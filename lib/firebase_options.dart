@@ -52,7 +52,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyAlBZYtxFLoYMa3X3gtLBARqV3SYpkf4b8',
-    appId: '1:127546533956:android:3dc248217f1439e7b87411',
+    appId: '1:127546533956:android:aa3c75f395a6c0deb87411',
     messagingSenderId: '127546533956',
     projectId: 'proboscis-2025',
     storageBucket: 'proboscis-2025.firebasestorage.app',
@@ -60,11 +60,13 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyBBx8NpMO7EBFQt1UDMgTmqhvhxAn2XQ5I',
-    appId: '1:127546533956:ios:b535abb5dc358b5db87411',
+    appId: '1:127546533956:ios:eba708b0acd53d41b87411',
     messagingSenderId: '127546533956',
     projectId: 'proboscis-2025',
     storageBucket: 'proboscis-2025.firebasestorage.app',
-    iosBundleId: 'com.example.jidoapp',
+    androidClientId: '127546533956-25dvs50cvanhrdg82ei4t0hmrf1rctuk.apps.googleusercontent.com',
+    iosClientId: '127546533956-i1o2tnjc9uf65m6t0p4lp7hl2tak15s5.apps.googleusercontent.com',
+    iosBundleId: 'com.shinduhyung.travelog',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
@@ -73,6 +75,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '127546533956',
     projectId: 'proboscis-2025',
     storageBucket: 'proboscis-2025.firebasestorage.app',
+    androidClientId: '127546533956-25dvs50cvanhrdg82ei4t0hmrf1rctuk.apps.googleusercontent.com',
+    iosClientId: '127546533956-ek59bn68tdhvu26v6jj859214ehubm87.apps.googleusercontent.com',
     iosBundleId: 'com.example.jidoapp',
   );
 
@@ -85,4 +89,5 @@ class DefaultFirebaseOptions {
     storageBucket: 'proboscis-2025.firebasestorage.app',
     measurementId: 'G-EDDMZSRRTP',
   );
+
 }
