@@ -32,11 +32,14 @@ workflows:
 
       - name: Set up code signing
         script: |
-          xcode-project use-profiles
+          keychain initialize
+          keychain add-certificates
+          xcode-project use-profiles --project ios/Runner.xcodeproj
 
       - name: Build iOS
         script: |
-          flutter build ipa --release
+          flutter build ipa --release --export-options-plist=/Users/builder/export_options.plist
+          ls -R build/ios/ipa
 
     artifacts:
       - build/ios/ipa/*.ipa
