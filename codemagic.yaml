@@ -2,9 +2,12 @@ workflows:
   ios-workflow:
     name: iOS Build
     max_build_duration: 60
+
     environment:
       flutter: stable
       xcode: latest
+      groups:
+        - env
       ios_signing:
         certificates:
           - travelog_distribution
@@ -12,6 +15,17 @@ workflows:
           - travelog_profile
 
     scripts:
+      - name: Create .env
+        script: |
+          cat > .env <<EOF
+          OPENAI_API_KEY=$OPENAI_API_KEY
+          PERPLEXITY_API_KEY=$PERPLEXITY_API_KEY
+          AERODATABOX_API_KEY=$AERODATABOX_API_KEY
+          AVIATION_STACK_API_KEY=$AVIATION_STACK_API_KEY
+          Maps__API_KEY=$Maps__API_KEY
+          GEMINI_API_KEY=$GEMINI_API_KEY
+          EOF
+
       - name: Install dependencies
         script: |
           flutter pub get
