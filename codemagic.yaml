@@ -43,3 +43,10 @@ workflows:
 
     artifacts:
       - build/ios/ipa/*.ipa
+
+    publishing:
+      app_store_connect:
+        api_key: $APP_STORE_CONNECT_PRIVATE_KEY
+        key_id: Q26WF62U4A
+        issuer_id: 57fb8587-154a-4f47-8751-53922573c21f
+        submit_to_testflight: true
