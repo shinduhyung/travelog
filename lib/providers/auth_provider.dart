@@ -1,3 +1,4 @@
+import 'dart:io' show Platform;
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -8,12 +9,26 @@ class AuthProvider extends ChangeNotifier {
   final FirebaseAuth _auth = FirebaseAuth.instance;
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
 
-  // ⭐ Web에서는 반드시 clientId 필요 (네가 쓰던 값 그대로 사용)
-  final GoogleSignIn _googleSignIn = GoogleSignIn(
-    clientId: kIsWeb
-        ? '127546533956-dgquefldu0671hkjbd0obr357ke078he.apps.googleusercontent.com'
-        : null,
-  );
+  late final GoogleSignIn _googleSignIn = _createGoogleSignIn();
+
+  GoogleSignIn _createGoogleSignIn() {
+    if (kIsWeb) {
+      // 웹 환경
+      return GoogleSignIn(
+        clientId: '127546533956-dgquefldu0671hkjbd0obr357ke078he.apps.googleusercontent.com',
+      );
+    } else if (Platform.isIOS) {
+      // iOS 환경: plist 파일 우회를 위해 코드에 직접 주입
+      return GoogleSignIn(
+        clientId: '127546533956-i1o2tnjc9uf65m6t0p4lp7hl2tak15s5.apps.googleusercontent.com',
+        // Firebase 인증에 필요한 서버 클라이언트 ID (웹용 클라이언트 ID와 동일)
+        serverClientId: '127546533956-dgquefldu0671hkjbd0obr357ke078he.apps.googleusercontent.com',
+      );
+    } else {
+      // 안드로이드 환경: google-services.json에서 자동 인식
+      return GoogleSignIn();
+    }
+  }
 
   User? _user;
   bool _isAuthReady = false;   // FirebaseAuth 초기 복구 완료 플래그
@@ -75,7 +90,6 @@ class AuthProvider extends ChangeNotifier {
     try {
       print("🔥 Google 로그인 시작 (kIsWeb=$kIsWeb)");
 
-      // Web / Mobile 둘 다 google_sign_in 사용 (지금 네 구조 유지)
       final googleUser = await _googleSignIn.signIn();
       if (googleUser == null) {
         print("⚠️ Google 로그인 취소됨");
