@@ -66,7 +66,7 @@ class DefaultFirebaseOptions {
     storageBucket: 'proboscis-2025.firebasestorage.app',
     androidClientId: '127546533956-25dvs50cvanhrdg82ei4t0hmrf1rctuk.apps.googleusercontent.com',
     iosClientId: '127546533956-i1o2tnjc9uf65m6t0p4lp7hl2tak15s5.apps.googleusercontent.com',
-    iosBundleId: 'com.shinduhyung.travelog',
+    iosBundleId: 'com.ahnlee.travellog',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
