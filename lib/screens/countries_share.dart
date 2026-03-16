@@ -79,12 +79,12 @@ class CountriesShare {
   // 대륙별 전체 국가 수 (대략적인 값)
   static Map<String, int> _calculateContinentTotals(List<Country> countries) {
     return {
-      'Asia': 48,
-      'Europe': 44,
-      'Africa': 54,
-      'North America': 23,
-      'South America': 12,
-      'Oceania': 14,
+      'Asia': 51,
+      'Europe': 51,
+      'Africa': 56,
+      'North America': 38,
+      'South America': 13,
+      'Oceania': 24,
     };
   }
 
