@@ -231,7 +231,7 @@ class _TripMapScreenState extends State<TripMapScreen>
 
 
   // Google Maps API 키 추가
-  final String _googleMapsApiKey = 'AIzaSyAWeaM1vpebe5ZCjbE4tQvnb2FB_Vs8HFU';
+  final String _googleMapsApiKey = 'AIzaSyD0n7Lg_t4qdVElZITPc_gBNhifvwavblw';
   Map<String, List<Map<String, dynamic>>> _processedTransportData = {};
   bool _isTransportDataProcessed = false;
 

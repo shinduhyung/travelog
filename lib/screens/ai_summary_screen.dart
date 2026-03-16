@@ -140,7 +140,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
   String? _summaryId; // 각 summary를 구분하기 위한 ID
 
   // Google Maps Geocoding API 키 (사용자 요청에 따라 직접 사용되지 않음, 좌표 기반 계산)
-  final String _googleMapsApiKey = 'AIzaSyAWeaM1vpebe5ZCjbE4tQvnb2FB_Vs8HFU';
+  final String _googleMapsApiKey = 'AIzaSyD0n7Lg_t4qdVElZITPc_gBNhifvwavblw';
 
 
   @override
