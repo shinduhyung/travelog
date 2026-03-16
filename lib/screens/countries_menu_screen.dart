@@ -147,7 +147,7 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
                 height: double.infinity,
                 child: FlutterMap(
                   options: const MapOptions(
-                    initialCenter: LatLng(0, 0),
+                    initialCenter: LatLng(-50, 0),
                     initialZoom: 0.3,
                     interactionOptions: InteractionOptions(flags: InteractiveFlag.none),
                   ),
@@ -558,7 +558,7 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
                                         child: IgnorePointer(
                                           child: FlutterMap(
                                             options: const MapOptions(
-                                              initialCenter: LatLng(50, 0),
+                                              initialCenter: LatLng(0, 0),
                                               initialZoom: 0.3,
                                               interactionOptions: InteractionOptions(flags: InteractiveFlag.none),
                                             ),
