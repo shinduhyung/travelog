@@ -2,7 +2,7 @@ name: jidoapp
 description: "A new Flutter project."
 publish_to: 'none'
 
-version: 1.0.0+23
+version: 1.0.0+27
 
 environment:
   sdk: ^3.8.0
@@ -72,6 +72,7 @@ dependencies:
   geolocator: ^14.0.2
   google_sign_in: ^6.1.0
   image: ^4.7.2
+  flutter_cache_manager: ^3.4.1
 
 dev_dependencies:
   flutter_test:

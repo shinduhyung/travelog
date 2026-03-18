@@ -61,7 +61,13 @@ class UnescoProvider with ChangeNotifier {
 
     if (user != null) {
       try {
-        final doc = await _firestore.collection('users').doc(user.uid).get();
+        // 🔥 FIX: 네트워크 불안정/오프라인 시 무한 대기 방지를 위해 get()에 timeout 설정
+        final doc = await _firestore
+            .collection('users')
+            .doc(user.uid)
+            .get()
+            .timeout(const Duration(seconds: 5));
+
         if (doc.exists) {
           final data = doc.data();
           if (data != null) {
@@ -113,14 +119,14 @@ class UnescoProvider with ChangeNotifier {
 
             // 3. 병합된 최신 데이터를 로컬과 서버에 다시 저장하여 상태를 동기화합니다.
             await _saveToLocal(prefs);
-            await _syncAllToFirestore();
+            await _syncAllToFirestore(); // 내부적으로 await 하지 않고 백그라운드 처리됨
           }
         } else {
           // 서버에 문서가 없으면 로컬 데이터를 서버에 최초 업로드합니다.
           await _syncAllToFirestore();
         }
       } catch (e) {
-        if (kDebugMode) print("Failed to sync UNESCO data: $e");
+        if (kDebugMode) print("Failed to sync UNESCO data (Offline or Error): $e");
       }
     }
   }
@@ -187,13 +193,13 @@ class UnescoProvider with ChangeNotifier {
     await prefs.setString('unesco_site_visit_history', json.encode(historyMap));
   }
 
-  // [핵심 수정] 모든 유저 데이터를 하나의 Map으로 묶어 Firestore에 단일 호출로 저장합니다.
+  // 모든 유저 데이터를 하나의 Map으로 묶어 Firestore에 단일 호출로 저장합니다.
   Future<void> _syncAllToFirestore() async {
     final user = _auth.currentUser;
     if (user == null) return;
 
     final prefs = await SharedPreferences.getInstance();
-    await _saveToLocal(prefs); // 먼저 로컬을 최신화
+    await _saveToLocal(prefs); // 로컬 저장까지는 확실하게 완료를 대기
 
     final subLocsEncoded = _visitedSubLocations.map((key, value) => MapEntry(key, value.toList()));
     final ratingsMap = { for (var site in _allSites) if (site.rating != null && site.rating! > 0) site.name: site.rating! };
@@ -204,16 +210,20 @@ class UnescoProvider with ChangeNotifier {
     };
 
     try {
-      await _firestore.collection('users').doc(user.uid).set({
+      // 🔥 FIX: await 제거!
+      // Firestore의 쓰기(set) 작업은 오프라인일 때 무한 대기하므로, 완료를 기다리지 않고 Firebase 백그라운드 큐에 맡깁니다.
+      _firestore.collection('users').doc(user.uid).set({
         'unesco_visited_sites': _visitedSites.toList(),
         'unesco_wishlisted_sites': _wishlistedSites.toList(),
         'unesco_sub_locations': json.encode(subLocsEncoded),
         'unesco_ratings': json.encode(ratingsMap),
         'unesco_history': json.encode(historyMap),
         'lastUpdated': FieldValue.serverTimestamp(),
-      }, SetOptions(merge: true));
+      }, SetOptions(merge: true)).catchError((e) {
+        if (kDebugMode) print("Firestore background sync error: $e");
+      });
     } catch (e) {
-      if (kDebugMode) print("Firestore sync failed: $e");
+      if (kDebugMode) print("Firestore sync dispatch failed: $e");
     }
   }
 

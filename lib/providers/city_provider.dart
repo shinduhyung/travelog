@@ -417,11 +417,16 @@ class CityProvider with ChangeNotifier {
 
   Future<String> _loadJsonFromStorage(String fileName) async {
     final url = 'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/json%2F$fileName?alt=media';
-    final response = await http.get(Uri.parse(url));
-    if (response.statusCode == 200) {
-      return response.body;
+    try {
+      // 오프라인 상태일 때 무한 대기하지 않도록 timeout 설정
+      final response = await http.get(Uri.parse(url)).timeout(const Duration(seconds: 5));
+      if (response.statusCode == 200) {
+        return response.body;
+      }
+    } catch (e) {
+      print('🔥 [CityProvider] Network error or timeout loading $fileName: $e. Falling back to local asset.');
     }
-    // 실패 시 로컬 fallback
+    // 실패 시(오프라인, 타임아웃, statusCode 오류 등) 로컬 fallback
     return await rootBundle.loadString('assets/$fileName');
   }
 

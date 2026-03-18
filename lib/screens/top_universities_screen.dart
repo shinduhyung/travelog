@@ -15,19 +15,145 @@ import 'package:image_picker/image_picker.dart';
 class TopUniversitiesScreen extends StatelessWidget {
   const TopUniversitiesScreen({super.key});
 
+  // ISO A3 -> A2 맵 (국기 오류 수정본)
+  static const Map<String, String> _isoA3ToA2 = {
+    'KOR': 'KR', 'SWE': 'SE', 'JPN': 'JP', 'JAP': 'JP',
+    'USA': 'US', 'GBR': 'GB', 'UK': 'GB', 'ENG': 'GB',
+    'CHN': 'CN', 'CAN': 'CA', 'AUS': 'AU', 'CHE': 'CH',
+    'SUI': 'CH', 'IRL': 'IE', 'IRE': 'IE', 'DEU': 'DE',
+    'GER': 'DE', 'FRA': 'FR', 'NLD': 'NL', 'NED': 'NL',
+    'ITA': 'IT', 'ESP': 'ES', 'SPA': 'ES', 'SGP': 'SG',
+    'SIN': 'SG', 'HKG': 'HK', 'HK': 'HK',
+  };
+
+  // 요청하신 데이터 기반 대학교 이름 축약 메서드
+  String _getShortenedName(String name) {
+    final Map<String, String> shortNameMap = {
+      'Massachusetts Institute of Technology (MIT)': 'MIT',
+      'Imperial College London': 'Imperial College',
+      'Stanford University': 'Stanford',
+      'University of Oxford': 'Oxford',
+      'Harvard University': 'Harvard',
+      'University of Cambridge': 'Cambridge',
+      'ETH Zurich': 'ETH Zurich',
+      'National University of Singapore (NUS)': 'NUS',
+      'University College London (UCL)': 'UCL',
+      'California Institute of Technology (Caltech)': 'Caltech',
+      'University of Hong Kong (HKU)': 'HKU',
+      'Nanyang Technological University (NTU)': 'NTU',
+      'University of Chicago': 'Chicago',
+      'Peking University': 'Peking',
+      'University of Pennsylvania': 'UPenn',
+      'Cornell University': 'Cornell',
+      'University of California, Berkeley (UC Berkeley)': 'UC Berkeley',
+      'Tsinghua University': 'Tsinghua',
+      'University of Melbourne': 'Melbourne',
+      'University of New South Wales (UNSW Sydney)': 'UNSW Sydney',
+      'Yale University': 'Yale',
+      'EPFL (École Polytechnique Fédérale de Lausanne)': 'EPFL',
+      'Technical University of Munich (TUM)': 'TUM',
+      'Johns Hopkins University': 'Johns Hopkins',
+      'Princeton University': 'Princeton',
+      'University of Sydney': 'Sydney',
+      'McGill University': 'McGill',
+      'Paris Sciences et Lettres (PSL University)': 'PSL',
+      'University of Toronto': 'Toronto',
+      'Fudan University': 'Fudan',
+      'King\'s College London': 'KCL',
+      'Chinese University of Hong Kong (CUHK)': 'CUHK',
+      'Australian National University (ANU)': 'ANU',
+      'University of Edinburgh': 'Edinburgh',
+      'University of Manchester': 'Manchester',
+      'Monash University': 'Monash',
+      'University of Tokyo': 'Tokyo',
+      'Columbia University': 'Columbia',
+      'Seoul National University': 'SNU',
+      'University of British Columbia (UBC)': 'UBC',
+      'École Polytechnique': 'École Polytechnique',
+      'Northwestern University': 'Northwestern',
+      'University of Queensland': 'Queensland',
+      'Hong Kong University of Science and Technology (HKUST)': 'HKUST',
+      'University of Michigan': 'Michigan',
+      'UCLA (University of California, Los Angeles)': 'UCLA',
+      'Delft University of Technology': 'TU Delft',
+      'Shanghai Jiao Tong University': 'SJTU',
+      'Zhejiang University': 'Zhejiang',
+      'Yonsei University': 'Yonsei',
+      'University of Bristol': 'Bristol',
+      'Carnegie Mellon University': 'CMU',
+      'University of Amsterdam': 'Amsterdam',
+      'Hong Kong Polytechnic University': 'PolyU',
+      'New York University': 'NYU',
+      'London School of Economics': 'LSE',
+      'Kyoto University': 'Kyoto',
+      'Ludwig Maximilian University of Munich': 'LMU Munich',
+      'Universiti Malaya': 'Malaya',
+      'KU Leuven': 'KU Leuven',
+      'Korea University': 'Korea',
+      'Duke University': 'Duke',
+      'City University of Hong Kong': 'CityU HK',
+      'National Taiwan University': 'NTU Taiwan',
+      'University of Auckland': 'Auckland',
+      'University of California, San Diego (UCSD)': 'UCSD',
+      'King Fahd University of Petroleum & Minerals (KFUPM)': 'KFUPM',
+      'University of Texas at Austin': 'UT Austin',
+      'Brown University': 'Brown',
+      'University of Illinois Urbana-Champaign': 'UIUC',
+      'Paris-Saclay University': 'Paris-Saclay',
+      'Lund University': 'Lund',
+      'Sorbonne University': 'Sorbonne',
+      'University of Warwick': 'Warwick',
+      'Trinity College Dublin': 'Trinity College',
+      'University of Birmingham': 'Birmingham',
+      'University of Western Australia': 'UWA',
+      'KTH Royal Institute of Technology': 'KTH',
+      'University of Glasgow': 'Glasgow',
+      'Heidelberg University': 'Heidelberg',
+      'University of Washington': 'Washington',
+      'University of Adelaide': 'Adelaide',
+      'Pennsylvania State University': 'Penn State',
+      'University of Buenos Aires': 'UBA',
+      'Tokyo Institute of Technology': 'Tokyo Tech',
+      'University of Leeds': 'Leeds',
+      'University of Southampton': 'Southampton',
+      'Boston University': 'Boston',
+      'Free University of Berlin': 'FU Berlin',
+      'Purdue University': 'Purdue',
+      'Osaka University': 'Osaka',
+      'University of Sheffield': 'Sheffield',
+      'Uppsala University': 'Uppsala',
+      'Durham University': 'Durham',
+      'University of Alberta': 'Alberta',
+      'University of Technology Sydney (UTS)': 'UTS',
+      'University of Nottingham': 'Nottingham',
+      'Karlsruhe Institute of Technology (KIT)': 'KIT',
+      'Politecnico di Milano': 'Polimi',
+      'University of Zurich': 'Zurich',
+    };
+
+    // 맵에 있으면 짧은 이름 반환, 없으면 기본 일괄 축약 규칙 적용
+    if (shortNameMap.containsKey(name)) {
+      return shortNameMap[name]!;
+    }
+
+    return name
+        .replaceAll('University of ', 'U. of ')
+        .replaceAll('University', 'Univ.')
+        .replaceAll('Institute of Technology', 'Tech')
+        .replaceAll('and', '&');
+  }
+
   @override
   Widget build(BuildContext context) {
     final landmarksProvider = context.watch<LandmarksProvider>();
     final allLandmarks = landmarksProvider.allLandmarks;
 
-    // Filter landmarks where attribute is 'University' and rank is 1-100
     final List<Landmark> universityList = allLandmarks.where((l) {
       final bool isUniversity = l.attributes.contains('University');
       final int rank = l.attribute_rank;
       return isUniversity && rank >= 1 && rank <= 100;
     }).toList();
 
-    // Sort by attribute_rank in ascending order
     universityList.sort((a, b) => a.attribute_rank.compareTo(b.attribute_rank));
 
     return Scaffold(
@@ -61,23 +187,10 @@ class TopUniversitiesScreen extends StatelessWidget {
                   final university = universityList[index];
                   final isVisited = landmarksProvider.visitedLandmarks.contains(university.name);
 
-                  // Get ISO code for flag (assuming first country in the list)
                   final String isoA3 = university.countriesIsoA3.isNotEmpty
-                      ? university.countriesIsoA3[0]
+                      ? university.countriesIsoA3[0].trim().toUpperCase()
                       : '';
-                  // Convert ISO A3 to A2 for CountryFlag
-                  String flagIso = isoA3.length >= 2 ? isoA3.substring(0, 2) : '';
-
-                  // Manual override for specific universities
-                  if (university.name == 'Seoul National University' ||
-                      university.name == 'Yonsei University' ||
-                      university.name == 'Korea University') {
-                    flagIso = 'KR';
-                  } else if (university.name == 'Lund University' ||
-                      university.name == 'Uppsala University' ||
-                      university.name == 'KTH Royal Institute of Technology') {
-                    flagIso = 'SE';
-                  }
+                  String flagIso = _isoA3ToA2[isoA3] ?? (isoA3.length >= 2 ? isoA3.substring(0, 2) : '');
 
                   return GestureDetector(
                     onTap: () {
@@ -135,13 +248,14 @@ class TopUniversitiesScreen extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  university.name,
+                                  _getShortenedName(university.name),
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
                                   style: const TextStyle(
                                     fontSize: 16,
                                     fontWeight: FontWeight.bold,
                                     color: Color(0xFF111827),
                                   ),
-                                  overflow: TextOverflow.ellipsis,
                                 ),
                                 const SizedBox(height: 4),
                                 Text(

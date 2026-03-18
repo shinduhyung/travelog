@@ -101,8 +101,8 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
 
   Widget _buildWidgetPreview(CountryProvider provider, List<Country> visitedList) {
     final continentTotals = {
-      'Asia': 48, 'Europe': 44, 'Africa': 54,
-      'North America': 23, 'South America': 12, 'Oceania': 14,
+      'Asia': 51, 'Europe': 51, 'Africa': 56,
+      'North America': 38, 'South America': 13, 'Oceania': 24,
     };
 
     // 대륙별 통계 계산
@@ -147,7 +147,7 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
                 height: double.infinity,
                 child: FlutterMap(
                   options: const MapOptions(
-                    initialCenter: LatLng(-50, 0),
+                    initialCenter: LatLng(20, 0),
                     initialZoom: 0.3,
                     interactionOptions: InteractionOptions(flags: InteractiveFlag.none),
                   ),

@@ -30,8 +30,8 @@ class UnescoSitesScreen extends StatefulWidget {
 class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
   final TextEditingController _searchController = TextEditingController();
 
-  // Default sort option is Name
-  SiteSortOption _sortOption = SiteSortOption.nameAsc;
+  // Default sort option is Country
+  SiteSortOption _sortOption = SiteSortOption.countryAsc;
 
   // Filter States
   bool _showVisitedOnly = false;
@@ -42,7 +42,7 @@ class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
   // Visit Log States
   bool _isLogExpanded = true;
   LogSortOption _logSortOption = LogSortOption.newest;
-  LogGroupOption _logGroupOption = LogGroupOption.year;
+  LogGroupOption _logGroupOption = LogGroupOption.country; // Default 변경됨
 
   // Cached grouped list
   Map<String, List<UnescoSite>>? _cachedGroupedList;
@@ -669,6 +669,32 @@ class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
                 Icon(Icons.history_edu, color: themeColor),
                 const SizedBox(width: 8),
                 const Text("Visit Log", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                if (_isLogExpanded) ...[
+                  const SizedBox(width: 12),
+                  Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 2),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(16),
+                      border: Border.all(color: Colors.grey.shade300),
+                    ),
+                    child: DropdownButtonHideUnderline(
+                      child: DropdownButton<LogGroupOption>(
+                        value: _logGroupOption,
+                        isDense: true,
+                        icon: Icon(Icons.keyboard_arrow_down, size: 18, color: themeColor),
+                        style: TextStyle(color: Colors.grey[800], fontSize: 13, fontWeight: FontWeight.w600),
+                        onChanged: (LogGroupOption? newValue) {
+                          if (newValue != null) setState(() => _logGroupOption = newValue);
+                        },
+                        items: const [
+                          DropdownMenuItem(value: LogGroupOption.year, child: Text('By Year')),
+                          DropdownMenuItem(value: LogGroupOption.country, child: Text('By Country')),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
               ],
             ),
             IconButton(
@@ -679,38 +705,6 @@ class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
         ),
         if (_isLogExpanded) ...[
           const SizedBox(height: 12),
-          Align(
-            alignment: Alignment.centerLeft,
-            child: Container(
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
-              decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(20),
-                  border: Border.all(color: Colors.grey.shade300),
-                  boxShadow: [
-                    BoxShadow(color: Colors.black.withOpacity(0.03), blurRadius: 4, offset: const Offset(0, 2))
-                  ]
-              ),
-              child: DropdownButtonHideUnderline(
-                child: DropdownButton<LogGroupOption>(
-                  value: _logGroupOption,
-                  isDense: true,
-                  icon: Icon(Icons.keyboard_arrow_down, size: 20, color: themeColor),
-                  borderRadius: BorderRadius.circular(12),
-                  style: TextStyle(color: Colors.grey[800], fontSize: 14, fontWeight: FontWeight.w600),
-                  onChanged: (LogGroupOption? newValue) {
-                    if (newValue != null) setState(() => _logGroupOption = newValue);
-                  },
-                  items: const [
-                    DropdownMenuItem(value: LogGroupOption.year, child: Text('By Year')),
-                    DropdownMenuItem(value: LogGroupOption.country, child: Text('By Country')),
-                  ],
-                ),
-              ),
-            ),
-          ),
-          const SizedBox(height: 12),
-
           if (_logGroupOption == LogGroupOption.country)
             ...sortedLogKeys.map((key) => _buildCountryLogGroup(context, key, groupedLogs[key]!)).toList()
           else

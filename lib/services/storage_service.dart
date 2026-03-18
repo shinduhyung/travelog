@@ -149,6 +149,13 @@ class StorageService {
     );
   }
 
+  // --- Clear Database Methods ---
+  // 계정 로그아웃 시 기기에 남아있는 SQLite 데이터를 모두 초기화합니다.
+  Future<void> clearLocalDatabase() async {
+    final db = await instance.database;
+    await db.delete('trip_logs');
+    await db.delete('itineraries');
+  }
 
   // --- SharedPreferences Methods ---
 

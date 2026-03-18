@@ -9,6 +9,7 @@ import 'package:intl/intl.dart';
 import 'dart:io';
 import 'package:image_picker/image_picker.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter_cache_manager/flutter_cache_manager.dart'; // 캐시 매니저 패키지 추가
 
 // Models & Providers
 import 'package:jidoapp/models/landmarks_model.dart';
@@ -18,6 +19,15 @@ import 'package:jidoapp/providers/country_provider.dart';
 
 // Widgets
 import 'package:jidoapp/widgets/landmark_info_card.dart';
+
+// 파이어베이스 설정 무시하고 강제로 30일 기기 보관하는 커스텀 캐시 매니저 설정
+final CacheManager _landmarksCacheManager = CacheManager(
+  Config(
+    'landmarks_cache_key',
+    stalePeriod: const Duration(days: 30),
+    maxNrOfCacheObjects: 300,
+  ),
+);
 
 class TopLandmarksScreen extends StatefulWidget {
   const TopLandmarksScreen({super.key});
@@ -113,7 +123,8 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
     if (name == 'Notre Dame of Cathedral of Saigon' || name == 'Notre Dame Cathedral of Saigon') return 'Saigon Notre Dame';
     if (name == 'Bagan Archaeological Zone') return 'Bagan';
     if (name == 'Pamukkale Travertine Terraces') return 'Pamukkale';
-    if (name == 'Pearl Harbor National Memorial' || name == 'Pearl Harbor Peace Memorial') return 'Pearl Harbor Memorial';    if (name == 'Mezquita-Cathedral of Córdoba') return 'Cordoba Mezquita';
+    if (name == 'Pearl Harbor National Memorial' || name == 'Pearl Harbor Peace Memorial') return 'Pearl Harbor Memorial';
+    if (name == 'Mezquita-Cathedral of Córdoba') return 'Cordoba Mezquita';
     if (name == 'Sheikh Zayed Grand Mosque') return 'Sheikh Zayed Mosque';
     return name;
   }
@@ -265,13 +276,13 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
               children: [
                 Container(
                   padding: const EdgeInsets.fromLTRB(24, 32, 24, 20),
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     gradient: LinearGradient(
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,
                       colors: [
                         Colors.white,
-                        const Color(0xFFF9FAFB),
+                        Color(0xFFF9FAFB),
                       ],
                     ),
                   ),
@@ -411,6 +422,8 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
                                     children: [
                                       Positioned.fill(
                                         child: CachedNetworkImage(
+                                          cacheManager: _landmarksCacheManager, // 커스텀 캐시 매니저 연동
+                                          memCacheWidth: 600, // 디코딩 딜레이 방지를 위해 메모리 사이즈 축소
                                           imageUrl: imageUrl,
                                           fit: BoxFit.cover,
                                           placeholder: (context, url) => Container(color: Colors.grey[100]),
@@ -754,6 +767,8 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
                       children: [
                         Positioned.fill(
                           child: CachedNetworkImage(
+                            cacheManager: _landmarksCacheManager, // 커스텀 캐시 매니저 연동
+                            memCacheWidth: 800, // 모달 사진은 조금 더 크게
                             imageUrl: imageUrl,
                             fit: BoxFit.cover,
                             placeholder: (context, url) => Container(color: Colors.grey[100]),
@@ -1273,9 +1288,9 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
         children: [
           Container(
             padding: const EdgeInsets.all(16),
-            decoration: BoxDecoration(
-              color: const Color(0xFFF9FAFB),
-              borderRadius: const BorderRadius.only(
+            decoration: const BoxDecoration(
+              color: Color(0xFFF9FAFB),
+              borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(12),
                 bottomRight: Radius.circular(12),
               ),

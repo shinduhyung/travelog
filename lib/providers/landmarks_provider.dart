@@ -196,6 +196,7 @@ class LandmarksProvider with ChangeNotifier {
       await _loadUserData ();
       printLandmarksByCityCount ();
       checkSpecifiedLandmarks ();
+      printTopUniversities (); // 대학교 체크 함수 호출
 
       if (globalRankData.isNotEmpty) {
         printGlobalRankEmptyCityCheck (globalRankData);
@@ -209,6 +210,30 @@ class LandmarksProvider with ChangeNotifier {
     _isLoading = false;
     print ('[DEBUG_LANDMARKS] _loadAllData finished. _isLoading = false');
     notifyListeners ();
+  }
+
+  // 수정된 함수: attribute_rank를 사용하고 대소문자 구분 없이 'university' 속성을 확인합니다.
+  void printTopUniversities () {
+    print ('\n[Top Universities Check - Attribute Rank <= 100]');
+
+    final topUniversities = _allLandmarks.where ((l) {
+      final isUniversity = l.attributes.any((attr) => attr.toLowerCase() == 'university');
+      return isUniversity &&
+          l.attribute_rank > 0 &&
+          l.attribute_rank <= 100;
+    }).toList ();
+
+    // attribute_rank 순으로 오름차순 정렬
+    topUniversities.sort ((a, b) => a.attribute_rank.compareTo (b.attribute_rank));
+
+    if (topUniversities.isEmpty) {
+      print ('결과: 조건에 맞는 대학교 랜드마크가 없습니다.');
+    } else {
+      print ('총 ${topUniversities.length}개 발견:');
+      for (var l in topUniversities) {
+        print ('- Attribute Rank ${l.attribute_rank}: ${l.name}');
+      }
+    }
   }
 
   void printGlobalRankEmptyCityCheck (List<dynamic> globalRankData) {
