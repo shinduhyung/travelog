@@ -9,6 +9,7 @@ import 'package:provider/provider.dart';
 import 'package:intl/date_symbol_data_local.dart';
 
 import 'package:jidoapp/screens/login_screen.dart';
+import 'package:jidoapp/screens/onboarding_tutorial_screen.dart';
 import 'package:jidoapp/main_screen.dart';
 
 import 'package:jidoapp/widgets/plane_loading_logo.dart';
@@ -201,12 +202,16 @@ class AuthGateRoot extends StatelessWidget {
                   landmarksProvider) {
                 landmarksProvider ??= LandmarksProvider();
                 landmarksProvider.updateProviders(
-                    countryProvider, cityProvider);
+                  countryProvider,
+                  cityProvider,
+                );
                 return landmarksProvider;
               },
             ),
             ChangeNotifierProvider(
-                create: (_) => UnescoProvider(), lazy: false),
+              create: (_) => UnescoProvider(),
+              lazy: false,
+            ),
             ChangeNotifierProvider(create: (_) => ReligionProvider()),
             ChangeNotifierProvider(create: (_) => LanguageProvider()),
             ChangeNotifierProvider(create: (_) => LanguageFamilyProvider()),
@@ -231,7 +236,8 @@ class AuthGateRoot extends StatelessWidget {
                 tripLogProvider ??=
                     TripLogProvider(context.read<AiService>());
                 tripLogProvider.updateCountryData(
-                    countryProvider.countryNameToIsoMap);
+                  countryProvider.countryNameToIsoMap,
+                );
                 return tripLogProvider;
               },
             ),
@@ -240,11 +246,18 @@ class AuthGateRoot extends StatelessWidget {
                 context.read<AiService>(),
               ),
             ),
-            ChangeNotifierProxyProvider6<CountryProvider, EconomyProvider,
-                CityProvider, AirlineProvider, AirportProvider, LandmarksProvider, BadgeProvider>(
+            ChangeNotifierProxyProvider6<
+                CountryProvider,
+                EconomyProvider,
+                CityProvider,
+                AirlineProvider,
+                AirportProvider,
+                LandmarksProvider,
+                BadgeProvider>(
               create: (_) => BadgeProvider(),
               update: (context, countryProvider, economyProvider, cityProvider,
-                  airlineProvider, airportProvider, landmarksProvider, badgeProvider) {
+                  airlineProvider, airportProvider, landmarksProvider,
+                  badgeProvider) {
                 badgeProvider ??= BadgeProvider();
 
                 if (!cityProvider.isLoading && !landmarksProvider.isLoading) {
@@ -282,8 +295,19 @@ class WidgetUpdateWrapper extends StatefulWidget {
 class _WidgetUpdateWrapperState extends State<WidgetUpdateWrapper> {
   bool _widgetUpdated = false;
 
+  // TODO: 출시 후 SharedPreferences 로 한 번만 뜨도록 변경
+  bool _showTutorial = true;
+
   @override
   Widget build(BuildContext context) {
+    if (_showTutorial) {
+      return OnboardingTutorialScreen(
+        onComplete: () {
+          setState(() => _showTutorial = false);
+        },
+      );
+    }
+
     final countryProvider = context.watch<CountryProvider>();
 
     if (!_widgetUpdated &&
@@ -306,7 +330,6 @@ class _WidgetUpdateWrapperState extends State<WidgetUpdateWrapper> {
 
     debugPrint('✅ Widget update: ${visitedList.length}개 국가');
 
-    // widgetImage는 null로 전달 — countries_menu_screen 진입 시 실제 캡처됨
     HomeWidgetService.updateWidget(
       widgetImage: null,
       widgetType: WidgetType.countries,
@@ -413,11 +436,11 @@ class _BadgeGlobalListenerState extends State<BadgeGlobalListener> {
       if ((badgeProvider.newlyUnlocked.isNotEmpty ||
           badgeProvider.newRankUnlocked != null) &&
           !_isShowingDialog) {
-        WidgetsBinding.instance.addPostFrameCallback((_) => _checkNotifications());
+        WidgetsBinding.instance.addPostFrameCallback(
+              (_) => _checkNotifications(),
+        );
       }
-    } catch (e) {
-
-    }
+    } catch (e) {}
 
     return widget.child ?? const SizedBox.shrink();
   }
