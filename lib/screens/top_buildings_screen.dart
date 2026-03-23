@@ -9,6 +9,7 @@ import 'package:jidoapp/models/landmarks_model.dart';
 import 'package:jidoapp/providers/landmarks_provider.dart';
 import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/widgets/landmark_info_card.dart';
+import 'package:jidoapp/widgets/landmark_visit_editor_card.dart'; // 공통 위젯 추가
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:jidoapp/models/visit_date_model.dart';
 import 'dart:io';
@@ -23,22 +24,32 @@ class TopBuildingsScreen extends StatelessWidget {
     {'rank': 2, 'name': 'Merdeka 118', 'height': '678.9 m', 'iso': 'MY'},
     {'rank': 3, 'name': 'Shanghai Tower', 'height': '632 m', 'iso': 'CN'},
     {'rank': 4, 'name': 'Abraj Al Bait', 'height': '601 m', 'iso': 'SA'},
-    {'rank': 5, 'name': 'Ping An International Finance Centre', 'height': '599.1 m', 'iso': 'CN'},
+    {'rank': 5, 'name': 'Ping An Finance Center', 'height': '599.1 m', 'iso': 'CN'},
     {'rank': 6, 'name': 'Lotte World Tower', 'height': '554.5 m', 'iso': 'KR'},
     {'rank': 7, 'name': 'One World Trade Center', 'height': '541.3 m', 'iso': 'US'},
     {'rank': 8, 'name': 'Guangzhou CTF Finance Centre', 'height': '530 m', 'iso': 'CN'},
     {'rank': 9, 'name': 'Tianjin CTF Finance Centre', 'height': '530 m', 'iso': 'CN'},
-    {'rank': 10, 'name': 'China Zun', 'height': '527.7 m', 'iso': 'CN'},
+    {'rank': 10, 'name': 'CITIC Tower', 'height': '527.7 m', 'iso': 'CN'},
     {'rank': 11, 'name': 'Taipei 101', 'height': '508 m', 'iso': 'TW'},
     {'rank': 12, 'name': 'Shanghai World Financial Center', 'height': '492 m', 'iso': 'CN'},
     {'rank': 13, 'name': 'International Commerce Centre', 'height': '484 m', 'iso': 'HK'},
     {'rank': 14, 'name': 'Wuhan Greenland Center', 'height': '475.6 m', 'iso': 'CN'},
     {'rank': 15, 'name': 'Central Park Tower', 'height': '472.4 m', 'iso': 'US'},
     {'rank': 16, 'name': 'Lakhta Center', 'height': '462 m', 'iso': 'RU'},
-    {'rank': 17, 'name': 'Landmark 81', 'height': '461.2 m', 'iso': 'VN'},
-    {'rank': 18, 'name': 'Chongqing International Land-Sea Center', 'height': '458 m', 'iso': 'CN'},
-    {'rank': 19, 'name': 'The Exchange 106', 'height': '453.6 m', 'iso': 'MY'},
-    {'rank': 20, 'name': 'Changsha IFS Tower T1', 'height': '452.1 m', 'iso': 'CN'},
+    {'rank': 17, 'name': 'Vincom Landmark 81', 'height': '461.2 m', 'iso': 'VN'},
+    {'rank': 18, 'name': 'The Exchange 106', 'height': '453.6 m', 'iso': 'MY'},
+    {'rank': 19, 'name': 'Changsha IFS Tower T1', 'height': '452.1 m', 'iso': 'CN'},
+    {'rank': 20, 'name': 'Petronas Tower 1', 'height': '451.9 m', 'iso': 'MY'},
+    {'rank': 21, 'name': 'Petronas Tower 2', 'height': '451.9 m', 'iso': 'MY'},
+    {'rank': 22, 'name': 'Suzhou IFS', 'height': '450 m', 'iso': 'CN'},
+    {'rank': 23, 'name': 'Zifeng Tower', 'height': '450 m', 'iso': 'CN'},
+    {'rank': 24, 'name': 'Wuhan Center', 'height': '443.1 m', 'iso': 'CN'},
+    {'rank': 25, 'name': 'Willis Tower', 'height': '442.1 m', 'iso': 'US'},
+    {'rank': 26, 'name': 'KK100', 'height': '441.8 m', 'iso': 'CN'},
+    {'rank': 27, 'name': 'Guangzhou International Finance Center', 'height': '438.6 m', 'iso': 'CN'},
+    {'rank': 28, 'name': '111 West 57th Street', 'height': '435.3 m', 'iso': 'US'},
+    {'rank': 29, 'name': 'One Vanderbilt', 'height': '427 m', 'iso': 'US'},
+    {'rank': 30, 'name': '432 Park Avenue', 'height': '425.7 m', 'iso': 'US'},
   ];
 
   @override
@@ -52,19 +63,59 @@ class TopBuildingsScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Padding(
-              padding: EdgeInsets.fromLTRB(20, 30, 20, 10),
-              child: Text(
-                'Top 20 Tallest Buildings',
-                style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.w900,
-                  color: Color(0xFF111827),
-                  letterSpacing: -0.5,
-                ),
+            Container(
+              padding: const EdgeInsets.fromLTRB(24, 20, 24, 16),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.03),
+                    blurRadius: 10,
+                    offset: const Offset(0, 2),
+                  ),
+                ],
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.all(8),
+                        decoration: BoxDecoration(
+                          color: const Color(0xFFF5F5F5),
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: const Icon(
+                          Icons.apartment_outlined,
+                          color: Color(0xFF8E2DE2),
+                          size: 24,
+                        ),
+                      ),
+                      const SizedBox(width: 12),
+                      const Text(
+                        'World\'s Tallest Buildings',
+                        style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xFF111827),
+                          letterSpacing: -0.5,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 8),
+                  Text(
+                    'The tallest skyscrapers currently completed',
+                    style: TextStyle(
+                      fontSize: 14,
+                      color: Colors.grey[600],
+                      letterSpacing: 0.2,
+                    ),
+                  ),
+                ],
               ),
             ),
-
             Expanded(
               child: ListView.builder(
                 padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
@@ -83,9 +134,11 @@ class TopBuildingsScreen extends StatelessWidget {
                   return GestureDetector(
                     onTap: () {
                       if (landmark != null) {
-                        _showLandmarkDetailsModal(context, landmark, Colors.blueAccent);
+                        _showLandmarkDetailsModal(context, landmark, const Color(0xFF8E2DE2));
                       } else {
-                        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("$name details not found in database")));
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(content: Text("$name details not found in database")),
+                        );
                       }
                     },
                     child: Container(
@@ -108,24 +161,18 @@ class TopBuildingsScreen extends StatelessWidget {
                       child: Row(
                         children: [
                           Container(
-                            width: 40,
-                            height: 40,
-                            decoration: BoxDecoration(
-                              color: Colors.grey[100],
-                              borderRadius: BorderRadius.circular(10),
-                            ),
+                            width: 32,
                             alignment: Alignment.center,
                             child: Text(
                               '#$rank',
                               style: TextStyle(
                                 fontSize: 14,
-                                fontWeight: FontWeight.w800,
-                                color: Colors.grey[700],
+                                fontWeight: FontWeight.bold,
+                                color: rank <= 3 ? const Color(0xFF8E2DE2) : Colors.grey[400],
                               ),
                             ),
                           ),
-                          const SizedBox(width: 16),
-
+                          const SizedBox(width: 8),
                           ClipRRect(
                             borderRadius: BorderRadius.circular(4),
                             child: SizedBox(
@@ -135,7 +182,6 @@ class TopBuildingsScreen extends StatelessWidget {
                             ),
                           ),
                           const SizedBox(width: 16),
-
                           Expanded(
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -147,44 +193,34 @@ class TopBuildingsScreen extends StatelessWidget {
                                     fontWeight: FontWeight.bold,
                                     color: Color(0xFF111827),
                                   ),
-                                  maxLines: 1,
                                   overflow: TextOverflow.ellipsis,
-                                  softWrap: false,
                                 ),
                                 const SizedBox(height: 4),
                                 Text(
                                   height,
                                   style: TextStyle(
                                     fontSize: 13,
-                                    fontWeight: FontWeight.w600,
-                                    color: Colors.blueAccent.shade700,
+                                    color: Colors.grey[600],
+                                    fontWeight: FontWeight.w500,
                                   ),
-                                  maxLines: 1,
-                                  overflow: TextOverflow.ellipsis,
-                                  softWrap: false,
                                 ),
                               ],
                             ),
                           ),
-
                           if (isVisited)
                             Container(
-                              margin: const EdgeInsets.only(left: 12),
-                              padding: const EdgeInsets.all(4),
-                              decoration: const BoxDecoration(
-                                color: Colors.teal,
-                                shape: BoxShape.circle,
-                              ),
-                              child: const Icon(Icons.check, color: Colors.white, size: 16),
-                            )
-                          else
-                            Container(
-                              margin: const EdgeInsets.only(left: 12),
-                              width: 24,
-                              height: 24,
+                              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                               decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                border: Border.all(color: Colors.grey[300]!),
+                                color: Colors.teal.withOpacity(0.15),
+                                borderRadius: BorderRadius.circular(12),
+                              ),
+                              child: const Text(
+                                'Visited',
+                                style: TextStyle(
+                                  fontSize: 11,
+                                  color: Colors.teal,
+                                  fontWeight: FontWeight.w600,
+                                ),
                               ),
                             ),
                         ],
@@ -212,9 +248,6 @@ class TopBuildingsScreen extends StatelessWidget {
         final isVisited = provider.visitedLandmarks.contains(freshLandmark.name);
         final isWishlisted = provider.wishlistedLandmarks.contains(freshLandmark.name);
         final countryNames = provider.getCountryNames(freshLandmark.countriesIsoA3);
-
-        final visitedSubCount = provider.getVisitedSubLocationCount(freshLandmark.name);
-        final totalSubCount = freshLandmark.locations?.length ?? 0;
 
         String locationDisplay = countryNames;
         if (freshLandmark.city != 'Unknown' && freshLandmark.city != 'Unknown City') {
@@ -267,7 +300,7 @@ class TopBuildingsScreen extends StatelessWidget {
                             child: Text(freshLandmark.name,
                                 style: Theme.of(sheetContext).textTheme.titleLarge?.copyWith(
                                     fontWeight: FontWeight.bold, fontSize: 26, color: headerTextColor))),
-                        if (isVisited || visitedSubCount > 0) Icon(Icons.check_circle, color: headerTextColor, size: 24),
+                        if (isVisited) Icon(Icons.check_circle, color: headerTextColor, size: 24),
                       ],
                     ),
                     const SizedBox(height: 6),
@@ -296,36 +329,9 @@ class TopBuildingsScreen extends StatelessWidget {
                           ],
                         ),
                         const Divider(height: 20),
-                        if (totalSubCount > 1) ...[
-                          Text("Components / Locations",
-                              style: Theme.of(sheetContext).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
-                          const SizedBox(height: 4),
-                          Container(
-                            decoration: BoxDecoration(
-                              border: Border.all(color: Colors.grey.shade300),
-                              borderRadius: BorderRadius.circular(8),
-                            ),
-                            child: Column(
-                              children: freshLandmark.locations!.map((loc) {
-                                final isLocVisited = provider.isSubLocationVisited(freshLandmark.name, loc.name);
-                                return CheckboxListTile(
-                                  title: Text(loc.name, style: const TextStyle(fontSize: 14)),
-                                  value: isLocVisited,
-                                  activeColor: themeColor,
-                                  dense: true,
-                                  controlAffinity: ListTileControlAffinity.leading,
-                                  onChanged: (val) {
-                                    provider.toggleSubLocation(freshLandmark.name, loc.name);
-                                  },
-                                );
-                              }).toList(),
-                            ),
-                          ),
-                          const Divider(height: 24),
-                        ],
                         Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [Text('History (${freshLandmark.visitDates.length} entries)', style: Theme.of(sheetContext).textTheme.titleSmall), OutlinedButton.icon(icon: const Icon(Icons.add), label: const Text('Add Visit'), onPressed: () => provider.addVisitDate(freshLandmark.name))]),
                         const SizedBox(height: 8),
-                        if (freshLandmark.visitDates.isNotEmpty) ...freshLandmark.visitDates.asMap().entries.map((entry) => _LandmarkVisitEditorCard(
+                        if (freshLandmark.visitDates.isNotEmpty) ...freshLandmark.visitDates.asMap().entries.map((entry) => LandmarkVisitEditorCard(
                           key: ValueKey('${freshLandmark.name}_${entry.key}'),
                           landmarkName: freshLandmark.name,
                           visitDate: entry.value,
@@ -345,93 +351,6 @@ class TopBuildingsScreen extends StatelessWidget {
           ),
         );
       },
-    );
-  }
-}
-
-class _LandmarkVisitEditorCard extends StatefulWidget {
-  final String landmarkName;
-  final VisitDate visitDate;
-  final int index;
-  final VoidCallback onDelete;
-  final List<LandmarkSubLocation>? availableLocations;
-
-  const _LandmarkVisitEditorCard({
-    super.key,
-    required this.landmarkName,
-    required this.visitDate,
-    required this.index,
-    required this.onDelete,
-    this.availableLocations,
-  });
-
-  @override
-  State<_LandmarkVisitEditorCard> createState() => _LandmarkVisitEditorCardState();
-}
-
-class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
-  late final TextEditingController _titleController;
-  late final TextEditingController _memoController;
-  late List<String> _currentPhotos;
-  int? _year, _month, _day;
-  final ExpansionTileController _expansionTileController = ExpansionTileController();
-
-  @override
-  void initState() {
-    super.initState();
-    _titleController = TextEditingController(text: widget.visitDate.title);
-    _memoController = TextEditingController(text: widget.visitDate.memo);
-    _currentPhotos = List.from(widget.visitDate.photos);
-    _year = widget.visitDate.year;
-    _month = widget.visitDate.month;
-    _day = widget.visitDate.day;
-  }
-
-  void _pickImage(ImageSource source) async {
-    final picker = ImagePicker();
-    final pickedFile = await picker.pickImage(source: source);
-    if (pickedFile != null && mounted) {
-      final newPhotos = List<String>.from(_currentPhotos)..add(pickedFile.path);
-      setState(() => _currentPhotos = newPhotos);
-      if(mounted){
-        context.read<LandmarksProvider>().updateLandmarkVisit(
-            widget.landmarkName, widget.index, photos: newPhotos
-        );
-      }
-    }
-  }
-
-  Widget _buildPhotoPreview(String photoPath, int index) {
-    return Container(
-        width: 60, height: 60, margin: const EdgeInsets.only(right: 8), color: Colors.grey[300],
-        child: Image.file(File(photoPath), fit: BoxFit.cover));
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    final provider = context.read<LandmarksProvider>();
-    return Card(
-      elevation: 1, margin: const EdgeInsets.symmetric(vertical: 4),
-      child: ExpansionTile(
-        controller: _expansionTileController,
-        title: Text(widget.visitDate.title.isNotEmpty ? widget.visitDate.title : 'Visit Record'),
-        subtitle: Text('Date: $_year-$_month-$_day'),
-        trailing: IconButton(icon: const Icon(Icons.delete, color: Colors.red, size: 20), onPressed: widget.onDelete),
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(12.0),
-            child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  TextField(controller: _titleController, decoration: const InputDecoration(labelText: 'Title', isDense: true), onEditingComplete: () => provider.updateLandmarkVisit(widget.landmarkName, widget.index, title: _titleController.text)),
-                  const SizedBox(height: 8),
-                  TextField(controller: _memoController, decoration: const InputDecoration(labelText: 'Memo', isDense: true), onEditingComplete: () => provider.updateLandmarkVisit(widget.landmarkName, widget.index, memo: _memoController.text)),
-                  const SizedBox(height: 12),
-                  SingleChildScrollView(scrollDirection: Axis.horizontal, child: Row(children: [IconButton(icon: const Icon(Icons.camera_alt), onPressed: () => _pickImage(ImageSource.gallery)), ..._currentPhotos.asMap().entries.map((e) => _buildPhotoPreview(e.value, e.key)).toList()])),
-                ]),
-          )
-        ],
-      ),
     );
   }
 }

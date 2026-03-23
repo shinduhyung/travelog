@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:jidoapp/providers/auth_provider.dart';
+import 'package:jidoapp/screens/login_prompt_screen.dart';
 import 'package:jidoapp/providers/landmarks_provider.dart';
 import 'package:jidoapp/models/landmarks_model.dart';
 import 'package:jidoapp/screens/landmarks_list_screen.dart';
@@ -70,6 +72,7 @@ class TopPicksMenuScreen extends StatelessWidget {
                   ),
                 ),
 
+                // Global Top Attractions — 로그인 없이 접근 가능
                 SliverToBoxAdapter(
                   child: Padding(
                     padding: const EdgeInsets.fromLTRB(24, 8, 24, 0),
@@ -91,66 +94,61 @@ class TopPicksMenuScreen extends StatelessWidget {
 
                 const SliverToBoxAdapter(child: SizedBox(height: 24)),
 
+                // Quick Access 카드들 — 로그인 필요
                 SliverToBoxAdapter(
                   child: Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 24),
-                    child: Row(
-                      children: [
-                        Expanded(
-                          child: _buildQuickAccessCard(
-                            context,
-                            title: 'Cities',
-                            icon: Icons.location_city_rounded,
-                            color: const Color(0xFF4A5568),
-                            attributes: ['City'],
-                            customOnTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (_) => const LandmarkCitiesScreen(),
-                                ),
-                              );
-                            },
+                    child: Builder(builder: (context) {
+                      void gated(VoidCallback action) {
+                        final auth = Provider.of<AuthProvider>(context, listen: false);
+                        if (auth.user == null) {
+                          showModalBottomSheet(
+                            context: context,
+                            isScrollControlled: true,
+                            backgroundColor: Colors.transparent,
+                            builder: (_) => const LoginPromptScreen(),
+                          );
+                          return;
+                        }
+                        action();
+                      }
+                      return Row(
+                        children: [
+                          Expanded(
+                            child: _buildQuickAccessCard(
+                              context,
+                              title: 'Cities',
+                              icon: Icons.location_city_rounded,
+                              color: const Color(0xFF4A5568),
+                              attributes: ['City'],
+                              customOnTap: () => gated(() => Navigator.push(context, MaterialPageRoute(builder: (_) => const LandmarkCitiesScreen()))),
+                            ),
                           ),
-                        ),
-                        const SizedBox(width: 10),
-                        Expanded(
-                          child: _buildQuickAccessCard(
-                            context,
-                            title: 'Instagram',
-                            iconAsset: 'assets/icons/instagram_icon.webp',
-                            color: const Color(0xFFB87E7E),
-                            attributes: [],
-                            customOnTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (_) => const InstagramRankingScreen(),
-                                ),
-                              );
-                            },
+                          const SizedBox(width: 10),
+                          Expanded(
+                            child: _buildQuickAccessCard(
+                              context,
+                              title: 'Instagram',
+                              iconAsset: 'assets/icons/instagram_icon.webp',
+                              color: const Color(0xFFB87E7E),
+                              attributes: [],
+                              customOnTap: () => gated(() => Navigator.push(context, MaterialPageRoute(builder: (_) => const InstagramRankingScreen()))),
+                            ),
                           ),
-                        ),
-                        const SizedBox(width: 10),
-                        Expanded(
-                          child: _buildQuickAccessCard(
-                            context,
-                            title: '7 Wonders',
-                            icon: Icons.auto_awesome,
-                            color: const Color(0xFFD4AF37),
-                            attributes: [],
-                            customOnTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (_) => const WorldWondersScreen(),
-                                ),
-                              );
-                            },
+                          const SizedBox(width: 10),
+                          Expanded(
+                            child: _buildQuickAccessCard(
+                              context,
+                              title: '7 Wonders',
+                              icon: Icons.auto_awesome,
+                              color: const Color(0xFFD4AF37),
+                              attributes: [],
+                              customOnTap: () => gated(() => Navigator.push(context, MaterialPageRoute(builder: (_) => const WorldWondersScreen()))),
+                            ),
                           ),
-                        ),
-                      ],
-                    ),
+                        ],
+                      );
+                    }),
                   ),
                 ),
 
@@ -176,169 +174,153 @@ class TopPicksMenuScreen extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 24),
                   sliver: SliverList(
                     delegate: SliverChildListDelegate([
-                      _buildCompactCard(
-                        context,
-                        landmarksProvider,
-                        title: 'Highest Buildings',
-                        icon: Icons.apartment_rounded,
-                        color: const Color(0xFFB5838D),
-                        attributes: ['Tower', 'Skyscraper'],
-                        filterBySpecificNames: [
-                          'Burj Khalifa',
-                          'Merdeka 118',
-                          'Shanghai Tower',
-                          'Abraj Al Bait',
-                          'Ping An International Finance Centre',
-                          'Lotte World Tower',
-                          'One World Trade Center',
-                          'Guangzhou CTF Finance Centre',
-                          'Tianjin CTF Finance Centre',
-                          'China Zun',
-                          'Taipei 101',
-                          'Shanghai World Financial Center',
-                          'International Commerce Centre',
-                          'Wuhan Greenland Center',
-                          'Central Park Tower',
-                          'Lakhta Center',
-                          'Landmark 81',
-                          'Chongqing International Land-Sea Center',
-                          'The Exchange 106',
-                          'Changsha IFS Tower T1',
-                        ],
-                        customOnTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (_) => const TopBuildingsScreen(),
+                      Builder(builder: (context) {
+                        void gated(VoidCallback action) {
+                          final auth = Provider.of<AuthProvider>(context, listen: false);
+                          if (auth.user == null) {
+                            showModalBottomSheet(
+                              context: context,
+                              isScrollControlled: true,
+                              backgroundColor: Colors.transparent,
+                              builder: (_) => const LoginPromptScreen(),
+                            );
+                            return;
+                          }
+                          action();
+                        }
+                        return Column(
+                          children: [
+                            _buildCompactCard(
+                              context,
+                              landmarksProvider,
+                              title: 'Highest Buildings',
+                              icon: Icons.apartment_rounded,
+                              color: const Color(0xFFB5838D),
+                              attributes: ['Tower', 'Skyscraper'],
+                              filterBySpecificNames: [
+                                'Burj Khalifa',
+                                'Merdeka 118',
+                                'Shanghai Tower',
+                                'Abraj Al Bait',
+                                'Ping An International Finance Centre',
+                                'Lotte World Tower',
+                                'One World Trade Center',
+                                'Guangzhou CTF Finance Centre',
+                                'Tianjin CTF Finance Centre',
+                                'China Zun',
+                                'Taipei 101',
+                                'Shanghai World Financial Center',
+                                'International Commerce Centre',
+                                'Wuhan Greenland Center',
+                                'Central Park Tower',
+                                'Lakhta Center',
+                                'Landmark 81',
+                                'Chongqing International Land-Sea Center',
+                                'The Exchange 106',
+                                'Changsha IFS Tower T1',
+                              ],
+                              customOnTap: () => gated(() => Navigator.push(context, MaterialPageRoute(builder: (_) => const TopBuildingsScreen()))),
                             ),
-                          );
-                        },
-                      ),
-                      const SizedBox(height: 10),
-                      _buildCompactCard(
-                        context,
-                        landmarksProvider,
-                        title: 'Top Museums',
-                        icon: Icons.museum_rounded,
-                        color: const Color(0xFF6B9B9E),
-                        attributes: ['Museum'],
-                        filterBySpecificNames: [
-                          'Louvre Museum',
-                          'Metropolitan Museum of Art',
-                          'British Museum',
-                          'Hermitage Museum',
-                          'Prado Museum',
-                          'The Museum of Modern Art',
-                          'Pergamon Museum',
-                          'Uffizi Gallery',
-                          'Musée d\'Orsay',
-                          'Rijksmuseum',
-                          'National Palace Museum',
-                          'National Gallery',
-                          'Kunsthistorisches Museum',
-                          'National Gallery of Art',
-                          'National Museum of Anthropology',
-                          'Smithsonian National Museum of Natural History',
-                          'Art Institute of Chicago',
-                          'Tate Modern',
-                          'Acropolis Museum',
-                          'Victoria and Albert Museum',
-                        ],
-                        customOnTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (_) => const TopMuseumsScreen(),
+                            const SizedBox(height: 10),
+                            _buildCompactCard(
+                              context,
+                              landmarksProvider,
+                              title: 'Top Museums',
+                              icon: Icons.museum_rounded,
+                              color: const Color(0xFF6B9B9E),
+                              attributes: ['Museum'],
+                              filterBySpecificNames: [
+                                'Louvre Museum',
+                                'Metropolitan Museum of Art',
+                                'British Museum',
+                                'Hermitage Museum',
+                                'Prado Museum',
+                                'The Museum of Modern Art',
+                                'Pergamon Museum',
+                                'Uffizi Gallery',
+                                'Musée d\'Orsay',
+                                'Rijksmuseum',
+                                'National Palace Museum',
+                                'National Gallery',
+                                'Kunsthistorisches Museum',
+                                'National Gallery of Art',
+                                'National Museum of Anthropology',
+                                'Smithsonian National Museum of Natural History',
+                                'Art Institute of Chicago',
+                                'Tate Modern',
+                                'Acropolis Museum',
+                                'Victoria and Albert Museum',
+                              ],
+                              customOnTap: () => gated(() => Navigator.push(context, MaterialPageRoute(builder: (_) => const TopMuseumsScreen()))),
                             ),
-                          );
-                        },
-                      ),
-                      const SizedBox(height: 10),
-                      _buildCompactCard(
-                        context,
-                        landmarksProvider,
-                        title: 'Top Universities',
-                        icon: Icons.school_rounded,
-                        color: const Color(0xFF7B9CAE),
-                        attributes: ['University'],
-                        useAttributeRankFilter: true,
-                        customOnTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (_) => const TopUniversitiesScreen(),
+                            const SizedBox(height: 10),
+                            _buildCompactCard(
+                              context,
+                              landmarksProvider,
+                              title: 'Top Universities',
+                              icon: Icons.school_rounded,
+                              color: const Color(0xFF7B9CAE),
+                              attributes: ['University'],
+                              useAttributeRankFilter: true,
+                              customOnTap: () => gated(() => Navigator.push(context, MaterialPageRoute(builder: (_) => const TopUniversitiesScreen()))),
                             ),
-                          );
-                        },
-                      ),
-                      const SizedBox(height: 10),
-                      _buildCompactCard(
-                        context,
-                        landmarksProvider,
-                        title: 'Best Public Squares',
-                        icon: Icons.people_rounded,
-                        color: const Color(0xFFB88080),
-                        attributes: ['Square', 'Plaza'],
-                        filterBySpecificNames: [
-                          'Times Square',
-                          'Red Square',
-                          'Tiananmen Square',
-                          'St. Mark\'s Square',
-                          'Place de la Concorde',
-                          'Plaza Mayor',
-                          'Piazza del Duomo',
-                          'St. Peter\'s Square',
-                          'Trafalgar Square',
-                          'Grand Place',
-                        ],
-                        customOnTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (_) => const TopPublicSquaresScreen(),
+                            const SizedBox(height: 10),
+                            _buildCompactCard(
+                              context,
+                              landmarksProvider,
+                              title: 'Best Public Squares',
+                              icon: Icons.people_rounded,
+                              color: const Color(0xFFB88080),
+                              attributes: ['Square', 'Plaza'],
+                              filterBySpecificNames: [
+                                'Times Square',
+                                'Red Square',
+                                'Tiananmen Square',
+                                'St. Mark\'s Square',
+                                'Place de la Concorde',
+                                'Plaza Mayor',
+                                'Piazza del Duomo',
+                                'St. Peter\'s Square',
+                                'Trafalgar Square',
+                                'Grand Place',
+                              ],
+                              customOnTap: () => gated(() => Navigator.push(context, MaterialPageRoute(builder: (_) => const TopPublicSquaresScreen()))),
                             ),
-                          );
-                        },
-                      ),
-                      const SizedBox(height: 10),
-                      _buildCompactCard(
-                        context,
-                        landmarksProvider,
-                        title: 'Tallest Statues',
-                        icon: Icons.account_balance_rounded,
-                        color: const Color(0xFF8E7BA3),
-                        attributes: ['Statue'],
-                        filterBySpecificNames: [
-                          'Statue of Unity',
-                          'Spring Temple Buddha',
-                          'Laykyun Sekkya',
-                          'Vishwas Swaroopam',
-                          'Ushiku Daibutsu',
-                          'Sendai Daikannon',
-                          'Guanyin of Nanshan',
-                          'Great Buddha of Thailand',
-                          'Dai Kannon of Kita no Miyako Park',
-                          'Mamayev Kurgan',
-                          'Awaji Kannon',
-                          'Grand Buddha at Ling Shan',
-                          'Leshan Giant Buddha',
-                          'African Renaissance Monument',
-                          'Statue of Liberty',
-                          'Ataturk Mask',
-                          'Lord Murugan Statue',
-                          'Genghis Khan Statue Complex',
-                          'Christ the Redeemer',
-                          'Adiyogi Shiva Statue',
-                        ],
-                        customOnTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (_) => const TopStatuesScreen(),
+                            const SizedBox(height: 10),
+                            _buildCompactCard(
+                              context,
+                              landmarksProvider,
+                              title: 'Tallest Statues',
+                              icon: Icons.account_balance_rounded,
+                              color: const Color(0xFF8E7BA3),
+                              attributes: ['Statue'],
+                              filterBySpecificNames: [
+                                'Statue of Unity',
+                                'Spring Temple Buddha',
+                                'Laykyun Sekkya',
+                                'Vishwas Swaroopam',
+                                'Ushiku Daibutsu',
+                                'Sendai Daikannon',
+                                'Guanyin of Nanshan',
+                                'Great Buddha of Thailand',
+                                'Dai Kannon of Kita no Miyako Park',
+                                'Mamayev Kurgan',
+                                'Awaji Kannon',
+                                'Grand Buddha at Ling Shan',
+                                'Leshan Giant Buddha',
+                                'African Renaissance Monument',
+                                'Statue of Liberty',
+                                'Ataturk Mask',
+                                'Lord Murugan Statue',
+                                'Genghis Khan Statue Complex',
+                                'Christ the Redeemer',
+                                'Adiyogi Shiva Statue',
+                              ],
+                              customOnTap: () => gated(() => Navigator.push(context, MaterialPageRoute(builder: (_) => const TopStatuesScreen()))),
                             ),
-                          );
-                        },
-                      ),
+                          ],
+                        );
+                      }),
                     ]),
                   ),
                 ),
@@ -365,147 +347,138 @@ class TopPicksMenuScreen extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 24),
                   sliver: SliverList(
                     delegate: SliverChildListDelegate([
-                      _buildCompactCard(
-                        context,
-                        landmarksProvider,
-                        title: 'Highest Mountains',
-                        icon: Icons.terrain_rounded,
-                        color: const Color(0xFF4A5662),
-                        attributes: ['Mountain'],
-                        filterBySpecificNames: [
-                          'Mount Everest',
-                          'K2',
-                          'Kangchenjunga',
-                          'Lhotse',
-                          'Makalu',
-                          'Cho Oyu',
-                          'Dhaulagiri',
-                          'Manaslu',
-                          'Nanga Parbat',
-                          'Annapurna'
-                        ],
-                        customOnTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (_) => const TopMountainsScreen(),
+                      Builder(builder: (context) {
+                        void gated(VoidCallback action) {
+                          final auth = Provider.of<AuthProvider>(context, listen: false);
+                          if (auth.user == null) {
+                            showModalBottomSheet(
+                              context: context,
+                              isScrollControlled: true,
+                              backgroundColor: Colors.transparent,
+                              builder: (_) => const LoginPromptScreen(),
+                            );
+                            return;
+                          }
+                          action();
+                        }
+                        return Column(
+                          children: [
+                            _buildCompactCard(
+                              context,
+                              landmarksProvider,
+                              title: 'Highest Mountains',
+                              icon: Icons.terrain_rounded,
+                              color: const Color(0xFF4A5662),
+                              attributes: ['Mountain'],
+                              filterBySpecificNames: [
+                                'Mount Everest',
+                                'K2',
+                                'Kangchenjunga',
+                                'Lhotse',
+                                'Makalu',
+                                'Cho Oyu',
+                                'Dhaulagiri',
+                                'Manaslu',
+                                'Nanga Parbat',
+                                'Annapurna'
+                              ],
+                              customOnTap: () => gated(() => Navigator.push(context, MaterialPageRoute(builder: (_) => const TopMountainsScreen()))),
                             ),
-                          );
-                        },
-                      ),
-                      const SizedBox(height: 10),
-                      _buildCompactCard(
-                        context,
-                        landmarksProvider,
-                        title: 'Longest Rivers',
-                        icon: Icons.waves_rounded,
-                        color: const Color(0xFF5B8FA3),
-                        attributes: ['River'],
-                        filterBySpecificNames: [
-                          'Nile River',
-                          'Amazon River',
-                          'Yangtze River',
-                          'Mississippi River',
-                          'Yenisei River',
-                          'Yellow River',
-                          'Ob River',
-                          'Parana River',
-                          'Congo River',
-                          'Amur River',
-                          'Lena River',
-                          'Mekong River',
-                          'Mackenzie River',
-                          'Niger River',
-                          'Murray River',
-                          'Volga River'
-                        ],
-                        customOnTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (_) => const TopRiversScreen(),
+                            const SizedBox(height: 10),
+                            _buildCompactCard(
+                              context,
+                              landmarksProvider,
+                              title: 'Longest Rivers',
+                              icon: Icons.waves_rounded,
+                              color: const Color(0xFF5B8FA3),
+                              attributes: ['River'],
+                              filterBySpecificNames: [
+                                'Nile River',
+                                'Amazon River',
+                                'Yangtze River',
+                                'Mississippi River',
+                                'Yenisei River',
+                                'Yellow River',
+                                'Ob River',
+                                'Parana River',
+                                'Congo River',
+                                'Amur River',
+                                'Lena River',
+                                'Mekong River',
+                                'Mackenzie River',
+                                'Niger River',
+                                'Murray River',
+                                'Volga River'
+                              ],
+                              customOnTap: () => gated(() => Navigator.push(context, MaterialPageRoute(builder: (_) => const TopRiversScreen()))),
                             ),
-                          );
-                        },
-                      ),
-                      const SizedBox(height: 10),
-                      _buildCompactCard(
-                        context,
-                        landmarksProvider,
-                        title: 'Largest Lakes',
-                        icon: Icons.water_rounded,
-                        color: const Color(0xFF6B9DB8),
-                        attributes: ['Lake'],
-                        filterBySpecificNames: [
-                          'Caspian Sea',
-                          'Lake Superior',
-                          'Lake Victoria',
-                          'Lake Huron',
-                          'Lake Michigan',
-                          'Lake Tanganyika',
-                          'Lake Baikal',
-                          'Great Bear Lake',
-                          'Lake Malawi',
-                          'Great Slave Lake',
-                          'Lake Erie',
-                          'Lake Winnipeg',
-                          'Lake Ontario',
-                          'Lake Ladoga',
-                          'Lake Balkhash',
-                          'Lake Vostok',
-                          'Lake Onega',
-                          'Lake Titicaca',
-                          'Lake Nicaragua',
-                          'Lake Athabasca',
-                        ],
-                        customOnTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (_) => const TopLakesScreen(),
+                            const SizedBox(height: 10),
+                            _buildCompactCard(
+                              context,
+                              landmarksProvider,
+                              title: 'Largest Lakes',
+                              icon: Icons.water_rounded,
+                              color: const Color(0xFF6B9DB8),
+                              attributes: ['Lake'],
+                              filterBySpecificNames: [
+                                'Caspian Sea',
+                                'Lake Superior',
+                                'Lake Victoria',
+                                'Lake Huron',
+                                'Lake Michigan',
+                                'Lake Tanganyika',
+                                'Lake Baikal',
+                                'Great Bear Lake',
+                                'Lake Malawi',
+                                'Great Slave Lake',
+                                'Lake Erie',
+                                'Lake Winnipeg',
+                                'Lake Ontario',
+                                'Lake Ladoga',
+                                'Lake Balkhash',
+                                'Lake Vostok',
+                                'Lake Onega',
+                                'Lake Titicaca',
+                                'Lake Nicaragua',
+                                'Lake Athabasca',
+                              ],
+                              customOnTap: () => gated(() => Navigator.push(context, MaterialPageRoute(builder: (_) => const TopLakesScreen()))),
                             ),
-                          );
-                        },
-                      ),
-                      const SizedBox(height: 10),
-                      _buildCompactCard(
-                        context,
-                        landmarksProvider,
-                        title: 'Highest Falls',
-                        icon: Icons.water_drop_rounded,
-                        color: const Color(0xFF6B9AB8),
-                        attributes: ['Waterfall'],
-                        filterBySpecificNames: [
-                          'Angel Falls',
-                          'Tugela Falls',
-                          'Tres Hermanas Falls',
-                          'Olo\'upena Falls',
-                          'Yumbilla Falls',
-                          'Vinnufossen',
-                          'Skorga',
-                          'Pu\'uka\'oku Falls',
-                          'James Bruce Falls',
-                          'Browne Falls',
-                          'Strupenfossen',
-                          'Ramnefjellsfossen',
-                          'Waihilau Falls',
-                          'Colonial Creek Falls',
-                          'Mongefossen',
-                          'Gocta Falls',
-                          'Mutarazi Falls',
-                          'Kjelfossen',
-                          'Johannesburg Falls',
-                          'Yosemite Falls',
-                        ],
-                        customOnTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (_) => const TopFallsScreen(),
+                            const SizedBox(height: 10),
+                            _buildCompactCard(
+                              context,
+                              landmarksProvider,
+                              title: 'Highest Falls',
+                              icon: Icons.water_drop_rounded,
+                              color: const Color(0xFF6B9AB8),
+                              attributes: ['Waterfall'],
+                              filterBySpecificNames: [
+                                'Angel Falls',
+                                'Tugela Falls',
+                                'Tres Hermanas Falls',
+                                'Olo\'upena Falls',
+                                'Yumbilla Falls',
+                                'Vinnufossen',
+                                'Skorga',
+                                'Pu\'uka\'oku Falls',
+                                'James Bruce Falls',
+                                'Browne Falls',
+                                'Strupenfossen',
+                                'Ramnefjellsfossen',
+                                'Waihilau Falls',
+                                'Colonial Creek Falls',
+                                'Mongefossen',
+                                'Gocta Falls',
+                                'Mutarazi Falls',
+                                'Kjelfossen',
+                                'Johannesburg Falls',
+                                'Yosemite Falls',
+                              ],
+                              customOnTap: () => gated(() => Navigator.push(context, MaterialPageRoute(builder: (_) => const TopFallsScreen()))),
                             ),
-                          );
-                        },
-                      ),
+                          ],
+                        );
+                      }),
                     ]),
                   ),
                 ),
@@ -559,13 +532,27 @@ class TopPicksMenuScreen extends StatelessWidget {
                       Container(
                         padding: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
-                          color: Colors.white.withOpacity(0.15),
+                          color: Colors.white,
                           borderRadius: BorderRadius.circular(12),
                         ),
-                        child: const Icon(
-                          Icons.workspace_premium_rounded,
-                          color: Colors.white,
-                          size: 24,
+                        child: ShaderMask(
+                          shaderCallback: (bounds) => const LinearGradient(
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                            colors: [
+                              Color(0xFFEC4899),
+                              Color(0xFFF97316),
+                              Color(0xFFF59E0B),
+                              Color(0xFF22C55E),
+                              Color(0xFF0EA5E9),
+                              Color(0xFF8B5CF6),
+                            ],
+                          ).createShader(bounds),
+                          child: const Icon(
+                            Icons.star_rounded,
+                            color: Colors.white,
+                            size: 24,
+                          ),
                         ),
                       ),
                       const SizedBox(width: 12),

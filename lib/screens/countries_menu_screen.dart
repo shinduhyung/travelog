@@ -27,13 +27,15 @@ import 'package:jidoapp/screens/military_stats_screen.dart';
 import 'package:jidoapp/screens/geopolitics_stats_screen.dart';
 import 'package:jidoapp/screens/overview_stats_screen.dart';
 import 'package:jidoapp/screens/settings_screen.dart';
+import 'package:jidoapp/providers/auth_provider.dart';
+import 'package:jidoapp/screens/login_prompt_screen.dart';
 
 // ⭐️ 분리된 공유 기능 파일 임포트
 import 'package:jidoapp/screens/countries_share.dart';
 import 'package:screenshot/screenshot.dart'; // 지도 캡처용
 
 // [추가] 로딩 로고 위젯 임포트
-import 'package:jidoapp/widgets/plane_loading_logo.dart';
+
 
 // [추가] 홈 위젯 서비스 임포트
 import 'package:jidoapp/services/home_widget_service.dart';
@@ -352,8 +354,8 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
               builder: (context, provider, child) {
                 // [수정] Provider 로딩 상태일 때 -> 꽉 찬 비디오 로딩 화면 출력 (Cities와 동일하게 변경)
                 if (provider.isLoading) {
-                  return const SizedBox.expand(
-                    child: PlaneLoadingLogo(),
+                  return const Center(
+                    child: CircularProgressIndicator(),
                   );
                 }
 
@@ -753,12 +755,30 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
                                       ),
                                       child: IconButton(
                                         icon: const Icon(Icons.arrow_forward_rounded, color: Colors.white, size: 20),
-                                        onPressed: () => Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                            builder: (_) => statisticsItems[_selectedStatIndex]['screen'],
-                                          ),
-                                        ),
+                                        onPressed: () {
+                                          // index 0(CountryDex), index 1(General) 은 로그인 없이 접근 가능
+                                          final isFree = _selectedStatIndex <= 1;
+
+                                          if (!isFree) {
+                                            final authProvider = Provider.of<AuthProvider>(context, listen: false);
+                                            if (authProvider.user == null) {
+                                              showModalBottomSheet(
+                                                context: context,
+                                                isScrollControlled: true,
+                                                backgroundColor: Colors.transparent,
+                                                builder: (_) => const LoginPromptScreen(),
+                                              );
+                                              return;
+                                            }
+                                          }
+
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (_) => statisticsItems[_selectedStatIndex]['screen'],
+                                            ),
+                                          );
+                                        },
                                       ),
                                     ),
                                   ],

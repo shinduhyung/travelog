@@ -43,7 +43,7 @@ class FlightsShare {
       // 3. 공유 실행
       await Share.shareXFiles(
         filesToShare,
-        text: 'Check out my flight map! I have flown ${stats['distance']} via Travellog.',
+        text: 'Check out my flight map! I have flown ${stats['distance']} via Travelog.',
       );
     } catch (e) {
       debugPrint("Flight Share Error: $e");
@@ -218,7 +218,7 @@ class FlightsShare {
                   ),
                   const SizedBox(width: 12),
                   const Text(
-                    'Travellog',
+                    'Travelog',
                     style: TextStyle(
                       fontSize: 32,
                       fontWeight: FontWeight.w900,

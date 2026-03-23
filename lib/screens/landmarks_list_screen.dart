@@ -14,6 +14,7 @@ import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/providers/landmarks_provider.dart';
 import 'package:jidoapp/screens/landmark_map_screen.dart';
 import 'package:jidoapp/widgets/landmark_info_card.dart';
+import 'package:jidoapp/widgets/landmark_visit_editor_card.dart'; // 공통 위젯 import 추가
 import 'package:intl/intl.dart';
 
 enum LandmarkSortOption { nameAsc, country, metricDesc }
@@ -263,7 +264,7 @@ class _LandmarksListScreenState extends State<LandmarksListScreen> {
     if (site.city.contains('Hong Kong') || site.countriesIsoA3.contains('HKG')) return 'HK';
     if (site.countriesIsoA3.contains('GRL')) return 'GL';
     if (site.countriesIsoA3.contains('PYF')) return 'PF';
-    if (site.countriesIsoA3.contains('PRI')) return 'PR';
+    if (site.countriesIsoA3.contains('PRI')) return 'BM';
     if (site.countriesIsoA3.contains('BMU')) return 'BM';
     if (site.countriesIsoA3.contains('GIB')) return 'GI';
     if (site.countriesIsoA3.contains('PCN')) return 'PN';
@@ -688,7 +689,7 @@ class _LandmarksListScreenState extends State<LandmarksListScreen> {
 
                           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [Text('History (${freshLandmark.visitDates.length} entries)', style: Theme.of(sheetContext).textTheme.titleSmall), OutlinedButton.icon(icon: const Icon(Icons.add), label: const Text('Add Visit'), onPressed: () => provider.addVisitDate(freshLandmark.name))]),
                           const SizedBox(height: 8),
-                          if (freshLandmark.visitDates.isNotEmpty) ...freshLandmark.visitDates.asMap().entries.map((entry) => _LandmarkVisitEditorCard(
+                          if (freshLandmark.visitDates.isNotEmpty) ...freshLandmark.visitDates.asMap().entries.map((entry) => LandmarkVisitEditorCard(
                             key: ValueKey('${freshLandmark.name}_${entry.key}'),
                             landmarkName: freshLandmark.name,
                             visitDate: entry.value,
@@ -1287,197 +1288,6 @@ class _LandmarksListScreenState extends State<LandmarksListScreen> {
             ),
           ),
         ),
-      ),
-    );
-  }
-}
-
-class _LandmarkVisitEditorCard extends StatefulWidget {
-  final String landmarkName;
-  final VisitDate visitDate;
-  final int index;
-  final VoidCallback onDelete;
-  final List<LandmarkSubLocation>? availableLocations;
-
-  const _LandmarkVisitEditorCard({
-    super.key,
-    required this.landmarkName,
-    required this.visitDate,
-    required this.index,
-    required this.onDelete,
-    this.availableLocations,
-  });
-
-  @override
-  State<_LandmarkVisitEditorCard> createState() => _LandmarkVisitEditorCardState();
-}
-
-class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
-  late final TextEditingController _titleController;
-  late final TextEditingController _memoController;
-  late List<String> _currentPhotos;
-  int? _year, _month, _day;
-
-  final ExpansionTileController _expansionTileController = ExpansionTileController();
-
-  @override
-  void initState() {
-    super.initState();
-    _titleController = TextEditingController(text: widget.visitDate.title);
-    _memoController = TextEditingController(text: widget.visitDate.memo);
-    _currentPhotos = List.from(widget.visitDate.photos);
-    _year = widget.visitDate.year;
-    _month = widget.visitDate.month;
-    _day = widget.visitDate.day;
-  }
-
-  void _pickImage(ImageSource source) async {
-    final picker = ImagePicker();
-    final pickedFile = await picker.pickImage(source: source);
-    if (pickedFile != null && mounted) {
-      final newPhotos = List<String>.from(_currentPhotos)..add(pickedFile.path);
-      setState(() => _currentPhotos = newPhotos);
-      if(mounted){
-        context.read<LandmarksProvider>().updateLandmarkVisit(
-            widget.landmarkName,
-            widget.index,
-            photos: newPhotos
-        );
-      }
-    }
-  }
-
-  void _toggleLocationInVisit(String locName, bool isSelected) {
-    final provider = context.read<LandmarksProvider>();
-    List<String> currentDetails = List.from(widget.visitDate.visitedDetails);
-
-    if (isSelected) {
-      if (!currentDetails.contains(locName)) {
-        currentDetails.add(locName);
-        if (!provider.isSubLocationVisited(widget.landmarkName, locName)) {
-          provider.toggleSubLocation(widget.landmarkName, locName);
-        }
-      }
-    } else {
-      currentDetails.remove(locName);
-    }
-
-    provider.updateLandmarkVisit(
-        widget.landmarkName,
-        widget.index,
-        visitedDetails: currentDetails
-    );
-
-    setState(() {});
-  }
-
-  Widget _buildPhotoPreview(String photoPath, int index) {
-    return Container(
-        width: 60,
-        height: 60,
-        margin: const EdgeInsets.only(right: 8),
-        color: Colors.grey[300],
-        child: Image.file(File(photoPath), fit: BoxFit.cover));
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    final provider = context.read<LandmarksProvider>();
-    final themeColor = Theme.of(context).primaryColor;
-
-    return Card(
-      elevation: 1,
-      margin: const EdgeInsets.symmetric(vertical: 4),
-      child: ExpansionTile(
-        controller: _expansionTileController,
-        title: Text(widget.visitDate.title.isNotEmpty ? widget.visitDate.title : 'Visit Record'),
-        subtitle: Text('Date: $_year-$_month-$_day'),
-        trailing: IconButton(
-          icon: const Icon(Icons.delete, color: Colors.red, size: 20),
-          onPressed: () {
-            showDialog(
-              context: context,
-              builder: (context) => AlertDialog(
-                title: const Text('Delete Visit Record'),
-                content: const Text('Are you sure you want to delete this visit record?'),
-                actions: [
-                  TextButton(
-                    onPressed: () => Navigator.pop(context),
-                    child: const Text('Cancel'),
-                  ),
-                  TextButton(
-                    onPressed: () {
-                      Navigator.pop(context);
-                      widget.onDelete();
-                    },
-                    child: const Text('Delete', style: TextStyle(color: Colors.red)),
-                  ),
-                ],
-              ),
-            );
-          },
-        ),
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(12.0),
-            child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  TextField(
-                      controller: _titleController,
-                      decoration: const InputDecoration(labelText: 'Title', isDense: true),
-                      onEditingComplete: () => provider.updateLandmarkVisit(
-                          widget.landmarkName, widget.index,
-                          title: _titleController.text)),
-                  const SizedBox(height: 8),
-                  TextField(
-                      controller: _memoController,
-                      decoration: const InputDecoration(labelText: 'Memo', isDense: true),
-                      onEditingComplete: () => provider.updateLandmarkVisit(
-                          widget.landmarkName, widget.index,
-                          memo: _memoController.text)),
-                  const SizedBox(height: 12),
-
-                  // Sub-locations FilterChips
-                  if (widget.availableLocations != null && widget.availableLocations!.length > 1) ...[
-                    const Text("Locations included in this visit:",
-                        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Colors.grey)),
-                    const SizedBox(height: 4),
-                    Wrap(
-                      spacing: 8.0,
-                      runSpacing: 4.0,
-                      children: widget.availableLocations!.map((loc) {
-                        final isChecked = widget.visitDate.visitedDetails.contains(loc.name);
-                        return FilterChip(
-                          label: Text(loc.name, style: const TextStyle(fontSize: 11)),
-                          selected: isChecked,
-                          selectedColor: themeColor.withOpacity(0.2),
-                          checkmarkColor: themeColor,
-                          onSelected: (bool selected) {
-                            _toggleLocationInVisit(loc.name, selected);
-                          },
-                        );
-                      }).toList(),
-                    ),
-                    const SizedBox(height: 16),
-                  ],
-
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(children: [
-                      IconButton(
-                          icon: const Icon(Icons.camera_alt),
-                          onPressed: () => _pickImage(ImageSource.gallery)),
-                      ..._currentPhotos
-                          .asMap()
-                          .entries
-                          .map((e) => _buildPhotoPreview(e.value, e.key))
-                          .toList(),
-                    ]),
-                  ),
-                ]),
-          )
-        ],
       ),
     );
   }

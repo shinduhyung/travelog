@@ -9,6 +9,7 @@ import 'package:jidoapp/models/landmarks_model.dart';
 import 'package:jidoapp/providers/landmarks_provider.dart';
 import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/widgets/landmark_info_card.dart';
+import 'package:jidoapp/widgets/landmark_visit_editor_card.dart'; // 공통 위젯 import
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:jidoapp/models/visit_date_model.dart';
 import 'dart:io';
@@ -24,11 +25,11 @@ class TopPublicSquaresScreen extends StatelessWidget {
     {'rank': 3, 'name': 'Tiananmen Square', 'iso': 'CN'},
     {'rank': 4, 'name': 'St. Mark\'s Square', 'iso': 'IT'},
     {'rank': 5, 'name': 'Place de la Concorde', 'iso': 'FR'},
-    {'rank': 6, 'name': 'Plaza Mayor', 'iso': 'ES'},
-    {'rank': 7, 'name': 'Piazza del Duomo', 'iso': 'IT'},
-    {'rank': 8, 'name': 'St. Peter\'s Square', 'iso': 'VA'},
-    {'rank': 9, 'name': 'Trafalgar Square', 'iso': 'GB'},
-    {'rank': 10, 'name': 'Grand Place', 'iso': 'BE'},
+    {'rank': 6, 'name': 'Trafalgar Square', 'iso': 'GB'},
+    {'rank': 7, 'name': 'Grand Place', 'iso': 'BE'},
+    {'rank': 8, 'name': 'Plaza de Mayo', 'iso': 'AR'},
+    {'rank': 9, 'name': 'Zocalo', 'iso': 'MX'},
+    {'rank': 10, 'name': 'Djemaa el-Fna', 'iso': 'MA'},
   ];
 
   @override
@@ -42,21 +43,59 @@ class TopPublicSquaresScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Header Text Only (No Back Button)
-            const Padding(
-              padding: EdgeInsets.fromLTRB(20, 30, 20, 10),
-              child: Text(
-                'Top 10 Public Squares',
-                style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.w900,
-                  color: Color(0xFF111827),
-                  letterSpacing: -0.5,
-                ),
+            Container(
+              padding: const EdgeInsets.fromLTRB(24, 20, 24, 16),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.03),
+                    blurRadius: 10,
+                    offset: const Offset(0, 2),
+                  ),
+                ],
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.all(8),
+                        decoration: BoxDecoration(
+                          color: const Color(0xFFF5F5F5),
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: const Icon(
+                          Icons.grid_view_rounded,
+                          color: Color(0xFFf093fb),
+                          size: 24,
+                        ),
+                      ),
+                      const SizedBox(width: 12),
+                      const Text(
+                        'World Famous Squares',
+                        style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xFF111827),
+                          letterSpacing: -0.5,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 8),
+                  Text(
+                    'Iconic urban spaces and historical meeting points',
+                    style: TextStyle(
+                      fontSize: 14,
+                      color: Colors.grey[600],
+                      letterSpacing: 0.2,
+                    ),
+                  ),
+                ],
               ),
             ),
-
-            // List
             Expanded(
               child: ListView.builder(
                 padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
@@ -69,24 +108,15 @@ class TopPublicSquaresScreen extends StatelessWidget {
                   final rank = data['rank'] as int;
 
                   final isVisited = landmarksProvider.visitedLandmarks.contains(name);
-
-                  // Find landmark in DB for details
                   final landmark = allLandmarks.firstWhereOrNull((l) => l.name == name);
-
-                  // Determine subtitle (City or 'Square')
-                  String subtitle = 'Square';
-                  if (landmark != null && landmark.city != 'Unknown' && landmark.city != 'Unknown City') {
-                    subtitle = landmark.city;
-                  }
 
                   return GestureDetector(
                     onTap: () {
                       if (landmark != null) {
-                        // Using a brownish/reddish color for Squares theme
-                        _showLandmarkDetailsModal(context, landmark, const Color(0xFFB88080));
+                        _showLandmarkDetailsModal(context, landmark, const Color(0xFFf093fb));
                       } else {
                         ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(content: Text("$name details not found in database"))
+                          SnackBar(content: Text("$name details not found in database")),
                         );
                       }
                     },
@@ -109,27 +139,19 @@ class TopPublicSquaresScreen extends StatelessWidget {
                       ),
                       child: Row(
                         children: [
-                          // Rank
                           Container(
-                            width: 40,
-                            height: 40,
-                            decoration: BoxDecoration(
-                              color: Colors.grey[100],
-                              borderRadius: BorderRadius.circular(10),
-                            ),
+                            width: 32,
                             alignment: Alignment.center,
                             child: Text(
                               '#$rank',
                               style: TextStyle(
                                 fontSize: 14,
-                                fontWeight: FontWeight.w800,
-                                color: Colors.grey[700],
+                                fontWeight: FontWeight.bold,
+                                color: rank <= 3 ? const Color(0xFFf093fb) : Colors.grey[400],
                               ),
                             ),
                           ),
-                          const SizedBox(width: 16),
-
-                          // Flag
+                          const SizedBox(width: 8),
                           ClipRRect(
                             borderRadius: BorderRadius.circular(4),
                             child: SizedBox(
@@ -139,52 +161,31 @@ class TopPublicSquaresScreen extends StatelessWidget {
                             ),
                           ),
                           const SizedBox(width: 16),
-
-                          // Name & Subtitle
                           Expanded(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  name,
-                                  style: const TextStyle(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.bold,
-                                    color: Color(0xFF111827),
-                                  ),
-                                ),
-                                const SizedBox(height: 4),
-                                Text(
-                                  subtitle,
-                                  style: TextStyle(
-                                    fontSize: 13,
-                                    fontWeight: FontWeight.w600,
-                                    color: const Color(0xFFB88080).withOpacity(0.8),
-                                  ),
-                                ),
-                              ],
+                            child: Text(
+                              name,
+                              style: const TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                                color: Color(0xFF111827),
+                              ),
+                              overflow: TextOverflow.ellipsis,
                             ),
                           ),
-
-                          // Visited Icon
                           if (isVisited)
                             Container(
-                              margin: const EdgeInsets.only(left: 12),
-                              padding: const EdgeInsets.all(4),
-                              decoration: const BoxDecoration(
-                                color: Colors.teal,
-                                shape: BoxShape.circle,
-                              ),
-                              child: const Icon(Icons.check, color: Colors.white, size: 16),
-                            )
-                          else
-                            Container(
-                              margin: const EdgeInsets.only(left: 12),
-                              width: 24,
-                              height: 24,
+                              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                               decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                border: Border.all(color: Colors.grey[300]!),
+                                color: Colors.teal.withOpacity(0.15),
+                                borderRadius: BorderRadius.circular(12),
+                              ),
+                              child: const Text(
+                                'Visited',
+                                style: TextStyle(
+                                  fontSize: 11,
+                                  color: Colors.teal,
+                                  fontWeight: FontWeight.w600,
+                                ),
                               ),
                             ),
                         ],
@@ -200,8 +201,6 @@ class TopPublicSquaresScreen extends StatelessWidget {
     );
   }
 
-  // --- Modal Logic (Identical to TopBuildingsScreen/TopMuseumsScreen) ---
-
   void _showLandmarkDetailsModal(BuildContext context, Landmark landmark, Color fallbackThemeColor) {
     showModalBottomSheet(
       context: context,
@@ -214,9 +213,6 @@ class TopPublicSquaresScreen extends StatelessWidget {
         final isVisited = provider.visitedLandmarks.contains(freshLandmark.name);
         final isWishlisted = provider.wishlistedLandmarks.contains(freshLandmark.name);
         final countryNames = provider.getCountryNames(freshLandmark.countriesIsoA3);
-
-        final visitedSubCount = provider.getVisitedSubLocationCount(freshLandmark.name);
-        final totalSubCount = freshLandmark.locations?.length ?? 0;
 
         String locationDisplay = countryNames;
         if (freshLandmark.city != 'Unknown' && freshLandmark.city != 'Unknown City') {
@@ -258,8 +254,8 @@ class TopPublicSquaresScreen extends StatelessWidget {
                             child: Text('Cancel', style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600))),
                         ElevatedButton(
                             onPressed: () => Navigator.pop(sheetContext),
-                            child: Text('Done', style: TextStyle(fontWeight: FontWeight.w600, color: themeColor)),
-                            style: ElevatedButton.styleFrom(backgroundColor: headerTextColor)),
+                            style: ElevatedButton.styleFrom(backgroundColor: headerTextColor),
+                            child: Text('Done', style: TextStyle(fontWeight: FontWeight.w600, color: themeColor))),
                       ],
                     ),
                     const SizedBox(height: 12),
@@ -269,7 +265,7 @@ class TopPublicSquaresScreen extends StatelessWidget {
                             child: Text(freshLandmark.name,
                                 style: Theme.of(sheetContext).textTheme.titleLarge?.copyWith(
                                     fontWeight: FontWeight.bold, fontSize: 26, color: headerTextColor))),
-                        if (isVisited || visitedSubCount > 0) Icon(Icons.check_circle, color: headerTextColor, size: 24),
+                        if (isVisited) Icon(Icons.check_circle, color: headerTextColor, size: 24),
                       ],
                     ),
                     const SizedBox(height: 6),
@@ -298,36 +294,9 @@ class TopPublicSquaresScreen extends StatelessWidget {
                           ],
                         ),
                         const Divider(height: 20),
-                        if (totalSubCount > 1) ...[
-                          Text("Components / Locations",
-                              style: Theme.of(sheetContext).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
-                          const SizedBox(height: 4),
-                          Container(
-                            decoration: BoxDecoration(
-                              border: Border.all(color: Colors.grey.shade300),
-                              borderRadius: BorderRadius.circular(8),
-                            ),
-                            child: Column(
-                              children: freshLandmark.locations!.map((loc) {
-                                final isLocVisited = provider.isSubLocationVisited(freshLandmark.name, loc.name);
-                                return CheckboxListTile(
-                                  title: Text(loc.name, style: const TextStyle(fontSize: 14)),
-                                  value: isLocVisited,
-                                  activeColor: themeColor,
-                                  dense: true,
-                                  controlAffinity: ListTileControlAffinity.leading,
-                                  onChanged: (val) {
-                                    provider.toggleSubLocation(freshLandmark.name, loc.name);
-                                  },
-                                );
-                              }).toList(),
-                            ),
-                          ),
-                          const Divider(height: 24),
-                        ],
                         Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [Text('History (${freshLandmark.visitDates.length} entries)', style: Theme.of(sheetContext).textTheme.titleSmall), OutlinedButton.icon(icon: const Icon(Icons.add), label: const Text('Add Visit'), onPressed: () => provider.addVisitDate(freshLandmark.name))]),
                         const SizedBox(height: 8),
-                        if (freshLandmark.visitDates.isNotEmpty) ...freshLandmark.visitDates.asMap().entries.map((entry) => _LandmarkVisitEditorCard(
+                        if (freshLandmark.visitDates.isNotEmpty) ...freshLandmark.visitDates.asMap().entries.map((entry) => LandmarkVisitEditorCard(
                           key: ValueKey('${freshLandmark.name}_${entry.key}'),
                           landmarkName: freshLandmark.name,
                           visitDate: entry.value,
@@ -347,93 +316,6 @@ class TopPublicSquaresScreen extends StatelessWidget {
           ),
         );
       },
-    ).then((_) {});
-  }
-}
-
-class _LandmarkVisitEditorCard extends StatefulWidget {
-  final String landmarkName;
-  final VisitDate visitDate;
-  final int index;
-  final VoidCallback onDelete;
-  final List<LandmarkSubLocation>? availableLocations;
-
-  const _LandmarkVisitEditorCard({
-    super.key,
-    required this.landmarkName,
-    required this.visitDate,
-    required this.index,
-    required this.onDelete,
-    this.availableLocations,
-  });
-
-  @override
-  State<_LandmarkVisitEditorCard> createState() => _LandmarkVisitEditorCardState();
-}
-
-class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
-  late final TextEditingController _titleController;
-  late final TextEditingController _memoController;
-  late List<String> _currentPhotos;
-  int? _year, _month, _day;
-  final ExpansionTileController _expansionTileController = ExpansionTileController();
-
-  @override
-  void initState() {
-    super.initState();
-    _titleController = TextEditingController(text: widget.visitDate.title);
-    _memoController = TextEditingController(text: widget.visitDate.memo);
-    _currentPhotos = List.from(widget.visitDate.photos);
-    _year = widget.visitDate.year;
-    _month = widget.visitDate.month;
-    _day = widget.visitDate.day;
-  }
-
-  void _pickImage(ImageSource source) async {
-    final picker = ImagePicker();
-    final pickedFile = await picker.pickImage(source: source);
-    if (pickedFile != null && mounted) {
-      final newPhotos = List<String>.from(_currentPhotos)..add(pickedFile.path);
-      setState(() => _currentPhotos = newPhotos);
-      if(mounted){
-        context.read<LandmarksProvider>().updateLandmarkVisit(
-            widget.landmarkName, widget.index, photos: newPhotos
-        );
-      }
-    }
-  }
-
-  Widget _buildPhotoPreview(String photoPath, int index) {
-    return Container(
-        width: 60, height: 60, margin: const EdgeInsets.only(right: 8), color: Colors.grey[300],
-        child: Image.file(File(photoPath), fit: BoxFit.cover));
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    final provider = context.read<LandmarksProvider>();
-    return Card(
-      elevation: 1, margin: const EdgeInsets.symmetric(vertical: 4),
-      child: ExpansionTile(
-        controller: _expansionTileController,
-        title: Text(widget.visitDate.title.isNotEmpty ? widget.visitDate.title : 'Visit Record'),
-        subtitle: Text('Date: $_year-$_month-$_day'),
-        trailing: IconButton(icon: const Icon(Icons.delete, color: Colors.red, size: 20), onPressed: widget.onDelete),
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(12.0),
-            child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  TextField(controller: _titleController, decoration: const InputDecoration(labelText: 'Title', isDense: true), onEditingComplete: () => provider.updateLandmarkVisit(widget.landmarkName, widget.index, title: _titleController.text)),
-                  const SizedBox(height: 8),
-                  TextField(controller: _memoController, decoration: const InputDecoration(labelText: 'Memo', isDense: true), onEditingComplete: () => provider.updateLandmarkVisit(widget.landmarkName, widget.index, memo: _memoController.text)),
-                  const SizedBox(height: 12),
-                  SingleChildScrollView(scrollDirection: Axis.horizontal, child: Row(children: [IconButton(icon: const Icon(Icons.camera_alt), onPressed: () => _pickImage(ImageSource.gallery)), ..._currentPhotos.asMap().entries.map((e) => _buildPhotoPreview(e.value, e.key)).toList()])),
-                ]),
-          )
-        ],
-      ),
     );
   }
 }

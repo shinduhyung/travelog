@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:jidoapp/providers/auth_provider.dart';
 import 'package:jidoapp/screens/profile_screen.dart';
+import 'package:jidoapp/screens/login_prompt_screen.dart';
 import 'package:jidoapp/providers/badge_provider.dart';
 import 'package:jidoapp/screens/badges_screen.dart';
 import 'package:jidoapp/screens/calendar_screen.dart';
@@ -13,6 +14,13 @@ import 'package:jidoapp/screens/trip_log_list_screen.dart';
 import 'package:jidoapp/screens/recommendations_screen.dart';
 import 'package:jidoapp/screens/favorites_screen.dart';
 import 'package:jidoapp/screens/traveler_type_selector_screen.dart';
+// ⭐️ [추가] 통계용 Provider & Screen imports
+import 'package:jidoapp/providers/country_provider.dart';
+import 'package:jidoapp/providers/city_provider.dart';
+import 'package:jidoapp/providers/landmarks_provider.dart';
+import 'package:jidoapp/screens/countries_map_screen.dart';
+import 'package:jidoapp/screens/cities_screen.dart';
+import 'package:jidoapp/screens/top_landmarks_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -289,10 +297,22 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
               child: Column(
                 children: [
                   GestureDetector(
-                    onTap: () => Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (_) => const ProfileScreen())),
+                    onTap: () {
+                      if (user == null) {
+                        showModalBottomSheet(
+                          context: context,
+                          isScrollControlled: true,
+                          backgroundColor: Colors.transparent,
+                          builder: (_) => const LoginPromptScreen(),
+                        );
+                      } else {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (_) => const ProfileScreen()),
+                        );
+                      }
+                    },
                     child: Container(
                       color: Colors.transparent,
                       child: Row(
@@ -478,6 +498,12 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                       ),
                     ),
                   ),
+
+                  // ⭐️ [추가] 구분선 + 3개 통계 카드
+                  const SizedBox(height: 20),
+                  Divider(color: Colors.grey.shade100, height: 1),
+                  const SizedBox(height: 16),
+                  _buildTravelStatsSection(context),
                 ],
               ),
             );
@@ -487,7 +513,306 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
     );
   }
 
+  // ⭐️ [신규] Countries / Cities / Top Picks 통계 3행
+  Widget _buildTravelStatsSection(BuildContext context) {
+    // Countries 테마 = 앱 primaryColor (mint/teal)
+    final countriesColor = Theme.of(context).primaryColor;
+    // Cities 테마 = amber (cities_menu_screen과 동일)
+    const citiesColor = Colors.amber;
+
+    return Consumer3<CountryProvider, CityProvider, LandmarksProvider>(
+      builder: (context, countryProvider, cityProvider, landmarksProvider, _) {
+        // --- Countries ---
+        final visitedCountryCount = countryProvider.visitedCountries.length;
+        final totalCountryCount = countryProvider.allCountries.length;
+
+        // --- Cities: GAWC 도시 기준 ---
+        final gawcCities = cityProvider.gawcCities
+            .where((c) => c.gawcTier != 'N/A')
+            .toList();
+        final totalGawcCount = gawcCities.length;
+        final visitedGawcCount = gawcCities
+            .where((c) => cityProvider.visitedCities.contains(c.name))
+            .length;
+
+        // --- Top Picks (global_rank > 0, 상위 250개) ---
+        final topPicks = landmarksProvider.allLandmarks
+            .where((l) => l.global_rank > 0)
+            .toList()
+          ..sort((a, b) => a.global_rank.compareTo(b.global_rank));
+        final top250 = topPicks.take(250).toList();
+        final visitedTopCount = top250
+            .where((l) => landmarksProvider.visitedLandmarks.contains(l.name))
+            .length;
+
+        return Column(
+          children: [
+            // --- Countries Row ---
+            _buildStatRow(
+              context: context,
+              icon: Icons.location_on,
+              iconColor: countriesColor,
+              labelTop: 'Countries',
+              labelBottom: '$visitedCountryCount / $totalCountryCount',
+              progressValue: totalCountryCount > 0
+                  ? visitedCountryCount / totalCountryCount
+                  : 0.0,
+              progressColor: countriesColor,
+              isAddButton: true,
+              isRainbow: false,
+              onButtonTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => const CountriesMapScreen()),
+              ),
+            ),
+            const SizedBox(height: 14),
+
+            // --- Cities Row ---
+            _buildStatRow(
+              context: context,
+              icon: Icons.location_city_rounded,
+              iconColor: citiesColor,
+              labelTop: 'Top Cities',
+              labelBottom: '$visitedGawcCount / $totalGawcCount',
+              progressValue: totalGawcCount > 0
+                  ? (visitedGawcCount / totalGawcCount).clamp(0.0, 1.0)
+                  : 0.0,
+              progressColor: citiesColor,
+              isAddButton: true,
+              isRainbow: false,
+              onButtonTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => const CitiesScreen()),
+              ),
+            ),
+            const SizedBox(height: 14),
+
+            // --- Top Landmarks Row (무지개) ---
+            _buildStatRow(
+              context: context,
+              icon: Icons.star_rounded,
+              iconColor: const Color(0xFFEC4899),
+              labelTop: 'Top Landmarks',
+              labelBottom: '$visitedTopCount / 250',
+              progressValue: visitedTopCount / 250,
+              progressColor: const Color(0xFFEC4899),
+              isAddButton: false,
+              isRainbow: true,
+              onButtonTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => const TopLandmarksScreen()),
+              ),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  // ⭐️ [신규] 공통 통계 행 위젯
+  Widget _buildStatRow({
+    required BuildContext context,
+    required IconData icon,
+    required Color iconColor,
+    required String labelTop,
+    required String labelBottom,
+    required double progressValue,
+    required Color progressColor,
+    required bool isAddButton,
+    required bool isRainbow,
+    required VoidCallback onButtonTap,
+  }) {
+    return Row(
+      children: [
+        // 아이콘
+        isRainbow
+            ? Container(
+          width: 44,
+          height: 44,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(12),
+            border: Border.all(color: Colors.grey.shade100, width: 1),
+          ),
+          child: Center(
+            child: ShaderMask(
+              shaderCallback: (bounds) => const LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: [
+                  Color(0xFFEC4899),
+                  Color(0xFFF97316),
+                  Color(0xFFF59E0B),
+                  Color(0xFF22C55E),
+                  Color(0xFF0EA5E9),
+                  Color(0xFF8B5CF6),
+                ],
+              ).createShader(bounds),
+              child: Icon(icon, color: Colors.white, size: 24),
+            ),
+          ),
+        )
+            : Container(
+          width: 44,
+          height: 44,
+          decoration: BoxDecoration(
+            color: iconColor.withOpacity(0.10),
+            borderRadius: BorderRadius.circular(12),
+          ),
+          child: Icon(icon, color: iconColor, size: 22),
+        ),
+        const SizedBox(width: 12),
+
+        // 텍스트 + 프로그레스바
+        Expanded(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    labelTop,
+                    style: TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.w600,
+                      color: Colors.grey.shade500,
+                    ),
+                  ),
+                  Text(
+                    labelBottom,
+                    style: TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.w700,
+                      color: Colors.grey.shade700,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 6),
+              // 무지개일 경우 그라데이션 progress bar, 아닐 경우 단색
+              isRainbow
+                  ? _buildRainbowProgressBar(progressValue.clamp(0.0, 1.0))
+                  : ClipRRect(
+                borderRadius: BorderRadius.circular(4),
+                child: LinearProgressIndicator(
+                  value: progressValue.clamp(0.0, 1.0),
+                  minHeight: 5,
+                  backgroundColor: Colors.grey.shade100,
+                  valueColor:
+                  AlwaysStoppedAnimation<Color>(progressColor),
+                ),
+              ),
+            ],
+          ),
+        ),
+        const SizedBox(width: 12),
+
+        // 원형 버튼
+        GestureDetector(
+          onTap: onButtonTap,
+          child: Container(
+            width: 36,
+            height: 36,
+            decoration: isRainbow
+                ? BoxDecoration(
+              shape: BoxShape.circle,
+              gradient: const LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: [
+                  Color(0xFFEC4899),
+                  Color(0xFF8B5CF6),
+                  Color(0xFF0EA5E9),
+                ],
+              ),
+              boxShadow: [
+                BoxShadow(
+                  color: const Color(0xFF8B5CF6).withOpacity(0.35),
+                  blurRadius: 8,
+                  offset: const Offset(0, 3),
+                ),
+              ],
+            )
+                : BoxDecoration(
+              color: progressColor,
+              shape: BoxShape.circle,
+              boxShadow: [
+                BoxShadow(
+                  color: progressColor.withOpacity(0.3),
+                  blurRadius: 8,
+                  offset: const Offset(0, 3),
+                ),
+              ],
+            ),
+            child: Icon(
+              isAddButton ? Icons.add_rounded : Icons.arrow_forward_rounded,
+              color: Colors.white,
+              size: 18,
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
+  // 무지개 그라데이션 progress bar
+  Widget _buildRainbowProgressBar(double value) {
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        final totalWidth = constraints.maxWidth;
+        final filledWidth = totalWidth * value;
+        return ClipRRect(
+          borderRadius: BorderRadius.circular(4),
+          child: SizedBox(
+            height: 5,
+            child: Stack(
+              children: [
+                // 배경
+                Container(
+                  width: totalWidth,
+                  color: Colors.grey.shade100,
+                ),
+                // 무지개 채움
+                if (value > 0)
+                  Container(
+                    width: filledWidth,
+                    decoration: const BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: [
+                          Color(0xFFEC4899),
+                          Color(0xFFF97316),
+                          Color(0xFFF59E0B),
+                          Color(0xFF22C55E),
+                          Color(0xFF0EA5E9),
+                          Color(0xFF8B5CF6),
+                        ],
+                      ),
+                    ),
+                  ),
+              ],
+            ),
+          ),
+        );
+      },
+    );
+  }
+
   Widget _buildMainFeatures(BuildContext context) {
+    void gated(VoidCallback action) {
+      final auth = Provider.of<AuthProvider>(context, listen: false);
+      if (auth.user == null) {
+        showModalBottomSheet(
+          context: context,
+          isScrollControlled: true,
+          backgroundColor: Colors.transparent,
+          builder: (_) => const LoginPromptScreen(),
+        );
+        return;
+      }
+      action();
+    }
+
     return Column(
       children: [
         Row(
@@ -499,10 +824,7 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                     '',
                     Icons.auto_stories_rounded,
                     orange,
-                        () => Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (_) => const TripLogListScreen())))),
+                        () => gated(() => Navigator.push(context, MaterialPageRoute(builder: (_) => const TripLogListScreen()))))),
             const SizedBox(width: 12),
             Expanded(
                 child: _buildFeatureCard(
@@ -511,10 +833,7 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                     '',
                     Icons.explore_rounded,
                     skyBlue,
-                        () => Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (_) => const RecommendationsScreen())))),
+                        () => gated(() => Navigator.push(context, MaterialPageRoute(builder: (_) => const RecommendationsScreen()))))),
             const SizedBox(width: 12),
             Expanded(
                 child: _buildFeatureCard(
@@ -523,10 +842,7 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                     '',
                     Icons.favorite_rounded,
                     pink,
-                        () => Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (_) => const FavoritesScreen())))),
+                        () => gated(() => Navigator.push(context, MaterialPageRoute(builder: (_) => const FavoritesScreen()))))),
           ],
         ),
         const SizedBox(height: 12),
@@ -536,8 +852,7 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
             'Plan your next adventure',
             Icons.calendar_month_rounded,
             red,
-                () => Navigator.push(context,
-                MaterialPageRoute(builder: (_) => const CalendarScreen())),
+                () => gated(() => Navigator.push(context, MaterialPageRoute(builder: (_) => const CalendarScreen()))),
             isWide: true),
       ],
     );
@@ -611,6 +926,20 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
   }
 
   Widget _buildDocumentsSection(BuildContext context) {
+    void gated(VoidCallback action) {
+      final auth = Provider.of<AuthProvider>(context, listen: false);
+      if (auth.user == null) {
+        showModalBottomSheet(
+          context: context,
+          isScrollControlled: true,
+          backgroundColor: Colors.transparent,
+          builder: (_) => const LoginPromptScreen(),
+        );
+        return;
+      }
+      action();
+    }
+
     return Row(children: [
       Expanded(
           child: _buildDocCard(
@@ -618,8 +947,7 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
               'Passport',
               Icons.book_rounded,
               purple,
-                  () => Navigator.push(context,
-                  MaterialPageRoute(builder: (_) => const PassportScreen())))),
+                  () => gated(() => Navigator.push(context, MaterialPageRoute(builder: (_) => const PassportScreen()))))),
       const SizedBox(width: 12),
       Expanded(
           child: _buildDocCard(
@@ -627,8 +955,7 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
               'Visa',
               Icons.article_rounded,
               mint,
-                  () => Navigator.push(context,
-                  MaterialPageRoute(builder: (_) => const VisaScreen())))),
+                  () => gated(() => Navigator.push(context, MaterialPageRoute(builder: (_) => const VisaScreen()))))),
     ]);
   }
 
@@ -659,9 +986,22 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
   }
 
   Widget _buildSettingsCard(BuildContext context) {
+    void gated(VoidCallback action) {
+      final auth = Provider.of<AuthProvider>(context, listen: false);
+      if (auth.user == null) {
+        showModalBottomSheet(
+          context: context,
+          isScrollControlled: true,
+          backgroundColor: Colors.transparent,
+          builder: (_) => const LoginPromptScreen(),
+        );
+        return;
+      }
+      action();
+    }
+
     return GestureDetector(
-        onTap: () => Navigator.push(context,
-            MaterialPageRoute(builder: (_) => const SettingsScreen())),
+        onTap: () => gated(() => Navigator.push(context, MaterialPageRoute(builder: (_) => const SettingsScreen()))),
         child: Container(
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
             decoration: BoxDecoration(

@@ -73,7 +73,7 @@ class CitiesMapShare {
 
       await Share.shareXFiles(
         [XFile(imagePath.path)],
-        text: 'Check out my city travels! I have visited ${visitedCities.length} cities via Travellog.',
+        text: 'Check out my city travels! I have visited ${visitedCities.length} cities via Travelog.',
       );
     } catch (e) {
       debugPrint("Share Error: $e");
@@ -131,7 +131,7 @@ class CitiesMapShare {
                   ),
                   const SizedBox(width: 10),
                   Text(
-                    'Travellog',
+                    'Travelog',
                     style: GoogleFonts.poppins(
                       fontSize: 28,
                       fontWeight: FontWeight.w900,

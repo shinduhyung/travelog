@@ -32,7 +32,7 @@ class CitiesShare {
 
       await Share.shareXFiles(
         [XFile(statsImagePath.path)],
-        text: 'Check out my city travels! I have visited ${visitedCities.length} cities via Travellog.',
+        text: 'Check out my city travels! I have visited ${visitedCities.length} cities via Travelog.',
       );
     } catch (e) {
       debugPrint("Share Error: $e");
@@ -129,7 +129,7 @@ class CitiesShare {
                   ),
                   const SizedBox(width: 10),
                   Text(
-                    'Travellog',
+                    'Travelog',
                     style: TextStyle(
                       fontSize: 28,
                       fontWeight: FontWeight.w900,

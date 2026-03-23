@@ -19,6 +19,8 @@ import 'package:jidoapp/screens/landmark_visit_log_screen.dart';
 
 import 'package:jidoapp/screens/activities_menu_screen.dart';
 import 'package:jidoapp/screens/top_activities_menu_screen.dart';
+import 'package:jidoapp/providers/auth_provider.dart';
+import 'package:jidoapp/screens/login_prompt_screen.dart';
 
 class ExploreMenuScreen extends StatelessWidget {
   const ExploreMenuScreen({super.key});
@@ -87,13 +89,26 @@ class ExploreMenuScreen extends StatelessWidget {
                         final visited = unescoProvider.visitedSites.length;
                         final progress = total > 0 ? visited / total : 0.0;
 
+                        void gated(VoidCallback action) {
+                          final auth = Provider.of<AuthProvider>(context, listen: false);
+                          if (auth.user == null) {
+                            showModalBottomSheet(
+                              context: context,
+                              isScrollControlled: true,
+                              backgroundColor: Colors.transparent,
+                              builder: (_) => const LoginPromptScreen(),
+                            );
+                            return;
+                          }
+                          action();
+                        }
                         return _buildUnescoSection(
                           context,
                           visited: visited,
                           total: total,
                           progress: progress,
                           onMainTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const UnescoSitesScreen())),
-                          onMapTap: () {
+                          onMapTap: () => gated(() {
                             Navigator.push(context, MaterialPageRoute(
                               builder: (context) => UnescoMapScreen(
                                 title: 'UNESCO Map',
@@ -102,8 +117,8 @@ class ExploreMenuScreen extends StatelessWidget {
                                 onToggleVisited: unescoProvider.toggleVisitedStatus,
                               ),
                             ));
-                          },
-                          onStatsTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const UnescoStatsScreen())),
+                          }),
+                          onStatsTap: () => gated(() => Navigator.push(context, MaterialPageRoute(builder: (_) => const UnescoStatsScreen()))),
                         );
                       },
                     ),
@@ -336,8 +351,21 @@ class ExploreMenuScreen extends StatelessWidget {
     );
   }
 
-  // Landmarks Section
   Widget _buildLandmarksSection(BuildContext context) {
+    void _gatedPush(BuildContext context, Widget screen) {
+      final authProvider = Provider.of<AuthProvider>(context, listen: false);
+      if (authProvider.user == null) {
+        showModalBottomSheet(
+          context: context,
+          isScrollControlled: true,
+          backgroundColor: Colors.transparent,
+          builder: (_) => const LoginPromptScreen(),
+        );
+        return;
+      }
+      Navigator.push(context, MaterialPageRoute(builder: (_) => screen));
+    }
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -357,7 +385,7 @@ class ExploreMenuScreen extends StatelessWidget {
                 context,
                 title: 'Cultural',
                 imagePath: 'assets/explore_icons/landmarks_top.png',
-                onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const LandmarksMenuScreen())),
+                onTap: () => _gatedPush(context, const LandmarksMenuScreen()),
               ),
             ),
             const SizedBox(width: 12),
@@ -366,7 +394,7 @@ class ExploreMenuScreen extends StatelessWidget {
                 context,
                 title: 'Natural',
                 imagePath: 'assets/explore_icons/mountains.png',
-                onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const NaturalMenuScreen())),
+                onTap: () => _gatedPush(context, const NaturalMenuScreen()),
               ),
             ),
           ],
@@ -390,7 +418,7 @@ class ExploreMenuScreen extends StatelessWidget {
                 title: 'Stats',
                 icon: Icons.analytics_outlined,
                 color: const Color(0xFF3B82F6),
-                onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const LandmarkStatsScreen())),
+                onTap: () => _gatedPush(context, const LandmarkStatsScreen()),
               ),
             ),
             const SizedBox(width: 10),
@@ -400,7 +428,7 @@ class ExploreMenuScreen extends StatelessWidget {
                 title: 'Logs',
                 icon: Icons.history_edu_rounded,
                 color: const Color(0xFF10B981),
-                onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const LandmarkVisitLogScreen())),
+                onTap: () => _gatedPush(context, const LandmarkVisitLogScreen()),
               ),
             ),
           ],

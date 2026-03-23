@@ -1,3 +1,5 @@
+// lib/screens/universal_studios_screen.dart
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:collection/collection.dart';
@@ -6,6 +8,7 @@ import 'package:jidoapp/models/landmarks_model.dart';
 import 'package:jidoapp/providers/landmarks_provider.dart';
 import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/widgets/landmark_info_card.dart';
+import 'package:jidoapp/widgets/landmark_visit_editor_card.dart'; // 공통 위젯 import
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:jidoapp/models/visit_date_model.dart';
 import 'dart:io';
@@ -57,14 +60,14 @@ class UniversalStudiosScreen extends StatelessWidget {
                           borderRadius: BorderRadius.circular(12),
                         ),
                         child: const Icon(
-                          Icons.attractions_outlined,
-                          color: Color(0xFF00f2fe),
+                          Icons.movie_filter_outlined,
+                          color: Color(0xFF3b82f6),
                           size: 24,
                         ),
                       ),
                       const SizedBox(width: 12),
                       const Text(
-                        'Universal Studios Parks',
+                        'Universal Studios',
                         style: TextStyle(
                           fontSize: 26,
                           fontWeight: FontWeight.bold,
@@ -76,7 +79,7 @@ class UniversalStudiosScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 8),
                   Text(
-                    'Adventure-filled theme parks worldwide',
+                    'World-famous cinematic theme parks',
                     style: TextStyle(
                       fontSize: 14,
                       color: Colors.grey[600],
@@ -102,7 +105,7 @@ class UniversalStudiosScreen extends StatelessWidget {
                   return GestureDetector(
                     onTap: () {
                       if (landmark != null) {
-                        _showLandmarkDetailsModal(context, landmark, const Color(0xFF00f2fe));
+                        _showLandmarkDetailsModal(context, landmark, const Color(0xFF3b82f6));
                       } else {
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(content: Text("$name details not found in database")),
@@ -176,6 +179,7 @@ class UniversalStudiosScreen extends StatelessWidget {
       ),
     );
   }
+
   void _showLandmarkDetailsModal(BuildContext context, Landmark landmark, Color fallbackThemeColor) {
     showModalBottomSheet(
       context: context,
@@ -229,8 +233,8 @@ class UniversalStudiosScreen extends StatelessWidget {
                             child: Text('Cancel', style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600))),
                         ElevatedButton(
                             onPressed: () => Navigator.pop(sheetContext),
-                            child: Text('Done', style: TextStyle(fontWeight: FontWeight.w600, color: themeColor)),
-                            style: ElevatedButton.styleFrom(backgroundColor: headerTextColor)),
+                            style: ElevatedButton.styleFrom(backgroundColor: headerTextColor),
+                            child: Text('Done', style: TextStyle(fontWeight: FontWeight.w600, color: themeColor))),
                       ],
                     ),
                     const SizedBox(height: 12),
@@ -271,7 +275,7 @@ class UniversalStudiosScreen extends StatelessWidget {
                         const Divider(height: 20),
                         Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [Text('History (${freshLandmark.visitDates.length} entries)', style: Theme.of(sheetContext).textTheme.titleSmall), OutlinedButton.icon(icon: const Icon(Icons.add), label: const Text('Add Visit'), onPressed: () => provider.addVisitDate(freshLandmark.name))]),
                         const SizedBox(height: 8),
-                        if (freshLandmark.visitDates.isNotEmpty) ...freshLandmark.visitDates.asMap().entries.map((entry) => _LandmarkVisitEditorCard(
+                        if (freshLandmark.visitDates.isNotEmpty) ...freshLandmark.visitDates.asMap().entries.map((entry) => LandmarkVisitEditorCard(
                           key: ValueKey('${freshLandmark.name}_${entry.key}'),
                           landmarkName: freshLandmark.name,
                           visitDate: entry.value,
@@ -291,89 +295,6 @@ class UniversalStudiosScreen extends StatelessWidget {
           ),
         );
       },
-    );
-  }
-}
-
-class _LandmarkVisitEditorCard extends StatefulWidget {
-  final String landmarkName;
-  final VisitDate visitDate;
-  final int index;
-  final VoidCallback onDelete;
-  final List<LandmarkSubLocation>? availableLocations;
-
-  const _LandmarkVisitEditorCard({
-    super.key,
-    required this.landmarkName,
-    required this.visitDate,
-    required this.index,
-    required this.onDelete,
-    this.availableLocations,
-  });
-
-  @override
-  State<_LandmarkVisitEditorCard> createState() => _LandmarkVisitEditorCardState();
-}
-
-class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
-  late final TextEditingController _titleController;
-  late final TextEditingController _memoController;
-  late List<String> _currentPhotos;
-  int? _year, _month, _day;
-
-  @override
-  void initState() {
-    super.initState();
-    _titleController = TextEditingController(text: widget.visitDate.title);
-    _memoController = TextEditingController(text: widget.visitDate.memo);
-    _currentPhotos = List.from(widget.visitDate.photos);
-    _year = widget.visitDate.year;
-    _month = widget.visitDate.month;
-    _day = widget.visitDate.day;
-  }
-
-  void _pickImage(ImageSource source) async {
-    final picker = ImagePicker();
-    final pickedFile = await picker.pickImage(source: source);
-    if (pickedFile != null && mounted) {
-      final newPhotos = List<String>.from(_currentPhotos)..add(pickedFile.path);
-      setState(() => _currentPhotos = newPhotos);
-      context.read<LandmarksProvider>().updateLandmarkVisit(
-          widget.landmarkName, widget.index, photos: newPhotos
-      );
-    }
-  }
-
-  Widget _buildPhotoPreview(String photoPath, int index) {
-    return Container(
-        width: 60, height: 60, margin: const EdgeInsets.only(right: 8), color: Colors.grey[300],
-        child: Image.file(File(photoPath), fit: BoxFit.cover));
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    final provider = context.read<LandmarksProvider>();
-    return Card(
-      elevation: 1, margin: const EdgeInsets.symmetric(vertical: 4),
-      child: ExpansionTile(
-        title: Text(widget.visitDate.title.isNotEmpty ? widget.visitDate.title : 'Visit Record'),
-        subtitle: Text('Date: $_year-$_month-$_day'),
-        trailing: IconButton(icon: const Icon(Icons.delete, color: Colors.red, size: 20), onPressed: widget.onDelete),
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(12.0),
-            child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  TextField(controller: _titleController, decoration: const InputDecoration(labelText: 'Title', isDense: true), onEditingComplete: () => provider.updateLandmarkVisit(widget.landmarkName, widget.index, title: _titleController.text)),
-                  const SizedBox(height: 8),
-                  TextField(controller: _memoController, decoration: const InputDecoration(labelText: 'Memo', isDense: true), onEditingComplete: () => provider.updateLandmarkVisit(widget.landmarkName, widget.index, memo: _memoController.text)),
-                  const SizedBox(height: 12),
-                  SingleChildScrollView(scrollDirection: Axis.horizontal, child: Row(children: [IconButton(icon: const Icon(Icons.camera_alt), onPressed: () => _pickImage(ImageSource.gallery)), ..._currentPhotos.asMap().entries.map((e) => _buildPhotoPreview(e.value, e.key)).toList()])),
-                ]),
-          )
-        ],
-      ),
     );
   }
 }

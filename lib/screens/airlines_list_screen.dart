@@ -5,6 +5,8 @@ import 'package:jidoapp/models/airline_model.dart';
 import 'package:jidoapp/providers/airline_provider.dart';
 import 'package:jidoapp/screens/airline_detail_screen.dart';
 import 'package:jidoapp/screens/airline_stats_screen.dart';
+import 'package:jidoapp/providers/auth_provider.dart';
+import 'package:jidoapp/screens/login_prompt_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'dart:ui';
@@ -478,6 +480,16 @@ class _AirlinesListScreenState extends State<AirlinesListScreen>
                   color: Colors.transparent,
                   child: InkWell(
                     onTap: () {
+                      final auth = Provider.of<AuthProvider>(context, listen: false);
+                      if (auth.user == null) {
+                        showModalBottomSheet(
+                          context: context,
+                          isScrollControlled: true,
+                          backgroundColor: Colors.transparent,
+                          builder: (_) => const LoginPromptScreen(),
+                        );
+                        return;
+                      }
                       Navigator.push(
                         context,
                         MaterialPageRoute(

@@ -3,18 +3,15 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'dart:io';
-import 'dart:ui'; // BackdropFilter, ImageFilter 사용을 위해 추가
-import 'package:image_picker/image_picker.dart';
+import 'dart:ui';
 import 'package:collection/collection.dart';
 import 'package:country_flags/country_flags.dart';
 import 'package:jidoapp/models/unesco_model.dart';
-import 'package:jidoapp/models/visit_date_model.dart';
+import 'package:jidoapp/models/visit_date_model.dart'; // [Fix] Undefined class VisitDate 에러 해결을 위한 임포트
 import 'package:jidoapp/providers/unesco_provider.dart';
-import 'package:jidoapp/screens/unesco_map_screen.dart';
 import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/widgets/landmark_info_card.dart';
-import 'package:jidoapp/models/country_model.dart';
+import 'package:jidoapp/widgets/unesco_visit_editor_card.dart';
 
 enum SiteSortOption { nameAsc, inscriptionYearAsc, countryAsc }
 enum LogSortOption { newest, oldest }
@@ -30,25 +27,20 @@ class UnescoSitesScreen extends StatefulWidget {
 class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
   final TextEditingController _searchController = TextEditingController();
 
-  // Default sort option is Country
   SiteSortOption _sortOption = SiteSortOption.countryAsc;
 
-  // Filter States
   bool _showVisitedOnly = false;
   bool _showCultural = true;
   bool _showNatural = true;
   bool _showMixed = true;
 
-  // Visit Log States
   bool _isLogExpanded = true;
   LogSortOption _logSortOption = LogSortOption.newest;
-  LogGroupOption _logGroupOption = LogGroupOption.country; // Default 변경됨
+  LogGroupOption _logGroupOption = LogGroupOption.country;
 
-  // Cached grouped list
   Map<String, List<UnescoSite>>? _cachedGroupedList;
   List<String>? _cachedSortedKeys;
 
-  // Track the currently expanded group index to allow only one open at a time
   int? _expandedGroupIndex;
 
   @override
@@ -72,8 +64,6 @@ class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
     });
   }
 
-  // --- Theme Helpers ---
-
   Color _getTypeColor(String type) {
     switch (type) {
       case 'Natural': return Colors.green;
@@ -89,8 +79,6 @@ class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
       case 'Cultural': default: return Icons.account_balance;
     }
   }
-
-  // --- Filtering and Sorting Logic ---
 
   void _updateGroupedListIfNeeded(UnescoProvider provider, CountryProvider countryProvider) {
     if (_sortOption == SiteSortOption.nameAsc &&
@@ -210,7 +198,7 @@ class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
     showModalBottomSheet(
       context: context,
       isScrollControlled: true,
-      backgroundColor: Colors.transparent, // 투명 배경 추가
+      backgroundColor: Colors.transparent,
       builder: (BuildContext sheetContext) {
         final provider = sheetContext.watch<UnescoProvider>();
         final countryProvider = sheetContext.read<CountryProvider>();
@@ -247,7 +235,6 @@ class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
             heightFactor: 0.85,
             child: Column(
               children: [
-                // 그라데이션 및 오버레이 헤더 적용
                 ClipRRect(
                   borderRadius: const BorderRadius.vertical(top: Radius.circular(24)),
                   child: Stack(
@@ -416,7 +403,7 @@ class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
                         ),
                         const SizedBox(height: 10),
                         if (freshSite.visitDates.isNotEmpty)
-                          ...freshSite.visitDates.asMap().entries.map((entry) => _UnescoVisitEditorCard(
+                          ...freshSite.visitDates.asMap().entries.map((entry) => UnescoVisitEditorCard(
                             key: ValueKey('${freshSite.name}_${entry.key}'),
                             siteName: freshSite.name,
                             visitDate: entry.value,
@@ -443,8 +430,6 @@ class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
       },
     ).then((_) => setState(() {}));
   }
-
-  // --- UI Build Methods ---
 
   @override
   Widget build(BuildContext context) {
@@ -486,28 +471,21 @@ class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
 
     return CustomScrollView(
       slivers: [
-        // Header Section
         SliverToBoxAdapter(
           child: _buildHeader(context, percentage, visitedCount, totalCount, mainThemeColor),
         ),
-
-        // Visit Log Section
         SliverToBoxAdapter(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
             child: _buildVisitLogSection(context, provider, mainThemeColor),
           ),
         ),
-
-        // Controls Section
         SliverToBoxAdapter(
           child: Padding(
             padding: const EdgeInsets.fromLTRB(20, 0, 20, 12),
             child: _buildControls(context, mainThemeColor),
           ),
         ),
-
-        // List Section
         if (_sortOption != SiteSortOption.nameAsc || _searchController.text.trim().isNotEmpty || _showVisitedOnly)
           SliverPadding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -837,7 +815,6 @@ class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // UNESCO — big, proud, fills the space
             Row(
               crossAxisAlignment: CrossAxisAlignment.baseline,
               textBaseline: TextBaseline.alphabetic,
@@ -852,7 +829,6 @@ class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
                   ),
                 ),
                 const SizedBox(width: 8),
-                // small dot separator
                 Padding(
                   padding: const EdgeInsets.only(bottom: 4),
                   child: Container(
@@ -879,7 +855,6 @@ class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
               ],
             ),
             const SizedBox(height: 2),
-            // Thin accent underline only under UNESCO
             Row(
               children: [
                 Container(
@@ -914,7 +889,6 @@ class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
       ),
       child: Row(
         children: [
-          // Count info
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -954,10 +928,8 @@ class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
               ],
             ),
           ),
-          // Thin vertical divider
           Container(width: 1, height: 36, color: Colors.grey[100]),
           const SizedBox(width: 16),
-          // Progress bar + percentage
           Expanded(
             flex: 2,
             child: Column(
@@ -992,66 +964,6 @@ class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
                       ),
                     ],
                   ),
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildProgressCard(BuildContext context, double percentage, int visitedCount, int totalCount, Color themeColor) {
-    return Container(
-      decoration: BoxDecoration(
-        gradient: LinearGradient(begin: Alignment.topLeft, end: Alignment.bottomRight, colors: [Colors.white, Colors.white.withOpacity(0.95)]),
-        borderRadius: BorderRadius.circular(24),
-        boxShadow: [BoxShadow(color: themeColor.withOpacity(0.1), blurRadius: 24, offset: const Offset(0, 8), spreadRadius: -4)],
-      ),
-      child: Stack(
-        children: [
-          Positioned(right: -20, top: -20, child: Container(width: 80, height: 80, decoration: BoxDecoration(shape: BoxShape.circle, color: themeColor.withOpacity(0.05)))),
-          Positioned(left: -10, bottom: -10, child: Container(width: 60, height: 60, decoration: BoxDecoration(shape: BoxShape.circle, color: themeColor.withOpacity(0.03)))),
-          Padding(
-            padding: const EdgeInsets.all(24),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          children: [
-                            Container(padding: const EdgeInsets.all(8), decoration: BoxDecoration(gradient: LinearGradient(colors: [themeColor, themeColor.withOpacity(0.7)]), borderRadius: BorderRadius.circular(12)), child: const Icon(Icons.emoji_events_rounded, size: 20, color: Colors.white)),
-                            const SizedBox(width: 12),
-                            const Text('My Progress', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.black87, letterSpacing: -0.3)),
-                          ],
-                        ),
-                        const SizedBox(height: 4),
-                        Padding(padding: const EdgeInsets.only(left: 52), child: Text('Keep exploring!', style: TextStyle(fontSize: 12, color: Colors.grey[600], fontWeight: FontWeight.w500))),
-                      ],
-                    ),
-                    Container(padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10), decoration: BoxDecoration(gradient: LinearGradient(colors: [themeColor.withOpacity(0.15), themeColor.withOpacity(0.08)]), borderRadius: BorderRadius.circular(20), border: Border.all(color: themeColor.withOpacity(0.2), width: 1.5)), child: Text('${(percentage * 100).toStringAsFixed(0)}%', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: themeColor, letterSpacing: -0.5))),
-                  ],
-                ),
-                const SizedBox(height: 24),
-                Stack(
-                  children: [
-                    Container(height: 14, decoration: BoxDecoration(color: Colors.grey[100], borderRadius: BorderRadius.circular(10))),
-                    ClipRRect(borderRadius: BorderRadius.circular(10), child: ShaderMask(shaderCallback: (bounds) => LinearGradient(colors: [themeColor, themeColor.withOpacity(0.8)]).createShader(bounds), child: Container(height: 14, width: MediaQuery.of(context).size.width * percentage, decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(10))))),
-                  ],
-                ),
-                const SizedBox(height: 16),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Row(children: [Container(width: 8, height: 8, decoration: BoxDecoration(shape: BoxShape.circle, color: themeColor)), const SizedBox(width: 8), Text('$visitedCount visited', style: TextStyle(fontSize: 13, color: Colors.grey[700], fontWeight: FontWeight.w600))]),
-                    Text('$totalCount sites', style: TextStyle(fontSize: 13, color: Colors.grey[600], fontWeight: FontWeight.w500)),
-                  ],
                 ),
               ],
             ),
@@ -1254,92 +1166,6 @@ class _VisitLogItem {
   final VisitDate visit;
   final int nthVisit;
   _VisitLogItem({required this.site, required this.visit, required this.nthVisit});
-}
-
-class _UnescoVisitEditorCard extends StatefulWidget {
-  final String siteName;
-  final VisitDate visitDate;
-  final int index;
-  final VoidCallback onDelete;
-  final List<UnescoSubLocation> availableLocations;
-  const _UnescoVisitEditorCard({super.key, required this.siteName, required this.visitDate, required this.index, required this.onDelete, required this.availableLocations});
-  @override
-  State<_UnescoVisitEditorCard> createState() => _UnescoVisitEditorCardState();
-}
-
-class _UnescoVisitEditorCardState extends State<_UnescoVisitEditorCard> {
-  late final TextEditingController _titleController;
-  late final TextEditingController _memoController;
-  late List<String> _currentPhotos;
-  int? _year, _month, _day;
-  final ExpansionTileController _expansionTileController = ExpansionTileController();
-  @override
-  void initState() {
-    super.initState();
-    _titleController = TextEditingController(text: widget.visitDate.title);
-    _memoController = TextEditingController(text: widget.visitDate.memo);
-    _currentPhotos = List.from(widget.visitDate.photos);
-    _year = widget.visitDate.year;
-    _month = widget.visitDate.month;
-    _day = widget.visitDate.day;
-  }
-  void _pickImage(ImageSource source) async {
-    final picker = ImagePicker();
-    final pickedFile = await picker.pickImage(source: source);
-    if (pickedFile != null && mounted) {
-      final newPhotos = List<String>.from(_currentPhotos)..add(pickedFile.path);
-      setState(() => _currentPhotos = newPhotos);
-      context.read<UnescoProvider>().updateLandmarkVisit(widget.siteName, widget.index, photos: newPhotos);
-    }
-  }
-  void _toggleLocationInVisit(String locName, bool isSelected) {
-    final provider = context.read<UnescoProvider>();
-    List<String> currentDetails = List.from(widget.visitDate.visitedDetails);
-    if (isSelected) {
-      if (!currentDetails.contains(locName)) {
-        currentDetails.add(locName);
-        if (!provider.isSubLocationVisited(widget.siteName, locName)) provider.toggleSubLocation(widget.siteName, locName);
-      }
-    } else {
-      currentDetails.remove(locName);
-    }
-    provider.updateLandmarkVisit(widget.siteName, widget.index, visitedDetails: currentDetails);
-    setState(() {});
-  }
-  Widget _buildPhotoPreview(String photoPath, int index) {
-    return Container(width: 80, height: 80, margin: const EdgeInsets.only(right: 8), color: Colors.grey, child: Image.file(File(photoPath), fit: BoxFit.cover));
-  }
-  @override
-  Widget build(BuildContext context) {
-    final provider = context.read<UnescoProvider>();
-    final themeColor = Theme.of(context).primaryColor;
-    return Card(
-      child: ExpansionTile(
-        controller: _expansionTileController,
-        title: Text(widget.visitDate.title.isNotEmpty ? widget.visitDate.title : 'Visit Record'),
-        subtitle: Text('Date: $_year-$_month-$_day'),
-        trailing: IconButton(icon: const Icon(Icons.delete, color: Colors.red), onPressed: () { showDialog(context: context, builder: (context) => AlertDialog(title: const Text('Delete Visit Record'), content: const Text('Are you sure you want to delete this visit record?'), actions: [TextButton(onPressed: () => Navigator.pop(context), child: const Text('Cancel')), TextButton(onPressed: () { Navigator.pop(context); widget.onDelete(); }, child: const Text('Delete', style: TextStyle(color: Colors.red)))])); }),
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              TextField(controller: _titleController, decoration: const InputDecoration(labelText: 'Title'), onEditingComplete: () => provider.updateLandmarkVisit(widget.siteName, widget.index, title: _titleController.text)),
-              TextField(controller: _memoController, decoration: const InputDecoration(labelText: 'Memo'), onEditingComplete: () => provider.updateLandmarkVisit(widget.siteName, widget.index, memo: _memoController.text)),
-              const SizedBox(height: 16),
-              if (widget.availableLocations.length > 1) ...[
-                const Text("Locations included in this visit:", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Colors.grey)),
-                const SizedBox(height: 4),
-                Wrap(spacing: 8.0, runSpacing: 4.0, children: widget.availableLocations.map((loc) { final isChecked = widget.visitDate.visitedDetails.contains(loc.name); return FilterChip(label: Text(loc.name, style: const TextStyle(fontSize: 11)), selected: isChecked, selectedColor: themeColor.withOpacity(0.2), checkmarkColor: themeColor, onSelected: (bool selected) { _toggleLocationInVisit(loc.name, selected); }); }).toList()),
-                const SizedBox(height: 16),
-              ],
-              const SizedBox(height: 10),
-              SingleChildScrollView(scrollDirection: Axis.horizontal, child: Row(children: [IconButton(icon: const Icon(Icons.camera_alt), onPressed: () => _pickImage(ImageSource.gallery)), ..._currentPhotos.asMap().entries.map((e) => _buildPhotoPreview(e.value, e.key)).toList()])),
-            ]),
-          )
-        ],
-      ),
-    );
-  }
 }
 
 class DiagonalClipper extends CustomClipper<Path> {

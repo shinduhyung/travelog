@@ -7,6 +7,8 @@ import 'dart:math' as math;
 import 'dart:ui' as ui; // PathMetric 사용을 위해 추가
 
 import 'package:jidoapp/screens/flight_log_list_screen.dart';
+import 'package:jidoapp/providers/auth_provider.dart';
+import 'package:jidoapp/screens/login_prompt_screen.dart';
 import 'package:jidoapp/screens/flight_connection_screen.dart';
 import 'package:jidoapp/screens/flight_route_map_screen.dart';
 import 'package:jidoapp/providers/airline_provider.dart';
@@ -233,15 +235,18 @@ class FlightHubScreen extends StatelessWidget {
 
             const SliverToBoxAdapter(child: SizedBox(height: 20)),
 
-            // Overview - 특별한 디자인
+            // Overview
             SliverToBoxAdapter(
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 24),
-                child: _buildOverviewCard(
-                  context,
-                  totalFlights: totalFlights,
-                  uniqueRoutes: uniqueRoutes,
-                  screen: const FlightOverviewStatsScreen(),
+                child: _GatedAnalyticsWrapper(
+                  destination: const FlightOverviewStatsScreen(),
+                  child: _buildOverviewCard(
+                    context,
+                    totalFlights: totalFlights,
+                    uniqueRoutes: uniqueRoutes,
+                    screen: const FlightOverviewStatsScreen(),
+                  ),
                 ),
               ),
             ),
@@ -259,42 +264,53 @@ class FlightHubScreen extends StatelessWidget {
                   childAspectRatio: 1.1,
                 ),
                 delegate: SliverChildListDelegate([
-                  _buildCompactAnalyticsCard(
-                    context,
-                    title: 'Aircraft',
-                    count: '$uniqueAircraft',
-                    unit: 'types',
-                    icon: Icons.airplanemode_active,
-                    color: Color(0xFF11998E),
-                    screen: const AircraftStatsScreen(),
+                  _GatedAnalyticsWrapper(
+                    destination: const AircraftStatsScreen(),
+                    child: _buildCompactAnalyticsCard(
+                      context,
+                      title: 'Aircraft',
+                      count: '$uniqueAircraft',
+                      unit: 'types',
+                      icon: Icons.airplanemode_active,
+                      color: Color(0xFF11998E),
+                      screen: const AircraftStatsScreen(),
+                    ),
                   ),
-                  _buildCompactAnalyticsCard(
-                    context,
-                    title: 'Transfer',
-                    count: '$transferCount',
-                    unit: 'stops',
-                    icon: Icons.swap_horiz,
-                    color: Color(0xFFFA709A),
-                    screen: const FlightTransferStatsScreen(),
+                  _GatedAnalyticsWrapper(
+                    destination: const FlightTransferStatsScreen(),
+                    child: _buildCompactAnalyticsCard(
+                      context,
+                      title: 'Transfer',
+                      count: '$transferCount',
+                      unit: 'stops',
+                      icon: Icons.swap_horiz,
+                      color: Color(0xFFFA709A),
+                      screen: const FlightTransferStatsScreen(),
+                    ),
                   ),
-                  _buildCompactAnalyticsCard(
-                    context,
-                    title: 'Frequency',
-                    count: '$uniqueRoutes',
-                    unit: 'routes',
-                    icon: Icons.repeat,
-                    color: Color(0xFFFEE140),
-                    screen: const FlightFrequencyStatsScreen(),
+                  _GatedAnalyticsWrapper(
+                    destination: const FlightFrequencyStatsScreen(),
+                    child: _buildCompactAnalyticsCard(
+                      context,
+                      title: 'Frequency',
+                      count: '$uniqueRoutes',
+                      unit: 'routes',
+                      icon: Icons.repeat,
+                      color: Color(0xFFFEE140),
+                      screen: const FlightFrequencyStatsScreen(),
+                    ),
                   ),
-                  _buildCompactAnalyticsCard(
-                    context,
-                    title: 'Purchase',
-                    count:
-                    totalSpent > 0 ? '\$${formatMoney(totalSpent)}' : '0',
-                    unit: 'spent',
-                    icon: Icons.credit_card,
-                    color: Color(0xFFFA8BFF),
-                    screen: const PurchaseStatsScreen(),
+                  _GatedAnalyticsWrapper(
+                    destination: const PurchaseStatsScreen(),
+                    child: _buildCompactAnalyticsCard(
+                      context,
+                      title: 'Purchase',
+                      count: totalSpent > 0 ? '\$${formatMoney(totalSpent)}' : '0',
+                      unit: 'spent',
+                      icon: Icons.credit_card,
+                      color: Color(0xFFFA8BFF),
+                      screen: const PurchaseStatsScreen(),
+                    ),
                   ),
                 ]),
               ),
@@ -302,17 +318,20 @@ class FlightHubScreen extends StatelessWidget {
 
             const SliverToBoxAdapter(child: SizedBox(height: 12)),
 
-            // Seat Class - 가로로 길게
+            // Seat Class
             SliverToBoxAdapter(
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 24),
-                child: _buildWideAnalyticsCard(
-                  context,
-                  title: 'Premium Cabins',
-                  subtitle: '$premiumFlights Business & First Class flights',
-                  icon: Icons.airline_seat_flat,
-                  iconBg: Color(0xFFFF6B6B),
-                  screen: const SeatClassStatsScreen(),
+                child: _GatedAnalyticsWrapper(
+                  destination: const SeatClassStatsScreen(),
+                  child: _buildWideAnalyticsCard(
+                    context,
+                    title: 'Premium Cabins',
+                    subtitle: '$premiumFlights Business & First Class flights',
+                    icon: Icons.airline_seat_flat,
+                    iconBg: Color(0xFFFF6B6B),
+                    screen: const SeatClassStatsScreen(),
+                  ),
                 ),
               ),
             ),
@@ -1192,7 +1211,37 @@ class FlightHubScreen extends StatelessWidget {
   }
 }
 
-// 지도 배경 패턴을 그리는 CustomPainter (업그레이드 버전)
+// ⭐️ Analytics 카드를 로그인 없이 탭 시 LoginPromptScreen을 띄우는 래퍼
+class _GatedAnalyticsWrapper extends StatelessWidget {
+  final Widget child;
+  final Widget destination;
+
+  const _GatedAnalyticsWrapper({
+    required this.child,
+    required this.destination,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      behavior: HitTestBehavior.opaque,
+      onTap: () {
+        final auth = Provider.of<AuthProvider>(context, listen: false);
+        if (auth.user == null) {
+          showModalBottomSheet(
+            context: context,
+            isScrollControlled: true,
+            backgroundColor: Colors.transparent,
+            builder: (_) => const LoginPromptScreen(),
+          );
+          return;
+        }
+        Navigator.push(context, MaterialPageRoute(builder: (_) => destination));
+      },
+      child: AbsorbPointer(child: child),
+    );
+  }
+}
 class _MapPatternPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {

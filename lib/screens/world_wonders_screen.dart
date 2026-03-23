@@ -11,6 +11,7 @@ import 'package:jidoapp/models/landmarks_model.dart';
 import 'package:jidoapp/providers/landmarks_provider.dart';
 import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/widgets/landmark_info_card.dart';
+import 'package:jidoapp/widgets/landmark_visit_editor_card.dart'; // 공통 위젯 import
 
 class WorldWondersScreen extends StatefulWidget {
   const WorldWondersScreen({super.key});
@@ -35,158 +36,149 @@ class _WorldWondersScreenState extends State<WorldWondersScreen> {
   Widget build(BuildContext context) {
     final landmarksProvider = context.watch<LandmarksProvider>();
     final allLandmarks = landmarksProvider.allLandmarks;
-    final visitedSet = landmarksProvider.visitedLandmarks;
 
     return Scaffold(
-      backgroundColor: const Color(0xFFF9FAFB),
-      body: SafeArea(
-        child: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.fromLTRB(20, 24, 20, 16),
-              child: Row(
-                children: [
-                  const Expanded(
-                    child: Text(
-                      'New 7 Wonders',
-                      style: TextStyle(
-                        fontSize: 22,
-                        fontWeight: FontWeight.w800,
-                        color: Color(0xFF111827),
-                        letterSpacing: -0.5,
-                      ),
-                    ),
+      backgroundColor: const Color(0xFFF8F9FA),
+      body: CustomScrollView(
+        slivers: [
+          SliverAppBar(
+            expandedHeight: 180,
+            floating: false,
+            pinned: true,
+            backgroundColor: const Color(0xFF2C3E50),
+            flexibleSpace: FlexibleSpaceBar(
+              title: const Text('World Wonders',
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w900,
+                      letterSpacing: -1.0
+                  )),
+              background: Container(
+                decoration: const BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: [Color(0xFF2C3E50), Color(0xFF4CA1AF)],
                   ),
-                ],
+                ),
+                child: Center(
+                  child: Icon(Icons.auto_awesome, color: Colors.white.withOpacity(0.2), size: 100),
+                ),
               ),
             ),
+          ),
+          SliverPadding(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
+            sliver: SliverList(
+              delegate: SliverChildBuilderDelegate(
+                    (context, index) {
+                  final data = _wondersList[index];
+                  final name = data['name']!;
+                  final imageUrl = data['image']!;
+                  final iso = data['iso']!;
 
-            Expanded(
-              child: ListView.builder(
-                padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-                physics: const BouncingScrollPhysics(),
-                itemCount: _wondersList.length,
-                itemBuilder: (context, index) {
-                  final itemData = _wondersList[index];
-                  final name = itemData['name']!;
-                  final isoCode = itemData['iso']!;
-                  final imagePath = itemData['image']!;
-
+                  final isVisited = landmarksProvider.visitedLandmarks.contains(name);
                   final landmark = allLandmarks.firstWhereOrNull((l) => l.name == name);
-                  final isVisited = visitedSet.contains(name);
 
-                  return GestureDetector(
-                    onTap: () {
-                      if (landmark != null) {
-                        _showLandmarkDetailsModal(context, landmark, Colors.amber, imagePath);
-                      } else {
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          SnackBar(content: Text('Landmark data not found for $name')),
-                        );
-                      }
-                    },
-                    child: Container(
-                      margin: const EdgeInsets.only(bottom: 16.0),
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(16),
-                        border: isVisited
-                            ? Border.all(color: Colors.teal.withOpacity(0.5), width: 2)
-                            : null,
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.black.withOpacity(0.05),
-                            blurRadius: 10,
-                            offset: const Offset(0, 4),
+                  return _buildWonderCard(name, imageUrl, iso, isVisited, landmark);
+                },
+                childCount: _wondersList.length,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildWonderCard(String name, String imageUrl, String iso, bool isVisited, Landmark? landmark) {
+    return Container(
+      margin: const EdgeInsets.only(bottom: 24),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(20),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.08),
+            blurRadius: 15,
+            offset: const Offset(0, 5),
+          ),
+        ],
+      ),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(20),
+        child: Material(
+          color: Colors.transparent,
+          child: InkWell(
+            onTap: () {
+              if (landmark != null) {
+                _showLandmarkDetailsModal(context, landmark, const Color(0xFF2C3E50));
+              }
+            },
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Stack(
+                  children: [
+                    CachedNetworkImage(
+                      imageUrl: imageUrl,
+                      height: 200,
+                      width: double.infinity,
+                      fit: BoxFit.cover,
+                      placeholder: (context, url) => Container(color: Colors.grey[200]),
+                      errorWidget: (context, url, error) => Container(color: Colors.grey[300], child: const Icon(Icons.image_not_supported)),
+                    ),
+                    if (isVisited)
+                      Positioned(
+                        top: 16,
+                        right: 16,
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                          decoration: BoxDecoration(
+                            color: Colors.teal,
+                            borderRadius: BorderRadius.circular(20),
+                            boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.2), blurRadius: 4)],
                           ),
-                        ],
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
-                        children: [
-                          // 이미지 섹션 (Asset 이미지로 교체)
-                          Stack(
+                          child: const Row(
+                            mainAxisSize: MainAxisSize.min,
                             children: [
-                              ClipRRect(
-                                borderRadius: const BorderRadius.vertical(top: Radius.circular(16)),
-                                child: CachedNetworkImage(
-                                  imageUrl: imagePath,
-                                  height: 180,
-                                  width: double.infinity,
-                                  fit: BoxFit.cover,
-                                  errorWidget: (context, url, error) => Container(
-                                    height: 180,
-                                    width: double.infinity,
-                                    color: Colors.grey[300],
-                                    child: Icon(Icons.image_not_supported, size: 50, color: Colors.grey[400]),
-                                  ),
-                                ),
-                              ),
-                              if (isVisited)
-                                Positioned(
-                                  top: 12,
-                                  right: 12,
-                                  child: Container(
-                                    padding: const EdgeInsets.all(6),
-                                    decoration: const BoxDecoration(
-                                      color: Colors.teal,
-                                      shape: BoxShape.circle,
-                                      boxShadow: [BoxShadow(color: Colors.black26, blurRadius: 4)],
-                                    ),
-                                    child: const Icon(Icons.check, color: Colors.white, size: 20),
-                                  ),
-                                ),
+                              Icon(Icons.check_circle, color: Colors.white, size: 16),
+                              SizedBox(width: 4),
+                              Text('Visited', style: TextStyle(color: Colors.white, fontSize: 12, fontWeight: FontWeight.bold)),
                             ],
                           ),
-
-                          Padding(
-                            padding: const EdgeInsets.all(16.0),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Expanded(
-                                  child: Row(
-                                    children: [
-                                      ClipRRect(
-                                        borderRadius: BorderRadius.circular(4),
-                                        child: SizedBox(
-                                          width: 32,
-                                          height: 24,
-                                          child: CountryFlag.fromCountryCode(isoCode),
-                                        ),
-                                      ),
-                                      const SizedBox(width: 12),
-                                      Expanded(
-                                        child: Text(
-                                          name,
-                                          style: const TextStyle(
-                                            fontSize: 18,
-                                            fontWeight: FontWeight.bold,
-                                            color: Color(0xFF111827),
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                const Icon(Icons.arrow_forward_ios, size: 16, color: Colors.grey),
-                              ],
-                            ),
-                          ),
-                        ],
+                        ),
                       ),
-                    ),
-                  );
-                },
-              ),
+                  ],
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(20),
+                  child: Row(
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(4),
+                        child: SizedBox(width: 28, height: 20, child: CountryFlag.fromCountryCode(iso)),
+                      ),
+                      const SizedBox(width: 12),
+                      Expanded(
+                        child: Text(
+                          name,
+                          style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w800, color: Color(0xFF1F2937)),
+                        ),
+                      ),
+                      const Icon(Icons.arrow_forward_ios, size: 16, color: Colors.grey),
+                    ],
+                  ),
+                ),
+              ],
             ),
-          ],
+          ),
         ),
       ),
     );
   }
 
-  void _showLandmarkDetailsModal(BuildContext context, Landmark landmark, Color fallbackThemeColor, String imagePath) {
+  void _showLandmarkDetailsModal(BuildContext context, Landmark landmark, Color fallbackThemeColor) {
     showModalBottomSheet(
       context: context,
       isScrollControlled: true,
@@ -239,8 +231,8 @@ class _WorldWondersScreenState extends State<WorldWondersScreen> {
                             child: Text('Cancel', style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600))),
                         ElevatedButton(
                             onPressed: () => Navigator.pop(sheetContext),
-                            child: Text('Done', style: TextStyle(fontWeight: FontWeight.w600, color: themeColor)),
-                            style: ElevatedButton.styleFrom(backgroundColor: headerTextColor)),
+                            style: ElevatedButton.styleFrom(backgroundColor: headerTextColor),
+                            child: Text('Done', style: TextStyle(fontWeight: FontWeight.w600, color: themeColor))),
                       ],
                     ),
                     const SizedBox(height: 12),
@@ -271,18 +263,6 @@ class _WorldWondersScreenState extends State<WorldWondersScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        // 상세 모달 내부 이미지 섹션
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(12),
-                          child: CachedNetworkImage(
-                            imageUrl: imagePath,
-                            width: double.infinity,
-                            height: 200,
-                            fit: BoxFit.cover,
-                            errorWidget: (context, url, error) => const SizedBox.shrink(),
-                          ),
-                        ),
-                        const SizedBox(height: 16),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -291,6 +271,17 @@ class _WorldWondersScreenState extends State<WorldWondersScreen> {
                           ],
                         ),
                         const Divider(height: 20),
+                        Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [Text('History (${freshLandmark.visitDates.length} entries)', style: Theme.of(sheetContext).textTheme.titleSmall), OutlinedButton.icon(icon: const Icon(Icons.add), label: const Text('Add Visit'), onPressed: () => provider.addVisitDate(freshLandmark.name))]),
+                        const SizedBox(height: 8),
+                        if (freshLandmark.visitDates.isNotEmpty) ...freshLandmark.visitDates.asMap().entries.map((entry) => LandmarkVisitEditorCard(
+                          key: ValueKey('${freshLandmark.name}_${entry.key}'),
+                          landmarkName: freshLandmark.name,
+                          visitDate: entry.value,
+                          index: entry.key,
+                          onDelete: () => provider.removeVisitDate(freshLandmark.name, entry.key),
+                          availableLocations: freshLandmark.locations,
+                        )) else const Center(child: Text('No visits recorded.')),
+                        const Divider(height: 24),
                         LandmarkInfoCard(
                             overview: freshLandmark.overview,
                             historySignificance: freshLandmark.history_significance,

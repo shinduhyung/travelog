@@ -52,7 +52,7 @@ class CountriesShare {
 
       await Share.shareXFiles(
         filesToShare,
-        text: 'Check out my travel map! I have visited ${visitedCountries.length} countries via Travellog.',
+        text: 'Check out my travel map! I have visited ${visitedCountries.length} countries via Travelog.',
       );
     } catch (e) {
       debugPrint("Share Error: $e");
@@ -162,7 +162,7 @@ class CountriesShare {
                   ),
                   const SizedBox(width: 10),
                   Text(
-                    'Travellog',
+                    'Travelog',
                     style: TextStyle(
                       fontSize: 28,
                       fontWeight: FontWeight.w900,

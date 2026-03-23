@@ -9,7 +9,7 @@ import 'package:intl/intl.dart';
 import 'dart:io';
 import 'package:image_picker/image_picker.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flutter_cache_manager/flutter_cache_manager.dart'; // 캐시 매니저 패키지 추가
+import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 
 // Models & Providers
 import 'package:jidoapp/models/landmarks_model.dart';
@@ -295,22 +295,26 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
                           children: [
                             Row(
                               children: [
-                                Container(
-                                  width: 4,
-                                  height: 32,
-                                  decoration: BoxDecoration(
-                                    gradient: const LinearGradient(
-                                      begin: Alignment.topCenter,
-                                      end: Alignment.bottomCenter,
-                                      colors: [
-                                        Color(0xFF14B8A6),
-                                        Color(0xFF0D9488),
-                                      ],
-                                    ),
-                                    borderRadius: BorderRadius.circular(2),
+                                ShaderMask(
+                                  shaderCallback: (bounds) => const LinearGradient( // [Fix] 매개변수 이름 수정
+                                    begin: Alignment.topLeft,
+                                    end: Alignment.bottomRight,
+                                    colors: [
+                                      Color(0xFFEC4899),
+                                      Color(0xFFF97316),
+                                      Color(0xFFF59E0B),
+                                      Color(0xFF22C55E),
+                                      Color(0xFF0EA5E9),
+                                      Color(0xFF8B5CF6),
+                                    ],
+                                  ).createShader(bounds),
+                                  child: const Icon(
+                                    Icons.star_rounded,
+                                    color: Colors.white,
+                                    size: 32,
                                   ),
                                 ),
-                                const SizedBox(width: 12),
+                                const SizedBox(width: 10),
                                 const Expanded(
                                   child: Text(
                                     'Global Top Attractions',
@@ -351,9 +355,20 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
                           border: Border.all(color: Colors.grey[200]!),
                         ),
                         child: IconButton(
-                          icon: Icon(
-                            _isCompactList ? Icons.grid_view_rounded : Icons.view_agenda_rounded,
-                            color: const Color(0xFF14B8A6),
+                          icon: ShaderMask(
+                            shaderCallback: (bounds) => const LinearGradient( // [Fix] 매개변수 이름 수정
+                              begin: Alignment.topLeft,
+                              end: Alignment.bottomRight,
+                              colors: [
+                                Color(0xFFEC4899),
+                                Color(0xFF0EA5E9),
+                                Color(0xFF8B5CF6),
+                              ],
+                            ).createShader(bounds),
+                            child: Icon(
+                              _isCompactList ? Icons.grid_view_rounded : Icons.view_agenda_rounded,
+                              color: Colors.white,
+                            ),
                           ),
                           onPressed: () {
                             setState(() {
@@ -398,13 +413,13 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(24),
                             border: Border.all(
-                              color: isVisited ? const Color(0xFF14B8A6) : const Color(0xFFE5E7EB),
+                              color: isVisited ? const Color(0xFFEC4899) : const Color(0xFFE5E7EB),
                               width: isVisited ? 2 : 1,
                             ),
                             boxShadow: [
                               BoxShadow(
                                 color: isVisited
-                                    ? const Color(0xFF14B8A6).withOpacity(0.15)
+                                    ? const Color(0xFF8B5CF6).withOpacity(0.18)
                                     : Colors.black.withOpacity(0.06),
                                 blurRadius: 16,
                                 offset: const Offset(0, 6),
@@ -422,8 +437,8 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
                                     children: [
                                       Positioned.fill(
                                         child: CachedNetworkImage(
-                                          cacheManager: _landmarksCacheManager, // 커스텀 캐시 매니저 연동
-                                          memCacheWidth: 600, // 디코딩 딜레이 방지를 위해 메모리 사이즈 축소
+                                          cacheManager: _landmarksCacheManager,
+                                          memCacheWidth: 600,
                                           imageUrl: imageUrl,
                                           fit: BoxFit.cover,
                                           placeholder: (context, url) => Container(color: Colors.grey[100]),
@@ -496,14 +511,15 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
                                                 begin: Alignment.topLeft,
                                                 end: Alignment.bottomRight,
                                                 colors: [
-                                                  Color(0xFF14B8A6),
-                                                  Color(0xFF0D9488),
+                                                  Color(0xFFEC4899),
+                                                  Color(0xFF8B5CF6),
+                                                  Color(0xFF0EA5E9),
                                                 ],
                                               ),
                                               shape: BoxShape.circle,
                                               boxShadow: [
                                                 BoxShadow(
-                                                  color: const Color(0xFF14B8A6).withOpacity(0.4),
+                                                  color: const Color(0xFF8B5CF6).withOpacity(0.4),
                                                   blurRadius: 8,
                                                   offset: const Offset(0, 3),
                                                 ),
@@ -606,13 +622,13 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
           color: Colors.white,
           borderRadius: BorderRadius.circular(20),
           border: Border.all(
-            color: isVisited ? const Color(0xFF14B8A6) : const Color(0xFFE5E7EB),
+            color: isVisited ? const Color(0xFFEC4899) : const Color(0xFFE5E7EB),
             width: isVisited ? 2 : 1,
           ),
           boxShadow: [
             BoxShadow(
               color: isVisited
-                  ? const Color(0xFF14B8A6).withOpacity(0.08)
+                  ? const Color(0xFF8B5CF6).withOpacity(0.12)
                   : Colors.black.withOpacity(0.03),
               blurRadius: 10,
               offset: const Offset(0, 4),
@@ -699,8 +715,9 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
                     colors: [
-                      Color(0xFF14B8A6),
-                      Color(0xFF0D9488),
+                      Color(0xFFEC4899),
+                      Color(0xFF8B5CF6),
+                      Color(0xFF0EA5E9),
                     ],
                   ),
                   borderRadius: BorderRadius.circular(10),
@@ -721,6 +738,7 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
     showModalBottomSheet(
       context: context,
       isScrollControlled: true,
+      backgroundColor: Colors.transparent,
       builder: (BuildContext sheetContext) {
         final provider = sheetContext.watch<LandmarksProvider>();
         final countryProvider = sheetContext.read<CountryProvider>();
@@ -767,8 +785,8 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
                       children: [
                         Positioned.fill(
                           child: CachedNetworkImage(
-                            cacheManager: _landmarksCacheManager, // 커스텀 캐시 매니저 연동
-                            memCacheWidth: 800, // 모달 사진은 조금 더 크게
+                            cacheManager: _landmarksCacheManager,
+                            memCacheWidth: 800,
                             imageUrl: imageUrl,
                             fit: BoxFit.cover,
                             placeholder: (context, url) => Container(color: Colors.grey[100]),
@@ -1186,111 +1204,219 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
   late final TextEditingController _memoController;
   late List<String> _currentPhotos;
   int? _year, _month, _day;
+
+  late String _displayTitle;
+  late String _displayMemo;
+  bool _isEditing = false;
+
   final ExpansionTileController _expansionTileController = ExpansionTileController();
 
   @override
   void initState() {
     super.initState();
-    _titleController = TextEditingController(text: widget.visitDate.title);
-    _memoController = TextEditingController(text: widget.visitDate.memo);
+    _displayTitle = widget.visitDate.title;
+    _displayMemo = widget.visitDate.memo ?? '';
+
+    _titleController = TextEditingController(text: _displayTitle);
+    _memoController = TextEditingController(text: _displayMemo);
     _currentPhotos = List.from(widget.visitDate.photos);
     _year = widget.visitDate.year;
     _month = widget.visitDate.month;
     _day = widget.visitDate.day;
+
+    if (_displayTitle.isEmpty && _displayMemo.isEmpty && _currentPhotos.isEmpty) {
+      _isEditing = true;
+    }
+  }
+
+  @override
+  void dispose() {
+    _titleController.dispose();
+    _memoController.dispose();
+    super.dispose();
+  }
+
+  void _saveChanges() {
+    context.read<LandmarksProvider>().updateLandmarkVisit(
+      widget.landmarkName,
+      widget.index,
+      title: _titleController.text,
+      memo: _memoController.text,
+      year: _year ?? -9999,
+      month: _month ?? -9999,
+      day: _day ?? -9999,
+      photos: _currentPhotos,
+    );
+
+    setState(() {
+      _displayTitle = _titleController.text;
+      _displayMemo = _memoController.text;
+      _isEditing = false;
+    });
+  }
+
+  void _cancelEditing() {
+    setState(() {
+      _titleController.text = _displayTitle;
+      _memoController.text = _displayMemo;
+      _year = widget.visitDate.year;
+      _month = widget.visitDate.month;
+      _day = widget.visitDate.day;
+      _currentPhotos = List.from(widget.visitDate.photos);
+      _isEditing = false;
+    });
+  }
+
+  Future<void> _selectDate(BuildContext context) async {
+    final DateTime initialDate = DateTime(
+      _year ?? DateTime.now().year,
+      _month ?? DateTime.now().month,
+      _day ?? DateTime.now().day,
+    );
+
+    final DateTime? picked = await showDatePicker(
+      context: context,
+      initialDate: initialDate,
+      firstDate: DateTime(1900),
+      lastDate: DateTime(2100),
+    );
+
+    if (picked != null && mounted) {
+      setState(() {
+        _year = picked.year;
+        _month = picked.month;
+        _day = picked.day;
+      });
+    }
   }
 
   void _pickImage(ImageSource source) async {
     final picker = ImagePicker();
     final pickedFile = await picker.pickImage(source: source);
     if (pickedFile != null && mounted) {
-      final newPhotos = List<String>.from(_currentPhotos)..add(pickedFile.path);
-      setState(() => _currentPhotos = newPhotos);
-      if(mounted){
-        context.read<LandmarksProvider>().updateLandmarkVisit(
-            widget.landmarkName, widget.index, photos: newPhotos
-        );
-      }
+      setState(() {
+        _currentPhotos.add(pickedFile.path);
+      });
     }
   }
 
+  void _toggleLocationInVisit(String locName, bool isSelected) {
+    final provider = context.read<LandmarksProvider>();
+    List<String> currentDetails = List.from(widget.visitDate.visitedDetails);
+
+    if (isSelected) {
+      if (!currentDetails.contains(locName)) {
+        currentDetails.add(locName);
+        if (!provider.isSubLocationVisited(widget.landmarkName, locName)) {
+          provider.toggleSubLocation(widget.landmarkName, locName);
+        }
+      }
+    } else {
+      currentDetails.remove(locName);
+    }
+
+    provider.updateLandmarkVisit(
+        widget.landmarkName,
+        widget.index,
+        visitedDetails: currentDetails
+    );
+
+    setState(() {});
+  }
+
   Widget _buildPhotoPreview(String photoPath, int index) {
-    return Container(
-      width: 60,
-      height: 60,
-      margin: const EdgeInsets.only(right: 8),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(8),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withOpacity(0.1),
-            blurRadius: 4,
-            offset: const Offset(0, 2),
+    return Stack(
+      clipBehavior: Clip.none,
+      children: [
+        Container(
+          width: 60,
+          height: 60,
+          margin: const EdgeInsets.only(right: 12),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(8),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.1),
+                blurRadius: 4,
+                offset: const Offset(0, 2),
+              ),
+            ],
           ),
-        ],
-      ),
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(8),
-        child: Image.file(
-          File(photoPath),
-          fit: BoxFit.cover,
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(8),
+            child: Image.file(File(photoPath), fit: BoxFit.cover),
+          ),
         ),
-      ),
+        if (_isEditing)
+          Positioned(
+            top: -6,
+            right: 6,
+            child: GestureDetector(
+              onTap: () {
+                setState(() {
+                  _currentPhotos.removeAt(index);
+                });
+              },
+              child: Container(
+                decoration: const BoxDecoration(
+                  color: Colors.white,
+                  shape: BoxShape.circle,
+                ),
+                child: const Icon(Icons.cancel, color: Colors.red, size: 22),
+              ),
+            ),
+          ),
+      ],
     );
   }
 
   @override
   Widget build(BuildContext context) {
-    final provider = context.read<LandmarksProvider>();
-    return Container(
-      margin: const EdgeInsets.only(bottom: 12),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: Colors.grey[200]!),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withOpacity(0.03),
-            blurRadius: 8,
-            offset: const Offset(0, 2),
-          ),
-        ],
-      ),
+    final themeColor = Theme.of(context).primaryColor;
+
+    return Card(
+      elevation: 1,
+      margin: const EdgeInsets.symmetric(vertical: 6),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       child: ExpansionTile(
         controller: _expansionTileController,
-        tilePadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+        initiallyExpanded: _isEditing,
         title: Text(
-          widget.visitDate.title.isNotEmpty ? widget.visitDate.title : 'Visit Record',
-          style: const TextStyle(
-            fontWeight: FontWeight.w600,
-            fontSize: 14,
-          ),
+          _displayTitle.isNotEmpty ? _displayTitle : 'Visit Record',
+          style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15),
         ),
-        subtitle: Padding(
-          padding: const EdgeInsets.only(top: 4),
-          child: Row(
-            children: [
-              Icon(Icons.calendar_today, size: 14, color: Colors.grey[600]),
-              const SizedBox(width: 6),
-              Text(
-                '$_year-$_month-$_day',
-                style: TextStyle(
-                  fontSize: 12,
-                  color: Colors.grey[600],
-                ),
-              ),
-            ],
-          ),
-        ),
+        subtitle: Text('Date: $_year-$_month-$_day', style: TextStyle(color: Colors.grey[600], fontSize: 13)),
         trailing: IconButton(
           icon: const Icon(Icons.delete_outline, color: Colors.red, size: 22),
-          onPressed: widget.onDelete,
+          onPressed: () {
+            showDialog(
+              context: context,
+              builder: (context) => AlertDialog(
+                title: const Text('Delete Visit Record'),
+                content: const Text('Are you sure you want to delete this visit record?'),
+                actions: [
+                  TextButton(
+                    onPressed: () => Navigator.pop(context),
+                    child: const Text('Cancel'),
+                  ),
+                  TextButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                      widget.onDelete();
+                    },
+                    child: const Text('Delete', style: TextStyle(color: Colors.red)),
+                  ),
+                ],
+              ),
+            );
+          },
         ),
         children: [
           Container(
-            padding: const EdgeInsets.all(16),
-            decoration: const BoxDecoration(
-              color: Color(0xFFF9FAFB),
-              borderRadius: BorderRadius.only(
+            padding: const EdgeInsets.all(16.0),
+            decoration: BoxDecoration(
+              color: Colors.grey[50],
+              borderRadius: const BorderRadius.only(
                 bottomLeft: Radius.circular(12),
                 bottomRight: Radius.circular(12),
               ),
@@ -1298,66 +1424,155 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                TextField(
-                  controller: _titleController,
-                  decoration: InputDecoration(
-                    labelText: 'Title',
-                    isDense: true,
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                    filled: true,
-                    fillColor: Colors.white,
-                  ),
-                  onEditingComplete: () => provider.updateLandmarkVisit(
-                    widget.landmarkName,
-                    widget.index,
-                    title: _titleController.text,
-                  ),
-                ),
-                const SizedBox(height: 12),
-                TextField(
-                  controller: _memoController,
-                  decoration: InputDecoration(
-                    labelText: 'Memo',
-                    isDense: true,
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                    filled: true,
-                    fillColor: Colors.white,
-                  ),
-                  maxLines: 3,
-                  onEditingComplete: () => provider.updateLandmarkVisit(
-                    widget.landmarkName,
-                    widget.index,
-                    memo: _memoController.text,
-                  ),
-                ),
-                const SizedBox(height: 12),
-                SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
+                if (_isEditing) ...[
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Container(
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(8),
-                          border: Border.all(color: Colors.grey[300]!),
-                        ),
-                        child: IconButton(
-                          icon: const Icon(Icons.add_photo_alternate),
-                          onPressed: () => _pickImage(ImageSource.gallery),
-                        ),
+                      Text('Visit Date: $_year-$_month-$_day', style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14)),
+                      TextButton.icon(
+                        icon: const Icon(Icons.edit_calendar, size: 18),
+                        label: const Text('Edit Date'),
+                        onPressed: () => _selectDate(context),
+                        style: TextButton.styleFrom(visualDensity: VisualDensity.compact),
                       ),
-                      const SizedBox(width: 8),
-                      ..._currentPhotos.asMap().entries.map((e) => _buildPhotoPreview(e.value, e.key)).toList(),
                     ],
                   ),
+                  const SizedBox(height: 12),
+                  TextField(
+                    controller: _titleController,
+                    decoration: InputDecoration(
+                      labelText: 'Title',
+                      isDense: true,
+                      filled: true,
+                      fillColor: Colors.white,
+                      border: OutlineInputBorder(borderRadius: BorderRadius.circular(8), borderSide: BorderSide.none),
+                    ),
+                  ),
+                  const SizedBox(height: 12),
+                  TextField(
+                    controller: _memoController,
+                    maxLines: 3,
+                    minLines: 1,
+                    decoration: InputDecoration(
+                      labelText: 'Memo',
+                      isDense: true,
+                      filled: true,
+                      fillColor: Colors.white,
+                      border: OutlineInputBorder(borderRadius: BorderRadius.circular(8), borderSide: BorderSide.none),
+                    ),
+                  ),
+                ] else ...[
+                  if (_displayMemo.isNotEmpty)
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 12.0),
+                      child: Text(
+                        _displayMemo,
+                        style: TextStyle(fontSize: 14, color: Colors.grey[800], height: 1.4),
+                      ),
+                    ),
+                ],
+
+                const SizedBox(height: 12),
+
+                if (widget.availableLocations != null && widget.availableLocations!.length > 1) ...[
+                  Text("Locations included in this visit:",
+                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Colors.grey[700])),
+                  const SizedBox(height: 8),
+                  IgnorePointer(
+                    ignoring: !_isEditing,
+                    child: Wrap(
+                      spacing: 8.0,
+                      runSpacing: 4.0,
+                      children: widget.availableLocations!.map((loc) {
+                        final isChecked = widget.visitDate.visitedDetails.contains(loc.name);
+                        return FilterChip(
+                          label: Text(loc.name, style: const TextStyle(fontSize: 12)),
+                          selected: isChecked,
+                          selectedColor: themeColor.withOpacity(0.2),
+                          checkmarkColor: themeColor,
+                          backgroundColor: Colors.white,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8),
+                              side: BorderSide(color: Colors.grey.shade300)
+                          ),
+                          onSelected: (bool selected) {
+                            _toggleLocationInVisit(loc.name, selected);
+                          },
+                        );
+                      }).toList(),
+                    ),
+                  ),
+                  const SizedBox(height: 16),
+                ],
+
+                if (_currentPhotos.isNotEmpty || _isEditing)
+                  Padding(
+                    padding: const EdgeInsets.only(top: 8.0),
+                    child: SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      clipBehavior: Clip.none,
+                      child: Row(
+                        children: [
+                          if (_isEditing)
+                            Container(
+                              margin: const EdgeInsets.only(right: 12),
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(8),
+                                border: Border.all(color: Colors.grey.shade300),
+                              ),
+                              child: IconButton(
+                                icon: const Icon(Icons.add_photo_alternate, color: Colors.grey),
+                                onPressed: () => _pickImage(ImageSource.gallery),
+                              ),
+                            ),
+                          ..._currentPhotos.asMap().entries.map((e) => _buildPhotoPreview(e.value, e.key)).toList(),
+                        ],
+                      ),
+                    ),
+                  ),
+
+                const SizedBox(height: 20),
+
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    if (_isEditing) ...[
+                      TextButton(
+                        onPressed: _cancelEditing,
+                        child: Text('Cancel', style: TextStyle(color: Colors.grey[700], fontWeight: FontWeight.w600)),
+                      ),
+                      const SizedBox(width: 8),
+                      ElevatedButton.icon(
+                        onPressed: _saveChanges,
+                        icon: const Icon(Icons.save, size: 18),
+                        label: const Text('Save'),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: themeColor,
+                          foregroundColor: Colors.white,
+                          elevation: 0,
+                        ),
+                      ),
+                    ] else ...[
+                      OutlinedButton.icon(
+                        onPressed: () {
+                          setState(() {
+                            _isEditing = true;
+                          });
+                        },
+                        icon: const Icon(Icons.edit, size: 16),
+                        label: const Text('Edit Record'),
+                        style: OutlinedButton.styleFrom(
+                          foregroundColor: themeColor,
+                          side: BorderSide(color: themeColor.withOpacity(0.5)),
+                        ),
+                      ),
+                    ]
+                  ],
                 ),
               ],
             ),
-          ),
+          )
         ],
       ),
     );

@@ -9,9 +9,10 @@ import 'package:jidoapp/models/visit_date_model.dart';
 import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/providers/landmarks_provider.dart';
 import 'package:jidoapp/widgets/landmark_info_card.dart';
+import 'package:jidoapp/widgets/landmark_visit_editor_card.dart'; // 공통 위젯 임포트
 import 'package:provider/provider.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:shared_preferences/shared_preferences.dart'; // 저장 기능을 위해 추가
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:country_flags/country_flags.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:collection/collection.dart';
@@ -59,7 +60,6 @@ class LandmarkStatsScreen extends StatefulWidget {
 }
 
 class _LandmarkStatsScreenState extends State<LandmarkStatsScreen> {
-  // 모든 메뉴 파일의 속성을 통합한 리스트
   final Map<String, List<String>> _attributeGroups = {
     'Cultural': [
       'Ancient Site', 'Modern History', 'Archaeological Site', 'Traditional Village',
@@ -88,37 +88,28 @@ class _LandmarkStatsScreenState extends State<LandmarkStatsScreen> {
   void initState() {
     super.initState();
     _selectedAttributes = {};
-    _loadSavedFilters(); // 저장된 필터 불러오기
+    _loadSavedFilters();
   }
 
-  // SharedPreferences에서 필터 설정 불러오기
   Future<void> _loadSavedFilters() async {
     final prefs = await SharedPreferences.getInstance();
     final List<String>? savedList = prefs.getStringList('stat_selected_attributes');
 
     setState(() {
       if (savedList != null) {
-        // 1. 저장된 값이 있다면 그것을 사용
         _selectedAttributes = savedList.toSet();
       } else {
-        // 2. 저장된 값이 없다면(최초 실행) 기본 로직 적용
-        // Cultural: 모두 포함
         _selectedAttributes.addAll(_attributeGroups['Cultural']!);
-
-        // Natural: Sea, River, Jungle 제외하고 포함
         for (var attr in _attributeGroups['Natural']!) {
           if (attr != 'Sea' && attr != 'River' && attr != 'Jungle') {
             _selectedAttributes.add(attr);
           }
         }
-
-        // Activities: 기본적으로 모두 제외 (아무것도 추가하지 않음)
       }
       _isInit = true;
     });
   }
 
-  // 필터 변경 시 저장
   Future<void> _saveFilters() async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setStringList('stat_selected_attributes', _selectedAttributes.toList());
@@ -166,7 +157,7 @@ class _LandmarkStatsScreenState extends State<LandmarkStatsScreen> {
                                       if (val) _selectedAttributes.add(attr);
                                       else _selectedAttributes.remove(attr);
                                     });
-                                    _saveFilters(); // 변경 즉시 저장
+                                    _saveFilters();
                                     setDialogState(() {});
                                   },
                                 );
@@ -194,7 +185,6 @@ class _LandmarkStatsScreenState extends State<LandmarkStatsScreen> {
 
   @override
   Widget build(BuildContext context) {
-    // 로딩 중이거나 아직 설정을 불러오지 못했으면 로딩 표시
     if (!_isInit) {
       return const Scaffold(body: Center(child: CircularProgressIndicator()));
     }
@@ -211,7 +201,6 @@ class _LandmarkStatsScreenState extends State<LandmarkStatsScreen> {
     final visitedLandmarksSet = landmarksProvider.visitedLandmarks;
     final allRawLandmarks = landmarksProvider.allLandmarks;
 
-    // 선택된 속성이 하나라도 포함된 랜드마크만 필터링
     final List<Landmark> targetLandmarks = allRawLandmarks.where((l) {
       return l.attributes.any((attr) => _selectedAttributes.contains(attr));
     }).toList();
@@ -235,7 +224,6 @@ class _LandmarkStatsScreenState extends State<LandmarkStatsScreen> {
         .where((l) => visitedLandmarksSet.contains(l.name));
     final int totalVisitedItems = visitedTargetLandmarks.length;
 
-    // 통계 계산: 선택된 Attribute에 대해서만 카운트
     for (final landmark in targetLandmarks) {
       for (final attr in landmark.attributes) {
         if (_selectedAttributes.contains(attr)) {
@@ -543,7 +531,6 @@ class _LandmarkRankingCardState extends State<_LandmarkRankingCard> {
         data['fullName'] as String: data['color'] as Color
     };
 
-    // Calculate maximum values for normalization
     int maxVisited = 0;
     int maxTotal = 0;
     for (var s in _rankedList) {
@@ -616,14 +603,12 @@ class _LandmarkRankingCardState extends State<_LandmarkRankingCard> {
                 final stat = _rankedList[index];
                 final barColor = continentColors[stat.country.continent] ?? primaryBlue;
 
-                // Determine progressValue based on sort metric
                 double progressValue;
                 if (_sortMetric == 'By Visit Percentage') {
                   progressValue = stat.totalLandmarks > 0 ? stat.visitedLandmarks / stat.totalLandmarks : 0.0;
                 } else if (_sortMetric == 'By Number of Sites') {
                   progressValue = maxTotal > 0 ? stat.totalLandmarks / maxTotal : 0.0;
                 } else {
-                  // By Visit Count
                   progressValue = maxVisited > 0 ? stat.visitedLandmarks / maxVisited : 0.0;
                 }
 
@@ -716,7 +701,6 @@ class _SiteRankingCardState extends State<_SiteRankingCard> {
     _prepareList();
   }
 
-  // Helper Methods for Landmark Details Modal
   bool _isItemCategory(Landmark item, String category) => item.attributes.contains(category);
 
   bool _isItemNatural(Landmark item) {
@@ -940,7 +924,6 @@ class _SiteRankingCardState extends State<_SiteRankingCard> {
         String? modalFlagIso = _getDisplayIsoA2(freshLandmark, countryProvider);
         List<String> displayIsos = [];
 
-        // Sort countries to ensure China (CHN) comes first visually
         final List<String> sortedIsoA3 = List.from(freshLandmark.countriesIsoA3)
           ..sort((a, b) => a == 'CHN' ? -1 : (b == 'CHN' ? 1 : 0));
 
@@ -971,7 +954,6 @@ class _SiteRankingCardState extends State<_SiteRankingCard> {
                   borderRadius: const BorderRadius.vertical(top: Radius.circular(24)),
                   child: Stack(
                     children: [
-                      // Base theme color gradient
                       Positioned.fill(
                         child: Container(
                           decoration: BoxDecoration(
@@ -986,7 +968,6 @@ class _SiteRankingCardState extends State<_SiteRankingCard> {
                           ),
                         ),
                       ),
-                      // Dark gradient overlay
                       Positioned.fill(
                         child: Container(
                           decoration: BoxDecoration(
@@ -1001,7 +982,6 @@ class _SiteRankingCardState extends State<_SiteRankingCard> {
                           ),
                         ),
                       ),
-                      // Content
                       Padding(
                         padding: const EdgeInsets.fromLTRB(20, 16, 20, 20),
                         child: Column(
@@ -1165,7 +1145,8 @@ class _SiteRankingCardState extends State<_SiteRankingCard> {
 
                           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [Text('History (${freshLandmark.visitDates.length} entries)', style: Theme.of(sheetContext).textTheme.titleSmall), OutlinedButton.icon(icon: const Icon(Icons.add), label: const Text('Add Visit'), onPressed: () => provider.addVisitDate(freshLandmark.name))]),
                           const SizedBox(height: 8),
-                          if (freshLandmark.visitDates.isNotEmpty) ...freshLandmark.visitDates.asMap().entries.map((entry) => _LandmarkVisitEditorCard(
+                          // 공통 위젯인 LandmarkVisitEditorCard로 교체
+                          if (freshLandmark.visitDates.isNotEmpty) ...freshLandmark.visitDates.asMap().entries.map((entry) => LandmarkVisitEditorCard(
                             key: ValueKey('${freshLandmark.name}_${entry.key}'),
                             landmarkName: freshLandmark.name,
                             visitDate: entry.value,
@@ -1460,198 +1441,6 @@ class _LandmarkBrowserCardState extends State<_LandmarkBrowserCard> {
               }).toList()),
             ),
           const SizedBox(height: 12),
-        ],
-      ),
-    );
-  }
-}
-
-// 랜드마크 방문 기록 에디터 카드 추가
-class _LandmarkVisitEditorCard extends StatefulWidget {
-  final String landmarkName;
-  final VisitDate visitDate;
-  final int index;
-  final VoidCallback onDelete;
-  final List<LandmarkSubLocation>? availableLocations;
-
-  const _LandmarkVisitEditorCard({
-    super.key,
-    required this.landmarkName,
-    required this.visitDate,
-    required this.index,
-    required this.onDelete,
-    this.availableLocations,
-  });
-
-  @override
-  State<_LandmarkVisitEditorCard> createState() => _LandmarkVisitEditorCardState();
-}
-
-class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
-  late final TextEditingController _titleController;
-  late final TextEditingController _memoController;
-  late List<String> _currentPhotos;
-  int? _year, _month, _day;
-
-  final ExpansionTileController _expansionTileController = ExpansionTileController();
-
-  @override
-  void initState() {
-    super.initState();
-    _titleController = TextEditingController(text: widget.visitDate.title);
-    _memoController = TextEditingController(text: widget.visitDate.memo);
-    _currentPhotos = List.from(widget.visitDate.photos);
-    _year = widget.visitDate.year;
-    _month = widget.visitDate.month;
-    _day = widget.visitDate.day;
-  }
-
-  void _pickImage(ImageSource source) async {
-    final picker = ImagePicker();
-    final pickedFile = await picker.pickImage(source: source);
-    if (pickedFile != null && mounted) {
-      final newPhotos = List<String>.from(_currentPhotos)..add(pickedFile.path);
-      setState(() => _currentPhotos = newPhotos);
-      if(mounted){
-        context.read<LandmarksProvider>().updateLandmarkVisit(
-            widget.landmarkName,
-            widget.index,
-            photos: newPhotos
-        );
-      }
-    }
-  }
-
-  void _toggleLocationInVisit(String locName, bool isSelected) {
-    final provider = context.read<LandmarksProvider>();
-    List<String> currentDetails = List.from(widget.visitDate.visitedDetails);
-
-    if (isSelected) {
-      if (!currentDetails.contains(locName)) {
-        currentDetails.add(locName);
-        if (!provider.isSubLocationVisited(widget.landmarkName, locName)) {
-          provider.toggleSubLocation(widget.landmarkName, locName);
-        }
-      }
-    } else {
-      currentDetails.remove(locName);
-    }
-
-    provider.updateLandmarkVisit(
-        widget.landmarkName,
-        widget.index,
-        visitedDetails: currentDetails
-    );
-
-    setState(() {});
-  }
-
-  Widget _buildPhotoPreview(String photoPath, int index) {
-    return Container(
-        width: 60,
-        height: 60,
-        margin: const EdgeInsets.only(right: 8),
-        color: Colors.grey[300],
-        child: Image.file(File(photoPath), fit: BoxFit.cover));
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    final provider = context.read<LandmarksProvider>();
-    final themeColor = Theme.of(context).primaryColor;
-
-    return Card(
-      elevation: 1,
-      margin: const EdgeInsets.symmetric(vertical: 4),
-      child: ExpansionTile(
-        controller: _expansionTileController,
-        title: Text(widget.visitDate.title.isNotEmpty ? widget.visitDate.title : 'Visit Record'),
-        subtitle: Text('Date: $_year-$_month-$_day'),
-        trailing: IconButton(
-          icon: const Icon(Icons.delete, color: Colors.red, size: 20),
-          onPressed: () {
-            showDialog(
-              context: context,
-              builder: (context) => AlertDialog(
-                title: const Text('Delete Visit Record'),
-                content: const Text('Are you sure you want to delete this visit record?'),
-                actions: [
-                  TextButton(
-                    onPressed: () => Navigator.pop(context),
-                    child: const Text('Cancel'),
-                  ),
-                  TextButton(
-                    onPressed: () {
-                      Navigator.pop(context);
-                      widget.onDelete();
-                    },
-                    child: const Text('Delete', style: TextStyle(color: Colors.red)),
-                  ),
-                ],
-              ),
-            );
-          },
-        ),
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(12.0),
-            child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  TextField(
-                      controller: _titleController,
-                      decoration: const InputDecoration(labelText: 'Title', isDense: true),
-                      onEditingComplete: () => provider.updateLandmarkVisit(
-                          widget.landmarkName, widget.index,
-                          title: _titleController.text)),
-                  const SizedBox(height: 8),
-                  TextField(
-                      controller: _memoController,
-                      decoration: const InputDecoration(labelText: 'Memo', isDense: true),
-                      onEditingComplete: () => provider.updateLandmarkVisit(
-                          widget.landmarkName, widget.index,
-                          memo: _memoController.text)),
-                  const SizedBox(height: 12),
-
-                  // Sub-locations FilterChips
-                  if (widget.availableLocations != null && widget.availableLocations!.length > 1) ...[
-                    const Text("Locations included in this visit:",
-                        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Colors.grey)),
-                    const SizedBox(height: 4),
-                    Wrap(
-                      spacing: 8.0,
-                      runSpacing: 4.0,
-                      children: widget.availableLocations!.map((loc) {
-                        final isChecked = widget.visitDate.visitedDetails.contains(loc.name);
-                        return FilterChip(
-                          label: Text(loc.name, style: const TextStyle(fontSize: 11)),
-                          selected: isChecked,
-                          selectedColor: themeColor.withOpacity(0.2),
-                          checkmarkColor: themeColor,
-                          onSelected: (bool selected) {
-                            _toggleLocationInVisit(loc.name, selected);
-                          },
-                        );
-                      }).toList(),
-                    ),
-                    const SizedBox(height: 16),
-                  ],
-
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(children: [
-                      IconButton(
-                          icon: const Icon(Icons.camera_alt),
-                          onPressed: () => _pickImage(ImageSource.gallery)),
-                      ..._currentPhotos
-                          .asMap()
-                          .entries
-                          .map((e) => _buildPhotoPreview(e.value, e.key))
-                          .toList(),
-                    ]),
-                  ),
-                ]),
-          )
         ],
       ),
     );

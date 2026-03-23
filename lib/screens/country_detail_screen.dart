@@ -31,6 +31,8 @@ import 'package:jidoapp/providers/economy_provider.dart';
 
 // Widgets
 import 'package:jidoapp/widgets/landmark_info_card.dart';
+import 'package:jidoapp/widgets/landmark_visit_editor_card.dart'; // [Update] 공통 위젯 임포트
+import 'package:jidoapp/widgets/unesco_visit_editor_card.dart';  // [Update] 공통 위젯 임포트
 
 class CountryDetailScreen extends StatefulWidget {
   final Country country;
@@ -85,10 +87,6 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
     ) ?? false;
   }
 
-  // Data Fetching Logic
-
-// Data Fetching Logic
-
   String _getDisplayCityName(Landmark landmark) {
     if (landmark.name == 'Öresund Bridge') {
       if (widget.country.isoA3 == 'SWE') return 'Malmö';
@@ -123,7 +121,6 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
 
     for (var l in allCountryLandmarks) {
       // 1. Cultural Check (Priority 1)
-      // If it has any attribute distinct from natural/activity sets, treat as Cultural.
       bool isCultural = l.attributes.any((a) =>
       !_naturalAttributes.contains(a) && !_activityAttributes.contains(a));
 
@@ -136,12 +133,10 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
       if (isCultural) {
         cultural.add(l);
       } else if (isNatural) {
-        // Now Natural takes precedence over Activities if both are present (and not cultural)
         natural.add(l);
       } else if (isActivity) {
         activities.add(l);
       } else {
-        // Default / No attributes -> Cultural
         cultural.add(l);
       }
     }
@@ -159,8 +154,6 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
       return site.countriesIsoA3.contains(widget.country.isoA3);
     }).toList();
   }
-
-  // Modal Logic (Full Detail Screens)
 
   void _showLandmarkDetailsModal(BuildContext context, Landmark landmark, Color fallbackThemeColor) {
     showModalBottomSheet(
@@ -276,7 +269,7 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
                         ],
                         Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [Text('History (${freshLandmark.visitDates.length} entries)', style: Theme.of(sheetContext).textTheme.titleSmall), OutlinedButton.icon(icon: const Icon(Icons.add), label: const Text('Add Visit'), onPressed: () => provider.addVisitDate(freshLandmark.name))]),
                         const SizedBox(height: 8),
-                        if (freshLandmark.visitDates.isNotEmpty) ...freshLandmark.visitDates.asMap().entries.map((entry) => _LandmarkVisitEditorCard(
+                        if (freshLandmark.visitDates.isNotEmpty) ...freshLandmark.visitDates.asMap().entries.map((entry) => LandmarkVisitEditorCard(
                           key: ValueKey('${freshLandmark.name}_${entry.key}'),
                           landmarkName: freshLandmark.name,
                           visitDate: entry.value,
@@ -359,7 +352,7 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
                         ],
                         Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [Text('History (${freshSite.visitDates.length} entries)', style: Theme.of(sheetContext).textTheme.titleSmall), OutlinedButton.icon(icon: const Icon(Icons.add), label: const Text('Add Visit'), onPressed: () => provider.addVisitDate(freshSite.name))]),
                         const SizedBox(height: 8),
-                        if (freshSite.visitDates.isNotEmpty) ...freshSite.visitDates.asMap().entries.map((entry) => _UnescoVisitEditorCard(key: ValueKey('${freshSite.name}_${entry.key}'), siteName: freshSite.name, visitDate: entry.value, index: entry.key, onDelete: () => provider.removeVisitDate(freshSite.name, entry.key), availableLocations: freshSite.locations)) else const Center(child: Text('No visits recorded.')),
+                        if (freshSite.visitDates.isNotEmpty) ...freshSite.visitDates.asMap().entries.map((entry) => UnescoVisitEditorCard(key: ValueKey('${freshSite.name}_${entry.key}'), siteName: freshSite.name, visitDate: entry.value, index: entry.key, onDelete: () => provider.removeVisitDate(freshSite.name, entry.key), availableLocations: freshSite.locations)) else const Center(child: Text('No visits recorded.')),
                         const Divider(height: 24),
                         LandmarkInfoCard(overview: freshSite.overview, historySignificance: freshSite.history_significance, highlights: freshSite.highlights, themeColor: themeColor),
                         const SizedBox(height: 40),
@@ -436,8 +429,6 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
     final bool showSubtitle = subtitle != null && subtitle.trim().isNotEmpty;
 
     final bool isHighlighted = rank != null && rank > 0;
-    final luminance = themeColor.computeLuminance();
-    final highlightTextColor = luminance > 0.35 ? Colors.black87 : Colors.white;
 
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 4),
@@ -494,10 +485,6 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
     );
   }
 
-  // 1. Modified Top 30 Card (Correct Rank Display)
-
-  /// Converts landmark name to snake_case asset path
-  /// e.g. "Taj Mahal" → "assets/countrydex/taj_mahal.jpg"
   String _getLandmarkImageUrl(String name) {
     final snake = name
         .toLowerCase()
@@ -512,7 +499,6 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
     final isVisited = provider.visitedLandmarks.contains(landmark.name);
     final imageUrl = _getLandmarkImageUrl(landmark.name);
 
-    // Derive a readable text color against themeColor background
     final luminance = themeColor.computeLuminance();
     final nameTextColor = luminance > 0.35 ? Colors.black87 : Colors.white;
 
@@ -531,7 +517,6 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Image area
             Expanded(
               child: Stack(
                 children: [
@@ -557,7 +542,6 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
                       ),
                     ),
                   ),
-                  // Rank badge (top-left)
                   Positioned(
                     top: 6,
                     left: 6,
@@ -573,7 +557,6 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
                       );
                     }),
                   ),
-                  // Visited check (top-right)
                   if (isVisited)
                     Positioned(
                       top: 6,
@@ -591,7 +574,6 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
                 ],
               ),
             ),
-            // Name area — theme color background, always 2-line height
             Container(
               height: 48,
               width: double.infinity,
@@ -620,8 +602,6 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
       ),
     );
   }
-
-  // 2. New Expandable Explore Buttons & Logic
 
   Widget _buildExpandableCategoryButton({
     required String title,
@@ -676,8 +656,6 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
       ),
     );
   }
-
-  // Sub-builders for specific lists
 
   Widget _buildListGroupedByCity(
       BuildContext context,
@@ -742,7 +720,7 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
                 padding: const EdgeInsets.symmetric(horizontal: 12),
                 child: _buildSyncableListItem(
                   title: item.name,
-                  subtitle: null, // City shown as group header
+                  subtitle: null,
                   isVisited: isVisited,
                   onToggle: (val) async {
                     if (!val) {
@@ -858,7 +836,6 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
             ...sortedItems.map((item) {
               final isVisited = visitedItems.contains(item.name);
 
-              // City name hidden for non-cultural landmarks
               return Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 12),
                 child: _buildSyncableListItem(
@@ -886,7 +863,6 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
     );
   }
 
-  // UNESCO Sorting Logic
   List<UnescoSite> _sortSitesByCityPopularity(List<UnescoSite> sites) {
     if (sites.isEmpty) return [];
 
@@ -923,13 +899,11 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
 
     final themeColor = widget.country.themeColor ?? Theme.of(context).primaryColor;
 
-    // Data Preparation
     final topLandmarks = _getTop30Landmarks(context);
     final allLandmarks = landmarksProvider.allLandmarks.where((l) => l.countriesIsoA3.contains(widget.country.isoA3)).toList();
     final categorized = _categorizeLandmarks(allLandmarks);
     final unescoSites = _getUnescoSitesForCountry(context);
 
-    // Modified: Highly granular grouping for Activities to match menu screen
     final activityGrouping = {
       'Painting & Artworks': ['Painting', 'Artwork'],
       'Libraries & Bookstores': ['Library', 'Bookstore'],
@@ -963,7 +937,6 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
 
             const SizedBox(height: 12),
 
-            // Top 30 Highlights
             if (topLandmarks.isNotEmpty) ...[
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
@@ -997,7 +970,6 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
               const SizedBox(height: 32),
             ],
 
-            // Explore Title Changed
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 8, vertical: 8),
               child: Text(
@@ -1006,7 +978,6 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
               ),
             ),
 
-            // 1. Cultural Landmarks (First Priority Display)
             _buildExpandableCategoryButton(
               title: 'Cultural Landmarks',
               subtitle: '${categorized['cultural']!.length} locations',
@@ -1029,7 +1000,6 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
                 ),
               ),
 
-            // 2. Natural Wonders (Second Priority Display)
             _buildExpandableCategoryButton(
               title: 'Natural Wonders',
               subtitle: '${categorized['natural']!.length} locations',
@@ -1054,7 +1024,6 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
                 ),
               ),
 
-            // 3. Activities (Third Priority Display)
             _buildExpandableCategoryButton(
               title: 'Activities',
               subtitle: '${categorized['activities']!.length} locations',
@@ -1079,7 +1048,6 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
                 ),
               ),
 
-            // 4. UNESCO
             _buildExpandableCategoryButton(
               title: 'UNESCO World Heritage',
               subtitle: '${unescoSites.length} sites',
@@ -1113,7 +1081,7 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
                         ),
                         ...sortedSites.map((item) {
                           final isVisited = unescoProvider.visitedSites.contains(item.name);
-                          String? subtitle = null; // City name hidden
+                          String? subtitle = null;
                           return Padding(
                             padding: const EdgeInsets.symmetric(horizontal: 12),
                             child: _buildSyncableListItem(
@@ -1147,7 +1115,6 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
     );
   }
 
-  // Visit Log & Info Card Methods
   Widget _buildVisitLogCard(BuildContext context) {
     final countryProvider = context.watch<CountryProvider>();
     final visitDetails = countryProvider.visitDetails[widget.country.name];
@@ -1444,7 +1411,6 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
     );
   }
 
-  // Helper Widget for Safety Badge
   Widget _buildSafetyBadge(int level) {
     Color color;
     String text;
@@ -1585,7 +1551,7 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
                     ? city.description
                     : '${city.description} (Not in app database)',
                 isVisited: isVisited,
-                onToggle: isAppDefinedCityInMapData
+                onToggle: isAppDefinedCiMapData(cityObj)
                     ? (value) async {
                   if (!value) {
                     final details = cityProvider.visitDetails[city.name];
@@ -1630,9 +1596,9 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
       ),
     );
   }
-}
 
-// Helper Classes
+  bool isAppDefinedCiMapData(City? cityObj) => cityObj != null;
+}
 
 class _StarRating extends StatelessWidget {
   final double rating;
@@ -2071,8 +2037,6 @@ class _CountryVisitDetailEditorTileState extends State<_CountryVisitDetailEditor
                     filled: true,
                     fillColor: Colors.white,
                   ),
-                  onChanged: (val) {
-                  },
                 ),
                 const SizedBox(height: 12),
                 TextField(
@@ -2100,8 +2064,6 @@ class _CountryVisitDetailEditorTileState extends State<_CountryVisitDetailEditor
                     fillColor: Colors.white,
                   ),
                   maxLines: 3,
-                  onChanged: (val) {
-                  },
                 ),
                 const SizedBox(height: 16),
                 Row(
@@ -2417,8 +2379,6 @@ class _CountryVisitDetailEditorTileState extends State<_CountryVisitDetailEditor
                   ),
                   keyboardType: TextInputType.number,
                   inputFormatters: [FilteringTextInputFormatter.digitsOnly],
-                  onChanged: (val) {
-                  },
                 ),
                 const SizedBox(height: 16),
                 Row(
@@ -2584,328 +2544,6 @@ class _CountryVisitDetailEditorTileState extends State<_CountryVisitDetailEditor
               ],
             ),
           ),
-        ],
-      ),
-    );
-  }
-}
-
-class _LandmarkVisitEditorCard extends StatefulWidget {
-  final String landmarkName;
-  final VisitDate visitDate;
-  final int index;
-  final VoidCallback onDelete;
-  final List<LandmarkSubLocation>? availableLocations;
-
-  const _LandmarkVisitEditorCard({
-    super.key,
-    required this.landmarkName,
-    required this.visitDate,
-    required this.index,
-    required this.onDelete,
-    this.availableLocations,
-  });
-
-  @override
-  State<_LandmarkVisitEditorCard> createState() => _LandmarkVisitEditorCardState();
-}
-
-class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
-  late final TextEditingController _titleController;
-  late final TextEditingController _memoController;
-  late List<String> _currentPhotos;
-  int? _year, _month, _day;
-
-  final ExpansionTileController _expansionTileController = ExpansionTileController();
-
-  @override
-  void initState() {
-    super.initState();
-    _titleController = TextEditingController(text: widget.visitDate.title);
-    _memoController = TextEditingController(text: widget.visitDate.memo);
-    _currentPhotos = List.from(widget.visitDate.photos);
-    _year = widget.visitDate.year;
-    _month = widget.visitDate.month;
-    _day = widget.visitDate.day;
-  }
-
-  void _pickImage(ImageSource source) async {
-    final picker = ImagePicker();
-    final pickedFile = await picker.pickImage(source: source);
-    if (pickedFile != null && mounted) {
-      final newPhotos = List<String>.from(_currentPhotos)..add(pickedFile.path);
-      setState(() => _currentPhotos = newPhotos);
-      if(mounted){
-        context.read<LandmarksProvider>().updateLandmarkVisit(
-            widget.landmarkName,
-            widget.index,
-            photos: newPhotos
-        );
-      }
-    }
-  }
-
-  void _toggleLocationInVisit(String locName, bool isSelected) {
-    final provider = context.read<LandmarksProvider>();
-    List<String> currentDetails = List.from(widget.visitDate.visitedDetails);
-
-    if (isSelected) {
-      if (!currentDetails.contains(locName)) {
-        currentDetails.add(locName);
-        if (!provider.isSubLocationVisited(widget.landmarkName, locName)) {
-          provider.toggleSubLocation(widget.landmarkName, locName);
-        }
-      }
-    } else {
-      currentDetails.remove(locName);
-    }
-
-    provider.updateLandmarkVisit(
-        widget.landmarkName,
-        widget.index,
-        visitedDetails: currentDetails
-    );
-
-    setState(() {});
-  }
-
-  Widget _buildPhotoPreview(String photoPath, int index) {
-    return Container(
-        width: 60,
-        height: 60,
-        margin: const EdgeInsets.only(right: 8),
-        color: Colors.grey[300],
-        child: Image.file(File(photoPath), fit: BoxFit.cover));
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    final provider = context.read<LandmarksProvider>();
-    final themeColor = Theme.of(context).primaryColor;
-
-    return Card(
-      elevation: 1,
-      margin: const EdgeInsets.symmetric(vertical: 4),
-      child: ExpansionTile(
-        controller: _expansionTileController,
-        title: Text(widget.visitDate.title.isNotEmpty ? widget.visitDate.title : 'Visit Record'),
-        subtitle: Text('Date: $_year-$_month-$_day'),
-        trailing: IconButton(
-          icon: const Icon(Icons.delete, color: Colors.red, size: 20),
-          onPressed: widget.onDelete,
-        ),
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(12.0),
-            child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  TextField(
-                      controller: _titleController,
-                      decoration: const InputDecoration(labelText: 'Title', isDense: true),
-                      onEditingComplete: () => provider.updateLandmarkVisit(
-                          widget.landmarkName, widget.index,
-                          title: _titleController.text)),
-                  const SizedBox(height: 8),
-                  TextField(
-                      controller: _memoController,
-                      decoration: const InputDecoration(labelText: 'Memo', isDense: true),
-                      onEditingComplete: () => provider.updateLandmarkVisit(
-                          widget.landmarkName, widget.index,
-                          memo: _memoController.text)),
-                  const SizedBox(height: 12),
-
-                  if (widget.availableLocations != null && widget.availableLocations!.length > 1) ...[
-                    const Text("Locations included in this visit:",
-                        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Colors.grey)),
-                    const SizedBox(height: 4),
-                    Wrap(
-                      spacing: 8.0,
-                      runSpacing: 4.0,
-                      children: widget.availableLocations!.map((loc) {
-                        final isChecked = widget.visitDate.visitedDetails.contains(loc.name);
-                        return FilterChip(
-                          label: Text(loc.name, style: const TextStyle(fontSize: 11)),
-                          selected: isChecked,
-                          selectedColor: themeColor.withOpacity(0.2),
-                          checkmarkColor: themeColor,
-                          onSelected: (bool selected) {
-                            _toggleLocationInVisit(loc.name, selected);
-                          },
-                        );
-                      }).toList(),
-                    ),
-                    const SizedBox(height: 16),
-                  ],
-
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(children: [
-                      IconButton(
-                          icon: const Icon(Icons.camera_alt),
-                          onPressed: () => _pickImage(ImageSource.gallery)),
-                      ..._currentPhotos
-                          .asMap()
-                          .entries
-                          .map((e) => _buildPhotoPreview(e.value, e.key))
-                          .toList(),
-                    ]),
-                  ),
-                ]),
-          )
-        ],
-      ),
-    );
-  }
-}
-
-class _UnescoVisitEditorCard extends StatefulWidget {
-  final String siteName;
-  final VisitDate visitDate;
-  final int index;
-  final VoidCallback onDelete;
-  final List<UnescoSubLocation> availableLocations;
-
-  const _UnescoVisitEditorCard({
-    super.key,
-    required this.siteName,
-    required this.visitDate,
-    required this.index,
-    required this.onDelete,
-    required this.availableLocations,
-  });
-
-  @override
-  State<_UnescoVisitEditorCard> createState() => _UnescoVisitEditorCardState();
-}
-
-class _UnescoVisitEditorCardState extends State<_UnescoVisitEditorCard> {
-  late final TextEditingController _titleController;
-  late final TextEditingController _memoController;
-  late List<String> _currentPhotos;
-  int? _year, _month, _day;
-  final ExpansionTileController _expansionTileController = ExpansionTileController();
-
-  @override
-  void initState() {
-    super.initState();
-    _titleController = TextEditingController(text: widget.visitDate.title);
-    _memoController = TextEditingController(text: widget.visitDate.memo);
-    _currentPhotos = List.from(widget.visitDate.photos);
-    _year = widget.visitDate.year;
-    _month = widget.visitDate.month;
-    _day = widget.visitDate.day;
-  }
-
-  void _pickImage(ImageSource source) async {
-    final picker = ImagePicker();
-    final pickedFile = await picker.pickImage(source: source);
-    if (pickedFile != null && mounted) {
-      final newPhotos = List<String>.from(_currentPhotos)..add(pickedFile.path);
-      setState(() => _currentPhotos = newPhotos);
-      context.read<UnescoProvider>().updateLandmarkVisit(
-          widget.siteName, widget.index,
-          photos: newPhotos);
-    }
-  }
-
-  void _toggleLocationInVisit(String locName, bool isSelected) {
-    final provider = context.read<UnescoProvider>();
-    List<String> currentDetails = List.from(widget.visitDate.visitedDetails);
-
-    if (isSelected) {
-      if (!currentDetails.contains(locName)) {
-        currentDetails.add(locName);
-        if (!provider.isSubLocationVisited(widget.siteName, locName)) {
-          provider.toggleSubLocation(widget.siteName, locName);
-        }
-      }
-    } else {
-      currentDetails.remove(locName);
-    }
-
-    provider.updateLandmarkVisit(widget.siteName, widget.index,
-        visitedDetails: currentDetails);
-
-    setState(() {});
-  }
-
-  Widget _buildPhotoPreview(String photoPath, int index) {
-    return Container(
-        width: 80,
-        height: 80,
-        margin: const EdgeInsets.only(right: 8),
-        color: Colors.grey,
-        child: Image.file(File(photoPath), fit: BoxFit.cover));
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    final provider = context.read<UnescoProvider>();
-    final themeColor = Theme.of(context).primaryColor;
-
-    return Card(
-      child: ExpansionTile(
-        controller: _expansionTileController,
-        title: Text(widget.visitDate.title.isNotEmpty ? widget.visitDate.title : 'Visit Record'),
-        subtitle: Text('Date: $_year-$_month-$_day'),
-        trailing: IconButton(
-          icon: const Icon(Icons.delete, color: Colors.red),
-          onPressed: widget.onDelete,
-        ),
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  TextField(
-                      controller: _titleController,
-                      decoration: const InputDecoration(labelText: 'Title'),
-                      onEditingComplete: () => provider.updateLandmarkVisit(
-                          widget.siteName, widget.index,
-                          title: _titleController.text)),
-                  TextField(
-                      controller: _memoController,
-                      decoration: const InputDecoration(labelText: 'Memo'),
-                      onEditingComplete: () => provider.updateLandmarkVisit(
-                          widget.siteName, widget.index,
-                          memo: _memoController.text)),
-                  const SizedBox(height: 16),
-                  if (widget.availableLocations.length > 1) ...[
-                    const Text("Locations included in this visit:",
-                        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Colors.grey)),
-                    const SizedBox(height: 4),
-                    Wrap(
-                      spacing: 8.0,
-                      runSpacing: 4.0,
-                      children: widget.availableLocations.map((loc) {
-                        final isChecked = widget.visitDate.visitedDetails.contains(loc.name);
-                        return FilterChip(
-                          label: Text(loc.name, style: const TextStyle(fontSize: 11)),
-                          selected: isChecked,
-                          selectedColor: themeColor.withOpacity(0.2),
-                          checkmarkColor: themeColor,
-                          onSelected: (bool selected) {
-                            _toggleLocationInVisit(loc.name, selected);
-                          },
-                        );
-                      }).toList(),
-                    ),
-                    const SizedBox(height: 16),
-                  ],
-                  const SizedBox(height: 10),
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(children: [
-                      IconButton(
-                          icon: const Icon(Icons.camera_alt),
-                          onPressed: () => _pickImage(ImageSource.gallery)),
-                      ..._currentPhotos.asMap().entries.map((e) => _buildPhotoPreview(e.value, e.key)).toList(),
-                    ]),
-                  ),
-                ]),
-          )
         ],
       ),
     );

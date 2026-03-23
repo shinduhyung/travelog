@@ -1,3 +1,5 @@
+// lib/screens/top_paintings_screen.dart
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:collection/collection.dart';
@@ -6,6 +8,7 @@ import 'package:jidoapp/models/landmarks_model.dart';
 import 'package:jidoapp/providers/landmarks_provider.dart';
 import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/widgets/landmark_info_card.dart';
+import 'package:jidoapp/widgets/landmark_visit_editor_card.dart'; // 공통 위젯 import
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:jidoapp/models/visit_date_model.dart';
 import 'dart:io';
@@ -20,21 +23,21 @@ class TopPaintingsScreen extends StatelessWidget {
     {'rank': 3, 'name': 'The Starry Night', 'info': 'MoMA', 'iso': 'US'},
     {'rank': 4, 'name': 'The Last Supper', 'info': 'Santa Maria delle Grazie', 'iso': 'IT'},
     {'rank': 5, 'name': 'The Birth of Venus', 'info': 'Uffizi Gallery', 'iso': 'IT'},
-    {'rank': 6, 'name': 'The Creation of Adam', 'info': 'Sistine Chapel', 'iso': 'VA'},
-    {'rank': 7, 'name': 'The Kiss', 'info': 'Österreichische Galerie Belvedere', 'iso': 'AT'},
-    {'rank': 8, 'name': 'Guernica', 'info': 'Museo Reina Sofía', 'iso': 'ES'},
-    {'rank': 9, 'name': 'Wanderer above the Sea of Fog', 'info': 'Kunsthalle Hamburg', 'iso': 'DE'},
-    {'rank': 10, 'name': 'School of Athens', 'info': 'Vatican Museums', 'iso': 'VA'},
-    {'rank': 11, 'name': 'Sunflowers', 'info': 'National Gallery', 'iso': 'GB'},
-    {'rank': 12, 'name': 'Irises', 'info': 'J. Paul Getty Museum', 'iso': 'US'},
-    {'rank': 13, 'name': 'View of Toledo', 'info': 'Metropolitan Museum of Art', 'iso': 'US'},
-    {'rank': 14, 'name': 'Persistence of Memory', 'info': 'MoMA', 'iso': 'US'},
-    {'rank': 15, 'name': 'Café Terrace at Night', 'info': 'Kröller-Müller Museum', 'iso': 'NL'},
-    {'rank': 16, 'name': 'Las Meninas', 'info': 'Museo del Prado', 'iso': 'ES'},
-    {'rank': 17, 'name': 'The Hay Wain', 'info': 'National Gallery', 'iso': 'GB'},
-    {'rank': 18, 'name': 'The Transfiguration', 'info': 'Vatican Museums', 'iso': 'VA'},
-    {'rank': 19, 'name': 'Arnolfini Portrait', 'info': 'National Gallery', 'iso': 'GB'},
-    {'rank': 20, 'name': 'American Gothic', 'info': 'Art Institute of Chicago', 'iso': 'US'},
+    {'rank': 6, 'name': 'Las Meninas', 'info': 'Prado Museum', 'iso': 'ES'},
+    {'rank': 7, 'name': 'The Creation of Adam', 'info': 'Sistine Chapel', 'iso': 'VA'},
+    {'rank': 8, 'name': 'The Night Watch', 'info': 'Rijksmuseum', 'iso': 'NL'},
+    {'rank': 9, 'name': 'The Scream', 'info': 'National Museum Oslo', 'iso': 'NO'},
+    {'rank': 10, 'name': 'Guernica', 'info': 'Reina Sofia Museum', 'iso': 'ES'},
+    {'rank': 11, 'name': 'The Kiss', 'info': 'Upper Belvedere', 'iso': 'AT'},
+    {'rank': 12, 'name': 'Impression, Sunrise', 'info': 'Musee Marmottan Monet', 'iso': 'FR'},
+    {'rank': 13, 'name': 'Liberty Leading the People', 'info': 'Louvre Museum', 'iso': 'FR'},
+    {'rank': 14, 'name': 'Whistler\'s Mother', 'info': 'Musee d\'Orsay', 'iso': 'FR'},
+    {'rank': 15, 'name': 'The Arnolfini Portrait', 'info': 'National Gallery', 'iso': 'GB'},
+    {'rank': 16, 'name': 'The Garden of Earthly Delights', 'info': 'Prado Museum', 'iso': 'ES'},
+    {'rank': 17, 'name': 'A Sunday Afternoon on the Island of La Grande Jatte', 'info': 'Art Institute of Chicago', 'iso': 'US'},
+    {'rank': 18, 'name': 'Cafe Terrace at Night', 'info': 'Kroller-Muller Museum', 'iso': 'NL'},
+    {'rank': 19, 'name': 'American Gothic', 'info': 'Art Institute of Chicago', 'iso': 'US'},
+    {'rank': 20, 'name': 'Great Wave off Kanagawa', 'info': 'Metropolitan Museum of Art', 'iso': 'JP'},
   ];
 
   @override
@@ -73,13 +76,13 @@ class TopPaintingsScreen extends StatelessWidget {
                         ),
                         child: const Icon(
                           Icons.palette_outlined,
-                          color: Color(0xFF6B4EFF),
+                          color: Color(0xFFFF6B9D),
                           size: 24,
                         ),
                       ),
                       const SizedBox(width: 12),
                       const Text(
-                        'Top 20 Paintings',
+                        'World Top Paintings',
                         style: TextStyle(
                           fontSize: 26,
                           fontWeight: FontWeight.bold,
@@ -91,7 +94,7 @@ class TopPaintingsScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 8),
                   Text(
-                    'Most renowned artworks in the world',
+                    'The most iconic artworks in human history',
                     style: TextStyle(
                       fontSize: 14,
                       color: Colors.grey[600],
@@ -119,7 +122,7 @@ class TopPaintingsScreen extends StatelessWidget {
                   return GestureDetector(
                     onTap: () {
                       if (landmark != null) {
-                        _showLandmarkDetailsModal(context, landmark, const Color(0xFFC06C84));
+                        _showLandmarkDetailsModal(context, landmark, const Color(0xFFFF6B9D));
                       } else {
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(content: Text("$name details not found in database")),
@@ -146,29 +149,18 @@ class TopPaintingsScreen extends StatelessWidget {
                       child: Row(
                         children: [
                           Container(
-                            width: 40,
-                            height: 40,
-                            decoration: BoxDecoration(
-                              gradient: LinearGradient(
-                                begin: Alignment.topLeft,
-                                end: Alignment.bottomRight,
-                                colors: rank <= 3
-                                    ? [const Color(0xFF6B4EFF), const Color(0xFF8B6EFF)]
-                                    : [const Color(0xFFF5F5F5), const Color(0xFFE8E8E8)],
-                              ),
-                              borderRadius: BorderRadius.circular(12),
-                            ),
+                            width: 32,
                             alignment: Alignment.center,
                             child: Text(
-                              '$rank',
+                              '#$rank',
                               style: TextStyle(
-                                fontSize: 16,
+                                fontSize: 14,
                                 fontWeight: FontWeight.bold,
-                                color: rank <= 3 ? Colors.white : const Color(0xFF666666),
+                                color: rank <= 3 ? const Color(0xFFFF6B9D) : Colors.grey[400],
                               ),
                             ),
                           ),
-                          const SizedBox(width: 16),
+                          const SizedBox(width: 8),
                           ClipRRect(
                             borderRadius: BorderRadius.circular(4),
                             child: SizedBox(
@@ -197,8 +189,8 @@ class TopPaintingsScreen extends StatelessWidget {
                                   style: TextStyle(
                                     fontSize: 13,
                                     color: Colors.grey[600],
+                                    fontWeight: FontWeight.w500,
                                   ),
-                                  overflow: TextOverflow.ellipsis,
                                 ),
                               ],
                             ),
@@ -285,8 +277,8 @@ class TopPaintingsScreen extends StatelessWidget {
                             child: Text('Cancel', style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600))),
                         ElevatedButton(
                             onPressed: () => Navigator.pop(sheetContext),
-                            child: Text('Done', style: TextStyle(fontWeight: FontWeight.w600, color: themeColor)),
-                            style: ElevatedButton.styleFrom(backgroundColor: headerTextColor)),
+                            style: ElevatedButton.styleFrom(backgroundColor: headerTextColor),
+                            child: Text('Done', style: TextStyle(fontWeight: FontWeight.w600, color: themeColor))),
                       ],
                     ),
                     const SizedBox(height: 12),
@@ -304,47 +296,41 @@ class TopPaintingsScreen extends StatelessWidget {
                       children: [
                         Icon(Icons.location_on, size: 14, color: headerTextColor.withOpacity(0.8)),
                         const SizedBox(width: 4),
-                        Expanded(
-                            child: Text(locationDisplay,
-                                style: Theme.of(sheetContext).textTheme.titleSmall?.copyWith(
-                                    color: headerTextColor.withOpacity(0.8), fontWeight: FontWeight.normal))),
+                        Expanded(child: Text(locationDisplay, style: Theme.of(sheetContext).textTheme.titleSmall?.copyWith(color: headerTextColor.withOpacity(0.8), fontWeight: FontWeight.normal))),
                       ],
                     ),
                   ],
                 ),
               ),
               Expanded(
-                child: Container(
-                  color: Colors.white,
-                  child: SingleChildScrollView(
-                    child: Padding(
-                      padding: const EdgeInsets.all(16.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Row(mainAxisSize: MainAxisSize.min, children: [const Text('Wishlist:'), IconButton(visualDensity: VisualDensity.compact, icon: Icon(isWishlisted ? Icons.favorite : Icons.favorite_border, color: isWishlisted ? Colors.red : Colors.grey), onPressed: () => provider.toggleWishlistStatus(freshLandmark.name))]),
-                              Row(mainAxisSize: MainAxisSize.min, children: [const Text('My Rating:'), const SizedBox(width: 8), RatingBar.builder(initialRating: freshLandmark.rating ?? 0.0, minRating: 0, direction: Axis.horizontal, allowHalfRating: true, itemCount: 5, itemSize: 28.0, itemBuilder: (context, _) => const Icon(Icons.star, color: Colors.amber), onRatingUpdate: (rating) => provider.updateLandmarkRating(freshLandmark.name, rating))]),
-                            ],
-                          ),
-                          const Divider(height: 20),
-                          Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [Text('History (${freshLandmark.visitDates.length} entries)', style: Theme.of(sheetContext).textTheme.titleSmall), OutlinedButton.icon(icon: const Icon(Icons.add), label: const Text('Add Visit'), onPressed: () => provider.addVisitDate(freshLandmark.name))]),
-                          const SizedBox(height: 8),
-                          if (freshLandmark.visitDates.isNotEmpty) ...freshLandmark.visitDates.asMap().entries.map((entry) => _LandmarkVisitEditorCard(
-                            key: ValueKey('${freshLandmark.name}_${entry.key}'),
-                            landmarkName: freshLandmark.name,
-                            visitDate: entry.value,
-                            index: entry.key,
-                            onDelete: () => provider.removeVisitDate(freshLandmark.name, entry.key),
-                            availableLocations: freshLandmark.locations,
-                          )) else const Center(child: Text('No visits recorded.')),
-                          const Divider(height: 24),
-                          LandmarkInfoCard(overview: freshLandmark.overview, historySignificance: freshLandmark.history_significance, highlights: freshLandmark.highlights, themeColor: themeColor),
-                          const SizedBox(height: 40),
-                        ],
-                      ),
+                child: SingleChildScrollView(
+                  child: Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(mainAxisSize: MainAxisSize.min, children: [const Text('Wishlist:'), IconButton(visualDensity: VisualDensity.compact, icon: Icon(isWishlisted ? Icons.favorite : Icons.favorite_border, color: isWishlisted ? Colors.red : Colors.grey), onPressed: () => provider.toggleWishlistStatus(freshLandmark.name))]),
+                            Row(mainAxisSize: MainAxisSize.min, children: [const Text('My Rating:'), const SizedBox(width: 8), RatingBar.builder(initialRating: freshLandmark.rating ?? 0.0, minRating: 0, direction: Axis.horizontal, allowHalfRating: true, itemCount: 5, itemSize: 28.0, itemBuilder: (context, _) => const Icon(Icons.star, color: Colors.amber), onRatingUpdate: (rating) => provider.updateLandmarkRating(freshLandmark.name, rating))]),
+                          ],
+                        ),
+                        const Divider(height: 20),
+                        Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [Text('History (${freshLandmark.visitDates.length} entries)', style: Theme.of(sheetContext).textTheme.titleSmall), OutlinedButton.icon(icon: const Icon(Icons.add), label: const Text('Add Visit'), onPressed: () => provider.addVisitDate(freshLandmark.name))]),
+                        const SizedBox(height: 8),
+                        if (freshLandmark.visitDates.isNotEmpty) ...freshLandmark.visitDates.asMap().entries.map((entry) => LandmarkVisitEditorCard(
+                          key: ValueKey('${freshLandmark.name}_${entry.key}'),
+                          landmarkName: freshLandmark.name,
+                          visitDate: entry.value,
+                          index: entry.key,
+                          onDelete: () => provider.removeVisitDate(freshLandmark.name, entry.key),
+                          availableLocations: freshLandmark.locations,
+                        )) else const Center(child: Text('No visits recorded.')),
+                        const Divider(height: 24),
+                        LandmarkInfoCard(overview: freshLandmark.overview, historySignificance: freshLandmark.history_significance, highlights: freshLandmark.highlights, themeColor: themeColor),
+                        const SizedBox(height: 40),
+                      ],
                     ),
                   ),
                 ),
@@ -353,89 +339,6 @@ class TopPaintingsScreen extends StatelessWidget {
           ),
         );
       },
-    );
-  }
-}
-
-class _LandmarkVisitEditorCard extends StatefulWidget {
-  final String landmarkName;
-  final VisitDate visitDate;
-  final int index;
-  final VoidCallback onDelete;
-  final List<LandmarkSubLocation>? availableLocations;
-
-  const _LandmarkVisitEditorCard({
-    super.key,
-    required this.landmarkName,
-    required this.visitDate,
-    required this.index,
-    required this.onDelete,
-    this.availableLocations,
-  });
-
-  @override
-  State<_LandmarkVisitEditorCard> createState() => _LandmarkVisitEditorCardState();
-}
-
-class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
-  late final TextEditingController _titleController;
-  late final TextEditingController _memoController;
-  late List<String> _currentPhotos;
-  int? _year, _month, _day;
-
-  @override
-  void initState() {
-    super.initState();
-    _titleController = TextEditingController(text: widget.visitDate.title);
-    _memoController = TextEditingController(text: widget.visitDate.memo);
-    _currentPhotos = List.from(widget.visitDate.photos);
-    _year = widget.visitDate.year;
-    _month = widget.visitDate.month;
-    _day = widget.visitDate.day;
-  }
-
-  void _pickImage(ImageSource source) async {
-    final picker = ImagePicker();
-    final pickedFile = await picker.pickImage(source: source);
-    if (pickedFile != null && mounted) {
-      final newPhotos = List<String>.from(_currentPhotos)..add(pickedFile.path);
-      setState(() => _currentPhotos = newPhotos);
-      context.read<LandmarksProvider>().updateLandmarkVisit(
-          widget.landmarkName, widget.index, photos: newPhotos
-      );
-    }
-  }
-
-  Widget _buildPhotoPreview(String photoPath, int index) {
-    return Container(
-        width: 60, height: 60, margin: const EdgeInsets.only(right: 8), color: Colors.grey[300],
-        child: Image.file(File(photoPath), fit: BoxFit.cover));
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    final provider = context.read<LandmarksProvider>();
-    return Card(
-      elevation: 1, margin: const EdgeInsets.symmetric(vertical: 4),
-      child: ExpansionTile(
-        title: Text(widget.visitDate.title.isNotEmpty ? widget.visitDate.title : 'Visit Record'),
-        subtitle: Text('Date: $_year-$_month-$_day'),
-        trailing: IconButton(icon: const Icon(Icons.delete, color: Colors.red, size: 20), onPressed: widget.onDelete),
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(12.0),
-            child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  TextField(controller: _titleController, decoration: const InputDecoration(labelText: 'Title', isDense: true), onEditingComplete: () => provider.updateLandmarkVisit(widget.landmarkName, widget.index, title: _titleController.text)),
-                  const SizedBox(height: 8),
-                  TextField(controller: _memoController, decoration: const InputDecoration(labelText: 'Memo', isDense: true), onEditingComplete: () => provider.updateLandmarkVisit(widget.landmarkName, widget.index, memo: _memoController.text)),
-                  const SizedBox(height: 12),
-                  SingleChildScrollView(scrollDirection: Axis.horizontal, child: Row(children: [IconButton(icon: const Icon(Icons.camera_alt), onPressed: () => _pickImage(ImageSource.gallery)), ..._currentPhotos.asMap().entries.map((e) => _buildPhotoPreview(e.value, e.key)).toList()])),
-                ]),
-          )
-        ],
-      ),
     );
   }
 }

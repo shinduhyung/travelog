@@ -22,8 +22,10 @@ import 'package:provider/provider.dart';
 import 'package:screenshot/screenshot.dart';
 
 // [추가] 로딩 로고 위젯 임포트
-import 'package:jidoapp/widgets/plane_loading_logo.dart';
+
 import 'package:jidoapp/services/home_widget_service.dart';
+import 'package:jidoapp/providers/auth_provider.dart';
+import 'package:jidoapp/screens/login_prompt_screen.dart';
 
 class CitiesMenuScreen extends StatefulWidget {
   const CitiesMenuScreen({super.key});
@@ -469,8 +471,8 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
                 builder: (context, cityProvider, countryProvider, child) {
                   // [수정] Provider 로딩 상태일 때 -> 꽉 찬 비디오 로딩 화면 출력
                   if (cityProvider.isLoading || countryProvider.isLoading) {
-                    return const SizedBox.expand(
-                      child: PlaneLoadingLogo(),
+                    return const Center(
+                      child: CircularProgressIndicator(),
                     );
                   }
 
@@ -1107,12 +1109,27 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
                                             color: Colors.white,
                                             size: 20,
                                           ),
-                                          onPressed: () => Navigator.push(
-                                            context,
-                                            MaterialPageRoute(
-                                              builder: (_) => statisticsItems[_selectedStatIndex]['screen'],
-                                            ),
-                                          ),
+                                          onPressed: () {
+                                            // index 0 (Top Cities) 만 로그인 없이 접근 가능
+                                            if (_selectedStatIndex > 0) {
+                                              final authProvider = Provider.of<AuthProvider>(context, listen: false);
+                                              if (authProvider.user == null) {
+                                                showModalBottomSheet(
+                                                  context: context,
+                                                  isScrollControlled: true,
+                                                  backgroundColor: Colors.transparent,
+                                                  builder: (_) => const LoginPromptScreen(),
+                                                );
+                                                return;
+                                              }
+                                            }
+                                            Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                builder: (_) => statisticsItems[_selectedStatIndex]['screen'],
+                                              ),
+                                            );
+                                          },
                                         ),
                                       ),
                                     ],

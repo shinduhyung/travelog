@@ -8,6 +8,7 @@ import 'package:jidoapp/models/landmarks_model.dart';
 import 'package:jidoapp/providers/landmarks_provider.dart';
 import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/widgets/landmark_info_card.dart';
+import 'package:jidoapp/widgets/landmark_visit_editor_card.dart'; // 공통 위젯 import
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:jidoapp/models/visit_date_model.dart';
 import 'dart:io';
@@ -20,13 +21,23 @@ class TopMountainsScreen extends StatelessWidget {
     {'rank': 1, 'name': 'Mount Everest', 'height': '8,848 m', 'iso': 'NP'},
     {'rank': 2, 'name': 'K2', 'height': '8,611 m', 'iso': 'PK'},
     {'rank': 3, 'name': 'Kangchenjunga', 'height': '8,586 m', 'iso': 'NP'},
-    {'rank': 4, 'name': 'Lhotse', 'height': '8,516 m', 'iso': 'NP'},
+    {'rank': 4, 'name': 'Lhotse', 'height': '8,516 m', 'iso': 'CN'},
     {'rank': 5, 'name': 'Makalu', 'height': '8,485 m', 'iso': 'NP'},
     {'rank': 6, 'name': 'Cho Oyu', 'height': '8,188 m', 'iso': 'NP'},
-    {'rank': 7, 'name': 'Dhaulagiri', 'height': '8,167 m', 'iso': 'NP'},
+    {'rank': 7, 'name': 'Dhaulagiri I', 'height': '8,167 m', 'iso': 'NP'},
     {'rank': 8, 'name': 'Manaslu', 'height': '8,163 m', 'iso': 'NP'},
-    {'rank': 9, 'name': 'Nanga Parbat', 'height': '8,126 m', 'iso': 'PK'},
-    {'rank': 10, 'name': 'Annapurna', 'height': '8,091 m', 'iso': 'NP'},
+    {'rank': 9, 'name': 'Nanga Parbat', 'height': '8,125 m', 'iso': 'PK'},
+    {'rank': 10, 'name': 'Annapurna I', 'height': '8,091 m', 'iso': 'NP'},
+    {'rank': 11, 'name': 'Gasherbrum I', 'height': '8,080 m', 'iso': 'PK'},
+    {'rank': 12, 'name': 'Broad Peak', 'height': '8,051 m', 'iso': 'PK'},
+    {'rank': 13, 'name': 'Gasherbrum II', 'height': '8,035 m', 'iso': 'PK'},
+    {'rank': 14, 'name': 'Shishapangma', 'height': '8,027 m', 'iso': 'CN'},
+    {'rank': 15, 'name': 'Gyachung Kang', 'height': '7,952 m', 'iso': 'NP'},
+    {'rank': 16, 'name': 'Annapurna II', 'height': '7,937 m', 'iso': 'NP'},
+    {'rank': 17, 'name': 'Gasherbrum IV', 'height': '7,925 m', 'iso': 'PK'},
+    {'rank': 18, 'name': 'Himalchuli', 'height': '7,893 m', 'iso': 'NP'},
+    {'rank': 19, 'name': 'Distaghil Sar', 'height': '7,884 m', 'iso': 'PK'},
+    {'rank': 20, 'name': 'Ngadi Chuli', 'height': '7,871 m', 'iso': 'NP'},
   ];
 
   @override
@@ -40,16 +51,57 @@ class TopMountainsScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Padding(
-              padding: EdgeInsets.fromLTRB(20, 30, 20, 10),
-              child: Text(
-                'Top 10 Highest Mountains',
-                style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.w900,
-                  color: Color(0xFF111827),
-                  letterSpacing: -0.5,
-                ),
+            Container(
+              padding: const EdgeInsets.fromLTRB(24, 20, 24, 16),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.03),
+                    blurRadius: 10,
+                    offset: const Offset(0, 2),
+                  ),
+                ],
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.all(8),
+                        decoration: BoxDecoration(
+                          color: const Color(0xFFF5F5F5),
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: const Icon(
+                          Icons.landscape_rounded,
+                          color: Color(0xFF48c6ef),
+                          size: 24,
+                        ),
+                      ),
+                      const SizedBox(width: 12),
+                      const Text(
+                        'World\'s Highest Peaks',
+                        style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xFF111827),
+                          letterSpacing: -0.5,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 8),
+                  Text(
+                    'The highest mountains on Earth by altitude',
+                    style: TextStyle(
+                      fontSize: 14,
+                      color: Colors.grey[600],
+                      letterSpacing: 0.2,
+                    ),
+                  ),
+                ],
               ),
             ),
             Expanded(
@@ -70,7 +122,7 @@ class TopMountainsScreen extends StatelessWidget {
                   return GestureDetector(
                     onTap: () {
                       if (landmark != null) {
-                        _showLandmarkDetailsModal(context, landmark, const Color(0xFF4A5662));
+                        _showLandmarkDetailsModal(context, landmark, const Color(0xFF48c6ef));
                       } else {
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(content: Text("$name details not found in database")),
@@ -97,23 +149,18 @@ class TopMountainsScreen extends StatelessWidget {
                       child: Row(
                         children: [
                           Container(
-                            width: 40,
-                            height: 40,
-                            decoration: BoxDecoration(
-                              color: Colors.grey[100],
-                              borderRadius: BorderRadius.circular(10),
-                            ),
+                            width: 32,
                             alignment: Alignment.center,
                             child: Text(
                               '#$rank',
                               style: TextStyle(
                                 fontSize: 14,
-                                fontWeight: FontWeight.w800,
-                                color: Colors.grey[700],
+                                fontWeight: FontWeight.bold,
+                                color: rank <= 3 ? const Color(0xFF48c6ef) : Colors.grey[400],
                               ),
                             ),
                           ),
-                          const SizedBox(width: 16),
+                          const SizedBox(width: 8),
                           ClipRRect(
                             borderRadius: BorderRadius.circular(4),
                             child: SizedBox(
@@ -134,14 +181,15 @@ class TopMountainsScreen extends StatelessWidget {
                                     fontWeight: FontWeight.bold,
                                     color: Color(0xFF111827),
                                   ),
+                                  overflow: TextOverflow.ellipsis,
                                 ),
                                 const SizedBox(height: 4),
                                 Text(
                                   height,
                                   style: TextStyle(
                                     fontSize: 13,
-                                    fontWeight: FontWeight.w600,
-                                    color: const Color(0xFF4A5662).withOpacity(0.8),
+                                    color: Colors.grey[600],
+                                    fontWeight: FontWeight.w500,
                                   ),
                                 ),
                               ],
@@ -149,22 +197,18 @@ class TopMountainsScreen extends StatelessWidget {
                           ),
                           if (isVisited)
                             Container(
-                              margin: const EdgeInsets.only(left: 12),
-                              padding: const EdgeInsets.all(4),
-                              decoration: const BoxDecoration(
-                                color: Colors.teal,
-                                shape: BoxShape.circle,
-                              ),
-                              child: const Icon(Icons.check, color: Colors.white, size: 16),
-                            )
-                          else
-                            Container(
-                              margin: const EdgeInsets.only(left: 12),
-                              width: 24,
-                              height: 24,
+                              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                               decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                border: Border.all(color: Colors.grey[300]!),
+                                color: Colors.teal.withOpacity(0.15),
+                                borderRadius: BorderRadius.circular(12),
+                              ),
+                              child: const Text(
+                                'Visited',
+                                style: TextStyle(
+                                  fontSize: 11,
+                                  color: Colors.teal,
+                                  fontWeight: FontWeight.w600,
+                                ),
                               ),
                             ),
                         ],
@@ -233,8 +277,8 @@ class TopMountainsScreen extends StatelessWidget {
                             child: Text('Cancel', style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600))),
                         ElevatedButton(
                             onPressed: () => Navigator.pop(sheetContext),
-                            child: Text('Done', style: TextStyle(fontWeight: FontWeight.w600, color: themeColor)),
-                            style: ElevatedButton.styleFrom(backgroundColor: headerTextColor)),
+                            style: ElevatedButton.styleFrom(backgroundColor: headerTextColor),
+                            child: Text('Done', style: TextStyle(fontWeight: FontWeight.w600, color: themeColor))),
                       ],
                     ),
                     const SizedBox(height: 12),
@@ -275,7 +319,7 @@ class TopMountainsScreen extends StatelessWidget {
                         const Divider(height: 20),
                         Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [Text('History (${freshLandmark.visitDates.length} entries)', style: Theme.of(sheetContext).textTheme.titleSmall), OutlinedButton.icon(icon: const Icon(Icons.add), label: const Text('Add Visit'), onPressed: () => provider.addVisitDate(freshLandmark.name))]),
                         const SizedBox(height: 8),
-                        if (freshLandmark.visitDates.isNotEmpty) ...freshLandmark.visitDates.asMap().entries.map((entry) => _LandmarkVisitEditorCard(
+                        if (freshLandmark.visitDates.isNotEmpty) ...freshLandmark.visitDates.asMap().entries.map((entry) => LandmarkVisitEditorCard(
                           key: ValueKey('${freshLandmark.name}_${entry.key}'),
                           landmarkName: freshLandmark.name,
                           visitDate: entry.value,
@@ -295,89 +339,6 @@ class TopMountainsScreen extends StatelessWidget {
           ),
         );
       },
-    );
-  }
-}
-
-class _LandmarkVisitEditorCard extends StatefulWidget {
-  final String landmarkName;
-  final VisitDate visitDate;
-  final int index;
-  final VoidCallback onDelete;
-  final List<LandmarkSubLocation>? availableLocations;
-
-  const _LandmarkVisitEditorCard({
-    super.key,
-    required this.landmarkName,
-    required this.visitDate,
-    required this.index,
-    required this.onDelete,
-    this.availableLocations,
-  });
-
-  @override
-  State<_LandmarkVisitEditorCard> createState() => _LandmarkVisitEditorCardState();
-}
-
-class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
-  late final TextEditingController _titleController;
-  late final TextEditingController _memoController;
-  late List<String> _currentPhotos;
-  int? _year, _month, _day;
-
-  @override
-  void initState() {
-    super.initState();
-    _titleController = TextEditingController(text: widget.visitDate.title);
-    _memoController = TextEditingController(text: widget.visitDate.memo);
-    _currentPhotos = List.from(widget.visitDate.photos);
-    _year = widget.visitDate.year;
-    _month = widget.visitDate.month;
-    _day = widget.visitDate.day;
-  }
-
-  void _pickImage(ImageSource source) async {
-    final picker = ImagePicker();
-    final pickedFile = await picker.pickImage(source: source);
-    if (pickedFile != null && mounted) {
-      final newPhotos = List<String>.from(_currentPhotos)..add(pickedFile.path);
-      setState(() => _currentPhotos = newPhotos);
-      context.read<LandmarksProvider>().updateLandmarkVisit(
-          widget.landmarkName, widget.index, photos: newPhotos
-      );
-    }
-  }
-
-  Widget _buildPhotoPreview(String photoPath, int index) {
-    return Container(
-        width: 60, height: 60, margin: const EdgeInsets.only(right: 8), color: Colors.grey[300],
-        child: Image.file(File(photoPath), fit: BoxFit.cover));
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    final provider = context.read<LandmarksProvider>();
-    return Card(
-      elevation: 1, margin: const EdgeInsets.symmetric(vertical: 4),
-      child: ExpansionTile(
-        title: Text(widget.visitDate.title.isNotEmpty ? widget.visitDate.title : 'Visit Record'),
-        subtitle: Text('Date: $_year-$_month-$_day'),
-        trailing: IconButton(icon: const Icon(Icons.delete, color: Colors.red, size: 20), onPressed: widget.onDelete),
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(12.0),
-            child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  TextField(controller: _titleController, decoration: const InputDecoration(labelText: 'Title', isDense: true), onEditingComplete: () => provider.updateLandmarkVisit(widget.landmarkName, widget.index, title: _titleController.text)),
-                  const SizedBox(height: 8),
-                  TextField(controller: _memoController, decoration: const InputDecoration(labelText: 'Memo', isDense: true), onEditingComplete: () => provider.updateLandmarkVisit(widget.landmarkName, widget.index, memo: _memoController.text)),
-                  const SizedBox(height: 12),
-                  SingleChildScrollView(scrollDirection: Axis.horizontal, child: Row(children: [IconButton(icon: const Icon(Icons.camera_alt), onPressed: () => _pickImage(ImageSource.gallery)), ..._currentPhotos.asMap().entries.map((e) => _buildPhotoPreview(e.value, e.key)).toList()])),
-                ]),
-          )
-        ],
-      ),
     );
   }
 }

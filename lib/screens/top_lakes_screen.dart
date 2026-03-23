@@ -9,6 +9,7 @@ import 'package:jidoapp/models/landmarks_model.dart';
 import 'package:jidoapp/providers/landmarks_provider.dart';
 import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/widgets/landmark_info_card.dart';
+import 'package:jidoapp/widgets/landmark_visit_editor_card.dart'; // 공통 위젯 추가
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:jidoapp/models/visit_date_model.dart';
 import 'dart:io';
@@ -24,20 +25,20 @@ class TopLakesScreen extends StatelessWidget {
     {'rank': 4, 'name': 'Lake Huron', 'area': '59,600 km²', 'iso': 'CA'},
     {'rank': 5, 'name': 'Lake Michigan', 'area': '58,000 km²', 'iso': 'US'},
     {'rank': 6, 'name': 'Lake Tanganyika', 'area': '32,900 km²', 'iso': 'TZ'},
-    {'rank': 7, 'name': 'Lake Baikal', 'area': '31,500 km²', 'iso': 'RU'},
-    {'rank': 8, 'name': 'Great Bear Lake', 'area': '31,100 km²', 'iso': 'CA'},
+    {'rank': 7, 'name': 'Baikal', 'area': '31,500 km²', 'iso': 'RU'},
+    {'rank': 8, 'name': 'Great Bear Lake', 'area': '31,000 km²', 'iso': 'CA'},
     {'rank': 9, 'name': 'Lake Malawi', 'area': '29,600 km²', 'iso': 'MW'},
-    {'rank': 10, 'name': 'Great Slave Lake', 'area': '27,200 km²', 'iso': 'CA'},
+    {'rank': 10, 'name': 'Great Slave Lake', 'area': '27,000 km²', 'iso': 'CA'},
     {'rank': 11, 'name': 'Lake Erie', 'area': '25,700 km²', 'iso': 'US'},
     {'rank': 12, 'name': 'Lake Winnipeg', 'area': '24,500 km²', 'iso': 'CA'},
     {'rank': 13, 'name': 'Lake Ontario', 'area': '19,000 km²', 'iso': 'CA'},
-    {'rank': 14, 'name': 'Lake Ladoga', 'area': '17,700 km²', 'iso': 'RU'},
-    {'rank': 15, 'name': 'Lake Balkhash', 'area': '16,400 km²', 'iso': 'KZ'},
-    {'rank': 16, 'name': 'Lake Vostok', 'area': '12,500 km²', 'iso': 'AQ'},
-    {'rank': 17, 'name': 'Lake Onega', 'area': '9,700 km²', 'iso': 'RU'},
-    {'rank': 18, 'name': 'Lake Titicaca', 'area': '8,372 km²', 'iso': 'PE'},
-    {'rank': 19, 'name': 'Lake Nicaragua', 'area': '8,264 km²', 'iso': 'NI'},
-    {'rank': 20, 'name': 'Lake Athabasca', 'area': '7,850 km²', 'iso': 'CA'},
+    {'rank': 14, 'name': 'Lake Balkhash', 'area': '16,400 km²', 'iso': 'KZ'},
+    {'rank': 15, 'name': 'Lake Vostok', 'area': '12,500 km²', 'iso': 'AQ'},
+    {'rank': 16, 'name': 'Lake Ladoga', 'area': '17,700 km²', 'iso': 'RU'},
+    {'rank': 17, 'name': 'Lake Maracaibo', 'area': '13,200 km²', 'iso': 'VE'},
+    {'rank': 18, 'name': 'Lake Onega', 'area': '9,700 km²', 'iso': 'RU'},
+    {'rank': 19, 'name': 'Lake Titicaca', 'area': '8,372 km²', 'iso': 'PE'},
+    {'rank': 20, 'name': 'Lake Nicaragua', 'area': '8,264 km²', 'iso': 'NI'},
   ];
 
   @override
@@ -51,16 +52,57 @@ class TopLakesScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Padding(
-              padding: EdgeInsets.fromLTRB(20, 30, 20, 10),
-              child: Text(
-                'Top 20 Largest Lakes',
-                style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.w900,
-                  color: Color(0xFF111827),
-                  letterSpacing: -0.5,
-                ),
+            Container(
+              padding: const EdgeInsets.fromLTRB(24, 20, 24, 16),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.03),
+                    blurRadius: 10,
+                    offset: const Offset(0, 2),
+                  ),
+                ],
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.all(8),
+                        decoration: BoxDecoration(
+                          color: const Color(0xFFF5F5F5),
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: const Icon(
+                          Icons.waves_rounded,
+                          color: Color(0xFF2193b0),
+                          size: 24,
+                        ),
+                      ),
+                      const SizedBox(width: 12),
+                      const Text(
+                        'World\'s Largest Lakes',
+                        style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xFF111827),
+                          letterSpacing: -0.5,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 8),
+                  Text(
+                    'The largest freshwater and saline lakes by surface area',
+                    style: TextStyle(
+                      fontSize: 14,
+                      color: Colors.grey[600],
+                      letterSpacing: 0.2,
+                    ),
+                  ),
+                ],
               ),
             ),
             Expanded(
@@ -81,7 +123,7 @@ class TopLakesScreen extends StatelessWidget {
                   return GestureDetector(
                     onTap: () {
                       if (landmark != null) {
-                        _showLandmarkDetailsModal(context, landmark, const Color(0xFF6B9DB8));
+                        _showLandmarkDetailsModal(context, landmark, const Color(0xFF2193b0));
                       } else {
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(content: Text("$name details not found in database")),
@@ -108,23 +150,18 @@ class TopLakesScreen extends StatelessWidget {
                       child: Row(
                         children: [
                           Container(
-                            width: 40,
-                            height: 40,
-                            decoration: BoxDecoration(
-                              color: Colors.grey[100],
-                              borderRadius: BorderRadius.circular(10),
-                            ),
+                            width: 32,
                             alignment: Alignment.center,
                             child: Text(
                               '#$rank',
                               style: TextStyle(
                                 fontSize: 14,
-                                fontWeight: FontWeight.w800,
-                                color: Colors.grey[700],
+                                fontWeight: FontWeight.bold,
+                                color: rank <= 3 ? const Color(0xFF2193b0) : Colors.grey[400],
                               ),
                             ),
                           ),
-                          const SizedBox(width: 16),
+                          const SizedBox(width: 8),
                           ClipRRect(
                             borderRadius: BorderRadius.circular(4),
                             child: SizedBox(
@@ -145,14 +182,15 @@ class TopLakesScreen extends StatelessWidget {
                                     fontWeight: FontWeight.bold,
                                     color: Color(0xFF111827),
                                   ),
+                                  overflow: TextOverflow.ellipsis,
                                 ),
                                 const SizedBox(height: 4),
                                 Text(
                                   area,
                                   style: TextStyle(
                                     fontSize: 13,
-                                    fontWeight: FontWeight.w600,
-                                    color: const Color(0xFF6B9DB8).withOpacity(0.8),
+                                    color: Colors.grey[600],
+                                    fontWeight: FontWeight.w500,
                                   ),
                                 ),
                               ],
@@ -160,22 +198,18 @@ class TopLakesScreen extends StatelessWidget {
                           ),
                           if (isVisited)
                             Container(
-                              margin: const EdgeInsets.only(left: 12),
-                              padding: const EdgeInsets.all(4),
-                              decoration: const BoxDecoration(
-                                color: Colors.teal,
-                                shape: BoxShape.circle,
-                              ),
-                              child: const Icon(Icons.check, color: Colors.white, size: 16),
-                            )
-                          else
-                            Container(
-                              margin: const EdgeInsets.only(left: 12),
-                              width: 24,
-                              height: 24,
+                              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                               decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                border: Border.all(color: Colors.grey[300]!),
+                                color: Colors.teal.withOpacity(0.15),
+                                borderRadius: BorderRadius.circular(12),
+                              ),
+                              child: const Text(
+                                'Visited',
+                                style: TextStyle(
+                                  fontSize: 11,
+                                  color: Colors.teal,
+                                  fontWeight: FontWeight.w600,
+                                ),
                               ),
                             ),
                         ],
@@ -286,7 +320,7 @@ class TopLakesScreen extends StatelessWidget {
                         const Divider(height: 20),
                         Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [Text('History (${freshLandmark.visitDates.length} entries)', style: Theme.of(sheetContext).textTheme.titleSmall), OutlinedButton.icon(icon: const Icon(Icons.add), label: const Text('Add Visit'), onPressed: () => provider.addVisitDate(freshLandmark.name))]),
                         const SizedBox(height: 8),
-                        if (freshLandmark.visitDates.isNotEmpty) ...freshLandmark.visitDates.asMap().entries.map((entry) => _LandmarkVisitEditorCard(
+                        if (freshLandmark.visitDates.isNotEmpty) ...freshLandmark.visitDates.asMap().entries.map((entry) => LandmarkVisitEditorCard(
                           key: ValueKey('${freshLandmark.name}_${entry.key}'),
                           landmarkName: freshLandmark.name,
                           visitDate: entry.value,
@@ -306,89 +340,6 @@ class TopLakesScreen extends StatelessWidget {
           ),
         );
       },
-    );
-  }
-}
-
-class _LandmarkVisitEditorCard extends StatefulWidget {
-  final String landmarkName;
-  final VisitDate visitDate;
-  final int index;
-  final VoidCallback onDelete;
-  final List<LandmarkSubLocation>? availableLocations;
-
-  const _LandmarkVisitEditorCard({
-    super.key,
-    required this.landmarkName,
-    required this.visitDate,
-    required this.index,
-    required this.onDelete,
-    this.availableLocations,
-  });
-
-  @override
-  State<_LandmarkVisitEditorCard> createState() => _LandmarkVisitEditorCardState();
-}
-
-class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
-  late final TextEditingController _titleController;
-  late final TextEditingController _memoController;
-  late List<String> _currentPhotos;
-  int? _year, _month, _day;
-
-  @override
-  void initState() {
-    super.initState();
-    _titleController = TextEditingController(text: widget.visitDate.title);
-    _memoController = TextEditingController(text: widget.visitDate.memo);
-    _currentPhotos = List.from(widget.visitDate.photos);
-    _year = widget.visitDate.year;
-    _month = widget.visitDate.month;
-    _day = widget.visitDate.day;
-  }
-
-  void _pickImage(ImageSource source) async {
-    final picker = ImagePicker();
-    final pickedFile = await picker.pickImage(source: source);
-    if (pickedFile != null && mounted) {
-      final newPhotos = List<String>.from(_currentPhotos)..add(pickedFile.path);
-      setState(() => _currentPhotos = newPhotos);
-      context.read<LandmarksProvider>().updateLandmarkVisit(
-          widget.landmarkName, widget.index, photos: newPhotos
-      );
-    }
-  }
-
-  Widget _buildPhotoPreview(String photoPath, int index) {
-    return Container(
-        width: 60, height: 60, margin: const EdgeInsets.only(right: 8), color: Colors.grey[300],
-        child: Image.file(File(photoPath), fit: BoxFit.cover));
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    final provider = context.read<LandmarksProvider>();
-    return Card(
-      elevation: 1, margin: const EdgeInsets.symmetric(vertical: 4),
-      child: ExpansionTile(
-        title: Text(widget.visitDate.title.isNotEmpty ? widget.visitDate.title : 'Visit Record'),
-        subtitle: Text('Date: $_year-$_month-$_day'),
-        trailing: IconButton(icon: const Icon(Icons.delete, color: Colors.red, size: 20), onPressed: widget.onDelete),
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(12.0),
-            child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  TextField(controller: _titleController, decoration: const InputDecoration(labelText: 'Title', isDense: true), onEditingComplete: () => provider.updateLandmarkVisit(widget.landmarkName, widget.index, title: _titleController.text)),
-                  const SizedBox(height: 8),
-                  TextField(controller: _memoController, decoration: const InputDecoration(labelText: 'Memo', isDense: true), onEditingComplete: () => provider.updateLandmarkVisit(widget.landmarkName, widget.index, memo: _memoController.text)),
-                  const SizedBox(height: 12),
-                  SingleChildScrollView(scrollDirection: Axis.horizontal, child: Row(children: [IconButton(icon: const Icon(Icons.camera_alt), onPressed: () => _pickImage(ImageSource.gallery)), ..._currentPhotos.asMap().entries.map((e) => _buildPhotoPreview(e.value, e.key)).toList()])),
-                ]),
-          )
-        ],
-      ),
     );
   }
 }

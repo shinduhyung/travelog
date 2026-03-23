@@ -1,6 +1,9 @@
 // lib/screens/activities_menu_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:jidoapp/providers/auth_provider.dart';
+import 'package:jidoapp/screens/login_prompt_screen.dart';
 import 'package:jidoapp/screens/landmarks_list_screen.dart';
 import 'package:jidoapp/screens/top_activities_menu_screen.dart';
 
@@ -98,10 +101,22 @@ class ActivitiesMenuScreen extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 24),
                 child: GestureDetector(
-                  onTap: () => Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (_) => const TopActivitiesMenuScreen()),
-                  ),
+                  onTap: () {
+                    final authProvider = Provider.of<AuthProvider>(context, listen: false);
+                    if (authProvider.user == null) {
+                      showModalBottomSheet(
+                        context: context,
+                        isScrollControlled: true,
+                        backgroundColor: Colors.transparent,
+                        builder: (_) => const LoginPromptScreen(),
+                      );
+                      return;
+                    }
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (_) => const TopActivitiesMenuScreen()),
+                    );
+                  },
                   child: Container(
                     padding: const EdgeInsets.all(20),
                     decoration: BoxDecoration(

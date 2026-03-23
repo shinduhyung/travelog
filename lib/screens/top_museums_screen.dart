@@ -4,11 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:collection/collection.dart';
 import 'package:country_flags/country_flags.dart';
-
 import 'package:jidoapp/models/landmarks_model.dart';
 import 'package:jidoapp/providers/landmarks_provider.dart';
 import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/widgets/landmark_info_card.dart';
+import 'package:jidoapp/widgets/landmark_visit_editor_card.dart'; // 공통 위젯 import
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:jidoapp/models/visit_date_model.dart';
 import 'dart:io';
@@ -23,21 +23,21 @@ class TopMuseumsScreen extends StatelessWidget {
     {'rank': 3, 'name': 'British Museum', 'iso': 'GB'},
     {'rank': 4, 'name': 'Hermitage Museum', 'iso': 'RU'},
     {'rank': 5, 'name': 'Prado Museum', 'iso': 'ES'},
-    {'rank': 6, 'name': 'The Museum of Modern Art', 'iso': 'US'},
-    {'rank': 7, 'name': 'Pergamon Museum', 'iso': 'DE'},
-    {'rank': 8, 'name': 'Uffizi Gallery', 'iso': 'IT'},
-    {'rank': 9, 'name': 'Musée d\'Orsay', 'iso': 'FR'},
-    {'rank': 10, 'name': 'Rijksmuseum', 'iso': 'NL'},
-    {'rank': 11, 'name': 'National Palace Museum', 'iso': 'TW'},
-    {'rank': 12, 'name': 'National Gallery', 'iso': 'GB'},
-    {'rank': 13, 'name': 'Kunsthistorisches Museum', 'iso': 'AT'},
-    {'rank': 14, 'name': 'National Gallery of Art', 'iso': 'US'},
-    {'rank': 15, 'name': 'National Museum of Anthropology', 'iso': 'MX'},
-    {'rank': 16, 'name': 'Smithsonian National Museum of Natural History', 'iso': 'US'},
-    {'rank': 17, 'name': 'Art Institute of Chicago', 'iso': 'US'},
-    {'rank': 18, 'name': 'Tate Modern', 'iso': 'GB'},
-    {'rank': 19, 'name': 'Acropolis Museum', 'iso': 'GR'},
-    {'rank': 20, 'name': 'Victoria and Albert Museum', 'iso': 'GB'},
+    {'rank': 6, 'name': 'Vatican Museums', 'iso': 'VA'},
+    {'rank': 7, 'name': 'National Gallery', 'iso': 'GB'},
+    {'rank': 8, 'name': 'Rijksmuseum', 'iso': 'NL'},
+    {'rank': 9, 'name': 'Musee d\'Orsay', 'iso': 'FR'},
+    {'rank': 10, 'name': 'National Museum of Korea', 'iso': 'KR'},
+    {'rank': 11, 'name': 'Tokyo National Museum', 'iso': 'JP'},
+    {'rank': 12, 'name': 'Art Institute of Chicago', 'iso': 'US'},
+    {'rank': 13, 'name': 'Uffizi Gallery', 'iso': 'IT'},
+    {'rank': 14, 'name': 'National Museum of China', 'iso': 'CN'},
+    {'rank': 15, 'name': 'Pergamon Museum', 'iso': 'DE'},
+    {'rank': 16, 'name': 'State Tretyakov Gallery', 'iso': 'RU'},
+    {'rank': 17, 'name': 'Acropolis Museum', 'iso': 'GR'},
+    {'rank': 18, 'name': 'Egyptian Museum', 'iso': 'EG'},
+    {'rank': 19, 'name': 'Victoria and Albert Museum', 'iso': 'GB'},
+    {'rank': 20, 'name': 'Pompidou Centre', 'iso': 'FR'},
   ];
 
   @override
@@ -51,19 +51,59 @@ class TopMuseumsScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Padding(
-              padding: EdgeInsets.fromLTRB(20, 30, 20, 10),
-              child: Text(
-                'Top 20 Global Museums',
-                style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.w900,
-                  color: Color(0xFF111827),
-                  letterSpacing: -0.5,
-                ),
+            Container(
+              padding: const EdgeInsets.fromLTRB(24, 20, 24, 16),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.03),
+                    blurRadius: 10,
+                    offset: const Offset(0, 2),
+                  ),
+                ],
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.all(8),
+                        decoration: BoxDecoration(
+                          color: const Color(0xFFF5F5F5),
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: const Icon(
+                          Icons.museum_outlined,
+                          color: Color(0xFF667eea),
+                          size: 24,
+                        ),
+                      ),
+                      const SizedBox(width: 12),
+                      const Text(
+                        'Global Top Museums',
+                        style: TextStyle(
+                          fontSize: 26,
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xFF1A1A1A),
+                          letterSpacing: -0.5,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 8),
+                  Text(
+                    'World-class art and historical collections',
+                    style: TextStyle(
+                      fontSize: 14,
+                      color: Colors.grey[600],
+                      letterSpacing: 0.2,
+                    ),
+                  ),
+                ],
               ),
             ),
-
             Expanded(
               child: ListView.builder(
                 padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
@@ -78,18 +118,13 @@ class TopMuseumsScreen extends StatelessWidget {
                   final isVisited = landmarksProvider.visitedLandmarks.contains(name);
                   final landmark = allLandmarks.firstWhereOrNull((l) => l.name == name);
 
-                  String subtitle = 'Museum';
-                  if (landmark != null && landmark.city != 'Unknown' && landmark.city != 'Unknown City') {
-                    subtitle = landmark.city;
-                  }
-
                   return GestureDetector(
                     onTap: () {
                       if (landmark != null) {
-                        _showLandmarkDetailsModal(context, landmark, const Color(0xFF6B9B9E));
+                        _showLandmarkDetailsModal(context, landmark, const Color(0xFF667eea));
                       } else {
                         ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(content: Text("$name details not found in database"))
+                          SnackBar(content: Text("$name details not found in database")),
                         );
                       }
                     },
@@ -113,24 +148,18 @@ class TopMuseumsScreen extends StatelessWidget {
                       child: Row(
                         children: [
                           Container(
-                            width: 40,
-                            height: 40,
-                            decoration: BoxDecoration(
-                              color: Colors.grey[100],
-                              borderRadius: BorderRadius.circular(10),
-                            ),
+                            width: 32,
                             alignment: Alignment.center,
                             child: Text(
                               '#$rank',
                               style: TextStyle(
                                 fontSize: 14,
-                                fontWeight: FontWeight.w800,
-                                color: Colors.grey[700],
+                                fontWeight: FontWeight.bold,
+                                color: rank <= 3 ? const Color(0xFF667eea) : Colors.grey[400],
                               ),
                             ),
                           ),
-                          const SizedBox(width: 16),
-
+                          const SizedBox(width: 8),
                           ClipRRect(
                             borderRadius: BorderRadius.circular(4),
                             child: SizedBox(
@@ -140,56 +169,31 @@ class TopMuseumsScreen extends StatelessWidget {
                             ),
                           ),
                           const SizedBox(width: 16),
-
                           Expanded(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  name,
-                                  style: const TextStyle(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.bold,
-                                    color: Color(0xFF111827),
-                                  ),
-                                  maxLines: 1,
-                                  overflow: TextOverflow.ellipsis,
-                                  softWrap: false,
-                                ),
-                                const SizedBox(height: 4),
-                                Text(
-                                  subtitle,
-                                  style: TextStyle(
-                                    fontSize: 13,
-                                    fontWeight: FontWeight.w600,
-                                    color: const Color(0xFF6B9B9E).withOpacity(0.8),
-                                  ),
-                                  maxLines: 1,
-                                  overflow: TextOverflow.ellipsis,
-                                  softWrap: false,
-                                ),
-                              ],
+                            child: Text(
+                              name,
+                              style: const TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                                color: Color(0xFF111827),
+                              ),
+                              overflow: TextOverflow.ellipsis,
                             ),
                           ),
-
                           if (isVisited)
                             Container(
-                              margin: const EdgeInsets.only(left: 12),
-                              padding: const EdgeInsets.all(4),
-                              decoration: const BoxDecoration(
-                                color: Colors.teal,
-                                shape: BoxShape.circle,
-                              ),
-                              child: const Icon(Icons.check, color: Colors.white, size: 16),
-                            )
-                          else
-                            Container(
-                              margin: const EdgeInsets.only(left: 12),
-                              width: 24,
-                              height: 24,
+                              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                               decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                border: Border.all(color: Colors.grey[300]!),
+                                color: Colors.teal.withOpacity(0.15),
+                                borderRadius: BorderRadius.circular(12),
+                              ),
+                              child: const Text(
+                                'Visited',
+                                style: TextStyle(
+                                  fontSize: 11,
+                                  color: Colors.teal,
+                                  fontWeight: FontWeight.w600,
+                                ),
                               ),
                             ),
                         ],
@@ -217,9 +221,6 @@ class TopMuseumsScreen extends StatelessWidget {
         final isVisited = provider.visitedLandmarks.contains(freshLandmark.name);
         final isWishlisted = provider.wishlistedLandmarks.contains(freshLandmark.name);
         final countryNames = provider.getCountryNames(freshLandmark.countriesIsoA3);
-
-        final visitedSubCount = provider.getVisitedSubLocationCount(freshLandmark.name);
-        final totalSubCount = freshLandmark.locations?.length ?? 0;
 
         String locationDisplay = countryNames;
         if (freshLandmark.city != 'Unknown' && freshLandmark.city != 'Unknown City') {
@@ -261,8 +262,8 @@ class TopMuseumsScreen extends StatelessWidget {
                             child: Text('Cancel', style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600))),
                         ElevatedButton(
                             onPressed: () => Navigator.pop(sheetContext),
-                            child: Text('Done', style: TextStyle(fontWeight: FontWeight.w600, color: themeColor)),
-                            style: ElevatedButton.styleFrom(backgroundColor: headerTextColor)),
+                            style: ElevatedButton.styleFrom(backgroundColor: headerTextColor),
+                            child: Text('Done', style: TextStyle(fontWeight: FontWeight.w600, color: themeColor))),
                       ],
                     ),
                     const SizedBox(height: 12),
@@ -272,7 +273,7 @@ class TopMuseumsScreen extends StatelessWidget {
                             child: Text(freshLandmark.name,
                                 style: Theme.of(sheetContext).textTheme.titleLarge?.copyWith(
                                     fontWeight: FontWeight.bold, fontSize: 26, color: headerTextColor))),
-                        if (isVisited || visitedSubCount > 0) Icon(Icons.check_circle, color: headerTextColor, size: 24),
+                        if (isVisited) Icon(Icons.check_circle, color: headerTextColor, size: 24),
                       ],
                     ),
                     const SizedBox(height: 6),
@@ -301,36 +302,9 @@ class TopMuseumsScreen extends StatelessWidget {
                           ],
                         ),
                         const Divider(height: 20),
-                        if (totalSubCount > 1) ...[
-                          Text("Components / Locations",
-                              style: Theme.of(sheetContext).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
-                          const SizedBox(height: 4),
-                          Container(
-                            decoration: BoxDecoration(
-                              border: Border.all(color: Colors.grey.shade300),
-                              borderRadius: BorderRadius.circular(8),
-                            ),
-                            child: Column(
-                              children: freshLandmark.locations!.map((loc) {
-                                final isLocVisited = provider.isSubLocationVisited(freshLandmark.name, loc.name);
-                                return CheckboxListTile(
-                                  title: Text(loc.name, style: const TextStyle(fontSize: 14)),
-                                  value: isLocVisited,
-                                  activeColor: themeColor,
-                                  dense: true,
-                                  controlAffinity: ListTileControlAffinity.leading,
-                                  onChanged: (val) {
-                                    provider.toggleSubLocation(freshLandmark.name, loc.name);
-                                  },
-                                );
-                              }).toList(),
-                            ),
-                          ),
-                          const Divider(height: 24),
-                        ],
                         Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [Text('History (${freshLandmark.visitDates.length} entries)', style: Theme.of(sheetContext).textTheme.titleSmall), OutlinedButton.icon(icon: const Icon(Icons.add), label: const Text('Add Visit'), onPressed: () => provider.addVisitDate(freshLandmark.name))]),
                         const SizedBox(height: 8),
-                        if (freshLandmark.visitDates.isNotEmpty) ...freshLandmark.visitDates.asMap().entries.map((entry) => _LandmarkVisitEditorCard(
+                        if (freshLandmark.visitDates.isNotEmpty) ...freshLandmark.visitDates.asMap().entries.map((entry) => LandmarkVisitEditorCard(
                           key: ValueKey('${freshLandmark.name}_${entry.key}'),
                           landmarkName: freshLandmark.name,
                           visitDate: entry.value,
@@ -350,93 +324,6 @@ class TopMuseumsScreen extends StatelessWidget {
           ),
         );
       },
-    );
-  }
-}
-
-class _LandmarkVisitEditorCard extends StatefulWidget {
-  final String landmarkName;
-  final VisitDate visitDate;
-  final int index;
-  final VoidCallback onDelete;
-  final List<LandmarkSubLocation>? availableLocations;
-
-  const _LandmarkVisitEditorCard({
-    super.key,
-    required this.landmarkName,
-    required this.visitDate,
-    required this.index,
-    required this.onDelete,
-    this.availableLocations,
-  });
-
-  @override
-  State<_LandmarkVisitEditorCard> createState() => _LandmarkVisitEditorCardState();
-}
-
-class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
-  late final TextEditingController _titleController;
-  late final TextEditingController _memoController;
-  late List<String> _currentPhotos;
-  int? _year, _month, _day;
-  final ExpansionTileController _expansionTileController = ExpansionTileController();
-
-  @override
-  void initState() {
-    super.initState();
-    _titleController = TextEditingController(text: widget.visitDate.title);
-    _memoController = TextEditingController(text: widget.visitDate.memo);
-    _currentPhotos = List.from(widget.visitDate.photos);
-    _year = widget.visitDate.year;
-    _month = widget.visitDate.month;
-    _day = widget.visitDate.day;
-  }
-
-  void _pickImage(ImageSource source) async {
-    final picker = ImagePicker();
-    final pickedFile = await picker.pickImage(source: source);
-    if (pickedFile != null && mounted) {
-      final newPhotos = List<String>.from(_currentPhotos)..add(pickedFile.path);
-      setState(() => _currentPhotos = newPhotos);
-      if(mounted){
-        context.read<LandmarksProvider>().updateLandmarkVisit(
-            widget.landmarkName, widget.index, photos: newPhotos
-        );
-      }
-    }
-  }
-
-  Widget _buildPhotoPreview(String photoPath, int index) {
-    return Container(
-        width: 60, height: 60, margin: const EdgeInsets.only(right: 8), color: Colors.grey[300],
-        child: Image.file(File(photoPath), fit: BoxFit.cover));
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    final provider = context.read<LandmarksProvider>();
-    return Card(
-      elevation: 1, margin: const EdgeInsets.symmetric(vertical: 4),
-      child: ExpansionTile(
-        controller: _expansionTileController,
-        title: Text(widget.visitDate.title.isNotEmpty ? widget.visitDate.title : 'Visit Record'),
-        subtitle: Text('Date: $_year-$_month-$_day'),
-        trailing: IconButton(icon: const Icon(Icons.delete, color: Colors.red, size: 20), onPressed: widget.onDelete),
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(12.0),
-            child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  TextField(controller: _titleController, decoration: const InputDecoration(labelText: 'Title', isDense: true), onEditingComplete: () => provider.updateLandmarkVisit(widget.landmarkName, widget.index, title: _titleController.text)),
-                  const SizedBox(height: 8),
-                  TextField(controller: _memoController, decoration: const InputDecoration(labelText: 'Memo', isDense: true), onEditingComplete: () => provider.updateLandmarkVisit(widget.landmarkName, widget.index, memo: _memoController.text)),
-                  const SizedBox(height: 12),
-                  SingleChildScrollView(scrollDirection: Axis.horizontal, child: Row(children: [IconButton(icon: const Icon(Icons.camera_alt), onPressed: () => _pickImage(ImageSource.gallery)), ..._currentPhotos.asMap().entries.map((e) => _buildPhotoPreview(e.value, e.key)).toList()])),
-                ]),
-          )
-        ],
-      ),
     );
   }
 }

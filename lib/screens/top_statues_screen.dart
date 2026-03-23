@@ -9,6 +9,7 @@ import 'package:jidoapp/models/landmarks_model.dart';
 import 'package:jidoapp/providers/landmarks_provider.dart';
 import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/widgets/landmark_info_card.dart';
+import 'package:jidoapp/widgets/landmark_visit_editor_card.dart'; // 공통 위젯 import
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:jidoapp/models/visit_date_model.dart';
 import 'dart:io';
@@ -24,20 +25,20 @@ class TopStatuesScreen extends StatelessWidget {
     {'rank': 4, 'name': 'Vishwas Swaroopam', 'height': '106 m', 'iso': 'IN'},
     {'rank': 5, 'name': 'Ushiku Daibutsu', 'height': '100 m', 'iso': 'JP'},
     {'rank': 6, 'name': 'Sendai Daikannon', 'height': '100 m', 'iso': 'JP'},
-    {'rank': 7, 'name': 'Guanyin of Nanshan', 'height': '108 m', 'iso': 'CN'},
+    {'rank': 7, 'name': 'Guanyin of Nanshan', 'height': '92 m', 'iso': 'CN'},
     {'rank': 8, 'name': 'Great Buddha of Thailand', 'height': '92 m', 'iso': 'TH'},
-    {'rank': 9, 'name': 'Dai Kannon of Kita no Miyako Park', 'height': '88 m', 'iso': 'JP'},
-    {'rank': 10, 'name': 'Mamayev Kurgan', 'height': '85 m', 'iso': 'RU'},
+    {'rank': 9, 'name': 'Dai Kannon of Kita no Miyako park', 'height': '88 m', 'iso': 'JP'},
+    {'rank': 10, 'name': 'Mother Homeland Calls', 'height': '85 m', 'iso': 'RU'},
     {'rank': 11, 'name': 'Awaji Kannon', 'height': '80 m', 'iso': 'JP'},
-    {'rank': 12, 'name': 'Grand Buddha at Ling Shan', 'height': '88 m', 'iso': 'CN'},
-    {'rank': 13, 'name': 'Leshan Giant Buddha', 'height': '71 m', 'iso': 'CN'},
-    {'rank': 14, 'name': 'African Renaissance Monument', 'height': '49 m', 'iso': 'SN'},
-    {'rank': 15, 'name': 'Statue of Liberty', 'height': '46 m', 'iso': 'US'},
-    {'rank': 16, 'name': 'Ataturk Mask', 'height': '42 m', 'iso': 'TR'},
-    {'rank': 17, 'name': 'Lord Murugan Statue', 'height': '42.7 m', 'iso': 'MY'},
-    {'rank': 18, 'name': 'Genghis Khan Statue Complex', 'height': '40 m', 'iso': 'MN'},
+    {'rank': 12, 'name': 'Grand Buddha at Ling Shan', 'height': '79 m', 'iso': 'CN'},
+    {'rank': 13, 'name': 'Guanyin of Mount Xiqiao', 'height': '77 m', 'iso': 'CN'},
+    {'rank': 14, 'name': 'Tokyo Wan Kannon', 'height': '56 m', 'iso': 'JP'},
+    {'rank': 15, 'name': 'Usami Kannon', 'height': '50 m', 'iso': 'JP'},
+    {'rank': 16, 'name': 'African Renaissance Monument', 'height': '49 m', 'iso': 'SN'},
+    {'rank': 17, 'name': 'Statue of Liberty', 'height': '46 m', 'iso': 'US'},
+    {'rank': 18, 'name': 'The Motherland Monument', 'height': '42 m', 'iso': 'UA'},
     {'rank': 19, 'name': 'Christ the Redeemer', 'height': '30 m', 'iso': 'BR'},
-    {'rank': 20, 'name': 'Adiyogi Shiva Statue', 'height': '34 m', 'iso': 'IN'},
+    {'rank': 20, 'name': 'Genghis Khan Statue Complex', 'height': '40 m', 'iso': 'MN'},
   ];
 
   @override
@@ -51,16 +52,57 @@ class TopStatuesScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Padding(
-              padding: EdgeInsets.fromLTRB(20, 30, 20, 10),
-              child: Text(
-                'Top 20 Tallest Statues',
-                style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.w900,
-                  color: Color(0xFF111827),
-                  letterSpacing: -0.5,
-                ),
+            Container(
+              padding: const EdgeInsets.fromLTRB(24, 20, 24, 16),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.03),
+                    blurRadius: 10,
+                    offset: const Offset(0, 2),
+                  ),
+                ],
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.all(8),
+                        decoration: BoxDecoration(
+                          color: const Color(0xFFF5F5F5),
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: const Icon(
+                          Icons.accessibility_new_rounded,
+                          color: Color(0xFFa18cd1),
+                          size: 24,
+                        ),
+                      ),
+                      const SizedBox(width: 12),
+                      const Text(
+                        'World\'s Tallest Statues',
+                        style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xFF111827),
+                          letterSpacing: -0.5,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 8),
+                  Text(
+                    'The most massive and tallest sculptures across the globe',
+                    style: TextStyle(
+                      fontSize: 14,
+                      color: Colors.grey[600],
+                      letterSpacing: 0.2,
+                    ),
+                  ),
+                ],
               ),
             ),
             Expanded(
@@ -81,7 +123,7 @@ class TopStatuesScreen extends StatelessWidget {
                   return GestureDetector(
                     onTap: () {
                       if (landmark != null) {
-                        _showLandmarkDetailsModal(context, landmark, const Color(0xFF8E7BA3));
+                        _showLandmarkDetailsModal(context, landmark, const Color(0xFFa18cd1));
                       } else {
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(content: Text("$name details not found in database")),
@@ -108,23 +150,18 @@ class TopStatuesScreen extends StatelessWidget {
                       child: Row(
                         children: [
                           Container(
-                            width: 40,
-                            height: 40,
-                            decoration: BoxDecoration(
-                              color: Colors.grey[100],
-                              borderRadius: BorderRadius.circular(10),
-                            ),
+                            width: 32,
                             alignment: Alignment.center,
                             child: Text(
                               '#$rank',
                               style: TextStyle(
                                 fontSize: 14,
-                                fontWeight: FontWeight.w800,
-                                color: Colors.grey[700],
+                                fontWeight: FontWeight.bold,
+                                color: rank <= 3 ? const Color(0xFFa18cd1) : Colors.grey[400],
                               ),
                             ),
                           ),
-                          const SizedBox(width: 16),
+                          const SizedBox(width: 8),
                           ClipRRect(
                             borderRadius: BorderRadius.circular(4),
                             child: SizedBox(
@@ -145,43 +182,34 @@ class TopStatuesScreen extends StatelessWidget {
                                     fontWeight: FontWeight.bold,
                                     color: Color(0xFF111827),
                                   ),
-                                  maxLines: 1,
                                   overflow: TextOverflow.ellipsis,
-                                  softWrap: false,
                                 ),
                                 const SizedBox(height: 4),
                                 Text(
                                   height,
                                   style: TextStyle(
                                     fontSize: 13,
-                                    fontWeight: FontWeight.w600,
-                                    color: const Color(0xFF8E7BA3).withOpacity(0.8),
+                                    color: Colors.grey[600],
+                                    fontWeight: FontWeight.w500,
                                   ),
-                                  maxLines: 1,
-                                  overflow: TextOverflow.ellipsis,
-                                  softWrap: false,
                                 ),
                               ],
                             ),
                           ),
                           if (isVisited)
                             Container(
-                              margin: const EdgeInsets.only(left: 12),
-                              padding: const EdgeInsets.all(4),
-                              decoration: const BoxDecoration(
-                                color: Colors.teal,
-                                shape: BoxShape.circle,
-                              ),
-                              child: const Icon(Icons.check, color: Colors.white, size: 16),
-                            )
-                          else
-                            Container(
-                              margin: const EdgeInsets.only(left: 12),
-                              width: 24,
-                              height: 24,
+                              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                               decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                border: Border.all(color: Colors.grey[300]!),
+                                color: Colors.teal.withOpacity(0.15),
+                                borderRadius: BorderRadius.circular(12),
+                              ),
+                              child: const Text(
+                                'Visited',
+                                style: TextStyle(
+                                  fontSize: 11,
+                                  color: Colors.teal,
+                                  fontWeight: FontWeight.w600,
+                                ),
                               ),
                             ),
                         ],
@@ -250,8 +278,8 @@ class TopStatuesScreen extends StatelessWidget {
                             child: Text('Cancel', style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600))),
                         ElevatedButton(
                             onPressed: () => Navigator.pop(sheetContext),
-                            child: Text('Done', style: TextStyle(fontWeight: FontWeight.w600, color: themeColor)),
-                            style: ElevatedButton.styleFrom(backgroundColor: headerTextColor)),
+                            style: ElevatedButton.styleFrom(backgroundColor: headerTextColor),
+                            child: Text('Done', style: TextStyle(fontWeight: FontWeight.w600, color: themeColor))),
                       ],
                     ),
                     const SizedBox(height: 12),
@@ -292,7 +320,7 @@ class TopStatuesScreen extends StatelessWidget {
                         const Divider(height: 20),
                         Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [Text('History (${freshLandmark.visitDates.length} entries)', style: Theme.of(sheetContext).textTheme.titleSmall), OutlinedButton.icon(icon: const Icon(Icons.add), label: const Text('Add Visit'), onPressed: () => provider.addVisitDate(freshLandmark.name))]),
                         const SizedBox(height: 8),
-                        if (freshLandmark.visitDates.isNotEmpty) ...freshLandmark.visitDates.asMap().entries.map((entry) => _LandmarkVisitEditorCard(
+                        if (freshLandmark.visitDates.isNotEmpty) ...freshLandmark.visitDates.asMap().entries.map((entry) => LandmarkVisitEditorCard(
                           key: ValueKey('${freshLandmark.name}_${entry.key}'),
                           landmarkName: freshLandmark.name,
                           visitDate: entry.value,
@@ -312,89 +340,6 @@ class TopStatuesScreen extends StatelessWidget {
           ),
         );
       },
-    );
-  }
-}
-
-class _LandmarkVisitEditorCard extends StatefulWidget {
-  final String landmarkName;
-  final VisitDate visitDate;
-  final int index;
-  final VoidCallback onDelete;
-  final List<LandmarkSubLocation>? availableLocations;
-
-  const _LandmarkVisitEditorCard({
-    super.key,
-    required this.landmarkName,
-    required this.visitDate,
-    required this.index,
-    required this.onDelete,
-    this.availableLocations,
-  });
-
-  @override
-  State<_LandmarkVisitEditorCard> createState() => _LandmarkVisitEditorCardState();
-}
-
-class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
-  late final TextEditingController _titleController;
-  late final TextEditingController _memoController;
-  late List<String> _currentPhotos;
-  int? _year, _month, _day;
-
-  @override
-  void initState() {
-    super.initState();
-    _titleController = TextEditingController(text: widget.visitDate.title);
-    _memoController = TextEditingController(text: widget.visitDate.memo);
-    _currentPhotos = List.from(widget.visitDate.photos);
-    _year = widget.visitDate.year;
-    _month = widget.visitDate.month;
-    _day = widget.visitDate.day;
-  }
-
-  void _pickImage(ImageSource source) async {
-    final picker = ImagePicker();
-    final pickedFile = await picker.pickImage(source: source);
-    if (pickedFile != null && mounted) {
-      final newPhotos = List<String>.from(_currentPhotos)..add(pickedFile.path);
-      setState(() => _currentPhotos = newPhotos);
-      context.read<LandmarksProvider>().updateLandmarkVisit(
-          widget.landmarkName, widget.index, photos: newPhotos
-      );
-    }
-  }
-
-  Widget _buildPhotoPreview(String photoPath, int index) {
-    return Container(
-        width: 60, height: 60, margin: const EdgeInsets.only(right: 8), color: Colors.grey[300],
-        child: Image.file(File(photoPath), fit: BoxFit.cover));
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    final provider = context.read<LandmarksProvider>();
-    return Card(
-      elevation: 1, margin: const EdgeInsets.symmetric(vertical: 4),
-      child: ExpansionTile(
-        title: Text(widget.visitDate.title.isNotEmpty ? widget.visitDate.title : 'Visit Record'),
-        subtitle: Text('Date: $_year-$_month-$_day'),
-        trailing: IconButton(icon: const Icon(Icons.delete, color: Colors.red, size: 20), onPressed: widget.onDelete),
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(12.0),
-            child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  TextField(controller: _titleController, decoration: const InputDecoration(labelText: 'Title', isDense: true), onEditingComplete: () => provider.updateLandmarkVisit(widget.landmarkName, widget.index, title: _titleController.text)),
-                  const SizedBox(height: 8),
-                  TextField(controller: _memoController, decoration: const InputDecoration(labelText: 'Memo', isDense: true), onEditingComplete: () => provider.updateLandmarkVisit(widget.landmarkName, widget.index, memo: _memoController.text)),
-                  const SizedBox(height: 12),
-                  SingleChildScrollView(scrollDirection: Axis.horizontal, child: Row(children: [IconButton(icon: const Icon(Icons.camera_alt), onPressed: () => _pickImage(ImageSource.gallery)), ..._currentPhotos.asMap().entries.map((e) => _buildPhotoPreview(e.value, e.key)).toList()])),
-                ]),
-          )
-        ],
-      ),
     );
   }
 }

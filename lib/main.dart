@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'firebase_options.dart';
 
 import 'package:provider/provider.dart';
@@ -75,6 +76,8 @@ void _setSystemUiMode() {
 }
 
 final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
+
+bool isOnboardingActive = true;
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -168,6 +171,7 @@ class AuthGateRoot extends StatelessWidget {
   Widget build(BuildContext context) {
     return Consumer<AuthProvider>(
       builder: (context, auth, _) {
+        // 로딩 중
         if (!auth.isAuthReady) {
           return _buildAppShell(
             const Scaffold(
@@ -177,10 +181,7 @@ class AuthGateRoot extends StatelessWidget {
           );
         }
 
-        if (!auth.isAuthenticated) {
-          return _buildAppShell(const LoginScreen());
-        }
-
+        // ✅ 로그인 여부 상관없이 (게스트 포함) 바로 앱 진입
         return MultiProvider(
           providers: [
             ChangeNotifierProvider(create: (_) => CountryProvider()),
@@ -295,16 +296,46 @@ class WidgetUpdateWrapper extends StatefulWidget {
 class _WidgetUpdateWrapperState extends State<WidgetUpdateWrapper> {
   bool _widgetUpdated = false;
 
-  // TODO: 출시 후 SharedPreferences 로 한 번만 뜨도록 변경
-  bool _showTutorial = true;
+  // null = SharedPreferences 로딩 중, true = 표시, false = 이미 완료
+  bool? _showTutorial;
+
+  // 새 버전 출시 시 이 값을 올리면 기존 유저에게도 한 번 더 표시됩니다.
+  static const String _tutorialVersion = '1.0';
+  static const String _prefKey = 'onboarding_tutorial_version';
+
+  @override
+  void initState() {
+    super.initState();
+    _checkTutorial();
+  }
+
+  Future<void> _checkTutorial() async {
+    final prefs = await SharedPreferences.getInstance();
+    final completed = prefs.getString(_prefKey);
+    if (mounted) {
+      setState(() {
+        _showTutorial = (completed != _tutorialVersion);
+      });
+    }
+  }
+
+  Future<void> _completeTutorial() async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString(_prefKey, _tutorialVersion);
+    isOnboardingActive = false;
+    if (mounted) setState(() => _showTutorial = false);
+  }
 
   @override
   Widget build(BuildContext context) {
-    if (_showTutorial) {
+    // SharedPreferences 로딩 전 — 흰 화면 (아주 짧은 순간)
+    if (_showTutorial == null) {
+      return const Scaffold(backgroundColor: Colors.white);
+    }
+
+    if (_showTutorial!) {
       return OnboardingTutorialScreen(
-        onComplete: () {
-          setState(() => _showTutorial = false);
-        },
+        onComplete: _completeTutorial,
       );
     }
 
@@ -319,7 +350,7 @@ class _WidgetUpdateWrapperState extends State<WidgetUpdateWrapper> {
       });
     }
 
-    return const MainScreen();
+    return const MainScreen(initialIndex: 0);
   }
 
   void _triggerWidgetUpdate(CountryProvider countryProvider) {
@@ -383,6 +414,7 @@ class _BadgeGlobalListenerState extends State<BadgeGlobalListener> {
 
   void _checkNotifications() {
     if (!mounted || _isShowingDialog) return;
+    if (isOnboardingActive) return;
 
     try {
       final badgeProvider = context.read<BadgeProvider>();

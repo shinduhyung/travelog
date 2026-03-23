@@ -32,7 +32,7 @@ import 'package:jidoapp/widgets/landmark_info_card.dart';
 import 'package:jidoapp/screens/country_detail_screen.dart';
 
 // [추가] 로딩 로고 위젯 임포트
-import 'package:jidoapp/widgets/plane_loading_logo.dart';
+
 
 class RecommendationMatch {
   final String name;
@@ -258,8 +258,8 @@ class _RecommendationsScreenState extends State<RecommendationsScreen> {
     if (!_isDataLoaded) {
       return const Scaffold(
         backgroundColor: Colors.white,
-        body: SizedBox.expand(
-          child: PlaneLoadingLogo(),
+        body: Center(
+          child: CircularProgressIndicator(),
         ),
       );
     }

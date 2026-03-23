@@ -5,6 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:jidoapp/screens/trip_dna_screen.dart';
 import 'package:jidoapp/screens/traveler_type_ai_screen.dart';
+import 'package:provider/provider.dart';
+import 'package:jidoapp/providers/auth_provider.dart';
+import 'package:jidoapp/screens/login_prompt_screen.dart';
 
 class TravelerTypeSelectorScreen extends StatefulWidget {
   const TravelerTypeSelectorScreen({super.key});
@@ -392,6 +395,16 @@ class _TravelerTypeSelectorScreenState extends State<TravelerTypeSelectorScreen>
           icon: Icons.psychology_alt_outlined,
           gradientColors: const [purple, blue],
           onTap: () async {
+            final auth = Provider.of<AuthProvider>(context, listen: false);
+            if (auth.user == null) {
+              showModalBottomSheet(
+                context: context,
+                isScrollControlled: true,
+                backgroundColor: Colors.transparent,
+                builder: (_) => const LoginPromptScreen(),
+              );
+              return;
+            }
             await Navigator.push(
               context,
               MaterialPageRoute(
