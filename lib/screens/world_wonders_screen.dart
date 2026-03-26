@@ -27,14 +27,14 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
   late AnimationController _glowController;
 
   // 각 wonder별 아이콘 매핑
-  static const Map<String, String> _wonderEmojis = {
-    'Great Wall of China': '🏯',
-    'Petra': '🌹',
-    'Colosseum': '🏟️',
-    'Chichen Itza': '🐍',
-    'Machu Picchu': '🦙',
-    'Taj Mahal': '🕌',
-    'Christ the Redeemer': '✝️',
+  static const Map<String, String> _wonderIcons = {
+    'Great Wall of China': 'assets/icons/great_wall.png',
+    'Petra':               'assets/icons/petra.png',
+    'Colosseum':           'assets/icons/colosseum.png',
+    'Chichen Itza':        'assets/icons/chichen_itza.png',
+    'Machu Picchu':        'assets/icons/machu_picchu.png',
+    'Taj Mahal':           'assets/icons/taj_mahal.png',
+    'Christ the Redeemer': 'assets/icons/christ_redeemer.png',
   };
 
   final List<Map<String, String>> _wondersList = [
@@ -108,13 +108,13 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
                   landmarksProvider.visitedLandmarks.contains(name);
                   final landmark =
                   allLandmarks.firstWhereOrNull((l) => l.name == name);
-                  final emoji = _wonderEmojis[name] ?? '🌍';
+                  final iconPath = _wonderIcons[name] ?? 'assets/icons/petra.png';
 
                   return _AnimatedWonderCard(
                     index: index,
                     controller: _listAnimController,
                     child: _buildWonderCard(
-                      name, imageUrl, iso, location, emoji, isVisited, landmark,
+                      name, imageUrl, iso, location, iconPath, isVisited, landmark,
                     ),
                   );
                 },
@@ -210,13 +210,13 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
           Row(
             children: _wondersList.map((w) {
               final name = w['name']!;
-              final emoji = _wonderEmojis[name] ?? '🌍';
+              final iconPath = _wonderIcons[name] ?? 'assets/icons/petra.png';
               final isVisited = provider.visitedLandmarks.contains(name);
               return Expanded(
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 3),
                   child: _WonderIconBadge(
-                    emoji: emoji,
+                    iconPath: iconPath,
                     isVisited: isVisited,
                     glowController: _glowController,
                   ),
@@ -235,7 +235,7 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
       String imageUrl,
       String iso,
       String location,
-      String emoji,
+      String iconPath,
       bool isVisited,
       Landmark? landmark,
       ) {
@@ -351,7 +351,7 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
                   children: [
                     // 아이콘 (헤더 스타일과 동일, 글로우 포함)
                     _CardIconBadge(
-                      emoji: emoji,
+                      iconPath: iconPath,
                       isVisited: isVisited,
                       glowController: _glowController,
                     ),
@@ -730,12 +730,12 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
 
 // ── 헤더 아이콘 뱃지 (글로우 애니메이션 포함) ─────────────────
 class _WonderIconBadge extends StatelessWidget {
-  final String emoji;
+  final String iconPath;
   final bool isVisited;
   final AnimationController glowController;
 
   const _WonderIconBadge({
-    required this.emoji,
+    required this.iconPath,
     required this.isVisited,
     required this.glowController,
   });
@@ -753,12 +753,11 @@ class _WonderIconBadge extends StatelessWidget {
                 borderRadius: BorderRadius.circular(12),
               ),
               child: Center(
-                child: FittedBox(
-                  fit: BoxFit.scaleDown,
-                  child: Padding(
-                    padding: const EdgeInsets.all(6),
-                    child: Text(emoji,
-                        style: const TextStyle(fontSize: 22)),
+                child: Padding(
+                  padding: const EdgeInsets.all(6),
+                  child: Image.asset(
+                    iconPath,
+                    fit: BoxFit.contain,
                   ),
                 ),
               ),
@@ -801,12 +800,11 @@ class _WonderIconBadge extends StatelessWidget {
                   ],
                 ),
                 child: Center(
-                  child: FittedBox(
-                    fit: BoxFit.scaleDown,
-                    child: Padding(
-                      padding: const EdgeInsets.all(6),
-                      child: Text(emoji,
-                          style: const TextStyle(fontSize: 22)),
+                  child: Padding(
+                    padding: const EdgeInsets.all(6),
+                    child: Image.asset(
+                      iconPath,
+                      fit: BoxFit.contain,
                     ),
                   ),
                 ),
@@ -841,12 +839,12 @@ class _WonderIconBadge extends StatelessWidget {
 
 // ── 카드 아이콘 뱃지 (글로우 포함) ───────────────────────────
 class _CardIconBadge extends StatelessWidget {
-  final String emoji;
+  final String iconPath;
   final bool isVisited;
   final AnimationController glowController;
 
   const _CardIconBadge({
-    required this.emoji,
+    required this.iconPath,
     required this.isVisited,
     required this.glowController,
   });
@@ -862,7 +860,10 @@ class _CardIconBadge extends StatelessWidget {
           borderRadius: BorderRadius.circular(13),
         ),
         child: Center(
-          child: Text(emoji, style: const TextStyle(fontSize: 22)),
+          child: Padding(
+            padding: const EdgeInsets.all(8),
+            child: Image.asset(iconPath, fit: BoxFit.contain),
+          ),
         ),
       );
     }
@@ -888,7 +889,10 @@ class _CardIconBadge extends StatelessWidget {
             ],
           ),
           child: Center(
-            child: Text(emoji, style: const TextStyle(fontSize: 22)),
+            child: Padding(
+              padding: const EdgeInsets.all(8),
+              child: Image.asset(iconPath, fit: BoxFit.contain),
+            ),
           ),
         );
       },
