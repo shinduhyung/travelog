@@ -24,22 +24,21 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
   late AnimationController _listAnimController;
   late AnimationController _glowController;
 
-  // 각 wonder별 아이콘 URL 매핑
   static const Map<String, String> _wonderIcons = {
     'Great Wall of China':
-    'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/wonders%2Fgreat_wall.png?alt=media',
+    'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/wonder_icons%2Fgreat_wall.png?alt=media',
     'Petra':
-    'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/wonders%2Fpetra.png?alt=media',
+    'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/wonder_icons%2Fpetra.png?alt=media',
     'Colosseum':
-    'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/wonders%2Fcolosseum.png?alt=media',
+    'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/wonder_icons%2Fcolosseum.png?alt=media',
     'Chichen Itza':
-    'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/wonders%2Fchichen_itza.png?alt=media',
+    'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/wonder_icons%2Fchichen_itza.png?alt=media',
     'Machu Picchu':
-    'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/wonders%2Fmachu_picchu.png?alt=media',
+    'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/wonder_icons%2Fmachu_picchu.png?alt=media',
     'Taj Mahal':
-    'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/wonders%2Ftaj_mahal.png?alt=media',
+    'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/wonder_icons%2Ftaj_mahal.png?alt=media',
     'Christ the Redeemer':
-    'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/wonders%2Fchrist_redeemer.png?alt=media',
+    'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/wonder_icons%2Fchrist_redeemer.png?alt=media',
   };
 
   final List<Map<String, String>> _wondersList = [
@@ -48,49 +47,49 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
       'image':
       'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/wonders%2Fgreat_wall.png?alt=media',
       'iso': 'CN',
-      'location': 'China'
+      'location': 'China',
     },
     {
       'name': 'Petra',
       'image':
       'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/wonders%2Fpetra.png?alt=media',
       'iso': 'JO',
-      'location': 'Jordan'
+      'location': 'Jordan',
     },
     {
       'name': 'Colosseum',
       'image':
       'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/wonders%2Fcolosseum.png?alt=media',
       'iso': 'IT',
-      'location': 'Italy'
+      'location': 'Italy',
     },
     {
       'name': 'Chichen Itza',
       'image':
       'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/wonders%2Fchichen_itza.png?alt=media',
       'iso': 'MX',
-      'location': 'Mexico'
+      'location': 'Mexico',
     },
     {
       'name': 'Machu Picchu',
       'image':
       'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/wonders%2Fmachu_picchu.png?alt=media',
       'iso': 'PE',
-      'location': 'Peru'
+      'location': 'Peru',
     },
     {
       'name': 'Taj Mahal',
       'image':
       'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/wonders%2Ftaj_mahal.png?alt=media',
       'iso': 'IN',
-      'location': 'India'
+      'location': 'India',
     },
     {
       'name': 'Christ the Redeemer',
       'image':
       'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/wonders%2Fchrist_redeemer.png?alt=media',
       'iso': 'BR',
-      'location': 'Brazil'
+      'location': 'Brazil',
     },
   ];
 
@@ -156,7 +155,7 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
                   final landmark =
                   allLandmarks.firstWhereOrNull((l) => l.name == name);
                   final iconUrl = _wonderIcons[name] ??
-                      'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/wonders%2Fpetra.png?alt=media';
+                      'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/wonder_icons%2Fpetra.png?alt=media';
 
                   return _AnimatedWonderCard(
                     index: index,
@@ -256,7 +255,7 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
             children: _wondersList.map((w) {
               final name = w['name']!;
               final iconUrl = _wonderIcons[name] ??
-                  'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/wonders%2Fpetra.png?alt=media';
+                  'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/wonder_icons%2Fpetra.png?alt=media';
               final isVisited = provider.visitedLandmarks.contains(name);
               return Expanded(
                 child: Padding(
