@@ -1,5 +1,3 @@
-// lib/screens/world_wonders_screen.dart
-
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -26,25 +24,74 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
   late AnimationController _listAnimController;
   late AnimationController _glowController;
 
-  // 각 wonder별 아이콘 매핑
+  // 각 wonder별 아이콘 URL 매핑
   static const Map<String, String> _wonderIcons = {
-    'Great Wall of China': 'assets/icons/great_wall.png',
-    'Petra':               'assets/icons/petra.png',
-    'Colosseum':           'assets/icons/colosseum.png',
-    'Chichen Itza':        'assets/icons/chichen_itza.png',
-    'Machu Picchu':        'assets/icons/machu_picchu.png',
-    'Taj Mahal':           'assets/icons/taj_mahal.png',
-    'Christ the Redeemer': 'assets/icons/christ_redeemer.png',
+    'Great Wall of China':
+    'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/wonders%2Fgreat_wall.png?alt=media',
+    'Petra':
+    'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/wonders%2Fpetra.png?alt=media',
+    'Colosseum':
+    'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/wonders%2Fcolosseum.png?alt=media',
+    'Chichen Itza':
+    'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/wonders%2Fchichen_itza.png?alt=media',
+    'Machu Picchu':
+    'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/wonders%2Fmachu_picchu.png?alt=media',
+    'Taj Mahal':
+    'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/wonders%2Ftaj_mahal.png?alt=media',
+    'Christ the Redeemer':
+    'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/wonders%2Fchrist_redeemer.png?alt=media',
   };
 
   final List<Map<String, String>> _wondersList = [
-    {'name': 'Great Wall of China', 'image': 'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/wonders%2Fgreat_wall.png?alt=media',     'iso': 'CN', 'location': 'China'},
-    {'name': 'Petra',               'image': 'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/wonders%2Fpetra.png?alt=media',         'iso': 'JO', 'location': 'Jordan'},
-    {'name': 'Colosseum',           'image': 'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/wonders%2Fcolosseum.png?alt=media',     'iso': 'IT', 'location': 'Italy'},
-    {'name': 'Chichen Itza',        'image': 'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/wonders%2Fchichen_itza.png?alt=media',  'iso': 'MX', 'location': 'Mexico'},
-    {'name': 'Machu Picchu',        'image': 'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/wonders%2Fmachu_picchu.png?alt=media',  'iso': 'PE', 'location': 'Peru'},
-    {'name': 'Taj Mahal',           'image': 'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/wonders%2Ftaj_mahal.png?alt=media',     'iso': 'IN', 'location': 'India'},
-    {'name': 'Christ the Redeemer', 'image': 'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/wonders%2Fchrist_redeemer.png?alt=media','iso': 'BR', 'location': 'Brazil'},
+    {
+      'name': 'Great Wall of China',
+      'image':
+      'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/wonders%2Fgreat_wall.png?alt=media',
+      'iso': 'CN',
+      'location': 'China'
+    },
+    {
+      'name': 'Petra',
+      'image':
+      'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/wonders%2Fpetra.png?alt=media',
+      'iso': 'JO',
+      'location': 'Jordan'
+    },
+    {
+      'name': 'Colosseum',
+      'image':
+      'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/wonders%2Fcolosseum.png?alt=media',
+      'iso': 'IT',
+      'location': 'Italy'
+    },
+    {
+      'name': 'Chichen Itza',
+      'image':
+      'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/wonders%2Fchichen_itza.png?alt=media',
+      'iso': 'MX',
+      'location': 'Mexico'
+    },
+    {
+      'name': 'Machu Picchu',
+      'image':
+      'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/wonders%2Fmachu_picchu.png?alt=media',
+      'iso': 'PE',
+      'location': 'Peru'
+    },
+    {
+      'name': 'Taj Mahal',
+      'image':
+      'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/wonders%2Ftaj_mahal.png?alt=media',
+      'iso': 'IN',
+      'location': 'India'
+    },
+    {
+      'name': 'Christ the Redeemer',
+      'image':
+      'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/wonders%2Fchrist_redeemer.png?alt=media',
+      'iso': 'BR',
+      'location': 'Brazil'
+    },
   ];
 
   @override
@@ -85,15 +132,15 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
       body: CustomScrollView(
         physics: const BouncingScrollPhysics(),
         slivers: [
-          // ── 헤더 ──
           SliverToBoxAdapter(
             child: FadeTransition(
               opacity: CurvedAnimation(
-                  parent: _headerAnimController, curve: Curves.easeOut),
+                parent: _headerAnimController,
+                curve: Curves.easeOut,
+              ),
               child: _buildHeader(visitedCount, landmarksProvider),
             ),
           ),
-          // ── 카드 리스트 ──
           SliverPadding(
             padding: const EdgeInsets.fromLTRB(20, 4, 20, 40),
             sliver: SliverList(
@@ -108,13 +155,20 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
                   landmarksProvider.visitedLandmarks.contains(name);
                   final landmark =
                   allLandmarks.firstWhereOrNull((l) => l.name == name);
-                  final iconPath = _wonderIcons[name] ?? 'assets/icons/petra.png';
+                  final iconUrl = _wonderIcons[name] ??
+                      'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/wonders%2Fpetra.png?alt=media';
 
                   return _AnimatedWonderCard(
                     index: index,
                     controller: _listAnimController,
                     child: _buildWonderCard(
-                      name, imageUrl, iso, location, iconPath, isVisited, landmark,
+                      name,
+                      imageUrl,
+                      iso,
+                      location,
+                      iconUrl,
+                      isVisited,
+                      landmark,
                     ),
                   );
                 },
@@ -127,7 +181,6 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
     );
   }
 
-  // ── 헤더 ─────────────────────────────────────────────────
   Widget _buildHeader(int visitedCount, LandmarksProvider provider) {
     return Container(
       color: const Color(0xFFF5F4F0),
@@ -140,11 +193,8 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // 상단 라인
           const Divider(color: Color(0xFF1A1A1A), thickness: 1, height: 1),
           const SizedBox(height: 14),
-
-          // 타이틀 + 큰 숫자
           Row(
             crossAxisAlignment: CrossAxisAlignment.baseline,
             textBaseline: TextBaseline.alphabetic,
@@ -176,21 +226,19 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
               ),
             ],
           ),
-
           const SizedBox(height: 14),
-
-          // 하단 라인
           const Divider(color: Color(0xFF1A1A1A), thickness: 1, height: 1),
           const SizedBox(height: 10),
-
-          // 서브타이틀 + 방문 수
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
                 "Humanity's greatest achievements",
                 style: TextStyle(
-                    fontSize: 11, color: Colors.grey[500], letterSpacing: 0.2),
+                  fontSize: 11,
+                  color: Colors.grey[500],
+                  letterSpacing: 0.2,
+                ),
               ),
               Text(
                 '$visitedCount VISITED',
@@ -203,20 +251,18 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
               ),
             ],
           ),
-
           const SizedBox(height: 16),
-
-          // 아이콘 7개 행
           Row(
             children: _wondersList.map((w) {
               final name = w['name']!;
-              final iconPath = _wonderIcons[name] ?? 'assets/icons/petra.png';
+              final iconUrl = _wonderIcons[name] ??
+                  'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/wonders%2Fpetra.png?alt=media';
               final isVisited = provider.visitedLandmarks.contains(name);
               return Expanded(
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 3),
                   child: _WonderIconBadge(
-                    iconPath: iconPath,
+                    iconUrl: iconUrl,
                     isVisited: isVisited,
                     glowController: _glowController,
                   ),
@@ -229,13 +275,12 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
     );
   }
 
-  // ── 카드 ─────────────────────────────────────────────────
   Widget _buildWonderCard(
       String name,
       String imageUrl,
       String iso,
       String location,
-      String iconPath,
+      String iconUrl,
       bool isVisited,
       Landmark? landmark,
       ) {
@@ -243,7 +288,10 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
       onTap: () {
         if (landmark != null) {
           _showLandmarkDetailsModal(
-              context, landmark, const Color(0xFF1A1A1A));
+            context,
+            landmark,
+            const Color(0xFF1A1A1A),
+          );
         }
       },
       child: Container(
@@ -264,7 +312,6 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // 이미지
               Stack(
                 children: [
                   CachedNetworkImage(
@@ -277,17 +324,20 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
                       color: const Color(0xFFEEEDEA),
                       child: const Center(
                         child: CircularProgressIndicator(
-                            strokeWidth: 2, color: Color(0xFF1A1A1A)),
+                          strokeWidth: 2,
+                          color: Color(0xFF1A1A1A),
+                        ),
                       ),
                     ),
                     errorWidget: (context, url, error) => Container(
                       height: 210,
                       color: const Color(0xFFEEEDEA),
-                      child: const Icon(Icons.image_not_supported,
-                          color: Colors.grey),
+                      child: const Icon(
+                        Icons.image_not_supported,
+                        color: Colors.grey,
+                      ),
                     ),
                   ),
-                  // 하단 그라데이션
                   Positioned.fill(
                     child: Container(
                       decoration: BoxDecoration(
@@ -303,14 +353,15 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
                       ),
                     ),
                   ),
-                  // Visited 뱃지
                   if (isVisited)
                     Positioned(
                       top: 14,
                       right: 14,
                       child: Container(
                         padding: const EdgeInsets.symmetric(
-                            horizontal: 10, vertical: 5),
+                          horizontal: 10,
+                          vertical: 5,
+                        ),
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(20),
@@ -324,8 +375,11 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
                         child: const Row(
                           mainAxisSize: MainAxisSize.min,
                           children: [
-                            Icon(Icons.check_circle_rounded,
-                                color: Color(0xFF2ECC71), size: 12),
+                            Icon(
+                              Icons.check_circle_rounded,
+                              color: Color(0xFF2ECC71),
+                              size: 12,
+                            ),
                             SizedBox(width: 4),
                             Text(
                               'VISITED',
@@ -342,21 +396,17 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
                     ),
                 ],
               ),
-
-              // 하단 정보
               Padding(
-                padding: const EdgeInsets.symmetric(
-                    horizontal: 18, vertical: 14),
+                padding:
+                const EdgeInsets.symmetric(horizontal: 18, vertical: 14),
                 child: Row(
                   children: [
-                    // 아이콘 (헤더 스타일과 동일, 글로우 포함)
                     _CardIconBadge(
-                      iconPath: iconPath,
+                      iconUrl: iconUrl,
                       isVisited: isVisited,
                       glowController: _glowController,
                     ),
                     const SizedBox(width: 14),
-                    // 이름 + 국가
                     Expanded(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -385,14 +435,15 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
                               Text(
                                 location,
                                 style: TextStyle(
-                                    fontSize: 12, color: Colors.grey[500]),
+                                  fontSize: 12,
+                                  color: Colors.grey[500],
+                                ),
                               ),
                             ],
                           ),
                         ],
                       ),
                     ),
-                    // 화살표 버튼
                     Container(
                       width: 32,
                       height: 32,
@@ -400,8 +451,11 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
                         color: const Color(0xFFF5F4F0),
                         borderRadius: BorderRadius.circular(10),
                       ),
-                      child: const Icon(Icons.arrow_forward_rounded,
-                          size: 15, color: Color(0xFF1A1A1A)),
+                      child: const Icon(
+                        Icons.arrow_forward_rounded,
+                        size: 15,
+                        color: Color(0xFF1A1A1A),
+                      ),
                     ),
                   ],
                 ),
@@ -413,7 +467,6 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
     );
   }
 
-  // ── 모달 ─────────────────────────────────────────────────
   void _showLandmarkDetailsModal(
       BuildContext context, Landmark landmark, Color fallbackThemeColor) {
     showModalBottomSheet(
@@ -443,7 +496,8 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
         if (freshLandmark.countriesIsoA3.length == 1) {
           try {
             final country = countryProvider.allCountries.firstWhere(
-                    (c) => c.isoA3 == freshLandmark.countriesIsoA3.first);
+                  (c) => c.isoA3 == freshLandmark.countriesIsoA3.first,
+            );
             landmarkThemeColor = country.themeColor;
           } catch (e) {
             landmarkThemeColor = null;
@@ -452,7 +506,8 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
 
         final themeColor = landmarkThemeColor ?? fallbackThemeColor;
         final headerTextColor =
-        ThemeData.estimateBrightnessForColor(themeColor) == Brightness.dark
+        ThemeData.estimateBrightnessForColor(themeColor) ==
+            Brightness.dark
             ? Colors.white
             : Colors.black;
 
@@ -465,7 +520,6 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
             ),
             child: Column(
               children: [
-                // 드래그 핸들
                 Container(
                   margin: const EdgeInsets.only(top: 12),
                   width: 36,
@@ -475,7 +529,6 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
                     borderRadius: BorderRadius.circular(2),
                   ),
                 ),
-                // 헤더
                 Container(
                   margin: const EdgeInsets.fromLTRB(16, 12, 16, 0),
                   padding: const EdgeInsets.all(20),
@@ -496,11 +549,14 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
                               minimumSize: Size.zero,
                               tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                             ),
-                            child: Text('Cancel',
-                                style: TextStyle(
-                                    color: headerTextColor.withOpacity(0.7),
-                                    fontWeight: FontWeight.w500,
-                                    fontSize: 14)),
+                            child: Text(
+                              'Cancel',
+                              style: TextStyle(
+                                color: headerTextColor.withOpacity(0.7),
+                                fontWeight: FontWeight.w500,
+                                fontSize: 14,
+                              ),
+                            ),
                           ),
                           ElevatedButton(
                             onPressed: () => Navigator.pop(sheetContext),
@@ -509,17 +565,23 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
                               foregroundColor: themeColor,
                               elevation: 0,
                               padding: const EdgeInsets.symmetric(
-                                  horizontal: 20, vertical: 8),
+                                horizontal: 20,
+                                vertical: 8,
+                              ),
                               shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(20)),
+                                borderRadius: BorderRadius.circular(20),
+                              ),
                               minimumSize: Size.zero,
                               tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                             ),
-                            child: Text('Done',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w700,
-                                    color: themeColor,
-                                    fontSize: 13)),
+                            child: Text(
+                              'Done',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w700,
+                                color: themeColor,
+                                fontSize: 13,
+                              ),
+                            ),
                           ),
                         ],
                       ),
@@ -539,16 +601,21 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
                             ),
                           ),
                           if (isVisited)
-                            Icon(Icons.check_circle_rounded,
-                                color: headerTextColor, size: 22),
+                            Icon(
+                              Icons.check_circle_rounded,
+                              color: headerTextColor,
+                              size: 22,
+                            ),
                         ],
                       ),
                       const SizedBox(height: 6),
                       Row(
                         children: [
-                          Icon(Icons.location_on_rounded,
-                              size: 13,
-                              color: headerTextColor.withOpacity(0.7)),
+                          Icon(
+                            Icons.location_on_rounded,
+                            size: 13,
+                            color: headerTextColor.withOpacity(0.7),
+                          ),
                           const SizedBox(width: 4),
                           Expanded(
                             child: Text(
@@ -565,7 +632,6 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
                     ],
                   ),
                 ),
-                // 바디
                 Expanded(
                   child: SingleChildScrollView(
                     padding: const EdgeInsets.all(20),
@@ -585,16 +651,16 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
                               Row(
                                 children: [
                                   GestureDetector(
-                                    onTap: () => provider
-                                        .toggleWishlistStatus(freshLandmark.name),
+                                    onTap: () => provider.toggleWishlistStatus(
+                                      freshLandmark.name,
+                                    ),
                                     child: Container(
                                       padding: const EdgeInsets.all(8),
                                       decoration: BoxDecoration(
                                         color: isWishlisted
                                             ? const Color(0xFFFFEBEB)
                                             : Colors.white,
-                                        borderRadius:
-                                        BorderRadius.circular(10),
+                                        borderRadius: BorderRadius.circular(10),
                                         border: Border.all(
                                           color: isWishlisted
                                               ? const Color(0xFFFFCDD2)
@@ -633,11 +699,14 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
                                 itemCount: 5,
                                 itemSize: 26.0,
                                 itemBuilder: (context, _) => const Icon(
-                                    Icons.star_rounded,
-                                    color: Color(0xFFFFB800)),
+                                  Icons.star_rounded,
+                                  color: Color(0xFFFFB800),
+                                ),
                                 onRatingUpdate: (rating) =>
                                     provider.updateLandmarkRating(
-                                        freshLandmark.name, rating),
+                                      freshLandmark.name,
+                                      rating,
+                                    ),
                               ),
                             ],
                           ),
@@ -660,7 +729,9 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
                                   provider.addVisitDate(freshLandmark.name),
                               child: Container(
                                 padding: const EdgeInsets.symmetric(
-                                    horizontal: 12, vertical: 6),
+                                  horizontal: 12,
+                                  vertical: 6,
+                                ),
                                 decoration: BoxDecoration(
                                   color: const Color(0xFF1A1A1A),
                                   borderRadius: BorderRadius.circular(20),
@@ -668,14 +739,20 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
                                 child: const Row(
                                   mainAxisSize: MainAxisSize.min,
                                   children: [
-                                    Icon(Icons.add_rounded,
-                                        color: Colors.white, size: 14),
+                                    Icon(
+                                      Icons.add_rounded,
+                                      color: Colors.white,
+                                      size: 14,
+                                    ),
                                     SizedBox(width: 4),
-                                    Text('Add Visit',
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 12,
-                                            fontWeight: FontWeight.w700)),
+                                    Text(
+                                      'Add Visit',
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w700,
+                                      ),
+                                    ),
                                   ],
                                 ),
                               ),
@@ -684,26 +761,32 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
                         ),
                         const SizedBox(height: 10),
                         if (freshLandmark.visitDates.isNotEmpty)
-                          ...freshLandmark.visitDates
-                              .asMap()
-                              .entries
-                              .map((entry) => LandmarkVisitEditorCard(
-                            key: ValueKey(
-                                '${freshLandmark.name}_${entry.key}'),
-                            landmarkName: freshLandmark.name,
-                            visitDate: entry.value,
-                            index: entry.key,
-                            onDelete: () => provider.removeVisitDate(
-                                freshLandmark.name, entry.key),
-                            availableLocations: freshLandmark.locations,
-                          ))
+                          ...freshLandmark.visitDates.asMap().entries.map(
+                                (entry) => LandmarkVisitEditorCard(
+                              key: ValueKey(
+                                '${freshLandmark.name}_${entry.key}',
+                              ),
+                              landmarkName: freshLandmark.name,
+                              visitDate: entry.value,
+                              index: entry.key,
+                              onDelete: () => provider.removeVisitDate(
+                                freshLandmark.name,
+                                entry.key,
+                              ),
+                              availableLocations: freshLandmark.locations,
+                            ),
+                          )
                         else
                           Container(
                             padding: const EdgeInsets.symmetric(vertical: 20),
                             alignment: Alignment.center,
-                            child: Text('No visits recorded yet',
-                                style: TextStyle(
-                                    color: Colors.grey[400], fontSize: 13)),
+                            child: Text(
+                              'No visits recorded yet',
+                              style: TextStyle(
+                                color: Colors.grey[400],
+                                fontSize: 13,
+                              ),
+                            ),
                           ),
                         const SizedBox(height: 8),
                         const Divider(height: 24),
@@ -728,14 +811,13 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
   }
 }
 
-// ── 헤더 아이콘 뱃지 (글로우 애니메이션 포함) ─────────────────
 class _WonderIconBadge extends StatelessWidget {
-  final String iconPath;
+  final String iconUrl;
   final bool isVisited;
   final AnimationController glowController;
 
   const _WonderIconBadge({
-    required this.iconPath,
+    required this.iconUrl,
     required this.isVisited,
     required this.glowController,
   });
@@ -755,9 +837,15 @@ class _WonderIconBadge extends StatelessWidget {
               child: Center(
                 child: Padding(
                   padding: const EdgeInsets.all(6),
-                  child: Image.asset(
-                    iconPath,
+                  child: CachedNetworkImage(
+                    imageUrl: iconUrl,
                     fit: BoxFit.contain,
+                    placeholder: (context, url) => const SizedBox.shrink(),
+                    errorWidget: (context, url, error) => const Icon(
+                      Icons.image_not_supported,
+                      color: Colors.grey,
+                      size: 18,
+                    ),
                   ),
                 ),
               ),
@@ -788,8 +876,8 @@ class _WonderIconBadge extends StatelessWidget {
                 decoration: BoxDecoration(
                   color: const Color(0xFFFFF8E8),
                   borderRadius: BorderRadius.circular(12),
-                  border: Border.all(
-                      color: const Color(0xFFE8C84A), width: 1.2),
+                  border:
+                  Border.all(color: const Color(0xFFE8C84A), width: 1.2),
                   boxShadow: [
                     BoxShadow(
                       color: const Color(0xFFE8C84A)
@@ -802,9 +890,15 @@ class _WonderIconBadge extends StatelessWidget {
                 child: Center(
                   child: Padding(
                     padding: const EdgeInsets.all(6),
-                    child: Image.asset(
-                      iconPath,
+                    child: CachedNetworkImage(
+                      imageUrl: iconUrl,
                       fit: BoxFit.contain,
+                      placeholder: (context, url) => const SizedBox.shrink(),
+                      errorWidget: (context, url, error) => const Icon(
+                        Icons.image_not_supported,
+                        color: Colors.grey,
+                        size: 18,
+                      ),
                     ),
                   ),
                 ),
@@ -837,14 +931,13 @@ class _WonderIconBadge extends StatelessWidget {
   }
 }
 
-// ── 카드 아이콘 뱃지 (글로우 포함) ───────────────────────────
 class _CardIconBadge extends StatelessWidget {
-  final String iconPath;
+  final String iconUrl;
   final bool isVisited;
   final AnimationController glowController;
 
   const _CardIconBadge({
-    required this.iconPath,
+    required this.iconUrl,
     required this.isVisited,
     required this.glowController,
   });
@@ -862,7 +955,16 @@ class _CardIconBadge extends StatelessWidget {
         child: Center(
           child: Padding(
             padding: const EdgeInsets.all(8),
-            child: Image.asset(iconPath, fit: BoxFit.contain),
+            child: CachedNetworkImage(
+              imageUrl: iconUrl,
+              fit: BoxFit.contain,
+              placeholder: (context, url) => const SizedBox.shrink(),
+              errorWidget: (context, url, error) => const Icon(
+                Icons.image_not_supported,
+                color: Colors.grey,
+                size: 18,
+              ),
+            ),
           ),
         ),
       );
@@ -881,8 +983,8 @@ class _CardIconBadge extends StatelessWidget {
             border: Border.all(color: const Color(0xFFE8C84A), width: 1.2),
             boxShadow: [
               BoxShadow(
-                color: const Color(0xFFE8C84A)
-                    .withOpacity(0.2 + glow * 0.25),
+                color:
+                const Color(0xFFE8C84A).withOpacity(0.2 + glow * 0.25),
                 blurRadius: 6 + glow * 10,
                 spreadRadius: glow * 2,
               ),
@@ -891,7 +993,16 @@ class _CardIconBadge extends StatelessWidget {
           child: Center(
             child: Padding(
               padding: const EdgeInsets.all(8),
-              child: Image.asset(iconPath, fit: BoxFit.contain),
+              child: CachedNetworkImage(
+                imageUrl: iconUrl,
+                fit: BoxFit.contain,
+                placeholder: (context, url) => const SizedBox.shrink(),
+                errorWidget: (context, url, error) => const Icon(
+                  Icons.image_not_supported,
+                  color: Colors.grey,
+                  size: 18,
+                ),
+              ),
             ),
           ),
         );
@@ -900,7 +1011,6 @@ class _CardIconBadge extends StatelessWidget {
   }
 }
 
-// ── 리스트 입장 애니메이션 ────────────────────────────────────
 class _AnimatedWonderCard extends StatelessWidget {
   final int index;
   final AnimationController controller;
