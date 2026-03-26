@@ -4,11 +4,29 @@ import 'package:provider/provider.dart';
 import 'package:jidoapp/models/country_model.dart';
 import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/screens/countries_map_screen.dart';
+import 'package:jidoapp/screens/country_detail_screen.dart';
 import 'package:flutter/services.dart'; // rootBundle
 import 'dart:convert'; // json.decode
 import 'package:collection/collection.dart'; // for list.firstWhereOrNull
 import 'dart:math' as math; // For math.max
 
+
+
+// Helper: ISO A2 → 국기 이모지
+String flagEmoji(String isoA2) {
+  if (isoA2.length != 2) return '';
+  final base = 0x1F1E6 - 0x41;
+  return String.fromCharCode(base + isoA2.codeUnitAt(0)) +
+      String.fromCharCode(base + isoA2.codeUnitAt(1));
+}
+
+// Helper: 국가 클릭 → CountryDetailScreen
+void navigateToCountryDetail(BuildContext context, Country country) {
+  Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => CountryDetailScreen(country: country)),
+  );
+}
 
 // Data Class: Membership/Group Info (Icon added)
 class GroupInfo {
@@ -239,6 +257,7 @@ class _CombinedMembershipCardState extends State<_CombinedMembershipCard> {
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
             child: DropdownButtonHideUnderline(
               child: DropdownButton<GroupInfo>(
+                borderRadius: BorderRadius.circular(16),
                 value: _selectedGroup,
                 isExpanded: true,
                 icon: Icon(Icons.arrow_drop_down_circle_outlined, color: _selectedGroup.themeColor),
@@ -367,24 +386,30 @@ class _CombinedMembershipCardState extends State<_CombinedMembershipCard> {
                       final isVisited = widget.visitedCountryNames.contains(country.name);
                       final isSubMember = _selectedGroup.subMemberCodes?.contains(country.isoA3) ?? false;
 
-                      return Row(
-                        children: [
-                          Icon(
-                            isVisited ? Icons.check_circle : Icons.radio_button_unchecked,
-                            size: 20,
-                            color: isVisited ? _selectedGroup.themeColor : Colors.grey.shade400,
-                          ),
-                          const SizedBox(width: 8),
-                          Expanded(
-                            child: Text(
-                              country.name,
-                              style: textTheme.bodyMedium,
-                              overflow: TextOverflow.ellipsis,
+                      return InkWell(
+                        borderRadius: BorderRadius.circular(8),
+                        onTap: () => navigateToCountryDetail(context, country),
+                        child: Row(
+                          children: [
+                            Icon(
+                              isVisited ? Icons.check_circle : Icons.radio_button_unchecked,
+                              size: 20,
+                              color: isVisited ? _selectedGroup.themeColor : Colors.grey.shade400,
                             ),
-                          ),
-                          if (isSubMember)
-                            Icon(Icons.star, size: 16, color: _selectedGroup.subThemeColor),
-                        ],
+                            const SizedBox(width: 4),
+                            Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 14)),
+                            const SizedBox(width: 4),
+                            Expanded(
+                              child: Text(
+                                country.name,
+                                style: textTheme.bodyMedium,
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                            ),
+                            if (isSubMember)
+                              Icon(Icons.star, size: 16, color: _selectedGroup.subThemeColor),
+                          ],
+                        ),
                       );
                     },
                   ),
@@ -489,6 +514,7 @@ class _CombinedRecognitionCardState extends State<_CombinedRecognitionCard> {
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
             child: DropdownButtonHideUnderline(
               child: DropdownButton<GroupInfo>(
+                borderRadius: BorderRadius.circular(16),
                 value: _selectedGroup,
                 isExpanded: true,
                 icon: Icon(Icons.arrow_drop_down_circle_outlined, color: _selectedGroup.themeColor),
@@ -605,22 +631,28 @@ class _CombinedRecognitionCardState extends State<_CombinedRecognitionCard> {
                     itemBuilder: (context, index) {
                       final country = sortedCountries[index];
                       final isVisited = widget.visitedCountryNames.contains(country.name);
-                      return Row(
-                        children: [
-                          Icon(
-                            isVisited ? Icons.check_circle : Icons.radio_button_unchecked,
-                            size: 20,
-                            color: isVisited ? _selectedGroup.themeColor : Colors.grey.shade400,
-                          ),
-                          const SizedBox(width: 8),
-                          Expanded(
-                            child: Text(
-                              country.name,
-                              style: textTheme.bodyMedium,
-                              overflow: TextOverflow.ellipsis,
+                      return InkWell(
+                        borderRadius: BorderRadius.circular(8),
+                        onTap: () => navigateToCountryDetail(context, country),
+                        child: Row(
+                          children: [
+                            Icon(
+                              isVisited ? Icons.check_circle : Icons.radio_button_unchecked,
+                              size: 20,
+                              color: isVisited ? _selectedGroup.themeColor : Colors.grey.shade400,
                             ),
-                          ),
-                        ],
+                            const SizedBox(width: 4),
+                            Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 14)),
+                            const SizedBox(width: 4),
+                            Expanded(
+                              child: Text(
+                                country.name,
+                                style: textTheme.bodyMedium,
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                            ),
+                          ],
+                        ),
                       );
                     },
                   ),
@@ -1002,22 +1034,28 @@ class _ColdWarStatusTile extends StatelessWidget {
                       itemBuilder: (context, index) {
                         final country = sortedCountries[index];
                         final isVisited = visitedNames.contains(country.name);
-                        return Row(
-                          children: [
-                            Icon(
-                              isVisited ? Icons.check_circle_rounded : Icons.radio_button_unchecked_rounded,
-                              size: 18,
-                              color: isVisited ? color : Colors.grey,
-                            ),
-                            const SizedBox(width: 6),
-                            Expanded(
-                              child: Text(
-                                country.name,
-                                style: theme.textTheme.bodyMedium,
-                                overflow: TextOverflow.ellipsis,
+                        return InkWell(
+                          borderRadius: BorderRadius.circular(6),
+                          onTap: () => navigateToCountryDetail(context, country),
+                          child: Row(
+                            children: [
+                              Icon(
+                                isVisited ? Icons.check_circle_rounded : Icons.radio_button_unchecked_rounded,
+                                size: 18,
+                                color: isVisited ? color : Colors.grey,
                               ),
-                            ),
-                          ],
+                              const SizedBox(width: 4),
+                              Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 14)),
+                              const SizedBox(width: 4),
+                              Expanded(
+                                child: Text(
+                                  country.name,
+                                  style: theme.textTheme.bodyMedium,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              ),
+                            ],
+                          ),
                         );
                       },
                     ),

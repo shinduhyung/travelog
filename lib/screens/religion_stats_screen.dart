@@ -7,11 +7,28 @@ import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/providers/religion_provider.dart';
 import 'package:jidoapp/models/religion_data_model.dart';
 import 'package:jidoapp/screens/countries_map_screen.dart';
+import 'package:jidoapp/screens/country_detail_screen.dart'; // CountryDetailScreen 임포트 추가
 
 import 'package:provider/provider.dart';
 import 'package:collection/collection.dart'; // 리스트 비교용
 import 'dart:math' as math; // max 계산용
 import 'package:intl/intl.dart'; // 숫자 포맷팅용
+
+// Helper: ISO A2 → 국기 이모지
+String flagEmoji(String isoA2) {
+  if (isoA2.length != 2) return '';
+  final base = 0x1F1E6 - 0x41;
+  return String.fromCharCode(base + isoA2.codeUnitAt(0)) +
+      String.fromCharCode(base + isoA2.codeUnitAt(1));
+}
+
+// Helper: 국가 클릭시 CountryDetailScreen으로 이동
+void navigateToCountryDetail(BuildContext context, Country country) {
+  Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => CountryDetailScreen(country: country)),
+  );
+}
 
 class ReligionStatsScreen extends StatefulWidget {
   const ReligionStatsScreen({super.key});
@@ -414,22 +431,28 @@ class _ReligionTile extends StatelessWidget {
                         itemBuilder: (context, index) {
                           final country = sortedCountries[index];
                           final isVisited = visitedNames.contains(country.name);
-                          return Row(
-                            children: [
-                              Icon(
-                                isVisited ? Icons.check_circle_rounded : Icons.radio_button_unchecked_rounded,
-                                size: 18,
-                                color: isVisited ? itemColor : Colors.grey,
-                              ),
-                              const SizedBox(width: 6),
-                              Expanded(
-                                child: Text(
-                                  country.name,
-                                  style: theme.textTheme.bodyMedium,
-                                  overflow: TextOverflow.ellipsis,
+                          return InkWell( // 탭할 때 상세 페이지로 이동
+                            borderRadius: BorderRadius.circular(6),
+                            onTap: () => navigateToCountryDetail(context, country),
+                            child: Row(
+                              children: [
+                                Icon(
+                                  isVisited ? Icons.check_circle_rounded : Icons.radio_button_unchecked_rounded,
+                                  size: 18,
+                                  color: isVisited ? itemColor : Colors.grey,
                                 ),
-                              ),
-                            ],
+                                const SizedBox(width: 4),
+                                Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 14)), // 국기 추가
+                                const SizedBox(width: 4),
+                                Expanded(
+                                  child: Text(
+                                    country.name,
+                                    style: theme.textTheme.bodyMedium,
+                                    overflow: TextOverflow.ellipsis,
+                                  ),
+                                ),
+                              ],
+                            ),
                           );
                         },
                       ),
@@ -557,6 +580,7 @@ class _ReligionPopulationRankingCardState extends State<_ReligionPopulationRanki
                 const SizedBox(height: 8),
                 DropdownButtonHideUnderline(
                   child: DropdownButton<ReligionRankingInfo>(
+                    borderRadius: BorderRadius.circular(16), // 둥근 모서리 적용
                     value: _selectedRanking, isExpanded: true,
                     icon: Icon(Icons.arrow_drop_down_circle_outlined, color: rankingThemeColor),
                     items: _rankings.map((group) => DropdownMenuItem<ReligionRankingInfo>(
@@ -592,29 +616,35 @@ class _ReligionPopulationRankingCardState extends State<_ReligionPopulationRanki
                   elevation: 0,
                   color: isVisited ? rankingThemeColor.withOpacity(0.12) : Colors.transparent,
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8.0),
-                    child: Column(
-                      children: [
-                        Row(
-                          children: [
-                            _buildRankText(rank, rankingThemeColor),
-                            const SizedBox(width: 12),
-                            Expanded(child: Text(country.name, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold, fontSize: 15))),
-                            Text(numberFormatter.format(value), style: textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
-                          ],
-                        ),
-                        const SizedBox(height: 6),
-                        Stack(
-                          children: [
-                            Container(height: 6, decoration: BoxDecoration(color: Colors.grey.shade200, borderRadius: BorderRadius.circular(3))),
-                            FractionallySizedBox(
-                              widthFactor: progressValue,
-                              child: Container(height: 6, decoration: BoxDecoration(color: barColor, borderRadius: BorderRadius.circular(3))),
-                            ),
-                          ],
-                        ),
-                      ],
+                  child: InkWell( // 탭할 때 상세 페이지로 이동
+                    borderRadius: BorderRadius.circular(12),
+                    onTap: () => navigateToCountryDetail(context, country),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8.0),
+                      child: Column(
+                        children: [
+                          Row(
+                            children: [
+                              _buildRankText(rank, rankingThemeColor),
+                              const SizedBox(width: 12),
+                              Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 18)), // 국기 추가
+                              const SizedBox(width: 8),
+                              Expanded(child: Text(country.name, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold, fontSize: 15))),
+                              Text(numberFormatter.format(value), style: textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
+                            ],
+                          ),
+                          const SizedBox(height: 6),
+                          Stack(
+                            children: [
+                              Container(height: 6, decoration: BoxDecoration(color: Colors.grey.shade200, borderRadius: BorderRadius.circular(3))),
+                              FractionallySizedBox(
+                                widthFactor: progressValue,
+                                child: Container(height: 6, decoration: BoxDecoration(color: barColor, borderRadius: BorderRadius.circular(3))),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 );
@@ -717,6 +747,7 @@ class _CatholicHierarchyRankingCardState extends State<_CatholicHierarchyRanking
                 const SizedBox(height: 8),
                 DropdownButtonHideUnderline(
                   child: DropdownButton<ReligionRankingInfo>(
+                    borderRadius: BorderRadius.circular(16), // 둥근 모서리 적용
                     value: _selectedRanking, isExpanded: true,
                     icon: Icon(Icons.arrow_drop_down_circle_outlined, color: rankingThemeColor),
                     items: _rankings.map((group) => DropdownMenuItem<ReligionRankingInfo>(
@@ -752,29 +783,35 @@ class _CatholicHierarchyRankingCardState extends State<_CatholicHierarchyRanking
                   elevation: 0,
                   color: isVisited ? rankingThemeColor.withOpacity(0.12) : Colors.transparent,
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8.0),
-                    child: Column(
-                      children: [
-                        Row(
-                          children: [
-                            _buildRankText(rank, rankingThemeColor),
-                            const SizedBox(width: 12),
-                            Expanded(child: Text(country.name, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold, fontSize: 15))),
-                            Text('$value', style: textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
-                          ],
-                        ),
-                        const SizedBox(height: 6),
-                        Stack(
-                          children: [
-                            Container(height: 6, decoration: BoxDecoration(color: Colors.grey.shade200, borderRadius: BorderRadius.circular(3))),
-                            FractionallySizedBox(
-                              widthFactor: progressValue,
-                              child: Container(height: 6, decoration: BoxDecoration(color: barColor, borderRadius: BorderRadius.circular(3))),
-                            ),
-                          ],
-                        ),
-                      ],
+                  child: InkWell( // 탭할 때 상세 페이지로 이동
+                    borderRadius: BorderRadius.circular(12),
+                    onTap: () => navigateToCountryDetail(context, country),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8.0),
+                      child: Column(
+                        children: [
+                          Row(
+                            children: [
+                              _buildRankText(rank, rankingThemeColor),
+                              const SizedBox(width: 12),
+                              Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 18)), // 국기 추가
+                              const SizedBox(width: 8),
+                              Expanded(child: Text(country.name, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold, fontSize: 15))),
+                              Text('$value', style: textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
+                            ],
+                          ),
+                          const SizedBox(height: 6),
+                          Stack(
+                            children: [
+                              Container(height: 6, decoration: BoxDecoration(color: Colors.grey.shade200, borderRadius: BorderRadius.circular(3))),
+                              FractionallySizedBox(
+                                widthFactor: progressValue,
+                                child: Container(height: 6, decoration: BoxDecoration(color: barColor, borderRadius: BorderRadius.circular(3))),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 );

@@ -6,8 +6,25 @@ import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 import 'package:jidoapp/models/country_model.dart';
 import 'package:jidoapp/providers/country_provider.dart';
+import 'package:jidoapp/screens/country_detail_screen.dart'; // 상세 화면 임포트 추가
 import 'package:sleek_circular_slider/sleek_circular_slider.dart';
 import 'dart:math' as math;
+
+// Helper: ISO A2 → 국기 이모지
+String flagEmoji(String isoA2) {
+  if (isoA2.length != 2) return '';
+  final base = 0x1F1E6 - 0x41;
+  return String.fromCharCode(base + isoA2.codeUnitAt(0)) +
+      String.fromCharCode(base + isoA2.codeUnitAt(1));
+}
+
+// Helper: 국가 클릭시 CountryDetailScreen으로 이동
+void navigateToCountryDetail(BuildContext context, Country country) {
+  Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => CountryDetailScreen(country: country)),
+  );
+}
 
 // 데이터 클래스: 랭킹 정보
 class RankingInfo {
@@ -45,62 +62,65 @@ class PopulationStatsScreen extends StatelessWidget {
 
     return Scaffold(
       // AppBar 제거 (통합 화면의 탭 뷰로 사용됨)
-      body: Consumer<CountryProvider>(
-        builder: (context, provider, child) {
-          if (provider.isLoading) {
-            return const Center(child: CircularProgressIndicator());
-          }
+      body: SafeArea( // 상단바 겹침 방지 적용
+        bottom: false,
+        child: Consumer<CountryProvider>(
+          builder: (context, provider, child) {
+            if (provider.isLoading) {
+              return const Center(child: CircularProgressIndicator());
+            }
 
-          final countriesToDisplay = provider.filteredCountries;
-          final visitedCountryNames = provider.visitedCountries;
-          final visitedCountries = countriesToDisplay.where((c) => visitedCountryNames.contains(c.name)).toList();
+            final countriesToDisplay = provider.filteredCountries;
+            final visitedCountryNames = provider.visitedCountries;
+            final visitedCountries = countriesToDisplay.where((c) => visitedCountryNames.contains(c.name)).toList();
 
-          final totalVisitedPopulation = visitedCountries.fold<int>(0, (sum, item) => sum + item.populationEst);
-          final totalWorldPopulation = countriesToDisplay.fold<int>(0, (sum, item) => sum + item.populationEst);
-          final populationPercentage = totalWorldPopulation > 0 ? (totalVisitedPopulation / totalWorldPopulation * 100) : 0.0;
+            final totalVisitedPopulation = visitedCountries.fold<int>(0, (sum, item) => sum + item.populationEst);
+            final totalWorldPopulation = countriesToDisplay.fold<int>(0, (sum, item) => sum + item.populationEst);
+            final populationPercentage = totalWorldPopulation > 0 ? (totalVisitedPopulation / totalWorldPopulation * 100) : 0.0;
 
-          final Map<String, int> totalPopulationByContinent = {};
-          final Map<String, int> visitedPopulationByContinent = {};
-          for (var data in continentsData) {
-            final fullName = data['fullName'] as String;
-            totalPopulationByContinent[fullName] = 0;
-            visitedPopulationByContinent[fullName] = 0;
-          }
+            final Map<String, int> totalPopulationByContinent = {};
+            final Map<String, int> visitedPopulationByContinent = {};
+            for (var data in continentsData) {
+              final fullName = data['fullName'] as String;
+              totalPopulationByContinent[fullName] = 0;
+              visitedPopulationByContinent[fullName] = 0;
+            }
 
-          for (var country in countriesToDisplay) {
-            if (country.continent != null && totalPopulationByContinent.containsKey(country.continent)) {
-              totalPopulationByContinent.update(country.continent!, (v) => v + country.populationEst);
-              if (visitedCountryNames.contains(country.name)) {
-                visitedPopulationByContinent.update(country.continent!, (v) => v + country.populationEst);
+            for (var country in countriesToDisplay) {
+              if (country.continent != null && totalPopulationByContinent.containsKey(country.continent)) {
+                totalPopulationByContinent.update(country.continent!, (v) => v + country.populationEst);
+                if (visitedCountryNames.contains(country.name)) {
+                  visitedPopulationByContinent.update(country.continent!, (v) => v + country.populationEst);
+                }
               }
             }
-          }
 
-          final avgVisitedPopulation = visitedCountries.isNotEmpty ? totalVisitedPopulation / visitedCountries.length : 0.0;
-          final avgWorldPopulation = countriesToDisplay.isNotEmpty ? totalWorldPopulation / countriesToDisplay.length : 0.0;
+            final avgVisitedPopulation = visitedCountries.isNotEmpty ? totalVisitedPopulation / visitedCountries.length : 0.0;
+            final avgWorldPopulation = countriesToDisplay.isNotEmpty ? totalWorldPopulation / countriesToDisplay.length : 0.0;
 
-          return SingleChildScrollView(
-            padding: const EdgeInsets.all(16),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                _buildTotalPopulationCard(context, compactFormatter, totalVisitedPopulation, totalWorldPopulation, populationPercentage),
-                const SizedBox(height: 24),
-                _buildPopulationByContinentCard(context, compactFormatter, visitedPopulationByContinent, totalPopulationByContinent),
-                const SizedBox(height: 24),
-                _buildAveragePopulationCard(context, compactFormatter, avgVisitedPopulation, avgWorldPopulation),
-                const SizedBox(height: 24),
-                SizedBox(
-                  height: 600,
-                  child: _CombinedRankingCard(
-                    countriesToDisplay: countriesToDisplay,
-                    visitedCountryNames: visitedCountryNames,
+            return SingleChildScrollView(
+              padding: const EdgeInsets.all(16),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  _buildTotalPopulationCard(context, compactFormatter, totalVisitedPopulation, totalWorldPopulation, populationPercentage),
+                  const SizedBox(height: 24),
+                  _buildPopulationByContinentCard(context, compactFormatter, visitedPopulationByContinent, totalPopulationByContinent),
+                  const SizedBox(height: 24),
+                  _buildAveragePopulationCard(context, compactFormatter, avgVisitedPopulation, avgWorldPopulation),
+                  const SizedBox(height: 24),
+                  SizedBox(
+                    height: 600,
+                    child: _CombinedRankingCard(
+                      countriesToDisplay: countriesToDisplay,
+                      visitedCountryNames: visitedCountryNames,
+                    ),
                   ),
-                ),
-              ],
-            ),
-          );
-        },
+                ],
+              ),
+            );
+          },
+        ),
       ),
     );
   }
@@ -706,6 +726,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                 Align(
                   alignment: Alignment.centerRight,
                   child: DropdownButton<String>(
+                    borderRadius: BorderRadius.circular(16), // 둥근 모서리 적용
                     value: _selectedContinent,
                     items: _continents.map((String value) => DropdownMenuItem<String>(value: value, child: Text(value, style: const TextStyle(fontSize: 14)))).toList(),
                     onChanged: (String? newValue) { _selectedContinent = newValue!; _onFilterChanged(); },
@@ -736,29 +757,35 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                   elevation: 0,
                   color: isVisited ? rankingThemeColor.withOpacity(0.12) : Colors.transparent,
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8.0),
-                    child: Column(
-                      children: [
-                        Row(
-                          children: [
-                            // 순위 표시 함수 사용 (1, 2, 3위도 숫자로 표시됨)
-                            _buildRankIcon(rank, rankingThemeColor),
-                            const SizedBox(width: 12),
-                            Expanded(child: Text(country.name, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
-                            Text(compactFormatter.format(value), style: textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
-                          ],
-                        ),
-                        const SizedBox(height: 6),
-                        LayoutBuilder(
-                          builder: (context, constraints) => Stack(
+                  child: InkWell( // 상세 페이지 연결 적용
+                    borderRadius: BorderRadius.circular(12),
+                    onTap: () => navigateToCountryDetail(context, country),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8.0),
+                      child: Column(
+                        children: [
+                          Row(
                             children: [
-                              Container(height: 6, decoration: BoxDecoration(color: Colors.grey.shade200, borderRadius: BorderRadius.circular(3))),
-                              Container(height: 6, width: constraints.maxWidth * progressValue, decoration: BoxDecoration(color: barColor, borderRadius: BorderRadius.circular(3))),
+                              // 순위 표시 함수 사용 (1, 2, 3위도 숫자로 표시됨)
+                              _buildRankIcon(rank, rankingThemeColor),
+                              const SizedBox(width: 12),
+                              Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 18)), // 국기 추가
+                              const SizedBox(width: 8),
+                              Expanded(child: Text(country.name, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
+                              Text(compactFormatter.format(value), style: textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
                             ],
                           ),
-                        ),
-                      ],
+                          const SizedBox(height: 6),
+                          LayoutBuilder(
+                            builder: (context, constraints) => Stack(
+                              children: [
+                                Container(height: 6, decoration: BoxDecoration(color: Colors.grey.shade200, borderRadius: BorderRadius.circular(3))),
+                                Container(height: 6, width: constraints.maxWidth * progressValue, decoration: BoxDecoration(color: barColor, borderRadius: BorderRadius.circular(3))),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 );

@@ -43,6 +43,7 @@ class ActivitiesMenuScreen extends StatelessWidget {
     final Color cultureColor = const Color(0xFFEC4899);
     final Color lifestyleColor = const Color(0xFFF59E0B);
     final Color leisureColor = const Color(0xFF10B981);
+    final Color topActivitiesColor = const Color(0xFF111827);
 
     return Scaffold(
       backgroundColor: bgColor,
@@ -65,23 +66,13 @@ class ActivitiesMenuScreen extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Explore',
+                                'Activities',
                                 style: TextStyle(
                                   fontSize: 37,
                                   fontWeight: FontWeight.w900,
-                                  color: accentBlack,
+                                  color: cultureColor, // 핑크 계열로 변경됨
                                   letterSpacing: -1.5,
                                   height: 1.0,
-                                ),
-                              ),
-                              const SizedBox(height: 4),
-                              Text(
-                                'Activities',
-                                style: TextStyle(
-                                  fontSize: 19,
-                                  fontWeight: FontWeight.w600,
-                                  color: primaryAccent,
-                                  letterSpacing: -0.5,
                                 ),
                               ),
                             ],
@@ -96,7 +87,7 @@ class ActivitiesMenuScreen extends StatelessWidget {
 
             const SliverToBoxAdapter(child: SizedBox(height: 24)),
 
-            // Top Picks
+            // Top Activities
             SliverToBoxAdapter(
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 24),
@@ -120,19 +111,19 @@ class ActivitiesMenuScreen extends StatelessWidget {
                   child: Container(
                     padding: const EdgeInsets.all(20),
                     decoration: BoxDecoration(
-                      color: primaryAccent.withOpacity(0.06),
+                      color: topActivitiesColor.withOpacity(0.06),
                       borderRadius: BorderRadius.circular(20),
                     ),
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Container(
-                          width: 4,
-                          height: 48,
+                          padding: const EdgeInsets.all(10),
                           decoration: BoxDecoration(
-                            color: primaryAccent,
-                            borderRadius: BorderRadius.circular(4),
+                            color: topActivitiesColor,
+                            borderRadius: BorderRadius.circular(12),
                           ),
+                          child: const Icon(Icons.explore_rounded, color: Colors.white, size: 20),
                         ),
                         const SizedBox(width: 16),
                         Expanded(
@@ -140,7 +131,7 @@ class ActivitiesMenuScreen extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Top Picks',
+                                'Top Activities',
                                 style: TextStyle(
                                   fontSize: 22,
                                   fontWeight: FontWeight.w800,
@@ -162,7 +153,7 @@ class ActivitiesMenuScreen extends StatelessWidget {
                         ),
                         Icon(
                           Icons.arrow_forward_rounded,
-                          color: primaryAccent,
+                          color: topActivitiesColor,
                           size: 20,
                         ),
                       ],

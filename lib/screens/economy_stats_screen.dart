@@ -11,8 +11,25 @@ import 'package:jidoapp/models/economy_data_model.dart';
 import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/providers/economy_provider.dart';
 import 'package:jidoapp/screens/countries_map_screen.dart';
+import 'package:jidoapp/screens/country_detail_screen.dart'; // 상세 화면 임포트 추가
 import 'package:sleek_circular_slider/sleek_circular_slider.dart';
 import 'package:collection/collection.dart';
+
+// Helper: ISO A2 → 국기 이모지
+String flagEmoji(String isoA2) {
+  if (isoA2.length != 2) return '';
+  final base = 0x1F1E6 - 0x41;
+  return String.fromCharCode(base + isoA2.codeUnitAt(0)) +
+      String.fromCharCode(base + isoA2.codeUnitAt(1));
+}
+
+// Helper: 국가 클릭시 CountryDetailScreen으로 이동
+void navigateToCountryDetail(BuildContext context, Country country) {
+  Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => CountryDetailScreen(country: country)),
+  );
+}
 
 class RankingInfo {
   final String title;
@@ -61,22 +78,16 @@ class _EconomyStatsScreenState extends State<EconomyStatsScreen> {
   Map<String, double> _goldReservesData = {};
   bool _isLoadingGold = true;
 
-  // 🔄 제거: Map<String, Map<String, double>> _economicsTriviaData = {};
-  // 🔄 제거: bool _isLoadingTrivia = true;
-
   String? _goldError;
   String? _giniError;
-  // 🔄 제거: String? _triviaError;
 
   @override
   void initState() {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      // EconomyProvider는 생성자에서 로드되지만, 확실히 데이터 로드 시작을 알림
       Provider.of<EconomyProvider>(context, listen: false).loadEconomyData();
       _loadGiniData();
       _loadGoldData();
-      // 🔄 제거: _loadEconomicsTriviaData();
     });
   }
 
@@ -128,9 +139,6 @@ class _EconomyStatsScreenState extends State<EconomyStatsScreen> {
     }
   }
 
-  // 🔄 제거: _loadEconomicsTriviaData() 함수 전체
-
-
   Widget _buildErrorWidget(String? error) {
     return Center(
       child: Padding(
@@ -147,82 +155,80 @@ class _EconomyStatsScreenState extends State<EconomyStatsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Consumer2<EconomyProvider, CountryProvider>(
-        builder: (context, economyProvider, countryProvider, child) {
-          // 🔄 _isLoadingTrivia 제거
-          if (economyProvider.isLoading || countryProvider.isLoading || _isLoadingGini || _isLoadingGold) {
-            return const Center(child: CircularProgressIndicator());
-          }
+      body: SafeArea( // 상단바 겹침 방지
+        bottom: false,
+        child: Consumer2<EconomyProvider, CountryProvider>(
+          builder: (context, economyProvider, countryProvider, child) {
+            if (economyProvider.isLoading || countryProvider.isLoading || _isLoadingGini || _isLoadingGold) {
+              return const Center(child: CircularProgressIndicator());
+            }
 
-          if (_goldError != null) return _buildErrorWidget(_goldError);
-          if (_giniError != null) return _buildErrorWidget(_giniError);
-          // 🔄 _triviaError 제거
-          if (economyProvider.economicsTriviaData.isEmpty) {
-            // Trivia 데이터 로딩 오류 처리 (provider 내부에서 처리됨)
-            // 에러 메시지는 ranking card 내부에서 표시될 수 있도록 별도 처리하지 않음
-          }
+            if (_goldError != null) return _buildErrorWidget(_goldError);
+            if (_giniError != null) return _buildErrorWidget(_giniError);
 
+            final allEconomyData = economyProvider.economyData;
+            final visitedCountryNames = countryProvider.visitedCountries;
+            final filteredCountries = countryProvider.filteredCountries;
 
-          final allEconomyData = economyProvider.economyData;
-          final visitedCountryNames = countryProvider.visitedCountries;
-          final filteredCountries = countryProvider.filteredCountries;
+            final allowedIsoA3s = filteredCountries.map((c) => c.isoA3).toSet();
+            final filteredEconomyData = allEconomyData.where((e) => allowedIsoA3s.contains(e.isoA3)).toList();
 
-          final allowedIsoA3s = filteredCountries.map((c) => c.isoA3).toSet();
-          final filteredEconomyData = allEconomyData.where((e) => allowedIsoA3s.contains(e.isoA3)).toList();
+            final Map<String, String> isoA3ToCountryNameMap = {
+              for (var country in filteredCountries)
+                country.isoA3: country.name
+            };
 
-          final Map<String, String> isoA3ToCountryNameMap = {
-            for (var country in filteredCountries)
-              country.isoA3: country.name
-          };
+            final Map<String, Country> isoA3ToCountryMap = {
+              for (var country in filteredCountries)
+                country.isoA3: country
+            };
 
-          final Map<String, Country> isoA3ToCountryMap = {
-            for (var country in filteredCountries)
-              country.isoA3: country
-          };
+            final extraData = {
+              'gini': _giniIndexData,
+              'gold': _goldReservesData,
+              'trivia': economyProvider.economicsTriviaData,
+            };
 
-          final extraData = {
-            'gini': _giniIndexData,
-            'gold': _goldReservesData,
-            'trivia': economyProvider.economicsTriviaData, // 🔄 Provider에서 가져옴
-          };
-
-          return SingleChildScrollView(
-            padding: const EdgeInsets.all(16),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                _TotalGdpCard(allData: filteredEconomyData, visitedNames: visitedCountryNames, isoA3ToCountryNameMap: isoA3ToCountryNameMap),
-                const SizedBox(height: 24),
-                _GdpByContinentCard(allData: filteredEconomyData, visitedNames: visitedCountryNames, isoA3ToCountryNameMap: isoA3ToCountryNameMap),
-                const SizedBox(height: 24),
-                _AverageGdpCard(allData: filteredEconomyData, visitedNames: visitedCountryNames, isoA3ToCountryNameMap: isoA3ToCountryNameMap),
-                const SizedBox(height: 24),
-                SizedBox(
-                  height: 600,
-                  child: _CombinedRankingCard(
+            return SingleChildScrollView(
+              padding: const EdgeInsets.all(16),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  _TotalGdpCard(allData: filteredEconomyData, visitedNames: visitedCountryNames, isoA3ToCountryNameMap: isoA3ToCountryNameMap),
+                  const SizedBox(height: 24),
+                  _GdpByContinentCard(allData: filteredEconomyData, visitedNames: visitedCountryNames, isoA3ToCountryNameMap: isoA3ToCountryNameMap),
+                  const SizedBox(height: 24),
+                  _AverageGdpCard(allData: filteredEconomyData, visitedNames: visitedCountryNames, isoA3ToCountryNameMap: isoA3ToCountryNameMap),
+                  const SizedBox(height: 24),
+                  SizedBox(
+                    height: 600,
+                    child: _CombinedRankingCard(
+                      allData: filteredEconomyData,
+                      visitedNames: visitedCountryNames,
+                      isoA3ToCountryNameMap: isoA3ToCountryNameMap,
+                      isoA3ToCountryMap: isoA3ToCountryMap, // 추가 전달
+                      extraData: extraData,
+                    ),
+                  ),
+                  const SizedBox(height: 24),
+                  _DevelopmentStatusSection(
                     allData: filteredEconomyData,
                     visitedNames: visitedCountryNames,
                     isoA3ToCountryNameMap: isoA3ToCountryNameMap,
-                    extraData: extraData,
+                    isoA3ToCountryMap: isoA3ToCountryMap,
                   ),
-                ),
-                const SizedBox(height: 24),
-                _DevelopmentStatusSection(
-                  allData: filteredEconomyData,
-                  visitedNames: visitedCountryNames,
-                  isoA3ToCountryNameMap: isoA3ToCountryNameMap,
-                  isoA3ToCountryMap: isoA3ToCountryMap,
-                ),
-                const SizedBox(height: 24),
-                _CombinedSpecialGroupCard(
-                  allData: filteredEconomyData,
-                  visitedNames: visitedCountryNames,
-                  isoA3ToCountryNameMap: isoA3ToCountryNameMap,
-                ),
-              ],
-            ),
-          );
-        },
+                  const SizedBox(height: 24),
+                  _CombinedSpecialGroupCard(
+                    allData: filteredEconomyData,
+                    visitedNames: visitedCountryNames,
+                    isoA3ToCountryNameMap: isoA3ToCountryNameMap,
+                    isoA3ToCountryMap: isoA3ToCountryMap, // 추가 전달
+                  ),
+                ],
+              ),
+            );
+          },
+        ),
       ),
     );
   }
@@ -527,22 +533,28 @@ class _StatusTile extends StatelessWidget {
                       itemBuilder: (context, index) {
                         final country = sortedCountries[index];
                         final isVisited = visitedNames.contains(country.name);
-                        return Row(
-                          children: [
-                            Icon(
-                              isVisited ? Icons.check_circle_rounded : Icons.radio_button_unchecked_rounded,
-                              size: 18,
-                              color: isVisited ? color : Colors.grey,
-                            ),
-                            const SizedBox(width: 6),
-                            Expanded(
-                              child: Text(
-                                country.name,
-                                style: theme.textTheme.bodyMedium,
-                                overflow: TextOverflow.ellipsis,
+                        return InkWell( // 상세 페이지 연결 적용
+                          borderRadius: BorderRadius.circular(6),
+                          onTap: () => navigateToCountryDetail(context, country),
+                          child: Row(
+                            children: [
+                              Icon(
+                                isVisited ? Icons.check_circle_rounded : Icons.radio_button_unchecked_rounded,
+                                size: 18,
+                                color: isVisited ? color : Colors.grey,
                               ),
-                            ),
-                          ],
+                              const SizedBox(width: 6),
+                              Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 14)), // 국기 추가
+                              const SizedBox(width: 4),
+                              Expanded(
+                                child: Text(
+                                  country.name,
+                                  style: theme.textTheme.bodyMedium,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              ),
+                            ],
+                          ),
                         );
                       },
                     ),
@@ -859,12 +871,14 @@ class _CombinedRankingCard extends StatefulWidget {
   final List<EconomyData> allData;
   final Set<String> visitedNames;
   final Map<String, String> isoA3ToCountryNameMap;
+  final Map<String, Country> isoA3ToCountryMap; // 추가됨
   final Map<String, dynamic> extraData;
 
   const _CombinedRankingCard({
     required this.allData,
     required this.visitedNames,
     required this.isoA3ToCountryNameMap,
+    required this.isoA3ToCountryMap,
     required this.extraData,
   });
 
@@ -936,15 +950,15 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
       RankingInfo(title: 'Coal Production', icon: Icons.fireplace, themeColor: Colors.grey.shade800, valueAccessor: (e, extra) => (extra['trivia']?['coal'] as Map<String, double>?)?[e.isoA3] ?? 0.0, unit: ' t'),
       RankingInfo(title: 'Uranium Production', icon: Icons.science, themeColor: Colors.greenAccent.shade700, valueAccessor: (e, extra) => (extra['trivia']?['uranium'] as Map<String, double>?)?[e.isoA3] ?? 0.0, unit: ' t'),
 
-      // 🆕 Industrial / Tech (Internet rankings removed from here)
+      // Industrial / Tech
       RankingInfo(title: 'Car Production', icon: Icons.directions_car, themeColor: Colors.indigo, valueAccessor: (e, extra) => (extra['trivia']?['car_production'] as Map<String, double>?)?[e.isoA3] ?? 0.0, unit: 'M units', precision: 1),
       RankingInfo(title: 'Phone Production', icon: Icons.smartphone, themeColor: Colors.deepPurple, valueAccessor: (e, extra) => (extra['trivia']?['phone_production'] as Map<String, double>?)?[e.isoA3] ?? 0.0, unit: 'M units', precision: 0),
 
-      // 🆕 Finance
+      // Finance
       RankingInfo(title: 'Bitcoin Ownership', icon: Icons.currency_bitcoin, themeColor: Colors.orange, valueAccessor: (e, extra) => (extra['trivia']?['bitcoin_ownership_estimated_high'] as Map<String, double>?)?[e.isoA3] ?? 0.0, unit: '%', precision: 1),
       RankingInfo(title: 'USD Reserves', icon: Icons.attach_money, themeColor: Colors.green, valueAccessor: (e, extra) => (extra['trivia']?['usd_reserves'] as Map<String, double>?)?[e.isoA3] ?? 0.0, unit: 'B', precision: 0),
 
-      // 🆕 Consumption
+      // Consumption
       RankingInfo(title: 'Chicken Consumption', icon: Icons.restaurant, themeColor: Colors.orangeAccent, valueAccessor: (e, extra) => (extra['trivia']?['chicken_consumption'] as Map<String, double>?)?[e.isoA3] ?? 0.0, unit: ' kg/capita', precision: 0),
       RankingInfo(title: 'Beef Consumption', icon: Icons.restaurant, themeColor: Colors.redAccent, valueAccessor: (e, extra) => (extra['trivia']?['beef_consumption'] as Map<String, double>?)?[e.isoA3] ?? 0.0, unit: ' kg/capita', precision: 0),
       RankingInfo(title: 'Pork Consumption', icon: Icons.restaurant, themeColor: Colors.pinkAccent, valueAccessor: (e, extra) => (extra['trivia']?['pork_consumption'] as Map<String, double>?)?[e.isoA3] ?? 0.0, unit: ' kg/capita', precision: 0),
@@ -1012,6 +1026,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
               children: [
                 DropdownButtonHideUnderline(
                   child: DropdownButton<RankingInfo>(
+                    borderRadius: BorderRadius.circular(16), // 둥근 모서리 적용
                     value: _selectedRanking, isExpanded: true,
                     icon: Icon(Icons.arrow_drop_down_circle_outlined, color: rankingThemeColor),
                     items: _rankings.map((group) => DropdownMenuItem<RankingInfo>(
@@ -1068,6 +1083,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                 Align(
                   alignment: Alignment.centerRight,
                   child: DropdownButton<String>(
+                    borderRadius: BorderRadius.circular(16), // 둥근 모서리 적용
                     value: _selectedContinent,
                     items: _continents.map((String value) => DropdownMenuItem<String>(value: value, child: Text(value, style: const TextStyle(fontSize: 14)))).toList(),
                     onChanged: (String? newValue) { _selectedContinent = newValue!; _onFilterChanged(); },
@@ -1095,6 +1111,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
               itemCount: _rankedList.length,
               itemBuilder: (context, index) {
                 final country = _rankedList[index];
+                final countryObj = widget.isoA3ToCountryMap[country.isoA3]; // Country 객체 가져오기
                 final displayName = widget.isoA3ToCountryNameMap[country.isoA3] ?? country.name;
                 final isVisited = widget.visitedNames.contains(displayName);
                 final rank = index + 1;
@@ -1112,28 +1129,36 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                   elevation: 0,
                   color: isVisited ? rankingThemeColor.withOpacity(0.12) : Colors.transparent,
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8.0),
-                    child: Column(
-                      children: [
-                        Row(
-                          children: [
-                            Text('$rank', style: textTheme.bodyMedium?.copyWith(color: Colors.grey.shade600)),
-                            const SizedBox(width: 12),
-                            Expanded(child: Text(displayName, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
-                            Text(formattedValue, style: textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
-                          ],
-                        ),
-                        const SizedBox(height: 6),
-                        LayoutBuilder(
-                          builder: (context, constraints) => Stack(
+                  child: InkWell( // 상세 페이지 연결
+                    borderRadius: BorderRadius.circular(12),
+                    onTap: countryObj != null ? () => navigateToCountryDetail(context, countryObj) : null,
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8.0),
+                      child: Column(
+                        children: [
+                          Row(
                             children: [
-                              Container(height: 6, decoration: BoxDecoration(color: Colors.grey.shade200, borderRadius: BorderRadius.circular(3))),
-                              Container(height: 6, width: constraints.maxWidth * progressValue, decoration: BoxDecoration(color: barColor, borderRadius: BorderRadius.circular(3))),
+                              Text('$rank', style: textTheme.bodyMedium?.copyWith(color: Colors.grey.shade600)),
+                              const SizedBox(width: 12),
+                              if (countryObj != null) ...[
+                                Text(flagEmoji(countryObj.isoA2), style: const TextStyle(fontSize: 18)), // 국기 추가
+                                const SizedBox(width: 8),
+                              ],
+                              Expanded(child: Text(displayName, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
+                              Text(formattedValue, style: textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
                             ],
                           ),
-                        ),
-                      ],
+                          const SizedBox(height: 6),
+                          LayoutBuilder(
+                            builder: (context, constraints) => Stack(
+                              children: [
+                                Container(height: 6, decoration: BoxDecoration(color: Colors.grey.shade200, borderRadius: BorderRadius.circular(3))),
+                                Container(height: 6, width: constraints.maxWidth * progressValue, decoration: BoxDecoration(color: barColor, borderRadius: BorderRadius.circular(3))),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 );
@@ -1150,7 +1175,14 @@ class _CombinedSpecialGroupCard extends StatefulWidget {
   final List<EconomyData> allData;
   final Set<String> visitedNames;
   final Map<String, String> isoA3ToCountryNameMap;
-  const _CombinedSpecialGroupCard({required this.allData, required this.visitedNames, required this.isoA3ToCountryNameMap});
+  final Map<String, Country> isoA3ToCountryMap; // 추가됨
+
+  const _CombinedSpecialGroupCard({
+    required this.allData,
+    required this.visitedNames,
+    required this.isoA3ToCountryNameMap,
+    required this.isoA3ToCountryMap,
+  });
 
   @override
   State<_CombinedSpecialGroupCard> createState() => _CombinedSpecialGroupCardState();
@@ -1203,6 +1235,7 @@ class _CombinedSpecialGroupCardState extends State<_CombinedSpecialGroupCard> {
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
             child: DropdownButtonHideUnderline(
               child: DropdownButton<SpecialGroupInfo>(
+                borderRadius: BorderRadius.circular(16), // 둥근 모서리 적용
                 value: _selectedGroup, isExpanded: true,
                 icon: Icon(Icons.arrow_drop_down_circle_outlined, color: _selectedGroup.themeColor),
                 items: _groups.map((group) => DropdownMenuItem<SpecialGroupInfo>(
@@ -1255,15 +1288,29 @@ class _CombinedSpecialGroupCardState extends State<_CombinedSpecialGroupCard> {
                 itemCount: sortedCountries.length,
                 itemBuilder: (context, index) {
                   final country = sortedCountries[index];
+                  final countryObj = widget.isoA3ToCountryMap[country.isoA3]; // Country 객체 가져오기
                   final displayName = widget.isoA3ToCountryNameMap[country.isoA3] ?? country.name;
                   final isVisited = widget.visitedNames.contains(displayName);
-                  return Container(
-                    decoration: BoxDecoration(
-                        color: isVisited ? _selectedGroup.themeColor.withOpacity(0.12) : Colors.grey.shade100,
-                        borderRadius: BorderRadius.circular(8)
+
+                  return InkWell( // 상세 페이지 연결
+                    borderRadius: BorderRadius.circular(8),
+                    onTap: countryObj != null ? () => navigateToCountryDetail(context, countryObj) : null,
+                    child: Container(
+                      decoration: BoxDecoration(
+                          color: isVisited ? _selectedGroup.themeColor.withOpacity(0.12) : Colors.grey.shade100,
+                          borderRadius: BorderRadius.circular(8)
+                      ),
+                      padding: const EdgeInsets.symmetric(horizontal: 12),
+                      child: Row(
+                        children: [
+                          if (countryObj != null) ...[
+                            Text(flagEmoji(countryObj.isoA2), style: const TextStyle(fontSize: 14)), // 국기 추가
+                            const SizedBox(width: 6),
+                          ],
+                          Expanded(child: Align(alignment: Alignment.centerLeft, child: Text(displayName, style: theme.textTheme.bodyMedium, overflow: TextOverflow.ellipsis))),
+                        ],
+                      ),
                     ),
-                    padding: const EdgeInsets.symmetric(horizontal: 12),
-                    child: Align(alignment: Alignment.centerLeft, child: Text(displayName, style: theme.textTheme.bodyMedium, overflow: TextOverflow.ellipsis)),
                   );
                 },
               ),

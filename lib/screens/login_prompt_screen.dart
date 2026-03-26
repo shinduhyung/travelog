@@ -1,7 +1,9 @@
 // lib/screens/login_prompt_screen.dart
 
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 import 'package:jidoapp/providers/auth_provider.dart';
 
 class LoginPromptScreen extends StatelessWidget {
@@ -135,9 +137,15 @@ class LoginPromptScreen extends StatelessWidget {
               ),
               const SizedBox(height: 28),
 
-              // Google 로그인 버튼
+              // Google 로그인 버튼 (항상)
               const _GoogleSignInButton(),
-              const SizedBox(height: 16),
+              const SizedBox(height: 12),
+
+              // Apple 로그인 버튼 (iOS only)
+              if (!Platform.isAndroid) ...[
+                const _AppleSignInButton(),
+                const SizedBox(height: 16),
+              ],
 
               // 약관 안내
               const Text(
@@ -240,7 +248,7 @@ class _GoogleSignInButton extends StatelessWidget {
       },
       child: Container(
         width: double.infinity,
-        padding: const EdgeInsets.symmetric(vertical: 15),
+        height: 52,
         decoration: BoxDecoration(
           color: Colors.white,
           border: Border.all(color: const Color(0xFFEEEEEE)),
@@ -272,6 +280,65 @@ class _GoogleSignInButton extends StatelessWidget {
                 fontSize: 16,
                 fontWeight: FontWeight.w500,
                 color: Color(0xFF4A4A4A),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class _AppleSignInButton extends StatelessWidget {
+  const _AppleSignInButton();
+
+  @override
+  Widget build(BuildContext context) {
+    final authProvider = Provider.of<AuthProvider>(context, listen: false);
+
+    return InkWell(
+      borderRadius: BorderRadius.circular(40),
+      onTap: () async {
+        try {
+          await authProvider.signInWithApple();
+          if (context.mounted) Navigator.of(context).pop();
+        } catch (e) {
+          if (context.mounted) {
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(content: Text("Apple Login failed: $e")),
+            );
+          }
+        }
+      },
+      child: Container(
+        width: double.infinity,
+        height: 52,
+        decoration: BoxDecoration(
+          color: Colors.black,
+          borderRadius: BorderRadius.circular(40),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.12),
+              blurRadius: 12,
+              offset: const Offset(0, 4),
+            ),
+          ],
+        ),
+        child: const Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(
+              Icons.apple,
+              color: Colors.white,
+              size: 22,
+            ),
+            SizedBox(width: 10),
+            Text(
+              "Sign in with Apple",
+              style: TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.w500,
+                color: Colors.white,
               ),
             ),
           ],

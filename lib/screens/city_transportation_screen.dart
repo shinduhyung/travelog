@@ -5,649 +5,256 @@ import 'package:intl/intl.dart';
 import 'package:jidoapp/models/city_model.dart';
 import 'package:jidoapp/providers/city_provider.dart';
 import 'package:provider/provider.dart';
-import 'package:jidoapp/screens/tourism_screen.dart';
-import 'package:jidoapp/screens/city_stats_map_screen.dart'; // 🗺️ CityStatsMapScreen 임포트
+import 'package:jidoapp/screens/city_stats_map_screen.dart';
 import 'package:collection/collection.dart';
+import 'dart:math' as math;
+import 'package:jidoapp/screens/cities_screen.dart';
 
-class RankingInfo {
-  final String title;
-  final IconData icon;
-  final Color themeColor;
-  final String metricKey;
-  final num Function(City) valueAccessor;
+// ====================================================================
+// 모달 헬퍼 (allCities에서 풀 데이터 City 조회 → 국가 테마색 보장)
+// ====================================================================
 
-  RankingInfo({
-    required this.title,
-    required this.icon,
-    required this.themeColor,
-    required this.metricKey,
-    required this.valueAccessor,
-  });
+void _showCityModal(BuildContext context, City city) {
+  final provider = Provider.of<CityProvider>(context, listen: false);
+  final fullCity = provider.allCities.firstWhere(
+        (c) => c.name == city.name && c.countryIsoA2.isNotEmpty,
+    orElse: () => city,
+  );
+  showExternalCityDetailsModal(context, fullCity);
 }
 
-class CityTransportationScreen extends StatelessWidget {
+String _fe(String? code){if(code==null)return'';final c=code.trim().toUpperCase();if(c.length!=2)return'';final a=c.codeUnitAt(0),b=c.codeUnitAt(1);if(a<65||a>90||b<65||b>90)return'';return String.fromCharCode(0x1F1E6+(a-65))+String.fromCharCode(0x1F1E6+(b-65));}
+String _cf(City city){final iso=city.countryIsoA2.trim();return iso.length==2?_fe(iso):_fe(_im[city.country.trim()]);}
+const Map<String,String> _im={'Afghanistan':'AF','Albania':'AL','Algeria':'DZ','Argentina':'AR','Armenia':'AM','Australia':'AU','Austria':'AT','Azerbaijan':'AZ','Bahrain':'BH','Bangladesh':'BD','Belarus':'BY','Belgium':'BE','Bolivia':'BO','Brazil':'BR','Bulgaria':'BG','Cambodia':'KH','Canada':'CA','Chile':'CL','China':'CN','Colombia':'CO','Croatia':'HR','Cuba':'CU','Czech Republic':'CZ','Czechia':'CZ','Denmark':'DK','Ecuador':'EC','Egypt':'EG','Ethiopia':'ET','Finland':'FI','France':'FR','Georgia':'GE','Germany':'DE','Ghana':'GH','Greece':'GR','Guatemala':'GT','Hong Kong':'HK','Hungary':'HU','India':'IN','Indonesia':'ID','Iran':'IR','Iraq':'IQ','Ireland':'IE','Israel':'IL','Italy':'IT','Jamaica':'JM','Japan':'JP','Jordan':'JO','Kazakhstan':'KZ','Kenya':'KE','Kuwait':'KW','Lebanon':'LB','Libya':'LY','Malaysia':'MY','Mexico':'MX','Morocco':'MA','Myanmar':'MM','Nepal':'NP','Netherlands':'NL','New Zealand':'NZ','Nigeria':'NG','Norway':'NO','Pakistan':'PK','Panama':'PA','Paraguay':'PY','Peru':'PE','Philippines':'PH','Poland':'PL','Portugal':'PT','Qatar':'QA','Romania':'RO','Russia':'RU','Saudi Arabia':'SA','Senegal':'SN','Serbia':'RS','Singapore':'SG','Slovakia':'SK','Slovenia':'SI','South Africa':'ZA','South Korea':'KR','Korea':'KR','Republic of Korea':'KR','Spain':'ES','Sri Lanka':'LK','Sudan':'SD','Sweden':'SE','Switzerland':'CH','Syria':'SY','Taiwan':'TW','Tanzania':'TZ','Thailand':'TH','Tunisia':'TN','Turkey':'TR','Turkiye':'TR','Ukraine':'UA','United Arab Emirates':'AE','UAE':'AE','United Kingdom':'GB','UK':'GB','United States':'US','USA':'US','United States of America':'US','Uruguay':'UY','Uzbekistan':'UZ','Venezuela':'VE','Vietnam':'VN','Yemen':'YE','Zimbabwe':'ZW','North Korea':'KP','Democratic Republic of the Congo':'CD','Congo':'CG','Ivory Coast':'CI','Dominican Republic':'DO','El Salvador':'SV','Costa Rica':'CR','Honduras':'HN','Nicaragua':'NI','Puerto Rico':'PR'};
+
+class _C{static const Color bg=Color(0xFFF7F7F5),surface=Colors.white,ink=Color(0xFF141414),inkMid=Color(0xFF5C5C5C),inkLight=Color(0xFFAAAAAA),divider=Color(0xFFE8E8E4);}
+const Map<String,Color> _cc={'Asia':Color(0xFFF48FB1),'Europe':Color(0xFFFFCA28),'Africa':Color(0xFF8D6E63),'North America':Color(0xFF90CAF9),'South America':Color(0xFF66BB6A),'Oceania':Color(0xFFCE93D8)};
+class _TC{static const Color metro=Color(0xFF6B3D99),traffic=Color(0xFFD64545),subway=Color(0xFF3B5C7A),transit=Color(0xFF2A8C74),airport=Color(0xFF3D9EC4);}
+
+class RankingInfo{final String title,metricKey;final IconData icon;final Color themeColor;final num Function(City) valueAccessor;RankingInfo({required this.title,required this.icon,required this.themeColor,required this.metricKey,required this.valueAccessor});}
+
+class CityTransportationScreen extends StatelessWidget{
   const CityTransportationScreen({super.key});
-
   @override
-  Widget build(BuildContext context) {
-    return Consumer<CityProvider>(
-      builder: (context, provider, child) {
-        if (provider.isLoading) {
-          return const Center(child: CircularProgressIndicator());
-        }
-
-        final subwayCities = List<City>.from(provider.transportationCities)
-          ..sort((a, b) => a.name.compareTo(b.name));
-
-        return ListView(
-          padding: const EdgeInsets.all(16),
-          children: [
-            // 랭킹 카드 (지도 버튼 없음)
-            _CombinedRankingCard(cityProvider: provider),
-
-            const SizedBox(height: 24),
-
-            // 지하철 보유 도시 (지도 버튼 포함)
-            _ExpandableCityCard(
-              title: 'Cities with Subway',
-              icon: Icons.train,
-              color: Colors.blue,
-              cities: subwayCities,
-              visitedCityNames: provider.visitedCities,
-            ),
-
-            const SizedBox(height: 16),
-
-            // 모든 교통수단 보유 도시 (지도 버튼 포함)
-            _ExpandableCityCard(
-              title: 'Cities with All Major Transit Modes',
-              icon: Icons.directions_bus,
-              color: Colors.teal,
-              cities: provider.allTransitCities,
-              visitedCityNames: provider.visitedCities,
-            ),
-
-            const SizedBox(height: 16),
-
-            // 4개 이상 공항 보유 도시 (지도 버튼 포함)
-            _CitiesWith4PlusAirportsCard(
-              visitedNames: provider.visitedCities,
-              cityProvider: provider,
-            ),
-          ],
-        );
-      },
-    );
-  }
-}
-
-class _CombinedRankingCard extends StatefulWidget {
-  final CityProvider cityProvider;
-  const _CombinedRankingCard({required this.cityProvider});
-
-  @override
-  State<_CombinedRankingCard> createState() => _CombinedRankingCardState();
-}
-
-class _CombinedRankingCardState extends State<_CombinedRankingCard> {
-  late final List<RankingInfo> _rankings;
-  late RankingInfo _selectedRanking;
-  List<City> _rankedList = [];
-
-  @override
-  void initState() {
-    super.initState();
-    _rankings = [
-      RankingInfo(title: 'Metro Station Count', icon: Icons.train, themeColor: Colors.deepPurple, metricKey: 'station', valueAccessor: (c) => c.stationsCount),
-      RankingInfo(title: 'Traffic Ranking (per 10km)', icon: Icons.traffic, themeColor: Colors.redAccent, metricKey: 'traffic', valueAccessor: (c) => c.trafficTimeMinutes),
-    ];
-    _selectedRanking = _rankings.first;
-    _prepareList();
-  }
-
-  void _prepareList() {
-    List<City> listToRank;
-    String key = _selectedRanking.metricKey;
-
-    if (key == 'station') {
-      listToRank = widget.cityProvider.stationCities.where((c) => c.stationsCount != 0).toList();
-      listToRank.sort((a,b) => _selectedRanking.valueAccessor(b).compareTo(_selectedRanking.valueAccessor(a)));
-    } else if (key == 'traffic') {
-      listToRank = widget.cityProvider.trafficCities.where((c) => c.trafficTimeMinutes != 0).toList();
-      listToRank.sort((a,b) => _selectedRanking.valueAccessor(b).compareTo(_selectedRanking.valueAccessor(a)));
-    } else {
-      listToRank = [];
-    }
-
-    setState(() {
-      _rankedList = listToRank.take(30).toList();
+  Widget build(BuildContext context){
+    return Consumer<CityProvider>(builder:(context,provider,child){
+      if(provider.isLoading)return const Center(child:CircularProgressIndicator(strokeWidth:2,color:_C.ink));
+      final subwayCities=List<City>.from(provider.transportationCities)..sort((a,b)=>a.name.compareTo(b.name));
+      final visited=provider.visitedCities;
+      final groups=[
+        _TG(title:'Cities with Subway',label:'TRANSIT',icon:Icons.train_outlined,color:_TC.subway,cities:subwayCities,names:null),
+        _TG(title:'Cities with All Major Transit',label:'TRANSIT',icon:Icons.directions_bus_outlined,color:_TC.transit,cities:provider.allTransitCities,names:null),
+        _TG(title:'Cities with 4+ Airports',label:'AIR',icon:Icons.flight_outlined,color:_TC.airport,cities:null,names:const['New York City','London','Los Angeles','Melbourne','Paris','Moscow','Tokyo','Manila','Stockholm','San Francisco','Dubai','Boston']),
+      ];
+      final completed=groups.where((g){final ns=g.names??g.cities!.map((c)=>c.name).toList();return ns.isNotEmpty&&ns.every((n)=>visited.contains(n));}).length;
+      return SingleChildScrollView(physics:const BouncingScrollPhysics(),child:Column(crossAxisAlignment:CrossAxisAlignment.start,children:[
+        const _SH(label:'RANKINGS'),
+        Padding(padding:const EdgeInsets.symmetric(horizontal:16),child:_RCard(provider:provider)),
+        const _SH(label:'COLLECTIONS'),
+        Padding(padding:const EdgeInsets.symmetric(horizontal:16),child:_SumBar(groups:groups,visited:visited,completed:completed)),
+        const SizedBox(height:16),
+        ...groups.map((g)=>Padding(padding:const EdgeInsets.fromLTRB(16,0,16,12),child:_ColCard(data:g,visitedNames:visited,provider:provider))),
+        const SizedBox(height:32),
+      ]));
     });
   }
-
-  String _formatTrafficTime(double totalMinutes) {
-    if (totalMinutes < 0.01) return '0s';
-    int totalSeconds = (totalMinutes * 60).round();
-    int minutes = totalSeconds ~/ 60;
-    int seconds = totalSeconds % 60;
-    String result = '';
-    if (minutes > 0) result += '${minutes}min ';
-    result += '${seconds}s';
-    return result.trim();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    final textTheme = Theme.of(context).textTheme;
-    final compactFormatter = NumberFormat.compact();
-    final topValue = _rankedList.isNotEmpty ? _selectedRanking.valueAccessor(_rankedList.first) : 1;
-
-    return Card(
-      elevation: 2,
-      clipBehavior: Clip.antiAlias,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-      child: Column(
-        children: [
-          Container(
-            padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
-            color: Colors.grey.shade50,
-            child: DropdownButtonHideUnderline(
-              child: DropdownButton<RankingInfo>(
-                value: _selectedRanking,
-                isExpanded: true,
-                icon: Icon(Icons.arrow_drop_down_circle_outlined, color: _selectedRanking.themeColor),
-                items: _rankings.map((r) => DropdownMenuItem(
-                  value: r,
-                  child: Row(children: [
-                    Icon(r.icon, color: r.themeColor), const SizedBox(width: 12),
-                    Text(r.title, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
-                  ]),
-                )).toList(),
-                onChanged: (value) {
-                  if (value != null) setState(() { _selectedRanking = value; _prepareList(); });
-                },
-              ),
-            ),
-          ),
-          const Divider(height: 1),
-          SizedBox(
-            height: 350,
-            child: _rankedList.isEmpty
-                ? const Center(child: Text('No data available.'))
-                : ListView.builder(
-              padding: const EdgeInsets.all(8.0),
-              itemCount: _rankedList.length,
-              itemBuilder: (context, index) {
-                final item = _rankedList[index];
-                final isVisited = widget.cityProvider.visitedCities.contains(item.name);
-                final rank = index + 1;
-                final value = _selectedRanking.valueAccessor(item);
-
-                final themeColor = _selectedRanking.themeColor;
-                final barColor = widget.cityProvider.useDefaultCityRankingBarColor
-                    ? themeColor
-                    : TourismScreen.continentColors[item.continent] ?? themeColor;
-
-                return Card(
-                  elevation: 0,
-                  color: isVisited ? themeColor.withOpacity(0.08) : Colors.transparent,
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8.0),
-                    child: Column(
-                      children: [
-                        Row(
-                          children: [
-                            Container(
-                              width: 32,
-                              height: 32,
-                              alignment: Alignment.center,
-                              decoration: BoxDecoration(
-                                color: themeColor.withOpacity(0.15),
-                                borderRadius: BorderRadius.circular(6),
-                              ),
-                              child: Text(
-                                '$rank',
-                                style: textTheme.bodyMedium?.copyWith(
-                                  color: themeColor.withOpacity(0.8),
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ),
-                            const SizedBox(width: 12),
-                            Expanded(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(item.name, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold, fontSize: 17)),
-                                  Text(item.country, style: textTheme.bodySmall?.copyWith(color: Colors.grey.shade600)),
-                                ],
-                              ),
-                            ),
-                            const SizedBox(width: 12),
-                            Text(
-                              _selectedRanking.metricKey == 'traffic'
-                                  ? _formatTrafficTime(value.toDouble())
-                                  : compactFormatter.format(value),
-                              style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
-                            ),
-                          ],
-                        ),
-                        const SizedBox(height: 8),
-                        LinearProgressIndicator(
-                          value: topValue == 0 ? 0 : value.toDouble() / topValue.toDouble(),
-                          borderRadius: BorderRadius.circular(5),
-                          minHeight: 5,
-                          backgroundColor: barColor.withOpacity(0.1),
-                          color: barColor.withOpacity(0.7),
-                        ),
-                      ],
-                    ),
-                  ),
-                );
-              },
-            ),
-          ),
-        ],
-      ),
-    );
-  }
 }
 
-class _ExpandableCityCard extends StatefulWidget {
-  final String title;
-  final IconData icon;
-  final Color color;
-  final List<City> cities;
-  final Set<String> visitedCityNames;
+class _SH extends StatelessWidget{final String label;const _SH({required this.label});@override Widget build(BuildContext context)=>Padding(padding:const EdgeInsets.fromLTRB(16,24,16,12),child:Row(children:[Text(label,style:const TextStyle(fontSize:11,fontWeight:FontWeight.w700,letterSpacing:2.0,color:_C.inkLight)),const SizedBox(width:12),Expanded(child:Container(height:1,color:_C.divider))]));}
 
-  const _ExpandableCityCard({
-    required this.title,
-    required this.icon,
-    required this.color,
-    required this.cities,
-    required this.visitedCityNames,
-  });
-
-  @override
-  State<_ExpandableCityCard> createState() => _ExpandableCityCardState();
-}
-
-class _ExpandableCityCardState extends State<_ExpandableCityCard> with SingleTickerProviderStateMixin {
-  bool _isExpanded = false;
-  late AnimationController _rotationController;
-
-  @override
-  void initState() {
-    super.initState();
-    _rotationController = AnimationController(duration: const Duration(milliseconds: 200), vsync: this);
+// ── Ranking Card
+class _RCard extends StatefulWidget{final CityProvider provider;const _RCard({required this.provider});@override State<_RCard> createState()=>_RCardState();}
+class _RCardState extends State<_RCard>{
+  late final List<RankingInfo> _ranks;late RankingInfo _sel;List<City> _list=[];
+  String _ft(double m){if(m<0.01)return'0s';final s=(m*60).round();final mn=s~/60,sc=s%60;return mn>0?'${mn}min ${sc}s':'${sc}s';}
+  @override void initState(){super.initState();_ranks=[
+    RankingInfo(title:'Metro Stations',icon:Icons.train_outlined,themeColor:_TC.metro,metricKey:'station',valueAccessor:(c)=>c.stationsCount),
+    RankingInfo(title:'Traffic (per 10km)',icon:Icons.traffic_outlined,themeColor:_TC.traffic,metricKey:'traffic',valueAccessor:(c)=>c.trafficTimeMinutes),
+  ];_sel=_ranks.first;_prep();}
+  void _prep(){
+    final f=_sel.metricKey=='station'
+        ?widget.provider.stationCities.where((c)=>c.stationsCount!=0).toList()
+        :widget.provider.trafficCities.where((c)=>c.trafficTimeMinutes!=0).toList();
+    f.sort((a,b)=>_sel.valueAccessor(b).compareTo(_sel.valueAccessor(a)));
+    setState(()=>_list=f.take(30).toList());
   }
-
   @override
-  void dispose() {
-    _rotationController.dispose();
-    super.dispose();
-  }
-
-  void _toggleExpanded() {
-    setState(() {
-      _isExpanded = !_isExpanded;
-      if (_isExpanded) _rotationController.forward(); else _rotationController.reverse();
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    final textTheme = Theme.of(context).textTheme;
-    final displayCities = widget.cities;
-    final total = displayCities.length;
-    final visitedCount = displayCities.where((c) => widget.visitedCityNames.contains(c.name)).length;
-
-    return Card(
-      elevation: 2,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-      clipBehavior: Clip.antiAlias,
-      child: Column(
-        children: [
-          Container(
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                colors: [widget.color.withOpacity(0.7), widget.color],
-              ),
-            ),
-            child: Material(
-              color: Colors.transparent,
-              child: InkWell(
-                onTap: _toggleExpanded,
-                child: Padding(
-                  padding: const EdgeInsets.all(20),
-                  child: Column(
-                    children: [
-                      Row(
-                        children: [
-                          Container(
-                            padding: const EdgeInsets.all(10),
-                            decoration: BoxDecoration(color: Colors.white.withOpacity(0.25), borderRadius: BorderRadius.circular(12)),
-                            child: Icon(widget.icon, size: 24, color: Colors.white),
-                          ),
-                          const SizedBox(width: 14),
-                          Expanded(child: Text(widget.title, style: textTheme.titleLarge?.copyWith(color: Colors.white, fontWeight: FontWeight.bold))),
-
-                          // 🗺️ 지도 버튼 추가
-                          IconButton(
-                            icon: const Icon(Icons.map, color: Colors.white),
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => CityStatsMapScreen(
-                                    cities: displayCities,
-                                    title: widget.title,
-                                    markerColor: widget.color,
-                                  ),
-                                ),
-                              );
-                            },
-                          ),
-
-                          const SizedBox(width: 8),
-                          RotationTransition(turns: Tween(begin: 0.0, end: 0.5).animate(_rotationController), child: const Icon(Icons.expand_more, color: Colors.white, size: 24)),
-                        ],
-                      ),
-                      const SizedBox(height: 16),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text('Cities visited', style: textTheme.bodySmall?.copyWith(color: Colors.white.withOpacity(0.9), fontWeight: FontWeight.w500)),
-                                const SizedBox(height: 6),
-                                Row(
-                                  children: [
-                                    Text('$visitedCount', style: textTheme.headlineMedium?.copyWith(color: Colors.white, fontWeight: FontWeight.bold)),
-                                    Text(' / $total', style: textTheme.titleLarge?.copyWith(color: Colors.white.withOpacity(0.8))),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
+  Widget build(BuildContext context){
+    final fmt=NumberFormat.compact();
+    final top=_list.isNotEmpty?_sel.valueAccessor(_list.first):1;
+    return Container(
+      decoration:BoxDecoration(color:_C.surface,borderRadius:BorderRadius.circular(14),border:Border.all(color:_C.divider)),
+      child:Column(children:[
+        Container(
+          padding:const EdgeInsets.all(12),
+          decoration:const BoxDecoration(border:Border(bottom:BorderSide(color:_C.divider))),
+          child:Row(
+            children:_ranks.map((r){
+              final active=r==_sel;
+              return Expanded(
+                child:GestureDetector(
+                  onTap:()=>setState((){_sel=r;_prep();}),
+                  child:AnimatedContainer(
+                    duration:const Duration(milliseconds:200),
+                    padding:const EdgeInsets.symmetric(vertical:10),
+                    margin:const EdgeInsets.symmetric(horizontal:3),
+                    decoration:BoxDecoration(color:active?_C.ink:Colors.transparent,borderRadius:BorderRadius.circular(8)),
+                    child:Row(mainAxisAlignment:MainAxisAlignment.center,children:[
+                      Icon(r.icon,size:15,color:active?Colors.white:_C.inkLight),
+                      const SizedBox(width:6),
+                      Text(r.title,style:TextStyle(fontSize:12,fontWeight:active?FontWeight.w700:FontWeight.w400,color:active?Colors.white:_C.inkLight)),
+                    ]),
                   ),
                 ),
-              ),
-            ),
+              );
+            }).toList(),
           ),
-          AnimatedSize(
-            duration: const Duration(milliseconds: 300),
-            curve: Curves.easeInOut,
-            child: _isExpanded
-                ? Padding(
-              padding: const EdgeInsets.all(20),
-              child: Wrap(
-                spacing: 8, runSpacing: 8,
-                children: displayCities.map((city) {
-                  final isVisited = widget.visitedCityNames.contains(city.name);
-                  return Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-                    decoration: BoxDecoration(
-                      gradient: isVisited ? LinearGradient(colors: [widget.color.withOpacity(0.6), widget.color.withOpacity(0.8)]) : null,
-                      color: isVisited ? null : Colors.grey.shade100,
-                      borderRadius: BorderRadius.circular(20),
-                      border: isVisited ? Border.all(color: widget.color, width: 1.5) : null,
-                    ),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        if (isVisited) ...[const Icon(Icons.check_circle, size: 16, color: Colors.white), const SizedBox(width: 4)],
-                        Text(city.name, style: TextStyle(fontSize: 13, fontWeight: isVisited ? FontWeight.w600 : FontWeight.w500, color: isVisited ? Colors.white : Colors.grey.shade700)),
-                      ],
-                    ),
-                  );
-                }).toList(),
+        ),
+        SizedBox(height:360,child:_list.isEmpty
+            ?const Center(child:Text('No data',style:TextStyle(color:_C.inkLight)))
+            :ListView.builder(
+          physics:const BouncingScrollPhysics(),
+          padding:const EdgeInsets.symmetric(horizontal:12,vertical:8),
+          itemCount:_list.length,
+          itemBuilder:(context,index){
+            final item=_list[index];
+            final isVisited=widget.provider.visitedCities.contains(item.name);
+            final rank=index+1;
+            final value=_sel.valueAccessor(item);
+            final barFrac=top==0?0.0:(value/top).toDouble().clamp(0.0,1.0);
+            final barColor=widget.provider.useDefaultCityRankingBarColor?_sel.themeColor:(_cc[item.continent]??_sel.themeColor);
+            final dStr=_sel.metricKey=='traffic'?_ft(value.toDouble()):fmt.format(value);
+            return GestureDetector(
+              onTap:()=>_showCityModal(context,item),
+              child:Container(
+                margin:const EdgeInsets.symmetric(vertical:3),
+                padding:const EdgeInsets.symmetric(horizontal:10,vertical:10),
+                decoration:BoxDecoration(
+                  color:isVisited?_sel.themeColor.withOpacity(0.05):Colors.transparent,
+                  borderRadius:BorderRadius.circular(8),
+                  border:Border(left:BorderSide(color:isVisited?_sel.themeColor:Colors.transparent,width:2.5)),
+                ),
+                child:Row(children:[
+                  SizedBox(width:28,child:Text(rank<=3?(rank==1?'🥇':rank==2?'🥈':'🥉'):'$rank',
+                      style:TextStyle(fontSize:rank<=3?16:12,fontWeight:FontWeight.w700,color:_C.inkLight),textAlign:TextAlign.center)),
+                  const SizedBox(width:10),
+                  Expanded(child:Column(crossAxisAlignment:CrossAxisAlignment.start,children:[
+                    Row(children:[
+                      Expanded(child:Text(item.name,style:TextStyle(fontSize:13,fontWeight:isVisited?FontWeight.w700:FontWeight.w500,color:_C.ink),overflow:TextOverflow.ellipsis)),
+                      if(isVisited)...[const SizedBox(width:4),Icon(Icons.check_circle_rounded,size:14,color:_sel.themeColor)],
+                      const SizedBox(width:6),
+                      Text(dStr,style:const TextStyle(fontSize:13,fontWeight:FontWeight.w700,color:_C.ink)),
+                    ]),
+                    const SizedBox(height:5),
+                    ClipRRect(borderRadius:BorderRadius.circular(3),child:LinearProgressIndicator(value:barFrac,minHeight:3,backgroundColor:_C.divider,valueColor:AlwaysStoppedAnimation<Color>(barColor))),
+                    const SizedBox(height:3),
+                    Row(children:[Text(_cf(item),style:const TextStyle(fontSize:11)),const SizedBox(width:4),Text(item.country,style:const TextStyle(fontSize:10,color:_C.inkLight))]),
+                  ])),
+                ]),
               ),
-            )
-                : const SizedBox.shrink(),
-          ),
-        ],
-      ),
+            );
+          },
+        ),
+        ),
+      ]),
     );
   }
 }
 
-// 🚨 Cities with 4+ Airports Card
-class _CitiesWith4PlusAirportsCard extends StatefulWidget {
-  final Set<String> visitedNames;
-  final CityProvider cityProvider; // 🆕 데이터 조회를 위해 추가
+class _TG{final String title,label;final IconData icon;final Color color;final List<City>? cities;final List<String>? names;const _TG({required this.title,required this.label,required this.icon,required this.color,this.cities,this.names});}
 
-  const _CitiesWith4PlusAirportsCard({
-    required this.visitedNames,
-    required this.cityProvider,
-  });
-
-  @override
-  State<_CitiesWith4PlusAirportsCard> createState() => _CitiesWith4PlusAirportsCardState();
+class _SumBar extends StatelessWidget{
+  final List<_TG> groups;final Set<String> visited;final int completed;
+  const _SumBar({required this.groups,required this.visited,required this.completed});
+  @override Widget build(BuildContext context){
+    final total=groups.length;final pct=total>0?completed/total:0.0;
+    return Container(padding:const EdgeInsets.all(16),decoration:BoxDecoration(color:_C.ink,borderRadius:BorderRadius.circular(14)),child:Row(children:[
+      Expanded(child:Column(crossAxisAlignment:CrossAxisAlignment.start,children:[
+        Text('$completed of $total collections',style:const TextStyle(fontSize:22,fontWeight:FontWeight.w800,color:Colors.white,letterSpacing:-0.5)),
+        const SizedBox(height:4),
+        Text(completed==0?'No collections fully completed yet':completed==total?'All collections completed! 🎉':'${total-completed} remaining to complete',style:const TextStyle(fontSize:12,color:Color(0xFF888888))),
+        const SizedBox(height:14),
+        _SegBar(groups:groups,visited:visited),
+      ])),
+      const SizedBox(width:20),
+      _AP(value:pct),
+    ]));
+  }
 }
 
-class _CitiesWith4PlusAirportsCardState extends State<_CitiesWith4PlusAirportsCard> with SingleTickerProviderStateMixin {
-  bool _isExpanded = false;
-  late AnimationController _rotationController;
-
-  static const List<String> _citiesWith4PlusAirports = [
-    "New York City",
-    "London",
-    "Los Angeles",
-    "Melbourne",
-    "Paris",
-    "Moscow",
-    "Tokyo",
-    "Manila",
-    "Stockholm",
-    "San Francisco",
-    "Dubai",
-    "Boston",
-  ];
-
-  @override
-  void initState() {
-    super.initState();
-    _rotationController = AnimationController(duration: const Duration(milliseconds: 200), vsync: this);
+class _SegBar extends StatelessWidget{
+  final List<_TG> groups;final Set<String> visited;
+  const _SegBar({required this.groups,required this.visited});
+  @override Widget build(BuildContext context){
+    final total=groups.fold<int>(0,(s,g)=>s+(g.names?.length??g.cities?.length??0));
+    if(total==0)return const SizedBox.shrink();
+    return ClipRRect(borderRadius:BorderRadius.circular(4),child:SizedBox(height:6,child:Row(children:groups.map((g){
+      final ns=g.names??g.cities!.map((c)=>c.name).toList();
+      final frac=ns.length/total;final vis=ns.where((n)=>visited.contains(n)).length;
+      final vf=ns.isNotEmpty?vis/ns.length:0.0;
+      return Expanded(flex:(frac*1000).round(),child:Container(margin:const EdgeInsets.symmetric(horizontal:1),child:Stack(children:[Container(color:const Color(0xFF2E2E2E)),FractionallySizedBox(widthFactor:vf,child:Container(color:g.color))])));
+    }).toList())));
   }
+}
 
+class _AP extends StatelessWidget{final double value;const _AP({required this.value});@override Widget build(BuildContext context)=>SizedBox(width:68,height:68,child:Stack(alignment:Alignment.center,children:[CustomPaint(size:const Size(68,68),painter:_APainter(value:value)),Column(mainAxisSize:MainAxisSize.min,children:[Text('${(value*100).round()}',style:const TextStyle(fontSize:20,fontWeight:FontWeight.w800,color:Colors.white,height:1)),const Text('%',style:TextStyle(fontSize:10,color:Color(0xFF888888)))])]));}
+class _APainter extends CustomPainter{final double value;const _APainter({required this.value});@override void paint(Canvas canvas,Size size){final c=Offset(size.width/2,size.height/2);final r=size.width/2-4;canvas.drawCircle(c,r,Paint()..color=const Color(0xFF2E2E2E)..style=PaintingStyle.stroke..strokeWidth=4.0);if(value>0)canvas.drawArc(Rect.fromCircle(center:c,radius:r),-math.pi/2,2*math.pi*value,false,Paint()..color=Colors.white..style=PaintingStyle.stroke..strokeWidth=4.0..strokeCap=StrokeCap.round);}@override bool shouldRepaint(_APainter old)=>old.value!=value;}
+class _Ch extends StatelessWidget{final String label,value;final Color color;const _Ch({required this.label,required this.value,required this.color});@override Widget build(BuildContext context)=>Row(mainAxisSize:MainAxisSize.min,crossAxisAlignment:CrossAxisAlignment.baseline,textBaseline:TextBaseline.alphabetic,children:[Text(value,style:TextStyle(fontSize:16,fontWeight:FontWeight.w800,color:color)),const SizedBox(width:3),Text(label,style:const TextStyle(fontSize:10,fontWeight:FontWeight.w500,color:_C.inkLight,letterSpacing:0.3))]);}
+
+class _ColCard extends StatefulWidget{final _TG data;final Set<String> visitedNames;final CityProvider provider;const _ColCard({required this.data,required this.visitedNames,required this.provider});@override State<_ColCard> createState()=>_ColCardState();}
+class _ColCardState extends State<_ColCard> with SingleTickerProviderStateMixin{
+  bool _exp=false;late AnimationController _ctrl;late Animation<double> _rA,_fA;
+  @override void initState(){super.initState();_ctrl=AnimationController(duration:const Duration(milliseconds:250),vsync:this);_rA=Tween(begin:0.0,end:0.5).animate(CurvedAnimation(parent:_ctrl,curve:Curves.easeInOut));_fA=CurvedAnimation(parent:_ctrl,curve:Curves.easeIn);}
+  @override void dispose(){_ctrl.dispose();super.dispose();}
+  void _toggle(){setState((){_exp=!_exp;_exp?_ctrl.forward():_ctrl.reverse();});}
   @override
-  void dispose() {
-    _rotationController.dispose();
-    super.dispose();
-  }
-
-  void _toggleExpanded() {
-    setState(() {
-      _isExpanded = !_isExpanded;
-      if (_isExpanded) {
-        _rotationController.forward();
-      } else {
-        _rotationController.reverse();
-      }
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    final textTheme = Theme.of(context).textTheme;
-    final total = _citiesWith4PlusAirports.length;
-    final visitedCount = _citiesWith4PlusAirports.where((city) => widget.visitedNames.contains(city)).length;
-    const themeColor = Colors.blue;
-
-    // 🗺️ 지도용 City 객체 리스트 생성
-    final List<City> mapCities = _citiesWith4PlusAirports
-        .map((name) => widget.cityProvider.allCities.firstWhereOrNull((c) => c.name == name))
-        .whereType<City>()
-        .toList();
-
-    return Card(
-      elevation: 2,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-      clipBehavior: Clip.antiAlias,
-      child: Column(
-        children: [
-          Container(
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                colors: [themeColor.withOpacity(0.7), themeColor],
-              ),
-            ),
-            child: Material(
-              color: Colors.transparent,
-              child: InkWell(
-                onTap: _toggleExpanded,
-                child: Padding(
-                  padding: const EdgeInsets.all(20),
-                  child: Column(
-                    children: [
-                      Row(
-                        children: [
-                          Container(
-                            padding: const EdgeInsets.all(10),
-                            decoration: BoxDecoration(
-                              color: Colors.white.withOpacity(0.25),
-                              borderRadius: BorderRadius.circular(12),
-                            ),
-                            child: const Icon(Icons.flight, size: 24, color: Colors.white),
-                          ),
-                          const SizedBox(width: 14),
-                          Expanded(
-                            child: Text(
-                              'Cities with 4+ Airports',
-                              style: textTheme.titleLarge?.copyWith(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-
-                          // 🗺️ 지도 버튼 추가
-                          IconButton(
-                            icon: const Icon(Icons.map, color: Colors.white),
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => CityStatsMapScreen(
-                                    cities: mapCities,
-                                    title: 'Cities with 4+ Airports',
-                                    markerColor: themeColor,
-                                  ),
-                                ),
-                              );
-                            },
-                          ),
-
-                          const SizedBox(width: 8),
-                          RotationTransition(
-                            turns: Tween(begin: 0.0, end: 0.5).animate(_rotationController),
-                            child: const Icon(Icons.expand_more, color: Colors.white, size: 24),
-                          ),
-                        ],
-                      ),
-                      const SizedBox(height: 16),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  'Cities visited',
-                                  style: textTheme.bodySmall?.copyWith(
-                                    color: Colors.white.withOpacity(0.9),
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                                ),
-                                const SizedBox(height: 6),
-                                Row(
-                                  children: [
-                                    Text(
-                                      '$visitedCount',
-                                      style: textTheme.headlineMedium?.copyWith(
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                    Text(
-                                      ' / $total',
-                                      style: textTheme.titleLarge?.copyWith(
-                                        color: Colors.white.withOpacity(0.8),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
+  Widget build(BuildContext context){
+    final g=widget.data;
+    final ns=g.names??g.cities!.map((c)=>c.name).toList();
+    final total=ns.length;
+    final vis=ns.where((n)=>widget.visitedNames.contains(n)).length;
+    final pct=total>0?vis/total:0.0;
+    final mapC=g.cities??ns.map((n)=>widget.provider.allCities.firstWhereOrNull((c)=>c.name==n)).whereType<City>().toList();
+    return Container(
+      decoration:BoxDecoration(color:_C.surface,borderRadius:BorderRadius.circular(14),border:Border.all(color:_C.divider)),
+      child:Column(children:[
+        InkWell(onTap:_toggle,borderRadius:BorderRadius.circular(14),child:Padding(padding:const EdgeInsets.all(16),child:Row(children:[
+          Container(width:42,height:42,decoration:BoxDecoration(color:g.color.withOpacity(0.10),borderRadius:BorderRadius.circular(10)),child:Icon(g.icon,size:20,color:g.color)),
+          const SizedBox(width:14),
+          Expanded(child:Column(crossAxisAlignment:CrossAxisAlignment.start,children:[
+            Text(g.label,style:TextStyle(fontSize:10,fontWeight:FontWeight.w700,letterSpacing:1.5,color:g.color)),
+            const SizedBox(height:2),
+            Text(g.title,style:const TextStyle(fontSize:15,fontWeight:FontWeight.w700,color:_C.ink,letterSpacing:-0.2)),
+          ])),
+          GestureDetector(
+            onTap:()=>Navigator.push(context,MaterialPageRoute(builder:(_)=>CityStatsMapScreen(cities:mapC,title:g.title,markerColor:g.color))),
+            child:Container(padding:const EdgeInsets.symmetric(horizontal:10,vertical:6),decoration:BoxDecoration(color:_C.bg,borderRadius:BorderRadius.circular(8),border:Border.all(color:_C.divider)),
+                child:Row(mainAxisSize:MainAxisSize.min,children:const[Icon(Icons.map_outlined,size:14,color:_C.inkMid),SizedBox(width:4),Text('Map',style:TextStyle(fontSize:12,fontWeight:FontWeight.w600,color:_C.inkMid))])),
           ),
-          AnimatedSize(
-            duration: const Duration(milliseconds: 300),
-            curve: Curves.easeInOut,
-            child: _isExpanded
-                ? Padding(
-              padding: const EdgeInsets.all(20),
-              child: Wrap(
-                spacing: 8,
-                runSpacing: 8,
-                children: _citiesWith4PlusAirports.map((city) {
-                  final isVisited = widget.visitedNames.contains(city);
-                  return Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-                    decoration: BoxDecoration(
-                      gradient: isVisited
-                          ? LinearGradient(
-                        colors: [
-                          themeColor.withOpacity(0.6),
-                          themeColor.withOpacity(0.8),
-                        ],
-                      )
-                          : null,
-                      color: isVisited ? null : Colors.grey.shade100,
-                      borderRadius: BorderRadius.circular(20),
-                      border: isVisited ? Border.all(color: themeColor, width: 1.5) : null,
-                    ),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        if (isVisited) ...[
-                          const Icon(Icons.check_circle, size: 16, color: Colors.white),
-                          const SizedBox(width: 4),
-                        ],
-                        Text(
-                          city,
-                          style: TextStyle(
-                            fontSize: 13,
-                            fontWeight: isVisited ? FontWeight.w600 : FontWeight.w500,
-                            color: isVisited ? Colors.white : Colors.grey.shade700,
-                          ),
-                        ),
-                      ],
-                    ),
-                  );
-                }).toList(),
-              ),
-            )
-                : const SizedBox.shrink(),
-          ),
-        ],
-      ),
+          const SizedBox(width:4),
+          RotationTransition(turns:_rA,child:const Icon(Icons.keyboard_arrow_down_rounded,size:22,color:_C.inkLight)),
+        ]))),
+        Padding(padding:const EdgeInsets.fromLTRB(16,0,16,14),child:Column(children:[
+          ClipRRect(borderRadius:BorderRadius.circular(4),child:LinearProgressIndicator(value:pct,minHeight:5,backgroundColor:_C.divider,valueColor:AlwaysStoppedAnimation<Color>(g.color))),
+          const SizedBox(height:8),
+          Row(children:[_Ch(label:'Visited',value:'$vis',color:g.color),const SizedBox(width:8),_Ch(label:'Remaining',value:'${total-vis}',color:_C.inkLight),const Spacer(),Text('${(pct*100).round()}%',style:TextStyle(fontSize:20,fontWeight:FontWeight.w800,color:pct>0?g.color:_C.inkLight,letterSpacing:-0.5))]),
+        ])),
+        AnimatedSize(duration:const Duration(milliseconds:280),curve:Curves.easeInOut,child:_exp
+            ?FadeTransition(opacity:_fA,child:Container(width:double.infinity,padding:const EdgeInsets.fromLTRB(16,4,16,16),decoration:const BoxDecoration(border:Border(top:BorderSide(color:_C.divider))),
+          child:Wrap(spacing:7,runSpacing:7,children:ns.map((name){
+            final isV=widget.visitedNames.contains(name);
+            final cityObj=g.cities?.firstWhereOrNull((c)=>c.name==name)??widget.provider.allCities.firstWhereOrNull((c)=>c.name==name);
+            final flag=cityObj!=null?_cf(cityObj):'';
+            return GestureDetector(
+              onTap:cityObj!=null?()=>_showCityModal(context,cityObj):null,
+              child:Container(padding:const EdgeInsets.symmetric(horizontal:11,vertical:6),decoration:BoxDecoration(color:isV?g.color:_C.bg,borderRadius:BorderRadius.circular(20),border:Border.all(color:isV?g.color:_C.divider)),
+                  child:Row(mainAxisSize:MainAxisSize.min,children:[if(flag.isNotEmpty)...[Text(flag,style:const TextStyle(fontSize:11)),const SizedBox(width:5)],Text(name,style:TextStyle(fontSize:12,fontWeight:isV?FontWeight.w700:FontWeight.w500,color:isV?Colors.white:_C.inkMid))])),
+            );
+          }).toList()),
+        ))
+            :const SizedBox.shrink(),
+        ),
+      ]),
     );
   }
 }

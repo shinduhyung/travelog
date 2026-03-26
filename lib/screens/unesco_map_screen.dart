@@ -2,26 +2,28 @@
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:ui';
+import 'dart:io';
+import 'dart:ui'; // For ImageFilter
 
 import 'package:collection/collection.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_colorpicker/flutter_colorpicker.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:country_flags/country_flags.dart';
 
 import 'package:jidoapp/models/unesco_model.dart';
-import 'package:jidoapp/models/visit_date_model.dart'; // [Fix] Undefined class VisitDate 에러 해결을 위한 임포트
+import 'package:jidoapp/models/visit_date_model.dart';
 import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/providers/unesco_provider.dart';
 import 'package:jidoapp/widgets/landmark_info_card.dart';
-import 'package:jidoapp/widgets/unesco_visit_editor_card.dart';
 
 enum UnescoColorMode { sameColor, byVisits, byType, byRating, byContinent, wishlist }
 
@@ -80,10 +82,12 @@ class _UnescoMapScreenState extends State<UnescoMapScreen> {
   final TextEditingController _searchController = TextEditingController();
   bool _isMapReady = false;
 
-  UnescoSite? _selectedItem;
-  LatLng? _tempHighlightLocation;
-  String? _highlightedId;
+  // Highlighting State
+  UnescoSite? _selectedItem; // For the large popup
+  LatLng? _tempHighlightLocation; // For the grey dot (List tap)
+  String? _highlightedId; // To track selection state in list (border)
 
+  // --- Color Settings State Variables ---
   late UnescoColorMode _colorMode;
   late List<VisitCountRange> _byVisitRanges;
   late List<RatingCategory> _byRatingRanges;
@@ -95,8 +99,9 @@ class _UnescoMapScreenState extends State<UnescoMapScreen> {
   late Color _wishlistColor;
 
   Map<String, Color> _continentColors = {};
-  Map<String, Color> _typeColors = {};
+  Map<String, Color> _typeColors = {}; // Colors for Types
 
+  // Toggles
   bool _showUnvisited = false;
   bool _showWishlist = true;
 
@@ -195,7 +200,9 @@ class _UnescoMapScreenState extends State<UnescoMapScreen> {
               range.controller =
                   TextEditingController(text: range.from.toString());
             }
-          } catch (e) {}
+          } catch (e) {
+            if (kDebugMode) print('Error loading visit ranges: $e');
+          }
         }
 
         final typeColorsJson = prefs.getString('unescoTypeColors');
@@ -262,6 +269,7 @@ class _UnescoMapScreenState extends State<UnescoMapScreen> {
     }
   }
 
+  // --- Territory Flag Helper ---
   String? _getDisplayIsoA2(UnescoSite site, CountryProvider countryProvider) {
     if (site.city.contains('Macao') || site.countriesIsoA3.contains('MAC')) return 'MO';
     if (site.countriesIsoA3.contains('GRL')) return 'GL';
@@ -311,9 +319,11 @@ class _UnescoMapScreenState extends State<UnescoMapScreen> {
     switch (_colorMode) {
       case UnescoColorMode.byType:
         return _typeColors[site.type] ?? _typeColors['Cultural']!;
+
       case UnescoColorMode.byVisits:
         final visitCount = site.visitDates.length;
         if (visitCount <= 0 && !isSubVisited) return _defaultVisitedColor;
+
         VisitCountRange? selectedRange;
         for (int i = _byVisitRanges.length - 1; i >= 0; i--) {
           if (visitCount >= _byVisitRanges[i].from) {
@@ -322,6 +332,7 @@ class _UnescoMapScreenState extends State<UnescoMapScreen> {
           }
         }
         return selectedRange?.color ?? _defaultVisitedColor;
+
       case UnescoColorMode.byRating:
         final rating = site.rating;
         if (rating == null || rating == 0.0) return _unknownRatingColor;
@@ -333,6 +344,7 @@ class _UnescoMapScreenState extends State<UnescoMapScreen> {
           }
         }
         return selectedCategory?.color ?? _defaultVisitedColor;
+
       case UnescoColorMode.byContinent:
         final continents = getContinents(site.countriesIsoA3);
         if (continents.length == 1) {
@@ -341,6 +353,7 @@ class _UnescoMapScreenState extends State<UnescoMapScreen> {
           return _multiContinentColor;
         }
         return _defaultVisitedColor;
+
       case UnescoColorMode.sameColor:
       default:
         return _sameColor;
@@ -349,9 +362,13 @@ class _UnescoMapScreenState extends State<UnescoMapScreen> {
 
   IconData _getTypeIcon(String type) {
     switch (type) {
-      case 'Natural': return Icons.landscape;
-      case 'Mixed': return Icons.auto_awesome;
-      case 'Cultural': default: return Icons.account_balance;
+      case 'Natural':
+        return Icons.landscape;
+      case 'Mixed':
+        return Icons.auto_awesome;
+      case 'Cultural':
+      default:
+        return Icons.account_balance;
     }
   }
 
@@ -541,6 +558,7 @@ class _UnescoMapScreenState extends State<UnescoMapScreen> {
               ]),
           ],
         ),
+
         Positioned(
           top: 10,
           right: 10,
@@ -589,6 +607,7 @@ class _UnescoMapScreenState extends State<UnescoMapScreen> {
       statusText = "Visits: ${item.visitDates.length}";
     }
 
+    // Flag logic for popup
     String? territoryIsoA2 = _getDisplayIsoA2(item, countryProvider);
     List<String> displayIsos = [];
     if (territoryIsoA2 != null) {
@@ -627,6 +646,7 @@ class _UnescoMapScreenState extends State<UnescoMapScreen> {
                     overflow: TextOverflow.ellipsis,
                   ),
                   const SizedBox(height: 4),
+                  // Displaying flags instead of ISO codes
                   if (displayIsos.isNotEmpty)
                     Padding(
                       padding: const EdgeInsets.only(bottom: 4),
@@ -762,6 +782,7 @@ class _UnescoMapScreenState extends State<UnescoMapScreen> {
                     children: [
                       Text('General', style: GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 14)),
                       const SizedBox(height: 8),
+
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -773,6 +794,7 @@ class _UnescoMapScreenState extends State<UnescoMapScreen> {
                           ),
                         ],
                       ),
+
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -795,8 +817,10 @@ class _UnescoMapScreenState extends State<UnescoMapScreen> {
                             ],
                           ),
                         ),
+
                       const Divider(height: 24),
                       Text('Color Mode', style: GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 14)),
+
                       ...UnescoColorMode.values.map((mode) {
                         String title;
                         switch(mode) {
@@ -807,6 +831,7 @@ class _UnescoMapScreenState extends State<UnescoMapScreen> {
                           case UnescoColorMode.byContinent: title = "By Continent"; break;
                           case UnescoColorMode.wishlist: title = "Wishlist Only"; break;
                         }
+
                         return RadioListTile<UnescoColorMode>(
                           title: Text(title, style: GoogleFonts.poppins(fontSize: 13)),
                           value: mode,
@@ -817,7 +842,9 @@ class _UnescoMapScreenState extends State<UnescoMapScreen> {
                           contentPadding: EdgeInsets.zero,
                         );
                       }).toList(),
+
                       const Divider(),
+
                       if (tempColorMode == UnescoColorMode.sameColor)
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -826,6 +853,7 @@ class _UnescoMapScreenState extends State<UnescoMapScreen> {
                             buildColorPicker(tempSameColor, (c) => setStateDialog(() => tempSameColor = c))
                           ],
                         ),
+
                       if (tempColorMode == UnescoColorMode.byVisits) ...[
                         const SizedBox(height: 8),
                         Text('Visit Count Colors', style: GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 13)),
@@ -866,6 +894,7 @@ class _UnescoMapScreenState extends State<UnescoMapScreen> {
                           );
                         }).toList(),
                       ],
+
                       if (tempColorMode == UnescoColorMode.byType) ...[
                         const SizedBox(height: 8),
                         Text('Type Colors', style: GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 13)),
@@ -932,7 +961,7 @@ class _UnescoMapScreenState extends State<UnescoMapScreen> {
     showModalBottomSheet(
       context: context,
       isScrollControlled: true,
-      backgroundColor: Colors.transparent,
+      backgroundColor: Colors.transparent, // 투명 배경 설정
       builder: (BuildContext sheetContext) {
         final provider = sheetContext.watch<UnescoProvider>();
         final countryProvider = sheetContext.read<CountryProvider>();
@@ -955,6 +984,7 @@ class _UnescoMapScreenState extends State<UnescoMapScreen> {
         final themeColor = siteThemeColor ?? fallbackThemeColor;
         const headerTextColor = Colors.white;
 
+        // Flag logic for modal
         String? modalFlagIso = _getDisplayIsoA2(freshSite, countryProvider);
         List<String> displayIsos = [];
         final List<String> sortedIsoA3 = List.from(freshSite.countriesIsoA3)
@@ -978,10 +1008,12 @@ class _UnescoMapScreenState extends State<UnescoMapScreen> {
             heightFactor: 0.85,
             child: Column(
               children: [
+                // LandmarksList 스타일의 그라데이션 헤더
                 ClipRRect(
                   borderRadius: const BorderRadius.vertical(top: Radius.circular(24)),
                   child: Stack(
                     children: [
+                      // 배경 그라데이션
                       Positioned.fill(
                         child: Container(
                           decoration: BoxDecoration(
@@ -993,6 +1025,7 @@ class _UnescoMapScreenState extends State<UnescoMapScreen> {
                           ),
                         ),
                       ),
+                      // 다크 오버레이
                       Positioned.fill(
                         child: Container(
                           decoration: BoxDecoration(
@@ -1173,7 +1206,7 @@ class _UnescoMapScreenState extends State<UnescoMapScreen> {
                           ),
                           const SizedBox(height: 8),
                           if (freshSite.visitDates.isNotEmpty)
-                            ...freshSite.visitDates.asMap().entries.map((entry) => UnescoVisitEditorCard(
+                            ...freshSite.visitDates.asMap().entries.map((entry) => _UnescoVisitEditorCard(
                               key: ValueKey('${freshSite.name}_${entry.key}'),
                               siteName: freshSite.name,
                               visitDate: entry.value,
@@ -1215,7 +1248,8 @@ class _UnescoMapScreenState extends State<UnescoMapScreen> {
             decoration: InputDecoration(
               labelText: 'Search',
               prefixIcon: const Icon(Icons.search),
-              border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
+              border:
+              OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
               suffixIcon: _searchController.text.isNotEmpty
                   ? IconButton(
                   icon: const Icon(Icons.clear),
@@ -1233,8 +1267,11 @@ class _UnescoMapScreenState extends State<UnescoMapScreen> {
               final isVisited = provider.visitedSites.contains(item.name);
               final visitedSubCount = provider.getVisitedSubLocationCount(item.name);
               final totalSubCount = item.locations.length;
+
               final Color typeColor = _typeColors[item.type] ?? Colors.grey;
               final Color bgColor = typeColor.withOpacity(0.15);
+
+              // Check if highlighted to show border
               final bool isHighlighted = _highlightedId == item.name;
 
               if (totalSubCount > 1) {
@@ -1251,6 +1288,8 @@ class _UnescoMapScreenState extends State<UnescoMapScreen> {
                   child: ExpansionTile(
                     shape: const Border(),
                     collapsedShape: const Border(),
+                    backgroundColor: Colors.transparent,
+                    collapsedBackgroundColor: Colors.transparent,
                     title: Text(
                       item.name,
                       maxLines: 1,
@@ -1264,22 +1303,36 @@ class _UnescoMapScreenState extends State<UnescoMapScreen> {
                           "$visitedSubCount/$totalSubCount",
                           style: TextStyle(
                             fontSize: 12,
-                            color: visitedSubCount == totalSubCount ? Colors.green : Colors.grey[700],
+                            color: visitedSubCount == totalSubCount
+                                ? Colors.green
+                                : Colors.grey[700],
                             fontWeight: FontWeight.w600,
                           ),
                         ),
                         const SizedBox(width: 8),
                         IconButton(
                           icon: const Icon(Icons.info_outline),
-                          onPressed: () => _showUnescoSiteDetailsModal(item, themeColor),
+                          onPressed: () =>
+                              _showUnescoSiteDetailsModal(item, themeColor),
+                          tooltip: 'Info',
+                          visualDensity: VisualDensity.compact,
                         ),
-                        const Icon(Icons.expand_more),
+                        AnimatedRotation(
+                          turns: 0,
+                          duration: const Duration(milliseconds: 200),
+                          child: Icon(
+                            Icons.expand_more,
+                            color: isVisited ? themeColor : Colors.grey,
+                          ),
+                        ),
                       ],
                     ),
                     children: item.locations.map((loc) {
                       final isLocVisited = provider.isSubLocationVisited(item.name, loc.name);
+                      // Generate ID for sub-location
                       final String subLocId = "${item.name}_${loc.name}";
                       final bool isSubHighlighted = _highlightedId == subLocId;
+
                       return Container(
                         decoration: BoxDecoration(
                           border: isSubHighlighted
@@ -1294,7 +1347,9 @@ class _UnescoMapScreenState extends State<UnescoMapScreen> {
                           trailing: Checkbox(
                             value: isLocVisited,
                             activeColor: themeColor,
-                            onChanged: (val) { provider.toggleSubLocation(item.name, loc.name); },
+                            onChanged: (val) {
+                              provider.toggleSubLocation(item.name, loc.name);
+                            },
                           ),
                         ),
                       );
@@ -1308,7 +1363,10 @@ class _UnescoMapScreenState extends State<UnescoMapScreen> {
                 color: bgColor,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(8),
-                  side: isHighlighted ? BorderSide(color: Colors.grey.shade700, width: 2) : BorderSide.none,
+                  // Border for single item
+                  side: isHighlighted
+                      ? BorderSide(color: Colors.grey.shade700, width: 2)
+                      : BorderSide.none,
                 ),
                 margin: const EdgeInsets.only(bottom: 8),
                 child: ListTile(
@@ -1325,10 +1383,13 @@ class _UnescoMapScreenState extends State<UnescoMapScreen> {
                     children: [
                       IconButton(
                           icon: const Icon(Icons.info_outline),
-                          onPressed: () => _showUnescoSiteDetailsModal(item, themeColor)),
+                          onPressed: () =>
+                              _showUnescoSiteDetailsModal(item, themeColor),
+                          tooltip: 'Info'),
                       Checkbox(
                         value: isVisited,
-                        onChanged: (bool? value) => provider.toggleVisitedStatus(item.name),
+                        onChanged: (bool? value) =>
+                            provider.toggleVisitedStatus(item.name),
                       ),
                     ],
                   ),
@@ -1338,6 +1399,211 @@ class _UnescoMapScreenState extends State<UnescoMapScreen> {
           ),
         ),
       ],
+    );
+  }
+}
+
+class _UnescoVisitEditorCard extends StatefulWidget {
+  final String siteName;
+  final VisitDate visitDate;
+  final int index;
+  final VoidCallback onDelete;
+  final List<UnescoSubLocation> availableLocations;
+
+  const _UnescoVisitEditorCard({
+    super.key,
+    required this.siteName,
+    required this.visitDate,
+    required this.index,
+    required this.onDelete,
+    required this.availableLocations,
+  });
+
+  @override
+  State<_UnescoVisitEditorCard> createState() => _UnescoVisitEditorCardState();
+}
+
+class _UnescoVisitEditorCardState extends State<_UnescoVisitEditorCard> {
+  late final TextEditingController _titleController;
+  late final TextEditingController _memoController;
+  late List<String> _currentPhotos;
+  int? _year, _month, _day;
+  late String _displayTitle, _displayMemo;
+  bool _isEditing = false;
+  final ExpansionTileController _expansionTileController = ExpansionTileController();
+
+  @override
+  void initState() {
+    super.initState();
+    _displayTitle = widget.visitDate.title;
+    _displayMemo  = widget.visitDate.memo ?? '';
+    _titleController = TextEditingController(text: _displayTitle);
+    _memoController  = TextEditingController(text: _displayMemo);
+    _currentPhotos   = List.from(widget.visitDate.photos);
+    _year = widget.visitDate.year; _month = widget.visitDate.month; _day = widget.visitDate.day;
+    if (_displayTitle.isEmpty && _displayMemo.isEmpty && _currentPhotos.isEmpty) _isEditing = true;
+  }
+
+  @override void dispose() { _titleController.dispose(); _memoController.dispose(); super.dispose(); }
+
+  void _saveChanges() {
+    context.read<UnescoProvider>().updateLandmarkVisit(
+      widget.siteName, widget.index,
+      title: _titleController.text, memo: _memoController.text,
+      year: _year ?? -9999, month: _month ?? -9999, day: _day ?? -9999,
+      photos: _currentPhotos,
+    );
+    setState(() { _displayTitle = _titleController.text; _displayMemo = _memoController.text; _isEditing = false; });
+  }
+
+  void _cancelEditing() {
+    setState(() {
+      _titleController.text = _displayTitle; _memoController.text = _displayMemo;
+      _year = widget.visitDate.year; _month = widget.visitDate.month; _day = widget.visitDate.day;
+      _currentPhotos = List.from(widget.visitDate.photos); _isEditing = false;
+    });
+  }
+
+  Future<void> _selectDate(BuildContext context) async {
+    final p = await showDatePicker(context: context,
+        initialDate: DateTime(_year ?? DateTime.now().year, _month ?? 1, _day ?? 1),
+        firstDate: DateTime(1900), lastDate: DateTime(2100));
+    if (p != null && mounted) setState(() { _year = p.year; _month = p.month; _day = p.day; });
+  }
+
+  void _pickImage(ImageSource source) async {
+    final f = await ImagePicker().pickImage(source: source);
+    if (f != null && mounted) setState(() => _currentPhotos.add(f.path));
+  }
+
+  void _toggleLocationInVisit(String locName, bool isSelected) {
+    final provider = context.read<UnescoProvider>();
+    List<String> currentDetails = List.from(widget.visitDate.visitedDetails);
+    if (isSelected) {
+      if (!currentDetails.contains(locName)) {
+        currentDetails.add(locName);
+        if (!provider.isSubLocationVisited(widget.siteName, locName)) {
+          provider.toggleSubLocation(widget.siteName, locName);
+        }
+      }
+    } else {
+      currentDetails.remove(locName);
+    }
+    provider.updateLandmarkVisit(widget.siteName, widget.index, visitedDetails: currentDetails);
+    setState(() {});
+  }
+
+  Widget _buildPhotoPreview(String path, int i) {
+    return Stack(clipBehavior: Clip.none, children: [
+      Container(width: 60, height: 60, margin: const EdgeInsets.only(right: 12),
+          decoration: BoxDecoration(borderRadius: BorderRadius.circular(8),
+              boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.1), blurRadius: 4, offset: const Offset(0, 2))]),
+          child: ClipRRect(borderRadius: BorderRadius.circular(8), child: Image.file(File(path), fit: BoxFit.cover))),
+      if (_isEditing) Positioned(top: -6, right: 6,
+          child: GestureDetector(onTap: () => setState(() => _currentPhotos.removeAt(i)),
+              child: Container(decoration: const BoxDecoration(color: Colors.white, shape: BoxShape.circle),
+                  child: const Icon(Icons.cancel, color: Colors.red, size: 22)))),
+    ]);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final themeColor = Theme.of(context).primaryColor;
+    return Card(
+      elevation: 1, margin: const EdgeInsets.symmetric(vertical: 4),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+      child: ExpansionTile(
+        controller: _expansionTileController,
+        initiallyExpanded: _isEditing,
+        title: Text(_displayTitle.isNotEmpty ? _displayTitle : 'Visit Record',
+            style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15)),
+        subtitle: Text('Date: $_year-$_month-$_day', style: TextStyle(color: Colors.grey[600], fontSize: 13)),
+        trailing: IconButton(
+          icon: const Icon(Icons.delete_outline, color: Colors.red, size: 22),
+          onPressed: () => showDialog(context: context, builder: (ctx) => AlertDialog(
+              title: const Text('Delete Visit Record'),
+              content: const Text('Are you sure you want to delete this visit record?'),
+              actions: [
+                TextButton(onPressed: () => Navigator.pop(ctx), child: const Text('Cancel')),
+                TextButton(onPressed: () { Navigator.pop(ctx); widget.onDelete(); },
+                    child: const Text('Delete', style: TextStyle(color: Colors.red))),
+              ])),
+        ),
+        children: [Container(
+          padding: const EdgeInsets.all(16),
+          decoration: BoxDecoration(color: Colors.grey[50],
+              borderRadius: const BorderRadius.only(bottomLeft: Radius.circular(12), bottomRight: Radius.circular(12))),
+          child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            if (_isEditing) ...[
+              Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+                Text('Visit Date: $_year-$_month-$_day', style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14)),
+                TextButton.icon(icon: const Icon(Icons.edit_calendar, size: 18), label: const Text('Edit Date'),
+                    onPressed: () => _selectDate(context),
+                    style: TextButton.styleFrom(visualDensity: VisualDensity.compact)),
+              ]),
+              const SizedBox(height: 12),
+              TextField(controller: _titleController,
+                  decoration: InputDecoration(labelText: 'Title', isDense: true, filled: true, fillColor: Colors.white,
+                      border: OutlineInputBorder(borderRadius: BorderRadius.circular(8), borderSide: BorderSide.none))),
+              const SizedBox(height: 12),
+              TextField(controller: _memoController, maxLines: 3, minLines: 1,
+                  decoration: InputDecoration(labelText: 'Memo', isDense: true, filled: true, fillColor: Colors.white,
+                      border: OutlineInputBorder(borderRadius: BorderRadius.circular(8), borderSide: BorderSide.none))),
+            ] else if (_displayMemo.isNotEmpty)
+              Padding(padding: const EdgeInsets.only(bottom: 12),
+                  child: Text(_displayMemo, style: TextStyle(fontSize: 14, color: Colors.grey[800], height: 1.4))),
+
+            const SizedBox(height: 12),
+
+            if (widget.availableLocations != null && widget.availableLocations!.isNotEmpty) ...[
+              const Text("Locations included in this visit:",
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Colors.grey)),
+              const SizedBox(height: 4),
+              IgnorePointer(ignoring: !_isEditing,
+                  child: Wrap(spacing: 8.0, runSpacing: 4.0,
+                      children: widget.availableLocations!.map((loc) {
+                        final isChecked = widget.visitDate.visitedDetails.contains(loc.name);
+                        return FilterChip(
+                          label: Text(loc.name, style: const TextStyle(fontSize: 11)),
+                          selected: isChecked,
+                          selectedColor: themeColor.withOpacity(0.2),
+                          checkmarkColor: themeColor,
+                          onSelected: (bool selected) => _toggleLocationInVisit(loc.name, selected),
+                        );
+                      }).toList())),
+              const SizedBox(height: 16),
+            ],
+
+            if (_currentPhotos.isNotEmpty || _isEditing)
+              Padding(padding: const EdgeInsets.only(top: 8),
+                  child: SingleChildScrollView(scrollDirection: Axis.horizontal, clipBehavior: Clip.none,
+                      child: Row(children: [
+                        if (_isEditing) Container(margin: const EdgeInsets.only(right: 12),
+                            decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(8),
+                                border: Border.all(color: Colors.grey.shade300)),
+                            child: IconButton(icon: const Icon(Icons.add_photo_alternate, color: Colors.grey),
+                                onPressed: () => _pickImage(ImageSource.gallery))),
+                        ..._currentPhotos.asMap().entries.map((e) => _buildPhotoPreview(e.value, e.key)).toList(),
+                      ]))),
+
+            const SizedBox(height: 16),
+            Row(mainAxisAlignment: MainAxisAlignment.end, children: [
+              if (_isEditing) ...[
+                TextButton(onPressed: _cancelEditing,
+                    child: Text('Cancel', style: TextStyle(color: Colors.grey[700], fontWeight: FontWeight.w600))),
+                const SizedBox(width: 8),
+                ElevatedButton.icon(onPressed: _saveChanges,
+                    icon: const Icon(Icons.save, size: 18), label: const Text('Save'),
+                    style: ElevatedButton.styleFrom(backgroundColor: themeColor, foregroundColor: Colors.white, elevation: 0)),
+              ] else
+                OutlinedButton.icon(onPressed: () => setState(() => _isEditing = true),
+                    icon: const Icon(Icons.edit, size: 16), label: const Text('Edit Record'),
+                    style: OutlinedButton.styleFrom(foregroundColor: themeColor,
+                        side: BorderSide(color: themeColor.withOpacity(0.5)))),
+            ]),
+          ]),
+        )],
+      ),
     );
   }
 }

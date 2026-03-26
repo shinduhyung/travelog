@@ -1,3 +1,5 @@
+// lib/screens/history_stats_screen.dart
+
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -18,9 +20,24 @@ import 'package:jidoapp/providers/country_provider.dart';
 import 'package:latlong2/latlong.dart' hide Path;
 import 'package:provider/provider.dart';
 
-// 🚨🚨🚨 FIX: CountriesMapScreen 및 HighlightGroup 정의 import 추가
 import 'package:jidoapp/screens/countries_map_screen.dart';
+import 'package:jidoapp/screens/country_detail_screen.dart'; // 상세 화면 임포트 추가
 
+// Helper: ISO A2 → 국기 이모지
+String flagEmoji(String isoA2) {
+  if (isoA2.length != 2) return '';
+  final base = 0x1F1E6 - 0x41;
+  return String.fromCharCode(base + isoA2.codeUnitAt(0)) +
+      String.fromCharCode(base + isoA2.codeUnitAt(1));
+}
+
+// Helper: 국가 클릭시 CountryDetailScreen으로 이동
+void navigateToCountryDetail(BuildContext context, Country country) {
+  Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => CountryDetailScreen(country: country)),
+  );
+}
 
 // 🆕 GroupInfo 정의 (geopolitics_stats_screen.dart에서 가져옴)
 class GroupInfo {
@@ -149,6 +166,7 @@ class _HistoryStatsScreenState extends State<HistoryStatsScreen> {
   Widget build(BuildContext context) {
     final countryProvider = Provider.of<CountryProvider>(context);
     final visitedSet = countryProvider.visitedCountries;
+    final allCountries = countryProvider.allCountries;
 
     // 통계 계산
     final mongolStats = _calculateStats(_mongolEmpireAreas, visitedSet);
@@ -173,6 +191,7 @@ class _HistoryStatsScreenState extends State<HistoryStatsScreen> {
             stats: alexanderStats,
             isExpanded: _isAlexanderExpanded,
             visitedSet: visitedSet,
+            allCountries: allCountries,
           ),
 
           const SizedBox(height: 24),
@@ -187,6 +206,7 @@ class _HistoryStatsScreenState extends State<HistoryStatsScreen> {
             stats: romanStats,
             isExpanded: _isRomanExpanded,
             visitedSet: visitedSet,
+            allCountries: allCountries,
           ),
 
           const SizedBox(height: 24),
@@ -201,6 +221,7 @@ class _HistoryStatsScreenState extends State<HistoryStatsScreen> {
             stats: mongolStats,
             isExpanded: _isMongolExpanded,
             visitedSet: visitedSet,
+            allCountries: allCountries,
           ),
 
           const SizedBox(height: 24),
@@ -215,6 +236,7 @@ class _HistoryStatsScreenState extends State<HistoryStatsScreen> {
             stats: ottomanStats,
             isExpanded: _isOttomanExpanded,
             visitedSet: visitedSet,
+            allCountries: allCountries,
           ),
 
           // 🆕 역사/정치 연합 그룹 카드 추가
@@ -223,36 +245,6 @@ class _HistoryStatsScreenState extends State<HistoryStatsScreen> {
             allCountries: countryProvider.filteredCountries,
             visitedCountryNames: visitedSet,
           ),
-
-          // 5. 대영제국 (British Empire) - 주석 처리됨
-          /*
-          const SizedBox(height: 24),
-          _buildEmpireGroup(
-            context,
-            title: "British Empire",
-            color: Colors.pink.shade700,
-            mapScreen: const BritishEmpireMapScreen(),
-            empireAreas: _britishEmpireAreas,
-            stats: britishStats,
-            isExpanded: _isBritishExpanded,
-            visitedSet: visitedSet,
-          ),
-          */
-
-          // 6. 프랑스 제국 (French Empire) - 주석 처리됨
-          /*
-          const SizedBox(height: 24),
-          _buildEmpireGroup(
-            context,
-            title: "French Empire",
-            color: Colors.indigo,
-            mapScreen: const FrenchEmpireMapScreen(),
-            empireAreas: _frenchEmpireAreas,
-            stats: frenchStats,
-            isExpanded: _isFrenchExpanded,
-            visitedSet: visitedSet,
-          ),
-          */
         ],
       ),
     );
@@ -268,6 +260,7 @@ class _HistoryStatsScreenState extends State<HistoryStatsScreen> {
         required Map<String, dynamic> stats,
         required bool isExpanded,
         required Set<String> visitedSet,
+        required List<Country> allCountries, // 국가 상세 화면을 위해 추가
       }) {
     return Column(
       children: [
@@ -290,6 +283,7 @@ class _HistoryStatsScreenState extends State<HistoryStatsScreen> {
           totalEmpireArea: stats['totalArea'],
           isExpanded: isExpanded,
           onToggle: () => _toggleExpanded(title),
+          allCountries: allCountries,
         ),
       ],
     );
@@ -357,6 +351,7 @@ class _HistoryStatsScreenState extends State<HistoryStatsScreen> {
         required List<String> countries, required Set<String> visitedSet,
         required Color color, required double totalEmpireArea,
         required bool isExpanded, required VoidCallback onToggle,
+        required List<Country> allCountries, // 추가됨
       }) {
     final theme = Theme.of(context);
     final numberFormat = NumberFormat.decimalPattern('en_US');
@@ -426,23 +421,33 @@ class _HistoryStatsScreenState extends State<HistoryStatsScreen> {
                         final isVisited = visitedSet.contains(countryName);
                         final area = empireAreas[countryName]!;
                         final share = (area / totalEmpireArea) * 100;
-                        return Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-                          child: Row(
-                            children: [
-                              Icon(isVisited ? Icons.check_circle_rounded : Icons.radio_button_unchecked_rounded, size: 20, color: isVisited ? color : Colors.grey.shade300),
-                              const SizedBox(width: 12),
-                              Expanded(
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(countryName, style: theme.textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.bold, color: isVisited ? Colors.black87 : Colors.grey.shade500)),
-                                    Text('${numberFormat.format(area.round())} km²', style: theme.textTheme.bodySmall?.copyWith(color: Colors.grey.shade400)),
-                                  ],
+                        final countryObj = allCountries.firstWhereOrNull((c) => c.name == countryName); // 찾기
+
+                        return InkWell( // 클릭 시 상세 화면 이동
+                          borderRadius: BorderRadius.circular(8),
+                          onTap: countryObj != null ? () => navigateToCountryDetail(context, countryObj) : null,
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+                            child: Row(
+                              children: [
+                                Icon(isVisited ? Icons.check_circle_rounded : Icons.radio_button_unchecked_rounded, size: 20, color: isVisited ? color : Colors.grey.shade300),
+                                const SizedBox(width: 8),
+                                if (countryObj != null) ...[
+                                  Text(flagEmoji(countryObj.isoA2), style: const TextStyle(fontSize: 16)), // 국기 추가
+                                  const SizedBox(width: 8),
+                                ],
+                                Expanded(
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text(countryName, style: theme.textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.bold, color: isVisited ? Colors.black87 : Colors.grey.shade500)),
+                                      Text('${numberFormat.format(area.round())} km²', style: theme.textTheme.bodySmall?.copyWith(color: Colors.grey.shade400)),
+                                    ],
+                                  ),
                                 ),
-                              ),
-                              Text('${share.toStringAsFixed(1)}%', style: theme.textTheme.bodyMedium?.copyWith(color: Colors.grey.shade500, fontWeight: FontWeight.w500)),
-                            ],
+                                Text('${share.toStringAsFixed(1)}%', style: theme.textTheme.bodyMedium?.copyWith(color: Colors.grey.shade500, fontWeight: FontWeight.w500)),
+                              ],
+                            ),
                           ),
                         );
                       },
@@ -548,6 +553,7 @@ class _CombinedHistoricalUnionCardState extends State<_CombinedHistoricalUnionCa
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
             child: DropdownButtonHideUnderline(
               child: DropdownButton<GroupInfo>(
+                borderRadius: BorderRadius.circular(16), // 둥근 모서리 적용
                 value: _selectedGroup,
                 isExpanded: true,
                 icon: Icon(Icons.arrow_drop_down_circle_outlined, color: _selectedGroup.themeColor),
@@ -668,7 +674,7 @@ class _CombinedHistoricalUnionCardState extends State<_CombinedHistoricalUnionCa
                     physics: const NeverScrollableScrollPhysics(),
                     gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2,
-                      childAspectRatio: 5, // 🚨 FIX: childAspectRatio 사용
+                      childAspectRatio: 5,
                       mainAxisSpacing: 8,
                       crossAxisSpacing: 8,
                     ),
@@ -678,24 +684,30 @@ class _CombinedHistoricalUnionCardState extends State<_CombinedHistoricalUnionCa
                       final isVisited = widget.visitedCountryNames.contains(country.name);
                       final isSubMember = _selectedGroup.subMemberCodes?.contains(country.isoA3) ?? false;
 
-                      return Row(
-                        children: [
-                          Icon(
-                            isVisited ? Icons.check_circle : Icons.radio_button_unchecked,
-                            size: 20,
-                            color: isVisited ? _selectedGroup.themeColor : Colors.grey.shade400,
-                          ),
-                          const SizedBox(width: 8),
-                          Expanded(
-                            child: Text(
-                              country.name,
-                              style: theme.textTheme.bodyMedium,
-                              overflow: TextOverflow.ellipsis,
+                      return InkWell( // 클릭 시 상세 화면 이동
+                        borderRadius: BorderRadius.circular(8),
+                        onTap: () => navigateToCountryDetail(context, country),
+                        child: Row(
+                          children: [
+                            Icon(
+                              isVisited ? Icons.check_circle : Icons.radio_button_unchecked,
+                              size: 20,
+                              color: isVisited ? _selectedGroup.themeColor : Colors.grey.shade400,
                             ),
-                          ),
-                          if (isSubMember)
-                            Icon(Icons.star, size: 16, color: _selectedGroup.subThemeColor),
-                        ],
+                            const SizedBox(width: 6),
+                            Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 14)), // 국기 추가
+                            const SizedBox(width: 4),
+                            Expanded(
+                              child: Text(
+                                country.name,
+                                style: theme.textTheme.bodyMedium,
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                            ),
+                            if (isSubMember)
+                              Icon(Icons.star, size: 16, color: _selectedGroup.subThemeColor),
+                          ],
+                        ),
                       );
                     },
                   ),

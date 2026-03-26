@@ -7,15 +7,102 @@ import 'package:provider/provider.dart';
 import 'dart:math' as math;
 import 'package:intl/intl.dart';
 import 'package:jidoapp/screens/city_climate_screen.dart';
-import 'package:jidoapp/screens/city_stats_map_screen.dart'; // 🗺️ CityStatsMapScreen 임포트
+import 'package:jidoapp/screens/city_stats_map_screen.dart';
+import 'package:jidoapp/screens/cities_screen.dart';
 
-// Map and UI packages
-import 'package:flutter_map/flutter_map.dart';
-import 'package:latlong2/latlong.dart';
-import 'package:jidoapp/my_tile_layer.dart';
-import 'package:sleek_circular_slider/sleek_circular_slider.dart';
+// ====================================================================
+// 국기 이모지 헬퍼
+// ====================================================================
 
-// --- Data Classes ---
+String _flagEmoji(String? countryCode) {
+  if (countryCode == null) return '';
+  final code = countryCode.trim().toUpperCase();
+  if (code.length != 2) return '';
+  final a = code.codeUnitAt(0);
+  final b = code.codeUnitAt(1);
+  if (a < 65 || a > 90 || b < 65 || b > 90) return '';
+  return String.fromCharCode(0x1F1E6 + (a - 65)) +
+      String.fromCharCode(0x1F1E6 + (b - 65));
+}
+
+String _cityFlagEmoji(City city) {
+  final iso = city.countryIsoA2.trim();
+  if (iso.length == 2) return _flagEmoji(iso);
+  return _flagEmoji(_countryNameToIso[city.country.trim()]);
+}
+
+const Map<String, String> _countryNameToIso = {
+  'Afghanistan': 'AF', 'Albania': 'AL', 'Algeria': 'DZ', 'Argentina': 'AR',
+  'Armenia': 'AM', 'Australia': 'AU', 'Austria': 'AT', 'Azerbaijan': 'AZ',
+  'Bahrain': 'BH', 'Bangladesh': 'BD', 'Belarus': 'BY', 'Belgium': 'BE',
+  'Bolivia': 'BO', 'Bosnia and Herzegovina': 'BA', 'Brazil': 'BR',
+  'Bulgaria': 'BG', 'Cambodia': 'KH', 'Cameroon': 'CM', 'Canada': 'CA',
+  'Chile': 'CL', 'China': 'CN', 'Colombia': 'CO', 'Croatia': 'HR',
+  'Cuba': 'CU', 'Czech Republic': 'CZ', 'Czechia': 'CZ', 'Denmark': 'DK',
+  'Ecuador': 'EC', 'Egypt': 'EG', 'Ethiopia': 'ET', 'Finland': 'FI',
+  'France': 'FR', 'Georgia': 'GE', 'Germany': 'DE', 'Ghana': 'GH',
+  'Greece': 'GR', 'Guatemala': 'GT', 'Hong Kong': 'HK', 'Hungary': 'HU',
+  'India': 'IN', 'Indonesia': 'ID', 'Iran': 'IR', 'Iraq': 'IQ',
+  'Ireland': 'IE', 'Israel': 'IL', 'Italy': 'IT', 'Jamaica': 'JM',
+  'Japan': 'JP', 'Jordan': 'JO', 'Kazakhstan': 'KZ', 'Kenya': 'KE',
+  'Kuwait': 'KW', 'Lebanon': 'LB', 'Libya': 'LY', 'Malaysia': 'MY',
+  'Mexico': 'MX', 'Morocco': 'MA', 'Myanmar': 'MM', 'Nepal': 'NP',
+  'Netherlands': 'NL', 'New Zealand': 'NZ', 'Nigeria': 'NG', 'Norway': 'NO',
+  'Pakistan': 'PK', 'Panama': 'PA', 'Paraguay': 'PY', 'Peru': 'PE',
+  'Philippines': 'PH', 'Poland': 'PL', 'Portugal': 'PT', 'Qatar': 'QA',
+  'Romania': 'RO', 'Russia': 'RU', 'Saudi Arabia': 'SA', 'Senegal': 'SN',
+  'Serbia': 'RS', 'Singapore': 'SG', 'Slovakia': 'SK', 'Slovenia': 'SI',
+  'South Africa': 'ZA', 'South Korea': 'KR', 'Korea': 'KR',
+  'Republic of Korea': 'KR', 'Spain': 'ES', 'Sri Lanka': 'LK',
+  'Sudan': 'SD', 'Sweden': 'SE', 'Switzerland': 'CH', 'Syria': 'SY',
+  'Taiwan': 'TW', 'Tanzania': 'TZ', 'Thailand': 'TH', 'Tunisia': 'TN',
+  'Turkey': 'TR', 'Türkiye': 'TR', 'Ukraine': 'UA',
+  'United Arab Emirates': 'AE', 'UAE': 'AE',
+  'United Kingdom': 'GB', 'UK': 'GB',
+  'United States': 'US', 'USA': 'US', 'United States of America': 'US',
+  'Uruguay': 'UY', 'Uzbekistan': 'UZ', 'Venezuela': 'VE', 'Vietnam': 'VN',
+  'Yemen': 'YE', 'Zimbabwe': 'ZW', 'North Korea': 'KP',
+  'Democratic Republic of the Congo': 'CD', 'Congo': 'CG',
+  'Ivory Coast': 'CI', 'Dominican Republic': 'DO',
+  'El Salvador': 'SV', 'Costa Rica': 'CR', 'Honduras': 'HN',
+  'Nicaragua': 'NI', 'Puerto Rico': 'PR',
+};
+
+// ====================================================================
+// 디자인 토큰
+// ====================================================================
+
+class _GT {
+  static const Color bg       = Color(0xFFF7F7F5);
+  static const Color surface  = Colors.white;
+  static const Color ink      = Color(0xFF141414);
+  static const Color inkMid   = Color(0xFF5C5C5C);
+  static const Color inkLight = Color(0xFFAAAAAA);
+  static const Color divider  = Color(0xFFE8E8E4);
+
+  // 랭킹 / 카테고리 색상
+  static const Color latitude  = Color(0xFF3B5C7A);
+  static const Color elevation = Color(0xFF7A5C3C);
+  static const Color tropic    = Color(0xFFC4922A);
+  static const Color hemi      = Color(0xFFD64545);
+  static const Color trans     = Color(0xFF6B3D99);
+  static const Color river     = Color(0xFF3D9EC4);
+}
+
+// 대륙 색상 (Specials와 동일)
+const Map<String, Color> _continentColors = {
+  'Asia': Color(0xFFF48FB1),
+  'Europe': Color(0xFFFFCA28),
+  'Africa': Color(0xFF8D6E63),
+  'North America': Color(0xFF90CAF9),
+  'South America': Color(0xFF66BB6A),
+  'Oceania': Color(0xFFCE93D8),
+};
+
+// ====================================================================
+// RankingInfo
+// ====================================================================
+
 class RankingInfo {
   final String title;
   final IconData icon;
@@ -38,11 +125,10 @@ class RankingInfo {
   });
 }
 
-// MapFilter Enum
 enum MapFilter { all, visited }
 
 // ====================================================================
-// Main Integration Screen (CityGeographyStatsScreen)
+// 메인 통합 스크린
 // ====================================================================
 
 class CityGeographyStatsScreen extends StatelessWidget {
@@ -51,27 +137,15 @@ class CityGeographyStatsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Theme(
-      data: ThemeData.from(
-        colorScheme: ColorScheme.fromSwatch(
-          primarySwatch: Colors.yellow,
-        ),
+      data: Theme.of(context).copyWith(
+        scaffoldBackgroundColor: _GT.bg,
+        cardColor: _GT.surface,
       ),
       child: DefaultTabController(
         length: 2,
         child: Scaffold(
-          appBar: AppBar(
-            elevation: 1,
-            automaticallyImplyLeading: false,
-            title: const TabBar(
-              tabs: [
-                Tab(icon: Icon(Icons.public, size: 20), text: 'Geography'),
-                Tab(icon: Icon(Icons.thermostat, size: 20), text: 'Climate'),
-              ],
-              labelStyle: TextStyle(fontWeight: FontWeight.bold, fontSize: 13),
-              indicatorSize: TabBarIndicatorSize.tab,
-              labelPadding: EdgeInsets.zero,
-            ),
-          ),
+          backgroundColor: _GT.bg,
+          appBar: _GeoAppBar(),
           body: const TabBarView(
             children: [
               CityGeographyTabScreen(),
@@ -85,168 +159,184 @@ class CityGeographyStatsScreen extends StatelessWidget {
 }
 
 // ====================================================================
-// Geography Tab Content
+// App Bar
+// ====================================================================
+
+class _GeoAppBar extends StatelessWidget implements PreferredSizeWidget {
+  @override
+  Size get preferredSize => const Size.fromHeight(56);
+
+  @override
+  Widget build(BuildContext context) {
+    return AppBar(
+      backgroundColor: _GT.surface,
+      elevation: 0,
+      automaticallyImplyLeading: false,
+      titleSpacing: 0,
+      bottom: PreferredSize(
+        preferredSize: const Size.fromHeight(1),
+        child: Container(height: 1, color: _GT.divider),
+      ),
+      title: TabBar(
+        tabs: const [Tab(text: 'Geography'), Tab(text: 'Climate')],
+        labelStyle: const TextStyle(fontSize: 14, fontWeight: FontWeight.w700, letterSpacing: 0.5),
+        unselectedLabelStyle: const TextStyle(fontSize: 14, fontWeight: FontWeight.w400, letterSpacing: 0.5),
+        labelColor: _GT.ink,
+        unselectedLabelColor: _GT.inkLight,
+        indicator: const UnderlineTabIndicator(
+          borderSide: BorderSide(color: _GT.ink, width: 2),
+          insets: EdgeInsets.symmetric(horizontal: 24),
+        ),
+        indicatorSize: TabBarIndicatorSize.tab,
+      ),
+    );
+  }
+}
+
+// ====================================================================
+// Geography 탭
 // ====================================================================
 
 class CityGeographyTabScreen extends StatelessWidget {
   const CityGeographyTabScreen({super.key});
-
-  static final Map<String, Color> continentColors = {
-    'Asia': Colors.pink.shade200, 'Europe': Colors.amber, 'Africa': Colors.brown,
-    'North America': Colors.blue.shade200, 'South America': Colors.green, 'Oceania': Colors.purple,
-  };
 
   @override
   Widget build(BuildContext context) {
     return Consumer<CityProvider>(
       builder: (context, provider, child) {
         if (provider.isLoading) {
-          return const Center(child: CircularProgressIndicator());
+          return Center(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: const [
+                CircularProgressIndicator(strokeWidth: 2, color: _GT.ink),
+                SizedBox(height: 16),
+                Text('Loading geography...', style: TextStyle(fontSize: 13, color: _GT.inkLight)),
+              ],
+            ),
+          );
         }
 
-        final visitedCities = provider.allCities.where((city) => provider.visitedCities.contains(city.name)).toList();
-        final visitedCityNames = provider.visitedCities;
+        final visitedCities = provider.allCities
+            .where((c) => provider.visitedCities.contains(c.name))
+            .toList();
+        final visitedNames = provider.visitedCities;
 
+        // 극단값 계산
         City? mostNorthern, mostSouthern, mostEastern, mostWestern;
-        double avgLat = 0.0;
-        double avgLon = 0.0;
-        City? closestCityToCenter;
+        double avgLat = 0, avgLon = 0;
+        City? closestToCenter;
 
         if (visitedCities.isNotEmpty) {
           mostNorthern = visitedCities.reduce((a, b) => a.latitude > b.latitude ? a : b);
           mostSouthern = visitedCities.reduce((a, b) => a.latitude < b.latitude ? a : b);
-          mostEastern = visitedCities.reduce((a, b) => a.longitude > b.longitude ? a : b);
-          mostWestern = visitedCities.reduce((a, b) => a.longitude < b.longitude ? a : b);
+          mostEastern  = visitedCities.reduce((a, b) => a.longitude > b.longitude ? a : b);
+          mostWestern  = visitedCities.reduce((a, b) => a.longitude < b.longitude ? a : b);
 
-          double sumLat = 0.0;
-          double sumLon = 0.0;
-          for (var city in visitedCities) {
-            sumLat += city.latitude;
-            sumLon += city.longitude;
-          }
-          avgLat = sumLat / visitedCities.length;
-          avgLon = sumLon / visitedCities.length;
+          avgLat = visitedCities.map((c) => c.latitude).reduce((a, b) => a + b) / visitedCities.length;
+          avgLon = visitedCities.map((c) => c.longitude).reduce((a, b) => a + b) / visitedCities.length;
 
-          double minDistanceSq = double.infinity;
-          for (var city in visitedCities) {
-            final distanceSq = math.pow(city.latitude - avgLat, 2) + math.pow(city.longitude - avgLon, 2);
-            if (distanceSq < minDistanceSq) {
-              minDistanceSq = distanceSq.toDouble();
-              closestCityToCenter = city;
-            }
+          double minDist = double.infinity;
+          for (final c in visitedCities) {
+            final d = math.pow(c.latitude - avgLat, 2) + math.pow(c.longitude - avgLon, 2);
+            if (d < minDist) { minDist = d.toDouble(); closestToCenter = c; }
           }
         }
 
+        // 컬렉션 그룹
+        final groups = [
+          _GeoGroupData(
+            title: 'Tropic of Cancer',
+            label: 'GEOGRAPHY',
+            icon: Icons.wb_sunny_outlined,
+            color: _GT.tropic,
+            cities: provider.capitalsOnTropicOfCancer,
+          ),
+          _GeoGroupData(
+            title: 'Two Hemispheres',
+            label: 'GEOGRAPHY',
+            icon: Icons.language_outlined,
+            color: _GT.hemi,
+            cities: provider.capitalsInTwoHemispheres,
+          ),
+          _GeoGroupData(
+            title: 'Transcontinental',
+            label: 'GEOGRAPHY',
+            icon: Icons.map_outlined,
+            color: _GT.trans,
+            cities: provider.transcontinentalCities,
+          ),
+          _GeoGroupData(
+            title: 'On Major Rivers',
+            label: 'WATER',
+            icon: Icons.water_drop_outlined,
+            color: _GT.river,
+            cities: provider.capitalsOnMajorRivers,
+          ),
+        ];
+
+        final completed = groups.where((g) =>
+        g.cities.isNotEmpty && g.cities.every((c) => visitedNames.contains(c.name))
+        ).length;
+
         return SingleChildScrollView(
-          padding: const EdgeInsets.all(16.0),
+          physics: const BouncingScrollPhysics(),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+
+              // ── Geographic Center
               if (visitedCities.isNotEmpty) ...[
-                _buildSectionHeader(context, 'Geographic Center'),
-                Card(
-                  elevation: 2,
-                  clipBehavior: Clip.antiAlias,
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-                  margin: const EdgeInsets.only(bottom: 24),
-                  child: Padding(
-                    padding: const EdgeInsets.all(16.0),
-                    child: IntrinsicHeight(
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
-                        children: [
-                          _buildCenterInfoCard(
-                            context,
-                            title: 'Average',
-                            value: '${avgLat.toStringAsFixed(2)}°, ${avgLon.toStringAsFixed(2)}°',
-                            subValue: null,
-                            icon: Icons.public,
-                            color: Colors.teal,
-                          ),
-                          const SizedBox(width: 12),
-                          _buildCenterInfoCard(
-                            context,
-                            title: 'Closest City',
-                            value: closestCityToCenter?.name ?? 'N/A',
-                            subValue: closestCityToCenter?.country,
-                            icon: Icons.location_city_rounded,
-                            color: Colors.orange,
-                          ),
-                        ],
-                      ),
-                    ),
+                _SectionHeader(label: 'GEOGRAPHIC CENTER'),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                  child: _CenterCard(
+                    avgLat: avgLat,
+                    avgLon: avgLon,
+                    closestCity: closestToCenter,
                   ),
                 ),
-                _buildSectionHeader(context, 'Visited Extremes'),
-                Card(
-                  elevation: 2,
-                  clipBehavior: Clip.antiAlias,
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-                  margin: const EdgeInsets.only(bottom: 24),
-                  child: Padding(
-                    padding: const EdgeInsets.all(16.0),
-                    child: Column(
-                      children: [
-                        IntrinsicHeight(
-                          child: Row(
-                            crossAxisAlignment: CrossAxisAlignment.stretch,
-                            children: [
-                              _buildExtremeCard(context, title: 'Northernmost', city: mostNorthern, icon: Icons.north, color: Colors.blue),
-                              const SizedBox(width: 12),
-                              _buildExtremeCard(context, title: 'Southernmost', city: mostSouthern, icon: Icons.south, color: Colors.lightBlueAccent),
-                            ],
-                          ),
-                        ),
-                        const SizedBox(height: 12),
-                        IntrinsicHeight(
-                          child: Row(
-                            crossAxisAlignment: CrossAxisAlignment.stretch,
-                            children: [
-                              _buildExtremeCard(context, title: 'Easternmost', city: mostEastern, icon: Icons.east, color: Colors.orange),
-                              const SizedBox(width: 12),
-                              _buildExtremeCard(context, title: 'Westernmost', city: mostWestern, icon: Icons.west, color: Colors.deepOrangeAccent),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
+
+                // ── Extremes
+                _SectionHeader(label: 'VISITED EXTREMES'),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                  child: _ExtremesCard(
+                    northernmost: mostNorthern,
+                    southernmost: mostSouthern,
+                    easternmost: mostEastern,
+                    westernmost: mostWestern,
                   ),
                 ),
               ],
 
-              // 랭킹 카드 (지도 버튼 없음)
-              _CombinedRankingCard(
-                allCities: provider.allCities,
-                visitedCityNames: provider.visitedCities,
+              // ── Rankings
+              _SectionHeader(label: 'RANKINGS'),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                child: _GeoRankingCard(
+                  allCities: provider.allCities,
+                  visitedNames: visitedNames,
+                  useDefaultColor: provider.useDefaultCityRankingBarColor,
+                ),
               ),
-              const SizedBox(height: 32),
 
-              // Special Geography Lists (지도 버튼 포함)
-              _SpecialCityGroupCard(
-                title: 'Tropic of Cancer',
-                icon: Icons.wb_sunny,
-                color: Colors.orange,
-                cities: provider.capitalsOnTropicOfCancer,
-                visitedCityNames: visitedCityNames,
+              // ── Collections
+              _SectionHeader(label: 'COLLECTIONS'),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                child: _GeoSummaryBar(
+                  groups: groups,
+                  visitedNames: visitedNames,
+                  completed: completed,
+                ),
               ),
               const SizedBox(height: 16),
+              ...groups.map((g) => Padding(
+                padding: const EdgeInsets.fromLTRB(16, 0, 16, 12),
+                child: _GeoCollectionCard(data: g, visitedNames: visitedNames),
+              )),
 
-              _SpecialCityGroupCard(
-                title: 'Two Hemispheres',
-                icon: Icons.language,
-                color: Colors.pink,
-                cities: provider.capitalsInTwoHemispheres,
-                visitedCityNames: visitedCityNames,
-              ),
-              const SizedBox(height: 16),
-
-              _SpecialCityGroupCard(
-                title: 'Transcontinental',
-                icon: Icons.map,
-                color: Colors.purpleAccent,
-                cities: provider.transcontinentalCities,
-                visitedCityNames: visitedCityNames,
-              ),
               const SizedBox(height: 32),
             ],
           ),
@@ -254,298 +344,413 @@ class CityGeographyTabScreen extends StatelessWidget {
       },
     );
   }
-
-  Widget _buildSectionHeader(BuildContext context, String title) {
-    return Padding(
-      padding: const EdgeInsets.only(left: 8.0, bottom: 12.0),
-      child: Text(
-        title,
-        style: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold, color: Colors.grey.shade700),
-      ),
-    );
-  }
-
-  Widget _buildCenterInfoCard(BuildContext context, {
-    required String title,
-    required String value,
-    required String? subValue,
-    required IconData icon,
-    required Color color,
-  }) {
-    final textTheme = Theme.of(context).textTheme;
-    return Expanded(
-      child: Card(
-        elevation: 0,
-        color: color.withOpacity(0.1),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-        child: Padding(
-          padding: const EdgeInsets.all(12.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Row(
-                children: [
-                  Icon(icon, color: color, size: 20),
-                  const SizedBox(width: 8),
-                  Text(title, style: textTheme.titleSmall?.copyWith(fontWeight: FontWeight.bold)),
-                ],
-              ),
-              const SizedBox(height: 8),
-              Text(
-                value,
-                style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
-                overflow: TextOverflow.ellipsis,
-              ),
-              if (subValue != null)
-                Padding(
-                  padding: const EdgeInsets.only(top: 2.0),
-                  child: Text(
-                    subValue,
-                    style: textTheme.bodySmall?.copyWith(color: Colors.grey.shade600),
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-
-  Widget _buildExtremeCard(BuildContext context, {
-    required String title,
-    required City? city,
-    required IconData icon,
-    required Color color,
-  }) {
-    final textTheme = Theme.of(context).textTheme;
-    final value = city != null
-        ? (title.contains('Northern') || title.contains('Southern')
-        ? '${city.latitude.toStringAsFixed(2)}°'
-        : '${city.longitude.toStringAsFixed(2)}°')
-        : '';
-
-    return Expanded(
-      child: Card(
-        elevation: 0,
-        color: color.withOpacity(0.1),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-        child: Padding(
-          padding: const EdgeInsets.all(12.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                children: [
-                  Icon(icon, color: color, size: 20),
-                  const SizedBox(width: 8),
-                  Text(title, style: textTheme.titleSmall?.copyWith(fontWeight: FontWeight.bold)),
-                ],
-              ),
-              const SizedBox(height: 8),
-              if (city != null) ...[
-                Text(
-                  city.name,
-                  style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
-                  overflow: TextOverflow.ellipsis,
-                ),
-                Text(
-                  city.country,
-                  style: textTheme.bodySmall?.copyWith(color: Colors.grey.shade600),
-                  overflow: TextOverflow.ellipsis,
-                ),
-                const Spacer(),
-                Align(
-                  alignment: Alignment.bottomRight,
-                  child: Text(
-                    value,
-                    style: textTheme.titleSmall?.copyWith(fontWeight: FontWeight.bold, color: color),
-                  ),
-                ),
-              ] else ...[
-                const Spacer(),
-                Center(child: Text('N/A', style: textTheme.bodyMedium?.copyWith(color: Colors.grey.shade600))),
-                const Spacer(),
-              ]
-            ],
-          ),
-        ),
-      ),
-    );
-  }
 }
 
 // ====================================================================
-// 1. Ranking Card (지도 버튼 없음)
+// 섹션 헤더
 // ====================================================================
 
-class _CombinedRankingCard extends StatefulWidget {
-  final List<City> allCities;
-  final Set<String> visitedCityNames;
-
-  const _CombinedRankingCard({required this.allCities, required this.visitedCityNames});
+class _SectionHeader extends StatelessWidget {
+  final String label;
+  const _SectionHeader({required this.label});
 
   @override
-  State<_CombinedRankingCard> createState() => _CombinedRankingCardState();
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(16, 24, 16, 12),
+      child: Row(
+        children: [
+          Text(label, style: const TextStyle(
+            fontSize: 11, fontWeight: FontWeight.w700,
+            letterSpacing: 2.0, color: _GT.inkLight,
+          )),
+          const SizedBox(width: 12),
+          Expanded(child: Container(height: 1, color: _GT.divider)),
+        ],
+      ),
+    );
+  }
 }
 
-class _CombinedRankingCardState extends State<_CombinedRankingCard> {
+// ====================================================================
+// Geographic Center 카드
+// ====================================================================
+
+class _CenterCard extends StatelessWidget {
+  final double avgLat;
+  final double avgLon;
+  final City? closestCity;
+
+  const _CenterCard({required this.avgLat, required this.avgLon, required this.closestCity});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        color: _GT.surface,
+        borderRadius: BorderRadius.circular(14),
+        border: Border.all(color: _GT.divider),
+      ),
+      padding: const EdgeInsets.all(16),
+      child: Row(
+        children: [
+          Expanded(child: _InfoCell(
+            icon: Icons.my_location_outlined,
+            color: const Color(0xFF2A8C74),
+            label: 'AVERAGE CENTER',
+            value: '${avgLat.toStringAsFixed(2)}°',
+            subValue: '${avgLon.toStringAsFixed(2)}°',
+          )),
+          Container(width: 1, height: 60, color: _GT.divider),
+          Expanded(child: GestureDetector(
+            onTap: closestCity != null
+                ? () => showExternalCityDetailsModal(context, closestCity!)
+                : null,
+            child: _InfoCell(
+              icon: Icons.location_city_outlined,
+              color: const Color(0xFFC4922A),
+              label: 'CLOSEST CITY',
+              value: closestCity?.name ?? 'N/A',
+              subValue: closestCity?.country,
+            ),
+          )),
+        ],
+      ),
+    );
+  }
+}
+
+class _InfoCell extends StatelessWidget {
+  final IconData icon;
+  final Color color;
+  final String label;
+  final String value;
+  final String? subValue;
+
+  const _InfoCell({
+    required this.icon, required this.color,
+    required this.label, required this.value, this.subValue,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 12),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(children: [
+            Icon(icon, size: 14, color: color),
+            const SizedBox(width: 6),
+            Text(label, style: TextStyle(
+              fontSize: 10, fontWeight: FontWeight.w700,
+              letterSpacing: 1.2, color: color,
+            )),
+          ]),
+          const SizedBox(height: 6),
+          Text(value, style: const TextStyle(
+            fontSize: 18, fontWeight: FontWeight.w800,
+            color: _GT.ink, letterSpacing: -0.3,
+          ), overflow: TextOverflow.ellipsis),
+          if (subValue != null)
+            Text(subValue!, style: const TextStyle(
+              fontSize: 12, color: _GT.inkLight,
+            ), overflow: TextOverflow.ellipsis),
+        ],
+      ),
+    );
+  }
+}
+
+// ====================================================================
+// Extremes 카드
+// ====================================================================
+
+class _ExtremesCard extends StatelessWidget {
+  final City? northernmost, southernmost, easternmost, westernmost;
+
+  const _ExtremesCard({
+    this.northernmost, this.southernmost,
+    this.easternmost, this.westernmost,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        color: _GT.surface,
+        borderRadius: BorderRadius.circular(14),
+        border: Border.all(color: _GT.divider),
+      ),
+      padding: const EdgeInsets.all(12),
+      child: Column(
+        children: [
+          Row(children: [
+            Expanded(child: _ExtremeCell(
+              label: 'NORTHERNMOST', icon: Icons.north_outlined,
+              color: const Color(0xFF3B5C7A), city: northernmost,
+              coordStr: northernmost != null ? '${northernmost!.latitude.toStringAsFixed(2)}°N' : null,
+            )),
+            const SizedBox(width: 8),
+            Expanded(child: _ExtremeCell(
+              label: 'SOUTHERNMOST', icon: Icons.south_outlined,
+              color: const Color(0xFF5A9EC4), city: southernmost,
+              coordStr: southernmost != null ? '${southernmost!.latitude.abs().toStringAsFixed(2)}°S' : null,
+            )),
+          ]),
+          const SizedBox(height: 8),
+          Row(children: [
+            Expanded(child: _ExtremeCell(
+              label: 'EASTERNMOST', icon: Icons.east_outlined,
+              color: const Color(0xFFD66B2A), city: easternmost,
+              coordStr: easternmost != null ? '${easternmost!.longitude.toStringAsFixed(2)}°E' : null,
+            )),
+            const SizedBox(width: 8),
+            Expanded(child: _ExtremeCell(
+              label: 'WESTERNMOST', icon: Icons.west_outlined,
+              color: const Color(0xFF7A4A2A), city: westernmost,
+              coordStr: westernmost != null ? '${westernmost!.longitude.abs().toStringAsFixed(2)}°W' : null,
+            )),
+          ]),
+        ],
+      ),
+    );
+  }
+}
+
+class _ExtremeCell extends StatelessWidget {
+  final String label;
+  final IconData icon;
+  final Color color;
+  final City? city;
+  final String? coordStr;
+
+  const _ExtremeCell({
+    required this.label, required this.icon,
+    required this.color, this.city, this.coordStr,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: city != null ? () => showExternalCityDetailsModal(context, city!) : null,
+      child: Container(
+        padding: const EdgeInsets.all(12),
+        decoration: BoxDecoration(
+          color: color.withOpacity(0.06),
+          borderRadius: BorderRadius.circular(10),
+          border: Border.all(color: color.withOpacity(0.15)),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(children: [
+              Icon(icon, size: 12, color: color),
+              const SizedBox(width: 5),
+              Text(label, style: TextStyle(
+                fontSize: 9, fontWeight: FontWeight.w700,
+                letterSpacing: 1.2, color: color,
+              )),
+            ]),
+            const SizedBox(height: 6),
+            Text(
+              city?.name ?? 'N/A',
+              style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w700, color: _GT.ink),
+              overflow: TextOverflow.ellipsis,
+            ),
+            if (city != null) ...[
+              Text(city!.country, style: const TextStyle(fontSize: 11, color: _GT.inkLight), overflow: TextOverflow.ellipsis),
+              const SizedBox(height: 4),
+              Align(
+                alignment: Alignment.centerRight,
+                child: Text(coordStr ?? '', style: TextStyle(
+                  fontSize: 12, fontWeight: FontWeight.w700, color: color,
+                )),
+              ),
+            ],
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+// ====================================================================
+// 랭킹 카드
+// ====================================================================
+
+class _GeoRankingCard extends StatefulWidget {
+  final List<City> allCities;
+  final Set<String> visitedNames;
+  final bool useDefaultColor;
+
+  const _GeoRankingCard({
+    required this.allCities,
+    required this.visitedNames,
+    required this.useDefaultColor,
+  });
+
+  @override
+  State<_GeoRankingCard> createState() => _GeoRankingCardState();
+}
+
+class _GeoRankingCardState extends State<_GeoRankingCard> {
   late final List<RankingInfo> _rankings;
-  late RankingInfo _selectedRanking;
-  int _sortSegment = 0;
-  List<City> _rankedList = [];
+  late RankingInfo _selected;
+  int _sortDir = 0; // 0=high, 1=low
+  List<City> _list = [];
 
   @override
   void initState() {
     super.initState();
     _rankings = [
-      RankingInfo(title: 'Latitude', icon: Icons.public, themeColor: Colors.blue, metricKey: 'latitude', valueAccessor: (c) => c.latitude, unit: '°', absValue: true),
-      RankingInfo(title: 'Elevation', icon: Icons.terrain, themeColor: Colors.brown, metricKey: 'altitude', valueAccessor: (c) => c.altitude, unit: 'm', precision: 0),
+      RankingInfo(
+        title: 'Latitude', icon: Icons.public_outlined,
+        themeColor: _GT.latitude, metricKey: 'latitude',
+        valueAccessor: (c) => c.latitude, unit: '°', absValue: true,
+      ),
+      RankingInfo(
+        title: 'Elevation', icon: Icons.terrain_outlined,
+        themeColor: _GT.elevation, metricKey: 'altitude',
+        valueAccessor: (c) => c.altitude, unit: 'm', precision: 0,
+      ),
     ];
-    _selectedRanking = _rankings.first;
+    _selected = _rankings.first;
     _prepareList();
   }
 
   void _prepareList() {
-    List<City> listToRank = widget.allCities.where((c) => _selectedRanking.valueAccessor(c) != 0).toList();
-
-    listToRank.sort((a, b) {
-      num valA = _selectedRanking.valueAccessor(a);
-      num valB = _selectedRanking.valueAccessor(b);
-
-      if (_selectedRanking.metricKey == 'latitude') {
-        return _sortSegment == 0 ? valB.compareTo(valA) : valA.compareTo(valB);
-      }
-
-      if (_selectedRanking.absValue) {
-        valA = valA.abs();
-        valB = valB.abs();
-      }
-      return _sortSegment == 0 ? valB.compareTo(valA) : valA.compareTo(valB);
+    final filtered = widget.allCities.where((c) => _selected.valueAccessor(c) != 0).toList();
+    filtered.sort((a, b) {
+      num va = _selected.valueAccessor(a);
+      num vb = _selected.valueAccessor(b);
+      if (_selected.absValue) { va = va.abs(); vb = vb.abs(); }
+      return _sortDir == 0 ? vb.compareTo(va) : va.compareTo(vb);
     });
-
-    setState(() {
-      _rankedList = listToRank.take(30).toList();
-    });
+    setState(() => _list = filtered.take(30).toList());
   }
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
-    final textTheme = theme.textTheme;
-    final useDefaultColor = Provider.of<CityProvider>(context, listen: false).useDefaultCityRankingBarColor;
+    final topValue = _list.isNotEmpty
+        ? (_selected.absValue ? _selected.valueAccessor(_list.first).abs() : _selected.valueAccessor(_list.first))
+        : 1.0;
 
-    num topValue = 1.0;
-    if (_rankedList.isNotEmpty) {
-      topValue = _selectedRanking.valueAccessor(_rankedList.first);
-      if (_selectedRanking.absValue) topValue = topValue.abs();
-    }
-
-    return Card(
-      elevation: 2,
-      clipBehavior: Clip.antiAlias,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+    return Container(
+      decoration: BoxDecoration(
+        color: _GT.surface,
+        borderRadius: BorderRadius.circular(14),
+        border: Border.all(color: _GT.divider),
+      ),
       child: Column(
         children: [
+          // ── 탭 토글 헤더
           Container(
-            padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
-            color: Colors.grey.shade50,
-            child: Column(
-              children: [
-                DropdownButtonHideUnderline(
-                  child: DropdownButton<RankingInfo>(
-                    value: _selectedRanking,
-                    isExpanded: true,
-                    icon: Icon(Icons.arrow_drop_down_circle_outlined, color: _selectedRanking.themeColor),
-                    items: _rankings.map((r) => DropdownMenuItem(
-                      value: r,
-                      child: Row(children: [
-                        Icon(r.icon, color: r.themeColor), const SizedBox(width: 12),
-                        Text(r.title, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold, fontSize: 18)),
-                      ]),
-                    )).toList(),
-                    onChanged: (value) => setState(() { _selectedRanking = value!; _prepareList(); }),
-                  ),
-                ),
-                const SizedBox(height: 8),
-                SegmentedButton<int>(
-                  showSelectedIcon: false,
-                  segments: const [
-                    ButtonSegment<int>(value: 0, label: Text('High')),
-                    ButtonSegment<int>(value: 1, label: Text('Low')),
-                  ],
-                  selected: {_sortSegment},
-                  onSelectionChanged: (s) => setState(() { _sortSegment = s.first; _prepareList(); }),
-                ),
-              ],
+            padding: const EdgeInsets.all(12),
+            decoration: const BoxDecoration(
+              border: Border(bottom: BorderSide(color: _GT.divider)),
             ),
-          ),
-          const Divider(height: 1),
-          SizedBox(
-            height: 350,
-            child: ListView.builder(
-              padding: const EdgeInsets.all(8.0),
-              itemCount: _rankedList.length,
-              itemBuilder: (context, index) {
-                final item = _rankedList[index];
-                final isVisited = widget.visitedCityNames.contains(item.name);
-                final rank = index + 1;
-                num value = _selectedRanking.valueAccessor(item);
-
-                final themeColor = _selectedRanking.themeColor;
-                final barColor = useDefaultColor ? themeColor : (CityGeographyTabScreen.continentColors[item.continent] ?? themeColor);
-
-                return Card(
-                  elevation: 0,
-                  color: isVisited ? themeColor.withOpacity(0.08) : Colors.transparent,
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8.0),
-                    child: Column(
-                      children: [
-                        Row(
+            child: Row(
+              children: [
+                // 메트릭 탭들
+                ..._rankings.map((r) {
+                  final active = r == _selected;
+                  return Expanded(
+                    child: GestureDetector(
+                      onTap: () => setState(() { _selected = r; _prepareList(); }),
+                      child: AnimatedContainer(
+                        duration: const Duration(milliseconds: 200),
+                        padding: const EdgeInsets.symmetric(vertical: 10),
+                        margin: const EdgeInsets.symmetric(horizontal: 3),
+                        decoration: BoxDecoration(
+                          color: active ? _GT.ink : Colors.transparent,
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Container(
-                              width: 32, height: 32,
-                              alignment: Alignment.center,
-                              decoration: BoxDecoration(
-                                color: themeColor.withOpacity(0.15),
-                                borderRadius: BorderRadius.circular(6),
-                              ),
-                              child: Text(
-                                '$rank',
-                                style: textTheme.bodyMedium?.copyWith(
-                                  color: themeColor.withOpacity(0.8),
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ),
-                            const SizedBox(width: 12),
-                            Expanded(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(item.name, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold, fontSize: 17)),
-                                  Text(item.country, style: textTheme.bodySmall?.copyWith(color: Colors.grey.shade600)),
-                                ],
-                              ),
-                            ),
-                            const SizedBox(width: 12),
-                            Text('${value.toStringAsFixed(_selectedRanking.precision)}${_selectedRanking.unit}', style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
+                            Icon(r.icon, size: 15, color: active ? Colors.white : _GT.inkLight),
+                            const SizedBox(width: 6),
+                            Text(r.title, style: TextStyle(
+                              fontSize: 12,
+                              fontWeight: active ? FontWeight.w700 : FontWeight.w400,
+                              color: active ? Colors.white : _GT.inkLight,
+                            )),
                           ],
                         ),
-                        const SizedBox(height: 8),
-                        LinearProgressIndicator(
-                          value: (topValue == 0 ? 0 : (_selectedRanking.absValue ? value.abs() : value) / topValue).toDouble(),
-                          borderRadius: BorderRadius.circular(5),
-                          minHeight: 5,
-                          backgroundColor: barColor.withOpacity(0.1),
-                          color: barColor.withOpacity(0.7),
+                      ),
+                    ),
+                  );
+                }),
+                // ── 정렬 방향 버튼 (High ↑ / Low ↓)
+                const SizedBox(width: 6),
+                GestureDetector(
+                  onTap: () => setState(() {
+                    _sortDir = _sortDir == 0 ? 1 : 0;
+                    _prepareList();
+                  }),
+                  child: AnimatedContainer(
+                    duration: const Duration(milliseconds: 200),
+                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                    decoration: BoxDecoration(
+                      color: _GT.bg,
+                      borderRadius: BorderRadius.circular(8),
+                      border: Border.all(color: _GT.divider),
+                    ),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        AnimatedSwitcher(
+                          duration: const Duration(milliseconds: 200),
+                          child: Icon(
+                            _sortDir == 0 ? Icons.arrow_downward_rounded : Icons.arrow_upward_rounded,
+                            key: ValueKey(_sortDir),
+                            size: 14,
+                            color: _GT.inkMid,
+                          ),
+                        ),
+                        const SizedBox(width: 4),
+                        Text(
+                          _sortDir == 0 ? 'High' : 'Low',
+                          style: const TextStyle(
+                            fontSize: 11, fontWeight: FontWeight.w600, color: _GT.inkMid,
+                          ),
                         ),
                       ],
                     ),
                   ),
+                ),
+              ],
+            ),
+          ),
+
+          // ── 리스트
+          SizedBox(
+            height: 360,
+            child: ListView.builder(
+              physics: const BouncingScrollPhysics(),
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+              itemCount: _list.length,
+              itemBuilder: (context, index) {
+                final item = _list[index];
+                final isVisited = widget.visitedNames.contains(item.name);
+                final rank = index + 1;
+                final rawVal = _selected.valueAccessor(item);
+                final barVal = _selected.absValue ? rawVal.abs() : rawVal;
+                final barFrac = topValue == 0 ? 0.0 : barVal / topValue;
+
+                // 대륙별 색상 적용 (기본 색상 설정이 꺼져 있을 경우)
+                final barColor = widget.useDefaultColor
+                    ? _selected.themeColor
+                    : (_continentColors[item.continent] ?? _selected.themeColor);
+
+                final displayStr = '${rawVal.toStringAsFixed(_selected.precision)}${_selected.unit}';
+
+                return _GeoRankRow(
+                  rank: rank, city: item,
+                  value: displayStr, isVisited: isVisited,
+                  barFraction: barFrac.toDouble(),
+                  barColor: barColor, accentColor: _selected.themeColor,
                 );
               },
             ),
@@ -556,176 +761,431 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
   }
 }
 
-// ====================================================================
-// 2. Reusable Special Group Card (지도 버튼 추가)
-// ====================================================================
+class _GeoRankRow extends StatelessWidget {
+  final int rank;
+  final City city;
+  final String value;
+  final bool isVisited;
+  final double barFraction;
+  final Color barColor;
+  final Color accentColor;
 
-class _SpecialCityGroupCard extends StatefulWidget {
-  final String title;
-  final IconData icon;
-  final Color color;
-  final List<City> cities;
-  final Set<String> visitedCityNames;
-
-  const _SpecialCityGroupCard({
-    required this.title,
-    required this.icon,
-    required this.color,
-    required this.cities,
-    required this.visitedCityNames,
+  const _GeoRankRow({
+    required this.rank, required this.city, required this.value,
+    required this.isVisited, required this.barFraction,
+    required this.barColor, required this.accentColor,
   });
 
   @override
-  State<_SpecialCityGroupCard> createState() => _SpecialCityGroupCardState();
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () => showExternalCityDetailsModal(context, city),
+      child: Container(
+        margin: const EdgeInsets.symmetric(vertical: 3),
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+        decoration: BoxDecoration(
+          color: isVisited ? accentColor.withOpacity(0.05) : Colors.transparent,
+          borderRadius: BorderRadius.circular(8),
+          border: Border(
+            left: BorderSide(
+              color: isVisited ? accentColor : Colors.transparent,
+              width: 2.5,
+            ),
+          ),
+        ),
+        child: Row(
+          children: [
+            SizedBox(
+              width: 28,
+              child: Text(
+                rank <= 3 ? (rank == 1 ? '🥇' : rank == 2 ? '🥈' : '🥉') : '$rank',
+                style: TextStyle(fontSize: rank <= 3 ? 16 : 12, fontWeight: FontWeight.w700, color: _GT.inkLight),
+                textAlign: TextAlign.center,
+              ),
+            ),
+            const SizedBox(width: 10),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      Expanded(
+                        child: Text(city.name, style: TextStyle(
+                          fontSize: 13,
+                          fontWeight: isVisited ? FontWeight.w700 : FontWeight.w500,
+                          color: _GT.ink,
+                        ), overflow: TextOverflow.ellipsis),
+                      ),
+                      if (isVisited) ...[
+                        const SizedBox(width: 4),
+                        Icon(Icons.check_circle_rounded, size: 14, color: accentColor),
+                      ],
+                      const SizedBox(width: 6),
+                      Text(value, style: const TextStyle(
+                        fontSize: 13, fontWeight: FontWeight.w700, color: _GT.ink,
+                      )),
+                    ],
+                  ),
+                  const SizedBox(height: 5),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(3),
+                    child: LinearProgressIndicator(
+                      value: barFraction, minHeight: 3,
+                      backgroundColor: _GT.divider,
+                      valueColor: AlwaysStoppedAnimation<Color>(barColor),
+                    ),
+                  ),
+                  const SizedBox(height: 3),
+                  Row(
+                    children: [
+                      Text(_cityFlagEmoji(city), style: const TextStyle(fontSize: 11)),
+                      const SizedBox(width: 4),
+                      Text(city.country, style: const TextStyle(fontSize: 10, color: _GT.inkLight)),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
 }
 
-class _SpecialCityGroupCardState extends State<_SpecialCityGroupCard> with SingleTickerProviderStateMixin {
-  bool _isExpanded = false;
-  late AnimationController _rotationController;
+// ====================================================================
+// Collections 요약 바
+// ====================================================================
+
+class _GeoSummaryBar extends StatelessWidget {
+  final List<_GeoGroupData> groups;
+  final Set<String> visitedNames;
+  final int completed;
+
+  const _GeoSummaryBar({
+    required this.groups, required this.visitedNames, required this.completed,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final total = groups.length;
+    final pct = total > 0 ? completed / total : 0.0;
+
+    return Container(
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(color: _GT.ink, borderRadius: BorderRadius.circular(14)),
+      child: Row(
+        children: [
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  '$completed of $total collections',
+                  style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w800,
+                      color: Colors.white, letterSpacing: -0.5),
+                ),
+                const SizedBox(height: 4),
+                Text(
+                  completed == 0 ? 'No collections fully completed yet'
+                      : completed == total ? 'All collections completed! 🎉'
+                      : '${total - completed} remaining to complete',
+                  style: const TextStyle(fontSize: 12, color: Color(0xFF888888)),
+                ),
+                const SizedBox(height: 14),
+                _GeoSegmentBar(groups: groups, visitedNames: visitedNames),
+              ],
+            ),
+          ),
+          const SizedBox(width: 20),
+          _ArcPct(value: pct),
+        ],
+      ),
+    );
+  }
+}
+
+class _GeoSegmentBar extends StatelessWidget {
+  final List<_GeoGroupData> groups;
+  final Set<String> visitedNames;
+
+  const _GeoSegmentBar({required this.groups, required this.visitedNames});
+
+  @override
+  Widget build(BuildContext context) {
+    final total = groups.fold<int>(0, (s, g) => s + g.cities.length);
+    if (total == 0) return const SizedBox.shrink();
+
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(4),
+      child: SizedBox(
+        height: 6,
+        child: Row(
+          children: groups.map((g) {
+            final frac = g.cities.length / total;
+            final vis = g.cities.where((c) => visitedNames.contains(c.name)).length;
+            final visFrac = g.cities.isNotEmpty ? vis / g.cities.length : 0.0;
+            return Expanded(
+              flex: (frac * 1000).round(),
+              child: Container(
+                margin: const EdgeInsets.symmetric(horizontal: 1),
+                child: Stack(children: [
+                  Container(color: const Color(0xFF2E2E2E)),
+                  FractionallySizedBox(widthFactor: visFrac, child: Container(color: g.color)),
+                ]),
+              ),
+            );
+          }).toList(),
+        ),
+      ),
+    );
+  }
+}
+
+class _ArcPct extends StatelessWidget {
+  final double value;
+  const _ArcPct({required this.value});
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: 68, height: 68,
+      child: Stack(
+        alignment: Alignment.center,
+        children: [
+          CustomPaint(size: const Size(68, 68), painter: _ArcPainter(value: value)),
+          Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text('${(value * 100).round()}', style: const TextStyle(
+                fontSize: 20, fontWeight: FontWeight.w800, color: Colors.white, height: 1,
+              )),
+              const Text('%', style: TextStyle(fontSize: 10, color: Color(0xFF888888))),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _ArcPainter extends CustomPainter {
+  final double value;
+  const _ArcPainter({required this.value});
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final c = Offset(size.width / 2, size.height / 2);
+    final r = size.width / 2 - 4;
+    const sw = 4.0;
+    canvas.drawCircle(c, r, Paint()..color = const Color(0xFF2E2E2E)..style = PaintingStyle.stroke..strokeWidth = sw);
+    if (value > 0) {
+      canvas.drawArc(
+        Rect.fromCircle(center: c, radius: r),
+        -math.pi / 2, 2 * math.pi * value, false,
+        Paint()..color = Colors.white..style = PaintingStyle.stroke..strokeWidth = sw..strokeCap = StrokeCap.round,
+      );
+    }
+  }
+
+  @override
+  bool shouldRepaint(_ArcPainter old) => old.value != value;
+}
+
+// ====================================================================
+// 그룹 데이터 모델
+// ====================================================================
+
+class _GeoGroupData {
+  final String title;
+  final String label;
+  final IconData icon;
+  final Color color;
+  final List<City> cities;
+
+  const _GeoGroupData({
+    required this.title, required this.label,
+    required this.icon, required this.color, required this.cities,
+  });
+}
+
+// ====================================================================
+// Collection 카드
+// ====================================================================
+
+class _GeoCollectionCard extends StatefulWidget {
+  final _GeoGroupData data;
+  final Set<String> visitedNames;
+
+  const _GeoCollectionCard({required this.data, required this.visitedNames});
+
+  @override
+  State<_GeoCollectionCard> createState() => _GeoCollectionCardState();
+}
+
+class _GeoCollectionCardState extends State<_GeoCollectionCard>
+    with SingleTickerProviderStateMixin {
+  bool _expanded = false;
+  late AnimationController _ctrl;
+  late Animation<double> _rotateAnim;
+  late Animation<double> _fadeAnim;
 
   @override
   void initState() {
     super.initState();
-    _rotationController = AnimationController(duration: const Duration(milliseconds: 200), vsync: this);
+    _ctrl = AnimationController(duration: const Duration(milliseconds: 250), vsync: this);
+    _rotateAnim = Tween(begin: 0.0, end: 0.5).animate(CurvedAnimation(parent: _ctrl, curve: Curves.easeInOut));
+    _fadeAnim = CurvedAnimation(parent: _ctrl, curve: Curves.easeIn);
   }
 
   @override
-  void dispose() {
-    _rotationController.dispose();
-    super.dispose();
-  }
+  void dispose() { _ctrl.dispose(); super.dispose(); }
 
-  void _toggleExpanded() {
+  void _toggle() {
     setState(() {
-      _isExpanded = !_isExpanded;
-      if (_isExpanded) _rotationController.forward(); else _rotationController.reverse();
+      _expanded = !_expanded;
+      _expanded ? _ctrl.forward() : _ctrl.reverse();
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    final textTheme = Theme.of(context).textTheme;
-    final sortedCities = List<City>.from(widget.cities)..sort((a, b) => a.name.compareTo(b.name));
-    final total = sortedCities.length;
-    final visitedCount = sortedCities.where((c) => widget.visitedCityNames.contains(c.name)).length;
-    final percentage = total > 0 ? (visitedCount / total) : 0.0;
+    final g = widget.data;
+    final sorted = List<City>.from(g.cities)..sort((a, b) => a.name.compareTo(b.name));
+    final total = sorted.length;
+    final visited = sorted.where((c) => widget.visitedNames.contains(c.name)).length;
+    final pct = total > 0 ? visited / total : 0.0;
 
-    return Card(
-      elevation: 2,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-      clipBehavior: Clip.antiAlias,
+    return Container(
+      decoration: BoxDecoration(
+        color: _GT.surface,
+        borderRadius: BorderRadius.circular(14),
+        border: Border.all(color: _GT.divider),
+      ),
       child: Column(
         children: [
-          Container(
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                colors: [widget.color.withOpacity(0.7), widget.color],
-              ),
-            ),
-            child: Material(
-              color: Colors.transparent,
-              child: InkWell(
-                onTap: _toggleExpanded,
-                child: Padding(
-                  padding: const EdgeInsets.all(20),
-                  child: Column(
-                    children: [
-                      Row(
-                        children: [
-                          Container(
-                            padding: const EdgeInsets.all(10),
-                            decoration: BoxDecoration(color: Colors.white.withOpacity(0.25), borderRadius: BorderRadius.circular(12)),
-                            child: Icon(widget.icon, size: 24, color: Colors.white),
-                          ),
-                          const SizedBox(width: 14),
-                          Expanded(child: Text(widget.title, style: textTheme.titleLarge?.copyWith(color: Colors.white, fontWeight: FontWeight.bold))),
-
-                          // 🗺️ 지도 버튼 추가 (랭킹에는 없음)
-                          IconButton(
-                            icon: const Icon(Icons.map, color: Colors.white),
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => CityStatsMapScreen(
-                                    cities: sortedCities,
-                                    title: widget.title,
-                                    markerColor: widget.color, // 통계 테마 색상 전달
-                                  ),
-                                ),
-                              );
-                            },
-                          ),
-
-                          RotationTransition(turns: Tween(begin: 0.0, end: 0.5).animate(_rotationController), child: const Icon(Icons.expand_more, color: Colors.white, size: 24)),
-                        ],
-                      ),
-                      const SizedBox(height: 16),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text('Cities visited', style: textTheme.bodySmall?.copyWith(color: Colors.white.withOpacity(0.9), fontWeight: FontWeight.w500)),
-                                const SizedBox(height: 6),
-                                Row(
-                                  children: [
-                                    Text('$visitedCount', style: textTheme.headlineMedium?.copyWith(color: Colors.white, fontWeight: FontWeight.bold)),
-                                    Text(' / $total', style: textTheme.titleLarge?.copyWith(color: Colors.white.withOpacity(0.8))),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ),
-                          const SizedBox(width: 16),
-                          SizedBox(
-                            width: 70, height: 70,
-                            child: Stack(
-                              alignment: Alignment.center,
-                              children: [
-                                SizedBox(width: 70, height: 70, child: CircularProgressIndicator(value: percentage, strokeWidth: 6, backgroundColor: Colors.white.withOpacity(0.3), valueColor: const AlwaysStoppedAnimation<Color>(Colors.white))),
-                                Text('${(percentage * 100).toInt()}%', style: textTheme.titleLarge?.copyWith(color: Colors.white, fontWeight: FontWeight.bold)),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
+          // ── 헤더
+          InkWell(
+            onTap: _toggle,
+            borderRadius: BorderRadius.circular(14),
+            child: Padding(
+              padding: const EdgeInsets.all(16),
+              child: Row(
+                children: [
+                  Container(
+                    width: 42, height: 42,
+                    decoration: BoxDecoration(
+                      color: g.color.withOpacity(0.10),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Icon(g.icon, size: 20, color: g.color),
                   ),
-                ),
+                  const SizedBox(width: 14),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(g.label, style: TextStyle(
+                          fontSize: 10, fontWeight: FontWeight.w700,
+                          letterSpacing: 1.5, color: g.color,
+                        )),
+                        const SizedBox(height: 2),
+                        Text(g.title, style: const TextStyle(
+                          fontSize: 15, fontWeight: FontWeight.w700,
+                          color: _GT.ink, letterSpacing: -0.2,
+                        )),
+                      ],
+                    ),
+                  ),
+                  // 지도 버튼
+                  GestureDetector(
+                    onTap: () => Navigator.push(context, MaterialPageRoute(
+                      builder: (_) => CityStatsMapScreen(
+                        cities: sorted, title: g.title, markerColor: g.color,
+                      ),
+                    )),
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                      decoration: BoxDecoration(
+                        color: _GT.bg,
+                        borderRadius: BorderRadius.circular(8),
+                        border: Border.all(color: _GT.divider),
+                      ),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: const [
+                          Icon(Icons.map_outlined, size: 14, color: _GT.inkMid),
+                          SizedBox(width: 4),
+                          Text('Map', style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: _GT.inkMid)),
+                        ],
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 4),
+                  RotationTransition(
+                    turns: _rotateAnim,
+                    child: const Icon(Icons.keyboard_arrow_down_rounded, size: 22, color: _GT.inkLight),
+                  ),
+                ],
               ),
             ),
           ),
+
+          // ── 진행 바 + 통계
+          Padding(
+            padding: const EdgeInsets.fromLTRB(16, 0, 16, 14),
+            child: Column(
+              children: [
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(4),
+                  child: LinearProgressIndicator(
+                    value: pct, minHeight: 5,
+                    backgroundColor: _GT.divider,
+                    valueColor: AlwaysStoppedAnimation<Color>(g.color),
+                  ),
+                ),
+                const SizedBox(height: 8),
+                Row(
+                  children: [
+                    _StatChip(label: 'Visited', value: '$visited', color: g.color),
+                    const SizedBox(width: 8),
+                    _StatChip(label: 'Remaining', value: '${total - visited}', color: _GT.inkLight),
+                    const Spacer(),
+                    Text(
+                      '${(pct * 100).round()}%',
+                      style: TextStyle(
+                        fontSize: 20, fontWeight: FontWeight.w800,
+                        color: pct > 0 ? g.color : _GT.inkLight,
+                        letterSpacing: -0.5,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+
+          // ── 펼침: 도시 칩
           AnimatedSize(
-            duration: const Duration(milliseconds: 300),
+            duration: const Duration(milliseconds: 280),
             curve: Curves.easeInOut,
-            child: _isExpanded
-                ? Padding(
-              padding: const EdgeInsets.all(20),
-              child: Wrap(
-                spacing: 8, runSpacing: 8,
-                children: sortedCities.map((city) {
-                  final isVisited = widget.visitedCityNames.contains(city.name);
-                  return Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-                    decoration: BoxDecoration(
-                      gradient: isVisited ? LinearGradient(colors: [widget.color.withOpacity(0.6), widget.color.withOpacity(0.8)]) : null,
-                      color: isVisited ? null : Colors.grey.shade100,
-                      borderRadius: BorderRadius.circular(20),
-                      border: isVisited ? Border.all(color: widget.color, width: 1.5) : null,
-                    ),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        if (isVisited) ...[const Icon(Icons.check_circle, size: 16, color: Colors.white), const SizedBox(width: 4)],
-                        Text(city.name, style: TextStyle(fontSize: 13, fontWeight: isVisited ? FontWeight.w600 : FontWeight.w500, color: isVisited ? Colors.white : Colors.grey.shade700)),
-                      ],
-                    ),
-                  );
-                }).toList(),
+            child: _expanded
+                ? FadeTransition(
+              opacity: _fadeAnim,
+              child: Container(
+                width: double.infinity,
+                padding: const EdgeInsets.fromLTRB(16, 4, 16, 16),
+                decoration: const BoxDecoration(
+                  border: Border(top: BorderSide(color: _GT.divider)),
+                ),
+                child: Wrap(
+                  spacing: 7, runSpacing: 7,
+                  children: sorted.map((city) {
+                    final isVisited = widget.visitedNames.contains(city.name);
+                    return _CityChip(city: city, isVisited: isVisited, color: g.color);
+                  }).toList(),
+                ),
               ),
             )
                 : const SizedBox.shrink(),
@@ -737,152 +1197,63 @@ class _SpecialCityGroupCardState extends State<_SpecialCityGroupCard> with Singl
 }
 
 // ====================================================================
-// 3. Generic City Map Screen (호환성 유지용)
+// 작은 컴포넌트
 // ====================================================================
 
-class _GenericCityMapScreen extends StatefulWidget {
-  final String title;
-  final List<City> cities;
-  final Set<String> visitedCityNames;
-  const _GenericCityMapScreen({required this.title, required this.cities, required this.visitedCityNames});
-
-  @override
-  State<_GenericCityMapScreen> createState() => _GenericCityMapScreenState();
-}
-
-class _GenericCityMapScreenState extends State<_GenericCityMapScreen> {
-  City? _selectedCity;
-  MapFilter _mapFilter = MapFilter.visited;
+class _StatChip extends StatelessWidget {
+  final String label, value;
+  final Color color;
+  const _StatChip({required this.label, required this.value, required this.color});
 
   @override
   Widget build(BuildContext context) {
-    final visitedCities = widget.visitedCityNames;
-    final citiesForMapPins = _mapFilter == MapFilter.visited ? widget.cities.where((c) => visitedCities.contains(c.name)).toList() : widget.cities;
-    final citiesForList = List<City>.from(widget.cities)..sort((a, b) => a.name.compareTo(b.name));
-
-    return Scaffold(
-      appBar: AppBar(title: Text(widget.title)),
-      body: Column(
-        children: [
-          SizedBox(
-            height: MediaQuery.of(context).size.height * 0.4,
-            child: Stack(
-              children: [
-                FlutterMap(
-                  options: MapOptions(
-                    cameraConstraint: CameraConstraint.contain(bounds: LatLngBounds(const LatLng(-60, -180), const LatLng(85, 180))),
-                    initialZoom: 2.0,
-                    interactionOptions: const InteractionOptions(flags: InteractiveFlag.drag | InteractiveFlag.pinchZoom | InteractiveFlag.doubleTapZoom),
-                    onTap: (_, __) => setState(() => _selectedCity = null),
-                  ),
-                  children: [
-                    const MyTileLayer(),
-                    _buildCityMarkers(citiesForMapPins, visitedCities),
-                    if (_selectedCity != null)
-                      MarkerLayer(markers: [Marker(point: LatLng(_selectedCity!.latitude, _selectedCity!.longitude), width: 200, height: 50, child: _buildInfoPopup(_selectedCity!))])
-                  ],
-                ),
-                Positioned(
-                  top: 8, right: 8,
-                  child: Card(
-                    elevation: 2, color: Theme.of(context).scaffoldBackgroundColor.withOpacity(0.9), shape: const StadiumBorder(),
-                    child: Padding(
-                      padding: const EdgeInsets.all(4.0),
-                      child: Row(
-                        children: [
-                          ChoiceChip(label: const Text('All'), selected: _mapFilter == MapFilter.all, onSelected: (selected) { if (selected) setState(() => _mapFilter = MapFilter.all); }, showCheckmark: false, labelStyle: TextStyle(fontSize: 11, color: _mapFilter == MapFilter.all ? Theme.of(context).colorScheme.onPrimary : Theme.of(context).colorScheme.onSurface), selectedColor: Theme.of(context).primaryColor, shape: const StadiumBorder(), padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 0), materialTapTargetSize: MaterialTapTargetSize.shrinkWrap),
-                          const SizedBox(width: 2),
-                          ChoiceChip(label: const Text('Visited'), selected: _mapFilter == MapFilter.visited, onSelected: (selected) { if (selected) setState(() => _mapFilter = MapFilter.visited); }, showCheckmark: false, labelStyle: TextStyle(fontSize: 11, color: _mapFilter == MapFilter.visited ? Theme.of(context).colorScheme.onPrimary : Theme.of(context).colorScheme.onSurface), selectedColor: Theme.of(context).primaryColor, shape: const StadiumBorder(), padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 0), materialTapTargetSize: MaterialTapTargetSize.shrinkWrap),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Expanded(child: _buildCityList(context, citiesForList, visitedCities)),
-        ],
-      ),
+    return Row(
+      mainAxisSize: MainAxisSize.min,
+      crossAxisAlignment: CrossAxisAlignment.baseline,
+      textBaseline: TextBaseline.alphabetic,
+      children: [
+        Text(value, style: TextStyle(fontSize: 16, fontWeight: FontWeight.w800, color: color)),
+        const SizedBox(width: 3),
+        Text(label, style: const TextStyle(fontSize: 10, fontWeight: FontWeight.w500,
+            color: _GT.inkLight, letterSpacing: 0.3)),
+      ],
     );
   }
+}
 
-  Widget _buildInfoPopup(City city) {
-    return Card(
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+class _CityChip extends StatelessWidget {
+  final City city;
+  final bool isVisited;
+  final Color color;
+  const _CityChip({required this.city, required this.isVisited, required this.color});
+
+  @override
+  Widget build(BuildContext context) {
+    final flag = _cityFlagEmoji(city);
+    return GestureDetector(
+      onTap: () => showExternalCityDetailsModal(context, city),
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 11, vertical: 6),
+        decoration: BoxDecoration(
+          color: isVisited ? color : _GT.bg,
+          borderRadius: BorderRadius.circular(20),
+          border: Border.all(color: isVisited ? color : _GT.divider),
+        ),
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Expanded(child: Text(city.name, style: const TextStyle(fontWeight: FontWeight.bold), overflow: TextOverflow.ellipsis)),
-            IconButton(icon: const Icon(Icons.close, size: 18), padding: EdgeInsets.zero, constraints: const BoxConstraints(), onPressed: () => setState(() => _selectedCity = null))
+            if (flag.isNotEmpty) ...[
+              Text(flag, style: const TextStyle(fontSize: 11)),
+              const SizedBox(width: 5),
+            ],
+            Text(city.name, style: TextStyle(
+              fontSize: 12,
+              fontWeight: isVisited ? FontWeight.w700 : FontWeight.w500,
+              color: isVisited ? Colors.white : _GT.inkMid,
+              letterSpacing: 0.1,
+            )),
           ],
         ),
-      ),
-    );
-  }
-
-  Widget _buildCityMarkers(List<City> cities, Set<String> visited) {
-    final markers = cities.map((city) {
-      final isVisited = visited.contains(city.name);
-      return Marker(
-        width: 40, height: 40, point: LatLng(city.latitude, city.longitude),
-        child: GestureDetector(
-          onTap: () => setState(() => _selectedCity = city),
-          child: Tooltip(
-            message: city.name,
-            child: Icon(Icons.location_on, color: isVisited ? Colors.red : Colors.red.withOpacity(0.5), size: 30, shadows: const [Shadow(color: Colors.black54, blurRadius: 4.0)]),
-          ),
-        ),
-      );
-    }).toList();
-    return MarkerLayer(markers: markers);
-  }
-
-  Widget _buildCityList(BuildContext context, List<City> cities, Set<String> visitedCities) {
-    final total = cities.length;
-    final visitedCount = cities.where((c) => visitedCities.contains(c.name)).length;
-    final percentage = total > 0 ? (visitedCount / total) : 0.0;
-
-    return Card(
-      margin: EdgeInsets.zero, elevation: 4.0, shape: const RoundedRectangleBorder(),
-      child: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text('Visited Cities in List', style: Theme.of(context).textTheme.titleLarge),
-                const SizedBox(height: 8),
-                Row(
-                  children: [
-                    Expanded(child: LinearProgressIndicator(value: percentage, borderRadius: BorderRadius.circular(5), minHeight: 10)),
-                    const SizedBox(width: 16),
-                    Text('$visitedCount / $total (${(percentage * 100).toStringAsFixed(0)}%)'),
-                  ],
-                ),
-              ],
-            ),
-          ),
-          const Divider(height: 1),
-          Expanded(
-            child: ListView.separated(
-              itemCount: cities.length,
-              separatorBuilder: (context, index) => const Divider(height: 1),
-              itemBuilder: (context, index) {
-                final city = cities[index];
-                final isVisited = visitedCities.contains(city.name);
-                return ListTile(
-                  title: Text(city.name),
-                  subtitle: Text(city.country),
-                  trailing: isVisited ? Icon(Icons.check_circle, color: Theme.of(context).primaryColor) : const Icon(Icons.check_circle_outline, color: Colors.grey),
-                  onTap: () { Provider.of<CityProvider>(context, listen: false).toggleVisitedStatus(city.name); },
-                );
-              },
-            ),
-          )
-        ],
       ),
     );
   }

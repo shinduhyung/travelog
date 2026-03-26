@@ -9,10 +9,9 @@ import 'package:jidoapp/models/visit_date_model.dart';
 import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/providers/landmarks_provider.dart';
 import 'package:jidoapp/widgets/landmark_info_card.dart';
-import 'package:jidoapp/widgets/landmark_visit_editor_card.dart'; // 공통 위젯 임포트
 import 'package:provider/provider.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:shared_preferences/shared_preferences.dart'; // 저장 기능을 위해 추가
 import 'package:country_flags/country_flags.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:collection/collection.dart';
@@ -60,6 +59,7 @@ class LandmarkStatsScreen extends StatefulWidget {
 }
 
 class _LandmarkStatsScreenState extends State<LandmarkStatsScreen> {
+  // 모든 메뉴 파일의 속성을 통합한 리스트
   final Map<String, List<String>> _attributeGroups = {
     'Cultural': [
       'Ancient Site', 'Modern History', 'Archaeological Site', 'Traditional Village',
@@ -88,28 +88,37 @@ class _LandmarkStatsScreenState extends State<LandmarkStatsScreen> {
   void initState() {
     super.initState();
     _selectedAttributes = {};
-    _loadSavedFilters();
+    _loadSavedFilters(); // 저장된 필터 불러오기
   }
 
+  // SharedPreferences에서 필터 설정 불러오기
   Future<void> _loadSavedFilters() async {
     final prefs = await SharedPreferences.getInstance();
     final List<String>? savedList = prefs.getStringList('stat_selected_attributes');
 
     setState(() {
       if (savedList != null) {
+        // 1. 저장된 값이 있다면 그것을 사용
         _selectedAttributes = savedList.toSet();
       } else {
+        // 2. 저장된 값이 없다면(최초 실행) 기본 로직 적용
+        // Cultural: 모두 포함
         _selectedAttributes.addAll(_attributeGroups['Cultural']!);
+
+        // Natural: Sea, River, Jungle 제외하고 포함
         for (var attr in _attributeGroups['Natural']!) {
           if (attr != 'Sea' && attr != 'River' && attr != 'Jungle') {
             _selectedAttributes.add(attr);
           }
         }
+
+        // Activities: 기본적으로 모두 제외 (아무것도 추가하지 않음)
       }
       _isInit = true;
     });
   }
 
+  // 필터 변경 시 저장
   Future<void> _saveFilters() async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setStringList('stat_selected_attributes', _selectedAttributes.toList());
@@ -157,7 +166,7 @@ class _LandmarkStatsScreenState extends State<LandmarkStatsScreen> {
                                       if (val) _selectedAttributes.add(attr);
                                       else _selectedAttributes.remove(attr);
                                     });
-                                    _saveFilters();
+                                    _saveFilters(); // 변경 즉시 저장
                                     setDialogState(() {});
                                   },
                                 );
@@ -185,6 +194,7 @@ class _LandmarkStatsScreenState extends State<LandmarkStatsScreen> {
 
   @override
   Widget build(BuildContext context) {
+    // 로딩 중이거나 아직 설정을 불러오지 못했으면 로딩 표시
     if (!_isInit) {
       return const Scaffold(body: Center(child: CircularProgressIndicator()));
     }
@@ -201,6 +211,7 @@ class _LandmarkStatsScreenState extends State<LandmarkStatsScreen> {
     final visitedLandmarksSet = landmarksProvider.visitedLandmarks;
     final allRawLandmarks = landmarksProvider.allLandmarks;
 
+    // 선택된 속성이 하나라도 포함된 랜드마크만 필터링
     final List<Landmark> targetLandmarks = allRawLandmarks.where((l) {
       return l.attributes.any((attr) => _selectedAttributes.contains(attr));
     }).toList();
@@ -224,6 +235,7 @@ class _LandmarkStatsScreenState extends State<LandmarkStatsScreen> {
         .where((l) => visitedLandmarksSet.contains(l.name));
     final int totalVisitedItems = visitedTargetLandmarks.length;
 
+    // 통계 계산: 선택된 Attribute에 대해서만 카운트
     for (final landmark in targetLandmarks) {
       for (final attr in landmark.attributes) {
         if (_selectedAttributes.contains(attr)) {
@@ -531,6 +543,7 @@ class _LandmarkRankingCardState extends State<_LandmarkRankingCard> {
         data['fullName'] as String: data['color'] as Color
     };
 
+    // Calculate maximum values for normalization
     int maxVisited = 0;
     int maxTotal = 0;
     for (var s in _rankedList) {
@@ -603,12 +616,14 @@ class _LandmarkRankingCardState extends State<_LandmarkRankingCard> {
                 final stat = _rankedList[index];
                 final barColor = continentColors[stat.country.continent] ?? primaryBlue;
 
+                // Determine progressValue based on sort metric
                 double progressValue;
                 if (_sortMetric == 'By Visit Percentage') {
                   progressValue = stat.totalLandmarks > 0 ? stat.visitedLandmarks / stat.totalLandmarks : 0.0;
                 } else if (_sortMetric == 'By Number of Sites') {
                   progressValue = maxTotal > 0 ? stat.totalLandmarks / maxTotal : 0.0;
                 } else {
+                  // By Visit Count
                   progressValue = maxVisited > 0 ? stat.visitedLandmarks / maxVisited : 0.0;
                 }
 
@@ -701,6 +716,7 @@ class _SiteRankingCardState extends State<_SiteRankingCard> {
     _prepareList();
   }
 
+  // Helper Methods for Landmark Details Modal
   bool _isItemCategory(Landmark item, String category) => item.attributes.contains(category);
 
   bool _isItemNatural(Landmark item) {
@@ -924,6 +940,7 @@ class _SiteRankingCardState extends State<_SiteRankingCard> {
         String? modalFlagIso = _getDisplayIsoA2(freshLandmark, countryProvider);
         List<String> displayIsos = [];
 
+        // Sort countries to ensure China (CHN) comes first visually
         final List<String> sortedIsoA3 = List.from(freshLandmark.countriesIsoA3)
           ..sort((a, b) => a == 'CHN' ? -1 : (b == 'CHN' ? 1 : 0));
 
@@ -954,6 +971,7 @@ class _SiteRankingCardState extends State<_SiteRankingCard> {
                   borderRadius: const BorderRadius.vertical(top: Radius.circular(24)),
                   child: Stack(
                     children: [
+                      // Base theme color gradient
                       Positioned.fill(
                         child: Container(
                           decoration: BoxDecoration(
@@ -968,6 +986,7 @@ class _SiteRankingCardState extends State<_SiteRankingCard> {
                           ),
                         ),
                       ),
+                      // Dark gradient overlay
                       Positioned.fill(
                         child: Container(
                           decoration: BoxDecoration(
@@ -982,6 +1001,7 @@ class _SiteRankingCardState extends State<_SiteRankingCard> {
                           ),
                         ),
                       ),
+                      // Content
                       Padding(
                         padding: const EdgeInsets.fromLTRB(20, 16, 20, 20),
                         child: Column(
@@ -1145,8 +1165,7 @@ class _SiteRankingCardState extends State<_SiteRankingCard> {
 
                           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [Text('History (${freshLandmark.visitDates.length} entries)', style: Theme.of(sheetContext).textTheme.titleSmall), OutlinedButton.icon(icon: const Icon(Icons.add), label: const Text('Add Visit'), onPressed: () => provider.addVisitDate(freshLandmark.name))]),
                           const SizedBox(height: 8),
-                          // 공통 위젯인 LandmarkVisitEditorCard로 교체
-                          if (freshLandmark.visitDates.isNotEmpty) ...freshLandmark.visitDates.asMap().entries.map((entry) => LandmarkVisitEditorCard(
+                          if (freshLandmark.visitDates.isNotEmpty) ...freshLandmark.visitDates.asMap().entries.map((entry) => _LandmarkVisitEditorCard(
                             key: ValueKey('${freshLandmark.name}_${entry.key}'),
                             landmarkName: freshLandmark.name,
                             visitDate: entry.value,
@@ -1442,6 +1461,215 @@ class _LandmarkBrowserCardState extends State<_LandmarkBrowserCard> {
             ),
           const SizedBox(height: 12),
         ],
+      ),
+    );
+  }
+}
+
+// 랜드마크 방문 기록 에디터 카드 추가
+class _LandmarkVisitEditorCard extends StatefulWidget {
+  final String landmarkName;
+  final VisitDate visitDate;
+  final int index;
+  final VoidCallback onDelete;
+  final List<LandmarkSubLocation>? availableLocations;
+
+  const _LandmarkVisitEditorCard({
+    super.key,
+    required this.landmarkName,
+    required this.visitDate,
+    required this.index,
+    required this.onDelete,
+    this.availableLocations,
+  });
+
+  @override
+  State<_LandmarkVisitEditorCard> createState() => _LandmarkVisitEditorCardState();
+}
+
+class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
+  late final TextEditingController _titleController;
+  late final TextEditingController _memoController;
+  late List<String> _currentPhotos;
+  int? _year, _month, _day;
+  late String _displayTitle, _displayMemo;
+  bool _isEditing = false;
+  final ExpansionTileController _expansionTileController = ExpansionTileController();
+
+  @override
+  void initState() {
+    super.initState();
+    _displayTitle = widget.visitDate.title;
+    _displayMemo  = widget.visitDate.memo ?? '';
+    _titleController = TextEditingController(text: _displayTitle);
+    _memoController  = TextEditingController(text: _displayMemo);
+    _currentPhotos   = List.from(widget.visitDate.photos);
+    _year = widget.visitDate.year; _month = widget.visitDate.month; _day = widget.visitDate.day;
+    if (_displayTitle.isEmpty && _displayMemo.isEmpty && _currentPhotos.isEmpty) _isEditing = true;
+  }
+
+  @override void dispose() { _titleController.dispose(); _memoController.dispose(); super.dispose(); }
+
+  void _saveChanges() {
+    context.read<LandmarksProvider>().updateLandmarkVisit(
+      widget.landmarkName, widget.index,
+      title: _titleController.text, memo: _memoController.text,
+      year: _year ?? -9999, month: _month ?? -9999, day: _day ?? -9999,
+      photos: _currentPhotos,
+    );
+    setState(() { _displayTitle = _titleController.text; _displayMemo = _memoController.text; _isEditing = false; });
+  }
+
+  void _cancelEditing() {
+    setState(() {
+      _titleController.text = _displayTitle; _memoController.text = _displayMemo;
+      _year = widget.visitDate.year; _month = widget.visitDate.month; _day = widget.visitDate.day;
+      _currentPhotos = List.from(widget.visitDate.photos); _isEditing = false;
+    });
+  }
+
+  Future<void> _selectDate(BuildContext context) async {
+    final p = await showDatePicker(context: context,
+        initialDate: DateTime(_year ?? DateTime.now().year, _month ?? 1, _day ?? 1),
+        firstDate: DateTime(1900), lastDate: DateTime(2100));
+    if (p != null && mounted) setState(() { _year = p.year; _month = p.month; _day = p.day; });
+  }
+
+  void _pickImage(ImageSource source) async {
+    final f = await ImagePicker().pickImage(source: source);
+    if (f != null && mounted) setState(() => _currentPhotos.add(f.path));
+  }
+
+  void _toggleLocationInVisit(String locName, bool isSelected) {
+    final provider = context.read<LandmarksProvider>();
+    List<String> currentDetails = List.from(widget.visitDate.visitedDetails);
+    if (isSelected) {
+      if (!currentDetails.contains(locName)) {
+        currentDetails.add(locName);
+        if (!provider.isSubLocationVisited(widget.landmarkName, locName)) {
+          provider.toggleSubLocation(widget.landmarkName, locName);
+        }
+      }
+    } else {
+      currentDetails.remove(locName);
+    }
+    provider.updateLandmarkVisit(widget.landmarkName, widget.index, visitedDetails: currentDetails);
+    setState(() {});
+  }
+
+  Widget _buildPhotoPreview(String path, int i) {
+    return Stack(clipBehavior: Clip.none, children: [
+      Container(width: 60, height: 60, margin: const EdgeInsets.only(right: 12),
+          decoration: BoxDecoration(borderRadius: BorderRadius.circular(8),
+              boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.1), blurRadius: 4, offset: const Offset(0, 2))]),
+          child: ClipRRect(borderRadius: BorderRadius.circular(8), child: Image.file(File(path), fit: BoxFit.cover))),
+      if (_isEditing) Positioned(top: -6, right: 6,
+          child: GestureDetector(onTap: () => setState(() => _currentPhotos.removeAt(i)),
+              child: Container(decoration: const BoxDecoration(color: Colors.white, shape: BoxShape.circle),
+                  child: const Icon(Icons.cancel, color: Colors.red, size: 22)))),
+    ]);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final themeColor = Theme.of(context).primaryColor;
+    return Card(
+      elevation: 1, margin: const EdgeInsets.symmetric(vertical: 4),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+      child: ExpansionTile(
+        controller: _expansionTileController,
+        initiallyExpanded: _isEditing,
+        title: Text(_displayTitle.isNotEmpty ? _displayTitle : 'Visit Record',
+            style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15)),
+        subtitle: Text('Date: $_year-$_month-$_day', style: TextStyle(color: Colors.grey[600], fontSize: 13)),
+        trailing: IconButton(
+          icon: const Icon(Icons.delete_outline, color: Colors.red, size: 22),
+          onPressed: () => showDialog(context: context, builder: (ctx) => AlertDialog(
+              title: const Text('Delete Visit Record'),
+              content: const Text('Are you sure you want to delete this visit record?'),
+              actions: [
+                TextButton(onPressed: () => Navigator.pop(ctx), child: const Text('Cancel')),
+                TextButton(onPressed: () { Navigator.pop(ctx); widget.onDelete(); },
+                    child: const Text('Delete', style: TextStyle(color: Colors.red))),
+              ])),
+        ),
+        children: [Container(
+          padding: const EdgeInsets.all(16),
+          decoration: BoxDecoration(color: Colors.grey[50],
+              borderRadius: const BorderRadius.only(bottomLeft: Radius.circular(12), bottomRight: Radius.circular(12))),
+          child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            if (_isEditing) ...[
+              Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+                Text('Visit Date: $_year-$_month-$_day',
+                    style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14)),
+                TextButton.icon(icon: const Icon(Icons.edit_calendar, size: 18), label: const Text('Edit Date'),
+                    onPressed: () => _selectDate(context),
+                    style: TextButton.styleFrom(visualDensity: VisualDensity.compact)),
+              ]),
+              const SizedBox(height: 12),
+              TextField(controller: _titleController,
+                  decoration: InputDecoration(labelText: 'Title', isDense: true, filled: true, fillColor: Colors.white,
+                      border: OutlineInputBorder(borderRadius: BorderRadius.circular(8), borderSide: BorderSide.none))),
+              const SizedBox(height: 12),
+              TextField(controller: _memoController, maxLines: 3, minLines: 1,
+                  decoration: InputDecoration(labelText: 'Memo', isDense: true, filled: true, fillColor: Colors.white,
+                      border: OutlineInputBorder(borderRadius: BorderRadius.circular(8), borderSide: BorderSide.none))),
+            ] else if (_displayMemo.isNotEmpty)
+              Padding(padding: const EdgeInsets.only(bottom: 12),
+                  child: Text(_displayMemo, style: TextStyle(fontSize: 14, color: Colors.grey[800], height: 1.4))),
+
+            const SizedBox(height: 12),
+
+            if (widget.availableLocations != null && widget.availableLocations!.length > 1) ...[
+              const Text("Locations included in this visit:",
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Colors.grey)),
+              const SizedBox(height: 4),
+              IgnorePointer(
+                ignoring: !_isEditing,
+                child: Wrap(spacing: 8.0, runSpacing: 4.0,
+                    children: widget.availableLocations!.map((loc) {
+                      final isChecked = widget.visitDate.visitedDetails.contains(loc.name);
+                      return FilterChip(
+                        label: Text(loc.name, style: const TextStyle(fontSize: 11)),
+                        selected: isChecked,
+                        selectedColor: themeColor.withOpacity(0.2),
+                        checkmarkColor: themeColor,
+                        onSelected: (bool selected) => _toggleLocationInVisit(loc.name, selected),
+                      );
+                    }).toList()),
+              ),
+              const SizedBox(height: 16),
+            ],
+
+            if (_currentPhotos.isNotEmpty || _isEditing)
+              Padding(padding: const EdgeInsets.only(top: 8),
+                  child: SingleChildScrollView(scrollDirection: Axis.horizontal, clipBehavior: Clip.none,
+                      child: Row(children: [
+                        if (_isEditing) Container(margin: const EdgeInsets.only(right: 12),
+                            decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(8),
+                                border: Border.all(color: Colors.grey.shade300)),
+                            child: IconButton(icon: const Icon(Icons.add_photo_alternate, color: Colors.grey),
+                                onPressed: () => _pickImage(ImageSource.gallery))),
+                        ..._currentPhotos.asMap().entries.map((e) => _buildPhotoPreview(e.value, e.key)).toList(),
+                      ]))),
+
+            const SizedBox(height: 16),
+            Row(mainAxisAlignment: MainAxisAlignment.end, children: [
+              if (_isEditing) ...[
+                TextButton(onPressed: _cancelEditing,
+                    child: Text('Cancel', style: TextStyle(color: Colors.grey[700], fontWeight: FontWeight.w600))),
+                const SizedBox(width: 8),
+                ElevatedButton.icon(onPressed: _saveChanges,
+                    icon: const Icon(Icons.save, size: 18), label: const Text('Save'),
+                    style: ElevatedButton.styleFrom(backgroundColor: themeColor, foregroundColor: Colors.white, elevation: 0)),
+              ] else
+                OutlinedButton.icon(onPressed: () => setState(() => _isEditing = true),
+                    icon: const Icon(Icons.edit, size: 16), label: const Text('Edit Record'),
+                    style: OutlinedButton.styleFrom(foregroundColor: themeColor,
+                        side: BorderSide(color: themeColor.withOpacity(0.5)))),
+            ]),
+          ]),
+        )],
       ),
     );
   }

@@ -7,10 +7,28 @@ import 'package:provider/provider.dart';
 import 'package:jidoapp/models/country_model.dart';
 import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/screens/countries_map_screen.dart';
+import 'package:jidoapp/screens/country_detail_screen.dart';
 import 'package:collection/collection.dart'; // firstWhereOrNull을 위해 추가
 import 'dart:math' as math; // For math.max
 import 'package:flutter/foundation.dart'; // For listEquals, setEquals
 import 'package:intl/intl.dart'; // for NumberFormat
+
+
+// Helper: ISO A2 → 국기 이모지
+String flagEmoji(String isoA2) {
+  if (isoA2.length != 2) return '';
+  final base = 0x1F1E6 - 0x41;
+  return String.fromCharCode(base + isoA2.codeUnitAt(0)) +
+      String.fromCharCode(base + isoA2.codeUnitAt(1));
+}
+
+// Helper: 국가 클릭시 CountryDetailScreen으로 이동
+void navigateToCountryDetail(BuildContext context, Country country) {
+  Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => CountryDetailScreen(country: country)),
+  );
+}
 
 // Data Class: Ranking Info
 class RankingInfo {
@@ -268,6 +286,7 @@ class _OlympicsRankingCardState extends State<_OlympicsRankingCard> {
                       flex: 2,
                       child: DropdownButtonHideUnderline(
                         child: DropdownButton<int>(
+                          borderRadius: BorderRadius.circular(16),
                           value: _seasonSegment,
                           isExpanded: true,
                           // FIX: Changed trailing icon to standard arrow to avoid double icons
@@ -306,6 +325,7 @@ class _OlympicsRankingCardState extends State<_OlympicsRankingCard> {
                       flex: 1,
                       child: DropdownButtonHideUnderline(
                         child: DropdownButton<String>(
+                          borderRadius: BorderRadius.circular(16),
                           value: _selectedContinent,
                           isExpanded: true,
                           icon: Icon(Icons.arrow_drop_down, color: olympicColor),
@@ -328,6 +348,7 @@ class _OlympicsRankingCardState extends State<_OlympicsRankingCard> {
                     Expanded(
                       child: DropdownButtonHideUnderline(
                         child: DropdownButton<int>(
+                          borderRadius: BorderRadius.circular(16),
                           value: _medalTypeSegment,
                           isExpanded: true,
                           icon: Icon(Icons.arrow_drop_down, color: olympicColor),
@@ -350,6 +371,7 @@ class _OlympicsRankingCardState extends State<_OlympicsRankingCard> {
                     Expanded(
                       child: DropdownButtonHideUnderline(
                         child: DropdownButton<int>(
+                          borderRadius: BorderRadius.circular(16),
                           value: _displaySegment,
                           isExpanded: true,
                           icon: Icon(Icons.arrow_drop_down, color: olympicColor),
@@ -395,28 +417,34 @@ class _OlympicsRankingCardState extends State<_OlympicsRankingCard> {
                   elevation: 0,
                   color: isVisited ? olympicColor.withOpacity(0.12) : Colors.transparent,
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8.0),
-                    child: Column(
-                      children: [
-                        Row(
-                          children: [
-                            _buildRankText(rank, olympicColor),
-                            const SizedBox(width: 12),
-                            Expanded(child: Text(country.name, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold, fontSize: 17))),
-                            const SizedBox(width: 12),
-                            Text(medalValue.toString(), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
-                          ],
-                        ),
-                        const SizedBox(height: 6),
-                        LinearProgressIndicator(
-                          value: progressValue,
-                          borderRadius: BorderRadius.circular(5),
-                          minHeight: 5,
-                          backgroundColor: Colors.grey.shade200,
-                          color: barColor,
-                        ),
-                      ],
+                  child: InkWell(
+                    borderRadius: BorderRadius.circular(12),
+                    onTap: () => navigateToCountryDetail(context, country),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8.0),
+                      child: Column(
+                        children: [
+                          Row(
+                            children: [
+                              _buildRankText(rank, olympicColor),
+                              const SizedBox(width: 8),
+                              Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 18)),
+                              const SizedBox(width: 6),
+                              Expanded(child: Text(country.name, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold, fontSize: 17))),
+                              const SizedBox(width: 8),
+                              Text(medalValue.toString(), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
+                            ],
+                          ),
+                          const SizedBox(height: 6),
+                          LinearProgressIndicator(
+                            value: progressValue,
+                            borderRadius: BorderRadius.circular(5),
+                            minHeight: 5,
+                            backgroundColor: Colors.grey.shade200,
+                            color: barColor,
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 );
@@ -555,6 +583,7 @@ class _CombinedSportsAchievementCardState extends State<_CombinedSportsAchieveme
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
             child: DropdownButtonHideUnderline(
               child: DropdownButton<AchievementGroup>(
+                borderRadius: BorderRadius.circular(16),
                 value: _selectedGroup, isExpanded: true,
                 icon: Icon(Icons.arrow_drop_down_circle_outlined, color: _selectedGroup.themeColor),
                 items: _groups.map((group) => DropdownMenuItem<AchievementGroup>(
@@ -646,12 +675,24 @@ class _CombinedSportsAchievementCardState extends State<_CombinedSportsAchieveme
                       if (entry.type == 'winter') marker = '*';
                       if (entry.type == 'both') marker = '**';
 
-                      return Row(
-                        children: [
-                          Icon(isVisited ? Icons.check_circle : Icons.radio_button_unchecked, size: 20, color: isVisited ? _selectedGroup.themeColor : Colors.grey.shade400),
-                          const SizedBox(width: 8),
-                          Expanded(child: Text('${entry.displayName} $marker', style: textTheme.bodyMedium, overflow: TextOverflow.ellipsis)),
-                        ],
+                      // 단일 국가면 국기 표시 및 클릭 가능
+                      String flag = '';
+                      Country? singleCountry;
+                      if (entry.isoA3Codes.length == 1) {
+                        singleCountry = widget.allCountries.firstWhereOrNull((c) => c.isoA3 == entry.isoA3Codes.first);
+                        if (singleCountry != null) flag = flagEmoji(singleCountry.isoA2);
+                      }
+                      return InkWell(
+                        borderRadius: BorderRadius.circular(8),
+                        onTap: singleCountry != null ? () => navigateToCountryDetail(context, singleCountry!) : null,
+                        child: Row(
+                          children: [
+                            Icon(isVisited ? Icons.check_circle : Icons.radio_button_unchecked, size: 20, color: isVisited ? _selectedGroup.themeColor : Colors.grey.shade400),
+                            const SizedBox(width: 6),
+                            if (flag.isNotEmpty) ...[Text(flag, style: const TextStyle(fontSize: 14)), const SizedBox(width: 4)],
+                            Expanded(child: Text('${entry.displayName} $marker', style: textTheme.bodyMedium, overflow: TextOverflow.ellipsis)),
+                          ],
+                        ),
                       );
                     },
                   ),
@@ -977,22 +1018,28 @@ class _SportTile extends StatelessWidget {
                       itemBuilder: (context, index) {
                         final country = sortedCountries[index];
                         final isVisited = visitedNames.contains(country.name);
-                        return Row(
-                          children: [
-                            Icon(
-                              isVisited ? Icons.check_circle_rounded : Icons.radio_button_unchecked_rounded,
-                              size: 18,
-                              color: isVisited ? color : Colors.grey,
-                            ),
-                            const SizedBox(width: 6),
-                            Expanded(
-                              child: Text(
-                                country.name,
-                                style: theme.textTheme.bodyMedium,
-                                overflow: TextOverflow.ellipsis,
+                        return InkWell(
+                          borderRadius: BorderRadius.circular(6),
+                          onTap: () => navigateToCountryDetail(context, country),
+                          child: Row(
+                            children: [
+                              Icon(
+                                isVisited ? Icons.check_circle_rounded : Icons.radio_button_unchecked_rounded,
+                                size: 18,
+                                color: isVisited ? color : Colors.grey,
                               ),
-                            ),
-                          ],
+                              const SizedBox(width: 4),
+                              Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 14)),
+                              const SizedBox(width: 4),
+                              Expanded(
+                                child: Text(
+                                  country.name,
+                                  style: theme.textTheme.bodyMedium,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              ),
+                            ],
+                          ),
                         );
                       },
                     ),

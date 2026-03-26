@@ -16,8 +16,20 @@ import 'package:jidoapp/providers/country_provider.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:country_flags/country_flags.dart';
-// 🆕 추가: City Tiers Screen 이동을 위한 가상 import (파일은 나중에 생성)
 import 'package:jidoapp/screens/city_tiers_screen.dart';
+
+// ====================================================================
+// 모달 헬퍼 (allCities에서 풀 데이터 City 조회 → 국가 테마색 보장)
+// ====================================================================
+
+void _showCityModal(BuildContext context, City city) {
+  final provider = Provider.of<CityProvider>(context, listen: false);
+  final fullCity = provider.allCities.firstWhere(
+        (c) => c.name == city.name && c.countryIsoA2.isNotEmpty,
+    orElse: () => city,
+  );
+  showExternalCityDetailsModal(context, fullCity);
+}
 
 class RankingInfo {
   final String title;
@@ -139,7 +151,7 @@ class _CityOverviewTabScreenState extends State<CityOverviewTabScreen> {
       onIncludeLivedChanged: (value) => setState(() => _includeLived = value),
       onIncludeTransferChanged: (value) => setState(() => _includeTransfer = value),
       onIncludeLayoverChanged: (value) => setState(() => _includeLayover = value),
-      onCityTap: (city) => showExternalCityDetailsModal(context, city),
+      onCityTap: (city) => _showCityModal(context, city),
     );
   }
 }
@@ -164,35 +176,42 @@ class CityOverviewStatsScreen extends StatelessWidget {
     return DefaultTabController(
       length: tabs.length,
       child: Theme(
-        data: ThemeData.from(
-          colorScheme: ColorScheme.fromSwatch(
-            primarySwatch: Colors.yellow,
-          ),
+        data: Theme.of(context).copyWith(
+          scaffoldBackgroundColor: const Color(0xFFF7F7F5),
+          cardColor: Colors.white,
         ),
         child: Scaffold(
-          body: SafeArea(
-            child: Column(
-              children: [
-                Material(
-                  color: Colors.white,
-                  elevation: 1,
-                  child: TabBar(
-                    tabs: tabs,
-                    labelColor: Colors.black87,
-                    unselectedLabelColor: Colors.grey,
-                    indicatorColor: Colors.amber,
-                    indicatorWeight: 3,
-                    labelStyle: const TextStyle(fontWeight: FontWeight.w900, fontSize: 13),
-                  ),
+          backgroundColor: const Color(0xFFF7F7F5),
+          appBar: PreferredSize(
+            preferredSize: const Size.fromHeight(56),
+            child: AppBar(
+              backgroundColor: Colors.white,
+              elevation: 0,
+              automaticallyImplyLeading: false,
+              titleSpacing: 0,
+              bottom: PreferredSize(
+                preferredSize: const Size.fromHeight(1),
+                child: Container(height: 1, color: const Color(0xFFE8E8E4)),
+              ),
+              title: TabBar(
+                tabs: const [
+                  Tab(text: 'Overview'),
+                  Tab(text: 'Population'),
+                  Tab(text: 'Economy'),
+                ],
+                labelStyle: const TextStyle(fontSize: 14, fontWeight: FontWeight.w700, letterSpacing: 0.5),
+                unselectedLabelStyle: const TextStyle(fontSize: 14, fontWeight: FontWeight.w400, letterSpacing: 0.5),
+                labelColor: const Color(0xFF141414),
+                unselectedLabelColor: const Color(0xFFAAAAAA),
+                indicator: const UnderlineTabIndicator(
+                  borderSide: BorderSide(color: Color(0xFF141414), width: 2),
+                  insets: EdgeInsets.symmetric(horizontal: 24),
                 ),
-                Expanded(
-                  child: TabBarView(
-                    children: screens,
-                  ),
-                ),
-              ],
+                indicatorSize: TabBarIndicatorSize.tab,
+              ),
             ),
           ),
+          body: TabBarView(children: screens),
         ),
       ),
     );
@@ -1392,115 +1411,111 @@ class _CityOverviewRankingCardState extends State<_CityOverviewRankingCard> {
     final topValue = _rankedList.isNotEmpty ? _rankedList.first.value : 1.0;
     final rankingThemeColor = _selectedRanking.themeColor;
 
-    return Card(
-      elevation: 2,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-      clipBehavior: Clip.antiAlias,
+    return Container(
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(14),
+        border: Border.all(color: const Color(0xFFE8E8E4)),
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Container(
-            padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
-            color: Colors.grey.shade50,
+            padding: const EdgeInsets.all(12),
+            decoration: const BoxDecoration(
+              border: Border(bottom: BorderSide(color: Color(0xFFE8E8E4))),
+            ),
             child: Column(
               children: [
-                Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(24),
-                    border: Border.all(color: Colors.grey.shade200),
-                  ),
-                  child: DropdownButtonHideUnderline(
-                    child: DropdownButton<RankingInfo>(
-                      borderRadius: BorderRadius.circular(24),
-                      value: _selectedRanking,
-                      isExpanded: true,
-                      icon: Icon(Icons.arrow_drop_down_circle_outlined, color: rankingThemeColor),
-                      items: _rankings.map((group) => DropdownMenuItem<RankingInfo>(
-                        value: group,
-                        child: Row(children: [
-                          Icon(group.icon, color: group.themeColor), const SizedBox(width: 12),
-                          Text(group.title, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
-                        ]),
-                      )).toList(),
-                      onChanged: (newValue) {
-                        if (newValue != null) setState(() { _selectedRanking = newValue; _prepareList(); });
-                      },
-                    ),
-                  ),
-                ),
-                const SizedBox(height: 8),
+                // ── 메트릭 탭 (Visit Count / Total Days)
                 Row(
-                  children: [
-                    Expanded(
-                      child: Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 12),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(20),
-                          border: Border.all(color: Colors.grey.shade200),
-                        ),
-                        child: DropdownButtonHideUnderline(
-                          child: DropdownButton<String>(
-                            borderRadius: BorderRadius.circular(20),
-                            isExpanded: true,
-                            value: _selectedContinent,
-                            items: _continents.map((String value) => DropdownMenuItem<String>(value: value, child: Text(value, style: const TextStyle(fontSize: 14)))).toList(),
-                            onChanged: (String? newValue) {
-                              setState(() {
-                                _selectedContinent = newValue!;
-                                _updateCountryList();
-                                _prepareList();
-                              });
-                            },
+                  children: _rankings.map((r) {
+                    final active = r == _selectedRanking;
+                    return Expanded(
+                      child: GestureDetector(
+                        onTap: () => setState(() { _selectedRanking = r; _prepareList(); }),
+                        child: AnimatedContainer(
+                          duration: const Duration(milliseconds: 200),
+                          padding: const EdgeInsets.symmetric(vertical: 10),
+                          margin: const EdgeInsets.symmetric(horizontal: 3),
+                          decoration: BoxDecoration(
+                            color: active ? const Color(0xFF141414) : Colors.transparent,
+                            borderRadius: BorderRadius.circular(8),
                           ),
+                          child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                            Icon(r.icon, size: 15, color: active ? Colors.white : const Color(0xFFAAAAAA)),
+                            const SizedBox(width: 6),
+                            Text(r.title, style: TextStyle(
+                              fontSize: 12, fontWeight: active ? FontWeight.w700 : FontWeight.w400,
+                              color: active ? Colors.white : const Color(0xFFAAAAAA),
+                            )),
+                          ]),
                         ),
                       ),
-                    ),
-                    const SizedBox(width: 8),
-                    Expanded(
-                      child: Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 12),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(20),
-                          border: Border.all(color: Colors.grey.shade200),
-                        ),
-                        child: DropdownButtonHideUnderline(
-                          child: DropdownButton<String>(
-                            borderRadius: BorderRadius.circular(20),
-                            isExpanded: true,
-                            value: _selectedCountry,
-                            items: _countries.map((String value) => DropdownMenuItem<String>(value: value, child: Text(value, style: const TextStyle(fontSize: 14)))).toList(),
-                            onChanged: (String? newValue) {
-                              setState(() {
-                                _selectedCountry = newValue!;
-                                _prepareList();
-                              });
-                            },
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
+                    );
+                  }).toList(),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 8.0),
-                  child: Wrap(
-                    spacing: 6, alignment: WrapAlignment.center,
-                    children: [
-                      _buildFilterChip('Home', widget.includeHome, widget.onIncludeHomeChanged),
-                      _buildFilterChip('Lived', widget.includeLived, widget.onIncludeLivedChanged),
-                      _buildFilterChip('Transfer', widget.includeTransfer, widget.onIncludeTransferChanged),
-                      _buildFilterChip('Layover', widget.includeLayover, widget.onIncludeLayoverChanged),
-                    ],
+                const SizedBox(height: 10),
+                // ── 대륙 + 국가 드롭다운
+                Row(children: [
+                  Expanded(
+                    child: Container(
+                      height: 32,
+                      padding: const EdgeInsets.symmetric(horizontal: 10),
+                      decoration: BoxDecoration(
+                        color: const Color(0xFFF7F7F5),
+                        borderRadius: BorderRadius.circular(8),
+                        border: Border.all(color: const Color(0xFFE8E8E4)),
+                      ),
+                      child: DropdownButtonHideUnderline(
+                        child: DropdownButton<String>(
+                          isExpanded: true,
+                          value: _selectedContinent,
+                          icon: const Icon(Icons.keyboard_arrow_down_rounded, size: 16, color: Color(0xFF5C5C5C)),
+                          style: const TextStyle(fontSize: 12, color: Color(0xFF141414), fontWeight: FontWeight.w600),
+                          items: _continents.map((v) => DropdownMenuItem(value: v, child: Text(v))).toList(),
+                          onChanged: (v) { if (v != null) setState(() { _selectedContinent = v; _updateCountryList(); _prepareList(); }); },
+                        ),
+                      ),
+                    ),
                   ),
+                  const SizedBox(width: 8),
+                  Expanded(
+                    child: Container(
+                      height: 32,
+                      padding: const EdgeInsets.symmetric(horizontal: 10),
+                      decoration: BoxDecoration(
+                        color: const Color(0xFFF7F7F5),
+                        borderRadius: BorderRadius.circular(8),
+                        border: Border.all(color: const Color(0xFFE8E8E4)),
+                      ),
+                      child: DropdownButtonHideUnderline(
+                        child: DropdownButton<String>(
+                          isExpanded: true,
+                          value: _selectedCountry,
+                          icon: const Icon(Icons.keyboard_arrow_down_rounded, size: 16, color: Color(0xFF5C5C5C)),
+                          style: const TextStyle(fontSize: 12, color: Color(0xFF141414), fontWeight: FontWeight.w600),
+                          items: _countries.map((v) => DropdownMenuItem(value: v, child: Text(v))).toList(),
+                          onChanged: (v) { if (v != null) setState(() { _selectedCountry = v; _prepareList(); }); },
+                        ),
+                      ),
+                    ),
+                  ),
+                ]),
+                const SizedBox(height: 8),
+                // ── Filter chips
+                Wrap(
+                  spacing: 6, alignment: WrapAlignment.center,
+                  children: [
+                    _buildFilterChip('Home', widget.includeHome, widget.onIncludeHomeChanged),
+                    _buildFilterChip('Lived', widget.includeLived, widget.onIncludeLivedChanged),
+                    _buildFilterChip('Transfer', widget.includeTransfer, widget.onIncludeTransferChanged),
+                    _buildFilterChip('Layover', widget.includeLayover, widget.onIncludeLayoverChanged),
+                  ],
                 ),
               ],
             ),
           ),
-          const Divider(height: 1),
           SizedBox(
             height: 350,
             child: _rankedList.isEmpty ? const Center(child: Text('No cities to display.')) : ListView.builder(
@@ -1514,44 +1529,51 @@ class _CityOverviewRankingCardState extends State<_CityOverviewRankingCard> {
 
                 final themeColor = _selectedRanking.themeColor;
                 final barColor = _continentColors[city.continent] ?? themeColor;
+                final topValue2 = _rankedList.isNotEmpty ? _rankedList.first.value : 1.0;
+                final barFrac = topValue2 > 0 ? (value / topValue2).clamp(0.0, 1.0) : 0.0;
 
-                return Card(
-                  elevation: 0, color: themeColor.withOpacity(0.12),
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8.0),
-                    child: Column(
+                return GestureDetector(
+                  onTap: () => _showCityModal(context, city),
+                  child: Container(
+                    margin: const EdgeInsets.symmetric(vertical: 3),
+                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                    decoration: BoxDecoration(
+                      color: themeColor.withOpacity(0.05),
+                      borderRadius: BorderRadius.circular(8),
+                      border: Border(left: BorderSide(color: themeColor, width: 2.5)),
+                    ),
+                    child: Row(
                       children: [
-                        Row(
-                          children: [
-                            Text('$rank', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.grey.shade600)),
-                            const SizedBox(width: 12),
-                            Expanded(
-                              child: Row(
-                                children: [
-                                  _buildFlag(city.countryIsoA2),
-                                  const SizedBox(width: 8),
-                                  Flexible(
-                                    child: Text(
-                                      city.name,
-                                      style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
-                                      overflow: TextOverflow.ellipsis,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            const SizedBox(width: 12),
-                            Text('${value.toInt()}${_selectedRanking.unit}', style: textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
-                          ],
+                        SizedBox(
+                          width: 28,
+                          child: Text(
+                            rank <= 3 ? (rank == 1 ? '🥇' : rank == 2 ? '🥈' : '🥉') : '$rank',
+                            style: TextStyle(fontSize: rank <= 3 ? 16 : 12, fontWeight: FontWeight.w700, color: const Color(0xFFAAAAAA)),
+                            textAlign: TextAlign.center,
+                          ),
                         ),
-                        const SizedBox(height: 6),
-                        LinearProgressIndicator(
-                          value: topValue > 0 ? value / topValue : 0,
-                          borderRadius: BorderRadius.circular(5),
-                          minHeight: 6,
-                          backgroundColor: Colors.grey.shade200,
-                          color: barColor,
+                        const SizedBox(width: 10),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(children: [
+                                _buildFlag(city.countryIsoA2),
+                                const SizedBox(width: 6),
+                                Expanded(child: Text(city.name, style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: Color(0xFF141414)), overflow: TextOverflow.ellipsis)),
+                                Icon(Icons.check_circle_rounded, size: 14, color: themeColor),
+                                const SizedBox(width: 6),
+                                Text('${value.toInt()}${_selectedRanking.unit}', style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: Color(0xFF141414))),
+                              ]),
+                              const SizedBox(height: 5),
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(3),
+                                child: LinearProgressIndicator(value: barFrac, minHeight: 3, backgroundColor: const Color(0xFFE8E8E4), valueColor: AlwaysStoppedAnimation<Color>(barColor)),
+                              ),
+                              const SizedBox(height: 3),
+                              Text(city.country, style: const TextStyle(fontSize: 10, color: Color(0xFFAAAAAA))),
+                            ],
+                          ),
                         ),
                       ],
                     ),

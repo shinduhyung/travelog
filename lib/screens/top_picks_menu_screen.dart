@@ -94,7 +94,7 @@ class TopPicksMenuScreen extends StatelessWidget {
 
                 const SliverToBoxAdapter(child: SizedBox(height: 24)),
 
-                // Quick Access 카드들 — 로그인 필요
+                // Quick Access 카드들 — 순서 변경: Wonders -> Cities -> Instagram
                 SliverToBoxAdapter(
                   child: Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 24),
@@ -117,6 +117,17 @@ class TopPicksMenuScreen extends StatelessWidget {
                           Expanded(
                             child: _buildQuickAccessCard(
                               context,
+                              title: '7 Wonders',
+                              icon: Icons.auto_awesome,
+                              color: const Color(0xFFD4AF37),
+                              attributes: [],
+                              customOnTap: () => gated(() => Navigator.push(context, MaterialPageRoute(builder: (_) => const WorldWondersScreen()))),
+                            ),
+                          ),
+                          const SizedBox(width: 12),
+                          Expanded(
+                            child: _buildQuickAccessCard(
+                              context,
                               title: 'Cities',
                               icon: Icons.location_city_rounded,
                               color: const Color(0xFF4A5568),
@@ -124,26 +135,15 @@ class TopPicksMenuScreen extends StatelessWidget {
                               customOnTap: () => gated(() => Navigator.push(context, MaterialPageRoute(builder: (_) => const LandmarkCitiesScreen()))),
                             ),
                           ),
-                          const SizedBox(width: 10),
+                          const SizedBox(width: 12),
                           Expanded(
                             child: _buildQuickAccessCard(
                               context,
                               title: 'Instagram',
-                              iconAsset: 'assets/icons/instagram_icon.webp',
+                              icon: Icons.camera_alt_rounded,
                               color: const Color(0xFFB87E7E),
                               attributes: [],
                               customOnTap: () => gated(() => Navigator.push(context, MaterialPageRoute(builder: (_) => const InstagramRankingScreen()))),
-                            ),
-                          ),
-                          const SizedBox(width: 10),
-                          Expanded(
-                            child: _buildQuickAccessCard(
-                              context,
-                              title: '7 Wonders',
-                              icon: Icons.auto_awesome,
-                              color: const Color(0xFFD4AF37),
-                              attributes: [],
-                              customOnTap: () => gated(() => Navigator.push(context, MaterialPageRoute(builder: (_) => const WorldWondersScreen()))),
                             ),
                           ),
                         ],
@@ -368,7 +368,7 @@ class TopPicksMenuScreen extends StatelessWidget {
                               landmarksProvider,
                               title: 'Highest Mountains',
                               icon: Icons.terrain_rounded,
-                              color: const Color(0xFF4A5662),
+                              color: const Color(0xFF52796F),
                               attributes: ['Mountain'],
                               filterBySpecificNames: [
                                 'Mount Everest',
@@ -509,146 +509,141 @@ class TopPicksMenuScreen extends StatelessWidget {
             end: Alignment.bottomRight,
             colors: [Color(0xFF2C3E50), Color(0xFF1A252F)],
           ),
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(24),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(0.1),
+              color: Colors.black.withOpacity(0.12),
               blurRadius: 20,
-              offset: const Offset(0, 8),
+              offset: const Offset(0, 10),
             ),
           ],
         ),
-        child: Stack(
-          children: [
-
-            Padding(
-              padding: const EdgeInsets.all(24),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        child: Padding(
+          padding: const EdgeInsets.all(24),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Row(
                 children: [
-                  Row(
-                    children: [
-                      Container(
-                        padding: const EdgeInsets.all(10),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        child: ShaderMask(
-                          shaderCallback: (bounds) => const LinearGradient(
-                            begin: Alignment.topLeft,
-                            end: Alignment.bottomRight,
-                            colors: [
-                              Color(0xFFEC4899),
-                              Color(0xFFF97316),
-                              Color(0xFFF59E0B),
-                              Color(0xFF22C55E),
-                              Color(0xFF0EA5E9),
-                              Color(0xFF8B5CF6),
-                            ],
-                          ).createShader(bounds),
-                          child: const Icon(
-                            Icons.star_rounded,
-                            color: Colors.white,
-                            size: 24,
-                          ),
-                        ),
-                      ),
-                      const SizedBox(width: 12),
-                      const Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Global Top Attractions',
-                            style: TextStyle(
-                              fontSize: 19, // 제목이 길어져 폰트 크기를 약간 조정함
-                              fontWeight: FontWeight.w800,
-                              color: Colors.white,
-                              letterSpacing: -0.5,
-                            ),
-                          ),
-                          Text(
-                            'World\'s Most Iconic',
-                            style: TextStyle(
-                              fontSize: 13,
-                              color: Colors.white70,
-                              fontWeight: FontWeight.w500,
-                            ),
-                          ),
+                  Container(
+                    padding: const EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(14),
+                    ),
+                    child: ShaderMask(
+                      shaderCallback: (bounds) => const LinearGradient(
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                        colors: [
+                          Color(0xFFEC4899),
+                          Color(0xFFF97316),
+                          Color(0xFFF59E0B),
+                          Color(0xFF22C55E),
+                          Color(0xFF0EA5E9),
+                          Color(0xFF8B5CF6),
                         ],
+                      ).createShader(bounds),
+                      child: const Icon(
+                        Icons.star_rounded,
+                        color: Colors.white,
+                        size: 26,
                       ),
-                    ],
+                    ),
                   ),
-                  Row(
+                  const SizedBox(width: 14),
+                  const Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              '$visited / $total',
-                              style: const TextStyle(
-                                fontSize: 28,
-                                fontWeight: FontWeight.w800,
-                                color: Colors.white,
-                                height: 1,
-                              ),
-                            ),
-                            const SizedBox(height: 6),
-                            Container(
-                              height: 6,
-                              decoration: BoxDecoration(
-                                color: Colors.white.withOpacity(0.2),
-                                borderRadius: BorderRadius.circular(3),
-                              ),
-                              child: FractionallySizedBox(
-                                alignment: Alignment.centerLeft,
-                                widthFactor: progress.clamp(0.0, 1.0),
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    color: Colors.white,
-                                    borderRadius: BorderRadius.circular(3),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
+                      Text(
+                        'Global Top Attractions',
+                        style: TextStyle(
+                          fontSize: 19,
+                          fontWeight: FontWeight.w800,
+                          color: Colors.white,
+                          letterSpacing: -0.5,
                         ),
                       ),
-                      const SizedBox(width: 16),
-                      Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Text(
-                              '${(progress * 100).toStringAsFixed(0)}%',
-                              style: const TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.w800,
-                                color: Color(0xFF2C3E50),
-                              ),
-                            ),
-                            const SizedBox(width: 6),
-                            const Icon(
-                              Icons.arrow_forward_rounded,
-                              size: 18,
-                              color: Color(0xFF2C3E50),
-                            ),
-                          ],
+                      Text(
+                        'World\'s Most Iconic',
+                        style: TextStyle(
+                          fontSize: 13,
+                          color: Colors.white70,
+                          fontWeight: FontWeight.w500,
                         ),
                       ),
                     ],
                   ),
                 ],
               ),
-            ),
-          ],
+              Row(
+                children: [
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          '$visited / $total',
+                          style: const TextStyle(
+                            fontSize: 28,
+                            fontWeight: FontWeight.w800,
+                            color: Colors.white,
+                            height: 1,
+                          ),
+                        ),
+                        const SizedBox(height: 8),
+                        Container(
+                          height: 6,
+                          decoration: BoxDecoration(
+                            color: Colors.white.withOpacity(0.15),
+                            borderRadius: BorderRadius.circular(3),
+                          ),
+                          child: FractionallySizedBox(
+                            alignment: Alignment.centerLeft,
+                            widthFactor: progress.clamp(0.0, 1.0),
+                            child: Container(
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(3),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(width: 16),
+                  Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(14),
+                    ),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Text(
+                          '${(progress * 100).toStringAsFixed(0)}%',
+                          style: const TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.w800,
+                            color: Color(0xFF2C3E50),
+                          ),
+                        ),
+                        const SizedBox(width: 4),
+                        const Icon(
+                          Icons.arrow_forward_rounded,
+                          size: 18,
+                          color: Color(0xFF2C3E50),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -676,52 +671,52 @@ class TopPicksMenuScreen extends StatelessWidget {
         );
       },
       child: Container(
-        height: 100,
+        height: 110, // 높이를 조금 높여 여유를 줌
         decoration: BoxDecoration(
           color: Colors.white,
-          borderRadius: BorderRadius.circular(16),
-          border: Border.all(color: Colors.grey.shade200),
+          borderRadius: BorderRadius.circular(20),
+          border: Border.all(color: color.withOpacity(0.1), width: 1.5), // 아이콘 색상의 옅은 테두리
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(0.04),
-              blurRadius: 10,
-              offset: const Offset(0, 2),
+              color: color.withOpacity(0.06), // 아이콘 색상을 반영한 부드러운 그림자
+              blurRadius: 12,
+              offset: const Offset(0, 4),
             ),
           ],
         ),
         child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 8),
+          padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 8),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Container(
-                width: 38,
-                height: 38,
+                width: 42,
+                height: 42,
                 decoration: BoxDecoration(
-                  color: color.withOpacity(0.1),
-                  borderRadius: BorderRadius.circular(10),
+                  color: color.withOpacity(0.12),
+                  shape: BoxShape.circle, // 원형으로 변경하여 더 부드러운 느낌
                 ),
                 child: iconAsset != null
                     ? Center(
                   child: Image.asset(
                     iconAsset,
-                    width: 20,
-                    height: 20,
+                    width: 22,
+                    height: 22,
                     color: color,
                   ),
                 )
-                    : Icon(icon, color: color, size: 22),
+                    : Icon(icon, color: color, size: 24),
               ),
-              const SizedBox(height: 8),
+              const SizedBox(height: 10),
               Text(
                 title,
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: 12,
+                  fontSize: 13,
                   fontWeight: FontWeight.w700,
                   color: Colors.grey.shade800,
-                  letterSpacing: -0.3,
+                  letterSpacing: -0.4,
                 ),
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,

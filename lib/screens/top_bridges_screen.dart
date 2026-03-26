@@ -9,7 +9,6 @@ import 'package:jidoapp/models/landmarks_model.dart';
 import 'package:jidoapp/providers/landmarks_provider.dart';
 import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/widgets/landmark_info_card.dart';
-import 'package:jidoapp/widgets/landmark_visit_editor_card.dart'; // 공통 위젯 추가
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:jidoapp/models/visit_date_model.dart';
 import 'dart:io';
@@ -25,20 +24,20 @@ class TopBridgesScreen extends StatelessWidget {
     {'rank': 4, 'name': 'Tianjin Grand Bridge', 'length': '113.7 km', 'iso': 'CN'},
     {'rank': 5, 'name': 'Weinan Weihe Grand Bridge', 'length': '79.7 km', 'iso': 'CN'},
     {'rank': 6, 'name': 'Bang Na Expressway', 'length': '54.0 km', 'iso': 'TH'},
-    {'rank': 7, 'name': 'Beijing Grand Bridge', 'length': '48.1 km', 'iso': 'CN'},
+    {'rank': 7, 'name': 'Beijing Grand Bridge', 'length': '48.2 km', 'iso': 'CN'},
     {'rank': 8, 'name': 'Lake Pontchartrain Causeway', 'length': '38.4 km', 'iso': 'US'},
-    {'rank': 9, 'name': 'Line 1, Wuhan Metro Bridge', 'length': '37.7 km', 'iso': 'CN'},
+    {'rank': 9, 'name': 'Line 1 Wuhan Metro Bridge', 'length': '37.8 km', 'iso': 'CN'},
     {'rank': 10, 'name': 'Manchac Swamp Bridge', 'length': '36.7 km', 'iso': 'US'},
-    {'rank': 11, 'name': 'Yangcun Bridge', 'length': '35.8 km', 'iso': 'CN'},
-    {'rank': 12, 'name': 'Hangzhou Bay Bridge', 'length': '35.7 km', 'iso': 'CN'},
-    {'rank': 13, 'name': 'Runyang Yangtze River Bridge', 'length': '35.6 km', 'iso': 'CN'},
-    {'rank': 14, 'name': 'Donghai Bridge', 'length': '32.5 km', 'iso': 'CN'},
-    {'rank': 15, 'name': 'Shanghai Maglev Line', 'length': '29.9 km', 'iso': 'CN'},
-    {'rank': 16, 'name': 'Atchafalaya Basin Bridge', 'length': '29.3 km', 'iso': 'US'},
-    {'rank': 17, 'name': 'Yanshan Bridge', 'length': '28.5 km', 'iso': 'CN'},
-    {'rank': 18, 'name': 'King Fahd Causeway', 'length': '25.0 km', 'iso': 'SA'},
-    {'rank': 19, 'name': 'West Hangzhou Bay Bridge', 'length': '25.0 km', 'iso': 'CN'},
-    {'rank': 20, 'name': 'Jiaozhou Bay Bridge', 'length': '26.7 km', 'iso': 'CN'},
+    {'rank': 11, 'name': 'Sheikh Jaber Al-Ahmad Al-Sabah Causeway', 'length': '36.1 km', 'iso': 'KW'},
+    {'rank': 12, 'name': 'Yangcun Grand Bridge', 'length': '35.8 km', 'iso': 'CN'},
+    {'rank': 13, 'name': 'Hangzhou Bay Bridge', 'length': '35.7 km', 'iso': 'CN'},
+    {'rank': 14, 'name': 'Runyang Yangtze River Bridge', 'length': '35.7 km', 'iso': 'CN'},
+    {'rank': 15, 'name': 'Donghai Bridge', 'length': '32.5 km', 'iso': 'CN'},
+    {'rank': 16, 'name': 'Shanghai Maglev line', 'length': '29.9 km', 'iso': 'CN'},
+    {'rank': 17, 'name': 'Atchafalaya Basin Bridge', 'length': '29.3 km', 'iso': 'US'},
+    {'rank': 18, 'name': 'Chesapeake Bay Bridge-Tunnel', 'length': '28.3 km', 'iso': 'US'},
+    {'rank': 19, 'name': 'Jiaozhou Bay Bridge', 'length': '26.7 km', 'iso': 'CN'},
+    {'rank': 20, 'name': 'Jinhui Canal Grand Bridge', 'length': '26.5 km', 'iso': 'CN'},
   ];
 
   @override
@@ -52,57 +51,16 @@ class TopBridgesScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
-              padding: const EdgeInsets.fromLTRB(24, 20, 24, 16),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black.withOpacity(0.03),
-                    blurRadius: 10,
-                    offset: const Offset(0, 2),
-                  ),
-                ],
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    children: [
-                      Container(
-                        padding: const EdgeInsets.all(8),
-                        decoration: BoxDecoration(
-                          color: const Color(0xFFF5F5F5),
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        child: const Icon(
-                          Icons.architecture, // bridge_outlined 대신 architecture 사용
-                          color: Color(0xFF4facfe),
-                          size: 24,
-                        ),
-                      ),
-                      const SizedBox(width: 12),
-                      const Text(
-                        'World\'s Longest Bridges',
-                        style: TextStyle(
-                          fontSize: 24,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xFF111827),
-                          letterSpacing: -0.5,
-                        ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 8),
-                  Text(
-                    'The longest structural marvels by total length',
-                    style: TextStyle(
-                      fontSize: 14,
-                      color: Colors.grey[600],
-                      letterSpacing: 0.2,
-                    ),
-                  ),
-                ],
+            const Padding(
+              padding: EdgeInsets.fromLTRB(20, 30, 20, 10),
+              child: Text(
+                'Top 20 Longest Bridges',
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.w900,
+                  color: Color(0xFF111827),
+                  letterSpacing: -0.5,
+                ),
               ),
             ),
             Expanded(
@@ -123,7 +81,7 @@ class TopBridgesScreen extends StatelessWidget {
                   return GestureDetector(
                     onTap: () {
                       if (landmark != null) {
-                        _showLandmarkDetailsModal(context, landmark, const Color(0xFF4facfe));
+                        _showLandmarkDetailsModal(context, landmark, const Color(0xFFC4A568));
                       } else {
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(content: Text("$name details not found in database")),
@@ -150,18 +108,23 @@ class TopBridgesScreen extends StatelessWidget {
                       child: Row(
                         children: [
                           Container(
-                            width: 32,
+                            width: 40,
+                            height: 40,
+                            decoration: BoxDecoration(
+                              color: Colors.grey[100],
+                              borderRadius: BorderRadius.circular(10),
+                            ),
                             alignment: Alignment.center,
                             child: Text(
                               '#$rank',
                               style: TextStyle(
                                 fontSize: 14,
-                                fontWeight: FontWeight.bold,
-                                color: rank <= 3 ? const Color(0xFF4facfe) : Colors.grey[400],
+                                fontWeight: FontWeight.w800,
+                                color: Colors.grey[700],
                               ),
                             ),
                           ),
-                          const SizedBox(width: 8),
+                          const SizedBox(width: 16),
                           ClipRRect(
                             borderRadius: BorderRadius.circular(4),
                             child: SizedBox(
@@ -182,15 +145,14 @@ class TopBridgesScreen extends StatelessWidget {
                                     fontWeight: FontWeight.bold,
                                     color: Color(0xFF111827),
                                   ),
-                                  overflow: TextOverflow.ellipsis,
                                 ),
                                 const SizedBox(height: 4),
                                 Text(
                                   length,
                                   style: TextStyle(
                                     fontSize: 13,
-                                    color: Colors.grey[600],
-                                    fontWeight: FontWeight.w500,
+                                    fontWeight: FontWeight.w600,
+                                    color: const Color(0xFFC4A568).withOpacity(0.8),
                                   ),
                                 ),
                               ],
@@ -198,18 +160,22 @@ class TopBridgesScreen extends StatelessWidget {
                           ),
                           if (isVisited)
                             Container(
-                              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                              decoration: BoxDecoration(
-                                color: Colors.teal.withOpacity(0.15),
-                                borderRadius: BorderRadius.circular(12),
+                              margin: const EdgeInsets.only(left: 12),
+                              padding: const EdgeInsets.all(4),
+                              decoration: const BoxDecoration(
+                                color: Colors.teal,
+                                shape: BoxShape.circle,
                               ),
-                              child: const Text(
-                                'Visited',
-                                style: TextStyle(
-                                  fontSize: 11,
-                                  color: Colors.teal,
-                                  fontWeight: FontWeight.w600,
-                                ),
+                              child: const Icon(Icons.check, color: Colors.white, size: 16),
+                            )
+                          else
+                            Container(
+                              margin: const EdgeInsets.only(left: 12),
+                              width: 24,
+                              height: 24,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                border: Border.all(color: Colors.grey[300]!),
                               ),
                             ),
                         ],
@@ -320,7 +286,7 @@ class TopBridgesScreen extends StatelessWidget {
                         const Divider(height: 20),
                         Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [Text('History (${freshLandmark.visitDates.length} entries)', style: Theme.of(sheetContext).textTheme.titleSmall), OutlinedButton.icon(icon: const Icon(Icons.add), label: const Text('Add Visit'), onPressed: () => provider.addVisitDate(freshLandmark.name))]),
                         const SizedBox(height: 8),
-                        if (freshLandmark.visitDates.isNotEmpty) ...freshLandmark.visitDates.asMap().entries.map((entry) => LandmarkVisitEditorCard(
+                        if (freshLandmark.visitDates.isNotEmpty) ...freshLandmark.visitDates.asMap().entries.map((entry) => _LandmarkVisitEditorCard(
                           key: ValueKey('${freshLandmark.name}_${entry.key}'),
                           landmarkName: freshLandmark.name,
                           visitDate: entry.value,
@@ -340,6 +306,89 @@ class TopBridgesScreen extends StatelessWidget {
           ),
         );
       },
+    );
+  }
+}
+
+class _LandmarkVisitEditorCard extends StatefulWidget {
+  final String landmarkName;
+  final VisitDate visitDate;
+  final int index;
+  final VoidCallback onDelete;
+  final List<LandmarkSubLocation>? availableLocations;
+
+  const _LandmarkVisitEditorCard({
+    super.key,
+    required this.landmarkName,
+    required this.visitDate,
+    required this.index,
+    required this.onDelete,
+    this.availableLocations,
+  });
+
+  @override
+  State<_LandmarkVisitEditorCard> createState() => _LandmarkVisitEditorCardState();
+}
+
+class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
+  late final TextEditingController _titleController;
+  late final TextEditingController _memoController;
+  late List<String> _currentPhotos;
+  int? _year, _month, _day;
+
+  @override
+  void initState() {
+    super.initState();
+    _titleController = TextEditingController(text: widget.visitDate.title);
+    _memoController = TextEditingController(text: widget.visitDate.memo);
+    _currentPhotos = List.from(widget.visitDate.photos);
+    _year = widget.visitDate.year;
+    _month = widget.visitDate.month;
+    _day = widget.visitDate.day;
+  }
+
+  void _pickImage(ImageSource source) async {
+    final picker = ImagePicker();
+    final pickedFile = await picker.pickImage(source: source);
+    if (pickedFile != null && mounted) {
+      final newPhotos = List<String>.from(_currentPhotos)..add(pickedFile.path);
+      setState(() => _currentPhotos = newPhotos);
+      context.read<LandmarksProvider>().updateLandmarkVisit(
+          widget.landmarkName, widget.index, photos: newPhotos
+      );
+    }
+  }
+
+  Widget _buildPhotoPreview(String photoPath, int index) {
+    return Container(
+        width: 60, height: 60, margin: const EdgeInsets.only(right: 8), color: Colors.grey[300],
+        child: Image.file(File(photoPath), fit: BoxFit.cover));
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final provider = context.read<LandmarksProvider>();
+    return Card(
+      elevation: 1, margin: const EdgeInsets.symmetric(vertical: 4),
+      child: ExpansionTile(
+        title: Text(widget.visitDate.title.isNotEmpty ? widget.visitDate.title : 'Visit Record'),
+        subtitle: Text('Date: $_year-$_month-$_day'),
+        trailing: IconButton(icon: const Icon(Icons.delete, color: Colors.red, size: 20), onPressed: widget.onDelete),
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(12.0),
+            child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  TextField(controller: _titleController, decoration: const InputDecoration(labelText: 'Title', isDense: true), onEditingComplete: () => provider.updateLandmarkVisit(widget.landmarkName, widget.index, title: _titleController.text)),
+                  const SizedBox(height: 8),
+                  TextField(controller: _memoController, decoration: const InputDecoration(labelText: 'Memo', isDense: true), onEditingComplete: () => provider.updateLandmarkVisit(widget.landmarkName, widget.index, memo: _memoController.text)),
+                  const SizedBox(height: 12),
+                  SingleChildScrollView(scrollDirection: Axis.horizontal, child: Row(children: [IconButton(icon: const Icon(Icons.camera_alt), onPressed: () => _pickImage(ImageSource.gallery)), ..._currentPhotos.asMap().entries.map((e) => _buildPhotoPreview(e.value, e.key)).toList()])),
+                ]),
+          )
+        ],
+      ),
     );
   }
 }

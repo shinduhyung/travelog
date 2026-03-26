@@ -4,13 +4,29 @@ import 'package:intl/intl.dart';
 import 'package:jidoapp/models/country_model.dart';
 import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/screens/countries_map_screen.dart';
+import 'package:jidoapp/screens/country_detail_screen.dart'; // 상세 화면 추가
 import 'package:provider/provider.dart';
 import 'dart:math' as math;
 import 'package:flutter/foundation.dart';
 
-// 🚨🚨🚨 추가: Climate Stats Screen import
+// Climate Stats Screen import
 import 'package:jidoapp/screens/climate_stats_screen.dart';
 
+// Helper: ISO A2 → 국기 이모지
+String flagEmoji(String isoA2) {
+  if (isoA2.length != 2) return '';
+  final base = 0x1F1E6 - 0x41;
+  return String.fromCharCode(base + isoA2.codeUnitAt(0)) +
+      String.fromCharCode(base + isoA2.codeUnitAt(1));
+}
+
+// Helper: 국가 클릭시 CountryDetailScreen으로 이동
+void navigateToCountryDetail(BuildContext context, Country country) {
+  Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => CountryDetailScreen(country: country)),
+  );
+}
 
 // --- 데이터 클래스 ---
 class RankingInfo {
@@ -54,7 +70,7 @@ class SpecialGroupInfo {
 }
 
 
-// 🚨🚨🚨 GeographyTabScreen: 기존 GeographyStatsScreen의 모든 내용을 담습니다.
+// GeographyTabScreen: 기존 GeographyStatsScreen의 모든 내용을 담습니다.
 class GeographyTabScreen extends StatelessWidget {
   const GeographyTabScreen({super.key});
 
@@ -82,9 +98,9 @@ class GeographyTabScreen extends StatelessWidget {
           padding: const EdgeInsets.all(16.0),
           child: Column(
             children: [
-              // 1. Latitude / Elevation (Fixed height, no top 10 limit)
+              // 1. Latitude / Elevation
               SizedBox(
-                height: 520, // 🚨 아래 카드와 동일한 높이 적용
+                height: 520,
                 child: _CombinedGeoMetricCard(
                   countriesToDisplay: countriesToDisplay,
                   visitedCountryNames: visitedCountryNames,
@@ -92,7 +108,7 @@ class GeographyTabScreen extends StatelessWidget {
               ),
               const SizedBox(height: 24),
 
-              // 2. Geographic Features (Control Removed, Fixed to All/High/World)
+              // 2. Geographic Features
               SizedBox(
                 height: 520,
                 child: _CombinedRankingCard(
@@ -102,7 +118,7 @@ class GeographyTabScreen extends StatelessWidget {
               ),
               const SizedBox(height: 24),
 
-              // 3. Geo Blocks (Renamed: Removed "3")
+              // 3. Geo Blocks
               _CombinedGeoBlockCard(
                 allCountries: countriesToDisplay,
                 visitedCountryNames: visitedCountryNames,
@@ -123,7 +139,7 @@ class GeographyTabScreen extends StatelessWidget {
 }
 
 
-// 🚨🚨🚨 GeographyStatsScreen: Climate Stats와 통합하는 래퍼 스크린
+// GeographyStatsScreen: Climate Stats와 통합하는 래퍼 스크린
 class GeographyStatsScreen extends StatelessWidget {
   const GeographyStatsScreen({super.key});
 
@@ -143,22 +159,25 @@ class GeographyStatsScreen extends StatelessWidget {
       length: tabs.length,
       child: Material(
         color: Colors.white,
-        child: Column(
-          children: [
-            const Material(
-              elevation: 1,
-              child: TabBar(
-                tabs: tabs,
-                labelStyle: TextStyle(fontWeight: FontWeight.bold),
-                indicatorSize: TabBarIndicatorSize.label,
+        child: SafeArea( // 상단바 겹침 방지 적용
+          bottom: false,
+          child: Column(
+            children: [
+              const Material(
+                elevation: 1,
+                child: TabBar(
+                  tabs: tabs,
+                  labelStyle: TextStyle(fontWeight: FontWeight.bold),
+                  indicatorSize: TabBarIndicatorSize.label,
+                ),
               ),
-            ),
-            Expanded(
-              child: TabBarView(
-                children: screens,
+              Expanded(
+                child: TabBarView(
+                  children: screens,
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
@@ -166,7 +185,7 @@ class GeographyStatsScreen extends StatelessWidget {
 }
 
 
-// --- 지리 블록 카드 (이름 변경됨) ---
+// --- 지리 블록 카드 ---
 class _CombinedGeoBlockCard extends StatefulWidget {
   final List<Country> allCountries;
   final Set<String> visitedCountryNames;
@@ -191,7 +210,6 @@ class _CombinedGeoBlockCardState extends State<_CombinedGeoBlockCard> {
   @override
   void initState() {
     super.initState();
-    // 🚨 수정: 이름에서 숫자 '3' 제거
     _groups = [
       SpecialGroupInfo(
         title: 'Scandinavian', icon: Icons.flag, themeColor: Colors.blue, memberCodes: _scandinaviaCodes,
@@ -244,6 +262,7 @@ class _CombinedGeoBlockCardState extends State<_CombinedGeoBlockCard> {
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
             child: DropdownButtonHideUnderline(
               child: DropdownButton<SpecialGroupInfo>(
+                borderRadius: BorderRadius.circular(16), // 둥근 모서리 적용
                 value: _selectedGroup, isExpanded: true,
                 icon: Icon(Icons.arrow_drop_down_circle_outlined, color: _selectedGroup.themeColor),
                 items: _groups.map((group) => DropdownMenuItem<SpecialGroupInfo>(
@@ -298,15 +317,27 @@ class _CombinedGeoBlockCardState extends State<_CombinedGeoBlockCard> {
                   final country = sortedCountries[index];
                   final isVisited = widget.visitedCountryNames.contains(country.name);
 
-                  return Container(
-                    decoration: BoxDecoration(
-                        color: isVisited ? _selectedGroup.themeColor.withOpacity(0.12) : Colors.grey.shade100,
-                        borderRadius: BorderRadius.circular(8)
-                    ),
-                    padding: const EdgeInsets.symmetric(horizontal: 12),
-                    child: Align(
-                        alignment: Alignment.centerLeft,
-                        child: Text(country.name, style: theme.textTheme.bodyMedium, overflow: TextOverflow.ellipsis)
+                  return InkWell( // 상세 페이지 연결
+                    borderRadius: BorderRadius.circular(8),
+                    onTap: () => navigateToCountryDetail(context, country),
+                    child: Container(
+                      decoration: BoxDecoration(
+                          color: isVisited ? _selectedGroup.themeColor.withOpacity(0.12) : Colors.grey.shade100,
+                          borderRadius: BorderRadius.circular(8)
+                      ),
+                      padding: const EdgeInsets.symmetric(horizontal: 12),
+                      child: Row(
+                        children: [
+                          Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 14)), // 국기 추가
+                          const SizedBox(width: 6),
+                          Expanded(
+                            child: Align(
+                                alignment: Alignment.centerLeft,
+                                child: Text(country.name, style: theme.textTheme.bodyMedium, overflow: TextOverflow.ellipsis)
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   );
                 },
@@ -320,7 +351,7 @@ class _CombinedGeoBlockCardState extends State<_CombinedGeoBlockCard> {
 }
 
 
-// --- 지도 관련 카드 ---
+// --- 지도 관련 특수 그룹 카드 ---
 class _CombinedSpecialGroupCard extends StatefulWidget {
   final List<Country> allCountries;
   final Set<String> visitedCountryNames;
@@ -468,7 +499,6 @@ class _CombinedSpecialGroupCardState extends State<_CombinedSpecialGroupCard> {
       sortedCountries.sort((a,b) => a.name.compareTo(b.name));
     }
 
-
     return Card(
       elevation: 4, shadowColor: Colors.black.withOpacity(0.2),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
@@ -480,6 +510,7 @@ class _CombinedSpecialGroupCardState extends State<_CombinedSpecialGroupCard> {
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
             child: DropdownButtonHideUnderline(
               child: DropdownButton<SpecialGroupInfo>(
+                borderRadius: BorderRadius.circular(16), // 둥근 모서리 적용
                 value: _selectedGroup, isExpanded: true,
                 icon: Icon(Icons.arrow_drop_down_circle_outlined, color: _selectedGroup.themeColor),
                 items: _groups.map((group) => DropdownMenuItem<SpecialGroupInfo>(
@@ -536,25 +567,37 @@ class _CombinedSpecialGroupCardState extends State<_CombinedSpecialGroupCard> {
                   final isSubMember = _selectedGroup.subMemberCodes.contains(country.isoA3);
                   final memberData = _selectedGroup.memberData?[country.isoA3];
 
-                  return Container(
-                    decoration: BoxDecoration(
-                        color: isVisited ? _selectedGroup.themeColor.withOpacity(0.12) : Colors.grey.shade100,
-                        borderRadius: BorderRadius.circular(8)
-                    ),
-                    padding: const EdgeInsets.symmetric(horizontal: 12),
-                    child: Align(
-                        alignment: Alignment.centerLeft,
-                        child: RichText(
-                          overflow: TextOverflow.ellipsis,
-                          text: TextSpan(
-                            style: theme.textTheme.bodyMedium,
-                            children: [
-                              if(isSubMember) const TextSpan(text: '(*) ', style: TextStyle(color: Colors.purple, fontWeight: FontWeight.bold)),
-                              TextSpan(text: country.name),
-                              if(memberData != null) TextSpan(text: ' ($memberData)', style: TextStyle(color: Colors.grey.shade600)),
-                            ],
+                  return InkWell( // 상세 페이지 연결
+                    borderRadius: BorderRadius.circular(8),
+                    onTap: () => navigateToCountryDetail(context, country),
+                    child: Container(
+                      decoration: BoxDecoration(
+                          color: isVisited ? _selectedGroup.themeColor.withOpacity(0.12) : Colors.grey.shade100,
+                          borderRadius: BorderRadius.circular(8)
+                      ),
+                      padding: const EdgeInsets.symmetric(horizontal: 12),
+                      child: Row(
+                        children: [
+                          Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 14)), // 국기 추가
+                          const SizedBox(width: 6),
+                          Expanded(
+                            child: Align(
+                                alignment: Alignment.centerLeft,
+                                child: RichText(
+                                  overflow: TextOverflow.ellipsis,
+                                  text: TextSpan(
+                                    style: theme.textTheme.bodyMedium,
+                                    children: [
+                                      if(isSubMember) const TextSpan(text: '(*) ', style: TextStyle(color: Colors.purple, fontWeight: FontWeight.bold)),
+                                      TextSpan(text: country.name),
+                                      if(memberData != null) TextSpan(text: ' ($memberData)', style: TextStyle(color: Colors.grey.shade600)),
+                                    ],
+                                  ),
+                                )
+                            ),
                           ),
-                        )
+                        ],
+                      ),
                     ),
                   );
                 },
@@ -640,7 +683,6 @@ class _CombinedGeoMetricCardState extends State<_CombinedGeoMetricCard> {
         listToRank = listToRank.reversed.toList();
       }
     }
-    // 🚨 수정: 10개 제한 제거 (전체 리스트 표시)
     setState(() {
       _rankedList = listToRank;
     });
@@ -678,6 +720,7 @@ class _CombinedGeoMetricCardState extends State<_CombinedGeoMetricCard> {
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
             child: DropdownButtonHideUnderline(
               child: DropdownButton<String>(
+                borderRadius: BorderRadius.circular(16), // 둥근 모서리 적용
                 value: _selectedMetricType,
                 isExpanded: true,
                 icon: Icon(Icons.arrow_drop_down_circle_outlined, color: themeColor),
@@ -719,9 +762,12 @@ class _CombinedGeoMetricCardState extends State<_CombinedGeoMetricCard> {
                 Expanded(
                   child: DropdownButtonFormField<int>(
                     value: isLatitude ? _latitudeSortOrder : _elevationSortOrder,
-                    decoration: const InputDecoration(labelText: 'Order', border: OutlineInputBorder(), isDense: true),
+                    decoration: InputDecoration(
+                        labelText: 'Order',
+                        border: OutlineInputBorder(borderRadius: BorderRadius.circular(16)), // 둥근 모서리
+                        isDense: true
+                    ),
                     items: const [
-                      // 1. 스위치 색상 테마색 적용
                       DropdownMenuItem(
                         value: 0,
                         child: Text('High'),
@@ -742,7 +788,11 @@ class _CombinedGeoMetricCardState extends State<_CombinedGeoMetricCard> {
                   child: isLatitude
                       ? DropdownButtonFormField<int>(
                     value: _latitudeMetric,
-                    decoration: const InputDecoration(labelText: 'Metric', border: OutlineInputBorder(), isDense: true),
+                    decoration: InputDecoration(
+                        labelText: 'Metric',
+                        border: OutlineInputBorder(borderRadius: BorderRadius.circular(16)), // 둥근 모서리
+                        isDense: true
+                    ),
                     items: const [
                       DropdownMenuItem(value: 0, child: Text('Average')),
                       DropdownMenuItem(value: 1, child: Text('Farthest Pt.')),
@@ -752,7 +802,11 @@ class _CombinedGeoMetricCardState extends State<_CombinedGeoMetricCard> {
                   )
                       : DropdownButtonFormField<int>(
                     value: _elevationMetric,
-                    decoration: const InputDecoration(labelText: 'Metric', border: OutlineInputBorder(), isDense: true),
+                    decoration: InputDecoration(
+                        labelText: 'Metric',
+                        border: OutlineInputBorder(borderRadius: BorderRadius.circular(16)), // 둥근 모서리
+                        isDense: true
+                    ),
                     items: const [
                       DropdownMenuItem(value: 1, child: Text('Average')),
                       DropdownMenuItem(value: 0, child: Text('Highest')),
@@ -780,7 +834,6 @@ class _CombinedGeoMetricCardState extends State<_CombinedGeoMetricCard> {
     final visitedCountries = widget.countriesToDisplay.where((c) => widget.visitedCountryNames.contains(c.name)).toList();
     final allCountries = widget.countriesToDisplay;
 
-    // ⭐️ 숫자 포매터 정의
     final latitudeFormatter = NumberFormat("0.00", 'en_US');
     final elevationFormatter = NumberFormat("###,###,##0", 'en_US');
 
@@ -856,7 +909,6 @@ class _CombinedGeoMetricCardState extends State<_CombinedGeoMetricCard> {
     }
     final topValue = getTopValue();
 
-    // 🚨 Expanded 내부이므로 높이 지정 없음
     return ListView.builder(
       padding: const EdgeInsets.fromLTRB(8, 0, 8, 8),
       itemCount: _rankedList.length,
@@ -886,28 +938,34 @@ class _CombinedGeoMetricCardState extends State<_CombinedGeoMetricCard> {
           elevation: 0,
           color: isVisited ? themeColor.withOpacity(0.12) : Colors.transparent,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8.0),
-            child: Column(
-              children: [
-                Row(
-                  children: [
-                    _buildRankText(rank, themeColor), // 2. 순위 숫자 표시로 변경
-                    const SizedBox(width: 12),
-                    Expanded(child: Text(item.name, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold, fontSize: 17))),
-                    const SizedBox(width: 12),
-                    Text(displayValue, style: theme.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
-                  ],
-                ),
-                const SizedBox(height: 6),
-                LinearProgressIndicator(
-                  value: rawValue.abs().toDouble() / (topValue == 0 ? 1 : topValue.toDouble()),
-                  borderRadius: BorderRadius.circular(5),
-                  minHeight: 5,
-                  backgroundColor: Colors.grey.shade300,
-                  color: barColor,
-                ),
-              ],
+          child: InkWell( // 상세 페이지 연결
+            borderRadius: BorderRadius.circular(12),
+            onTap: () => navigateToCountryDetail(context, item),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8.0),
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      _buildRankText(rank, themeColor),
+                      const SizedBox(width: 12),
+                      Text(flagEmoji(item.isoA2), style: const TextStyle(fontSize: 18)), // 국기 추가
+                      const SizedBox(width: 8),
+                      Expanded(child: Text(item.name, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold, fontSize: 17))),
+                      const SizedBox(width: 12),
+                      Text(displayValue, style: theme.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
+                    ],
+                  ),
+                  const SizedBox(height: 6),
+                  LinearProgressIndicator(
+                    value: rawValue.abs().toDouble() / (topValue == 0 ? 1 : topValue.toDouble()),
+                    borderRadius: BorderRadius.circular(5),
+                    minHeight: 5,
+                    backgroundColor: Colors.grey.shade300,
+                    color: barColor,
+                  ),
+                ],
+              ),
             ),
           ),
         );
@@ -916,9 +974,7 @@ class _CombinedGeoMetricCardState extends State<_CombinedGeoMetricCard> {
   }
 }
 
-
-
-// --- Geographic Features (구 Rankings) 카드 ---
+// --- Geographic Features 카드 ---
 class _CombinedRankingCard extends StatefulWidget {
   final List<Country> allCountries;
   final Set<String> visitedCountryNames;
@@ -933,7 +989,6 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
   late final List<RankingInfo> _rankings;
   late RankingInfo _selectedRanking;
 
-  // 🚨 UI 컨트롤 상태 변수 삭제 (High, All, World 고정)
   List<Country> _rankedList = [];
 
   final List<String> _continents = ['World', 'Asia', 'Europe', 'Africa', 'North America', 'South America', 'Oceania'];
@@ -963,23 +1018,17 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
   }
 
   void _prepareList() {
-    // 🚨 1. 필터 고정: All Countries (visited 여부 상관 없음)
     List<Country> listToRank = List.from(widget.allCountries);
 
-    // 🚨 2. 필터 고정: World (대륙 필터링 없음)
-    // if (_selectedContinent != 'World') ... 삭제
-
-    // 0 이상인 값만 표시
     listToRank = listToRank.where((c) {
       final value = _selectedRanking.valueAccessor(c);
       return value != null && (value as num) > 0;
     }).toList();
 
-    // 🚨 3. 정렬 고정: High (내림차순)
     listToRank.sort((a, b) {
       final valA = _selectedRanking.valueAccessor(a) ?? 0;
       final valB = _selectedRanking.valueAccessor(b) ?? 0;
-      return valB.compareTo(valA); // Always Descending
+      return valB.compareTo(valA);
     });
 
     if (mounted) setState(() { _rankedList = listToRank; });
@@ -1029,6 +1078,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                 const SizedBox(height: 8),
                 DropdownButtonHideUnderline(
                   child: DropdownButton<RankingInfo>(
+                    borderRadius: BorderRadius.circular(16), // 둥근 모서리 적용
                     value: _selectedRanking, isExpanded: true,
                     icon: Icon(Icons.arrow_drop_down_circle_outlined, color: rankingThemeColor),
                     items: _rankings.map((group) => DropdownMenuItem<RankingInfo>(
@@ -1042,7 +1092,6 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                     onChanged: (newValue) { if (newValue != null) { setState(() { _selectedRanking = newValue; _prepareList(); }); } },
                   ),
                 ),
-                // 🚨 수정: UI 컨트롤 (스위치, 대륙 드롭다운) 삭제
               ],
             ),
           ),
@@ -1067,28 +1116,34 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                   elevation: 0,
                   color: isVisited ? rankingThemeColor.withOpacity(0.12) : Colors.transparent,
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8.0),
-                    child: Column(
-                      children: [
-                        Row(
-                          children: [
-                            _buildRankText(rank, rankingThemeColor),
-                            const SizedBox(width: 12),
-                            Expanded(child: Text(country.name, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
-                            Text(formattedValue, style: textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
-                          ],
-                        ),
-                        const SizedBox(height: 6),
-                        LayoutBuilder(
-                          builder: (context, constraints) => Stack(
+                  child: InkWell( // 상세 페이지 연결
+                    borderRadius: BorderRadius.circular(12),
+                    onTap: () => navigateToCountryDetail(context, country),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8.0),
+                      child: Column(
+                        children: [
+                          Row(
                             children: [
-                              Container(height: 6, decoration: BoxDecoration(color: Colors.grey.shade200, borderRadius: BorderRadius.circular(3))),
-                              Container(height: 6, width: constraints.maxWidth * progressValue, decoration: BoxDecoration(color: barColor, borderRadius: BorderRadius.circular(3))),
+                              _buildRankText(rank, rankingThemeColor),
+                              const SizedBox(width: 12),
+                              Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 18)), // 국기 추가
+                              const SizedBox(width: 8),
+                              Expanded(child: Text(country.name, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
+                              Text(formattedValue, style: textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
                             ],
                           ),
-                        ),
-                      ],
+                          const SizedBox(height: 6),
+                          LayoutBuilder(
+                            builder: (context, constraints) => Stack(
+                              children: [
+                                Container(height: 6, decoration: BoxDecoration(color: Colors.grey.shade200, borderRadius: BorderRadius.circular(3))),
+                                Container(height: 6, width: constraints.maxWidth * progressValue, decoration: BoxDecoration(color: barColor, borderRadius: BorderRadius.circular(3))),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 );

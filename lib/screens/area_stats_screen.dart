@@ -6,8 +6,25 @@ import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 import 'package:jidoapp/models/country_model.dart';
 import 'package:jidoapp/providers/country_provider.dart';
+import 'package:jidoapp/screens/country_detail_screen.dart'; // 상세 화면 임포트 추가
 import 'package:sleek_circular_slider/sleek_circular_slider.dart';
 import 'dart:math' as math;
+
+// Helper: ISO A2 → 국기 이모지
+String flagEmoji(String isoA2) {
+  if (isoA2.length != 2) return '';
+  final base = 0x1F1E6 - 0x41;
+  return String.fromCharCode(base + isoA2.codeUnitAt(0)) +
+      String.fromCharCode(base + isoA2.codeUnitAt(1));
+}
+
+// Helper: 국가 클릭시 CountryDetailScreen으로 이동
+void navigateToCountryDetail(BuildContext context, Country country) {
+  Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => CountryDetailScreen(country: country)),
+  );
+}
 
 // 데이터 클래스: 랭킹 정보
 class RankingInfo {
@@ -44,64 +61,66 @@ class AreaStatsScreen extends StatelessWidget {
     final compactFormatter = NumberFormat.compact();
 
     return Scaffold(
-      // AppBar 제거 (통합 화면의 탭 뷰로 사용됨)
-      body: Consumer<CountryProvider>(
-        builder: (context, provider, child) {
-          if (provider.isLoading) {
-            return const Center(child: CircularProgressIndicator());
-          }
+      body: SafeArea( // 상단바 겹침 방지
+        bottom: false,
+        child: Consumer<CountryProvider>(
+          builder: (context, provider, child) {
+            if (provider.isLoading) {
+              return const Center(child: CircularProgressIndicator());
+            }
 
-          final countriesToDisplay = provider.filteredCountries;
-          final visitedCountryNames = provider.visitedCountries;
-          final visitedCountries = countriesToDisplay.where((c) => visitedCountryNames.contains(c.name)).toList();
+            final countriesToDisplay = provider.filteredCountries;
+            final visitedCountryNames = provider.visitedCountries;
+            final visitedCountries = countriesToDisplay.where((c) => visitedCountryNames.contains(c.name)).toList();
 
-          final totalVisitedArea = visitedCountries.fold<double>(0, (sum, item) => sum + item.area);
-          final totalWorldArea = countriesToDisplay.fold<double>(0, (sum, item) => sum + item.area);
-          final areaPercentage = totalWorldArea > 0 ? (totalVisitedArea / totalWorldArea * 100) : 0.0;
+            final totalVisitedArea = visitedCountries.fold<double>(0, (sum, item) => sum + item.area);
+            final totalWorldArea = countriesToDisplay.fold<double>(0, (sum, item) => sum + item.area);
+            final areaPercentage = totalWorldArea > 0 ? (totalVisitedArea / totalWorldArea * 100) : 0.0;
 
-          final Map<String, double> totalAreaByContinent = {};
-          final Map<String, double> visitedAreaByContinent = {};
+            final Map<String, double> totalAreaByContinent = {};
+            final Map<String, double> visitedAreaByContinent = {};
 
-          for (var data in continentsData) {
-            final fullName = data['fullName'] as String;
-            totalAreaByContinent[fullName] = 0;
-            visitedAreaByContinent[fullName] = 0;
-          }
+            for (var data in continentsData) {
+              final fullName = data['fullName'] as String;
+              totalAreaByContinent[fullName] = 0;
+              visitedAreaByContinent[fullName] = 0;
+            }
 
-          for (var country in countriesToDisplay) {
-            if (country.continent != null && totalAreaByContinent.containsKey(country.continent)) {
-              totalAreaByContinent.update(country.continent!, (v) => v + country.area);
-              if (visitedCountryNames.contains(country.name)) {
-                visitedAreaByContinent.update(country.continent!, (v) => v + country.area);
+            for (var country in countriesToDisplay) {
+              if (country.continent != null && totalAreaByContinent.containsKey(country.continent)) {
+                totalAreaByContinent.update(country.continent!, (v) => v + country.area);
+                if (visitedCountryNames.contains(country.name)) {
+                  visitedAreaByContinent.update(country.continent!, (v) => v + country.area);
+                }
               }
             }
-          }
 
-          final avgVisitedArea = visitedCountries.isNotEmpty ? totalVisitedArea / visitedCountries.length : 0.0;
-          final avgWorldArea = countriesToDisplay.isNotEmpty ? totalWorldArea / countriesToDisplay.length : 0.0;
+            final avgVisitedArea = visitedCountries.isNotEmpty ? totalVisitedArea / visitedCountries.length : 0.0;
+            final avgWorldArea = countriesToDisplay.isNotEmpty ? totalWorldArea / countriesToDisplay.length : 0.0;
 
-          return SingleChildScrollView(
-            padding: const EdgeInsets.all(16),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                _buildTotalAreaCard(context, compactFormatter, totalVisitedArea, totalWorldArea, areaPercentage),
-                const SizedBox(height: 24),
-                _buildAreaByContinentCard(context, compactFormatter, visitedAreaByContinent, totalAreaByContinent),
-                const SizedBox(height: 24),
-                _buildAverageAreaCard(context, numberFormatter, avgVisitedArea, avgWorldArea),
-                const SizedBox(height: 24),
-                SizedBox(
-                  height: 600,
-                  child: _CombinedRankingCard(
-                    countriesToDisplay: countriesToDisplay,
-                    visitedCountryNames: visitedCountryNames,
+            return SingleChildScrollView(
+              padding: const EdgeInsets.all(16),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  _buildTotalAreaCard(context, compactFormatter, totalVisitedArea, totalWorldArea, areaPercentage),
+                  const SizedBox(height: 24),
+                  _buildAreaByContinentCard(context, compactFormatter, visitedAreaByContinent, totalAreaByContinent),
+                  const SizedBox(height: 24),
+                  _buildAverageAreaCard(context, numberFormatter, avgVisitedArea, avgWorldArea),
+                  const SizedBox(height: 24),
+                  SizedBox(
+                    height: 600,
+                    child: _CombinedRankingCard(
+                      countriesToDisplay: countriesToDisplay,
+                      visitedCountryNames: visitedCountryNames,
+                    ),
                   ),
-                ),
-              ],
-            ),
-          );
-        },
+                ],
+              ),
+            );
+          },
+        ),
       ),
     );
   }
@@ -438,7 +457,6 @@ class AreaStatsScreen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text('Average Area per Country', style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
-          // ⭐️ 설명 텍스트 제거됨
           const SizedBox(height: 24),
           _buildHorizontalBar(
             context: context,
@@ -624,7 +642,6 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
 
     final countryProvider = Provider.of<CountryProvider>(context);
     final useDefaultColor = countryProvider.useDefaultRankingBarColor;
-    // 랭킹의 테마색을 가져옵니다.
     final rankingThemeColor = _selectedRanking.themeColor;
 
     final Map<String, Color> continentColors = {
@@ -646,7 +663,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
               children: [
                 Row(
                   children: [
-                    Icon(_selectedRanking.icon, color: rankingThemeColor), // ✅ 수정된 부분
+                    Icon(_selectedRanking.icon, color: rankingThemeColor),
                     const SizedBox(width: 12),
                     Text(_selectedRanking.title, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
                   ],
@@ -654,7 +671,6 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                 const SizedBox(height: 8),
                 Row(
                   children: [
-                    // 1. 스위치 색상을 테마색으로 변경
                     Expanded(
                         child: SegmentedButton<int>(
                           showSelectedIcon: false,
@@ -664,7 +680,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                           style: SegmentedButton.styleFrom(
                             foregroundColor: Colors.grey.shade700,
                             selectedForegroundColor: Colors.white,
-                            selectedBackgroundColor: rankingThemeColor.withOpacity(0.8), // 테마색 적용
+                            selectedBackgroundColor: rankingThemeColor.withOpacity(0.8),
                             backgroundColor: Colors.white,
                             side: BorderSide(color: Colors.grey.shade300, width: 1),
                             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
@@ -673,7 +689,6 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                         )
                     ),
                     const SizedBox(width: 8),
-                    // 1. 스위치 색상을 테마색으로 변경
                     Expanded(
                         child: SegmentedButton<int>(
                           showSelectedIcon: false,
@@ -683,7 +698,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                           style: SegmentedButton.styleFrom(
                             foregroundColor: Colors.grey.shade700,
                             selectedForegroundColor: Colors.white,
-                            selectedBackgroundColor: rankingThemeColor.withOpacity(0.8), // 테마색 적용
+                            selectedBackgroundColor: rankingThemeColor.withOpacity(0.8),
                             backgroundColor: Colors.white,
                             side: BorderSide(color: Colors.grey.shade300, width: 1),
                             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
@@ -696,6 +711,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                 Align(
                   alignment: Alignment.centerRight,
                   child: DropdownButton<String>(
+                    borderRadius: BorderRadius.circular(16), // 둥근 모서리 적용
                     value: _selectedContinent,
                     items: _continents.map((String value) => DropdownMenuItem<String>(value: value, child: Text(value, style: const TextStyle(fontSize: 14)))).toList(),
                     onChanged: (String? newValue) { _selectedContinent = newValue!; _onFilterChanged(); },
@@ -725,29 +741,34 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                   elevation: 0,
                   color: isVisited ? rankingThemeColor.withOpacity(0.12) : Colors.transparent,
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8.0),
-                    child: Column(
-                      children: [
-                        Row(
-                          children: [
-                            // 2. 모든 순위를 일반 숫자 형식으로 표시
-                            _buildRankText(rank, rankingThemeColor),
-                            const SizedBox(width: 12),
-                            Expanded(child: Text(country.name, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
-                            Text('${compactFormatter.format(value)}${_selectedRanking.unit}', style: textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
-                          ],
-                        ),
-                        const SizedBox(height: 6),
-                        LayoutBuilder(
-                          builder: (context, constraints) => Stack(
+                  child: InkWell( // 상세 페이지 연결 적용
+                    borderRadius: BorderRadius.circular(12),
+                    onTap: () => navigateToCountryDetail(context, country),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8.0),
+                      child: Column(
+                        children: [
+                          Row(
                             children: [
-                              Container(height: 6, decoration: BoxDecoration(color: Colors.grey.shade200, borderRadius: BorderRadius.circular(3))),
-                              Container(height: 6, width: constraints.maxWidth * progressValue, decoration: BoxDecoration(color: barColor, borderRadius: BorderRadius.circular(3))),
+                              _buildRankText(rank, rankingThemeColor),
+                              const SizedBox(width: 12),
+                              Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 18)), // 국기 추가
+                              const SizedBox(width: 8),
+                              Expanded(child: Text(country.name, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
+                              Text('${compactFormatter.format(value)}${_selectedRanking.unit}', style: textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
                             ],
                           ),
-                        ),
-                      ],
+                          const SizedBox(height: 6),
+                          LayoutBuilder(
+                            builder: (context, constraints) => Stack(
+                              children: [
+                                Container(height: 6, decoration: BoxDecoration(color: Colors.grey.shade200, borderRadius: BorderRadius.circular(3))),
+                                Container(height: 6, width: constraints.maxWidth * progressValue, decoration: BoxDecoration(color: barColor, borderRadius: BorderRadius.circular(3))),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 );

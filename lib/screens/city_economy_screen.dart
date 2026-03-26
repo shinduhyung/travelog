@@ -5,6 +5,16 @@ import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 import 'package:jidoapp/models/city_model.dart';
 import 'package:jidoapp/providers/city_provider.dart';
+import 'package:jidoapp/screens/cities_screen.dart';
+
+void _showCityModal(BuildContext context, City city) {
+  final provider = Provider.of<CityProvider>(context, listen: false);
+  final fullCity = provider.allCities.firstWhere(
+        (c) => c.name == city.name && c.countryIsoA2.isNotEmpty,
+    orElse: () => city,
+  );
+  showExternalCityDetailsModal(context, fullCity);
+}
 
 class RankingInfo {
   final String title;
@@ -106,13 +116,13 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
           valueAccessor: (c) => c.gdpNominal,
           unit: '\$'),
       RankingInfo(
-          title: 'Wealthiest Cities',
+          title: 'Wealthiest',
           icon: Icons.diamond,
           themeColor: Colors.blue,
           metricKey: 'wealth',
           valueAccessor: (c) => c.millionaires),
       RankingInfo(
-          title: 'Global Financial Centres',
+          title: 'Financial',
           icon: Icons.account_balance,
           themeColor: Colors.purple,
           metricKey: 'financial_index',
@@ -181,109 +191,131 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
         : 1;
     final useDefaultColor = widget.cityProvider.useDefaultCityRankingBarColor;
 
-    return Card(
-      elevation: 2,
-      clipBehavior: Clip.antiAlias,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+    return Container(
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(14),
+        border: Border.all(color: const Color(0xFFE8E8E4)),
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Container(
-            padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
-            color: Colors.grey.shade50,
+            padding: const EdgeInsets.all(12),
+            decoration: const BoxDecoration(
+              border: Border(bottom: BorderSide(color: Color(0xFFE8E8E4))),
+            ),
             child: Column(
               children: [
-                DropdownButtonHideUnderline(
-                  child: DropdownButton<RankingInfo>(
-                    value: _selectedRanking,
-                    isExpanded: true,
-                    icon: Icon(Icons.arrow_drop_down_circle_outlined,
-                        color: _selectedRanking.themeColor),
-                    items: _rankings
-                        .map((r) => DropdownMenuItem(
-                      value: r,
-                      child: Row(children: [
-                        Icon(r.icon, color: r.themeColor),
-                        const SizedBox(width: 12),
-                        Text(r.title,
-                            style: textTheme.titleMedium?.copyWith(
-                                fontWeight: FontWeight.bold)),
-                      ]),
-                    ))
-                        .toList(),
-                    onChanged: (value) {
-                      if (value != null) {
-                        setState(() {
-                          _selectedRanking = value;
-                          _prepareList();
-                        });
-                      }
-                    },
-                  ),
+                // ── 메트릭 탭 (GDP / Wealthiest / Financial)
+                Row(
+                  children: _rankings.map((r) {
+                    final active = r == _selectedRanking;
+                    return Expanded(
+                      child: GestureDetector(
+                        onTap: () => setState(() { _selectedRanking = r; _prepareList(); }),
+                        child: AnimatedContainer(
+                          duration: const Duration(milliseconds: 200),
+                          padding: const EdgeInsets.symmetric(vertical: 10),
+                          margin: const EdgeInsets.symmetric(horizontal: 3),
+                          decoration: BoxDecoration(
+                            color: active ? const Color(0xFF141414) : Colors.transparent,
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                            Icon(r.icon, size: 15, color: active ? Colors.white : const Color(0xFFAAAAAA)),
+                            const SizedBox(width: 6),
+                            Text(r.title, style: TextStyle(
+                              fontSize: 11, fontWeight: active ? FontWeight.w700 : FontWeight.w400,
+                              color: active ? Colors.white : const Color(0xFFAAAAAA),
+                            )),
+                          ]),
+                        ),
+                      ),
+                    );
+                  }).toList(),
                 ),
+                // ── GDP 서브토글
+                if (_selectedRanking.metricKey == 'gdp') ...[
+                  const SizedBox(height: 8),
+                  Row(
+                    children: [['Nominal', 0], ['PPP', 1]].map((e) {
+                      final active = _gdpTypeSegment == e[1];
+                      return Expanded(
+                        child: GestureDetector(
+                          onTap: () => setState(() { _gdpTypeSegment = e[1] as int; _prepareList(); }),
+                          child: AnimatedContainer(
+                            duration: const Duration(milliseconds: 180),
+                            padding: const EdgeInsets.symmetric(vertical: 7),
+                            margin: const EdgeInsets.symmetric(horizontal: 3),
+                            decoration: BoxDecoration(
+                              color: active ? const Color(0xFF141414) : Colors.transparent,
+                              borderRadius: BorderRadius.circular(7),
+                              border: Border.all(color: active ? const Color(0xFF141414) : const Color(0xFFE8E8E4)),
+                            ),
+                            child: Text(e[0] as String, textAlign: TextAlign.center, style: TextStyle(
+                              fontSize: 11, fontWeight: active ? FontWeight.w700 : FontWeight.w400,
+                              color: active ? Colors.white : const Color(0xFFAAAAAA),
+                            )),
+                          ),
+                        ),
+                      );
+                    }).toList(),
+                  ),
+                ],
+                // ── Wealth 서브토글
+                if (_selectedRanking.metricKey == 'wealth') ...[
+                  const SizedBox(height: 8),
+                  Row(
+                    children: [['Millionaires', 0], ['Billionaires', 1]].map((e) {
+                      final active = _wealthTypeSegment == e[1];
+                      return Expanded(
+                        child: GestureDetector(
+                          onTap: () => setState(() { _wealthTypeSegment = e[1] as int; _prepareList(); }),
+                          child: AnimatedContainer(
+                            duration: const Duration(milliseconds: 180),
+                            padding: const EdgeInsets.symmetric(vertical: 7),
+                            margin: const EdgeInsets.symmetric(horizontal: 3),
+                            decoration: BoxDecoration(
+                              color: active ? const Color(0xFF141414) : Colors.transparent,
+                              borderRadius: BorderRadius.circular(7),
+                              border: Border.all(color: active ? const Color(0xFF141414) : const Color(0xFFE8E8E4)),
+                            ),
+                            child: Text(e[0] as String, textAlign: TextAlign.center, style: TextStyle(
+                              fontSize: 11, fontWeight: active ? FontWeight.w700 : FontWeight.w400,
+                              color: active ? Colors.white : const Color(0xFFAAAAAA),
+                            )),
+                          ),
+                        ),
+                      );
+                    }).toList(),
+                  ),
+                ],
+                // ── 대륙 드롭다운
                 const SizedBox(height: 8),
-                if (_selectedRanking.metricKey == 'gdp')
-                  SizedBox(
-                    width: double.infinity,
-                    child: SegmentedButton<int>(
-                      showSelectedIcon: false,
-                      style: SegmentedButton.styleFrom(
-                        selectedBackgroundColor:
-                        _selectedRanking.themeColor.withOpacity(0.8),
-                        selectedForegroundColor: Colors.white,
+                Row(mainAxisAlignment: MainAxisAlignment.end, children: [
+                  Container(
+                    height: 32,
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                    decoration: BoxDecoration(
+                      color: const Color(0xFFF7F7F5),
+                      borderRadius: BorderRadius.circular(8),
+                      border: Border.all(color: const Color(0xFFE8E8E4)),
+                    ),
+                    child: DropdownButtonHideUnderline(
+                      child: DropdownButton<String>(
+                        value: _selectedContinent,
+                        icon: const Icon(Icons.keyboard_arrow_down_rounded, size: 16, color: Color(0xFF5C5C5C)),
+                        style: const TextStyle(fontSize: 12, color: Color(0xFF141414), fontWeight: FontWeight.w600),
+                        items: _continents.map((v) => DropdownMenuItem(value: v, child: Text(v))).toList(),
+                        onChanged: (v) { if (v != null) setState(() { _selectedContinent = v; _prepareList(); }); },
                       ),
-                      segments: const [
-                        ButtonSegment(value: 0, label: Text('Nominal')),
-                        ButtonSegment(value: 1, label: Text('PPP'))
-                      ],
-                      selected: {_gdpTypeSegment},
-                      onSelectionChanged: (s) => setState(() {
-                        _gdpTypeSegment = s.first;
-                        _prepareList();
-                      }),
                     ),
                   ),
-                if (_selectedRanking.metricKey == 'wealth')
-                  SizedBox(
-                    width: double.infinity,
-                    child: SegmentedButton<int>(
-                      showSelectedIcon: false,
-                      style: SegmentedButton.styleFrom(
-                        selectedBackgroundColor:
-                        _selectedRanking.themeColor.withOpacity(0.8),
-                        selectedForegroundColor: Colors.white,
-                      ),
-                      segments: const [
-                        ButtonSegment(value: 0, label: Text('Millionaires')),
-                        ButtonSegment(value: 1, label: Text('Billionaires'))
-                      ],
-                      selected: {_wealthTypeSegment},
-                      onSelectionChanged: (s) => setState(() {
-                        _wealthTypeSegment = s.first;
-                        _prepareList();
-                      }),
-                    ),
-                  ),
-                Align(
-                  alignment: Alignment.centerRight,
-                  child: DropdownButton<String>(
-                    value: _selectedContinent,
-                    items: _continents
-                        .map((v) => DropdownMenuItem(
-                        value: v,
-                        child: Text(v, style: const TextStyle(fontSize: 14))))
-                        .toList(),
-                    onChanged: (v) => setState(() {
-                      _selectedContinent = v!;
-                      _prepareList();
-                    }),
-                    underline: const SizedBox(),
-                  ),
-                ),
+                ]),
               ],
             ),
           ),
-          const Divider(height: 1),
           SizedBox(
             height: 600,
             child: _rankedList.isEmpty
@@ -319,123 +351,49 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                     : (CityEconomyScreen.continentColors[continent] ??
                     _selectedRanking.themeColor);
 
-                return Card(
-                  elevation: 0,
-                  color: isVisited
-                      ? _selectedRanking.themeColor.withOpacity(0.12)
-                      : Colors.transparent,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 12.0,
-                      vertical: 8.0,
+                return GestureDetector(
+                  onTap: item is City ? () => _showCityModal(context, item) : null,
+                  child: Container(
+                    margin: const EdgeInsets.symmetric(vertical: 3),
+                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                    decoration: BoxDecoration(
+                      color: isVisited ? _selectedRanking.themeColor.withOpacity(0.05) : Colors.transparent,
+                      borderRadius: BorderRadius.circular(8),
+                      border: Border(left: BorderSide(
+                        color: isVisited ? _selectedRanking.themeColor : Colors.transparent,
+                        width: 2.5,
+                      )),
                     ),
-                    child: Column(
-                      children: [
-                        Row(
-                          children: [
-                            Text(
-                              '$rank',
-                              style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.grey.shade600,
-                              ),
-                            ),
-                            const SizedBox(width: 12),
-                            Expanded(
-                              child: Row(
-                                children: [
-                                  Expanded(
-                                    child: Text(
-                                      name,
-                                      style: textTheme.titleMedium?.copyWith(
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                  ),
-                                  if (isVisited)
-                                    Container(
-                                      padding: const EdgeInsets.symmetric(
-                                        horizontal: 8,
-                                        vertical: 4,
-                                      ),
-                                      decoration: BoxDecoration(
-                                        gradient: LinearGradient(
-                                          colors: [
-                                            barColor,
-                                            barColor.withOpacity(0.8),
-                                          ],
-                                        ),
-                                        borderRadius:
-                                        BorderRadius.circular(8),
-                                        boxShadow: [
-                                          BoxShadow(
-                                            color: barColor.withOpacity(0.3),
-                                            blurRadius: 4,
-                                            offset: const Offset(0, 2),
-                                          ),
-                                        ],
-                                      ),
-                                      child: const Row(
-                                        mainAxisSize: MainAxisSize.min,
-                                        children: [
-                                          Icon(
-                                            Icons.check_circle,
-                                            size: 14,
-                                            color: Colors.white,
-                                          ),
-                                          const SizedBox(width: 4),
-                                          Text(
-                                            'Visited',
-                                            style: TextStyle(
-                                              fontSize: 11,
-                                              fontWeight: FontWeight.bold,
-                                              color: Colors.white,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                ],
-                              ),
-                            ),
-                            const SizedBox(width: 8),
-                            Text(
-                              '${_selectedRanking.unit}${compactFormatter.format(value)}',
-                              style: textTheme.bodyLarge?.copyWith(
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ],
-                        ),
-                        const SizedBox(height: 6),
-                        LayoutBuilder(
-                          builder: (context, constraints) => Stack(
-                            children: [
-                              Container(
-                                height: 6,
-                                decoration: BoxDecoration(
-                                  color: Colors.grey.shade200,
-                                  borderRadius: BorderRadius.circular(3),
-                                ),
-                              ),
-                              Container(
-                                height: 6,
-                                width: constraints.maxWidth *
-                                    (topValue == 0 ? 0 : value / topValue),
-                                decoration: BoxDecoration(
-                                  color: barColor,
-                                  borderRadius: BorderRadius.circular(3),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
+                    child: Row(children: [
+                      SizedBox(width: 28, child: Text(
+                        rank <= 3 ? (rank == 1 ? '🥇' : rank == 2 ? '🥈' : '🥉') : '$rank',
+                        style: TextStyle(fontSize: rank <= 3 ? 16 : 12, fontWeight: FontWeight.w700, color: const Color(0xFFAAAAAA)),
+                        textAlign: TextAlign.center,
+                      )),
+                      const SizedBox(width: 10),
+                      Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                        Row(children: [
+                          Expanded(child: Text(name, style: TextStyle(
+                            fontSize: 13, fontWeight: isVisited ? FontWeight.w700 : FontWeight.w500,
+                            color: const Color(0xFF141414),
+                          ), overflow: TextOverflow.ellipsis)),
+                          if (isVisited) ...[const SizedBox(width: 4), Icon(Icons.check_circle_rounded, size: 14, color: _selectedRanking.themeColor)],
+                          const SizedBox(width: 6),
+                          Text('${_selectedRanking.unit}${compactFormatter.format(value)}',
+                              style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: Color(0xFF141414))),
+                        ]),
+                        const SizedBox(height: 5),
+                        ClipRRect(borderRadius: BorderRadius.circular(3), child: LinearProgressIndicator(
+                          value: topValue == 0 ? 0 : (value / topValue).clamp(0.0, 1.0).toDouble(),
+                          minHeight: 3,
+                          backgroundColor: const Color(0xFFE8E8E4),
+                          valueColor: AlwaysStoppedAnimation<Color>(barColor),
+                        )),
+                        const SizedBox(height: 3),
+                        Text(item is City ? (item as City).country : ((item as Map<String,dynamic>)['country'] ?? ''),
+                            style: const TextStyle(fontSize: 10, color: Color(0xFFAAAAAA))),
+                      ])),
+                    ]),
                   ),
                 );
               },

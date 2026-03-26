@@ -43,6 +43,7 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
   static const Color orange = Color(0xFFF97316);
   static const Color skyBlue = Color(0xFF0EA5E9);
   static const Color pink = Color(0xFFEC4899);
+  static const Color recommendBlue = Color(0xFF2563EB); // Recommendations Screen의 테마색
 
   @override
   void initState() {
@@ -831,8 +832,8 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                     context,
                     'Discover',
                     '',
-                    Icons.explore_rounded,
-                    skyBlue,
+                    Icons.auto_awesome, // Recommendations Screen의 AI Picks 아이콘으로 변경
+                    recommendBlue, // Recommendations Screen의 블루 컬러로 변경
                         () => gated(() => Navigator.push(context, MaterialPageRoute(builder: (_) => const RecommendationsScreen()))))),
             const SizedBox(width: 12),
             Expanded(

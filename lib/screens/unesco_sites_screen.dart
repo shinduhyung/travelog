@@ -3,15 +3,18 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'dart:ui';
+import 'dart:io';
+import 'dart:ui'; // BackdropFilter, ImageFilter 사용을 위해 추가
+import 'package:image_picker/image_picker.dart';
 import 'package:collection/collection.dart';
 import 'package:country_flags/country_flags.dart';
 import 'package:jidoapp/models/unesco_model.dart';
-import 'package:jidoapp/models/visit_date_model.dart'; // [Fix] Undefined class VisitDate 에러 해결을 위한 임포트
+import 'package:jidoapp/models/visit_date_model.dart';
 import 'package:jidoapp/providers/unesco_provider.dart';
+import 'package:jidoapp/screens/unesco_map_screen.dart';
 import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/widgets/landmark_info_card.dart';
-import 'package:jidoapp/widgets/unesco_visit_editor_card.dart';
+import 'package:jidoapp/models/country_model.dart';
 
 enum SiteSortOption { nameAsc, inscriptionYearAsc, countryAsc }
 enum LogSortOption { newest, oldest }
@@ -27,20 +30,25 @@ class UnescoSitesScreen extends StatefulWidget {
 class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
   final TextEditingController _searchController = TextEditingController();
 
+  // Default sort option is Country
   SiteSortOption _sortOption = SiteSortOption.countryAsc;
 
+  // Filter States
   bool _showVisitedOnly = false;
   bool _showCultural = true;
   bool _showNatural = true;
   bool _showMixed = true;
 
+  // Visit Log States
   bool _isLogExpanded = true;
   LogSortOption _logSortOption = LogSortOption.newest;
-  LogGroupOption _logGroupOption = LogGroupOption.country;
+  LogGroupOption _logGroupOption = LogGroupOption.country; // Default 변경됨
 
+  // Cached grouped list
   Map<String, List<UnescoSite>>? _cachedGroupedList;
   List<String>? _cachedSortedKeys;
 
+  // Track the currently expanded group index to allow only one open at a time
   int? _expandedGroupIndex;
 
   @override
@@ -64,6 +72,8 @@ class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
     });
   }
 
+  // --- Theme Helpers ---
+
   Color _getTypeColor(String type) {
     switch (type) {
       case 'Natural': return Colors.green;
@@ -79,6 +89,8 @@ class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
       case 'Cultural': default: return Icons.account_balance;
     }
   }
+
+  // --- Filtering and Sorting Logic ---
 
   void _updateGroupedListIfNeeded(UnescoProvider provider, CountryProvider countryProvider) {
     if (_sortOption == SiteSortOption.nameAsc &&
@@ -198,7 +210,7 @@ class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
     showModalBottomSheet(
       context: context,
       isScrollControlled: true,
-      backgroundColor: Colors.transparent,
+      backgroundColor: Colors.transparent, // 투명 배경 추가
       builder: (BuildContext sheetContext) {
         final provider = sheetContext.watch<UnescoProvider>();
         final countryProvider = sheetContext.read<CountryProvider>();
@@ -235,6 +247,7 @@ class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
             heightFactor: 0.85,
             child: Column(
               children: [
+                // 그라데이션 및 오버레이 헤더 적용
                 ClipRRect(
                   borderRadius: const BorderRadius.vertical(top: Radius.circular(24)),
                   child: Stack(
@@ -403,7 +416,7 @@ class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
                         ),
                         const SizedBox(height: 10),
                         if (freshSite.visitDates.isNotEmpty)
-                          ...freshSite.visitDates.asMap().entries.map((entry) => UnescoVisitEditorCard(
+                          ...freshSite.visitDates.asMap().entries.map((entry) => _UnescoVisitEditorCard(
                             key: ValueKey('${freshSite.name}_${entry.key}'),
                             siteName: freshSite.name,
                             visitDate: entry.value,
@@ -430,6 +443,8 @@ class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
       },
     ).then((_) => setState(() {}));
   }
+
+  // --- UI Build Methods ---
 
   @override
   Widget build(BuildContext context) {
@@ -471,21 +486,28 @@ class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
 
     return CustomScrollView(
       slivers: [
+        // Header Section
         SliverToBoxAdapter(
           child: _buildHeader(context, percentage, visitedCount, totalCount, mainThemeColor),
         ),
+
+        // Visit Log Section
         SliverToBoxAdapter(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
             child: _buildVisitLogSection(context, provider, mainThemeColor),
           ),
         ),
+
+        // Controls Section
         SliverToBoxAdapter(
           child: Padding(
             padding: const EdgeInsets.fromLTRB(20, 0, 20, 12),
             child: _buildControls(context, mainThemeColor),
           ),
         ),
+
+        // List Section
         if (_sortOption != SiteSortOption.nameAsc || _searchController.text.trim().isNotEmpty || _showVisitedOnly)
           SliverPadding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -815,6 +837,7 @@ class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            // UNESCO — big, proud, fills the space
             Row(
               crossAxisAlignment: CrossAxisAlignment.baseline,
               textBaseline: TextBaseline.alphabetic,
@@ -829,6 +852,7 @@ class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
                   ),
                 ),
                 const SizedBox(width: 8),
+                // small dot separator
                 Padding(
                   padding: const EdgeInsets.only(bottom: 4),
                   child: Container(
@@ -855,6 +879,7 @@ class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
               ],
             ),
             const SizedBox(height: 2),
+            // Thin accent underline only under UNESCO
             Row(
               children: [
                 Container(
@@ -889,6 +914,7 @@ class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
       ),
       child: Row(
         children: [
+          // Count info
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -928,8 +954,10 @@ class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
               ],
             ),
           ),
+          // Thin vertical divider
           Container(width: 1, height: 36, color: Colors.grey[100]),
           const SizedBox(width: 16),
+          // Progress bar + percentage
           Expanded(
             flex: 2,
             child: Column(
@@ -964,6 +992,66 @@ class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
                       ),
                     ],
                   ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildProgressCard(BuildContext context, double percentage, int visitedCount, int totalCount, Color themeColor) {
+    return Container(
+      decoration: BoxDecoration(
+        gradient: LinearGradient(begin: Alignment.topLeft, end: Alignment.bottomRight, colors: [Colors.white, Colors.white.withOpacity(0.95)]),
+        borderRadius: BorderRadius.circular(24),
+        boxShadow: [BoxShadow(color: themeColor.withOpacity(0.1), blurRadius: 24, offset: const Offset(0, 8), spreadRadius: -4)],
+      ),
+      child: Stack(
+        children: [
+          Positioned(right: -20, top: -20, child: Container(width: 80, height: 80, decoration: BoxDecoration(shape: BoxShape.circle, color: themeColor.withOpacity(0.05)))),
+          Positioned(left: -10, bottom: -10, child: Container(width: 60, height: 60, decoration: BoxDecoration(shape: BoxShape.circle, color: themeColor.withOpacity(0.03)))),
+          Padding(
+            padding: const EdgeInsets.all(24),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          children: [
+                            Container(padding: const EdgeInsets.all(8), decoration: BoxDecoration(gradient: LinearGradient(colors: [themeColor, themeColor.withOpacity(0.7)]), borderRadius: BorderRadius.circular(12)), child: const Icon(Icons.emoji_events_rounded, size: 20, color: Colors.white)),
+                            const SizedBox(width: 12),
+                            const Text('My Progress', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.black87, letterSpacing: -0.3)),
+                          ],
+                        ),
+                        const SizedBox(height: 4),
+                        Padding(padding: const EdgeInsets.only(left: 52), child: Text('Keep exploring!', style: TextStyle(fontSize: 12, color: Colors.grey[600], fontWeight: FontWeight.w500))),
+                      ],
+                    ),
+                    Container(padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10), decoration: BoxDecoration(gradient: LinearGradient(colors: [themeColor.withOpacity(0.15), themeColor.withOpacity(0.08)]), borderRadius: BorderRadius.circular(20), border: Border.all(color: themeColor.withOpacity(0.2), width: 1.5)), child: Text('${(percentage * 100).toStringAsFixed(0)}%', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: themeColor, letterSpacing: -0.5))),
+                  ],
+                ),
+                const SizedBox(height: 24),
+                Stack(
+                  children: [
+                    Container(height: 14, decoration: BoxDecoration(color: Colors.grey[100], borderRadius: BorderRadius.circular(10))),
+                    ClipRRect(borderRadius: BorderRadius.circular(10), child: ShaderMask(shaderCallback: (bounds) => LinearGradient(colors: [themeColor, themeColor.withOpacity(0.8)]).createShader(bounds), child: Container(height: 14, width: MediaQuery.of(context).size.width * percentage, decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(10))))),
+                  ],
+                ),
+                const SizedBox(height: 16),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Row(children: [Container(width: 8, height: 8, decoration: BoxDecoration(shape: BoxShape.circle, color: themeColor)), const SizedBox(width: 8), Text('$visitedCount visited', style: TextStyle(fontSize: 13, color: Colors.grey[700], fontWeight: FontWeight.w600))]),
+                    Text('$totalCount sites', style: TextStyle(fontSize: 13, color: Colors.grey[600], fontWeight: FontWeight.w500)),
+                  ],
                 ),
               ],
             ),
@@ -1168,6 +1256,202 @@ class _VisitLogItem {
   _VisitLogItem({required this.site, required this.visit, required this.nthVisit});
 }
 
+class _UnescoVisitEditorCard extends StatefulWidget {
+  final String siteName;
+  final VisitDate visitDate;
+  final int index;
+  final VoidCallback onDelete;
+  final List<UnescoSubLocation> availableLocations;
+  const _UnescoVisitEditorCard({super.key, required this.siteName, required this.visitDate, required this.index, required this.onDelete, required this.availableLocations});
+  @override
+  State<_UnescoVisitEditorCard> createState() => _UnescoVisitEditorCardState();
+}
+
+class _UnescoVisitEditorCardState extends State<_UnescoVisitEditorCard> {
+  late final TextEditingController _titleController;
+  late final TextEditingController _memoController;
+  late List<String> _currentPhotos;
+  int? _year, _month, _day;
+  late String _displayTitle, _displayMemo;
+  bool _isEditing = false;
+  final ExpansionTileController _expansionTileController = ExpansionTileController();
+
+  @override
+  void initState() {
+    super.initState();
+    _displayTitle = widget.visitDate.title;
+    _displayMemo  = widget.visitDate.memo ?? '';
+    _titleController = TextEditingController(text: _displayTitle);
+    _memoController  = TextEditingController(text: _displayMemo);
+    _currentPhotos   = List.from(widget.visitDate.photos);
+    _year = widget.visitDate.year; _month = widget.visitDate.month; _day = widget.visitDate.day;
+    if (_displayTitle.isEmpty && _displayMemo.isEmpty && _currentPhotos.isEmpty) _isEditing = true;
+  }
+
+  @override void dispose() { _titleController.dispose(); _memoController.dispose(); super.dispose(); }
+
+  void _saveChanges() {
+    context.read<UnescoProvider>().updateLandmarkVisit(
+      widget.siteName, widget.index,
+      title: _titleController.text, memo: _memoController.text,
+      year: _year ?? -9999, month: _month ?? -9999, day: _day ?? -9999,
+      photos: _currentPhotos,
+    );
+    setState(() { _displayTitle = _titleController.text; _displayMemo = _memoController.text; _isEditing = false; });
+  }
+
+  void _cancelEditing() {
+    setState(() {
+      _titleController.text = _displayTitle; _memoController.text = _displayMemo;
+      _year = widget.visitDate.year; _month = widget.visitDate.month; _day = widget.visitDate.day;
+      _currentPhotos = List.from(widget.visitDate.photos); _isEditing = false;
+    });
+  }
+
+  Future<void> _selectDate(BuildContext context) async {
+    final p = await showDatePicker(context: context,
+        initialDate: DateTime(_year ?? DateTime.now().year, _month ?? 1, _day ?? 1),
+        firstDate: DateTime(1900), lastDate: DateTime(2100));
+    if (p != null && mounted) setState(() { _year = p.year; _month = p.month; _day = p.day; });
+  }
+
+  void _pickImage(ImageSource source) async {
+    final f = await ImagePicker().pickImage(source: source);
+    if (f != null && mounted) setState(() => _currentPhotos.add(f.path));
+  }
+
+  void _toggleLocationInVisit(String locName, bool isSelected) {
+    final provider = context.read<UnescoProvider>();
+    List<String> currentDetails = List.from(widget.visitDate.visitedDetails);
+    if (isSelected) {
+      if (!currentDetails.contains(locName)) {
+        currentDetails.add(locName);
+        if (!provider.isSubLocationVisited(widget.siteName, locName)) {
+          provider.toggleSubLocation(widget.siteName, locName);
+        }
+      }
+    } else {
+      currentDetails.remove(locName);
+    }
+    provider.updateLandmarkVisit(widget.siteName, widget.index, visitedDetails: currentDetails);
+    setState(() {});
+  }
+
+  Widget _buildPhotoPreview(String path, int i) {
+    return Stack(clipBehavior: Clip.none, children: [
+      Container(width: 60, height: 60, margin: const EdgeInsets.only(right: 12),
+          decoration: BoxDecoration(borderRadius: BorderRadius.circular(8),
+              boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.1), blurRadius: 4, offset: const Offset(0, 2))]),
+          child: ClipRRect(borderRadius: BorderRadius.circular(8), child: Image.file(File(path), fit: BoxFit.cover))),
+      if (_isEditing) Positioned(top: -6, right: 6,
+          child: GestureDetector(onTap: () => setState(() => _currentPhotos.removeAt(i)),
+              child: Container(decoration: const BoxDecoration(color: Colors.white, shape: BoxShape.circle),
+                  child: const Icon(Icons.cancel, color: Colors.red, size: 22)))),
+    ]);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final themeColor = Theme.of(context).primaryColor;
+    return Card(
+      elevation: 1, margin: const EdgeInsets.symmetric(vertical: 4),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+      child: ExpansionTile(
+        controller: _expansionTileController,
+        initiallyExpanded: _isEditing,
+        title: Text(_displayTitle.isNotEmpty ? _displayTitle : 'Visit Record',
+            style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15)),
+        subtitle: Text('Date: $_year-$_month-$_day', style: TextStyle(color: Colors.grey[600], fontSize: 13)),
+        trailing: IconButton(
+          icon: const Icon(Icons.delete_outline, color: Colors.red, size: 22),
+          onPressed: () => showDialog(context: context, builder: (ctx) => AlertDialog(
+              title: const Text('Delete Visit Record'),
+              content: const Text('Are you sure you want to delete this visit record?'),
+              actions: [
+                TextButton(onPressed: () => Navigator.pop(ctx), child: const Text('Cancel')),
+                TextButton(onPressed: () { Navigator.pop(ctx); widget.onDelete(); },
+                    child: const Text('Delete', style: TextStyle(color: Colors.red))),
+              ])),
+        ),
+        children: [Container(
+          padding: const EdgeInsets.all(16),
+          decoration: BoxDecoration(color: Colors.grey[50],
+              borderRadius: const BorderRadius.only(bottomLeft: Radius.circular(12), bottomRight: Radius.circular(12))),
+          child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            if (_isEditing) ...[
+              Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+                Text('Visit Date: $_year-$_month-$_day', style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14)),
+                TextButton.icon(icon: const Icon(Icons.edit_calendar, size: 18), label: const Text('Edit Date'),
+                    onPressed: () => _selectDate(context),
+                    style: TextButton.styleFrom(visualDensity: VisualDensity.compact)),
+              ]),
+              const SizedBox(height: 12),
+              TextField(controller: _titleController,
+                  decoration: InputDecoration(labelText: 'Title', isDense: true, filled: true, fillColor: Colors.white,
+                      border: OutlineInputBorder(borderRadius: BorderRadius.circular(8), borderSide: BorderSide.none))),
+              const SizedBox(height: 12),
+              TextField(controller: _memoController, maxLines: 3, minLines: 1,
+                  decoration: InputDecoration(labelText: 'Memo', isDense: true, filled: true, fillColor: Colors.white,
+                      border: OutlineInputBorder(borderRadius: BorderRadius.circular(8), borderSide: BorderSide.none))),
+            ] else if (_displayMemo.isNotEmpty)
+              Padding(padding: const EdgeInsets.only(bottom: 12),
+                  child: Text(_displayMemo, style: TextStyle(fontSize: 14, color: Colors.grey[800], height: 1.4))),
+
+            const SizedBox(height: 12),
+
+            if (widget.availableLocations != null && widget.availableLocations!.isNotEmpty) ...[
+              const Text("Locations included in this visit:",
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Colors.grey)),
+              const SizedBox(height: 4),
+              IgnorePointer(ignoring: !_isEditing,
+                  child: Wrap(spacing: 8.0, runSpacing: 4.0,
+                      children: widget.availableLocations!.map((loc) {
+                        final isChecked = widget.visitDate.visitedDetails.contains(loc.name);
+                        return FilterChip(
+                          label: Text(loc.name, style: const TextStyle(fontSize: 11)),
+                          selected: isChecked,
+                          selectedColor: themeColor.withOpacity(0.2),
+                          checkmarkColor: themeColor,
+                          onSelected: (bool selected) => _toggleLocationInVisit(loc.name, selected),
+                        );
+                      }).toList())),
+              const SizedBox(height: 16),
+            ],
+
+            if (_currentPhotos.isNotEmpty || _isEditing)
+              Padding(padding: const EdgeInsets.only(top: 8),
+                  child: SingleChildScrollView(scrollDirection: Axis.horizontal, clipBehavior: Clip.none,
+                      child: Row(children: [
+                        if (_isEditing) Container(margin: const EdgeInsets.only(right: 12),
+                            decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(8),
+                                border: Border.all(color: Colors.grey.shade300)),
+                            child: IconButton(icon: const Icon(Icons.add_photo_alternate, color: Colors.grey),
+                                onPressed: () => _pickImage(ImageSource.gallery))),
+                        ..._currentPhotos.asMap().entries.map((e) => _buildPhotoPreview(e.value, e.key)).toList(),
+                      ]))),
+
+            const SizedBox(height: 16),
+            Row(mainAxisAlignment: MainAxisAlignment.end, children: [
+              if (_isEditing) ...[
+                TextButton(onPressed: _cancelEditing,
+                    child: Text('Cancel', style: TextStyle(color: Colors.grey[700], fontWeight: FontWeight.w600))),
+                const SizedBox(width: 8),
+                ElevatedButton.icon(onPressed: _saveChanges,
+                    icon: const Icon(Icons.save, size: 18), label: const Text('Save'),
+                    style: ElevatedButton.styleFrom(backgroundColor: themeColor, foregroundColor: Colors.white, elevation: 0)),
+              ] else
+                OutlinedButton.icon(onPressed: () => setState(() => _isEditing = true),
+                    icon: const Icon(Icons.edit, size: 16), label: const Text('Edit Record'),
+                    style: OutlinedButton.styleFrom(foregroundColor: themeColor,
+                        side: BorderSide(color: themeColor.withOpacity(0.5)))),
+            ]),
+          ]),
+        )],
+      ),
+    );
+  }
+}
+
 class DiagonalClipper extends CustomClipper<Path> {
   const DiagonalClipper();
   @override
@@ -1179,6 +1463,5 @@ class DiagonalClipper extends CustomClipper<Path> {
     path.close();
     return path;
   }
-  @override
-  bool shouldReclip(CustomClipper<Path> oldClipper) => false;
+  @override bool shouldReclip(CustomClipper<Path> oldClipper) => false;
 }

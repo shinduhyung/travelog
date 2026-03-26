@@ -9,9 +9,24 @@ import 'package:jidoapp/screens/climate_map_screen.dart';
 import 'dart:math' as math;
 import 'package:flutter/foundation.dart';
 import 'package:jidoapp/screens/countries_map_screen.dart';
-// 🚨🚨🚨 GeographyTabScreen의 continentsData에 접근하기 위해 import 추가
+import 'package:jidoapp/screens/country_detail_screen.dart'; // 상세 화면 추가
 import 'package:jidoapp/screens/geography_stats_screen.dart';
 
+// Helper: ISO A2 → 국기 이모지
+String flagEmoji(String isoA2) {
+  if (isoA2.length != 2) return '';
+  final base = 0x1F1E6 - 0x41;
+  return String.fromCharCode(base + isoA2.codeUnitAt(0)) +
+      String.fromCharCode(base + isoA2.codeUnitAt(1));
+}
+
+// Helper: 국가 클릭시 CountryDetailScreen으로 이동
+void navigateToCountryDetail(BuildContext context, Country country) {
+  Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => CountryDetailScreen(country: country)),
+  );
+}
 
 // 데이터 클래스: 랭킹 정보
 class RankingInfo {
@@ -34,11 +49,9 @@ class RankingInfo {
   });
 }
 
-// 🚨🚨🚨 ClimateStatsScreen을 ClimateTabScreen으로 변경하여 탭 뷰 위젯으로 사용
 class ClimateStatsScreen extends StatelessWidget {
   const ClimateStatsScreen({super.key});
 
-  // Climate zone names in English only
   static const Map<String, String> _climateZoneNames = {
     'A': 'Tropical',
     'B': 'Arid',
@@ -47,14 +60,12 @@ class ClimateStatsScreen extends StatelessWidget {
     'E': 'Polar',
   };
 
-  // Colors for each climate zone card
   static const Map<String, Color> _climateZoneColors = {
     'A': Color(0xFFFF0000), 'B': Color(0xFFFFFF00), 'C': Color(0xFF008000), 'D': Color(0xFF0000FF), 'E': Color(0xFF00FFFF),
   };
 
   @override
   Widget build(BuildContext context) {
-    // Scaffold와 AppBar는 래퍼인 GeographyStatsScreen에서 처리합니다.
     return Consumer<CountryProvider>(
       builder: (context, provider, child) {
         if (provider.isLoading) {
@@ -64,7 +75,6 @@ class ClimateStatsScreen extends StatelessWidget {
         final filteredCountries = provider.filteredCountries;
         final visitedCountryNames = provider.visitedCountries;
 
-        // Group countries by climate zone
         final Map<String, List<Country>> countriesByClimateZone = {};
         for (var country in filteredCountries) {
           if (country.climateZone != null) {
@@ -78,15 +88,13 @@ class ClimateStatsScreen extends StatelessWidget {
           padding: const EdgeInsets.all(16.0),
           child: Column(
             children: [
-              // 지도 버튼 (Economy Development Status Map과 동일한 스타일 적용)
               _ClimateMapButton(
                 countriesByClimateZone: countriesByClimateZone,
                 climateZonesToShow: climateZonesToShow,
                 climateZoneNames: _climateZoneNames,
                 climateZoneColors: _climateZoneColors,
               ),
-              const SizedBox(height: 12), // 🚨 수정: 간격 조정
-              // ✅ 원상 복구된 기후대별 카드 리스트를 단일 확장 로직으로 묶기
+              const SizedBox(height: 12),
               _ClimateZoneSection(
                 countriesByClimateZone: countriesByClimateZone,
                 visitedCountryNames: visitedCountryNames,
@@ -94,7 +102,7 @@ class ClimateStatsScreen extends StatelessWidget {
                 climateZoneNames: _climateZoneNames,
                 climateZoneColors: _climateZoneColors,
               ),
-              const SizedBox(height: 12), // 간격 조정
+              const SizedBox(height: 12),
               SizedBox(
                 height: 600,
                 child: _CombinedRankingCard(
@@ -110,7 +118,6 @@ class ClimateStatsScreen extends StatelessWidget {
   }
 }
 
-// 🚨 추가: 지도 버튼 위젯
 class _ClimateMapButton extends StatelessWidget {
   final Map<String, List<Country>> countriesByClimateZone;
   final List<String> climateZonesToShow;
@@ -185,7 +192,6 @@ class _ClimateMapButton extends StatelessWidget {
   }
 }
 
-// 🚨 추가: 기후대 섹션 (단일 확장 로직 포함)
 class _ClimateZoneSection extends StatefulWidget {
   final Map<String, List<Country>> countriesByClimateZone;
   final Set<String> visitedCountryNames;
@@ -206,7 +212,6 @@ class _ClimateZoneSection extends StatefulWidget {
 }
 
 class _ClimateZoneSectionState extends State<_ClimateZoneSection> {
-  // 🚨 단일 확장 상태: 현재 확장된 기후대 코드
   String? _expandedZoneCode;
 
   void _toggleZone(String zoneCode) {
@@ -234,7 +239,7 @@ class _ClimateZoneSectionState extends State<_ClimateZoneSection> {
 
       return Padding(
         padding: const EdgeInsets.only(bottom: 12.0),
-        child: _ClimateZoneTile( // 🚨 _ClimateZoneStatCard 대신 _ClimateZoneTile 사용
+        child: _ClimateZoneTile(
           title: zoneName,
           zoneCode: zoneCode,
           countries: countriesInZone,
@@ -252,7 +257,6 @@ class _ClimateZoneSectionState extends State<_ClimateZoneSection> {
   }
 }
 
-// 🚨 추가: _GovernmentTile과 유사한 기후대 타일 위젯 (단일 확장 로직)
 class _ClimateZoneTile extends StatelessWidget {
   final String title;
   final String zoneCode;
@@ -282,12 +286,12 @@ class _ClimateZoneTile extends StatelessWidget {
 
     return Container(
       decoration: BoxDecoration(
-        color: isExpanded ? color.withOpacity(0.12) : Colors.white, // 확장 시 배경색 변경
+        color: isExpanded ? color.withOpacity(0.12) : Colors.white,
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: isExpanded ? color.withOpacity(0.3) : Colors.grey.shade300, width: 1.5), // 확장 시 테두리 색 변경
+        border: Border.all(color: isExpanded ? color.withOpacity(0.3) : Colors.grey.shade300, width: 1.5),
         boxShadow: [
           BoxShadow(
-            color: isExpanded ? color.withOpacity(0.1) : Colors.black.withOpacity(0.05), // 확장 시 그림자 변경
+            color: isExpanded ? color.withOpacity(0.1) : Colors.black.withOpacity(0.05),
             blurRadius: 5,
             offset: const Offset(0, 2),
           ),
@@ -296,7 +300,7 @@ class _ClimateZoneTile extends StatelessWidget {
       child: Column(
         children: [
           InkWell(
-            onTap: () => onToggle(zoneCode), // 토글 함수 연결
+            onTap: () => onToggle(zoneCode),
             child: Padding(
               padding: const EdgeInsets.all(16),
               child: Column(
@@ -306,7 +310,6 @@ class _ClimateZoneTile extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      // 제목
                       Expanded(
                         child: Text(
                           title,
@@ -318,7 +321,6 @@ class _ClimateZoneTile extends StatelessWidget {
                           overflow: TextOverflow.ellipsis,
                         ),
                       ),
-                      // 달성률
                       Text(
                         '${(percentage * 100).toStringAsFixed(0)}%',
                         style: theme.textTheme.titleMedium?.copyWith(
@@ -329,10 +331,7 @@ class _ClimateZoneTile extends StatelessWidget {
                       ),
                     ],
                   ),
-
                   const SizedBox(height: 8),
-
-                  // 진행률 및 개수
                   Row(
                     children: [
                       Expanded(
@@ -364,8 +363,6 @@ class _ClimateZoneTile extends StatelessWidget {
               ),
             ),
           ),
-
-          // 확장 가능한 국가 목록
           AnimatedSize(
             duration: const Duration(milliseconds: 300),
             curve: Curves.easeInOut,
@@ -388,22 +385,28 @@ class _ClimateZoneTile extends StatelessWidget {
                       itemBuilder: (context, index) {
                         final country = sortedCountries[index];
                         final isVisited = visitedNames.contains(country.name);
-                        return Row(
-                          children: [
-                            Icon(
-                              isVisited ? Icons.check_circle_rounded : Icons.radio_button_unchecked_rounded,
-                              size: 18,
-                              color: isVisited ? color : Colors.grey,
-                            ),
-                            const SizedBox(width: 6),
-                            Expanded(
-                              child: Text(
-                                country.name,
-                                style: theme.textTheme.bodyMedium,
-                                overflow: TextOverflow.ellipsis,
+                        return InkWell( // 상세 페이지 연결
+                          borderRadius: BorderRadius.circular(6),
+                          onTap: () => navigateToCountryDetail(context, country),
+                          child: Row(
+                            children: [
+                              Icon(
+                                isVisited ? Icons.check_circle_rounded : Icons.radio_button_unchecked_rounded,
+                                size: 18,
+                                color: isVisited ? color : Colors.grey,
                               ),
-                            ),
-                          ],
+                              const SizedBox(width: 6),
+                              Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 14)), // 국기 추가
+                              const SizedBox(width: 4),
+                              Expanded(
+                                child: Text(
+                                  country.name,
+                                  style: theme.textTheme.bodyMedium,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              ),
+                            ],
+                          ),
                         );
                       },
                     ),
@@ -418,12 +421,6 @@ class _ClimateZoneTile extends StatelessWidget {
   }
 }
 
-// 🚨 제거: _ClimateZoneStatCard 위젯은 _ClimateZoneTile로 대체됨
-// class _ClimateZoneStatCard extends StatefulWidget {...}
-// class _ClimateZoneStatCardState extends State<_ClimateZoneStatCard> {...}
-
-
-// ✅ 통합된 랭킹 카드
 class _CombinedRankingCard extends StatefulWidget {
   final List<Country> countriesToDisplay;
   final Set<String> visitedCountryNames;
@@ -435,7 +432,6 @@ class _CombinedRankingCard extends StatefulWidget {
 }
 
 class _CombinedRankingCardState extends State<_CombinedRankingCard> {
-  // 🚨🚨🚨 Const 오류 해결: late final로 변경
   late final List<RankingInfo> _rankings;
   late RankingInfo _selectedRanking;
 
@@ -445,7 +441,6 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
   List<Country> _rankedList = [];
 
   final List<String> _continents = ['World', 'Asia', 'Europe', 'Africa', 'North America', 'South America', 'Oceania'];
-  // GeographyTabScreen에서 continentsData를 가져오기 위해 import 필요
   static final Map<String, Color> _continentColors = {
     'Asia': Colors.pink.shade200, 'Europe': Colors.amber, 'Africa': Colors.brown,
     'North America': Colors.blue.shade200, 'South America': Colors.green, 'Oceania': Colors.purple,
@@ -454,7 +449,6 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
   @override
   void initState() {
     super.initState();
-    // 🚨🚨🚨 Const 오류 해결: const 키워드 제거
     _rankings = [
       RankingInfo(title: 'Average Temperature', icon: Icons.thermostat, themeColor: Colors.orange, valueAccessor: (c) => c.avgTemp, unit: '°C', precision: 1),
       RankingInfo(title: 'Average Precipitation', icon: Icons.water_drop, themeColor: Colors.blue, valueAccessor: (c) => c.avgPrecipitation, unit: 'mm', precision: 0),
@@ -484,7 +478,6 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
 
   void _onFilterChanged() => setState(() => _prepareList());
 
-  // 모든 순위를 일반 텍스트로 표시하는 헬퍼 함수
   Widget _buildRankText(int rank, Color color) {
     return Text(
       '$rank',
@@ -520,8 +513,9 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
               children: [
                 DropdownButtonHideUnderline(
                   child: DropdownButton<RankingInfo>(
+                    borderRadius: BorderRadius.circular(16), // 둥근 모서리 적용
                     value: _selectedRanking, isExpanded: true,
-                    icon: Icon(Icons.arrow_drop_down_circle_outlined, color: rankingThemeColor), // 테마색 적용
+                    icon: Icon(Icons.arrow_drop_down_circle_outlined, color: rankingThemeColor),
                     items: _rankings.map((group) => DropdownMenuItem<RankingInfo>(
                       value: group,
                       child: Row(children: [
@@ -544,7 +538,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                           style: SegmentedButton.styleFrom(
                             foregroundColor: Colors.grey.shade700,
                             selectedForegroundColor: Colors.white,
-                            selectedBackgroundColor: rankingThemeColor.withOpacity(0.8), // 테마색 적용
+                            selectedBackgroundColor: rankingThemeColor.withOpacity(0.8),
                             backgroundColor: Colors.white,
                             side: BorderSide(color: Colors.grey.shade300, width: 1),
                             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
@@ -562,7 +556,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                           style: SegmentedButton.styleFrom(
                             foregroundColor: Colors.grey.shade700,
                             selectedForegroundColor: Colors.white,
-                            selectedBackgroundColor: rankingThemeColor.withOpacity(0.8), // 테마색 적용
+                            selectedBackgroundColor: rankingThemeColor.withOpacity(0.8),
                             backgroundColor: Colors.white,
                             side: BorderSide(color: Colors.grey.shade300, width: 1),
                             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
@@ -575,6 +569,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                 Align(
                   alignment: Alignment.centerRight,
                   child: DropdownButton<String>(
+                    borderRadius: BorderRadius.circular(16), // 둥근 모서리 적용
                     value: _selectedContinent,
                     items: _continents.map((String value) => DropdownMenuItem<String>(value: value, child: Text(value, style: const TextStyle(fontSize: 14)))).toList(),
                     onChanged: (String? newValue) { _selectedContinent = newValue!; _onFilterChanged(); },
@@ -606,33 +601,38 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                   displayValue = value.toStringAsFixed(_selectedRanking.precision);
                 }
 
-
                 return Card(
                   elevation: 0,
                   color: isVisited ? rankingThemeColor.withOpacity(0.12) : Colors.transparent,
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8.0),
-                    child: Column(
-                      children: [
-                        Row(
-                          children: [
-                            _buildRankText(rank, rankingThemeColor), // 순위 숫자 표시로 변경
-                            const SizedBox(width: 12),
-                            Expanded(child: Text(country.name, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
-                            Text('$displayValue${_selectedRanking.unit}', style: textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
-                          ],
-                        ),
-                        const SizedBox(height: 6),
-                        LayoutBuilder(
-                          builder: (context, constraints) => Stack(
+                  child: InkWell( // 상세 페이지 연결
+                    borderRadius: BorderRadius.circular(12),
+                    onTap: () => navigateToCountryDetail(context, country),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8.0),
+                      child: Column(
+                        children: [
+                          Row(
                             children: [
-                              Container(height: 6, decoration: BoxDecoration(color: Colors.grey.shade200, borderRadius: BorderRadius.circular(3))),
-                              Container(height: 6, width: constraints.maxWidth * progressValue, decoration: BoxDecoration(color: barColor, borderRadius: BorderRadius.circular(3))),
+                              _buildRankText(rank, rankingThemeColor),
+                              const SizedBox(width: 12),
+                              Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 18)), // 국기 추가
+                              const SizedBox(width: 8),
+                              Expanded(child: Text(country.name, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
+                              Text('$displayValue${_selectedRanking.unit}', style: textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
                             ],
                           ),
-                        ),
-                      ],
+                          const SizedBox(height: 6),
+                          LayoutBuilder(
+                            builder: (context, constraints) => Stack(
+                              children: [
+                                Container(height: 6, decoration: BoxDecoration(color: Colors.grey.shade200, borderRadius: BorderRadius.circular(3))),
+                                Container(height: 6, width: constraints.maxWidth * progressValue, decoration: BoxDecoration(color: barColor, borderRadius: BorderRadius.circular(3))),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 );

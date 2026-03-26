@@ -17,6 +17,7 @@ import 'package:jidoapp/screens/city_society_screen.dart';
 import 'package:jidoapp/screens/city_specials_screen.dart';
 import 'package:jidoapp/screens/top_cities_screen.dart';
 import 'package:jidoapp/screens/tourism_screen.dart';
+import 'package:jidoapp/screens/country_detail_screen.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:provider/provider.dart';
 import 'package:screenshot/screenshot.dart';
@@ -674,107 +675,124 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
                                       Row(
                                         children: [
                                           Expanded(
-                                            child: Container(
-                                              padding: const EdgeInsets.all(16),
-                                              decoration: BoxDecoration(
-                                                gradient: LinearGradient(
-                                                  begin: Alignment.topLeft,
-                                                  end: Alignment.bottomRight,
-                                                  colors: [
-                                                    getCountryColor(topCountryIso).withOpacity(0.12),
-                                                    getCountryColor(topCountryIso).withOpacity(0.05),
-                                                  ],
-                                                ),
-                                                borderRadius: BorderRadius.circular(16),
-                                                border: Border.all(
-                                                  color: getCountryColor(topCountryIso).withOpacity(0.2),
-                                                  width: 1.5,
-                                                ),
-                                              ),
-                                              child: Column(
-                                                crossAxisAlignment: CrossAxisAlignment.start,
-                                                children: [
-                                                  Row(
-                                                    children: [
-                                                      Container(
-                                                        width: 28,
-                                                        height: 28,
-                                                        decoration: BoxDecoration(
-                                                          color: Colors.white,
-                                                          borderRadius: BorderRadius.circular(6),
-                                                          boxShadow: [
-                                                            BoxShadow(
-                                                              color: Colors.black.withOpacity(0.1),
-                                                              blurRadius: 4,
-                                                              offset: const Offset(0, 2),
-                                                            ),
-                                                          ],
-                                                        ),
-                                                        child: ClipRRect(
-                                                          borderRadius: BorderRadius.circular(4),
-                                                          child: topCountryIso.isNotEmpty
-                                                              ? CountryFlag.fromCountryCode(topCountryIso)
-                                                              : Icon(
-                                                            Icons.flag_rounded,
-                                                            size: 16,
-                                                            color: Colors.grey.shade400,
-                                                          ),
-                                                        ),
+                                            child: GestureDetector(
+                                              onTap: () {
+                                                if (topCountryIso.isNotEmpty) {
+                                                  final targetCountry = countryProvider.allCountries.firstWhereOrNull(
+                                                          (c) => c.isoA2.toUpperCase() == topCountryIso
+                                                  );
+                                                  if (targetCountry != null) {
+                                                    Navigator.push(
+                                                      context,
+                                                      MaterialPageRoute(
+                                                        builder: (context) => CountryDetailScreen(country: targetCountry),
                                                       ),
-                                                      const SizedBox(width: 8),
-                                                      Expanded(
-                                                        child: Text(
-                                                          'Top Country',
-                                                          style: TextStyle(
-                                                            fontSize: 11,
-                                                            fontWeight: FontWeight.w700,
-                                                            color: Colors.grey.shade600,
-                                                            letterSpacing: 0.5,
-                                                          ),
-                                                        ),
-                                                      ),
+                                                    );
+                                                  }
+                                                }
+                                              },
+                                              child: Container(
+                                                padding: const EdgeInsets.all(16),
+                                                decoration: BoxDecoration(
+                                                  gradient: LinearGradient(
+                                                    begin: Alignment.topLeft,
+                                                    end: Alignment.bottomRight,
+                                                    colors: [
+                                                      getCountryColor(topCountryIso).withOpacity(0.12),
+                                                      getCountryColor(topCountryIso).withOpacity(0.05),
                                                     ],
                                                   ),
-                                                  const SizedBox(height: 12),
-                                                  Text(
-                                                    topCountryName,
-                                                    style: TextStyle(
-                                                      fontSize: 17,
-                                                      fontWeight: FontWeight.w900,
-                                                      color: getCountryColor(topCountryIso),
-                                                      height: 1.1,
-                                                    ),
-                                                    maxLines: 1,
-                                                    overflow: TextOverflow.ellipsis,
+                                                  borderRadius: BorderRadius.circular(16),
+                                                  border: Border.all(
+                                                    color: getCountryColor(topCountryIso).withOpacity(0.2),
+                                                    width: 1.5,
                                                   ),
-                                                  const SizedBox(height: 8),
-                                                  Container(
-                                                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-                                                    decoration: BoxDecoration(
-                                                      color: Colors.white.withOpacity(0.8),
-                                                      borderRadius: BorderRadius.circular(8),
-                                                      border: Border.all(
-                                                        color: getCountryColor(topCountryIso).withOpacity(0.3),
-                                                        width: 1.5,
-                                                      ),
-                                                      boxShadow: [
-                                                        BoxShadow(
-                                                          color: getCountryColor(topCountryIso).withOpacity(0.1),
-                                                          blurRadius: 4,
-                                                          offset: const Offset(0, 2),
+                                                ),
+                                                child: Column(
+                                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                                  children: [
+                                                    Row(
+                                                      children: [
+                                                        Container(
+                                                          width: 28,
+                                                          height: 28,
+                                                          decoration: BoxDecoration(
+                                                            color: Colors.white,
+                                                            borderRadius: BorderRadius.circular(6),
+                                                            boxShadow: [
+                                                              BoxShadow(
+                                                                color: Colors.black.withOpacity(0.1),
+                                                                blurRadius: 4,
+                                                                offset: const Offset(0, 2),
+                                                              ),
+                                                            ],
+                                                          ),
+                                                          child: ClipRRect(
+                                                            borderRadius: BorderRadius.circular(4),
+                                                            child: topCountryIso.isNotEmpty
+                                                                ? CountryFlag.fromCountryCode(topCountryIso)
+                                                                : Icon(
+                                                              Icons.flag_rounded,
+                                                              size: 16,
+                                                              color: Colors.grey.shade400,
+                                                            ),
+                                                          ),
+                                                        ),
+                                                        const SizedBox(width: 8),
+                                                        Expanded(
+                                                          child: Text(
+                                                            'Top Country',
+                                                            style: TextStyle(
+                                                              fontSize: 11,
+                                                              fontWeight: FontWeight.w700,
+                                                              color: Colors.grey.shade600,
+                                                              letterSpacing: 0.5,
+                                                            ),
+                                                          ),
                                                         ),
                                                       ],
                                                     ),
-                                                    child: Text(
-                                                      '$topCountryCityCount ${topCountryCityCount == 1 ? 'city' : 'cities'}',
+                                                    const SizedBox(height: 12),
+                                                    Text(
+                                                      topCountryName,
                                                       style: TextStyle(
-                                                        fontSize: 14,
-                                                        fontWeight: FontWeight.w800,
+                                                        fontSize: 17,
+                                                        fontWeight: FontWeight.w900,
                                                         color: getCountryColor(topCountryIso),
+                                                        height: 1.1,
+                                                      ),
+                                                      maxLines: 1,
+                                                      overflow: TextOverflow.ellipsis,
+                                                    ),
+                                                    const SizedBox(height: 8),
+                                                    Container(
+                                                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                                                      decoration: BoxDecoration(
+                                                        color: Colors.white.withOpacity(0.8),
+                                                        borderRadius: BorderRadius.circular(8),
+                                                        border: Border.all(
+                                                          color: getCountryColor(topCountryIso).withOpacity(0.3),
+                                                          width: 1.5,
+                                                        ),
+                                                        boxShadow: [
+                                                          BoxShadow(
+                                                            color: getCountryColor(topCountryIso).withOpacity(0.1),
+                                                            blurRadius: 4,
+                                                            offset: const Offset(0, 2),
+                                                          ),
+                                                        ],
+                                                      ),
+                                                      child: Text(
+                                                        '$topCountryCityCount ${topCountryCityCount == 1 ? 'city' : 'cities'}',
+                                                        style: TextStyle(
+                                                          fontSize: 14,
+                                                          fontWeight: FontWeight.w800,
+                                                          color: getCountryColor(topCountryIso),
+                                                        ),
                                                       ),
                                                     ),
-                                                  ),
-                                                ],
+                                                  ],
+                                                ),
                                               ),
                                             ),
                                           ),

@@ -1707,22 +1707,25 @@ class OverviewStatsScreen extends StatelessWidget {
       length: tabs.length,
       child: Material(
         color: Colors.white,
-        child: Column(
-          children: [
-            const Material(
-              elevation: 1,
-              child: TabBar(
-                tabs: tabs,
-                labelStyle: TextStyle(fontWeight: FontWeight.bold),
-                indicatorSize: TabBarIndicatorSize.label,
+        child: SafeArea(
+          bottom: false,
+          child: Column(
+            children: [
+              const Material(
+                elevation: 1,
+                child: TabBar(
+                  tabs: tabs,
+                  labelStyle: TextStyle(fontWeight: FontWeight.bold),
+                  indicatorSize: TabBarIndicatorSize.label,
+                ),
               ),
-            ),
-            const Expanded(
-              child: TabBarView(
-                children: screens,
+              const Expanded(
+                child: TabBarView(
+                  children: screens,
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
@@ -2027,47 +2030,66 @@ class _OverviewRankingCardState extends State<_OverviewRankingCard> {
                   color: rankingThemeColor.withOpacity(0.12),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12)),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 12.0, vertical: 8.0),
-                    child: Column(
-                      children: [
-                        Row(
-                          children: [
-                            _buildRankText(rank, rankingThemeColor),
-                            const SizedBox(width: 12),
-                            Expanded(
-                                child: Text(country.name,
-                                    style: textTheme.titleMedium?.copyWith(
-                                        fontWeight: FontWeight.bold))),
-                            Text(
-                                '${value.toInt()}${_selectedRanking.unit}',
-                                style: textTheme.bodyLarge
-                                    ?.copyWith(fontWeight: FontWeight.bold)),
-                          ],
-                        ),
-                        const SizedBox(height: 6),
-                        LayoutBuilder(
-                          builder: (context, constraints) => Stack(
+                  child: InkWell(
+                    borderRadius: BorderRadius.circular(12),
+                    onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => CountryDetailScreen(country: country)),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 12.0, vertical: 8.0),
+                      child: Column(
+                        children: [
+                          Row(
                             children: [
-                              Container(
-                                  height: 6,
-                                  decoration: BoxDecoration(
-                                      color: Colors.grey.shade200,
-                                      borderRadius:
-                                      BorderRadius.circular(3))),
-                              Container(
-                                  height: 6,
-                                  width: constraints.maxWidth *
-                                      progressValue,
-                                  decoration: BoxDecoration(
-                                      color: barColor,
-                                      borderRadius:
-                                      BorderRadius.circular(3))),
+                              _buildRankText(rank, rankingThemeColor),
+                              const SizedBox(width: 8),
+                              Text(
+                                widget.provider.allCountries
+                                    .where((c) => c.name == country.name)
+                                    .map((c) {
+                                  final base = 0x1F1E6 - 0x41;
+                                  return String.fromCharCode(base + c.isoA2.codeUnitAt(0)) +
+                                      String.fromCharCode(base + c.isoA2.codeUnitAt(1));
+                                })
+                                    .firstOrNull ?? '',
+                                style: const TextStyle(fontSize: 18),
+                              ),
+                              const SizedBox(width: 6),
+                              Expanded(
+                                  child: Text(country.name,
+                                      style: textTheme.titleMedium?.copyWith(
+                                          fontWeight: FontWeight.bold))),
+                              Text(
+                                  '${value.toInt()}${_selectedRanking.unit}',
+                                  style: textTheme.bodyLarge
+                                      ?.copyWith(fontWeight: FontWeight.bold)),
                             ],
                           ),
-                        ),
-                      ],
+                          const SizedBox(height: 6),
+                          LayoutBuilder(
+                            builder: (context, constraints) => Stack(
+                              children: [
+                                Container(
+                                    height: 6,
+                                    decoration: BoxDecoration(
+                                        color: Colors.grey.shade200,
+                                        borderRadius:
+                                        BorderRadius.circular(3))),
+                                Container(
+                                    height: 6,
+                                    width: constraints.maxWidth *
+                                        progressValue,
+                                    decoration: BoxDecoration(
+                                        color: barColor,
+                                        borderRadius:
+                                        BorderRadius.circular(3))),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 );
@@ -2177,16 +2199,23 @@ class _RatingTierCard extends StatelessWidget {
                       children: countriesInTier.map((country) {
                         return Tooltip(
                           message: country.name,
-                          child: Container(
-                            padding: const EdgeInsets.all(6.0),
-                            decoration: BoxDecoration(
-                              color: Colors.grey.shade50,
-                              borderRadius: BorderRadius.circular(8),
-                              border: Border.all(color: Colors.grey.shade200),
+                          child: InkWell(
+                            borderRadius: BorderRadius.circular(8),
+                            onTap: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => CountryDetailScreen(country: country)),
                             ),
-                            child: Text(
-                              _getFlagEmoji(country.isoA2),
-                              style: const TextStyle(fontSize: 24),
+                            child: Container(
+                              padding: const EdgeInsets.all(6.0),
+                              decoration: BoxDecoration(
+                                color: Colors.grey.shade50,
+                                borderRadius: BorderRadius.circular(8),
+                                border: Border.all(color: Colors.grey.shade200),
+                              ),
+                              child: Text(
+                                _getFlagEmoji(country.isoA2),
+                                style: const TextStyle(fontSize: 24),
+                              ),
                             ),
                           ),
                         );

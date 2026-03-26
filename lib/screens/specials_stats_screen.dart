@@ -5,6 +5,7 @@ import 'package:flutter/foundation.dart';
 import 'package:jidoapp/models/country_model.dart';
 import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/screens/countries_map_screen.dart';
+import 'package:jidoapp/screens/country_detail_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:sleek_circular_slider/sleek_circular_slider.dart';
 import 'package:collection/collection.dart';
@@ -148,22 +149,25 @@ class SpecialsStatsScreen extends StatelessWidget {
       length: tabs.length,
       child: Material(
         color: Colors.white,
-        child: Column(
-          children: [
-            const Material(
-              elevation: 1,
-              child: TabBar(
-                tabs: tabs,
-                labelStyle: TextStyle(fontWeight: FontWeight.bold),
-                indicatorSize: TabBarIndicatorSize.label,
+        child: SafeArea(
+          bottom: false,
+          child: Column(
+            children: [
+              const Material(
+                elevation: 1,
+                child: TabBar(
+                  tabs: tabs,
+                  labelStyle: TextStyle(fontWeight: FontWeight.bold),
+                  indicatorSize: TabBarIndicatorSize.label,
+                ),
               ),
-            ),
-            Expanded(
-              child: TabBarView(
-                children: screens,
+              Expanded(
+                child: TabBarView(
+                  children: screens,
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
@@ -293,6 +297,11 @@ class _AlphabeticalChallengeCardState extends State<_AlphabeticalChallengeCard> 
                   ),
                   child: ListTile(
                     dense: true,
+                    onTap: () {
+                      Navigator.of(context).pop();
+                      navigateToCountryDetail(context, country);
+                    },
+                    leading: Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 20)),
                     title: Text(country.name),
                   ),
                 );
@@ -504,6 +513,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
 
                 DropdownButtonHideUnderline(
                   child: DropdownButton<CountryRankingInfo>(
+                    borderRadius: BorderRadius.circular(16),
                     value: _selectedRanking, isExpanded: true,
                     icon: Icon(Icons.arrow_drop_down_circle_outlined, color: rankingThemeColor),
                     items: _rankings.map((group) => DropdownMenuItem<CountryRankingInfo>(
@@ -546,28 +556,34 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                   elevation: 0,
                   color: isVisited ? rankingThemeColor.withOpacity(0.12) : Colors.transparent,
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8.0),
-                    child: Column(
-                      children: [
-                        Row(
-                          children: [
-                            _buildRankText(rank, rankingThemeColor),
-                            const SizedBox(width: 12),
-                            Expanded(child: Text(country.name, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
-                            Text('${value.toStringAsFixed(_selectedRanking.precision)}${_selectedRanking.unit}', style: textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
-                          ],
-                        ),
-                        const SizedBox(height: 6),
-                        LayoutBuilder(
-                          builder: (context, constraints) => Stack(
+                  child: InkWell(
+                    borderRadius: BorderRadius.circular(12),
+                    onTap: () => navigateToCountryDetail(context, country),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8.0),
+                      child: Column(
+                        children: [
+                          Row(
                             children: [
-                              Container(height: 6, decoration: BoxDecoration(color: Colors.grey.shade200, borderRadius: BorderRadius.circular(3))),
-                              Container(height: 6, width: constraints.maxWidth * progressValue, decoration: BoxDecoration(color: barColor, borderRadius: BorderRadius.circular(3))),
+                              _buildRankText(rank, rankingThemeColor),
+                              const SizedBox(width: 8),
+                              Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 18)),
+                              const SizedBox(width: 6),
+                              Expanded(child: Text(country.name, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
+                              Text('${value.toStringAsFixed(_selectedRanking.precision)}${_selectedRanking.unit}', style: textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
                             ],
                           ),
-                        ),
-                      ],
+                          const SizedBox(height: 6),
+                          LayoutBuilder(
+                            builder: (context, constraints) => Stack(
+                              children: [
+                                Container(height: 6, decoration: BoxDecoration(color: Colors.grey.shade200, borderRadius: BorderRadius.circular(3))),
+                                Container(height: 6, width: constraints.maxWidth * progressValue, decoration: BoxDecoration(color: barColor, borderRadius: BorderRadius.circular(3))),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 );
@@ -696,6 +712,7 @@ class _CombinedInternetRankingCardState extends State<_CombinedInternetRankingCa
                 const SizedBox(height: 8),
                 DropdownButtonHideUnderline(
                   child: DropdownButton<CountryRankingInfo>(
+                    borderRadius: BorderRadius.circular(16),
                     value: _selectedRanking, isExpanded: true,
                     icon: Icon(Icons.arrow_drop_down_circle_outlined, color: rankingThemeColor),
                     items: _rankings.map((group) => DropdownMenuItem<CountryRankingInfo>(
@@ -743,28 +760,34 @@ class _CombinedInternetRankingCardState extends State<_CombinedInternetRankingCa
                   elevation: 0,
                   color: isVisited ? rankingThemeColor.withOpacity(0.12) : Colors.transparent,
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8.0),
-                    child: Column(
-                      children: [
-                        Row(
-                          children: [
-                            _buildRankText(rank, rankingThemeColor),
-                            const SizedBox(width: 12),
-                            Expanded(child: Text(country.name, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
-                            Text(formattedValue, style: textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
-                          ],
-                        ),
-                        const SizedBox(height: 6),
-                        LayoutBuilder(
-                          builder: (context, constraints) => Stack(
+                  child: InkWell(
+                    borderRadius: BorderRadius.circular(12),
+                    onTap: () => navigateToCountryDetail(context, country),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8.0),
+                      child: Column(
+                        children: [
+                          Row(
                             children: [
-                              Container(height: 6, decoration: BoxDecoration(color: Colors.grey.shade200, borderRadius: BorderRadius.circular(3))),
-                              Container(height: 6, width: constraints.maxWidth * progressValue, decoration: BoxDecoration(color: barColor, borderRadius: BorderRadius.circular(3))),
+                              _buildRankText(rank, rankingThemeColor),
+                              const SizedBox(width: 8),
+                              Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 18)),
+                              const SizedBox(width: 6),
+                              Expanded(child: Text(country.name, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
+                              Text(formattedValue, style: textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
                             ],
                           ),
-                        ),
-                      ],
+                          const SizedBox(height: 6),
+                          LayoutBuilder(
+                            builder: (context, constraints) => Stack(
+                              children: [
+                                Container(height: 6, decoration: BoxDecoration(color: Colors.grey.shade200, borderRadius: BorderRadius.circular(3))),
+                                Container(height: 6, width: constraints.maxWidth * progressValue, decoration: BoxDecoration(color: barColor, borderRadius: BorderRadius.circular(3))),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 );
@@ -846,6 +869,7 @@ class _CombinedFlagCardState extends State<_CombinedFlagCard> {
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
             child: DropdownButtonHideUnderline(
               child: DropdownButton<SpecialGroupInfo>(
+                borderRadius: BorderRadius.circular(16),
                 value: _selectedGroup, isExpanded: true,
                 icon: Icon(Icons.arrow_drop_down_circle_outlined, color: _selectedGroup.themeColor),
                 items: _groups.map((group) => DropdownMenuItem<SpecialGroupInfo>(
@@ -904,13 +928,23 @@ class _CombinedFlagCardState extends State<_CombinedFlagCard> {
                 itemBuilder: (context, index) {
                   final country = sortedCountries[index];
                   final isVisited = widget.visitedCountryNames.contains(country.name);
-                  return Container(
-                    decoration: BoxDecoration(
-                        color: isVisited ? _selectedGroup.themeColor.withOpacity(0.12) : Colors.grey.shade100,
-                        borderRadius: BorderRadius.circular(8)
+                  return InkWell(
+                    borderRadius: BorderRadius.circular(8),
+                    onTap: () => navigateToCountryDetail(context, country),
+                    child: Container(
+                      decoration: BoxDecoration(
+                          color: isVisited ? _selectedGroup.themeColor.withOpacity(0.12) : Colors.grey.shade100,
+                          borderRadius: BorderRadius.circular(8)
+                      ),
+                      padding: const EdgeInsets.symmetric(horizontal: 8),
+                      child: Row(
+                        children: [
+                          Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 14)),
+                          const SizedBox(width: 6),
+                          Expanded(child: Text(country.name, style: theme.textTheme.bodyMedium, overflow: TextOverflow.ellipsis)),
+                        ],
+                      ),
                     ),
-                    padding: const EdgeInsets.symmetric(horizontal: 12),
-                    child: Align(alignment: Alignment.centerLeft, child: Text(country.name, style: theme.textTheme.bodyMedium, overflow: TextOverflow.ellipsis)),
                   );
                 },
               ),
@@ -981,6 +1015,7 @@ class _CombinedNameCardState extends State<_CombinedNameCard> {
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
             child: DropdownButtonHideUnderline(
               child: DropdownButton<SpecialGroupInfo>(
+                borderRadius: BorderRadius.circular(16),
                 value: _selectedGroup, isExpanded: true,
                 icon: Icon(Icons.arrow_drop_down_circle_outlined, color: _selectedGroup.themeColor),
                 items: _groups.map((group) => DropdownMenuItem<SpecialGroupInfo>(
@@ -1039,13 +1074,23 @@ class _CombinedNameCardState extends State<_CombinedNameCard> {
                 itemBuilder: (context, index) {
                   final country = sortedCountries[index];
                   final isVisited = widget.visitedCountryNames.contains(country.name);
-                  return Container(
-                    decoration: BoxDecoration(
-                        color: isVisited ? _selectedGroup.themeColor.withOpacity(0.12) : Colors.grey.shade100,
-                        borderRadius: BorderRadius.circular(8)
+                  return InkWell(
+                    borderRadius: BorderRadius.circular(8),
+                    onTap: () => navigateToCountryDetail(context, country),
+                    child: Container(
+                      decoration: BoxDecoration(
+                          color: isVisited ? _selectedGroup.themeColor.withOpacity(0.12) : Colors.grey.shade100,
+                          borderRadius: BorderRadius.circular(8)
+                      ),
+                      padding: const EdgeInsets.symmetric(horizontal: 8),
+                      child: Row(
+                        children: [
+                          Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 14)),
+                          const SizedBox(width: 6),
+                          Expanded(child: Text(country.name, style: theme.textTheme.bodyMedium, overflow: TextOverflow.ellipsis)),
+                        ],
+                      ),
                     ),
-                    padding: const EdgeInsets.symmetric(horizontal: 12),
-                    child: Align(alignment: Alignment.centerLeft, child: Text(country.name, style: theme.textTheme.bodyMedium, overflow: TextOverflow.ellipsis)),
                   );
                 },
               ),
@@ -1117,6 +1162,7 @@ class _CombinedVisitsCardState extends State<_CombinedVisitsCard> {
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
             child: DropdownButtonHideUnderline(
               child: DropdownButton<SpecialGroupInfo>(
+                borderRadius: BorderRadius.circular(16),
                 value: _selectedGroup, isExpanded: true,
                 icon: Icon(Icons.arrow_drop_down_circle_outlined, color: _selectedGroup.themeColor),
                 items: _groups.map((group) => DropdownMenuItem<SpecialGroupInfo>(
@@ -1175,13 +1221,23 @@ class _CombinedVisitsCardState extends State<_CombinedVisitsCard> {
                 itemBuilder: (context, index) {
                   final country = sortedCountries[index];
                   final isVisited = widget.visitedCountryNames.contains(country.name);
-                  return Container(
-                    decoration: BoxDecoration(
-                        color: isVisited ? _selectedGroup.themeColor.withOpacity(0.12) : Colors.grey.shade100,
-                        borderRadius: BorderRadius.circular(8)
+                  return InkWell(
+                    borderRadius: BorderRadius.circular(8),
+                    onTap: () => navigateToCountryDetail(context, country),
+                    child: Container(
+                      decoration: BoxDecoration(
+                          color: isVisited ? _selectedGroup.themeColor.withOpacity(0.12) : Colors.grey.shade100,
+                          borderRadius: BorderRadius.circular(8)
+                      ),
+                      padding: const EdgeInsets.symmetric(horizontal: 8),
+                      child: Row(
+                        children: [
+                          Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 14)),
+                          const SizedBox(width: 6),
+                          Expanded(child: Text(country.name, style: theme.textTheme.bodyMedium, overflow: TextOverflow.ellipsis)),
+                        ],
+                      ),
                     ),
-                    padding: const EdgeInsets.symmetric(horizontal: 12),
-                    child: Align(alignment: Alignment.centerLeft, child: Text(country.name, style: theme.textTheme.bodyMedium, overflow: TextOverflow.ellipsis)),
                   );
                 },
               ),
@@ -1252,6 +1308,7 @@ class _CombinedSpaceCardState extends State<_CombinedSpaceCard> {
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
             child: DropdownButtonHideUnderline(
               child: DropdownButton<SpecialGroupInfo>(
+                borderRadius: BorderRadius.circular(16),
                 value: _selectedGroup, isExpanded: true,
                 icon: Icon(Icons.arrow_drop_down_circle_outlined, color: _selectedGroup.themeColor),
                 items: _groups.map((group) => DropdownMenuItem<SpecialGroupInfo>(
@@ -1310,13 +1367,23 @@ class _CombinedSpaceCardState extends State<_CombinedSpaceCard> {
                 itemBuilder: (context, index) {
                   final country = sortedCountries[index];
                   final isVisited = widget.visitedCountryNames.contains(country.name);
-                  return Container(
-                    decoration: BoxDecoration(
-                        color: isVisited ? _selectedGroup.themeColor.withOpacity(0.12) : Colors.grey.shade100,
-                        borderRadius: BorderRadius.circular(8)
+                  return InkWell(
+                    borderRadius: BorderRadius.circular(8),
+                    onTap: () => navigateToCountryDetail(context, country),
+                    child: Container(
+                      decoration: BoxDecoration(
+                          color: isVisited ? _selectedGroup.themeColor.withOpacity(0.12) : Colors.grey.shade100,
+                          borderRadius: BorderRadius.circular(8)
+                      ),
+                      padding: const EdgeInsets.symmetric(horizontal: 8),
+                      child: Row(
+                        children: [
+                          Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 14)),
+                          const SizedBox(width: 6),
+                          Expanded(child: Text(country.name, style: theme.textTheme.bodyMedium, overflow: TextOverflow.ellipsis)),
+                        ],
+                      ),
                     ),
-                    padding: const EdgeInsets.symmetric(horizontal: 12),
-                    child: Align(alignment: Alignment.centerLeft, child: Text(country.name, style: theme.textTheme.bodyMedium, overflow: TextOverflow.ellipsis)),
                   );
                 },
               ),

@@ -8,6 +8,7 @@ import 'package:intl/intl.dart';
 import 'package:jidoapp/models/country_model.dart';
 import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/screens/countries_map_screen.dart';
+import 'package:jidoapp/screens/country_detail_screen.dart'; // 추가됨
 import 'package:sleek_circular_slider/sleek_circular_slider.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter/foundation.dart';
@@ -16,6 +17,22 @@ import 'dart:math' as math;
 import 'package:jidoapp/screens/religion_stats_screen.dart';
 import 'package:jidoapp/screens/language_stats_screen.dart';
 import 'package:jidoapp/screens/history_stats_screen.dart';
+
+// Helper: ISO A2 → 국기 이모지
+String flagEmoji(String isoA2) {
+  if (isoA2.length != 2) return '';
+  final base = 0x1F1E6 - 0x41;
+  return String.fromCharCode(base + isoA2.codeUnitAt(0)) +
+      String.fromCharCode(base + isoA2.codeUnitAt(1));
+}
+
+// Helper: 국가 클릭시 CountryDetailScreen으로 이동
+void navigateToCountryDetail(BuildContext context, Country country) {
+  Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => CountryDetailScreen(country: country)),
+  );
+}
 
 // Data Class: Ranking Info
 class RankingInfo {
@@ -186,7 +203,7 @@ class SocietyTabScreen extends StatelessWidget {
   }
 }
 
-// SocietyStatsScreen (Wrapper) - Unchanged
+// SocietyStatsScreen (Wrapper)
 class SocietyStatsScreen extends StatelessWidget {
   const SocietyStatsScreen({super.key});
 
@@ -219,22 +236,25 @@ class SocietyStatsScreen extends StatelessWidget {
           length: tabs.length,
           child: Material(
             color: Colors.white,
-            child: Column(
-              children: [
-                const Material(
-                  elevation: 1,
-                  child: TabBar(
-                    tabs: tabs,
-                    labelStyle: TextStyle(fontWeight: FontWeight.bold),
-                    indicatorSize: TabBarIndicatorSize.label,
+            child: SafeArea( // 상단바 겹침 방지 적용
+              bottom: false,
+              child: Column(
+                children: [
+                  const Material(
+                    elevation: 1,
+                    child: TabBar(
+                      tabs: tabs,
+                      labelStyle: TextStyle(fontWeight: FontWeight.bold),
+                      indicatorSize: TabBarIndicatorSize.label,
+                    ),
                   ),
-                ),
-                Expanded(
-                  child: TabBarView(
-                    children: screens,
+                  Expanded(
+                    child: TabBarView(
+                      children: screens,
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         );
@@ -243,7 +263,7 @@ class SocietyStatsScreen extends StatelessWidget {
   }
 }
 
-// Government Section Widget - Unchanged
+// Government Section Widget
 class _FormsOfGovernmentSection extends StatefulWidget {
   final List<Country> countriesToDisplay;
   final Set<String> visitedCountryNames;
@@ -417,7 +437,7 @@ class _FormsOfGovernmentSectionState extends State<_FormsOfGovernmentSection> {
   }
 }
 
-// Government Tile Widget - Unchanged
+// Government Tile Widget
 class _GovernmentTile extends StatelessWidget {
   final String title;
   final List<Country> countries;
@@ -545,22 +565,28 @@ class _GovernmentTile extends StatelessWidget {
                       itemBuilder: (context, index) {
                         final country = sortedCountries[index];
                         final isVisited = visitedNames.contains(country.name);
-                        return Row(
-                          children: [
-                            Icon(
-                              isVisited ? Icons.check_circle_rounded : Icons.radio_button_unchecked_rounded,
-                              size: 18,
-                              color: isVisited ? color : Colors.grey,
-                            ),
-                            const SizedBox(width: 6),
-                            Expanded(
-                              child: Text(
-                                country.name,
-                                style: theme.textTheme.bodyMedium,
-                                overflow: TextOverflow.ellipsis,
+                        return InkWell( // 클릭 시 해당 국가 화면으로 이동
+                          borderRadius: BorderRadius.circular(6),
+                          onTap: () => navigateToCountryDetail(context, country),
+                          child: Row(
+                            children: [
+                              Icon(
+                                isVisited ? Icons.check_circle_rounded : Icons.radio_button_unchecked_rounded,
+                                size: 18,
+                                color: isVisited ? color : Colors.grey,
                               ),
-                            ),
-                          ],
+                              const SizedBox(width: 6),
+                              Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 14)), // 국기 추가
+                              const SizedBox(width: 4),
+                              Expanded(
+                                child: Text(
+                                  country.name,
+                                  style: theme.textTheme.bodyMedium,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              ),
+                            ],
+                          ),
                         );
                       },
                     ),
@@ -650,7 +676,7 @@ class _RankingCategoryCardState extends State<_RankingCategoryCard> {
       return _sortOrderSegment == 0 ? valB.compareTo(valA) : valA.compareTo(valB);
     });
 
-    // 🚨 [추가된 로직] 제한된 항목(isRestricted=true)인 경우 상위 10개만 남김
+    // 제한된 항목(isRestricted=true)인 경우 상위 10개만 남김
     if (_selectedRanking.isRestricted) {
       listToRank = listToRank.take(10).toList();
     }
@@ -704,6 +730,7 @@ class _RankingCategoryCardState extends State<_RankingCategoryCard> {
 
                 DropdownButtonHideUnderline(
                   child: DropdownButton<RankingInfo>(
+                    borderRadius: BorderRadius.circular(16), // 둥근 모서리 적용
                     value: _selectedRanking, isExpanded: true,
                     icon: Icon(_selectedRanking.icon, color: rankingThemeColor),
                     items: widget.rankings.map((group) => DropdownMenuItem<RankingInfo>(
@@ -788,6 +815,7 @@ class _RankingCategoryCardState extends State<_RankingCategoryCard> {
                     child: Opacity(
                       opacity: isRestricted ? 0.5 : 1.0,
                       child: DropdownButton<String>(
+                        borderRadius: BorderRadius.circular(16), // 둥근 모서리 적용
                         value: _selectedContinent,
                         items: _continents.map((String value) => DropdownMenuItem<String>(value: value, child: Text(value, style: const TextStyle(fontSize: 14)))).toList(),
                         onChanged: (String? newValue) { _selectedContinent = newValue!; _onFilterChanged(); },
@@ -818,28 +846,34 @@ class _RankingCategoryCardState extends State<_RankingCategoryCard> {
                   elevation: 0,
                   color: isVisited ? rankingThemeColor.withOpacity(0.12) : Colors.transparent,
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8.0),
-                    child: Column(
-                      children: [
-                        Row(
-                          children: [
-                            _buildRankText(rank, rankingThemeColor),
-                            const SizedBox(width: 12),
-                            Expanded(child: Text(country.name, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
-                            Text('${value.toStringAsFixed(_selectedRanking.precision)}${_selectedRanking.unit}', style: textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
-                          ],
-                        ),
-                        const SizedBox(height: 6),
-                        LayoutBuilder(
-                          builder: (context, constraints) => Stack(
+                  child: InkWell( // 클릭 시 해당 국가 화면으로 이동
+                    borderRadius: BorderRadius.circular(12),
+                    onTap: () => navigateToCountryDetail(context, country),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8.0),
+                      child: Column(
+                        children: [
+                          Row(
                             children: [
-                              Container(height: 6, decoration: BoxDecoration(color: Colors.grey.shade200, borderRadius: BorderRadius.circular(3))),
-                              Container(height: 6, width: constraints.maxWidth * progressValue, decoration: BoxDecoration(color: barColor, borderRadius: BorderRadius.circular(3))),
+                              _buildRankText(rank, rankingThemeColor),
+                              const SizedBox(width: 12),
+                              Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 18)), // 국기 추가
+                              const SizedBox(width: 8),
+                              Expanded(child: Text(country.name, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
+                              Text('${value.toStringAsFixed(_selectedRanking.precision)}${_selectedRanking.unit}', style: textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
                             ],
                           ),
-                        ),
-                      ],
+                          const SizedBox(height: 6),
+                          LayoutBuilder(
+                            builder: (context, constraints) => Stack(
+                              children: [
+                                Container(height: 6, decoration: BoxDecoration(color: Colors.grey.shade200, borderRadius: BorderRadius.circular(3))),
+                                Container(height: 6, width: constraints.maxWidth * progressValue, decoration: BoxDecoration(color: barColor, borderRadius: BorderRadius.circular(3))),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 );
@@ -852,7 +886,7 @@ class _RankingCategoryCardState extends State<_RankingCategoryCard> {
   }
 }
 
-// Combined Special Group Card (Re-positioned to bottom in SocietyTabScreen) - Unchanged
+// Combined Special Group Card (Re-positioned to bottom in SocietyTabScreen)
 class _CombinedSpecialGroupCard extends StatefulWidget {
   final List<Country> countriesToDisplay;
   final Set<String> visitedCountryNames;
@@ -867,7 +901,7 @@ class _CombinedSpecialGroupCardState extends State<_CombinedSpecialGroupCard> {
   late SpecialGroupInfo _selectedGroup;
   bool _isExpanded = false;
 
-  // Group Codes (Unchanged)
+  // Group Codes
   static const List<String> _drinkableTapWaterCountryCodes = [
     'AND', 'ABW', 'AUS', 'AUT', 'BHR', 'BEL', 'BMU', 'CAN', 'CHL', 'COK', 'CRI', 'HRV', 'CUW', 'CZE', 'DNK', 'EST', 'FIN', 'FRA', 'DEU', 'GRL', 'HUN', 'ISL', 'ISR', 'ITA', 'JPN', 'KWT', 'LIE', 'LUX', 'MLT', 'MCO', 'NLD', 'NCL', 'NZL', 'NOR', 'PLW', 'POL', 'PRT', 'PRI', 'IRL', 'SMR', 'SAU', 'SGP', 'SVK', 'SVN', 'KOR', 'ESP', 'SWE', 'CHE', 'VIR', 'ARE', 'GBR', 'USA'
   ];
@@ -1090,6 +1124,7 @@ class _CombinedSpecialGroupCardState extends State<_CombinedSpecialGroupCard> {
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
             child: DropdownButtonHideUnderline(
               child: DropdownButton<SpecialGroupInfo>(
+                borderRadius: BorderRadius.circular(16), // 둥근 모서리 적용
                 value: _selectedGroup, isExpanded: true,
                 icon: Icon(Icons.arrow_drop_down_circle_outlined, color: _selectedGroup.themeColor),
                 items: _groups.map((group) => DropdownMenuItem<SpecialGroupInfo>(
@@ -1143,13 +1178,28 @@ class _CombinedSpecialGroupCardState extends State<_CombinedSpecialGroupCard> {
                 itemBuilder: (context, index) {
                   final country = sortedCountries[index];
                   final isVisited = widget.visitedCountryNames.contains(country.name);
-                  return Container(
-                    decoration: BoxDecoration(
-                        color: isVisited ? _selectedGroup.themeColor.withOpacity(0.12) : Colors.grey.shade100,
-                        borderRadius: BorderRadius.circular(8)
+                  return InkWell( // 클릭 시 해당 국가 화면으로 이동
+                    borderRadius: BorderRadius.circular(8),
+                    onTap: () => navigateToCountryDetail(context, country),
+                    child: Container(
+                      decoration: BoxDecoration(
+                          color: isVisited ? _selectedGroup.themeColor.withOpacity(0.12) : Colors.grey.shade100,
+                          borderRadius: BorderRadius.circular(8)
+                      ),
+                      padding: const EdgeInsets.symmetric(horizontal: 12),
+                      child: Row(
+                        children: [
+                          Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 16)), // 국기 추가
+                          const SizedBox(width: 6),
+                          Expanded(
+                            child: Align(
+                                alignment: Alignment.centerLeft,
+                                child: Text(country.name, style: theme.textTheme.bodyMedium, overflow: TextOverflow.ellipsis)
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
-                    padding: const EdgeInsets.symmetric(horizontal: 12),
-                    child: Align(alignment: Alignment.centerLeft, child: Text(country.name, style: theme.textTheme.bodyMedium, overflow: TextOverflow.ellipsis)),
                   );
                 },
               ),
@@ -1161,7 +1211,7 @@ class _CombinedSpecialGroupCardState extends State<_CombinedSpecialGroupCard> {
   }
 }
 
-// Age Related Ranking Card - Unchanged
+// Age Related Ranking Card
 class _AgeRelatedRankingCard extends StatefulWidget {
   final List<Country> countriesToDisplay;
   final Set<String> visitedCountryNames;
@@ -1293,6 +1343,7 @@ class _AgeRelatedRankingCardState extends State<_AgeRelatedRankingCard> {
                 const SizedBox(height: 8),
                 DropdownButtonHideUnderline(
                   child: DropdownButton<RankingInfo>(
+                    borderRadius: BorderRadius.circular(16), // 둥근 모서리 적용
                     value: _selectedRanking, isExpanded: true,
                     icon: Icon(Icons.arrow_drop_down_circle_outlined, color: rankingThemeColor),
                     items: _rankings.map((group) => DropdownMenuItem<RankingInfo>(
@@ -1372,28 +1423,34 @@ class _AgeRelatedRankingCardState extends State<_AgeRelatedRankingCard> {
                   elevation: 0,
                   color: isVisited ? rankingThemeColor.withOpacity(0.12) : Colors.transparent,
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8.0),
-                    child: Column(
-                      children: [
-                        Row(
-                          children: [
-                            _buildRankText(rank, rankingThemeColor),
-                            const SizedBox(width: 12),
-                            Expanded(child: Text(country.name, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold, fontSize: 15))),
-                            Text('${value.toStringAsFixed(_selectedRanking.precision)}${_selectedRanking.unit}', style: textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
-                          ],
-                        ),
-                        const SizedBox(height: 6),
-                        LayoutBuilder(
-                          builder: (context, constraints) => Stack(
+                  child: InkWell( // 클릭 시 해당 국가 화면으로 이동
+                    borderRadius: BorderRadius.circular(12),
+                    onTap: () => navigateToCountryDetail(context, country),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8.0),
+                      child: Column(
+                        children: [
+                          Row(
                             children: [
-                              Container(height: 6, decoration: BoxDecoration(color: Colors.grey.shade200, borderRadius: BorderRadius.circular(3))),
-                              Container(height: 6, width: constraints.maxWidth * progressValue, decoration: BoxDecoration(color: barColor, borderRadius: BorderRadius.circular(3))),
+                              _buildRankText(rank, rankingThemeColor),
+                              const SizedBox(width: 12),
+                              Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 18)), // 국기 추가
+                              const SizedBox(width: 8),
+                              Expanded(child: Text(country.name, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold, fontSize: 15))),
+                              Text('${value.toStringAsFixed(_selectedRanking.precision)}${_selectedRanking.unit}', style: textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
                             ],
                           ),
-                        ),
-                      ],
+                          const SizedBox(height: 6),
+                          LayoutBuilder(
+                            builder: (context, constraints) => Stack(
+                              children: [
+                                Container(height: 6, decoration: BoxDecoration(color: Colors.grey.shade200, borderRadius: BorderRadius.circular(3))),
+                                Container(height: 6, width: constraints.maxWidth * progressValue, decoration: BoxDecoration(color: barColor, borderRadius: BorderRadius.circular(3))),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 );

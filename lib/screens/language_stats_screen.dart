@@ -7,9 +7,26 @@ import 'package:jidoapp/providers/language_family_provider.dart';
 import 'package:jidoapp/providers/language_provider.dart';
 import 'package:jidoapp/screens/language_family_map_screen.dart';
 import 'package:jidoapp/screens/language_map_screen.dart';
+import 'package:jidoapp/screens/country_detail_screen.dart'; // 상세 화면 임포트 추가
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:collection/collection.dart';
+
+// Helper: ISO A2 → 국기 이모지
+String flagEmoji(String isoA2) {
+  if (isoA2.length != 2) return '';
+  final base = 0x1F1E6 - 0x41;
+  return String.fromCharCode(base + isoA2.codeUnitAt(0)) +
+      String.fromCharCode(base + isoA2.codeUnitAt(1));
+}
+
+// Helper: 국가 클릭시 CountryDetailScreen으로 이동
+void navigateToCountryDetail(BuildContext context, Country country) {
+  Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => CountryDetailScreen(country: country)),
+  );
+}
 
 // isDominant 헬퍼 함수
 bool isDominant(String language, Country country) {
@@ -46,7 +63,6 @@ class _LanguageStatsScreenState extends State<LanguageStatsScreen> {
   bool _isLoadingSettings = true;
   String? _expandedLanguage = null;
   Set<String> _expandedFamilies = {};
-
 
   final Map<String, Color> _languageColors = {
     'English': const Color(0xFFA0522D), 'French': const Color(0xFF000080),
@@ -97,7 +113,6 @@ class _LanguageStatsScreenState extends State<LanguageStatsScreen> {
       }
     });
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -156,7 +171,6 @@ class _LanguageStatsScreenState extends State<LanguageStatsScreen> {
                           style: TextStyle(
                             fontSize: 12,
                             fontWeight: FontWeight.bold,
-                            // 🚨 수정: 뷰에 따라 텍스트 색상 변경 (활성/비활성 느낌)
                             color: isLanguagesView ? Colors.grey.shade700 : Colors.grey.shade400,
                           ),
                         ),
@@ -165,7 +179,6 @@ class _LanguageStatsScreenState extends State<LanguageStatsScreen> {
                           scale: 0.8,
                           child: Switch(
                             value: _includeNonDominant,
-                            // 🚨 수정: Families 뷰일 때는 null을 전달하여 스위치 비활성화 (회색 처리됨)
                             onChanged: isLanguagesView
                                 ? (value) {
                               setState(() {
@@ -177,9 +190,6 @@ class _LanguageStatsScreenState extends State<LanguageStatsScreen> {
                                 : null, // null이면 비활성화됨
                             activeTrackColor: Theme.of(context).primaryColor.withOpacity(0.4),
                             activeColor: Theme.of(context).primaryColor,
-                            // 비활성화 시 기본 스타일이 적용되지만, 명시적으로 색상을 지정하고 싶다면 아래 속성 사용 가능
-                            // disabledTrackColor: Colors.grey.shade200,
-                            // disabledThumbColor: Colors.grey.shade400,
                             inactiveThumbColor: Colors.grey.shade500,
                             inactiveTrackColor: Colors.grey.shade300,
                             materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
@@ -338,7 +348,6 @@ class _LanguageStatsScreenState extends State<LanguageStatsScreen> {
 
         bool isFamilyTerminal = branches.length <= 1 ||
             familyName == 'Mongolic' || familyName == 'Koreanic' || familyName == 'Japonic';
-
 
         return _FamilyStatTile(
           id: familyName,
@@ -527,24 +536,30 @@ class _LanguageStatsScreenState extends State<LanguageStatsScreen> {
                         itemBuilder: (context, index) {
                           final country = sortedCountries[index];
                           final isVisited = visitedNames.contains(country.name);
-                          return Row(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              Icon(
-                                isVisited ? Icons.check_circle_rounded : Icons.radio_button_unchecked_rounded,
-                                size: 16,
-                                color: isVisited ? langColor : Colors.grey.shade400,
-                              ),
-                              const SizedBox(width: 6),
-                              Expanded(
-                                child: Text(
-                                  country.name,
-                                  style: theme.textTheme.bodySmall,
-                                  overflow: TextOverflow.ellipsis,
-                                  maxLines: 1,
+                          return InkWell( // 클릭 시 상세 화면 이동
+                            borderRadius: BorderRadius.circular(6),
+                            onTap: () => navigateToCountryDetail(context, country),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Icon(
+                                  isVisited ? Icons.check_circle_rounded : Icons.radio_button_unchecked_rounded,
+                                  size: 16,
+                                  color: isVisited ? langColor : Colors.grey.shade400,
                                 ),
-                              ),
-                            ],
+                                const SizedBox(width: 4),
+                                Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 14)), // 국기 추가
+                                const SizedBox(width: 4),
+                                Expanded(
+                                  child: Text(
+                                    country.name,
+                                    style: theme.textTheme.bodySmall,
+                                    overflow: TextOverflow.ellipsis,
+                                    maxLines: 1,
+                                  ),
+                                ),
+                              ],
+                            ),
                           );
                         },
                       ),
@@ -607,7 +622,6 @@ class _LanguageStatsScreenState extends State<LanguageStatsScreen> {
       );
     }
     if (title == 'Malayo-Polynesian') displayTitle = 'Malayo-Poly.';
-
 
     return Padding(
       padding: EdgeInsets.fromLTRB(leftMargin, 0, 0, 8.0),
@@ -719,24 +733,30 @@ class _LanguageStatsScreenState extends State<LanguageStatsScreen> {
                           itemBuilder: (context, index) {
                             final country = sortedCountries[index];
                             final isVisited = visitedNames.contains(country.name);
-                            return Row(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                                Icon(
-                                  isVisited ? Icons.check_circle_rounded : Icons.radio_button_unchecked_rounded,
-                                  size: 16,
-                                  color: isVisited ? itemColor : Colors.grey.shade400,
-                                ),
-                                const SizedBox(width: 6),
-                                Expanded(
-                                  child: Text(
-                                    country.name,
-                                    style: theme.textTheme.bodySmall,
-                                    overflow: TextOverflow.ellipsis,
-                                    maxLines: 1,
+                            return InkWell( // 클릭 시 상세 화면 이동
+                              borderRadius: BorderRadius.circular(6),
+                              onTap: () => navigateToCountryDetail(context, country),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  Icon(
+                                    isVisited ? Icons.check_circle_rounded : Icons.radio_button_unchecked_rounded,
+                                    size: 16,
+                                    color: isVisited ? itemColor : Colors.grey.shade400,
                                   ),
-                                ),
-                              ],
+                                  const SizedBox(width: 4),
+                                  Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 14)), // 국기 추가
+                                  const SizedBox(width: 4),
+                                  Expanded(
+                                    child: Text(
+                                      country.name,
+                                      style: theme.textTheme.bodySmall,
+                                      overflow: TextOverflow.ellipsis,
+                                      maxLines: 1,
+                                    ),
+                                  ),
+                                ],
+                              ),
                             );
                           },
                         ),
