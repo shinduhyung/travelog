@@ -79,23 +79,34 @@ class AuthProvider extends ChangeNotifier {
   // 🍎 Apple 로그인
   Future<void> signInWithApple() async {
     try {
-      final rawNonce = _generateNonce();
-      final nonce = _sha256ofString(rawNonce);
+      if (Platform.isAndroid) {
+        // 안드로이드: Firebase의 자체 OAuth provider 사용 (Glitch 서버 불필요)
+        final provider = OAuthProvider("apple.com");
+        provider.addScope('email');
+        provider.addScope('name');
 
-      final appleCredential = await SignInWithApple.getAppleIDCredential(
-        scopes: [
-          AppleIDAuthorizationScopes.email,
-          AppleIDAuthorizationScopes.fullName,
-        ],
-        nonce: nonce,
-      );
+        await _auth.signInWithProvider(provider);
+      } else {
+        // iOS: 기존과 동일하게 네이티브 Apple 로그인 사용
+        final rawNonce = _generateNonce();
+        final nonce = _sha256ofString(rawNonce);
 
-      final OAuthCredential credential = OAuthProvider("apple.com").credential(
-        idToken: appleCredential.identityToken,
-        rawNonce: rawNonce,
-      );
+        final appleCredential = await SignInWithApple.getAppleIDCredential(
+          scopes: [
+            AppleIDAuthorizationScopes.email,
+            AppleIDAuthorizationScopes.fullName,
+          ],
+          nonce: nonce,
+        );
 
-      await _auth.signInWithCredential(credential);
+        final OAuthCredential credential = OAuthProvider("apple.com").credential(
+          idToken: appleCredential.identityToken,
+          rawNonce: rawNonce,
+          accessToken: appleCredential.authorizationCode,
+        );
+
+        await _auth.signInWithCredential(credential);
+      }
     } catch (e) {
       debugPrint("Error signing in with Apple: $e");
       rethrow;

@@ -1,6 +1,5 @@
 // lib/screens/login_prompt_screen.dart
 
-import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
@@ -141,11 +140,9 @@ class LoginPromptScreen extends StatelessWidget {
               const _GoogleSignInButton(),
               const SizedBox(height: 12),
 
-              // Apple 로그인 버튼 (iOS only)
-              if (!Platform.isAndroid) ...[
-                const _AppleSignInButton(),
-                const SizedBox(height: 16),
-              ],
+              // Apple 로그인 버튼
+              const _AppleSignInButton(),
+              const SizedBox(height: 16),
 
               // 약관 안내
               const Text(
