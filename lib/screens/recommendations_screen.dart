@@ -234,7 +234,7 @@ class _RecommendationsScreenState extends State<RecommendationsScreen> {
                           color: _kBlue,
                           borderRadius: BorderRadius.circular(10),
                         ),
-                        child: const Icon(Icons.auto_awesome, color: Colors.white, size: 16),
+                        child: const Icon(Icons.search_rounded, color: Colors.white, size: 16),
                       ),
                       const SizedBox(width: 10),
                       const Text('AI Picks',

@@ -832,7 +832,7 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                     context,
                     'Discover',
                     '',
-                    Icons.auto_awesome, // Recommendations Screen의 AI Picks 아이콘으로 변경
+                    Icons.search_rounded, // Recommendations Screen 아이콘
                     recommendBlue, // Recommendations Screen의 블루 컬러로 변경
                         () => gated(() => Navigator.push(context, MaterialPageRoute(builder: (_) => const RecommendationsScreen()))))),
             const SizedBox(width: 12),

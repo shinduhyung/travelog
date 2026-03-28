@@ -536,9 +536,10 @@ class _Step1PassportAirportState extends State<_Step1PassportAirport> {
 
           _BottomButton(
             label: 'CONTINUE',
-            enabled: true,
+            enabled: widget.selectedHubAirport != null,
             subLabel: widget.selectedHubAirport == null ? 'Skip if none' : null,
             onTap: widget.onNext,
+            onSkip: widget.onNext,
           ),
           const SizedBox(height: 16),
         ],
@@ -896,9 +897,10 @@ class _Step2Highlights extends StatelessWidget {
           ),
           _BottomButton(
             label: 'CONTINUE',
-            enabled: true,
+            enabled: visitedHighlights.isNotEmpty,
             subLabel: visitedHighlights.isEmpty ? 'Skip if none' : null,
             onTap: onNext,
+            onSkip: onNext,
           ),
           const SizedBox(height: 16),
         ],
@@ -976,7 +978,11 @@ class _Step3PopularCountries extends StatelessWidget {
             ),
           ),
 
-          _BottomButton(label: 'CONTINUE', enabled: true, onTap: onFinish),
+          _BottomButton(
+            label: 'CONTINUE',
+            enabled: visitedPopular.isNotEmpty || homeCountryName != null,
+            onTap: onFinish,
+          ),
           const SizedBox(height: 16),
         ],
       ),
@@ -1414,9 +1420,10 @@ class _Step4GawcCities extends StatelessWidget {
           ),
           _BottomButton(
             label: 'CONTINUE',
-            enabled: true,
+            enabled: visitedCities.isNotEmpty,
             subLabel: visitedCities.isEmpty ? 'Skip if none' : null,
             onTap: onFinish,
+            onSkip: onFinish,
           ),
           const SizedBox(height: 16),
         ],
@@ -1616,9 +1623,10 @@ class _Step5TopLandmarks extends StatelessWidget {
           ),
           _BottomButton(
             label: 'START EXPLORING!',
-            enabled: true,
+            enabled: visitedLandmarks.isNotEmpty,
             subLabel: visitedLandmarks.isEmpty ? 'Skip if none' : null,
             onTap: onFinish,
+            onSkip: onFinish,
           ),
           const SizedBox(height: 16),
         ],
@@ -1732,8 +1740,9 @@ class _BottomButton extends StatelessWidget {
   final bool enabled;
   final String? subLabel;
   final VoidCallback? onTap;
+  final VoidCallback? onSkip; // subLabel 전용 — 항상 작동
 
-  const _BottomButton({required this.label, required this.enabled, this.subLabel, this.onTap});
+  const _BottomButton({required this.label, required this.enabled, this.subLabel, this.onTap, this.onSkip});
 
   @override
   Widget build(BuildContext context) {
@@ -1759,10 +1768,29 @@ class _BottomButton extends StatelessWidget {
             ),
           ),
           if (subLabel != null) ...[
-            const SizedBox(height: 10),
+            const SizedBox(height: 12),
             GestureDetector(
-              onTap: onTap,
-              child: Text(subLabel!, style: GoogleFonts.poppins(color: Colors.white.withOpacity(0.65), fontSize: 12)),
+              onTap: onSkip,
+              child: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+                decoration: BoxDecoration(
+                  color: Colors.white.withOpacity(0.15),
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(color: Colors.white.withOpacity(0.4), width: 1),
+                ),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Icon(Icons.skip_next_rounded, color: Colors.white.withOpacity(0.9), size: 16),
+                    const SizedBox(width: 6),
+                    Text(subLabel!,
+                        style: GoogleFonts.poppins(
+                            color: Colors.white.withOpacity(0.9),
+                            fontSize: 13,
+                            fontWeight: FontWeight.w500)),
+                  ],
+                ),
+              ),
             ),
           ],
         ],
