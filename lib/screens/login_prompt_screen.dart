@@ -234,7 +234,27 @@ class _GoogleSignInButton extends StatelessWidget {
       onTap: () async {
         try {
           await authProvider.signInWithGoogle();
-          if (context.mounted) Navigator.of(context).pop();
+          if (!context.mounted) return;
+
+          // 케이스 1/2: pendingLoginAction 처리 완료까지 로딩 표시
+          if (authProvider.isHandlingLoginAction ||
+              authProvider.pendingLoginAction != null) {
+            showDialog(
+              context: context,
+              barrierDismissible: false,
+              builder: (_) => const Center(
+                child: CircularProgressIndicator(color: Colors.white),
+              ),
+            );
+            // 처리 완료 대기
+            while (authProvider.isHandlingLoginAction ||
+                authProvider.pendingLoginAction != null) {
+              await Future.delayed(const Duration(milliseconds: 100));
+            }
+            if (context.mounted) Navigator.of(context).pop(); // 로딩 닫기
+          }
+
+          if (context.mounted) Navigator.of(context).pop(); // 로그인 화면 닫기
         } catch (e) {
           if (context.mounted) {
             ScaffoldMessenger.of(context).showSnackBar(
@@ -298,7 +318,27 @@ class _AppleSignInButton extends StatelessWidget {
       onTap: () async {
         try {
           await authProvider.signInWithApple();
-          if (context.mounted) Navigator.of(context).pop();
+          if (!context.mounted) return;
+
+          // 케이스 1/2: pendingLoginAction 처리 완료까지 로딩 표시
+          if (authProvider.isHandlingLoginAction ||
+              authProvider.pendingLoginAction != null) {
+            showDialog(
+              context: context,
+              barrierDismissible: false,
+              builder: (_) => const Center(
+                child: CircularProgressIndicator(color: Colors.white),
+              ),
+            );
+            // 처리 완료 대기
+            while (authProvider.isHandlingLoginAction ||
+                authProvider.pendingLoginAction != null) {
+              await Future.delayed(const Duration(milliseconds: 100));
+            }
+            if (context.mounted) Navigator.of(context).pop(); // 로딩 닫기
+          }
+
+          if (context.mounted) Navigator.of(context).pop(); // 로그인 화면 닫기
         } catch (e) {
           if (context.mounted) {
             ScaffoldMessenger.of(context).showSnackBar(

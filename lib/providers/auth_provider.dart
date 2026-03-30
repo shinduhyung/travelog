@@ -43,6 +43,10 @@ class AuthProvider extends ChangeNotifier {
   String? _pendingLoginAction;
   String? get pendingLoginAction => _pendingLoginAction;
 
+  // 케이스 1/2 처리 완료 여부 — login_prompt_screen에서 대기용
+  bool _isHandlingLoginAction = false;
+  bool get isHandlingLoginAction => _isHandlingLoginAction;
+
   User? get user => _user;
   bool get isAuthenticated => _user != null;
   bool get isGuest => _user == null;
@@ -77,25 +81,25 @@ class AuthProvider extends ChangeNotifier {
 
   // 비로그인 → 로그인 시 케이스 1/2 판단
   Future<void> _handleGuestToLoginTransition(String uid) async {
+    _isHandlingLoginAction = true;
+    notifyListeners();
+
     try {
       final bool firestoreHasData = await _checkFirestoreHasUserData(uid);
 
       if (firestoreHasData) {
-        // 케이스 2: 기존 계정 → Firestore 데이터로 덮어씌우기
-        // Provider들이 이미 로그인 시 Firestore를 우선 로드하므로
-        // 각 Provider의 reloadFromServer()를 호출하도록 신호를 보냄
         print("✅ 기존 계정 감지 → Firestore 데이터로 덮어씌우기 (케이스 2)");
         _pendingLoginAction = 'reload';
       } else {
-        // 케이스 1: 새 계정 → 로컬 데이터를 Firestore로 업로드
         print("✅ 새 계정 감지 → 로컬 데이터를 Firestore로 업로드 (케이스 1)");
         _pendingLoginAction = 'upload';
       }
     } catch (e) {
       print("⚠️ 게스트→로그인 전환 처리 중 오류: $e");
-      // 오류 시 안전하게 reload로 처리
       _pendingLoginAction = 'reload';
     }
+    // _isHandlingLoginAction은 clearPendingLoginAction()에서 false로 변경
+    notifyListeners();
   }
 
   // Firestore에 유저 데이터가 있는지 확인
@@ -133,6 +137,8 @@ class AuthProvider extends ChangeNotifier {
   // Provider들이 pendingLoginAction을 처리한 후 호출하여 초기화
   void clearPendingLoginAction() {
     _pendingLoginAction = null;
+    _isHandlingLoginAction = false;
+    notifyListeners();
   }
 
   Future<void> _saveUserToFirestore(User user) async {
