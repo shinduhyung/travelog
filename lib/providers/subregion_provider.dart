@@ -118,7 +118,32 @@ class SubregionProvider with ChangeNotifier {
   }
   // ─── 케이스 2: Firestore 데이터로 로컬 덮어씌우기 ──────────────────────
   Future<void> reloadFromServer() async {
-    await _loadVisitedSubregions();
+    final prefs = await SharedPreferences.getInstance();
+    final user = _auth.currentUser;
+
+    // 1. 메모리 + 로컬 초기화
+    _visitedSubregions = {};
+    await prefs.remove('visited_subregions');
+
+    // 2. Firestore에서 새로 로드
+    if (user != null) {
+      try {
+        final doc = await _firestore.collection('users').doc(user.uid).get();
+        if (doc.exists && doc.data()!.containsKey('visited_subregions')) {
+          final String serverJson = doc.data()!['visited_subregions'];
+          await prefs.setString('visited_subregions', serverJson);
+          final Map<String, dynamic> decodedMap = json.decode(serverJson);
+          _visitedSubregions = decodedMap.map(
+                (key, value) => MapEntry(key, Set<String>.from(value as List<dynamic>)),
+          );
+        }
+      } catch (e) {
+        if (kDebugMode) debugPrint("Failed to reload subregions from server: $e");
+      }
+    }
+
+    _isLoading = false;
+    notifyListeners();
   }
 
   // ─── 케이스 1: 로컬 데이터를 Firestore로 업로드 ─────────────────────────

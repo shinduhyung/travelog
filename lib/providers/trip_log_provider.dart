@@ -274,8 +274,48 @@ class TripLogProvider with ChangeNotifier {
     return map;
   }
   // ─── 케이스 2: Firestore 데이터로 로컬 덮어씌우기 ──────────────────────
+  // 기존 _syncWithServer는 merge 방식이라 로컬 데이터가 남으므로
+  // SQLite를 먼저 완전히 비운 후 Firestore에서 새로 로드
   Future<void> reloadFromServer() async {
-    await _loadEntries();
+    final user = _auth.currentUser;
+    if (user == null) {
+      // 비로그인이면 그냥 SQLite 초기화
+      await StorageService.instance.clearLocalDatabase();
+      _entries.clear();
+      _isLoading = false;
+      notifyListeners();
+      return;
+    }
+
+    _isLoading = true;
+    notifyListeners();
+
+    try {
+      // 1. SQLite 완전 초기화
+      await StorageService.instance.clearLocalDatabase();
+      _entries.clear();
+
+      // 2. Firestore subcollection에서 전체 로드
+      final collectionRef = _firestore
+          .collection('users')
+          .doc(user.uid)
+          .collection('trip_logs');
+      final snapshot = await collectionRef.get();
+
+      for (final doc in snapshot.docs) {
+        final sanitizedData = _firestoreToModelMap(doc.id, doc.data());
+        final entry = TripLogEntry.fromMap(sanitizedData);
+        await StorageService.instance.create(entry);
+        _entries.add(entry);
+      }
+
+      _entries.sort((a, b) => b.date.compareTo(a.date));
+    } catch (e) {
+      debugPrint("Error reloading trip logs from server: $e");
+    } finally {
+      _isLoading = false;
+      notifyListeners();
+    }
   }
 
   // ─── 케이스 1: 로컬 데이터를 Firestore로 업로드 ─────────────────────────

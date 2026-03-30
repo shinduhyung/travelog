@@ -164,8 +164,54 @@ class FlightMapSettingsProvider with ChangeNotifier {
     await _saveSettings();
   }
   // ─── 케이스 2: Firestore 데이터로 로컬 덮어씌우기 ──────────────────────
+  // 로컬 데이터를 먼저 기본값으로 초기화 후 Firestore에서 새로 로드
   Future<void> reloadFromServer() async {
-    await _loadSettings();
+    final prefs = await SharedPreferences.getInstance();
+    final user = _auth.currentUser;
+
+    // 1. 메모리 + 로컬 초기화 (기본값으로)
+    _useThicknessByFrequency = true;
+    _showHubs = true;
+    _routeColor1 = Colors.pink[300]!;
+    _routeColor2 = Colors.purple[200]!;
+    _hiddenLogIds = {};
+    await prefs.remove('route_thickness_by_freq');
+    await prefs.remove('route_show_hubs');
+    await prefs.remove('route_color_1');
+    await prefs.remove('route_color_2');
+    await prefs.remove('hidden_log_ids');
+
+    // 2. Firestore에서 새로 로드
+    if (user != null) {
+      try {
+        final doc = await _firestore.collection('users').doc(user.uid).get();
+        if (doc.exists && doc.data() != null) {
+          final data = doc.data()!;
+          if (data.containsKey('route_thickness_by_freq')) {
+            _useThicknessByFrequency = data['route_thickness_by_freq'];
+            await prefs.setBool('route_thickness_by_freq', _useThicknessByFrequency);
+          }
+          if (data.containsKey('route_show_hubs')) {
+            _showHubs = data['route_show_hubs'];
+            await prefs.setBool('route_show_hubs', _showHubs);
+          }
+          if (data.containsKey('route_color_1')) {
+            _routeColor1 = Color(data['route_color_1']);
+            await prefs.setInt('route_color_1', _routeColor1.value);
+          }
+          if (data.containsKey('route_color_2')) {
+            _routeColor2 = Color(data['route_color_2']);
+            await prefs.setInt('route_color_2', _routeColor2.value);
+          }
+          if (data.containsKey('hidden_log_ids')) {
+            _hiddenLogIds = Set<String>.from(data['hidden_log_ids'] as Iterable<dynamic>);
+            await prefs.setStringList('hidden_log_ids', _hiddenLogIds.toList());
+          }
+        }
+      } catch (e) {
+        debugPrint("Failed to reload map settings from server: $e");
+      }
+    }
     notifyListeners();
   }
 

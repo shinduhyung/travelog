@@ -427,10 +427,68 @@ class AirportProvider with ChangeNotifier {
     });
   }
   // ─── 케이스 2: Firestore 데이터로 로컬 덮어씌우기 ──────────────────────
+  // 로컬 데이터를 먼저 완전히 비운 후 Firestore에서 새로 로드
   Future<void> reloadFromServer() async {
     final prefs = await SharedPreferences.getInstance();
-    _loadFromLocal(prefs);
-    await _loadAirportData();
+
+    // 1. 메모리 초기화
+    _airportVisitHistory = {};
+    _airportRatings = {};
+    _airportHubs = {};
+    _airportFavorites = {};
+    _airportMemos = {};
+    _airportPhotos = {};
+
+    // 2. 로컬(prefs) 관련 키 초기화
+    await prefs.remove('airport_visit_history');
+    await prefs.remove('airport_ratings');
+    await prefs.remove('airport_hubs');
+    await prefs.remove('airport_favorites');
+    await prefs.remove('airport_memos');
+    await prefs.remove('airport_photos');
+
+    // 3. Firestore에서 새로 로드
+    final user = _auth.currentUser;
+    if (user != null) {
+      try {
+        final doc = await _firestore.collection('users').doc(user.uid).get();
+        if (doc.exists && doc.data() != null) {
+          final data = doc.data()!;
+          if (data.containsKey('airport_visit_history')) {
+            final String historyJson = data['airport_visit_history'];
+            await prefs.setString('airport_visit_history', historyJson);
+            _parseHistory(historyJson);
+          }
+          if (data.containsKey('airport_ratings')) {
+            final String ratingsJson = data['airport_ratings'];
+            await prefs.setString('airport_ratings', ratingsJson);
+            _parseRatings(ratingsJson);
+          }
+          if (data.containsKey('airport_hubs')) {
+            final String hubsJson = data['airport_hubs'];
+            await prefs.setString('airport_hubs', hubsJson);
+            _parseHubs(hubsJson);
+          }
+          if (data.containsKey('airport_favorites')) {
+            final String favoritesJson = data['airport_favorites'];
+            await prefs.setString('airport_favorites', favoritesJson);
+            _parseFavorites(favoritesJson);
+          }
+          if (data.containsKey('airport_memos')) {
+            final String memosJson = data['airport_memos'];
+            await prefs.setString('airport_memos', memosJson);
+            _airportMemos = Map<String, String>.from(json.decode(memosJson));
+          }
+          if (data.containsKey('airport_photos')) {
+            final String photosJson = data['airport_photos'];
+            await prefs.setString('airport_photos', photosJson);
+            _parsePhotos(photosJson);
+          }
+        }
+      } catch (e) {
+        if (kDebugMode) print("Failed to reload airport data from server: $e");
+      }
+    }
     notifyListeners();
   }
 

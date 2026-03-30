@@ -283,7 +283,39 @@ class PersonalityProvider with ChangeNotifier {
   }
   // ─── 케이스 2: Firestore 데이터로 로컬 덮어씌우기 ──────────────────────
   Future<void> reloadFromServer() async {
-    await _loadSavedState();
+    final prefs = await SharedPreferences.getInstance();
+    final user = _auth.currentUser;
+
+    // 1. 메모리 + 로컬 초기화
+    _responses = {};
+    _finalScores = {};
+    _isCalculated = false;
+    await prefs.remove('dna_responses');
+    await prefs.remove('dna_final_scores');
+    await prefs.remove('dna_is_calculated');
+
+    // 2. Firestore에서 새로 로드
+    if (user != null) {
+      try {
+        final doc = await _firestore.collection('users').doc(user.uid).get();
+        if (doc.exists && doc.data() != null) {
+          final data = doc.data()!;
+          if (data.containsKey('dna_responses')) {
+            await prefs.setString('dna_responses', data['dna_responses']);
+          }
+          if (data.containsKey('dna_final_scores')) {
+            await prefs.setString('dna_final_scores', data['dna_final_scores']);
+          }
+          if (data.containsKey('dna_is_calculated')) {
+            await prefs.setBool('dna_is_calculated', data['dna_is_calculated']);
+          }
+          _loadFromLocal(prefs);
+        }
+      } catch (e) {
+        print("Failed to reload personality state from server: $e");
+      }
+    }
+    notifyListeners();
   }
 
   // ─── 케이스 1: 로컬 데이터를 Firestore로 업로드 ─────────────────────────

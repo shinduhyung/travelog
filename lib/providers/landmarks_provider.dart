@@ -699,7 +699,53 @@ class LandmarksProvider with ChangeNotifier {
   }
   // ─── 케이스 2: Firestore 데이터로 로컬 덮어씌우기 ──────────────────────
   Future<void> reloadFromServer() async {
-    await _loadUserData();
+    final prefs = await SharedPreferences.getInstance();
+    final user = _auth.currentUser;
+
+    // 1. 메모리 + 로컬 초기화
+    _visitedLandmarks = {};
+    _visitedSubLocations = {};
+    _wishlistedLandmarks = {};
+    for (var landmark in _allLandmarks) {
+      landmark.visitDates.clear();
+      landmark.rating = null;
+    }
+    await prefs.remove('visited_landmarks');
+    await prefs.remove('visited_landmark_sublocations');
+    await prefs.remove('wishlisted_landmarks');
+    await prefs.remove('landmark_ratings');
+    await prefs.remove('landmark_visit_history');
+
+    // 2. Firestore에서 새로 로드
+    if (user != null) {
+      try {
+        final doc = await _firestore.collection('users').doc(user.uid).get();
+        if (doc.exists && doc.data() != null) {
+          final data = doc.data()!;
+          if (data.containsKey('landmark_ratings')) {
+            await prefs.setString('landmark_ratings', data['landmark_ratings']);
+          }
+          if (data.containsKey('visited_landmarks')) {
+            final List<dynamic> visitedList = data['visited_landmarks'];
+            await prefs.setStringList('visited_landmarks', visitedList.cast<String>());
+          }
+          if (data.containsKey('visited_landmark_sublocations')) {
+            final List<dynamic> subLocList = data['visited_landmark_sublocations'];
+            await prefs.setStringList('visited_landmark_sublocations', subLocList.cast<String>());
+          }
+          if (data.containsKey('wishlisted_landmarks')) {
+            final List<dynamic> wishList = data['wishlisted_landmarks'];
+            await prefs.setStringList('wishlisted_landmarks', wishList.cast<String>());
+          }
+          if (data.containsKey('landmark_visit_history')) {
+            await prefs.setString('landmark_visit_history', data['landmark_visit_history']);
+          }
+          _loadFromLocal(prefs);
+        }
+      } catch (e) {
+        print('Error reloading landmarks from server: $e');
+      }
+    }
     notifyListeners();
   }
 

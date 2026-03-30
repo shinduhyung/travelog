@@ -108,7 +108,28 @@ class VisaProvider with ChangeNotifier {
   }
   // ─── 케이스 2: Firestore 데이터로 로컬 덮어씌우기 ──────────────────────
   Future<void> reloadFromServer() async {
-    await _loadVisas();
+    final prefs = await SharedPreferences.getInstance();
+    final user = _auth.currentUser;
+
+    // 1. 메모리 + 로컬 초기화
+    _visas = [];
+    await prefs.remove('user_visas_list');
+
+    // 2. Firestore에서 새로 로드
+    if (user != null) {
+      try {
+        final doc = await _firestore.collection('users').doc(user.uid).get();
+        if (doc.exists && doc.data()!.containsKey('user_visas')) {
+          final List<dynamic> serverList = doc.data()!['user_visas'];
+          final List<String> stringList = serverList.cast<String>();
+          _visas = stringList.map((item) => UserVisaInfo.fromJson(item)).toList();
+          await prefs.setStringList('user_visas_list', stringList);
+        }
+      } catch (e) {
+        print("Failed to reload visas from server: $e");
+      }
+    }
+    notifyListeners();
   }
 
   // ─── 케이스 1: 로컬 데이터를 Firestore로 업로드 ─────────────────────────

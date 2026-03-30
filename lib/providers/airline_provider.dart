@@ -1297,8 +1297,102 @@ class AirlineProvider with ChangeNotifier {
     return false;
   }
   // ─── 케이스 2: Firestore 데이터로 로컬 덮어씌우기 ──────────────────────
+  // prefs 로컬 데이터를 먼저 비운 후 Firestore에서 새로 로드
   Future<void> reloadFromServer() async {
-    await _initializeData();
+    final prefs = await SharedPreferences.getInstance();
+
+    // 1. 메모리 초기화 (정적 항공사 목록은 유지, 유저 데이터만 초기화)
+    for (var airline in _airlines) {
+      airline.logs.clear();
+      airline.otherUsages.clear();
+      airline.rating = 0.0;
+      airline.isFavorite = false;
+      airline.mileageBalance = 0.0;
+    }
+    _itineraries.clear();
+    _flightConnections.clear();
+
+    // 2. 로컬(prefs) 키 초기화
+    await prefs.remove('saved_airlines_data');
+    await prefs.remove('saved_itineraries_data');
+    await prefs.remove('saved_flight_connections');
+
+    // 3. Firestore에서 새로 로드
+    _isLoading = true;
+    notifyListeners();
+
+    final user = _auth.currentUser;
+    if (user != null) {
+      try {
+        final doc = await _firestore.collection('users').doc(user.uid).get();
+        if (doc.exists && doc.data() != null) {
+          final data = doc.data()!;
+
+          String? savedAirlinesJson;
+          String? savedItinerariesJson;
+          String? savedConnectionsJson;
+
+          if (data.containsKey('saved_airlines_data')) {
+            savedAirlinesJson = data['saved_airlines_data'];
+            await prefs.setString('saved_airlines_data', savedAirlinesJson!);
+          }
+          if (data.containsKey('saved_itineraries_data')) {
+            savedItinerariesJson = data['saved_itineraries_data'];
+            await prefs.setString('saved_itineraries_data', savedItinerariesJson!);
+          }
+          if (data.containsKey('saved_flight_connections')) {
+            savedConnectionsJson = data['saved_flight_connections'];
+            await prefs.setString('saved_flight_connections', savedConnectionsJson!);
+          }
+
+          if (savedAirlinesJson != null && savedAirlinesJson.isNotEmpty) {
+            final List<dynamic> decodedData = json.decode(savedAirlinesJson);
+            List<Airline> loadedAirlines = decodedData.map((json) => Airline.fromJson(json)).toList();
+            for (var loadedAirline in loadedAirlines) {
+              int existingIndex = _airlines.indexWhere((a) =>
+              (a.code != 'N/A' && a.code.isNotEmpty && a.code == loadedAirline.code) ||
+                  (a.name == loadedAirline.name));
+              if (existingIndex != -1) {
+                final staticAirline = _airlines[existingIndex];
+                final String? mergedCode3 = (loadedAirline.code3 == null || loadedAirline.code3!.isEmpty)
+                    ? staticAirline.code3 : loadedAirline.code3;
+                _airlines[existingIndex] = Airline(
+                  name: loadedAirline.name,
+                  code: loadedAirline.code == 'N/A' ? staticAirline.code : loadedAirline.code,
+                  code3: mergedCode3,
+                  themeColorHex: (loadedAirline.themeColorHex == null || loadedAirline.themeColorHex!.isEmpty)
+                      ? staticAirline.themeColorHex : loadedAirline.themeColorHex,
+                  airlineType: (loadedAirline.airlineType == null || loadedAirline.airlineType!.isEmpty)
+                      ? staticAirline.airlineType : loadedAirline.airlineType,
+                  logs: loadedAirline.logs,
+                  otherUsages: loadedAirline.otherUsages,
+                  rating: loadedAirline.rating,
+                  isFavorite: loadedAirline.isFavorite,
+                  mileageBalance: loadedAirline.mileageBalance,
+                );
+              } else {
+                _airlines.add(loadedAirline);
+              }
+            }
+            _airlines.sort((a, b) => a.name.compareTo(b.name));
+          }
+
+          if (savedItinerariesJson != null && savedItinerariesJson.isNotEmpty) {
+            final List<dynamic> decodedData = json.decode(savedItinerariesJson);
+            _itineraries = decodedData.map((json) => Itinerary.fromJson(json)).toList();
+          }
+
+          if (savedConnectionsJson != null && savedConnectionsJson.isNotEmpty) {
+            final List<dynamic> decodedData = json.decode(savedConnectionsJson);
+            _flightConnections = decodedData.map((json) => FlightConnection.fromJson(json)).toList();
+          }
+        }
+      } catch (e) {
+        if (kDebugMode) print("Failed to reload airline data from server: $e");
+      }
+    }
+
+    _isLoading = false;
     notifyListeners();
   }
 

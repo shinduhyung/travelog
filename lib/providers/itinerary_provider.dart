@@ -161,8 +161,32 @@ class ItineraryProvider with ChangeNotifier {
     }
   }
   // ─── 케이스 2: Firestore 데이터로 로컬 덮어씌우기 ──────────────────────
+  // 로컬 데이터를 먼저 비운 후 Firestore에서 새로 로드
   Future<void> reloadFromServer() async {
-    await _loadEntries();
+    final prefs = await SharedPreferences.getInstance();
+    final user = _auth.currentUser;
+
+    // 1. 메모리 + 로컬 초기화
+    _entries = [];
+    await prefs.remove('saved_itineraries');
+
+    // 2. Firestore에서 새로 로드
+    if (user != null) {
+      try {
+        final doc = await _firestore.collection('users').doc(user.uid).get();
+        if (doc.exists && doc.data()!.containsKey('saved_itineraries')) {
+          final String serverJson = doc.data()!['saved_itineraries'];
+          final List<dynamic> jsonList = json.decode(serverJson);
+          _entries = jsonList.map((j) => ItineraryEntry.fromJson(j)).toList();
+          await prefs.setString('saved_itineraries', serverJson);
+        }
+      } catch (e) {
+        debugPrint("Failed to reload itineraries from server: $e");
+      }
+    }
+
+    _isLoading = false;
+    notifyListeners();
   }
 
   // ─── 케이스 1: 로컬 데이터를 Firestore로 업로드 ─────────────────────────

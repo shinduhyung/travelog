@@ -174,8 +174,30 @@ class CalendarProvider with ChangeNotifier {
     return _memos.where((memo) => memo.date == dateString).toList();
   }
   // ─── 케이스 2: Firestore 데이터로 로컬 덮어씌우기 ──────────────────────
+  // 로컬 데이터를 먼저 비운 후 Firestore에서 새로 로드
   Future<void> reloadFromServer() async {
-    await _loadMemos();
+    final prefs = await SharedPreferences.getInstance();
+    final user = _auth.currentUser;
+
+    // 1. 메모리 + 로컬 초기화
+    _memos = [];
+    await prefs.remove(_keyCalendarMemos);
+
+    // 2. Firestore에서 새로 로드
+    if (user != null) {
+      try {
+        final doc = await _firestore.collection('users').doc(user.uid).get();
+        if (doc.exists && doc.data()!.containsKey(_keyCalendarMemos)) {
+          final String serverJson = doc.data()![_keyCalendarMemos];
+          final List<dynamic> jsonList = json.decode(serverJson);
+          _memos = jsonList.map((json) => CalendarMemoModel.fromJson(json)).toList();
+          await prefs.setString(_keyCalendarMemos, serverJson);
+        }
+      } catch (e) {
+        debugPrint("Failed to reload calendar memos from server: $e");
+      }
+    }
+    notifyListeners();
   }
 
   // ─── 케이스 1: 로컬 데이터를 Firestore로 업로드 ─────────────────────────

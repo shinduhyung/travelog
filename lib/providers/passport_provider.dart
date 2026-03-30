@@ -208,7 +208,28 @@ class PassportProvider with ChangeNotifier {
   }
   // ─── 케이스 2: Firestore 데이터로 로컬 덮어씌우기 ──────────────────────
   Future<void> reloadFromServer() async {
-    await _loadUserSelection();
+    final prefs = await SharedPreferences.getInstance();
+    final user = _auth.currentUser;
+
+    // 1. 로컬 초기화 (기본값으로)
+    _selectedPassportIso = 'KOR';
+    await prefs.remove('selectedPassportIso');
+
+    // 2. Firestore에서 새로 로드
+    if (user != null) {
+      try {
+        final doc = await _firestore.collection('users').doc(user.uid).get();
+        if (doc.exists && doc.data()!.containsKey('selectedPassportIso')) {
+          final String serverIso = doc.data()!['selectedPassportIso'];
+          if (_passportDataMap.containsKey(serverIso)) {
+            _selectedPassportIso = serverIso;
+            await prefs.setString('selectedPassportIso', serverIso);
+          }
+        }
+      } catch (e) {
+        print("Failed to reload passport selection from server: $e");
+      }
+    }
     notifyListeners();
   }
 
