@@ -36,9 +36,16 @@ class AuthProvider extends ChangeNotifier {
   bool _isAuthReady = false;
   bool _isSigningIn = false;
 
+  // 로그인 후 Provider들이 처리해야 할 액션을 담는 변수
+  // 'upload': 로컬 데이터를 Firestore로 업로드 (케이스 1 - 새 계정)
+  // 'reload': Firestore 데이터로 로컬 덮어씌우기 (케이스 2 - 기존 계정)
+  // null: 액션 없음
+  String? _pendingLoginAction;
+  String? get pendingLoginAction => _pendingLoginAction;
+
   User? get user => _user;
   bool get isAuthenticated => _user != null;
-  bool get isGuest => _user == null; // ✅ 게스트 여부
+  bool get isGuest => _user == null;
   bool get isAuthReady => _isAuthReady;
   bool get isSigningIn => _isSigningIn;
 
@@ -50,14 +57,82 @@ class AuthProvider extends ChangeNotifier {
     print("🚀 AUTH CHANGED");
     print(" currentUser.uid = ${firebaseUser?.uid}");
 
+    final bool wasGuest = _user == null;
+    final bool isNowLoggedIn = firebaseUser != null;
+
     _user = firebaseUser;
+
+    if (isNowLoggedIn) {
+      _saveUserToFirestore(firebaseUser);
+
+      // 비로그인 → 로그인 전환인 경우에만 케이스 1/2 판단
+      if (wasGuest) {
+        await _handleGuestToLoginTransition(firebaseUser.uid);
+      }
+    }
 
     _isAuthReady = true;
     notifyListeners();
+  }
 
-    if (_user != null) {
-      _saveUserToFirestore(_user!);
+  // 비로그인 → 로그인 시 케이스 1/2 판단
+  Future<void> _handleGuestToLoginTransition(String uid) async {
+    try {
+      final bool firestoreHasData = await _checkFirestoreHasUserData(uid);
+
+      if (firestoreHasData) {
+        // 케이스 2: 기존 계정 → Firestore 데이터로 덮어씌우기
+        // Provider들이 이미 로그인 시 Firestore를 우선 로드하므로
+        // 각 Provider의 reloadFromServer()를 호출하도록 신호를 보냄
+        print("✅ 기존 계정 감지 → Firestore 데이터로 덮어씌우기 (케이스 2)");
+        _pendingLoginAction = 'reload';
+      } else {
+        // 케이스 1: 새 계정 → 로컬 데이터를 Firestore로 업로드
+        print("✅ 새 계정 감지 → 로컬 데이터를 Firestore로 업로드 (케이스 1)");
+        _pendingLoginAction = 'upload';
+      }
+    } catch (e) {
+      print("⚠️ 게스트→로그인 전환 처리 중 오류: $e");
+      // 오류 시 안전하게 reload로 처리
+      _pendingLoginAction = 'reload';
     }
+  }
+
+  // Firestore에 유저 데이터가 있는지 확인
+  // 주요 데이터 필드 하나라도 있으면 true 반환
+  Future<bool> _checkFirestoreHasUserData(String uid) async {
+    try {
+      final doc = await _firestore
+          .collection('users')
+          .doc(uid)
+          .get()
+          .timeout(const Duration(seconds: 5));
+
+      if (!doc.exists) return false;
+
+      final data = doc.data();
+      if (data == null) return false;
+
+      // 핵심 여행 데이터 필드 중 하나라도 있으면 기존 계정으로 판단
+      const dataFields = [
+        'country_visits_v2',
+        'city_visit_details_v3',
+        'airport_visit_history',
+        'saved_airlines_data',
+        'visited_landmarks',
+        'visited_unesco_sites',
+      ];
+
+      return dataFields.any((field) => data.containsKey(field));
+    } catch (e) {
+      print("⚠️ Firestore 데이터 확인 오류: $e");
+      return false;
+    }
+  }
+
+  // Provider들이 pendingLoginAction을 처리한 후 호출하여 초기화
+  void clearPendingLoginAction() {
+    _pendingLoginAction = null;
   }
 
   Future<void> _saveUserToFirestore(User user) async {
@@ -80,14 +155,11 @@ class AuthProvider extends ChangeNotifier {
   Future<void> signInWithApple() async {
     try {
       if (Platform.isAndroid) {
-        // 안드로이드: Firebase의 자체 OAuth provider 사용 (Glitch 서버 불필요)
         final provider = OAuthProvider("apple.com");
         provider.addScope('email');
         provider.addScope('name');
-
         await _auth.signInWithProvider(provider);
       } else {
-        // iOS: 기존과 동일하게 네이티브 Apple 로그인 사용
         final rawNonce = _generateNonce();
         final nonce = _sha256ofString(rawNonce);
 
@@ -159,6 +231,9 @@ class AuthProvider extends ChangeNotifier {
   }
 
   // 🔥 로그아웃
+  // 케이스 3: SharedPreferences + SQLite 초기화 후 로그아웃
+  // → _onAuthStateChanged(null)이 호출되고 main.dart에서 앱을 재시작하여
+  //   Provider 인스턴스가 새로 생성되므로 메모리도 자동 초기화됨
   Future<void> signOut() async {
     print("🔥 로그아웃 실행 및 로컬 캐시 초기화");
     try {

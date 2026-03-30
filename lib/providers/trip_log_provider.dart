@@ -273,4 +273,24 @@ class TripLogProvider with ChangeNotifier {
 
     return map;
   }
+  // ─── 케이스 2: Firestore 데이터로 로컬 덮어씌우기 ──────────────────────
+  Future<void> reloadFromServer() async {
+    await _loadEntries();
+  }
+
+  // ─── 케이스 1: 로컬 데이터를 Firestore로 업로드 ─────────────────────────
+  // TripLogProvider는 로컬(SQLite)과 Firestore를 addEntry 시 항상 같이 저장하므로
+  // 현재 로컬 entries를 순회하며 Firestore에 없는 것만 업로드
+  Future<void> uploadLocalToFirestore() async {
+    final user = _auth.currentUser;
+    if (user == null) return;
+    final collectionRef = _firestore
+        .collection('users')
+        .doc(user.uid)
+        .collection('trip_logs');
+    for (final entry in _entries) {
+      await collectionRef.doc(entry.id).set(entry.toMap());
+    }
+  }
+
 }

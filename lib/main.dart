@@ -164,14 +164,21 @@ class JidoRoot extends StatelessWidget {
   }
 }
 
-class AuthGateRoot extends StatelessWidget {
+class AuthGateRoot extends StatefulWidget {
   const AuthGateRoot({super.key});
+
+  @override
+  State<AuthGateRoot> createState() => _AuthGateRootState();
+}
+
+class _AuthGateRootState extends State<AuthGateRoot> {
+  int _sessionKey = 0;
+  bool _wasAuthenticated = false;
 
   @override
   Widget build(BuildContext context) {
     return Consumer<AuthProvider>(
       builder: (context, auth, _) {
-        // 로딩 중
         if (!auth.isAuthReady) {
           return _buildAppShell(
             const Scaffold(
@@ -181,105 +188,115 @@ class AuthGateRoot extends StatelessWidget {
           );
         }
 
-        // ✅ 로그인 여부 상관없이 (게스트 포함) 바로 앱 진입
-        return MultiProvider(
-          providers: [
-            ChangeNotifierProvider(create: (_) => CountryProvider()),
-            ChangeNotifierProxyProvider<CountryProvider, CityProvider>(
-              create: (context) => CityProvider(),
-              update: (context, countryProvider, cityProvider) {
-                cityProvider ??= CityProvider();
-                cityProvider.updateCountryProvider(countryProvider);
-                return cityProvider;
-              },
-            ),
-            ChangeNotifierProvider(create: (_) => AirlineProvider()),
-            ChangeNotifierProvider(create: (_) => AirportProvider()),
-            ChangeNotifierProxyProvider2<CountryProvider, CityProvider,
-                LandmarksProvider>(
-              lazy: false,
-              create: (_) => LandmarksProvider(),
-              update: (context, countryProvider, cityProvider,
-                  landmarksProvider) {
-                landmarksProvider ??= LandmarksProvider();
-                landmarksProvider.updateProviders(
-                  countryProvider,
-                  cityProvider,
-                );
-                return landmarksProvider;
-              },
-            ),
-            ChangeNotifierProvider(
-              create: (_) => UnescoProvider(),
-              lazy: false,
-            ),
-            ChangeNotifierProvider(create: (_) => ReligionProvider()),
-            ChangeNotifierProvider(create: (_) => LanguageProvider()),
-            ChangeNotifierProvider(create: (_) => LanguageFamilyProvider()),
-            ChangeNotifierProvider(create: (_) => HistoryProvider()),
-            ChangeNotifierProvider(create: (_) => EconomyProvider()),
-            ChangeNotifierProvider(
-              create: (_) => CountryInfoProvider(),
-              lazy: false,
-            ),
-            ChangeNotifierProvider(create: (_) => PassportProvider()),
-            ChangeNotifierProvider(create: (_) => SubregionProvider()),
-            ChangeNotifierProvider(create: (_) => VisaProvider()),
-            ChangeNotifierProvider(
-              create: (_) => FlightMapSettingsProvider(),
-            ),
-            ChangeNotifierProvider(create: (_) => CalendarProvider()),
-            ChangeNotifierProvider(create: (_) => PersonalityProvider()),
-            Provider<AiService>(create: (_) => AiService()),
-            ChangeNotifierProxyProvider<CountryProvider, TripLogProvider>(
-              create: (context) => TripLogProvider(context.read<AiService>()),
-              update: (context, countryProvider, tripLogProvider) {
-                tripLogProvider ??=
-                    TripLogProvider(context.read<AiService>());
-                tripLogProvider.updateCountryData(
-                  countryProvider.countryNameToIsoMap,
-                );
-                return tripLogProvider;
-              },
-            ),
-            ChangeNotifierProvider(
-              create: (context) => ItineraryProvider(
-                context.read<AiService>(),
+        // 로그인 → 로그아웃 전환 감지: sessionKey 증가로 MultiProvider 완전 재생성
+        if (_wasAuthenticated && !auth.isAuthenticated) {
+          WidgetsBinding.instance.addPostFrameCallback((_) {
+            if (mounted) setState(() => _sessionKey++);
+          });
+        }
+        _wasAuthenticated = auth.isAuthenticated;
+
+        return KeyedSubtree(
+          key: ValueKey(_sessionKey),
+          child: MultiProvider(
+            providers: [
+              ChangeNotifierProvider(create: (_) => CountryProvider()),
+              ChangeNotifierProxyProvider<CountryProvider, CityProvider>(
+                create: (context) => CityProvider(),
+                update: (context, countryProvider, cityProvider) {
+                  cityProvider ??= CityProvider();
+                  cityProvider.updateCountryProvider(countryProvider);
+                  return cityProvider;
+                },
               ),
-            ),
-            ChangeNotifierProxyProvider6<
-                CountryProvider,
-                EconomyProvider,
-                CityProvider,
-                AirlineProvider,
-                AirportProvider,
-                LandmarksProvider,
-                BadgeProvider>(
-              create: (_) => BadgeProvider(),
-              update: (context, countryProvider, economyProvider, cityProvider,
-                  airlineProvider, airportProvider, landmarksProvider,
-                  badgeProvider) {
-                badgeProvider ??= BadgeProvider();
-
-                if (!cityProvider.isLoading && !landmarksProvider.isLoading) {
-                  badgeProvider.updateBadges(
+              ChangeNotifierProvider(create: (_) => AirlineProvider()),
+              ChangeNotifierProvider(create: (_) => AirportProvider()),
+              ChangeNotifierProxyProvider2<CountryProvider, CityProvider,
+                  LandmarksProvider>(
+                lazy: false,
+                create: (_) => LandmarksProvider(),
+                update: (context, countryProvider, cityProvider,
+                    landmarksProvider) {
+                  landmarksProvider ??= LandmarksProvider();
+                  landmarksProvider.updateProviders(
                     countryProvider,
-                    economyProvider.economyData,
-                    cityProvider: cityProvider,
-                    airlineProvider: airlineProvider,
-                    airportProvider: airportProvider,
-                    landmarksProvider: landmarksProvider,
+                    cityProvider,
                   );
-                }
+                  return landmarksProvider;
+                },
+              ),
+              ChangeNotifierProvider(
+                create: (_) => UnescoProvider(),
+                lazy: false,
+              ),
+              ChangeNotifierProvider(create: (_) => ReligionProvider()),
+              ChangeNotifierProvider(create: (_) => LanguageProvider()),
+              ChangeNotifierProvider(create: (_) => LanguageFamilyProvider()),
+              ChangeNotifierProvider(create: (_) => HistoryProvider()),
+              ChangeNotifierProvider(create: (_) => EconomyProvider()),
+              ChangeNotifierProvider(
+                create: (_) => CountryInfoProvider(),
+                lazy: false,
+              ),
+              ChangeNotifierProvider(create: (_) => PassportProvider()),
+              ChangeNotifierProvider(create: (_) => SubregionProvider()),
+              ChangeNotifierProvider(create: (_) => VisaProvider()),
+              ChangeNotifierProvider(
+                create: (_) => FlightMapSettingsProvider(),
+              ),
+              ChangeNotifierProvider(create: (_) => CalendarProvider()),
+              ChangeNotifierProvider(create: (_) => PersonalityProvider()),
+              Provider<AiService>(create: (_) => AiService()),
+              ChangeNotifierProxyProvider<CountryProvider, TripLogProvider>(
+                create: (context) => TripLogProvider(context.read<AiService>()),
+                update: (context, countryProvider, tripLogProvider) {
+                  tripLogProvider ??=
+                      TripLogProvider(context.read<AiService>());
+                  tripLogProvider.updateCountryData(
+                    countryProvider.countryNameToIsoMap,
+                  );
+                  return tripLogProvider;
+                },
+              ),
+              ChangeNotifierProvider(
+                create: (context) => ItineraryProvider(
+                  context.read<AiService>(),
+                ),
+              ),
+              ChangeNotifierProxyProvider6<
+                  CountryProvider,
+                  EconomyProvider,
+                  CityProvider,
+                  AirlineProvider,
+                  AirportProvider,
+                  LandmarksProvider,
+                  BadgeProvider>(
+                create: (_) => BadgeProvider(),
+                update: (context, countryProvider, economyProvider, cityProvider,
+                    airlineProvider, airportProvider, landmarksProvider,
+                    badgeProvider) {
+                  badgeProvider ??= BadgeProvider();
 
-                return badgeProvider;
-              },
+                  if (!cityProvider.isLoading && !landmarksProvider.isLoading) {
+                    badgeProvider.updateBadges(
+                      countryProvider,
+                      economyProvider.economyData,
+                      cityProvider: cityProvider,
+                      airlineProvider: airlineProvider,
+                      airportProvider: airportProvider,
+                      landmarksProvider: landmarksProvider,
+                    );
+                  }
+
+                  return badgeProvider;
+                },
+              ),
+            ],
+            child: _buildAppShell(
+              const WidgetUpdateWrapper(),
+              navKey: navigatorKey,
             ),
-          ],
-          child: _buildAppShell(
-            const WidgetUpdateWrapper(),
-            navKey: navigatorKey,
-          ),
+          ),  // KeyedSubtree
         );
       },
     );
@@ -307,6 +324,63 @@ class _WidgetUpdateWrapperState extends State<WidgetUpdateWrapper> {
   void initState() {
     super.initState();
     _checkTutorial();
+    // 로그인 전환 시 pendingLoginAction 감지
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _listenToAuthChanges();
+    });
+  }
+
+  void _listenToAuthChanges() {
+    final authProvider = context.read<AuthProvider>();
+    authProvider.addListener(() => _handlePendingLoginAction(authProvider));
+  }
+
+  Future<void> _handlePendingLoginAction(AuthProvider authProvider) async {
+    final action = authProvider.pendingLoginAction;
+    if (action == null || !mounted) return;
+
+    // 즉시 클리어해서 중복 실행 방지
+    authProvider.clearPendingLoginAction();
+
+    if (action == 'upload') {
+      // 케이스 1: 새 계정 → 로컬 데이터를 Firestore로 업로드
+      debugPrint('🔼 [LoginAction] upload: 로컬 → Firestore');
+      await Future.wait([
+        context.read<CountryProvider>().uploadLocalToFirestore(),
+        context.read<CityProvider>().uploadLocalToFirestore(),
+        context.read<AirportProvider>().uploadLocalToFirestore(),
+        context.read<AirlineProvider>().uploadLocalToFirestore(),
+        context.read<LandmarksProvider>().uploadLocalToFirestore(),
+        context.read<UnescoProvider>().uploadLocalToFirestore(),
+        context.read<SubregionProvider>().uploadLocalToFirestore(),
+        context.read<CalendarProvider>().uploadLocalToFirestore(),
+        context.read<ItineraryProvider>().uploadLocalToFirestore(),
+        context.read<FlightMapSettingsProvider>().uploadLocalToFirestore(),
+        context.read<PersonalityProvider>().uploadLocalToFirestore(),
+        context.read<PassportProvider>().uploadLocalToFirestore(),
+        context.read<VisaProvider>().uploadLocalToFirestore(),
+        context.read<TripLogProvider>().uploadLocalToFirestore(),
+      ]);
+    } else if (action == 'reload') {
+      // 케이스 2: 기존 계정 → Firestore 데이터로 덮어씌우기
+      debugPrint('🔽 [LoginAction] reload: Firestore → 로컬');
+      await Future.wait([
+        context.read<CountryProvider>().reloadFromServer(),
+        context.read<CityProvider>().reloadFromServer(),
+        context.read<AirportProvider>().reloadFromServer(),
+        context.read<AirlineProvider>().reloadFromServer(),
+        context.read<LandmarksProvider>().reloadFromServer(),
+        context.read<UnescoProvider>().reloadFromServer(),
+        context.read<SubregionProvider>().reloadFromServer(),
+        context.read<CalendarProvider>().reloadFromServer(),
+        context.read<ItineraryProvider>().reloadFromServer(),
+        context.read<FlightMapSettingsProvider>().reloadFromServer(),
+        context.read<PersonalityProvider>().reloadFromServer(),
+        context.read<PassportProvider>().reloadFromServer(),
+        context.read<VisaProvider>().reloadFromServer(),
+        context.read<TripLogProvider>().reloadFromServer(),
+      ]);
+    }
   }
 
   Future<void> _checkTutorial() async {

@@ -173,6 +173,16 @@ class CalendarProvider with ChangeNotifier {
     final dateString = day.toIso8601String().substring(0, 10);
     return _memos.where((memo) => memo.date == dateString).toList();
   }
+  // ─── 케이스 2: Firestore 데이터로 로컬 덮어씌우기 ──────────────────────
+  Future<void> reloadFromServer() async {
+    await _loadMemos();
+  }
+
+  // ─── 케이스 1: 로컬 데이터를 Firestore로 업로드 ─────────────────────────
+  Future<void> uploadLocalToFirestore() async {
+    await _saveMemos();
+  }
+
 }
 
 extension ListExtension<T> on List<T> {

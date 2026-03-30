@@ -163,4 +163,15 @@ class FlightMapSettingsProvider with ChangeNotifier {
     _hiddenLogIds.clear();
     await _saveSettings();
   }
+  // ─── 케이스 2: Firestore 데이터로 로컬 덮어씌우기 ──────────────────────
+  Future<void> reloadFromServer() async {
+    await _loadSettings();
+    notifyListeners();
+  }
+
+  // ─── 케이스 1: 로컬 데이터를 Firestore로 업로드 ─────────────────────────
+  Future<void> uploadLocalToFirestore() async {
+    await _saveSettings();
+  }
+
 }

@@ -1,3 +1,5 @@
+// lib/screens/world_wonders_screen.dart
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -25,20 +27,13 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
   late AnimationController _glowController;
 
   static const Map<String, String> _wonderIcons = {
-    'Great Wall of China':
-    'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/wonder_icons%2Fgreat_wall.png?alt=media',
-    'Petra':
-    'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/wonder_icons%2Fpetra.png?alt=media',
-    'Colosseum':
-    'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/wonder_icons%2Fcolosseum.png?alt=media',
-    'Chichen Itza':
-    'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/wonder_icons%2Fchichen_itza.png?alt=media',
-    'Machu Picchu':
-    'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/wonder_icons%2Fmachu_picchu.png?alt=media',
-    'Taj Mahal':
-    'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/wonder_icons%2Ftaj_mahal.png?alt=media',
-    'Christ the Redeemer':
-    'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/wonder_icons%2Fchrist_redeemer.png?alt=media',
+    'Great Wall of China': 'assets/wonder_icons/great_wall.png',
+    'Petra': 'assets/wonder_icons/petra.png',
+    'Colosseum': 'assets/wonder_icons/colosseum.png',
+    'Chichen Itza': 'assets/wonder_icons/chichen_itza.png',
+    'Machu Picchu': 'assets/wonder_icons/machu_picchu.png',
+    'Taj Mahal': 'assets/wonder_icons/taj_mahal.png',
+    'Christ the Redeemer': 'assets/wonder_icons/christ_redeemer.png',
   };
 
   final List<Map<String, String>> _wondersList = [
@@ -154,8 +149,8 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
                   landmarksProvider.visitedLandmarks.contains(name);
                   final landmark =
                   allLandmarks.firstWhereOrNull((l) => l.name == name);
-                  final iconUrl = _wonderIcons[name] ??
-                      'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/wonder_icons%2Fpetra.png?alt=media';
+                  final iconPath = _wonderIcons[name] ??
+                      'assets/wonder_icons/petra.png';
 
                   return _AnimatedWonderCard(
                     index: index,
@@ -165,7 +160,7 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
                       imageUrl,
                       iso,
                       location,
-                      iconUrl,
+                      iconPath,
                       isVisited,
                       landmark,
                     ),
@@ -254,14 +249,14 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
           Row(
             children: _wondersList.map((w) {
               final name = w['name']!;
-              final iconUrl = _wonderIcons[name] ??
-                  'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/wonder_icons%2Fpetra.png?alt=media';
+              final iconPath =
+                  _wonderIcons[name] ?? 'assets/wonder_icons/petra.png';
               final isVisited = provider.visitedLandmarks.contains(name);
               return Expanded(
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 3),
                   child: _WonderIconBadge(
-                    iconUrl: iconUrl,
+                    iconPath: iconPath,
                     isVisited: isVisited,
                     glowController: _glowController,
                   ),
@@ -279,7 +274,7 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
       String imageUrl,
       String iso,
       String location,
-      String iconUrl,
+      String iconPath,
       bool isVisited,
       Landmark? landmark,
       ) {
@@ -401,7 +396,7 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
                 child: Row(
                   children: [
                     _CardIconBadge(
-                      iconUrl: iconUrl,
+                      iconPath: iconPath,
                       isVisited: isVisited,
                       glowController: _glowController,
                     ),
@@ -811,12 +806,12 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
 }
 
 class _WonderIconBadge extends StatelessWidget {
-  final String iconUrl;
+  final String iconPath;
   final bool isVisited;
   final AnimationController glowController;
 
   const _WonderIconBadge({
-    required this.iconUrl,
+    required this.iconPath,
     required this.isVisited,
     required this.glowController,
   });
@@ -836,15 +831,9 @@ class _WonderIconBadge extends StatelessWidget {
               child: Center(
                 child: Padding(
                   padding: const EdgeInsets.all(6),
-                  child: CachedNetworkImage(
-                    imageUrl: iconUrl,
+                  child: Image.asset(
+                    iconPath,
                     fit: BoxFit.contain,
-                    placeholder: (context, url) => const SizedBox.shrink(),
-                    errorWidget: (context, url, error) => const Icon(
-                      Icons.image_not_supported,
-                      color: Colors.grey,
-                      size: 18,
-                    ),
                   ),
                 ),
               ),
@@ -889,15 +878,9 @@ class _WonderIconBadge extends StatelessWidget {
                 child: Center(
                   child: Padding(
                     padding: const EdgeInsets.all(6),
-                    child: CachedNetworkImage(
-                      imageUrl: iconUrl,
+                    child: Image.asset(
+                      iconPath,
                       fit: BoxFit.contain,
-                      placeholder: (context, url) => const SizedBox.shrink(),
-                      errorWidget: (context, url, error) => const Icon(
-                        Icons.image_not_supported,
-                        color: Colors.grey,
-                        size: 18,
-                      ),
                     ),
                   ),
                 ),
@@ -931,12 +914,12 @@ class _WonderIconBadge extends StatelessWidget {
 }
 
 class _CardIconBadge extends StatelessWidget {
-  final String iconUrl;
+  final String iconPath;
   final bool isVisited;
   final AnimationController glowController;
 
   const _CardIconBadge({
-    required this.iconUrl,
+    required this.iconPath,
     required this.isVisited,
     required this.glowController,
   });
@@ -954,15 +937,9 @@ class _CardIconBadge extends StatelessWidget {
         child: Center(
           child: Padding(
             padding: const EdgeInsets.all(8),
-            child: CachedNetworkImage(
-              imageUrl: iconUrl,
+            child: Image.asset(
+              iconPath,
               fit: BoxFit.contain,
-              placeholder: (context, url) => const SizedBox.shrink(),
-              errorWidget: (context, url, error) => const Icon(
-                Icons.image_not_supported,
-                color: Colors.grey,
-                size: 18,
-              ),
             ),
           ),
         ),
@@ -992,15 +969,9 @@ class _CardIconBadge extends StatelessWidget {
           child: Center(
             child: Padding(
               padding: const EdgeInsets.all(8),
-              child: CachedNetworkImage(
-                imageUrl: iconUrl,
+              child: Image.asset(
+                iconPath,
                 fit: BoxFit.contain,
-                placeholder: (context, url) => const SizedBox.shrink(),
-                errorWidget: (context, url, error) => const Icon(
-                  Icons.image_not_supported,
-                  color: Colors.grey,
-                  size: 18,
-                ),
               ),
             ),
           ),

@@ -2211,4 +2211,21 @@ class BadgeProvider with ChangeNotifier {
       notifyListeners();
     }
   }
+  // ─── 케이스 2: Firestore 데이터로 로컬 덮어씌우기 ──────────────────────
+  Future<void> reloadFromServer() async {
+    // 뱃지는 다른 Provider 상태로 재계산되므로 Firestore에서 잠금 상태만 재로드
+    for (var a in _achievements) {
+      a.isUnlocked = false;
+    }
+    _currentRank = 'Rookie';
+    _newlyUnlocked.clear();
+    _newRankUnlocked = null;
+    await _loadUnlockedBadges();
+  }
+
+  // ─── 케이스 1: 로컬 데이터를 Firestore로 업로드 ─────────────────────────
+  Future<void> uploadLocalToFirestore() async {
+    await _saveUnlockedBadges();
+  }
+
 }

@@ -1369,6 +1369,29 @@ class CityProvider with ChangeNotifier {
   CityVisitDetail? getCityVisitDetail(String cityName) {
     return _visitDetails[cityName];
   }
+  // ─── 케이스 2: Firestore 데이터로 로컬 덮어씌우기 ──────────────────────
+  Future<void> reloadFromServer() async {
+    await _loadVisitDetails();
+    await _loadSettings();
+    await _loadHomeCity();
+    await _loadCustomCities();
+    notifyListeners();
+  }
+
+  // ─── 케이스 1: 로컬 데이터를 Firestore로 업로드 ─────────────────────────
+  Future<void> uploadLocalToFirestore() async {
+    await _saveVisitDetails();
+    await _saveCustomCities();
+    final user = _auth.currentUser;
+    if (user != null) {
+      final prefs = await SharedPreferences.getInstance();
+      _firestore.collection('users').doc(user.uid).set({
+        'useDefaultCityRankingBarColor': _useDefaultCityRankingBarColor,
+        'homeCityName': _homeCityName,
+      }, SetOptions(merge: true));
+    }
+  }
+
 }
 
 // Helper: CopyWith Extension

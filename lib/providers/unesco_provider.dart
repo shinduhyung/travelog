@@ -385,4 +385,23 @@ class UnescoProvider with ChangeNotifier {
       if (kDebugMode) print('Error updating visit: $e');
     }
   }
+  // ─── 케이스 2: Firestore 데이터로 로컬 덮어씌우기 ──────────────────────
+  Future<void> reloadFromServer() async {
+    // 방문 데이터 초기화 후 서버에서 재로드
+    _visitedSites.clear();
+    _wishlistedSites.clear();
+    _visitedSubLocations.clear();
+    for (var site in _allSites) {
+      site.visitDates.clear();
+      site.rating = null;
+    }
+    await _loadUserData();
+    notifyListeners();
+  }
+
+  // ─── 케이스 1: 로컬 데이터를 Firestore로 업로드 ─────────────────────────
+  Future<void> uploadLocalToFirestore() async {
+    await _syncAllToFirestore();
+  }
+
 }

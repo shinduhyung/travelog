@@ -426,4 +426,17 @@ class AirportProvider with ChangeNotifier {
           entry.day == date.day;
     });
   }
+  // ─── 케이스 2: Firestore 데이터로 로컬 덮어씌우기 ──────────────────────
+  Future<void> reloadFromServer() async {
+    final prefs = await SharedPreferences.getInstance();
+    _loadFromLocal(prefs);
+    await _loadAirportData();
+    notifyListeners();
+  }
+
+  // ─── 케이스 1: 로컬 데이터를 Firestore로 업로드 ─────────────────────────
+  Future<void> uploadLocalToFirestore() async {
+    await _saveAirportData();
+  }
+
 }
