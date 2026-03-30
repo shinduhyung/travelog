@@ -136,6 +136,7 @@ class _OnboardingTutorialScreenState extends State<OnboardingTutorialScreen>
 
     if (_selectedHomeCountry != null) {
       countryProvider.setVisitedStatus(_selectedHomeCountry!.name, true);
+      countryProvider.setHomeCountry(_selectedHomeCountry!.name, _selectedHomeCountry!.isoA3);
     }
     // 여권 선택 저장
     if (_selectedPassportIso != null) {

@@ -499,15 +499,19 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
                                           ),
                                         ),
                                       ),
-                                      if (isVisited)
-                                        Positioned(
-                                          top: 16,
-                                          right: 16,
-                                          child: Container(
+                                      Positioned(
+                                        top: 16,
+                                        right: 16,
+                                        child: GestureDetector(
+                                          onTap: isVisited ? null : () {
+                                            landmarksProvider.addVisitDate(item.name);
+                                          },
+                                          child: isVisited
+                                              ? Container(
                                             width: 36,
                                             height: 36,
-                                            decoration: BoxDecoration(
-                                              gradient: const LinearGradient(
+                                            decoration: const BoxDecoration(
+                                              gradient: LinearGradient(
                                                 begin: Alignment.topLeft,
                                                 end: Alignment.bottomRight,
                                                 colors: [
@@ -517,21 +521,28 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
                                                 ],
                                               ),
                                               shape: BoxShape.circle,
-                                              boxShadow: [
-                                                BoxShadow(
-                                                  color: const Color(0xFF8B5CF6).withOpacity(0.4),
-                                                  blurRadius: 8,
-                                                  offset: const Offset(0, 3),
-                                                ),
-                                              ],
                                             ),
                                             child: const Icon(
                                               Icons.check_rounded,
                                               color: Colors.white,
                                               size: 20,
                                             ),
+                                          )
+                                              : Container(
+                                            width: 36,
+                                            height: 36,
+                                            decoration: const BoxDecoration(
+                                              color: Colors.black38,
+                                              shape: BoxShape.circle,
+                                            ),
+                                            child: const Icon(
+                                              Icons.add_rounded,
+                                              color: Colors.white,
+                                              size: 20,
+                                            ),
                                           ),
                                         ),
+                                      ),
                                     ],
                                   ),
                                 ),
@@ -705,13 +716,18 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
                 ],
               ),
             ),
-            if (isVisited)
-              Container(
+            GestureDetector(
+              onTap: isVisited ? null : () {
+                final provider = context.read<LandmarksProvider>();
+                provider.addVisitDate(item.name);
+              },
+              child: Container(
                 margin: const EdgeInsets.only(left: 8),
                 width: 32,
                 height: 32,
                 decoration: BoxDecoration(
-                  gradient: const LinearGradient(
+                  gradient: isVisited
+                      ? const LinearGradient(
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
                     colors: [
@@ -719,15 +735,18 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
                       Color(0xFF8B5CF6),
                       Color(0xFF0EA5E9),
                     ],
-                  ),
+                  )
+                      : null,
+                  color: isVisited ? null : const Color(0xFFE5E7EB),
                   borderRadius: BorderRadius.circular(10),
                 ),
-                child: const Icon(
-                  Icons.check_rounded,
-                  color: Colors.white,
+                child: Icon(
+                  isVisited ? Icons.check_rounded : Icons.add_rounded,
+                  color: isVisited ? Colors.white : Colors.grey[500],
                   size: 18,
                 ),
               ),
+            ),
           ],
         ),
       ),
