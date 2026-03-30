@@ -1,11 +1,28 @@
 // lib/screens/settings_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/providers/airport_provider.dart';
+import 'package:jidoapp/providers/airline_provider.dart';
+import 'package:jidoapp/providers/auth_provider.dart';
+import 'package:jidoapp/providers/badge_provider.dart';
+import 'package:jidoapp/providers/calendar_provider.dart';
 import 'package:jidoapp/providers/city_provider.dart';
 import 'package:jidoapp/providers/country_provider.dart';
+import 'package:jidoapp/providers/flight_map_settings_provider.dart';
+import 'package:jidoapp/providers/itinerary_provider.dart';
+import 'package:jidoapp/providers/landmarks_provider.dart';
+import 'package:jidoapp/providers/passport_provider.dart';
+import 'package:jidoapp/providers/personality_provider.dart';
+import 'package:jidoapp/providers/subregion_provider.dart';
+import 'package:jidoapp/providers/trip_log_provider.dart';
+import 'package:jidoapp/providers/unesco_provider.dart';
+import 'package:jidoapp/providers/visa_provider.dart';
 import 'package:provider/provider.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'dart:io'; // For exiting the app
+import 'package:jidoapp/services/storage_service.dart';
+import 'dart:io';
 
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key});
@@ -85,28 +102,128 @@ class _SettingsScreenState extends State<SettingsScreen> {
       },
     );
 
-    if (confirmed == true && context.mounted) {
-      final prefs = await SharedPreferences.getInstance();
-      await prefs.clear();
+    if (confirmed != true || !context.mounted) return;
 
+    // 로딩 표시
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (_) => const Center(child: CircularProgressIndicator()),
+    );
+
+    try {
+      // 1. SharedPreferences 초기화 (튜토리얼 버전은 유지)
+      final prefs = await SharedPreferences.getInstance();
+      final tutorialVersion = prefs.getString('onboarding_tutorial_version');
+      await prefs.clear();
+      if (tutorialVersion != null) {
+        await prefs.setString('onboarding_tutorial_version', tutorialVersion);
+      }
+
+      // 2. SQLite(TripLog) 초기화
+      await StorageService.instance.clearLocalDatabase();
+
+      // 3. Firestore 유저 데이터 초기화 (로그인 상태인 경우)
+      final user = FirebaseAuth.instance.currentUser;
+      if (user != null) {
+        final firestore = FirebaseFirestore.instance;
+        final userDoc = firestore.collection('users').doc(user.uid);
+
+        // 여행 데이터 필드 일괄 삭제
+        await userDoc.update({
+          'country_visits_v2': FieldValue.delete(),
+          'city_visit_details_v3': FieldValue.delete(),
+          'saved_custom_cities': FieldValue.delete(),
+          'homeCityName': FieldValue.delete(),
+          'homeCountryIsoA3': FieldValue.delete(),
+          'useDefaultCityRankingBarColor': FieldValue.delete(),
+          'useDefaultRankingBarColor': FieldValue.delete(),
+          'includeTerritories': FieldValue.delete(),
+          'airport_visit_history': FieldValue.delete(),
+          'airport_ratings': FieldValue.delete(),
+          'airport_hubs': FieldValue.delete(),
+          'airport_favorites': FieldValue.delete(),
+          'airport_memos': FieldValue.delete(),
+          'airport_photos': FieldValue.delete(),
+          'saved_airlines_data': FieldValue.delete(),
+          'saved_itineraries_data': FieldValue.delete(),
+          'saved_flight_connections': FieldValue.delete(),
+          'visited_landmarks': FieldValue.delete(),
+          'visited_landmark_sublocations': FieldValue.delete(),
+          'wishlisted_landmarks': FieldValue.delete(),
+          'landmark_ratings': FieldValue.delete(),
+          'landmark_visit_history': FieldValue.delete(),
+          'unesco_visited_sites': FieldValue.delete(),
+          'unesco_wishlisted_sites': FieldValue.delete(),
+          'unesco_sub_locations': FieldValue.delete(),
+          'unesco_ratings': FieldValue.delete(),
+          'unesco_history': FieldValue.delete(),
+          'visited_subregions': FieldValue.delete(),
+          'calendarMemos': FieldValue.delete(),
+          'saved_itineraries': FieldValue.delete(),
+          'route_thickness_by_freq': FieldValue.delete(),
+          'route_show_hubs': FieldValue.delete(),
+          'route_color_1': FieldValue.delete(),
+          'route_color_2': FieldValue.delete(),
+          'hidden_log_ids': FieldValue.delete(),
+          'dna_responses': FieldValue.delete(),
+          'dna_final_scores': FieldValue.delete(),
+          'dna_is_calculated': FieldValue.delete(),
+          'selectedPassportIso': FieldValue.delete(),
+          'user_visas': FieldValue.delete(),
+        });
+
+        // badges subcollection 초기화
+        await userDoc.collection('badges').doc('unlocked').delete();
+
+        // trip_logs subcollection 초기화
+        final tripLogs = await userDoc.collection('trip_logs').get();
+        for (final doc in tripLogs.docs) {
+          await doc.reference.delete();
+        }
+      }
+
+      // 4. Provider 메모리 초기화 (각 Provider reloadFromServer 호출)
+      if (context.mounted) {
+        await Future.wait([
+          context.read<CountryProvider>().reloadFromServer(),
+          context.read<CityProvider>().reloadFromServer(),
+          context.read<AirportProvider>().reloadFromServer(),
+          context.read<AirlineProvider>().reloadFromServer(),
+          context.read<LandmarksProvider>().reloadFromServer(),
+          context.read<UnescoProvider>().reloadFromServer(),
+          context.read<SubregionProvider>().reloadFromServer(),
+          context.read<CalendarProvider>().reloadFromServer(),
+          context.read<ItineraryProvider>().reloadFromServer(),
+          context.read<FlightMapSettingsProvider>().reloadFromServer(),
+          context.read<PersonalityProvider>().reloadFromServer(),
+          context.read<PassportProvider>().reloadFromServer(),
+          context.read<VisaProvider>().reloadFromServer(),
+          context.read<TripLogProvider>().reloadFromServer(),
+          context.read<BadgeProvider>().reloadFromServer(),
+        ]);
+      }
+    } catch (e) {
+      debugPrint('❌ Reset error: \$e');
+    }
+
+    // 로딩 닫기
+    if (context.mounted) Navigator.of(context).pop();
+
+    // 완료 안내
+    if (context.mounted) {
       await showDialog(
         context: context,
-        barrierDismissible: false,
-        builder: (BuildContext context) {
-          return AlertDialog(
-            title: const Text('Reset Complete'),
-            content: const Text(
-                'All data has been reset. Please restart the app for the changes to take full effect.'),
-            actions: <Widget>[
-              TextButton(
-                onPressed: () {
-                  exit(0); // Force exit app
-                },
-                child: const Text('OK & Restart App'),
-              ),
-            ],
-          );
-        },
+        builder: (_) => AlertDialog(
+          title: const Text('Reset Complete'),
+          content: const Text('All data has been reset.'),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.of(context).pop(),
+              child: const Text('OK'),
+            ),
+          ],
+        ),
       );
     }
   }
