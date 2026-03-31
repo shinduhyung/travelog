@@ -349,50 +349,43 @@ class LandmarksProvider with ChangeNotifier {
     final prefs = await SharedPreferences.getInstance ();
     final user = _auth.currentUser;
 
-    _loadFromLocal (prefs);
-
     if (user != null) {
       try {
         final doc = await _firestore.collection ('users').doc (user.uid).get ();
         if (doc.exists) {
           final data = doc.data ();
           if (data != null) {
-            bool serverHasData = false;
-
             if (data.containsKey ('landmark_ratings')) {
               await prefs.setString ('landmark_ratings', data['landmark_ratings']);
-              serverHasData = true;
             }
             if (data.containsKey ('visited_landmarks')) {
               final List<dynamic> visitedList = data['visited_landmarks'];
               await prefs.setStringList ('visited_landmarks', visitedList.cast<String> ());
-              serverHasData = true;
             }
             if (data.containsKey ('visited_landmark_sublocations')) {
               final List<dynamic> subLocList = data['visited_landmark_sublocations'];
               await prefs.setStringList ('visited_landmark_sublocations', subLocList.cast<String> ());
-              serverHasData = true;
             }
             if (data.containsKey ('wishlisted_landmarks')) {
               final List<dynamic> wishList = data['wishlisted_landmarks'];
               await prefs.setStringList ('wishlisted_landmarks', wishList.cast<String> ());
-              serverHasData = true;
             }
             if (data.containsKey ('landmark_visit_history')) {
               await prefs.setString ('landmark_visit_history', data['landmark_visit_history']);
-              serverHasData = true;
             }
-
             _loadFromLocal (prefs);
-
-
           }
         } else {
-          await _saveAllUserData ();
+          // Firestore에 데이터 없으면 로컬도 읽지 않음 (빈 상태 유지)
+          _loadFromLocal (prefs);
         }
       } catch (e) {
         print ('Error loading user data from Firestore: $e');
+        _loadFromLocal (prefs);
       }
+    } else {
+      // 비로그인 상태면 로컬 데이터 읽기
+      _loadFromLocal (prefs);
     }
   }
 

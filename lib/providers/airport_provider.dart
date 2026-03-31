@@ -96,10 +96,7 @@ class AirportProvider with ChangeNotifier {
     final prefs = await SharedPreferences.getInstance();
     final user = _auth.currentUser;
 
-    // 1. Load from Local
-    _loadFromLocal(prefs);
-
-    // 2. Load from Server
+    // Load from Server (로컬은 Firestore 이후에만 읽음)
     if (user != null) {
       try {
         final doc = await _firestore.collection('users').doc(user.uid).get();

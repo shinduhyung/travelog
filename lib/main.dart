@@ -189,12 +189,15 @@ class _AuthGateRootState extends State<AuthGateRoot> {
         }
 
         // 로그인 → 로그아웃 전환 감지: sessionKey 증가로 MultiProvider 완전 재생성
-        if (_wasAuthenticated && !auth.isAuthenticated) {
-          WidgetsBinding.instance.addPostFrameCallback((_) {
-            if (mounted) setState(() => _sessionKey++);
-          });
+        // isAuthReady가 true일 때만 상태 변화를 추적 (앱 시작 시 자동 복원 이벤트 무시)
+        if (auth.isAuthReady) {
+          if (_wasAuthenticated && !auth.isAuthenticated) {
+            WidgetsBinding.instance.addPostFrameCallback((_) {
+              if (mounted) setState(() => _sessionKey++);
+            });
+          }
+          _wasAuthenticated = auth.isAuthenticated;
         }
-        _wasAuthenticated = auth.isAuthenticated;
 
         return KeyedSubtree(
           key: ValueKey(_sessionKey),

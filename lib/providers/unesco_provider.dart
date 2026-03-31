@@ -56,9 +56,6 @@ class UnescoProvider with ChangeNotifier {
     final prefs = await SharedPreferences.getInstance();
     final user = _auth.currentUser;
 
-    // 1. 먼저 로컬 데이터를 불러옵니다.
-    _loadFromLocal(prefs);
-
     if (user != null) {
       try {
         // 🔥 FIX: 네트워크 불안정/오프라인 시 무한 대기 방지를 위해 get()에 timeout 설정
