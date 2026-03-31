@@ -53,9 +53,6 @@ class ItineraryProvider with ChangeNotifier {
 
           // 로컬 동기화
           await prefs.setString('saved_itineraries', serverJson);
-        } else if (localJson != null) {
-          // 서버에 없지만 로컬에 있으면 업로드 (첫 동기화)
-          await _saveEntries();
         }
       } catch (e) {
         debugPrint("Failed to load itineraries from server: $e");

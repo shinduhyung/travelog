@@ -80,8 +80,7 @@ class FlightMapSettingsProvider with ChangeNotifier {
             }
           }
         } else {
-          // If no data on the server, save current local settings to server (initial sync)
-          await _saveSettings();
+
         }
       } catch (e) {
         debugPrint("Failed to load map settings from server: $e");

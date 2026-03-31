@@ -51,9 +51,6 @@ class VisaProvider with ChangeNotifier {
 
           // 로컬 동기화
           await prefs.setStringList('user_visas_list', stringList);
-        } else if (_visas.isNotEmpty) {
-          // 서버에 데이터 없는데 로컬에 있으면 업로드
-          await _saveVisas();
         }
       } catch (e) {
         print("Failed to load visas from server: $e");

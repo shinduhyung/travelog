@@ -385,9 +385,7 @@ class LandmarksProvider with ChangeNotifier {
 
             _loadFromLocal (prefs);
 
-            if (!serverHasData && (_visitedLandmarks.isNotEmpty || _wishlistedLandmarks.isNotEmpty)) {
-              await _saveAllUserData ();
-            }
+
           }
         } else {
           await _saveAllUserData ();

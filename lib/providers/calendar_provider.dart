@@ -53,9 +53,6 @@ class CalendarProvider with ChangeNotifier {
 
           // 로컬에도 최신 데이터 저장
           await prefs.setString(_keyCalendarMemos, serverJson);
-        } else if (jsonString != null) {
-          // 서버에 데이터가 없고 로컬에는 있는 경우 (최초 업로드)
-          await _saveMemos();
         }
       } catch (e) {
         debugPrint("Failed to load calendar memos from server: $e");

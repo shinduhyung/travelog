@@ -74,9 +74,7 @@ class PersonalityProvider with ChangeNotifier {
               _loadFromLocal(prefs);
 
               // If server is empty but local has data, upload local data
-              if (!serverHasData && _isCalculated) {
-                await _saveState();
-              }
+
             }
           }
         } catch (e) {

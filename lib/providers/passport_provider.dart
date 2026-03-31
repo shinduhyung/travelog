@@ -154,9 +154,6 @@ class PassportProvider with ChangeNotifier {
             _selectedPassportIso = serverIso;
             await prefs.setString('selectedPassportIso', serverIso); // Sync Local
           }
-        } else if (localIso != null) {
-          // If server is empty but local exists, sync to server
-          await _saveUserSelection(localIso);
         }
       } catch (e) {
         print("Failed to sync passport selection from server: $e");

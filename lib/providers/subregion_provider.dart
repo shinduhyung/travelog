@@ -58,9 +58,6 @@ class SubregionProvider with ChangeNotifier {
           _visitedSubregions = decodedMap.map(
                 (key, value) => MapEntry(key, Set<String>.from(value as List<dynamic>)),
           );
-        } else if (localJson != null) {
-          // 서버에 데이터가 없고 로컬에는 있다면 (최초 연동 시) 업로드
-          await _saveVisitedSubregions();
         }
       } catch (e) {
         if (kDebugMode) debugPrint("Failed to load subregions from server: $e");

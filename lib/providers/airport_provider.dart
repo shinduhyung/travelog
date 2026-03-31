@@ -150,9 +150,7 @@ class AirportProvider with ChangeNotifier {
               serverHasData = true;
             }
 
-            if (!serverHasData && (_airportVisitHistory.isNotEmpty || _airportRatings.isNotEmpty)) {
-              await _saveAirportData();
-            }
+
           }
         } else {
           await _saveAirportData();

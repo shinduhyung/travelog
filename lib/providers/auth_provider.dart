@@ -61,50 +61,21 @@ class AuthProvider extends ChangeNotifier {
     print("🚀 AUTH CHANGED");
     print(" currentUser.uid = ${firebaseUser?.uid}");
 
-    final bool wasGuest = _user == null;
-    final bool isNowLoggedIn = firebaseUser != null;
-
     _user = firebaseUser;
 
-    if (isNowLoggedIn) {
+    if (firebaseUser != null) {
       _saveUserToFirestore(firebaseUser);
-
-      // 비로그인 → 로그인 전환인 경우에만 케이스 1/2 판단
-      if (wasGuest) {
-        await _handleGuestToLoginTransition(firebaseUser.uid);
-      }
     }
 
     _isAuthReady = true;
     notifyListeners();
   }
 
-  // 비로그인 → 로그인 시 케이스 1/2 판단
-  Future<void> _handleGuestToLoginTransition(String uid) async {
+  // Firebase 로그인 전에 호출 — UID로 Firestore 조회해서 케이스 1/2 판단
+  Future<void> _prepareLoginAction(String uid) async {
     _isHandlingLoginAction = true;
     notifyListeners();
 
-    try {
-      final bool firestoreHasData = await _checkFirestoreHasUserData(uid);
-
-      if (firestoreHasData) {
-        print("✅ 기존 계정 감지 → Firestore 데이터로 덮어씌우기 (케이스 2)");
-        _pendingLoginAction = 'reload';
-      } else {
-        print("✅ 새 계정 감지 → 로컬 데이터를 Firestore로 업로드 (케이스 1)");
-        _pendingLoginAction = 'upload';
-      }
-    } catch (e) {
-      print("⚠️ 게스트→로그인 전환 처리 중 오류: $e");
-      _pendingLoginAction = 'reload';
-    }
-    // _isHandlingLoginAction은 clearPendingLoginAction()에서 false로 변경
-    notifyListeners();
-  }
-
-  // Firestore에 유저 데이터가 있는지 확인
-  // 주요 데이터 필드 하나라도 있으면 true 반환
-  Future<bool> _checkFirestoreHasUserData(String uid) async {
     try {
       final doc = await _firestore
           .collection('users')
@@ -112,26 +83,26 @@ class AuthProvider extends ChangeNotifier {
           .get()
           .timeout(const Duration(seconds: 5));
 
-      if (!doc.exists) return false;
+      final bool isExistingUser =
+          doc.exists && (doc.data()?['onboardingCompleted'] == true);
+      print("🔍 [_prepareLoginAction] doc.exists=${doc.exists}, onboardingCompleted=${doc.data()?['onboardingCompleted']}, isExistingUser=$isExistingUser");
 
-      final data = doc.data();
-      if (data == null) return false;
-
-      // 핵심 여행 데이터 필드 중 하나라도 있으면 기존 계정으로 판단
-      const dataFields = [
-        'country_visits_v2',
-        'city_visit_details_v3',
-        'airport_visit_history',
-        'saved_airlines_data',
-        'visited_landmarks',
-        'visited_unesco_sites',
-      ];
-
-      return dataFields.any((field) => data.containsKey(field));
+      if (isExistingUser) {
+        print("✅ 기존 계정 확인 (onboardingCompleted=true) → reload 예약 (케이스 2)");
+        _pendingLoginAction = 'reload';
+      } else {
+        print("✅ 새 계정 확인 (onboardingCompleted 없음) → upload 예약 (케이스 1)");
+        _pendingLoginAction = 'upload';
+        // 플래그 저장 — 이후 로그인부터는 기존 계정으로 처리
+        await _firestore.collection('users').doc(uid).set({
+          'onboardingCompleted': true,
+        }, SetOptions(merge: true));
+      }
     } catch (e) {
-      print("⚠️ Firestore 데이터 확인 오류: $e");
-      return false;
+      print("⚠️ 케이스 판단 오류: $e → 안전하게 reload");
+      _pendingLoginAction = 'reload';
     }
+    notifyListeners();
   }
 
   // Provider들이 pendingLoginAction을 처리한 후 호출하여 초기화
@@ -164,7 +135,12 @@ class AuthProvider extends ChangeNotifier {
         final provider = OAuthProvider("apple.com");
         provider.addScope('email');
         provider.addScope('name');
-        await _auth.signInWithProvider(provider);
+        // Android: signInWithProvider 결과로 UID 확인 후 케이스 판단
+        final userCredential = await _auth.signInWithProvider(provider);
+        if (userCredential.user != null) {
+          await _prepareLoginAction(userCredential.user!.uid);
+          notifyListeners();
+        }
       } else {
         final rawNonce = _generateNonce();
         final nonce = _sha256ofString(rawNonce);
@@ -177,6 +153,12 @@ class AuthProvider extends ChangeNotifier {
           nonce: nonce,
         );
 
+        // iOS: userIdentifier가 Firebase UID와 동일
+        final String appleUid = appleCredential.userIdentifier ?? "";
+        if (appleUid.isNotEmpty) {
+          await _prepareLoginAction(appleUid);
+        }
+
         final OAuthCredential credential = OAuthProvider("apple.com").credential(
           idToken: appleCredential.identityToken,
           rawNonce: rawNonce,
@@ -187,6 +169,8 @@ class AuthProvider extends ChangeNotifier {
       }
     } catch (e) {
       debugPrint("Error signing in with Apple: $e");
+      _pendingLoginAction = null;
+      _isHandlingLoginAction = false;
       rethrow;
     }
   }
@@ -218,6 +202,9 @@ class AuthProvider extends ChangeNotifier {
         return;
       }
 
+      // Firebase 로그인 전에 UID로 Firestore 조회 → 케이스 1/2 미리 판단
+      await _prepareLoginAction(googleUser.id);
+
       final googleAuth = await googleUser.authentication;
       final credential = GoogleAuthProvider.credential(
         idToken: googleAuth.idToken,
@@ -229,6 +216,8 @@ class AuthProvider extends ChangeNotifier {
     } catch (e, st) {
       print("❌ Google 로그인 실패: $e");
       debugPrintStack(stackTrace: st);
+      _pendingLoginAction = null;
+      _isHandlingLoginAction = false;
       rethrow;
     } finally {
       _isSigningIn = false;
@@ -237,19 +226,14 @@ class AuthProvider extends ChangeNotifier {
   }
 
   // 🔥 로그아웃
-  // 케이스 3: SharedPreferences + SQLite 초기화 후 로그아웃
-  // → _onAuthStateChanged(null)이 호출되고 main.dart에서 앱을 재시작하여
-  //   Provider 인스턴스가 새로 생성되므로 메모리도 자동 초기화됨
+  // 케이스 3: 로그아웃
+  // → _onAuthStateChanged(null) 호출 → main.dart에서 _sessionKey++ → MultiProvider 재생성
+  // → 메모리는 Provider 재생성으로 초기화됨
+  // → 로컬 SharedPreferences/SQLite는 지우지 않음
+  //   (재로그인 시 reloadFromServer()가 Firestore로 덮어씌우기 때문)
   Future<void> signOut() async {
-    print("🔥 로그아웃 실행 및 로컬 캐시 초기화");
+    print("🔥 로그아웃 실행");
     try {
-      final prefs = await SharedPreferences.getInstance();
-      await prefs.clear();
-      print("✅ SharedPreferences 로컬 데이터 초기화 완료");
-
-      await StorageService.instance.clearLocalDatabase();
-      print("✅ 로컬 데이터베이스 완전 초기화 완료");
-
       try {
         await _googleSignIn.signOut();
       } catch (e) {
@@ -257,6 +241,7 @@ class AuthProvider extends ChangeNotifier {
       }
 
       await _auth.signOut();
+      print("✅ 로그아웃 완료");
     } catch (e, st) {
       print("❌ 로그아웃 실패: $e");
       debugPrintStack(stackTrace: st);

@@ -1209,8 +1209,6 @@ class CountryProvider with ChangeNotifier {
           _visitDetails = decoded.map((k, v) =>
               MapEntry(k, VisitDetails.fromJson(v as Map<String, dynamic>)));
           await prefs.setString('visit_details_v2', serverJson);
-        } else if (localJson != null) {
-          await _saveVisitDetails();
         }
       } catch (e) {
         if (kDebugMode) {

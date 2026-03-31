@@ -335,51 +335,71 @@ class _WidgetUpdateWrapperState extends State<WidgetUpdateWrapper> {
     authProvider.addListener(() => _handlePendingLoginAction(authProvider));
   }
 
+  bool _isHandlingAction = false;
+
   Future<void> _handlePendingLoginAction(AuthProvider authProvider) async {
     final action = authProvider.pendingLoginAction;
+    debugPrint('🔍 [_handlePendingLoginAction] called, action=$action, _isHandlingAction=$_isHandlingAction, mounted=$mounted');
     if (action == null || !mounted) return;
 
-    // 즉시 클리어해서 중복 실행 방지
-    authProvider.clearPendingLoginAction();
+    // 중복 실행 방지 — 이미 처리 중이면 스킵
+    if (_isHandlingAction) return;
+    _isHandlingAction = true;
 
-    if (action == 'upload') {
-      // 케이스 1: 새 계정 → 로컬 데이터를 Firestore로 업로드
-      debugPrint('🔼 [LoginAction] upload: 로컬 → Firestore');
-      await Future.wait([
-        context.read<CountryProvider>().uploadLocalToFirestore(),
-        context.read<CityProvider>().uploadLocalToFirestore(),
-        context.read<AirportProvider>().uploadLocalToFirestore(),
-        context.read<AirlineProvider>().uploadLocalToFirestore(),
-        context.read<LandmarksProvider>().uploadLocalToFirestore(),
-        context.read<UnescoProvider>().uploadLocalToFirestore(),
-        context.read<SubregionProvider>().uploadLocalToFirestore(),
-        context.read<CalendarProvider>().uploadLocalToFirestore(),
-        context.read<ItineraryProvider>().uploadLocalToFirestore(),
-        context.read<FlightMapSettingsProvider>().uploadLocalToFirestore(),
-        context.read<PersonalityProvider>().uploadLocalToFirestore(),
-        context.read<PassportProvider>().uploadLocalToFirestore(),
-        context.read<VisaProvider>().uploadLocalToFirestore(),
-        context.read<TripLogProvider>().uploadLocalToFirestore(),
-      ]);
-    } else if (action == 'reload') {
-      // 케이스 2: 기존 계정 → Firestore 데이터로 덮어씌우기
-      debugPrint('🔽 [LoginAction] reload: Firestore → 로컬');
-      await Future.wait([
-        context.read<CountryProvider>().reloadFromServer(),
-        context.read<CityProvider>().reloadFromServer(),
-        context.read<AirportProvider>().reloadFromServer(),
-        context.read<AirlineProvider>().reloadFromServer(),
-        context.read<LandmarksProvider>().reloadFromServer(),
-        context.read<UnescoProvider>().reloadFromServer(),
-        context.read<SubregionProvider>().reloadFromServer(),
-        context.read<CalendarProvider>().reloadFromServer(),
-        context.read<ItineraryProvider>().reloadFromServer(),
-        context.read<FlightMapSettingsProvider>().reloadFromServer(),
-        context.read<PersonalityProvider>().reloadFromServer(),
-        context.read<PassportProvider>().reloadFromServer(),
-        context.read<VisaProvider>().reloadFromServer(),
-        context.read<TripLogProvider>().reloadFromServer(),
-      ]);
+    try {
+      // Firebase 로그인 완료 대기 — currentUser가 세팅될 때까지 최대 3초
+      final authProvider2 = context.read<AuthProvider>();
+      int waited = 0;
+      while (authProvider2.user == null && waited < 30) {
+        await Future.delayed(const Duration(milliseconds: 100));
+        waited++;
+      }
+      debugPrint('🔍 [LoginAction] user=${authProvider2.user?.uid}, waited=${waited * 100}ms');
+
+      if (action == 'upload') {
+        // 케이스 1: 새 계정 → 로컬 데이터를 Firestore로 업로드
+        debugPrint('🔼 [LoginAction] upload: 로컬 → Firestore');
+        await Future.wait([
+          context.read<CountryProvider>().uploadLocalToFirestore(),
+          context.read<CityProvider>().uploadLocalToFirestore(),
+          context.read<AirportProvider>().uploadLocalToFirestore(),
+          context.read<AirlineProvider>().uploadLocalToFirestore(),
+          context.read<LandmarksProvider>().uploadLocalToFirestore(),
+          context.read<UnescoProvider>().uploadLocalToFirestore(),
+          context.read<SubregionProvider>().uploadLocalToFirestore(),
+          context.read<CalendarProvider>().uploadLocalToFirestore(),
+          context.read<ItineraryProvider>().uploadLocalToFirestore(),
+          context.read<FlightMapSettingsProvider>().uploadLocalToFirestore(),
+          context.read<PersonalityProvider>().uploadLocalToFirestore(),
+          context.read<PassportProvider>().uploadLocalToFirestore(),
+          context.read<VisaProvider>().uploadLocalToFirestore(),
+          context.read<TripLogProvider>().uploadLocalToFirestore(),
+        ]);
+      } else if (action == 'reload') {
+        // 케이스 2: 기존 계정 → Firestore 데이터로 덮어씌우기
+        debugPrint('🔽 [LoginAction] reload: Firestore → 로컬');
+        await Future.wait([
+          context.read<CountryProvider>().reloadFromServer(),
+          context.read<CityProvider>().reloadFromServer(),
+          context.read<AirportProvider>().reloadFromServer(),
+          context.read<AirlineProvider>().reloadFromServer(),
+          context.read<LandmarksProvider>().reloadFromServer(),
+          context.read<UnescoProvider>().reloadFromServer(),
+          context.read<SubregionProvider>().reloadFromServer(),
+          context.read<CalendarProvider>().reloadFromServer(),
+          context.read<ItineraryProvider>().reloadFromServer(),
+          context.read<FlightMapSettingsProvider>().reloadFromServer(),
+          context.read<PersonalityProvider>().reloadFromServer(),
+          context.read<PassportProvider>().reloadFromServer(),
+          context.read<VisaProvider>().reloadFromServer(),
+          context.read<TripLogProvider>().reloadFromServer(),
+        ]);
+      }
+    } finally {
+      // 모든 처리 완료 후 클리어
+      _isHandlingAction = false;
+      authProvider.clearPendingLoginAction();
+      debugPrint('🔍 [_handlePendingLoginAction] DONE, action=$action');
     }
   }
 

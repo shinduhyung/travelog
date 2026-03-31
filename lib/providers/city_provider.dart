@@ -1007,8 +1007,6 @@ class CityProvider with ChangeNotifier {
           if (doc.exists && doc.data()!.containsKey('city_visit_details_v3')) {
             detailsString = doc.data()!['city_visit_details_v3'];
             await prefs.setString('city_visit_details_v3', detailsString!);
-          } else if (detailsString != null) {
-            await _saveVisitDetails();
           }
         } catch (e) {
           print("🔥🔥🔥 [CityProvider] Failed to fetch visit details from server: $e");
