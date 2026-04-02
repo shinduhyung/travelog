@@ -84,7 +84,7 @@ class DefaultFirebaseOptions {
     apiKey: 'AIzaSyA-3Nu_k0E4llHqph4UV6CzYb3q90CvfWk',
     appId: '1:127546533956:web:fbf2900ada647aaab87411',
     messagingSenderId: '127546533956',
-    projectId: 'proboscis-2025',
+    projectId: 'proboscRis-2025',
     authDomain: 'proboscis-2025.firebaseapp.com',
     storageBucket: 'proboscis-2025.firebasestorage.app',
     measurementId: 'G-EDDMZSRRTP',
