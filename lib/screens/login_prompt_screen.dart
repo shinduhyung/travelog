@@ -15,6 +15,7 @@ class LoginPromptScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
+        toolbarHeight: kToolbarHeight,
         leading: IconButton(
           icon: const Icon(Icons.close, color: Color(0xFF4A4A4A)),
           onPressed: () => Navigator.of(context).pop(),

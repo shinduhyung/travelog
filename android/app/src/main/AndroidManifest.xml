@@ -16,6 +16,10 @@
         android:allowBackup="false"
         android:usesCleartextTraffic="true">
 
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3945470636956441~5584608596"/>
+
         <activity
             android:name=".MainActivity"
             android:exported="true"

@@ -17,12 +17,13 @@ import 'package:jidoapp/providers/subregion_provider.dart';
 import 'package:jidoapp/providers/trip_log_provider.dart';
 import 'package:jidoapp/providers/unesco_provider.dart';
 import 'package:jidoapp/providers/visa_provider.dart';
+import 'package:jidoapp/services/subscription_service.dart';
+import 'package:jidoapp/widgets/subscription_sheet.dart';
 import 'package:provider/provider.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:jidoapp/services/storage_service.dart';
-import 'dart:io';
 
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key});
@@ -104,7 +105,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
 
     if (confirmed != true || !context.mounted) return;
 
-    // 로딩 표시
     showDialog(
       context: context,
       barrierDismissible: false,
@@ -112,7 +112,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
     );
 
     try {
-      // 1. SharedPreferences 초기화 (튜토리얼 버전은 유지)
       final prefs = await SharedPreferences.getInstance();
       final tutorialVersion = prefs.getString('onboarding_tutorial_version');
       await prefs.clear();
@@ -120,16 +119,13 @@ class _SettingsScreenState extends State<SettingsScreen> {
         await prefs.setString('onboarding_tutorial_version', tutorialVersion);
       }
 
-      // 2. SQLite(TripLog) 초기화
       await StorageService.instance.clearLocalDatabase();
 
-      // 3. Firestore 유저 데이터 초기화 (로그인 상태인 경우)
       final user = FirebaseAuth.instance.currentUser;
       if (user != null) {
         final firestore = FirebaseFirestore.instance;
         final userDoc = firestore.collection('users').doc(user.uid);
 
-        // 여행 데이터 필드 일괄 삭제
         await userDoc.update({
           'country_visits_v2': FieldValue.delete(),
           'city_visit_details_v3': FieldValue.delete(),
@@ -173,17 +169,14 @@ class _SettingsScreenState extends State<SettingsScreen> {
           'user_visas': FieldValue.delete(),
         });
 
-        // badges subcollection 초기화
         await userDoc.collection('badges').doc('unlocked').delete();
 
-        // trip_logs subcollection 초기화
         final tripLogs = await userDoc.collection('trip_logs').get();
         for (final doc in tripLogs.docs) {
           await doc.reference.delete();
         }
       }
 
-      // 4. Provider 메모리 초기화 (각 Provider reloadFromServer 호출)
       if (context.mounted) {
         await Future.wait([
           context.read<CountryProvider>().reloadFromServer(),
@@ -204,13 +197,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
         ]);
       }
     } catch (e) {
-      debugPrint('❌ Reset error: \$e');
+      debugPrint('Reset error: $e');
     }
 
-    // 로딩 닫기
     if (context.mounted) Navigator.of(context).pop();
 
-    // 완료 안내
     if (context.mounted) {
       await showDialog(
         context: context,
@@ -230,10 +221,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
 
   @override
   Widget build(BuildContext context) {
-    // Access Providers
     final countryProvider = Provider.of<CountryProvider>(context);
     final cityProvider = Provider.of<CityProvider>(context);
 
+    // Settings is always accessible regardless of login state
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
@@ -242,7 +233,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
             : ListView(
           padding: const EdgeInsets.all(16.0),
           children: [
-            // Title replacement for AppBar
             const Padding(
               padding: EdgeInsets.symmetric(vertical: 16.0),
               child: Center(
@@ -256,7 +246,74 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 ),
               ),
             ),
-            // Theme Settings
+
+            // ── Premium / Remove Ads ──────────────────────────
+            Consumer<SubscriptionService>(
+              builder: (context, sub, _) => GestureDetector(
+                onTap: () => SubscriptionSheet.show(context),
+                child: Container(
+                  margin: const EdgeInsets.only(bottom: 16),
+                  padding: const EdgeInsets.all(16),
+                  decoration: BoxDecoration(
+                    gradient: const LinearGradient(
+                      colors: [Color(0xFF3DDAD7), Color(0xFF00A39F)],
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                    ),
+                    borderRadius: BorderRadius.circular(16),
+                    boxShadow: [
+                      BoxShadow(
+                        color: const Color(0xFF3DDAD7).withOpacity(0.3),
+                        blurRadius: 12,
+                        offset: const Offset(0, 4),
+                      ),
+                    ],
+                  ),
+                  child: Row(
+                    children: [
+                      const Icon(Icons.workspace_premium_rounded,
+                          color: Colors.white, size: 28),
+                      const SizedBox(width: 12),
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              sub.isPremium
+                                  ? 'Premium Active'
+                                  : 'Remove Ads',
+                              style: const TextStyle(
+                                color: Colors.white,
+                                fontSize: 16,
+                                fontWeight: FontWeight.w700,
+                              ),
+                            ),
+                            Text(
+                              sub.isPremium
+                                  ? 'You are subscribed. Thank you!'
+                                  : 'Go ad-free for \$9.99 / year',
+                              style: TextStyle(
+                                color: Colors.white.withOpacity(0.85),
+                                fontSize: 12,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Icon(
+                        sub.isPremium
+                            ? Icons.check_circle_rounded
+                            : Icons.arrow_forward_ios,
+                        color: Colors.white,
+                        size: sub.isPremium ? 22 : 14,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+
+            // ── Theme ─────────────────────────────────────────
             ListTile(
               leading: const Icon(Icons.palette_outlined),
               title: const Text('Theme'),
@@ -281,11 +338,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
             ),
             const Divider(),
 
-            // Include Territories Switch
             SwitchListTile(
               secondary: const Icon(Icons.public_off_outlined),
               title: const Text('Include Territories'),
-              subtitle: const Text('Include territories in all statistics'),
+              subtitle:
+              const Text('Include territories in all statistics'),
               value: countryProvider.includeTerritories,
               onChanged: (bool value) {
                 countryProvider.toggleIncludeTerritories();
@@ -293,7 +350,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
             ),
             const Divider(),
 
-            // Border Color Settings
             SwitchListTile(
               secondary: const Icon(Icons.border_color_outlined),
               title: const Text('Use White Borders'),
@@ -304,7 +360,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
             ),
             const Divider(),
 
-            // Country Ranking Bar Color Settings
             SwitchListTile(
               secondary: const Icon(Icons.color_lens_outlined),
               title: const Text('Use Default Country Ranking Bar Color'),
@@ -317,7 +372,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
             ),
             const Divider(),
 
-            // City Ranking Bar Color Settings
             SwitchListTile(
               secondary: const Icon(Icons.location_city_outlined),
               title: const Text('Use Default City Ranking Bar Color'),
@@ -330,7 +384,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
             ),
             const Divider(),
 
-            // Reset All Data
             ListTile(
               leading: const Icon(Icons.warning_amber_rounded,
                   color: Colors.red),

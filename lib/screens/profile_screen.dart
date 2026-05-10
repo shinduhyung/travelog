@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:jidoapp/providers/auth_provider.dart';
+import 'package:jidoapp/services/subscription_service.dart';
+import 'package:jidoapp/widgets/subscription_sheet.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -33,7 +35,6 @@ class ProfileScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const SizedBox(height: 20),
-            // 프로필 이미지
             Container(
               width: 100,
               height: 100,
@@ -54,12 +55,12 @@ class ProfileScreen extends StatelessWidget {
                     ? NetworkImage(user.photoURL!)
                     : null,
                 child: user.photoURL == null
-                    ? const Icon(Icons.person, size: 50, color: Colors.grey)
+                    ? const Icon(Icons.person,
+                    size: 50, color: Colors.grey)
                     : null,
               ),
             ),
             const SizedBox(height: 24),
-            // 이름
             Text(
               user.displayName ?? 'Traveler',
               style: const TextStyle(
@@ -69,7 +70,6 @@ class ProfileScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 8),
-            // 이메일
             Text(
               user.email ?? '',
               style: TextStyle(
@@ -78,21 +78,87 @@ class ProfileScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 40),
-            // 로그아웃 버튼
+
+            // ── Remove Ads / Premium button ───────────────────
+            Consumer<SubscriptionService>(
+              builder: (context, sub, _) => GestureDetector(
+                onTap: () => SubscriptionSheet.show(context),
+                child: Container(
+                  width: double.infinity,
+                  padding: const EdgeInsets.all(16),
+                  margin: const EdgeInsets.only(bottom: 16),
+                  decoration: BoxDecoration(
+                    gradient: const LinearGradient(
+                      colors: [Color(0xFF3DDAD7), Color(0xFF00A39F)],
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                    ),
+                    borderRadius: BorderRadius.circular(16),
+                    boxShadow: [
+                      BoxShadow(
+                        color: const Color(0xFF3DDAD7).withOpacity(0.3),
+                        blurRadius: 12,
+                        offset: const Offset(0, 4),
+                      ),
+                    ],
+                  ),
+                  child: Row(
+                    children: [
+                      const Icon(Icons.workspace_premium_rounded,
+                          color: Colors.white, size: 26),
+                      const SizedBox(width: 12),
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              sub.isPremium
+                                  ? 'Premium Active'
+                                  : 'Remove Ads',
+                              style: const TextStyle(
+                                color: Colors.white,
+                                fontSize: 15,
+                                fontWeight: FontWeight.w700,
+                              ),
+                            ),
+                            Text(
+                              sub.isPremium
+                                  ? 'You are subscribed. Thank you!'
+                                  : 'Go ad-free for \$9.99 / year',
+                              style: TextStyle(
+                                color: Colors.white.withOpacity(0.85),
+                                fontSize: 12,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Icon(
+                        sub.isPremium
+                            ? Icons.check_circle_rounded
+                            : Icons.arrow_forward_ios,
+                        color: Colors.white,
+                        size: sub.isPremium ? 22 : 14,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+
+            // ── Log Out button ────────────────────────────────
             SizedBox(
               width: double.infinity,
               height: 56,
               child: ElevatedButton(
                 onPressed: () async {
                   await authProvider.signOut();
-                  // 로그아웃 되면 main.dart의 StreamBuilder가 감지해서
-                  // 자동으로 로그인 화면으로 보냅니다.
                   if (context.mounted) {
                     Navigator.popUntil(context, (route) => route.isFirst);
                   }
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFFEF4444), // 빨간색
+                  backgroundColor: const Color(0xFFEF4444),
                   elevation: 0,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(16),

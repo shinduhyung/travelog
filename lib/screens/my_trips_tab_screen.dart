@@ -23,6 +23,8 @@ import 'package:jidoapp/screens/cities_screen.dart';
 import 'package:jidoapp/screens/top_landmarks_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:jidoapp/services/subscription_service.dart';
+import 'package:jidoapp/widgets/subscription_sheet.dart';
 
 class MyTripsTabScreen extends StatefulWidget {
   const MyTripsTabScreen({super.key});
@@ -318,44 +320,81 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                       color: Colors.transparent,
                       child: Row(
                         children: [
-                          Container(
-                            width: 60,
-                            height: 60,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              border: Border.all(
-                                  color: Colors.grey.shade100, width: 2),
-                              image: user?.photoURL != null
-                                  ? DecorationImage(
-                                image: NetworkImage(user!.photoURL!),
-                                fit: BoxFit.cover,
+                          Consumer<SubscriptionService>(
+                            builder: (context, sub, _) => Container(
+                              width: 60,
+                              height: 60,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                border: Border.all(
+                                    color: sub.isPremium
+                                        ? const Color(0xFF3DDAD7)
+                                        : Colors.grey.shade100,
+                                    width: sub.isPremium ? 2.5 : 2),
+                                image: user?.photoURL != null
+                                    ? DecorationImage(
+                                  image: NetworkImage(user!.photoURL!),
+                                  fit: BoxFit.cover,
+                                )
+                                    : null,
+                                color: sub.isPremium
+                                    ? const Color(0xFF3DDAD7).withOpacity(0.08)
+                                    : Colors.grey.shade100,
+                              ),
+                              child: user?.photoURL == null
+                                  ? sub.isPremium
+                                  ? const Icon(
+                                Icons.workspace_premium_rounded,
+                                color: Color(0xFF3DDAD7),
+                                size: 30,
                               )
+                                  : Icon(Icons.person,
+                                  color: Colors.grey.shade400, size: 30)
                                   : null,
-                              color: Colors.grey.shade100,
                             ),
-                            child: user?.photoURL == null
-                                ? Icon(Icons.person,
-                                color: Colors.grey.shade400, size: 30)
-                                : null,
                           ),
                           const SizedBox(width: 16),
                           Expanded(
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text(user?.displayName ?? 'Hello, Traveler',
-                                    style: const TextStyle(
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.w700,
-                                        color: Colors.black87)),
-                                const SizedBox(height: 4),
                                 Text(
-                                    user?.email ?? 'Sign in to sync',
-                                    overflow: TextOverflow.ellipsis,
-                                    style: TextStyle(
-                                        fontSize: 13,
-                                        color: Colors.grey.shade500,
-                                        fontWeight: FontWeight.w500)),
+                                  user?.email ?? 'Sign in to sync',
+                                  overflow: TextOverflow.ellipsis,
+                                  style: const TextStyle(
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.w700,
+                                      color: Colors.black87),
+                                ),
+                                const SizedBox(height: 4),
+                                Consumer<SubscriptionService>(
+                                  builder: (context, sub, _) => GestureDetector(
+                                    onTap: () => SubscriptionSheet.show(context),
+                                    child: Row(
+                                      mainAxisSize: MainAxisSize.min,
+                                      children: [
+                                        Icon(
+                                          sub.isPremium
+                                              ? Icons.check_circle_rounded
+                                              : Icons.star_rounded,
+                                          size: 13,
+                                          color: const Color(0xFF3DDAD7),
+                                        ),
+                                        const SizedBox(width: 4),
+                                        Text(
+                                          sub.isPremium
+                                              ? 'Premium Active'
+                                              : 'Remove Ads',
+                                          style: const TextStyle(
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.w700,
+                                            color: Color(0xFF3DDAD7),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
                               ],
                             ),
                           ),
@@ -372,6 +411,7 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                       ),
                     ),
                   ),
+
                   const SizedBox(height: 20),
                   Divider(color: Colors.grey.shade100, height: 1),
                   const SizedBox(height: 20),
@@ -987,22 +1027,8 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
   }
 
   Widget _buildSettingsCard(BuildContext context) {
-    void gated(VoidCallback action) {
-      final auth = Provider.of<AuthProvider>(context, listen: false);
-      if (auth.user == null) {
-        showModalBottomSheet(
-          context: context,
-          isScrollControlled: true,
-          backgroundColor: Colors.transparent,
-          builder: (_) => const LoginPromptScreen(),
-        );
-        return;
-      }
-      action();
-    }
-
     return GestureDetector(
-        onTap: () => gated(() => Navigator.push(context, MaterialPageRoute(builder: (_) => const SettingsScreen()))),
+        onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const SettingsScreen())),
         child: Container(
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
             decoration: BoxDecoration(

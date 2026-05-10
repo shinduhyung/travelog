@@ -11,54 +11,56 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            // 1. 이미지 자산 (에러 해결을 위해 pubspec.yaml 확인 필수)
-            Image.asset(
-              'assets/splash_image.png', // 파일명 철자(spash vs splash) 확인해주세요!
-              height: 120, // 이미지 크기를 조금 줄여서 부담스럽지 않게 조정
-              fit: BoxFit.contain,
-              errorBuilder: (context, error, stackTrace) {
-                // 이미지를 못 찾을 경우 엑박 대신 아이콘을 보여주는 안전 장치
-                return const Icon(
-                  Icons.image_not_supported_outlined,
-                  size: 100,
-                  color: Colors.grey,
-                );
-              },
-            ),
-            const SizedBox(height: 25),
+      body: SafeArea(
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              // 1. 이미지 자산 (에러 해결을 위해 pubspec.yaml 확인 필수)
+              Image.asset(
+                'assets/splash_image.png', // 파일명 철자(spash vs splash) 확인해주세요!
+                height: 120, // 이미지 크기를 조금 줄여서 부담스럽지 않게 조정
+                fit: BoxFit.contain,
+                errorBuilder: (context, error, stackTrace) {
+                  // 이미지를 못 찾을 경우 엑박 대신 아이콘을 보여주는 안전 장치
+                  return const Icon(
+                    Icons.image_not_supported_outlined,
+                    size: 100,
+                    color: Colors.grey,
+                  );
+                },
+              ),
+              const SizedBox(height: 25),
 
-            // 2. 부드럽고 Cursive한 느낌의 텍스트 스타일
-            const Text(
-              "Travelog",
-              style: TextStyle(
-                fontSize: 40,
-                // 과한 굵기(Bold) 대신 가벼운 느낌
-                fontWeight: FontWeight.w400,
-                // 이탤릭체로 흘림 효과 (Cursive 느낌)
-                fontStyle: FontStyle.italic,
-                // 명조 계열(Serif)을 사용하여 감성적인 분위기
-                fontFamily: 'Serif',
-                color: Color(0xFF2C3E50), // 찐한 검정 대신 부드러운 다크 네이비/그레이
-                letterSpacing: 1.2,
+              // 2. 부드럽고 Cursive한 느낌의 텍스트 스타일
+              const Text(
+                "Travelog",
+                style: TextStyle(
+                  fontSize: 40,
+                  // 과한 굵기(Bold) 대신 가벼운 느낌
+                  fontWeight: FontWeight.w400,
+                  // 이탤릭체로 흘림 효과 (Cursive 느낌)
+                  fontStyle: FontStyle.italic,
+                  // 명조 계열(Serif)을 사용하여 감성적인 분위기
+                  fontFamily: 'Serif',
+                  color: Color(0xFF2C3E50), // 찐한 검정 대신 부드러운 다크 네이비/그레이
+                  letterSpacing: 1.2,
+                ),
               ),
-            ),
-            const SizedBox(height: 8),
-            const Text(
-              "AI Travel Journal",
-              style: TextStyle(
-                fontSize: 15,
-                fontWeight: FontWeight.w300, // 얇게 처리하여 세련됨 강조
-                color: Colors.grey,
-                letterSpacing: 3.0, // 여유로운 자간
+              const SizedBox(height: 8),
+              const Text(
+                "AI Travel Journal",
+                style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w300, // 얇게 처리하여 세련됨 강조
+                  color: Colors.grey,
+                  letterSpacing: 3.0, // 여유로운 자간
+                ),
               ),
-            ),
-            const SizedBox(height: 60),
-            _GoogleSignInButton(),
-          ],
+              const SizedBox(height: 60),
+              _GoogleSignInButton(),
+            ],
+          ),
         ),
       ),
     );

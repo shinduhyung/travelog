@@ -8,6 +8,7 @@ import 'package:jidoapp/models/visit_details_model.dart'; // GroupBy가 여기 �
 import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/screens/countries_map_screen.dart'; // GroupBy enum 위치 확인 필요
 import 'package:jidoapp/screens/country_detail_screen.dart';
+import 'package:jidoapp/services/ad_service.dart';
 
 // 헤더 아이템 클래스
 class HeaderItem {
@@ -20,12 +21,14 @@ class CountrySelectionScreen extends StatefulWidget {
   final List<Country> allCountries;
   final ScrollController scrollController;
   final GroupBy groupBy;
+  final bool isOnboarding;
 
   const CountrySelectionScreen({
     super.key,
     required this.allCountries,
     required this.scrollController,
     required this.groupBy,
+    this.isOnboarding = false,
   });
 
   @override
@@ -45,8 +48,15 @@ class _CountrySelectionScreenState extends State<CountrySelectionScreen> {
   @override
   void initState() {
     super.initState();
+    if (widget.isOnboarding) AdService.instance.setOnboardingActive();
     _tempSelectedCountries = Provider.of<CountryProvider>(context, listen: false).visitedCountries.toSet();
     _buildDisplayList();
+  }
+
+  @override
+  void dispose() {
+    if (widget.isOnboarding) AdService.instance.clearOnboardingActive();
+    super.dispose();
   }
 
   void _buildDisplayList() {

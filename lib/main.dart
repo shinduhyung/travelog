@@ -39,12 +39,14 @@ import 'package:jidoapp/providers/unesco_provider.dart';
 import 'package:jidoapp/providers/trip_log_provider.dart';
 import 'package:jidoapp/services/ai_service.dart';
 import 'package:jidoapp/services/home_widget_service.dart';
+import 'package:jidoapp/services/ad_service.dart';
+import 'package:jidoapp/services/subscription_service.dart'; // ← 추가
 
 import 'package:jidoapp/screens/badge_collected_screen.dart';
 import 'package:jidoapp/screens/rank_collected_screen.dart';
 
 import 'package:timezone/data/latest.dart' as tz;
-import 'package:timezone/timezone.dart' as tz;
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 const MaterialColor mintSwatch = MaterialColor(
   0xFF3DDAD7,
@@ -91,6 +93,14 @@ Future<void> main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+
+  await MobileAds.instance.initialize();
+
+  // SubscriptionService를 먼저 초기화 (캐시된 프리미엄 상태 복원)
+  // → AdService.initialize() 시점에 isPremium 값이 올바르게 세팅됨
+  await SubscriptionService.instance.initialize();
+
+  AdService.instance.initialize();
 
   await dotenv.load(fileName: ".env");
   await initializeDateFormatting('ko_KR', null);
@@ -188,8 +198,6 @@ class _AuthGateRootState extends State<AuthGateRoot> {
           );
         }
 
-        // 로그인 → 로그아웃 전환 감지: sessionKey 증가로 MultiProvider 완전 재생성
-        // isAuthReady가 true일 때만 상태 변화를 추적 (앱 시작 시 자동 복원 이벤트 무시)
         if (auth.isAuthReady) {
           if (_wasAuthenticated && !auth.isAuthenticated) {
             WidgetsBinding.instance.addPostFrameCallback((_) {
@@ -203,6 +211,12 @@ class _AuthGateRootState extends State<AuthGateRoot> {
           key: ValueKey(_sessionKey),
           child: MultiProvider(
             providers: [
+              // ─── SubscriptionService Provider ───────────────────
+              // 싱글톤 인스턴스를 Provider로 노출 → UI에서 구독 상태 리슨 가능
+              ChangeNotifierProvider<SubscriptionService>.value(
+                value: SubscriptionService.instance,
+              ),
+              // ────────────────────────────────────────────────────
               ChangeNotifierProvider(create: (_) => CountryProvider()),
               ChangeNotifierProxyProvider<CountryProvider, CityProvider>(
                 create: (context) => CityProvider(),
@@ -275,9 +289,9 @@ class _AuthGateRootState extends State<AuthGateRoot> {
                   LandmarksProvider,
                   BadgeProvider>(
                 create: (_) => BadgeProvider(),
-                update: (context, countryProvider, economyProvider, cityProvider,
-                    airlineProvider, airportProvider, landmarksProvider,
-                    badgeProvider) {
+                update: (context, countryProvider, economyProvider,
+                    cityProvider, airlineProvider, airportProvider,
+                    landmarksProvider, badgeProvider) {
                   badgeProvider ??= BadgeProvider();
 
                   if (!cityProvider.isLoading && !landmarksProvider.isLoading) {
@@ -299,7 +313,7 @@ class _AuthGateRootState extends State<AuthGateRoot> {
               const WidgetUpdateWrapper(),
               navKey: navigatorKey,
             ),
-          ),  // KeyedSubtree
+          ),
         );
       },
     );
@@ -316,10 +330,8 @@ class WidgetUpdateWrapper extends StatefulWidget {
 class _WidgetUpdateWrapperState extends State<WidgetUpdateWrapper> {
   bool _widgetUpdated = false;
 
-  // null = SharedPreferences 로딩 중, true = 표시, false = 이미 완료
   bool? _showTutorial;
 
-  // 새 버전 출시 시 이 값을 올리면 기존 유저에게도 한 번 더 표시됩니다.
   static const String _tutorialVersion = '1.0';
   static const String _prefKey = 'onboarding_tutorial_version';
 
@@ -327,7 +339,6 @@ class _WidgetUpdateWrapperState extends State<WidgetUpdateWrapper> {
   void initState() {
     super.initState();
     _checkTutorial();
-    // 로그인 전환 시 pendingLoginAction 감지
     WidgetsBinding.instance.addPostFrameCallback((_) {
       _listenToAuthChanges();
     });
@@ -342,25 +353,24 @@ class _WidgetUpdateWrapperState extends State<WidgetUpdateWrapper> {
 
   Future<void> _handlePendingLoginAction(AuthProvider authProvider) async {
     final action = authProvider.pendingLoginAction;
-    debugPrint('🔍 [_handlePendingLoginAction] called, action=$action, _isHandlingAction=$_isHandlingAction, mounted=$mounted');
+    debugPrint(
+        '🔍 [_handlePendingLoginAction] called, action=$action, _isHandlingAction=$_isHandlingAction, mounted=$mounted');
     if (action == null || !mounted) return;
 
-    // 중복 실행 방지 — 이미 처리 중이면 스킵
     if (_isHandlingAction) return;
     _isHandlingAction = true;
 
     try {
-      // Firebase 로그인 완료 대기 — currentUser가 세팅될 때까지 최대 3초
       final authProvider2 = context.read<AuthProvider>();
       int waited = 0;
       while (authProvider2.user == null && waited < 30) {
         await Future.delayed(const Duration(milliseconds: 100));
         waited++;
       }
-      debugPrint('🔍 [LoginAction] user=${authProvider2.user?.uid}, waited=${waited * 100}ms');
+      debugPrint(
+          '🔍 [LoginAction] user=${authProvider2.user?.uid}, waited=${waited * 100}ms');
 
       if (action == 'upload') {
-        // 케이스 1: 새 계정 → 로컬 데이터를 Firestore로 업로드
         debugPrint('🔼 [LoginAction] upload: 로컬 → Firestore');
         await Future.wait([
           context.read<CountryProvider>().uploadLocalToFirestore(),
@@ -379,7 +389,6 @@ class _WidgetUpdateWrapperState extends State<WidgetUpdateWrapper> {
           context.read<TripLogProvider>().uploadLocalToFirestore(),
         ]);
       } else if (action == 'reload') {
-        // 케이스 2: 기존 계정 → Firestore 데이터로 덮어씌우기
         debugPrint('🔽 [LoginAction] reload: Firestore → 로컬');
         await Future.wait([
           context.read<CountryProvider>().reloadFromServer(),
@@ -399,7 +408,6 @@ class _WidgetUpdateWrapperState extends State<WidgetUpdateWrapper> {
         ]);
       }
     } finally {
-      // 모든 처리 완료 후 클리어
       _isHandlingAction = false;
       authProvider.clearPendingLoginAction();
       debugPrint('🔍 [_handlePendingLoginAction] DONE, action=$action');
@@ -425,7 +433,6 @@ class _WidgetUpdateWrapperState extends State<WidgetUpdateWrapper> {
 
   @override
   Widget build(BuildContext context) {
-    // SharedPreferences 로딩 전 — 흰 화면 (아주 짧은 순간)
     if (_showTutorial == null) {
       return const Scaffold(backgroundColor: Colors.white);
     }
@@ -483,7 +490,15 @@ Widget _buildAppShell(Widget home, {GlobalKey<NavigatorState>? navKey}) {
         useMaterial3: true,
       ),
       builder: (context, child) {
-        return BadgeGlobalListener(child: child ?? const SizedBox.shrink());
+        return Listener(
+          behavior: HitTestBehavior.translucent,
+          onPointerDown: (_) {
+            AdService.instance.recordGlobalTouch();
+          },
+          child: BadgeGlobalListener(
+            child: child ?? const SizedBox.shrink(),
+          ),
+        );
       },
       home: home,
     ),
