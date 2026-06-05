@@ -9,6 +9,8 @@ import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/screens/countries_map_screen.dart'; // GroupBy enum 위치 확인 필요
 import 'package:jidoapp/screens/country_detail_screen.dart';
 import 'package:jidoapp/services/ad_service.dart';
+import 'package:in_app_review/in_app_review.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 // 헤더 아이템 클래스
 class HeaderItem {
@@ -48,6 +50,7 @@ class _CountrySelectionScreenState extends State<CountrySelectionScreen> {
   @override
   void initState() {
     super.initState();
+    AdService.instance.setCountrySelectionActive();
     if (widget.isOnboarding) AdService.instance.setOnboardingActive();
     _tempSelectedCountries = Provider.of<CountryProvider>(context, listen: false).visitedCountries.toSet();
     _buildDisplayList();
@@ -56,6 +59,7 @@ class _CountrySelectionScreenState extends State<CountrySelectionScreen> {
   @override
   void dispose() {
     if (widget.isOnboarding) AdService.instance.clearOnboardingActive();
+    AdService.instance.clearCountrySelectionActive();
     super.dispose();
   }
 
@@ -354,7 +358,7 @@ class _CountrySelectionScreenState extends State<CountrySelectionScreen> {
                   const SizedBox(width: 16),
                   Expanded(
                     child: ElevatedButton(
-                      onPressed: () {
+                      onPressed: () async {
                         final provider = Provider.of<CountryProvider>(context, listen: false);
                         final originalVisited = provider.visitedCountries;
 
@@ -369,7 +373,26 @@ class _CountrySelectionScreenState extends State<CountrySelectionScreen> {
                           provider.setVisitedStatus(countryName, false);
                         }
 
-                        Navigator.pop(context);
+                        // 리뷰 요청 조건:
+                        // 1) 국가를 추가했을 때만
+                        // 2) 추가 후 총 방문 국가 10개 이상
+                        // 3) 기기당 딱 1회
+                        if (countriesToAdd.isNotEmpty) {
+                          final newTotal = _tempSelectedCountries.length;
+                          if (newTotal >= 10) {
+                            final prefs = await SharedPreferences.getInstance();
+                            final alreadyRequested = prefs.getBool('review_requested') ?? false;
+                            if (!alreadyRequested) {
+                              final inAppReview = InAppReview.instance;
+                              if (await inAppReview.isAvailable()) {
+                                await inAppReview.requestReview();
+                                await prefs.setBool('review_requested', true);
+                              }
+                            }
+                          }
+                        }
+
+                        if (context.mounted) Navigator.pop(context);
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: _mintPrimary, // 민트 버튼

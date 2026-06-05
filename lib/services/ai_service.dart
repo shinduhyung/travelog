@@ -491,13 +491,16 @@ CRITICAL: The date format for '📅' must be "YYYY-MM-DD (DayOfWeek in Korean)".
       }
     }
 
-    final lines = content.split('\n');
-    for (final line in lines) {
+    String normalizedContent = content;
+    for (final key in ['Countries:', 'Cities:', 'Airports:', 'Flights:', 'Trains:', 'Buses:', 'Ferries:', 'Cars:', 'Landmarks:', 'TransitAirports:', 'startLocation:', 'endLocation:']) {
+      normalizedContent = normalizedContent.replaceAll('$key\n', key);
+    }
+    final lines = normalizedContent.split('\n');    for (final line in lines) {
       if (line.startsWith('Countries:')) {
         final data = line.substring('Countries:'.length).trim();
         final items = data.split(';');
         for (final item in items) {
-          final match = RegExp(r'([^()]+)\s*\(Arrival:\s*(.*?), Duration:\s*(.*?)\)').firstMatch(item.trim());
+          final match = RegExp(r'(.+?)\s*\(Arrival:\s*(.*?),\s*Duration:\s*(.*?)\)').firstMatch(item.trim());
           if (match != null) {
             final countryName = match.group(1)!.trim();
             final isoCode = countryNameToIso[countryName] ?? 'N/A';

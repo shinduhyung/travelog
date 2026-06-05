@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:jidoapp/services/subscription_service.dart';
@@ -22,13 +23,18 @@ class AdService {
   DateTime? _lastShownAt;
   Timer? _timerAdTimer;
 
+  int _totalAdsShown = 0; // 누적 광고 표시 횟수 (SharedPreferences 영구 저장)
+  static const String _prefKeyTotalAds = 'total_ads_shown';
+
   bool _isTutorialActive = false;
   bool _isOnboardingActive = false;
+  bool _isCountrySelectionActive = false;
   bool _isPremium = false;
 
   static const int _showEveryTouches = 30;
-  static const int _timerIntervalMinutes = 2;
-  static const int _cooldownSeconds = 30;
+  static const int _timerIntervalMinutes = 4;
+  static const int _cooldownSeconds = 120;
+  static const int _earlyUserThreshold = 10; // 처음 10회까지 완화 적용
 
   // Show subscription sheet every 3 ad dismissals
   static const int _subscriptionPromptEvery = 3;
@@ -79,8 +85,23 @@ class AdService {
     debugPrint('[AdService] onboarding ended - ads resumed');
   }
 
+  void setCountrySelectionActive() {
+    _isCountrySelectionActive = true;
+    _timerAdTimer?.cancel();
+    debugPrint('[AdService] country selection started - ads paused');
+  }
+
+  void clearCountrySelectionActive() {
+    _isCountrySelectionActive = false;
+    _touchCount = 0;
+    _lastShownAt = null;
+    if (!_isPremium && !_isTutorialActive && !_isOnboardingActive) _startTimerAd();
+    debugPrint('[AdService] country selection ended - ads resumed');
+  }
+
   void initialize() {
     _isPremium = SubscriptionService.instance.isPremium;
+    _loadTotalAdsShown();
     if (!_isPremium) {
       loadInterstitialAd();
     } else {
@@ -88,10 +109,31 @@ class AdService {
     }
   }
 
+  Future<void> _loadTotalAdsShown() async {
+    final prefs = await SharedPreferences.getInstance();
+    _totalAdsShown = prefs.getInt(_prefKeyTotalAds) ?? 0;
+    debugPrint('[AdService] totalAdsShown loaded: $_totalAdsShown');
+  }
+
+  Future<void> _incrementTotalAdsShown() async {
+    _totalAdsShown++;
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setInt(_prefKeyTotalAds, _totalAdsShown);
+  }
+
+  // 현재 유저가 초기 유저인지 여부
+  bool get _isEarlyUser => _totalAdsShown < _earlyUserThreshold;
+
+  int get _effectiveTouchThreshold =>
+      _isEarlyUser ? _showEveryTouches * 2 : _showEveryTouches;
+
+  int get _effectiveTimerMinutes =>
+      _isEarlyUser ? _timerIntervalMinutes * 2 : _timerIntervalMinutes;
+
   void _startTimerAd() {
     _timerAdTimer?.cancel();
     _timerAdTimer = Timer.periodic(
-      const Duration(minutes: _timerIntervalMinutes),
+      Duration(minutes: _effectiveTimerMinutes),
           (_) => _showAdIfReady(),
     );
   }
@@ -144,6 +186,7 @@ class AdService {
     if (_isPremium) return;
     if (_isTutorialActive) return;
     if (_isOnboardingActive) return;
+    if (_isCountrySelectionActive) return;
 
     final now = DateTime.now();
     final bool cooldownOk = _lastShownAt == null ||
@@ -159,15 +202,25 @@ class AdService {
     _lastShownAt = now;
     _interstitialAd!.show();
     _interstitialAd = null;
+    _incrementTotalAdsShown().then((_) {
+      // 10회 도달 시 타이머 간격을 정상으로 재시작
+      if (_totalAdsShown == _earlyUserThreshold) {
+        debugPrint('[AdService] early user period ended - resuming normal ad frequency');
+        if (!_isPremium && !_isTutorialActive && !_isOnboardingActive && !_isCountrySelectionActive) {
+          _startTimerAd();
+        }
+      }
+    });
   }
 
   void recordGlobalTouch() {
     if (_isPremium) return;
     if (_isTutorialActive) return;
     if (_isOnboardingActive) return;
+    if (_isCountrySelectionActive) return;
 
     _touchCount++;
-    if (_touchCount % _showEveryTouches == 0) {
+    if (_touchCount % _effectiveTouchThreshold == 0) {
       _showAdIfReady();
     }
   }

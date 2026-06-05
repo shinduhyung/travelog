@@ -75,6 +75,9 @@ class LandmarkCitiesScreen extends StatelessWidget {
     { 'city': 'Chicago', 'iso': 'US', 'desc': 'Set on Lake Michigan, famous for its bold architecture and world-renowned museums.', 'landmarks': [ 'Cloud Gate', 'Art Institute of Chicago', 'Willis Tower', 'Magnificent Mile', 'Navy Pier', 'Chicago Architecture Tour', 'Field Museum of Natural History' ] },
   ];
 
+  /// Public accessor so other screens (e.g. TopCitiesScreen) can read the list.
+  static List<Map<String, dynamic>> get citiesData => _citiesData;
+
   @override
   Widget build(BuildContext context) {
     return Consumer3<LandmarksProvider, CityProvider, CountryProvider>(

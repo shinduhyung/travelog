@@ -146,6 +146,142 @@ class ProfileScreen extends StatelessWidget {
               ),
             ),
 
+
+
+            // ── Benefits card ─────────────────────────────────
+            Consumer<SubscriptionService>(
+              builder: (context, sub, _) => Container(
+                width: double.infinity,
+                margin: const EdgeInsets.only(bottom: 16),
+                padding: const EdgeInsets.all(18),
+                decoration: BoxDecoration(
+                  color: sub.isPremium
+                      ? const Color(0xFF3DDAD7).withOpacity(0.06)
+                      : const Color(0xFFF8F9FC),
+                  borderRadius: BorderRadius.circular(16),
+                  border: Border.all(
+                    color: sub.isPremium
+                        ? const Color(0xFF3DDAD7).withOpacity(0.3)
+                        : Colors.grey.shade200,
+                  ),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        Icon(
+                          sub.isPremium
+                              ? Icons.check_circle_rounded
+                              : Icons.workspace_premium_rounded,
+                          size: 14,
+                          color: sub.isPremium
+                              ? const Color(0xFF3DDAD7)
+                              : Colors.grey,
+                        ),
+                        const SizedBox(width: 6),
+                        Text(
+                          sub.isPremium ? 'YOUR PREMIUM BENEFITS' : 'PREMIUM BENEFITS',
+                          style: TextStyle(
+                            fontSize: 10,
+                            fontWeight: FontWeight.w700,
+                            color: sub.isPremium
+                                ? const Color(0xFF3DDAD7)
+                                : Colors.grey,
+                            letterSpacing: 1.2,
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 14),
+                    _ProfileBenefitRow(
+                      icon: Icons.block_rounded,
+                      label: 'No interstitial & banner ads',
+                      active: sub.isPremium,
+                    ),
+                    const SizedBox(height: 10),
+                    _ProfileBenefitRow(
+                      icon: Icons.bar_chart_rounded,
+                      label: 'Detailed stats for countries & cities',
+                      active: sub.isPremium,
+                    ),
+                    const SizedBox(height: 10),
+                    _ProfileBenefitRow(
+                      icon: Icons.explore_rounded,
+                      label: 'UNESCO map, landmark stats & more',
+                      active: sub.isPremium,
+                    ),
+                    const SizedBox(height: 10),
+                    _ProfileBenefitRow(
+                      icon: Icons.analytics_outlined,
+                      label: 'Airport & airline statistics',
+                      active: sub.isPremium,
+                    ),
+                    const SizedBox(height: 10),
+                    _ProfileBenefitRow(
+                      icon: Icons.favorite_rounded,
+                      label: 'Supporting the developer directly',
+                      active: sub.isPremium,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+
+            // ── Gift code card (premium only) ─────────────────
+            Consumer<SubscriptionService>(
+              builder: (context, sub, _) => sub.isPremium
+                  ? Container(
+                width: double.infinity,
+                margin: const EdgeInsets.only(bottom: 16),
+                padding: const EdgeInsets.all(16),
+                decoration: BoxDecoration(
+                  color: const Color(0xFFFFF8F0),
+                  borderRadius: BorderRadius.circular(14),
+                  border: Border.all(color: const Color(0xFFFFB347), width: 1.2),
+                  boxShadow: [
+                    BoxShadow(
+                      color: const Color(0xFFFFB347).withOpacity(0.08),
+                      blurRadius: 8,
+                      offset: const Offset(0, 3),
+                    ),
+                  ],
+                ),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text('🎁', style: TextStyle(fontSize: 20)),
+                    const SizedBox(width: 12),
+                    Expanded(
+                      child: RichText(
+                        text: const TextSpan(
+                          style: TextStyle(fontSize: 12, color: Color(0xFF555555), height: 1.55),
+                          children: [
+                            TextSpan(
+                              text: 'Get 2 free 90-day gift codes!\n',
+                              style: TextStyle(fontWeight: FontWeight.w800, fontSize: 13, color: Color(0xFF1A1A2E)),
+                            ),
+                            TextSpan(text: 'Send your subscribed email + purchase screenshot to '),
+                            TextSpan(
+                              text: 'leeahn137@gmail.com',
+                              style: TextStyle(fontWeight: FontWeight.w700, color: Color(0xFF3DDAD7)),
+                            ),
+                            TextSpan(text: ' to receive '),
+                            TextSpan(
+                              text: '2 free 90-day gift codes',
+                              style: TextStyle(fontWeight: FontWeight.w700, color: Color(0xFF1A1A2E)),
+                            ),
+                            TextSpan(text: ' to share with friends!'),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              )
+                  : const SizedBox.shrink(),
+            ),
+
             // ── Log Out button ────────────────────────────────
             SizedBox(
               width: double.infinity,
@@ -177,6 +313,54 @@ class ProfileScreen extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+}
+
+class _ProfileBenefitRow extends StatelessWidget {
+  final IconData icon;
+  final String label;
+  final bool active;
+
+  const _ProfileBenefitRow({
+    required this.icon,
+    required this.label,
+    required this.active,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Container(
+          width: 28,
+          height: 28,
+          decoration: BoxDecoration(
+            color: active
+                ? const Color(0xFF3DDAD7).withOpacity(0.12)
+                : Colors.grey.shade100,
+            borderRadius: BorderRadius.circular(8),
+          ),
+          child: Icon(
+            icon,
+            size: 14,
+            color: active ? const Color(0xFF3DDAD7) : Colors.grey.shade400,
+          ),
+        ),
+        const SizedBox(width: 10),
+        Text(
+          label,
+          style: TextStyle(
+            fontSize: 13,
+            color: active ? const Color(0xFF2C3E50) : Colors.grey.shade400,
+            fontWeight: active ? FontWeight.w500 : FontWeight.w400,
+          ),
+        ),
+        if (active) ...[
+          const SizedBox(width: 6),
+          const Icon(Icons.check_rounded, size: 13, color: Color(0xFF3DDAD7)),
+        ],
+      ],
     );
   }
 }

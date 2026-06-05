@@ -1,12 +1,9 @@
-// lib/screens/explore_menu_screen.dart
-
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:jidoapp/providers/unesco_provider.dart';
 import 'package:jidoapp/providers/landmarks_provider.dart';
 
-// Screens
 import 'package:jidoapp/screens/unesco_sites_screen.dart';
 import 'package:jidoapp/screens/unesco_map_screen.dart';
 import 'package:jidoapp/screens/unesco_stats_screen.dart';
@@ -18,15 +15,43 @@ import 'package:jidoapp/screens/landmark_stats_screen.dart';
 import 'package:jidoapp/screens/landmark_visit_log_screen.dart';
 
 import 'package:jidoapp/screens/activities_menu_screen.dart';
-import 'package:jidoapp/screens/top_activities_menu_screen.dart';
 import 'package:jidoapp/providers/auth_provider.dart';
 import 'package:jidoapp/screens/login_prompt_screen.dart';
+import 'package:jidoapp/utils/premium_access_manager.dart';
+import 'package:jidoapp/widgets/subscription_sheet.dart';
+import 'package:jidoapp/services/subscription_service.dart';
 
 class ExploreMenuScreen extends StatelessWidget {
   const ExploreMenuScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final isPremium = context.watch<SubscriptionService>().isPremium;
+
+    void gated(VoidCallback action) {
+      final auth = Provider.of<AuthProvider>(context, listen: false);
+      if (auth.user == null) {
+        showModalBottomSheet(
+          context: context,
+          isScrollControlled: true,
+          backgroundColor: Colors.transparent,
+          builder: (_) => const LoginPromptScreen(),
+        );
+        return;
+      }
+      action();
+    }
+
+    void premiumGated(VoidCallback action) {
+      gated(() {
+        if (!PremiumAccessManager.hasAccess(context)) {
+          SubscriptionSheet.show(context);
+          return;
+        }
+        action();
+      });
+    }
+
     return Scaffold(
       backgroundColor: Colors.white,
       body: Stack(
@@ -46,7 +71,6 @@ class ExploreMenuScreen extends StatelessWidget {
             child: CustomScrollView(
               physics: const ClampingScrollPhysics(),
               slivers: [
-                // Header (심플하고 여백을 살린 스타일)
                 SliverToBoxAdapter(
                   child: Padding(
                     padding: const EdgeInsets.fromLTRB(20, 32, 20, 10),
@@ -79,7 +103,6 @@ class ExploreMenuScreen extends StatelessWidget {
                   ),
                 ),
 
-                // UNESCO Section
                 SliverToBoxAdapter(
                   child: Padding(
                     padding: const EdgeInsets.fromLTRB(20, 24, 20, 0),
@@ -89,26 +112,14 @@ class ExploreMenuScreen extends StatelessWidget {
                         final visited = unescoProvider.visitedSites.length;
                         final progress = total > 0 ? visited / total : 0.0;
 
-                        void gated(VoidCallback action) {
-                          final auth = Provider.of<AuthProvider>(context, listen: false);
-                          if (auth.user == null) {
-                            showModalBottomSheet(
-                              context: context,
-                              isScrollControlled: true,
-                              backgroundColor: Colors.transparent,
-                              builder: (_) => const LoginPromptScreen(),
-                            );
-                            return;
-                          }
-                          action();
-                        }
                         return _buildUnescoSection(
                           context,
                           visited: visited,
                           total: total,
                           progress: progress,
+                          isPremium: isPremium,
                           onMainTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const UnescoSitesScreen())),
-                          onMapTap: () => gated(() {
+                          onMapTap: () => premiumGated(() {
                             Navigator.push(context, MaterialPageRoute(
                               builder: (context) => UnescoMapScreen(
                                 title: 'UNESCO Map',
@@ -118,22 +129,20 @@ class ExploreMenuScreen extends StatelessWidget {
                               ),
                             ));
                           }),
-                          onStatsTap: () => gated(() => Navigator.push(context, MaterialPageRoute(builder: (_) => const UnescoStatsScreen()))),
+                          onStatsTap: () => premiumGated(() => Navigator.push(context, MaterialPageRoute(builder: (_) => const UnescoStatsScreen()))),
                         );
                       },
                     ),
                   ),
                 ),
 
-                // Landmarks Section
                 SliverToBoxAdapter(
                   child: Padding(
                     padding: const EdgeInsets.fromLTRB(20, 24, 20, 0),
-                    child: _buildLandmarksSection(context),
+                    child: _buildLandmarksSection(context, gated: gated, premiumGated: premiumGated, isPremium: isPremium),
                   ),
                 ),
 
-                // Activities Section
                 SliverToBoxAdapter(
                   child: Padding(
                     padding: const EdgeInsets.fromLTRB(20, 24, 20, 50),
@@ -148,12 +157,12 @@ class ExploreMenuScreen extends StatelessWidget {
     );
   }
 
-  // UNESCO Section
   Widget _buildUnescoSection(
       BuildContext context, {
         required int visited,
         required int total,
         required double progress,
+        required bool isPremium,
         required VoidCallback onMainTap,
         required VoidCallback onMapTap,
         required VoidCallback onStatsTap,
@@ -163,16 +172,16 @@ class ExploreMenuScreen extends StatelessWidget {
         GestureDetector(
           onTap: onMainTap,
           child: Container(
-            height: 220, // 사진이 조금 더 잘 보이도록 높이 증가
+            height: 220,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(24),
               border: Border.all(
-                color: const Color(0xFFFF8C42), // 주황색 테두리
+                color: const Color(0xFFFF8C42),
                 width: 2.0,
               ),
               boxShadow: [
                 BoxShadow(
-                  color: const Color(0xFFFF8C42).withOpacity(0.35), // 넓게 퍼지는 주황색 글로우 효과
+                  color: const Color(0xFFFF8C42).withOpacity(0.35),
                   blurRadius: 20,
                   offset: const Offset(0, 8),
                 ),
@@ -182,7 +191,6 @@ class ExploreMenuScreen extends StatelessWidget {
               borderRadius: BorderRadius.circular(22),
               child: Stack(
                 children: [
-                  // 전체 배경 사진 (검은색 그라데이션 제거)
                   Positioned.fill(
                     child: Image.asset(
                       'assets/explore_icons/unesco.png',
@@ -191,7 +199,6 @@ class ExploreMenuScreen extends StatelessWidget {
                     ),
                   ),
 
-                  // 하단 글래스모피즘(반투명 블러) 영역
                   Positioned(
                     left: 0,
                     right: 0,
@@ -202,7 +209,7 @@ class ExploreMenuScreen extends StatelessWidget {
                         child: Container(
                           padding: const EdgeInsets.fromLTRB(20, 16, 20, 20),
                           decoration: BoxDecoration(
-                            color: Colors.white.withOpacity(0.85), // 밝은 톤의 반투명 배경
+                            color: Colors.white.withOpacity(0.85),
                             border: Border(
                               top: BorderSide(color: Colors.white.withOpacity(0.5), width: 1),
                             ),
@@ -223,7 +230,7 @@ class ExploreMenuScreen extends StatelessWidget {
                                           style: const TextStyle(
                                             fontSize: 34,
                                             fontWeight: FontWeight.w800,
-                                            color: Color(0xFFFF8C42), // 밝은 배경에 맞는 주황색 숫자
+                                            color: Color(0xFFFF8C42),
                                             height: 1,
                                             letterSpacing: -1,
                                           ),
@@ -236,7 +243,7 @@ class ExploreMenuScreen extends StatelessWidget {
                                             style: TextStyle(
                                               fontSize: 16,
                                               fontWeight: FontWeight.w600,
-                                              color: Colors.grey[600], // 진한 회색 텍스트
+                                              color: Colors.grey[600],
                                             ),
                                           ),
                                         ),
@@ -297,6 +304,7 @@ class ExploreMenuScreen extends StatelessWidget {
                 label: 'Map',
                 color: const Color(0xFF667EEA),
                 onTap: onMapTap,
+                showLock: !isPremium,
               ),
             ),
             const SizedBox(width: 12),
@@ -306,6 +314,7 @@ class ExploreMenuScreen extends StatelessWidget {
                 label: 'Stats',
                 color: const Color(0xFFEC4899),
                 onTap: onStatsTap,
+                showLock: !isPremium,
               ),
             ),
           ],
@@ -319,53 +328,55 @@ class ExploreMenuScreen extends StatelessWidget {
     required String label,
     required Color color,
     required VoidCallback onTap,
+    bool showLock = false,
   }) {
     return GestureDetector(
       onTap: onTap,
-      child: Container(
-        padding: const EdgeInsets.symmetric(vertical: 14),
-        decoration: BoxDecoration(
-          color: color.withOpacity(0.1),
-          borderRadius: BorderRadius.circular(16),
-          border: Border.all(
-            color: color.withOpacity(0.3),
-            width: 1.5,
-          ),
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(icon, size: 18, color: color),
-            const SizedBox(width: 8),
-            Text(
-              label,
-              style: TextStyle(
-                fontSize: 14,
-                fontWeight: FontWeight.w600,
-                color: color,
+      child: Stack(
+        children: [
+          Container(
+            padding: const EdgeInsets.symmetric(vertical: 14),
+            decoration: BoxDecoration(
+              color: color.withOpacity(0.1),
+              borderRadius: BorderRadius.circular(16),
+              border: Border.all(
+                color: color.withOpacity(0.3),
+                width: 1.5,
               ),
             ),
-          ],
-        ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(icon, size: 18, color: color),
+                const SizedBox(width: 8),
+                Text(
+                  label,
+                  style: TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w600,
+                    color: color,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          if (showLock)
+            Positioned(
+              top: 6,
+              right: 8,
+              child: Icon(Icons.lock_rounded, size: 11, color: color.withOpacity(0.7)),
+            ),
+        ],
       ),
     );
   }
 
-  Widget _buildLandmarksSection(BuildContext context) {
-    void _gatedPush(BuildContext context, Widget screen) {
-      final authProvider = Provider.of<AuthProvider>(context, listen: false);
-      if (authProvider.user == null) {
-        showModalBottomSheet(
-          context: context,
-          isScrollControlled: true,
-          backgroundColor: Colors.transparent,
-          builder: (_) => const LoginPromptScreen(),
-        );
-        return;
-      }
-      Navigator.push(context, MaterialPageRoute(builder: (_) => screen));
-    }
-
+  Widget _buildLandmarksSection(
+      BuildContext context, {
+        required void Function(VoidCallback) gated,
+        required void Function(VoidCallback) premiumGated,
+        required bool isPremium,
+      }) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -385,7 +396,7 @@ class ExploreMenuScreen extends StatelessWidget {
                 context,
                 title: 'Cultural',
                 imagePath: 'assets/explore_icons/landmarks_top.png',
-                onTap: () => _gatedPush(context, const LandmarksMenuScreen()),
+                onTap: () => gated(() => Navigator.push(context, MaterialPageRoute(builder: (_) => const LandmarksMenuScreen()))),
               ),
             ),
             const SizedBox(width: 12),
@@ -394,7 +405,7 @@ class ExploreMenuScreen extends StatelessWidget {
                 context,
                 title: 'Natural',
                 imagePath: 'assets/explore_icons/mountains.png',
-                onTap: () => _gatedPush(context, const NaturalMenuScreen()),
+                onTap: () => gated(() => Navigator.push(context, MaterialPageRoute(builder: (_) => const NaturalMenuScreen()))),
               ),
             ),
           ],
@@ -408,7 +419,8 @@ class ExploreMenuScreen extends StatelessWidget {
                 title: 'Top Picks',
                 icon: Icons.emoji_events_rounded,
                 color: const Color(0xFFF59E0B),
-                onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const TopPicksMenuScreen())),
+                onTap: () => premiumGated(() => Navigator.push(context, MaterialPageRoute(builder: (_) => const TopPicksMenuScreen()))),
+                showLock: !isPremium,
               ),
             ),
             const SizedBox(width: 10),
@@ -418,7 +430,8 @@ class ExploreMenuScreen extends StatelessWidget {
                 title: 'Stats',
                 icon: Icons.analytics_outlined,
                 color: const Color(0xFF3B82F6),
-                onTap: () => _gatedPush(context, const LandmarkStatsScreen()),
+                onTap: () => premiumGated(() => Navigator.push(context, MaterialPageRoute(builder: (_) => const LandmarkStatsScreen()))),
+                showLock: !isPremium,
               ),
             ),
             const SizedBox(width: 10),
@@ -428,7 +441,8 @@ class ExploreMenuScreen extends StatelessWidget {
                 title: 'Logs',
                 icon: Icons.history_edu_rounded,
                 color: const Color(0xFF10B981),
-                onTap: () => _gatedPush(context, const LandmarkVisitLogScreen()),
+                onTap: () => premiumGated(() => Navigator.push(context, MaterialPageRoute(builder: (_) => const LandmarkVisitLogScreen()))),
+                showLock: !isPremium,
               ),
             ),
           ],
@@ -509,6 +523,7 @@ class ExploreMenuScreen extends StatelessWidget {
         required IconData icon,
         required Color color,
         required VoidCallback onTap,
+        bool showLock = false,
       }) {
     return GestureDetector(
       onTap: onTap,
@@ -529,41 +544,50 @@ class ExploreMenuScreen extends StatelessWidget {
             ),
           ],
         ),
-        child: Padding(
-          padding: const EdgeInsets.all(12),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Container(
-                width: 28,
-                height: 28,
-                decoration: BoxDecoration(
-                  color: color.withOpacity(0.1),
-                  shape: BoxShape.circle,
-                ),
-                child: Icon(
-                  icon,
-                  color: color,
-                  size: 16,
-                ),
+        child: Stack(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(12),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Container(
+                    width: 28,
+                    height: 28,
+                    decoration: BoxDecoration(
+                      color: color.withOpacity(0.1),
+                      shape: BoxShape.circle,
+                    ),
+                    child: Icon(
+                      icon,
+                      color: color,
+                      size: 16,
+                    ),
+                  ),
+                  Text(
+                    title,
+                    style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w700,
+                      color: color,
+                    ),
+                  ),
+                ],
               ),
-              Text(
-                title,
-                style: TextStyle(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w700,
-                  color: color,
-                ),
+            ),
+            if (showLock)
+              Positioned(
+                top: 6,
+                right: 8,
+                child: Icon(Icons.lock_rounded, size: 11, color: color.withOpacity(0.7)),
               ),
-            ],
-          ),
+          ],
         ),
       ),
     );
   }
 
-  // Activities Section
   Widget _buildActivitiesSection(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,

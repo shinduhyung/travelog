@@ -2,7 +2,7 @@ name: jidoapp
 description: "A new Flutter project."
 publish_to: 'none'
 
-version: 1.0.1+39
+version: 1.0.1+56
 
 environment:
   sdk: ^3.8.0
@@ -34,7 +34,9 @@ dependencies:
   firebase_auth: ^5.7.0
   firebase_analytics: ^11.3.0
   cloud_firestore: ^5.6.12
+  cloud_functions: ^5.6.2
   firebase_storage: ^12.3.2
+  firebase_messaging: ^15.2.5
   cached_network_image: ^3.4.1
   flutter_map_marker_cluster: ^1.3.6
 
@@ -50,7 +52,7 @@ dependencies:
 
   # In-App Purchase (구독)
   in_app_purchase: ^3.2.0
-  in_app_purchase_android: ^0.3.5
+  in_app_purchase_android: ^0.4.0
 
   # Data & Network
   http: ^1.2.1
@@ -80,6 +82,10 @@ dependencies:
   flutter_cache_manager: ^3.4.1
   sign_in_with_apple: ^6.1.1
   crypto: ^3.0.3
+  # In-App Review
+  in_app_review: ^2.0.9
+  # Facebook
+  facebook_app_events: ^0.19.0
 
 dev_dependencies:
   flutter_test:
@@ -223,3 +229,6 @@ flutter:
     - assets/flags/
     - assets/hub_airport.json
     - assets/countries_light.json
+    - assets/city_info.json
+    - assets/city_rank.json
+    - functions/quizzes.json

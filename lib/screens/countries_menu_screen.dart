@@ -1,5 +1,3 @@
-// lib/screens/countries_menu_screen.dart
-
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
 import 'dart:ui' as ui;
@@ -12,32 +10,20 @@ import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/screens/countries_map_screen.dart';
 import 'package:jidoapp/screens/countrydex_screen.dart';
 
-import 'package:jidoapp/screens/population_stats_screen.dart';
-import 'package:jidoapp/screens/economy_stats_screen.dart';
-import 'package:jidoapp/screens/area_stats_screen.dart';
-import 'package:jidoapp/screens/climate_stats_screen.dart';
-import 'package:jidoapp/screens/geography_stats_screen.dart';
-import 'package:jidoapp/screens/language_stats_screen.dart';
-import 'package:jidoapp/screens/religion_stats_screen.dart';
-import 'package:jidoapp/screens/specials_stats_screen.dart';
-import 'package:jidoapp/screens/society_stats_screen.dart';
-import 'package:jidoapp/screens/history_stats_screen.dart';
-import 'package:jidoapp/screens/sports_stats_screen.dart';
-import 'package:jidoapp/screens/military_stats_screen.dart';
-import 'package:jidoapp/screens/geopolitics_stats_screen.dart';
 import 'package:jidoapp/screens/overview_stats_screen.dart';
-import 'package:jidoapp/screens/settings_screen.dart';
+import 'package:jidoapp/screens/society_stats_screen.dart';
+import 'package:jidoapp/screens/military_stats_screen.dart';
+import 'package:jidoapp/screens/geography_stats_screen.dart';
+import 'package:jidoapp/screens/specials_stats_screen.dart';
+
 import 'package:jidoapp/providers/auth_provider.dart';
 import 'package:jidoapp/screens/login_prompt_screen.dart';
+import 'package:jidoapp/utils/premium_access_manager.dart';
+import 'package:jidoapp/services/subscription_service.dart';
+import 'package:jidoapp/widgets/subscription_sheet.dart';
 
-// ⭐️ 분리된 공유 기능 파일 임포트
 import 'package:jidoapp/screens/countries_share.dart';
-import 'package:screenshot/screenshot.dart'; // 지도 캡처용
-
-// [추가] 로딩 로고 위젯 임포트
-
-
-// [추가] 홈 위젯 서비스 임포트
+import 'package:screenshot/screenshot.dart';
 import 'package:jidoapp/services/home_widget_service.dart';
 
 class CountriesMenuScreen extends StatefulWidget {
@@ -50,7 +36,6 @@ class CountriesMenuScreen extends StatefulWidget {
 class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
   int _selectedStatIndex = 0;
 
-  // ⭐️ 지도 캡처 컨트롤러
   final ScreenshotController _mapScreenshotController = ScreenshotController();
   final ScreenshotController _widgetScreenshotController = ScreenshotController();
   bool _isSharing = false;
@@ -68,7 +53,6 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
   void initState() {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      // FlutterMap 폴리곤 렌더링 시간을 위해 3000ms로 변경
       Future.delayed(const Duration(milliseconds: 3000), () {
         _captureAndUpdateWidget();
       });
@@ -83,7 +67,6 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
           .where((c) => provider.visitedCountries.contains(c.name))
           .toList();
 
-      // 위젯 전체 UI (지도+통계) 캡처
       final widgetImage = await _widgetScreenshotController.captureFromWidget(
         _buildWidgetPreview(provider, visitedList),
         context: context,
@@ -107,7 +90,6 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
       'North America': 38, 'South America': 13, 'Oceania': 24,
     };
 
-    // 대륙별 통계 계산
     final stats = <String, int>{};
     for (final c in visitedList) {
       final continent = c.continent;
@@ -139,7 +121,6 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
       padding: const EdgeInsets.all(12),
       child: Row(
         children: [
-          // 지도 영역
           Expanded(
             flex: 6,
             child: ClipRRect(
@@ -177,12 +158,10 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
             ),
           ),
           const SizedBox(width: 10),
-          // 통계 영역
           Expanded(
             flex: 4,
             child: Column(
               children: [
-                // 헤더
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -196,7 +175,6 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
                   ],
                 ),
                 const SizedBox(height: 8),
-                // 대륙 그리드
                 Expanded(
                   child: Column(
                     children: List.generate(3, (rowIdx) {
@@ -272,48 +250,70 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
     final isSelected = _selectedStatIndex == index;
     final primaryColor = Theme.of(context).primaryColor;
 
+    final isPremiumTier = index >= 3;
+    final isPremium = context.watch<SubscriptionService>().isPremium;
+
     return GestureDetector(
       onTap: () => setState(() => _selectedStatIndex = index),
-      child: AnimatedContainer(
-        duration: const Duration(milliseconds: 200),
-        width: 52,
-        height: 52,
-        decoration: BoxDecoration(
-          color: isSelected ? primaryColor : Colors.white,
-          borderRadius: BorderRadius.circular(16),
-          boxShadow: isSelected
-              ? [BoxShadow(color: primaryColor.withOpacity(0.4), blurRadius: 12, offset: const Offset(0, 4))]
-              : [BoxShadow(color: Colors.black.withOpacity(0.06), blurRadius: 8, offset: const Offset(0, 2))],
-        ),
-        child: Icon(
-          item['icon'],
-          color: isSelected ? Colors.white : Colors.grey.shade500,
-          size: 22,
-        ),
+      child: Stack(
+        clipBehavior: Clip.none,
+        children: [
+          AnimatedContainer(
+            duration: const Duration(milliseconds: 200),
+            width: 52,
+            height: 52,
+            decoration: BoxDecoration(
+              color: isSelected ? primaryColor : Colors.white,
+              borderRadius: BorderRadius.circular(16),
+              boxShadow: isSelected
+                  ? [BoxShadow(color: primaryColor.withOpacity(0.4), blurRadius: 12, offset: const Offset(0, 4))]
+                  : [BoxShadow(color: Colors.black.withOpacity(0.06), blurRadius: 8, offset: const Offset(0, 2))],
+            ),
+            child: Icon(
+              item['icon'],
+              color: isSelected ? Colors.white : Colors.grey.shade500,
+              size: 22,
+            ),
+          ),
+          if (isPremiumTier && !isPremium)
+            Positioned(
+              top: -3,
+              right: -3,
+              child: Container(
+                width: 16,
+                height: 16,
+                decoration: BoxDecoration(
+                  color: isSelected ? Colors.white : primaryColor,
+                  shape: BoxShape.circle,
+                ),
+                child: Icon(
+                  Icons.lock_rounded,
+                  size: 9,
+                  color: isSelected ? primaryColor : Colors.white,
+                ),
+              ),
+            ),
+        ],
       ),
     );
   }
 
-  // ⭐️ [리팩토링됨] 공유 버튼 클릭 시 실행
   Future<void> _handleShare(BuildContext context, CountryProvider provider) async {
     if (_isSharing) return;
 
     setState(() => _isSharing = true);
 
     try {
-      // 1. 현재 화면의 지도를 캡처합니다.
       final Uint8List? mapImage = await _mapScreenshotController.capture();
 
       if (mapImage == null) throw Exception("Failed to capture map");
 
-      // 2. 방문 국가 데이터를 가져옵니다.
       final visitedCountries = provider.allCountries
           .where((c) => provider.visitedCountries.contains(c.name))
           .toList();
 
       if (!mounted) return;
 
-      // 3. 분리된 파일(CountriesShare)의 기능을 호출하여 공유를 시작합니다.
       await CountriesShare.share(
         context: context,
         mapImage: mapImage,
@@ -332,27 +332,22 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // ⭐️ 배경색을 흰색으로 변경 (이미지가 깨끗하게 보이도록)
       backgroundColor: Colors.white,
       body: Stack(
         children: [
-          // ⭐️ 배경 월페이퍼 이미지 추가
           Positioned.fill(
             child: Opacity(
-              opacity: 0.3, // 아주 연하게 설정 (0.0 ~ 1.0 사이 값 조절)
+              opacity: 0.3,
               child: Image.asset(
                 'assets/icons/app_wallpaper.png',
                 fit: BoxFit.cover,
               ),
             ),
           ),
-
-          // 기존 UI 내용 (SafeArea 포함)
           SafeArea(
             top: false,
             child: Consumer<CountryProvider>(
               builder: (context, provider, child) {
-                // [수정] Provider 로딩 상태일 때 -> 꽉 찬 비디오 로딩 화면 출력 (Cities와 동일하게 변경)
                 if (provider.isLoading) {
                   return const Center(
                     child: CircularProgressIndicator(),
@@ -372,8 +367,6 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
                       const SizedBox(height: 16),
-
-                      // ========== 메인 지도 ==========
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 20),
                         child: Container(
@@ -391,7 +384,6 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
                           ),
                           child: Column(
                             children: [
-                              // 상단 통계 영역
                               Padding(
                                 padding: const EdgeInsets.fromLTRB(24, 24, 24, 0),
                                 child: TweenAnimationBuilder(
@@ -544,8 +536,6 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
                                   },
                                 ),
                               ),
-
-                              // 지도 영역
                               SizedBox(
                                 height: 250,
                                 child: Stack(
@@ -587,14 +577,12 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
                                         ),
                                       ),
                                     ),
-                                    // 우측 상단 버튼 그룹
                                     Positioned(
                                       top: 16,
                                       right: 16,
                                       child: Row(
                                         mainAxisSize: MainAxisSize.min,
                                         children: [
-                                          // ⭐️ 공유 버튼
                                           GestureDetector(
                                             onTap: () => _handleShare(context, provider),
                                             child: Container(
@@ -627,7 +615,6 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
                                             ),
                                           ),
                                           const SizedBox(width: 12),
-                                          // 기존 추가 버튼
                                           GestureDetector(
                                             onTap: () => Navigator.push(
                                               context,
@@ -663,10 +650,7 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
                           ),
                         ),
                       ),
-
                       const SizedBox(height: 32),
-
-                      // ========== Statistics 메뉴 ==========
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 20),
                         child: Column(
@@ -756,8 +740,7 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
                                       child: IconButton(
                                         icon: const Icon(Icons.arrow_forward_rounded, color: Colors.white, size: 20),
                                         onPressed: () {
-                                          // index 0(CountryDex), index 1(General) 은 로그인 없이 접근 가능
-                                          final isFree = _selectedStatIndex <= 1;
+                                          final isFree = _selectedStatIndex <= 2;
 
                                           if (!isFree) {
                                             final authProvider = Provider.of<AuthProvider>(context, listen: false);
@@ -767,6 +750,13 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
                                                 isScrollControlled: true,
                                                 backgroundColor: Colors.transparent,
                                                 builder: (_) => const LoginPromptScreen(),
+                                              );
+                                              return;
+                                            }
+                                            if (!PremiumAccessManager.hasAccess(context)) {
+                                              SubscriptionSheet.show(
+                                                context,
+                                                onShareTap: () => _handleShare(context, provider),
                                               );
                                               return;
                                             }
@@ -788,7 +778,6 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
                           ],
                         ),
                       ),
-
                       const SizedBox(height: 120),
                     ],
                   ),
@@ -802,7 +791,6 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
   }
 }
 
-// 애니메이션 프로그레스 바
 class _AnimatedProgressBar extends StatelessWidget {
   final double progress;
   final Color primaryColor;
@@ -904,7 +892,6 @@ class _AnimatedProgressBar extends StatelessWidget {
   }
 }
 
-// ⭐️ 물결 페인터 및 기타 보조 클래스 (유지)
 class _LiquidWavePainter extends CustomPainter {
   final double progress;
   final double wavePhase;
@@ -920,7 +907,6 @@ class _LiquidWavePainter extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     final baseHeight = size.height * (1 - progress);
 
-    // 첫 번째 물결
     final wave1Path = ui.Path();
     wave1Path.moveTo(0, size.height);
     wave1Path.lineTo(0, baseHeight);
@@ -947,7 +933,6 @@ class _LiquidWavePainter extends CustomPainter {
 
     canvas.drawPath(wave1Path, wave1Paint);
 
-    // 두 번째 물결
     final wave2Path = ui.Path();
     wave2Path.moveTo(0, size.height);
     wave2Path.lineTo(0, baseHeight);

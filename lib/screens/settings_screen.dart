@@ -291,7 +291,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
                             Text(
                               sub.isPremium
                                   ? 'You are subscribed. Thank you!'
-                                  : 'Go ad-free for \$9.99 / year',
+                                  : sub.productDetails != null
+                                  ? 'Go ad-free for ${sub.productDetails!.price} / year'
+                                  : 'Go ad-free',
                               style: TextStyle(
                                 color: Colors.white.withOpacity(0.85),
                                 fontSize: 12,

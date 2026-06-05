@@ -12,6 +12,7 @@ import 'package:jidoapp/providers/landmarks_provider.dart';
 import 'package:jidoapp/providers/unesco_provider.dart'; // [수정 1] 추가
 import 'package:provider/provider.dart';
 import 'badge_detail_screen.dart';
+import 'package:jidoapp/screens/badge_share.dart';
 import 'dart:ui';
 import 'dart:math';
 
@@ -1083,11 +1084,89 @@ class _BadgesScreenState extends State<BadgesScreen> {
                     ),
                   ),
                 ),
+
+                // 우측 상단 공유 버튼
+                Positioned(
+                  right: 0,
+                  top: 0,
+                  child: _BadgeShareButton(
+                    achievement: achievement,
+                    progress: progressVal,
+                    progressDetailText: progressString,
+                    color: categoryColor,
+                  ),
+                ),
               ],
             ),
           ),
         );
       },
+    );
+  }
+}
+
+// ─────────────────────────────────────────────
+// 공유 버튼 위젯
+// ─────────────────────────────────────────────
+
+class _BadgeShareButton extends StatefulWidget {
+  final Achievement achievement;
+  final double progress;
+  final String progressDetailText;
+  final Color color;
+
+  const _BadgeShareButton({
+    required this.achievement,
+    required this.progress,
+    required this.progressDetailText,
+    required this.color,
+  });
+
+  @override
+  State<_BadgeShareButton> createState() => _BadgeShareButtonState();
+}
+
+class _BadgeShareButtonState extends State<_BadgeShareButton> {
+  bool _isSharing = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: _isSharing
+          ? null
+          : () async {
+        setState(() => _isSharing = true);
+        await BadgeShare.share(
+          context: context,
+          achievement: widget.achievement,
+          progress: widget.progress,
+          progressDetailText: widget.progressDetailText,
+        );
+        if (mounted) {
+          setState(() => _isSharing = false);
+        }
+      },
+      child: Container(
+        padding: const EdgeInsets.all(8),
+        decoration: BoxDecoration(
+          color: widget.color.withOpacity(0.1),
+          shape: BoxShape.circle,
+        ),
+        child: _isSharing
+            ? SizedBox(
+          width: 20,
+          height: 20,
+          child: CircularProgressIndicator(
+            strokeWidth: 2,
+            color: widget.color,
+          ),
+        )
+            : Icon(
+          Icons.ios_share_rounded,
+          color: widget.color,
+          size: 20,
+        ),
+      ),
     );
   }
 }

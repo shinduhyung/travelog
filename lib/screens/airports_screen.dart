@@ -10,6 +10,9 @@ import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/screens/airport_stats_screen.dart';
 import 'package:jidoapp/providers/auth_provider.dart';
 import 'package:jidoapp/screens/login_prompt_screen.dart';
+import 'package:jidoapp/utils/premium_access_manager.dart';
+import 'package:jidoapp/services/subscription_service.dart';
+import 'package:jidoapp/widgets/subscription_sheet.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
@@ -1349,6 +1352,7 @@ class _AirportsScreenState extends State<AirportsScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final isPremium = context.watch<SubscriptionService>().isPremium;
     return Scaffold(
       backgroundColor: Colors.grey[50],
       body: Consumer2<AirportProvider, CountryProvider>(
@@ -1447,6 +1451,10 @@ class _AirportsScreenState extends State<AirportsScreen> {
                           );
                           return;
                         }
+                        if (!PremiumAccessManager.hasAccess(context)) {
+                          SubscriptionSheet.show(context);
+                          return;
+                        }
                         Navigator.push(
                           context,
                           MaterialPageRoute(
@@ -1455,53 +1463,63 @@ class _AirportsScreenState extends State<AirportsScreen> {
                         );
                       },
                       borderRadius: BorderRadius.circular(20),
-                      child: Padding(
-                        padding: const EdgeInsets.all(20),
-                        child: Row(
-                          children: [
-                            Container(
-                              padding: const EdgeInsets.all(14),
-                              decoration: BoxDecoration(
-                                color: Colors.white.withOpacity(0.2),
-                                borderRadius: BorderRadius.circular(16),
-                              ),
-                              child: const Icon(
-                                Icons.analytics,
-                                color: Colors.white,
-                                size: 32,
-                              ),
-                            ),
-                            const SizedBox(width: 16),
-                            Expanded(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  const Text(
-                                    'View Statistics',
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold,
-                                    ),
+                      child: Stack(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(20),
+                            child: Row(
+                              children: [
+                                Container(
+                                  padding: const EdgeInsets.all(14),
+                                  decoration: BoxDecoration(
+                                    color: Colors.white.withOpacity(0.2),
+                                    borderRadius: BorderRadius.circular(16),
                                   ),
-                                  const SizedBox(height: 4),
-                                  Text(
-                                    'Explore your airport data',
-                                    style: TextStyle(
-                                      color: Colors.white.withOpacity(0.9),
-                                      fontSize: 13,
-                                    ),
+                                  child: const Icon(
+                                    Icons.analytics,
+                                    color: Colors.white,
+                                    size: 32,
                                   ),
-                                ],
-                              ),
+                                ),
+                                const SizedBox(width: 16),
+                                Expanded(
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      const Text(
+                                        'View Statistics',
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                      const SizedBox(height: 4),
+                                      Text(
+                                        'Explore your airport data',
+                                        style: TextStyle(
+                                          color: Colors.white.withOpacity(0.9),
+                                          fontSize: 13,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                const Icon(
+                                  Icons.arrow_forward_ios,
+                                  color: Colors.white,
+                                  size: 20,
+                                ),
+                              ],
                             ),
-                            const Icon(
-                              Icons.arrow_forward_ios,
-                              color: Colors.white,
-                              size: 20,
+                          ),
+                          if (!isPremium)
+                            const Positioned(
+                              top: 8,
+                              right: 10,
+                              child: Icon(Icons.lock_rounded, size: 12, color: Colors.white54),
                             ),
-                          ],
-                        ),
+                        ],
                       ),
                     ),
                   ),

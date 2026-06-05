@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:io';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/foundation.dart';
 import 'package:in_app_purchase/in_app_purchase.dart';
 import 'package:in_app_purchase_android/in_app_purchase_android.dart';
@@ -86,7 +87,24 @@ class SubscriptionService extends ChangeNotifier {
     if (Platform.isAndroid) {
       final androidDetails = purchase as GooglePlayPurchaseDetails?;
       if (androidDetails != null) {
-        debugPrint('[SubscriptionService] Android orderId: ${androidDetails.billingClientPurchase.orderId}');
+        final orderId = androidDetails.billingClientPurchase.orderId;
+        debugPrint('[SubscriptionService] Android orderId: $orderId');
+
+        // Firestore에 주문 저장 → 대시보드에서 수익 집계용
+        try {
+          await FirebaseFirestore.instance
+              .collection('orders')
+              .doc(orderId)
+              .set({
+            'orderId': orderId,
+            'productId': purchase.productID,
+            'purchaseTime': FieldValue.serverTimestamp(),
+            'platform': 'android',
+            'status': purchase.status.name,
+          }, SetOptions(merge: true));
+        } catch (e) {
+          debugPrint('[SubscriptionService] Firestore save error: $e');
+        }
       }
     }
 

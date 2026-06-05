@@ -83,41 +83,41 @@ class _HistoryStatsScreenState extends State<HistoryStatsScreen> {
   // 1. 몽골 제국 데이터
   static const Map<String, double> _mongolEmpireAreas = {
     'China': 9600000, 'Russia': 4500000, 'Kazakhstan': 2724900, 'Iran': 1648195,
-    'Mongolia': 1564110, 'Afghanistan': 652864, 'Ukraine': 603500, 'Turkmenistan': 488100,
+    'Mongolia': 1564110, 'Afghanistan': 652864, 'Ukraine': 600000, 'Turkmenistan': 488100,
     'Uzbekistan': 447400, 'Iraq': 438317, 'Turkey': 400000, 'Pakistan': 300000,
     'Kyrgyzstan': 199951, 'Tajikistan': 143100, 'North Korea': 120540, 'South Korea': 100210,
     'Romania': 100000, 'Azerbaijan': 86600, 'Georgia': 69700, 'Moldova': 33851, 'Armenia': 29743,
   };
 
-  // 2. 오스만 제국 데이터
+// 2. 오스만 제국 데이터
   static const Map<String, double> _ottomanEmpireAreas = {
-    'Turkey': 783562, 'Egypt': 1010408, 'Saudi Arabia': 2149690, 'Iraq': 438317,
-    'Syria': 185180, 'Greece': 131957, 'Bulgaria': 110994, 'Romania': 238391,
-    'Algeria': 2381741, 'Tunisia': 163610, 'Libya': 1759540, 'Serbia': 88361,
+    'Turkey': 783562, 'Egypt': 400000, 'Saudi Arabia': 450000, 'Iraq': 438317,
+    'Syria': 185180, 'Greece': 131957, 'Bulgaria': 110994, 'Romania': 200000,
+    'Algeria': 350000, 'Tunisia': 150000, 'Libya': 400000, 'Serbia': 88361,
     'Jordan': 89342, 'Israel': 22072, 'Lebanon': 10452, 'Palestine': 6020,
-    'Hungary': 93030, 'Croatia': 56594, 'Bosnia and Herzegovina': 51197,
-    'Albania': 28748, 'North Macedonia': 25713, 'Montenegro': 13812,
+    'Hungary': 90000, 'Croatia': 30000, 'Bosnia and Herzegovina': 51197,
+    'Albania': 28748, 'North Macedonia': 25713, 'Montenegro': 10000,
     'Kosovo': 10908, 'Cyprus': 9251,
   };
 
-  // 3. 로마 제국 데이터
+// 3. 로마 제국 데이터
   static const Map<String, double> _romanEmpireAreas = {
     'Italy': 301340, 'France': 551695, 'Spain': 505992, 'Turkey': 783562,
-    'Egypt': 1010408, 'United Kingdom': 242495, 'Greece': 131957, 'Syria': 185180,
-    'Tunisia': 163610, 'Algeria': 2381741, 'Morocco': 446550, 'Romania': 238391,
+    'Egypt': 250000, 'United Kingdom': 150000, 'Greece': 131957, 'Syria': 185180,
+    'Tunisia': 163610, 'Algeria': 300000, 'Morocco': 100000, 'Romania': 150000,
     'Bulgaria': 110994, 'Portugal': 92090, 'Israel': 22072, 'Jordan': 89342,
-    'Lebanon': 10452, 'Cyprus': 9251, 'Switzerland': 41284, 'Austria': 83871,
-    'Hungary': 93030, 'Croatia': 56594, 'Slovenia': 20273, 'Serbia': 88361,
-    'Albania': 28748, 'Libya': 1759540, 'Belgium': 30528, 'Netherlands': 41543,
+    'Lebanon': 10452, 'Cyprus': 9251, 'Switzerland': 41284, 'Austria': 60000,
+    'Hungary': 40000, 'Croatia': 56594, 'Slovenia': 20273, 'Serbia': 88361,
+    'Albania': 28748, 'Libya': 200000, 'Belgium': 30528, 'Netherlands': 150000,
   };
 
-  // 4. 알렉산더 제국 데이터
+// 4. 알렉산더 제국 데이터
   static const Map<String, double> _alexanderEmpireAreas = {
-    'Iran': 1648195, 'Egypt': 1010408, 'Turkey': 783562, 'Afghanistan': 652864,
-    'Pakistan': 881913, 'Iraq': 438317, 'Turkmenistan': 488100, 'Uzbekistan': 447400,
-    'Syria': 185180, 'Greece': 131957, 'Jordan': 89342, 'Tajikistan': 143100,
+    'Iran': 1648195, 'Egypt': 250000, 'Turkey': 783562, 'Afghanistan': 652864,
+    'Pakistan': 450000, 'Iraq': 438317, 'Turkmenistan': 300000, 'Uzbekistan': 250000,
+    'Syria': 185180, 'Greece': 131957, 'Jordan': 89342, 'Tajikistan': 100000,
     'Bulgaria': 110994, 'North Macedonia': 25713, 'Israel': 22072, 'Lebanon': 10452,
-    'Cyprus': 9251, 'Kuwait': 17818, 'Kyrgyzstan': 199951,
+    'Cyprus': 9251, 'Kuwait': 17818, 'Kyrgyzstan': 20000,
   };
 
   void _toggleExpanded(String empireName) {

@@ -1,17 +1,19 @@
-// lib/screens/activities_menu_screen.dart
-
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:jidoapp/providers/auth_provider.dart';
 import 'package:jidoapp/screens/login_prompt_screen.dart';
 import 'package:jidoapp/screens/landmarks_list_screen.dart';
 import 'package:jidoapp/screens/top_activities_menu_screen.dart';
+import 'package:jidoapp/utils/premium_access_manager.dart';
+import 'package:jidoapp/widgets/subscription_sheet.dart';
+import 'package:jidoapp/services/subscription_service.dart';
 
 class ActivitiesMenuScreen extends StatelessWidget {
   const ActivitiesMenuScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final isPremium = context.watch<SubscriptionService>().isPremium;
     final cultureAndArtsItems = [
       {'title': 'Painting & Artworks', 'imagePath': 'assets/explore_icons/paintings.png', 'attributes': ['Painting', 'Artwork']},
       {'title': 'Libraries & Bookstores', 'imagePath': 'assets/explore_icons/library.png', 'attributes': ['Library', 'Bookstore']},
@@ -38,12 +40,11 @@ class ActivitiesMenuScreen extends StatelessWidget {
     ];
 
     final Color bgColor = const Color(0xFFF8F9FA);
-    final Color primaryAccent = const Color(0xFF6366F1);
-    final Color accentBlack = const Color(0xFF0F172A);
     final Color cultureColor = const Color(0xFFEC4899);
     final Color lifestyleColor = const Color(0xFFF59E0B);
     final Color leisureColor = const Color(0xFF10B981);
     final Color topActivitiesColor = const Color(0xFF111827);
+    final Color accentBlack = const Color(0xFF0F172A);
 
     return Scaffold(
       backgroundColor: bgColor,
@@ -51,7 +52,6 @@ class ActivitiesMenuScreen extends StatelessWidget {
         child: CustomScrollView(
           physics: const BouncingScrollPhysics(),
           slivers: [
-            // Header
             SliverToBoxAdapter(
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(24, 20, 24, 0),
@@ -70,7 +70,7 @@ class ActivitiesMenuScreen extends StatelessWidget {
                                 style: TextStyle(
                                   fontSize: 37,
                                   fontWeight: FontWeight.w900,
-                                  color: cultureColor, // 핑크 계열로 변경됨
+                                  color: cultureColor,
                                   letterSpacing: -1.5,
                                   height: 1.0,
                                 ),
@@ -87,7 +87,6 @@ class ActivitiesMenuScreen extends StatelessWidget {
 
             const SliverToBoxAdapter(child: SizedBox(height: 24)),
 
-            // Top Activities
             SliverToBoxAdapter(
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 24),
@@ -103,61 +102,76 @@ class ActivitiesMenuScreen extends StatelessWidget {
                       );
                       return;
                     }
+
+                    if (!PremiumAccessManager.hasAccess(context)) {
+                      SubscriptionSheet.show(context);
+                      return;
+                    }
+
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (_) => const TopActivitiesMenuScreen()),
                     );
                   },
-                  child: Container(
-                    padding: const EdgeInsets.all(20),
-                    decoration: BoxDecoration(
-                      color: topActivitiesColor.withOpacity(0.06),
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Container(
-                          padding: const EdgeInsets.all(10),
-                          decoration: BoxDecoration(
-                            color: topActivitiesColor,
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                          child: const Icon(Icons.explore_rounded, color: Colors.white, size: 20),
+                  child: Stack(
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.all(20),
+                        decoration: BoxDecoration(
+                          color: topActivitiesColor.withOpacity(0.06),
+                          borderRadius: BorderRadius.circular(20),
                         ),
-                        const SizedBox(width: 16),
-                        Expanded(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Top Activities',
-                                style: TextStyle(
-                                  fontSize: 22,
-                                  fontWeight: FontWeight.w800,
-                                  color: accentBlack,
-                                  letterSpacing: -0.6,
-                                  height: 1.1,
-                                ),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Container(
+                              padding: const EdgeInsets.all(10),
+                              decoration: BoxDecoration(
+                                color: topActivitiesColor,
+                                borderRadius: BorderRadius.circular(12),
                               ),
-                              const SizedBox(height: 3),
-                              Text(
-                                'Must-visit destinations',
-                                style: TextStyle(
-                                  fontSize: 13,
-                                  color: accentBlack.withOpacity(0.4),
-                                ),
+                              child: const Icon(Icons.explore_rounded, color: Colors.white, size: 20),
+                            ),
+                            const SizedBox(width: 16),
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Top Activities',
+                                    style: TextStyle(
+                                      fontSize: 22,
+                                      fontWeight: FontWeight.w800,
+                                      color: accentBlack,
+                                      letterSpacing: -0.6,
+                                      height: 1.1,
+                                    ),
+                                  ),
+                                  const SizedBox(height: 3),
+                                  Text(
+                                    'Must-visit destinations',
+                                    style: TextStyle(
+                                      fontSize: 13,
+                                      color: accentBlack.withOpacity(0.4),
+                                    ),
+                                  ),
+                                ],
                               ),
-                            ],
-                          ),
+                            ),
+                            Icon(
+                              Icons.arrow_forward_rounded,
+                              color: topActivitiesColor,
+                              size: 20,
+                            ),
+                          ],
                         ),
-                        Icon(
-                          Icons.arrow_forward_rounded,
-                          color: topActivitiesColor,
-                          size: 20,
-                        ),
-                      ],
-                    ),
+                      ),
+                      Positioned(
+                        top: 8,
+                        right: 10,
+                        child: isPremium ? const SizedBox.shrink() : Icon(Icons.lock_rounded, size: 12, color: topActivitiesColor.withOpacity(0.5)),
+                      ),
+                    ],
                   ),
                 ),
               ),
@@ -165,7 +179,6 @@ class ActivitiesMenuScreen extends StatelessWidget {
 
             const SliverToBoxAdapter(child: SizedBox(height: 40)),
 
-            // Culture & Arts
             SliverToBoxAdapter(
               child: _buildCategorySection(
                 context,
@@ -179,7 +192,6 @@ class ActivitiesMenuScreen extends StatelessWidget {
 
             const SliverToBoxAdapter(child: SizedBox(height: 36)),
 
-            // Lifestyle
             SliverToBoxAdapter(
               child: _buildCategorySection(
                 context,
@@ -193,7 +205,6 @@ class ActivitiesMenuScreen extends StatelessWidget {
 
             const SliverToBoxAdapter(child: SizedBox(height: 36)),
 
-            // Leisure & Entertainment
             SliverToBoxAdapter(
               child: _buildCategorySection(
                 context,

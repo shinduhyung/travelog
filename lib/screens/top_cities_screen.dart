@@ -3,8 +3,12 @@ import 'package:provider/provider.dart';
 import 'package:jidoapp/models/city_model.dart';
 import 'package:jidoapp/providers/city_provider.dart';
 import 'package:jidoapp/providers/country_provider.dart';
+import 'package:jidoapp/providers/landmarks_provider.dart';
 import 'package:jidoapp/screens/capitals_screen.dart';
-import 'package:jidoapp/screens/cities_screen.dart';
+import 'package:jidoapp/screens/landmark_cities_screen.dart';
+import 'package:jidoapp/screens/cities_screen.dart'
+    hide showExternalCityDetailsModal;
+import 'package:jidoapp/widgets/city_detail_modal.dart';
 import 'package:collection/collection.dart';
 import 'dart:math';
 import 'package:country_flags/country_flags.dart';
@@ -19,6 +23,7 @@ class TopCitiesScreen extends StatefulWidget {
 
 class _TopCitiesScreenState extends State<TopCitiesScreen> {
   bool _isLargestMode = false;
+  bool _isCompactGawcList = false;
 
   static final List<Map<String, Object>> continentsData = [
     {'name': 'Asia', 'fullName': 'Asia', 'asset': 'assets/icons/asia.png', 'color': Colors.pink.shade300},
@@ -125,7 +130,7 @@ class _TopCitiesScreenState extends State<TopCitiesScreen> {
                   ),
                   const SizedBox(width: 10),
                   Text(
-                    "Statistics",
+                    "Major Cities",
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
@@ -367,31 +372,261 @@ class _TopCitiesScreenState extends State<TopCitiesScreen> {
               final allGaWCData = cityProvider.gawcCities.where((c) => c.gawcTier != 'N/A').toList();
               final visitedCityNames = cityProvider.visitedCities;
 
+              final totalGawcCount = allGaWCData.length;
+              final visitedGawcCount = visitedCityNames.where((n) => allGaWCData.any((c) => c.name == n)).length;
+              final gawcProgress = totalGawcCount > 0 ? (visitedGawcCount / totalGawcCount).clamp(0.0, 1.0) : 0.0;
+              const citiesColor = Color(0xFFF59E0B);
+
               return SingleChildScrollView(
                 padding: const EdgeInsets.all(20),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    _buildCapitalStats(context, cityProvider, countryProvider),
-
-                    const SizedBox(height: 28),
-
-                    const Padding(
-                      padding: EdgeInsets.only(left: 4, bottom: 12),
-                      child: Text(
-                        "Global City Ranking (GaWC)",
-                        style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.w800,
-                          color: Color(0xFF111827),
-                          letterSpacing: -0.5,
-                        ),
+                    // --- Global Top Cities 헤더 ---
+                    Container(
+                      padding: const EdgeInsets.fromLTRB(0, 0, 0, 16),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Row(
+                                  children: [
+                                    Container(
+                                      padding: const EdgeInsets.all(6),
+                                      decoration: BoxDecoration(
+                                        color: Colors.amber.withOpacity(0.15),
+                                        borderRadius: BorderRadius.circular(10),
+                                      ),
+                                      child: const Icon(
+                                        Icons.location_city_rounded,
+                                        color: Colors.amber,
+                                        size: 28,
+                                      ),
+                                    ),
+                                    const SizedBox(width: 10),
+                                    const Expanded(
+                                      child: Text(
+                                        'Global Top Cities',
+                                        style: TextStyle(
+                                          fontSize: 24,
+                                          fontWeight: FontWeight.w900,
+                                          color: Color(0xFF111827),
+                                          letterSpacing: -0.8,
+                                          height: 1.2,
+                                        ),
+                                        maxLines: 1,
+                                        overflow: TextOverflow.ellipsis,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                const SizedBox(height: 8),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 44),
+                                  child: Text(
+                                    'GaWC Global City Rankings',
+                                    style: TextStyle(
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.grey[600],
+                                      letterSpacing: -0.2,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Container(
+                            margin: const EdgeInsets.only(left: 8),
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(12),
+                              border: Border.all(color: Colors.grey[200]!),
+                            ),
+                            child: IconButton(
+                              icon: Icon(
+                                _isCompactGawcList
+                                    ? Icons.grid_view_rounded
+                                    : Icons.view_agenda_rounded,
+                                color: Colors.amber,
+                              ),
+                              onPressed: () {
+                                setState(() {
+                                  _isCompactGawcList = !_isCompactGawcList;
+                                });
+                              },
+                            ),
+                          ),
+                        ],
                       ),
                     ),
+
+                    // 진행도 바 (전체 너비)
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 16),
+                      child: Column(
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text('Visited', style: TextStyle(fontSize: 11, fontWeight: FontWeight.w600, color: Colors.grey.shade500)),
+                              Text('$visitedGawcCount / $totalGawcCount', style: TextStyle(fontSize: 11, fontWeight: FontWeight.w700, color: Colors.grey.shade700)),
+                            ],
+                          ),
+                          const SizedBox(height: 6),
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(8),
+                            child: LinearProgressIndicator(
+                              value: gawcProgress,
+                              minHeight: 16,
+                              backgroundColor: Colors.grey.shade100,
+                              valueColor: const AlwaysStoppedAnimation<Color>(citiesColor),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+
                     _GaWCRankingList(
                       citiesToDisplay: allGaWCData,
                       visitedCityNames: visitedCityNames,
+                      isCompactList: _isCompactGawcList,
                     ),
+
+                    const SizedBox(height: 28),
+
+                    _buildCapitalStats(context, cityProvider, countryProvider),
+
+                    const SizedBox(height: 20),
+
+                    // --- Iconic Cities 카드 ---
+                    Consumer<LandmarksProvider>(
+                      builder: (context, landmarksProvider, _) {
+                        const iconicColor = Color(0xFF4A5568);
+                        const completedColor = Color(0xFFD97706);
+                        final totalCities = LandmarkCitiesScreen.citiesData.length;
+
+                        final visitedCityCount = LandmarkCitiesScreen.citiesData
+                            .where((c) => cityProvider.isVisited(c['city'] as String))
+                            .length;
+
+                        final completedCityCount = LandmarkCitiesScreen.citiesData.where((cityData) {
+                          final landmarks = cityData['landmarks'] as List<String>;
+                          return landmarks.every((l) => landmarksProvider.visitedLandmarks.contains(l));
+                        }).length;
+
+                        final visitedRatio = totalCities > 0 ? (visitedCityCount / totalCities).clamp(0.0, 1.0) : 0.0;
+                        final completedRatio = totalCities > 0 ? (completedCityCount / totalCities).clamp(0.0, 1.0) : 0.0;
+
+                        return GestureDetector(
+                          onTap: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (_) => const LandmarkCitiesScreen()),
+                          ),
+                          child: Container(
+                            width: double.infinity,
+                            padding: const EdgeInsets.fromLTRB(20, 18, 20, 20),
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(24),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey.withOpacity(0.08),
+                                  blurRadius: 20,
+                                  spreadRadius: 2,
+                                  offset: const Offset(0, 8),
+                                ),
+                              ],
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                // 헤더 행
+                                Row(
+                                  children: [
+                                    Container(
+                                      padding: const EdgeInsets.all(9),
+                                      decoration: BoxDecoration(
+                                        color: iconicColor,
+                                        borderRadius: BorderRadius.circular(12),
+                                      ),
+                                      child: const Icon(
+                                        Icons.location_city_rounded,
+                                        color: Colors.white,
+                                        size: 20,
+                                      ),
+                                    ),
+                                    const SizedBox(width: 14),
+                                    const Expanded(
+                                      child: Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            'Iconic Cities',
+                                            style: TextStyle(
+                                              fontSize: 16,
+                                              fontWeight: FontWeight.w900,
+                                              color: Color(0xFF111827),
+                                              letterSpacing: -0.5,
+                                              height: 1.1,
+                                            ),
+                                          ),
+                                          SizedBox(height: 3),
+                                          Text(
+                                            '40 cities · 7 landmarks each',
+                                            style: TextStyle(
+                                              fontSize: 12,
+                                              color: Color(0xFF9CA3AF),
+                                              fontWeight: FontWeight.w500,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    Container(
+                                      padding: const EdgeInsets.all(8),
+                                      decoration: BoxDecoration(
+                                        color: iconicColor.withOpacity(0.08),
+                                        shape: BoxShape.circle,
+                                      ),
+                                      child: const Icon(
+                                        Icons.arrow_forward_ios_rounded,
+                                        color: iconicColor,
+                                        size: 14,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                const SizedBox(height: 16),
+                                Divider(color: Colors.grey.shade100, height: 1),
+                                const SizedBox(height: 14),
+                                // Cities visited 바
+                                _IconicStatBar(
+                                  label: 'Cities visited',
+                                  value: visitedCityCount,
+                                  total: totalCities,
+                                  ratio: visitedRatio,
+                                  color: iconicColor,
+                                ),
+                                const SizedBox(height: 10),
+                                // Fully completed 바
+                                _IconicStatBar(
+                                  label: 'Fully completed  7/7 ★',
+                                  value: completedCityCount,
+                                  total: totalCities,
+                                  ratio: completedRatio,
+                                  color: completedColor,
+                                ),
+                              ],
+                            ),
+                          ),
+                        );
+                      },
+                    ),
+
                     const SizedBox(height: 40),
                   ],
                 ),
@@ -407,10 +642,12 @@ class _TopCitiesScreenState extends State<TopCitiesScreen> {
 class _GaWCRankingList extends StatefulWidget {
   final List<City> citiesToDisplay;
   final Set<String> visitedCityNames;
+  final bool isCompactList;
 
   const _GaWCRankingList({
     required this.citiesToDisplay,
     required this.visitedCityNames,
+    this.isCompactList = false,
   });
 
   @override
@@ -457,6 +694,82 @@ class _GaWCRankingListState extends State<_GaWCRankingList> {
     final int firstLetter = countryCode.codeUnitAt(0) - 0x41 + 0x1F1E6;
     final int secondLetter = countryCode.codeUnitAt(1) - 0x41 + 0x1F1E6;
     return String.fromCharCode(firstLetter) + String.fromCharCode(secondLetter);
+  }
+
+  Widget _buildCompactCityItem(BuildContext context, City city, bool isVisited, Color themeColor) {
+    return Container(
+      margin: const EdgeInsets.only(bottom: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(
+          color: isVisited ? themeColor.withOpacity(0.5) : const Color(0xFFE5E7EB),
+          width: isVisited ? 1.5 : 1,
+        ),
+        boxShadow: [
+          BoxShadow(
+            color: isVisited
+                ? themeColor.withOpacity(0.08)
+                : Colors.black.withOpacity(0.03),
+            blurRadius: 8,
+            offset: const Offset(0, 3),
+          ),
+        ],
+      ),
+      child: Row(
+        children: [
+          Text(
+            _getFlagEmoji(city.countryIsoA2),
+            style: const TextStyle(fontSize: 20),
+          ),
+          const SizedBox(width: 12),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  city.name,
+                  style: const TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w700,
+                    color: Color(0xFF111827),
+                    letterSpacing: -0.3,
+                  ),
+                ),
+                if (city.countryIsoA2.isNotEmpty)
+                  Text(
+                    city.country,
+                    style: TextStyle(
+                      fontSize: 12,
+                      color: Colors.grey[500],
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+              ],
+            ),
+          ),
+          GestureDetector(
+            onTap: isVisited ? null : () {
+              context.read<CityProvider>().addVisitWithDetails(city.name);
+            },
+            child: Container(
+              width: 32,
+              height: 32,
+              decoration: BoxDecoration(
+                color: isVisited ? themeColor : const Color(0xFFE5E7EB),
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Icon(
+                isVisited ? Icons.check_rounded : Icons.add_rounded,
+                color: isVisited ? Colors.white : Colors.grey[500],
+                size: 18,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 
   @override
@@ -577,7 +890,22 @@ class _GaWCRankingListState extends State<_GaWCRankingList> {
                     Divider(height: 1, indent: 20, endIndent: 20, color: Colors.grey.shade100),
                     Padding(
                       padding: const EdgeInsets.all(20.0),
-                      child: GridView.builder(
+                      child: widget.isCompactList
+                          ? ListView.builder(
+                        shrinkWrap: true,
+                        physics: const NeverScrollableScrollPhysics(),
+                        itemCount: sortedCities.length,
+                        itemBuilder: (context, index) {
+                          final city = sortedCities[index];
+                          final isVisited = widget.visitedCityNames.contains(city.name);
+                          final country = countryProvider.allCountries.firstWhereOrNull(
+                                (c) => c.isoA2 == city.countryIsoA2,
+                          );
+                          final themeColor = country?.themeColor ?? const Color(0xFF14B8A6);
+                          return _buildCompactCityItem(context, city, isVisited, themeColor);
+                        },
+                      )
+                          : GridView.builder(
                         shrinkWrap: true,
                         physics: const NeverScrollableScrollPhysics(),
                         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -596,10 +924,9 @@ class _GaWCRankingListState extends State<_GaWCRankingList> {
                           );
                           final themeColor = country?.themeColor ?? const Color(0xFF14B8A6);
 
+                          // --- Photo Grid 모드 ---
                           return GestureDetector(
-                            onTap: () {
-                              showExternalCityDetailsModal(context, city);
-                            },
+                            onTap: () => showExternalCityDetailsModal(context, city),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -627,12 +954,33 @@ class _GaWCRankingListState extends State<_GaWCRankingList> {
                                             placeholder: (context, url) => Container(color: const Color(0xFFF3F4F6)),
                                             errorWidget: (context, url, error) => Container(color: const Color(0xFFF3F4F6)),
                                           ),
-                                          if (isVisited)
-                                            Positioned(
-                                              top: 10,
-                                              right: 10,
-                                              child: Container(
-                                                padding: const EdgeInsets.all(6),
+                                          // 그라디언트 오버레이
+                                          Positioned.fill(
+                                            child: Container(
+                                              decoration: BoxDecoration(
+                                                gradient: LinearGradient(
+                                                  begin: Alignment.topCenter,
+                                                  end: Alignment.bottomCenter,
+                                                  colors: [
+                                                    Colors.transparent,
+                                                    Colors.black.withOpacity(0.15),
+                                                  ],
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                          // + / check 버튼
+                                          Positioned(
+                                            top: 8,
+                                            right: 8,
+                                            child: GestureDetector(
+                                              onTap: isVisited ? null : () {
+                                                context.read<CityProvider>().addVisitWithDetails(city.name);
+                                              },
+                                              child: isVisited
+                                                  ? Container(
+                                                width: 32,
+                                                height: 32,
                                                 decoration: BoxDecoration(
                                                   color: themeColor,
                                                   shape: BoxShape.circle,
@@ -644,9 +992,19 @@ class _GaWCRankingListState extends State<_GaWCRankingList> {
                                                     ),
                                                   ],
                                                 ),
-                                                child: const Icon(Icons.check, size: 14, color: Colors.white),
+                                                child: const Icon(Icons.check_rounded, size: 18, color: Colors.white),
+                                              )
+                                                  : Container(
+                                                width: 32,
+                                                height: 32,
+                                                decoration: const BoxDecoration(
+                                                  color: Colors.black38,
+                                                  shape: BoxShape.circle,
+                                                ),
+                                                child: const Icon(Icons.add_rounded, size: 18, color: Colors.white),
                                               ),
                                             ),
+                                          ),
                                         ],
                                       ),
                                     ),
@@ -688,6 +1046,82 @@ class _GaWCRankingListState extends State<_GaWCRankingList> {
           ),
         );
       }).toList(),
+    );
+  }
+}
+
+class _IconicStatBar extends StatelessWidget {
+  final String label;
+  final int value;
+  final int total;
+  final double ratio;
+  final Color color;
+
+  const _IconicStatBar({
+    required this.label,
+    required this.value,
+    required this.total,
+    required this.ratio,
+    required this.color,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final pct = (ratio * 100).toStringAsFixed(0);
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          children: [
+            Expanded(
+              child: Text(
+                label,
+                style: TextStyle(
+                  fontSize: 12,
+                  fontWeight: FontWeight.w600,
+                  color: Colors.grey[600],
+                ),
+              ),
+            ),
+            Text(
+              '$value',
+              style: TextStyle(
+                fontSize: 14,
+                fontWeight: FontWeight.w900,
+                color: color,
+              ),
+            ),
+            Text(
+              '  $pct%',
+              style: TextStyle(
+                fontSize: 12,
+                fontWeight: FontWeight.w600,
+                color: color.withOpacity(0.6),
+              ),
+            ),
+          ],
+        ),
+        const SizedBox(height: 5),
+        ClipRRect(
+          borderRadius: BorderRadius.circular(3),
+          child: Stack(
+            children: [
+              Container(height: 6, color: Colors.grey[100]),
+              FractionallySizedBox(
+                widthFactor: ratio,
+                child: Container(
+                  height: 6,
+                  decoration: BoxDecoration(
+                    color: color,
+                    borderRadius: BorderRadius.circular(3),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ],
     );
   }
 }

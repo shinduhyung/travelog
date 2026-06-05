@@ -27,6 +27,9 @@ import 'package:screenshot/screenshot.dart';
 import 'package:jidoapp/services/home_widget_service.dart';
 import 'package:jidoapp/providers/auth_provider.dart';
 import 'package:jidoapp/screens/login_prompt_screen.dart';
+import 'package:jidoapp/utils/premium_access_manager.dart';
+import 'package:jidoapp/services/subscription_service.dart';
+import 'package:jidoapp/widgets/subscription_sheet.dart';
 
 class CitiesMenuScreen extends StatefulWidget {
   const CitiesMenuScreen({super.key});
@@ -385,36 +388,62 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
     final isSelected = _selectedStatIndex == index;
     final primaryColor = Colors.amber;
 
+    final isPremiumTier = index >= 3;
+    final isPremium = context.watch<SubscriptionService>().isPremium;
+
     return GestureDetector(
       onTap: () => setState(() => _selectedStatIndex = index),
-      child: AnimatedContainer(
-        duration: const Duration(milliseconds: 200),
-        width: 52,
-        height: 52,
-        decoration: BoxDecoration(
-          color: isSelected ? primaryColor : Colors.white,
-          borderRadius: BorderRadius.circular(16),
-          boxShadow: isSelected
-              ? [
-            BoxShadow(
-              color: primaryColor.withOpacity(0.4),
-              blurRadius: 12,
-              offset: const Offset(0, 4),
-            )
-          ]
-              : [
-            BoxShadow(
-              color: Colors.black.withOpacity(0.06),
-              blurRadius: 8,
-              offset: const Offset(0, 2),
-            )
-          ],
-        ),
-        child: Icon(
-          item['icon'],
-          color: isSelected ? Colors.white : Colors.grey.shade500,
-          size: 22,
-        ),
+      child: Stack(
+        clipBehavior: Clip.none,
+        children: [
+          AnimatedContainer(
+            duration: const Duration(milliseconds: 200),
+            width: 52,
+            height: 52,
+            decoration: BoxDecoration(
+              color: isSelected ? primaryColor : Colors.white,
+              borderRadius: BorderRadius.circular(16),
+              boxShadow: isSelected
+                  ? [
+                BoxShadow(
+                  color: primaryColor.withOpacity(0.4),
+                  blurRadius: 12,
+                  offset: const Offset(0, 4),
+                )
+              ]
+                  : [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.06),
+                  blurRadius: 8,
+                  offset: const Offset(0, 2),
+                )
+              ],
+            ),
+            child: Icon(
+              item['icon'],
+              color: isSelected ? Colors.white : Colors.grey.shade500,
+              size: 22,
+            ),
+          ),
+          if (isPremiumTier && !isPremium)
+            Positioned(
+              top: -3,
+              right: -3,
+              child: Container(
+                width: 16,
+                height: 16,
+                decoration: BoxDecoration(
+                  color: isSelected ? Colors.white : primaryColor,
+                  shape: BoxShape.circle,
+                ),
+                child: Icon(
+                  Icons.lock_rounded,
+                  size: 9,
+                  color: isSelected ? primaryColor : Colors.white,
+                ),
+              ),
+            ),
+        ],
       ),
     );
   }
@@ -1128,8 +1157,8 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
                                             size: 20,
                                           ),
                                           onPressed: () {
-                                            // index 0 (Top Cities) 만 로그인 없이 접근 가능
-                                            if (_selectedStatIndex > 0) {
+                                            // index 0 (Top Cities), 1 (General), 2 (Culture) 은 무료
+                                            if (_selectedStatIndex > 2) {
                                               final authProvider = Provider.of<AuthProvider>(context, listen: false);
                                               if (authProvider.user == null) {
                                                 showModalBottomSheet(
@@ -1138,6 +1167,10 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
                                                   backgroundColor: Colors.transparent,
                                                   builder: (_) => const LoginPromptScreen(),
                                                 );
+                                                return;
+                                              }
+                                              if (!PremiumAccessManager.hasAccess(context)) {
+                                                SubscriptionSheet.show(context);
                                                 return;
                                               }
                                             }

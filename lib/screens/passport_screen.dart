@@ -1,5 +1,6 @@
 // lib/screens/passport_screen.dart
 
+import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:jidoapp/models/country_model.dart';
 import 'package:cached_network_image/cached_network_image.dart';
@@ -8,6 +9,7 @@ import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/providers/passport_provider.dart';
 import 'package:jidoapp/screens/passport_visa_detail_screen.dart';
 import 'package:provider/provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class PassportScreen extends StatefulWidget {
   const PassportScreen({super.key});
@@ -34,6 +36,27 @@ class _UserPassportInfo {
     required this.issueDate,
     required this.expiryDate,
   });
+
+  Map<String, dynamic> toJson() => {
+    'surname': surname,
+    'givenNames': givenNames,
+    'passportNumber': passportNumber,
+    'dob': dob,
+    'sex': sex,
+    'issueDate': issueDate,
+    'expiryDate': expiryDate,
+  };
+
+  factory _UserPassportInfo.fromJson(Map<String, dynamic> json) =>
+      _UserPassportInfo(
+        surname: json['surname'] ?? '',
+        givenNames: json['givenNames'] ?? '',
+        passportNumber: json['passportNumber'] ?? '',
+        dob: json['dob'] ?? '',
+        sex: json['sex'] ?? '',
+        issueDate: json['issueDate'] ?? '',
+        expiryDate: json['expiryDate'] ?? '',
+      );
 }
 
 class _RankedPassportItem {
@@ -51,6 +74,7 @@ class _RankedPassportItem {
 class _PassportScreenState extends State<PassportScreen> {
   static const Color purple = Color(0xFF8B5CF6);
   static const Color darkPurple = Color(0xFF7C3AED);
+  static const String _prefsKey = 'userPassports';
 
   final _formKey = GlobalKey<FormState>();
   final _surnameController = TextEditingController();
@@ -81,6 +105,7 @@ class _PassportScreenState extends State<PassportScreen> {
   @override
   void initState() {
     super.initState();
+    _loadSavedPassports();
     _searchController.addListener(() {
       setState(() {
         _searchQuery = _searchController.text;
@@ -98,6 +123,37 @@ class _PassportScreenState extends State<PassportScreen> {
     _expiryController.dispose();
     _searchController.dispose();
     super.dispose();
+  }
+
+  // ── SharedPreferences Load ──────────────────────────────────────────────────
+  Future<void> _loadSavedPassports() async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      final String? jsonString = prefs.getString(_prefsKey);
+      if (jsonString != null) {
+        final List<dynamic> decoded = jsonDecode(jsonString);
+        if (mounted) {
+          setState(() {
+            _userPassports.addAll(
+              decoded.map((e) => _UserPassportInfo.fromJson(e as Map<String, dynamic>)),
+            );
+          });
+        }
+      }
+    } catch (e) {
+      print('Error loading saved passports: $e');
+    }
+  }
+
+  // ── SharedPreferences Save ──────────────────────────────────────────────────
+  Future<void> _persistPassports() async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      final String encoded = jsonEncode(_userPassports.map((p) => p.toJson()).toList());
+      await prefs.setString(_prefsKey, encoded);
+    } catch (e) {
+      print('Error persisting passports: $e');
+    }
   }
 
   InputDecoration _inputDecoration(String label, IconData icon) {
@@ -221,7 +277,6 @@ class _PassportScreenState extends State<PassportScreen> {
       List<Country> allCountries,
       Map<String, DestinationVisaInfo> visaInfoMap,
       ) {
-
     final dropdownItems = provider.passportDataMap.entries.map((entry) {
       final name = countryProvider.isoToCountryNameMap[entry.key] ?? entry.value.passportName;
       return MapEntry(entry.key, name);
@@ -302,7 +357,8 @@ class _PassportScreenState extends State<PassportScreen> {
                     height: 125,
                     color: Colors.grey[100],
                     child: CachedNetworkImage(
-                      imageUrl: 'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/passports%2F${provider.selectedPassportIso}.png?alt=media',
+                      imageUrl:
+                      'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/passports%2F${provider.selectedPassportIso}.png?alt=media',
                       fit: BoxFit.cover,
                       errorWidget: (context, url, error) => const Center(
                         child: Icon(Icons.menu_book_rounded, size: 30, color: Colors.grey),
@@ -486,7 +542,10 @@ class _PassportScreenState extends State<PassportScreen> {
               height: 50,
               child: ElevatedButton.icon(
                 icon: const Icon(Icons.save_alt_rounded, color: Colors.white),
-                label: const Text('Save Details', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16)),
+                label: const Text(
+                  'Save Details',
+                  style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16),
+                ),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.black87,
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
@@ -544,7 +603,8 @@ class _PassportScreenState extends State<PassportScreen> {
 
     if (picked != null) {
       setState(() {
-        controller.text = "${picked.year}-${picked.month.toString().padLeft(2, '0')}-${picked.day.toString().padLeft(2, '0')}";
+        controller.text =
+        "${picked.year}-${picked.month.toString().padLeft(2, '0')}-${picked.day.toString().padLeft(2, '0')}";
       });
     }
   }
@@ -572,6 +632,7 @@ class _PassportScreenState extends State<PassportScreen> {
         _selectedSex = null;
         FocusScope.of(context).unfocus();
       });
+      _persistPassports(); // ← 저장
     }
   }
 
@@ -641,6 +702,7 @@ class _PassportScreenState extends State<PassportScreen> {
                 setState(() {
                   _userPassports.removeAt(index);
                 });
+                _persistPassports(); // ← 삭제 후 저장
               },
             ),
           ),
@@ -735,7 +797,8 @@ class _PassportScreenState extends State<PassportScreen> {
                   final passportData = item.data;
                   final rank = item.rank;
 
-                  final displayName = countryProvider.isoToCountryNameMap[passportIso] ?? passportData.passportName;
+                  final displayName =
+                      countryProvider.isoToCountryNameMap[passportIso] ?? passportData.passportName;
 
                   bool isMyPassport = (passportIso == myPassportIso);
 
@@ -771,7 +834,9 @@ class _PassportScreenState extends State<PassportScreen> {
                         decoration: BoxDecoration(
                           color: isMyPassport
                               ? purple.withOpacity(0.1)
-                              : (rank <= 3 ? const Color(0xFFFBBF24).withOpacity(0.1) : Colors.grey[50]),
+                              : (rank <= 3
+                              ? const Color(0xFFFBBF24).withOpacity(0.1)
+                              : Colors.grey[50]),
                           shape: BoxShape.circle,
                         ),
                         child: Text(
@@ -804,7 +869,8 @@ class _PassportScreenState extends State<PassportScreen> {
                               ),
                               child: const Text(
                                 'ME',
-                                style: TextStyle(color: purple, fontSize: 10, fontWeight: FontWeight.bold),
+                                style: TextStyle(
+                                    color: purple, fontSize: 10, fontWeight: FontWeight.bold),
                               ),
                             ),
                           ]
@@ -814,7 +880,8 @@ class _PassportScreenState extends State<PassportScreen> {
                         '${passportData.visaFreeCountries} visa-free destinations',
                         style: TextStyle(color: Colors.grey[500], fontSize: 13),
                       ),
-                      trailing: Icon(Icons.arrow_forward_ios_rounded, size: 16, color: Colors.grey[300]),
+                      trailing:
+                      Icon(Icons.arrow_forward_ios_rounded, size: 16, color: Colors.grey[300]),
                       onTap: () {
                         final Map<String, DestinationVisaInfo> visaInfoMap = {
                           for (var info in passportData.visaRequirements)

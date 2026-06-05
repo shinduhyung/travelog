@@ -6,7 +6,7 @@ import 'package:intl/intl.dart';
 import 'package:jidoapp/models/badge_model.dart';
 import 'package:jidoapp/models/country_model.dart';
 import 'package:jidoapp/models/city_model.dart';
-
+import 'package:jidoapp/screens/badge_share.dart';
 import 'package:jidoapp/models/city_visit_detail_model.dart';
 import 'package:jidoapp/models/economy_data_model.dart';
 import 'package:jidoapp/models/landmarks_model.dart';
@@ -285,137 +285,154 @@ class BadgeDetailScreen extends StatelessWidget {
           ),
         ],
       ),
-      child: Column(
+      child: Stack(
+        clipBehavior: Clip.none,
         children: [
-          Row(
+          Column(
             children: [
-              // Badge Image
-              Container(
-                width: 100,
-                height: 100,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(16),
-                  color: Colors.grey[100],
-                ),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(16),
-                  child: ColorFiltered(
-                    colorFilter: ColorFilter.mode(
-                      isUnlocked ? Colors.transparent : Colors.grey,
-                      isUnlocked ? BlendMode.dst : BlendMode.saturation,
+              Row(
+                children: [
+                  // Badge Image
+                  Container(
+                    width: 100,
+                    height: 100,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(16),
+                      color: Colors.grey[100],
                     ),
-                    child: Image.asset(
-                      achievement.imagePath,
-                      fit: BoxFit.cover,
-                      errorBuilder: (context, error, stackTrace) {
-                        return Container(
-                          color: Colors.grey[200],
-                          child: const Icon(
-                            Icons.shield_outlined,
-                            size: 50,
-                            color: Colors.grey,
-                          ),
-                        );
-                      },
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(16),
+                      child: ColorFiltered(
+                        colorFilter: ColorFilter.mode(
+                          isUnlocked ? Colors.transparent : Colors.grey,
+                          isUnlocked ? BlendMode.dst : BlendMode.saturation,
+                        ),
+                        child: Image.asset(
+                          achievement.imagePath,
+                          fit: BoxFit.cover,
+                          errorBuilder: (context, error, stackTrace) {
+                            return Container(
+                              color: Colors.grey[200],
+                              child: const Icon(
+                                Icons.shield_outlined,
+                                size: 50,
+                                color: Colors.grey,
+                              ),
+                            );
+                          },
+                        ),
+                      ),
                     ),
                   ),
-                ),
-              ),
-              const SizedBox(width: 20),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
+                  const SizedBox(width: 20),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Expanded(
+                        Row(
+                          children: [
+                            Expanded(
+                              child: Text(
+                                achievement.name,
+                                style: const TextStyle(
+                                  fontSize: 22,
+                                  fontWeight: FontWeight.bold,
+                                  letterSpacing: -0.5,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(height: 8),
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 12,
+                            vertical: 6,
+                          ),
+                          decoration: BoxDecoration(
+                            color: categoryColor.withOpacity(0.15),
+                            borderRadius: BorderRadius.circular(8),
+                          ),
                           child: Text(
-                            achievement.name,
-                            style: const TextStyle(
-                              fontSize: 22,
+                            '${achievement.points} points',
+                            style: TextStyle(
+                              fontSize: 13,
                               fontWeight: FontWeight.bold,
-                              letterSpacing: -0.5,
+                              color: categoryColor,
                             ),
                           ),
                         ),
                       ],
                     ),
-                    const SizedBox(height: 8),
-                    Container(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 12,
-                        vertical: 6,
-                      ),
-                      decoration: BoxDecoration(
-                        color: categoryColor.withOpacity(0.15),
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      child: Text(
-                        '${achievement.points} points',
-                        style: TextStyle(
-                          fontSize: 13,
-                          fontWeight: FontWeight.bold,
-                          color: categoryColor,
-                        ),
-                      ),
-                    ),
-                  ],
+                  ),
+                ],
+              ),
+              const SizedBox(height: 20),
+              Text(
+                achievement.description,
+                style: TextStyle(
+                  fontSize: 15,
+                  color: Colors.grey[700],
+                  height: 1.4,
                 ),
               ),
-            ],
-          ),
-          const SizedBox(height: 20),
-          Text(
-            achievement.description,
-            style: TextStyle(
-              fontSize: 15,
-              color: Colors.grey[700],
-              height: 1.4,
-            ),
-          ),
-          const SizedBox(height: 24),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              const SizedBox(height: 24),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    'Progress',
-                    style: TextStyle(
-                      fontSize: 14,
-                      color: Colors.grey[600],
-                      fontWeight: FontWeight.w500,
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Progress',
+                        style: TextStyle(
+                          fontSize: 14,
+                          color: Colors.grey[600],
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      Text(
+                        progressDetailText,
+                        style: const TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 12),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(8),
+                    child: LinearProgressIndicator(
+                      value: progress,
+                      backgroundColor: Colors.grey[200],
+                      color: categoryColor,
+                      minHeight: 12,
                     ),
                   ),
+                  const SizedBox(height: 8),
                   Text(
-                    progressDetailText,
-                    style: const TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.bold,
+                    '${(progress * 100).toStringAsFixed(0)}% Complete',
+                    style: TextStyle(
+                      fontSize: 13,
+                      color: Colors.grey[600],
                     ),
                   ),
                 ],
               ),
-              const SizedBox(height: 12),
-              ClipRRect(
-                borderRadius: BorderRadius.circular(8),
-                child: LinearProgressIndicator(
-                  value: progress,
-                  backgroundColor: Colors.grey[200],
-                  color: categoryColor,
-                  minHeight: 12,
-                ),
-              ),
-              const SizedBox(height: 8),
-              Text(
-                '${(progress * 100).toStringAsFixed(0)}% Complete',
-                style: TextStyle(
-                  fontSize: 13,
-                  color: Colors.grey[600],
-                ),
-              ),
             ],
+          ),
+
+          // 공유 버튼
+          Positioned(
+            top: -10,
+            right: -10,
+            child: _BadgeShareButton(
+              achievement: achievement,
+              progress: progress,
+              progressDetailText: progressDetailText,
+              color: categoryColor,
+            ),
           ),
         ],
       ),
@@ -1492,6 +1509,62 @@ class BadgeDetailScreen extends StatelessWidget {
             );
           },
         );
+      },
+    );
+  }
+}
+
+// 공유 중 스피너를 보여주기 위한 로컬 Stateful 위젯
+class _BadgeShareButton extends StatefulWidget {
+  final Achievement achievement;
+  final double progress;
+  final String progressDetailText;
+  final Color color;
+
+  const _BadgeShareButton({
+    required this.achievement,
+    required this.progress,
+    required this.progressDetailText,
+    required this.color,
+  });
+
+  @override
+  State<_BadgeShareButton> createState() => _BadgeShareButtonState();
+}
+
+class _BadgeShareButtonState extends State<_BadgeShareButton> {
+  bool _isSharing = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return IconButton(
+      icon: _isSharing
+          ? SizedBox(
+        width: 20,
+        height: 20,
+        child: CircularProgressIndicator(
+          strokeWidth: 2,
+          color: widget.color,
+        ),
+      )
+          : Icon(
+        Icons.ios_share_rounded,
+        color: Colors.grey[400],
+        size: 26,
+      ),
+      onPressed: _isSharing
+          ? null
+          : () async {
+        setState(() => _isSharing = true);
+        await BadgeShare.share(
+          context: context,
+          achievement: widget.achievement,
+          progress: widget.progress,
+          progressDetailText: widget.progressDetailText,
+        );
+        if (mounted) {
+          setState(() => _isSharing = false);
+        }
       },
     );
   }

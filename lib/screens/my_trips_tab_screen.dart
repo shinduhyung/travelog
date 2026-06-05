@@ -1,7 +1,8 @@
 // lib/screens/my_trips_tab_screen.dart
 import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:jidoapp/providers/auth_provider.dart';
+// ⭐️ Firebase Auth와 명칭 충돌을 막기 위해 custom_auth로 alias 지정
+import 'package:jidoapp/providers/auth_provider.dart' as custom_auth;
 import 'package:jidoapp/screens/profile_screen.dart';
 import 'package:jidoapp/screens/login_prompt_screen.dart';
 import 'package:jidoapp/providers/badge_provider.dart';
@@ -14,12 +15,14 @@ import 'package:jidoapp/screens/trip_log_list_screen.dart';
 import 'package:jidoapp/screens/recommendations_screen.dart';
 import 'package:jidoapp/screens/favorites_screen.dart';
 import 'package:jidoapp/screens/traveler_type_selector_screen.dart';
-// ⭐️ [추가] 통계용 Provider & Screen imports
+import 'package:jidoapp/screens/daily_quiz_screen.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/providers/city_provider.dart';
 import 'package:jidoapp/providers/landmarks_provider.dart';
 import 'package:jidoapp/screens/countries_map_screen.dart';
-import 'package:jidoapp/screens/cities_screen.dart';
+import 'package:jidoapp/screens/top_cities_screen.dart';
 import 'package:jidoapp/screens/top_landmarks_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -37,6 +40,10 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
   String? _travelerType;
   String? _travelerTypeIconName;
 
+  // Daily Quiz state
+  bool _quizSolvedToday = false;
+  bool _quizLoadingDone = false;
+
   static const Color mint = Color(0xFF00CDB5);
   static const Color darkMint = Color(0xFF009688);
   static const Color purple = Color(0xFF8B5CF6);
@@ -45,14 +52,55 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
   static const Color orange = Color(0xFFF97316);
   static const Color skyBlue = Color(0xFF0EA5E9);
   static const Color pink = Color(0xFFEC4899);
-  static const Color recommendBlue = Color(0xFF2563EB); // Recommendations Screen의 테마색
+  static const Color recommendBlue = Color(0xFF2563EB);
 
   @override
   void initState() {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) {
       _loadTravelerType();
+      _checkQuizSolvedToday();
     });
+  }
+
+  Future<void> _checkQuizSolvedToday() async {
+    // 매번 호출 시 상태 리셋 (화면 복귀 후 stale 방지)
+    if (mounted) {
+      setState(() {
+        _quizSolvedToday = false;
+        _quizLoadingDone = false;
+      });
+    }
+    try {
+      final user = FirebaseAuth.instance.currentUser;
+      if (user == null) {
+        if (mounted) setState(() => _quizLoadingDone = true);
+        return;
+      }
+
+      // daily_quiz_screen과 동일하게 UTC 기준 YYYYMMDD 직접 생성
+      final nowUtc = DateTime.now().toUtc();
+      final year = nowUtc.year.toString();
+      final month = nowUtc.month.toString().padLeft(2, '0');
+      final day = nowUtc.day.toString().padLeft(2, '0');
+      final todayStr = '$year$month$day';
+
+      final historyDoc = await FirebaseFirestore.instance
+          .collection('users')
+          .doc(user.uid)
+          .collection('quiz_history')
+          .doc(todayStr)
+          .get();
+
+      if (mounted) {
+        setState(() {
+          _quizSolvedToday = historyDoc.exists;
+          _quizLoadingDone = true;
+        });
+      }
+    } catch (_) {
+      if (mounted) setState(() => _quizLoadingDone = true);
+    }
   }
 
   Future<void> _loadTravelerType() async {
@@ -126,7 +174,7 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
     }
   }
 
-  // ⭐️ [UPDATE] New Level Logic synced with BadgesScreen
+
   String _getCurrentLevel(int points) {
     if (points >= 600) return 'Legend';
     if (points >= 400) return 'Worldmaster';
@@ -137,23 +185,22 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
     return 'Rookie';
   }
 
-  // ⭐️ [UPDATE] New Color Theme synced with BadgesScreen
   Color _getLevelColor(String level) {
     switch (level) {
       case 'Rookie':
-        return const Color(0xFF8B4513); // Brown
+        return const Color(0xFF8B4513);
       case 'Explorer':
-        return const Color(0xFFFFA726); // Orange/Yellow
+        return const Color(0xFFFFA726);
       case 'Nomad':
-        return const Color(0xFF66BB6A); // Green
+        return const Color(0xFF66BB6A);
       case 'Adventurer':
-        return const Color(0xFF26A69A); // Mint
+        return const Color(0xFF26A69A);
       case 'Globetrotter':
-        return const Color(0xFF5C6BC0); // Navy/Indigo
+        return const Color(0xFF5C6BC0);
       case 'Worldmaster':
-        return const Color(0xFFAB47BC); // Purple
+        return const Color(0xFFAB47BC);
       case 'Legend':
-        return const Color(0xFFEC407A); // Pink
+        return const Color(0xFFEC407A);
       default:
         return const Color(0xFF8B4513);
     }
@@ -167,9 +214,6 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
         physics: const ClampingScrollPhysics(),
         child: Column(
           children: [
-            // ==================================================================
-            // 1. Header with Pure Image Background
-            // ==================================================================
             Stack(
               clipBehavior: Clip.none,
               children: [
@@ -213,9 +257,6 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                     ),
                   ),
                 ),
-                // ==================================================================
-                // 2. Profile Card (Overlapping Effect)
-                // ==================================================================
                 Padding(
                   padding: const EdgeInsets.only(top: 220, left: 24, right: 24),
                   child: _buildProfileSection(context),
@@ -269,18 +310,31 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
   }
 
   Widget _buildProfileSection(BuildContext context) {
-    return Consumer<AuthProvider>(
+    void gated(VoidCallback action) {
+      final auth = Provider.of<custom_auth.AuthProvider>(context, listen: false);
+      if (auth.user == null) {
+        showModalBottomSheet(
+          context: context,
+          isScrollControlled: true,
+          backgroundColor: Colors.transparent,
+          builder: (_) => const LoginPromptScreen(),
+        );
+        return;
+      }
+      action();
+    }
+
+    // ⭐️ 주입받을 Provider 타입을 custom_auth 영역으로 명시하여 충돌 해결
+    return Consumer<custom_auth.AuthProvider>(
       builder: (context, authProvider, _) {
         final user = authProvider.user;
         return Consumer<BadgeProvider>(
           builder: (context, badgeProvider, _) {
-            // ⭐️ Calculate Points
             final totalPoints = badgeProvider.achievements
                 .where((a) => a.isUnlocked)
                 .map((a) => a.points)
                 .fold(0, (sum, points) => sum + points);
 
-            // ⭐️ Determine Level & Color
             final currentLevel = _getCurrentLevel(totalPoints);
             final levelColor = _getLevelColor(currentLevel);
 
@@ -416,7 +470,6 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                   Divider(color: Colors.grey.shade100, height: 1),
                   const SizedBox(height: 20),
 
-                  // Traveler Type Row
                   GestureDetector(
                     onTap: () async {
                       await Navigator.push(
@@ -472,7 +525,6 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
 
                   const SizedBox(height: 16),
 
-                  // ⭐️ [UPDATE] Achievements Rank Row
                   GestureDetector(
                     onTap: () => Navigator.push(
                         context,
@@ -482,7 +534,6 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                       color: Colors.transparent,
                       child: Row(
                         children: [
-                          // Level Icon Image
                           Container(
                             width: 48,
                             height: 48,
@@ -495,7 +546,6 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                                 width: 1,
                               ),
                             ),
-                            // Using Asset Image instead of Icon
                             child: Image.asset(
                               'assets/badge_levels/${currentLevel.toLowerCase()}.png',
                               fit: BoxFit.contain,
@@ -517,7 +567,7 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                                   style: TextStyle(
                                       fontSize: 15,
                                       fontWeight: FontWeight.w700,
-                                      color: levelColor), // Apply level color
+                                      color: levelColor),
                                 ),
                               ],
                             ),
@@ -540,8 +590,114 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                     ),
                   ),
 
-                  // ⭐️ [추가] 구분선 + 3개 통계 카드
                   const SizedBox(height: 20),
+                  Divider(color: Colors.grey.shade100, height: 1),
+                  const SizedBox(height: 16),
+
+                  GestureDetector(
+                    onTap: () => gated(() async {
+                      await Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (_) => const DailyQuizScreen()),
+                      );
+                      _checkQuizSolvedToday();
+                    }),
+                    child: Container(
+                      color: Colors.transparent,
+                      child: Row(
+                        children: [
+                          Container(
+                            width: 48,
+                            height: 48,
+                            decoration: BoxDecoration(
+                              color: !_quizLoadingDone
+                                  ? Colors.grey.shade100
+                                  : _quizSolvedToday
+                                  ? const Color(0xFF10B981).withOpacity(0.1)
+                                  : const Color(0xFF6366F1).withOpacity(0.1),
+                              borderRadius: BorderRadius.circular(14),
+                            ),
+                            child: !_quizLoadingDone
+                                ? Center(
+                              child: SizedBox(
+                                width: 20,
+                                height: 20,
+                                child: CircularProgressIndicator(
+                                  strokeWidth: 2,
+                                  color: Colors.grey.shade400,
+                                ),
+                              ),
+                            )
+                                : Icon(
+                              _quizSolvedToday
+                                  ? Icons.check_circle_rounded
+                                  : Icons.help_rounded,
+                              color: _quizSolvedToday
+                                  ? const Color(0xFF10B981)
+                                  : const Color(0xFF6366F1),
+                              size: 24,
+                            ),
+                          ),
+                          const SizedBox(width: 16),
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Daily Quiz',
+                                  style: TextStyle(
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w600,
+                                    color: Colors.grey.shade500,
+                                  ),
+                                ),
+                                const SizedBox(height: 2),
+                                Text(
+                                  !_quizLoadingDone
+                                      ? '...'
+                                      : _quizSolvedToday
+                                      ? 'Completed today!'
+                                      : "Today's quiz is waiting!",
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w700,
+                                    color: !_quizLoadingDone
+                                        ? Colors.grey.shade400
+                                        : _quizSolvedToday
+                                        ? const Color(0xFF10B981)
+                                        : Colors.black87,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          if (_quizLoadingDone && !_quizSolvedToday)
+                            Container(
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 10, vertical: 5),
+                              decoration: BoxDecoration(
+                                color: const Color(0xFF6366F1).withOpacity(0.1),
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                              child: const Text(
+                                'Go!',
+                                style: TextStyle(
+                                  fontSize: 11,
+                                  fontWeight: FontWeight.w700,
+                                  color: Color(0xFF6366F1),
+                                ),
+                              ),
+                            )
+                          else
+                            Icon(Icons.arrow_forward_ios,
+                                size: 14, color: Colors.grey.shade300),
+                        ],
+                      ),
+                    ),
+                  ),
+
+                  const SizedBox(height: 16),
                   Divider(color: Colors.grey.shade100, height: 1),
                   const SizedBox(height: 16),
                   _buildTravelStatsSection(context),
@@ -554,20 +710,15 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
     );
   }
 
-  // ⭐️ [신규] Countries / Cities / Top Picks 통계 3행
   Widget _buildTravelStatsSection(BuildContext context) {
-    // Countries 테마 = 앱 primaryColor (mint/teal)
     final countriesColor = Theme.of(context).primaryColor;
-    // Cities 테마 = amber (cities_menu_screen과 동일)
     const citiesColor = Colors.amber;
 
     return Consumer3<CountryProvider, CityProvider, LandmarksProvider>(
       builder: (context, countryProvider, cityProvider, landmarksProvider, _) {
-        // --- Countries ---
         final visitedCountryCount = countryProvider.visitedCountries.length;
         final totalCountryCount = countryProvider.allCountries.length;
 
-        // --- Cities: GAWC 도시 기준 ---
         final gawcCities = cityProvider.gawcCities
             .where((c) => c.gawcTier != 'N/A')
             .toList();
@@ -576,7 +727,6 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
             .where((c) => cityProvider.visitedCities.contains(c.name))
             .length;
 
-        // --- Top Picks (global_rank > 0, 상위 250개) ---
         final topPicks = landmarksProvider.allLandmarks
             .where((l) => l.global_rank > 0)
             .toList()
@@ -588,7 +738,6 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
 
         return Column(
           children: [
-            // --- Countries Row ---
             _buildStatRow(
               context: context,
               icon: Icons.location_on,
@@ -607,8 +756,6 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
               ),
             ),
             const SizedBox(height: 14),
-
-            // --- Cities Row ---
             _buildStatRow(
               context: context,
               icon: Icons.location_city_rounded,
@@ -623,12 +770,10 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
               isRainbow: false,
               onButtonTap: () => Navigator.push(
                 context,
-                MaterialPageRoute(builder: (_) => const CitiesScreen()),
+                MaterialPageRoute(builder: (_) => const TopCitiesScreen()),
               ),
             ),
             const SizedBox(height: 14),
-
-            // --- Top Landmarks Row (무지개) ---
             _buildStatRow(
               context: context,
               icon: Icons.star_rounded,
@@ -650,7 +795,6 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
     );
   }
 
-  // ⭐️ [신규] 공통 통계 행 위젯
   Widget _buildStatRow({
     required BuildContext context,
     required IconData icon,
@@ -665,7 +809,6 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
   }) {
     return Row(
       children: [
-        // 아이콘
         isRainbow
             ? Container(
           width: 44,
@@ -703,8 +846,6 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
           child: Icon(icon, color: iconColor, size: 22),
         ),
         const SizedBox(width: 12),
-
-        // 텍스트 + 프로그레스바
         Expanded(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -731,7 +872,6 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                 ],
               ),
               const SizedBox(height: 6),
-              // 무지개일 경우 그라데이션 progress bar, 아닐 경우 단색
               isRainbow
                   ? _buildRainbowProgressBar(progressValue.clamp(0.0, 1.0))
                   : ClipRRect(
@@ -748,8 +888,6 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
           ),
         ),
         const SizedBox(width: 12),
-
-        // 원형 버튼
         GestureDetector(
           onTap: onButtonTap,
           child: Container(
@@ -797,7 +935,6 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
     );
   }
 
-  // 무지개 그라데이션 progress bar
   Widget _buildRainbowProgressBar(double value) {
     return LayoutBuilder(
       builder: (context, constraints) {
@@ -809,12 +946,10 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
             height: 5,
             child: Stack(
               children: [
-                // 배경
                 Container(
                   width: totalWidth,
                   color: Colors.grey.shade100,
                 ),
-                // 무지개 채움
                 if (value > 0)
                   Container(
                     width: filledWidth,
@@ -841,7 +976,7 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
 
   Widget _buildMainFeatures(BuildContext context) {
     void gated(VoidCallback action) {
-      final auth = Provider.of<AuthProvider>(context, listen: false);
+      final auth = Provider.of<custom_auth.AuthProvider>(context, listen: false);
       if (auth.user == null) {
         showModalBottomSheet(
           context: context,
@@ -872,8 +1007,8 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                     context,
                     'Discover',
                     '',
-                    Icons.search_rounded, // Recommendations Screen 아이콘
-                    recommendBlue, // Recommendations Screen의 블루 컬러로 변경
+                    Icons.search_rounded,
+                    recommendBlue,
                         () => gated(() => Navigator.push(context, MaterialPageRoute(builder: (_) => const RecommendationsScreen()))))),
             const SizedBox(width: 12),
             Expanded(
@@ -968,7 +1103,7 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
 
   Widget _buildDocumentsSection(BuildContext context) {
     void gated(VoidCallback action) {
-      final auth = Provider.of<AuthProvider>(context, listen: false);
+      final auth = Provider.of<custom_auth.AuthProvider>(context, listen: false);
       if (auth.user == null) {
         showModalBottomSheet(
           context: context,

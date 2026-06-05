@@ -1,5 +1,8 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:jidoapp/screens/daily_quiz_screen.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -28,6 +31,7 @@ import 'package:jidoapp/providers/economy_provider.dart';
 import 'package:jidoapp/providers/landmarks_provider.dart';
 import 'package:jidoapp/providers/badge_provider.dart';
 import 'package:jidoapp/providers/country_info_provider.dart';
+import 'package:jidoapp/providers/city_info_provider.dart';
 import 'package:jidoapp/providers/itinerary_provider.dart';
 import 'package:jidoapp/providers/passport_provider.dart';
 import 'package:jidoapp/providers/subregion_provider.dart';
@@ -79,6 +83,65 @@ void _setSystemUiMode() {
 
 final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
+// FCM 백그라운드 메시지 핸들러 (top-level 필수)
+@pragma('vm:entry-point')
+Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
+  // 백그라운드에서는 별도 처리 불필요 (시스템이 알림 표시)
+  debugPrint('📬 [FCM] 백그라운드 메시지: \${message.messageId}');
+}
+
+// FCM 토큰 Firestore 저장
+Future<void> _saveFcmToken() async {
+  try {
+    final messaging = FirebaseMessaging.instance;
+    final token = await messaging.getToken();
+    if (token == null) return;
+
+    final user = await FirebaseMessaging.instance.getToken();
+    debugPrint('📱 [FCM] 토큰: \$token');
+
+    // 로그인 유저 여부 무관하게 anonymous device token 저장
+    // uid는 auth 상태 변경 시점에 저장하므로 여기서는 토큰만 기록
+    await FirebaseFirestore.instance
+        .collection('fcm_tokens')
+        .doc(token)
+        .set({
+      'token': token,
+      'updatedAt': FieldValue.serverTimestamp(),
+      'platform': 'android',
+    }, SetOptions(merge: true));
+
+    // 토큰 갱신 리스너
+    messaging.onTokenRefresh.listen((newToken) async {
+      await FirebaseFirestore.instance
+          .collection('fcm_tokens')
+          .doc(newToken)
+          .set({
+        'token': newToken,
+        'updatedAt': FieldValue.serverTimestamp(),
+        'platform': 'android',
+      }, SetOptions(merge: true));
+    });
+  } catch (e) {
+    debugPrint('⚠️ [FCM] 토큰 저장 오류: \$e');
+  }
+}
+
+// 알림 탭 → DailyQuizScreen 딥링크
+void _handleNotificationTap(RemoteMessage message) {
+  final date = message.data['date'] as String?;
+  final context = navigatorKey.currentContext;
+  if (context == null) return;
+
+  debugPrint('🔔 [FCM] 알림 탭 → date: \$date');
+
+  Navigator.of(context).push(
+    MaterialPageRoute(
+      builder: (_) => DailyQuizScreen(initialDate: date),
+    ),
+  );
+}
+
 bool isOnboardingActive = true;
 
 Future<void> main() async {
@@ -93,6 +156,33 @@ Future<void> main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+
+  // FCM 초기화
+  FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
+  await FirebaseMessaging.instance.requestPermission(
+    alert: true,
+    badge: true,
+    sound: true,
+  );
+  await _saveFcmToken();
+
+  // 포그라운드 알림 표시 설정 (iOS)
+  await FirebaseMessaging.instance.setForegroundNotificationPresentationOptions(
+    alert: true,
+    badge: true,
+    sound: true,
+  );
+
+  // 앱 종료 상태에서 알림 탭으로 열린 경우
+  final initialMessage = await FirebaseMessaging.instance.getInitialMessage();
+  if (initialMessage != null) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _handleNotificationTap(initialMessage);
+    });
+  }
+
+  // 백그라운드 → 포그라운드로 전환 시 알림 탭
+  FirebaseMessaging.onMessageOpenedApp.listen(_handleNotificationTap);
 
   await MobileAds.instance.initialize();
 
@@ -253,6 +343,10 @@ class _AuthGateRootState extends State<AuthGateRoot> {
               ChangeNotifierProvider(create: (_) => EconomyProvider()),
               ChangeNotifierProvider(
                 create: (_) => CountryInfoProvider(),
+                lazy: false,
+              ),
+              ChangeNotifierProvider(
+                create: (_) => CityInfoProvider(),
                 lazy: false,
               ),
               ChangeNotifierProvider(create: (_) => PassportProvider()),

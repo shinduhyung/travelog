@@ -142,7 +142,7 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
   Widget _buildSingleFlag(String isoA2, {double width = 42, double height = 31}) {
     return Container(
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(6),
+        borderRadius: BorderRadius.circular(8),
         boxShadow: [
           BoxShadow(
             color: Colors.black.withOpacity(0.1),
@@ -152,7 +152,7 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
         ],
       ),
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(6),
+        borderRadius: BorderRadius.circular(8),
         child: SizedBox(
           width: width,
           height: height,
@@ -168,7 +168,7 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
       height: height,
       decoration: BoxDecoration(
         color: Colors.grey[100],
-        borderRadius: BorderRadius.circular(6),
+        borderRadius: BorderRadius.circular(8),
       ),
       child: Icon(
         Icons.public,
@@ -183,7 +183,7 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
       width: width,
       height: height,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(6),
+        borderRadius: BorderRadius.circular(8),
         boxShadow: [
           BoxShadow(
             color: Colors.black.withOpacity(0.1),
@@ -193,7 +193,7 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
         ],
       ),
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(6),
+        borderRadius: BorderRadius.circular(8),
         child: Image.asset(imagePath, fit: BoxFit.cover),
       ),
     );
@@ -216,7 +216,7 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
             left: i * overlap,
             child: Container(
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(6),
+                borderRadius: BorderRadius.circular(8),
                 border: Border.all(color: Colors.white, width: 1.5),
               ),
               child: _buildSingleFlag(validA2s[i], width: flagWidth, height: flagHeight),
@@ -267,6 +267,12 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
             .where((item) => item.global_rank > 0)
             .toList()
           ..sort((a, b) => a.global_rank.compareTo(b.global_rank));
+
+        final totalCount = topItems.length;
+        final visitedCount = topItems
+            .where((item) => landmarksProvider.visitedLandmarks.contains(item.name))
+            .length;
+        final progress = totalCount > 0 ? (visitedCount / totalCount).clamp(0.0, 1.0) : 0.0;
 
         return Scaffold(
           backgroundColor: const Color(0xFFF9FAFB),
@@ -375,6 +381,48 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
                               _isCompactList = !_isCompactList;
                             });
                           },
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
+                // 진행도 바 (전체 너비)
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(24, 12, 24, 8),
+                  child: Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text('Visited', style: TextStyle(fontSize: 11, fontWeight: FontWeight.w600, color: Colors.grey.shade500)),
+                          Text('$visitedCount / $totalCount', style: TextStyle(fontSize: 11, fontWeight: FontWeight.w700, color: Colors.grey.shade700)),
+                        ],
+                      ),
+                      const SizedBox(height: 6),
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(8),
+                        child: Stack(
+                          children: [
+                            Container(height: 16, color: Colors.grey.shade100),
+                            FractionallySizedBox(
+                              widthFactor: progress,
+                              child: Container(
+                                height: 16,
+                                decoration: const BoxDecoration(
+                                  gradient: LinearGradient(
+                                    begin: Alignment.centerLeft,
+                                    end: Alignment.centerRight,
+                                    colors: [
+                                      Color(0xFFEC4899),
+                                      Color(0xFF8B5CF6),
+                                      Color(0xFF0EA5E9),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                     ],
