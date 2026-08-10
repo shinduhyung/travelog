@@ -8,8 +8,6 @@ import 'package:jidoapp/screens/airline_stats_screen.dart';
 import 'package:jidoapp/providers/auth_provider.dart';
 import 'package:jidoapp/screens/login_prompt_screen.dart';
 import 'package:jidoapp/utils/premium_access_manager.dart';
-import 'package:jidoapp/services/subscription_service.dart';
-import 'package:jidoapp/widgets/subscription_sheet.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'dart:ui';
@@ -367,7 +365,6 @@ class _AirlinesListScreenState extends State<AirlinesListScreen>
 
   @override
   Widget build(BuildContext context) {
-    final isPremium = context.watch<SubscriptionService>().isPremium;
     final tabBar = TabBar(
       controller: _tabController,
       isScrollable: true,
@@ -494,16 +491,7 @@ class _AirlinesListScreenState extends State<AirlinesListScreen>
                         );
                         return;
                       }
-                      if (!PremiumAccessManager.hasAccess(context)) {
-                        SubscriptionSheet.show(context);
-                        return;
-                      }
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const AirlineStatsScreen(),
-                        ),
-                      );
+                      Navigator.push(context, MaterialPageRoute(builder: (_) => const AirlineStatsScreen()));
                     },
                     borderRadius: BorderRadius.circular(20),
                     child: Stack(
@@ -563,12 +551,6 @@ class _AirlinesListScreenState extends State<AirlinesListScreen>
                             ],
                           ),
                         ),
-                        if (!isPremium)
-                          const Positioned(
-                            top: 8,
-                            right: 10,
-                            child: Icon(Icons.lock_rounded, size: 12, color: Colors.white54),
-                          ),
                       ],
                     ),
                   ),

@@ -1000,99 +1000,58 @@ class CountryProvider with ChangeNotifier {
         debugPrint('🌍 CountryProvider _initializeData START');
       }
 
-      final colorJsonStr =
-      await rootBundle.loadString('assets/country_color.json');
-      final geoJsonStr = await rootBundle.loadString('assets/custom.geo.json');
-      final areaJsonStr = await rootBundle.loadString('assets/area_data.json');
-      final climateJsonStr =
-      await rootBundle.loadString('assets/climate_data.json');
-      final geoDataStr =
-      await rootBundle.loadString('assets/geography_data.json');
-      final latDataStr =
-      await rootBundle.loadString('assets/latitude_data.json');
-      final populationJsonStr = await rootBundle
-          .loadString('assets/updated_country_populations.json');
-      final fertilityJsonStr =
-      await rootBundle.loadString('assets/fertility_rate.json');
-      final homicideJsonStr =
-      await rootBundle.loadString('assets/homicide_rate.json');
-      final lifeExpectancyJsonStr =
-      await rootBundle.loadString('assets/life_expectancy.json');
-      final immigrantJsonStr =
-      await rootBundle.loadString('assets/immigration_rate.json');
-      final hdiJsonStr = await rootBundle.loadString('assets/hdi_data.json');
-      final obesityJsonStr =
-      await rootBundle.loadString('assets/obesity_rate.json');
-      final powerIndexJsonStr =
-      await rootBundle.loadString('assets/power_index.json');
-      final militaryExpenditureJsonStr =
-      await rootBundle.loadString('assets/military_expenditure.json');
-      final armedForcesJsonStr =
-      await rootBundle.loadString('assets/armed_forces.json');
-      final nukesJsonStr = await rootBundle.loadString('assets/nukes.json');
-      final aircraftCarriersJsonStr =
-      await rootBundle.loadString('assets/aircraft_carries.json');
-      final navyShipsJsonStr =
-      await rootBundle.loadString('assets/navy_ships.json');
-      final aircraftsJsonStr =
-      await rootBundle.loadString('assets/aircrafts.json');
-      final tanksJsonStr = await rootBundle.loadString('assets/tanks.json');
-      final iqJsonStr = await rootBundle.loadString('assets/iq.json');
-      final heightJsonStr = await rootBundle.loadString('assets/height.json');
-      final novelJsonStr = await rootBundle.loadString('assets/novel.json');
-      final democracyJsonStr =
-      await rootBundle.loadString('assets/democracy.json');
-      final olympicsJsonStr =
-      await rootBundle.loadString('assets/olympics.json');
-      final healthJsonStr = await rootBundle.loadString('assets/health.json');
-      final baldJsonStr = await rootBundle.loadString('assets/bald.json');
-      final technologyJsonStr =
-      await rootBundle.loadString('assets/technology.json');
-      final averageAgeJsonStr =
-      await rootBundle.loadString('assets/average_age.json');
-      final religionPopJsonStr =
-      await rootBundle.loadString('assets/religion_population.json');
-      final casualtiesJsonStr =
-      await rootBundle.loadString('assets/casualties.json');
-      final popularityJsonStr =
-      await rootBundle.loadString('assets/country_popularity.json');
+      // 30개 asset 파일을 병렬로 로드 (순차 await → Future.wait)
+      // Map 키로 관리해서 인덱스 매핑 실수 방지
+      const assetKeys = <String, String>{
+        'colorJson':               'assets/country_color.json',
+        'geoJsonMain':             'assets/custom.geo.json',
+        'areaJson':                'assets/area_data.json',
+        'climateJson':             'assets/climate_data.json',
+        'geographyJson':           'assets/geography_data.json',
+        'latitudeJson':            'assets/latitude_data.json',
+        'populationJson':          'assets/updated_country_populations.json',
+        'fertilityJson':           'assets/fertility_rate.json',
+        'homicideJson':            'assets/homicide_rate.json',
+        'lifeExpectancyJson':      'assets/life_expectancy.json',
+        'immigrantJson':           'assets/immigration_rate.json',
+        'hdiJson':                 'assets/hdi_data.json',
+        'obesityJson':             'assets/obesity_rate.json',
+        'powerIndexJson':          'assets/power_index.json',
+        'militaryExpenditureJson': 'assets/military_expenditure.json',
+        'armedForcesJson':         'assets/armed_forces.json',
+        'nukesJson':               'assets/nukes.json',
+        'aircraftCarriersJson':    'assets/aircraft_carries.json',
+        'navyShipsJson':           'assets/navy_ships.json',
+        'aircraftsJson':           'assets/aircrafts.json',
+        'tanksJson':               'assets/tanks.json',
+        'iqJson':                  'assets/iq.json',
+        'heightJson':              'assets/height.json',
+        'novelJson':               'assets/novel.json',
+        'democracyJson':           'assets/democracy.json',
+        'olympicsJson':            'assets/olympics.json',
+        'healthJson':              'assets/health.json',
+        'baldJson':                'assets/bald.json',
+        'technologyJson':          'assets/technology.json',
+        'averageAgeJson':          'assets/average_age.json',
+        'religionPopJson':         'assets/religion_population.json',
+        'casualtiesJson':          'assets/casualties.json',
+        'popularityJson':          'assets/country_popularity.json',
+      };
+
+      final keys = assetKeys.keys.toList();
+      final values = await Future.wait(
+        assetKeys.values.map((path) => rootBundle.loadString(path)),
+      );
+      final Map<String, String> jsons = {
+        for (int i = 0; i < keys.length; i++) keys[i]: values[i],
+      };
+
+      if (kDebugMode) {
+        debugPrint('🌍 CountryProvider assets loaded (${jsons.length} files)');
+      }
 
       _rawCountries = await compute(_parseAndProcessCountries, {
-        'jsons': {
-          'geoJsonMain': geoJsonStr,
-          'areaJson': areaJsonStr,
-          'climateJson': climateJsonStr,
-          'geographyJson': geoDataStr,
-          'latitudeJson': latDataStr,
-          'populationJson': populationJsonStr,
-          'fertilityJson': fertilityJsonStr,
-          'homicideJson': homicideJsonStr,
-          'lifeExpectancyJson': lifeExpectancyJsonStr,
-          'immigrantJson': immigrantJsonStr,
-          'hdiJson': hdiJsonStr,
-          'obesityJson': obesityJsonStr,
-          'powerIndexJson': powerIndexJsonStr,
-          'militaryExpenditureJson': militaryExpenditureJsonStr,
-          'armedForcesJson': armedForcesJsonStr,
-          'nukesJson': nukesJsonStr,
-          'aircraftCarriersJson': aircraftCarriersJsonStr,
-          'navyShipsJson': navyShipsJsonStr,
-          'aircraftsJson': aircraftsJsonStr,
-          'tanksJson': tanksJsonStr,
-          'iqJson': iqJsonStr,
-          'heightJson': heightJsonStr,
-          'novelJson': novelJsonStr,
-          'democracyJson': democracyJsonStr,
-          'olympicsJson': olympicsJsonStr,
-          'colorJson': colorJsonStr,
-          'healthJson': healthJsonStr,
-          'baldJson': baldJsonStr,
-          'technologyJson': technologyJsonStr,
-          'averageAgeJson': averageAgeJsonStr,
-          'religionPopJson': religionPopJsonStr,
-          'casualtiesJson': casualtiesJsonStr,
-          'popularityJson': popularityJsonStr,
-        },
+        'jsons': jsons,
       });
 
       await _loadSettings();

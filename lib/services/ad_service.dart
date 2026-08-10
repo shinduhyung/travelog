@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
+import 'package:facebook_app_events/facebook_app_events.dart';
 import 'package:jidoapp/services/subscription_service.dart';
 import 'package:jidoapp/widgets/subscription_sheet.dart';
 import 'package:jidoapp/main.dart' show navigatorKey;
@@ -16,6 +17,8 @@ class AdService {
 
   static final AdService instance = AdService._();
 
+  final FacebookAppEvents _facebookAppEvents = FacebookAppEvents();
+
   InterstitialAd? _interstitialAd;
 
   int _touchCount = 0;
@@ -23,18 +26,31 @@ class AdService {
   DateTime? _lastShownAt;
   Timer? _timerAdTimer;
 
-  int _totalAdsShown = 0; // 누적 광고 표시 횟수 (SharedPreferences 영구 저장)
-  static const String _prefKeyTotalAds = 'total_ads_shown';
-
   bool _isTutorialActive = false;
   bool _isOnboardingActive = false;
   bool _isCountrySelectionActive = false;
+  bool _isUiOverlayActive = false;  // 로그인/구독/프로필 시트 표시 중
   bool _isPremium = false;
 
+  // ─── Interstitial 기준 (기존 유지) ───────────────────────────────────────
   static const int _showEveryTouches = 30;
   static const int _timerIntervalMinutes = 4;
   static const int _cooldownSeconds = 120;
-  static const int _earlyUserThreshold = 10; // 처음 10회까지 완화 적용
+
+  // 초기 유저 판별 기준 (광고 10회 노출 전까지는 초기 유저로 간주)
+  static const int _earlyUserThreshold = 10;
+  int _totalAdsShown = 0;
+
+  // 초기 유저 여부
+  bool get _isEarlyUser => _totalAdsShown < _earlyUserThreshold;
+
+  // 초기 유저는 60회, 일반 유저는 30회마다 광고
+  int get _effectiveTouchThreshold =>
+      _isEarlyUser ? _showEveryTouches * 2 : _showEveryTouches;
+
+  // 초기 유저는 8분, 일반 유저는 4분 주기
+  int get _effectiveTimerMinutes =>
+      _isEarlyUser ? _timerIntervalMinutes * 2 : _timerIntervalMinutes;
 
   // Show subscription sheet every 3 ad dismissals
   static const int _subscriptionPromptEvery = 3;
@@ -68,7 +84,9 @@ class AdService {
     _isTutorialActive = false;
     _touchCount = 0;
     _lastShownAt = null;
-    if (!_isPremium) _startTimerAd();
+    if (!_isPremium && !_isOnboardingActive && !_isCountrySelectionActive && !_isUiOverlayActive) {
+      _startTimerAd();
+    }
   }
 
   void setOnboardingActive() {
@@ -99,36 +117,29 @@ class AdService {
     debugPrint('[AdService] country selection ended - ads resumed');
   }
 
+  /// 로그인/구독/프로필 화면 표시 시 호출 — 터치·타이머 광고 일시정지
+  void setUiOverlayActive() {
+    _isUiOverlayActive = true;
+    _timerAdTimer?.cancel();
+    debugPrint('[AdService] UI overlay started - ads paused');
+  }
+
+  void clearUiOverlayActive() {
+    _isUiOverlayActive = false;
+    if (!_isPremium && !_isTutorialActive && !_isOnboardingActive && !_isCountrySelectionActive) {
+      _startTimerAd();
+    }
+    debugPrint('[AdService] UI overlay ended - ads resumed');
+  }
+
   void initialize() {
     _isPremium = SubscriptionService.instance.isPremium;
-    _loadTotalAdsShown();
     if (!_isPremium) {
       loadInterstitialAd();
     } else {
       debugPrint('[AdService] premium user - skipping ad load');
     }
   }
-
-  Future<void> _loadTotalAdsShown() async {
-    final prefs = await SharedPreferences.getInstance();
-    _totalAdsShown = prefs.getInt(_prefKeyTotalAds) ?? 0;
-    debugPrint('[AdService] totalAdsShown loaded: $_totalAdsShown');
-  }
-
-  Future<void> _incrementTotalAdsShown() async {
-    _totalAdsShown++;
-    final prefs = await SharedPreferences.getInstance();
-    await prefs.setInt(_prefKeyTotalAds, _totalAdsShown);
-  }
-
-  // 현재 유저가 초기 유저인지 여부
-  bool get _isEarlyUser => _totalAdsShown < _earlyUserThreshold;
-
-  int get _effectiveTouchThreshold =>
-      _isEarlyUser ? _showEveryTouches * 2 : _showEveryTouches;
-
-  int get _effectiveTimerMinutes =>
-      _isEarlyUser ? _timerIntervalMinutes * 2 : _timerIntervalMinutes;
 
   void _startTimerAd() {
     _timerAdTimer?.cancel();
@@ -137,6 +148,8 @@ class AdService {
           (_) => _showAdIfReady(),
     );
   }
+
+  // ─── Interstitial ────────────────────────────────────────────────────────
 
   void loadInterstitialAd() {
     if (_isPremium) return;
@@ -148,6 +161,19 @@ class AdService {
       adLoadCallback: InterstitialAdLoadCallback(
         onAdLoaded: (InterstitialAd ad) {
           _interstitialAd = ad;
+
+          ad.onPaidEvent = (Ad ad, double valueMicros, PrecisionType precision, String currencyCode) {
+            final double revenue = valueMicros / 1000000.0;
+            _facebookAppEvents.logEvent(
+              name: 'AdImpression',
+              parameters: {
+                '_valueToSum': revenue,
+                'fb_currency': currencyCode,
+                'ad_platform': 'admob',
+              },
+            );
+          };
+
           _interstitialAd!.fullScreenContentCallback =
               FullScreenContentCallback(
                 onAdDismissedFullScreenContent: (InterstitialAd ad) {
@@ -155,7 +181,6 @@ class AdService {
                   _interstitialAd = null;
                   loadInterstitialAd();
 
-                  // Show subscription sheet every N dismissals
                   _dismissCount++;
                   if (_dismissCount % _subscriptionPromptEvery == 0) {
                     final ctx = navigatorKey.currentContext;
@@ -176,7 +201,7 @@ class AdService {
         },
         onAdFailedToLoad: (LoadAdError error) {
           _interstitialAd = null;
-          debugPrint('[AdService] ad failed to load: $error');
+          debugPrint('[AdService] interstitial failed to load: $error');
         },
       ),
     );
@@ -187,6 +212,7 @@ class AdService {
     if (_isTutorialActive) return;
     if (_isOnboardingActive) return;
     if (_isCountrySelectionActive) return;
+    if (_isUiOverlayActive) return;
 
     final now = DateTime.now();
     final bool cooldownOk = _lastShownAt == null ||
@@ -202,15 +228,7 @@ class AdService {
     _lastShownAt = now;
     _interstitialAd!.show();
     _interstitialAd = null;
-    _incrementTotalAdsShown().then((_) {
-      // 10회 도달 시 타이머 간격을 정상으로 재시작
-      if (_totalAdsShown == _earlyUserThreshold) {
-        debugPrint('[AdService] early user period ended - resuming normal ad frequency');
-        if (!_isPremium && !_isTutorialActive && !_isOnboardingActive && !_isCountrySelectionActive) {
-          _startTimerAd();
-        }
-      }
-    });
+    _totalAdsShown++;
   }
 
   void recordGlobalTouch() {
@@ -218,10 +236,12 @@ class AdService {
     if (_isTutorialActive) return;
     if (_isOnboardingActive) return;
     if (_isCountrySelectionActive) return;
+    if (_isUiOverlayActive) return;
 
     _touchCount++;
     if (_touchCount % _effectiveTouchThreshold == 0) {
       _showAdIfReady();
     }
   }
+
 }

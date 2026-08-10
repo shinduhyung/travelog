@@ -5,6 +5,7 @@ import 'package:flutter/foundation.dart';
 import 'package:in_app_purchase/in_app_purchase.dart';
 import 'package:in_app_purchase_android/in_app_purchase_android.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:facebook_app_events/facebook_app_events.dart';
 
 class SubscriptionService extends ChangeNotifier {
   SubscriptionService._();
@@ -13,24 +14,31 @@ class SubscriptionService extends ChangeNotifier {
 
   static const String kProductId = 'travelog_premium_yearly';
   static const String _prefKeyIsPremium = 'is_premium';
+  static const String _prefKeyHasEverBeenPremium = 'has_ever_been_premium';
+
+  static const bool _debugForceNonPremium = false;
 
   final InAppPurchase _iap = InAppPurchase.instance;
+  final FacebookAppEvents _facebookAppEvents = FacebookAppEvents();
   StreamSubscription<List<PurchaseDetails>>? _purchaseSubscription;
 
   bool _isPremium = false;
+  bool _hasEverBeenPremium = false;
   bool _isLoading = false;
   bool _isAvailable = false;
 
   ProductDetails? _productDetails;
 
   bool get isPremium => _isPremium;
+  bool get hasEverBeenPremium => _hasEverBeenPremium;
   bool get isLoading => _isLoading;
   bool get isAvailable => _isAvailable;
   ProductDetails? get productDetails => _productDetails;
 
   Future<void> initialize() async {
     final prefs = await SharedPreferences.getInstance();
-    _isPremium = prefs.getBool(_prefKeyIsPremium) ?? false;
+    _isPremium = _debugForceNonPremium ? false : (prefs.getBool(_prefKeyIsPremium) ?? false);
+    _hasEverBeenPremium = _debugForceNonPremium ? false : (prefs.getBool(_prefKeyHasEverBeenPremium) ?? false);
     notifyListeners();
 
     _purchaseSubscription = _iap.purchaseStream.listen(
@@ -55,7 +63,7 @@ class SubscriptionService extends ChangeNotifier {
       debugPrint('[SubscriptionService] product not found: ${response.notFoundIDs}');
     }
 
-    await _iap.restorePurchases();
+    if (!_debugForceNonPremium) await _iap.restorePurchases();
   }
 
   void _onPurchaseUpdate(List<PurchaseDetails> purchases) {
@@ -65,8 +73,12 @@ class SubscriptionService extends ChangeNotifier {
           _setLoading(true);
           break;
         case PurchaseStatus.purchased:
-        case PurchaseStatus.restored:
           _handleSuccessfulPurchase(purchase);
+          break;
+        case PurchaseStatus.restored:
+        // 복원(restored)은 Firestore에 기록하지 않고 프리미엄 상태만 활성화
+          _setPremium(true);
+          _setLoading(false);
           break;
         case PurchaseStatus.error:
           _setLoading(false);
@@ -84,11 +96,23 @@ class SubscriptionService extends ChangeNotifier {
   }
 
   Future<void> _handleSuccessfulPurchase(PurchaseDetails purchase) async {
+    // ProductDetails에서 가격 및 통화 정보 추출
+    double price = _productDetails?.rawPrice ?? 0.0;
+    String currencyCode = _productDetails?.currencyCode ?? 'USD';
+
+    // 페이스북으로 구매(Purchase) 이벤트와 실제 가격 전송
+    _facebookAppEvents.logPurchase(
+      amount: price,
+      currency: currencyCode,
+    );
+
     if (Platform.isAndroid) {
       final androidDetails = purchase as GooglePlayPurchaseDetails?;
       if (androidDetails != null) {
         final orderId = androidDetails.billingClientPurchase.orderId;
         debugPrint('[SubscriptionService] Android orderId: $orderId');
+
+        int priceAmountMicros = (price * 1000000).round();
 
         // Firestore에 주문 저장 → 대시보드에서 수익 집계용
         try {
@@ -100,7 +124,9 @@ class SubscriptionService extends ChangeNotifier {
             'productId': purchase.productID,
             'purchaseTime': FieldValue.serverTimestamp(),
             'platform': 'android',
-            'status': purchase.status.name,
+            'status': 'purchased',
+            'priceAmountMicros': priceAmountMicros,
+            'priceCurrencyCode': currencyCode,
           }, SetOptions(merge: true));
         } catch (e) {
           debugPrint('[SubscriptionService] Firestore save error: $e');
@@ -147,6 +173,13 @@ class SubscriptionService extends ChangeNotifier {
     _isPremium = value;
     final prefs = await SharedPreferences.getInstance();
     await prefs.setBool(_prefKeyIsPremium, value);
+
+    // 프리미엄이 한 번이라도 활성화되면 이력을 남김
+    if (value) {
+      _hasEverBeenPremium = true;
+      await prefs.setBool(_prefKeyHasEverBeenPremium, true);
+    }
+
     notifyListeners();
 
     if (value) {

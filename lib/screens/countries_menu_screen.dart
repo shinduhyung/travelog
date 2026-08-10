@@ -19,12 +19,11 @@ import 'package:jidoapp/screens/specials_stats_screen.dart';
 import 'package:jidoapp/providers/auth_provider.dart';
 import 'package:jidoapp/screens/login_prompt_screen.dart';
 import 'package:jidoapp/utils/premium_access_manager.dart';
-import 'package:jidoapp/services/subscription_service.dart';
-import 'package:jidoapp/widgets/subscription_sheet.dart';
 
 import 'package:jidoapp/screens/countries_share.dart';
 import 'package:screenshot/screenshot.dart';
 import 'package:jidoapp/services/home_widget_service.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class CountriesMenuScreen extends StatefulWidget {
   const CountriesMenuScreen({super.key});
@@ -57,6 +56,41 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
         _captureAndUpdateWidget();
       });
     });
+  }
+
+  /// stats 화면 진입 공통 처리
+  Future<void> _handleStatNavigation(BuildContext context, CountryProvider provider) async {
+    final index = _selectedStatIndex;
+    final isPremiumTier = index >= 3;
+
+    if (isPremiumTier) {
+      final authProvider = Provider.of<AuthProvider>(context, listen: false);
+      if (authProvider.user == null) {
+        if (!mounted) return;
+        showModalBottomSheet(
+          context: context,
+          isScrollControlled: true,
+          backgroundColor: Colors.transparent,
+          builder: (_) => const LoginPromptScreen(),
+        );
+        return;
+      }
+    }
+
+    if (!mounted) return;
+    _navigateToStat(context, index);
+  }
+
+
+  /// 실제 stat 화면으로 이동
+  void _navigateToStat(BuildContext context, int index) {
+    if (!mounted) return;
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (_) => statisticsItems[index]['screen'],
+      ),
+    );
   }
 
   Future<void> _captureAndUpdateWidget() async {
@@ -250,9 +284,6 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
     final isSelected = _selectedStatIndex == index;
     final primaryColor = Theme.of(context).primaryColor;
 
-    final isPremiumTier = index >= 3;
-    final isPremium = context.watch<SubscriptionService>().isPremium;
-
     return GestureDetector(
       onTap: () => setState(() => _selectedStatIndex = index),
       child: Stack(
@@ -275,24 +306,6 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
               size: 22,
             ),
           ),
-          if (isPremiumTier && !isPremium)
-            Positioned(
-              top: -3,
-              right: -3,
-              child: Container(
-                width: 16,
-                height: 16,
-                decoration: BoxDecoration(
-                  color: isSelected ? Colors.white : primaryColor,
-                  shape: BoxShape.circle,
-                ),
-                child: Icon(
-                  Icons.lock_rounded,
-                  size: 9,
-                  color: isSelected ? primaryColor : Colors.white,
-                ),
-              ),
-            ),
         ],
       ),
     );
@@ -739,36 +752,7 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
                                       ),
                                       child: IconButton(
                                         icon: const Icon(Icons.arrow_forward_rounded, color: Colors.white, size: 20),
-                                        onPressed: () {
-                                          final isFree = _selectedStatIndex <= 2;
-
-                                          if (!isFree) {
-                                            final authProvider = Provider.of<AuthProvider>(context, listen: false);
-                                            if (authProvider.user == null) {
-                                              showModalBottomSheet(
-                                                context: context,
-                                                isScrollControlled: true,
-                                                backgroundColor: Colors.transparent,
-                                                builder: (_) => const LoginPromptScreen(),
-                                              );
-                                              return;
-                                            }
-                                            if (!PremiumAccessManager.hasAccess(context)) {
-                                              SubscriptionSheet.show(
-                                                context,
-                                                onShareTap: () => _handleShare(context, provider),
-                                              );
-                                              return;
-                                            }
-                                          }
-
-                                          Navigator.push(
-                                            context,
-                                            MaterialPageRoute(
-                                              builder: (_) => statisticsItems[_selectedStatIndex]['screen'],
-                                            ),
-                                          );
-                                        },
+                                        onPressed: () => _handleStatNavigation(context, provider),
                                       ),
                                     ),
                                   ],

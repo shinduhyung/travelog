@@ -11,8 +11,6 @@ import 'package:jidoapp/screens/airport_stats_screen.dart';
 import 'package:jidoapp/providers/auth_provider.dart';
 import 'package:jidoapp/screens/login_prompt_screen.dart';
 import 'package:jidoapp/utils/premium_access_manager.dart';
-import 'package:jidoapp/services/subscription_service.dart';
-import 'package:jidoapp/widgets/subscription_sheet.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
@@ -620,8 +618,48 @@ class _AirportsScreenState extends State<AirportsScreen> {
                   const Text('My Hub'),
                   Checkbox(
                     value: isHub,
-                    onChanged: (bool? value) {
-                      provider.updateHubStatus(airport.iataCode, value ?? false);
+                    onChanged: (bool? value) async {
+                      final wantsToEnable = value ?? false;
+
+                      if (wantsToEnable) {
+                        // 이미 다른 공항이 Hub로 지정되어 있는 경우 확인
+                        final currentHubIata = provider.currentHubIata;
+
+                        if (currentHubIata != null && currentHubIata != airport.iataCode) {
+                          String currentHubName = currentHubIata;
+                          try {
+                            currentHubName = provider.allAirports
+                                .firstWhere((a) => a.iataCode == currentHubIata)
+                                .name;
+                          } catch (_) {}
+
+                          final confirmed = await showDialog<bool>(
+                            context: context,
+                            builder: (dialogContext) {
+                              return AlertDialog(
+                                title: const Text('Change Hub Airport'),
+                                content: Text(
+                                  'Currently "$currentHubName" is set as your Hub. Do you want to change it to "${airport.name}"?',
+                                ),
+                                actions: [
+                                  TextButton(
+                                    onPressed: () => Navigator.of(dialogContext).pop(false),
+                                    child: const Text('No'),
+                                  ),
+                                  TextButton(
+                                    onPressed: () => Navigator.of(dialogContext).pop(true),
+                                    child: const Text('Yes'),
+                                  ),
+                                ],
+                              );
+                            },
+                          );
+
+                          if (confirmed != true) return;
+                        }
+                      }
+
+                      provider.updateHubStatus(airport.iataCode, wantsToEnable);
                     },
                   ),
                 ],
@@ -1352,7 +1390,6 @@ class _AirportsScreenState extends State<AirportsScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final isPremium = context.watch<SubscriptionService>().isPremium;
     return Scaffold(
       backgroundColor: Colors.grey[50],
       body: Consumer2<AirportProvider, CountryProvider>(
@@ -1451,16 +1488,7 @@ class _AirportsScreenState extends State<AirportsScreen> {
                           );
                           return;
                         }
-                        if (!PremiumAccessManager.hasAccess(context)) {
-                          SubscriptionSheet.show(context);
-                          return;
-                        }
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const AirportStatsScreen(),
-                          ),
-                        );
+                        Navigator.push(context, MaterialPageRoute(builder: (_) => const AirportStatsScreen()));
                       },
                       borderRadius: BorderRadius.circular(20),
                       child: Stack(
@@ -1513,12 +1541,6 @@ class _AirportsScreenState extends State<AirportsScreen> {
                               ],
                             ),
                           ),
-                          if (!isPremium)
-                            const Positioned(
-                              top: 8,
-                              right: 10,
-                              child: Icon(Icons.lock_rounded, size: 12, color: Colors.white54),
-                            ),
                         ],
                       ),
                     ),

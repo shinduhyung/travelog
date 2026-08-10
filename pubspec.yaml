@@ -2,7 +2,7 @@ name: jidoapp
 description: "A new Flutter project."
 publish_to: 'none'
 
-version: 1.0.1+56
+version: 1.0.1+64
 
 environment:
   sdk: ^3.8.0
@@ -86,6 +86,7 @@ dependencies:
   in_app_review: ^2.0.9
   # Facebook
   facebook_app_events: ^0.19.0
+  url_launcher: ^6.3.0
 
 dev_dependencies:
   flutter_test:
@@ -231,4 +232,6 @@ flutter:
     - assets/countries_light.json
     - assets/city_info.json
     - assets/city_rank.json
+    - assets/top_city_hub_airport.json
+    - assets/
     - functions/quizzes.json

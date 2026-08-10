@@ -10,6 +10,7 @@ import 'package:latlong2/latlong.dart';
 import 'package:country_flags/country_flags.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'package:jidoapp/services/ad_service.dart';
 import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/providers/landmarks_provider.dart';
 import 'package:jidoapp/providers/city_provider.dart';
@@ -104,6 +105,7 @@ class _OnboardingTutorialScreenState extends State<OnboardingTutorialScreen>
   @override
   void initState() {
     super.initState();
+    AdService.instance.setTutorialActive();
     _fadeCtrl = AnimationController(vsync: this, duration: const Duration(milliseconds: 500));
     _fadeAnim = CurvedAnimation(parent: _fadeCtrl, curve: Curves.easeOut);
     _slideCtrl = AnimationController(vsync: this, duration: const Duration(milliseconds: 450));
@@ -115,6 +117,7 @@ class _OnboardingTutorialScreenState extends State<OnboardingTutorialScreen>
 
   @override
   void dispose() {
+    AdService.instance.clearTutorialActive();
     _fadeCtrl.dispose();
     _slideCtrl.dispose();
     super.dispose();

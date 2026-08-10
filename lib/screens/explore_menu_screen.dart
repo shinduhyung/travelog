@@ -18,7 +18,6 @@ import 'package:jidoapp/screens/activities_menu_screen.dart';
 import 'package:jidoapp/providers/auth_provider.dart';
 import 'package:jidoapp/screens/login_prompt_screen.dart';
 import 'package:jidoapp/utils/premium_access_manager.dart';
-import 'package:jidoapp/widgets/subscription_sheet.dart';
 import 'package:jidoapp/services/subscription_service.dart';
 
 class ExploreMenuScreen extends StatelessWidget {
@@ -43,13 +42,7 @@ class ExploreMenuScreen extends StatelessWidget {
     }
 
     void premiumGated(VoidCallback action) {
-      gated(() {
-        if (!PremiumAccessManager.hasAccess(context)) {
-          SubscriptionSheet.show(context);
-          return;
-        }
-        action();
-      });
+      gated(action);
     }
 
     return Scaffold(
@@ -364,7 +357,15 @@ class ExploreMenuScreen extends StatelessWidget {
             Positioned(
               top: 6,
               right: 8,
-              child: Icon(Icons.lock_rounded, size: 11, color: color.withOpacity(0.7)),
+              child: Container(
+                width: 18,
+                height: 18,
+                decoration: BoxDecoration(
+                  color: color.withOpacity(0.15),
+                  shape: BoxShape.circle,
+                ),
+                child: Icon(Icons.play_arrow_rounded, size: 11, color: color),
+              ),
             ),
         ],
       ),
@@ -580,7 +581,15 @@ class ExploreMenuScreen extends StatelessWidget {
               Positioned(
                 top: 6,
                 right: 8,
-                child: Icon(Icons.lock_rounded, size: 11, color: color.withOpacity(0.7)),
+                child: Container(
+                  width: 18,
+                  height: 18,
+                  decoration: BoxDecoration(
+                    color: color.withOpacity(0.15),
+                    shape: BoxShape.circle,
+                  ),
+                  child: Icon(Icons.play_arrow_rounded, size: 11, color: color),
+                ),
               ),
           ],
         ),

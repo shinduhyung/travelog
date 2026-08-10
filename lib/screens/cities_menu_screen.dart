@@ -25,11 +25,10 @@ import 'package:screenshot/screenshot.dart';
 // [추가] 로딩 로고 위젯 임포트
 
 import 'package:jidoapp/services/home_widget_service.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:jidoapp/providers/auth_provider.dart';
 import 'package:jidoapp/screens/login_prompt_screen.dart';
 import 'package:jidoapp/utils/premium_access_manager.dart';
-import 'package:jidoapp/services/subscription_service.dart';
-import 'package:jidoapp/widgets/subscription_sheet.dart';
 
 class CitiesMenuScreen extends StatefulWidget {
   const CitiesMenuScreen({super.key});
@@ -46,10 +45,37 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
   bool _isSharing = false;
   bool _widgetUpdated = false;
 
+  // 화면별 최초 1회 열람 여부 캐시 (prefs 키: stats_viewed_cities_<index>)
   @override
   void initState() {
     super.initState();
     Future.delayed(const Duration(milliseconds: 3000), _captureAndUpdateWidget);
+  }
+
+  /// stats 화면 진입 공통 처리
+  Future<void> _handleStatNavigation(BuildContext context) async {
+    final index = _selectedStatIndex;
+    final isPremiumTier = index >= 3;
+
+    if (isPremiumTier) {
+      final authProvider = Provider.of<AuthProvider>(context, listen: false);
+      if (authProvider.user == null) {
+        if (!mounted) return;
+        showModalBottomSheet(
+          context: context,
+          isScrollControlled: true,
+          backgroundColor: Colors.transparent,
+          builder: (_) => const LoginPromptScreen(),
+        );
+        return;
+      }
+    }
+
+    if (!mounted) return;
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (_) => statisticsItems[index]['screen']),
+    );
   }
 
   final List<Map<String, dynamic>> statisticsItems = [
@@ -388,9 +414,6 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
     final isSelected = _selectedStatIndex == index;
     final primaryColor = Colors.amber;
 
-    final isPremiumTier = index >= 3;
-    final isPremium = context.watch<SubscriptionService>().isPremium;
-
     return GestureDetector(
       onTap: () => setState(() => _selectedStatIndex = index),
       child: Stack(
@@ -425,24 +448,6 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
               size: 22,
             ),
           ),
-          if (isPremiumTier && !isPremium)
-            Positioned(
-              top: -3,
-              right: -3,
-              child: Container(
-                width: 16,
-                height: 16,
-                decoration: BoxDecoration(
-                  color: isSelected ? Colors.white : primaryColor,
-                  shape: BoxShape.circle,
-                ),
-                child: Icon(
-                  Icons.lock_rounded,
-                  size: 9,
-                  color: isSelected ? primaryColor : Colors.white,
-                ),
-              ),
-            ),
         ],
       ),
     );
@@ -1156,31 +1161,7 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
                                             color: Colors.white,
                                             size: 20,
                                           ),
-                                          onPressed: () {
-                                            // index 0 (Top Cities), 1 (General), 2 (Culture) 은 무료
-                                            if (_selectedStatIndex > 2) {
-                                              final authProvider = Provider.of<AuthProvider>(context, listen: false);
-                                              if (authProvider.user == null) {
-                                                showModalBottomSheet(
-                                                  context: context,
-                                                  isScrollControlled: true,
-                                                  backgroundColor: Colors.transparent,
-                                                  builder: (_) => const LoginPromptScreen(),
-                                                );
-                                                return;
-                                              }
-                                              if (!PremiumAccessManager.hasAccess(context)) {
-                                                SubscriptionSheet.show(context);
-                                                return;
-                                              }
-                                            }
-                                            Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                builder: (_) => statisticsItems[_selectedStatIndex]['screen'],
-                                              ),
-                                            );
-                                          },
+                                          onPressed: () => _handleStatNavigation(context),
                                         ),
                                       ),
                                     ],

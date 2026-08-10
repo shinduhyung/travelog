@@ -147,7 +147,11 @@ class PassportProvider with ChangeNotifier {
     // 2. Load from Server (if logged in)
     if (user != null) {
       try {
-        final doc = await _firestore.collection('users').doc(user.uid).get();
+        final doc = await _firestore
+            .collection('users')
+            .doc(user.uid)
+            .get()
+            .timeout(const Duration(seconds: 5));
         if (doc.exists && doc.data()!.containsKey('selectedPassportIso')) {
           String serverIso = doc.data()!['selectedPassportIso'];
           if (_passportDataMap.containsKey(serverIso)) {
@@ -169,16 +173,14 @@ class PassportProvider with ChangeNotifier {
     // 1. Save Local
     await prefs.setString('selectedPassportIso', isoCode);
 
-    // 2. Save Server
+    // 2. Save Server (백그라운드 — 오프라인 시 무한 block 방지)
     if (user != null) {
-      try {
-        await _firestore.collection('users').doc(user.uid).set({
-          'selectedPassportIso': isoCode,
-          'lastUpdated': FieldValue.serverTimestamp(),
-        }, SetOptions(merge: true));
-      } catch (e) {
+      _firestore.collection('users').doc(user.uid).set({
+        'selectedPassportIso': isoCode,
+        'lastUpdated': FieldValue.serverTimestamp(),
+      }, SetOptions(merge: true)).catchError((e) {
         print("Failed to save passport selection to server: $e");
-      }
+      });
     }
   }
 
@@ -215,7 +217,11 @@ class PassportProvider with ChangeNotifier {
     // 2. Firestore에서 새로 로드
     if (user != null) {
       try {
-        final doc = await _firestore.collection('users').doc(user.uid).get();
+        final doc = await _firestore
+            .collection('users')
+            .doc(user.uid)
+            .get()
+            .timeout(const Duration(seconds: 5));
         if (doc.exists && doc.data()!.containsKey('selectedPassportIso')) {
           final String serverIso = doc.data()!['selectedPassportIso'];
           if (_passportDataMap.containsKey(serverIso)) {

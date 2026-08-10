@@ -9,8 +9,17 @@ import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/screens/countries_map_screen.dart'; // GroupBy enum 위치 확인 필요
 import 'package:jidoapp/screens/country_detail_screen.dart';
 import 'package:jidoapp/services/ad_service.dart';
+import 'package:jidoapp/services/subscription_service.dart';
 import 'package:in_app_review/in_app_review.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+// isoA2 코드 → 국기 이모지 변환
+String _countryFlag(String isoA2) {
+  if (isoA2.length != 2) return '';
+  const base = 0x1F1E6 - 0x41;
+  final chars = isoA2.toUpperCase().codeUnits;
+  return String.fromCharCode(base + chars[0]) + String.fromCharCode(base + chars[1]);
+}
 
 // 헤더 아이템 클래스
 class HeaderItem {
@@ -288,15 +297,26 @@ class _CountrySelectionScreenState extends State<CountrySelectionScreen> {
                                   : null,
                             ),
 
-                            // 이름
+                            // 국기 + 이름
                             Expanded(
-                              child: Text(
-                                country.name,
-                                style: GoogleFonts.poppins(
-                                  fontSize: 16,
-                                  fontWeight: isSelected ? FontWeight.w600 : FontWeight.w500,
-                                  color: isSelected ? _mintDark : Colors.black87,
-                                ),
+                              child: Row(
+                                children: [
+                                  Text(
+                                    _countryFlag(country.isoA2),
+                                    style: const TextStyle(fontSize: 22),
+                                  ),
+                                  const SizedBox(width: 10),
+                                  Expanded(
+                                    child: Text(
+                                      country.name,
+                                      style: GoogleFonts.poppins(
+                                        fontSize: 16,
+                                        fontWeight: isSelected ? FontWeight.w600 : FontWeight.w500,
+                                        color: isSelected ? _mintDark : Colors.black87,
+                                      ),
+                                    ),
+                                  ),
+                                ],
                               ),
                             ),
 
@@ -392,6 +412,29 @@ class _CountrySelectionScreenState extends State<CountrySelectionScreen> {
                           }
                         }
 
+                        // 프로모션 팝업 조건:
+                        // 1) 국가를 추가했을 때만
+                        // 2) 추가 후 총 방문 국가 5개 이상
+                        // 3) 기기당 딱 1회
+                        // 4) 프리미엄 유저 제외
+                        if (countriesToAdd.isNotEmpty && context.mounted) {
+                          final newTotal = _tempSelectedCountries.length;
+                          if (newTotal >= 5) {
+                            final prefs = await SharedPreferences.getInstance();
+                            final alreadyShown = prefs.getBool('promo_popup_shown') ?? false;
+                            final isPremium = SubscriptionService.instance.isPremium;
+                            if (!alreadyShown && !isPremium) {
+                              await prefs.setBool('promo_popup_shown', true);
+                              if (context.mounted) {
+                                await showDialog(
+                                  context: context,
+                                  builder: (_) => const _PromoDialog(),
+                                );
+                              }
+                            }
+                          }
+                        }
+
                         if (context.mounted) Navigator.pop(context);
                       },
                       style: ElevatedButton.styleFrom(
@@ -412,6 +455,119 @@ class _CountrySelectionScreenState extends State<CountrySelectionScreen> {
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class _PromoDialog extends StatelessWidget {
+  const _PromoDialog();
+
+  @override
+  Widget build(BuildContext context) {
+    return Dialog(
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+      backgroundColor: Colors.white,
+      child: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            // 닫기 버튼
+            Align(
+              alignment: Alignment.topRight,
+              child: GestureDetector(
+                onTap: () => Navigator.of(context).pop(),
+                child: const Icon(Icons.close_rounded, size: 20, color: Color(0xFF999999)),
+              ),
+            ),
+            const SizedBox(height: 4),
+            // 프로모션 컨테이너 (subscription_sheet 동일 스타일)
+            Container(
+              padding: const EdgeInsets.all(16),
+              decoration: BoxDecoration(
+                color: const Color(0xFFFFF8F0),
+                borderRadius: BorderRadius.circular(16),
+                border: Border.all(color: const Color(0xFFFFB347), width: 1.5),
+                boxShadow: [
+                  BoxShadow(
+                    color: const Color(0xFFFFB347).withOpacity(0.1),
+                    blurRadius: 8,
+                    offset: const Offset(0, 4),
+                  ),
+                ],
+              ),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text('🎁', style: TextStyle(fontSize: 22)),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: RichText(
+                      text: const TextSpan(
+                        style: TextStyle(
+                          fontSize: 13,
+                          color: Color(0xFF444444),
+                          height: 1.5,
+                        ),
+                        children: [
+                          TextSpan(
+                            text: 'Try 30 days for FREE!\n',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w800,
+                              fontSize: 14,
+                              color: Color(0xFF1A1A2E),
+                            ),
+                          ),
+                          TextSpan(text: 'Post your map on '),
+                          TextSpan(
+                            text: 'Instagram',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w700,
+                              color: Color(0xFFE1306C),
+                            ),
+                          ),
+                          TextSpan(text: ' or '),
+                          TextSpan(
+                            text: 'Facebook',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w700,
+                              color: Color(0xFF1877F2),
+                            ),
+                          ),
+                          TextSpan(text: ' and send a screenshot to '),
+                          TextSpan(
+                            text: 'leeahn137@gmail.com',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w700,
+                              color: Color(0xFF3DDAD7),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 16),
+            // 닫기 버튼
+            SizedBox(
+              width: double.infinity,
+              child: TextButton(
+                onPressed: () => Navigator.of(context).pop(),
+                style: TextButton.styleFrom(
+                  foregroundColor: Colors.grey[600],
+                  padding: const EdgeInsets.symmetric(vertical: 12),
+                ),
+                child: const Text(
+                  'Maybe later',
+                  style: TextStyle(fontSize: 14),
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

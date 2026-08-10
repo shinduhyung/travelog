@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -14,6 +15,7 @@ import 'package:intl/date_symbol_data_local.dart';
 
 import 'package:jidoapp/screens/login_screen.dart';
 import 'package:jidoapp/screens/onboarding_tutorial_screen.dart';
+import 'package:jidoapp/screens/welcome_screen.dart';
 import 'package:jidoapp/main_screen.dart';
 
 import 'package:jidoapp/widgets/plane_loading_logo.dart';
@@ -44,10 +46,15 @@ import 'package:jidoapp/providers/trip_log_provider.dart';
 import 'package:jidoapp/services/ai_service.dart';
 import 'package:jidoapp/services/home_widget_service.dart';
 import 'package:jidoapp/services/ad_service.dart';
-import 'package:jidoapp/services/subscription_service.dart'; // ← 추가
+import 'package:jidoapp/services/subscription_service.dart';
 
 import 'package:jidoapp/screens/badge_collected_screen.dart';
 import 'package:jidoapp/screens/rank_collected_screen.dart';
+import 'package:jidoapp/screens/badge_share.dart';
+import 'package:jidoapp/screens/countries_share.dart'; // TODO: 테스트용
+import 'package:screenshot/screenshot.dart'; // TODO: 테스트용
+import 'package:flutter_map/flutter_map.dart'; // TODO: 테스트용
+import 'package:latlong2/latlong.dart'; // TODO: 테스트용
 
 import 'package:timezone/data/latest.dart' as tz;
 import 'package:google_mobile_ads/google_mobile_ads.dart';
@@ -86,7 +93,6 @@ final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 // FCM 백그라운드 메시지 핸들러 (top-level 필수)
 @pragma('vm:entry-point')
 Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
-  // 백그라운드에서는 별도 처리 불필요 (시스템이 알림 표시)
   debugPrint('📬 [FCM] 백그라운드 메시지: \${message.messageId}');
 }
 
@@ -100,8 +106,6 @@ Future<void> _saveFcmToken() async {
     final user = await FirebaseMessaging.instance.getToken();
     debugPrint('📱 [FCM] 토큰: \$token');
 
-    // 로그인 유저 여부 무관하게 anonymous device token 저장
-    // uid는 auth 상태 변경 시점에 저장하므로 여기서는 토큰만 기록
     await FirebaseFirestore.instance
         .collection('fcm_tokens')
         .doc(token)
@@ -111,7 +115,6 @@ Future<void> _saveFcmToken() async {
       'platform': 'android',
     }, SetOptions(merge: true));
 
-    // 토큰 갱신 리스너
     messaging.onTokenRefresh.listen((newToken) async {
       await FirebaseFirestore.instance
           .collection('fcm_tokens')
@@ -157,7 +160,6 @@ Future<void> main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
-  // FCM 초기화
   FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
   await FirebaseMessaging.instance.requestPermission(
     alert: true,
@@ -166,14 +168,12 @@ Future<void> main() async {
   );
   await _saveFcmToken();
 
-  // 포그라운드 알림 표시 설정 (iOS)
   await FirebaseMessaging.instance.setForegroundNotificationPresentationOptions(
     alert: true,
     badge: true,
     sound: true,
   );
 
-  // 앱 종료 상태에서 알림 탭으로 열린 경우
   final initialMessage = await FirebaseMessaging.instance.getInitialMessage();
   if (initialMessage != null) {
     WidgetsBinding.instance.addPostFrameCallback((_) {
@@ -181,13 +181,10 @@ Future<void> main() async {
     });
   }
 
-  // 백그라운드 → 포그라운드로 전환 시 알림 탭
   FirebaseMessaging.onMessageOpenedApp.listen(_handleNotificationTap);
 
   await MobileAds.instance.initialize();
 
-  // SubscriptionService를 먼저 초기화 (캐시된 프리미엄 상태 복원)
-  // → AdService.initialize() 시점에 isPremium 값이 올바르게 세팅됨
   await SubscriptionService.instance.initialize();
 
   AdService.instance.initialize();
@@ -301,12 +298,9 @@ class _AuthGateRootState extends State<AuthGateRoot> {
           key: ValueKey(_sessionKey),
           child: MultiProvider(
             providers: [
-              // ─── SubscriptionService Provider ───────────────────
-              // 싱글톤 인스턴스를 Provider로 노출 → UI에서 구독 상태 리슨 가능
               ChangeNotifierProvider<SubscriptionService>.value(
                 value: SubscriptionService.instance,
               ),
-              // ────────────────────────────────────────────────────
               ChangeNotifierProvider(create: (_) => CountryProvider()),
               ChangeNotifierProxyProvider<CountryProvider, CityProvider>(
                 create: (context) => CityProvider(),
@@ -425,6 +419,7 @@ class _WidgetUpdateWrapperState extends State<WidgetUpdateWrapper> {
   bool _widgetUpdated = false;
 
   bool? _showTutorial;
+  bool _showWelcome = false;
 
   static const String _tutorialVersion = '1.0';
   static const String _prefKey = 'onboarding_tutorial_version';
@@ -432,10 +427,20 @@ class _WidgetUpdateWrapperState extends State<WidgetUpdateWrapper> {
   @override
   void initState() {
     super.initState();
-    _checkTutorial();
     WidgetsBinding.instance.addPostFrameCallback((_) {
       _listenToAuthChanges();
+      _initTutorialCheck();
     });
+  }
+
+  Future<void> _initTutorialCheck() async {
+    final authProvider = context.read<AuthProvider>();
+    int waited = 0;
+    while (!authProvider.isAuthReady && waited < 30) {
+      await Future.delayed(const Duration(milliseconds: 100));
+      waited++;
+    }
+    _checkTutorial();
   }
 
   void _listenToAuthChanges() {
@@ -509,11 +514,41 @@ class _WidgetUpdateWrapperState extends State<WidgetUpdateWrapper> {
   }
 
   Future<void> _checkTutorial() async {
+    final authProvider = context.read<AuthProvider>();
+
+    // 1. 이미 로그인된 상태이면 튜토리얼 및 Welcome 화면 패스
+    if (authProvider.isAuthenticated) {
+      isOnboardingActive = false;
+      if (mounted) {
+        setState(() {
+          _showTutorial = false;
+          _showWelcome = false;
+        });
+      }
+      return;
+    }
+
+    // 2. 비로그인 상태라도 온보딩(튜토리얼)을 이미 완료했는지 확인
     final prefs = await SharedPreferences.getInstance();
     final completed = prefs.getString(_prefKey);
+
+    if (completed == _tutorialVersion) {
+      isOnboardingActive = false;
+      if (mounted) {
+        setState(() {
+          _showTutorial = false;
+          _showWelcome = false;
+        });
+      }
+      return;
+    }
+
+    // 3. 로그인도 안 되어 있고 튜토리얼도 안 했다면 Welcome Screen 띄우기
+    isOnboardingActive = true;
     if (mounted) {
       setState(() {
-        _showTutorial = (completed != _tutorialVersion);
+        _showTutorial = false;
+        _showWelcome = true;
       });
     }
   }
@@ -527,11 +562,20 @@ class _WidgetUpdateWrapperState extends State<WidgetUpdateWrapper> {
 
   @override
   Widget build(BuildContext context) {
-    if (_showTutorial == null) {
-      return const Scaffold(backgroundColor: Colors.white);
+    if (_showTutorial == null && !_showWelcome) {
+      return const Scaffold(backgroundColor: Color(0xFF1ABFBC));
     }
 
-    if (_showTutorial!) {
+    if (_showWelcome) {
+      return WelcomeScreen(
+        onStartTutorial: () {
+          setState(() => _showWelcome = false);
+          setState(() => _showTutorial = true);
+        },
+      );
+    }
+
+    if (_showTutorial == true) {
       return OnboardingTutorialScreen(
         onComplete: _completeTutorial,
       );
@@ -548,6 +592,7 @@ class _WidgetUpdateWrapperState extends State<WidgetUpdateWrapper> {
       });
     }
 
+    // 모든 과정 완료 또는 생략 시 My Trips 탭 (initialIndex: 0) 으로 진입
     return const MainScreen(initialIndex: 0);
   }
 
@@ -654,10 +699,27 @@ class _BadgeGlobalListenerState extends State<BadgeGlobalListener> {
           context: overlayContext,
           barrierDismissible: false,
           builder: (ctx) => BadgeCollectedScreen(achievement: newBadge),
-        ).then((_) {
+        ).then((_) async {
           if (mounted) {
             _isShowingDialog = false;
             badgeProvider.markBadgeAsSeen(newBadge);
+
+            // 뱃지 공유 프로모 팝업 조건:
+            // 1) 기기당 1회만
+            // 2) 프리미엄 유저 제외
+            final prefs = await SharedPreferences.getInstance();
+            final alreadyShown = prefs.getBool('badge_share_promo_shown') ?? false;
+            final isPremium = SubscriptionService.instance.isPremium;
+            if (!alreadyShown && !isPremium && mounted) {
+              final ctx = navigatorKey.currentContext;
+              if (ctx != null) {
+                await prefs.setBool('badge_share_promo_shown', true);
+                showDialog(
+                  context: ctx,
+                  builder: (_) => _BadgeSharePromoDialog(achievement: newBadge),
+                );
+              }
+            }
           }
         });
       }
@@ -681,5 +743,354 @@ class _BadgeGlobalListenerState extends State<BadgeGlobalListener> {
     } catch (e) {}
 
     return widget.child ?? const SizedBox.shrink();
+  }
+}
+
+// TODO: 테스트용 - 나중에 제거
+class _PromoTestDialog extends StatefulWidget {
+  final BuildContext parentContext;
+  const _PromoTestDialog({required this.parentContext});
+
+  @override
+  State<_PromoTestDialog> createState() => _PromoTestDialogState();
+}
+
+class _PromoTestDialogState extends State<_PromoTestDialog> {
+  bool _isSharing = false;
+  final ScreenshotController _screenshotController = ScreenshotController();
+
+  Future<void> _handleShare() async {
+    if (_isSharing) return;
+    setState(() => _isSharing = true);
+
+    try {
+      final provider = Provider.of<CountryProvider>(widget.parentContext, listen: false);
+      final visitedCountries = provider.allCountries
+          .where((c) => provider.visitedCountries.contains(c.name))
+          .toList();
+
+      final Uint8List? mapImage = await _screenshotController.capture();
+
+      if (!mounted) return;
+
+      await CountriesShare.share(
+        context: widget.parentContext,
+        mapImage: mapImage ?? Uint8List(0),
+        visitedCountries: visitedCountries,
+      );
+    } catch (e) {
+      debugPrint('PromoTestDialog share error: $e');
+    } finally {
+      if (mounted) setState(() => _isSharing = false);
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Dialog(
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+      backgroundColor: Colors.white,
+      child: Stack(
+        clipBehavior: Clip.none,
+        children: [
+          Consumer<CountryProvider>(
+            builder: (context, countryProvider, _) => Positioned(
+              left: -9999,
+              top: 0,
+              width: 600,
+              height: 300,
+              child: Screenshot(
+                controller: _screenshotController,
+                child: IgnorePointer(
+                  child: FlutterMap(
+                    options: const MapOptions(
+                      initialCenter: LatLng(20, 0),
+                      initialZoom: 0.3,
+                      interactionOptions: InteractionOptions(flags: InteractiveFlag.none),
+                    ),
+                    children: [
+                      TileLayer(urlTemplate: '', backgroundColor: Colors.white),
+                      PolygonLayer(
+                        polygons: countryProvider.allCountries.expand((country) {
+                          final isVisited = countryProvider.visitedCountries.contains(country.name);
+                          final color = isVisited
+                              ? (countryProvider.continentColors[country.continent] ?? Colors.grey)
+                              : Colors.grey.withOpacity(0.15);
+                          return country.polygonsData.map((polygonData) => Polygon(
+                            points: polygonData.first,
+                            holePointsList: polygonData.length > 1 ? polygonData.sublist(1) : null,
+                            color: color,
+                            borderColor: Colors.white,
+                            borderStrokeWidth: 0.5,
+                            isFilled: true,
+                          ));
+                        }).toList(),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(20),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Align(
+                  alignment: Alignment.topRight,
+                  child: GestureDetector(
+                    onTap: () => Navigator.of(context).pop(),
+                    child: const Icon(Icons.close_rounded, size: 20, color: Color(0xFF999999)),
+                  ),
+                ),
+                const SizedBox(height: 4),
+                Container(
+                  padding: const EdgeInsets.all(16),
+                  decoration: BoxDecoration(
+                    color: const Color(0xFFFFF8F0),
+                    borderRadius: BorderRadius.circular(16),
+                    border: Border.all(color: const Color(0xFFFFB347), width: 1.5),
+                    boxShadow: [
+                      BoxShadow(
+                        color: const Color(0xFFFFB347).withOpacity(0.1),
+                        blurRadius: 8,
+                        offset: const Offset(0, 4),
+                      ),
+                    ],
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text('🎁', style: TextStyle(fontSize: 22)),
+                          const SizedBox(width: 12),
+                          Expanded(
+                            child: RichText(
+                              text: const TextSpan(
+                                style: TextStyle(fontSize: 13, color: Color(0xFF444444), height: 1.5),
+                                children: [
+                                  TextSpan(
+                                    text: 'Try 30 days for FREE!\n',
+                                    style: TextStyle(fontWeight: FontWeight.w800, fontSize: 14, color: Color(0xFF1A1A2E)),
+                                  ),
+                                  TextSpan(text: 'Post your map on '),
+                                  TextSpan(text: 'Instagram', style: TextStyle(fontWeight: FontWeight.w700, color: Color(0xFFE1306C))),
+                                  TextSpan(text: ' or '),
+                                  TextSpan(text: 'Facebook', style: TextStyle(fontWeight: FontWeight.w700, color: Color(0xFF1877F2))),
+                                  TextSpan(text: ' and send a screenshot to '),
+                                  TextSpan(text: 'leeahn137@gmail.com', style: TextStyle(fontWeight: FontWeight.w700, color: Color(0xFF3DDAD7))),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 12),
+                      GestureDetector(
+                        onTap: _handleShare,
+                        child: Container(
+                          width: double.infinity,
+                          padding: const EdgeInsets.symmetric(vertical: 11),
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(10),
+                            border: Border.all(color: const Color(0xFFFFB347), width: 1.2),
+                            boxShadow: [
+                              BoxShadow(
+                                color: const Color(0xFFFFB347).withOpacity(0.15),
+                                blurRadius: 6,
+                                offset: const Offset(0, 2),
+                              ),
+                            ],
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              _isSharing
+                                  ? const SizedBox(
+                                width: 18, height: 18,
+                                child: CircularProgressIndicator(
+                                  strokeWidth: 2,
+                                  valueColor: AlwaysStoppedAnimation<Color>(Color(0xFFFFB347)),
+                                ),
+                              )
+                                  : const Icon(Icons.share_rounded, size: 18, color: Color(0xFFFFB347)),
+                              const SizedBox(width: 8),
+                              const Text(
+                                'Share My Map',
+                                style: TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: Color(0xFFFFB347)),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 16),
+                SizedBox(
+                  width: double.infinity,
+                  child: TextButton(
+                    onPressed: () => Navigator.of(context).pop(),
+                    style: TextButton.styleFrom(
+                      foregroundColor: Colors.grey,
+                      padding: const EdgeInsets.symmetric(vertical: 12),
+                    ),
+                    child: const Text('Maybe later', style: TextStyle(fontSize: 14)),
+                  ),
+                ),
+              ],        // Column children
+            ),
+          ),
+        ],          // Stack children
+      ),            // Stack
+    );
+  }
+}
+
+class _BadgeSharePromoDialog extends StatefulWidget {
+  final dynamic achievement;
+  const _BadgeSharePromoDialog({required this.achievement});
+
+  @override
+  State<_BadgeSharePromoDialog> createState() => _BadgeSharePromoDialogState();
+}
+
+class _BadgeSharePromoDialogState extends State<_BadgeSharePromoDialog> {
+  bool _isSharing = false;
+
+  Future<void> _handleShare() async {
+    if (_isSharing) return;
+    setState(() => _isSharing = true);
+    try {
+      await BadgeShare.share(
+        context: context,
+        achievement: widget.achievement,
+        progress: 1.0,
+        progressDetailText: 'Completed',
+      );
+    } catch (e) {
+      debugPrint('BadgeSharePromo error: $e');
+    } finally {
+      if (mounted) setState(() => _isSharing = false);
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Dialog(
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+      backgroundColor: Colors.white,
+      child: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Align(
+              alignment: Alignment.topRight,
+              child: GestureDetector(
+                onTap: () => Navigator.of(context).pop(),
+                child: const Icon(Icons.close_rounded, size: 20, color: Color(0xFF999999)),
+              ),
+            ),
+            const SizedBox(height: 4),
+            Container(
+              padding: const EdgeInsets.all(16),
+              decoration: BoxDecoration(
+                color: const Color(0xFFFFF8F0),
+                borderRadius: BorderRadius.circular(16),
+                border: Border.all(color: const Color(0xFFFFB347), width: 1.5),
+                boxShadow: [
+                  BoxShadow(
+                    color: const Color(0xFFFFB347).withOpacity(0.1),
+                    blurRadius: 8,
+                    offset: const Offset(0, 4),
+                  ),
+                ],
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text('🎁', style: TextStyle(fontSize: 22)),
+                      const SizedBox(width: 12),
+                      Expanded(
+                        child: RichText(
+                          text: const TextSpan(
+                            style: TextStyle(fontSize: 13, color: Color(0xFF444444), height: 1.5),
+                            children: [
+                              TextSpan(
+                                text: 'Try 30 days for FREE!\n',
+                                style: TextStyle(fontWeight: FontWeight.w800, fontSize: 14, color: Color(0xFF1A1A2E)),
+                              ),
+                              TextSpan(text: 'Post your badge on '),
+                              TextSpan(text: 'Instagram', style: TextStyle(fontWeight: FontWeight.w700, color: Color(0xFFE1306C))),
+                              TextSpan(text: ' or '),
+                              TextSpan(text: 'Facebook', style: TextStyle(fontWeight: FontWeight.w700, color: Color(0xFF1877F2))),
+                              TextSpan(text: ' and send a screenshot to '),
+                              TextSpan(text: 'leeahn137@gmail.com', style: TextStyle(fontWeight: FontWeight.w700, color: Color(0xFF3DDAD7))),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 12),
+                  GestureDetector(
+                    onTap: _handleShare,
+                    child: Container(
+                      width: double.infinity,
+                      padding: const EdgeInsets.symmetric(vertical: 11),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(color: const Color(0xFFFFB347), width: 1.2),
+                        boxShadow: [
+                          BoxShadow(
+                            color: const Color(0xFFFFB347).withOpacity(0.15),
+                            blurRadius: 6,
+                            offset: const Offset(0, 2),
+                          ),
+                        ],
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          _isSharing
+                              ? const SizedBox(
+                            width: 18, height: 18,
+                            child: CircularProgressIndicator(strokeWidth: 2, valueColor: AlwaysStoppedAnimation<Color>(Color(0xFFFFB347))),
+                          )
+                              : const Icon(Icons.share_rounded, size: 18, color: Color(0xFFFFB347)),
+                          const SizedBox(width: 8),
+                          const Text('Share My Badge', style: TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: Color(0xFFFFB347))),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 16),
+            SizedBox(
+              width: double.infinity,
+              child: TextButton(
+                onPressed: () => Navigator.of(context).pop(),
+                style: TextButton.styleFrom(
+                  foregroundColor: Colors.grey,
+                  padding: const EdgeInsets.symmetric(vertical: 12),
+                ),
+                child: const Text('Maybe later', style: TextStyle(fontSize: 14)),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }

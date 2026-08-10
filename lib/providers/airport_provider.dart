@@ -43,6 +43,8 @@ class AirportProvider with ChangeNotifier {
   double getRating(String iataCode) => _airportRatings[iataCode] ?? 0.0;
 
   bool isHub(String iataCode) => _airportHubs[iataCode] ?? false;
+  // Hub는 항상 0개 또는 1개만 존재 — 현재 지정된 Hub의 IATA 코드 (없으면 null)
+  String? get currentHubIata => _airportHubs.keys.isEmpty ? null : _airportHubs.keys.first;
   bool isFavorite(String iataCode) => _airportFavorites[iataCode] ?? false;
 
   String getMemo(String iataCode) => _airportMemos[iataCode] ?? '';
@@ -154,6 +156,28 @@ class AirportProvider with ChangeNotifier {
         }
       } catch (e) {
         if (kDebugMode) print("Failed to load airport data from server: $e");
+      }
+    }
+
+    // ⭐️ 마이그레이션: 과거에 여러 개 등록된 Hub를 1개로 정리
+    _migrateToSingleHub();
+  }
+
+  // ─── Hub는 1개만 유지되도록 정리 (기존 다중 Hub 유저 대응) ──────────────
+  // 방문 횟수가 많은 공항을 남기고, 동점이면 IATA 코드 알파벳순으로 결정 (항상 같은 결과 보장)
+  void _migrateToSingleHub() {
+    if (_airportHubs.length > 1) {
+      final sortedHubs = _airportHubs.keys.toList()
+        ..sort((a, b) {
+          final visitCompare = getVisitCount(b).compareTo(getVisitCount(a));
+          if (visitCompare != 0) return visitCompare;
+          return a.compareTo(b); // 동점 시 IATA 코드 알파벳순
+        });
+      final keepIata = sortedHubs.first;
+      _airportHubs = {keepIata: true};
+      _saveAirportData();
+      if (kDebugMode) {
+        print("Migrated multiple hubs down to single hub: $keepIata");
       }
     }
   }
@@ -344,6 +368,7 @@ class AirportProvider with ChangeNotifier {
 
   void updateHubStatus(String iataCode, bool isHub) {
     if (isHub) {
+      _airportHubs.clear(); // ⭐️ Hub는 한 번에 1개만 — 기존 Hub 전부 해제 후 새로 지정
       _airportHubs[iataCode] = true;
     } else {
       _airportHubs.remove(iataCode);
@@ -484,6 +509,7 @@ class AirportProvider with ChangeNotifier {
         if (kDebugMode) print("Failed to reload airport data from server: $e");
       }
     }
+    _migrateToSingleHub();
     notifyListeners();
   }
 

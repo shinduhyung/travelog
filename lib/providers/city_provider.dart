@@ -741,32 +741,63 @@ class CityProvider with ChangeNotifier {
   }
 
   Future<void> _loadThemeData(Map<String, String> continentMap) async {
-    _summerOlympicsCities = await _loadList('assets/summer_olympics_cities.json', _parseCities);
-    _winterOlympicsCities = await _loadList('assets/winter_olympics_cities.json', _parseCities);
-    _nhlCities = await _loadList('assets/nhl_cities.json', _parseCities);
-    _nbaCities = await _loadList('assets/nba_cities.json', _parseCities);
-    _mlbCities = await _loadList('assets/mlb_cities.json', _parseCities);
-    _nflCities = await _loadList('assets/nfl_cities.json', _parseCities);
-    _mlsCities = await _loadList('assets/mls_cities.json', _parseCities);
-    _starbucksCities = await _loadList('assets/starbucks.json', _parseCities);
-    _millionaireCities = await _loadList('assets/millionaire.json', _parseCities);
-    _transportationCities = await _loadList('assets/transportation.json', _parseCities);
-    _stationCities = await _loadList('assets/stations.json', _parseStationsJson);
-    _oldestCities = await _loadList('assets/oldest.json', _parseOldestCitiesJson);
-    _studentCities = await _loadList('assets/student.json', _parseStudentCitiesJson);
-    _safetyCities = await _loadList('assets/safety.json', _parseSafetyJson);
-    _liveabilityCities = await _loadList('assets/liveability.json', _parseLiveabilityJson);
-    _surveillanceCities = await _loadList('assets/surveillance.json', _parseSurveillanceJson);
-    _skyscraperCities = await _loadList('assets/skyscraper.json', _parseSkyscraperJson);
-    _pollutionCities = await _loadList('assets/pollution.json', _parsePollutionJson);
-    _homicideCities = await _loadList('assets/city_homicide_rate.json', _parseHomicideJson);
-    _trafficCities = await _loadList('assets/traffic.json', _parseTrafficJson);
-    _hollywoodCities = await _loadList('assets/hollywood.json', _parseHollywoodJson);
-    _gawcCities = await _loadList('assets/gawc.json', _parseGaWCJson);
+    // 22개 theme 리스트를 병렬로 로드 (순차 await → Future.wait)
+    final results = await Future.wait([
+      _loadList('assets/summer_olympics_cities.json', _parseCities),    // 0
+      _loadList('assets/winter_olympics_cities.json', _parseCities),    // 1
+      _loadList('assets/nhl_cities.json',             _parseCities),    // 2
+      _loadList('assets/nba_cities.json',             _parseCities),    // 3
+      _loadList('assets/mlb_cities.json',             _parseCities),    // 4
+      _loadList('assets/nfl_cities.json',             _parseCities),    // 5
+      _loadList('assets/mls_cities.json',             _parseCities),    // 6
+      _loadList('assets/starbucks.json',              _parseCities),    // 7
+      _loadList('assets/millionaire.json',            _parseCities),    // 8
+      _loadList('assets/transportation.json',         _parseCities),    // 9
+      _loadList('assets/stations.json',               _parseStationsJson),     // 10
+      _loadList('assets/oldest.json',                 _parseOldestCitiesJson), // 11
+      _loadList('assets/student.json',                _parseStudentCitiesJson),// 12
+      _loadList('assets/safety.json',                 _parseSafetyJson),       // 13
+      _loadList('assets/liveability.json',            _parseLiveabilityJson),  // 14
+      _loadList('assets/surveillance.json',           _parseSurveillanceJson), // 15
+      _loadList('assets/skyscraper.json',             _parseSkyscraperJson),   // 16
+      _loadList('assets/pollution.json',              _parsePollutionJson),    // 17
+      _loadList('assets/city_homicide_rate.json',     _parseHomicideJson),     // 18
+      _loadList('assets/traffic.json',                _parseTrafficJson),      // 19
+      _loadList('assets/hollywood.json',              _parseHollywoodJson),    // 20
+      _loadList('assets/gawc.json',                   _parseGaWCJson),         // 21
+    ]);
 
+    _summerOlympicsCities  = results[0];
+    _winterOlympicsCities  = results[1];
+    _nhlCities             = results[2];
+    _nbaCities             = results[3];
+    _mlbCities             = results[4];
+    _nflCities             = results[5];
+    _mlsCities             = results[6];
+    _starbucksCities       = results[7];
+    _millionaireCities     = results[8];
+    _transportationCities  = results[9];
+    _stationCities         = results[10];
+    _oldestCities          = results[11];
+    _studentCities         = results[12];
+    _safetyCities          = results[13];
+    _liveabilityCities     = results[14];
+    _surveillanceCities    = results[15];
+    _skyscraperCities      = results[16];
+    _pollutionCities       = results[17];
+    _homicideCities        = results[18];
+    _trafficCities         = results[19];
+    _hollywoodCities       = results[20];
+    _gawcCities            = results[21];
+
+    // largest는 같은 파일을 두 parser로 쓰므로 한 번만 로드 후 병렬 parse
     final String largestJsonStr = await rootBundle.loadString('assets/largest.json');
-    _largestCities = await compute(_parseCities, largestJsonStr);
-    _largestCitiesOverrideMap = await compute(_parseLargestCitiesMap, largestJsonStr);
+    final largestResults = await Future.wait([
+      compute(_parseCities, largestJsonStr),
+      compute(_parseLargestCitiesMap, largestJsonStr),
+    ]);
+    _largestCities            = largestResults[0] as List<City>;
+    _largestCitiesOverrideMap = largestResults[1] as Map<String, String>;
   }
 
   Future<List<City>> _loadList(String path, List<City> Function(String) parser) async {

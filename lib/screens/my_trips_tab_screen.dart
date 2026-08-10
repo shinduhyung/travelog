@@ -1,5 +1,4 @@
 // lib/screens/my_trips_tab_screen.dart
-import 'dart:convert';
 import 'package:flutter/material.dart';
 // ⭐️ Firebase Auth와 명칭 충돌을 막기 위해 custom_auth로 alias 지정
 import 'package:jidoapp/providers/auth_provider.dart' as custom_auth;
@@ -7,14 +6,7 @@ import 'package:jidoapp/screens/profile_screen.dart';
 import 'package:jidoapp/screens/login_prompt_screen.dart';
 import 'package:jidoapp/providers/badge_provider.dart';
 import 'package:jidoapp/screens/badges_screen.dart';
-import 'package:jidoapp/screens/calendar_screen.dart';
-import 'package:jidoapp/screens/passport_screen.dart';
-import 'package:jidoapp/screens/settings_screen.dart';
-import 'package:jidoapp/screens/visa_screen.dart';
-import 'package:jidoapp/screens/trip_log_list_screen.dart';
-import 'package:jidoapp/screens/recommendations_screen.dart';
-import 'package:jidoapp/screens/favorites_screen.dart';
-import 'package:jidoapp/screens/traveler_type_selector_screen.dart';
+import 'package:jidoapp/screens/my_journey_screen.dart';
 import 'package:jidoapp/screens/daily_quiz_screen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -24,10 +16,15 @@ import 'package:jidoapp/providers/landmarks_provider.dart';
 import 'package:jidoapp/screens/countries_map_screen.dart';
 import 'package:jidoapp/screens/top_cities_screen.dart';
 import 'package:jidoapp/screens/top_landmarks_screen.dart';
+import 'package:jidoapp/screens/world_discover_screen.dart';
 import 'package:provider/provider.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:jidoapp/services/subscription_service.dart';
 import 'package:jidoapp/widgets/subscription_sheet.dart';
+import 'package:jidoapp/screens/countries_share.dart';
+import 'dart:typed_data';
+import 'package:flutter_map/flutter_map.dart';
+import 'package:latlong2/latlong.dart';
+import 'package:screenshot/screenshot.dart';
 
 class MyTripsTabScreen extends StatefulWidget {
   const MyTripsTabScreen({super.key});
@@ -37,12 +34,34 @@ class MyTripsTabScreen extends StatefulWidget {
 }
 
 class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
-  String? _travelerType;
-  String? _travelerTypeIconName;
-
   // Daily Quiz state
   bool _quizSolvedToday = false;
   bool _quizLoadingDone = false;
+
+  bool _isSharing = false;
+  final ScreenshotController _mapScreenshotController = ScreenshotController();
+
+  Future<void> _handleShare() async {
+    if (_isSharing) return;
+    setState(() => _isSharing = true);
+    try {
+      final provider = context.read<CountryProvider>();
+      final visitedCountries = provider.allCountries
+          .where((c) => provider.visitedCountries.contains(c.name))
+          .toList();
+      final Uint8List? mapImage = await _mapScreenshotController.capture();
+      if (!mounted) return;
+      await CountriesShare.share(
+        context: context,
+        mapImage: mapImage ?? Uint8List(0),
+        visitedCountries: visitedCountries,
+      );
+    } catch (e) {
+      debugPrint('MyTrips share error: $e');
+    } finally {
+      if (mounted) setState(() => _isSharing = false);
+    }
+  }
 
   static const Color mint = Color(0xFF00CDB5);
   static const Color darkMint = Color(0xFF009688);
@@ -58,13 +77,11 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
   void initState() {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      _loadTravelerType();
       _checkQuizSolvedToday();
     });
   }
 
   Future<void> _checkQuizSolvedToday() async {
-    // 매번 호출 시 상태 리셋 (화면 복귀 후 stale 방지)
     if (mounted) {
       setState(() {
         _quizSolvedToday = false;
@@ -78,7 +95,6 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
         return;
       }
 
-      // daily_quiz_screen과 동일하게 UTC 기준 YYYYMMDD 직접 생성
       final nowUtc = DateTime.now().toUtc();
       final year = nowUtc.year.toString();
       final month = nowUtc.month.toString().padLeft(2, '0');
@@ -102,78 +118,6 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
       if (mounted) setState(() => _quizLoadingDone = true);
     }
   }
-
-  Future<void> _loadTravelerType() async {
-    final prefs = await SharedPreferences.getInstance();
-    String? typeName;
-    final aiJson = prefs.getString('ai_analysis_result');
-    if (aiJson != null) {
-      try {
-        final parsed = jsonDecode(aiJson) as Map<String, dynamic>;
-        final types = (parsed['summary']?['persona_scores'] as List? ?? [])
-            .cast<Map<String, dynamic>>();
-        if (types.isNotEmpty) {
-          types.sort((a, b) =>
-              (b['score'] as num).compareTo(a['score'] as num));
-          typeName = types.first['label'] as String?;
-        }
-      } catch (e) {
-        debugPrint('Error parsing AI result: $e');
-      }
-    }
-    typeName ??= prefs.getString('traveler_type');
-    if (mounted) {
-      setState(() {
-        _travelerType = typeName;
-        _travelerTypeIconName = _getIconNameForType(typeName);
-      });
-    }
-  }
-
-  String? _getIconNameForType(String? typeName) {
-    if (typeName == null || typeName.isEmpty) return null;
-    final map = {
-      'Identity Seeker': 'self_improvement_outlined',
-      'Sensory Immersionist': 'camera_roll_outlined',
-      'Efficiency Maximizer': 'speed_outlined',
-      'Cultural Decoder': 'museum_outlined',
-      'Joy Collector': 'celebration_outlined',
-      'Inner Sanctuary Seeker': 'spa_outlined',
-      'Wildlife & Earth Enthusiast': 'forest_outlined',
-      'Global Connector': 'people_alt_outlined',
-      'Freedom Drifter': 'directions_car_filled_outlined',
-      'Achievement Hunter': 'emoji_events_outlined',
-    };
-    return map[typeName];
-  }
-
-  IconData _getTravelerTypeIcon() {
-    switch (_travelerTypeIconName) {
-      case 'self_improvement_outlined':
-        return Icons.self_improvement_outlined;
-      case 'camera_roll_outlined':
-        return Icons.camera_roll_outlined;
-      case 'speed_outlined':
-        return Icons.speed_outlined;
-      case 'museum_outlined':
-        return Icons.museum_outlined;
-      case 'celebration_outlined':
-        return Icons.celebration_outlined;
-      case 'spa_outlined':
-        return Icons.spa_outlined;
-      case 'forest_outlined':
-        return Icons.forest_outlined;
-      case 'people_alt_outlined':
-        return Icons.people_alt_outlined;
-      case 'directions_car_filled_outlined':
-        return Icons.directions_car_filled_outlined;
-      case 'emoji_events_outlined':
-        return Icons.emoji_events_outlined;
-      default:
-        return Icons.person_outline;
-    }
-  }
-
 
   String _getCurrentLevel(int points) {
     if (points >= 600) return 'Legend';
@@ -210,121 +154,112 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFFF8F9FA),
-      body: SingleChildScrollView(
-        physics: const ClampingScrollPhysics(),
-        child: Column(
-          children: [
-            Stack(
-              clipBehavior: Clip.none,
-              children: [
-                Container(
-                  height: 300,
-                  width: double.infinity,
-                  decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(40),
-                      bottomRight: Radius.circular(40),
-                    ),
-                    image: DecorationImage(
-                      image: AssetImage('assets/icons/app_logo.png'),
-                      fit: BoxFit.cover,
+      body: Stack(
+        children: [
+          Consumer<CountryProvider>(
+            builder: (context, countryProvider, _) {
+              return Positioned(
+                left: -9999,
+                top: 0,
+                width: 600,
+                height: 300,
+                child: Screenshot(
+                  controller: _mapScreenshotController,
+                  child: IgnorePointer(
+                    child: FlutterMap(
+                      options: const MapOptions(
+                        initialCenter: LatLng(20, 0),
+                        initialZoom: 0.3,
+                        interactionOptions: InteractionOptions(flags: InteractiveFlag.none),
+                      ),
+                      children: [
+                        TileLayer(urlTemplate: '', backgroundColor: Colors.white),
+                        PolygonLayer(
+                          polygons: countryProvider.allCountries.expand((country) {
+                            final isVisited = countryProvider.visitedCountries.contains(country.name);
+                            final color = isVisited
+                                ? (countryProvider.continentColors[country.continent] ?? Colors.grey)
+                                : Colors.grey.withOpacity(0.15);
+                            return country.polygonsData.map((polygonData) => Polygon(
+                              points: polygonData.first,
+                              holePointsList: polygonData.length > 1 ? polygonData.sublist(1) : null,
+                              color: color,
+                              borderColor: Colors.white,
+                              borderStrokeWidth: 0.5,
+                              isFilled: true,
+                            ));
+                          }).toList(),
+                        ),
+                      ],
                     ),
                   ),
                 ),
-                SafeArea(
-                  bottom: false,
-                  child: Container(
-                    height: 220,
-                    padding: const EdgeInsets.symmetric(horizontal: 28),
-                    alignment: Alignment.centerLeft,
-                    child: const Text(
-                      'Travelog',
-                      style: TextStyle(
-                        fontSize: 42,
-                        fontWeight: FontWeight.w900,
-                        color: Colors.white,
-                        letterSpacing: -0.5,
-                        fontFamily: 'Pretendard',
-                        height: 1.0,
-                        shadows: [
-                          Shadow(
-                            offset: Offset(0, 2),
-                            blurRadius: 10.0,
-                            color: Color.fromARGB(120, 0, 0, 0),
-                          ),
-                        ],
+              );
+            },
+          ),
+          SingleChildScrollView(
+            physics: const ClampingScrollPhysics(),
+            child: Column(
+              children: [
+                Stack(
+                  clipBehavior: Clip.none,
+                  children: [
+                    Container(
+                      height: 300,
+                      width: double.infinity,
+                      decoration: const BoxDecoration(
+                        borderRadius: BorderRadius.only(
+                          bottomLeft: Radius.circular(40),
+                          bottomRight: Radius.circular(40),
+                        ),
+                        image: DecorationImage(
+                          image: AssetImage('assets/icons/app_logo.png'),
+                          fit: BoxFit.cover,
+                        ),
                       ),
                     ),
-                  ),
+                    SafeArea(
+                      bottom: false,
+                      child: Container(
+                        height: 220,
+                        padding: const EdgeInsets.symmetric(horizontal: 28),
+                        alignment: Alignment.centerLeft,
+                        child: const Text(
+                          'Travelog',
+                          style: TextStyle(
+                            fontSize: 42,
+                            fontWeight: FontWeight.w900,
+                            color: Colors.white,
+                            letterSpacing: -0.5,
+                            fontFamily: 'Pretendard',
+                            height: 1.0,
+                            shadows: [
+                              Shadow(
+                                offset: Offset(0, 2),
+                                blurRadius: 10.0,
+                                color: Color.fromARGB(120, 0, 0, 0),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 220, left: 24, right: 24),
+                      child: _buildProfileSection(context),
+                    ),
+                  ],
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 220, left: 24, right: 24),
-                  child: _buildProfileSection(context),
-                ),
+                const SizedBox(height: 120),
               ],
             ),
-            const SizedBox(height: 24),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24),
-              child: _buildMainFeatures(context),
-            ),
-            const SizedBox(height: 32),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24),
-              child: Row(
-                children: [
-                  Container(
-                    width: 4,
-                    height: 20,
-                    decoration: BoxDecoration(
-                        color: darkMint,
-                        borderRadius: BorderRadius.circular(2)),
-                  ),
-                  const SizedBox(width: 8),
-                  Text(
-                    'My Documents',
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w700,
-                      color: Colors.grey.shade800,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            const SizedBox(height: 16),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24),
-              child: _buildDocumentsSection(context),
-            ),
-            const SizedBox(height: 16),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24),
-              child: _buildSettingsCard(context),
-            ),
-            const SizedBox(height: 120),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
 
   Widget _buildProfileSection(BuildContext context) {
-    void gated(VoidCallback action) {
-      final auth = Provider.of<custom_auth.AuthProvider>(context, listen: false);
-      if (auth.user == null) {
-        showModalBottomSheet(
-          context: context,
-          isScrollControlled: true,
-          backgroundColor: Colors.transparent,
-          builder: (_) => const LoginPromptScreen(),
-        );
-        return;
-      }
-      action();
-    }
-
-    // ⭐️ 주입받을 Provider 타입을 custom_auth 영역으로 명시하여 충돌 해결
     return Consumer<custom_auth.AuthProvider>(
       builder: (context, authProvider, _) {
         final user = authProvider.user;
@@ -354,19 +289,25 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
               child: Column(
                 children: [
                   GestureDetector(
-                    onTap: () {
+                    onTap: () async {
                       if (user == null) {
-                        showModalBottomSheet(
+                        await showModalBottomSheet(
                           context: context,
                           isScrollControlled: true,
                           backgroundColor: Colors.transparent,
                           builder: (_) => const LoginPromptScreen(),
                         );
+                        if (!context.mounted) return;
+                        if (Provider.of<custom_auth.AuthProvider>(context, listen: false).user != null) {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (_) => const ProfileScreen()),
+                          );
+                        }
                       } else {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(
-                              builder: (_) => const ProfileScreen()),
+                          MaterialPageRoute(builder: (_) => const ProfileScreen()),
                         );
                       }
                     },
@@ -422,32 +363,57 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                                 ),
                                 const SizedBox(height: 4),
                                 Consumer<SubscriptionService>(
-                                  builder: (context, sub, _) => GestureDetector(
-                                    onTap: () => SubscriptionSheet.show(context),
-                                    child: Row(
-                                      mainAxisSize: MainAxisSize.min,
-                                      children: [
-                                        Icon(
-                                          sub.isPremium
-                                              ? Icons.check_circle_rounded
-                                              : Icons.star_rounded,
-                                          size: 13,
-                                          color: const Color(0xFF3DDAD7),
+                                  builder: (context, sub, _) {
+                                    if (sub.isPremium) {
+                                      return GestureDetector(
+                                        onTap: () => SubscriptionSheet.show(context),
+                                        child: Row(
+                                          mainAxisSize: MainAxisSize.min,
+                                          children: const [
+                                            Icon(Icons.check_circle_rounded, size: 13, color: Color(0xFF3DDAD7)),
+                                            SizedBox(width: 4),
+                                            Text(
+                                              'Premium Active',
+                                              style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: Color(0xFF3DDAD7)),
+                                            ),
+                                          ],
                                         ),
-                                        const SizedBox(width: 4),
-                                        Text(
-                                          sub.isPremium
-                                              ? 'Premium Active'
-                                              : 'Remove Ads',
-                                          style: const TextStyle(
-                                            fontSize: 12,
-                                            fontWeight: FontWeight.w700,
-                                            color: Color(0xFF3DDAD7),
+                                      );
+                                    } else if (!sub.hasEverBeenPremium) {
+                                      return GestureDetector(
+                                        onTap: () => SubscriptionSheet.show(context, onShareTap: _handleShare),
+                                        child: Container(
+                                          margin: const EdgeInsets.only(top: 4),
+                                          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                                          decoration: BoxDecoration(
+                                            color: const Color(0xFFFFF8F0),
+                                            borderRadius: BorderRadius.circular(10),
+                                            border: Border.all(color: const Color(0xFFFFB347), width: 1.2),
+                                          ),
+                                          child: Row(
+                                            mainAxisSize: MainAxisSize.min,
+                                            children: [
+                                              const Text('🎁', style: TextStyle(fontSize: 13)),
+                                              const SizedBox(width: 6),
+                                              RichText(
+                                                text: const TextSpan(
+                                                  style: TextStyle(fontSize: 12, height: 1.3),
+                                                  children: [
+                                                    TextSpan(
+                                                      text: 'Try 30 days FREE! ',
+                                                      style: TextStyle(fontWeight: FontWeight.w800, color: Color(0xFF1A1A2E)),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+                                            ],
                                           ),
                                         ),
-                                      ],
-                                    ),
-                                  ),
+                                      );
+                                    } else {
+                                      return const SizedBox.shrink();
+                                    }
+                                  },
                                 ),
                               ],
                             ),
@@ -469,17 +435,18 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                   const SizedBox(height: 20),
                   Divider(color: Colors.grey.shade100, height: 1),
                   const SizedBox(height: 20),
+                  const _DiscoverSection(),
+                  const SizedBox(height: 20),
+                  Divider(color: Colors.grey.shade100, height: 1),
+                  const SizedBox(height: 20),
 
                   GestureDetector(
-                    onTap: () async {
-                      await Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (_) => const TravelerTypeSelectorScreen(),
-                        ),
-                      );
-                      _loadTravelerType();
-                    },
+                    onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) => const MyJourneyScreen(),
+                      ),
+                    ),
                     child: Container(
                       color: Colors.transparent,
                       child: Row(
@@ -490,29 +457,24 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                                 color: mint.withOpacity(0.1),
                                 borderRadius: BorderRadius.circular(14),
                               ),
-                              child: Icon(_getTravelerTypeIcon(),
+                              child: Icon(Icons.luggage_rounded,
                                   color: darkMint, size: 24)),
                           const SizedBox(width: 16),
-                          Expanded(
+                          const Expanded(
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text('Traveler Type',
-                                    style: TextStyle(
-                                        fontSize: 12,
-                                        fontWeight: FontWeight.w600,
-                                        color: Colors.grey.shade500)),
-                                const SizedBox(height: 2),
-                                Text(
-                                    _travelerType?.isNotEmpty == true
-                                        ? _travelerType!
-                                        : 'Analyze DNA',
+                                Text('My Journey',
                                     style: TextStyle(
                                         fontSize: 15,
                                         fontWeight: FontWeight.w700,
-                                        color: _travelerType?.isNotEmpty == true
-                                            ? Colors.black87
-                                            : Colors.grey.shade400)),
+                                        color: Colors.black87)),
+                                SizedBox(height: 2),
+                                Text('Trips, documents & more',
+                                    style: TextStyle(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w600,
+                                        color: Colors.grey)),
                               ],
                             ),
                           ),
@@ -595,14 +557,31 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                   const SizedBox(height: 16),
 
                   GestureDetector(
-                    onTap: () => gated(() async {
-                      await Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (_) => const DailyQuizScreen()),
-                      );
-                      _checkQuizSolvedToday();
-                    }),
+                    onTap: () async {
+                      final auth = Provider.of<custom_auth.AuthProvider>(context, listen: false);
+                      if (auth.user == null) {
+                        await showModalBottomSheet(
+                          context: context,
+                          isScrollControlled: true,
+                          backgroundColor: Colors.transparent,
+                          builder: (_) => const LoginPromptScreen(),
+                        );
+                        if (!context.mounted) return;
+                        if (Provider.of<custom_auth.AuthProvider>(context, listen: false).user != null) {
+                          await Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (_) => const DailyQuizScreen()),
+                          );
+                          _checkQuizSolvedToday();
+                        }
+                      } else {
+                        await Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (_) => const DailyQuizScreen()),
+                        );
+                        _checkQuizSolvedToday();
+                      }
+                    },
                     child: Container(
                       color: Colors.transparent,
                       child: Row(
@@ -974,219 +953,220 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
     );
   }
 
-  Widget _buildMainFeatures(BuildContext context) {
-    void gated(VoidCallback action) {
-      final auth = Provider.of<custom_auth.AuthProvider>(context, listen: false);
-      if (auth.user == null) {
-        showModalBottomSheet(
-          context: context,
-          isScrollControlled: true,
-          backgroundColor: Colors.transparent,
-          builder: (_) => const LoginPromptScreen(),
-        );
-        return;
-      }
-      action();
-    }
+}
 
-    return Column(
-      children: [
-        Row(
-          children: [
-            Expanded(
-                child: _buildFeatureCard(
-                    context,
-                    'Trip Log',
-                    '',
-                    Icons.auto_stories_rounded,
-                    orange,
-                        () => gated(() => Navigator.push(context, MaterialPageRoute(builder: (_) => const TripLogListScreen()))))),
-            const SizedBox(width: 12),
-            Expanded(
-                child: _buildFeatureCard(
-                    context,
-                    'Discover',
-                    '',
-                    Icons.search_rounded,
-                    recommendBlue,
-                        () => gated(() => Navigator.push(context, MaterialPageRoute(builder: (_) => const RecommendationsScreen()))))),
-            const SizedBox(width: 12),
-            Expanded(
-                child: _buildFeatureCard(
-                    context,
-                    'Favorites',
-                    '',
-                    Icons.favorite_rounded,
-                    pink,
-                        () => gated(() => Navigator.push(context, MaterialPageRoute(builder: (_) => const FavoritesScreen()))))),
-          ],
-        ),
-        const SizedBox(height: 12),
-        _buildFeatureCard(
-            context,
-            'Calendar',
-            'Plan your next adventure',
-            Icons.calendar_month_rounded,
-            red,
-                () => gated(() => Navigator.push(context, MaterialPageRoute(builder: (_) => const CalendarScreen()))),
-            isWide: true),
-      ],
+// ⭐️ Discover 섹션: 앱 전체와 통일된 화이트 카드 스타일. Discover는 헤더(탭 불가)이고,
+//    실제 진입점은 하위 3개 옵션(Next Trip / Flight Deals / Hotels) 중 하나를 고르는 구조.
+//    움직임 포인트는 헤더 아이콘이 천천히 도는 것 하나로 절제함.
+// ⚠️ Next Trip / Flight Deals / Hotels는 전용 화면이 아직 없어서 임시로 WorldDiscoverScreen으로 연결됨.
+//    추후 제휴 로드맵(숙소/항공 딥링크)에 맞춰 각각 별도 화면으로 교체 필요.
+class _DiscoverSection extends StatefulWidget {
+  const _DiscoverSection();
+
+  @override
+  State<_DiscoverSection> createState() => _DiscoverSectionState();
+}
+
+class _DiscoverSectionState extends State<_DiscoverSection>
+    with TickerProviderStateMixin {
+  late final AnimationController _spinController;
+  late final AnimationController _glowController;
+  late final Animation<double> _glow;
+
+  static const Color accent = Color(0xFF6D5DF6); // Discover 헤더 아이콘 전용 포인트 컬러
+  static const Color orange = Color(0xFFF97316);
+  static const Color recommendBlue = Color(0xFF2563EB);
+  static const Color pink = Color(0xFFEC4899);
+
+  @override
+  void initState() {
+    super.initState();
+    _spinController = AnimationController(
+      vsync: this,
+      duration: const Duration(seconds: 10),
+    )..repeat();
+    _glowController = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 1600),
+    )..repeat(reverse: true);
+    _glow = CurvedAnimation(parent: _glowController, curve: Curves.easeInOut);
+  }
+
+  @override
+  void dispose() {
+    _spinController.dispose();
+    _glowController.dispose();
+    super.dispose();
+  }
+
+  void _openDiscover(BuildContext context) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (_) => const WorldDiscoverScreen()),
     );
   }
 
-  Widget _buildFeatureCard(BuildContext context, String title, String subtitle,
-      IconData icon, Color color, VoidCallback onTap,
-      {bool isWide = false}) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        padding:
-        EdgeInsets.symmetric(vertical: 20, horizontal: isWide ? 20 : 12),
-        decoration: BoxDecoration(
+  @override
+  Widget build(BuildContext context) {
+    return AnimatedBuilder(
+      animation: _glow,
+      builder: (context, child) {
+        return Container(
+          decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(20),
+            border: Border.all(
+              color: accent.withOpacity(0.20 + 0.16 * _glow.value),
+              width: 1.5,
+            ),
             boxShadow: [
               BoxShadow(
-                  color: Colors.black.withOpacity(0.04),
-                  blurRadius: 10,
-                  offset: const Offset(0, 4))
-            ]),
-        child: isWide
-            ? Row(children: [
-          Container(
-              padding: const EdgeInsets.all(12),
-              decoration: BoxDecoration(
-                  color: color.withOpacity(0.1),
-                  borderRadius: BorderRadius.circular(14)),
-              child: Icon(icon, color: color, size: 24)),
-          const SizedBox(width: 16),
-          Expanded(
-              child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(title,
-                        style: const TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w700,
-                            color: Colors.black87)),
-                    if (subtitle.isNotEmpty) ...[
-                      const SizedBox(height: 2),
-                      Text(subtitle,
-                          style: TextStyle(
-                              fontSize: 13,
-                              color: Colors.grey.shade500,
-                              fontWeight: FontWeight.w500)),
-                    ]
-                  ])),
-          Icon(Icons.arrow_forward_ios,
-              size: 14, color: Colors.grey.shade300)
-        ])
-            : Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
-          Container(
-              padding: const EdgeInsets.all(14),
-              decoration: BoxDecoration(
-                color: color.withOpacity(0.1),
-                shape: BoxShape.circle,
+                color: accent.withOpacity(0.10 + 0.10 * _glow.value),
+                blurRadius: 14 + 8 * _glow.value,
+                offset: const Offset(0, 6),
               ),
-              child: Icon(icon, color: color, size: 24)),
-          const SizedBox(height: 12),
-          Text(title,
-              textAlign: TextAlign.center,
-              style: const TextStyle(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w700,
-                  color: Colors.black87)),
-        ]),
+            ],
+          ),
+          child: child,
+        );
+      },
+      child: Column(
+        children: [
+          // 헤더 (탭 불가 — Discover 자체는 버튼이 아니라 아래 옵션들의 라벨)
+          Container(
+            padding: const EdgeInsets.fromLTRB(20, 18, 20, 16),
+            decoration: BoxDecoration(
+              borderRadius: const BorderRadius.vertical(top: Radius.circular(19)),
+              gradient: LinearGradient(
+                begin: Alignment.centerLeft,
+                end: Alignment.centerRight,
+                colors: [accent.withOpacity(0.10), accent.withOpacity(0.02)],
+              ),
+            ),
+            child: Row(
+              children: [
+                Container(
+                  padding: const EdgeInsets.all(12),
+                  decoration: BoxDecoration(
+                    color: accent.withOpacity(0.14),
+                    borderRadius: BorderRadius.circular(14),
+                  ),
+                  child: AnimatedBuilder(
+                    animation: _spinController,
+                    builder: (context, child) {
+                      return Transform.rotate(
+                        angle: _spinController.value * 2 * 3.14159265,
+                        child: child,
+                      );
+                    },
+                    child: const Icon(Icons.public_rounded, color: accent, size: 24),
+                  ),
+                ),
+                const SizedBox(width: 16),
+                const Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Discover',
+                        style: TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.w700,
+                            color: Colors.black87),
+                      ),
+                      SizedBox(height: 2),
+                      Text(
+                        'Your next destination',
+                        style: TextStyle(
+                            fontSize: 12,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.grey),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Divider(color: Colors.grey.shade100, height: 1),
+          // 하위 3개 옵션 — Discover에 속한 선택지로, 하나만 고르는 구조 (같은 카드 안에 세그먼트로 병합)
+          IntrinsicHeight(
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Expanded(
+                  child: _buildOption(
+                    context,
+                    icon: Icons.search_rounded,
+                    label: 'Next Trip',
+                    color: recommendBlue,
+                  ),
+                ),
+                VerticalDivider(color: Colors.grey.shade100, width: 1),
+                Expanded(
+                  child: _buildOption(
+                    context,
+                    icon: Icons.flight_rounded,
+                    label: 'Flight Deals',
+                    color: orange,
+                  ),
+                ),
+                VerticalDivider(color: Colors.grey.shade100, width: 1),
+                Expanded(
+                  child: _buildOption(
+                    context,
+                    icon: Icons.hotel_rounded,
+                    label: 'Hotels',
+                    color: pink,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
 
-  Widget _buildDocumentsSection(BuildContext context) {
-    void gated(VoidCallback action) {
-      final auth = Provider.of<custom_auth.AuthProvider>(context, listen: false);
-      if (auth.user == null) {
-        showModalBottomSheet(
-          context: context,
-          isScrollControlled: true,
-          backgroundColor: Colors.transparent,
-          builder: (_) => const LoginPromptScreen(),
-        );
-        return;
-      }
-      action();
-    }
-
-    return Row(children: [
-      Expanded(
-          child: _buildDocCard(
-              context,
-              'Passport',
-              Icons.book_rounded,
-              purple,
-                  () => gated(() => Navigator.push(context, MaterialPageRoute(builder: (_) => const PassportScreen()))))),
-      const SizedBox(width: 12),
-      Expanded(
-          child: _buildDocCard(
-              context,
-              'Visa',
-              Icons.article_rounded,
-              mint,
-                  () => gated(() => Navigator.push(context, MaterialPageRoute(builder: (_) => const VisaScreen()))))),
-    ]);
-  }
-
-  Widget _buildDocCard(BuildContext context, String title, IconData icon,
-      Color color, VoidCallback onTap) {
-    return GestureDetector(
-        onTap: onTap,
-        child: Container(
-            padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 16),
-            decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(20),
-                boxShadow: [
-                  BoxShadow(
-                      color: Colors.black.withOpacity(0.04),
-                      blurRadius: 10,
-                      offset: const Offset(0, 4))
-                ]),
-            child: Column(children: [
-              Icon(icon, color: color, size: 32),
-              const SizedBox(height: 12),
-              Text(title,
-                  style: const TextStyle(
-                      fontSize: 15,
-                      fontWeight: FontWeight.w600,
-                      color: Colors.black87))
-            ])));
-  }
-
-  Widget _buildSettingsCard(BuildContext context) {
-    return GestureDetector(
-        onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const SettingsScreen())),
-        child: Container(
-            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
-            decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(20),
-                boxShadow: [
-                  BoxShadow(
-                      color: Colors.black.withOpacity(0.04),
-                      blurRadius: 10,
-                      offset: const Offset(0, 4))
-                ]),
-            child: Row(children: [
-              Icon(Icons.settings_outlined,
-                  color: Colors.grey.shade700, size: 24),
-              const SizedBox(width: 16),
-              const Expanded(
-                  child: Text('Settings',
-                      style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w600,
-                          color: Colors.black87))),
-              Icon(Icons.arrow_forward_ios,
-                  size: 14, color: Colors.grey.shade300)
-            ])));
+  Widget _buildOption(
+      BuildContext context, {
+        required IconData icon,
+        required String label,
+        required Color color,
+      }) {
+    return Material(
+      color: Colors.transparent,
+      borderRadius: BorderRadius.circular(20),
+      child: InkWell(
+        onTap: () => _openDiscover(context),
+        borderRadius: BorderRadius.circular(20),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 8),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Container(
+                padding: const EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  color: color.withOpacity(0.1),
+                  shape: BoxShape.circle,
+                ),
+                child: Icon(icon, color: color, size: 20),
+              ),
+              const SizedBox(height: 8),
+              Text(
+                label,
+                textAlign: TextAlign.center,
+                style: const TextStyle(
+                  fontSize: 11,
+                  fontWeight: FontWeight.w700,
+                  color: Colors.black87,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }

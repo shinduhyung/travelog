@@ -10,6 +10,8 @@ import 'package:jidoapp/providers/passport_provider.dart';
 import 'package:jidoapp/screens/passport_visa_detail_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class PassportScreen extends StatefulWidget {
   const PassportScreen({super.key});
@@ -125,32 +127,94 @@ class _PassportScreenState extends State<PassportScreen> {
     super.dispose();
   }
 
-  // ── SharedPreferences Load ──────────────────────────────────────────────────
+  // ── SharedPreferences + Firestore Load ────────────────────────────────────
   Future<void> _loadSavedPassports() async {
     try {
       final prefs = await SharedPreferences.getInstance();
-      final String? jsonString = prefs.getString(_prefsKey);
-      if (jsonString != null) {
-        final List<dynamic> decoded = jsonDecode(jsonString);
-        if (mounted) {
-          setState(() {
-            _userPassports.addAll(
-              decoded.map((e) => _UserPassportInfo.fromJson(e as Map<String, dynamic>)),
-            );
-          });
+      final user = FirebaseAuth.instance.currentUser;
+
+      List<_UserPassportInfo> loaded = [];
+
+      if (user != null) {
+        // 로그인 상태: Firestore 우선, 실패 시 로컬 fallback
+        try {
+          final doc = await FirebaseFirestore.instance
+              .collection('users')
+              .doc(user.uid)
+              .get()
+              .timeout(const Duration(seconds: 5));
+
+          if (doc.exists && doc.data()!.containsKey('userPassports')) {
+            final String serverJson = doc.data()!['userPassports'];
+            final List<dynamic> decoded = jsonDecode(serverJson);
+            loaded = decoded
+                .map((e) => _UserPassportInfo.fromJson(e as Map<String, dynamic>))
+                .toList();
+            // 서버 데이터를 로컬에도 동기화
+            await prefs.setString(_prefsKey, serverJson);
+          } else {
+            // Firestore에 없으면 로컬에서 로드 후 서버에 업로드
+            final String? localJson = prefs.getString(_prefsKey);
+            if (localJson != null) {
+              final List<dynamic> decoded = jsonDecode(localJson);
+              loaded = decoded
+                  .map((e) => _UserPassportInfo.fromJson(e as Map<String, dynamic>))
+                  .toList();
+            }
+          }
+        } catch (e) {
+          print('Firestore passport load failed, using local: $e');
+          final String? localJson = prefs.getString(_prefsKey);
+          if (localJson != null) {
+            final List<dynamic> decoded = jsonDecode(localJson);
+            loaded = decoded
+                .map((e) => _UserPassportInfo.fromJson(e as Map<String, dynamic>))
+                .toList();
+          }
         }
+      } else {
+        // 비로그인: 로컬만
+        final String? localJson = prefs.getString(_prefsKey);
+        if (localJson != null) {
+          final List<dynamic> decoded = jsonDecode(localJson);
+          loaded = decoded
+              .map((e) => _UserPassportInfo.fromJson(e as Map<String, dynamic>))
+              .toList();
+        }
+      }
+
+      if (mounted && loaded.isNotEmpty) {
+        setState(() {
+          _userPassports.addAll(loaded);
+        });
       }
     } catch (e) {
       print('Error loading saved passports: $e');
     }
   }
 
-  // ── SharedPreferences Save ──────────────────────────────────────────────────
+  // ── SharedPreferences + Firestore Save ────────────────────────────────────
   Future<void> _persistPassports() async {
     try {
       final prefs = await SharedPreferences.getInstance();
       final String encoded = jsonEncode(_userPassports.map((p) => p.toJson()).toList());
+
+      // 로컬 저장
       await prefs.setString(_prefsKey, encoded);
+
+      // Firestore 저장 (로그인 상태일 때만, 백그라운드)
+      final user = FirebaseAuth.instance.currentUser;
+      if (user != null) {
+        FirebaseFirestore.instance
+            .collection('users')
+            .doc(user.uid)
+            .set({
+          'userPassports': encoded,
+          'lastUpdated': FieldValue.serverTimestamp(),
+        }, SetOptions(merge: true)).catchError((e) {
+          print('Firestore passport save failed: $e');
+        });
+      }
     } catch (e) {
       print('Error persisting passports: $e');
     }

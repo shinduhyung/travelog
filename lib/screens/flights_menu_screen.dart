@@ -375,6 +375,18 @@ class _FlightsMenuScreenState extends State<FlightsMenuScreen>
   }
 
   // ⭐️ [디자인 개선] 숫자(Count)를 포함하는 카드로 수정
+  // ⭐️ Hub 미등록 유저를 위한 검색 기반 Hub 등록 모달
+  void _showHubSetupModal(BuildContext context, AirportProvider airportProvider) {
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      backgroundColor: Colors.transparent,
+      builder: (modalContext) {
+        return _HubSetupSheet(airportProvider: airportProvider);
+      },
+    );
+  }
+
   Widget _buildListSummaryCard(
       BuildContext context, {
         required String title,
@@ -384,13 +396,17 @@ class _FlightsMenuScreenState extends State<FlightsMenuScreen>
         required IconData icon,
         required Color color,
         required VoidCallback onTap,
+        bool isHubPrompt = false,
       }) {
     final bool isAirports = title.toLowerCase() == "airports";
     final IconData displayIcon = isAirports ? Icons.flight_land : Icons.airlines;
 
+    // Hub 미등록 상태면 강조 색상으로 전환 (눈에 띄게)
+    final Color cardColor = isHubPrompt ? Colors.deepOrange : color;
+
     // Airport 이름에서 맨 뒤 "Airport" 제거 로직
     String displayValue = value;
-    if (isAirports && value.isNotEmpty) {
+    if (isAirports && value.isNotEmpty && !isHubPrompt) {
       final words = value.split(' ');
       if (words.isNotEmpty && words.last.toLowerCase() == 'airport') {
         displayValue = words.sublist(0, words.length - 1).join(' ');
@@ -404,10 +420,15 @@ class _FlightsMenuScreenState extends State<FlightsMenuScreen>
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(20),
+          border: isHubPrompt
+              ? Border.all(color: cardColor.withOpacity(0.5), width: 1.5)
+              : null,
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(0.06),
-              blurRadius: 15,
+              color: isHubPrompt
+                  ? cardColor.withOpacity(0.25)
+                  : Colors.black.withOpacity(0.06),
+              blurRadius: isHubPrompt ? 20 : 15,
               offset: const Offset(0, 4),
             ),
           ],
@@ -425,7 +446,7 @@ class _FlightsMenuScreenState extends State<FlightsMenuScreen>
                 child: Container(
                   decoration: BoxDecoration(
                     gradient: LinearGradient(
-                      colors: [color, color.withOpacity(0.6)],
+                      colors: [cardColor, cardColor.withOpacity(0.6)],
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter,
                     ),
@@ -436,20 +457,45 @@ class _FlightsMenuScreenState extends State<FlightsMenuScreen>
                 padding: const EdgeInsets.fromLTRB(24, 20, 20, 20),
                 child: Row(
                   children: [
-                    // 아이콘
-                    Container(
-                      width: 52,
-                      height: 52,
-                      decoration: BoxDecoration(
-                        color: color.withOpacity(0.1),
-                        borderRadius: BorderRadius.circular(14),
+                    // 아이콘 (Hub 미등록 시 펄스 효과)
+                    if (isHubPrompt && _markerPulse != null)
+                      AnimatedBuilder(
+                        animation: _markerPulse!,
+                        builder: (context, child) {
+                          final pulseValue = (_markerPulse!.value / 2.0).clamp(0.0, 1.0);
+                          return Container(
+                            width: 52,
+                            height: 52,
+                            decoration: BoxDecoration(
+                              color: cardColor.withOpacity(0.1),
+                              borderRadius: BorderRadius.circular(14),
+                              border: Border.all(
+                                color: cardColor.withOpacity(1.0 - pulseValue),
+                                width: 2,
+                              ),
+                            ),
+                            child: Icon(
+                              Icons.add_location_alt,
+                              color: cardColor,
+                              size: 26,
+                            ),
+                          );
+                        },
+                      )
+                    else
+                      Container(
+                        width: 52,
+                        height: 52,
+                        decoration: BoxDecoration(
+                          color: cardColor.withOpacity(0.1),
+                          borderRadius: BorderRadius.circular(14),
+                        ),
+                        child: Icon(
+                          displayIcon,
+                          color: cardColor,
+                          size: 26,
+                        ),
                       ),
-                      child: Icon(
-                        displayIcon,
-                        color: color,
-                        size: 26,
-                      ),
-                    ),
                     const SizedBox(width: 16),
                     // 텍스트 정보
                     Expanded(
@@ -459,38 +505,40 @@ class _FlightsMenuScreenState extends State<FlightsMenuScreen>
                           Row(
                             children: [
                               Text(
-                                title.toUpperCase(),
+                                (isHubPrompt ? "SET UP HUB" : title).toUpperCase(),
                                 style: TextStyle(
                                   fontSize: 11,
                                   fontWeight: FontWeight.w700,
-                                  color: color,
+                                  color: cardColor,
                                   letterSpacing: 1.2,
                                 ),
                               ),
-                              const SizedBox(width: 8),
-                              Container(
-                                padding: const EdgeInsets.symmetric(
-                                  horizontal: 8,
-                                  vertical: 2,
-                                ),
-                                decoration: BoxDecoration(
-                                  color: color.withOpacity(0.15),
-                                  borderRadius: BorderRadius.circular(6),
-                                ),
-                                child: Text(
-                                  "$count",
-                                  style: TextStyle(
-                                    fontSize: 11,
-                                    fontWeight: FontWeight.w800,
-                                    color: color,
+                              if (!isHubPrompt) ...[
+                                const SizedBox(width: 8),
+                                Container(
+                                  padding: const EdgeInsets.symmetric(
+                                    horizontal: 8,
+                                    vertical: 2,
+                                  ),
+                                  decoration: BoxDecoration(
+                                    color: cardColor.withOpacity(0.15),
+                                    borderRadius: BorderRadius.circular(6),
+                                  ),
+                                  child: Text(
+                                    "$count",
+                                    style: TextStyle(
+                                      fontSize: 11,
+                                      fontWeight: FontWeight.w800,
+                                      color: cardColor,
+                                    ),
                                   ),
                                 ),
-                              ),
+                              ],
                             ],
                           ),
                           const SizedBox(height: 6),
                           Text(
-                            displayValue,
+                            isHubPrompt ? "Tap to set your Hub" : displayValue,
                             style: TextStyle(
                               fontSize: isAirports ? 16 : 18,
                               fontWeight: FontWeight.w800,
@@ -502,7 +550,7 @@ class _FlightsMenuScreenState extends State<FlightsMenuScreen>
                           ),
                           const SizedBox(height: 2),
                           Text(
-                            subLabel,
+                            isHubPrompt ? "Select your home airport" : subLabel,
                             style: TextStyle(
                               fontSize: 12,
                               fontWeight: FontWeight.w500,
@@ -516,12 +564,12 @@ class _FlightsMenuScreenState extends State<FlightsMenuScreen>
                     Container(
                       padding: const EdgeInsets.all(8),
                       decoration: BoxDecoration(
-                        color: color.withOpacity(0.08),
+                        color: cardColor.withOpacity(0.08),
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Icon(
-                        Icons.arrow_forward_ios,
-                        color: color,
+                        isHubPrompt ? Icons.search : Icons.arrow_forward_ios,
+                        color: cardColor,
                         size: 16,
                       ),
                     ),
@@ -581,20 +629,15 @@ class _FlightsMenuScreenState extends State<FlightsMenuScreen>
             String mostUsedAirportName = "Select Your Hub";
             String airportSubLabel = "My Hub";
 
-            final hubs = airportProvider.visitedAirports
-                .where((iata) => airportProvider.isHub(iata))
-                .toList();
+            final currentHubIata = airportProvider.currentHubIata;
 
-            if (hubs.isNotEmpty) {
-              hubs.sort((a, b) => airportProvider.getVisitCount(b).compareTo(airportProvider.getVisitCount(a)));
-              final topHubIata = hubs.first;
-
+            if (currentHubIata != null) {
               try {
                 mostUsedAirportName = airportProvider.allAirports
-                    .firstWhere((a) => a.iataCode == topHubIata)
+                    .firstWhere((a) => a.iataCode == currentHubIata)
                     .name;
               } catch (_) {
-                mostUsedAirportName = topHubIata;
+                mostUsedAirportName = currentHubIata;
               }
             }
 
@@ -871,7 +914,7 @@ class _FlightsMenuScreenState extends State<FlightsMenuScreen>
 
                           _buildHeroLogCard(context, flightCount),
 
-                          // ⭐️ [변경] Airports 카드: 숫자 추가 및 디자인 개선
+                          // ⭐️ [변경] Airports 카드: Hub 미등록 시 검색 모달로 유도
                           _buildListSummaryCard(
                             context,
                             title: "Airports",
@@ -880,7 +923,10 @@ class _FlightsMenuScreenState extends State<FlightsMenuScreen>
                             count: visitedAirportsCount, // ⭐️ 방문 공항 수 전달
                             icon: Icons.connecting_airports,
                             color: accentBlue,
-                            onTap: () => Navigator.push(
+                            isHubPrompt: airportProvider.currentHubIata == null,
+                            onTap: airportProvider.currentHubIata == null
+                                ? () => _showHubSetupModal(context, airportProvider)
+                                : () => Navigator.push(
                               context,
                               MaterialPageRoute(
                                 builder: (_) => const AirportsScreen(),
@@ -914,6 +960,257 @@ class _FlightsMenuScreenState extends State<FlightsMenuScreen>
               ),
             );
           },
+        ),
+      ),
+    );
+  }
+}
+
+// ⭐️ Hub 검색 등록용 바텀시트
+class _HubSetupSheet extends StatefulWidget {
+  final AirportProvider airportProvider;
+
+  const _HubSetupSheet({required this.airportProvider});
+
+  @override
+  State<_HubSetupSheet> createState() => _HubSetupSheetState();
+}
+
+class _HubSetupSheetState extends State<_HubSetupSheet> {
+  final TextEditingController _searchController = TextEditingController();
+  String _query = '';
+
+  @override
+  void dispose() {
+    _searchController.dispose();
+    super.dispose();
+  }
+
+  List<Airport> _filteredAirports() {
+    final all = widget.airportProvider.allAirports;
+    if (_query.trim().isEmpty) return const [];
+    final q = _query.trim().toLowerCase();
+    // 공항명 또는 IATA 코드로만 검색됨 (도시명 검색은 지원하지 않음 — 데이터에 도시 필드가 없음)
+    final results = all.where((a) {
+      return a.name.toLowerCase().contains(q) ||
+          a.iataCode.toLowerCase().contains(q);
+    }).toList();
+    results.sort((a, b) {
+      // IATA 코드가 정확히 일치하면 최상단
+      final aExact = a.iataCode.toLowerCase() == q ? 0 : 1;
+      final bExact = b.iataCode.toLowerCase() == q ? 0 : 1;
+      if (aExact != bExact) return aExact.compareTo(bExact);
+      return a.name.compareTo(b.name);
+    });
+    return results.take(30).toList();
+  }
+
+  String _getFlagEmoji(String countryCode) {
+    if (countryCode.length != 2) return '🏳️';
+    final int firstLetter = countryCode.toUpperCase().codeUnitAt(0) - 0x41 + 0x1F1E6;
+    final int secondLetter = countryCode.toUpperCase().codeUnitAt(1) - 0x41 + 0x1F1E6;
+    return String.fromCharCode(firstLetter) + String.fromCharCode(secondLetter);
+  }
+
+  void _selectHub(Airport airport) {
+    widget.airportProvider.updateHubStatus(airport.iataCode, true);
+    Navigator.of(context).pop();
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text('${airport.name} is now set as your Hub'),
+        backgroundColor: Colors.deepOrange,
+        behavior: SnackBarBehavior.floating,
+      ),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final results = _filteredAirports();
+
+    return Padding(
+      padding: EdgeInsets.only(
+        bottom: MediaQuery.of(context).viewInsets.bottom,
+      ),
+      child: DraggableScrollableSheet(
+        initialChildSize: 0.75,
+        minChildSize: 0.5,
+        maxChildSize: 0.92,
+        expand: false,
+        builder: (context, scrollController) {
+          return Container(
+            decoration: const BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
+            ),
+            child: Column(
+              children: [
+                const SizedBox(height: 12),
+                Container(
+                  width: 40,
+                  height: 4,
+                  decoration: BoxDecoration(
+                    color: Colors.grey[300],
+                    borderRadius: BorderRadius.circular(2),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(20, 16, 20, 8),
+                  child: Row(
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                          color: Colors.deepOrange.withOpacity(0.1),
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: const Icon(Icons.add_location_alt,
+                            color: Colors.deepOrange),
+                      ),
+                      const SizedBox(width: 12),
+                      const Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Set Your Hub',
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.w800,
+                              ),
+                            ),
+                            Text(
+                              'Search by airport name or IATA code',
+                              style: TextStyle(
+                                fontSize: 12,
+                                color: Colors.grey,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+                  child: TextField(
+                    controller: _searchController,
+                    autofocus: true,
+                    onChanged: (value) => setState(() => _query = value),
+                    decoration: InputDecoration(
+                      hintText: 'e.g. CDG, Charles de Gaulle',
+                      prefixIcon: const Icon(Icons.search),
+                      suffixIcon: _query.isNotEmpty
+                          ? IconButton(
+                        icon: const Icon(Icons.clear),
+                        onPressed: () {
+                          _searchController.clear();
+                          setState(() => _query = '');
+                        },
+                      )
+                          : null,
+                      filled: true,
+                      fillColor: Colors.grey[100],
+                      contentPadding: const EdgeInsets.symmetric(vertical: 0),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(14),
+                        borderSide: BorderSide.none,
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 8),
+                Expanded(
+                  child: _query.trim().isEmpty
+                      ? const _HubSetupEmptyState()
+                      : results.isEmpty
+                      ? const _HubSetupNoResults()
+                      : ListView.separated(
+                    controller: scrollController,
+                    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+                    itemCount: results.length,
+                    separatorBuilder: (_, __) => const Divider(height: 1),
+                    itemBuilder: (context, index) {
+                      final airport = results[index];
+                      return ListTile(
+                        contentPadding: const EdgeInsets.symmetric(horizontal: 12),
+                        leading: Container(
+                          width: 44,
+                          height: 44,
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                            color: Colors.deepOrange.withOpacity(0.08),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Text(
+                            _getFlagEmoji(airport.country),
+                            style: const TextStyle(fontSize: 22),
+                          ),
+                        ),
+                        title: Text(
+                          airport.name,
+                          style: const TextStyle(fontWeight: FontWeight.w600),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                        subtitle: Text(airport.iataCode),
+                        onTap: () => _selectHub(airport),
+                      );
+                    },
+                  ),
+                ),
+              ],
+            ),
+          );
+        },
+      ),
+    );
+  }
+}
+
+class _HubSetupEmptyState extends StatelessWidget {
+  const _HubSetupEmptyState();
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Padding(
+        padding: const EdgeInsets.all(24),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(Icons.travel_explore, size: 40, color: Colors.grey[400]),
+            const SizedBox(height: 12),
+            Text(
+              'Start typing to find your airport',
+              style: TextStyle(color: Colors.grey[500]),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class _HubSetupNoResults extends StatelessWidget {
+  const _HubSetupNoResults();
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Padding(
+        padding: const EdgeInsets.all(24),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(Icons.search_off, size: 40, color: Colors.grey[400]),
+            const SizedBox(height: 12),
+            Text(
+              'No matching airports found',
+              style: TextStyle(color: Colors.grey[500]),
+            ),
+          ],
         ),
       ),
     );

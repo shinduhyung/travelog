@@ -5,15 +5,12 @@ import 'package:jidoapp/screens/login_prompt_screen.dart';
 import 'package:jidoapp/screens/landmarks_list_screen.dart';
 import 'package:jidoapp/screens/top_activities_menu_screen.dart';
 import 'package:jidoapp/utils/premium_access_manager.dart';
-import 'package:jidoapp/widgets/subscription_sheet.dart';
-import 'package:jidoapp/services/subscription_service.dart';
 
 class ActivitiesMenuScreen extends StatelessWidget {
   const ActivitiesMenuScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final isPremium = context.watch<SubscriptionService>().isPremium;
     final cultureAndArtsItems = [
       {'title': 'Painting & Artworks', 'imagePath': 'assets/explore_icons/paintings.png', 'attributes': ['Painting', 'Artwork']},
       {'title': 'Libraries & Bookstores', 'imagePath': 'assets/explore_icons/library.png', 'attributes': ['Library', 'Bookstore']},
@@ -103,15 +100,7 @@ class ActivitiesMenuScreen extends StatelessWidget {
                       return;
                     }
 
-                    if (!PremiumAccessManager.hasAccess(context)) {
-                      SubscriptionSheet.show(context);
-                      return;
-                    }
-
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (_) => const TopActivitiesMenuScreen()),
-                    );
+                    Navigator.push(context, MaterialPageRoute(builder: (_) => const TopActivitiesMenuScreen()));
                   },
                   child: Stack(
                     children: [
@@ -165,11 +154,6 @@ class ActivitiesMenuScreen extends StatelessWidget {
                             ),
                           ],
                         ),
-                      ),
-                      Positioned(
-                        top: 8,
-                        right: 10,
-                        child: isPremium ? const SizedBox.shrink() : Icon(Icons.lock_rounded, size: 12, color: topActivitiesColor.withOpacity(0.5)),
                       ),
                     ],
                   ),
