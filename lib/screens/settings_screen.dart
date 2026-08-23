@@ -250,7 +250,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
             // ── Premium / Remove Ads ──────────────────────────
             Consumer<SubscriptionService>(
               builder: (context, sub, _) => GestureDetector(
-                onTap: () => SubscriptionSheet.show(context),
+                onTap: () => SubscriptionSheet.show(context, triggerContext: 'settings'),
                 child: Container(
                   margin: const EdgeInsets.only(bottom: 16),
                   padding: const EdgeInsets.all(16),
@@ -291,8 +291,8 @@ class _SettingsScreenState extends State<SettingsScreen> {
                             Text(
                               sub.isPremium
                                   ? 'You are subscribed. Thank you!'
-                                  : sub.productDetails != null
-                                  ? 'Go ad-free for ${sub.productDetails!.price} / year'
+                                  : sub.productDetailsFor(sub.yearlyProductIdToOffer) != null
+                                  ? 'Go ad-free for ${sub.productDetailsFor(sub.yearlyProductIdToOffer)!.price} / year'
                                   : 'Go ad-free',
                               style: TextStyle(
                                 color: Colors.white.withOpacity(0.85),

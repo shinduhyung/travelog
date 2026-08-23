@@ -9,7 +9,7 @@ import 'package:jidoapp/models/flight_info.dart';
 import 'dart:developer' as developer;
 import 'package:collection/collection.dart';
 import 'package:jidoapp/models/city_visit_detail_model.dart';
-import 'package:google_generative_ai/google_generative_ai.dart';
+import 'package:http/http.dart' as http;
 import 'package:latlong2/latlong.dart';
 
 class DatedTripItem {
@@ -21,7 +21,9 @@ class DatedTripItem {
 }
 
 class AiService {
-  final String _apiKey = dotenv.env['GEMINI_API_KEY'] ?? 'NO_KEY';
+  final String _apiKey = dotenv.env['DEEPSEEK_API_KEY'] ?? 'NO_KEY';
+  final String _deepSeekModel = 'deepseek-chat'; // 필요시 'deepseek-reasoner' 로 변경 가능
+  static const String _deepSeekEndpoint = 'https://api.deepseek.com/chat/completions';
   final Distance distance = const Distance();
   final double travelThresholdKm = 70.0;
 
@@ -49,7 +51,7 @@ Structure your output exactly as follows, using the specified emojis. Be insight
 📝 **Summary:**
 [Provide a 2-3 sentence narrative summary of the user's travel style, combining the elements above into a cohesive description.]
 """;
-    return _callGeminiApi(systemPrompt, aggregatedData);
+    return _callDeepSeekApi(systemPrompt, aggregatedData);
   }
 
   Future<String> recommendDestinations(String aggregatedData) async {
@@ -89,26 +91,45 @@ For each recommendation, provide a compelling reason that connects to their past
 - [Activity 2]
 - [Activity 3]
 """;
-    return _callGeminiApi(systemPrompt, aggregatedData);
+    return _callDeepSeekApi(systemPrompt, aggregatedData);
   }
 
-  Future<String> _callGeminiApi(String systemPrompt, String userInput) async {
+  // Gemini GenerativeModel 호출부를 대체하는 DeepSeek(OpenAI 호환) 공용 헬퍼
+  // systemPrompt / userInput을 그대로 받아 기존 함수 시그니처와 호환되게 유지
+  Future<String> _callDeepSeekApi(String systemPrompt, String userInput) async {
     if (_apiKey == 'NO_KEY') return "API Key is missing.";
 
-    final model = GenerativeModel(
-      model: 'gemini-2.5-flash',
-      apiKey: _apiKey,
-    );
-
-    final content = [
-      Content.text('$systemPrompt\n\n$userInput'),
-    ];
-
     try {
-      final response = await model.generateContent(content);
-      return response.text ?? 'No response text available.';
+      final response = await http.post(
+        Uri.parse(_deepSeekEndpoint),
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer $_apiKey',
+        },
+        body: jsonEncode({
+          'model': _deepSeekModel,
+          'messages': [
+            if (systemPrompt.isNotEmpty)
+              {'role': 'system', 'content': systemPrompt},
+            {'role': 'user', 'content': userInput},
+          ],
+          'stream': false,
+        }),
+      );
+
+      if (response.statusCode != 200) {
+        developer.log(
+          'DeepSeek API error: ${response.statusCode} ${response.body}',
+          name: 'AiService._callDeepSeekApi',
+        );
+        return 'Error: Could not connect to the AI service.';
+      }
+
+      final decoded = jsonDecode(utf8.decode(response.bodyBytes));
+      final text = decoded['choices']?[0]?['message']?['content'] as String?;
+      return text ?? 'No response text available.';
     } catch (e) {
-      developer.log('Error calling Gemini API: $e', name: 'AiService._callGeminiApi');
+      developer.log('Error calling DeepSeek API: $e', name: 'AiService._callDeepSeekApi');
       return 'Error: Could not connect to the AI service.';
     }
   }
@@ -175,18 +196,12 @@ Now parse:
 """$filteredInput"""
 ''';
 
-    final model = GenerativeModel(
-      model: 'gemini-2.5-flash',
-      apiKey: _apiKey,
-    );
-
-    final content = [Content.text(prompt)];
-
     try {
-      final response = await model.generateContent(content);
-      return response.text ?? 'No response text available.';
+      // 기존에는 systemPrompt와 userInput 구분 없이 prompt 전체를 한 번에 보냈으므로
+      // system 메시지는 비워두고 동일하게 동작하도록 유지
+      return await _callDeepSeekApi('', prompt);
     } catch (e) {
-      developer.log('Gemini Error: $e', name: 'AiService.getItineraryFromText');
+      developer.log('DeepSeek Error: $e', name: 'AiService.getItineraryFromText');
       return 'Error: Failed to get itinerary from AI.\nError: $e';
     }
   }
@@ -289,19 +304,11 @@ AIRPORTS:
 
 MANDATORY: If explicit times are mentioned in the text (like "Dep 07:42 / Arr 11:05"), you MUST use those exact times. Never ignore explicit time information.
 """;
-    final model = GenerativeModel(
-      model: 'gemini-2.5-flash',
-      apiKey: _apiKey,
-    );
-    final content = [
-      Content.text('$systemPrompt\n\n$filteredText')
-    ];
-
     try {
-      final response = await model.generateContent(content);
-      return await _parseStructuredAiResponse(response.text ?? '', countryNameToIso, aeroDataBoxService);
+      final responseText = await _callDeepSeekApi(systemPrompt, filteredText);
+      return await _parseStructuredAiResponse(responseText, countryNameToIso, aeroDataBoxService);
     } catch (e) {
-      developer.log('Gemini Error: $e', name: 'AiService.getSummaryFromText');
+      developer.log('DeepSeek Error: $e', name: 'AiService.getSummaryFromText');
       return AiSummary();
     }
   }
@@ -334,19 +341,13 @@ If an entry has no specific time, just omit the time.
 CRITICAL: The date format for '📅' must be "YYYY-MM-DD (DayOfWeek in Korean)". For example: "2025-07-15 (화)".
 """;
 
-    final model = GenerativeModel(
-      model: 'gemini-2.5-flash',
-      apiKey: _apiKey,
-    );
-    final content = [
-      Content.text('$systemPrompt\n\nCreate an itinerary from this travel data:\n$summaryData')
-    ];
-
     try {
-      final response = await model.generateContent(content);
-      return response.text ?? 'No response text available.';
+      return await _callDeepSeekApi(
+        systemPrompt,
+        'Create an itinerary from this travel data:\n$summaryData',
+      );
     } catch (e) {
-      developer.log('Gemini Error: $e', name: 'AiService.generateItineraryFromSummary');
+      developer.log('DeepSeek Error: $e', name: 'AiService.generateItineraryFromSummary');
       return 'Error: Could not connect to AI service for itinerary generation.';
     }
   }

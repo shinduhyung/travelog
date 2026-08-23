@@ -27,6 +27,16 @@ class Achievement {
   final AchievementCategory category;
   bool isUnlocked;
 
+  // [추가] 이 뱃지를 실제로 획득(claim)하려면 프리미엄 구독이 필요한지 여부.
+  // 조건 자체는 구독 여부와 무관하게 계산되고, 실제 isUnlocked 전환만 막는다.
+  final bool requiresSubscription;
+
+  // [추가] 조건(targetCount/targetIsoCodes 등)을 실제로 다 채웠는지 여부.
+  // requiresSubscription이 true인데 구독이 안 되어 있으면 isUnlocked는 false로
+  // 유지되지만, 이 필드는 true가 되어 "완료했지만 잠긴" UI 상태를 구분할 수 있게 해준다.
+  // Firestore에 저장하지 않는 런타임 전용 플래그.
+  bool conditionsMet;
+
   // Total count required for the achievement (e.g., 10 countries visited)
   final int? targetCount;
   // Specific ISO codes required for the achievement (e.g., list of World Cup winners)
@@ -67,6 +77,8 @@ class Achievement {
     required this.imagePath,
     required this.category,
     this.isUnlocked = false,
+    this.requiresSubscription = false,
+    this.conditionsMet = false,
     this.targetCount,
     this.targetIsoCodes,
     this.targetPopulationLimit,

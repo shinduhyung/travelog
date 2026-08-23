@@ -15,6 +15,10 @@ import 'badge_detail_screen.dart';
 import 'package:jidoapp/screens/badge_share.dart';
 import 'dart:ui';
 import 'dart:math';
+import 'package:jidoapp/widgets/premium_badge_shimmer.dart';
+import 'package:jidoapp/widgets/subscription_sheet.dart';
+import 'package:jidoapp/services/subscription_service.dart';
+import 'package:jidoapp/widgets/firebase_badge_image.dart';
 
 class BadgesScreen extends StatefulWidget {
   const BadgesScreen({super.key});
@@ -26,6 +30,7 @@ class BadgesScreen extends StatefulWidget {
 class _BadgesScreenState extends State<BadgesScreen> {
   bool _showUnlocked = true;
   bool _showLocked = true;
+  bool _showPremiumOnly = true; // [추가] 구독 전용 뱃지만 보기 필터 (비구독자에게만 노출) — 기본값 ON
   AchievementCategory? _selectedCategory; // null이면 전체 표시
   bool _isCategoryDropdownOpen = false;
 
@@ -136,15 +141,25 @@ class _BadgesScreenState extends State<BadgesScreen> {
 
     final allAchievements = badgeProvider.achievements;
 
+    final bool isPremiumUser = SubscriptionService.instance.isPremium;
+
     final filteredAchievements = allAchievements.where((a) {
       // 카테고리 필터
       if (_selectedCategory != null && a.category != _selectedCategory) {
         return false;
       }
+      // [추가] 구독 전용 뱃지만 보기 필터 (구독자에게는 이 필터 자체가 존재하지 않음)
+      if (_showPremiumOnly && !isPremiumUser && !a.requiresSubscription) {
+        return false;
+      }
       // Unlocked/Locked 필터
+      // [수정] 조건은 다 채웠지만 프리미엄 미구독이라 실제 isUnlocked는 false인
+      // 뱃지도 "달성" 쪽(체크 필터)에 같이 보여준다 — 포인트/isUnlocked 자체는
+      // 그대로 안 바뀌고(획득 안 된 상태 유지), 어느 필터 버킷에 노출되는지만 조정.
+      final bool displayAsAchieved = a.isUnlocked || a.conditionsMet;
       if (_showUnlocked && _showLocked) return true;
-      if (_showUnlocked) return a.isUnlocked;
-      if (_showLocked) return !a.isUnlocked;
+      if (_showUnlocked) return displayAsAchieved;
+      if (_showLocked) return !displayAsAchieved;
       return false;
     }).toList();
 
@@ -651,11 +666,22 @@ class _BadgesScreenState extends State<BadgesScreen> {
                       ),
                       const SizedBox(width: 8),
                       _buildMiniToggle(
-                        icon: Icons.lock_rounded,
-                        color: Colors.grey[600]!,
+                        icon: Icons.close_rounded,
+                        color: Colors.red[600]!,
                         isActive: _showLocked,
                         onTap: () => setState(() => _showLocked = !_showLocked),
                       ),
+                      // [추가] 구독 전용 뱃지만 보기 스위치. 구독자한테는 아예 안 보임 —
+                      // 이 기능의 존재 자체를 몰라야 하기 때문.
+                      if (!SubscriptionService.instance.isPremium) ...[
+                        const SizedBox(width: 8),
+                        _buildMiniToggle(
+                          icon: Icons.lock_rounded,
+                          color: const Color(0xFFFFC107),
+                          isActive: _showPremiumOnly,
+                          onTap: () => setState(() => _showPremiumOnly = !_showPremiumOnly),
+                        ),
+                      ],
                     ],
                   ),
                 ],
@@ -818,6 +844,66 @@ class _BadgesScreenState extends State<BadgesScreen> {
     );
   }
 
+  // [수정] 뱃지 이미지 상태 처리:
+  // - 정상 해금: 컬러
+  // - 미완료(일반): 흑백
+  // - 구독 필요한 뱃지 (비구독자, 미획득) -> 달성 여부와 무관하게 항상 가운데
+  //   자물쇠 아이콘이 뜬다. 그 중에서:
+  //     · 조건 미충족: 흑백 바탕 + 자물쇠
+  //     · 조건 충족(달성했지만 미구독): 반짝이는(컬러↔흑백) 바탕 + 자물쇠
+  //   두 경우 다 isUnlocked는 false로 남아 포인트에 안 잡히고 실제 획득도 안 됨.
+  // - 구독자에게는 이 특수 처리가 전부 안 뜨고 평범한 컬러/흑백 두 상태만 보임.
+  Widget _buildBadgeImage(Achievement achievement) {
+    final bool isPremiumUser = SubscriptionService.instance.isPremium;
+
+    final bool isLockedPremium = achievement.requiresSubscription &&
+        !achievement.isUnlocked &&
+        !isPremiumUser;
+
+    if (isLockedPremium) {
+      final Widget base = achievement.conditionsMet
+          ? PremiumBadgeShimmer(
+        child: FirebaseBadgeImage(
+          imagePath: achievement.imagePath,
+          fit: BoxFit.cover,
+        ),
+      )
+          : ColorFiltered(
+        colorFilter: const ColorFilter.mode(Colors.grey, BlendMode.saturation),
+        child: FirebaseBadgeImage(
+          imagePath: achievement.imagePath,
+          fit: BoxFit.cover,
+        ),
+      );
+
+      return Stack(
+        alignment: Alignment.center,
+        children: [
+          base,
+          Container(
+            padding: const EdgeInsets.all(8),
+            decoration: BoxDecoration(
+              color: Colors.black.withOpacity(0.55),
+              shape: BoxShape.circle,
+            ),
+            child: const Icon(Icons.lock_rounded, color: Colors.white, size: 20),
+          ),
+        ],
+      );
+    }
+
+    return ColorFiltered(
+      colorFilter: ColorFilter.mode(
+        achievement.isUnlocked ? Colors.transparent : Colors.grey,
+        achievement.isUnlocked ? BlendMode.dst : BlendMode.saturation,
+      ),
+      child: FirebaseBadgeImage(
+        imagePath: achievement.imagePath,
+        fit: BoxFit.cover,
+      ),
+    );
+  }
+
   Widget _buildBadgeGridItem(
       Achievement achievement,
       BadgeProvider badgeProvider,
@@ -871,16 +957,7 @@ class _BadgesScreenState extends State<BadgesScreen> {
                     ],
                   ),
                   child: ClipRect(
-                    child: ColorFiltered(
-                      colorFilter: ColorFilter.mode(
-                        achievement.isUnlocked ? Colors.transparent : Colors.grey,
-                        achievement.isUnlocked ? BlendMode.dst : BlendMode.saturation,
-                      ),
-                      child: Image.asset(
-                        achievement.imagePath,
-                        fit: BoxFit.cover,
-                      ),
-                    ),
+                    child: _buildBadgeImage(achievement),
                   ),
                 ),
               ),
@@ -944,6 +1021,9 @@ class _BadgesScreenState extends State<BadgesScreen> {
     final int current = min(currentRaw, total);
     final double progressVal = total > 0 ? (current / total).clamp(0.0, 1.0) : 0.0;
     final categoryColor = _getCategoryColor(achievement.category);
+    final bool isPremiumPendingClaim = achievement.requiresSubscription &&
+        !achievement.isUnlocked &&
+        achievement.conditionsMet;
 
     String progressString;
     if (achievement.targetPopulationLimit != null) {
@@ -979,13 +1059,7 @@ class _BadgesScreenState extends State<BadgesScreen> {
                         ],
                       ),
                       child: ClipRect(
-                        child: ColorFiltered(
-                          colorFilter: ColorFilter.mode(
-                            achievement.isUnlocked ? Colors.transparent : Colors.grey,
-                            achievement.isUnlocked ? BlendMode.dst : BlendMode.saturation,
-                          ),
-                          child: Image.asset(achievement.imagePath, fit: BoxFit.cover),
-                        ),
+                        child: _buildBadgeImage(achievement),
                       ),
                     ),
                     const SizedBox(height: 16),
@@ -1052,19 +1126,26 @@ class _BadgesScreenState extends State<BadgesScreen> {
                       child: ElevatedButton(
                         onPressed: () {
                           Navigator.pop(ctx);
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => BadgeDetailScreen(achievement: achievement)),
-                          );
+                          if (isPremiumPendingClaim) {
+                            SubscriptionSheet.show(context, triggerContext: 'badge_moment_claim');
+                          } else {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => BadgeDetailScreen(achievement: achievement)),
+                            );
+                          }
                         },
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: categoryColor,
-                          foregroundColor: Colors.white,
+                          backgroundColor: isPremiumPendingClaim ? const Color(0xFFFFC107) : categoryColor,
+                          foregroundColor: isPremiumPendingClaim ? Colors.black87 : Colors.white,
                           padding: const EdgeInsets.symmetric(vertical: 14),
                           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                           elevation: 0,
                         ),
-                        child: const Text('View Checklist', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+                        child: Text(
+                          isPremiumPendingClaim ? 'Subscribe to Claim' : 'View Checklist',
+                          style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                        ),
                       ),
                     ),
                   ],

@@ -1,4 +1,5 @@
 // lib/screens/my_trips_tab_screen.dart
+import 'dart:convert';
 import 'package:flutter/material.dart';
 // ⭐️ Firebase Auth와 명칭 충돌을 막기 위해 custom_auth로 alias 지정
 import 'package:jidoapp/providers/auth_provider.dart' as custom_auth;
@@ -6,7 +7,14 @@ import 'package:jidoapp/screens/profile_screen.dart';
 import 'package:jidoapp/screens/login_prompt_screen.dart';
 import 'package:jidoapp/providers/badge_provider.dart';
 import 'package:jidoapp/screens/badges_screen.dart';
-import 'package:jidoapp/screens/my_journey_screen.dart';
+import 'package:jidoapp/screens/calendar_screen.dart';
+import 'package:jidoapp/screens/passport_screen.dart';
+import 'package:jidoapp/screens/settings_screen.dart';
+import 'package:jidoapp/screens/visa_screen.dart';
+import 'package:jidoapp/screens/trip_log_list_screen.dart';
+import 'package:jidoapp/screens/recommendations_screen.dart';
+import 'package:jidoapp/screens/favorites_screen.dart';
+import 'package:jidoapp/screens/traveler_type_selector_screen.dart';
 import 'package:jidoapp/screens/daily_quiz_screen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -16,15 +24,98 @@ import 'package:jidoapp/providers/landmarks_provider.dart';
 import 'package:jidoapp/screens/countries_map_screen.dart';
 import 'package:jidoapp/screens/top_cities_screen.dart';
 import 'package:jidoapp/screens/top_landmarks_screen.dart';
-import 'package:jidoapp/screens/world_discover_screen.dart';
 import 'package:provider/provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:jidoapp/services/subscription_service.dart';
 import 'package:jidoapp/widgets/subscription_sheet.dart';
+import 'package:jidoapp/widgets/premium_theme.dart';
 import 'package:jidoapp/screens/countries_share.dart';
 import 'dart:typed_data';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:screenshot/screenshot.dart';
+
+// ─────────────────────────────────────────────
+// 업데이트된 기능(뱃지 400+, 데일리 퀴즈 Expert 모드) 안내용 반짝이는 NEW 태그.
+// 은은하게 커졌다 작아졌다 하면서 살짝 발광하는 느낌을 준다.
+// ─────────────────────────────────────────────
+class _SparkleNewBadge extends StatefulWidget {
+  const _SparkleNewBadge();
+
+  @override
+  State<_SparkleNewBadge> createState() => _SparkleNewBadgeState();
+}
+
+class _SparkleNewBadgeState extends State<_SparkleNewBadge>
+    with SingleTickerProviderStateMixin {
+  late final AnimationController _controller;
+  late final Animation<double> _pulse;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 900),
+    )..repeat(reverse: true);
+
+    _pulse = Tween<double>(begin: 0.92, end: 1.12)
+        .chain(CurveTween(curve: Curves.easeInOut))
+        .animate(_controller);
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return AnimatedBuilder(
+      animation: _pulse,
+      builder: (context, child) {
+        return Transform.scale(
+          scale: _pulse.value,
+          child: child,
+        );
+      },
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+        decoration: BoxDecoration(
+          gradient: const LinearGradient(
+            colors: [Color(0xFFFF6B9D), Color(0xFFFFB300)],
+          ),
+          borderRadius: BorderRadius.circular(20),
+          border: Border.all(color: Colors.white, width: 1.5),
+          boxShadow: [
+            BoxShadow(
+              color: const Color(0xFFFFB300).withOpacity(0.6),
+              blurRadius: 8,
+              spreadRadius: 0.5,
+            ),
+          ],
+        ),
+        child: const Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(Icons.auto_awesome_rounded, size: 9, color: Colors.white),
+            SizedBox(width: 2),
+            Text(
+              'NEW',
+              style: TextStyle(
+                fontSize: 9,
+                fontWeight: FontWeight.w900,
+                color: Colors.white,
+                letterSpacing: 0.3,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
 
 class MyTripsTabScreen extends StatefulWidget {
   const MyTripsTabScreen({super.key});
@@ -34,9 +125,18 @@ class MyTripsTabScreen extends StatefulWidget {
 }
 
 class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
+  String? _travelerType;
+  String? _travelerTypeIconName;
+
   // Daily Quiz state
   bool _quizSolvedToday = false;
   bool _quizLoadingDone = false;
+  // 사용자가 DailyQuizScreen에서 "Set as my default"로 저장해둔 기본 모드.
+  // My Trips 카드와 알림 모두 이 값을 기준으로 Normal/Expert를 보여줌.
+  static const String _prefKeyDefaultQuizMode = 'daily_quiz_default_mode';
+  bool _quizDefaultIsExpert = false;
+  static const List<Color> _quizNormalGradient = [Color(0xFF6366F1), Color(0xFF4F46E5)];
+  static const List<Color> _quizExpertGradient = [Color(0xFF7C3AED), Color(0xFFDB2777)];
 
   bool _isSharing = false;
   final ScreenshotController _mapScreenshotController = ScreenshotController();
@@ -77,8 +177,24 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
   void initState() {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      _checkQuizSolvedToday();
+      _loadTravelerType();
+      _loadQuizDefaultMode();
     });
+  }
+
+  Future<void> _loadQuizDefaultMode() async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      final saved = prefs.getString(_prefKeyDefaultQuizMode);
+      final isPremium = SubscriptionService.instance.isPremium;
+      // 저장된 기본값이 Expert인데 지금은 구독자가 아니면(만료 등) Normal로 안전하게 폴백
+      final isExpert = saved == 'expert' && isPremium;
+      if (mounted) setState(() => _quizDefaultIsExpert = isExpert);
+    } catch (e) {
+      debugPrint('Error loading quiz default mode: $e');
+    } finally {
+      _checkQuizSolvedToday();
+    }
   }
 
   Future<void> _checkQuizSolvedToday() async {
@@ -104,7 +220,7 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
       final historyDoc = await FirebaseFirestore.instance
           .collection('users')
           .doc(user.uid)
-          .collection('quiz_history')
+          .collection(_quizDefaultIsExpert ? 'quiz_history_expert' : 'quiz_history')
           .doc(todayStr)
           .get();
 
@@ -116,6 +232,77 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
       }
     } catch (_) {
       if (mounted) setState(() => _quizLoadingDone = true);
+    }
+  }
+
+  Future<void> _loadTravelerType() async {
+    final prefs = await SharedPreferences.getInstance();
+    String? typeName;
+    final aiJson = prefs.getString('ai_analysis_result');
+    if (aiJson != null) {
+      try {
+        final parsed = jsonDecode(aiJson) as Map<String, dynamic>;
+        final types = (parsed['summary']?['persona_scores'] as List? ?? [])
+            .cast<Map<String, dynamic>>();
+        if (types.isNotEmpty) {
+          types.sort((a, b) =>
+              (b['score'] as num).compareTo(a['score'] as num));
+          typeName = types.first['label'] as String?;
+        }
+      } catch (e) {
+        debugPrint('Error parsing AI result: $e');
+      }
+    }
+    typeName ??= prefs.getString('traveler_type');
+    if (mounted) {
+      setState(() {
+        _travelerType = typeName;
+        _travelerTypeIconName = _getIconNameForType(typeName);
+      });
+    }
+  }
+
+  String? _getIconNameForType(String? typeName) {
+    if (typeName == null || typeName.isEmpty) return null;
+    final map = {
+      'Identity Seeker': 'self_improvement_outlined',
+      'Sensory Immersionist': 'camera_roll_outlined',
+      'Efficiency Maximizer': 'speed_outlined',
+      'Cultural Decoder': 'museum_outlined',
+      'Joy Collector': 'celebration_outlined',
+      'Inner Sanctuary Seeker': 'spa_outlined',
+      'Wildlife & Earth Enthusiast': 'forest_outlined',
+      'Global Connector': 'people_alt_outlined',
+      'Freedom Drifter': 'directions_car_filled_outlined',
+      'Achievement Hunter': 'emoji_events_outlined',
+    };
+    return map[typeName];
+  }
+
+  IconData _getTravelerTypeIcon() {
+    switch (_travelerTypeIconName) {
+      case 'self_improvement_outlined':
+        return Icons.self_improvement_outlined;
+      case 'camera_roll_outlined':
+        return Icons.camera_roll_outlined;
+      case 'speed_outlined':
+        return Icons.speed_outlined;
+      case 'museum_outlined':
+        return Icons.museum_outlined;
+      case 'celebration_outlined':
+        return Icons.celebration_outlined;
+      case 'spa_outlined':
+        return Icons.spa_outlined;
+      case 'forest_outlined':
+        return Icons.forest_outlined;
+      case 'people_alt_outlined':
+        return Icons.people_alt_outlined;
+      case 'directions_car_filled_outlined':
+        return Icons.directions_car_filled_outlined;
+      case 'emoji_events_outlined':
+        return Icons.emoji_events_outlined;
+      default:
+        return Icons.person_outline;
     }
   }
 
@@ -250,6 +437,45 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                     ),
                   ],
                 ),
+                const SizedBox(height: 24),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 24),
+                  child: _buildMainFeatures(context),
+                ),
+                const SizedBox(height: 32),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 24),
+                  child: Row(
+                    children: [
+                      Container(
+                        width: 4,
+                        height: 20,
+                        decoration: BoxDecoration(
+                            color: darkMint,
+                            borderRadius: BorderRadius.circular(2)),
+                      ),
+                      const SizedBox(width: 8),
+                      Text(
+                        'My Documents',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w700,
+                          color: Colors.grey.shade800,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 16),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 24),
+                  child: _buildDocumentsSection(context),
+                ),
+                const SizedBox(height: 16),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 24),
+                  child: _buildSettingsCard(context),
+                ),
                 const SizedBox(height: 120),
               ],
             ),
@@ -316,37 +542,69 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                       child: Row(
                         children: [
                           Consumer<SubscriptionService>(
-                            builder: (context, sub, _) => Container(
-                              width: 60,
-                              height: 60,
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                border: Border.all(
-                                    color: sub.isPremium
-                                        ? const Color(0xFF3DDAD7)
-                                        : Colors.grey.shade100,
-                                    width: sub.isPremium ? 2.5 : 2),
-                                image: user?.photoURL != null
-                                    ? DecorationImage(
-                                  image: NetworkImage(user!.photoURL!),
-                                  fit: BoxFit.cover,
-                                )
+                            builder: (context, sub, _) {
+                              const double avatarSize = 60;
+                              final kind = sub.activePlanKind;
+                              final colors = PremiumTheme.colorsFor(kind);
+
+                              if (!sub.isPremium) {
+                                // 원래 그대로: 단일 컨테이너에 테두리만 페인트
+                                // (테두리가 레이아웃 크기를 차지하지 않음).
+                                return Container(
+                                  width: avatarSize,
+                                  height: avatarSize,
+                                  decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    border: Border.all(color: Colors.grey.shade100, width: 2),
+                                    image: user?.photoURL != null
+                                        ? DecorationImage(
+                                      image: NetworkImage(user!.photoURL!),
+                                      fit: BoxFit.cover,
+                                    )
+                                        : null,
+                                    color: Colors.grey.shade100,
+                                  ),
+                                  child: user?.photoURL == null
+                                      ? Icon(Icons.person, color: Colors.grey.shade400, size: 30)
+                                      : null,
+                                );
+                              }
+
+                              // 그라디언트 테두리는 바깥에 두께만큼 패딩을 더하는
+                              // 방식이라, 전체가 60x60을 유지하려면 안쪽 원의
+                              // 크기를 테두리 두께만큼 미리 줄여야 함.
+                              final double borderWidth =
+                              kind == PremiumPlanKind.lifetime ? 2.5 : 2;
+                              final double coreSize = avatarSize - borderWidth * 2;
+
+                              final Widget avatarCore = Container(
+                                width: coreSize,
+                                height: coreSize,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  image: user?.photoURL != null
+                                      ? DecorationImage(
+                                    image: NetworkImage(user!.photoURL!),
+                                    fit: BoxFit.cover,
+                                  )
+                                      : null,
+                                  color: colors[0].withOpacity(0.1),
+                                ),
+                                child: user?.photoURL == null
+                                    ? Icon(Icons.workspace_premium_rounded, color: colors[0], size: 28)
                                     : null,
-                                color: sub.isPremium
-                                    ? const Color(0xFF3DDAD7).withOpacity(0.08)
-                                    : Colors.grey.shade100,
-                              ),
-                              child: user?.photoURL == null
-                                  ? sub.isPremium
-                                  ? const Icon(
-                                Icons.workspace_premium_rounded,
-                                color: Color(0xFF3DDAD7),
-                                size: 30,
-                              )
-                                  : Icon(Icons.person,
-                                  color: Colors.grey.shade400, size: 30)
-                                  : null,
-                            ),
+                              );
+
+                              // borderRadius = 절반 크기로 두면 정사각형
+                              // 컨테이너가 완전한 원으로 보임.
+                              return PremiumGradientBorder(
+                                colors: colors,
+                                animated: PremiumTheme.isVivid(kind),
+                                borderWidth: borderWidth,
+                                borderRadius: avatarSize / 2,
+                                child: avatarCore,
+                              );
+                            },
                           ),
                           const SizedBox(width: 16),
                           Expanded(
@@ -365,47 +623,65 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                                 Consumer<SubscriptionService>(
                                   builder: (context, sub, _) {
                                     if (sub.isPremium) {
+                                      final kind = sub.activePlanKind;
+                                      final colors = PremiumTheme.colorsFor(kind);
                                       return GestureDetector(
-                                        onTap: () => SubscriptionSheet.show(context),
+                                        onTap: () => SubscriptionSheet.show(context, triggerContext: 'my_trips_header'),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.min,
-                                          children: const [
-                                            Icon(Icons.check_circle_rounded, size: 13, color: Color(0xFF3DDAD7)),
-                                            SizedBox(width: 4),
-                                            Text(
-                                              'Premium Active',
-                                              style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: Color(0xFF3DDAD7)),
-                                            ),
+                                          children: [
+                                            Icon(Icons.check_circle_rounded, size: 13, color: colors[0]),
+                                            const SizedBox(width: 4),
+                                            if (PremiumTheme.isVivid(kind))
+                                              ShaderMask(
+                                                shaderCallback: (bounds) => LinearGradient(colors: colors).createShader(bounds),
+                                                child: const Text(
+                                                  'Lifetime Premium',
+                                                  style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: Colors.white),
+                                                ),
+                                              )
+                                            else
+                                              Text(
+                                                'Premium Active',
+                                                style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: colors[0]),
+                                              ),
                                           ],
                                         ),
                                       );
                                     } else if (!sub.hasEverBeenPremium) {
+                                      // 눈에 잘 띄는 그라디언트 프로모 — yearly 테마로
+                                      // (가장 추천하는 플랜과 톤을 맞춤).
                                       return GestureDetector(
-                                        onTap: () => SubscriptionSheet.show(context, onShareTap: _handleShare),
+                                        onTap: () => SubscriptionSheet.show(context, triggerContext: 'my_trips_promo'),
                                         child: Container(
                                           margin: const EdgeInsets.only(top: 4),
-                                          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                                          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 7),
                                           decoration: BoxDecoration(
-                                            color: const Color(0xFFFFF8F0),
-                                            borderRadius: BorderRadius.circular(10),
-                                            border: Border.all(color: const Color(0xFFFFB347), width: 1.2),
+                                            gradient: LinearGradient(
+                                              colors: PremiumTheme.yearly,
+                                              begin: Alignment.topLeft,
+                                              end: Alignment.bottomRight,
+                                            ),
+                                            borderRadius: BorderRadius.circular(20),
+                                            boxShadow: [
+                                              BoxShadow(
+                                                color: PremiumTheme.yearly[0].withOpacity(0.4),
+                                                blurRadius: 10,
+                                                offset: const Offset(0, 3),
+                                              ),
+                                            ],
                                           ),
-                                          child: Row(
+                                          child: const Row(
                                             mainAxisSize: MainAxisSize.min,
                                             children: [
-                                              const Text('🎁', style: TextStyle(fontSize: 13)),
-                                              const SizedBox(width: 6),
-                                              RichText(
-                                                text: const TextSpan(
-                                                  style: TextStyle(fontSize: 12, height: 1.3),
-                                                  children: [
-                                                    TextSpan(
-                                                      text: 'Try 30 days FREE! ',
-                                                      style: TextStyle(fontWeight: FontWeight.w800, color: Color(0xFF1A1A2E)),
-                                                    ),
-                                                  ],
-                                                ),
+                                              Icon(Icons.workspace_premium_rounded, size: 14, color: Colors.white),
+                                              SizedBox(width: 6),
+                                              Text(
+                                                'Go Premium',
+                                                style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, color: Colors.white),
                                               ),
+                                              SizedBox(width: 4),
+                                              Icon(Icons.arrow_forward_rounded, size: 13, color: Colors.white),
                                             ],
                                           ),
                                         ),
@@ -435,18 +711,17 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                   const SizedBox(height: 20),
                   Divider(color: Colors.grey.shade100, height: 1),
                   const SizedBox(height: 20),
-                  const _DiscoverSection(),
-                  const SizedBox(height: 20),
-                  Divider(color: Colors.grey.shade100, height: 1),
-                  const SizedBox(height: 20),
 
                   GestureDetector(
-                    onTap: () => Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (_) => const MyJourneyScreen(),
-                      ),
-                    ),
+                    onTap: () async {
+                      await Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (_) => const TravelerTypeSelectorScreen(),
+                        ),
+                      );
+                      _loadTravelerType();
+                    },
                     child: Container(
                       color: Colors.transparent,
                       child: Row(
@@ -457,24 +732,29 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                                 color: mint.withOpacity(0.1),
                                 borderRadius: BorderRadius.circular(14),
                               ),
-                              child: Icon(Icons.luggage_rounded,
+                              child: Icon(_getTravelerTypeIcon(),
                                   color: darkMint, size: 24)),
                           const SizedBox(width: 16),
-                          const Expanded(
+                          Expanded(
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text('My Journey',
-                                    style: TextStyle(
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.w700,
-                                        color: Colors.black87)),
-                                SizedBox(height: 2),
-                                Text('Trips, documents & more',
+                                Text('Traveler Type',
                                     style: TextStyle(
                                         fontSize: 12,
                                         fontWeight: FontWeight.w600,
-                                        color: Colors.grey)),
+                                        color: Colors.grey.shade500)),
+                                const SizedBox(height: 2),
+                                Text(
+                                    _travelerType?.isNotEmpty == true
+                                        ? _travelerType!
+                                        : 'Analyze DNA',
+                                    style: TextStyle(
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.w700,
+                                        color: _travelerType?.isNotEmpty == true
+                                            ? Colors.black87
+                                            : Colors.grey.shade400)),
                               ],
                             ),
                           ),
@@ -496,22 +776,33 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                       color: Colors.transparent,
                       child: Row(
                         children: [
-                          Container(
-                            width: 48,
-                            height: 48,
-                            padding: const EdgeInsets.all(8),
-                            decoration: BoxDecoration(
-                              color: levelColor.withOpacity(0.1),
-                              borderRadius: BorderRadius.circular(14),
-                              border: Border.all(
-                                color: levelColor.withOpacity(0.3),
-                                width: 1,
+                          Stack(
+                            clipBehavior: Clip.none,
+                            children: [
+                              Container(
+                                width: 48,
+                                height: 48,
+                                padding: const EdgeInsets.all(8),
+                                decoration: BoxDecoration(
+                                  color: levelColor.withOpacity(0.1),
+                                  borderRadius: BorderRadius.circular(14),
+                                  border: Border.all(
+                                    color: levelColor.withOpacity(0.3),
+                                    width: 1,
+                                  ),
+                                ),
+                                child: Image.asset(
+                                  'assets/badge_levels/${currentLevel.toLowerCase()}.png',
+                                  fit: BoxFit.contain,
+                                ),
                               ),
-                            ),
-                            child: Image.asset(
-                              'assets/badge_levels/${currentLevel.toLowerCase()}.png',
-                              fit: BoxFit.contain,
-                            ),
+                              // [추가] 뱃지 400+ 추가 업데이트 안내용 반짝이는 NEW 태그
+                              const Positioned(
+                                top: -8,
+                                right: -8,
+                                child: _SparkleNewBadge(),
+                              ),
+                            ],
                           ),
                           const SizedBox(width: 16),
                           Expanded(
@@ -570,60 +861,99 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                         if (Provider.of<custom_auth.AuthProvider>(context, listen: false).user != null) {
                           await Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (_) => const DailyQuizScreen()),
+                            MaterialPageRoute(builder: (_) => const DailyQuizScreen(useSavedDefaultMode: true)),
                           );
-                          _checkQuizSolvedToday();
+                          _loadQuizDefaultMode();
                         }
                       } else {
                         await Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (_) => const DailyQuizScreen()),
+                          MaterialPageRoute(builder: (_) => const DailyQuizScreen(useSavedDefaultMode: true)),
                         );
-                        _checkQuizSolvedToday();
+                        _loadQuizDefaultMode();
                       }
                     },
                     child: Container(
                       color: Colors.transparent,
                       child: Row(
                         children: [
-                          Container(
-                            width: 48,
-                            height: 48,
-                            decoration: BoxDecoration(
-                              color: !_quizLoadingDone
-                                  ? Colors.grey.shade100
-                                  : _quizSolvedToday
-                                  ? const Color(0xFF10B981).withOpacity(0.1)
-                                  : const Color(0xFF6366F1).withOpacity(0.1),
-                              borderRadius: BorderRadius.circular(14),
-                            ),
-                            child: !_quizLoadingDone
-                                ? Center(
-                              child: SizedBox(
-                                width: 20,
-                                height: 20,
-                                child: CircularProgressIndicator(
-                                  strokeWidth: 2,
-                                  color: Colors.grey.shade400,
+                          Stack(
+                            clipBehavior: Clip.none,
+                            children: [
+                              Container(
+                                width: 48,
+                                height: 48,
+                                decoration: BoxDecoration(
+                                  color: !_quizLoadingDone
+                                      ? Colors.grey.shade100
+                                      : _quizSolvedToday
+                                      ? const Color(0xFF10B981).withOpacity(0.1)
+                                      : (_quizDefaultIsExpert ? _quizExpertGradient.first : _quizNormalGradient.first)
+                                      .withOpacity(0.1),
+                                  borderRadius: BorderRadius.circular(14),
+                                  border: (_quizLoadingDone && !_quizSolvedToday && _quizDefaultIsExpert)
+                                      ? Border.all(color: _quizExpertGradient.first.withOpacity(0.35), width: 1.5)
+                                      : null,
+                                  boxShadow: (_quizLoadingDone && !_quizSolvedToday && _quizDefaultIsExpert)
+                                      ? [
+                                    BoxShadow(
+                                      color: _quizExpertGradient.first.withOpacity(0.28),
+                                      blurRadius: 14,
+                                      offset: const Offset(0, 4),
+                                    ),
+                                  ]
+                                      : null,
                                 ),
+                                child: !_quizLoadingDone
+                                    ? Center(
+                                  child: SizedBox(
+                                    width: 20,
+                                    height: 20,
+                                    child: CircularProgressIndicator(
+                                      strokeWidth: 2,
+                                      color: Colors.grey.shade400,
+                                    ),
+                                  ),
+                                )
+                                    : _quizSolvedToday
+                                    ? const Icon(Icons.check_circle_rounded, color: Color(0xFF10B981), size: 24)
+                                    : _quizDefaultIsExpert
+                                    ? ShaderMask(
+                                  shaderCallback: (bounds) =>
+                                      LinearGradient(colors: _quizExpertGradient).createShader(bounds),
+                                  child: const Icon(Icons.local_fire_department_rounded,
+                                      color: Colors.white, size: 24),
+                                )
+                                    : const Icon(Icons.help_rounded, color: Color(0xFF6366F1), size: 24),
                               ),
-                            )
-                                : Icon(
-                              _quizSolvedToday
-                                  ? Icons.check_circle_rounded
-                                  : Icons.help_rounded,
-                              color: _quizSolvedToday
-                                  ? const Color(0xFF10B981)
-                                  : const Color(0xFF6366F1),
-                              size: 24,
-                            ),
+                              // [추가] 데일리 퀴즈 Expert 모드 업데이트 안내용 반짝이는 NEW 태그
+                              const Positioned(
+                                top: -8,
+                                right: -8,
+                                child: _SparkleNewBadge(),
+                              ),
+                            ],
                           ),
                           const SizedBox(width: 16),
                           Expanded(
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text(
+                                _quizDefaultIsExpert
+                                    ? ShaderMask(
+                                  shaderCallback: (bounds) =>
+                                      LinearGradient(colors: _quizExpertGradient).createShader(bounds),
+                                  child: const Text(
+                                    'Daily Quiz · Expert',
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.w800,
+                                      color: Colors.white,
+                                      letterSpacing: 0.2,
+                                    ),
+                                  ),
+                                )
+                                    : Text(
                                   'Daily Quiz',
                                   style: TextStyle(
                                     fontSize: 12,
@@ -656,7 +986,9 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                               padding: const EdgeInsets.symmetric(
                                   horizontal: 10, vertical: 5),
                               decoration: BoxDecoration(
-                                color: const Color(0xFF6366F1).withOpacity(0.1),
+                                gradient: LinearGradient(
+                                  colors: _quizDefaultIsExpert ? _quizExpertGradient : _quizNormalGradient,
+                                ),
                                 borderRadius: BorderRadius.circular(8),
                               ),
                               child: const Text(
@@ -664,7 +996,7 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                                 style: TextStyle(
                                   fontSize: 11,
                                   fontWeight: FontWeight.w700,
-                                  color: Color(0xFF6366F1),
+                                  color: Colors.white,
                                 ),
                               ),
                             )
@@ -953,220 +1285,227 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
     );
   }
 
-}
+  Widget _buildMainFeatures(BuildContext context) {
+    void gated(VoidCallback action) async {
+      final auth = Provider.of<custom_auth.AuthProvider>(context, listen: false);
+      if (auth.user == null) {
+        await showModalBottomSheet(
+          context: context,
+          isScrollControlled: true,
+          backgroundColor: Colors.transparent,
+          builder: (_) => const LoginPromptScreen(),
+        );
+        if (!context.mounted) return;
+        if (Provider.of<custom_auth.AuthProvider>(context, listen: false).user != null) {
+          action();
+        }
+        return;
+      }
+      action();
+    }
 
-// ⭐️ Discover 섹션: 앱 전체와 통일된 화이트 카드 스타일. Discover는 헤더(탭 불가)이고,
-//    실제 진입점은 하위 3개 옵션(Next Trip / Flight Deals / Hotels) 중 하나를 고르는 구조.
-//    움직임 포인트는 헤더 아이콘이 천천히 도는 것 하나로 절제함.
-// ⚠️ Next Trip / Flight Deals / Hotels는 전용 화면이 아직 없어서 임시로 WorldDiscoverScreen으로 연결됨.
-//    추후 제휴 로드맵(숙소/항공 딥링크)에 맞춰 각각 별도 화면으로 교체 필요.
-class _DiscoverSection extends StatefulWidget {
-  const _DiscoverSection();
-
-  @override
-  State<_DiscoverSection> createState() => _DiscoverSectionState();
-}
-
-class _DiscoverSectionState extends State<_DiscoverSection>
-    with TickerProviderStateMixin {
-  late final AnimationController _spinController;
-  late final AnimationController _glowController;
-  late final Animation<double> _glow;
-
-  static const Color accent = Color(0xFF6D5DF6); // Discover 헤더 아이콘 전용 포인트 컬러
-  static const Color orange = Color(0xFFF97316);
-  static const Color recommendBlue = Color(0xFF2563EB);
-  static const Color pink = Color(0xFFEC4899);
-
-  @override
-  void initState() {
-    super.initState();
-    _spinController = AnimationController(
-      vsync: this,
-      duration: const Duration(seconds: 10),
-    )..repeat();
-    _glowController = AnimationController(
-      vsync: this,
-      duration: const Duration(milliseconds: 1600),
-    )..repeat(reverse: true);
-    _glow = CurvedAnimation(parent: _glowController, curve: Curves.easeInOut);
-  }
-
-  @override
-  void dispose() {
-    _spinController.dispose();
-    _glowController.dispose();
-    super.dispose();
-  }
-
-  void _openDiscover(BuildContext context) {
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (_) => const WorldDiscoverScreen()),
+    return Column(
+      children: [
+        Row(
+          children: [
+            Expanded(
+                child: _buildFeatureCard(
+                    context,
+                    'Trip Log',
+                    '',
+                    Icons.auto_stories_rounded,
+                    orange,
+                        () => gated(() => Navigator.push(context, MaterialPageRoute(builder: (_) => const TripLogListScreen()))))),
+            const SizedBox(width: 12),
+            Expanded(
+                child: _buildFeatureCard(
+                    context,
+                    'Discover',
+                    '',
+                    Icons.search_rounded,
+                    recommendBlue,
+                        () => gated(() => Navigator.push(context, MaterialPageRoute(builder: (_) => const RecommendationsScreen()))))),
+            const SizedBox(width: 12),
+            Expanded(
+                child: _buildFeatureCard(
+                    context,
+                    'Favorites',
+                    '',
+                    Icons.favorite_rounded,
+                    pink,
+                        () => gated(() => Navigator.push(context, MaterialPageRoute(builder: (_) => const FavoritesScreen()))))),
+          ],
+        ),
+        const SizedBox(height: 12),
+        _buildFeatureCard(
+            context,
+            'Calendar',
+            'Plan your next adventure',
+            Icons.calendar_month_rounded,
+            red,
+                () => gated(() => Navigator.push(context, MaterialPageRoute(builder: (_) => const CalendarScreen()))),
+            isWide: true),
+      ],
     );
   }
 
-  @override
-  Widget build(BuildContext context) {
-    return AnimatedBuilder(
-      animation: _glow,
-      builder: (context, child) {
-        return Container(
-          decoration: BoxDecoration(
+  Widget _buildFeatureCard(BuildContext context, String title, String subtitle,
+      IconData icon, Color color, VoidCallback onTap,
+      {bool isWide = false}) {
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        padding:
+        EdgeInsets.symmetric(vertical: 20, horizontal: isWide ? 20 : 12),
+        decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(20),
-            border: Border.all(
-              color: accent.withOpacity(0.20 + 0.16 * _glow.value),
-              width: 1.5,
-            ),
             boxShadow: [
               BoxShadow(
-                color: accent.withOpacity(0.10 + 0.10 * _glow.value),
-                blurRadius: 14 + 8 * _glow.value,
-                offset: const Offset(0, 6),
-              ),
-            ],
-          ),
-          child: child,
-        );
-      },
-      child: Column(
-        children: [
-          // 헤더 (탭 불가 — Discover 자체는 버튼이 아니라 아래 옵션들의 라벨)
+                  color: Colors.black.withOpacity(0.04),
+                  blurRadius: 10,
+                  offset: const Offset(0, 4))
+            ]),
+        child: isWide
+            ? Row(children: [
           Container(
-            padding: const EdgeInsets.fromLTRB(20, 18, 20, 16),
-            decoration: BoxDecoration(
-              borderRadius: const BorderRadius.vertical(top: Radius.circular(19)),
-              gradient: LinearGradient(
-                begin: Alignment.centerLeft,
-                end: Alignment.centerRight,
-                colors: [accent.withOpacity(0.10), accent.withOpacity(0.02)],
-              ),
-            ),
-            child: Row(
-              children: [
-                Container(
-                  padding: const EdgeInsets.all(12),
-                  decoration: BoxDecoration(
-                    color: accent.withOpacity(0.14),
-                    borderRadius: BorderRadius.circular(14),
-                  ),
-                  child: AnimatedBuilder(
-                    animation: _spinController,
-                    builder: (context, child) {
-                      return Transform.rotate(
-                        angle: _spinController.value * 2 * 3.14159265,
-                        child: child,
-                      );
-                    },
-                    child: const Icon(Icons.public_rounded, color: accent, size: 24),
-                  ),
-                ),
-                const SizedBox(width: 16),
-                const Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Discover',
-                        style: TextStyle(
-                            fontSize: 15,
+              padding: const EdgeInsets.all(12),
+              decoration: BoxDecoration(
+                  color: color.withOpacity(0.1),
+                  borderRadius: BorderRadius.circular(14)),
+              child: Icon(icon, color: color, size: 24)),
+          const SizedBox(width: 16),
+          Expanded(
+              child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(title,
+                        style: const TextStyle(
+                            fontSize: 16,
                             fontWeight: FontWeight.w700,
-                            color: Colors.black87),
-                      ),
-                      SizedBox(height: 2),
-                      Text(
-                        'Your next destination',
-                        style: TextStyle(
-                            fontSize: 12,
-                            fontWeight: FontWeight.w600,
-                            color: Colors.grey),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Divider(color: Colors.grey.shade100, height: 1),
-          // 하위 3개 옵션 — Discover에 속한 선택지로, 하나만 고르는 구조 (같은 카드 안에 세그먼트로 병합)
-          IntrinsicHeight(
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                Expanded(
-                  child: _buildOption(
-                    context,
-                    icon: Icons.search_rounded,
-                    label: 'Next Trip',
-                    color: recommendBlue,
-                  ),
-                ),
-                VerticalDivider(color: Colors.grey.shade100, width: 1),
-                Expanded(
-                  child: _buildOption(
-                    context,
-                    icon: Icons.flight_rounded,
-                    label: 'Flight Deals',
-                    color: orange,
-                  ),
-                ),
-                VerticalDivider(color: Colors.grey.shade100, width: 1),
-                Expanded(
-                  child: _buildOption(
-                    context,
-                    icon: Icons.hotel_rounded,
-                    label: 'Hotels',
-                    color: pink,
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ],
+                            color: Colors.black87)),
+                    if (subtitle.isNotEmpty) ...[
+                      const SizedBox(height: 2),
+                      Text(subtitle,
+                          style: TextStyle(
+                              fontSize: 13,
+                              color: Colors.grey.shade500,
+                              fontWeight: FontWeight.w500)),
+                    ]
+                  ])),
+          Icon(Icons.arrow_forward_ios,
+              size: 14, color: Colors.grey.shade300)
+        ])
+            : Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
+          Container(
+              padding: const EdgeInsets.all(14),
+              decoration: BoxDecoration(
+                color: color.withOpacity(0.1),
+                shape: BoxShape.circle,
+              ),
+              child: Icon(icon, color: color, size: 24)),
+          const SizedBox(height: 12),
+          Text(title,
+              textAlign: TextAlign.center,
+              style: const TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w700,
+                  color: Colors.black87)),
+        ]),
       ),
     );
   }
 
-  Widget _buildOption(
-      BuildContext context, {
-        required IconData icon,
-        required String label,
-        required Color color,
-      }) {
-    return Material(
-      color: Colors.transparent,
-      borderRadius: BorderRadius.circular(20),
-      child: InkWell(
-        onTap: () => _openDiscover(context),
-        borderRadius: BorderRadius.circular(20),
-        child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 8),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Container(
-                padding: const EdgeInsets.all(10),
-                decoration: BoxDecoration(
-                  color: color.withOpacity(0.1),
-                  shape: BoxShape.circle,
-                ),
-                child: Icon(icon, color: color, size: 20),
-              ),
-              const SizedBox(height: 8),
-              Text(
-                label,
-                textAlign: TextAlign.center,
-                style: const TextStyle(
-                  fontSize: 11,
-                  fontWeight: FontWeight.w700,
-                  color: Colors.black87,
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
+  Widget _buildDocumentsSection(BuildContext context) {
+    void gated(VoidCallback action) async {
+      final auth = Provider.of<custom_auth.AuthProvider>(context, listen: false);
+      if (auth.user == null) {
+        await showModalBottomSheet(
+          context: context,
+          isScrollControlled: true,
+          backgroundColor: Colors.transparent,
+          builder: (_) => const LoginPromptScreen(),
+        );
+        if (!context.mounted) return;
+        if (Provider.of<custom_auth.AuthProvider>(context, listen: false).user != null) {
+          action();
+        }
+        return;
+      }
+      action();
+    }
+
+    return Row(children: [
+      Expanded(
+          child: _buildDocCard(
+              context,
+              'Passport',
+              Icons.book_rounded,
+              purple,
+                  () => gated(() => Navigator.push(context, MaterialPageRoute(builder: (_) => const PassportScreen()))))),
+      const SizedBox(width: 12),
+      Expanded(
+          child: _buildDocCard(
+              context,
+              'Visa',
+              Icons.article_rounded,
+              mint,
+                  () => gated(() => Navigator.push(context, MaterialPageRoute(builder: (_) => const VisaScreen()))))),
+    ]);
+  }
+
+  Widget _buildDocCard(BuildContext context, String title, IconData icon,
+      Color color, VoidCallback onTap) {
+    return GestureDetector(
+        onTap: onTap,
+        child: Container(
+            padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 16),
+            decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(20),
+                boxShadow: [
+                  BoxShadow(
+                      color: Colors.black.withOpacity(0.04),
+                      blurRadius: 10,
+                      offset: const Offset(0, 4))
+                ]),
+            child: Column(children: [
+              Icon(icon, color: color, size: 32),
+              const SizedBox(height: 12),
+              Text(title,
+                  style: const TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.w600,
+                      color: Colors.black87))
+            ])));
+  }
+
+  Widget _buildSettingsCard(BuildContext context) {
+    return GestureDetector(
+        onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const SettingsScreen())),
+        child: Container(
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+            decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(20),
+                boxShadow: [
+                  BoxShadow(
+                      color: Colors.black.withOpacity(0.04),
+                      blurRadius: 10,
+                      offset: const Offset(0, 4))
+                ]),
+            child: Row(children: [
+              Icon(Icons.settings_outlined,
+                  color: Colors.grey.shade700, size: 24),
+              const SizedBox(width: 16),
+              const Expanded(
+                  child: Text('Settings',
+                      style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.black87))),
+              Icon(Icons.arrow_forward_ios,
+                  size: 14, color: Colors.grey.shade300)
+            ])));
   }
 }

@@ -35,5 +35,20 @@
       ],
       "source": "functions"
     }
-  ]
+  ],
+  "hosting": {
+    "site": "proboscis-2025",
+    "public": "build/web",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
 }

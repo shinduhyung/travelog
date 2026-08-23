@@ -15,6 +15,10 @@ class FlightPriceResult {
   final String? carrier;
   final String? itineraryId;
   final String? sessionId;
+  // 'trip.com' when the server found a Trip.com-specific pricing option,
+  // 'lowest-available' when it fell back to the cheapest fare across all
+  // agents in the aggregator response (may not match Trip.com's actual price).
+  final String? priceSource;
 
   const FlightPriceResult({
     required this.found,
@@ -25,9 +29,11 @@ class FlightPriceResult {
     this.carrier,
     this.itineraryId,
     this.sessionId,
+    this.priceSource,
   });
 
   bool get isDirect => stopCount == 0;
+  bool get isTripComPrice => priceSource == 'trip.com';
 
   factory FlightPriceResult.fromMap(Map<String, dynamic> map) {
     return FlightPriceResult(
@@ -39,6 +45,7 @@ class FlightPriceResult {
       carrier: map['carrier'] as String?,
       itineraryId: map['itineraryId'] as String?,
       sessionId: map['sessionId'] as String?,
+      priceSource: map['priceSource'] as String?,
     );
   }
 }

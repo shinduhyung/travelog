@@ -35,6 +35,10 @@ import 'package:jidoapp/widgets/badge_detail_checklists/city_checklist.dart';
 import 'package:jidoapp/widgets/badge_detail_checklists/landmark_checklist.dart';
 import 'package:jidoapp/widgets/badge_detail_checklists/flight_checklist.dart';
 import 'package:jidoapp/widgets/badge_detail_checklists/continent_checklist.dart';
+import 'package:jidoapp/widgets/premium_badge_shimmer.dart';
+import 'package:jidoapp/widgets/subscription_sheet.dart';
+import 'package:jidoapp/services/subscription_service.dart';
+import 'package:jidoapp/widgets/firebase_badge_image.dart';
 
 class BadgeDetailScreen extends StatelessWidget {
   final Achievement achievement;
@@ -270,6 +274,13 @@ class BadgeDetailScreen extends StatelessWidget {
 
     final categoryColor = _getCategoryColor(achievement.category);
     final isUnlocked = achievement.isUnlocked;
+    final bool isPremiumUser = SubscriptionService.instance.isPremium;
+    final bool isPremiumPendingClaim = achievement.requiresSubscription &&
+        !achievement.isUnlocked &&
+        achievement.conditionsMet; // "Subscribe to Claim" 버튼 노출 여부 (달성한 것만)
+    final bool isLockedPremium = achievement.requiresSubscription &&
+        !achievement.isUnlocked &&
+        !isPremiumUser; // 자물쇠 오버레이는 달성 여부와 무관하게 항상 표시
 
     return Container(
       margin: const EdgeInsets.all(20),
@@ -302,24 +313,42 @@ class BadgeDetailScreen extends StatelessWidget {
                     ),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(16),
-                      child: ColorFiltered(
+                      child: isLockedPremium
+                          ? Stack(
+                        alignment: Alignment.center,
+                        children: [
+                          achievement.conditionsMet
+                              ? PremiumBadgeShimmer(
+                            child: FirebaseBadgeImage(
+                              imagePath: achievement.imagePath,
+                              fit: BoxFit.cover,
+                            ),
+                          )
+                              : ColorFiltered(
+                            colorFilter: const ColorFilter.mode(Colors.grey, BlendMode.saturation),
+                            child: FirebaseBadgeImage(
+                              imagePath: achievement.imagePath,
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                          Container(
+                            padding: const EdgeInsets.all(10),
+                            decoration: BoxDecoration(
+                              color: Colors.black.withOpacity(0.55),
+                              shape: BoxShape.circle,
+                            ),
+                            child: const Icon(Icons.lock_rounded, color: Colors.white, size: 24),
+                          ),
+                        ],
+                      )
+                          : ColorFiltered(
                         colorFilter: ColorFilter.mode(
                           isUnlocked ? Colors.transparent : Colors.grey,
                           isUnlocked ? BlendMode.dst : BlendMode.saturation,
                         ),
-                        child: Image.asset(
-                          achievement.imagePath,
+                        child: FirebaseBadgeImage(
+                          imagePath: achievement.imagePath,
                           fit: BoxFit.cover,
-                          errorBuilder: (context, error, stackTrace) {
-                            return Container(
-                              color: Colors.grey[200],
-                              child: const Icon(
-                                Icons.shield_outlined,
-                                size: 50,
-                                color: Colors.grey,
-                              ),
-                            );
-                          },
                         ),
                       ),
                     ),
@@ -418,6 +447,29 @@ class BadgeDetailScreen extends StatelessWidget {
                       color: Colors.grey[600],
                     ),
                   ),
+                  if (isPremiumPendingClaim) ...[
+                    const SizedBox(height: 16),
+                    SizedBox(
+                      width: double.infinity,
+                      child: ElevatedButton.icon(
+                        onPressed: () {
+                          SubscriptionSheet.show(context, triggerContext: 'badge_moment_claim');
+                        },
+                        icon: const Icon(Icons.workspace_premium_rounded, size: 20),
+                        label: const Text(
+                          'Subscribe to Claim',
+                          style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                        ),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: const Color(0xFFFFC107),
+                          foregroundColor: Colors.black87,
+                          padding: const EdgeInsets.symmetric(vertical: 14),
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                          elevation: 0,
+                        ),
+                      ),
+                    ),
+                  ],
                 ],
               ),
             ],

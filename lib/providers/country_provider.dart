@@ -994,6 +994,19 @@ class CountryProvider with ChangeNotifier {
     );
   }
 
+  // ============== [새로 추가된 함수] ==============
+  void printAllExactCountryNames() {
+    final List<String> exactNames = allCountries.map((c) => c.name).toList();
+    exactNames.sort(); // 알파벳 순으로 정렬
+
+    debugPrint('========== 정확한 국가명 리스트 시작 (총 ${exactNames.length}개) ==========');
+    for (var name in exactNames) {
+      debugPrint(name);
+    }
+    debugPrint('========== 정확한 국가명 리스트 끝 ==========');
+  }
+  // ===============================================
+
   Future<void> _initializeData() async {
     try {
       if (kDebugMode) {
@@ -1057,6 +1070,12 @@ class CountryProvider with ChangeNotifier {
       await _loadSettings();
       await _loadVisitDetails();
       await _loadHomeCountry();
+
+      // ============== [함수 호출 추가됨] ==============
+      if (kDebugMode) {
+        printAllExactCountryNames();
+      }
+      // ===============================================
 
     } catch (e, s) {
       if (kDebugMode) {

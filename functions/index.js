@@ -1,11 +1,17 @@
 const { onSchedule } = require("firebase-functions/v2/scheduler");
 const { onDocumentCreated } = require("firebase-functions/v2/firestore");
 const admin = require("firebase-admin");
-const fs = require("fs");
 const path = require("path");
 const { google } = require("googleapis");
 
 admin.initializeApp();
+
+// Flight price + booking link Cloud Functions (RapidAPI Sky-scrapper proxy) —
+// see functions/flight_functions.js for the implementation.
+// 변경 후 (주석 처리)
+// const flightFunctions = require('./flight_functions');
+// exports.getFlightPrice = flightFunctions.getFlightPrice;
+// exports.getFlightBookingLink = flightFunctions.getFlightBookingLink;
 
 // 통화 코드 -> 국가 코드 (Play 주문에서 국가를 못 가져왔을 때 폴백)
 const CURRENCY_TO_COUNTRY = {
@@ -18,6 +24,24 @@ const CURRENCY_TO_COUNTRY = {
 };
 
 const ANDROID_PACKAGE_NAME = 'com.ahnlee.jidoapp';
+
+// Firebase Storage 경로 (Flutter 앱과 동일한 경로를 읽음)
+const QUIZ_STORAGE_PATHS = {
+  normal: 'functions/quizzes.json',
+  expert: 'functions/quizzes_hard.json',
+};
+
+// Storage에서 퀴즈 뱅크 JSON을 읽어옴 (배포 불필요, 파일만 교체하면 반영됨)
+async function fetchQuizBankFromStorage(storagePath) {
+  const bucket = admin.storage().bucket();
+  const file = bucket.file(storagePath);
+  const [exists] = await file.exists();
+  if (!exists) {
+    throw new Error(`Storage file not found: ${storagePath}`);
+  }
+  const [buffer] = await file.download();
+  return JSON.parse(buffer.toString('utf-8'));
+}
 
 // 국가 코드 -> 국기 이모지
 function countryFlag(countryCode) {
@@ -85,97 +109,155 @@ exports.addDailyQuiz = onSchedule(
     const dateStr = `${year}${month}${day}`;
 
     try {
-      const jsonPath = path.join(__dirname, "quizzes.json");
-      const rawData = fs.readFileSync(jsonPath, "utf-8");
-      const quizBank = JSON.parse(rawData);
-
-      if (!quizBank || quizBank.length === 0) {
-        throw new Error("Quiz data array is empty.");
-      }
-
-      const todayQuiz = quizBank.find(q => q.date === dateStr);
-      if (!todayQuiz) {
-        console.log(`No quiz found for date: ${dateStr}`);
-        return;
-      }
-
-      const notificationTitle = `🌍 Today's Travel Quiz`;
-      const notificationBody = `${todayQuiz.question} 👉 Tap to answer!`;
-
       const tokensSnapshot = await db.collection('fcm_tokens').get();
       if (tokensSnapshot.empty) {
         console.log('No FCM tokens found.');
         return;
       }
 
-      const tokens = tokensSnapshot.docs
-        .filter(doc => doc.data().device !== 'revenue_dashboard')
+      const eligibleDocs = tokensSnapshot.docs.filter(
+        doc => doc.data().device !== 'revenue_dashboard'
+      );
+
+      // 각 기기가 DailyQuizScreen에서 저장해둔 기본 모드(quizMode 필드)에 따라
+      // Normal/Expert 중 하나만 발송함. 필드가 없으면(구버전 앱 등) Normal로 취급.
+      const normalTokens = eligibleDocs
+        .filter(doc => doc.data().quizMode !== 'expert')
         .map(doc => doc.data().token)
         .filter(Boolean);
-      console.log(`Sending to ${tokens.length} devices for date: ${dateStr}`);
+      const expertTokens = eligibleDocs
+        .filter(doc => doc.data().quizMode === 'expert')
+        .map(doc => doc.data().token)
+        .filter(Boolean);
 
-      const BATCH_SIZE = 500;
-      let successCount = 0;
-      let failCount = 0;
-
-      for (let i = 0; i < tokens.length; i += BATCH_SIZE) {
-        const batch = tokens.slice(i, i + BATCH_SIZE);
-
-        const message = {
-          notification: {
-            title: notificationTitle,
-            body: notificationBody,
-          },
-          data: {
-            type: 'daily_quiz',
-            date: dateStr,
-          },
-          android: {
-            notification: {
-              channelId: 'daily_quiz',
-              priority: 'high',
-              sound: 'default',
-            },
-          },
-          apns: {
-            payload: {
-              aps: {
-                sound: 'default',
-                badge: 1,
-              },
-            },
-          },
-          tokens: batch,
-        };
-
-        const response = await messaging.sendEachForMulticast(message);
-        successCount += response.successCount;
-        failCount += response.failureCount;
-
-        const deletePromises = [];
-        response.responses.forEach((resp, idx) => {
-          if (!resp.success) {
-            const errorCode = resp.error?.code;
-            if (
-              errorCode === 'messaging/invalid-registration-token' ||
-              errorCode === 'messaging/registration-token-not-registered'
-            ) {
-              const invalidToken = batch[idx];
-              deletePromises.push(
-                db.collection('fcm_tokens').doc(invalidToken).delete()
-              );
-            }
-          }
-        });
-        await Promise.all(deletePromises);
+      if (normalTokens.length === 0 && expertTokens.length === 0) {
+        console.log('No eligible device tokens.');
+        return;
       }
 
-      console.log(`✅ FCM 발송 완료 — 성공: ${successCount}, 실패: ${failCount}`);
+      console.log(
+        `Sending Normal to ${normalTokens.length} devices, Expert to ${expertTokens.length} devices for date: ${dateStr}`
+      );
+
+      // Normal + Expert 퀴즈 푸시를 각각 독립적으로 시도 (하나가 실패해도 다른 하나는 발송됨)
+      await Promise.all([
+        normalTokens.length > 0
+          ? sendDailyQuizPush({
+              db,
+              messaging,
+              tokens: normalTokens,
+              dateStr,
+              storagePath: QUIZ_STORAGE_PATHS.normal,
+              mode: null, // Normal 모드는 mode 필드를 넣지 않음 (기존 앱과 호환)
+              notificationTitle: `🌍 Today's Travel Quiz`,
+              channelId: 'daily_quiz',
+              color: '#6366F1', // Normal 테마 (인디고)
+            })
+          : Promise.resolve(),
+        expertTokens.length > 0
+          ? sendDailyQuizPush({
+              db,
+              messaging,
+              tokens: expertTokens,
+              dateStr,
+              storagePath: QUIZ_STORAGE_PATHS.expert,
+              mode: 'expert',
+              notificationTitle: `🧠 Today's Expert Quiz`,
+              channelId: 'daily_quiz', // 별도 채널을 앱에 만들어두었다면 여기서 바꿔주면 됨
+              color: '#7C3AED', // Expert 테마 (보라 → 핑크 그라데이션의 시작색)
+            })
+          : Promise.resolve(),
+      ]);
     } catch (error) {
       console.error(`Error in addDailyQuiz: ${error}`);
     }
   }
 );
+
+// 퀴즈 뱅크(Storage) 하나를 읽어서 해당 날짜 문제를 찾고 FCM 발송까지 처리
+async function sendDailyQuizPush({ db, messaging, tokens, dateStr, storagePath, mode, notificationTitle, channelId, color }) {
+  try {
+    const quizBank = await fetchQuizBankFromStorage(storagePath);
+
+    if (!quizBank || quizBank.length === 0) {
+      console.log(`Quiz bank is empty: ${storagePath}`);
+      return;
+    }
+
+    const todayQuiz = quizBank.find(q => q.date === dateStr);
+    if (!todayQuiz) {
+      console.log(`No quiz found for date: ${dateStr} (${storagePath})`);
+      return;
+    }
+
+    const notificationBody = `${todayQuiz.question} 👉 Tap to answer!`;
+    const dataPayload = {
+      type: 'daily_quiz',
+      date: dateStr,
+    };
+    if (mode) {
+      dataPayload.mode = mode;
+    }
+
+    const BATCH_SIZE = 500;
+    let successCount = 0;
+    let failCount = 0;
+
+    for (let i = 0; i < tokens.length; i += BATCH_SIZE) {
+      const batch = tokens.slice(i, i + BATCH_SIZE);
+
+      const message = {
+        notification: {
+          title: notificationTitle,
+          body: notificationBody,
+        },
+        data: dataPayload,
+        android: {
+          notification: {
+            channelId: channelId,
+            priority: 'high',
+            sound: 'default',
+            color: color,
+          },
+        },
+        apns: {
+          payload: {
+            aps: {
+              sound: 'default',
+              badge: 1,
+            },
+          },
+        },
+        tokens: batch,
+      };
+
+      const response = await messaging.sendEachForMulticast(message);
+      successCount += response.successCount;
+      failCount += response.failureCount;
+
+      const deletePromises = [];
+      response.responses.forEach((resp, idx) => {
+        if (!resp.success) {
+          const errorCode = resp.error?.code;
+          if (
+            errorCode === 'messaging/invalid-registration-token' ||
+            errorCode === 'messaging/registration-token-not-registered'
+          ) {
+            const invalidToken = batch[idx];
+            deletePromises.push(
+              db.collection('fcm_tokens').doc(invalidToken).delete()
+            );
+          }
+        }
+      });
+      await Promise.all(deletePromises);
+    }
+
+    console.log(`✅ FCM 발송 완료 (${storagePath}, mode=${mode ?? 'normal'}) — 성공: ${successCount}, 실패: ${failCount}`);
+  } catch (error) {
+    console.error(`Error sending push for ${storagePath}:`, error);
+  }
+}
 
 exports.notifyNewSubscription = onDocumentCreated(
   "orders/{orderId}",
@@ -216,12 +298,23 @@ exports.notifyNewSubscription = onDocumentCreated(
       amountStr = `${currencyCode} ${amount.toLocaleString('en-US', { maximumFractionDigits: 2 })}`;
     }
 
+    // 상품 종류 라벨 (알림만 보고 monthly/yearly/lifetime 바로 구분되도록)
+    const PRODUCT_LABELS = {
+      travelog_premium_yearly: 'Yearly (Legacy)',
+      travelog_premium_yearly_v2: 'Yearly',
+      travelog_premium_monthly: 'Monthly',
+      travelog_lifetime: 'Lifetime',
+    };
+    const productLabel = PRODUCT_LABELS[order.productId] ?? '';
+
     const flag = countryFlag(country);
     const titleParts = [flag];
     if (country) titleParts.push(country);
     if (amountStr) titleParts.push(amountStr);
     const title = titleParts.join(' ');
-    const body = amountStr ? `Travelog Premium ${amountStr}` : 'Travelog Premium 결제 완료';
+    const body = amountStr
+      ? `Travelog Premium ${productLabel ? productLabel + ' ' : ''}${amountStr}`
+      : 'Travelog Premium 결제 완료';
 
     // revenue_dashboard 기기 토큰만 조회
     const tokensSnapshot = await db.collection('fcm_tokens')

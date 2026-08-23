@@ -1015,13 +1015,6 @@ class _HubSetupSheetState extends State<_HubSetupSheet> {
   void _selectHub(Airport airport) {
     widget.airportProvider.updateHubStatus(airport.iataCode, true);
     Navigator.of(context).pop();
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: Text('${airport.name} is now set as your Hub'),
-        backgroundColor: Colors.deepOrange,
-        behavior: SnackBarBehavior.floating,
-      ),
-    );
   }
 
   @override

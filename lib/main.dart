@@ -50,6 +50,7 @@ import 'package:jidoapp/services/subscription_service.dart';
 
 import 'package:jidoapp/screens/badge_collected_screen.dart';
 import 'package:jidoapp/screens/rank_collected_screen.dart';
+import 'package:jidoapp/screens/badges_screen.dart';
 import 'package:jidoapp/screens/badge_share.dart';
 import 'package:jidoapp/screens/countries_share.dart'; // TODO: 테스트용
 import 'package:screenshot/screenshot.dart'; // TODO: 테스트용
@@ -106,6 +107,11 @@ Future<void> _saveFcmToken() async {
     final user = await FirebaseMessaging.instance.getToken();
     debugPrint('📱 [FCM] 토큰: \$token');
 
+    // DailyQuizScreen에서 저장해둔 기본 모드(Normal/Expert)를 함께 실어 보내서
+    // Cloud Functions가 이 기기에 어느 쪽 일일 퀴즈 알림을 보낼지 판단하게 함.
+    final prefs = await SharedPreferences.getInstance();
+    final quizMode = prefs.getString('daily_quiz_default_mode') == 'expert' ? 'expert' : 'normal';
+
     await FirebaseFirestore.instance
         .collection('fcm_tokens')
         .doc(token)
@@ -113,9 +119,13 @@ Future<void> _saveFcmToken() async {
       'token': token,
       'updatedAt': FieldValue.serverTimestamp(),
       'platform': 'android',
+      'quizMode': quizMode,
     }, SetOptions(merge: true));
 
     messaging.onTokenRefresh.listen((newToken) async {
+      final refreshedPrefs = await SharedPreferences.getInstance();
+      final refreshedQuizMode =
+      refreshedPrefs.getString('daily_quiz_default_mode') == 'expert' ? 'expert' : 'normal';
       await FirebaseFirestore.instance
           .collection('fcm_tokens')
           .doc(newToken)
@@ -123,6 +133,7 @@ Future<void> _saveFcmToken() async {
         'token': newToken,
         'updatedAt': FieldValue.serverTimestamp(),
         'platform': 'android',
+        'quizMode': refreshedQuizMode,
       }, SetOptions(merge: true));
     });
   } catch (e) {
@@ -133,14 +144,19 @@ Future<void> _saveFcmToken() async {
 // 알림 탭 → DailyQuizScreen 딥링크
 void _handleNotificationTap(RemoteMessage message) {
   final date = message.data['date'] as String?;
+  final mode = message.data['mode'] as String?;
+  final isExpert = mode == 'expert';
   final context = navigatorKey.currentContext;
   if (context == null) return;
 
-  debugPrint('🔔 [FCM] 알림 탭 → date: \$date');
+  debugPrint('🔔 [FCM] 알림 탭 → date: \$date, mode: \$mode');
 
   Navigator.of(context).push(
     MaterialPageRoute(
-      builder: (_) => DailyQuizScreen(initialDate: date),
+      builder: (_) => DailyQuizScreen(
+        initialDate: date,
+        initialExpert: isExpert,
+      ),
     ),
   );
 }
@@ -187,7 +203,7 @@ Future<void> main() async {
 
   await SubscriptionService.instance.initialize();
 
-  AdService.instance.initialize();
+  await AdService.instance.initialize();
 
   await dotenv.load(fileName: ".env");
   await initializeDateFormatting('ko_KR', null);
@@ -655,6 +671,16 @@ class BadgeGlobalListener extends StatefulWidget {
 class _BadgeGlobalListenerState extends State<BadgeGlobalListener> {
   bool _isShowingDialog = false;
 
+  // [추가] 앱 업데이트로 뱃지 400개가 새로 추가된 것을 안내하는 1회성 팝업 처리용.
+  // 기존 설치자(이전 빌드 번호 < _currentBuildNumber)에게만, 세션당 한 번만 체크한다.
+  static const int _currentBuildNumber = 75;
+  static const String _lastSeenBuildKey = 'last_seen_build_number';
+  bool _buildExpansionCheckDone = false;
+
+  // [디버깅용] true로 두면 74 이하 유저에게 1회성 제한 없이 세션마다 계속
+  // "500+ New Badges" 팝업이 뜬다. 확인 끝나면 반드시 false로 되돌릴 것.
+  static const bool _debugAlwaysShowBadgeExpansionPromo = false;
+
   @override
   void initState() {
     super.initState();
@@ -663,7 +689,7 @@ class _BadgeGlobalListenerState extends State<BadgeGlobalListener> {
     });
   }
 
-  void _checkNotifications() {
+  Future<void> _checkNotifications() async {
     if (!mounted || _isShowingDialog) return;
     if (isOnboardingActive) return;
 
@@ -671,6 +697,47 @@ class _BadgeGlobalListenerState extends State<BadgeGlobalListener> {
       final badgeProvider = context.read<BadgeProvider>();
       final overlayContext = navigatorKey.currentContext;
       if (overlayContext == null) return;
+
+      // [추가] 뱃지 400개 추가 안내 팝업 (기존 설치자 전용, 딱 한 번만)
+      if (!_buildExpansionCheckDone) {
+        _buildExpansionCheckDone = true;
+        final prefs = await SharedPreferences.getInstance();
+        final lastSeenBuild = prefs.getInt(_lastSeenBuildKey);
+
+        if (lastSeenBuild == null && !_debugAlwaysShowBadgeExpansionPromo) {
+          // 최초 설치 — 프로모 없이 현재 빌드 번호만 기준으로 저장
+          await prefs.setInt(_lastSeenBuildKey, _currentBuildNumber);
+        } else if (_debugAlwaysShowBadgeExpansionPromo ||
+            (lastSeenBuild != null && lastSeenBuild < _currentBuildNumber)) {
+          // [디버깅용] 플래그가 켜져 있으면 seen 처리를 저장하지 않아서
+          // 앱을 재시작할 때마다(세션마다) 계속 뜬다.
+          if (!_debugAlwaysShowBadgeExpansionPromo) {
+            await prefs.setInt(_lastSeenBuildKey, _currentBuildNumber);
+          }
+          if (!mounted) return;
+
+          _isShowingDialog = true;
+          final goToBadges = await showDialog<bool>(
+            context: overlayContext,
+            barrierDismissible: false,
+            builder: (ctx) => const _NewBadgesExpansionDialog(newBadgeLabel: '500+'),
+          );
+          _isShowingDialog = false;
+
+          if (goToBadges == true) {
+            // 뒤이어 새로 획득한 뱃지들을 하나씩 팝업으로 띄우지 않고 조용히 seen 처리
+            badgeProvider.clearNewlyUnlocked();
+            final navState = navigatorKey.currentState;
+            if (mounted && navState != null) {
+              navState.push(
+                MaterialPageRoute(builder: (_) => const BadgesScreen()),
+              );
+            }
+            return; // 아래 랭크/뱃지 체인은 건너뜀
+          }
+          // '닫기'를 선택했으면 아래 로직으로 그대로 이어져서 기존 체인이 진행됨
+        }
+      }
 
       if (badgeProvider.newRankUnlocked != null) {
         _isShowingDialog = true;
@@ -947,6 +1014,174 @@ class _PromoTestDialogState extends State<_PromoTestDialog> {
           ),
         ],          // Stack children
       ),            // Stack
+    );
+  }
+}
+
+// ─────────────────────────────────────────────
+// 뱃지 400개 추가 안내 팝업 (앱 업데이트 시 기존 설치자 전용, 1회성)
+// ─────────────────────────────────────────────
+
+class _NewBadgesExpansionDialog extends StatelessWidget {
+  final String newBadgeLabel; // 예: '500+'
+
+  const _NewBadgesExpansionDialog({required this.newBadgeLabel});
+
+  @override
+  Widget build(BuildContext context) {
+    return Dialog(
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
+      backgroundColor: Colors.transparent,
+      insetPadding: const EdgeInsets.symmetric(horizontal: 24),
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(24),
+          gradient: const LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [Color(0xFF1A1A2E), Color(0xFF16213E)],
+          ),
+          boxShadow: [
+            BoxShadow(
+              color: const Color(0xFF3DDAD7).withOpacity(0.35),
+              blurRadius: 30,
+              offset: const Offset(0, 12),
+            ),
+          ],
+        ),
+        child: Stack(
+          clipBehavior: Clip.none,
+          children: [
+            Padding(
+              padding: const EdgeInsets.fromLTRB(24, 36, 24, 24),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  // "NEW" 스탬프
+                  Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
+                    decoration: BoxDecoration(
+                      gradient: const LinearGradient(
+                        colors: [Color(0xFFFFD54F), Color(0xFFFFB300)],
+                      ),
+                      borderRadius: BorderRadius.circular(20),
+                      boxShadow: [
+                        BoxShadow(
+                          color: const Color(0xFFFFB300).withOpacity(0.5),
+                          blurRadius: 12,
+                          offset: const Offset(0, 4),
+                        ),
+                      ],
+                    ),
+                    child: const Text(
+                      'NEW',
+                      style: TextStyle(
+                        fontSize: 12,
+                        fontWeight: FontWeight.w900,
+                        color: Color(0xFF1A1A2E),
+                        letterSpacing: 3,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 20),
+                  ShaderMask(
+                    shaderCallback: (bounds) => const LinearGradient(
+                      colors: [Color(0xFF3DDAD7), Color(0xFFFFD54F)],
+                    ).createShader(bounds),
+                    child: Text(
+                      newBadgeLabel,
+                      style: const TextStyle(
+                        fontSize: 48,
+                        fontWeight: FontWeight.w900,
+                        color: Colors.white,
+                        height: 1.0,
+                        letterSpacing: -1.5,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 6),
+                  const Text(
+                    'New Badges Just Landed',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w800,
+                      color: Colors.white,
+                      letterSpacing: -0.3,
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+                  Text(
+                    'Countries, cities, landmarks, and flights — a huge batch of new achievements is ready to collect. A few might already be unlocked from your past trips.',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 13.5,
+                      color: Colors.white.withOpacity(0.65),
+                      height: 1.5,
+                    ),
+                  ),
+                  const SizedBox(height: 28),
+                  SizedBox(
+                    width: double.infinity,
+                    child: ElevatedButton(
+                      onPressed: () => Navigator.of(context).pop(true),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: const Color(0xFF3DDAD7),
+                        foregroundColor: const Color(0xFF1A1A2E),
+                        padding: const EdgeInsets.symmetric(vertical: 15),
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+                        elevation: 0,
+                      ),
+                      child: const Text(
+                        'View New Badges',
+                        style: TextStyle(fontSize: 15.5, fontWeight: FontWeight.w800),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+                  TextButton(
+                    onPressed: () => Navigator.of(context).pop(false),
+                    child: Text(
+                      'Close',
+                      style: TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600,
+                        color: Colors.white.withOpacity(0.5),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            // 상단 왕관 아이콘 배지
+            Positioned(
+              top: -28,
+              left: 0,
+              right: 0,
+              child: Center(
+                child: Container(
+                  width: 56,
+                  height: 56,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    gradient: const LinearGradient(
+                      colors: [Color(0xFF3DDAD7), Color(0xFF2BA6A3)],
+                    ),
+                    border: Border.all(color: const Color(0xFF1A1A2E), width: 4),
+                    boxShadow: [
+                      BoxShadow(
+                        color: const Color(0xFF3DDAD7).withOpacity(0.5),
+                        blurRadius: 16,
+                        offset: const Offset(0, 6),
+                      ),
+                    ],
+                  ),
+                  child: const Icon(Icons.auto_awesome_rounded, color: Colors.white, size: 26),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

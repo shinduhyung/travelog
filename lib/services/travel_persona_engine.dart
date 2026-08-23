@@ -4,7 +4,7 @@ import 'dart:convert';
 import 'dart:math';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:google_generative_ai/google_generative_ai.dart';
+import 'package:http/http.dart' as http;
 import 'package:jidoapp/models/city_visit_detail_model.dart';
 import 'package:jidoapp/models/trip_log_entry.dart';
 import 'package:jidoapp/providers/airline_provider.dart';
@@ -25,14 +25,21 @@ class TravelPersonaEngine {
 
   factory TravelPersonaEngine() => _instance;
 
-  GenerativeModel? _model;
+  String? _apiKey;
+  static const String _deepSeekModel = 'deepseek-chat';
+  static const String _deepSeekEndpoint = 'https://api.deepseek.com/chat/completions';
 
+  // 주의: 예전 코드에 하드코딩되어 있던 Gemini fallback 키는 완전히 제거했습니다.
+  // 소스코드에 API 키를 하드코딩하는 것은 심각한 보안 위험이므로 .env 값이 없으면
+  // 바로 예외를 던지도록 변경했습니다.
   void _ensureModel() {
-    if (_model != null) return;
-    final envKey = dotenv.env['GEMINI_API_KEY'];
-    const fallbackKey = 'AIzaSyB7wZb2tO1-Fs6GbDADUSTs2Qs3w08Hovw';
-    final apiKey = (envKey != null && envKey.isNotEmpty) ? envKey : fallbackKey;
-    _model = GenerativeModel(model: 'gemini-2.5-flash', apiKey: apiKey);
+    if (_apiKey != null) return;
+    final envKey = dotenv.env['DEEPSEEK_API_KEY'];
+    if (envKey == null || envKey.isEmpty) {
+      _apiKey = null;
+      return;
+    }
+    _apiKey = envKey;
   }
 
   static const String _archetypePrototypesJson = r'''
@@ -160,8 +167,8 @@ class TravelPersonaEngine {
       ) async {
     _ensureModel();
 
-    if (_model == null) {
-      throw Exception('Gemini Model initialization failed');
+    if (_apiKey == null) {
+      throw Exception('DeepSeek API key initialization failed');
     }
 
     if (!personalityProvider.isCalculated) {
@@ -273,11 +280,32 @@ Output STRICT JSON structure (MUST contain 'debug_info' field):
 ''';
 
     try {
-      final response = await _model!.generateContent([
-        Content.text(systemPrompt),
-        Content.text(jsonEncode(inputPayload)),
-      ]);
-      return response.text?.replaceAll('```json', '').replaceAll('```', '').trim() ?? '{}';
+      final response = await http.post(
+        Uri.parse(_deepSeekEndpoint),
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer $_apiKey',
+        },
+        body: jsonEncode({
+          'model': _deepSeekModel,
+          'messages': [
+            {'role': 'system', 'content': systemPrompt},
+            {'role': 'user', 'content': jsonEncode(inputPayload)},
+          ],
+          // 시스템 프롬프트가 이미 "STRICT JSON"을 요구하므로 JSON 모드를 강제해서
+          // 마크다운 코드펜스 없이 순수 JSON만 반환하도록 함
+          'response_format': {'type': 'json_object'},
+          'stream': false,
+        }),
+      );
+
+      if (response.statusCode != 200) {
+        throw Exception('DeepSeek API error: ${response.statusCode} ${response.body}');
+      }
+
+      final decoded = jsonDecode(utf8.decode(response.bodyBytes));
+      final text = decoded['choices']?[0]?['message']?['content'] as String?;
+      return text?.replaceAll('```json', '').replaceAll('```', '').trim() ?? '{}';
     } catch (e) {
       final debugResponse = {
         "full_feature_vector": fullFeatureVector,

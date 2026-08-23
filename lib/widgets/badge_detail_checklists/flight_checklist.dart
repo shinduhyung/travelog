@@ -1094,7 +1094,7 @@ class FlightChecklist {
       );
     }
 
-    if (achievement.id == 'top10_airports' && achievement.targetIsoCodes != null) {
+    if ((achievement.id == 'top10_airports' || achievement.id.startsWith('airport_')) && achievement.targetIsoCodes != null) {
       final visitedAirports = airportProvider.visitedAirports;
       final targetAirports = achievement.targetIsoCodes!.toList()..sort();
 
@@ -1155,7 +1155,7 @@ class FlightChecklist {
       );
     }
 
-    if (achievement.id == 'top10_airlines' && achievement.targetIsoCodes != null) {
+    if ((achievement.id == 'top10_airlines' || achievement.id.startsWith('airline_')) && achievement.targetIsoCodes != null) {
       final visitedAirlines = airlineProvider.airlines.where((a) => a.totalTimes > 0).map((a) => a.code).toSet();
       final targetAirlines = achievement.targetIsoCodes!.toList();
 
