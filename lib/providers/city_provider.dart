@@ -205,7 +205,17 @@ class CityProvider with ChangeNotifier {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
   final FirebaseAuth _auth = FirebaseAuth.instance;
 
+  // [DEBUG] 이 인스턴스를 다른 인스턴스와 로그에서 구분하기 위한 식별자.
+  // 리마운트 테스트에서 "CityProvider가 몇 번 새로 생성됐는지" 셀 때 유용.
+  static int _instanceCounter = 0;
+  final int _instanceId = ++_instanceCounter;
+
+  // ── 로딩 상태 ──────────────────────────────────────────────────────────
+  // isLoading: 지도/도시 목록/방문기록 등 "핵심" 데이터. 이게 꺼지면 메인 화면 사용 가능.
+  // isStatsLoading: 스타벅스/GAWC/할리우드 등 "부가 통계". Top Cities 등 상세 통계
+  //                 화면에서만 의미가 있고, 메인 화면 진입을 막지 않는다.
   bool _isLoading = true;
+  bool _isStatsLoading = true;
   String? _error;
 
   List<City> _allCities = [];
@@ -278,6 +288,7 @@ class CityProvider with ChangeNotifier {
 
   // Getters
   bool get isLoading => _isLoading;
+  bool get isStatsLoading => _isStatsLoading;
   String? get error => _error;
   List<City> get allCities => _allCities;
 
@@ -346,7 +357,12 @@ class CityProvider with ChangeNotifier {
   int get totalVisitedCount => _visitDetails.keys.length;
 
   CityProvider() {
-    print('🔥🔥🔥 [CityProvider] Constructor called. Initializing...');
+    // [DEBUG] 언제, 어떤 유저 기준으로 이 인스턴스가 생성됐는지 추적.
+    // 기존 계정으로 로그인(reload) 시 이 로그가 "새로" 한 번 더 찍혀야
+    // 리마운트가 실제로 동작한 것. 계정 전환 테스트에서는 이 인스턴스ID가
+    // 바뀌면서 uid도 기대한 계정으로 바뀌는지가 핵심 확인 포인트.
+    debugPrint(
+        '🆕 [CityProvider#$_instanceId] constructed (currentUser=${_auth.currentUser?.uid})');
     _initializeData();
   }
 
@@ -358,7 +374,7 @@ class CityProvider with ChangeNotifier {
     _countryProvider = countryProvider;
     // When CountryProvider is updated, sync city country names
     _syncCityCountryNames();
-    _calculateCitiesMenuStats({});
+    _calculateCitiesMenuStats();
   }
 
   // Method to sync country names in cities based on CountryProvider settings (Handling Merged Territories)
@@ -406,7 +422,6 @@ class CityProvider with ChangeNotifier {
     }
 
     if (hasChanges) {
-      print('🔥🔥🔥 [CityProvider] Synced city country names (Merged: ${!includeTerritories})');
       notifyListeners();
     }
   }
@@ -424,10 +439,40 @@ class CityProvider with ChangeNotifier {
         return response.body;
       }
     } catch (e) {
-      print('🔥 [CityProvider] Network error or timeout loading $fileName: $e. Falling back to local asset.');
+      print('[CityProvider] Network error or timeout loading $fileName: $e. Falling back to local asset.');
     }
     // 실패 시(오프라인, 타임아웃, statusCode 오류 등) 로컬 fallback
     return await rootBundle.loadString('assets/$fileName');
+  }
+
+  // cities15000.json은 매번 네트워크로 받으면 로딩이 느려지므로,
+  // 로컬 캐시가 있으면 그걸로 즉시 진행하고, 최신본은 백그라운드에서
+  // 조용히 받아서 "다음 실행부터" 반영되게 한다.
+  static const String _cities15000CacheKey = 'cached_cities15000_json';
+
+  Future<String> _loadCities15000WithCache() async {
+    final prefs = await SharedPreferences.getInstance();
+    final cached = prefs.getString(_cities15000CacheKey);
+
+    if (cached != null && cached.isNotEmpty) {
+      // 캐시로 즉시 진행하고, 최신본은 백그라운드에서 갱신 (fire-and-forget)
+      _loadJsonFromStorage('cities15000.json').then((fresh) {
+        if (fresh.isNotEmpty) {
+          prefs.setString(_cities15000CacheKey, fresh);
+        }
+      }).catchError((e) {
+        print('[CityProvider] Background cities15000 refresh failed: $e');
+      });
+      return cached;
+    }
+
+    // 캐시가 없는 최초 실행에서만 어쩔 수 없이 기다린다.
+    final fresh = await _loadJsonFromStorage('cities15000.json');
+    if (fresh.isNotEmpty) {
+      // ignore: unawaited_futures
+      prefs.setString(_cities15000CacheKey, fresh);
+    }
+    return fresh;
   }
 
   // ===========================================================================
@@ -435,91 +480,95 @@ class CityProvider with ChangeNotifier {
   // ===========================================================================
 
   Future<void> _initializeData() async {
-    print('🔥🔥🔥 [CityProvider] Starting _initializeData...');
+    // [DEBUG] 이 provider 인스턴스 기준으로 초기화 시작을 기록. 여러 개의
+    // CityProvider가 겹쳐서 존재할 수 있는 리마운트 전환 구간에서, 로그의
+    // 인스턴스ID로 "어느 인스턴스가 초기화를 시작/완료했는지" 구분 가능.
+    final stopwatch = Stopwatch()..start();
+    debugPrint(
+        '▶️ [CityProvider#$_instanceId] _initializeData START (user=${_auth.currentUser?.uid})');
     try {
-      // 1. Essential Data Load (Map & Basic Cities) - JSON Parsing
-      final String continentJsonStr = await rootBundle.loadString('assets/continent.json');
-      final Map<String, String> countryToContinentMap = await compute(_parseContinents, continentJsonStr);
+      // 1. 핵심 데이터 로드 (지도용 기본 도시 목록) — 최대한 병렬로
+      final continentFuture = rootBundle
+          .loadString('assets/continent.json')
+          .then((s) => compute(_parseContinents, s));
+      final citiesJsonFuture = rootBundle.loadString('assets/cities.json');
+      final cities15000Future = _loadCities15000WithCache();
 
-      final String cities15000JsonStr = await _loadJsonFromStorage('cities15000.json');
-      final String citiesJsonStr = await rootBundle.loadString('assets/cities.json');
+      final Map<String, String> countryToContinentMap = await continentFuture;
+      final String citiesJsonStr = await citiesJsonFuture;
+      final String cities15000JsonStr = await cities15000Future;
 
-      final Map<String, dynamic> message = {
+      _allCities = await compute(_mergeAndProcessCities, {
         'cities15000Json': cities15000JsonStr,
         'citiesJson': citiesJsonStr,
         'continentMap': countryToContinentMap,
-      };
+      });
 
-      _allCities = await compute(_mergeAndProcessCities, message);
-      print('🔥🔥🔥 [CityProvider] Merged ${_allCities.length} standard cities.');
+      // 2. 사용자 데이터 로드 — Firestore 문서를 한 번만 조회해서 재사용
+      final user = _auth.currentUser;
+      Map<String, dynamic>? remoteUserData;
+      if (user != null) {
+        try {
+          final doc = await _firestore
+              .collection('users')
+              .doc(user.uid)
+              .get()
+              .timeout(const Duration(seconds: 4));
+          if (doc.exists) remoteUserData = doc.data();
+        } catch (e) {
+          print('[CityProvider] Firestore fetch failed: $e');
+        }
+      }
 
-      // 2. Custom Cities Load (User added) - Firebase Integrated
-      await _loadCustomCities();
-      print('🔥🔥🔥 [CityProvider] Custom cities loaded.');
+      await _loadCustomCities(remoteUserData);
+      await _loadVisitDetails(remoteUserData);
+      await _loadSettings(remoteUserData);
+      await _loadHomeCity(remoteUserData);
 
-      // 3. Theme Data Load
-      await _loadThemeData(countryToContinentMap);
-
-      // 3.1 Special Stats Load (Instagram, Transportation, etc.)
-      await _loadSpecialStats();
-
-      // 4. Additional Info 1: Tourist Ratio
-      final String touristRatioJsonStr = await rootBundle.loadString('assets/city_tourist_ratio.json');
-      _touristRatioData = await compute(_parseTouristRatioJson, touristRatioJsonStr);
-      _applyTouristRatioToAllLists();
-
-      // 5. Additional Info 2: Financial Index
-      final String financialIndexJsonStr = await rootBundle.loadString('assets/financial_index.json');
-      _financialIndexRawData = (json.decode(financialIndexJsonStr) as List<dynamic>)
-          .map((item) => item as Map<String, dynamic>)
-          .toList();
-
-      // 6. Visit History Load - Firebase Integrated
-      await _loadVisitDetails();
-      print('🔥🔥🔥 [CityProvider] Visited details loaded: ${_visitDetails.length} cities.');
-
-      // 7. Settings Load - Firebase Integrated
-      await _loadSettings();
-      await _loadHomeCity();
-
-      // Attempt to sync country names if CountryProvider is already available
       if (_countryProvider != null) {
         _syncCityCountryNames();
       }
 
-      _calculateCitiesMenuStats(countryToContinentMap);
+      _calculateCitiesMenuStats();
 
-      // --- DEBUG SECTION: CHECK MISSING CITIES FROM USER LIST ---
-      final List<String> userCityList = [
-        "Kinshasa",
-        "Brazzaville",
-        "Malmö",
-        "Copenhagen",
-        "Tallinn",
-        "Helsinki",
-        "Buenos Aires",
-        "Montevideo",
-        "Vienna",
-        "Bratislava",
-        "Singapore",
-        "Johor Bahru",
-        "Detroit",
-        "Windsor",
-        "Hong Kong",
-        "Macau",
-        "San Diego",
-        "Tijuana"
-      ];
+      // ✅ 핵심 데이터(지도, 방문기록)가 준비됐으니 여기서 먼저 화면을 풀어준다.
+      _isLoading = false;
+      notifyListeners();
+      // [DEBUG] 핵심 데이터(방문기록 포함) 준비 완료 시점 — 화면에 실제로
+      // 데이터가 뜨는 시점과 거의 일치. 계정 전환 테스트에서 "이 시점의
+      // visitedCities 개수"를 같이 로그로 남겨두면 어느 계정 데이터가
+      // 실제로 반영됐는지 바로 확인 가능.
+      debugPrint(
+          '✅ [CityProvider#$_instanceId] core data ready (user=${_auth.currentUser?.uid}, '
+              'visitedCities=${_visitDetails.length}, elapsedMs=${stopwatch.elapsedMilliseconds})');
 
-      await debugCheckCityListMissing(userCityList);
-      // -----------------------------------------------------------
+      // 3. 부가 통계 데이터 — 메인 화면 사용을 막지 않고 백그라운드로 이어서 로드
+      await _loadThemeData(countryToContinentMap);
+      await _loadSpecialStats();
 
-      print('🔥🔥🔥 [CityProvider] Initialization COMPLETED.');
+      final String touristRatioJsonStr =
+      await rootBundle.loadString('assets/city_tourist_ratio.json');
+      _touristRatioData = await compute(_parseTouristRatioJson, touristRatioJsonStr);
+      _applyTouristRatioToAllLists();
+
+      final String financialIndexJsonStr =
+      await rootBundle.loadString('assets/financial_index.json');
+      _financialIndexRawData = (json.decode(financialIndexJsonStr) as List<dynamic>)
+          .map((item) => item as Map<String, dynamic>)
+          .toList();
+
+      _isStatsLoading = false;
+      notifyListeners();
+      debugPrint(
+          '🏁 [CityProvider#$_instanceId] _initializeData DONE (user=${_auth.currentUser?.uid}, '
+              'elapsedMs=${stopwatch.elapsedMilliseconds})');
     } catch (e, stackTrace) {
       _error = 'Failed to load city data: $e';
-      print('🔥🔥🔥 [CityProvider] FATAL ERROR: $_error\n$stackTrace');
-    } finally {
+      print('[CityProvider] FATAL ERROR: $_error\n$stackTrace');
+      debugPrint(
+          '💥 [CityProvider#$_instanceId] _initializeData FAILED (user=${_auth.currentUser?.uid}, elapsedMs=${stopwatch.elapsedMilliseconds})');
       _isLoading = false;
+      _isStatsLoading = false;
       notifyListeners();
     }
   }
@@ -562,9 +611,8 @@ class CityProvider with ChangeNotifier {
       _capitalsNoSeasonalSnowfall = _matchCitiesFromStats(statsJson['capitals_no_seasonal_snowfall']);
       _capitalsInTwoHemispheres = _matchCitiesFromStats(statsJson['capitals_in_two_hemispheres']);
       _transcontinentalCities = _matchCitiesFromStats(statsJson['transcontinental_cities']);
-
     } catch (e) {
-      print('🔥 [CityProvider] Error loading city_stats.json: $e');
+      print('[CityProvider] Error loading city_stats.json: $e');
     }
   }
 
@@ -587,157 +635,6 @@ class CityProvider with ChangeNotifier {
       }
     }
     return matched;
-  }
-
-  // --- DEBUG: Check for major cities missing from map data ---
-  Future<void> debugFindMissingMajorCities() async {
-    print('🔥 [CityProvider] Checking for missing major cities...');
-    try {
-      final String infoString = await rootBundle.loadString('assets/country_info.json');
-      final Map<String, dynamic> infoJson = json.decode(infoString);
-
-      List<String> missing = [];
-      final Set<String> existingCityNames = _allCities
-          .map((c) => _getOriginalCityName(c.name).toLowerCase().trim())
-          .toSet();
-
-      infoJson.forEach((key, value) {
-        if (value is Map && value['majorCities'] is List) {
-          final List<dynamic> majorCities = value['majorCities'];
-          for (var item in majorCities) {
-            if (item is Map && item['name'] != null) {
-              String cityName = item['name'].toString();
-              String normalizedInfoName = cityName.toLowerCase().trim();
-
-              if (!existingCityNames.contains(normalizedInfoName)) {
-                missing.add('$cityName ($key)');
-              }
-            }
-          }
-        }
-      });
-
-      if (missing.isNotEmpty) {
-        print('🔥 [CityProvider] Found ${missing.length} major cities missing from loaded data.');
-      }
-    } catch (e) {
-      print('🔥 [CityProvider] Error checking missing cities: $e');
-    }
-  }
-
-  // --- DEBUG: Check for stats cities unused due to missing map coordinates ---
-  Future<void> debugPrintUnusedCitiesStats() async {
-    print('🔥 [CityProvider] Checking for cities in cities.json but NOT in cities15000.json...');
-    try {
-      final String citiesJsonStr = await rootBundle.loadString('assets/cities.json');
-      final String cities15000JsonStr = await rootBundle.loadString('assets/cities15000.json');
-
-      final List<dynamic> statsList = json.decode(citiesJsonStr);
-      final List<dynamic> baseList = json.decode(cities15000JsonStr);
-
-      final Set<String> statsNames = statsList.map((e) => e['name'] as String).toSet();
-      final Set<String> baseNames = baseList.map((e) => e['name'] as String).toSet();
-
-      final List<String> unused = statsNames.where((name) => !baseNames.contains(name)).toList();
-
-      if (unused.isNotEmpty) {
-        print('🔥 [CityProvider] Found ${unused.length} cities in cities.json that are NOT being used.');
-      }
-    } catch (e) {
-      print('🔥 [CityProvider] Error checking unused stats: $e');
-    }
-  }
-
-  String _normalizeCityKey(String raw) {
-    var s = raw.trim().toLowerCase();
-    s = _getOriginalCityName(s);
-    s = s
-        .replaceAll('&', ' and ')
-        .replaceAll(RegExp(r"[’'`´]"), "")
-        .replaceAll(RegExp(r"[.,/\\\-]"), " ")
-        .replaceAll(RegExp(r"\s+"), " ")
-        .trim();
-    return s;
-  }
-
-  String _applyCityAliases(String raw) {
-    final key = _normalizeCityKey(raw);
-    const aliasMap = <String, String>{
-      "st petersburg": "saint petersburg",
-      "washington dc": "washington d c",
-      "washington d c": "washington d c",
-      "vatican": "vatican city",
-    };
-    return aliasMap[key] ?? key;
-  }
-
-  int _levenshtein(String a, String b) {
-    if (a == b) return 0;
-    if (a.isEmpty) return b.length;
-    if (b.isEmpty) return a.length;
-    final prev = List<int>.generate(b.length + 1, (i) => i);
-    final curr = List<int>.filled(b.length + 1, 0);
-    for (int i = 0; i < a.length; i++) {
-      curr[0] = i + 1;
-      for (int j = 0; j < b.length; j++) {
-        final cost = a.codeUnitAt(i) == b.codeUnitAt(j) ? 0 : 1;
-        curr[j + 1] = [
-          curr[j] + 1,
-          prev[j + 1] + 1,
-          prev[j] + cost,
-        ].reduce(min);
-      }
-      for (int j = 0; j < curr.length; j++) {
-        prev[j] = curr[j];
-      }
-    }
-    return prev[b.length];
-  }
-
-  Future<void> debugCheckCityListMissing(List<String> inputCities) async {
-    print('🧪 [CityProvider] debugCheckCityListMissing: start');
-    final Map<String, List<String>> keyToOriginalNames = {};
-    for (final c in _allCities) {
-      final key = _applyCityAliases(c.name);
-      keyToOriginalNames.putIfAbsent(key, () => []).add(c.name);
-    }
-    final keys = keyToOriginalNames.keys.toList();
-
-    final List<String> missing = [];
-    final Map<String, List<String>> suggestions = {};
-
-    for (final raw in inputCities) {
-      if (raw.trim().isEmpty) continue;
-      final q = _applyCityAliases(raw);
-      if (keyToOriginalNames.containsKey(q)) continue;
-
-      missing.add(raw);
-      final scored = <MapEntry<String, int>>[];
-      for (final k in keys) {
-        final d = _levenshtein(q, k);
-        scored.add(MapEntry(k, d));
-      }
-      scored.sort((a, b) => a.value.compareTo(b.value));
-      final top = scored.take(3).map((e) {
-        final anyOriginal = keyToOriginalNames[e.key]?.first ?? e.key;
-        return '$anyOriginal (key="${e.key}", dist=${e.value})';
-      }).toList();
-      suggestions[raw] = top;
-    }
-
-    if (missing.isNotEmpty) {
-      print('❌ [CityProvider] Missing cities count = ${missing.length}');
-      for (final m in missing) {
-        print('   - $m');
-        final sug = suggestions[m];
-        if (sug != null && sug.isNotEmpty) {
-          for (final s in sug) {
-            print('         * $s');
-          }
-        }
-      }
-    }
-    print('🧪 [CityProvider] debugCheckCityListMissing: done');
   }
 
   Future<void> _loadThemeData(Map<String, String> continentMap) async {
@@ -866,7 +763,7 @@ class CityProvider with ChangeNotifier {
     }
   }
 
-  void _calculateCitiesMenuStats(Map<String, String> countryToContinentMap) {
+  void _calculateCitiesMenuStats() {
     const List<String> continentFullNames = [
       'Asia', 'Europe', 'Africa', 'North America', 'South America', 'Oceania',
     ];
@@ -975,25 +872,20 @@ class CityProvider with ChangeNotifier {
         }, SetOptions(merge: true));
       }
     } catch (e) {
-      print('🔥🔥🔥 [CityProvider] ERROR saving custom cities: $e');
+      print('[CityProvider] ERROR saving custom cities: $e');
     }
   }
 
-  Future<void> _loadCustomCities() async {
+  // remoteData: _initializeData / reloadFromServer에서 한 번만 조회한
+  // users/{uid} 문서 데이터를 넘겨받는다. 이 함수 내부에서 별도로
+  // Firestore를 조회하지 않는다 (읽기 횟수 절약 = 로딩 속도).
+  Future<void> _loadCustomCities(Map<String, dynamic>? remoteData) async {
     try {
       final prefs = await SharedPreferences.getInstance();
-      final user = _auth.currentUser;
       String? jsonStr = prefs.getString('saved_custom_cities');
 
-      if (user != null) {
-        try {
-          final doc = await _firestore.collection('users').doc(user.uid).get();
-          if (doc.exists && doc.data()!.containsKey('saved_custom_cities')) {
-            jsonStr = doc.data()!['saved_custom_cities'];
-          }
-        } catch (e) {
-          print("🔥🔥🔥 [CityProvider] Failed to fetch custom cities from server: $e");
-        }
+      if (remoteData != null && remoteData.containsKey('saved_custom_cities')) {
+        jsonStr = remoteData['saved_custom_cities'];
       }
 
       if (jsonStr != null) {
@@ -1018,7 +910,7 @@ class CityProvider with ChangeNotifier {
         }
       }
     } catch (e) {
-      print('🔥🔥🔥 [CityProvider] ERROR loading custom cities: $e');
+      print('[CityProvider] ERROR loading custom cities: $e');
     }
   }
 
@@ -1026,21 +918,31 @@ class CityProvider with ChangeNotifier {
   // User Data & Visit Details (Firebase Integrated)
   // ===========================================================================
 
-  Future<void> _loadVisitDetails() async {
+  // 방문 기록에 대해 "로컬이 서버보다 최신이면 서버로 덮어쓰지 않는다"는
+  // 안전장치. 저장 실패 등으로 서버가 뒤처져 있을 때, 재로그인/재로드
+  // 한 번으로 방금 입력한 데이터가 사라지는 사고를 막기 위한 최소한의 보호.
+  static const String _visitDetailsSyncedAtKey = 'city_visit_details_synced_at';
+
+  Future<void> _loadVisitDetails(Map<String, dynamic>? remoteData) async {
     try {
       final prefs = await SharedPreferences.getInstance();
-      final user = _auth.currentUser;
       String? detailsString = prefs.getString('city_visit_details_v3');
+      final int localSyncedAtMs = prefs.getInt(_visitDetailsSyncedAtKey) ?? 0;
 
-      if (user != null) {
-        try {
-          final doc = await _firestore.collection('users').doc(user.uid).get();
-          if (doc.exists && doc.data()!.containsKey('city_visit_details_v3')) {
-            detailsString = doc.data()!['city_visit_details_v3'];
-            await prefs.setString('city_visit_details_v3', detailsString!);
-          }
-        } catch (e) {
-          print("🔥🔥🔥 [CityProvider] Failed to fetch visit details from server: $e");
+      if (remoteData != null && remoteData.containsKey('city_visit_details_v3')) {
+        final dynamic rawTimestamp = remoteData['lastUpdated'];
+        final int remoteMs = (rawTimestamp is Timestamp)
+            ? rawTimestamp.millisecondsSinceEpoch
+            : 0;
+
+        // 서버가 로컬보다 최신이거나, 로컬에 동기화 시각 기록이 아예 없는
+        // 경우(예: 이 기기에서 처음 로그인)에만 서버 값으로 반영한다.
+        if (remoteMs >= localSyncedAtMs) {
+          detailsString = remoteData['city_visit_details_v3'];
+          await prefs.setString('city_visit_details_v3', detailsString!);
+          await prefs.setInt(_visitDetailsSyncedAtKey, remoteMs);
+        } else {
+          print('[CityProvider] Local visit details are newer than server — keeping local copy.');
         }
       }
 
@@ -1056,7 +958,7 @@ class CityProvider with ChangeNotifier {
         });
       }
     } catch (e) {
-      print('🔥🔥🔥 [CityProvider] FATAL ERROR loading visit details: $e');
+      print('[CityProvider] FATAL ERROR loading visit details: $e');
     }
     notifyListeners();
   }
@@ -1068,6 +970,10 @@ class CityProvider with ChangeNotifier {
           _visitDetails.map((key, value) => MapEntry(key, value.toJson()))
       );
       await prefs.setString('city_visit_details_v3', encodedMap);
+      // 로컬에 저장한 시각을 기록 — 다음 로드 시 서버와 비교해서
+      // "누가 더 최신인지" 판단하는 기준이 된다.
+      await prefs.setInt(
+          _visitDetailsSyncedAtKey, DateTime.now().millisecondsSinceEpoch);
 
       final user = _auth.currentUser;
       if (user != null) {
@@ -1076,8 +982,14 @@ class CityProvider with ChangeNotifier {
             'city_visit_details_v3': encodedMap,
             'lastUpdated': FieldValue.serverTimestamp(),
           }, SetOptions(merge: true));
+          // [DEBUG] 어느 계정 문서에 방문 기록이 실제로 저장됐는지 추적.
+          // "다른 계정으로 전환했는데 이전 계정 데이터가 새 계정 문서에
+          // 저장되는지"를 검증할 때 이 로그가 핵심 증거가 된다.
+          debugPrint(
+              '💾 [CityProvider#$_instanceId] visit details SAVED to Firestore '
+                  '(uid=${user.uid}, cityCount=${_visitDetails.length})');
         } catch (e) {
-          print("🔥🔥🔥 [CityProvider] Failed to save visit details to server: $e");
+          print('[CityProvider] Failed to save visit details to server: $e');
         }
       }
     } catch (e) {
@@ -1093,42 +1005,26 @@ class CityProvider with ChangeNotifier {
   // Settings & Home City (Firebase Integrated)
   // ===========================================================================
 
-  Future<void> _loadSettings() async {
+  Future<void> _loadSettings(Map<String, dynamic>? remoteData) async {
     final prefs = await SharedPreferences.getInstance();
-    final user = _auth.currentUser;
     _useDefaultCityRankingBarColor = prefs.getBool('useDefaultCityRankingBarColor') ?? false;
 
-    if (user != null) {
-      try {
-        final doc = await _firestore.collection('users').doc(user.uid).get();
-        if (doc.exists && doc.data()!.containsKey('useDefaultCityRankingBarColor')) {
-          _useDefaultCityRankingBarColor = doc.data()!['useDefaultCityRankingBarColor'];
-          await prefs.setBool('useDefaultCityRankingBarColor', _useDefaultCityRankingBarColor);
-        }
-      } catch (e) {
-        print('[CityProvider] Error loading settings from server: $e');
-      }
+    if (remoteData != null && remoteData.containsKey('useDefaultCityRankingBarColor')) {
+      _useDefaultCityRankingBarColor = remoteData['useDefaultCityRankingBarColor'];
+      await prefs.setBool('useDefaultCityRankingBarColor', _useDefaultCityRankingBarColor);
     }
   }
 
-  Future<void> _loadHomeCity() async {
+  Future<void> _loadHomeCity(Map<String, dynamic>? remoteData) async {
     final prefs = await SharedPreferences.getInstance();
-    final user = _auth.currentUser;
     _homeCityName = prefs.getString('homeCityName');
 
-    if (user != null) {
-      try {
-        final doc = await _firestore.collection('users').doc(user.uid).get();
-        if (doc.exists && doc.data()!.containsKey('homeCityName')) {
-          _homeCityName = doc.data()!['homeCityName'];
-          if (_homeCityName != null) {
-            await prefs.setString('homeCityName', _homeCityName!);
-          } else {
-            await prefs.remove('homeCityName');
-          }
-        }
-      } catch (e) {
-        print('[CityProvider] Error loading home city from server: $e');
+    if (remoteData != null && remoteData.containsKey('homeCityName')) {
+      _homeCityName = remoteData['homeCityName'];
+      if (_homeCityName != null) {
+        await prefs.setString('homeCityName', _homeCityName!);
+      } else {
+        await prefs.remove('homeCityName');
       }
     }
   }
@@ -1227,7 +1123,7 @@ class CityProvider with ChangeNotifier {
       }
     }
     await _saveVisitDetails();
-    _calculateCitiesMenuStats({});
+    _calculateCitiesMenuStats();
     notifyListeners();
   }
 
@@ -1241,7 +1137,7 @@ class CityProvider with ChangeNotifier {
         _visitDetails[cityName] = updatedDetail;
       }
       await _saveVisitDetails();
-      _calculateCitiesMenuStats({});
+      _calculateCitiesMenuStats();
       notifyListeners();
     }
   }
@@ -1306,7 +1202,7 @@ class CityProvider with ChangeNotifier {
       }
     }
     await _saveVisitDetails();
-    _calculateCitiesMenuStats({});
+    _calculateCitiesMenuStats();
     notifyListeners();
   }
 
@@ -1385,7 +1281,7 @@ class CityProvider with ChangeNotifier {
     final updatedRanges = List<DateRange>.from(detail.visitDateRanges)..add(newRange);
     _visitDetails[cityName] = detail.copyWith(visitDateRanges: updatedRanges);
     await _saveVisitDetails();
-    _calculateCitiesMenuStats({});
+    _calculateCitiesMenuStats();
     notifyListeners();
   }
 
@@ -1398,12 +1294,31 @@ class CityProvider with ChangeNotifier {
   CityVisitDetail? getCityVisitDetail(String cityName) {
     return _visitDetails[cityName];
   }
+
   // ─── 케이스 2: Firestore 데이터로 로컬 덮어씌우기 ──────────────────────
   Future<void> reloadFromServer() async {
-    await _loadVisitDetails();
-    await _loadSettings();
-    await _loadHomeCity();
-    await _loadCustomCities();
+    // [DEBUG] main.dart의 리마운트 로직으로 이 함수는 이제 정상 흐름에서는
+    // 호출되지 않아야 한다(대신 새 CityProvider 인스턴스가 생성됨). 만약
+    // 이 로그가 찍힌다면 어딘가에서 여전히 구 경로로 reloadFromServer()를
+    // 직접 부르고 있다는 뜻이므로 호출부를 찾아봐야 한다.
+    debugPrint(
+        '⚠️ [CityProvider#$_instanceId] reloadFromServer() called directly — '
+            'expected path is now remount via main.dart, verify caller (user=${_auth.currentUser?.uid})');
+    final user = _auth.currentUser;
+    Map<String, dynamic>? remoteData;
+    if (user != null) {
+      try {
+        final doc = await _firestore.collection('users').doc(user.uid).get();
+        if (doc.exists) remoteData = doc.data();
+      } catch (e) {
+        print('[CityProvider] reloadFromServer fetch failed: $e');
+      }
+    }
+
+    await _loadVisitDetails(remoteData);
+    await _loadSettings(remoteData);
+    await _loadHomeCity(remoteData);
+    await _loadCustomCities(remoteData);
     notifyListeners();
   }
 
@@ -1413,7 +1328,6 @@ class CityProvider with ChangeNotifier {
     await _saveCustomCities();
     final user = _auth.currentUser;
     if (user != null) {
-      final prefs = await SharedPreferences.getInstance();
       _firestore.collection('users').doc(user.uid).set({
         'useDefaultCityRankingBarColor': _useDefaultCityRankingBarColor,
         'homeCityName': _homeCityName,

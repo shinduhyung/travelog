@@ -89,6 +89,30 @@ const Map<String, String> airlineAllianceCodes = {
   "RJA": "OneWorld"  // Royal Jordanian
 };
 
+// [HOTFIX] updateBadges()가 BadgeProvider 자신의 Firestore 초기 로드
+// (_loadUnlockedBadges, 아래 참고)보다 먼저 호출된 경우, 그 호출에 쓰였던
+// 인자들을 잠깐 기억해뒀다가 초기 로드가 끝나는 즉시 그대로 재실행하기
+// 위한 작은 데이터 보관용 클래스. ChangeNotifier가 아니라 순수 값 보관용.
+class _PendingBadgeUpdateArgs {
+  final CountryProvider countryProvider;
+  final List<EconomyData> allEconomyData;
+  final CityProvider? cityProvider;
+  final AirlineProvider? airlineProvider;
+  final AirportProvider? airportProvider;
+  final LandmarksProvider? landmarksProvider;
+  final dynamic unescoProvider;
+
+  _PendingBadgeUpdateArgs({
+    required this.countryProvider,
+    required this.allEconomyData,
+    this.cityProvider,
+    this.airlineProvider,
+    this.airportProvider,
+    this.landmarksProvider,
+    this.unescoProvider,
+  });
+}
+
 class BadgeProvider with ChangeNotifier {
   List<Achievement> _newlyUnlocked = [];
   List<Achievement> get newlyUnlocked => _newlyUnlocked;
@@ -107,6 +131,43 @@ class BadgeProvider with ChangeNotifier {
 
   // [추가] 초기화 상태 확인용
   bool _isInitialized = false;
+
+  // [HOTFIX] updateBadges()가 아직 _isInitialized==false일 때 호출되면
+  // (아래 updateBadges 참고) 여기 저장해뒀다가, _loadUnlockedBadges()가
+  // 끝나는 즉시 그 인자로 한 번 더 자동 재계산한다. 없으면 초기화가
+  // 늦게 끝났을 때 badges가 다음 provider 갱신 전까지 계속 "0/0"으로
+  // 보이는 새로운 버그가 생기기 때문에 필요하다.
+  _PendingBadgeUpdateArgs? _pendingBadgeUpdateArgs;
+
+  // [HOTFIX] 앱 킬 때마다 이미 딴 뱃지 수백 개가 "새로 딴 뱃지" 팝업으로
+  // 다시 뜨는 문제의 원인 메모:
+  // updateBadges()는 CityProvider/LandmarksProvider/UnescoProvider의
+  // 로딩이 끝나는 순간(main.dart의 ProxyProvider2 update 콜백) 호출되는데,
+  // 정작 BadgeProvider 자신이 Firestore에서 "이미 해제된 뱃지 목록"을
+  // 다 불러왔는지(_isInitialized)는 그동안 전혀 체크하지 않았다.
+  // 그래서 로컬 자산 기반인 Country/City 데이터가 Firestore의 뱃지
+  // 문서 조회보다 먼저 끝나버리면, 이 시점엔 achievement.isUnlocked가
+  // 전부 기본값(false)인 상태라 실제로 예전에 달성한 뱃지들까지도
+  // "방금 막 딴 것"으로 오판해 _newlyUnlocked에 우르르 쌓였다.
+  // 아래 updateBadges() 맨 앞의 가드와 _loadUnlockedBadges() 끝의
+  // 재실행 로직이 이 레이스를 없앤다.
+
+  // [HOTFIX] main.dart의 리마운트(기존 계정 로그인 시 전체 provider
+  // 트리 재생성)로 BadgeProvider도 다른 provider들과 똑같이 dispose
+  // 대상이 된다. CityProvider/CountryProvider에서 겪은 것과 동일한
+  // "used after being disposed" 크래시를 막기 위해 같은 가드를 적용한다.
+  bool _disposed = false;
+
+  @override
+  void dispose() {
+    _disposed = true;
+    super.dispose();
+  }
+
+  void _safeNotify() {
+    if (_disposed) return;
+    notifyListeners();
+  }
 
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
   final FirebaseAuth _auth = FirebaseAuth.instance;
@@ -7060,6 +7121,15 @@ class BadgeProvider with ChangeNotifier {
     final user = _auth.currentUser;
     if (user == null) {
       print('[BadgeProvider] No user logged in, skipping badge load');
+      // [HOTFIX] 원래는 여기서 _isInitialized를 세팅하지 않고 그냥
+      // return했다. 위 updateBadges()에 새로 넣은 가드와 조합되면
+      // 비로그인 상태에서는 _isInitialized가 영원히 false로 남아
+      // 뱃지 계산 자체가 멈추는(항상 0/0으로 보이는) 새 버그가 생긴다.
+      // 불러올 서버 데이터가 애초에 없는 상황이니 "초기화 완료"로
+      // 즉시 표시한다.
+      _isInitialized = true;
+      _safeNotify();
+      _replayPendingBadgeUpdateIfAny();
       return;
     }
 
@@ -7090,11 +7160,33 @@ class BadgeProvider with ChangeNotifier {
       }
       // 로드 완료 표시
       _isInitialized = true;
-      notifyListeners();
+      _safeNotify();
     } catch (e) {
       print('[BadgeProvider] Error loading badges: $e');
       _isInitialized = true; // 에러가 나도 초기화 시도는 끝난 것으로 간주
     }
+
+    _replayPendingBadgeUpdateIfAny();
+  }
+
+  // [HOTFIX] 초기화가 끝나기 전에 스킵됐던 updateBadges() 호출이 있었다면
+  // (위 updateBadges 참고) 그 인자 그대로 한 번 더 돌려서 실제 뱃지
+  // 상태를 반영한다. _loadUnlockedBadges()의 모든 종료 경로(정상 로드,
+  // 에러, 비로그인)에서 공통으로 호출된다.
+  void _replayPendingBadgeUpdateIfAny() {
+    if (_disposed) return; // 그 사이 리마운트로 이 인스턴스가 교체됐다면 재계산도 스킵.
+    final pending = _pendingBadgeUpdateArgs;
+    if (pending == null) return;
+    _pendingBadgeUpdateArgs = null;
+    updateBadges(
+      pending.countryProvider,
+      pending.allEconomyData,
+      cityProvider: pending.cityProvider,
+      airlineProvider: pending.airlineProvider,
+      airportProvider: pending.airportProvider,
+      landmarksProvider: pending.landmarksProvider,
+      unescoProvider: pending.unescoProvider,
+    );
   }
 
   Future<void> _saveUnlockedBadges() async {
@@ -7435,6 +7527,25 @@ class BadgeProvider with ChangeNotifier {
         dynamic unescoProvider}
       ) {
 
+    // [HOTFIX] 이 provider가 Firestore에서 "이미 해제된 뱃지 목록"을
+    // 아직 다 불러오지 못한 상태라면 여기서 계산을 미룬다. 지금 계산을
+    // 돌리면 achievement.isUnlocked가 전부 기본값(false)이라 실제로
+    // 예전에 딴 뱃지들까지 "방금 막 딴 것"으로 오판된다. 대신 이번
+    // 호출에 쓰인 인자를 기억해뒀다가, 초기 로드가 끝나는 즉시
+    // _loadUnlockedBadges()가 알아서 다시 호출해준다.
+    if (!_isInitialized) {
+      _pendingBadgeUpdateArgs = _PendingBadgeUpdateArgs(
+        countryProvider: countryProvider,
+        allEconomyData: allEconomyData,
+        cityProvider: cityProvider,
+        airlineProvider: airlineProvider,
+        airportProvider: airportProvider,
+        landmarksProvider: landmarksProvider,
+        unescoProvider: unescoProvider,
+      );
+      return;
+    }
+
     if (landmarksProvider != null && !landmarksProvider.isLoading && !_hasDebuggedLandmarks) {
       debugCheckMissingLandmarks(landmarksProvider);
     }
@@ -7665,34 +7776,34 @@ class BadgeProvider with ChangeNotifier {
     }
 
     if (shouldSave) _saveUnlockedBadges();
-    if (didChange) notifyListeners();
+    if (didChange) _safeNotify();
   }
 
   void clearNewlyUnlocked() {
     _newlyUnlocked.clear();
-    notifyListeners();
+    _safeNotify();
   }
 
   void clearNewlyPendingPremiumClaim() {
     _newlyPendingPremiumClaim.clear();
-    notifyListeners();
+    _safeNotify();
   }
 
   void markPremiumClaimPromptSeen(Achievement achievement) {
     _newlyPendingPremiumClaim.remove(achievement);
-    notifyListeners();
+    _safeNotify();
   }
 
   // [복구] 알림창 확인 처리 메서드
   void markBadgeAsSeen(Achievement achievement) {
     _newlyUnlocked.remove(achievement);
-    notifyListeners();
+    _safeNotify();
   }
 
   // [복구] 랭크 알림 확인 처리 메서드
   void markRankAsSeen() {
     _newRankUnlocked = null;
-    notifyListeners();
+    _safeNotify();
   }
 
   // [복구] 랭크 계산 메서드
@@ -7741,11 +7852,20 @@ class BadgeProvider with ChangeNotifier {
   void debugForceUnlock() {
     if (_achievements.isNotEmpty) {
       _newlyUnlocked.add(_achievements.first);
-      notifyListeners();
+      _safeNotify();
     }
   }
   // ─── 케이스 2: Firestore 데이터로 로컬 덮어씌우기 ──────────────────────
   Future<void> reloadFromServer() async {
+    // [HOTFIX] 리셋 직후 어딘가에서 updateBadges()가 끼어들면 위와 똑같은
+    // 레이스(방금 리셋해서 다 false가 된 achievements가 "새로 딴 뱃지"로
+    // 오판되는 것)가 재현된다. _isInitialized를 다시 false로 내려서,
+    // 재로드가 끝날 때까지는 updateBadges() 호출이 계산 대신 대기 큐로
+    // 빠지도록 한다 (현재 main.dart 흐름에서는 기존 계정 로그인이 전체
+    // provider 리마운트로 처리되어 이 메서드가 호출되지 않지만, 외부에서
+    // 직접 호출될 가능성에 대비한 방어적 조치).
+    _isInitialized = false;
+
     // 뱃지는 다른 Provider 상태로 재계산되므로 Firestore에서 잠금 상태만 재로드
     for (var a in _achievements) {
       a.isUnlocked = false;

@@ -505,7 +505,12 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
               child: Consumer2<CityProvider, CountryProvider>(
                 builder: (context, cityProvider, countryProvider, child) {
                   // [수정] Provider 로딩 상태일 때 -> 꽉 찬 비디오 로딩 화면 출력
-                  if (cityProvider.isLoading || countryProvider.isLoading) {
+                  // 이 화면에서 바로 Top Cities 등 통계 화면으로 이동하므로,
+                  // 핵심 데이터(isLoading)뿐 아니라 부가 통계(isStatsLoading)까지
+                  // 다 끝난 뒤에 보여준다. (그래야 통계 화면에서 0/0으로 안 보임)
+                  if (cityProvider.isLoading ||
+                      cityProvider.isStatsLoading ||
+                      countryProvider.isLoading) {
                     return const Center(
                       child: CircularProgressIndicator(),
                     );

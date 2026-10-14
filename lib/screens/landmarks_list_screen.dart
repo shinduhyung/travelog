@@ -2,12 +2,14 @@
 
 import 'dart:io';
 import 'dart:ui';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:collection/collection.dart';
 import 'package:country_flags/country_flags.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:jidoapp/models/landmarks_model.dart';
 import 'package:jidoapp/models/visit_date_model.dart';
 import 'package:jidoapp/providers/country_provider.dart';
@@ -37,7 +39,7 @@ class _LandmarksListScreenState extends State<LandmarksListScreen> {
   final TextEditingController _searchController = TextEditingController();
 
   // State Variables
-  LandmarkSortOption _sortOption = LandmarkSortOption.nameAsc;
+  LandmarkSortOption _sortOption = LandmarkSortOption.country;
   bool _showVisitedOnly = false;
 
   @override
@@ -79,6 +81,104 @@ class _LandmarksListScreenState extends State<LandmarksListScreen> {
       'Mountain', 'Waterfall', 'Falls', 'River', 'Lake', 'Sea', 'Beach', 'Island', 'Unique Landscape'
     ].contains(a));
   }
+
+  // ── Landmark Hero Image (Firebase Storage: new_countrydex/) ─────────────
+  // 이름 슬러그(파일명의 나머지 부분)만 뽑아내는 헬퍼.
+  String _getLandmarkNameSlug(Landmark landmark) {
+    return landmark.name
+        .toLowerCase()
+        .replaceAll(RegExp(r"[''`]"), '')
+        .replaceAll(RegExp(r'[^a-z0-9\s]'), '')
+        .trim()
+        .replaceAll(RegExp(r'\s+'), '_');
+  }
+
+  // 시도할 후보 URL 리스트를 반환.
+  // 1) {iso}_{name} (기존 방식, iso 코드가 있을 때만)
+  // 2) m_{name} (다국적/미매칭 랜드마크 대비 fallback)
+  // 두 후보를 동시에 요청해서 먼저 성공하는 걸 사용한다 (아래 _FallbackNetworkImage 참고).
+  List<String> _getLandmarkImageUrlCandidates(Landmark landmark) {
+    final snake = _getLandmarkNameSlug(landmark);
+    if (snake.isEmpty) return [];
+
+    const base = 'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/new_countrydex%2F';
+    const suffix = '.webp?alt=media';
+
+    final List<String> fileNames = [];
+    if (landmark.countriesIsoA3.isNotEmpty) {
+      final iso = landmark.countriesIsoA3.first.toLowerCase();
+      fileNames.add('${iso}_$snake');
+    }
+    fileNames.add('m_$snake');
+
+    return fileNames.map((name) => '$base$name$suffix').toList();
+  }
+
+  // 하위 호환용: 기존 첫 번째(iso) URL만 필요한 곳에서 사용.
+  String _getLandmarkFirebaseImageUrl(Landmark landmark) {
+    final candidates = _getLandmarkImageUrlCandidates(landmark);
+    return candidates.isNotEmpty ? candidates.first : '';
+  }
+
+  Widget _buildLandmarkHeroImage(Landmark landmark) {
+    final candidates = _getLandmarkImageUrlCandidates(landmark);
+    if (candidates.isEmpty) {
+      return const SizedBox.shrink();
+    }
+
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 16.0),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(16),
+        child: AspectRatio(
+          aspectRatio: 1,
+          child: _FallbackNetworkImage(
+            urls: candidates,
+            placeholderBuilder: (context) => Container(
+              color: Colors.grey.shade100,
+              child: const Center(
+                child: SizedBox(
+                  width: 24,
+                  height: 24,
+                  child: CircularProgressIndicator(strokeWidth: 2),
+                ),
+              ),
+            ),
+            emptyBuilder: (context) => const SizedBox.shrink(),
+          ),
+        ),
+      ),
+    );
+  }
+  // ─────────────────────────────────────────────────────────────────────
+
+  // 리스트 카드 왼쪽 리딩 영역용 작은 썸네일. 이미지 없으면 기존 점(dot)으로 fallback.
+  Widget _buildSmallLandmarkThumb(Landmark item, bool isHighlighted, Color themeColor) {
+    final candidates = _getLandmarkImageUrlCandidates(item);
+    if (candidates.isEmpty) {
+      return Icon(Icons.circle, size: 12, color: isHighlighted ? themeColor : Colors.grey[300]);
+    }
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(10),
+      child: SizedBox(
+        width: 48,
+        height: 48,
+        child: _FallbackNetworkImage(
+          urls: candidates,
+          placeholderBuilder: (context) => Center(
+            child: SizedBox(
+              width: 14,
+              height: 14,
+              child: CircularProgressIndicator(strokeWidth: 1.5, color: themeColor),
+            ),
+          ),
+          emptyBuilder: (context) =>
+              Icon(Icons.circle, size: 12, color: isHighlighted ? themeColor : Colors.grey[300]),
+        ),
+      ),
+    );
+  }
+  // ─────────────────────────────────────────────────────────────────────
 
   String? _getHeaderImagePath() {
     final map = {
@@ -352,33 +452,34 @@ class _LandmarksListScreenState extends State<LandmarksListScreen> {
               : null;
 
           customHeaderWidget = Padding(
-            padding: const EdgeInsets.only(top: 4, bottom: 2),
+            padding: const EdgeInsets.only(top: 10, bottom: 2),
             child: Row(
               mainAxisSize: MainAxisSize.min,
               children: [
                 Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                   decoration: BoxDecoration(
-                    border: Border.all(color: headerTextColor.withOpacity(0.6), width: 1.5),
-                    borderRadius: BorderRadius.circular(4),
+                    color: Colors.white.withOpacity(0.18),
+                    borderRadius: BorderRadius.circular(20),
+                    border: Border.all(color: headerTextColor.withOpacity(0.4), width: 1),
                   ),
                   child: Text(
                     text,
                     style: const TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
+                      fontSize: 13,
+                      fontWeight: FontWeight.w700,
                       color: headerTextColor,
                     ),
                   ),
                 ),
                 if (openedText != null)
                   Padding(
-                    padding: const EdgeInsets.only(left: 10),
+                    padding: const EdgeInsets.only(left: 8),
                     child: Text(
                       openedText,
                       style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w500,
+                        fontSize: 13,
+                        fontWeight: FontWeight.w600,
                         color: headerTextColor.withOpacity(0.9),
                       ),
                     ),
@@ -394,12 +495,12 @@ class _LandmarksListScreenState extends State<LandmarksListScreen> {
 
           if (subInfos.isNotEmpty) {
             customHeaderWidget = Padding(
-              padding: const EdgeInsets.only(top: 4, bottom: 2),
+              padding: const EdgeInsets.only(top: 10, bottom: 2),
               child: Text(
                 subInfos.join(' • '),
                 style: TextStyle(
-                    fontSize: 15,
-                    fontWeight: FontWeight.w500,
+                    fontSize: 13,
+                    fontWeight: FontWeight.w600,
                     color: headerTextColor.withOpacity(0.9),
                     fontStyle: FontStyle.italic
                 ),
@@ -409,12 +510,12 @@ class _LandmarksListScreenState extends State<LandmarksListScreen> {
         }
         else if (_isItemCategory(freshLandmark, 'Festival') && freshLandmark.month != null) {
           customHeaderWidget = Padding(
-            padding: const EdgeInsets.only(top: 4, bottom: 2),
+            padding: const EdgeInsets.only(top: 10, bottom: 2),
             child: Text(
               freshLandmark.month!,
               style: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.w600,
+                fontSize: 15,
+                fontWeight: FontWeight.w700,
                 color: headerTextColor.withOpacity(0.95),
               ),
             ),
@@ -433,12 +534,12 @@ class _LandmarksListScreenState extends State<LandmarksListScreen> {
           }
           if (text.isNotEmpty) {
             customHeaderWidget = Padding(
-              padding: const EdgeInsets.only(top: 4, bottom: 2),
+              padding: const EdgeInsets.only(top: 10, bottom: 2),
               child: Text(
                 text,
                 style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w500,
+                  fontSize: 13,
+                  fontWeight: FontWeight.w600,
                   color: headerTextColor.withOpacity(0.95),
                 ),
               ),
@@ -447,12 +548,12 @@ class _LandmarksListScreenState extends State<LandmarksListScreen> {
         }
         else if (freshLandmark.type != null && freshLandmark.type!.isNotEmpty) {
           customHeaderWidget = Padding(
-            padding: const EdgeInsets.only(top: 4, bottom: 2),
+            padding: const EdgeInsets.only(top: 10, bottom: 2),
             child: Text(
               freshLandmark.type!,
               style: TextStyle(
-                fontSize: 17,
-                fontWeight: FontWeight.w500,
+                fontSize: 14,
+                fontWeight: FontWeight.w600,
                 color: headerTextColor.withOpacity(0.95),
               ),
             ),
@@ -527,7 +628,7 @@ class _LandmarksListScreenState extends State<LandmarksListScreen> {
                       ),
                       // Content
                       Padding(
-                        padding: const EdgeInsets.fromLTRB(20, 16, 20, 20),
+                        padding: const EdgeInsets.fromLTRB(16, 14, 16, 18),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -536,40 +637,47 @@ class _LandmarksListScreenState extends State<LandmarksListScreen> {
                               children: [
                                 TextButton(
                                   onPressed: () => Navigator.pop(sheetContext),
-                                  child: const Text('Cancel', style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600)),
+                                  style: TextButton.styleFrom(
+                                    backgroundColor: Colors.white.withOpacity(0.18),
+                                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                                    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                                  ),
+                                  child: const Text('Cancel',
+                                      style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600, fontSize: 13)),
                                 ),
                                 ElevatedButton(
                                   onPressed: () => Navigator.pop(sheetContext),
-                                  style: ElevatedButton.styleFrom(backgroundColor: headerTextColor),
-                                  child: Text('Done', style: TextStyle(fontWeight: FontWeight.w600, color: themeColor)),
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: headerTextColor,
+                                    foregroundColor: themeColor,
+                                    elevation: 0,
+                                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                                    padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 8),
+                                  ),
+                                  child: const Text('Done', style: TextStyle(fontWeight: FontWeight.w700, fontSize: 13)),
                                 ),
                               ],
                             ),
-                            const SizedBox(height: 12),
-                            Row(
-                              children: [
-                                Expanded(
-                                  child: Text(
-                                    displayTitle,
-                                    style: Theme.of(sheetContext).textTheme.titleLarge?.copyWith(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 26,
-                                      color: headerTextColor,
-                                    ),
-                                  ),
-                                ),
-                                if (isVisited || visitedSubCount > 0)
-                                  const Icon(Icons.check_circle, color: headerTextColor, size: 24),
-                              ],
+                            const SizedBox(height: 16),
+                            Text(
+                              displayTitle,
+                              style: const TextStyle(
+                                fontWeight: FontWeight.w800,
+                                fontSize: 26,
+                                color: headerTextColor,
+                                letterSpacing: -0.5,
+                                height: 1.15,
+                                shadows: [Shadow(color: Colors.black26, blurRadius: 6, offset: Offset(0, 1))],
+                              ),
                             ),
                             if (metricLabel.isNotEmpty)
                               Padding(
-                                padding: const EdgeInsets.only(top: 4.0),
+                                padding: const EdgeInsets.only(top: 6.0),
                                 child: Text(
                                   metricLabel,
                                   style: TextStyle(
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.w600,
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w700,
                                     color: headerTextColor.withOpacity(0.95),
                                   ),
                                 ),
@@ -577,20 +685,53 @@ class _LandmarksListScreenState extends State<LandmarksListScreen> {
 
                             if (customHeaderWidget != null) customHeaderWidget,
 
-                            const SizedBox(height: 6),
+                            const SizedBox(height: 10),
                             Row(
                               children: [
-                                Icon(Icons.location_on, size: 14, color: headerTextColor.withOpacity(0.8)),
-                                const SizedBox(width: 4),
-                                Expanded(
-                                  child: Text(
-                                    locationDisplay,
-                                    style: Theme.of(sheetContext).textTheme.titleSmall?.copyWith(
-                                      color: headerTextColor.withOpacity(0.8),
-                                      fontWeight: FontWeight.normal,
-                                    ),
+                                Container(
+                                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                                  decoration: BoxDecoration(
+                                    color: Colors.white.withOpacity(0.18),
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: [
+                                      Icon(Icons.location_on, size: 13, color: headerTextColor.withOpacity(0.9)),
+                                      const SizedBox(width: 4),
+                                      Flexible(
+                                        child: Text(
+                                          locationDisplay,
+                                          overflow: TextOverflow.ellipsis,
+                                          style: TextStyle(
+                                            fontSize: 12.5,
+                                            fontWeight: FontWeight.w600,
+                                            color: headerTextColor.withOpacity(0.95),
+                                          ),
+                                        ),
+                                      ),
+                                    ],
                                   ),
                                 ),
+                                if (isVisited || visitedSubCount > 0) ...[
+                                  const SizedBox(width: 8),
+                                  Container(
+                                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                                    decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.circular(20),
+                                    ),
+                                    child: Row(
+                                      mainAxisSize: MainAxisSize.min,
+                                      children: [
+                                        Icon(Icons.check_circle, size: 13, color: themeColor),
+                                        const SizedBox(width: 4),
+                                        Text('Visited',
+                                            style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: themeColor)),
+                                      ],
+                                    ),
+                                  ),
+                                ],
                               ],
                             ),
                             const SizedBox(height: 12),
@@ -599,16 +740,16 @@ class _LandmarksListScreenState extends State<LandmarksListScreen> {
                               scrollDirection: Axis.horizontal,
                               child: Row(
                                 children: displayIsos.map((isoA2) => Padding(
-                                  padding: const EdgeInsets.only(right: 12.0),
+                                  padding: const EdgeInsets.only(right: 10.0),
                                   child: Container(
-                                    height: 24,
-                                    width: 32,
+                                    height: 22,
+                                    width: 30,
                                     decoration: BoxDecoration(
-                                      border: Border.all(color: headerTextColor.withOpacity(0.3), width: 1),
-                                      borderRadius: BorderRadius.circular(4),
+                                      border: Border.all(color: headerTextColor.withOpacity(0.4), width: 1),
+                                      borderRadius: BorderRadius.circular(5),
                                     ),
                                     child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(4),
+                                      borderRadius: BorderRadius.circular(5),
                                       child: CountryFlag.fromCountryCode(isoA2),
                                     ),
                                   ),
@@ -618,12 +759,20 @@ class _LandmarksListScreenState extends State<LandmarksListScreen> {
 
                             if (totalSubCount > 1)
                               Padding(
-                                padding: const EdgeInsets.only(top: 12.0),
-                                child: Text(
-                                  "$visitedSubCount / $totalSubCount visited",
-                                  style: Theme.of(sheetContext).textTheme.bodyMedium?.copyWith(
-                                    color: headerTextColor.withOpacity(0.9),
-                                    fontWeight: FontWeight.bold,
+                                padding: const EdgeInsets.only(top: 10.0),
+                                child: Container(
+                                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                                  decoration: BoxDecoration(
+                                    color: Colors.white.withOpacity(0.18),
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  child: Text(
+                                    "$visitedSubCount / $totalSubCount visited",
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.w700,
+                                      color: headerTextColor.withOpacity(0.95),
+                                    ),
                                   ),
                                 ),
                               ),
@@ -640,6 +789,7 @@ class _LandmarksListScreenState extends State<LandmarksListScreen> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
+                          _buildLandmarkHeroImage(freshLandmark),
                           if (_isItemCategory(freshLandmark, 'Painting') || _isItemCategory(freshLandmark, 'Artwork')) ...[
                             if (freshLandmark.artist != null) Text(freshLandmark.artist!, style: Theme.of(sheetContext).textTheme.displaySmall?.copyWith(fontWeight: FontWeight.bold, fontSize: 32)),
                             if (freshLandmark.created != null) Padding(padding: const EdgeInsets.only(top: 4), child: Text(freshLandmark.created!, style: Theme.of(sheetContext).textTheme.headlineSmall?.copyWith(color: Colors.black54, fontStyle: FontStyle.italic))),
@@ -1220,7 +1370,7 @@ class _LandmarksListScreenState extends State<LandmarksListScreen> {
         leadingWidget = Icon(Icons.place, color: isVisited ? themeColor : Colors.grey, size: 24);
       }
     } else {
-      leadingWidget = Icon(Icons.circle, size: 12, color: (isVisited || visitedSubCount > 0) ? themeColor : Colors.grey[300]);
+      leadingWidget = _buildSmallLandmarkThumb(item, isVisited || visitedSubCount > 0, themeColor);
     }
 
     String metricText = _getMetricText(item);
@@ -1308,4 +1458,74 @@ class DiagonalClipper extends CustomClipper<Path> {
 
   @override
   bool shouldReclip(CustomClipper<Path> oldClipper) => false;
+}
+
+/// 여러 후보 URL을 동시에 요청해서, 먼저 성공하는 것을 보여주는 위젯.
+/// 후보 파일들은 서로 배타적으로만 존재한다는 전제(iso와 m이 동시에 있지 않음).
+class _FallbackNetworkImage extends StatefulWidget {
+  final List<String> urls;
+  final WidgetBuilder placeholderBuilder;
+  final WidgetBuilder emptyBuilder;
+
+  const _FallbackNetworkImage({
+    required this.urls,
+    required this.placeholderBuilder,
+    required this.emptyBuilder,
+  });
+
+  @override
+  State<_FallbackNetworkImage> createState() => _FallbackNetworkImageState();
+}
+
+class _FallbackNetworkImageState extends State<_FallbackNetworkImage> {
+  Set<String> _failed = {};
+
+  @override
+  void didUpdateWidget(covariant _FallbackNetworkImage oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    // 랜드마크(후보 리스트)가 바뀌면 실패 기록 초기화
+    if (!listEquals(oldWidget.urls, widget.urls)) {
+      _failed = {};
+    }
+  }
+
+  void _markFailed(String url) {
+    if (!_failed.contains(url)) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (mounted) setState(() => _failed = {..._failed, url});
+      });
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    if (widget.urls.isEmpty) return widget.emptyBuilder(context);
+
+    final allFailed = widget.urls.every(_failed.contains);
+    if (allFailed) {
+      return widget.emptyBuilder(context);
+    }
+
+    return Stack(
+      fit: StackFit.expand,
+      children: [
+        // 모두 로딩/실패 상태일 때 보일 기본 배경 (스피너)
+        widget.placeholderBuilder(context),
+        // 후보들을 동시에 겹쳐서 요청 — 성공한 것만 위에 그려짐
+        for (final url in widget.urls)
+          if (!_failed.contains(url))
+            CachedNetworkImage(
+              key: ValueKey(url),
+              imageUrl: url,
+              fit: BoxFit.cover,
+              fadeInDuration: Duration.zero,
+              placeholder: (context, _) => const SizedBox.shrink(),
+              errorWidget: (context, _, __) {
+                _markFailed(url);
+                return const SizedBox.shrink();
+              },
+            ),
+      ],
+    );
+  }
 }

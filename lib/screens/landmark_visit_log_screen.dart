@@ -1,5 +1,6 @@
 // lib/screens/landmark_visit_log_screen.dart
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:country_flags/country_flags.dart';
@@ -7,6 +8,7 @@ import 'package:collection/collection.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'dart:io';
 import 'package:image_picker/image_picker.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 import 'package:jidoapp/models/landmarks_model.dart';
 import 'package:jidoapp/models/visit_date_model.dart';
@@ -70,6 +72,70 @@ class _LandmarkVisitLogScreenState extends State<LandmarkVisitLogScreen> {
     return const Icon(Icons.place, size: 16, color: Colors.grey);
   }
 
+  // ── Landmark Hero Image (Firebase Storage: new_countrydex/) ─────────────
+  // 이름 슬러그(파일명의 나머지 부분)만 뽑아내는 헬퍼.
+  String _getLandmarkNameSlug(Landmark landmark) {
+    return landmark.name
+        .toLowerCase()
+        .replaceAll(RegExp(r"[''`]"), '')
+        .replaceAll(RegExp(r'[^a-z0-9\s]'), '')
+        .trim()
+        .replaceAll(RegExp(r'\s+'), '_');
+  }
+
+  // 시도할 후보 URL 리스트를 반환.
+  // 1) {iso}_{name} (기존 방식, iso 코드가 있을 때만)
+  // 2) m_{name} (다국적/미매칭 랜드마크 대비 fallback)
+  // 두 후보를 동시에 요청해서 먼저 성공하는 걸 사용한다 (_FallbackNetworkImage 참고).
+  List<String> _getLandmarkImageUrlCandidates(Landmark landmark) {
+    final snake = _getLandmarkNameSlug(landmark);
+    if (snake.isEmpty) return [];
+
+    const base = 'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/new_countrydex%2F';
+    const suffix = '.webp?alt=media';
+
+    final List<String> fileNames = [];
+    if (landmark.countriesIsoA3.isNotEmpty) {
+      final iso = landmark.countriesIsoA3.first.toLowerCase();
+      fileNames.add('${iso}_$snake');
+    }
+    fileNames.add('m_$snake');
+
+    return fileNames.map((name) => '$base$name$suffix').toList();
+  }
+
+  Widget _buildLandmarkHeroImage(Landmark landmark) {
+    final candidates = _getLandmarkImageUrlCandidates(landmark);
+    if (candidates.isEmpty) {
+      return const SizedBox.shrink();
+    }
+
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 16.0),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(16),
+        child: AspectRatio(
+          aspectRatio: 1,
+          child: _FallbackNetworkImage(
+            urls: candidates,
+            placeholderBuilder: (context) => Container(
+              color: Colors.grey.shade100,
+              child: const Center(
+                child: SizedBox(
+                  width: 24,
+                  height: 24,
+                  child: CircularProgressIndicator(strokeWidth: 2),
+                ),
+              ),
+            ),
+            emptyBuilder: (context) => const SizedBox.shrink(),
+          ),
+        ),
+      ),
+    );
+  }
+  // ─────────────────────────────────────────────────────────────────────
+
   void _showLandmarkDetailsModal(BuildContext context, Landmark landmark, Color fallbackThemeColor) {
     showModalBottomSheet(
       context: context,
@@ -89,50 +155,145 @@ class _LandmarkVisitLogScreenState extends State<LandmarkVisitLogScreen> {
             themeColor = c?.themeColor;
           }
           final finalColor      = themeColor ?? fallbackThemeColor;
-          final headerTextColor = ThemeData.estimateBrightnessForColor(finalColor) == Brightness.dark ? Colors.white : Colors.black;
+          const headerTextColor = Colors.white;
 
           return Container(
             decoration: const BoxDecoration(
               color: Colors.white,
-              borderRadius: BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20)),
+              borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
             ),
             child: FractionallySizedBox(
               heightFactor: 0.85,
               child: Column(children: [
-                Container(
-                  decoration: BoxDecoration(
-                    color: finalColor,
-                    borderRadius: const BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20)),
+                ClipRRect(
+                  borderRadius: const BorderRadius.vertical(top: Radius.circular(24)),
+                  child: Stack(
+                    children: [
+                      Positioned.fill(
+                        child: Container(
+                          decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                              begin: Alignment.topLeft,
+                              end: Alignment.bottomRight,
+                              colors: [finalColor, finalColor.withOpacity(0.85)],
+                            ),
+                          ),
+                        ),
+                      ),
+                      Positioned.fill(
+                        child: Container(
+                          decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                              begin: Alignment.topCenter,
+                              end: Alignment.bottomCenter,
+                              colors: [
+                                Colors.black.withOpacity(0.0),
+                                Colors.black.withOpacity(0.35),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(16, 14, 16, 18),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                TextButton(
+                                  onPressed: () => Navigator.pop(sheetContext),
+                                  style: TextButton.styleFrom(
+                                    backgroundColor: Colors.white.withOpacity(0.18),
+                                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                                    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                                  ),
+                                  child: const Text('Cancel',
+                                      style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600, fontSize: 13)),
+                                ),
+                                ElevatedButton(
+                                  onPressed: () => Navigator.pop(sheetContext),
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: headerTextColor,
+                                    foregroundColor: finalColor,
+                                    elevation: 0,
+                                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                                    padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 8),
+                                  ),
+                                  child: const Text('Done', style: TextStyle(fontWeight: FontWeight.w700, fontSize: 13)),
+                                ),
+                              ],
+                            ),
+                            const SizedBox(height: 16),
+                            Text(freshLandmark.name,
+                                style: const TextStyle(
+                                  fontWeight: FontWeight.w800,
+                                  fontSize: 26,
+                                  color: headerTextColor,
+                                  letterSpacing: -0.5,
+                                  height: 1.15,
+                                  shadows: [Shadow(color: Colors.black26, blurRadius: 6, offset: Offset(0, 1))],
+                                )),
+                            const SizedBox(height: 10),
+                            Row(
+                              children: [
+                                Container(
+                                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                                  decoration: BoxDecoration(
+                                    color: Colors.white.withOpacity(0.18),
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: [
+                                      Icon(Icons.location_on, size: 13, color: headerTextColor.withOpacity(0.9)),
+                                      const SizedBox(width: 4),
+                                      Flexible(
+                                        child: Text(
+                                          countryNames,
+                                          overflow: TextOverflow.ellipsis,
+                                          style: TextStyle(
+                                            fontSize: 12.5,
+                                            fontWeight: FontWeight.w600,
+                                            color: headerTextColor.withOpacity(0.95),
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                if (isVisited) ...[
+                                  const SizedBox(width: 8),
+                                  Container(
+                                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                                    decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.circular(20),
+                                    ),
+                                    child: Row(
+                                      mainAxisSize: MainAxisSize.min,
+                                      children: [
+                                        Icon(Icons.check_circle, size: 13, color: finalColor),
+                                        const SizedBox(width: 4),
+                                        Text('Visited',
+                                            style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: finalColor)),
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
-                  padding: const EdgeInsets.fromLTRB(16, 16, 8, 12),
-                  child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                    Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                      TextButton(onPressed: () => Navigator.pop(sheetContext),
-                          child: Text('Cancel', style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600))),
-                      ElevatedButton(onPressed: () => Navigator.pop(sheetContext),
-                          style: ElevatedButton.styleFrom(backgroundColor: headerTextColor),
-                          child: Text('Done', style: TextStyle(fontWeight: FontWeight.w600, color: finalColor))),
-                    ]),
-                    const SizedBox(height: 12),
-                    Row(children: [
-                      Expanded(child: Text(freshLandmark.name,
-                          style: Theme.of(sheetContext).textTheme.titleLarge?.copyWith(
-                              fontWeight: FontWeight.bold, fontSize: 26, color: headerTextColor))),
-                      if (isVisited) Icon(Icons.check_circle, color: headerTextColor, size: 24),
-                    ]),
-                    const SizedBox(height: 6),
-                    Row(children: [
-                      Icon(Icons.location_on, size: 14, color: headerTextColor.withOpacity(0.8)),
-                      const SizedBox(width: 4),
-                      Expanded(child: Text(countryNames,
-                          style: Theme.of(sheetContext).textTheme.titleSmall?.copyWith(
-                              color: headerTextColor.withOpacity(0.8)))),
-                    ]),
-                  ]),
                 ),
                 Expanded(child: SingleChildScrollView(
                   padding: const EdgeInsets.all(16.0),
                   child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                    _buildLandmarkHeroImage(freshLandmark),
                     Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                       Row(children: [
                         const Text('Wishlist:'),
@@ -149,7 +310,7 @@ class _LandmarkVisitLogScreenState extends State<LandmarkVisitLogScreen> {
                     ]),
                     const Divider(height: 20),
 
-                    // ── Visit History (새로 추가) ───────────────────────
+                    // ── Visit History ───────────────────────
                     Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                       Text('History (${freshLandmark.visitDates.length} entries)',
                           style: Theme.of(sheetContext).textTheme.titleSmall),
@@ -479,8 +640,8 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
     if (p != null && mounted) setState(() { _year = p.year; _month = p.month; _day = p.day; });
   }
 
-  void _pickImage(ImageSource src) async {
-    final f = await ImagePicker().pickImage(source: src);
+  void _pickImage(ImageSource source) async {
+    final f = await ImagePicker().pickImage(source: source);
     if (f != null && mounted) setState(() => _currentPhotos.add(f.path));
   }
 
@@ -524,8 +685,7 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
               Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                 Text('Visit Date: $_year-$_month-$_day', style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14)),
                 TextButton.icon(icon: const Icon(Icons.edit_calendar, size: 18), label: const Text('Edit Date'),
-                    onPressed: () => _selectDate(context),
-                    style: TextButton.styleFrom(visualDensity: VisualDensity.compact)),
+                    onPressed: () => _selectDate(context), style: TextButton.styleFrom(visualDensity: VisualDensity.compact)),
               ]),
               const SizedBox(height: 12),
               TextField(controller: _titleController,
@@ -568,6 +728,76 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
           ]),
         )],
       ),
+    );
+  }
+}
+
+/// 여러 후보 URL을 동시에 요청해서, 먼저 성공하는 것을 보여주는 위젯.
+/// 후보 파일들은 서로 배타적으로만 존재한다는 전제(iso와 m이 동시에 있지 않음).
+class _FallbackNetworkImage extends StatefulWidget {
+  final List<String> urls;
+  final WidgetBuilder placeholderBuilder;
+  final WidgetBuilder emptyBuilder;
+
+  const _FallbackNetworkImage({
+    required this.urls,
+    required this.placeholderBuilder,
+    required this.emptyBuilder,
+  });
+
+  @override
+  State<_FallbackNetworkImage> createState() => _FallbackNetworkImageState();
+}
+
+class _FallbackNetworkImageState extends State<_FallbackNetworkImage> {
+  Set<String> _failed = {};
+
+  @override
+  void didUpdateWidget(covariant _FallbackNetworkImage oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    // 랜드마크(후보 리스트)가 바뀌면 실패 기록 초기화
+    if (!listEquals(oldWidget.urls, widget.urls)) {
+      _failed = {};
+    }
+  }
+
+  void _markFailed(String url) {
+    if (!_failed.contains(url)) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (mounted) setState(() => _failed = {..._failed, url});
+      });
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    if (widget.urls.isEmpty) return widget.emptyBuilder(context);
+
+    final allFailed = widget.urls.every(_failed.contains);
+    if (allFailed) {
+      return widget.emptyBuilder(context);
+    }
+
+    return Stack(
+      fit: StackFit.expand,
+      children: [
+        // 모두 로딩/실패 상태일 때 보일 기본 배경 (스피너)
+        widget.placeholderBuilder(context),
+        // 후보들을 동시에 겹쳐서 요청 — 성공한 것만 위에 그려짐
+        for (final url in widget.urls)
+          if (!_failed.contains(url))
+            CachedNetworkImage(
+              key: ValueKey(url),
+              imageUrl: url,
+              fit: BoxFit.cover,
+              fadeInDuration: Duration.zero,
+              placeholder: (context, _) => const SizedBox.shrink(),
+              errorWidget: (context, _, __) {
+                _markFailed(url);
+                return const SizedBox.shrink();
+              },
+            ),
+      ],
     );
   }
 }

@@ -2,7 +2,7 @@ name: jidoapp
 description: "A new Flutter project."
 publish_to: 'none'
 
-version: 1.0.1+76
+version: 1.0.1+90
 
 environment:
   sdk: ^3.8.0
@@ -54,7 +54,7 @@ dependencies:
 
   # In-App Purchase (구독)
   in_app_purchase: ^3.2.0
-  in_app_purchase_android: ^0.4.0
+  in_app_purchase_android: ^0.5.3
 
   # Data & Network
   http: ^1.2.1
@@ -235,7 +235,10 @@ flutter:
     - assets/city_rank.json
     - assets/top_city_hub_airport.json
     - assets/city_tour_links.json
-    - assets/data/which_is_farther_questions.json
+    - assets/data/
+    - assets/images/flags/
+    - assets/images/flags_insane/
+
     # [수정] 뱃지 이미지 6개 폴더(총 523개) 중 5개는 전부 Firebase Storage로만
     # 서빙 — 앱 용량을 아끼려고 로컬 번들에서 제외함. assets/badges/는 아직
     # Firebase에 안 올라간 기존 뱃지들이 남아있어서 그대로 유지 (line 139 참고,

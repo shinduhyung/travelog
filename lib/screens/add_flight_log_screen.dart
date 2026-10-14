@@ -11,6 +11,8 @@ import 'package:jidoapp/models/flight_info.dart';
 import 'package:jidoapp/providers/airline_provider.dart';
 import 'package:jidoapp/providers/airport_provider.dart';
 import 'package:jidoapp/services/aero_data_box_service.dart';
+import 'package:jidoapp/services/subscription_service.dart';
+import 'package:jidoapp/widgets/subscription_sheet.dart'; // TODO: 실제 경로로 수정 (subscription_sheet.dart 파일 위치 확인)
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 
@@ -592,6 +594,7 @@ class _AddFlightLogScreenState extends State<AddFlightLogScreen> {
   Widget _buildFastSearchCheckbox() {
     const MaterialColor specialColor = Colors.cyan;
     final bool isFastSearch = _isFastSearch;
+    final bool isPremium = context.watch<SubscriptionService>().isPremium;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -621,12 +624,26 @@ class _AddFlightLogScreenState extends State<AddFlightLogScreen> {
                       letterSpacing: 0.5,
                     ),
                   ),
+                  if (!isPremium) ...[
+                    const SizedBox(width: 6),
+                    Icon(
+                      Icons.lock,
+                      size: 15,
+                      color: Colors.grey.shade600,
+                    ),
+                  ],
                 ],
               ),
               value: isFastSearch,
-              onChanged: (val) => setState(() {
-                _isFastSearch = val ?? false;
-              }),
+              onChanged: (val) {
+                if (!isPremium) {
+                  SubscriptionSheet.show(context, triggerContext: 'fast_search_lock');
+                  return;
+                }
+                setState(() {
+                  _isFastSearch = val ?? false;
+                });
+              },
               controlAffinity: ListTileControlAffinity.trailing,
               contentPadding: EdgeInsets.zero,
             ),

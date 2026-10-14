@@ -1,5 +1,6 @@
 // lib/screens/flight_route_map_screen.dart
 
+import 'dart:io'; // ⭐️ [DEBUG] 타일 URL 직접 요청 테스트용
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:jidoapp/models/airport_model.dart';
@@ -82,6 +83,33 @@ class _FlightRouteMapScreenState extends State<FlightRouteMapScreen>
         curve: Curves.easeOutQuad,
       ),
     );
+
+    // ⭐️ [DEBUG] 타일 서버에 직접 요청을 날려서 상태 코드/에러를 로그로 확인
+    _debugTestTileUrl();
+  }
+
+  // ⭐️ [DEBUG] 실제 타일 URL 하나를 직접 fetch해서 statusCode/에러를 로그에 출력
+  Future<void> _debugTestTileUrl() async {
+    const testUrl =
+        'https://basemaps.cartocdn.com/rastertiles/voyager/2/2/1.png?key=cb1_3gig_1_69cf9f203f105d92c0cc26b2';
+    debugPrint('[TileDebug] === 타일 URL 직접 요청 테스트 시작 ===');
+    debugPrint('[TileDebug] URL: $testUrl');
+    try {
+      final client = HttpClient();
+      final request = await client.getUrl(Uri.parse(testUrl));
+      final response = await request.close();
+      debugPrint('[TileDebug] statusCode: ${response.statusCode}');
+      debugPrint('[TileDebug] headers: ${response.headers}');
+      if (response.statusCode != 200) {
+        final body = await response.transform(const SystemEncoding().decoder).join();
+        debugPrint('[TileDebug] error body: $body');
+      }
+      client.close();
+    } catch (e, st) {
+      debugPrint('[TileDebug] 요청 자체가 실패함 (네트워크/DNS/SSL 등): $e');
+      debugPrint('[TileDebug] stackTrace: $st');
+    }
+    debugPrint('[TileDebug] === 타일 URL 직접 요청 테스트 종료 ===');
   }
 
   // 데이터 로딩이 완료되거나 변경될 때마다 맵 데이터를 다시 준비
@@ -509,7 +537,13 @@ class _FlightRouteMapScreenState extends State<FlightRouteMapScreen>
                     ),
                   ),
                   children: [
-                    const MyTileLayer(),
+                    MyTileLayer(
+                      // ⭐️ [DEBUG] 개별 타일 로드 실패 시 로그 출력
+                      onTileError: (tile, error, stackTrace) {
+                        debugPrint(
+                            '[TileDebug] 타일 로드 실패 - coords: ${tile.coordinates}, error: $error');
+                      },
+                    ),
                     PolylineLayer(polylines: visiblePolylines),
                     MarkerLayer(markers: visibleMarkers),
                   ],

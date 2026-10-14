@@ -125,7 +125,7 @@ class _HistoricalEmpireScreenState extends State<HistoricalEmpireScreen> {
       ),
       children: [
         fm.TileLayer(
-          urlTemplate: 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}{r}.png',
+          urlTemplate: 'https://basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png?key=cb1_3gig_1_69cf9f203f105d92c0cc26b2',
           subdomains: const ['a', 'b', 'c'],
         ),
         fm.PolygonLayer(polygons: empirePolygons),

@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'dart:io';
-
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
@@ -182,8 +182,9 @@ class SubscriptionService extends ChangeNotifier {
           break;
 
         case PurchaseStatus.restored:
-        // 복원은 신규 구매가 아니므로
-        // Meta/TikTok Purchase 이벤트를 전송하지 않음
+        // 복원은 신규 구매가 아니므로 Meta/TikTok Purchase 이벤트는 전송하지 않음.
+        // 단, 자동 갱신(재결제)도 앱을 다시 켤 때 restored로 들어오므로
+        // Firestore 주문 저장은 _handleSuccessfulPurchase에서 항상 수행한다.
           _handleSuccessfulPurchase(purchase, isRestore: true);
           break;
 
@@ -202,8 +203,19 @@ class SubscriptionService extends ChangeNotifier {
       }
 
       if (purchase.pendingCompletePurchase) {
-        _iap.completePurchase(purchase);
+        _completePurchaseSafely(purchase);
       }
+    }
+  }
+
+  // completePurchase(=acknowledge) 실패가 조용히 묻히지 않도록 catch + 로그.
+  Future<void> _completePurchaseSafely(PurchaseDetails purchase) async {
+    try {
+      await _iap.completePurchase(purchase);
+    } catch (e) {
+      debugPrint(
+        '[SubscriptionService] completePurchase failed for ${purchase.purchaseID}: $e',
+      );
     }
   }
 
@@ -266,50 +278,75 @@ class SubscriptionService extends ChangeNotifier {
           );
         }
       }
+    }
 
-      // --------------------------------------------------
-      // Android 주문 정보 Firestore 저장
-      // --------------------------------------------------
-      if (Platform.isAndroid) {
-        final androidDetails = purchase as GooglePlayPurchaseDetails?;
+    // --------------------------------------------------
+    // Android 주문 정보 Firestore 저장 — isRestore와 무관하게 항상 실행.
+    // 자동 갱신(재결제)은 대부분 앱이 꺼져 있을 때 일어나서, 다음 앱 실행 시
+    // restorePurchases()로 restored 상태로만 감지된다. 예전엔 이 저장이
+    // if (!isRestore) 안에 있어서 재결제가 통째로 누락됐음.
+    //
+    // 이미 있는 문서면 건드리지 않는다: restore는 앱 켤 때마다 같은 orderId를
+    // 다시 보내므로, 매번 쓰면 purchaseTime(serverTimestamp)이 계속 갱신됨.
+    // --------------------------------------------------
+    if (Platform.isAndroid && purchase is GooglePlayPurchaseDetails) {
+      final orderId = purchase.billingClientPurchase.orderId;
 
-        if (androidDetails != null) {
-          final orderId = androidDetails.billingClientPurchase.orderId;
+      if (orderId != null && orderId.isNotEmpty) {
+        final docRef =
+        FirebaseFirestore.instance.collection('orders').doc(orderId);
 
-          debugPrint(
-            '[SubscriptionService] Android orderId: $orderId',
-          );
+        try {
+          final existing = await docRef.get();
 
-          final int priceAmountMicros = (price * 1000000).round();
-
-          try {
-            await FirebaseFirestore.instance
-                .collection('orders')
-                .doc(orderId)
-                .set(
-              {
-                'orderId': orderId,
-                'productId': productId,
-                'isLifetime': isLifetimePurchase,
-                'purchaseTime': FieldValue.serverTimestamp(),
-                'platform': 'android',
-                'status': 'purchased',
-                'priceAmountMicros': priceAmountMicros,
-                'priceCurrencyCode': currencyCode,
-                'adExperimentGroup': AdService.instance.experimentGroup,
-                'deviceId': AdService.instance.deviceId,
-                'userAssignedAt': AdService.instance.assignedAt != null
-                    ? Timestamp.fromDate(AdService.instance.assignedAt!)
-                    : null,
-              },
-              SetOptions(merge: true),
-            );
-          } catch (e) {
+          if (existing.exists) {
             debugPrint(
-              '[SubscriptionService] Firestore save error: $e',
+              '[SubscriptionService] order $orderId already recorded, skip (isRestore=$isRestore)',
             );
+          } else {
+            // Play 구독 갱신 orderId 포맷: "<원본 orderId>..N" (N은 0부터).
+            // 라이프타임은 갱신이 없으므로 항상 최초 구매.
+            final bool isRenewal =
+                !isLifetimePurchase && orderId.contains('..');
+            final String originalOrderId =
+            isRenewal ? orderId.split('..').first : orderId;
+
+            debugPrint(
+              '[SubscriptionService] Android orderId: $orderId '
+                  'isRenewal=$isRenewal isRestore=$isRestore',
+            );
+
+            final int priceAmountMicros = (price * 1000000).round();
+
+            await docRef.set({
+              'orderId': orderId,
+              'originalOrderId': originalOrderId,
+              'purchaseToken': purchase.billingClientPurchase.purchaseToken,
+              'productId': productId,
+              'isLifetime': isLifetimePurchase,
+              'isRenewal': isRenewal,
+              'purchaseTime': FieldValue.serverTimestamp(),
+              'platform': 'android',
+              'status': 'purchased',
+              'priceAmountMicros': priceAmountMicros,
+              'priceCurrencyCode': currencyCode,
+              'uid': FirebaseAuth.instance.currentUser?.uid,
+              'adExperimentGroup': AdService.instance.experimentGroup,
+              'deviceId': AdService.instance.deviceId,
+              'userAssignedAt': AdService.instance.assignedAt != null
+                  ? Timestamp.fromDate(AdService.instance.assignedAt!)
+                  : null,
+            });
           }
+        } catch (e) {
+          debugPrint(
+            '[SubscriptionService] Firestore save error: $e',
+          );
         }
+      } else {
+        debugPrint(
+          '[SubscriptionService] ⚠️ Android purchase has no orderId — cannot record order.',
+        );
       }
     }
 

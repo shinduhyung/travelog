@@ -1,5 +1,6 @@
 import 'package:jidoapp/models/city_model.dart';
 import 'package:jidoapp/screens/cities_screen.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
@@ -97,6 +98,98 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
     return landmark.city;
   }
 
+  // ── Landmark Hero Image (Firebase Storage: new_countrydex/) ─────────────
+  // 이름 슬러그(파일명의 나머지 부분)만 뽑아내는 헬퍼.
+  String _getLandmarkNameSlug(Landmark landmark) {
+    return landmark.name
+        .toLowerCase()
+        .replaceAll(RegExp(r"[''`]"), '')
+        .replaceAll(RegExp(r'[^a-z0-9\s]'), '')
+        .trim()
+        .replaceAll(RegExp(r'\s+'), '_');
+  }
+
+  // 시도할 후보 URL 리스트를 반환.
+  // 1) {iso}_{name} (기존 방식, iso 코드가 있을 때만)
+  // 2) m_{name} (다국적/미매칭 랜드마크 대비 fallback)
+  // 두 후보를 동시에 요청해서 먼저 성공하는 걸 사용한다 (_FallbackNetworkImage 참고).
+  List<String> _getLandmarkImageUrlCandidates(Landmark landmark) {
+    final snake = _getLandmarkNameSlug(landmark);
+    if (snake.isEmpty) return [];
+
+    const base = 'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/new_countrydex%2F';
+    const suffix = '.webp?alt=media';
+
+    final List<String> fileNames = [];
+    if (landmark.countriesIsoA3.isNotEmpty) {
+      final iso = landmark.countriesIsoA3.first.toLowerCase();
+      fileNames.add('${iso}_$snake');
+    }
+    fileNames.add('m_$snake');
+
+    return fileNames.map((name) => '$base$name$suffix').toList();
+  }
+
+  Widget _buildLandmarkHeroImage(Landmark landmark) {
+    final candidates = _getLandmarkImageUrlCandidates(landmark);
+    if (candidates.isEmpty) {
+      return const SizedBox.shrink();
+    }
+
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 16.0),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(16),
+        child: AspectRatio(
+          aspectRatio: 1,
+          child: _FallbackNetworkImage(
+            urls: candidates,
+            placeholderBuilder: (context) => Container(
+              color: Colors.grey.shade100,
+              child: const Center(
+                child: SizedBox(
+                  width: 24,
+                  height: 24,
+                  child: CircularProgressIndicator(strokeWidth: 2),
+                ),
+              ),
+            ),
+            emptyBuilder: (context) => const SizedBox.shrink(),
+          ),
+        ),
+      ),
+    );
+  }
+  // ─────────────────────────────────────────────────────────────────────
+
+  // 리스트(문화/자연/액티비티) 왼쪽에 보이는 작은 랜드마크 썸네일.
+  // 이미지가 없으면 점(dot) 아이콘으로 fallback.
+  Widget _buildSmallLandmarkThumb(Landmark item, bool isHighlighted, Color themeColor) {
+    final candidates = _getLandmarkImageUrlCandidates(item);
+    if (candidates.isEmpty) {
+      return Icon(Icons.circle, size: 12, color: isHighlighted ? themeColor : Colors.grey[300]);
+    }
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(10),
+      child: SizedBox(
+        width: 44,
+        height: 44,
+        child: _FallbackNetworkImage(
+          urls: candidates,
+          placeholderBuilder: (context) => Center(
+            child: SizedBox(
+              width: 14,
+              height: 14,
+              child: CircularProgressIndicator(strokeWidth: 1.5, color: themeColor),
+            ),
+          ),
+          emptyBuilder: (context) =>
+              Icon(Icons.circle, size: 12, color: isHighlighted ? themeColor : Colors.grey[300]),
+        ),
+      ),
+    );
+  }
+  // ─────────────────────────────────────────────────────────────────────
   List<Landmark> _getTop30Landmarks(BuildContext context) {    final landmarksProvider = context.watch<LandmarksProvider>();
   final currentIso = widget.country.isoA3;
 
@@ -166,6 +259,7 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
     showModalBottomSheet(
       context: context,
       isScrollControlled: true,
+      backgroundColor: Colors.transparent,
       builder: (BuildContext sheetContext) {
         final provider = sheetContext.watch<LandmarksProvider>();
         final countryProvider = sheetContext.read<CountryProvider>();
@@ -193,106 +287,204 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
           } catch (e) { landmarkThemeColor = null; }
         }
         final themeColor = landmarkThemeColor ?? fallbackThemeColor;
-        final headerTextColor = ThemeData.estimateBrightnessForColor(themeColor) == Brightness.dark ? Colors.white : Colors.black;
+        const headerTextColor = Colors.white;
 
-        return FractionallySizedBox(
-          heightFactor: 0.85,
-          child: Column(
-            children: [
-              Container(
-                color: themeColor,
-                padding: const EdgeInsets.only(top: 16, left: 16, right: 8, bottom: 12),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        TextButton(
-                            onPressed: () => Navigator.pop(sheetContext),
-                            child: Text('Cancel', style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600))),
-                        ElevatedButton(
-                            onPressed: () => Navigator.pop(sheetContext),
-                            child: Text('Done', style: TextStyle(fontWeight: FontWeight.w600, color: themeColor)),
-                            style: ElevatedButton.styleFrom(backgroundColor: headerTextColor)),
-                      ],
-                    ),
-                    const SizedBox(height: 12),
-                    Row(
-                      children: [
-                        Expanded(
-                            child: Text(freshLandmark.name,
-                                style: Theme.of(sheetContext).textTheme.titleLarge?.copyWith(
-                                    fontWeight: FontWeight.bold, fontSize: 26, color: headerTextColor))),
-                        if (isVisited || visitedSubCount > 0) Icon(Icons.check_circle, color: headerTextColor, size: 24),
-                      ],
-                    ),
-                    const SizedBox(height: 6),
-                    Row(
-                      children: [
-                        Icon(Icons.location_on, size: 14, color: headerTextColor.withOpacity(0.8)),
-                        const SizedBox(width: 4),
-                        Expanded(child: Text(locationDisplay, style: Theme.of(sheetContext).textTheme.titleSmall?.copyWith(color: headerTextColor.withOpacity(0.8), fontWeight: FontWeight.normal))),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-              Expanded(
-                child: SingleChildScrollView(
-                  child: Padding(
-                    padding: const EdgeInsets.all(16.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Row(mainAxisSize: MainAxisSize.min, children: [const Text('Wishlist:'), IconButton(visualDensity: VisualDensity.compact, icon: Icon(isWishlisted ? Icons.favorite : Icons.favorite_border, color: isWishlisted ? Colors.red : Colors.grey), onPressed: () => provider.toggleWishlistStatus(freshLandmark.name))]),
-                            Row(mainAxisSize: MainAxisSize.min, children: [const Text('My Rating:'), const SizedBox(width: 8), RatingBar.builder(initialRating: freshLandmark.rating ?? 0.0, minRating: 0, direction: Axis.horizontal, allowHalfRating: true, itemCount: 5, itemSize: 28.0, itemBuilder: (context, _) => const Icon(Icons.star, color: Colors.amber), onRatingUpdate: (rating) => provider.updateLandmarkRating(freshLandmark.name, rating))]),
-                          ],
-                        ),
-                        const Divider(height: 20),
-                        if (totalSubCount > 1) ...[
-                          Text("Components / Locations", style: Theme.of(sheetContext).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
-                          const SizedBox(height: 4),
-                          Container(
-                            decoration: BoxDecoration(border: Border.all(color: Colors.grey.shade300), borderRadius: BorderRadius.circular(8)),
-                            child: Column(
-                              children: freshLandmark.locations!.map((loc) {
-                                final isLocVisited = provider.isSubLocationVisited(freshLandmark.name, loc.name);
-                                return CheckboxListTile(
-                                  title: Text(loc.name, style: const TextStyle(fontSize: 14)),
-                                  value: isLocVisited,
-                                  activeColor: themeColor,
-                                  dense: true,
-                                  controlAffinity: ListTileControlAffinity.leading,
-                                  onChanged: (val) => provider.toggleSubLocation(freshLandmark.name, loc.name),
-                                );
-                              }).toList(),
+        return Container(
+          decoration: const BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
+          ),
+          child: FractionallySizedBox(
+            heightFactor: 0.85,
+            child: Column(
+              children: [
+                ClipRRect(
+                  borderRadius: const BorderRadius.vertical(top: Radius.circular(24)),
+                  child: Stack(
+                    children: [
+                      // 테마색 그라데이션 배경
+                      Positioned.fill(
+                        child: Container(
+                          decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                              begin: Alignment.topLeft,
+                              end: Alignment.bottomRight,
+                              colors: [themeColor, themeColor.withOpacity(0.85)],
                             ),
                           ),
+                        ),
+                      ),
+                      // 하단으로 갈수록 어두워지는 오버레이 (텍스트 가독성)
+                      Positioned.fill(
+                        child: Container(
+                          decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                              begin: Alignment.topCenter,
+                              end: Alignment.bottomCenter,
+                              colors: [
+                                Colors.black.withOpacity(0.0),
+                                Colors.black.withOpacity(0.35),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                      // 컨텐츠
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(16, 14, 16, 18),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                TextButton(
+                                  onPressed: () => Navigator.pop(sheetContext),
+                                  style: TextButton.styleFrom(
+                                    backgroundColor: Colors.white.withOpacity(0.18),
+                                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                                    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                                  ),
+                                  child: const Text('Cancel',
+                                      style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600, fontSize: 13)),
+                                ),
+                                ElevatedButton(
+                                  onPressed: () => Navigator.pop(sheetContext),
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: headerTextColor,
+                                    foregroundColor: themeColor,
+                                    elevation: 0,
+                                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                                    padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 8),
+                                  ),
+                                  child: const Text('Done', style: TextStyle(fontWeight: FontWeight.w700, fontSize: 13)),
+                                ),
+                              ],
+                            ),
+                            const SizedBox(height: 16),
+                            Text(
+                              freshLandmark.name,
+                              style: const TextStyle(
+                                fontWeight: FontWeight.w800,
+                                fontSize: 26,
+                                color: headerTextColor,
+                                letterSpacing: -0.5,
+                                height: 1.15,
+                                shadows: [Shadow(color: Colors.black26, blurRadius: 6, offset: Offset(0, 1))],
+                              ),
+                            ),
+                            const SizedBox(height: 10),
+                            Row(
+                              children: [
+                                Container(
+                                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                                  decoration: BoxDecoration(
+                                    color: Colors.white.withOpacity(0.18),
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: [
+                                      Icon(Icons.location_on, size: 13, color: headerTextColor.withOpacity(0.9)),
+                                      const SizedBox(width: 4),
+                                      Flexible(
+                                        child: Text(
+                                          locationDisplay,
+                                          overflow: TextOverflow.ellipsis,
+                                          style: TextStyle(
+                                            fontSize: 12.5,
+                                            fontWeight: FontWeight.w600,
+                                            color: headerTextColor.withOpacity(0.95),
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                if (isVisited || visitedSubCount > 0) ...[
+                                  const SizedBox(width: 8),
+                                  Container(
+                                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                                    decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.circular(20),
+                                    ),
+                                    child: Row(
+                                      mainAxisSize: MainAxisSize.min,
+                                      children: [
+                                        Icon(Icons.check_circle, size: 13, color: themeColor),
+                                        const SizedBox(width: 4),
+                                        Text('Visited',
+                                            style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: themeColor)),
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Expanded(
+                  child: SingleChildScrollView(
+                    child: Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          _buildLandmarkHeroImage(freshLandmark),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Row(mainAxisSize: MainAxisSize.min, children: [const Text('Wishlist:'), IconButton(visualDensity: VisualDensity.compact, icon: Icon(isWishlisted ? Icons.favorite : Icons.favorite_border, color: isWishlisted ? Colors.red : Colors.grey), onPressed: () => provider.toggleWishlistStatus(freshLandmark.name))]),
+                              Row(mainAxisSize: MainAxisSize.min, children: [const Text('My Rating:'), const SizedBox(width: 8), RatingBar.builder(initialRating: freshLandmark.rating ?? 0.0, minRating: 0, direction: Axis.horizontal, allowHalfRating: true, itemCount: 5, itemSize: 28.0, itemBuilder: (context, _) => const Icon(Icons.star, color: Colors.amber), onRatingUpdate: (rating) => provider.updateLandmarkRating(freshLandmark.name, rating))]),
+                            ],
+                          ),
+                          const Divider(height: 20),
+                          if (totalSubCount > 1) ...[
+                            Text("Components / Locations", style: Theme.of(sheetContext).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
+                            const SizedBox(height: 4),
+                            Container(
+                              decoration: BoxDecoration(border: Border.all(color: Colors.grey.shade300), borderRadius: BorderRadius.circular(8)),
+                              child: Column(
+                                children: freshLandmark.locations!.map((loc) {
+                                  final isLocVisited = provider.isSubLocationVisited(freshLandmark.name, loc.name);
+                                  return CheckboxListTile(
+                                    title: Text(loc.name, style: const TextStyle(fontSize: 14)),
+                                    value: isLocVisited,
+                                    activeColor: themeColor,
+                                    dense: true,
+                                    controlAffinity: ListTileControlAffinity.leading,
+                                    onChanged: (val) => provider.toggleSubLocation(freshLandmark.name, loc.name),
+                                  );
+                                }).toList(),
+                              ),
+                            ),
+                            const Divider(height: 24),
+                          ],
+                          Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [Text('History (${freshLandmark.visitDates.length} entries)', style: Theme.of(sheetContext).textTheme.titleSmall), OutlinedButton.icon(icon: const Icon(Icons.add), label: const Text('Add Visit'), onPressed: () => provider.addVisitDate(freshLandmark.name))]),
+                          const SizedBox(height: 8),
+                          if (freshLandmark.visitDates.isNotEmpty) ...freshLandmark.visitDates.asMap().entries.map((entry) => _LandmarkVisitEditorCard(
+                            key: ValueKey('${freshLandmark.name}_${entry.key}'),
+                            landmarkName: freshLandmark.name,
+                            visitDate: entry.value,
+                            index: entry.key,
+                            onDelete: () => provider.removeVisitDate(freshLandmark.name, entry.key),
+                            availableLocations: freshLandmark.locations,
+                          )) else const Center(child: Text('No visits recorded.')),
                           const Divider(height: 24),
+                          LandmarkInfoCard(overview: freshLandmark.overview, historySignificance: freshLandmark.history_significance, highlights: freshLandmark.highlights, themeColor: themeColor),
+                          const SizedBox(height: 40),
                         ],
-                        Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [Text('History (${freshLandmark.visitDates.length} entries)', style: Theme.of(sheetContext).textTheme.titleSmall), OutlinedButton.icon(icon: const Icon(Icons.add), label: const Text('Add Visit'), onPressed: () => provider.addVisitDate(freshLandmark.name))]),
-                        const SizedBox(height: 8),
-                        if (freshLandmark.visitDates.isNotEmpty) ...freshLandmark.visitDates.asMap().entries.map((entry) => _LandmarkVisitEditorCard(
-                          key: ValueKey('${freshLandmark.name}_${entry.key}'),
-                          landmarkName: freshLandmark.name,
-                          visitDate: entry.value,
-                          index: entry.key,
-                          onDelete: () => provider.removeVisitDate(freshLandmark.name, entry.key),
-                          availableLocations: freshLandmark.locations,
-                        )) else const Center(child: Text('No visits recorded.')),
-                        const Divider(height: 24),
-                        LandmarkInfoCard(overview: freshLandmark.overview, historySignificance: freshLandmark.history_significance, highlights: freshLandmark.highlights, themeColor: themeColor),
-                        const SizedBox(height: 40),
-                      ],
+                      ),
                     ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         );
       },
@@ -432,6 +624,7 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
     required VoidCallback onDetailPressed,
     required Color themeColor,
     int? rank,
+    Widget? leading,
   }) {
     final bool showSubtitle = subtitle != null && subtitle.trim().isNotEmpty;
 
@@ -451,24 +644,33 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
+          if (leading != null) ...[
+            leading,
+            const SizedBox(width: 12),
+          ],
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Row(
-                  children: [
-                    Expanded(
-                      child: Text(
-                        title,
-                        style: TextStyle(
-                          fontSize: 15,
-                          fontWeight: isHighlighted ? FontWeight.w600 : FontWeight.w500,
-                          color: isHighlighted ? themeColor.withOpacity(0.9) : null,
-                        ),
+                // 이름 영역: 짧든 길든 항상 2줄 높이로 고정 → 카드 높이가 균일하게 유지되고
+                // 넘치는 텍스트는 ...으로 잘림 (overflow 방지)
+                SizedBox(
+                  height: 40,
+                  child: Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      title,
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(
+                        fontSize: 15,
+                        height: 1.25,
+                        fontWeight: isHighlighted ? FontWeight.w600 : FontWeight.w500,
+                        color: isHighlighted ? themeColor.withOpacity(0.9) : null,
                       ),
                     ),
-                  ],
+                  ),
                 ),
                 if (showSubtitle)
                   Padding(
@@ -756,6 +958,7 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
                   onDetailPressed: () => _showLandmarkDetailsModal(context, item, themeColor),
                   themeColor: themeColor,
                   rank: item.getRankForCountry(currentIso),
+                  leading: _buildSmallLandmarkThumb(item, isVisited, themeColor),
                 ),
               );
             }),
@@ -877,6 +1080,7 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
                   onDetailPressed: () => _showLandmarkDetailsModal(context, item, themeColor),
                   themeColor: themeColor,
                   rank: item.getRankForCountry(currentIso),
+                  leading: _buildSmallLandmarkThumb(item, isVisited, themeColor),
                 ),
               );
             }),
@@ -2932,6 +3136,76 @@ class _UnescoVisitEditorCardState extends State<_UnescoVisitEditorCard> {
           ]),
         )],
       ),
+    );
+  }
+}
+
+/// 여러 후보 URL을 동시에 요청해서, 먼저 성공하는 것을 보여주는 위젯.
+/// 후보 파일들은 서로 배타적으로만 존재한다는 전제(iso와 m이 동시에 있지 않음).
+class _FallbackNetworkImage extends StatefulWidget {
+  final List<String> urls;
+  final WidgetBuilder placeholderBuilder;
+  final WidgetBuilder emptyBuilder;
+
+  const _FallbackNetworkImage({
+    required this.urls,
+    required this.placeholderBuilder,
+    required this.emptyBuilder,
+  });
+
+  @override
+  State<_FallbackNetworkImage> createState() => _FallbackNetworkImageState();
+}
+
+class _FallbackNetworkImageState extends State<_FallbackNetworkImage> {
+  Set<String> _failed = {};
+
+  @override
+  void didUpdateWidget(covariant _FallbackNetworkImage oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    // 랜드마크(후보 리스트)가 바뀌면 실패 기록 초기화
+    if (!listEquals(oldWidget.urls, widget.urls)) {
+      _failed = {};
+    }
+  }
+
+  void _markFailed(String url) {
+    if (!_failed.contains(url)) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (mounted) setState(() => _failed = {..._failed, url});
+      });
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    if (widget.urls.isEmpty) return widget.emptyBuilder(context);
+
+    final allFailed = widget.urls.every(_failed.contains);
+    if (allFailed) {
+      return widget.emptyBuilder(context);
+    }
+
+    return Stack(
+      fit: StackFit.expand,
+      children: [
+        // 모두 로딩/실패 상태일 때 보일 기본 배경 (스피너)
+        widget.placeholderBuilder(context),
+        // 후보들을 동시에 겹쳐서 요청 — 성공한 것만 위에 그려짐
+        for (final url in widget.urls)
+          if (!_failed.contains(url))
+            CachedNetworkImage(
+              key: ValueKey(url),
+              imageUrl: url,
+              fit: BoxFit.cover,
+              fadeInDuration: Duration.zero,
+              placeholder: (context, _) => const SizedBox.shrink(),
+              errorWidget: (context, _, __) {
+                _markFailed(url);
+                return const SizedBox.shrink();
+              },
+            ),
+      ],
     );
   }
 }

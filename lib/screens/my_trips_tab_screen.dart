@@ -16,6 +16,7 @@ import 'package:jidoapp/screens/recommendations_screen.dart';
 import 'package:jidoapp/screens/favorites_screen.dart';
 import 'package:jidoapp/screens/traveler_type_selector_screen.dart';
 import 'package:jidoapp/screens/daily_quiz_screen.dart';
+import 'package:jidoapp/screens/travelog_games_screen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:jidoapp/providers/country_provider.dart';
@@ -24,6 +25,8 @@ import 'package:jidoapp/providers/landmarks_provider.dart';
 import 'package:jidoapp/screens/countries_map_screen.dart';
 import 'package:jidoapp/screens/top_cities_screen.dart';
 import 'package:jidoapp/screens/top_landmarks_screen.dart';
+import 'package:jidoapp/screens/flight_log_list_screen.dart';
+import 'package:jidoapp/providers/airline_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:jidoapp/services/subscription_service.dart';
@@ -36,32 +39,75 @@ import 'package:latlong2/latlong.dart';
 import 'package:screenshot/screenshot.dart';
 
 // ─────────────────────────────────────────────
-// 업데이트된 기능(뱃지 400+, 데일리 퀴즈 Expert 모드) 안내용 반짝이는 NEW 태그.
-// 은은하게 커졌다 작아졌다 하면서 살짝 발광하는 느낌을 준다.
+// 신규 기능 안내용 NEW 태그. (정적 — 애니메이션 없음)
 // ─────────────────────────────────────────────
-class _SparkleNewBadge extends StatefulWidget {
+class _SparkleNewBadge extends StatelessWidget {
   const _SparkleNewBadge();
 
   @override
-  State<_SparkleNewBadge> createState() => _SparkleNewBadgeState();
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+      decoration: BoxDecoration(
+        gradient: const LinearGradient(
+          colors: [Color(0xFFFF6B9D), Color(0xFFFFB300)],
+        ),
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(color: Colors.white, width: 1.5),
+        boxShadow: [
+          BoxShadow(
+            color: const Color(0xFFFFB300).withOpacity(0.6),
+            blurRadius: 8,
+            spreadRadius: 0.5,
+          ),
+        ],
+      ),
+      child: const Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Icon(Icons.auto_awesome_rounded, size: 9, color: Colors.white),
+          SizedBox(width: 2),
+          Text(
+            'NEW',
+            style: TextStyle(
+              fontSize: 9,
+              fontWeight: FontWeight.w900,
+              color: Colors.white,
+              letterSpacing: 0.3,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
 }
 
-class _SparkleNewBadgeState extends State<_SparkleNewBadge>
+// ─────────────────────────────────────────────
+// Travelog Games 카드 배경에 쓰이는 "색이 흐르는" 애니메이션 그라데이션.
+// 폭이 2배인 그라데이션 띠를 계속 왼쪽으로 흘려보내는 방식이라, 색상
+// 리스트의 처음/끝이 이어져 있으면 끊김 없이 무한 루프된다.
+// ─────────────────────────────────────────────
+class _FlowingGradientBackground extends StatefulWidget {
+  final List<Color> colors;
+  final Duration duration;
+
+  const _FlowingGradientBackground({
+    required this.colors,
+    this.duration = const Duration(seconds: 5),
+  });
+
+  @override
+  State<_FlowingGradientBackground> createState() => _FlowingGradientBackgroundState();
+}
+
+class _FlowingGradientBackgroundState extends State<_FlowingGradientBackground>
     with SingleTickerProviderStateMixin {
   late final AnimationController _controller;
-  late final Animation<double> _pulse;
 
   @override
   void initState() {
     super.initState();
-    _controller = AnimationController(
-      vsync: this,
-      duration: const Duration(milliseconds: 900),
-    )..repeat(reverse: true);
-
-    _pulse = Tween<double>(begin: 0.92, end: 1.12)
-        .chain(CurveTween(curve: Curves.easeInOut))
-        .animate(_controller);
+    _controller = AnimationController(vsync: this, duration: widget.duration)..repeat();
   }
 
   @override
@@ -72,42 +118,365 @@ class _SparkleNewBadgeState extends State<_SparkleNewBadge>
 
   @override
   Widget build(BuildContext context) {
-    return AnimatedBuilder(
-      animation: _pulse,
-      builder: (context, child) {
-        return Transform.scale(
-          scale: _pulse.value,
-          child: child,
+    // 색상 리스트를 두 번 이어 붙여서 "끝 -> 처음"이 자연스럽게 이어지도록 함.
+    final loopColors = [...widget.colors, ...widget.colors];
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        final width = constraints.maxWidth;
+        return ClipRect(
+          child: AnimatedBuilder(
+            animation: _controller,
+            builder: (context, _) {
+              final dx = -_controller.value * width;
+              return Stack(
+                children: [
+                  Positioned(
+                    left: dx,
+                    top: 0,
+                    bottom: 0,
+                    width: width * 2,
+                    child: DecoratedBox(
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          begin: Alignment.centerLeft,
+                          end: Alignment.centerRight,
+                          colors: loopColors,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              );
+            },
+          ),
         );
       },
+    );
+  }
+}
+// ─────────────────────────────────────────────
+// Travelog Games 진입 카드
+// ─────────────────────────────────────────────
+class _TravelogGamesCard extends StatelessWidget {
+  final VoidCallback onTap;
+
+  const _TravelogGamesCard({required this.onTap});
+
+  static const List<Color> _gameFlow = [
+    Color(0xFF087F6B),
+    Color(0xFF12A594),
+    Color(0xFF45B9A8),
+    Color(0xFF3FA9C6),
+    Color(0xFF6688C7),
+    Color(0xFF18A58B),
+    Color(0xFF087F6B),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: onTap,
       child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+        height: 86,
         decoration: BoxDecoration(
-          gradient: const LinearGradient(
-            colors: [Color(0xFFFF6B9D), Color(0xFFFFB300)],
-          ),
           borderRadius: BorderRadius.circular(20),
-          border: Border.all(color: Colors.white, width: 1.5),
           boxShadow: [
             BoxShadow(
-              color: const Color(0xFFFFB300).withOpacity(0.6),
-              blurRadius: 8,
-              spreadRadius: 0.5,
+              color: const Color(0xFF168F86).withOpacity(0.28),
+              blurRadius: 20,
+              offset: const Offset(0, 8),
             ),
           ],
         ),
-        child: const Row(
-          mainAxisSize: MainAxisSize.min,
+        clipBehavior: Clip.antiAlias,
+        child: Stack(
+          fit: StackFit.expand,
           children: [
-            Icon(Icons.auto_awesome_rounded, size: 9, color: Colors.white),
-            SizedBox(width: 2),
-            Text(
-              'NEW',
-              style: TextStyle(
-                fontSize: 9,
-                fontWeight: FontWeight.w900,
-                color: Colors.white,
-                letterSpacing: 0.3,
+            // 기본 flowing gradient
+            _FlowingGradientBackground(
+              colors: _gameFlow,
+            ),
+
+            // ─────────────────────────────
+            // 왼쪽 상단 : 옅은 민트빛
+            // ─────────────────────────────
+            Positioned(
+              left: -45,
+              top: -65,
+              child: Container(
+                width: 170,
+                height: 170,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  gradient: RadialGradient(
+                    colors: [
+                      const Color(0xFFBFF3E6).withOpacity(0.35),
+                      const Color(0xFFBFF3E6).withOpacity(0.00),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+
+            // ─────────────────────────────
+            // 중앙 오른쪽 : 하늘색 glow
+            // ─────────────────────────────
+            Positioned(
+              right: 35,
+              top: -60,
+              child: Container(
+                width: 170,
+                height: 170,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  gradient: RadialGradient(
+                    colors: [
+                      const Color(0xFFC8E9FF).withOpacity(0.34),
+                      const Color(0xFFC8E9FF).withOpacity(0.00),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+
+            // ─────────────────────────────
+            // 오른쪽 아래 : 라벤더빛
+            // ─────────────────────────────
+            Positioned(
+              right: -55,
+              bottom: -90,
+              child: Container(
+                width: 190,
+                height: 190,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  gradient: RadialGradient(
+                    colors: [
+                      const Color(0xFFD8D5FF).withOpacity(0.30),
+                      const Color(0xFFD8D5FF).withOpacity(0.00),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+
+            // ─────────────────────────────
+            // 아주 옅은 크림색 포인트
+            // ─────────────────────────────
+            Positioned(
+              left: 115,
+              bottom: -60,
+              child: Container(
+                width: 130,
+                height: 130,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  gradient: RadialGradient(
+                    colors: [
+                      const Color(0xFFFFF0CC).withOpacity(0.18),
+                      const Color(0xFFFFF0CC).withOpacity(0.00),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+
+            // 전체적인 유리 하이라이트
+            Positioned.fill(
+              child: DecoratedBox(
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                    colors: [
+                      Colors.white.withOpacity(0.10),
+                      Colors.transparent,
+                      const Color(0xFF2C4D72).withOpacity(0.08),
+                    ],
+                    stops: const [
+                      0.0,
+                      0.52,
+                      1.0,
+                    ],
+                  ),
+                ),
+              ),
+            ),
+
+            // 오른쪽 배경 장식
+            Positioned(
+              right: 54,
+              top: -17,
+              child: Transform.rotate(
+                angle: -0.18,
+                child: Icon(
+                  Icons.public_rounded,
+                  size: 90,
+                  color: const Color(0xFFD8F5FF).withOpacity(0.075),
+                ),
+              ),
+            ),
+
+            Positioned(
+              right: 15,
+              bottom: -13,
+              child: Transform.rotate(
+                angle: 0.15,
+                child: Icon(
+                  Icons.explore_rounded,
+                  size: 50,
+                  color: const Color(0xFFE5DDFF).withOpacity(0.07),
+                ),
+              ),
+            ),
+
+            // ─────────────────────────────
+            // CONTENT
+            // ─────────────────────────────
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 15,
+                vertical: 13,
+              ),
+              child: Row(
+                children: [
+                  // ─────────────────────────
+                  // 게임 아이콘
+                  // ─────────────────────────
+                  Stack(
+                    clipBehavior: Clip.none,
+                    children: [
+                      Container(
+                        width: 55,
+                        height: 55,
+                        decoration: BoxDecoration(
+                          gradient: const LinearGradient(
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                            colors: [
+                              Color(0xFFD9F5EC),
+                              Color(0xFFCFE7FF),
+                            ],
+                          ),
+                          borderRadius: BorderRadius.circular(17),
+                          border: Border.all(
+                            color: Colors.white.withOpacity(0.50),
+                            width: 1,
+                          ),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.08),
+                              blurRadius: 9,
+                              offset: const Offset(0, 4),
+                            ),
+                          ],
+                        ),
+                        child: const Icon(
+                          Icons.sports_esports_rounded,
+                          color: Color(0xFF176C73),
+                          size: 29,
+                        ),
+                      ),
+
+                      const Positioned(
+                        top: -7,
+                        right: -7,
+                        child: _SparkleNewBadge(),
+                      ),
+                    ],
+                  ),
+
+                  const SizedBox(width: 16),
+
+                  // ─────────────────────────
+                  // 제목 영역
+                  // ─────────────────────────
+                  Expanded(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 8,
+                            vertical: 3,
+                          ),
+                          decoration: BoxDecoration(
+                            color: const Color(0xFFDDF4F0)
+                                .withOpacity(0.20),
+                            borderRadius: BorderRadius.circular(7),
+                            border: Border.all(
+                              color: const Color(0xFFDDF4F0)
+                                  .withOpacity(0.24),
+                              width: 0.8,
+                            ),
+                          ),
+                          child: const Text(
+                            'PLAY & EXPLORE',
+                            style: TextStyle(
+                              color: Color(0xFFE2FFF8),
+                              fontSize: 8.5,
+                              fontWeight: FontWeight.w800,
+                              letterSpacing: 0.9,
+                            ),
+                          ),
+                        ),
+
+                        const SizedBox(height: 6),
+
+                        const Text(
+                          'Travelog Games',
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: TextStyle(
+                            fontSize: 19,
+                            height: 1,
+                            fontWeight: FontWeight.w900,
+                            color: Color(0xFFF6FFFD),
+                            letterSpacing: -0.45,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+
+                  const SizedBox(width: 12),
+
+                  // ─────────────────────────
+                  // 오른쪽 버튼
+                  // ─────────────────────────
+                  Container(
+                    width: 37,
+                    height: 37,
+                    decoration: BoxDecoration(
+                      gradient: const LinearGradient(
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                        colors: [
+                          Color(0xFFE0F5F1),
+                          Color(0xFFDCE8FF),
+                        ],
+                      ),
+                      borderRadius: BorderRadius.circular(12),
+                      border: Border.all(
+                        color: Colors.white.withOpacity(0.55),
+                      ),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.09),
+                          blurRadius: 8,
+                          offset: const Offset(0, 3),
+                        ),
+                      ],
+                    ),
+                    child: const Icon(
+                      Icons.arrow_forward_rounded,
+                      size: 18,
+                      color: Color(0xFF27747C),
+                    ),
+                  ),
+                ],
               ),
             ),
           ],
@@ -116,7 +485,6 @@ class _SparkleNewBadgeState extends State<_SparkleNewBadge>
     );
   }
 }
-
 class MyTripsTabScreen extends StatefulWidget {
   const MyTripsTabScreen({super.key});
 
@@ -776,33 +1144,22 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                       color: Colors.transparent,
                       child: Row(
                         children: [
-                          Stack(
-                            clipBehavior: Clip.none,
-                            children: [
-                              Container(
-                                width: 48,
-                                height: 48,
-                                padding: const EdgeInsets.all(8),
-                                decoration: BoxDecoration(
-                                  color: levelColor.withOpacity(0.1),
-                                  borderRadius: BorderRadius.circular(14),
-                                  border: Border.all(
-                                    color: levelColor.withOpacity(0.3),
-                                    width: 1,
-                                  ),
-                                ),
-                                child: Image.asset(
-                                  'assets/badge_levels/${currentLevel.toLowerCase()}.png',
-                                  fit: BoxFit.contain,
-                                ),
+                          Container(
+                            width: 48,
+                            height: 48,
+                            padding: const EdgeInsets.all(8),
+                            decoration: BoxDecoration(
+                              color: levelColor.withOpacity(0.1),
+                              borderRadius: BorderRadius.circular(14),
+                              border: Border.all(
+                                color: levelColor.withOpacity(0.3),
+                                width: 1,
                               ),
-                              // [추가] 뱃지 400+ 추가 업데이트 안내용 반짝이는 NEW 태그
-                              const Positioned(
-                                top: -8,
-                                right: -8,
-                                child: _SparkleNewBadge(),
-                              ),
-                            ],
+                            ),
+                            child: Image.asset(
+                              'assets/badge_levels/${currentLevel.toLowerCase()}.png',
+                              fit: BoxFit.contain,
+                            ),
                           ),
                           const SizedBox(width: 16),
                           Expanded(
@@ -877,62 +1234,51 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                       color: Colors.transparent,
                       child: Row(
                         children: [
-                          Stack(
-                            clipBehavior: Clip.none,
-                            children: [
-                              Container(
-                                width: 48,
-                                height: 48,
-                                decoration: BoxDecoration(
-                                  color: !_quizLoadingDone
-                                      ? Colors.grey.shade100
-                                      : _quizSolvedToday
-                                      ? const Color(0xFF10B981).withOpacity(0.1)
-                                      : (_quizDefaultIsExpert ? _quizExpertGradient.first : _quizNormalGradient.first)
-                                      .withOpacity(0.1),
-                                  borderRadius: BorderRadius.circular(14),
-                                  border: (_quizLoadingDone && !_quizSolvedToday && _quizDefaultIsExpert)
-                                      ? Border.all(color: _quizExpertGradient.first.withOpacity(0.35), width: 1.5)
-                                      : null,
-                                  boxShadow: (_quizLoadingDone && !_quizSolvedToday && _quizDefaultIsExpert)
-                                      ? [
-                                    BoxShadow(
-                                      color: _quizExpertGradient.first.withOpacity(0.28),
-                                      blurRadius: 14,
-                                      offset: const Offset(0, 4),
-                                    ),
-                                  ]
-                                      : null,
+                          Container(
+                            width: 48,
+                            height: 48,
+                            decoration: BoxDecoration(
+                              color: !_quizLoadingDone
+                                  ? Colors.grey.shade100
+                                  : _quizSolvedToday
+                                  ? const Color(0xFF10B981).withOpacity(0.1)
+                                  : (_quizDefaultIsExpert ? _quizExpertGradient.first : _quizNormalGradient.first)
+                                  .withOpacity(0.1),
+                              borderRadius: BorderRadius.circular(14),
+                              border: (_quizLoadingDone && !_quizSolvedToday && _quizDefaultIsExpert)
+                                  ? Border.all(color: _quizExpertGradient.first.withOpacity(0.35), width: 1.5)
+                                  : null,
+                              boxShadow: (_quizLoadingDone && !_quizSolvedToday && _quizDefaultIsExpert)
+                                  ? [
+                                BoxShadow(
+                                  color: _quizExpertGradient.first.withOpacity(0.28),
+                                  blurRadius: 14,
+                                  offset: const Offset(0, 4),
                                 ),
-                                child: !_quizLoadingDone
-                                    ? Center(
-                                  child: SizedBox(
-                                    width: 20,
-                                    height: 20,
-                                    child: CircularProgressIndicator(
-                                      strokeWidth: 2,
-                                      color: Colors.grey.shade400,
-                                    ),
-                                  ),
-                                )
-                                    : _quizSolvedToday
-                                    ? const Icon(Icons.check_circle_rounded, color: Color(0xFF10B981), size: 24)
-                                    : _quizDefaultIsExpert
-                                    ? ShaderMask(
-                                  shaderCallback: (bounds) =>
-                                      LinearGradient(colors: _quizExpertGradient).createShader(bounds),
-                                  child: const Icon(Icons.local_fire_department_rounded,
-                                      color: Colors.white, size: 24),
-                                )
-                                    : const Icon(Icons.help_rounded, color: Color(0xFF6366F1), size: 24),
+                              ]
+                                  : null,
+                            ),
+                            child: !_quizLoadingDone
+                                ? Center(
+                              child: SizedBox(
+                                width: 20,
+                                height: 20,
+                                child: CircularProgressIndicator(
+                                  strokeWidth: 2,
+                                  color: Colors.grey.shade400,
+                                ),
                               ),
-                              // [추가] 데일리 퀴즈 Expert 모드 업데이트 안내용 반짝이는 NEW 태그
-                              const Positioned(
-                                top: -8,
-                                right: -8,
-                                child: _SparkleNewBadge(),
-                              ),
-                            ],
+                            )
+                                : _quizSolvedToday
+                                ? const Icon(Icons.check_circle_rounded, color: Color(0xFF10B981), size: 24)
+                                : _quizDefaultIsExpert
+                                ? ShaderMask(
+                              shaderCallback: (bounds) =>
+                                  LinearGradient(colors: _quizExpertGradient).createShader(bounds),
+                              child: const Icon(Icons.local_fire_department_rounded,
+                                  color: Colors.white, size: 24),
+                            )
+                                : const Icon(Icons.help_rounded, color: Color(0xFF6366F1), size: 24),
                           ),
                           const SizedBox(width: 16),
                           Expanded(
@@ -1009,6 +1355,14 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                   ),
 
                   const SizedBox(height: 16),
+                  _TravelogGamesCard(
+                    onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (_) => const TravelogGamesScreen()),
+                    ),
+                  ),
+
+                  const SizedBox(height: 16),
                   Divider(color: Colors.grey.shade100, height: 1),
                   const SizedBox(height: 16),
                   _buildTravelStatsSection(context),
@@ -1025,11 +1379,22 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
     final countriesColor = Theme.of(context).primaryColor;
     const citiesColor = Colors.amber;
 
-    return Consumer3<CountryProvider, CityProvider, LandmarksProvider>(
-      builder: (context, countryProvider, cityProvider, landmarksProvider, _) {
+    return Consumer4<CountryProvider, CityProvider, LandmarksProvider, AirlineProvider>(
+      builder: (context, countryProvider, cityProvider, landmarksProvider, airlineProvider, _) {
+        // [FIX] 아래 4개 통계(Countries/Top Cities/Top Landmarks/Flights) 모두
+        // 각자의 provider가 아직 초기 로딩 중일 때는 "0/0"처럼 실제 데이터가
+        // 아닌 값이 잠깐 보이는 걸 막는다. Top Cities에 이미 적용돼 있던
+        // 방식(isLoading 동안 labelBottom을 '···'로, 진행바를 중립 로딩바로)을
+        // 나머지 셋에도 그대로 적용.
+        final bool isCountriesLoading = countryProvider.isLoading;
         final visitedCountryCount = countryProvider.visitedCountries.length;
         final totalCountryCount = countryProvider.allCountries.length;
 
+        // gawcCities는 CityProvider의 "부가 통계" 단계(isStatsLoading)에서
+        // 채워지는 데이터라, 로딩이 끝나기 전엔 비어 있어서 0/0으로 보인다.
+        // isStatsLoading이 true인 동안은 아직 신뢰할 수 없는 값이므로
+        // 아래에서 labelBottom을 "···"로 대체한다.
+        final bool isTopCitiesLoading = cityProvider.isStatsLoading;
         final gawcCities = cityProvider.gawcCities
             .where((c) => c.gawcTier != 'N/A')
             .toList();
@@ -1038,6 +1403,9 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
             .where((c) => cityProvider.visitedCities.contains(c.name))
             .length;
 
+        // [FIX] Top Landmarks — landmarksProvider.isLoading이 끝나기 전엔
+        // allLandmarks/visitedLandmarks가 비어 있어 "0 / 250"으로 보인다.
+        final bool isLandmarksLoading = landmarksProvider.isLoading;
         final topPicks = landmarksProvider.allLandmarks
             .where((l) => l.global_rank > 0)
             .toList()
@@ -1047,6 +1415,12 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
             .where((l) => landmarksProvider.visitedLandmarks.contains(l.name))
             .length;
 
+        // [FIX] Flights — airlineProvider.isLoading이 끝나기 전엔
+        // allFlightLogs가 비어 있어 "0 flights"로 보인다.
+        final bool isFlightsLoading = airlineProvider.isLoading;
+        final flightCount = airlineProvider.allFlightLogs.length;
+        const flightsColor = Color(0xFF8B5CF6);
+
         return Column(
           children: [
             _buildStatRow(
@@ -1054,13 +1428,16 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
               icon: Icons.location_on,
               iconColor: countriesColor,
               labelTop: 'Countries',
-              labelBottom: '$visitedCountryCount / $totalCountryCount',
+              labelBottom: isCountriesLoading
+                  ? '···'
+                  : '$visitedCountryCount / $totalCountryCount',
               progressValue: totalCountryCount > 0
                   ? visitedCountryCount / totalCountryCount
                   : 0.0,
               progressColor: countriesColor,
               isAddButton: true,
               isRainbow: false,
+              isLoading: isCountriesLoading,
               onButtonTap: () => Navigator.push(
                 context,
                 MaterialPageRoute(builder: (_) => const CountriesMapScreen()),
@@ -1072,13 +1449,16 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
               icon: Icons.location_city_rounded,
               iconColor: citiesColor,
               labelTop: 'Top Cities',
-              labelBottom: '$visitedGawcCount / $totalGawcCount',
+              labelBottom: isTopCitiesLoading
+                  ? '···'
+                  : '$visitedGawcCount / $totalGawcCount',
               progressValue: totalGawcCount > 0
                   ? (visitedGawcCount / totalGawcCount).clamp(0.0, 1.0)
                   : 0.0,
               progressColor: citiesColor,
               isAddButton: true,
               isRainbow: false,
+              isLoading: isTopCitiesLoading,
               onButtonTap: () => Navigator.push(
                 context,
                 MaterialPageRoute(builder: (_) => const TopCitiesScreen()),
@@ -1090,14 +1470,39 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
               icon: Icons.star_rounded,
               iconColor: const Color(0xFFEC4899),
               labelTop: 'Top Landmarks',
-              labelBottom: '$visitedTopCount / 250',
-              progressValue: visitedTopCount / 250,
+              labelBottom: isLandmarksLoading
+                  ? '···'
+                  : '$visitedTopCount / 250',
+              progressValue: isLandmarksLoading
+                  ? 0.0
+                  : (visitedTopCount / 250).clamp(0.0, 1.0),
               progressColor: const Color(0xFFEC4899),
               isAddButton: false,
               isRainbow: true,
+              isLoading: isLandmarksLoading,
               onButtonTap: () => Navigator.push(
                 context,
                 MaterialPageRoute(builder: (_) => const TopLandmarksScreen()),
+              ),
+            ),
+            const SizedBox(height: 14),
+            _buildStatRow(
+              context: context,
+              icon: Icons.flight_takeoff,
+              emoji: null,
+              iconColor: flightsColor,
+              labelTop: 'Flights',
+              labelBottom: isFlightsLoading ? '···' : '$flightCount flights',
+              progressValue: isFlightsLoading
+                  ? 0.0
+                  : (flightCount / 100).clamp(0.0, 1.0),
+              progressColor: flightsColor,
+              isAddButton: true,
+              isRainbow: false,
+              isLoading: isFlightsLoading,
+              onButtonTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => const FlightLogListScreen()),
               ),
             ),
           ],
@@ -1117,6 +1522,8 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
     required bool isAddButton,
     required bool isRainbow,
     required VoidCallback onButtonTap,
+    bool isLoading = false,
+    String? emoji,
   }) {
     return Row(
       children: [
@@ -1154,7 +1561,11 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
             color: iconColor.withOpacity(0.10),
             borderRadius: BorderRadius.circular(12),
           ),
-          child: Icon(icon, color: iconColor, size: 22),
+          child: Center(
+            child: emoji != null
+                ? Text(emoji, style: const TextStyle(fontSize: 22))
+                : Icon(icon, color: iconColor, size: 22),
+          ),
         ),
         const SizedBox(width: 12),
         Expanded(
@@ -1183,7 +1594,18 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                 ],
               ),
               const SizedBox(height: 6),
-              isRainbow
+              isLoading
+                  ? ClipRRect(
+                borderRadius: BorderRadius.circular(4),
+                child: LinearProgressIndicator(
+                  value: null, // 데이터가 아직 없다는 걸 명확히 하는 중립적인 로딩 바
+                  minHeight: 5,
+                  backgroundColor: Colors.grey.shade100,
+                  valueColor:
+                  AlwaysStoppedAnimation<Color>(Colors.grey.shade300),
+                ),
+              )
+                  : isRainbow
                   ? _buildRainbowProgressBar(progressValue.clamp(0.0, 1.0))
                   : ClipRRect(
                 borderRadius: BorderRadius.circular(4),
@@ -1212,13 +1634,16 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                 end: Alignment.bottomRight,
                 colors: [
                   Color(0xFFEC4899),
-                  Color(0xFF8B5CF6),
+                  Color(0xFFF97316),
+                  Color(0xFFF59E0B),
+                  Color(0xFF22C55E),
                   Color(0xFF0EA5E9),
+                  Color(0xFF8B5CF6),
                 ],
               ),
               boxShadow: [
                 BoxShadow(
-                  color: const Color(0xFF8B5CF6).withOpacity(0.35),
+                  color: const Color(0xFFEC4899).withOpacity(0.35),
                   blurRadius: 8,
                   offset: const Offset(0, 3),
                 ),

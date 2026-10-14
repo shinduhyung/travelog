@@ -120,6 +120,12 @@ class AuthProvider extends ChangeNotifier {
         'displayName': user.displayName,
         'photoURL': user.photoURL,
         'lastSignInAt': FieldValue.serverTimestamp(),
+        // 기기 로케일 기준 국가코드 — homeCountryIsoA3를 직접 설정 안 한
+        // 유저의 국적을 관리자 통계에서 추정하는 용도. GPS/IP 아님, 어디까지나
+        // 추정치.
+        'localeCountryCode':
+        WidgetsBinding.instance.platformDispatcher.locale.countryCode ??
+            'unknown',
       }, SetOptions(merge: true));
 
       print("✅ Firestore 저장 시도 완료 (UID = ${user.uid})");

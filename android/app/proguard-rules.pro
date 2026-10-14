@@ -1,55 +1,44 @@
-# Flutter
--keep class io.flutter.app.** { *; }
--keep class io.flutter.plugin.**  { *; }
--keep class io.flutter.util.**  { *; }
--keep class io.flutter.view.**  { *; }
--keep class io.flutter.**  { *; }
--keep class io.flutter.plugins.**  { *; }
+# Flutter — 엔진이 JNI로 참조하는 최소 범위만 유지
+-keep class io.flutter.embedding.engine.** { *; }
+-keep class io.flutter.plugin.common.** { *; }
 -dontwarn io.flutter.embedding.**
 
 # Firebase / Google Play Services
--keep class com.google.firebase.** { *; }
--keep class com.google.android.gms.** { *; }
+# → 자체 consumer-rules.pro가 필요한 클래스는 알아서 keep 하므로 전체 keep 삭제
 -dontwarn com.google.firebase.**
 -dontwarn com.google.android.gms.**
 
-# Firestore document parsing happens in Dart (cloud_firestore serializes to
-# Map<String,dynamic>), not via reflection on native Kotlin/Java model
-# classes, so no app-specific -keep rules are needed for that.
-
-# TikTok Business SDK
+# TikTok Business SDK — SDK 자체 요구사항이면 유지, 문서 재확인 권장
 -keep class com.tiktok.** { *; }
 -dontwarn com.tiktok.**
 
 # Install Referrer
 -keep class com.android.installreferrer.** { *; }
 
-# AndroidX Lifecycle
--keep class androidx.lifecycle.** { *; }
+# AndroidX Lifecycle — 자체 consumer-rules.pro로 충분, 전체 keep 삭제
 -dontwarn androidx.lifecycle.**
 
-# Keep annotations & generic signatures (needed for Firebase reflection)
+# Keep annotations & generic signatures (Firebase 리플렉션에 필요)
 -keepattributes Signature
 -keepattributes *Annotation*
 -keepattributes EnclosingMethod
 -keepattributes InnerClasses
 
-# Keep native method names (JNI)
+# JNI native 메서드 이름 유지
 -keepclasseswithmembernames class * {
     native <methods>;
 }
 
-# Keep this app's Application/Activity classes and their no-arg
-# constructors (Android instantiates these by reflection)
+# 앱의 Application/Activity 클래스 (리플렉션으로 생성됨)
 -keep class com.example.jidoapp.MyApplication { *; }
 -keep class com.example.jidoapp.MainActivity { *; }
 
-# Keep Parcelable CREATOR fields (standard Android requirement)
+# Parcelable CREATOR 필드 유지
 -keepclassmembers class * implements android.os.Parcelable {
     public static final android.os.Parcelable$Creator *;
 }
 
-# Keep enum values()/valueOf() (used by SDKs like TikTok's currency/event enums)
+# enum values()/valueOf() 유지 (TikTok SDK 등에서 사용)
 -keepclassmembers enum * {
     public static **[] values();
     public static ** valueOf(java.lang.String);

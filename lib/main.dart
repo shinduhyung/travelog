@@ -47,6 +47,7 @@ import 'package:jidoapp/services/ai_service.dart';
 import 'package:jidoapp/services/home_widget_service.dart';
 import 'package:jidoapp/services/ad_service.dart';
 import 'package:jidoapp/services/subscription_service.dart';
+import 'package:jidoapp/services/game_scores_sync_service.dart';
 
 import 'package:jidoapp/screens/badge_collected_screen.dart';
 import 'package:jidoapp/screens/rank_collected_screen.dart';
@@ -265,6 +266,29 @@ Future<void> _debugCheckLandmarkData() async {
   print('\n✅ [END] main.dart :: 랜드마크 데이터 검사 종료\n');
 }
 
+// 🔥 FIX: provider 패키지의 ProxyProviderX는 6개까지만 지원합니다.
+// BadgeProvider가 참조해야 하는 CountryProvider/EconomyProvider/CityProvider/
+// AirlineProvider/AirportProvider/LandmarksProvider 6개를 하나로 묶어 넘기기
+// 위한 순수 데이터 컨테이너입니다. ChangeNotifier가 아니며, 값만 담아
+// 다음 단계(ChangeNotifierProxyProvider2)로 전달하는 용도입니다.
+class _BadgeCoreDeps {
+  final CountryProvider countryProvider;
+  final EconomyProvider economyProvider;
+  final CityProvider cityProvider;
+  final AirlineProvider airlineProvider;
+  final AirportProvider airportProvider;
+  final LandmarksProvider landmarksProvider;
+
+  _BadgeCoreDeps({
+    required this.countryProvider,
+    required this.economyProvider,
+    required this.cityProvider,
+    required this.airlineProvider,
+    required this.airportProvider,
+    required this.landmarksProvider,
+  });
+}
+
 class JidoRoot extends StatelessWidget {
   const JidoRoot({super.key});
 
@@ -288,6 +312,16 @@ class _AuthGateRootState extends State<AuthGateRoot> {
   int _sessionKey = 0;
   bool _wasAuthenticated = false;
 
+  // [FIX] 기존 계정으로 "다시" 로그인(reload 케이스)했을 때, 같은 uid에 대해
+  // 리마운트를 중복 트리거하지 않기 위한 가드. uid가 바뀌거나 reload 액션이
+  // 새로 세팅될 때만 다시 동작해야 하므로 uid를 키로 기억해둔다.
+  String? _lastHandledReloadUid;
+
+  // [DEBUG] build()는 sessionKey가 안 바뀌어도 AuthProvider의 다른 상태
+  // 변화(예: isSigningIn 토글)만으로도 계속 호출된다. 실제 "트리 재생성"과
+  // 헷갈리지 않도록, sessionKey가 실제로 바뀐 경우에만 로그를 찍기 위한 값.
+  int? _lastLoggedSessionKey;
+
   @override
   Widget build(BuildContext context) {
     return Consumer<AuthProvider>(
@@ -303,11 +337,77 @@ class _AuthGateRootState extends State<AuthGateRoot> {
 
         if (auth.isAuthReady) {
           if (_wasAuthenticated && !auth.isAuthenticated) {
+            // 로그아웃 → 프로바이더 트리 리마운트 (기존 로직)
             WidgetsBinding.instance.addPostFrameCallback((_) {
-              if (mounted) setState(() => _sessionKey++);
+              if (mounted) {
+                // [DEBUG] 리마운트 원인 추적용
+                debugPrint(
+                    '🔁 [AuthGateRoot] remount triggered: reason=logout, prevSessionKey=$_sessionKey');
+                setState(() => _sessionKey++);
+              }
             });
           }
           _wasAuthenticated = auth.isAuthenticated;
+
+          // [FIX] 기존 계정으로 로그인(케이스 2, pendingLoginAction == 'reload')한
+          // 경우에도 프로바이더 트리를 통째로 새로 만든다.
+          //
+          // 왜 필요한가:
+          // 로그아웃/재설치/새 기기 상태에서 앱이 뜨면 CityProvider/CountryProvider
+          // 생성자가 곧바로 (로그인 전 상태 기준으로) _initializeData()를 백그라운드로
+          // 시작한다. 이 로딩이 채 끝나기 전에 사용자가 기존 계정으로 로그인하면,
+          // 예전 코드는 reloadFromServer()만 별도로 호출했는데 — 이 두 비동기 작업이
+          // 동시에 같은 provider state를 건드리면서 경쟁(race condition)이 생겼다.
+          // 운이 나쁘면 뒤늦게 끝난 _initializeData()가 reloadFromServer()가 채워넣은
+          // 정상 데이터를 다시 (로그인 전 빈 상태로) 덮어써서 방문 기록이 안 보이는
+          // 현상이 발생했다. 앱을 완전히 재시작하면 _initializeData()가 이미 로그인된
+          // 상태로 딱 한 번만 깨끗하게 실행되므로 정상으로 보였던 것.
+          //
+          // 해결책: 로그아웃 때와 동일하게, 기존 계정 로그인 순간에도 _sessionKey를
+          // 올려서 MultiProvider를 통째로 새로 만든다. 그러면 새로 생성되는
+          // CityProvider/CountryProvider 등은 처음부터 "로그인된 상태"로 생성자가
+          // 돌기 때문에 경쟁 자체가 발생하지 않는다. 개별 provider 파일들을 전부
+          // 수정할 필요가 없다.
+          //
+          // auth.isAuthenticated를 함께 확인하는 이유: pendingLoginAction은
+          // AuthProvider._prepareLoginAction()에서 Firebase 로그인이 완전히
+          // 끝나기 *전*에 미리 세팅된다 (UID로 Firestore를 먼저 조회해서 케이스를
+          // 판단하기 때문). 그래서 isAuthenticated가 true가 되기 전에 리마운트하면
+          // 새로 생성된 provider들이 여전히 "로그인 안 된" _auth.currentUser를
+          // 참조하게 될 수 있다. 따라서 실제 Firebase 인증 전환이 끝난 뒤에만
+          // 리마운트해야 한다.
+          if (auth.isAuthenticated &&
+              auth.pendingLoginAction == 'reload' &&
+              _lastHandledReloadUid != auth.user!.uid) {
+            final String newUid = auth.user!.uid;
+            _lastHandledReloadUid = newUid;
+            WidgetsBinding.instance.addPostFrameCallback((_) {
+              if (mounted) {
+                // [DEBUG] 리마운트 원인 추적용 — 기존 계정 로그인(reload)으로
+                // 트리거된 경우. 계정 전환 테스트 시 이 로그가 정확히
+                // "몇 번, 어떤 uid로" 찍히는지가 핵심 확인 포인트.
+                debugPrint(
+                    '🔁 [AuthGateRoot] remount triggered: reason=reload, uid=$newUid, prevSessionKey=$_sessionKey');
+                setState(() => _sessionKey++);
+                auth.clearPendingLoginAction();
+              }
+            });
+          }
+
+          // uid가 로그아웃 등으로 사라지면 다음에 같은 계정이 다시 로그인했을 때도
+          // 정상적으로 다시 트리거되도록 가드를 초기화.
+          if (!auth.isAuthenticated) {
+            _lastHandledReloadUid = null;
+          }
+        }
+
+        // [DEBUG] sessionKey가 실제로 바뀐 경우에만 찍음 — build()는 다른
+        // 이유(isSigningIn 토글 등)로도 자주 호출되므로, sessionKey 변화
+        // 여부로 필터링해야 "진짜 리마운트 횟수"와 로그 개수가 일치한다.
+        if (_lastLoggedSessionKey != _sessionKey) {
+          _lastLoggedSessionKey = _sessionKey;
+          debugPrint(
+              '🌳 [AuthGateRoot] provider tree (re)built: sessionKey=$_sessionKey, uid=${auth.user?.uid}');
         }
 
         return KeyedSubtree(
@@ -384,28 +484,56 @@ class _AuthGateRootState extends State<AuthGateRoot> {
                   context.read<AiService>(),
                 ),
               ),
-              ChangeNotifierProxyProvider6<
+              // 🔥 FIX: provider 패키지는 ProxyProvider6까지만 제공하고
+              // ProxyProvider7은 존재하지 않습니다. BadgeProvider가
+              // UnescoProvider까지 총 7개 의존성을 참조해야 하므로,
+              // 앞의 6개를 먼저 하나의 번들(_BadgeCoreDeps)로 묶은 뒤
+              // 그 번들 + UnescoProvider 두 개만으로 BadgeProvider를
+              // 최종 생성하는 2단계 구조로 나눕니다.
+              ProxyProvider6<
                   CountryProvider,
                   EconomyProvider,
                   CityProvider,
                   AirlineProvider,
                   AirportProvider,
                   LandmarksProvider,
-                  BadgeProvider>(
-                create: (_) => BadgeProvider(),
+                  _BadgeCoreDeps>(
                 update: (context, countryProvider, economyProvider,
                     cityProvider, airlineProvider, airportProvider,
-                    landmarksProvider, badgeProvider) {
+                    landmarksProvider, _) {
+                  return _BadgeCoreDeps(
+                    countryProvider: countryProvider,
+                    economyProvider: economyProvider,
+                    cityProvider: cityProvider,
+                    airlineProvider: airlineProvider,
+                    airportProvider: airportProvider,
+                    landmarksProvider: landmarksProvider,
+                  );
+                },
+              ),
+              ChangeNotifierProxyProvider2<_BadgeCoreDeps, UnescoProvider,
+                  BadgeProvider>(
+                create: (_) => BadgeProvider(),
+                update: (context, coreDeps, unescoProvider, badgeProvider) {
                   badgeProvider ??= BadgeProvider();
 
-                  if (!cityProvider.isLoading && !landmarksProvider.isLoading) {
+                  // 🔥 FIX: 이전에는 UnescoProvider가 이 의존성 그래프에
+                  // 아예 포함되지 않아서, 유네스코 방문 체크를 해도
+                  // 뱃지 재계산 자체가 트리거되지 않았습니다. 그 결과
+                  // 진행률(10/10)은 정확히 표시되지만 unlock 판정 로직은
+                  // 항상 스킵되는 상태였습니다. 이제 UnescoProvider 변경도
+                  // 감지하고, 로딩이 끝난 뒤에만 재계산합니다.
+                  if (!coreDeps.cityProvider.isLoading &&
+                      !coreDeps.landmarksProvider.isLoading &&
+                      !unescoProvider.isLoading) {
                     badgeProvider.updateBadges(
-                      countryProvider,
-                      economyProvider.economyData,
-                      cityProvider: cityProvider,
-                      airlineProvider: airlineProvider,
-                      airportProvider: airportProvider,
-                      landmarksProvider: landmarksProvider,
+                      coreDeps.countryProvider,
+                      coreDeps.economyProvider.economyData,
+                      cityProvider: coreDeps.cityProvider,
+                      airlineProvider: coreDeps.airlineProvider,
+                      airportProvider: coreDeps.airportProvider,
+                      landmarksProvider: coreDeps.landmarksProvider,
+                      unescoProvider: unescoProvider,
                     );
                   }
 
@@ -440,6 +568,14 @@ class _WidgetUpdateWrapperState extends State<WidgetUpdateWrapper> {
   static const String _tutorialVersion = '1.0';
   static const String _prefKey = 'onboarding_tutorial_version';
 
+  // [FIX] addListener로 등록한 콜백을 dispose에서 정확히 removeListener 하려면
+  // 익명 함수가 아니라 이 필드에 저장해둔 같은 참조를 넘겨야 한다.
+  // (이전 코드는 dispose를 아예 오버라이드하지 않아서, 이 위젯이 리마운트될
+  // 때마다 — 로그아웃, 그리고 이번에 추가된 reload 리마운트 포함 — 이전
+  // AuthProvider 리스너가 계속 쌓이는 누수가 있었다.)
+  AuthProvider? _listenedAuthProvider;
+  void Function()? _authListener;
+
   @override
   void initState() {
     super.initState();
@@ -447,6 +583,16 @@ class _WidgetUpdateWrapperState extends State<WidgetUpdateWrapper> {
       _listenToAuthChanges();
       _initTutorialCheck();
     });
+  }
+
+  @override
+  void dispose() {
+    // [FIX] 리스너 정리 — 위젯이 리마운트/dispose될 때 등록해뒀던
+    // AuthProvider 리스너를 반드시 제거한다.
+    if (_listenedAuthProvider != null && _authListener != null) {
+      _listenedAuthProvider!.removeListener(_authListener!);
+    }
+    super.dispose();
   }
 
   Future<void> _initTutorialCheck() async {
@@ -461,7 +607,9 @@ class _WidgetUpdateWrapperState extends State<WidgetUpdateWrapper> {
 
   void _listenToAuthChanges() {
     final authProvider = context.read<AuthProvider>();
-    authProvider.addListener(() => _handlePendingLoginAction(authProvider));
+    _authListener = () => _handlePendingLoginAction(authProvider);
+    authProvider.addListener(_authListener!);
+    _listenedAuthProvider = authProvider;
   }
 
   bool _isHandlingAction = false;
@@ -502,29 +650,23 @@ class _WidgetUpdateWrapperState extends State<WidgetUpdateWrapper> {
           context.read<PassportProvider>().uploadLocalToFirestore(),
           context.read<VisaProvider>().uploadLocalToFirestore(),
           context.read<TripLogProvider>().uploadLocalToFirestore(),
+          // [추가] 미니게임 리더보드/설정(Respawn 홈 국가, Insane 1회
+          // 체험 사용 여부 포함) — Provider가 아닌 단순 싱글턴이라
+          // context.read 없이 바로 호출.
+          GameScoresSyncService.instance.uploadLocalToFirestore(),
         ]);
-      } else if (action == 'reload') {
-        debugPrint('🔽 [LoginAction] reload: Firestore → 로컬');
-        await Future.wait([
-          context.read<CountryProvider>().reloadFromServer(),
-          context.read<CityProvider>().reloadFromServer(),
-          context.read<AirportProvider>().reloadFromServer(),
-          context.read<AirlineProvider>().reloadFromServer(),
-          context.read<LandmarksProvider>().reloadFromServer(),
-          context.read<UnescoProvider>().reloadFromServer(),
-          context.read<SubregionProvider>().reloadFromServer(),
-          context.read<CalendarProvider>().reloadFromServer(),
-          context.read<ItineraryProvider>().reloadFromServer(),
-          context.read<FlightMapSettingsProvider>().reloadFromServer(),
-          context.read<PersonalityProvider>().reloadFromServer(),
-          context.read<PassportProvider>().reloadFromServer(),
-          context.read<VisaProvider>().reloadFromServer(),
-          context.read<TripLogProvider>().reloadFromServer(),
-        ]);
+        authProvider.clearPendingLoginAction();
       }
+      // [FIX] 'reload' 분기는 여기서 제거했습니다.
+      // 기존 계정 로그인(케이스 2)은 이제 AuthGateRoot에서 MultiProvider
+      // 트리 자체를 새로 만드는 방식으로 처리합니다 (main.dart의
+      // _AuthGateRootState 참고). 그러면 새로 생성되는 각 Provider가
+      // 생성자에서부터 이미 로그인된 유저 기준으로 깨끗하게 초기화되므로,
+      // 여기서 개별 reloadFromServer()를 호출해 기존 초기화 작업과
+      // 경쟁시킬 필요가 없어집니다. pendingLoginAction 정리(clear)도
+      // AuthGateRoot 쪽에서 리마운트 직후에 수행합니다.
     } finally {
       _isHandlingAction = false;
-      authProvider.clearPendingLoginAction();
       debugPrint('🔍 [_handlePendingLoginAction] DONE, action=$action');
     }
   }
@@ -627,11 +769,61 @@ class _WidgetUpdateWrapperState extends State<WidgetUpdateWrapper> {
   }
 }
 
+/// [추가] 전면광고 "화면 전환 시점 노출" 실험용 NavigatorObserver.
+///
+/// pending 광고(조건은 충족됐지만 아직 안 띄운 광고)가 있을 때, 실제
+/// 페이지 화면이 바뀌는 순간에만 AdService.instance.onScreenTransition()을
+/// 호출해서 광고를 내보낸다.
+///
+/// 주의:
+/// - showDialog()/showModalBottomSheet() 등 PopupRoute는 여기서 절대
+///   화면 전환으로 취급하지 않는다(route가 PageRoute일 때만 반응).
+/// - 앱 최초 실행으로 첫 route가 push되는 경우(previousRoute == null)도
+///   화면 "전환"이 아니므로 무시한다.
+class AdNavigatorObserver extends NavigatorObserver {
+  void _notifyIfPageTransition({
+    required Route<dynamic>? route,
+    required Route<dynamic>? previousRoute,
+  }) {
+    if (route is! PageRoute) return; // Dialog/BottomSheet 등 PopupRoute 무시
+    if (previousRoute == null) return; // 앱 최초 route 생성은 전환으로 취급 X
+    AdService.instance.onScreenTransition();
+  }
+
+  @override
+  void didPush(Route<dynamic> route, Route<dynamic>? previousRoute) {
+    super.didPush(route, previousRoute);
+    _notifyIfPageTransition(route: route, previousRoute: previousRoute);
+  }
+
+  @override
+  void didPop(Route<dynamic> route, Route<dynamic>? previousRoute) {
+    super.didPop(route, previousRoute);
+    // pop 이후 실제로 "다시 보이게 되는" 화면은 route가 아니라
+    // previousRoute이므로, 그 쪽이 PageRoute인지로 판단한다.
+    if (previousRoute is! PageRoute) return;
+    AdService.instance.onScreenTransition();
+  }
+
+  @override
+  void didReplace({Route<dynamic>? newRoute, Route<dynamic>? oldRoute}) {
+    super.didReplace(newRoute: newRoute, oldRoute: oldRoute);
+    _notifyIfPageTransition(route: newRoute, previousRoute: oldRoute);
+  }
+
+// didRemove는 의도적으로 훅하지 않음: Navigator.removeRoute()는 보통
+// 애니메이션 없이 이력만 조용히 정리하는 용도라, 이걸 "화면 전환"으로
+// 취급하면 사용자가 인지하지 못하는 시점에 광고가 부자연스럽게 뜰 수 있다.
+}
+
 Widget _buildAppShell(Widget home, {GlobalKey<NavigatorState>? navKey}) {
   return AnnotatedRegion<SystemUiOverlayStyle>(
     value: _defaultSystemUiOverlayStyle,
     child: MaterialApp(
       navigatorKey: navKey,
+      navigatorObservers: [
+        AdNavigatorObserver(),
+      ],
       title: 'Travelog',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(

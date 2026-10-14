@@ -694,6 +694,11 @@ class CountryProvider with ChangeNotifier {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
   final FirebaseAuth _auth = FirebaseAuth.instance;
 
+  // [DEBUG] 이 인스턴스를 다른 인스턴스와 로그에서 구분하기 위한 식별자.
+  // city_provider.dart와 동일한 패턴.
+  static int _instanceCounter = 0;
+  final int _instanceId = ++_instanceCounter;
+
   bool _isLoading = true;
   List<Country> _rawCountries = [];
   Map<String, VisitDetails> _visitDetails = {};
@@ -858,6 +863,10 @@ class CountryProvider with ChangeNotifier {
   String? get homeCountryIsoA3 => _homeCountryIsoA3;
 
   CountryProvider() {
+    // [DEBUG] city_provider.dart와 동일한 패턴 — 계정 전환/리마운트 테스트에서
+    // 이 인스턴스가 몇 번, 어떤 유저 기준으로 생성됐는지 추적.
+    debugPrint(
+        '🆕 [CountryProvider#$_instanceId] constructed (currentUser=${_auth.currentUser?.uid})');
     _initializeData();
   }
 
@@ -1008,6 +1017,9 @@ class CountryProvider with ChangeNotifier {
   // ===============================================
 
   Future<void> _initializeData() async {
+    final stopwatch = Stopwatch()..start();
+    debugPrint(
+        '▶️ [CountryProvider#$_instanceId] _initializeData START (user=${_auth.currentUser?.uid})');
     try {
       if (kDebugMode) {
         debugPrint('🌍 CountryProvider _initializeData START');
@@ -1071,6 +1083,12 @@ class CountryProvider with ChangeNotifier {
       await _loadVisitDetails();
       await _loadHomeCountry();
 
+      // [DEBUG] 핵심 데이터 준비 완료 시점의 visitedCountries 개수 —
+      // 계정 전환 테스트에서 어느 계정 데이터가 실제로 반영됐는지 확인용.
+      debugPrint(
+          '✅ [CountryProvider#$_instanceId] core data ready (user=${_auth.currentUser?.uid}, '
+              'visitedCountries=${visitedCountries.length}, elapsedMs=${stopwatch.elapsedMilliseconds})');
+
       // ============== [함수 호출 추가됨] ==============
       if (kDebugMode) {
         printAllExactCountryNames();
@@ -1082,9 +1100,13 @@ class CountryProvider with ChangeNotifier {
         debugPrint('🚨🚨🚨 CountryProvider Initialization Error: $e');
         debugPrint('Stack Trace: $s');
       }
+      debugPrint(
+          '💥 [CountryProvider#$_instanceId] _initializeData FAILED (user=${_auth.currentUser?.uid}, elapsedMs=${stopwatch.elapsedMilliseconds})');
     } finally {
       _isLoading = false;
       notifyListeners();
+      debugPrint(
+          '🏁 [CountryProvider#$_instanceId] _initializeData DONE (user=${_auth.currentUser?.uid}, elapsedMs=${stopwatch.elapsedMilliseconds})');
     }
   }
 
@@ -1210,6 +1232,10 @@ class CountryProvider with ChangeNotifier {
           'country_visits_v2': jsonString,
           'lastUpdated': FieldValue.serverTimestamp(),
         }, SetOptions(merge: true));
+        // [DEBUG] 어느 계정 문서에 국가 방문 기록이 저장됐는지 추적.
+        debugPrint(
+            '💾 [CountryProvider#$_instanceId] visit details SAVED to Firestore '
+                '(uid=${user.uid}, countryCount=${_visitDetails.length})');
       } catch (e) {
         if (kDebugMode) {
           debugPrint("⚠️ Failed to save server visit details: $e");
@@ -1233,6 +1259,13 @@ class CountryProvider with ChangeNotifier {
           } else {
             await prefs.remove('homeCountryIsoA3');
           }
+        } else if (_homeCountryIsoA3 != null) {
+          // 🔧 FIX: 서버 문서에 homeCountryIsoA3 필드가 아예 없는데
+          // 로컬(SharedPreferences)엔 값이 있는 경우 — 온보딩이 로그인 전
+          // 상태에서만 진행되는 구조상, 이 값이 로그인 시점의 upload 로직을
+          // 놓치면 영영 서버에 반영될 기회가 없었음. 여기서 즉시 업로드해서
+          // 앱을 다시 켜기만 해도(재로그인 없이) 자동으로 채워지도록 함.
+          await _saveHomeCountry();
         }
       } catch (e) {
         if (kDebugMode) {
@@ -1554,6 +1587,11 @@ class CountryProvider with ChangeNotifier {
   }
   // ─── 케이스 2: Firestore 데이터로 로컬 덮어씌우기 ──────────────────────
   Future<void> reloadFromServer() async {
+    // [DEBUG] main.dart의 리마운트 로직으로 이 함수는 이제 정상 흐름에서는
+    // 호출되지 않아야 한다. 찍힌다면 구 경로 호출부가 남아있는 것.
+    debugPrint(
+        '⚠️ [CountryProvider#$_instanceId] reloadFromServer() called directly — '
+            'expected path is now remount via main.dart, verify caller (user=${_auth.currentUser?.uid})');
     await _loadSettings();
     await _loadVisitDetails();
     await _loadHomeCountry();

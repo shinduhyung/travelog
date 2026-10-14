@@ -50,17 +50,30 @@ class _TravelerTypeAiScreenState extends State<TravelerTypeAiScreen> {
     _loadSavedAnalysis();
   }
 
+  // Returns true only if the parsed result actually contains usable persona scores.
+  bool _hasValidScores(Map<String, dynamic> parsed) {
+    final scores = (parsed['summary']?['persona_scores'] as List?) ?? [];
+    return scores.isNotEmpty;
+  }
+
   Future<void> _loadSavedAnalysis() async {
     try {
       final prefs = await SharedPreferences.getInstance();
       final savedJson = prefs.getString('ai_analysis_result');
       if (savedJson != null) {
         final parsed = jsonDecode(savedJson) as Map<String, dynamic>;
-        if (mounted) {
-          setState(() {
-            _rawResult = savedJson;
-            _parsed = parsed;
-          });
+
+        if (_hasValidScores(parsed)) {
+          if (mounted) {
+            setState(() {
+              _rawResult = savedJson;
+              _parsed = parsed;
+            });
+          }
+        } else {
+          // Stale/failed cache from a previous run — discard it so the user
+          // sees the "not yet analyzed" placeholder instead of an error.
+          await prefs.remove('ai_analysis_result');
         }
       }
     } catch (e) {
@@ -96,8 +109,14 @@ class _TravelerTypeAiScreenState extends State<TravelerTypeAiScreen> {
       );
 
       final parsed = jsonDecode(result) as Map<String, dynamic>;
-      final prefs = await SharedPreferences.getInstance();
-      await prefs.setString('ai_analysis_result', result);
+
+      // Only persist to cache when the analysis actually produced scores.
+      // A failed/errored result must not overwrite a previously good cache
+      // (or get treated as "successful" on the next app launch).
+      if (_hasValidScores(parsed)) {
+        final prefs = await SharedPreferences.getInstance();
+        await prefs.setString('ai_analysis_result', result);
+      }
 
       if (mounted) {
         setState(() {
