@@ -18,9 +18,9 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   late int _selectedIndex;
 
-  final List<Widget> _pages = [
+  List<Widget> get _pages => [
     const MyTripsTabScreen(),
-    const CountriesMenuScreen(),
+    CountriesMenuScreen(isActive: _selectedIndex == 1),
     const CitiesMenuScreen(),
     const ExploreMenuScreen(),
     FlightsMenuScreen(),
@@ -60,10 +60,7 @@ class _MainScreenState extends State<MainScreen> {
       extendBody: true,
       body: SafeArea(
         bottom: false,
-        child: IndexedStack(
-          index: _selectedIndex,
-          children: _pages,
-        ),
+        child: IndexedStack(index: _selectedIndex, children: _pages),
       ),
       bottomNavigationBar: Container(
         decoration: BoxDecoration(
@@ -91,24 +88,35 @@ class _MainScreenState extends State<MainScreen> {
                     onTap: () => _onItemTapped(index),
                     child: AnimatedContainer(
                       duration: const Duration(milliseconds: 300),
-                      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 14,
+                        vertical: 8,
+                      ),
                       decoration: BoxDecoration(
-                        color: isSelected ? mintColor.withOpacity(0.15) : Colors.transparent,
+                        color: isSelected
+                            ? mintColor.withOpacity(0.15)
+                            : Colors.transparent,
                         borderRadius: BorderRadius.circular(18),
                       ),
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         children: [
-                          Icon(_icons[index],
-                              size: isSelected ? 28 : 24,
-                              color: isSelected ? mintColor : Colors.grey),
+                          Icon(
+                            _icons[index],
+                            size: isSelected ? 28 : 24,
+                            color: isSelected ? mintColor : Colors.grey,
+                          ),
                           const SizedBox(height: 4),
-                          Text(_labels[index],
-                              style: TextStyle(
-                                fontSize: 11,
-                                fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
-                                color: isSelected ? mintColor : Colors.grey,
-                              )),
+                          Text(
+                            _labels[index],
+                            style: TextStyle(
+                              fontSize: 11,
+                              fontWeight: isSelected
+                                  ? FontWeight.bold
+                                  : FontWeight.normal,
+                              color: isSelected ? mintColor : Colors.grey,
+                            ),
+                          ),
                         ],
                       ),
                     ),

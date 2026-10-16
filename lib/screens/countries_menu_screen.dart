@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
+import 'dart:async';
+import 'package:jidoapp/services/country_regions_notice_service.dart';
+import 'package:jidoapp/services/ad_service.dart';
+import 'package:jidoapp/widgets/country_regions_update_dialog.dart';
 import 'dart:math' as math;
 import 'dart:ui' as ui;
 import 'dart:typed_data';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:jidoapp/models/country_model.dart';
+import 'package:jidoapp/services/admin_region_repository.dart';
+import 'package:jidoapp/widgets/visited_world_map_layer.dart';
 import 'package:provider/provider.dart';
 import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/screens/countries_map_screen.dart';
@@ -18,15 +24,19 @@ import 'package:jidoapp/screens/specials_stats_screen.dart';
 
 import 'package:jidoapp/providers/auth_provider.dart';
 import 'package:jidoapp/screens/login_prompt_screen.dart';
-import 'package:jidoapp/utils/premium_access_manager.dart';
 
 import 'package:jidoapp/screens/countries_share.dart';
 import 'package:screenshot/screenshot.dart';
 import 'package:jidoapp/services/home_widget_service.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class CountriesMenuScreen extends StatefulWidget {
-  const CountriesMenuScreen({super.key});
+  final bool isActive;
+  final CountryRegionsNoticeService? regionsNoticeService;
+  const CountriesMenuScreen({
+    super.key,
+    this.isActive = true,
+    this.regionsNoticeService,
+  });
 
   @override
   State<CountriesMenuScreen> createState() => _CountriesMenuScreenState();
@@ -36,30 +46,222 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
   int _selectedStatIndex = 0;
 
   final ScreenshotController _mapScreenshotController = ScreenshotController();
-  final ScreenshotController _widgetScreenshotController = ScreenshotController();
+  final ScreenshotController _widgetScreenshotController =
+      ScreenshotController();
   bool _isSharing = false;
+  bool _showRegions = false;
+  late final CountryRegionsNoticeService _regionsNotice;
+  bool _badgeRefreshQueued = false;
+  bool _checkingNotice = false;
+  bool _showFeatureNew = false;
+  int _badgeRevision = 0;
+  Timer? _widgetCaptureTimer;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    context.watch<AuthProvider>();
+    _scheduleBadgeRefresh();
+  }
+
+  @override
+  void didUpdateWidget(CountriesMenuScreen oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (!oldWidget.isActive && widget.isActive) _scheduleBadgeRefresh();
+  }
+
+  @override
+  void dispose() {
+    _widgetCaptureTimer?.cancel();
+    super.dispose();
+  }
+
+  void _scheduleBadgeRefresh() {
+    if (!mounted || !widget.isActive || _badgeRefreshQueued) return;
+    _badgeRefreshQueued = true;
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _badgeRefreshQueued = false;
+      unawaited(_refreshFeatureBadges());
+    });
+    WidgetsBinding.instance.ensureVisualUpdate();
+  }
+
+  Future<void> _refreshFeatureBadges() async {
+    if (!mounted || !widget.isActive) return;
+    final auth = context.read<AuthProvider>();
+    final revision = ++_badgeRevision;
+    final uid = auth.user?.uid;
+    if (!auth.isAuthReady || auth.isSigningIn || auth.isHandlingLoginAction) {
+      if (_showFeatureNew) setState(() => _showFeatureNew = false);
+      return;
+    }
+    try {
+      final pending = await _regionsNotice.isPending(
+        uid: uid,
+        isNewAccount: auth.isNewAccountForRegionsUpdate,
+      );
+      if (mounted &&
+          revision == _badgeRevision &&
+          context.read<AuthProvider>().user?.uid == uid) {
+        setState(() => _showFeatureNew = pending);
+      }
+    } catch (error) {
+      debugPrint('[CountryRegionsNotice] Badge refresh deferred: $error');
+    }
+  }
+
+  Widget _featureBadge(Widget child, String name, {bool enabled = true}) {
+    if (!_showFeatureNew || !enabled) return child;
+    return Stack(
+      alignment: Alignment.center,
+      clipBehavior: Clip.none,
+      children: [
+        child,
+        Positioned(
+          key: ValueKey('regions-new-$name'),
+          top: -9,
+          right: -15,
+          child: IgnorePointer(
+            child: Container(
+              padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 2),
+              decoration: BoxDecoration(
+                color: const Color(0xFFFF7043),
+                borderRadius: BorderRadius.circular(5),
+              ),
+              child: const Text(
+                'NEW',
+                style: TextStyle(
+                  fontSize: 8,
+                  fontWeight: FontWeight.w800,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
+  /// A feature tap waits for the shared introduction, then runs that exact tap.
+  Future<void> _runRegionFeatureAction(VoidCallback action) async {
+    if (!mounted || !widget.isActive || _checkingNotice) return;
+    final auth = context.read<AuthProvider>();
+    final uid = auth.user?.uid;
+    bool canShow() =>
+        mounted &&
+        widget.isActive &&
+        context.read<AuthProvider>().user?.uid == uid &&
+        ModalRoute.of(context)?.isCurrent == true;
+    setState(() => _checkingNotice = true);
+    try {
+      if (auth.isAuthReady &&
+          !auth.isSigningIn &&
+          !auth.isHandlingLoginAction) {
+        final claim = await _regionsNotice.claim(
+          uid: uid,
+          isNewAccount: auth.isNewAccountForRegionsUpdate,
+          canShow: canShow,
+        );
+        if (claim != null) {
+          if (!canShow()) {
+            await _regionsNotice.release(claim);
+            return;
+          }
+          AdService.instance.setUiOverlayActive();
+          try {
+            await showDialog<void>(
+              context: context,
+              barrierDismissible: false,
+              builder: (_) => const CountryRegionsUpdateDialog(),
+            );
+            try {
+              await _regionsNotice.markDisplayed(claim);
+            } catch (error) {
+              debugPrint('[CountryRegionsNotice] Local cache failed: $error');
+            }
+            if (mounted) {
+              ++_badgeRevision; // Discard badge reads started before acknowledgment.
+              setState(() => _showFeatureNew = false);
+            }
+          } finally {
+            AdService.instance.clearUiOverlayActive();
+          }
+        }
+      }
+    } catch (error) {
+      // An offline notice check must not block the requested feature action.
+      debugPrint('[CountryRegionsNotice] Tap notice deferred: $error');
+    } finally {
+      if (mounted) setState(() => _checkingNotice = false);
+    }
+    if (canShow()) action();
+    _scheduleBadgeRefresh();
+  }
+
+  Future<void> _handleStatCategoryTap(int index) async {
+    if (_checkingNotice) return;
+    if (index == 0) {
+      await _runRegionFeatureAction(
+        () => setState(() => _selectedStatIndex = index),
+      );
+    } else {
+      setState(() => _selectedStatIndex = index);
+    }
+  }
 
   final List<Map<String, dynamic>> statisticsItems = [
-    {'icon': Icons.menu_book, 'title': 'CountryDex', 'screen': const CountryDexScreen()},
-    {'icon': Icons.insights, 'title': 'General', 'screen': const OverviewStatsScreen()},
-    {'icon': Icons.groups, 'title': 'Culture', 'screen': const SocietyStatsScreen()},
-    {'icon': Icons.public, 'title': 'World', 'screen': const MilitaryStatsScreen()},
-    {'icon': Icons.terrain, 'title': 'Geography', 'screen': const GeographyStatsScreen()},
-    {'icon': Icons.auto_awesome, 'title': 'Specials', 'screen': const SpecialsStatsScreen()},
+    {
+      'icon': Icons.menu_book,
+      'title': 'CountryDex',
+      'screen': const CountryDexScreen(),
+    },
+    {
+      'icon': Icons.insights,
+      'title': 'General',
+      'screen': const OverviewStatsScreen(),
+    },
+    {
+      'icon': Icons.groups,
+      'title': 'Culture',
+      'screen': const SocietyStatsScreen(),
+    },
+    {
+      'icon': Icons.public,
+      'title': 'World',
+      'screen': const MilitaryStatsScreen(),
+    },
+    {
+      'icon': Icons.terrain,
+      'title': 'Geography',
+      'screen': const GeographyStatsScreen(),
+    },
+    {
+      'icon': Icons.auto_awesome,
+      'title': 'Specials',
+      'screen': const SpecialsStatsScreen(),
+    },
   ];
 
   @override
   void initState() {
     super.initState();
+    _regionsNotice =
+        widget.regionsNoticeService ?? CountryRegionsNoticeService();
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      Future.delayed(const Duration(milliseconds: 3000), () {
-        _captureAndUpdateWidget();
-      });
+      if (!mounted) return;
+      _widgetCaptureTimer = Timer(
+        const Duration(milliseconds: 3000),
+        _captureAndUpdateWidget,
+      );
     });
   }
 
   /// stats 화면 진입 공통 처리
-  Future<void> _handleStatNavigation(BuildContext context, CountryProvider provider) async {
+  Future<void> _handleStatNavigation(
+    BuildContext context,
+    CountryProvider provider,
+  ) async {
     final index = _selectedStatIndex;
     final isPremiumTier = index >= 3;
 
@@ -78,18 +280,19 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
     }
 
     if (!mounted) return;
-    _navigateToStat(context, index);
+    if (index == 0) {
+      await _runRegionFeatureAction(() => _navigateToStat(context, index));
+    } else {
+      _navigateToStat(context, index);
+    }
   }
-
 
   /// 실제 stat 화면으로 이동
   void _navigateToStat(BuildContext context, int index) {
     if (!mounted) return;
     Navigator.push(
       context,
-      MaterialPageRoute(
-        builder: (_) => statisticsItems[index]['screen'],
-      ),
+      MaterialPageRoute(builder: (_) => statisticsItems[index]['screen']),
     );
   }
 
@@ -118,10 +321,17 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
     }
   }
 
-  Widget _buildWidgetPreview(CountryProvider provider, List<Country> visitedList) {
+  Widget _buildWidgetPreview(
+    CountryProvider provider,
+    List<Country> visitedList,
+  ) {
     final continentTotals = {
-      'Asia': 51, 'Europe': 51, 'Africa': 56,
-      'North America': 38, 'South America': 13, 'Oceania': 24,
+      'Asia': 51,
+      'Europe': 51,
+      'Africa': 56,
+      'North America': 38,
+      'South America': 13,
+      'Oceania': 24,
     };
 
     final stats = <String, int>{};
@@ -129,13 +339,22 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
       final continent = c.continent;
       if (continent == null || continent.isEmpty) continue;
       String mapped;
-      if (continent.contains('Asia')) mapped = 'Asia';
-      else if (continent.contains('Europe')) mapped = 'Europe';
-      else if (continent.contains('Africa')) mapped = 'Africa';
-      else if (continent == 'North America' || continent.contains('Caribbean') || continent.contains('Central America')) mapped = 'North America';
-      else if (continent == 'South America') mapped = 'South America';
-      else if (continent.contains('Oceania') || continent.contains('Australia')) mapped = 'Oceania';
-      else mapped = continent;
+      if (continent.contains('Asia'))
+        mapped = 'Asia';
+      else if (continent.contains('Europe'))
+        mapped = 'Europe';
+      else if (continent.contains('Africa'))
+        mapped = 'Africa';
+      else if (continent == 'North America' ||
+          continent.contains('Caribbean') ||
+          continent.contains('Central America'))
+        mapped = 'North America';
+      else if (continent == 'South America')
+        mapped = 'South America';
+      else if (continent.contains('Oceania') || continent.contains('Australia'))
+        mapped = 'Oceania';
+      else
+        mapped = continent;
       stats[mapped] = (stats[mapped] ?? 0) + 1;
     }
 
@@ -143,9 +362,21 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
       {'name': 'Asia', 'fullName': 'Asia', 'color': Colors.pink.shade300},
       {'name': 'Europe', 'fullName': 'Europe', 'color': Colors.yellow.shade700},
       {'name': 'Africa', 'fullName': 'Africa', 'color': Colors.brown.shade400},
-      {'name': 'N. America', 'fullName': 'North America', 'color': Colors.blue.shade400},
-      {'name': 'S. America', 'fullName': 'South America', 'color': Colors.green.shade400},
-      {'name': 'Oceania', 'fullName': 'Oceania', 'color': Colors.purple.shade400},
+      {
+        'name': 'N. America',
+        'fullName': 'North America',
+        'color': Colors.blue.shade400,
+      },
+      {
+        'name': 'S. America',
+        'fullName': 'South America',
+        'color': Colors.green.shade400,
+      },
+      {
+        'name': 'Oceania',
+        'fullName': 'Oceania',
+        'color': Colors.purple.shade400,
+      },
     ];
 
     return Container(
@@ -166,24 +397,33 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
                   options: const MapOptions(
                     initialCenter: LatLng(20, 0),
                     initialZoom: 0.3,
-                    interactionOptions: InteractionOptions(flags: InteractiveFlag.none),
+                    interactionOptions: InteractionOptions(
+                      flags: InteractiveFlag.none,
+                    ),
                   ),
                   children: [
                     TileLayer(urlTemplate: '', backgroundColor: Colors.white),
                     PolygonLayer(
                       polygons: provider.allCountries.expand((country) {
-                        final isVisited = provider.visitedCountries.contains(country.name);
+                        final isVisited = provider.visitedCountries.contains(
+                          country.name,
+                        );
                         final color = isVisited
-                            ? (provider.continentColors[country.continent] ?? Colors.grey)
+                            ? (provider.continentColors[country.continent] ??
+                                  Colors.grey)
                             : Colors.grey.withOpacity(0.15);
-                        return country.polygonsData.map((polygonData) => Polygon(
-                          points: polygonData.first,
-                          holePointsList: polygonData.length > 1 ? polygonData.sublist(1) : null,
-                          color: color,
-                          borderColor: Colors.white,
-                          borderStrokeWidth: 0.5,
-                          isFilled: true,
-                        ));
+                        return country.polygonsData.map(
+                          (polygonData) => Polygon(
+                            points: polygonData.first,
+                            holePointsList: polygonData.length > 1
+                                ? polygonData.sublist(1)
+                                : null,
+                            color: color,
+                            borderColor: Colors.white,
+                            borderStrokeWidth: 0.5,
+                            isFilled: true,
+                          ),
+                        );
                       }).toList(),
                     ),
                   ],
@@ -199,12 +439,30 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Text('Travelog', style: TextStyle(fontSize: 14, fontWeight: FontWeight.w900)),
+                    const Text(
+                      'Travelog',
+                      style: TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w900,
+                      ),
+                    ),
                     Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
-                      decoration: BoxDecoration(color: Colors.blue, borderRadius: BorderRadius.circular(20)),
-                      child: Text('${visitedList.length} Countries',
-                          style: const TextStyle(color: Colors.white, fontSize: 10, fontWeight: FontWeight.bold)),
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 8,
+                        vertical: 3,
+                      ),
+                      decoration: BoxDecoration(
+                        color: Colors.blue,
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: Text(
+                        '${visitedList.length} Countries',
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 10,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
                     ),
                   ],
                 ),
@@ -219,19 +477,23 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
                           padding: const EdgeInsets.only(bottom: 4),
                           child: Row(
                             children: [
-                              Expanded(child: _buildMiniStatItem(
-                                left['name'] as String,
-                                stats[left['fullName']] ?? 0,
-                                continentTotals[left['fullName']] ?? 1,
-                                left['color'] as Color,
-                              )),
+                              Expanded(
+                                child: _buildMiniStatItem(
+                                  left['name'] as String,
+                                  stats[left['fullName']] ?? 0,
+                                  continentTotals[left['fullName']] ?? 1,
+                                  left['color'] as Color,
+                                ),
+                              ),
                               const SizedBox(width: 4),
-                              Expanded(child: _buildMiniStatItem(
-                                right['name'] as String,
-                                stats[right['fullName']] ?? 0,
-                                continentTotals[right['fullName']] ?? 1,
-                                right['color'] as Color,
-                              )),
+                              Expanded(
+                                child: _buildMiniStatItem(
+                                  right['name'] as String,
+                                  stats[right['fullName']] ?? 0,
+                                  continentTotals[right['fullName']] ?? 1,
+                                  right['color'] as Color,
+                                ),
+                              ),
                             ],
                           ),
                         ),
@@ -262,17 +524,42 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
         children: [
           Row(
             children: [
-              Container(width: 8, height: 8, decoration: BoxDecoration(color: color, shape: BoxShape.circle)),
+              Container(
+                width: 8,
+                height: 8,
+                decoration: BoxDecoration(color: color, shape: BoxShape.circle),
+              ),
               const SizedBox(width: 3),
-              Expanded(child: Text(name, style: const TextStyle(fontSize: 8, fontWeight: FontWeight.bold), overflow: TextOverflow.ellipsis)),
+              Expanded(
+                child: Text(
+                  name,
+                  style: const TextStyle(
+                    fontSize: 8,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
             ],
           ),
           const SizedBox(height: 2),
-          Text('$count/$total', style: TextStyle(fontSize: 11, fontWeight: FontWeight.w900, color: color)),
+          Text(
+            '$count/$total',
+            style: TextStyle(
+              fontSize: 11,
+              fontWeight: FontWeight.w900,
+              color: color,
+            ),
+          ),
           const SizedBox(height: 2),
           ClipRRect(
             borderRadius: BorderRadius.circular(2),
-            child: LinearProgressIndicator(value: ratio, backgroundColor: Colors.grey.shade200, color: color, minHeight: 3),
+            child: LinearProgressIndicator(
+              value: ratio,
+              backgroundColor: Colors.grey.shade200,
+              color: color,
+              minHeight: 3,
+            ),
           ),
         ],
       ),
@@ -285,7 +572,8 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
     final primaryColor = Theme.of(context).primaryColor;
 
     return GestureDetector(
-      onTap: () => setState(() => _selectedStatIndex = index),
+      key: ValueKey('stat-category-$index'),
+      onTap: () => _handleStatCategoryTap(index),
       child: Stack(
         clipBehavior: Clip.none,
         children: [
@@ -297,13 +585,29 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
               color: isSelected ? primaryColor : Colors.white,
               borderRadius: BorderRadius.circular(16),
               boxShadow: isSelected
-                  ? [BoxShadow(color: primaryColor.withOpacity(0.4), blurRadius: 12, offset: const Offset(0, 4))]
-                  : [BoxShadow(color: Colors.black.withOpacity(0.06), blurRadius: 8, offset: const Offset(0, 2))],
+                  ? [
+                      BoxShadow(
+                        color: primaryColor.withOpacity(0.4),
+                        blurRadius: 12,
+                        offset: const Offset(0, 4),
+                      ),
+                    ]
+                  : [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.06),
+                        blurRadius: 8,
+                        offset: const Offset(0, 2),
+                      ),
+                    ],
             ),
-            child: Icon(
-              item['icon'],
-              color: isSelected ? Colors.white : Colors.grey.shade500,
-              size: 22,
+            child: _featureBadge(
+              Icon(
+                item['icon'],
+                color: isSelected ? Colors.white : Colors.grey.shade500,
+                size: 22,
+              ),
+              'countrydex',
+              enabled: index == 0,
             ),
           ),
         ],
@@ -311,12 +615,17 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
     );
   }
 
-  Future<void> _handleShare(BuildContext context, CountryProvider provider) async {
+  Future<void> _handleShare(CountryProvider provider) async {
     if (_isSharing) return;
 
     setState(() => _isSharing = true);
 
     try {
+      if (_showRegions) {
+        await AdminRegionRepository.loadAll();
+        await WidgetsBinding.instance.endOfFrame;
+      }
+      if (!mounted) return;
       final Uint8List? mapImage = await _mapScreenshotController.capture();
 
       if (mapImage == null) throw Exception("Failed to capture map");
@@ -332,7 +641,6 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
         mapImage: mapImage,
         visitedCountries: visitedCountries,
       );
-
     } catch (e) {
       debugPrint("Main Screen Share Error: $e");
     } finally {
@@ -362,17 +670,18 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
             child: Consumer<CountryProvider>(
               builder: (context, provider, child) {
                 if (provider.isLoading) {
-                  return const Center(
-                    child: CircularProgressIndicator(),
-                  );
+                  return const Center(child: CircularProgressIndicator());
                 }
 
                 final countriesToDisplay = provider.filteredCountries;
                 final totalCountries = countriesToDisplay.length;
-                final visitedInFilter = countriesToDisplay
-                    .where((c) => provider.visitedCountries.contains(c.name));
+                final visitedInFilter = countriesToDisplay.where(
+                  (c) => provider.visitedCountries.contains(c.name),
+                );
                 final visitedCountriesCount = visitedInFilter.length;
-                final countryRatio = totalCountries > 0 ? visitedCountriesCount / totalCountries : 0.0;
+                final countryRatio = totalCountries > 0
+                    ? visitedCountriesCount / totalCountries
+                    : 0.0;
 
                 return SingleChildScrollView(
                   physics: const ClampingScrollPhysics(),
@@ -398,11 +707,19 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
                           child: Column(
                             children: [
                               Padding(
-                                padding: const EdgeInsets.fromLTRB(24, 24, 24, 0),
+                                padding: const EdgeInsets.fromLTRB(
+                                  24,
+                                  24,
+                                  24,
+                                  0,
+                                ),
                                 child: TweenAnimationBuilder(
                                   duration: const Duration(milliseconds: 2000),
                                   curve: Curves.easeOutCubic,
-                                  tween: Tween<double>(begin: 0, end: countryRatio),
+                                  tween: Tween<double>(
+                                    begin: 0,
+                                    end: countryRatio,
+                                  ),
                                   builder: (context, double value, child) {
                                     return Container(
                                       padding: const EdgeInsets.all(24),
@@ -411,7 +728,9 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
                                         borderRadius: BorderRadius.circular(28),
                                         boxShadow: [
                                           BoxShadow(
-                                            color: Colors.black.withOpacity(0.04),
+                                            color: Colors.black.withOpacity(
+                                              0.04,
+                                            ),
                                             blurRadius: 30,
                                             offset: const Offset(0, 10),
                                           ),
@@ -420,33 +739,53 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
                                       child: Column(
                                         children: [
                                           Row(
-                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
                                             children: [
                                               Expanded(
                                                 child: Column(
-                                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
                                                   children: [
                                                     Container(
-                                                      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                                                      padding:
+                                                          const EdgeInsets.symmetric(
+                                                            horizontal: 12,
+                                                            vertical: 6,
+                                                          ),
                                                       decoration: BoxDecoration(
-                                                        color: Theme.of(context).primaryColor.withOpacity(0.1),
-                                                        borderRadius: BorderRadius.circular(20),
+                                                        color: Theme.of(context)
+                                                            .primaryColor
+                                                            .withOpacity(0.1),
+                                                        borderRadius:
+                                                            BorderRadius.circular(
+                                                              20,
+                                                            ),
                                                       ),
                                                       child: Row(
-                                                        mainAxisSize: MainAxisSize.min,
+                                                        mainAxisSize:
+                                                            MainAxisSize.min,
                                                         children: [
                                                           Icon(
                                                             Icons.location_on,
                                                             size: 14,
-                                                            color: Theme.of(context).primaryColor,
+                                                            color: Theme.of(
+                                                              context,
+                                                            ).primaryColor,
                                                           ),
-                                                          const SizedBox(width: 6),
+                                                          const SizedBox(
+                                                            width: 6,
+                                                          ),
                                                           Text(
                                                             'Countries',
                                                             style: TextStyle(
                                                               fontSize: 12,
-                                                              fontWeight: FontWeight.w700,
-                                                              color: Theme.of(context).primaryColor,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w700,
+                                                              color: Theme.of(
+                                                                context,
+                                                              ).primaryColor,
                                                             ),
                                                           ),
                                                         ],
@@ -454,43 +793,82 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
                                                     ),
                                                     const SizedBox(height: 16),
                                                     Row(
-                                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                                      crossAxisAlignment:
+                                                          CrossAxisAlignment
+                                                              .start,
                                                       children: [
                                                         TweenAnimationBuilder(
-                                                          duration: const Duration(milliseconds: 1500),
-                                                          curve: Curves.easeOutExpo,
-                                                          tween: Tween<double>(begin: 0, end: visitedCountriesCount.toDouble()),
-                                                          builder: (context, double val, child) {
-                                                            return ShaderMask(
-                                                              shaderCallback: (bounds) => LinearGradient(
-                                                                begin: Alignment.topLeft,
-                                                                end: Alignment.bottomRight,
-                                                                colors: [
-                                                                  Theme.of(context).primaryColor,
-                                                                  Theme.of(context).primaryColor.withOpacity(0.7),
-                                                                ],
-                                                              ).createShader(bounds),
-                                                              child: Text(
-                                                                '${val.toInt()}',
-                                                                style: const TextStyle(
-                                                                  fontSize: 64,
-                                                                  fontWeight: FontWeight.w900,
-                                                                  color: Colors.white,
-                                                                  height: 0.9,
-                                                                  letterSpacing: -3,
-                                                                ),
+                                                          duration:
+                                                              const Duration(
+                                                                milliseconds:
+                                                                    1500,
                                                               ),
-                                                            );
-                                                          },
+                                                          curve: Curves
+                                                              .easeOutExpo,
+                                                          tween: Tween<double>(
+                                                            begin: 0,
+                                                            end:
+                                                                visitedCountriesCount
+                                                                    .toDouble(),
+                                                          ),
+                                                          builder:
+                                                              (
+                                                                context,
+                                                                double val,
+                                                                child,
+                                                              ) {
+                                                                return ShaderMask(
+                                                                  shaderCallback: (bounds) => LinearGradient(
+                                                                    begin: Alignment
+                                                                        .topLeft,
+                                                                    end: Alignment
+                                                                        .bottomRight,
+                                                                    colors: [
+                                                                      Theme.of(
+                                                                        context,
+                                                                      ).primaryColor,
+                                                                      Theme.of(
+                                                                        context,
+                                                                      ).primaryColor.withOpacity(
+                                                                        0.7,
+                                                                      ),
+                                                                    ],
+                                                                  ).createShader(bounds),
+                                                                  child: Text(
+                                                                    '${val.toInt()}',
+                                                                    style: const TextStyle(
+                                                                      fontSize:
+                                                                          64,
+                                                                      fontWeight:
+                                                                          FontWeight
+                                                                              .w900,
+                                                                      color: Colors
+                                                                          .white,
+                                                                      height:
+                                                                          0.9,
+                                                                      letterSpacing:
+                                                                          -3,
+                                                                    ),
+                                                                  ),
+                                                                );
+                                                              },
                                                         ),
                                                         Padding(
-                                                          padding: const EdgeInsets.only(top: 8, left: 8),
+                                                          padding:
+                                                              const EdgeInsets.only(
+                                                                top: 8,
+                                                                left: 8,
+                                                              ),
                                                           child: Text(
                                                             '/ $totalCountries',
                                                             style: TextStyle(
                                                               fontSize: 18,
-                                                              fontWeight: FontWeight.w600,
-                                                              color: Colors.grey.shade400,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w600,
+                                                              color: Colors
+                                                                  .grey
+                                                                  .shade400,
                                                             ),
                                                           ),
                                                         ),
@@ -500,27 +878,53 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
                                                 ),
                                               ),
                                               TweenAnimationBuilder(
-                                                duration: const Duration(milliseconds: 1500),
+                                                duration: const Duration(
+                                                  milliseconds: 1500,
+                                                ),
                                                 curve: Curves.easeOutExpo,
-                                                tween: Tween<double>(begin: 0, end: value * 100),
+                                                tween: Tween<double>(
+                                                  begin: 0,
+                                                  end: value * 100,
+                                                ),
                                                 builder: (context, double val, child) {
                                                   return Container(
-                                                    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                                                    padding:
+                                                        const EdgeInsets.symmetric(
+                                                          horizontal: 16,
+                                                          vertical: 12,
+                                                        ),
                                                     decoration: BoxDecoration(
                                                       gradient: LinearGradient(
-                                                        begin: Alignment.topLeft,
-                                                        end: Alignment.bottomRight,
+                                                        begin:
+                                                            Alignment.topLeft,
+                                                        end: Alignment
+                                                            .bottomRight,
                                                         colors: [
-                                                          Theme.of(context).primaryColor,
-                                                          Theme.of(context).primaryColor.withOpacity(0.8),
+                                                          Theme.of(
+                                                            context,
+                                                          ).primaryColor,
+                                                          Theme.of(context)
+                                                              .primaryColor
+                                                              .withOpacity(0.8),
                                                         ],
                                                       ),
-                                                      borderRadius: BorderRadius.circular(16),
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                            16,
+                                                          ),
                                                       boxShadow: [
                                                         BoxShadow(
-                                                          color: Theme.of(context).primaryColor.withOpacity(0.3),
+                                                          color:
+                                                              Theme.of(context)
+                                                                  .primaryColor
+                                                                  .withOpacity(
+                                                                    0.3,
+                                                                  ),
                                                           blurRadius: 12,
-                                                          offset: const Offset(0, 4),
+                                                          offset: const Offset(
+                                                            0,
+                                                            4,
+                                                          ),
                                                         ),
                                                       ],
                                                     ),
@@ -528,7 +932,8 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
                                                       '${val.toInt()}%',
                                                       style: const TextStyle(
                                                         fontSize: 24,
-                                                        fontWeight: FontWeight.w900,
+                                                        fontWeight:
+                                                            FontWeight.w900,
                                                         color: Colors.white,
                                                       ),
                                                     ),
@@ -540,7 +945,9 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
                                           const SizedBox(height: 20),
                                           _AnimatedProgressBar(
                                             progress: value,
-                                            primaryColor: Theme.of(context).primaryColor,
+                                            primaryColor: Theme.of(
+                                              context,
+                                            ).primaryColor,
                                             totalCountries: totalCountries,
                                           ),
                                         ],
@@ -565,25 +972,24 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
                                             options: const MapOptions(
                                               initialCenter: LatLng(0, 0),
                                               initialZoom: 0.3,
-                                              interactionOptions: InteractionOptions(flags: InteractiveFlag.none),
+                                              interactionOptions:
+                                                  InteractionOptions(
+                                                    flags: InteractiveFlag.none,
+                                                  ),
                                             ),
                                             children: [
-                                              TileLayer(urlTemplate: '', backgroundColor: Colors.white),
-                                              PolygonLayer(
-                                                polygons: provider.allCountries.expand((country) {
-                                                  final isVisited = provider.visitedCountries.contains(country.name);
-                                                  final color = isVisited
-                                                      ? (provider.continentColors[country.continent] ?? Colors.grey)
-                                                      : Colors.grey.withOpacity(0.15);
-                                                  return country.polygonsData.map((polygonData) => Polygon(
-                                                    points: polygonData.first,
-                                                    holePointsList: polygonData.length > 1 ? polygonData.sublist(1) : null,
-                                                    color: color,
-                                                    borderColor: Colors.white,
-                                                    borderStrokeWidth: 0.5,
-                                                    isFilled: true,
-                                                  ));
-                                                }).toList(),
+                                              TileLayer(
+                                                urlTemplate: '',
+                                                backgroundColor: Colors.white,
+                                              ),
+                                              VisitedWorldMapLayer(
+                                                countries:
+                                                    provider.allCountries,
+                                                visitedCountries:
+                                                    provider.visitedCountries,
+                                                continentColors:
+                                                    provider.continentColors,
+                                                showRegions: _showRegions,
                                               ),
                                             ],
                                           ),
@@ -596,8 +1002,54 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
                                       child: Row(
                                         mainAxisSize: MainAxisSize.min,
                                         children: [
+                                          Tooltip(
+                                            message: _showRegions
+                                                ? 'Show visited countries'
+                                                : 'Show visited regions',
+                                            child: Material(
+                                              color: _showRegions
+                                                  ? Theme.of(
+                                                      context,
+                                                    ).primaryColor
+                                                  : Colors.white,
+                                              elevation: 4,
+                                              shadowColor: Colors.black26,
+                                              shape: const CircleBorder(),
+                                              child: IconButton(
+                                                key: const ValueKey(
+                                                  'change-map-mode',
+                                                ),
+                                                padding: const EdgeInsets.all(
+                                                  12,
+                                                ),
+                                                iconSize: 26,
+                                                onPressed:
+                                                    _isSharing ||
+                                                        _checkingNotice
+                                                    ? null
+                                                    : () => _runRegionFeatureAction(
+                                                        () => setState(
+                                                          () => _showRegions =
+                                                              !_showRegions,
+                                                        ),
+                                                      ),
+                                                icon: _featureBadge(
+                                                  Icon(
+                                                    Icons.swap_horiz_rounded,
+                                                    color: _showRegions
+                                                        ? Colors.white
+                                                        : Theme.of(
+                                                            context,
+                                                          ).primaryColor,
+                                                  ),
+                                                  'map',
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                          const SizedBox(width: 12),
                                           GestureDetector(
-                                            onTap: () => _handleShare(context, provider),
+                                            onTap: () => _handleShare(provider),
                                             child: Container(
                                               padding: const EdgeInsets.all(12),
                                               decoration: BoxDecoration(
@@ -605,7 +1057,8 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
                                                 shape: BoxShape.circle,
                                                 boxShadow: [
                                                   BoxShadow(
-                                                    color: Colors.black.withOpacity(0.1),
+                                                    color: Colors.black
+                                                        .withOpacity(0.1),
                                                     blurRadius: 12,
                                                     offset: const Offset(0, 4),
                                                   ),
@@ -613,34 +1066,53 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
                                               ),
                                               child: _isSharing
                                                   ? SizedBox(
-                                                width: 26,
-                                                height: 26,
-                                                child: CircularProgressIndicator(
-                                                  strokeWidth: 2,
-                                                  valueColor: AlwaysStoppedAnimation<Color>(Theme.of(context).primaryColor),
-                                                ),
-                                              )
+                                                      width: 26,
+                                                      height: 26,
+                                                      child: CircularProgressIndicator(
+                                                        strokeWidth: 2,
+                                                        valueColor:
+                                                            AlwaysStoppedAnimation<
+                                                              Color
+                                                            >(
+                                                              Theme.of(
+                                                                context,
+                                                              ).primaryColor,
+                                                            ),
+                                                      ),
+                                                    )
                                                   : Icon(
-                                                Icons.share_rounded,
-                                                color: Theme.of(context).primaryColor,
-                                                size: 26,
-                                              ),
+                                                      Icons.share_rounded,
+                                                      color: Theme.of(
+                                                        context,
+                                                      ).primaryColor,
+                                                      size: 26,
+                                                    ),
                                             ),
                                           ),
                                           const SizedBox(width: 12),
                                           GestureDetector(
                                             onTap: () => Navigator.push(
                                               context,
-                                              MaterialPageRoute(builder: (_) => const CountriesMapScreen()),
+                                              MaterialPageRoute(
+                                                builder: (_) =>
+                                                    CountriesMapScreen(
+                                                      initialShowRegions:
+                                                          _showRegions,
+                                                    ),
+                                              ),
                                             ),
                                             child: Container(
                                               padding: const EdgeInsets.all(12),
                                               decoration: BoxDecoration(
-                                                color: Theme.of(context).primaryColor,
+                                                color: Theme.of(
+                                                  context,
+                                                ).primaryColor,
                                                 shape: BoxShape.circle,
                                                 boxShadow: [
                                                   BoxShadow(
-                                                    color: Theme.of(context).primaryColor.withOpacity(0.4),
+                                                    color: Theme.of(context)
+                                                        .primaryColor
+                                                        .withOpacity(0.4),
                                                     blurRadius: 12,
                                                     offset: const Offset(0, 4),
                                                   ),
@@ -673,7 +1145,7 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: List.generate(
                                 statisticsItems.length,
-                                    (i) => _buildStatCategoryChip(context, i),
+                                (i) => _buildStatCategoryChip(context, i),
                               ),
                             ),
                             const SizedBox(height: 16),
@@ -711,7 +1183,9 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
                                       width: 48,
                                       height: 48,
                                       decoration: BoxDecoration(
-                                        color: Theme.of(context).primaryColor.withOpacity(0.1),
+                                        color: Theme.of(
+                                          context,
+                                        ).primaryColor.withOpacity(0.1),
                                         borderRadius: BorderRadius.circular(14),
                                       ),
                                       child: Icon(
@@ -723,7 +1197,8 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
                                     const SizedBox(width: 16),
                                     Expanded(
                                       child: Column(
-                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
                                         children: [
                                           Text(
                                             statisticsItems[_selectedStatIndex]['title'],
@@ -751,8 +1226,18 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
                                         borderRadius: BorderRadius.circular(12),
                                       ),
                                       child: IconButton(
-                                        icon: const Icon(Icons.arrow_forward_rounded, color: Colors.white, size: 20),
-                                        onPressed: () => _handleStatNavigation(context, provider),
+                                        icon: const Icon(
+                                          Icons.arrow_forward_rounded,
+                                          color: Colors.white,
+                                          size: 20,
+                                        ),
+                                        key: const ValueKey(
+                                          'open-detailed-stats',
+                                        ),
+                                        onPressed: () => _handleStatNavigation(
+                                          context,
+                                          provider,
+                                        ),
                                       ),
                                     ),
                                   ],
@@ -811,10 +1296,7 @@ class _AnimatedProgressBar extends StatelessWidget {
                     height: 8,
                     decoration: BoxDecoration(
                       gradient: LinearGradient(
-                        colors: [
-                          primaryColor.withOpacity(0.6),
-                          primaryColor,
-                        ],
+                        colors: [primaryColor.withOpacity(0.6), primaryColor],
                       ),
                       borderRadius: BorderRadius.circular(10),
                       boxShadow: [
@@ -853,10 +1335,7 @@ class _AnimatedProgressBar extends StatelessWidget {
                     decoration: BoxDecoration(
                       color: Colors.white,
                       shape: BoxShape.circle,
-                      border: Border.all(
-                        color: primaryColor,
-                        width: 3,
-                      ),
+                      border: Border.all(color: primaryColor, width: 3),
                       boxShadow: [
                         BoxShadow(
                           color: primaryColor.withOpacity(0.4),
@@ -896,9 +1375,15 @@ class _LiquidWavePainter extends CustomPainter {
     wave1Path.lineTo(0, baseHeight);
 
     for (double x = 0; x <= size.width; x++) {
-      final y = baseHeight +
-          math.sin((x / size.width * 2 * math.pi) + (wavePhase * 2 * math.pi)) * 6 +
-          math.sin((x / size.width * 4 * math.pi) + (wavePhase * 2 * math.pi * 1.5)) * 3;
+      final y =
+          baseHeight +
+          math.sin((x / size.width * 2 * math.pi) + (wavePhase * 2 * math.pi)) *
+              6 +
+          math.sin(
+                (x / size.width * 4 * math.pi) +
+                    (wavePhase * 2 * math.pi * 1.5),
+              ) *
+              3;
       wave1Path.lineTo(x, y);
     }
 
@@ -909,10 +1394,7 @@ class _LiquidWavePainter extends CustomPainter {
       ..shader = LinearGradient(
         begin: Alignment.topCenter,
         end: Alignment.bottomCenter,
-        colors: [
-          primaryColor.withOpacity(0.3),
-          primaryColor.withOpacity(0.5),
-        ],
+        colors: [primaryColor.withOpacity(0.3), primaryColor.withOpacity(0.5)],
       ).createShader(Rect.fromLTWH(0, 0, size.width, size.height));
 
     canvas.drawPath(wave1Path, wave1Paint);
@@ -922,9 +1404,18 @@ class _LiquidWavePainter extends CustomPainter {
     wave2Path.lineTo(0, baseHeight);
 
     for (double x = 0; x <= size.width; x++) {
-      final y = baseHeight +
-          math.sin((x / size.width * 2 * math.pi) + (wavePhase * 2 * math.pi) + math.pi) * 4 +
-          math.sin((x / size.width * 3 * math.pi) + (wavePhase * 2 * math.pi * 2)) * 2;
+      final y =
+          baseHeight +
+          math.sin(
+                (x / size.width * 2 * math.pi) +
+                    (wavePhase * 2 * math.pi) +
+                    math.pi,
+              ) *
+              4 +
+          math.sin(
+                (x / size.width * 3 * math.pi) + (wavePhase * 2 * math.pi * 2),
+              ) *
+              2;
       wave2Path.lineTo(x, y);
     }
 
@@ -935,10 +1426,7 @@ class _LiquidWavePainter extends CustomPainter {
       ..shader = LinearGradient(
         begin: Alignment.topCenter,
         end: Alignment.bottomCenter,
-        colors: [
-          primaryColor.withOpacity(0.7),
-          primaryColor,
-        ],
+        colors: [primaryColor.withOpacity(0.7), primaryColor],
       ).createShader(Rect.fromLTWH(0, 0, size.width, size.height));
 
     canvas.drawPath(wave2Path, wave2Paint);

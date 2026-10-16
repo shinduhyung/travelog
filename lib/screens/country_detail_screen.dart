@@ -32,6 +32,7 @@ import 'package:jidoapp/providers/economy_provider.dart';
 
 // Widgets
 import 'package:jidoapp/widgets/landmark_info_card.dart';
+import 'package:jidoapp/widgets/country_regions_section.dart';
 
 class CountryDetailScreen extends StatefulWidget {
   final Country country;
@@ -1732,6 +1733,13 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
       }
     }
 
+    // 주/도 지역 지도 — 지역 데이터가 없는 국가는 스스로 숨겨진다.
+    final regionsSection = CountryRegionsSection(
+      country: widget.country,
+      themeColor: themeColor,
+      header: _buildSectionHeader(context, 'Regions', Icons.map_outlined, themeColor),
+    );
+
     if (info == null) {
       return Container(
         margin: const EdgeInsets.only(bottom: 24),
@@ -1747,7 +1755,13 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
             ),
           ],
         ),
-        child: const Text('No additional info available.'),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            regionsSection,
+            const Text('No additional info available.'),
+          ],
+        ),
       );
     }
     return Container(
@@ -1768,15 +1782,7 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            _buildSectionHeader(context, 'General Info', Icons.info_outline, themeColor),
-            _buildInfoRow('Capital', info.capital),
-            _buildInfoRow('Official Language', info.officialLanguage),
-            _buildInfoRow('Currency', info.currency),
-            _buildInfoRow('Population', populationDisplay),
-            _buildInfoRow('Area', areaDisplay),
-            _buildInfoRow('GDP', gdpDisplay),
-            _buildInfoRow('GDP per Capita', gdpPerCapitaDisplay),
-
+            regionsSection,
             _buildSectionHeader(context, 'Major Cities', Icons.location_city, themeColor),
             ...info.majorCities.map((city) {
               final cityProvider = context.watch<CityProvider>();
@@ -1815,6 +1821,15 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
                 themeColor: themeColor,
               );
             }),
+
+            _buildSectionHeader(context, 'General Info', Icons.info_outline, themeColor),
+            _buildInfoRow('Capital', info.capital),
+            _buildInfoRow('Official Language', info.officialLanguage),
+            _buildInfoRow('Currency', info.currency),
+            _buildInfoRow('Population', populationDisplay),
+            _buildInfoRow('Area', areaDisplay),
+            _buildInfoRow('GDP', gdpDisplay),
+            _buildInfoRow('GDP per Capita', gdpPerCapitaDisplay),
 
             _buildSectionHeader(context, 'Country History', Icons.history_edu, themeColor),
             if (info.history.isEmpty)

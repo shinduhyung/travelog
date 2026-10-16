@@ -10,6 +10,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:crypto/crypto.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 import 'package:jidoapp/services/storage_service.dart';
+import 'package:jidoapp/services/country_regions_notice_service.dart';
 
 class AuthProvider extends ChangeNotifier {
   final FirebaseAuth _auth = FirebaseAuth.instance;
@@ -35,6 +36,8 @@ class AuthProvider extends ChangeNotifier {
   User? _user;
   bool _isAuthReady = false;
   bool _isSigningIn = false;
+  bool _isNewAccountForRegionsUpdate = false;
+  bool get isNewAccountForRegionsUpdate => _isNewAccountForRegionsUpdate;
 
   // 로그인 후 Provider들이 처리해야 할 액션을 담는 변수
   // 'upload': 로컬 데이터를 Firestore로 업로드 (케이스 1 - 새 계정)
@@ -61,6 +64,7 @@ class AuthProvider extends ChangeNotifier {
     print("🚀 AUTH CHANGED");
     print(" currentUser.uid = ${firebaseUser?.uid}");
 
+    if (firebaseUser == null) _isNewAccountForRegionsUpdate = false;
     _user = firebaseUser;
 
     if (firebaseUser != null) {
@@ -134,8 +138,30 @@ class AuthProvider extends ChangeNotifier {
     }
   }
 
+  /// Use Firebase account creation, not onboarding/history availability,
+  /// to exclude users who register after this feature ships.
+  Future<void> _recordRegionsNoticeEligibility(UserCredential credential) async {
+    _isNewAccountForRegionsUpdate = credential.additionalUserInfo?.isNewUser == true;
+    final user = credential.user;
+    if (!_isNewAccountForRegionsUpdate || user == null) return;
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setBool(CountryRegionsNoticeService.seenKey(user.uid), true);
+    try {
+      await _firestore.collection('users').doc(user.uid).set({
+        'countryRegionsNoticeV1': 'new_account',
+      }, SetOptions(merge: true)).timeout(const Duration(seconds: 5));
+    } catch (error) {
+      // Keep the local exclusion; Firestore can also flush the queued write
+      // when connectivity returns. Notice storage failure does not fail login.
+      debugPrint('[CountryRegionsNotice] New-account marker deferred: $error');
+    }
+  }
+
   // 🍎 Apple 로그인
   Future<void> signInWithApple() async {
+    if (_isSigningIn) return;
+    _isSigningIn = true;
+    notifyListeners();
     try {
       if (Platform.isAndroid) {
         final provider = OAuthProvider("apple.com");
@@ -145,6 +171,7 @@ class AuthProvider extends ChangeNotifier {
         final userCredential = await _auth.signInWithProvider(provider);
         if (userCredential.user != null) {
           await _prepareLoginAction(userCredential.user!.uid);
+          await _recordRegionsNoticeEligibility(userCredential);
           notifyListeners();
         }
       } else {
@@ -171,13 +198,17 @@ class AuthProvider extends ChangeNotifier {
           accessToken: appleCredential.authorizationCode,
         );
 
-        await _auth.signInWithCredential(credential);
+        final userCredential = await _auth.signInWithCredential(credential);
+        await _recordRegionsNoticeEligibility(userCredential);
       }
     } catch (e) {
       debugPrint("Error signing in with Apple: $e");
       _pendingLoginAction = null;
       _isHandlingLoginAction = false;
       rethrow;
+    } finally {
+      _isSigningIn = false;
+      notifyListeners();
     }
   }
 
@@ -218,6 +249,7 @@ class AuthProvider extends ChangeNotifier {
       );
 
       final userCredential = await _auth.signInWithCredential(credential);
+      await _recordRegionsNoticeEligibility(userCredential);
       print(" Firebase 로그인 성공: ${userCredential.user?.email}");
     } catch (e, st) {
       print("❌ Google 로그인 실패: $e");

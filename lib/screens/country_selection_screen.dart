@@ -1,10 +1,14 @@
 // lib/screens/country_selection_screen.dart
 
+import 'package:jidoapp/services/country_region_access.dart';
+import 'package:jidoapp/widgets/country_region_access_gate.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:jidoapp/models/country_model.dart';
-import 'package:jidoapp/models/visit_details_model.dart'; // GroupBy가 여기 있거나 map screen에 있을 수 있음
+import 'package:jidoapp/models/admin_region.dart';
+import 'package:jidoapp/providers/subregion_provider.dart';
+import 'package:jidoapp/widgets/country_region_dropdown.dart';
 import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/screens/countries_map_screen.dart'; // GroupBy enum 위치 확인 필요
 import 'package:jidoapp/screens/country_detail_screen.dart';
@@ -18,7 +22,8 @@ String _countryFlag(String isoA2) {
   if (isoA2.length != 2) return '';
   const base = 0x1F1E6 - 0x41;
   final chars = isoA2.toUpperCase().codeUnits;
-  return String.fromCharCode(base + chars[0]) + String.fromCharCode(base + chars[1]);
+  return String.fromCharCode(base + chars[0]) +
+      String.fromCharCode(base + chars[1]);
 }
 
 // 헤더 아이템 클래스
@@ -50,18 +55,33 @@ class _CountrySelectionScreenState extends State<CountrySelectionScreen> {
   String _searchQuery = '';
   late Set<String> _tempSelectedCountries;
   late List<dynamic> _displayList;
+  final Set<String> _expandedCountries = {};
+  final Map<String, Map<String, ({AdminRegion region, bool visited})>>
+  _regionChanges = {};
+
+  void _toggleRegionDraft(Country country, AdminRegion region, bool visited) {
+    setState(() {
+      _regionChanges.putIfAbsent(country.isoA3, () => {})[region.stableKey] = (
+        region: region,
+        visited: visited,
+      );
+    });
+  }
 
   // ✨ 민트 테마 컬러 정의
   final Color _mintPrimary = const Color(0xFF26A69A); // 메인 민트 (Teal 400)
-  final Color _mintLight = const Color(0xFFE0F2F1);   // 연한 배경용 민트 (Teal 50)
-  final Color _mintDark = const Color(0xFF00796B);    // 텍스트/강조용 진한 민트 (Teal 700)
+  final Color _mintLight = const Color(0xFFE0F2F1); // 연한 배경용 민트 (Teal 50)
+  final Color _mintDark = const Color(0xFF00796B); // 텍스트/강조용 진한 민트 (Teal 700)
 
   @override
   void initState() {
     super.initState();
     AdService.instance.setCountrySelectionActive();
     if (widget.isOnboarding) AdService.instance.setOnboardingActive();
-    _tempSelectedCountries = Provider.of<CountryProvider>(context, listen: false).visitedCountries.toSet();
+    _tempSelectedCountries = Provider.of<CountryProvider>(
+      context,
+      listen: false,
+    ).visitedCountries.toSet();
     _buildDisplayList();
   }
 
@@ -77,22 +97,37 @@ class _CountrySelectionScreenState extends State<CountrySelectionScreen> {
 
     final relevantCountries = _searchQuery.isEmpty
         ? widget.allCountries
-        : widget.allCountries.where((c) => c.name.toLowerCase().contains(_searchQuery.toLowerCase())).toList();
+        : widget.allCountries
+              .where(
+                (c) =>
+                    c.name.toLowerCase().contains(_searchQuery.toLowerCase()),
+              )
+              .toList();
 
     for (var country in relevantCountries) {
-      final key = (widget.groupBy == GroupBy.continent ? country.continent : country.subregion) ?? 'Unclassified';
+      final key =
+          (widget.groupBy == GroupBy.continent
+              ? country.continent
+              : country.subregion) ??
+          'Unclassified';
       groupedCountries.putIfAbsent(key, () => []).add(country);
     }
 
-    groupedCountries.forEach((key, value) => value.sort((a, b) => a.name.compareTo(b.name)));
+    groupedCountries.forEach(
+      (key, value) => value.sort((a, b) => a.name.compareTo(b.name)),
+    );
     final sortedGroupKeys = groupedCountries.keys.toList()..sort();
 
     _displayList = [];
     for (var key in sortedGroupKeys) {
       final countriesInGroup = groupedCountries[key]!;
-      final visitedCount = countriesInGroup.where((c) => _tempSelectedCountries.contains(c.name)).length;
+      final visitedCount = countriesInGroup
+          .where((c) => _tempSelectedCountries.contains(c.name))
+          .length;
       final totalCount = countriesInGroup.length;
-      final percent = totalCount > 0 ? (visitedCount / totalCount * 100).round() : 0;
+      final percent = totalCount > 0
+          ? (visitedCount / totalCount * 100).round()
+          : 0;
       final stats = '$visitedCount/$totalCount ($percent%)';
 
       _displayList.add(HeaderItem(key, stats));
@@ -118,19 +153,37 @@ class _CountrySelectionScreenState extends State<CountrySelectionScreen> {
         final bool? confirm = await showDialog<bool>(
           context: context,
           builder: (context) => AlertDialog(
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-            title: Text('Confirm Removal', style: GoogleFonts.poppins(fontWeight: FontWeight.bold, color: Colors.black87)),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20),
+            ),
+            title: Text(
+              'Confirm Removal',
+              style: GoogleFonts.poppins(
+                fontWeight: FontWeight.bold,
+                color: Colors.black87,
+              ),
+            ),
             content: Text(
-                'Are you sure you want to remove all $recordCount visit records for ${country.name}?',
-                style: GoogleFonts.poppins(color: Colors.black54)),
+              'Are you sure you want to remove all $recordCount visit records for ${country.name}?',
+              style: GoogleFonts.poppins(color: Colors.black54),
+            ),
             actions: [
               TextButton(
                 onPressed: () => Navigator.pop(context, false),
-                child: Text('Cancel', style: GoogleFonts.poppins(color: Colors.grey)),
+                child: Text(
+                  'Cancel',
+                  style: GoogleFonts.poppins(color: Colors.grey),
+                ),
               ),
               TextButton(
                 onPressed: () => Navigator.pop(context, true),
-                child: Text('Yes, Remove', style: GoogleFonts.poppins(color: Colors.redAccent, fontWeight: FontWeight.bold)),
+                child: Text(
+                  'Yes, Remove',
+                  style: GoogleFonts.poppins(
+                    color: Colors.redAccent,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
               ),
             ],
           ),
@@ -173,7 +226,10 @@ class _CountrySelectionScreenState extends State<CountrySelectionScreen> {
       appBar: AppBar(
         title: Text(
           'Select Countries',
-          style: GoogleFonts.poppins(fontWeight: FontWeight.w600, color: Colors.white),
+          style: GoogleFonts.poppins(
+            fontWeight: FontWeight.w600,
+            color: Colors.white,
+          ),
         ),
         backgroundColor: _mintPrimary, // 민트색 앱바
         elevation: 0,
@@ -196,7 +252,10 @@ class _CountrySelectionScreenState extends State<CountrySelectionScreen> {
                 prefixIcon: const Icon(Icons.search, color: Colors.grey),
                 filled: true,
                 fillColor: Colors.white,
-                contentPadding: const EdgeInsets.symmetric(vertical: 0, horizontal: 20),
+                contentPadding: const EdgeInsets.symmetric(
+                  vertical: 0,
+                  horizontal: 20,
+                ),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(30), // 완전 둥근 캡슐형
                   borderSide: BorderSide.none,
@@ -221,86 +280,111 @@ class _CountrySelectionScreenState extends State<CountrySelectionScreen> {
                 // 헤더
                 if (item is HeaderItem) {
                   return Padding(
-                    padding: const EdgeInsets.only(top: 24.0, bottom: 12.0, left: 8.0),
+                    padding: const EdgeInsets.only(
+                      top: 24.0,
+                      bottom: 12.0,
+                      left: 8.0,
+                    ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(item.title,
-                            style: GoogleFonts.poppins(
-                                fontSize: 15,
-                                fontWeight: FontWeight.bold,
-                                color: _mintDark)), // 진한 민트색 텍스트
+                        Text(
+                          item.title,
+                          style: GoogleFonts.poppins(
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                            color: _mintDark,
+                          ),
+                        ), // 진한 민트색 텍스트
                         Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 10,
+                            vertical: 4,
+                          ),
                           decoration: BoxDecoration(
                             color: _mintLight, // 연한 민트 배경
                             borderRadius: BorderRadius.circular(12),
                           ),
-                          child: Text(item.stats,
-                              style: GoogleFonts.poppins(
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.w600,
-                                  color: _mintPrimary)),
+                          child: Text(
+                            item.stats,
+                            style: GoogleFonts.poppins(
+                              fontSize: 12,
+                              fontWeight: FontWeight.w600,
+                              color: _mintPrimary,
+                            ),
+                          ),
                         ),
                       ],
                     ),
                   );
                 }
 
-                // 국가 카드
+                // Country selection remains separate from regional selection.
                 if (item is Country) {
                   final country = item;
-                  final isSelected = _tempSelectedCountries.contains(country.name);
-                  final isWishlisted = context.watch<CountryProvider>().wishlistedCountries.contains(country.name);
-
+                  final isSelected = _tempSelectedCountries.contains(
+                    country.name,
+                  );
+                  final expanded = _expandedCountries.contains(country.isoA3);
                   return Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 6.0),
-                    child: InkWell(
-                      onTap: () => _handleCountryToggle(country, !isSelected),
-                      borderRadius: BorderRadius.circular(16),
-                      child: AnimatedContainer(
-                        duration: const Duration(milliseconds: 200),
-                        decoration: BoxDecoration(
-                          // 선택 시: 연한 민트 배경 + 민트 테두리
-                          color: isSelected ? _mintLight.withOpacity(0.5) : Colors.white,
-                          borderRadius: BorderRadius.circular(16),
-                          border: Border.all(
-                            color: isSelected ? _mintPrimary : Colors.transparent,
-                            width: 1.5,
-                          ),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black.withOpacity(0.03),
-                              blurRadius: 8,
-                              offset: const Offset(0, 4),
-                            ),
-                          ],
+                    key: ValueKey(country.isoA3),
+                    padding: const EdgeInsets.symmetric(vertical: 6),
+                    child: AnimatedContainer(
+                      duration: const Duration(milliseconds: 200),
+                      decoration: BoxDecoration(
+                        color: isSelected
+                            ? _mintLight.withValues(alpha: 0.5)
+                            : Colors.white,
+                        borderRadius: BorderRadius.circular(16),
+                        border: Border.all(
+                          color: isSelected ? _mintPrimary : Colors.transparent,
+                          width: 1.5,
                         ),
-                        padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 12.0),
-                        child: Row(
-                          children: [
-                            // 체크박스 (민트 원형)
-                            Container(
-                              width: 24,
-                              height: 24,
-                              margin: const EdgeInsets.only(right: 16),
-                              decoration: BoxDecoration(
-                                color: isSelected ? _mintPrimary : Colors.white,
-                                shape: BoxShape.circle,
-                                border: Border.all(
-                                  color: isSelected ? _mintPrimary : Colors.grey.shade300,
-                                  width: 2,
-                                ),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withValues(alpha: 0.03),
+                            blurRadius: 8,
+                            offset: const Offset(0, 4),
+                          ),
+                        ],
+                      ),
+                      child: Column(
+                        children: [
+                          InkWell(
+                            onTap: () =>
+                                _handleCountryToggle(country, !isSelected),
+                            borderRadius: BorderRadius.circular(16),
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 12,
+                                vertical: 8,
                               ),
-                              child: isSelected
-                                  ? const Icon(Icons.check, size: 16, color: Colors.white)
-                                  : null,
-                            ),
-
-                            // 국기 + 이름
-                            Expanded(
                               child: Row(
                                 children: [
+                                  Container(
+                                    width: 24,
+                                    height: 24,
+                                    margin: const EdgeInsets.only(right: 12),
+                                    decoration: BoxDecoration(
+                                      color: isSelected
+                                          ? _mintPrimary
+                                          : Colors.white,
+                                      shape: BoxShape.circle,
+                                      border: Border.all(
+                                        color: isSelected
+                                            ? _mintPrimary
+                                            : Colors.grey.shade300,
+                                        width: 2,
+                                      ),
+                                    ),
+                                    child: isSelected
+                                        ? const Icon(
+                                            Icons.check,
+                                            size: 16,
+                                            color: Colors.white,
+                                          )
+                                        : null,
+                                  ),
                                   Text(
                                     _countryFlag(country.isoA2),
                                     style: const TextStyle(fontSize: 22),
@@ -311,37 +395,93 @@ class _CountrySelectionScreenState extends State<CountrySelectionScreen> {
                                       country.name,
                                       style: GoogleFonts.poppins(
                                         fontSize: 16,
-                                        fontWeight: isSelected ? FontWeight.w600 : FontWeight.w500,
-                                        color: isSelected ? _mintDark : Colors.black87,
+                                        fontWeight: isSelected
+                                            ? FontWeight.w600
+                                            : FontWeight.w500,
+                                        color: isSelected
+                                            ? _mintDark
+                                            : Colors.black87,
                                       ),
                                     ),
+                                  ),
+                                  IconButton(
+                                    icon: const Icon(Icons.book, size: 20),
+                                    color: Colors.grey.shade400,
+                                    tooltip: 'Details',
+                                    onPressed: () => Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (_) => CountryDetailScreen(
+                                          country: country,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  IconButton(
+                                    key: ValueKey('regions-${country.isoA3}'),
+                                    icon: Icon(
+                                      expanded
+                                          ? Icons.expand_less_rounded
+                                          : Icons.expand_more_rounded,
+                                    ),
+                                    color: expanded
+                                        ? _mintPrimary
+                                        : Colors.grey.shade400,
+                                    tooltip: expanded
+                                        ? 'Hide regions'
+                                        : 'Show regions',
+                                    onPressed: () {
+                                      if (!CountryRegionAccess.isUnlocked(
+                                        country.isoA2,
+                                      )) {
+                                        showCountryRegionsPremiumDialog(
+                                          context,
+                                        );
+                                        return;
+                                      }
+                                      setState(() {
+                                        if (expanded) {
+                                          _expandedCountries.remove(
+                                            country.isoA3,
+                                          );
+                                        } else {
+                                          _expandedCountries.add(country.isoA3);
+                                        }
+                                      });
+                                    },
                                   ),
                                 ],
                               ),
                             ),
-
-                            // 아이콘 버튼
-                            IconButton(
-                              icon: const Icon(Icons.book, size: 20),
-                              color: Colors.grey.shade400,
-                              tooltip: "Details",
-                              onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(builder: (context) => CountryDetailScreen(country: country)),
-                                );
-                              },
+                          ),
+                          if (expanded)
+                            Consumer<SubregionProvider>(
+                              builder: (context, visits, _) =>
+                                  CountryRegionDropdown(
+                                    key: ValueKey(
+                                      'region-list-${country.isoA3}',
+                                    ),
+                                    countryIsoA2: country.isoA2,
+                                    color: _mintPrimary,
+                                    isVisited: (region) =>
+                                        _regionChanges[country.isoA3]?[region
+                                                .stableKey]
+                                            ?.visited ??
+                                        visits.isRegionVisited(
+                                          country.isoA3,
+                                          region,
+                                        ),
+                                    onChanged: visits.isLoading
+                                        ? null
+                                        : (region, visited) =>
+                                              _toggleRegionDraft(
+                                                country,
+                                                region,
+                                                visited,
+                                              ),
+                                  ),
                             ),
-                            IconButton(
-                              icon: Icon(isWishlisted ? Icons.favorite : Icons.favorite_border, size: 20),
-                              color: isWishlisted ? Colors.red.shade400 : Colors.grey.shade400,
-                              tooltip: "Wishlist",
-                              onPressed: () {
-                                Provider.of<CountryProvider>(context, listen: false).toggleCountryWishlistStatus(country.name);
-                              },
-                            ),
-                          ],
-                        ),
+                        ],
                       ),
                     ),
                   );
@@ -357,7 +497,11 @@ class _CountrySelectionScreenState extends State<CountrySelectionScreen> {
             decoration: BoxDecoration(
               color: Colors.white,
               boxShadow: [
-                BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 10, offset: const Offset(0, -5)),
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.05),
+                  blurRadius: 10,
+                  offset: const Offset(0, -5),
+                ),
               ],
             ),
             child: SafeArea(
@@ -368,22 +512,33 @@ class _CountrySelectionScreenState extends State<CountrySelectionScreen> {
                       onPressed: () => Navigator.pop(context),
                       style: OutlinedButton.styleFrom(
                         padding: const EdgeInsets.symmetric(vertical: 16),
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(14),
+                        ),
                         side: BorderSide(color: Colors.grey.shade300),
                         foregroundColor: Colors.grey.shade600,
                       ),
-                      child: Text('Cancel', style: GoogleFonts.poppins(fontWeight: FontWeight.w500)),
+                      child: Text(
+                        'Cancel',
+                        style: GoogleFonts.poppins(fontWeight: FontWeight.w500),
+                      ),
                     ),
                   ),
                   const SizedBox(width: 16),
                   Expanded(
                     child: ElevatedButton(
                       onPressed: () async {
-                        final provider = Provider.of<CountryProvider>(context, listen: false);
+                        final provider = Provider.of<CountryProvider>(
+                          context,
+                          listen: false,
+                        );
                         final originalVisited = provider.visitedCountries;
 
-                        final countriesToAdd = _tempSelectedCountries.difference(originalVisited);
-                        final countriesToRemove = originalVisited.difference(_tempSelectedCountries);
+                        final countriesToAdd = _tempSelectedCountries
+                            .difference(originalVisited);
+                        final countriesToRemove = originalVisited.difference(
+                          _tempSelectedCountries,
+                        );
 
                         for (final countryName in countriesToAdd) {
                           provider.setVisitedStatus(countryName, true);
@@ -393,6 +548,15 @@ class _CountrySelectionScreenState extends State<CountrySelectionScreen> {
                           provider.setVisitedStatus(countryName, false);
                         }
 
+                        context.read<SubregionProvider>().setRegionVisits(
+                          _regionChanges.map(
+                            (iso, changes) => MapEntry(iso, {
+                              for (final change in changes.values)
+                                change.region: change.visited,
+                            }),
+                          ),
+                        );
+
                         // 리뷰 요청 조건:
                         // 1) 국가를 추가했을 때만
                         // 2) 추가 후 총 방문 국가 10개 이상
@@ -401,7 +565,8 @@ class _CountrySelectionScreenState extends State<CountrySelectionScreen> {
                           final newTotal = _tempSelectedCountries.length;
                           if (newTotal >= 10) {
                             final prefs = await SharedPreferences.getInstance();
-                            final alreadyRequested = prefs.getBool('review_requested') ?? false;
+                            final alreadyRequested =
+                                prefs.getBool('review_requested') ?? false;
                             if (!alreadyRequested) {
                               final inAppReview = InAppReview.instance;
                               if (await inAppReview.isAvailable()) {
@@ -421,8 +586,10 @@ class _CountrySelectionScreenState extends State<CountrySelectionScreen> {
                           final newTotal = _tempSelectedCountries.length;
                           if (newTotal >= 5) {
                             final prefs = await SharedPreferences.getInstance();
-                            final alreadyShown = prefs.getBool('promo_popup_shown') ?? false;
-                            final isPremium = SubscriptionService.instance.isPremium;
+                            final alreadyShown =
+                                prefs.getBool('promo_popup_shown') ?? false;
+                            final isPremium =
+                                SubscriptionService.instance.isPremium;
                             if (!alreadyShown && !isPremium) {
                               await prefs.setBool('promo_popup_shown', true);
                               if (context.mounted) {
@@ -442,11 +609,16 @@ class _CountrySelectionScreenState extends State<CountrySelectionScreen> {
                         foregroundColor: Colors.white,
                         padding: const EdgeInsets.symmetric(vertical: 16),
                         elevation: 2,
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(14),
+                        ),
                       ),
                       child: Text(
                         'Apply Changes',
-                        style: GoogleFonts.poppins(fontWeight: FontWeight.w600, fontSize: 16),
+                        style: GoogleFonts.poppins(
+                          fontWeight: FontWeight.w600,
+                          fontSize: 16,
+                        ),
                       ),
                     ),
                   ),
@@ -478,7 +650,11 @@ class _PromoDialog extends StatelessWidget {
               alignment: Alignment.topRight,
               child: GestureDetector(
                 onTap: () => Navigator.of(context).pop(),
-                child: const Icon(Icons.close_rounded, size: 20, color: Color(0xFF999999)),
+                child: const Icon(
+                  Icons.close_rounded,
+                  size: 20,
+                  color: Color(0xFF999999),
+                ),
               ),
             ),
             const SizedBox(height: 4),

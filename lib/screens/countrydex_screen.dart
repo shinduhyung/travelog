@@ -1,14 +1,27 @@
 // lib/screens/countrydex_screen.dart
 
+import 'package:jidoapp/services/country_region_access.dart';
+import 'package:jidoapp/services/subscription_service.dart';
+import 'package:jidoapp/widgets/country_region_access_gate.dart';
 import 'package:flutter/material.dart';
 import 'package:jidoapp/models/country_model.dart';
 import 'package:jidoapp/models/visit_details_model.dart';
+import 'package:jidoapp/models/admin_region.dart';
 import 'package:jidoapp/providers/country_provider.dart';
+import 'package:jidoapp/providers/subregion_provider.dart';
+import 'package:jidoapp/services/admin_region_repository.dart';
 import 'package:jidoapp/screens/country_detail_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-enum SortOption { alphabet, continent, visitCount, visitOrder, visitDuration, favorites }
+enum SortOption {
+  alphabet,
+  continent,
+  visitCount,
+  visitOrder,
+  visitDuration,
+  favorites,
+}
 
 class CountryDexScreen extends StatefulWidget {
   const CountryDexScreen({super.key});
@@ -37,10 +50,23 @@ class _CountryDexScreenState extends State<CountryDexScreen> {
   static const Color mintBackground = Color(0xFFF0FDFC);
   static const Color mintCard = Color(0xFFE0F9F6);
 
+  // 국가(iso_a2) → 주/도 목록. 이름 옆 "x/y" 방문 지역 표시용.
+  Map<String, List<AdminRegion>> _regionsByIsoA2 = {};
+
   @override
   void initState() {
     super.initState();
     _loadSortOption(); // Load saved sort option
+    AdminRegionRepository.loadAll().then((regions) {
+      if (mounted) {
+        setState(
+          () => _regionsByIsoA2 = regions.map(
+            (iso, list) =>
+                MapEntry(iso, list.where((r) => !r.isWholeArea).toList()),
+          ),
+        );
+      }
+    });
   }
 
   @override
@@ -52,8 +78,10 @@ class _CountryDexScreenState extends State<CountryDexScreen> {
   // Function to load saved sort options
   Future<void> _loadSortOption() async {
     final prefs = await SharedPreferences.getInstance();
-    final defaultSortIndex = prefs.getInt(_sortOptionKey) ?? SortOption.visitCount.index;
-    final defaultVisitOrderDirection = prefs.getBool(_visitOrderDirectionKey) ?? true;
+    final defaultSortIndex =
+        prefs.getInt(_sortOptionKey) ?? SortOption.visitCount.index;
+    final defaultVisitOrderDirection =
+        prefs.getBool(_visitOrderDirectionKey) ?? true;
 
     if (mounted) {
       setState(() {
@@ -81,8 +109,7 @@ class _CountryDexScreenState extends State<CountryDexScreen> {
     }
     int totalDays = 0;
     for (var range in details.visitDateRanges) {
-
-      if(range.userDefinedDuration != null) {
+      if (range.userDefinedDuration != null) {
         totalDays += range.userDefinedDuration!;
         continue;
       }
@@ -90,7 +117,9 @@ class _CountryDexScreenState extends State<CountryDexScreen> {
       final arrival = range.arrival;
       final departure = range.departure;
 
-      if (arrival != null && departure != null && !departure.isBefore(arrival)) {
+      if (arrival != null &&
+          departure != null &&
+          !departure.isBefore(arrival)) {
         totalDays += departure.difference(arrival).inDays + 1;
       }
     }
@@ -139,7 +168,9 @@ class _CountryDexScreenState extends State<CountryDexScreen> {
             ),
             child: PopupMenuButton<SortOption>(
               icon: const Icon(Icons.tune_rounded, color: mintDark),
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(16),
+              ),
               onSelected: (SortOption result) {
                 setState(() => _sortOption = result);
                 _saveSortOption(result);
@@ -149,7 +180,10 @@ class _CountryDexScreenState extends State<CountryDexScreen> {
                 _buildMenuItem(SortOption.continent, '🌍 By Continent'),
                 _buildMenuItem(SortOption.visitCount, '🎯 By Number of Visits'),
                 _buildMenuItem(SortOption.visitOrder, '📅 By First Visit Date'),
-                _buildMenuItem(SortOption.visitDuration, '⏱️ By Total Visit Days'),
+                _buildMenuItem(
+                  SortOption.visitDuration,
+                  '⏱️ By Total Visit Days',
+                ),
                 _buildMenuItem(SortOption.favorites, '❤️ Favorites (Wishlist)'),
               ],
             ),
@@ -179,14 +213,14 @@ class _CountryDexScreenState extends State<CountryDexScreen> {
               prefixIcon: Icon(Icons.search, color: mintDark),
               suffixIcon: _searchQuery.isNotEmpty
                   ? IconButton(
-                icon: Icon(Icons.clear, color: Colors.grey.shade500),
-                onPressed: () {
-                  _searchController.clear(); // Clear the text visually
-                  setState(() {
-                    _searchQuery = ''; // Reset the search query state
-                  });
-                },
-              )
+                      icon: Icon(Icons.clear, color: Colors.grey.shade500),
+                      onPressed: () {
+                        _searchController.clear(); // Clear the text visually
+                        setState(() {
+                          _searchQuery = ''; // Reset the search query state
+                        });
+                      },
+                    )
                   : null,
               filled: true,
               fillColor: Colors.white,
@@ -194,7 +228,10 @@ class _CountryDexScreenState extends State<CountryDexScreen> {
                 borderRadius: BorderRadius.circular(16),
                 borderSide: BorderSide.none,
               ),
-              contentPadding: const EdgeInsets.symmetric(vertical: 0, horizontal: 20),
+              contentPadding: const EdgeInsets.symmetric(
+                vertical: 0,
+                horizontal: 20,
+              ),
             ),
           ),
         ),
@@ -229,11 +266,17 @@ class _CountryDexScreenState extends State<CountryDexScreen> {
               segments: const [
                 ButtonSegment(
                   value: true,
-                  label: Text('Newest First', style: TextStyle(fontWeight: FontWeight.w600)),
+                  label: Text(
+                    'Newest First',
+                    style: TextStyle(fontWeight: FontWeight.w600),
+                  ),
                 ),
                 ButtonSegment(
                   value: false,
-                  label: Text('Oldest First', style: TextStyle(fontWeight: FontWeight.w600)),
+                  label: Text(
+                    'Oldest First',
+                    style: TextStyle(fontWeight: FontWeight.w600),
+                  ),
                 ),
               ],
               selected: {_visitOrderIsNewestFirst},
@@ -276,21 +319,36 @@ class _CountryDexScreenState extends State<CountryDexScreen> {
 
               // 2nd Filtering & Sorting: Apply SortOption
               if (_sortOption == SortOption.favorites) {
-                final Set<String> wishlistedNames = provider.wishlistedCountries;
+                final Set<String> wishlistedNames =
+                    provider.wishlistedCountries;
                 countriesToDisplay = countriesToDisplay
                     .where((c) => wishlistedNames.contains(c.name))
                     .toList();
                 countriesToDisplay.sort((a, b) => a.name.compareTo(b.name));
-                return _buildListView(countriesToDisplay, visitDetailsMap, homeCountryIso);
+                return _buildListView(
+                  countriesToDisplay,
+                  visitDetailsMap,
+                  homeCountryIso,
+                );
               }
 
               if (_sortOption != SortOption.alphabet) {
                 // Grouped Sorting
-                return _buildGroupedView(context, provider, countriesToDisplay, _sortOption, homeCountryIso);
+                return _buildGroupedView(
+                  context,
+                  provider,
+                  countriesToDisplay,
+                  _sortOption,
+                  homeCountryIso,
+                );
               } else {
                 // Alphabetical Sorting
                 countriesToDisplay.sort((a, b) => a.name.compareTo(b.name));
-                return _buildListView(countriesToDisplay, visitDetailsMap, homeCountryIso);
+                return _buildListView(
+                  countriesToDisplay,
+                  visitDetailsMap,
+                  homeCountryIso,
+                );
               }
             },
           ),
@@ -336,7 +394,13 @@ class _CountryDexScreenState extends State<CountryDexScreen> {
     );
   }
 
-  Widget _buildGroupedView(BuildContext context, CountryProvider provider, List<Country> countries, SortOption sortOption, String? homeCountryIso) {
+  Widget _buildGroupedView(
+    BuildContext context,
+    CountryProvider provider,
+    List<Country> countries,
+    SortOption sortOption,
+    String? homeCountryIso,
+  ) {
     final Map<String, List<Country>> groupedData = {};
 
     switch (sortOption) {
@@ -358,10 +422,14 @@ class _CountryDexScreenState extends State<CountryDexScreen> {
           } else {
             final count = details?.visitCount ?? 0;
             final String key;
-            if (count >= 5) key = '5+ Visits';
-            else if (count >= 2) key = '2 - 4 Visits';
-            else if (count == 1) key = '1 Visit';
-            else key = 'Unvisited';
+            if (count >= 5)
+              key = '5+ Visits';
+            else if (count >= 2)
+              key = '2 - 4 Visits';
+            else if (count == 1)
+              key = '1 Visit';
+            else
+              key = 'Unvisited';
             groupedData.putIfAbsent(key, () => []).add(country);
           }
         }
@@ -399,7 +467,9 @@ class _CountryDexScreenState extends State<CountryDexScreen> {
 
       case SortOption.visitDuration:
         for (var country in countries) {
-          final totalDays = _calculateTotalVisitDays(provider.visitDetails[country.name]);
+          final totalDays = _calculateTotalVisitDays(
+            provider.visitDetails[country.name],
+          );
           final String key;
           if (totalDays >= 30) {
             key = '30+ days';
@@ -427,8 +497,14 @@ class _CountryDexScreenState extends State<CountryDexScreen> {
         groupTitles.sort();
         break;
       case SortOption.visitCount:
-      // 수정됨: Living / Lived를 맨 앞에 추가
-        const order = ['Living / Lived', '5+ Visits', '2 - 4 Visits', '1 Visit', 'Unvisited'];
+        // 수정됨: Living / Lived를 맨 앞에 추가
+        const order = [
+          'Living / Lived',
+          '5+ Visits',
+          '2 - 4 Visits',
+          '1 Visit',
+          'Unvisited',
+        ];
         groupTitles.sort((a, b) {
           final indexA = order.indexOf(a);
           final indexB = order.indexOf(b);
@@ -452,8 +528,17 @@ class _CountryDexScreenState extends State<CountryDexScreen> {
         });
         break;
       case SortOption.visitDuration:
-        const order = ['30+ days', '10-29 days', '4-9 days', '2-3 days', '1 day', '0 or Unknown'];
-        groupTitles.sort((a, b) => order.indexOf(a).compareTo(order.indexOf(b)));
+        const order = [
+          '30+ days',
+          '10-29 days',
+          '4-9 days',
+          '2-3 days',
+          '1 day',
+          '0 or Unknown',
+        ];
+        groupTitles.sort(
+          (a, b) => order.indexOf(a).compareTo(order.indexOf(b)),
+        );
         break;
       default:
         break;
@@ -477,14 +562,15 @@ class _CountryDexScreenState extends State<CountryDexScreen> {
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
               decoration: BoxDecoration(
                 gradient: LinearGradient(
-                  colors: [mintPrimary.withOpacity(0.1), mintLight.withOpacity(0.05)],
+                  colors: [
+                    mintPrimary.withOpacity(0.1),
+                    mintLight.withOpacity(0.05),
+                  ],
                   begin: Alignment.centerLeft,
                   end: Alignment.centerRight,
                 ),
                 borderRadius: BorderRadius.circular(12),
-                border: Border(
-                  left: BorderSide(color: mintPrimary, width: 4),
-                ),
+                border: Border(left: BorderSide(color: mintPrimary, width: 4)),
               ),
               child: Row(
                 children: [
@@ -498,7 +584,10 @@ class _CountryDexScreenState extends State<CountryDexScreen> {
                   ),
                   const SizedBox(width: 8),
                   Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 8,
+                      vertical: 2,
+                    ),
                     decoration: BoxDecoration(
                       color: mintPrimary,
                       borderRadius: BorderRadius.circular(12),
@@ -515,7 +604,12 @@ class _CountryDexScreenState extends State<CountryDexScreen> {
                 ],
               ),
             ),
-            _buildListView(groupCountries, provider.visitDetails, homeCountryIso, isShrunk: true),
+            _buildListView(
+              groupCountries,
+              provider.visitDetails,
+              homeCountryIso,
+              isShrunk: true,
+            ),
           ],
         );
       },
@@ -523,11 +617,11 @@ class _CountryDexScreenState extends State<CountryDexScreen> {
   }
 
   Widget _buildListView(
-      List<Country> countries,
-      Map<String, VisitDetails> visitDetailsMap,
-      String? homeCountryIso,
-      {bool isShrunk = false}
-      ) {
+    List<Country> countries,
+    Map<String, VisitDetails> visitDetailsMap,
+    String? homeCountryIso, {
+    bool isShrunk = false,
+  }) {
     return ListView.builder(
       padding: const EdgeInsets.symmetric(horizontal: 12),
       shrinkWrap: isShrunk,
@@ -541,8 +635,13 @@ class _CountryDexScreenState extends State<CountryDexScreen> {
     );
   }
 
-  Widget _buildListTile(Country country, VisitDetails? details, String? homeCountryIso) {
-    final flagUrl = 'https://flagcdn.com/w160/${country.isoA2.toLowerCase()}.png';
+  Widget _buildListTile(
+    Country country,
+    VisitDetails? details,
+    String? homeCountryIso,
+  ) {
+    final flagUrl =
+        'https://flagcdn.com/w160/${country.isoA2.toLowerCase()}.png';
 
     // Status checks
     final isHome = homeCountryIso == country.isoA3;
@@ -559,7 +658,9 @@ class _CountryDexScreenState extends State<CountryDexScreen> {
         color: Colors.white,
         borderRadius: BorderRadius.circular(16),
         border: Border.all(
-          color: (isVisited || isHome || isLived) ? mintPrimary.withOpacity(0.3) : Colors.grey.shade200,
+          color: (isVisited || isHome || isLived)
+              ? mintPrimary.withOpacity(0.3)
+              : Colors.grey.shade200,
           width: (isVisited || isHome || isLived) ? 2 : 1,
         ),
         boxShadow: [
@@ -596,7 +697,10 @@ class _CountryDexScreenState extends State<CountryDexScreen> {
                     height: 48,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      border: Border.all(color: Colors.grey.shade300, width: 1.5),
+                      border: Border.all(
+                        color: Colors.grey.shade300,
+                        width: 1.5,
+                      ),
                       boxShadow: [
                         BoxShadow(
                           color: Colors.black.withOpacity(0.1),
@@ -607,7 +711,9 @@ class _CountryDexScreenState extends State<CountryDexScreen> {
                     ),
                     clipBehavior: Clip.antiAlias,
                     child: Opacity(
-                      opacity: isVisited || isWishlisted || isHome || isLived ? 1.0 : 0.5,
+                      opacity: isVisited || isWishlisted || isHome || isLived
+                          ? 1.0
+                          : 0.5,
                       child: Image.network(
                         flagUrl,
                         fit: BoxFit.cover,
@@ -621,7 +727,11 @@ class _CountryDexScreenState extends State<CountryDexScreen> {
                           );
                         },
                         errorBuilder: (context, error, stackTrace) {
-                          return Icon(Icons.flag_outlined, color: Colors.grey[400], size: 28);
+                          return Icon(
+                            Icons.flag_outlined,
+                            color: Colors.grey[400],
+                            size: 28,
+                          );
                         },
                       ),
                     ),
@@ -643,11 +753,21 @@ class _CountryDexScreenState extends State<CountryDexScreen> {
                               style: TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.bold,
-                                color: (isVisited || isHome || isLived) ? Colors.black87 : Colors.grey.shade700,
+                                color: (isVisited || isHome || isLived)
+                                    ? Colors.black87
+                                    : Colors.grey.shade700,
                               ),
                               overflow: TextOverflow.ellipsis,
                             ),
                           ),
+                          if (_regionsByIsoA2[country.isoA2]?.isNotEmpty ??
+                              false) ...[
+                            const SizedBox(width: 6),
+                            _buildRegionCountChip(
+                              country,
+                              _regionsByIsoA2[country.isoA2]!,
+                            ),
+                          ],
                           if (rating > 0) ...[
                             const SizedBox(width: 8),
                             _buildStarRating(rating),
@@ -678,82 +798,102 @@ class _CountryDexScreenState extends State<CountryDexScreen> {
                             )
                           // 3. Visit Record (Only shown if NOT Home AND NOT Lived)
                           else if (isVisited && visitCount > 0)
-                              Container(
-                                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                                decoration: BoxDecoration(
-                                  gradient: LinearGradient(
-                                    colors: [mintPrimary.withOpacity(0.2), mintLight.withOpacity(0.1)],
-                                  ),
-                                  borderRadius: BorderRadius.circular(8),
+                            Container(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 10,
+                                vertical: 4,
+                              ),
+                              decoration: BoxDecoration(
+                                gradient: LinearGradient(
+                                  colors: [
+                                    mintPrimary.withOpacity(0.2),
+                                    mintLight.withOpacity(0.1),
+                                  ],
                                 ),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [
-                                    Icon(Icons.check_circle, color: mintDark, size: 14),
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  Icon(
+                                    Icons.check_circle,
+                                    color: mintDark,
+                                    size: 14,
+                                  ),
+                                  const SizedBox(width: 4),
+                                  Text(
+                                    '$visitCount time${visitCount > 1 ? 's' : ''}',
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                      color: mintDark,
+                                      fontWeight: FontWeight.w600,
+                                    ),
+                                  ),
+                                  if (totalDays > 0) ...[
                                     const SizedBox(width: 4),
                                     Text(
-                                      '$visitCount time${visitCount > 1 ? 's' : ''}',
+                                      '• $totalDays days',
                                       style: TextStyle(
                                         fontSize: 12,
                                         color: mintDark,
                                         fontWeight: FontWeight.w600,
                                       ),
                                     ),
-                                    if (totalDays > 0) ...[
-                                      const SizedBox(width: 4),
-                                      Text(
-                                        '• $totalDays days',
-                                        style: TextStyle(
-                                          fontSize: 12,
-                                          color: mintDark,
-                                          fontWeight: FontWeight.w600,
-                                        ),
-                                      ),
-                                    ],
                                   ],
-                                ),
-                              )
-                            // 4. Wishlisted
-                            else if (isWishlisted && !isVisited)
-                                Container(
-                                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                                  decoration: BoxDecoration(
-                                    color: Colors.pink.shade50,
-                                    borderRadius: BorderRadius.circular(8),
+                                ],
+                              ),
+                            )
+                          // 4. Wishlisted
+                          else if (isWishlisted && !isVisited)
+                            Container(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 10,
+                                vertical: 4,
+                              ),
+                              decoration: BoxDecoration(
+                                color: Colors.pink.shade50,
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  Icon(
+                                    Icons.favorite,
+                                    color: Colors.pink.shade400,
+                                    size: 14,
                                   ),
-                                  child: Row(
-                                    mainAxisSize: MainAxisSize.min,
-                                    children: [
-                                      Icon(Icons.favorite, color: Colors.pink.shade400, size: 14),
-                                      const SizedBox(width: 4),
-                                      Text(
-                                        'Wishlisted',
-                                        style: TextStyle(
-                                          fontSize: 12,
-                                          color: Colors.pink.shade700,
-                                          fontWeight: FontWeight.w600,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                )
-                              // 5. Unvisited
-                              else
-                                Container(
-                                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                                  decoration: BoxDecoration(
-                                    color: Colors.grey.shade100,
-                                    borderRadius: BorderRadius.circular(8),
-                                  ),
-                                  child: Text(
-                                    'Unvisited',
+                                  const SizedBox(width: 4),
+                                  Text(
+                                    'Wishlisted',
                                     style: TextStyle(
                                       fontSize: 12,
-                                      color: Colors.grey.shade600,
+                                      color: Colors.pink.shade700,
                                       fontWeight: FontWeight.w600,
                                     ),
                                   ),
+                                ],
+                              ),
+                            )
+                          // 5. Unvisited
+                          else
+                            Container(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 10,
+                                vertical: 4,
+                              ),
+                              decoration: BoxDecoration(
+                                color: Colors.grey.shade100,
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                              child: Text(
+                                'Unvisited',
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  color: Colors.grey.shade600,
+                                  fontWeight: FontWeight.w600,
                                 ),
+                              ),
+                            ),
                         ],
                       ),
                     ],
@@ -778,6 +918,71 @@ class _CountryDexScreenState extends State<CountryDexScreen> {
           ),
         ),
       ),
+    );
+  }
+
+  // 방문한 주/도 수 "x/y" — 0개면 회색, 1개 이상이면 민트색
+  Widget _buildRegionCountChip(Country country, List<AdminRegion> regions) {
+    return AnimatedBuilder(
+      animation: SubscriptionService.instance,
+      builder: (context, _) {
+        if (!CountryRegionAccess.isUnlocked(country.isoA2)) {
+          return InkWell(
+            onTap: () => showCountryRegionsPremiumDialog(context),
+            child: const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Icon(Icons.lock_outline_rounded, size: 12),
+                  SizedBox(width: 3),
+                  Text('Premium', style: TextStyle(fontSize: 11)),
+                ],
+              ),
+            ),
+          );
+        }
+        return _buildUnlockedRegionCountChip(country, regions);
+      },
+    );
+  }
+
+  Widget _buildUnlockedRegionCountChip(
+    Country country,
+    List<AdminRegion> regions,
+  ) {
+    return Selector<SubregionProvider, int>(
+      selector: (_, provider) =>
+          provider.visitedRegionCount(country.isoA3, regions),
+      builder: (context, visited, _) {
+        final active = visited > 0;
+        return Container(
+          padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+          decoration: BoxDecoration(
+            color: active ? mintCard : Colors.grey.shade100,
+            borderRadius: BorderRadius.circular(6),
+          ),
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Icon(
+                Icons.map_outlined,
+                size: 12,
+                color: active ? mintDark : Colors.grey.shade500,
+              ),
+              const SizedBox(width: 3),
+              Text(
+                '$visited/${regions.length}',
+                style: TextStyle(
+                  fontSize: 11,
+                  fontWeight: FontWeight.w700,
+                  color: active ? mintDark : Colors.grey.shade500,
+                ),
+              ),
+            ],
+          ),
+        );
+      },
     );
   }
 

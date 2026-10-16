@@ -2,7 +2,7 @@ name: jidoapp
 description: "A new Flutter project."
 publish_to: 'none'
 
-version: 1.0.1+90
+version: 1.0.1+91
 
 environment:
   sdk: ^3.8.0
@@ -121,6 +121,9 @@ flutter:
   assets:
     - .env
     - assets/custom.geo.json
+    - assets/admin1_regions.geojson
+    - assets/admin1_coverage.json
+    - assets/admin1_sources.txt
     - assets/area_data.json
     - assets/climate_data.json
     - assets/geography_data.json

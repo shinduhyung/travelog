@@ -1,0 +1,19 @@
+Made with Natural Earth (public domain).
+https://www.naturalearthdata.com/
+https://www.naturalearthdata.com/about/terms-of-use/
+
+Supplementary boundaries: geoBoundaries, William & Mary geoLab and community contributors.
+https://www.geoboundaries.org/
+Runfola, D. et al. (2020), geoBoundaries: A global database of political administrative boundaries. PLoS ONE 15(4): e0231866.
+https://doi.org/10.1371/journal.pone.0231866
+
+Kiribati and Tuvalu: OpenStreetMap contributors, Wambacher, via geoBoundaries; boundaries represented in 2017. Open Data Commons Open Database License 1.0 (ODbL).
+https://www.openstreetmap.org/copyright
+https://opendatacommons.org/licenses/odbl/1-0/
+These adapted country boundary datasets remain available under ODbL 1.0. They are included in the bundled admin1_regions.geojson; filter properties.iso_a2 = KI or TV to extract them. Original downloadable datasets are linked in admin1_coverage.json and tool/admin1_data.md.
+
+Niue: Pacific Data Hub, via geoBoundaries; boundaries represented in 2020. Creative Commons Attribution 4.0 International (CC BY 4.0).
+https://pacificdata.org/data/dataset/2011_niu_phc_admin_boundaries
+https://creativecommons.org/licenses/by/4.0/
+
+Changes: schema normalized to this app; Natural Earth boundaries simplified with mapshaper (8% keep-shapes, precision 0.0001), except the original 30 countries which are preserved. Supplementary data uses geoBoundaries simplified geometry. Duplicate codes for new countries have distinct storage keys. Whole-area outlines are explicitly marked and are not counted as subdivisions. This combined file is a collection of datasets; underlying country datasets retain their respective licenses.

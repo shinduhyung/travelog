@@ -6,6 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:jidoapp/models/country_model.dart';
+import 'package:jidoapp/widgets/visited_world_map_layer.dart';
 import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/screens/country_selection_screen.dart';
 import 'package:latlong2/latlong.dart';
@@ -91,11 +92,13 @@ enum GroupBy { continent, subregion }
 
 class CountriesMapScreen extends StatefulWidget {
   final String? region;
+  final bool initialShowRegions;
   final List<HighlightGroup>? highlightGroups;
 
   const CountriesMapScreen({
     super.key,
     this.region,
+    this.initialShowRegions = false,
     this.highlightGroups,
   });
 
@@ -106,6 +109,7 @@ class CountriesMapScreen extends StatefulWidget {
 class _CountriesMapScreenState extends State<CountriesMapScreen> {
   final MapController _mapController = MapController();
   bool _useWhiteBorders = false;
+  bool _showRegions = false;
 
   // --- 색상 설정 관련 상태 변수 ---
   late CountriesColorMode _colorMode;
@@ -147,6 +151,7 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
   @override
   void initState() {
     super.initState();
+    _showRegions = widget.initialShowRegions;
 
     _isHighlightMode = widget.highlightGroups != null && widget.highlightGroups!.isNotEmpty;
     if (_isHighlightMode) {
@@ -397,9 +402,9 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
   }
 
   // 🔥 [수정됨] 색상 결정 로직 개선
-  Color _getPolygonColor(Country country, CountryProvider provider) {
+  Color _getPolygonColor(Country country, CountryProvider provider, {bool forceVisited = false}) {
     final details = provider.visitDetails[country.name];
-    final bool isVisited = details?.isVisited ?? false;
+    final bool isVisited = forceVisited || (details?.isVisited ?? false);
     final bool isWishlisted = details?.isWishlisted ?? false;
     final bool isHome = provider.homeCountryIsoA3 == country.isoA3;
     final bool hasLived = details?.hasLived ?? false;
@@ -414,7 +419,7 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
 
     // 2. Wishlist Mode: 방문 여부 무시, 오직 위시리스트 여부만 체크
     if (_colorMode == CountriesColorMode.wishlist) {
-      if (isWishlisted) {
+      if (forceVisited || isWishlisted) {
         return _wishlistColor;
       }
       return Colors.grey.withOpacity(0.35);
@@ -432,7 +437,7 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
           ).color;
           break;
         case CountriesColorMode.byDuration:
-          if (details!.visitDateRanges.any((range) => range.isDurationUnknown)) {
+          if (details == null || details.visitDateRanges.any((range) => range.isDurationUnknown)) {
             baseColor = _unknownDurationColor;
           } else {
             int totalDays = details.totalDurationInDays();
@@ -609,18 +614,32 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
           FlutterMap(
             mapController: _mapController,
             options: const MapOptions(
+              backgroundColor: Colors.transparent,
               interactionOptions: InteractionOptions(
                 flags: InteractiveFlag.drag | InteractiveFlag.pinchZoom | InteractiveFlag.doubleTapZoom,
               ),
             ),
             children: [
-              TileLayer(urlTemplate: '', backgroundColor: Colors.transparent),
               Builder(
                 builder: (context) {
                   final Map<String, HighlightGroup> highlightMap = _isHighlightMode ? { for (var g in _currentHighlightGroups) for (var c in g.countryCodes) c: g } : {};
 
                   final isWorldView = widget.region == null;
                   final countriesForThisView = isWorldView ? provider.allCountries : provider.allCountries.where((c) => c.continent == widget.region).toList();
+                  if (_showRegions) {
+                    return VisitedWorldMapLayer(
+                      countries: countriesForThisView,
+                      visitedCountries: provider.visitedCountries,
+                      continentColors: provider.continentColors,
+                      showRegions: true,
+                      borderColor: _useWhiteBorders ? Colors.white70 : Colors.black26,
+                      unvisitedColor: _showUnvisited ? Colors.grey.withValues(alpha: 0.35) : Colors.transparent,
+                      showUnvisitedRegions: _showUnvisited,
+                      regionColor: (country) => _isHighlightMode
+                          ? highlightMap[country.isoA3]?.color ?? Colors.grey
+                          : _getPolygonColor(country, provider, forceVisited: true),
+                    );
+                  }
                   final List<Polygon> polygonsToDraw = [];
 
                   for (var country in countriesForThisView) {
@@ -707,6 +726,12 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
                       Container(width: 1, height: 20, color: Colors.grey.withOpacity(0.3), margin: const EdgeInsets.symmetric(horizontal: 4)),
 
                       _buildIconButton(
+                        icon: Icons.swap_horiz_rounded,
+                        selected: _showRegions,
+                        onPressed: () => setState(() => _showRegions = !_showRegions),
+                        tooltip: _showRegions ? 'Show visited countries' : 'Show visited regions',
+                      ),
+                      _buildIconButton(
                         icon: Icons.settings_rounded,
                         onPressed: _isHighlightMode ? _showHighlightColorSettingsDialog : _showColorSettingsDialog,
                         tooltip: 'Settings',
@@ -771,9 +796,9 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
     );
   }
 
-  Widget _buildIconButton({required IconData icon, required VoidCallback onPressed, required String tooltip}) {
+  Widget _buildIconButton({required IconData icon, required VoidCallback onPressed, required String tooltip, bool selected = false}) {
     return IconButton(
-      icon: Icon(icon, size: 22, color: Colors.grey.shade800),
+      icon: Icon(icon, size: 22, color: selected ? Colors.teal : Colors.grey.shade800),
       onPressed: onPressed,
       tooltip: tooltip,
       visualDensity: VisualDensity.compact,
