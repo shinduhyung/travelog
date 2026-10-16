@@ -13,6 +13,10 @@ admin.initializeApp();
 // exports.getFlightPrice = flightFunctions.getFlightPrice;
 // exports.getFlightBookingLink = flightFunctions.getFlightBookingLink;
 
+// iOS 구독 갱신 누락 감지 (App Store Server API 폴링) — see functions/subscription_renewal_check.js
+const subscriptionRenewalCheck = require('./subscription_renewal_check');
+exports.checkIosSubscriptionRenewals = subscriptionRenewalCheck.checkIosSubscriptionRenewals;
+
 // 통화 코드 -> 국가 코드 (Play 주문에서 국가를 못 가져왔을 때 폴백)
 const CURRENCY_TO_COUNTRY = {
   USD: 'US', KRW: 'KR', JPY: 'JP', GBP: 'GB', EUR: 'EU',

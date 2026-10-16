@@ -1,70 +1,122 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
+<dict>
+    <key>GADApplicationIdentifier</key>
+    <string>ca-app-pub-3945470636956441~2153585309</string>
+    <key>CADisableMinimumFrameDurationOnPhone</key>
+    <true/>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>$(DEVELOPMENT_LANGUAGE)</string>
+    <key>CFBundleDisplayName</key>
+    <string>Travelog</string>
+    <key>CFBundleExecutable</key>
+    <string>$(EXECUTABLE_NAME)</string>
+    <key>CFBundleIdentifier</key>
+    <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>CFBundleName</key>
+    <string>Travelog</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>CFBundleShortVersionString</key>
+    <string>$(FLUTTER_BUILD_NAME)</string>
+    <key>CFBundleSignature</key>
+    <string>????</string>
+    <key>CFBundleURLTypes</key>
+    <array>
+       <dict>
+          <key>CFBundleTypeRole</key>
+          <string>Editor</string>
+          <key>CFBundleURLSchemes</key>
+          <array>
+             <string>com.googleusercontent.apps.127546533956-i1o2tnjc9uf65m6t0p4lp7hl2tak15s5</string>
+          </array>
+       </dict>
+       <dict>
+          <key>CFBundleTypeRole</key>
+          <string>Editor</string>
+          <key>CFBundleURLSchemes</key>
+          <array>
+             <string>fb2725893267791659</string>
+          </array>
+       </dict>
+    </array>
+    <key>FacebookAppID</key>
+    <string>2725893267791659</string>
+    <key>FacebookClientToken</key>
+    <string>97c819b5c1f6f661c4c0d1c36f3b634a</string>
+    <key>FacebookDisplayName</key>
+    <string>Travelog</string>
+    <key>CFBundleVersion</key>
+    <string>$(FLUTTER_BUILD_NUMBER)</string>
+    <key>LSRequiresIPhoneOS</key>
+    <true/>
+    <key>NSCameraUsageDescription</key>
+    <string>We need camera access to take new photos for your airport memos.</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>We need access to your photo library to select pictures for your airport memos.</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>Travelog uses your location to show nearby places and location-based travel features.</string>
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>Travelog uses your location to provide location-based travel features when permitted.</string>
+    <key>NSUserTrackingUsageDescription</key>
+    <string>This identifier will be used to deliver personalized ads to you.</string>
+    <key>SKAdNetworkItems</key>
+    <array>
+       <dict>
+          <key>SKAdNetworkIdentifier</key>
+          <string>v9wttpbfk9.skadnetwork</string>
+       </dict>
+       <dict>
+          <key>SKAdNetworkIdentifier</key>
+          <string>n38lu8286q.skadnetwork</string>
+       </dict>
+    </array>
+    <key>UIApplicationSceneManifest</key>
     <dict>
-       <key>CFBundleDevelopmentRegion</key>
-       <string>$(DEVELOPMENT_LANGUAGE)</string>
-       <key>CFBundleDisplayName</key>
-       <string>Travelog</string>
-       <key>CFBundleExecutable</key>
-       <string>$(EXECUTABLE_NAME)</string>
-       <key>CFBundleIdentifier</key>
-       <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
-       <key>CFBundleInfoDictionaryVersion</key>
-       <string>6.0</string>
-       <key>CFBundleName</key>
-       <string>Travelog</string>
-       <key>CFBundlePackageType</key>
-       <string>APPL</string>
-       <key>CFBundleShortVersionString</key>
-       <string>$(FLUTTER_BUILD_NAME)</string>
-       <key>CFBundleSignature</key>
-       <string>????</string>
-       <key>CFBundleVersion</key>
-       <string>$(FLUTTER_BUILD_NUMBER)</string>
-       <key>LSRequiresIPhoneOS</key>
-       <true/>
-
-       <key>CFBundleURLTypes</key>
-       <array>
-           <dict>
-               <key>CFBundleTypeRole</key>
-               <string>Editor</string>
-               <key>CFBundleURLSchemes</key>
-               <array>
-                   <string>com.googleusercontent.apps.127546533956-i1o2tnjc9uf65m6t0p4lp7hl2tak15s5</string>
-               </array>
-           </dict>
-       </array>
-
-       <key>UILaunchStoryboardName</key>
-       <string>LaunchScreen</string>
-       <key>UIMainStoryboardFile</key>
-       <string>Main</string>
-       <key>UISupportedInterfaceOrientations</key>
-       <array>
-          <string>UIInterfaceOrientationPortrait</string>
-          <string>UIInterfaceOrientationLandscapeLeft</string>
-          <string>UIInterfaceOrientationLandscapeRight</string>
-       </array>
-       <key>UISupportedInterfaceOrientations~ipad</key>
-       <array>
-          <string>UIInterfaceOrientationPortrait</string>
-          <string>UIInterfaceOrientationPortraitUpsideDown</string>
-          <string>UIInterfaceOrientationLandscapeLeft</string>
-          <string>UIInterfaceOrientationLandscapeRight</string>
-       </array>
-       <key>CADisableMinimumFrameDurationOnPhone</key>
-       <true/>
-       <key>UIApplicationSupportsIndirectInputEvents</key>
-       <true/>
-       <key>NSPhotoLibraryUsageDescription</key>
-       <string>We need access to your photo library to select pictures for your airport memos.</string>
-       <key>NSCameraUsageDescription</key>
-       <string>We need camera access to take new photos for your airport memos.</string>
-       <key>UIStatusBarHidden</key>
-       <true/>
-       <key>UIViewControllerBasedStatusBarAppearance</key>
+       <key>UIApplicationSupportsMultipleScenes</key>
        <false/>
+       <key>UISceneConfigurations</key>
+       <dict>
+          <key>UIWindowSceneSessionRoleApplication</key>
+          <array>
+             <dict>
+                <key>UISceneClassName</key>
+                <string>UIWindowScene</string>
+                <key>UISceneConfigurationName</key>
+                <string>flutter</string>
+                <key>UISceneDelegateClassName</key>
+                <string>FlutterSceneDelegate</string>
+                <key>UISceneStoryboardFile</key>
+                <string>Main</string>
+             </dict>
+          </array>
+       </dict>
     </dict>
+    <key>UIApplicationSupportsIndirectInputEvents</key>
+    <true/>
+    <key>UILaunchStoryboardName</key>
+    <string>LaunchScreen</string>
+    <key>UIMainStoryboardFile</key>
+    <string>Main</string>
+    <key>UIStatusBarHidden</key>
+    <true/>
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+       <string>UIInterfaceOrientationPortrait</string>
+       <string>UIInterfaceOrientationLandscapeLeft</string>
+       <string>UIInterfaceOrientationLandscapeRight</string>
+    </array>
+    <key>UISupportedInterfaceOrientations~ipad</key>
+    <array>
+       <string>UIInterfaceOrientationPortrait</string>
+       <string>UIInterfaceOrientationPortraitUpsideDown</string>
+       <string>UIInterfaceOrientationLandscapeLeft</string>
+       <string>UIInterfaceOrientationLandscapeRight</string>
+    </array>
+    <key>UIViewControllerBasedStatusBarAppearance</key>
+    <false/>
+</dict>
 </plist>

@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:io';
 import 'dart:math';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter/material.dart';
@@ -48,7 +49,8 @@ class AdService {
   InterstitialAd? _interstitialAd;
 
   int _touchesSinceLastAd = 0; // 직전 노출 이후 터치 수 — 터치 트리거이자 계측용 겸용
-  String? _pendingTriggerSource; // 이번 노출을 유발한 조건: 'touch' | 'timer' (Firestore 계측용)
+  String?
+  _pendingTriggerSource; // 이번 노출을 유발한 조건: 'touch' | 'timer' (Firestore 계측용)
   int? _pendingElapsedSeconds; // 직전 노출 이후 경과 시간(초) (Firestore 계측용)
   int? _pendingTouchesSinceLastAd; // 직전 노출 이후 터치 수 (Firestore 계측용)
   int _dismissCount = 0;
@@ -66,7 +68,8 @@ class AdService {
   // recordGlobalTouch()/_refreshTimerState()의 가드 참고.
   bool _isAdPending = false;
   String? _queuedTriggerSource; // pending을 만든 최초 조건: 'touch' | 'timer'
-  int? _queuedElapsedSeconds; // 조건 충족 "그 순간"의 경과 시간(초) — 화면 전환까지 기다린 시간은 포함하지 않음
+  int?
+  _queuedElapsedSeconds; // 조건 충족 "그 순간"의 경과 시간(초) — 화면 전환까지 기다린 시간은 포함하지 않음
   int? _queuedTouchesSinceLastAd; // 조건 충족 "그 순간"의 터치 수
 
   // 화면 전환이 감지된 직후, Navigator push/pop 애니메이션과 겹치지 않게
@@ -78,7 +81,7 @@ class AdService {
   bool _isTutorialActive = false;
   bool _isOnboardingActive = false;
   bool _isCountrySelectionActive = false;
-  bool _isUiOverlayActive = false;  // 로그인/구독/프로필 시트 표시 중
+  bool _isUiOverlayActive = false; // 로그인/구독/프로필 시트 표시 중
   bool _isPremium = false;
 
   // [추가] 게임 허브(Travelog Games) 진입 중에는 메인 앱의 터치/시간 광고 트리거를 완전히
@@ -102,7 +105,8 @@ class AdService {
   static const String _prefKeyExperimentGroup = 'ad_experiment_group_v5';
   static const String _prefKeyAssignedAt = 'ad_experiment_group_v5_assigned_at';
   static const String _prefKeyDeviceId = 'ad_experiment_device_id';
-  static const String _prefKeyAssignmentDocId = 'ad_experiment_assignment_doc_id';
+  static const String _prefKeyAssignmentDocId =
+      'ad_experiment_assignment_doc_id';
 
   // [변경] 시간조건/터치조건 고정값. 더 이상 범위 랜덤 배정하지 않음.
   static const int _fixedTimeCondition = 130; // 초
@@ -138,10 +142,16 @@ class AdService {
   // Show subscription sheet every 3 ad dismissals
   static const int _subscriptionPromptEvery = 3;
 
+  // Android 전용 인터스티셜 광고 단위 — mediation group 연결되어 정상 수익 확인됨
   static const String _realInterstitialAdUnitId =
-      'ca-app-pub-3945470636956441/8397434180'; // interstitial_main — mediation group 연결되어 정상 수익 확인됨
+      'ca-app-pub-3945470636956441/8397434180'; // interstitial_main
 
-  String get _adUnitId => _realInterstitialAdUnitId;
+  // iOS 전용 인터스티셜 광고 단위 (travelog_apple_interstitial)
+  static const String _iosInterstitialAdUnitId =
+      'ca-app-pub-3945470636956441/5308407850';
+
+  String get _adUnitId =>
+      Platform.isIOS ? _iosInterstitialAdUnitId : _realInterstitialAdUnitId;
 
   void _onPremiumActivated() {
     _isPremium = true;
@@ -183,7 +193,9 @@ class AdService {
   void setOnboardingActive() {
     _isOnboardingActive = true;
     _refreshTimerState();
-    debugPrint('[AdService] onboarding started - ads paused (non-experimental)');
+    debugPrint(
+      '[AdService] onboarding started - ads paused (non-experimental)',
+    );
   }
 
   void clearOnboardingActive() {
@@ -199,7 +211,7 @@ class AdService {
     _refreshTimerState();
     debugPrint(
       '[AdService] country selection started - ads '
-          '${_countryScreenAdsEnabledForGroup ? "kept on (group $_groupLabel)" : "paused"}',
+      '${_countryScreenAdsEnabledForGroup ? "kept on (group $_groupLabel)" : "paused"}',
     );
   }
 
@@ -239,7 +251,9 @@ class AdService {
     _isGamesActive = true;
     _gamesPauseStartedAt = DateTime.now();
     _refreshTimerState();
-    debugPrint('[AdService] games area entered - main ad triggers paused (preserved)');
+    debugPrint(
+      '[AdService] games area entered - main ad triggers paused (preserved)',
+    );
   }
 
   void resumeForGames() {
@@ -258,7 +272,9 @@ class AdService {
     }
 
     _refreshTimerState();
-    debugPrint('[AdService] games area exited - main ad triggers resumed (preserved)');
+    debugPrint(
+      '[AdService] games area exited - main ad triggers resumed (preserved)',
+    );
   }
 
   /// 지금 광고를 멈춰야 하는 상태인지.
@@ -268,7 +284,8 @@ class AdService {
     if (_isUiOverlayActive) return true;
     if (_isOnboardingActive) return true;
     if (_isGamesActive) return true;
-    if (_isCountrySelectionActive && !_countryScreenAdsEnabledForGroup) return true;
+    if (_isCountrySelectionActive && !_countryScreenAdsEnabledForGroup)
+      return true;
     return false;
   }
 
@@ -291,11 +308,14 @@ class AdService {
     // 생길 수 있다.
     if (_isAdPending) return;
 
-    final int cooldown =
-    _isPostTutorialGraceActive ? _postTutorialGraceSeconds : _cooldownSeconds;
+    final int cooldown = _isPostTutorialGraceActive
+        ? _postTutorialGraceSeconds
+        : _cooldownSeconds;
 
     final now = DateTime.now();
-    final elapsed = _lastShownAt == null ? Duration.zero : now.difference(_lastShownAt!);
+    final elapsed = _lastShownAt == null
+        ? Duration.zero
+        : now.difference(_lastShownAt!);
     final remaining = Duration(seconds: cooldown) - elapsed;
     final wait = remaining.isNegative ? Duration.zero : remaining;
 
@@ -311,27 +331,26 @@ class AdService {
     final params = ConsentRequestParameters();
     ConsentInformation.instance.requestConsentInfoUpdate(
       params,
-          () async {
+      () async {
         ConsentForm.loadAndShowConsentFormIfRequired((formError) async {
           if (formError != null) {
             debugPrint(
               '[Consent] form error: ${formError.errorCode} ${formError.message}',
             );
           }
-          final canRequestAds =
-          await ConsentInformation.instance.canRequestAds();
+          final canRequestAds = await ConsentInformation.instance
+              .canRequestAds();
           debugPrint('[Consent] canRequestAds=$canRequestAds');
           if (canRequestAds) {
             _startAdsAfterConsent();
           }
         });
       },
-          (formError) async {
+      (formError) async {
         debugPrint(
           '[Consent] update error: ${formError.errorCode} ${formError.message}',
         );
-        final canRequestAds =
-        await ConsentInformation.instance.canRequestAds();
+        final canRequestAds = await ConsentInformation.instance.canRequestAds();
         if (canRequestAds) {
           _startAdsAfterConsent();
         }
@@ -409,10 +428,11 @@ class AdService {
           .collection('ad_experiment_assignments_v3')
           .doc(docId)
           .update({
-        'deviceId': _deviceId,
-        'localeCountryCode':
-        WidgetsBinding.instance.platformDispatcher.locale.countryCode ?? 'unknown',
-      });
+            'deviceId': _deviceId,
+            'localeCountryCode':
+                WidgetsBinding.instance.platformDispatcher.locale.countryCode ??
+                'unknown',
+          });
       debugPrint('[AdService] backfilled deviceId onto assignment doc $docId');
     } catch (e) {
       debugPrint('[AdService] deviceId backfill error: $e');
@@ -433,16 +453,21 @@ class AdService {
   /// 반환값(DocumentReference)의 id를 로컬에 저장해서, 나중에 필드를 또
   /// 추가해야 할 때 이 기기의 배정 문서를 정확히 찾아 백필할 수 있게 함.
   Future<DocumentReference<Map<String, dynamic>>?> _logExperimentAssignment(
-      String groupLabel) async {
+    String groupLabel,
+  ) async {
     try {
-      return await FirebaseFirestore.instance.collection('ad_experiment_assignments_v3').add({
-        'adExperimentGroup': groupLabel,
-        'deviceId': _deviceId,
-        // 기기 로케일 기준 국가코드 — 로그인 여부와 무관하게 전원한테 붙음.
-        // GPS 아니라 시스템 설정값이라 대략치 (VPN/언어만 바꾼 유저는 부정확할 수 있음).
-        'localeCountryCode': WidgetsBinding.instance.platformDispatcher.locale.countryCode ?? 'unknown',
-        'assignedAt': FieldValue.serverTimestamp(),
-      });
+      return await FirebaseFirestore.instance
+          .collection('ad_experiment_assignments_v3')
+          .add({
+            'adExperimentGroup': groupLabel,
+            'deviceId': _deviceId,
+            // 기기 로케일 기준 국가코드 — 로그인 여부와 무관하게 전원한테 붙음.
+            // GPS 아니라 시스템 설정값이라 대략치 (VPN/언어만 바꾼 유저는 부정확할 수 있음).
+            'localeCountryCode':
+                WidgetsBinding.instance.platformDispatcher.locale.countryCode ??
+                'unknown',
+            'assignedAt': FieldValue.serverTimestamp(),
+          });
     } catch (e) {
       debugPrint('[AdService] assignment log error: $e');
       return null;
@@ -452,12 +477,15 @@ class AdService {
   void _applyGroupLabel(String label) {
     _groupLabel = label;
     final parts = label.split('-'); // ["130", "1", "40"]
-    _cooldownSeconds = int.tryParse(parts.isNotEmpty ? parts[0] : '') ?? _fixedTimeCondition;
+    _cooldownSeconds =
+        int.tryParse(parts.isNotEmpty ? parts[0] : '') ?? _fixedTimeCondition;
     final countryDigit = int.tryParse(parts.length > 1 ? parts[1] : '1') ?? 1;
-    _touchThreshold = int.tryParse(parts.length > 2 ? parts[2] : '') ?? _fixedTouchCondition;
+    _touchThreshold =
+        int.tryParse(parts.length > 2 ? parts[2] : '') ?? _fixedTouchCondition;
 
-    _countryAdGroup =
-    countryDigit == 2 ? CountryAdGroup.allow : CountryAdGroup.block;
+    _countryAdGroup = countryDigit == 2
+        ? CountryAdGroup.allow
+        : CountryAdGroup.block;
   }
 
   // ─── Interstitial ────────────────────────────────────────────────────────
@@ -477,60 +505,68 @@ class AdService {
           final String adSourceName =
               ad.responseInfo?.mediationAdapterClassName ?? 'unknown';
 
-          ad.onPaidEvent = (Ad ad, double valueMicros, PrecisionType precision, String currencyCode) {
-            final double revenue = valueMicros / 1000000.0;
+          ad.onPaidEvent =
+              (
+                Ad ad,
+                double valueMicros,
+                PrecisionType precision,
+                String currencyCode,
+              ) {
+                final double revenue = valueMicros / 1000000.0;
 
-            _facebookAppEvents.logEvent(
-              name: 'AdImpression',
-              parameters: {
-                '_valueToSum': revenue,
-                'fb_currency': currencyCode,
-                'ad_platform': 'admob',
-                'ad_experiment_group': _groupLabel,
-              },
-            );
+                _facebookAppEvents.logEvent(
+                  name: 'AdImpression',
+                  parameters: {
+                    '_valueToSum': revenue,
+                    'fb_currency': currencyCode,
+                    'ad_platform': 'admob',
+                    'ad_experiment_group': _groupLabel,
+                  },
+                );
 
-            _logAdRevenueToFirestore(
-              revenue: revenue,
-              currencyCode: currencyCode,
-              precision: precision.toString(),
-              adSourceName: adSourceName,
-            );
-          };
+                _logAdRevenueToFirestore(
+                  revenue: revenue,
+                  currencyCode: currencyCode,
+                  precision: precision.toString(),
+                  adSourceName: adSourceName,
+                );
+              };
 
-          _interstitialAd!.fullScreenContentCallback =
-              FullScreenContentCallback(
-                onAdImpression: (InterstitialAd ad) {
-                  // 실제 노출이 몇 번 일어나는지 별도 기록 —
-                  // onPaidEvent 발생 횟수와 비교해서 격차를 직접 확인하기 위함.
-                  _logAdImpressionToFirestore();
-                },
-                onAdDismissedFullScreenContent: (InterstitialAd ad) {
-                  ad.dispose();
-                  _interstitialAd = null;
-                  loadInterstitialAd();
+          _interstitialAd!
+              .fullScreenContentCallback = FullScreenContentCallback(
+            onAdImpression: (InterstitialAd ad) {
+              // 실제 노출이 몇 번 일어나는지 별도 기록 —
+              // onPaidEvent 발생 횟수와 비교해서 격차를 직접 확인하기 위함.
+              _logAdImpressionToFirestore();
+            },
+            onAdDismissedFullScreenContent: (InterstitialAd ad) {
+              ad.dispose();
+              _interstitialAd = null;
+              loadInterstitialAd();
 
-                  _dismissCount++;
-                  if (_dismissCount % _subscriptionPromptEvery == 0) {
-                    final ctx = navigatorKey.currentContext;
-                    if (ctx != null) {
-                      Future.delayed(const Duration(milliseconds: 400), () {
-                        if (ctx.mounted) {
-                          SubscriptionSheet.show(ctx, triggerContext: 'ad_dismiss');
-                        }
-                      });
+              _dismissCount++;
+              if (_dismissCount % _subscriptionPromptEvery == 0) {
+                final ctx = navigatorKey.currentContext;
+                if (ctx != null) {
+                  Future.delayed(const Duration(milliseconds: 400), () {
+                    if (ctx.mounted) {
+                      SubscriptionSheet.show(ctx, triggerContext: 'ad_dismiss');
                     }
-                  }
-                },
-                onAdFailedToShowFullScreenContent:
-                    (InterstitialAd ad, AdError error) {
-                  debugPrint('[AdService] failed to show: code=${error.code} '
-                      'domain=${error.domain} msg=${error.message}');
+                  });
+                }
+              }
+            },
+            onAdFailedToShowFullScreenContent:
+                (InterstitialAd ad, AdError error) {
+                  debugPrint(
+                    '[AdService] failed to show: code=${error.code} '
+                    'domain=${error.domain} msg=${error.message}',
+                  );
                   ad.dispose();
                   _interstitialAd = null;
                   loadInterstitialAd();
                 },
-              );
+          );
         },
         onAdFailedToLoad: (LoadAdError error) {
           _interstitialAd = null;
@@ -636,13 +672,14 @@ class AdService {
     // "조건을 만족한 바로 그 순간"의 값을 캡처 — 화면 전환을 기다리는 동안
     // 흐른 시간/터치는 이 계측값에 반영되지 않는다(원래 조건 충족 시점
     // 기준의 지표를 그대로 유지하기 위함).
-    _queuedElapsedSeconds =
-    _lastShownAt == null ? null : now.difference(_lastShownAt!).inSeconds;
+    _queuedElapsedSeconds = _lastShownAt == null
+        ? null
+        : now.difference(_lastShownAt!).inSeconds;
     _queuedTouchesSinceLastAd = _touchesSinceLastAd;
 
     debugPrint(
       '[AdService] ad condition met ($triggerSource) - queued as pending, '
-          'will show on next screen transition',
+      'will show on next screen transition',
     );
   }
 
@@ -729,5 +766,4 @@ class AdService {
       _queueAd('touch');
     }
   }
-
 }

@@ -1,3 +1,4 @@
+import 'dart:io';
 // lib/screens/cities_menu_screen.dart
 
 import 'dart:math';
@@ -57,7 +58,7 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
     final index = _selectedStatIndex;
     final isPremiumTier = index >= 3;
 
-    if (isPremiumTier) {
+    if (Platform.isAndroid && isPremiumTier) {
       final authProvider = Provider.of<AuthProvider>(context, listen: false);
       if (authProvider.user == null) {
         if (!mounted) return;
@@ -352,7 +353,10 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
   };
 
   // ⭐️ 공유 버튼 클릭 시 실행
-  Future<void> _handleShare(BuildContext context, CityProvider cityProvider) async {
+  Future<void> _handleShare(
+    BuildContext context,
+    CityProvider cityProvider,
+  ) async {
     if (_isSharing) return;
 
     setState(() => _isSharing = true);
@@ -385,6 +389,7 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
   }
 
   Future<void> _captureAndUpdateWidget() async {
+    if (!Platform.isAndroid) return;
     if (!mounted || _widgetUpdated) return;
     _widgetUpdated = true;
     try {
@@ -396,7 +401,12 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
       if (mapImage == null) return;
       final continentStats = CitiesShare.calculateContinentStats(visitedCities);
       final widgetImage = await ScreenshotController().captureFromWidget(
-        CitiesShare.buildStatsLayout(context, mapImage, visitedCities, continentStats),
+        CitiesShare.buildStatsLayout(
+          context,
+          mapImage,
+          visitedCities,
+          continentStats,
+        ),
         context: context,
         pixelRatio: 2.0,
       );
@@ -428,19 +438,19 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
               borderRadius: BorderRadius.circular(16),
               boxShadow: isSelected
                   ? [
-                BoxShadow(
-                  color: primaryColor.withOpacity(0.4),
-                  blurRadius: 12,
-                  offset: const Offset(0, 4),
-                )
-              ]
+                      BoxShadow(
+                        color: primaryColor.withOpacity(0.4),
+                        blurRadius: 12,
+                        offset: const Offset(0, 4),
+                      ),
+                    ]
                   : [
-                BoxShadow(
-                  color: Colors.black.withOpacity(0.06),
-                  blurRadius: 8,
-                  offset: const Offset(0, 2),
-                )
-              ],
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.06),
+                        blurRadius: 8,
+                        offset: const Offset(0, 2),
+                      ),
+                    ],
             ),
             child: Icon(
               item['icon'],
@@ -511,13 +521,12 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
                   if (cityProvider.isLoading ||
                       cityProvider.isStatsLoading ||
                       countryProvider.isLoading) {
-                    return const Center(
-                      child: CircularProgressIndicator(),
-                    );
+                    return const Center(child: CircularProgressIndicator());
                   }
 
                   final Map<String, String> isoToCountryName = {
-                    for (var c in countryProvider.allCountries) c.isoA2.toUpperCase(): c.name
+                    for (var c in countryProvider.allCountries)
+                      c.isoA2.toUpperCase(): c.name,
                   };
 
                   final visitedCount = cityProvider.totalVisitedCount;
@@ -529,17 +538,21 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
                     final city = cityProvider.getCityDetail(cityName);
                     if (city != null && city.countryIsoA2.isNotEmpty) {
                       final iso = city.countryIsoA2.toUpperCase();
-                      countryCityCounts[iso] = (countryCityCounts[iso] ?? 0) + 1;
+                      countryCityCounts[iso] =
+                          (countryCityCounts[iso] ?? 0) + 1;
 
                       if (!countryIsoToResolvedName.containsKey(iso)) {
                         String? resolvedName = isoToCountryName[iso];
 
-                        if ((resolvedName == null || resolvedName == 'Unknown') &&
+                        if ((resolvedName == null ||
+                                resolvedName == 'Unknown') &&
                             cityProvider.allCities.isNotEmpty) {
-                          final sameIsoCity = cityProvider.allCities.firstWhereOrNull(
+                          final sameIsoCity = cityProvider.allCities
+                              .firstWhereOrNull(
                                 (c) => c.countryIsoA2.toUpperCase() == iso,
-                          );
-                          if (sameIsoCity != null && sameIsoCity.country != 'Unknown') {
+                              );
+                          if (sameIsoCity != null &&
+                              sameIsoCity.country != 'Unknown') {
                             resolvedName = sameIsoCity.country;
                           }
                         }
@@ -560,17 +573,22 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
                   int topCountryCityCount = 0;
 
                   if (countryCityCounts.isNotEmpty) {
-                    final entry = countryCityCounts.entries.reduce((a, b) => a.value > b.value ? a : b);
+                    final entry = countryCityCounts.entries.reduce(
+                      (a, b) => a.value > b.value ? a : b,
+                    );
                     topCountryIso = entry.key;
                     topCountryCityCount = entry.value;
-                    topCountryName = countryIsoToResolvedName[topCountryIso] ?? topCountryIso;
+                    topCountryName =
+                        countryIsoToResolvedName[topCountryIso] ??
+                        topCountryIso;
                   }
 
                   Map<String, int> continentCounts = {};
                   cityProvider.visitDetails.forEach((cityName, detail) {
                     final city = cityProvider.getCityDetail(cityName);
                     if (city != null) {
-                      continentCounts[city.continent] = (continentCounts[city.continent] ?? 0) + 1;
+                      continentCounts[city.continent] =
+                          (continentCounts[city.continent] ?? 0) + 1;
                     }
                   });
 
@@ -584,7 +602,8 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
                   });
 
                   Color getCountryColor(String isoA2) {
-                    return _countryColorMap[isoA2.toUpperCase()] ?? primaryColor;
+                    return _countryColorMap[isoA2.toUpperCase()] ??
+                        primaryColor;
                   }
 
                   Color getContinentColor(String continent) {
@@ -608,12 +627,12 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
 
                   final visitedCityMarkers = cityProvider.visitDetails.keys
                       .map((cityName) {
-                    final cityData = cityProvider.getCityDetail(cityName);
-                    if (cityData != null) {
-                      return LatLng(cityData.latitude, cityData.longitude);
-                    }
-                    return null;
-                  })
+                        final cityData = cityProvider.getCityDetail(cityName);
+                        if (cityData != null) {
+                          return LatLng(cityData.latitude, cityData.longitude);
+                        }
+                        return null;
+                      })
                       .whereType<LatLng>()
                       .toList();
 
@@ -641,7 +660,12 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
                             child: Column(
                               children: [
                                 Padding(
-                                  padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
+                                  padding: const EdgeInsets.fromLTRB(
+                                    20,
+                                    20,
+                                    20,
+                                    0,
+                                  ),
                                   child: Column(
                                     children: [
                                       Row(
@@ -649,8 +673,11 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
                                           Container(
                                             padding: const EdgeInsets.all(10),
                                             decoration: BoxDecoration(
-                                              color: primaryColor.withOpacity(0.1),
-                                              borderRadius: BorderRadius.circular(12),
+                                              color: primaryColor.withOpacity(
+                                                0.1,
+                                              ),
+                                              borderRadius:
+                                                  BorderRadius.circular(12),
                                             ),
                                             child: const Icon(
                                               Icons.location_city_rounded,
@@ -660,7 +687,8 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
                                           ),
                                           const SizedBox(width: 16),
                                           Column(
-                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
                                             children: [
                                               Text(
                                                 'Total Visited',
@@ -672,35 +700,47 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
                                                 ),
                                               ),
                                               Row(
-                                                crossAxisAlignment: CrossAxisAlignment.baseline,
-                                                textBaseline: TextBaseline.alphabetic,
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.baseline,
+                                                textBaseline:
+                                                    TextBaseline.alphabetic,
                                                 children: [
                                                   TweenAnimationBuilder<double>(
-                                                    duration: const Duration(milliseconds: 1200),
+                                                    duration: const Duration(
+                                                      milliseconds: 1200,
+                                                    ),
                                                     curve: Curves.easeOutCubic,
                                                     tween: Tween<double>(
                                                       begin: 0,
-                                                      end: visitedCount.toDouble(),
+                                                      end: visitedCount
+                                                          .toDouble(),
                                                     ),
-                                                    builder: (context, val, child) {
-                                                      return Text(
-                                                        '${val.toInt()}',
-                                                        style: const TextStyle(
-                                                          fontSize: 32,
-                                                          fontWeight: FontWeight.w900,
-                                                          color: Colors.black87,
-                                                          height: 1.0,
-                                                          letterSpacing: -1.0,
-                                                        ),
-                                                      );
-                                                    },
+                                                    builder:
+                                                        (context, val, child) {
+                                                          return Text(
+                                                            '${val.toInt()}',
+                                                            style:
+                                                                const TextStyle(
+                                                                  fontSize: 32,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w900,
+                                                                  color: Colors
+                                                                      .black87,
+                                                                  height: 1.0,
+                                                                  letterSpacing:
+                                                                      -1.0,
+                                                                ),
+                                                          );
+                                                        },
                                                   ),
                                                   const SizedBox(width: 6),
                                                   const Text(
                                                     'cities',
                                                     style: TextStyle(
                                                       fontSize: 16,
-                                                      fontWeight: FontWeight.w600,
+                                                      fontWeight:
+                                                          FontWeight.w600,
                                                       color: Colors.black54,
                                                     ),
                                                   ),
@@ -717,38 +757,58 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
                                             child: GestureDetector(
                                               onTap: () {
                                                 if (topCountryIso.isNotEmpty) {
-                                                  final targetCountry = countryProvider.allCountries.firstWhereOrNull(
-                                                          (c) => c.isoA2.toUpperCase() == topCountryIso
-                                                  );
+                                                  final targetCountry =
+                                                      countryProvider
+                                                          .allCountries
+                                                          .firstWhereOrNull(
+                                                            (c) =>
+                                                                c.isoA2
+                                                                    .toUpperCase() ==
+                                                                topCountryIso,
+                                                          );
                                                   if (targetCountry != null) {
                                                     Navigator.push(
                                                       context,
                                                       MaterialPageRoute(
-                                                        builder: (context) => CountryDetailScreen(country: targetCountry),
+                                                        builder: (context) =>
+                                                            CountryDetailScreen(
+                                                              country:
+                                                                  targetCountry,
+                                                            ),
                                                       ),
                                                     );
                                                   }
                                                 }
                                               },
                                               child: Container(
-                                                padding: const EdgeInsets.all(16),
+                                                padding: const EdgeInsets.all(
+                                                  16,
+                                                ),
                                                 decoration: BoxDecoration(
                                                   gradient: LinearGradient(
                                                     begin: Alignment.topLeft,
                                                     end: Alignment.bottomRight,
                                                     colors: [
-                                                      getCountryColor(topCountryIso).withOpacity(0.12),
-                                                      getCountryColor(topCountryIso).withOpacity(0.05),
+                                                      getCountryColor(
+                                                        topCountryIso,
+                                                      ).withOpacity(0.12),
+                                                      getCountryColor(
+                                                        topCountryIso,
+                                                      ).withOpacity(0.05),
                                                     ],
                                                   ),
-                                                  borderRadius: BorderRadius.circular(16),
+                                                  borderRadius:
+                                                      BorderRadius.circular(16),
                                                   border: Border.all(
-                                                    color: getCountryColor(topCountryIso).withOpacity(0.2),
+                                                    color: getCountryColor(
+                                                      topCountryIso,
+                                                    ).withOpacity(0.2),
                                                     width: 1.5,
                                                   ),
                                                 ),
                                                 child: Column(
-                                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
                                                   children: [
                                                     Row(
                                                       children: [
@@ -757,35 +817,63 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
                                                           height: 28,
                                                           decoration: BoxDecoration(
                                                             color: Colors.white,
-                                                            borderRadius: BorderRadius.circular(6),
+                                                            borderRadius:
+                                                                BorderRadius.circular(
+                                                                  6,
+                                                                ),
                                                             boxShadow: [
                                                               BoxShadow(
-                                                                color: Colors.black.withOpacity(0.1),
+                                                                color: Colors
+                                                                    .black
+                                                                    .withOpacity(
+                                                                      0.1,
+                                                                    ),
                                                                 blurRadius: 4,
-                                                                offset: const Offset(0, 2),
+                                                                offset:
+                                                                    const Offset(
+                                                                      0,
+                                                                      2,
+                                                                    ),
                                                               ),
                                                             ],
                                                           ),
                                                           child: ClipRRect(
-                                                            borderRadius: BorderRadius.circular(4),
-                                                            child: topCountryIso.isNotEmpty
-                                                                ? CountryFlag.fromCountryCode(topCountryIso)
+                                                            borderRadius:
+                                                                BorderRadius.circular(
+                                                                  4,
+                                                                ),
+                                                            child:
+                                                                topCountryIso
+                                                                    .isNotEmpty
+                                                                ? CountryFlag.fromCountryCode(
+                                                                    topCountryIso,
+                                                                  )
                                                                 : Icon(
-                                                              Icons.flag_rounded,
-                                                              size: 16,
-                                                              color: Colors.grey.shade400,
-                                                            ),
+                                                                    Icons
+                                                                        .flag_rounded,
+                                                                    size: 16,
+                                                                    color: Colors
+                                                                        .grey
+                                                                        .shade400,
+                                                                  ),
                                                           ),
                                                         ),
-                                                        const SizedBox(width: 8),
+                                                        const SizedBox(
+                                                          width: 8,
+                                                        ),
                                                         Expanded(
                                                           child: Text(
                                                             'Top Country',
                                                             style: TextStyle(
                                                               fontSize: 11,
-                                                              fontWeight: FontWeight.w700,
-                                                              color: Colors.grey.shade600,
-                                                              letterSpacing: 0.5,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w700,
+                                                              color: Colors
+                                                                  .grey
+                                                                  .shade600,
+                                                              letterSpacing:
+                                                                  0.5,
                                                             ),
                                                           ),
                                                         ),
@@ -796,28 +884,54 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
                                                       topCountryName,
                                                       style: TextStyle(
                                                         fontSize: 17,
-                                                        fontWeight: FontWeight.w900,
-                                                        color: getCountryColor(topCountryIso),
+                                                        fontWeight:
+                                                            FontWeight.w900,
+                                                        color: getCountryColor(
+                                                          topCountryIso,
+                                                        ),
                                                         height: 1.1,
                                                       ),
                                                       maxLines: 1,
-                                                      overflow: TextOverflow.ellipsis,
+                                                      overflow:
+                                                          TextOverflow.ellipsis,
                                                     ),
                                                     const SizedBox(height: 8),
                                                     Container(
-                                                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                                                      padding:
+                                                          const EdgeInsets.symmetric(
+                                                            horizontal: 10,
+                                                            vertical: 5,
+                                                          ),
                                                       decoration: BoxDecoration(
-                                                        color: Colors.white.withOpacity(0.8),
-                                                        borderRadius: BorderRadius.circular(8),
+                                                        color: Colors.white
+                                                            .withOpacity(0.8),
+                                                        borderRadius:
+                                                            BorderRadius.circular(
+                                                              8,
+                                                            ),
                                                         border: Border.all(
-                                                          color: getCountryColor(topCountryIso).withOpacity(0.3),
+                                                          color:
+                                                              getCountryColor(
+                                                                topCountryIso,
+                                                              ).withOpacity(
+                                                                0.3,
+                                                              ),
                                                           width: 1.5,
                                                         ),
                                                         boxShadow: [
                                                           BoxShadow(
-                                                            color: getCountryColor(topCountryIso).withOpacity(0.1),
+                                                            color:
+                                                                getCountryColor(
+                                                                  topCountryIso,
+                                                                ).withOpacity(
+                                                                  0.1,
+                                                                ),
                                                             blurRadius: 4,
-                                                            offset: const Offset(0, 2),
+                                                            offset:
+                                                                const Offset(
+                                                                  0,
+                                                                  2,
+                                                                ),
                                                           ),
                                                         ],
                                                       ),
@@ -825,8 +939,12 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
                                                         '$topCountryCityCount ${topCountryCityCount == 1 ? 'city' : 'cities'}',
                                                         style: TextStyle(
                                                           fontSize: 14,
-                                                          fontWeight: FontWeight.w800,
-                                                          color: getCountryColor(topCountryIso),
+                                                          fontWeight:
+                                                              FontWeight.w800,
+                                                          color:
+                                                              getCountryColor(
+                                                                topCountryIso,
+                                                              ),
                                                         ),
                                                       ),
                                                     ),
@@ -844,39 +962,67 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
                                                   begin: Alignment.topLeft,
                                                   end: Alignment.bottomRight,
                                                   colors: [
-                                                    getContinentColor(topContinent).withOpacity(0.12),
-                                                    getContinentColor(topContinent).withOpacity(0.05),
+                                                    getContinentColor(
+                                                      topContinent,
+                                                    ).withOpacity(0.12),
+                                                    getContinentColor(
+                                                      topContinent,
+                                                    ).withOpacity(0.05),
                                                   ],
                                                 ),
-                                                borderRadius: BorderRadius.circular(16),
+                                                borderRadius:
+                                                    BorderRadius.circular(16),
                                                 border: Border.all(
-                                                  color: getContinentColor(topContinent).withOpacity(0.2),
+                                                  color: getContinentColor(
+                                                    topContinent,
+                                                  ).withOpacity(0.2),
                                                   width: 1.5,
                                                 ),
                                               ),
                                               child: Column(
-                                                crossAxisAlignment: CrossAxisAlignment.start,
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
                                                 children: [
                                                   Row(
                                                     children: [
                                                       Container(
-                                                        padding: const EdgeInsets.all(6),
+                                                        padding:
+                                                            const EdgeInsets.all(
+                                                              6,
+                                                            ),
                                                         decoration: BoxDecoration(
-                                                          color: getContinentColor(topContinent).withOpacity(0.15),
-                                                          borderRadius: BorderRadius.circular(8),
+                                                          color:
+                                                              getContinentColor(
+                                                                topContinent,
+                                                              ).withOpacity(
+                                                                0.15,
+                                                              ),
+                                                          borderRadius:
+                                                              BorderRadius.circular(
+                                                                8,
+                                                              ),
                                                         ),
-                                                        child: topContinent != 'None'
+                                                        child:
+                                                            topContinent !=
+                                                                'None'
                                                             ? Image.asset(
-                                                          _getContinentAsset(topContinent),
-                                                          width: 16,
-                                                          height: 16,
-                                                          color: getContinentColor(topContinent),
-                                                        )
+                                                                _getContinentAsset(
+                                                                  topContinent,
+                                                                ),
+                                                                width: 16,
+                                                                height: 16,
+                                                                color: getContinentColor(
+                                                                  topContinent,
+                                                                ),
+                                                              )
                                                             : Icon(
-                                                          Icons.public_rounded,
-                                                          size: 16,
-                                                          color: getContinentColor(topContinent),
-                                                        ),
+                                                                Icons
+                                                                    .public_rounded,
+                                                                size: 16,
+                                                                color: getContinentColor(
+                                                                  topContinent,
+                                                                ),
+                                                              ),
                                                       ),
                                                       const SizedBox(width: 8),
                                                       Expanded(
@@ -884,8 +1030,11 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
                                                           'Top Region',
                                                           style: TextStyle(
                                                             fontSize: 11,
-                                                            fontWeight: FontWeight.w700,
-                                                            color: Colors.grey.shade600,
+                                                            fontWeight:
+                                                                FontWeight.w700,
+                                                            color: Colors
+                                                                .grey
+                                                                .shade600,
                                                             letterSpacing: 0.5,
                                                           ),
                                                         ),
@@ -894,35 +1043,60 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
                                                   ),
                                                   const SizedBox(height: 12),
                                                   Text(
-                                                    topContinent == 'North America'
+                                                    topContinent ==
+                                                            'North America'
                                                         ? 'N. America'
-                                                        : topContinent == 'South America'
+                                                        : topContinent ==
+                                                              'South America'
                                                         ? 'S. America'
                                                         : topContinent,
                                                     style: TextStyle(
                                                       fontSize: 17,
-                                                      fontWeight: FontWeight.w900,
-                                                      color: getContinentColor(topContinent),
+                                                      fontWeight:
+                                                          FontWeight.w900,
+                                                      color: getContinentColor(
+                                                        topContinent,
+                                                      ),
                                                       height: 1.1,
                                                     ),
                                                     maxLines: 1,
-                                                    overflow: TextOverflow.ellipsis,
+                                                    overflow:
+                                                        TextOverflow.ellipsis,
                                                   ),
                                                   const SizedBox(height: 8),
                                                   Container(
-                                                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                                                    padding:
+                                                        const EdgeInsets.symmetric(
+                                                          horizontal: 10,
+                                                          vertical: 5,
+                                                        ),
                                                     decoration: BoxDecoration(
-                                                      color: Colors.white.withOpacity(0.8),
-                                                      borderRadius: BorderRadius.circular(8),
+                                                      color: Colors.white
+                                                          .withOpacity(0.8),
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                            8,
+                                                          ),
                                                       border: Border.all(
-                                                        color: getContinentColor(topContinent).withOpacity(0.3),
+                                                        color:
+                                                            getContinentColor(
+                                                              topContinent,
+                                                            ).withOpacity(0.3),
                                                         width: 1.5,
                                                       ),
                                                       boxShadow: [
                                                         BoxShadow(
-                                                          color: getContinentColor(topContinent).withOpacity(0.1),
+                                                          color:
+                                                              getContinentColor(
+                                                                topContinent,
+                                                              ).withOpacity(
+                                                                0.1,
+                                                              ),
                                                           blurRadius: 4,
-                                                          offset: const Offset(0, 2),
+                                                          offset: const Offset(
+                                                            0,
+                                                            2,
+                                                          ),
                                                         ),
                                                       ],
                                                     ),
@@ -930,8 +1104,12 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
                                                       '$topContinentCount ${topContinentCount == 1 ? 'city' : 'cities'}',
                                                       style: TextStyle(
                                                         fontSize: 14,
-                                                        fontWeight: FontWeight.w800,
-                                                        color: getContinentColor(topContinent),
+                                                        fontWeight:
+                                                            FontWeight.w800,
+                                                        color:
+                                                            getContinentColor(
+                                                              topContinent,
+                                                            ),
                                                       ),
                                                     ),
                                                   ),
@@ -960,37 +1138,64 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
                                               options: const MapOptions(
                                                 initialCenter: LatLng(20, 0),
                                                 initialZoom: 0.3,
-                                                interactionOptions: InteractionOptions(
-                                                  flags: InteractiveFlag.none,
-                                                ),
+                                                interactionOptions:
+                                                    InteractionOptions(
+                                                      flags:
+                                                          InteractiveFlag.none,
+                                                    ),
                                                 backgroundColor: Colors.white,
                                               ),
                                               children: [
                                                 PolygonLayer(
-                                                  polygons: countryProvider.allCountries.expand((country) {
-                                                    return country.polygonsData.map((polygonData) {
-                                                      return Polygon(
-                                                        points: polygonData.first,
-                                                        holePointsList: polygonData.length > 1 ? polygonData.sublist(1) : null,
-                                                        color: Colors.grey.withOpacity(0.15),
-                                                        borderColor: Colors.white,
-                                                        borderStrokeWidth: 0.5,
-                                                        isFilled: true,
-                                                      );
-                                                    });
-                                                  }).toList(),
+                                                  polygons: countryProvider
+                                                      .allCountries
+                                                      .expand((country) {
+                                                        return country.polygonsData.map((
+                                                          polygonData,
+                                                        ) {
+                                                          return Polygon(
+                                                            points: polygonData
+                                                                .first,
+                                                            holePointsList:
+                                                                polygonData
+                                                                        .length >
+                                                                    1
+                                                                ? polygonData
+                                                                      .sublist(
+                                                                        1,
+                                                                      )
+                                                                : null,
+                                                            color: Colors.grey
+                                                                .withOpacity(
+                                                                  0.15,
+                                                                ),
+                                                            borderColor:
+                                                                Colors.white,
+                                                            borderStrokeWidth:
+                                                                0.5,
+                                                            isFilled: true,
+                                                          );
+                                                        });
+                                                      })
+                                                      .toList(),
                                                 ),
                                                 CircleLayer(
                                                   circles: visitedCityMarkers
                                                       .map(
                                                         (point) => CircleMarker(
-                                                      point: point,
-                                                      color: primaryColor,
-                                                      borderColor: primaryColor.withOpacity(0.7),
-                                                      borderStrokeWidth: 0.5,
-                                                      radius: menuScreenRadius,
-                                                    ),
-                                                  )
+                                                          point: point,
+                                                          color: primaryColor,
+                                                          borderColor:
+                                                              primaryColor
+                                                                  .withOpacity(
+                                                                    0.7,
+                                                                  ),
+                                                          borderStrokeWidth:
+                                                              0.5,
+                                                          radius:
+                                                              menuScreenRadius,
+                                                        ),
+                                                      )
                                                       .toList(),
                                                 ),
                                               ],
@@ -1005,52 +1210,73 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
                                           mainAxisSize: MainAxisSize.min,
                                           children: [
                                             GestureDetector(
-                                              onTap: () => _handleShare(context, cityProvider),
+                                              onTap: () => _handleShare(
+                                                context,
+                                                cityProvider,
+                                              ),
                                               child: Container(
-                                                padding: const EdgeInsets.all(12),
+                                                padding: const EdgeInsets.all(
+                                                  12,
+                                                ),
                                                 decoration: BoxDecoration(
                                                   color: Colors.white,
                                                   shape: BoxShape.circle,
                                                   boxShadow: [
                                                     BoxShadow(
-                                                      color: Colors.black.withOpacity(0.1),
+                                                      color: Colors.black
+                                                          .withOpacity(0.1),
                                                       blurRadius: 12,
-                                                      offset: const Offset(0, 4),
+                                                      offset: const Offset(
+                                                        0,
+                                                        4,
+                                                      ),
                                                     ),
                                                   ],
                                                 ),
                                                 child: _isSharing
                                                     ? const SizedBox(
-                                                  width: 26,
-                                                  height: 26,
-                                                  child: CircularProgressIndicator(
-                                                    strokeWidth: 2,
-                                                    valueColor: AlwaysStoppedAnimation<Color>(Colors.amber),
-                                                  ),
-                                                )
+                                                        width: 26,
+                                                        height: 26,
+                                                        child: CircularProgressIndicator(
+                                                          strokeWidth: 2,
+                                                          valueColor:
+                                                              AlwaysStoppedAnimation<
+                                                                Color
+                                                              >(Colors.amber),
+                                                        ),
+                                                      )
                                                     : const Icon(
-                                                  Icons.share_rounded,
-                                                  color: Colors.amber,
-                                                  size: 26,
-                                                ),
+                                                        Icons.share_rounded,
+                                                        color: Colors.amber,
+                                                        size: 26,
+                                                      ),
                                               ),
                                             ),
                                             const SizedBox(width: 12),
                                             GestureDetector(
                                               onTap: () => Navigator.push(
                                                 context,
-                                                MaterialPageRoute(builder: (_) => const CitiesScreen()),
+                                                MaterialPageRoute(
+                                                  builder: (_) =>
+                                                      const CitiesScreen(),
+                                                ),
                                               ),
                                               child: Container(
-                                                padding: const EdgeInsets.all(12),
+                                                padding: const EdgeInsets.all(
+                                                  12,
+                                                ),
                                                 decoration: BoxDecoration(
                                                   color: primaryColor,
                                                   shape: BoxShape.circle,
                                                   boxShadow: [
                                                     BoxShadow(
-                                                      color: primaryColor.withOpacity(0.4),
+                                                      color: primaryColor
+                                                          .withOpacity(0.4),
                                                       blurRadius: 12,
-                                                      offset: const Offset(0, 4),
+                                                      offset: const Offset(
+                                                        0,
+                                                        4,
+                                                      ),
                                                     ),
                                                   ],
                                                 ),
@@ -1078,10 +1304,11 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
                                 children: List.generate(
                                   statisticsItems.length,
-                                      (i) => _buildStatCategoryChip(context, i),
+                                  (i) => _buildStatCategoryChip(context, i),
                                 ),
                               ),
                               const SizedBox(height: 16),
@@ -1120,7 +1347,9 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
                                         height: 48,
                                         decoration: BoxDecoration(
                                           color: primaryColor.withOpacity(0.1),
-                                          borderRadius: BorderRadius.circular(14),
+                                          borderRadius: BorderRadius.circular(
+                                            14,
+                                          ),
                                         ),
                                         child: Icon(
                                           statisticsItems[_selectedStatIndex]['icon'],
@@ -1131,7 +1360,8 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
                                       const SizedBox(width: 16),
                                       Expanded(
                                         child: Column(
-                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
                                           children: [
                                             Text(
                                               statisticsItems[_selectedStatIndex]['title'],
@@ -1158,7 +1388,9 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
                                         height: 44,
                                         decoration: BoxDecoration(
                                           color: primaryColor,
-                                          borderRadius: BorderRadius.circular(12),
+                                          borderRadius: BorderRadius.circular(
+                                            12,
+                                          ),
                                         ),
                                         child: IconButton(
                                           icon: const Icon(
@@ -1166,7 +1398,8 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
                                             color: Colors.white,
                                             size: 20,
                                           ),
-                                          onPressed: () => _handleStatNavigation(context),
+                                          onPressed: () =>
+                                              _handleStatNavigation(context),
                                         ),
                                       ),
                                     ],

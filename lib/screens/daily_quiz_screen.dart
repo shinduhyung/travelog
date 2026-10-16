@@ -203,8 +203,6 @@ class _DailyQuizScreenState extends State<DailyQuizScreen>
   Future<void> _loadDefaultModePreference() async {
     try {
       final prefs = await SharedPreferences.getInstance();
-      // 이 키가 아예 없다는 건 "계정이 한 번도 기본 모드를 설정한 적 없음" = 최초 진입.
-      // 최초 진입일 때만 선택 패널을 펼쳐서 보여주고, 그 이후로는 항상 접힌 상태로 시작함.
       final bool everConfigured = prefs.containsKey(_prefKeyDefaultQuizMode);
       final saved = prefs.getString(_prefKeyDefaultQuizMode);
       final savedIsExpert = saved == 'expert';
@@ -215,7 +213,6 @@ class _DailyQuizScreenState extends State<DailyQuizScreen>
       });
 
       if (widget.useSavedDefaultMode) {
-        // 저장된 기본값이 Expert인데 지금은 구독자가 아니면(만료 등) Normal로 안전하게 폴백
         final bool startExpert = savedIsExpert && _isPremium;
         if (startExpert != _isExpertMode) {
           final nowUtc = DateTime.now().toUtc();
@@ -235,7 +232,6 @@ class _DailyQuizScreenState extends State<DailyQuizScreen>
     await _loadDefaultModePreference();
     await _loadAllQuizHistory();
     if (_isExpertMode) {
-      // Expert 모드로 바로 진입한 경우 Expert 히스토리도 함께 로드
       await _loadAllQuizHistory(expert: true);
       _expertHistoryLoaded = true;
     }
@@ -279,7 +275,6 @@ class _DailyQuizScreenState extends State<DailyQuizScreen>
     _expertGateTimer?.cancel();
     _expertGateShown = false;
     if (expert) {
-      // Expert로 새로 들어올 때마다 "처음 1초 자동 팝업"을 다시 허용
       _autoExpertGateFired = false;
     }
 
@@ -312,7 +307,6 @@ class _DailyQuizScreenState extends State<DailyQuizScreen>
       final jsonPath = expert ? 'functions/quizzes_hard.json' : 'functions/quizzes.json';
       debugPrint("🗓️ [Quiz] 날짜: $_dateStr (expert=$expert)");
 
-      // 캐시 없으면 Storage에서 다운로드 (Normal/Expert 각각 별도 캐시)
       List<Map<String, dynamic>>? cache = expert ? _cachedQuizzesExpert : _cachedQuizzes;
 
       if (cache == null) {
@@ -348,7 +342,6 @@ class _DailyQuizScreenState extends State<DailyQuizScreen>
         debugPrint("💾 [Quiz] 캐시 사용 — 총 ${cache.length}개");
       }
 
-      // date 필드로 해당 날짜 퀴즈 찾기
       final quizData = cache.firstWhere(
             (q) => q['date'] == _dateStr,
         orElse: () => {},
@@ -367,8 +360,7 @@ class _DailyQuizScreenState extends State<DailyQuizScreen>
       final today = DateTime(nowUtc.year, nowUtc.month, nowUtc.day);
       final selectedDay = DateTime(date.year, date.month, date.day);
       bool isToday = selectedDay == today;
-      // 정답 공개: 내가 푼 날 or 어제 이전(전날까지만 답 공개, 오늘은 미풀이시 문제만)
-      bool revealAnswer = selectedDay.isBefore(today); // 전날까지만
+      bool revealAnswer = selectedDay.isBefore(today);
 
       final solvedMap = expert ? _historySolvedMapExpert : _historySolvedMap;
       final correctMap = expert ? _historyCorrectMapExpert : _historyCorrectMap;
@@ -412,7 +404,6 @@ class _DailyQuizScreenState extends State<DailyQuizScreen>
   Future<void> _submitAnswer(int index) async {
     if (_hasSolved) return;
 
-    // Expert 모드는 구독자만 풀 수 있음 — 비구독자가 답을 고르면 즉시 페이월 안내
     if (_isExpertMode && !_isPremium) {
       _promptExpertSubscription();
       return;
@@ -464,8 +455,6 @@ class _DailyQuizScreenState extends State<DailyQuizScreen>
   // ── Expert(Premium) 페이월 게이팅 ─────────────────────────
   void _evaluateExpertGate() {
     _expertGateTimer?.cancel();
-    // 자동(1초 타이머) 팝업은 화면당 딱 한 번만 — 그 뒤로는 사용자가 직접
-    // 눌렀을 때(_promptExpertSubscription 수동 호출)만 다시 뜸
     if (_autoExpertGateFired) return;
     if (_isExpertMode && !_isPremium && _isQuizAvailable && !_hasSolved) {
       _expertGateTimer = Timer(const Duration(seconds: 1), () {
@@ -485,13 +474,12 @@ class _DailyQuizScreenState extends State<DailyQuizScreen>
       _isPremium = SubscriptionService.instance.isPremium;
       _expertGateShown = false;
       if (!mounted) return;
-      setState(() {}); // 구독 완료 시 잠금 UI 즉시 해제되도록 리프레시
+      setState(() {});
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    // 구독 상태가 바뀌면(구매/복원 등) 자동으로 리빌드되어 Expert 잠금 UI가 즉시 갱신됨
     _isPremium = context.watch<SubscriptionService>().isPremium;
 
     return Scaffold(
@@ -579,7 +567,7 @@ class _DailyQuizScreenState extends State<DailyQuizScreen>
       if (mounted) {
         setState(() {
           _defaultIsExpert = expert;
-          _defaultModeExpanded = false; // 설정 완료되면 접힌 상태로 되돌아감
+          _defaultModeExpanded = false;
         });
       }
       unawaited(_syncQuizModeToFcmToken(expert ? 'expert' : 'normal'));
@@ -604,8 +592,6 @@ class _DailyQuizScreenState extends State<DailyQuizScreen>
     }
   }
 
-  /// 현재 기기의 FCM 토큰에 선호 모드를 저장 — 서버(Cloud Functions)가 이 값을 보고
-  /// Normal/Expert 알림 중 어느 쪽을 보낼지 결정함.
   Future<void> _syncQuizModeToFcmToken(String mode) async {
     try {
       final token = await FirebaseMessaging.instance.getToken();
@@ -621,12 +607,9 @@ class _DailyQuizScreenState extends State<DailyQuizScreen>
 
   // ── 기본 모드 선택 UI (구독자 전용, Normal/Expert 화면 양쪽에 노출) ─────
   Widget _buildDefaultModeSelector() {
-    // 비구독자에게는 아예 노출하지 않음 — Expert를 기본으로 고를 수도 없고,
-    // 어차피 Normal이 유일한 선택지라 보여줄 이유가 없음.
     if (!_isPremium) return const SizedBox(height: 8);
 
     if (!_defaultModeExpanded) {
-      // 접힌 상태 — 계정 최초 설정 이후엔 항상 이 상태로 시작, 탭하면 펼쳐짐
       return Padding(
         padding: const EdgeInsets.fromLTRB(20, 8, 20, 2),
         child: GestureDetector(
@@ -923,7 +906,6 @@ class _DailyQuizScreenState extends State<DailyQuizScreen>
     final startDay = DateTime(activeStartDate.year, activeStartDate.month, activeStartDate.day);
     final int itemCount = today.difference(startDay).inDays + 1;
 
-    // 월 구분선 위치 계산: index→date, 이전 index와 월이 다를 때 표시
     return Container(
       height: 116,
       color: Colors.white,
@@ -955,7 +937,6 @@ class _DailyQuizScreenState extends State<DailyQuizScreen>
           return Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // 월 표시 (월이 바뀌는 첫 날에만)
               if (isMonthStart)
                 Padding(
                   padding: const EdgeInsets.only(left: 8, bottom: 4),
@@ -973,7 +954,7 @@ class _DailyQuizScreenState extends State<DailyQuizScreen>
                 const SizedBox(height: 18),
               GestureDetector(
                 onTap: isFuture
-                    ? null // 미래 날짜는 선택 불가
+                    ? null
                     : () {
                   setState(() => _selectedDate = date);
                   _loadQuizForDate(date);
@@ -1050,8 +1031,6 @@ class _DailyQuizScreenState extends State<DailyQuizScreen>
 
     final content = SingleChildScrollView(
       padding: const EdgeInsets.only(left: 24, right: 24, top: 24, bottom: 100),
-      // 잠긴 상태에선 스크롤 중 실수로 채점되지 않도록 물리 스크롤은 유지하되
-      // 탭 제스처는 아래 GestureDetector가 감지해서 바로 페이월을 띄움
       physics: locked ? const ClampingScrollPhysics() : null,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -1164,7 +1143,6 @@ class _DailyQuizScreenState extends State<DailyQuizScreen>
 
     if (!locked) return content;
 
-    // 잠긴 Expert 화면에서는 옵션뿐 아니라 카드 어디를 눌러도 바로 페이월이 뜨도록
     return GestureDetector(
       behavior: HitTestBehavior.opaque,
       onTap: _promptExpertSubscription,
@@ -1172,7 +1150,6 @@ class _DailyQuizScreenState extends State<DailyQuizScreen>
     );
   }
 
-  // 반짝이는 사선 하이라이트가 계속 흐르는 "PREMIUM" 배지
   Widget _buildPremiumChip() {
     return ClipRRect(
       borderRadius: BorderRadius.circular(20),
@@ -1237,20 +1214,16 @@ class _DailyQuizScreenState extends State<DailyQuizScreen>
     );
   }
 
-  // 옵션 텍스트로 visited 여부 판단
   bool _isOptionVisited(String optionText) {
     final lowerText = optionText.trim().toLowerCase();
     final landmarkProvider = context.read<LandmarksProvider>();
     final countryProvider = context.read<CountryProvider>();
     final cityProvider = context.read<CityProvider>();
 
-    // 랜드마크 방문 여부
     if (landmarkProvider.allLandmarks.any(
             (l) => l.name.toLowerCase() == lowerText && landmarkProvider.visitedLandmarks.contains(l.name))) return true;
-    // 국가 방문 여부 (isoA3 기준)
     final matchedCountry = countryProvider.allCountries.firstWhereOrNull((c) => c.name.toLowerCase() == lowerText);
     if (matchedCountry != null && countryProvider.visitedCountries.contains(matchedCountry.isoA3)) return true;
-    // 도시 방문 여부 (cityName 기준)
     if (cityProvider.isVisited(optionText.trim())) return true;
     return false;
   }
@@ -1486,7 +1459,6 @@ class _DailyQuizScreenState extends State<DailyQuizScreen>
     final airlineProvider = context.read<AirlineProvider>();
     final airportProvider = context.read<AirportProvider>();
 
-    // 1. 국가 매칭
     final country = countryProvider.allCountries.firstWhereOrNull(
           (c) => c.name.toLowerCase() == lowerText,
     );
@@ -1495,7 +1467,6 @@ class _DailyQuizScreenState extends State<DailyQuizScreen>
       return;
     }
 
-    // 2. 랜드마크 매칭
     final landmark = landmarkProvider.allLandmarks.firstWhereOrNull(
           (l) => l.name.toLowerCase() == lowerText,
     );
@@ -1504,7 +1475,6 @@ class _DailyQuizScreenState extends State<DailyQuizScreen>
       return;
     }
 
-    // 3. 도시 매칭
     final city = cityProvider.allCities.firstWhereOrNull(
           (c) => c.name.toLowerCase() == lowerText,
     );
@@ -1513,7 +1483,6 @@ class _DailyQuizScreenState extends State<DailyQuizScreen>
       return;
     }
 
-    // 4. 항공사 매칭
     final airline = airlineProvider.airlines.firstWhereOrNull(
           (a) => a.name.toLowerCase() == lowerText,
     );
@@ -1522,7 +1491,6 @@ class _DailyQuizScreenState extends State<DailyQuizScreen>
       return;
     }
 
-    // 5. 공항 매칭
     final airport = airportProvider.allAirports.firstWhereOrNull(
           (ap) => ap.name.toLowerCase() == lowerText,
     );
@@ -1531,7 +1499,6 @@ class _DailyQuizScreenState extends State<DailyQuizScreen>
       return;
     }
 
-    // 6. 매칭 실패 시 디버그 콘솔 로그 출력
     debugPrint("모달 연결 실패: $optionText");
 
     ScaffoldMessenger.of(context).showSnackBar(
@@ -1570,7 +1537,6 @@ class _DailyQuizScreenState extends State<DailyQuizScreen>
 
 // ─────────────────────────────────────────────
 // 탭하면 살짝 눌리는 느낌을 주는 프레셔블 스케일 래퍼.
-// InkWell 리플 대신 스케일 다운으로 좀 더 고급스러운 촉각 피드백을 줌.
 // ─────────────────────────────────────────────
 class _PressableScale extends StatefulWidget {
   final Widget child;
@@ -1613,8 +1579,7 @@ class _PressableScaleState extends State<_PressableScale> {
 }
 
 // ─────────────────────────────────────────────
-// 정답 축하 애니메이션 — 은은한 빛 번짐 + 컨페티 입자가
-// 화면 중앙에서 확 터졌다가 사라지는 셀레브레이션 오버레이.
+// 정답 축하 애니메이션
 // ─────────────────────────────────────────────
 class _CelebrationOverlay extends StatelessWidget {
   final AnimationController controller;
@@ -1629,7 +1594,6 @@ class _CelebrationOverlay extends StatelessWidget {
       animation: controller,
       builder: (context, _) {
         final t = controller.value;
-        // 빛 번짐: 0~0.35 구간에서 확 커졌다가 나머지 구간 동안 서서히 옅어짐
         final glowT = Curves.easeOut.transform((t / 0.35).clamp(0.0, 1.0));
         final glowFade = 1.0 - Curves.easeIn.transform(((t - 0.25) / 0.75).clamp(0.0, 1.0));
         final glowScale = 0.4 + glowT * 1.8;
@@ -1678,7 +1642,6 @@ class _CelebrationBadge extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // 0~0.25: elastic pop-in, 0.25~0.65: hold, 0.65~1.0: fade+float up
     final popT = Curves.elasticOut.transform((progress / 0.25).clamp(0.0, 1.0));
     final fadeT = 1.0 - Curves.easeIn.transform(((progress - 0.65) / 0.35).clamp(0.0, 1.0));
     final riseOffset = (1.0 - fadeT) * -18;
@@ -1738,7 +1701,7 @@ class _ConfettiParticle {
 }
 
 class _ConfettiPainter extends CustomPainter {
-  final double progress; // 0..1
+  final double progress;
   final List<Color> colors;
 
   _ConfettiPainter({required this.progress, required this.colors});
@@ -1758,20 +1721,19 @@ class _ConfettiPainter extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     if (progress <= 0.03) return;
     final center = Offset(size.width / 2, size.height * 0.42);
-    // 입자는 0.05~0.9 구간 동안 바깥으로 퍼지고, 0.5 이후로 옅어짐
     final travel = Curves.easeOut.transform(((progress - 0.03) / 0.75).clamp(0.0, 1.0));
     final fade = 1.0 - Curves.easeIn.transform(((progress - 0.45) / 0.55).clamp(0.0, 1.0));
     if (fade <= 0) return;
 
     final palette = [
       ...colors,
-      const Color(0xFFFFD54F), // gold accent
+      const Color(0xFFFFD54F),
       Colors.white,
     ];
 
     for (final p in _particles) {
       final dx = math.cos(p.angle) * p.speed * travel;
-      final dy = math.sin(p.angle) * p.speed * travel - (travel * travel * 40); // 살짝 위로 튀는 궤적
+      final dy = math.sin(p.angle) * p.speed * travel - (travel * travel * 40);
       final offset = center + Offset(dx, dy);
       final color = palette[p.colorIndex % palette.length].withOpacity(fade.clamp(0.0, 1.0));
 
@@ -1852,12 +1814,10 @@ class _QuizLandmarkModalState extends State<_QuizLandmarkModal> {
 
         final imageUrl = _quizGetLandmarkImageUrl(freshLandmark.name);
 
-        // 도시명
         String displayCity = freshLandmark.city != 'Unknown' && freshLandmark.city != 'Unknown City'
             ? freshLandmark.city
             : '';
 
-        // 국기 위젯
         Widget buildFlags() {
           final validA2s = freshLandmark.countriesIsoA3.map((isoA3) {
             return countryProvider.allCountries
@@ -1887,7 +1847,6 @@ class _QuizLandmarkModalState extends State<_QuizLandmarkModal> {
             heightFactor: 0.85,
             child: Column(
               children: [
-                // ── 헤더 이미지 영역 ──
                 ClipRRect(
                   borderRadius: const BorderRadius.vertical(top: Radius.circular(24)),
                   child: AspectRatio(
@@ -2033,7 +1992,6 @@ class _QuizLandmarkModalState extends State<_QuizLandmarkModal> {
                     ),
                   ),
                 ),
-                // ── 스크롤 바디 ──
                 Expanded(
                   child: SingleChildScrollView(
                     physics: const BouncingScrollPhysics(),
@@ -2042,7 +2000,6 @@ class _QuizLandmarkModalState extends State<_QuizLandmarkModal> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          // Wishlist + Rating
                           Container(
                             padding: const EdgeInsets.all(16),
                             decoration: BoxDecoration(
@@ -2093,7 +2050,6 @@ class _QuizLandmarkModalState extends State<_QuizLandmarkModal> {
                           ),
                           const SizedBox(height: 24),
 
-                          // Sub-locations
                           if (totalSubCount > 1) ...[
                             Row(children: [
                               Container(
@@ -2129,7 +2085,6 @@ class _QuizLandmarkModalState extends State<_QuizLandmarkModal> {
                             const SizedBox(height: 24),
                           ],
 
-                          // Visit History
                           Row(children: [
                             Container(
                               padding: const EdgeInsets.all(8),
@@ -2181,7 +2136,6 @@ class _QuizLandmarkModalState extends State<_QuizLandmarkModal> {
                             ),
                           const SizedBox(height: 24),
 
-                          // Info card
                           Container(
                             padding: const EdgeInsets.all(16),
                             decoration: BoxDecoration(
@@ -2214,7 +2168,6 @@ class _QuizLandmarkModalState extends State<_QuizLandmarkModal> {
     );
   }
 }
-
 
 class _LandmarkVisitEditorCard extends StatefulWidget {
   final String landmarkName;

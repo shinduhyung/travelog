@@ -34,9 +34,20 @@ class BadgeShare {
           ? 'I just unlocked the "${achievement.name}" badge on Travelog! 🏆✈️\n\n#Travelog #TravelTracker'
           : 'Working on the "${achievement.name}" badge on Travelog! 🏃‍♂️✈️\n\n#Travelog #TravelTracker';
 
+      // iOS(특히 iPad, sharePositionOrigin 없을 시 크래시가 보고된 iOS 26)에서는
+      // 이 값이 없으면 공유 시트가 안 뜨거나 크래시가 남. Android는 무시함.
+      Rect? sharePositionOrigin;
+      if (context.mounted) {
+        final box = context.findRenderObject() as RenderBox?;
+        if (box != null) {
+          sharePositionOrigin = box.localToGlobal(Offset.zero) & box.size;
+        }
+      }
+
       await Share.shareXFiles(
         [XFile(imagePath.path)],
         text: shareText,
+        sharePositionOrigin: sharePositionOrigin,
       );
     } catch (e) {
       debugPrint("Badge Share Error: $e");

@@ -6,6 +6,8 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:in_app_purchase/in_app_purchase.dart';
 import 'package:in_app_purchase_android/in_app_purchase_android.dart';
+import 'package:in_app_purchase_storekit/in_app_purchase_storekit.dart';
+import 'package:in_app_purchase_storekit/store_kit_2_wrappers.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:facebook_app_events/facebook_app_events.dart';
 import 'package:jidoapp/services/ad_service.dart';
@@ -33,11 +35,13 @@ class SubscriptionService extends ChangeNotifier {
   static const String _prefKeyActiveProductId = 'active_product_id';
   static const String _prefKeyIsLifetime = 'is_lifetime';
 
-  static const bool _debugForceNonPremium = false; // [디버깅용] true로 두면 실제 구독 상태와 무관하게 항상 비구독으로 취급됨. 프리미엄 뱃지 잠금 UI 테스트 끝나면 반드시 false로 되돌릴 것.
+  static const bool _debugForceNonPremium =
+      false; // [디버깅용] true로 두면 실제 구독 상태와 무관하게 항상 비구독으로 취급됨. 프리미엄 뱃지 잠금 UI 테스트 끝나면 반드시 false로 되돌릴 것.
 
   // TikTok Android Native SDK와 연결하는 통로
-  static const MethodChannel _tiktokChannel =
-  MethodChannel('com.ahnlee.jidoapp/tiktok_events');
+  static const MethodChannel _tiktokChannel = MethodChannel(
+    'com.ahnlee.jidoapp/tiktok_events',
+  );
 
   final InAppPurchase _iap = InAppPurchase.instance;
 
@@ -126,9 +130,7 @@ class SubscriptionService extends ChangeNotifier {
     _purchaseSubscription = _iap.purchaseStream.listen(
       _onPurchaseUpdate,
       onError: (Object e) {
-        debugPrint(
-          '[SubscriptionService] purchaseStream error: $e',
-        );
+        debugPrint('[SubscriptionService] purchaseStream error: $e');
       },
     );
 
@@ -168,9 +170,7 @@ class SubscriptionService extends ChangeNotifier {
     }
   }
 
-  void _onPurchaseUpdate(
-      List<PurchaseDetails> purchases,
-      ) {
+  void _onPurchaseUpdate(List<PurchaseDetails> purchases) {
     for (final purchase in purchases) {
       switch (purchase.status) {
         case PurchaseStatus.pending:
@@ -182,9 +182,9 @@ class SubscriptionService extends ChangeNotifier {
           break;
 
         case PurchaseStatus.restored:
-        // 복원은 신규 구매가 아니므로 Meta/TikTok Purchase 이벤트는 전송하지 않음.
-        // 단, 자동 갱신(재결제)도 앱을 다시 켤 때 restored로 들어오므로
-        // Firestore 주문 저장은 _handleSuccessfulPurchase에서 항상 수행한다.
+          // 복원은 신규 구매가 아니므로 Meta/TikTok Purchase 이벤트는 전송하지 않음.
+          // 단, 자동 갱신(재결제)도 앱을 다시 켤 때 restored로 들어오므로
+          // Firestore 주문 저장은 _handleSuccessfulPurchase에서 항상 수행한다.
           _handleSuccessfulPurchase(purchase, isRestore: true);
           break;
 
@@ -219,10 +219,39 @@ class SubscriptionService extends ChangeNotifier {
     }
   }
 
+  Future<String?> _extractOriginalTransactionId(
+    PurchaseDetails purchase,
+  ) async {
+    if (purchase is AppStorePurchaseDetails) {
+      final original = purchase.skPaymentTransaction.originalTransaction;
+      if (original?.transactionIdentifier != null) {
+        return original!.transactionIdentifier;
+      }
+      return purchase.purchaseID;
+    }
+
+    if (purchase.purchaseID != null) {
+      try {
+        final transactions = await SK2Transaction.transactions();
+        for (final t in transactions) {
+          if (t.id == purchase.purchaseID) {
+            return t.originalId;
+          }
+        }
+        debugPrint(
+          '[SubscriptionService] SK2 transaction id=${purchase.purchaseID} not found in transactions() list',
+        );
+      } catch (e) {
+        debugPrint('[SubscriptionService] SK2 originalId lookup error: $e');
+      }
+    }
+    return purchase.purchaseID; // 못 찾으면 자기 자신을 원본으로 취급 (안전한 폴백)
+  }
+
   Future<void> _handleSuccessfulPurchase(
-      PurchaseDetails purchase, {
-        required bool isRestore,
-      }) async {
+    PurchaseDetails purchase, {
+    required bool isRestore,
+  }) async {
     final String productId = purchase.productID;
     final bool isLifetimePurchase = productId == kLifetimeId;
 
@@ -243,13 +272,11 @@ class SubscriptionService extends ChangeNotifier {
 
         debugPrint(
           '[SubscriptionService] Meta Purchase sent: '
-              '$price $currencyCode',
+          '$price $currencyCode',
         );
       } catch (e) {
         // 광고 이벤트 실패 때문에 실제 구독 처리가 실패하면 안 됨
-        debugPrint(
-          '[SubscriptionService] Meta Purchase error: $e',
-        );
+        debugPrint('[SubscriptionService] Meta Purchase error: $e');
       }
 
       // --------------------------------------------------
@@ -257,25 +284,20 @@ class SubscriptionService extends ChangeNotifier {
       // --------------------------------------------------
       if (Platform.isAndroid) {
         try {
-          await _tiktokChannel.invokeMethod(
-            'trackPurchase',
-            {
-              'value': price,
-              'currency': currencyCode,
-              'productId': productId,
-            },
-          );
+          await _tiktokChannel.invokeMethod('trackPurchase', {
+            'value': price,
+            'currency': currencyCode,
+            'productId': productId,
+          });
 
           debugPrint(
             '[SubscriptionService] TikTok Purchase sent: '
-                '$price $currencyCode / $productId',
+            '$price $currencyCode / $productId',
           );
         } catch (e) {
           // TikTok 광고 이벤트 실패해도
           // 실제 프리미엄 활성화에는 영향 없음
-          debugPrint(
-            '[SubscriptionService] TikTok Purchase error: $e',
-          );
+          debugPrint('[SubscriptionService] TikTok Purchase error: $e');
         }
       }
     }
@@ -293,8 +315,9 @@ class SubscriptionService extends ChangeNotifier {
       final orderId = purchase.billingClientPurchase.orderId;
 
       if (orderId != null && orderId.isNotEmpty) {
-        final docRef =
-        FirebaseFirestore.instance.collection('orders').doc(orderId);
+        final docRef = FirebaseFirestore.instance
+            .collection('orders')
+            .doc(orderId);
 
         try {
           final existing = await docRef.get();
@@ -308,12 +331,13 @@ class SubscriptionService extends ChangeNotifier {
             // 라이프타임은 갱신이 없으므로 항상 최초 구매.
             final bool isRenewal =
                 !isLifetimePurchase && orderId.contains('..');
-            final String originalOrderId =
-            isRenewal ? orderId.split('..').first : orderId;
+            final String originalOrderId = isRenewal
+                ? orderId.split('..').first
+                : orderId;
 
             debugPrint(
               '[SubscriptionService] Android orderId: $orderId '
-                  'isRenewal=$isRenewal isRestore=$isRestore',
+              'isRenewal=$isRenewal isRestore=$isRestore',
             );
 
             final int priceAmountMicros = (price * 1000000).round();
@@ -339,13 +363,65 @@ class SubscriptionService extends ChangeNotifier {
             });
           }
         } catch (e) {
-          debugPrint(
-            '[SubscriptionService] Firestore save error: $e',
-          );
+          debugPrint('[SubscriptionService] Firestore save error: $e');
         }
       } else {
         debugPrint(
           '[SubscriptionService] ⚠️ Android purchase has no orderId — cannot record order.',
+        );
+      }
+    }
+
+    if (Platform.isIOS) {
+      final transactionId = purchase.purchaseID;
+      if (transactionId != null && transactionId.isNotEmpty) {
+        final int priceAmountMicros = (price * 1000000).round();
+        // 구독 갱신 여부(1년차/2년차)를 나중에 판별하기 위해 원본 트랜잭션 ID도 함께 저장.
+        final originalTransactionId =
+            await _extractOriginalTransactionId(purchase) ?? transactionId;
+
+        // purchase.transactionDate = 이 트랜잭션의 실제 결제/갱신 시각(epoch millis 문자열).
+        // FieldValue.serverTimestamp()는 "지금 처리된 시각"이라, restore로 과거 트랜잭션이
+        // 재전달될 때마다 원래 결제일이 "오늘"로 덮어써지는 버그의 직접 원인이었음.
+        // docId가 transactionId라서 merge:true로 계속 같은 문서를 다시 쓰는 구조이므로,
+        // 이 필드만 고치면 앞으로의 write는 물론 이미 오염된 기존 문서도 다음 restore 때
+        // 자동으로 정확한 날짜로 재덮어써진다.
+        Timestamp purchaseTimestamp;
+        final rawDate = purchase.transactionDate;
+        final millis = rawDate != null ? int.tryParse(rawDate) : null;
+        if (millis != null) {
+          purchaseTimestamp = Timestamp.fromDate(
+            DateTime.fromMillisecondsSinceEpoch(millis),
+          );
+        } else {
+          debugPrint(
+            '[SubscriptionService] ⚠️ no transactionDate for $transactionId, falling back to now',
+          );
+          purchaseTimestamp = Timestamp.now();
+        }
+
+        try {
+          await FirebaseFirestore.instance
+              .collection('orders')
+              .doc(transactionId)
+              .set({
+                'orderId': transactionId,
+                'originalTransactionId': originalTransactionId,
+                'productId': productId,
+                'isLifetime': isLifetimePurchase,
+                'purchaseTime': purchaseTimestamp,
+                'platform': 'ios',
+                'status': 'purchased',
+                'priceAmountMicros': priceAmountMicros,
+                'priceCurrencyCode': currencyCode,
+                'uid': FirebaseAuth.instance.currentUser?.uid,
+              }, SetOptions(merge: true));
+        } catch (e) {
+          debugPrint('[SubscriptionService] Firestore save error: $e');
+        }
+      } else {
+        debugPrint(
+          '[SubscriptionService] ⚠️ iOS purchase has no purchaseID — cannot record order.',
         );
       }
     }
@@ -384,14 +460,10 @@ class SubscriptionService extends ChangeNotifier {
 
     _setLoading(true);
 
-    final PurchaseParam param = PurchaseParam(
-      productDetails: details,
-    );
+    final PurchaseParam param = PurchaseParam(productDetails: details);
 
     try {
-      final result = await _iap.buyNonConsumable(
-        purchaseParam: param,
-      );
+      final result = await _iap.buyNonConsumable(purchaseParam: param);
 
       if (!result) {
         _setLoading(false);
@@ -402,9 +474,7 @@ class SubscriptionService extends ChangeNotifier {
     } catch (e) {
       _setLoading(false);
 
-      debugPrint(
-        '[SubscriptionService] buy error: $e',
-      );
+      debugPrint('[SubscriptionService] buy error: $e');
 
       _logFunnelEvent('checkout_error', productId, triggerContext);
 
@@ -416,24 +486,24 @@ class SubscriptionService extends ChangeNotifier {
   /// pipeline (mirrors the existing ad_revenue_events pattern). Never
   /// affects the actual purchase flow if it fails.
   Future<void> _logFunnelEvent(
-      String event,
-      String productId,
-      String? triggerContext,
-      ) async {
+    String event,
+    String productId,
+    String? triggerContext,
+  ) async {
     try {
       await FirebaseFirestore.instance
           .collection('subscription_funnel_events')
           .add({
-        'event': event,
-        'productId': productId,
-        'triggerContext': triggerContext ?? 'unknown',
-        'adExperimentGroup': AdService.instance.experimentGroup,
-        'deviceId': AdService.instance.deviceId,
-        'userAssignedAt': AdService.instance.assignedAt != null
-            ? Timestamp.fromDate(AdService.instance.assignedAt!)
-            : null,
-        'timestamp': FieldValue.serverTimestamp(),
-      });
+            'event': event,
+            'productId': productId,
+            'triggerContext': triggerContext ?? 'unknown',
+            'adExperimentGroup': AdService.instance.experimentGroup,
+            'deviceId': AdService.instance.deviceId,
+            'userAssignedAt': AdService.instance.assignedAt != null
+                ? Timestamp.fromDate(AdService.instance.assignedAt!)
+                : null,
+            'timestamp': FieldValue.serverTimestamp(),
+          });
     } catch (e) {
       debugPrint('[SubscriptionService] funnel log error: $e');
     }
@@ -447,19 +517,17 @@ class SubscriptionService extends ChangeNotifier {
     try {
       await _iap.restorePurchases();
     } catch (e) {
-      debugPrint(
-        '[SubscriptionService] restore error: $e',
-      );
+      debugPrint('[SubscriptionService] restore error: $e');
     } finally {
       _setLoading(false);
     }
   }
 
   Future<void> _setPremium(
-      bool value, {
-        String? productId,
-        bool isLifetime = false,
-      }) async {
+    bool value, {
+    String? productId,
+    bool isLifetime = false,
+  }) async {
     // [디버깅용] 활성 결제/복원 이벤트(예: 이미 구독 중인 계정에서 스토어가 스트림
     // 초기화 시 재전달하는 구매 정보)가 들어와도 강제로 비구독 취급되도록 덮어씀.
     // 이게 없으면 _debugForceNonPremium=true로 꺼둬도 실제 구독 중인 테스트
@@ -472,18 +540,12 @@ class SubscriptionService extends ChangeNotifier {
 
     final prefs = await SharedPreferences.getInstance();
 
-    await prefs.setBool(
-      _prefKeyIsPremium,
-      value,
-    );
+    await prefs.setBool(_prefKeyIsPremium, value);
 
     if (value) {
       _hasEverBeenPremium = true;
 
-      await prefs.setBool(
-        _prefKeyHasEverBeenPremium,
-        true,
-      );
+      await prefs.setBool(_prefKeyHasEverBeenPremium, true);
 
       if (productId != null) {
         _activeProductId = productId;
@@ -503,9 +565,7 @@ class SubscriptionService extends ChangeNotifier {
     }
   }
 
-  void _setLoading(
-      bool value,
-      ) {
+  void _setLoading(bool value) {
     _isLoading = value;
 
     notifyListeners();
@@ -523,7 +583,7 @@ class AdServiceSubscriptionBridge {
   AdServiceSubscriptionBridge._();
 
   static final AdServiceSubscriptionBridge instance =
-  AdServiceSubscriptionBridge._();
+      AdServiceSubscriptionBridge._();
 
   VoidCallback? _onActivated;
   VoidCallback? _onDeactivated;

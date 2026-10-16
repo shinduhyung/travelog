@@ -30,9 +30,20 @@ class CitiesShare {
       final statsImagePath = await File('${directory.path}/cities_map_share.png').create();
       await statsImagePath.writeAsBytes(statsImage);
 
+      // iOS(특히 iPad, sharePositionOrigin 없을 시 크래시가 보고된 iOS 26)에서는
+      // 이 값이 없으면 공유 시트가 안 뜨거나 크래시가 남. Android는 무시함.
+      Rect? sharePositionOrigin;
+      if (context.mounted) {
+        final box = context.findRenderObject() as RenderBox?;
+        if (box != null) {
+          sharePositionOrigin = box.localToGlobal(Offset.zero) & box.size;
+        }
+      }
+
       await Share.shareXFiles(
         [XFile(statsImagePath.path)],
         text: 'Check out my city travels! I have visited ${visitedCities.length} cities via Travelog.',
+        sharePositionOrigin: sharePositionOrigin,
       );
     } catch (e) {
       debugPrint("Share Error: $e");
