@@ -26,7 +26,7 @@ Map<String, String> _parseContinents(String jsonStr) {
   final List<dynamic> parsedJson = json.decode(jsonStr);
   return {
     for (var item in parsedJson)
-      item['iso_a2'] as String: item['continent'] as String
+      item['iso_a2'] as String: item['continent'] as String,
   };
 }
 
@@ -35,7 +35,7 @@ Map<String, String> _parseLargestCitiesMap(String jsonStr) {
   final List<dynamic> parsedJson = json.decode(jsonStr);
   return {
     for (var item in parsedJson)
-      item['country'] as String: item['name'] as String
+      item['country'] as String: item['name'] as String,
   };
 }
 
@@ -118,7 +118,9 @@ List<City> _parseGaWCJson(String jsonStr) {
 List<City> _mergeAndProcessCities(Map<String, dynamic> message) {
   final String cities15000Json = message['cities15000Json'];
   final String citiesJson = message['citiesJson'];
-  final Map<String, String> continentMap = Map<String, String>.from(message['continentMap']);
+  final Map<String, String> continentMap = Map<String, String>.from(
+    message['continentMap'],
+  );
 
   final List<dynamic> statsList = json.decode(citiesJson);
   final Map<String, City> statsMap = {};
@@ -148,7 +150,9 @@ List<City> _mergeAndProcessCities(Map<String, dynamic> message) {
 
     for (int i = 0; i < group.length; i++) {
       final item = group[i];
-      String uniqueName = (group.length > 1 && i > 0) ? '$cityName($i)' : cityName;
+      String uniqueName = (group.length > 1 && i > 0)
+          ? '$cityName($i)'
+          : cityName;
 
       City? statData;
       if (i == 0) {
@@ -156,39 +160,44 @@ List<City> _mergeAndProcessCities(Map<String, dynamic> message) {
       }
 
       if (statData != null) {
-        mergedList.add(City(
-          name: uniqueName,
-          country: statData.country,
-          countryIsoA2: statData.countryIsoA2,
-          continent: statData.continent,
-          population: (item['population'] as num?)?.toInt() ?? statData.population,
-          latitude: (item['latitude'] as num).toDouble(),
-          longitude: (item['longitude'] as num).toDouble(),
-          capitalStatus: statData.capitalStatus,
-          annualVisitors: statData.annualVisitors,
-          avgTemp: statData.avgTemp,
-          avgPrecipitation: statData.avgPrecipitation,
-          altitude: statData.altitude,
-          gdpNominal: statData.gdpNominal,
-          gdpPpp: statData.gdpPpp,
-          starbucksCount: statData.starbucksCount,
-          millionaires: statData.millionaires,
-          billionaires: statData.billionaires,
-          cityTouristRatio: statData.cityTouristRatio,
-          stationsCount: statData.stationsCount,
-          studentScore: statData.studentScore,
-          safetyScore: statData.safetyScore,
-          liveabilityScore: statData.liveabilityScore,
-          surveillanceCameraCount: statData.surveillanceCameraCount,
-          skyscraperCount: statData.skyscraperCount,
-          pollutionScore: statData.pollutionScore,
-          homicideRate: statData.homicideRate,
-          trafficTimeMinutes: statData.trafficTimeMinutes,
-          hollywoodScore: statData.hollywoodScore,
-          gawcTier: statData.gawcTier,
-        ));
+        mergedList.add(
+          City(
+            name: uniqueName,
+            country: statData.country,
+            countryIsoA2: statData.countryIsoA2,
+            continent: statData.continent,
+            population:
+                (item['population'] as num?)?.toInt() ?? statData.population,
+            latitude: (item['latitude'] as num).toDouble(),
+            longitude: (item['longitude'] as num).toDouble(),
+            capitalStatus: statData.capitalStatus,
+            annualVisitors: statData.annualVisitors,
+            avgTemp: statData.avgTemp,
+            avgPrecipitation: statData.avgPrecipitation,
+            altitude: statData.altitude,
+            gdpNominal: statData.gdpNominal,
+            gdpPpp: statData.gdpPpp,
+            starbucksCount: statData.starbucksCount,
+            millionaires: statData.millionaires,
+            billionaires: statData.billionaires,
+            cityTouristRatio: statData.cityTouristRatio,
+            stationsCount: statData.stationsCount,
+            studentScore: statData.studentScore,
+            safetyScore: statData.safetyScore,
+            liveabilityScore: statData.liveabilityScore,
+            surveillanceCameraCount: statData.surveillanceCameraCount,
+            skyscraperCount: statData.skyscraperCount,
+            pollutionScore: statData.pollutionScore,
+            homicideRate: statData.homicideRate,
+            trafficTimeMinutes: statData.trafficTimeMinutes,
+            hollywoodScore: statData.hollywoodScore,
+            gawcTier: statData.gawcTier,
+          ),
+        );
       } else {
-        mergedList.add(City.fromMapJson(item, continentMap).copyWith(name: uniqueName));
+        mergedList.add(
+          City.fromMapJson(item, continentMap).copyWith(name: uniqueName),
+        );
       }
     }
   }
@@ -320,7 +329,8 @@ class CityProvider with ChangeNotifier {
   List<City> get allTransitCities => _allTransitCities;
   List<City> get majorFilmFestivalCities => _majorFilmFestivalCities;
   List<City> get deFactoCapitals => _deFactoCapitals;
-  List<City> get countryNameIdenticalToCapital => _countryNameIdenticalToCapital;
+  List<City> get countryNameIdenticalToCapital =>
+      _countryNameIdenticalToCapital;
   List<City> get capitalsWithCityInName => _capitalsWithCityInName;
   List<City> get countryCapitalHighSimilarity => _countryCapitalHighSimilarity;
   List<City> get cityStates => _cityStates;
@@ -335,7 +345,8 @@ class CityProvider with ChangeNotifier {
   List<City> get capitalsInTwoHemispheres => _capitalsInTwoHemispheres;
   List<City> get transcontinentalCities => _transcontinentalCities;
 
-  List<Map<String, dynamic>> get financialIndexRawData => _financialIndexRawData;
+  List<Map<String, dynamic>> get financialIndexRawData =>
+      _financialIndexRawData;
 
   Set<String> get visitedCities => _visitDetails.keys.toSet();
   Map<String, CityVisitDetail> get visitDetails => _visitDetails;
@@ -351,7 +362,8 @@ class CityProvider with ChangeNotifier {
 
   Map<String, int> get cityContinentCounts => _cityContinentCounts;
   Map<String, int> get capitalContinentCounts => _capitalContinentCounts;
-  Map<String, int> get totalCapitalCountsByContinent => _totalCapitalCountsByContinent;
+  Map<String, int> get totalCapitalCountsByContinent =>
+      _totalCapitalCountsByContinent;
   int get totalVisitedCapitals => _totalVisitedCapitals;
   int get totalCapitals => _totalCapitals;
   int get totalVisitedCount => _visitDetails.keys.length;
@@ -362,7 +374,8 @@ class CityProvider with ChangeNotifier {
     // 리마운트가 실제로 동작한 것. 계정 전환 테스트에서는 이 인스턴스ID가
     // 바뀌면서 uid도 기대한 계정으로 바뀌는지가 핵심 확인 포인트.
     debugPrint(
-        '🆕 [CityProvider#$_instanceId] constructed (currentUser=${_auth.currentUser?.uid})');
+      '🆕 [CityProvider#$_instanceId] constructed (currentUser=${_auth.currentUser?.uid})',
+    );
     _initializeData();
   }
 
@@ -431,15 +444,20 @@ class CityProvider with ChangeNotifier {
   }
 
   Future<String> _loadJsonFromStorage(String fileName) async {
-    final url = 'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/json%2F$fileName?alt=media';
+    final url =
+        'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/json%2F$fileName?alt=media';
     try {
       // 오프라인 상태일 때 무한 대기하지 않도록 timeout 설정
-      final response = await http.get(Uri.parse(url)).timeout(const Duration(seconds: 5));
+      final response = await http
+          .get(Uri.parse(url))
+          .timeout(const Duration(seconds: 5));
       if (response.statusCode == 200) {
         return response.body;
       }
     } catch (e) {
-      print('[CityProvider] Network error or timeout loading $fileName: $e. Falling back to local asset.');
+      print(
+        '[CityProvider] Network error or timeout loading $fileName: $e. Falling back to local asset.',
+      );
     }
     // 실패 시(오프라인, 타임아웃, statusCode 오류 등) 로컬 fallback
     return await rootBundle.loadString('assets/$fileName');
@@ -456,13 +474,15 @@ class CityProvider with ChangeNotifier {
 
     if (cached != null && cached.isNotEmpty) {
       // 캐시로 즉시 진행하고, 최신본은 백그라운드에서 갱신 (fire-and-forget)
-      _loadJsonFromStorage('cities15000.json').then((fresh) {
-        if (fresh.isNotEmpty) {
-          prefs.setString(_cities15000CacheKey, fresh);
-        }
-      }).catchError((e) {
-        print('[CityProvider] Background cities15000 refresh failed: $e');
-      });
+      _loadJsonFromStorage('cities15000.json')
+          .then((fresh) {
+            if (fresh.isNotEmpty) {
+              prefs.setString(_cities15000CacheKey, fresh);
+            }
+          })
+          .catchError((e) {
+            print('[CityProvider] Background cities15000 refresh failed: $e');
+          });
       return cached;
     }
 
@@ -485,7 +505,8 @@ class CityProvider with ChangeNotifier {
     // 인스턴스ID로 "어느 인스턴스가 초기화를 시작/완료했는지" 구분 가능.
     final stopwatch = Stopwatch()..start();
     debugPrint(
-        '▶️ [CityProvider#$_instanceId] _initializeData START (user=${_auth.currentUser?.uid})');
+      '▶️ [CityProvider#$_instanceId] _initializeData START (user=${_auth.currentUser?.uid})',
+    );
     try {
       // 1. 핵심 데이터 로드 (지도용 기본 도시 목록) — 최대한 병렬로
       final continentFuture = rootBundle
@@ -539,34 +560,43 @@ class CityProvider with ChangeNotifier {
       // visitedCities 개수"를 같이 로그로 남겨두면 어느 계정 데이터가
       // 실제로 반영됐는지 바로 확인 가능.
       debugPrint(
-          '✅ [CityProvider#$_instanceId] core data ready (user=${_auth.currentUser?.uid}, '
-              'visitedCities=${_visitDetails.length}, elapsedMs=${stopwatch.elapsedMilliseconds})');
+        '✅ [CityProvider#$_instanceId] core data ready (user=${_auth.currentUser?.uid}, '
+        'visitedCities=${_visitDetails.length}, elapsedMs=${stopwatch.elapsedMilliseconds})',
+      );
 
       // 3. 부가 통계 데이터 — 메인 화면 사용을 막지 않고 백그라운드로 이어서 로드
       await _loadThemeData(countryToContinentMap);
       await _loadSpecialStats();
 
-      final String touristRatioJsonStr =
-      await rootBundle.loadString('assets/city_tourist_ratio.json');
-      _touristRatioData = await compute(_parseTouristRatioJson, touristRatioJsonStr);
+      final String touristRatioJsonStr = await rootBundle.loadString(
+        'assets/city_tourist_ratio.json',
+      );
+      _touristRatioData = await compute(
+        _parseTouristRatioJson,
+        touristRatioJsonStr,
+      );
       _applyTouristRatioToAllLists();
 
-      final String financialIndexJsonStr =
-      await rootBundle.loadString('assets/financial_index.json');
-      _financialIndexRawData = (json.decode(financialIndexJsonStr) as List<dynamic>)
-          .map((item) => item as Map<String, dynamic>)
-          .toList();
+      final String financialIndexJsonStr = await rootBundle.loadString(
+        'assets/financial_index.json',
+      );
+      _financialIndexRawData =
+          (json.decode(financialIndexJsonStr) as List<dynamic>)
+              .map((item) => item as Map<String, dynamic>)
+              .toList();
 
       _isStatsLoading = false;
       notifyListeners();
       debugPrint(
-          '🏁 [CityProvider#$_instanceId] _initializeData DONE (user=${_auth.currentUser?.uid}, '
-              'elapsedMs=${stopwatch.elapsedMilliseconds})');
+        '🏁 [CityProvider#$_instanceId] _initializeData DONE (user=${_auth.currentUser?.uid}, '
+        'elapsedMs=${stopwatch.elapsedMilliseconds})',
+      );
     } catch (e, stackTrace) {
       _error = 'Failed to load city data: $e';
       print('[CityProvider] FATAL ERROR: $_error\n$stackTrace');
       debugPrint(
-          '💥 [CityProvider#$_instanceId] _initializeData FAILED (user=${_auth.currentUser?.uid}, elapsedMs=${stopwatch.elapsedMilliseconds})');
+        '💥 [CityProvider#$_instanceId] _initializeData FAILED (user=${_auth.currentUser?.uid}, elapsedMs=${stopwatch.elapsedMilliseconds})',
+      );
       _isLoading = false;
       _isStatsLoading = false;
       notifyListeners();
@@ -576,15 +606,27 @@ class CityProvider with ChangeNotifier {
   // --- Special Stats (Instagram, Transportation, etc.) ---
   Future<void> _loadSpecialStats() async {
     try {
-      final String statsJsonStr = await rootBundle.loadString('assets/city_stats.json');
+      final String statsJsonStr = await rootBundle.loadString(
+        'assets/city_stats.json',
+      );
       final Map<String, dynamic> statsJson = json.decode(statsJsonStr);
 
-      _instagramCities = _matchCitiesFromStats(statsJson['top_cities_instagram']);
-      _majorFilmFestivalCities = _matchCitiesFromStats(statsJson['major_film_festival_cities']);
+      _instagramCities = _matchCitiesFromStats(
+        statsJson['top_cities_instagram'],
+      );
+      _majorFilmFestivalCities = _matchCitiesFromStats(
+        statsJson['major_film_festival_cities'],
+      );
       _deFactoCapitals = _matchCitiesFromStats(statsJson['de_facto_capitals']);
-      _countryNameIdenticalToCapital = _matchCitiesFromStats(statsJson['country_name_identical_to_capital']);
-      _capitalsWithCityInName = _matchCitiesFromStats(statsJson['capitals_with_city_in_name']);
-      _countryCapitalHighSimilarity = _matchCitiesFromStats(statsJson['country_capital_high_similarity']);
+      _countryNameIdenticalToCapital = _matchCitiesFromStats(
+        statsJson['country_name_identical_to_capital'],
+      );
+      _capitalsWithCityInName = _matchCitiesFromStats(
+        statsJson['capitals_with_city_in_name'],
+      );
+      _countryCapitalHighSimilarity = _matchCitiesFromStats(
+        statsJson['country_capital_high_similarity'],
+      );
       _cityStates = _matchCitiesFromStats(statsJson['city_states']);
 
       // Handle former capital relocations specially (using 'old_city')
@@ -592,25 +634,42 @@ class CityProvider with ChangeNotifier {
         List<dynamic> rawList = statsJson['former_capital_relocations'];
         // Remap to match _matchCitiesFromStats expectation
         List<Map<String, dynamic>> mappedList = rawList.map((item) {
-          return {
-            'city': item['old_city'],
-            'iso2': item['iso2']
-          };
+          return {'city': item['old_city'], 'iso2': item['iso2']};
         }).toList();
         _formerCapitalRelocations = _matchCitiesFromStats(mappedList);
       }
 
       _plannedCapitals = _matchCitiesFromStats(statsJson['planned_capitals']);
-      _capitalsNoAirportCities = _matchCitiesFromStats(statsJson['capitals_without_international_airport']);
-      _allTransitCities = _matchCitiesFromStats(statsJson['cities_all_urban_transit_modes']);
-      _capitalsBelowSeaLevel = _matchCitiesFromStats(statsJson['capitals_below_sea_level']);
-      _capitalsOnMajorRivers = _matchCitiesFromStats(statsJson['capitals_on_major_rivers']);
-      _capitalsAbove1000m = _matchCitiesFromStats(statsJson['capitals_above_1000m']);
-      _capitalsOnTropicOfCancer = _matchCitiesFromStats(statsJson['capitals_on_tropic_of_cancer']);
-      _capitalsHotDesertClimate = _matchCitiesFromStats(statsJson['capitals_hot_desert_climate']);
-      _capitalsNoSeasonalSnowfall = _matchCitiesFromStats(statsJson['capitals_no_seasonal_snowfall']);
-      _capitalsInTwoHemispheres = _matchCitiesFromStats(statsJson['capitals_in_two_hemispheres']);
-      _transcontinentalCities = _matchCitiesFromStats(statsJson['transcontinental_cities']);
+      _capitalsNoAirportCities = _matchCitiesFromStats(
+        statsJson['capitals_without_international_airport'],
+      );
+      _allTransitCities = _matchCitiesFromStats(
+        statsJson['cities_all_urban_transit_modes'],
+      );
+      _capitalsBelowSeaLevel = _matchCitiesFromStats(
+        statsJson['capitals_below_sea_level'],
+      );
+      _capitalsOnMajorRivers = _matchCitiesFromStats(
+        statsJson['capitals_on_major_rivers'],
+      );
+      _capitalsAbove1000m = _matchCitiesFromStats(
+        statsJson['capitals_above_1000m'],
+      );
+      _capitalsOnTropicOfCancer = _matchCitiesFromStats(
+        statsJson['capitals_on_tropic_of_cancer'],
+      );
+      _capitalsHotDesertClimate = _matchCitiesFromStats(
+        statsJson['capitals_hot_desert_climate'],
+      );
+      _capitalsNoSeasonalSnowfall = _matchCitiesFromStats(
+        statsJson['capitals_no_seasonal_snowfall'],
+      );
+      _capitalsInTwoHemispheres = _matchCitiesFromStats(
+        statsJson['capitals_in_two_hemispheres'],
+      );
+      _transcontinentalCities = _matchCitiesFromStats(
+        statsJson['transcontinental_cities'],
+      );
     } catch (e) {
       print('[CityProvider] Error loading city_stats.json: $e');
     }
@@ -625,9 +684,10 @@ class CityProvider with ChangeNotifier {
       final String name = item['city'] ?? '';
       final String iso = item['iso2'] ?? '';
 
-      final city = _allCities.firstWhereOrNull((c) =>
-      c.name.toLowerCase() == name.toLowerCase() &&
-          c.countryIsoA2.toLowerCase() == iso.toLowerCase()
+      final city = _allCities.firstWhereOrNull(
+        (c) =>
+            c.name.toLowerCase() == name.toLowerCase() &&
+            c.countryIsoA2.toLowerCase() == iso.toLowerCase(),
       );
 
       if (city != null) {
@@ -640,64 +700,69 @@ class CityProvider with ChangeNotifier {
   Future<void> _loadThemeData(Map<String, String> continentMap) async {
     // 22개 theme 리스트를 병렬로 로드 (순차 await → Future.wait)
     final results = await Future.wait([
-      _loadList('assets/summer_olympics_cities.json', _parseCities),    // 0
-      _loadList('assets/winter_olympics_cities.json', _parseCities),    // 1
-      _loadList('assets/nhl_cities.json',             _parseCities),    // 2
-      _loadList('assets/nba_cities.json',             _parseCities),    // 3
-      _loadList('assets/mlb_cities.json',             _parseCities),    // 4
-      _loadList('assets/nfl_cities.json',             _parseCities),    // 5
-      _loadList('assets/mls_cities.json',             _parseCities),    // 6
-      _loadList('assets/starbucks.json',              _parseCities),    // 7
-      _loadList('assets/millionaire.json',            _parseCities),    // 8
-      _loadList('assets/transportation.json',         _parseCities),    // 9
-      _loadList('assets/stations.json',               _parseStationsJson),     // 10
-      _loadList('assets/oldest.json',                 _parseOldestCitiesJson), // 11
-      _loadList('assets/student.json',                _parseStudentCitiesJson),// 12
-      _loadList('assets/safety.json',                 _parseSafetyJson),       // 13
-      _loadList('assets/liveability.json',            _parseLiveabilityJson),  // 14
-      _loadList('assets/surveillance.json',           _parseSurveillanceJson), // 15
-      _loadList('assets/skyscraper.json',             _parseSkyscraperJson),   // 16
-      _loadList('assets/pollution.json',              _parsePollutionJson),    // 17
-      _loadList('assets/city_homicide_rate.json',     _parseHomicideJson),     // 18
-      _loadList('assets/traffic.json',                _parseTrafficJson),      // 19
-      _loadList('assets/hollywood.json',              _parseHollywoodJson),    // 20
-      _loadList('assets/gawc.json',                   _parseGaWCJson),         // 21
+      _loadList('assets/summer_olympics_cities.json', _parseCities), // 0
+      _loadList('assets/winter_olympics_cities.json', _parseCities), // 1
+      _loadList('assets/nhl_cities.json', _parseCities), // 2
+      _loadList('assets/nba_cities.json', _parseCities), // 3
+      _loadList('assets/mlb_cities.json', _parseCities), // 4
+      _loadList('assets/nfl_cities.json', _parseCities), // 5
+      _loadList('assets/mls_cities.json', _parseCities), // 6
+      _loadList('assets/starbucks.json', _parseCities), // 7
+      _loadList('assets/millionaire.json', _parseCities), // 8
+      _loadList('assets/transportation.json', _parseCities), // 9
+      _loadList('assets/stations.json', _parseStationsJson), // 10
+      _loadList('assets/oldest.json', _parseOldestCitiesJson), // 11
+      _loadList('assets/student.json', _parseStudentCitiesJson), // 12
+      _loadList('assets/safety.json', _parseSafetyJson), // 13
+      _loadList('assets/liveability.json', _parseLiveabilityJson), // 14
+      _loadList('assets/surveillance.json', _parseSurveillanceJson), // 15
+      _loadList('assets/skyscraper.json', _parseSkyscraperJson), // 16
+      _loadList('assets/pollution.json', _parsePollutionJson), // 17
+      _loadList('assets/city_homicide_rate.json', _parseHomicideJson), // 18
+      _loadList('assets/traffic.json', _parseTrafficJson), // 19
+      _loadList('assets/hollywood.json', _parseHollywoodJson), // 20
+      _loadList('assets/gawc.json', _parseGaWCJson), // 21
     ]);
 
-    _summerOlympicsCities  = results[0];
-    _winterOlympicsCities  = results[1];
-    _nhlCities             = results[2];
-    _nbaCities             = results[3];
-    _mlbCities             = results[4];
-    _nflCities             = results[5];
-    _mlsCities             = results[6];
-    _starbucksCities       = results[7];
-    _millionaireCities     = results[8];
-    _transportationCities  = results[9];
-    _stationCities         = results[10];
-    _oldestCities          = results[11];
-    _studentCities         = results[12];
-    _safetyCities          = results[13];
-    _liveabilityCities     = results[14];
-    _surveillanceCities    = results[15];
-    _skyscraperCities      = results[16];
-    _pollutionCities       = results[17];
-    _homicideCities        = results[18];
-    _trafficCities         = results[19];
-    _hollywoodCities       = results[20];
-    _gawcCities            = results[21];
+    _summerOlympicsCities = results[0];
+    _winterOlympicsCities = results[1];
+    _nhlCities = results[2];
+    _nbaCities = results[3];
+    _mlbCities = results[4];
+    _nflCities = results[5];
+    _mlsCities = results[6];
+    _starbucksCities = results[7];
+    _millionaireCities = results[8];
+    _transportationCities = results[9];
+    _stationCities = results[10];
+    _oldestCities = results[11];
+    _studentCities = results[12];
+    _safetyCities = results[13];
+    _liveabilityCities = results[14];
+    _surveillanceCities = results[15];
+    _skyscraperCities = results[16];
+    _pollutionCities = results[17];
+    _homicideCities = results[18];
+    _trafficCities = results[19];
+    _hollywoodCities = results[20];
+    _gawcCities = results[21];
 
     // largest는 같은 파일을 두 parser로 쓰므로 한 번만 로드 후 병렬 parse
-    final String largestJsonStr = await rootBundle.loadString('assets/largest.json');
+    final String largestJsonStr = await rootBundle.loadString(
+      'assets/largest.json',
+    );
     final largestResults = await Future.wait([
       compute(_parseCities, largestJsonStr),
       compute(_parseLargestCitiesMap, largestJsonStr),
     ]);
-    _largestCities            = largestResults[0] as List<City>;
+    _largestCities = largestResults[0] as List<City>;
     _largestCitiesOverrideMap = largestResults[1] as Map<String, String>;
   }
 
-  Future<List<City>> _loadList(String path, List<City> Function(String) parser) async {
+  Future<List<City>> _loadList(
+    String path,
+    List<City> Function(String) parser,
+  ) async {
     try {
       final String jsonStr = await rootBundle.loadString(path);
       return await compute(parser, jsonStr);
@@ -757,7 +822,8 @@ class CityProvider with ChangeNotifier {
       final originalName = _getOriginalCityName(originalCity.name);
       if (_touristRatioData.containsKey(originalName)) {
         cities[i] = originalCity.copyWith(
-          cityTouristRatio: _touristRatioData[originalName] ?? originalCity.cityTouristRatio,
+          cityTouristRatio:
+              _touristRatioData[originalName] ?? originalCity.cityTouristRatio,
         );
       }
     }
@@ -765,26 +831,39 @@ class CityProvider with ChangeNotifier {
 
   void _calculateCitiesMenuStats() {
     const List<String> continentFullNames = [
-      'Asia', 'Europe', 'Africa', 'North America', 'South America', 'Oceania',
+      'Asia',
+      'Europe',
+      'Africa',
+      'North America',
+      'South America',
+      'Oceania',
     ];
 
     _cityContinentCounts = {for (var name in continentFullNames) name: 0};
     _capitalContinentCounts = {for (var name in continentFullNames) name: 0};
-    _totalCapitalCountsByContinent = {for (var name in continentFullNames) name: 0};
+    _totalCapitalCountsByContinent = {
+      for (var name in continentFullNames) name: 0,
+    };
     _totalVisitedCapitals = 0;
     _totalCapitals = 0;
     _totalVisitedCount = _visitDetails.keys.length;
 
-    final bool includeTerritories = _countryProvider?.includeTerritories ?? false;
+    final bool includeTerritories =
+        _countryProvider?.includeTerritories ?? false;
 
     for (var city in _allCities) {
-      bool isCapital = (city.capitalStatus == CapitalStatus.capital) ||
+      bool isCapital =
+          (city.capitalStatus == CapitalStatus.capital) ||
           (city.capitalStatus == CapitalStatus.territory && includeTerritories);
 
       if (isCapital) {
         _totalCapitals++;
         if (continentFullNames.contains(city.continent)) {
-          _totalCapitalCountsByContinent.update(city.continent, (v) => v + 1, ifAbsent: () => 1);
+          _totalCapitalCountsByContinent.update(
+            city.continent,
+            (v) => v + 1,
+            ifAbsent: () => 1,
+          );
         }
       }
     }
@@ -794,16 +873,26 @@ class CityProvider with ChangeNotifier {
 
       if (cityDetail != null) {
         if (continentFullNames.contains(cityDetail.continent)) {
-          _cityContinentCounts.update(cityDetail.continent, (v) => v + 1, ifAbsent: () => 1);
+          _cityContinentCounts.update(
+            cityDetail.continent,
+            (v) => v + 1,
+            ifAbsent: () => 1,
+          );
         }
 
-        bool isCapital = (cityDetail.capitalStatus == CapitalStatus.capital) ||
-            (cityDetail.capitalStatus == CapitalStatus.territory && includeTerritories);
+        bool isCapital =
+            (cityDetail.capitalStatus == CapitalStatus.capital) ||
+            (cityDetail.capitalStatus == CapitalStatus.territory &&
+                includeTerritories);
 
         if (isCapital) {
           _totalVisitedCapitals++;
           if (continentFullNames.contains(cityDetail.continent)) {
-            _capitalContinentCounts.update(cityDetail.continent, (v) => v + 1, ifAbsent: () => 1);
+            _capitalContinentCounts.update(
+              cityDetail.continent,
+              (v) => v + 1,
+              ifAbsent: () => 1,
+            );
           }
         }
       }
@@ -821,7 +910,9 @@ class CityProvider with ChangeNotifier {
 
     final originalName = _getOriginalCityName(cityName);
     if (originalName != cityName) {
-      return _allCities.firstWhereOrNull((c) => _getOriginalCityName(c.name) == originalName);
+      return _allCities.firstWhereOrNull(
+        (c) => _getOriginalCityName(c.name) == originalName,
+      );
     }
     return null;
   }
@@ -830,7 +921,14 @@ class CityProvider with ChangeNotifier {
   // Custom Cities (Firebase Integrated)
   // ===========================================================================
 
-  void addCustomCity(String name, double latitude, double longitude, String countryIsoA2, String continent, int population) {
+  void addCustomCity(
+    String name,
+    double latitude,
+    double longitude,
+    String countryIsoA2,
+    String continent,
+    int population,
+  ) {
     final newCity = City(
       name: name,
       country: 'Unknown',
@@ -853,14 +951,18 @@ class CityProvider with ChangeNotifier {
   Future<void> _saveCustomCities() async {
     try {
       final prefs = await SharedPreferences.getInstance();
-      final List<Map<String, dynamic>> jsonList = _customCities.map((city) => {
-        'name': city.name,
-        'country_iso': city.countryIsoA2,
-        'continent': city.continent,
-        'population': city.population,
-        'latitude': city.latitude,
-        'longitude': city.longitude,
-      }).toList();
+      final List<Map<String, dynamic>> jsonList = _customCities
+          .map(
+            (city) => {
+              'name': city.name,
+              'country_iso': city.countryIsoA2,
+              'continent': city.continent,
+              'population': city.population,
+              'latitude': city.latitude,
+              'longitude': city.longitude,
+            },
+          )
+          .toList();
 
       final String encoded = json.encode(jsonList);
       await prefs.setString('saved_custom_cities', encoded);
@@ -929,7 +1031,8 @@ class CityProvider with ChangeNotifier {
       String? detailsString = prefs.getString('city_visit_details_v3');
       final int localSyncedAtMs = prefs.getInt(_visitDetailsSyncedAtKey) ?? 0;
 
-      if (remoteData != null && remoteData.containsKey('city_visit_details_v3')) {
+      if (remoteData != null &&
+          remoteData.containsKey('city_visit_details_v3')) {
         final dynamic rawTimestamp = remoteData['lastUpdated'];
         final int remoteMs = (rawTimestamp is Timestamp)
             ? rawTimestamp.millisecondsSinceEpoch
@@ -942,7 +1045,9 @@ class CityProvider with ChangeNotifier {
           await prefs.setString('city_visit_details_v3', detailsString!);
           await prefs.setInt(_visitDetailsSyncedAtKey, remoteMs);
         } else {
-          print('[CityProvider] Local visit details are newer than server — keeping local copy.');
+          print(
+            '[CityProvider] Local visit details are newer than server — keeping local copy.',
+          );
         }
       }
 
@@ -967,13 +1072,15 @@ class CityProvider with ChangeNotifier {
     try {
       final prefs = await SharedPreferences.getInstance();
       final String encodedMap = json.encode(
-          _visitDetails.map((key, value) => MapEntry(key, value.toJson()))
+        _visitDetails.map((key, value) => MapEntry(key, value.toJson())),
       );
       await prefs.setString('city_visit_details_v3', encodedMap);
       // 로컬에 저장한 시각을 기록 — 다음 로드 시 서버와 비교해서
       // "누가 더 최신인지" 판단하는 기준이 된다.
       await prefs.setInt(
-          _visitDetailsSyncedAtKey, DateTime.now().millisecondsSinceEpoch);
+        _visitDetailsSyncedAtKey,
+        DateTime.now().millisecondsSinceEpoch,
+      );
 
       final user = _auth.currentUser;
       if (user != null) {
@@ -986,8 +1093,9 @@ class CityProvider with ChangeNotifier {
           // "다른 계정으로 전환했는데 이전 계정 데이터가 새 계정 문서에
           // 저장되는지"를 검증할 때 이 로그가 핵심 증거가 된다.
           debugPrint(
-              '💾 [CityProvider#$_instanceId] visit details SAVED to Firestore '
-                  '(uid=${user.uid}, cityCount=${_visitDetails.length})');
+            '💾 [CityProvider#$_instanceId] visit details SAVED to Firestore '
+            '(uid=${user.uid}, cityCount=${_visitDetails.length})',
+          );
         } catch (e) {
           print('[CityProvider] Failed to save visit details to server: $e');
         }
@@ -1007,11 +1115,17 @@ class CityProvider with ChangeNotifier {
 
   Future<void> _loadSettings(Map<String, dynamic>? remoteData) async {
     final prefs = await SharedPreferences.getInstance();
-    _useDefaultCityRankingBarColor = prefs.getBool('useDefaultCityRankingBarColor') ?? false;
+    _useDefaultCityRankingBarColor =
+        prefs.getBool('useDefaultCityRankingBarColor') ?? false;
 
-    if (remoteData != null && remoteData.containsKey('useDefaultCityRankingBarColor')) {
-      _useDefaultCityRankingBarColor = remoteData['useDefaultCityRankingBarColor'];
-      await prefs.setBool('useDefaultCityRankingBarColor', _useDefaultCityRankingBarColor);
+    if (remoteData != null &&
+        remoteData.containsKey('useDefaultCityRankingBarColor')) {
+      _useDefaultCityRankingBarColor =
+          remoteData['useDefaultCityRankingBarColor'];
+      await prefs.setBool(
+        'useDefaultCityRankingBarColor',
+        _useDefaultCityRankingBarColor,
+      );
     }
   }
 
@@ -1037,7 +1151,7 @@ class CityProvider with ChangeNotifier {
     final user = _auth.currentUser;
     if (user != null) {
       _firestore.collection('users').doc(user.uid).set({
-        'useDefaultCityRankingBarColor': value
+        'useDefaultCityRankingBarColor': value,
       }, SetOptions(merge: true));
     }
     notifyListeners();
@@ -1045,20 +1159,31 @@ class CityProvider with ChangeNotifier {
 
   void setCityHomeStatus(String cityName, bool isHome) async {
     if (_homeCityName != null && _visitDetails.containsKey(_homeCityName)) {
-      _visitDetails[_homeCityName!] = _visitDetails[_homeCityName!]!.copyWith(isHome: false);
+      _visitDetails[_homeCityName!] = _visitDetails[_homeCityName!]!.copyWith(
+        isHome: false,
+      );
     }
 
     if (isHome) {
       if (!_visitDetails.containsKey(cityName)) {
-        _visitDetails[cityName] = CityVisitDetail(name: cityName, isHome: true, hasLived: true);
+        _visitDetails[cityName] = CityVisitDetail(
+          name: cityName,
+          isHome: true,
+          hasLived: true,
+        );
       } else {
-        _visitDetails[cityName] = _visitDetails[cityName]!.copyWith(isHome: true, hasLived: true);
+        _visitDetails[cityName] = _visitDetails[cityName]!.copyWith(
+          isHome: true,
+          hasLived: true,
+        );
       }
       _homeCityName = cityName;
     } else {
       _homeCityName = null;
       if (_visitDetails.containsKey(cityName)) {
-        _visitDetails[cityName] = _visitDetails[cityName]!.copyWith(isHome: false);
+        _visitDetails[cityName] = _visitDetails[cityName]!.copyWith(
+          isHome: false,
+        );
       }
     }
 
@@ -1072,7 +1197,7 @@ class CityProvider with ChangeNotifier {
     final user = _auth.currentUser;
     if (user != null) {
       _firestore.collection('users').doc(user.uid).set({
-        'homeCityName': _homeCityName
+        'homeCityName': _homeCityName,
       }, SetOptions(merge: true));
     }
 
@@ -1091,13 +1216,21 @@ class CityProvider with ChangeNotifier {
 
   void toggleCityWishlistStatus(String cityName) async {
     if (!_visitDetails.containsKey(cityName)) {
-      _visitDetails[cityName] = CityVisitDetail(name: cityName, isWishlisted: true);
+      _visitDetails[cityName] = CityVisitDetail(
+        name: cityName,
+        isWishlisted: true,
+      );
     } else {
       final detail = _visitDetails[cityName]!;
-      _visitDetails[cityName] = detail.copyWith(isWishlisted: !detail.isWishlisted);
+      _visitDetails[cityName] = detail.copyWith(
+        isWishlisted: !detail.isWishlisted,
+      );
       final updatedDetail = _visitDetails[cityName]!;
 
-      if (!updatedDetail.hasLived && updatedDetail.visitDateRanges.isEmpty && !updatedDetail.isWishlisted && updatedDetail.rating == 0.0) {
+      if (!updatedDetail.hasLived &&
+          updatedDetail.visitDateRanges.isEmpty &&
+          !updatedDetail.isWishlisted &&
+          updatedDetail.rating == 0.0) {
         _visitDetails.remove(cityName);
       }
     }
@@ -1107,15 +1240,19 @@ class CityProvider with ChangeNotifier {
 
   void setVisitedStatus(String cityName, bool isVisited) async {
     if (isVisited) {
-      if (!_visitDetails.containsKey(cityName) || _visitDetails[cityName]!.visitDateRanges.isEmpty) {
-        _visitDetails[cityName] = (_visitDetails[cityName] ?? CityVisitDetail(name: cityName))
-            .copyWith(visitDateRanges: [DateRange()]);
+      if (!_visitDetails.containsKey(cityName) ||
+          _visitDetails[cityName]!.visitDateRanges.isEmpty) {
+        _visitDetails[cityName] =
+            (_visitDetails[cityName] ?? CityVisitDetail(name: cityName))
+                .copyWith(visitDateRanges: [DateRange()]);
       }
     } else {
       final detail = _visitDetails[cityName];
       if (detail != null) {
         final updatedDetail = detail.copyWith(visitDateRanges: []);
-        if (!updatedDetail.hasLived && !updatedDetail.isWishlisted && updatedDetail.rating == 0.0) {
+        if (!updatedDetail.hasLived &&
+            !updatedDetail.isWishlisted &&
+            updatedDetail.rating == 0.0) {
           _visitDetails.remove(cityName);
         } else {
           _visitDetails[cityName] = updatedDetail;
@@ -1131,7 +1268,9 @@ class CityProvider with ChangeNotifier {
     if (_visitDetails.containsKey(cityName)) {
       final detail = _visitDetails[cityName]!;
       final updatedDetail = detail.copyWith(visitDateRanges: []);
-      if (!updatedDetail.hasLived && !updatedDetail.isWishlisted && updatedDetail.rating == 0.0) {
+      if (!updatedDetail.hasLived &&
+          !updatedDetail.isWishlisted &&
+          updatedDetail.rating == 0.0) {
         _visitDetails.remove(cityName);
       } else {
         _visitDetails[cityName] = updatedDetail;
@@ -1141,20 +1280,24 @@ class CityProvider with ChangeNotifier {
       notifyListeners();
     }
   }
+
   void updateCityMetrics(
-      String cityName, {
-        double? rating,
-        double? affordability,
-        double? safety,
-        double? foodQuality,
-        double? transport,
-        double? englishProficiency,
-        double? cleanliness,
-        double? attractionDensity,
-        double? vibrancy,
-        double? accessibility,
-      }) async {
-    final detail = _visitDetails.putIfAbsent(cityName, () => CityVisitDetail(name: cityName));
+    String cityName, {
+    double? rating,
+    double? affordability,
+    double? safety,
+    double? foodQuality,
+    double? transport,
+    double? englishProficiency,
+    double? cleanliness,
+    double? attractionDensity,
+    double? vibrancy,
+    double? accessibility,
+  }) async {
+    final detail = _visitDetails.putIfAbsent(
+      cityName,
+      () => CityVisitDetail(name: cityName),
+    );
 
     _visitDetails[cityName] = detail.copyWith(
       rating: rating,
@@ -1181,7 +1324,9 @@ class CityProvider with ChangeNotifier {
       _visitDetails[cityName] = detail.copyWith(hasLived: !detail.hasLived);
 
       if (!detail.hasLived && detail.isHome) {
-        _visitDetails[cityName] = _visitDetails[cityName]!.copyWith(isHome: false);
+        _visitDetails[cityName] = _visitDetails[cityName]!.copyWith(
+          isHome: false,
+        );
         if (_homeCityName == cityName) {
           _homeCityName = null;
           final prefs = await SharedPreferences.getInstance();
@@ -1190,14 +1335,17 @@ class CityProvider with ChangeNotifier {
           final user = _auth.currentUser;
           if (user != null) {
             _firestore.collection('users').doc(user.uid).set({
-              'homeCityName': null
+              'homeCityName': null,
             }, SetOptions(merge: true));
           }
         }
       }
 
       final updatedDetail = _visitDetails[cityName]!;
-      if (!updatedDetail.hasLived && updatedDetail.visitDateRanges.isEmpty && !updatedDetail.isWishlisted && updatedDetail.rating == 0.0) {
+      if (!updatedDetail.hasLived &&
+          updatedDetail.visitDateRanges.isEmpty &&
+          !updatedDetail.isWishlisted &&
+          updatedDetail.rating == 0.0) {
         _visitDetails.remove(cityName);
       }
     }
@@ -1208,7 +1356,9 @@ class CityProvider with ChangeNotifier {
 
   void setCityRating(String cityName, double rating) async {
     if (_visitDetails.containsKey(cityName)) {
-      _visitDetails[cityName] = _visitDetails[cityName]!.copyWith(rating: rating);
+      _visitDetails[cityName] = _visitDetails[cityName]!.copyWith(
+        rating: rating,
+      );
       await _saveVisitDetails();
       notifyListeners();
     } else if (rating > 0.0) {
@@ -1221,16 +1371,24 @@ class CityProvider with ChangeNotifier {
   void addCityDateRange(String cityName) async {
     if (_visitDetails.containsKey(cityName)) {
       final detail = _visitDetails[cityName]!;
-      final newRanges = List<DateRange>.from(detail.visitDateRanges)..add(DateRange());
+      final newRanges = List<DateRange>.from(detail.visitDateRanges)
+        ..add(DateRange());
       _visitDetails[cityName] = detail.copyWith(visitDateRanges: newRanges);
     } else {
-      _visitDetails[cityName] = CityVisitDetail(name: cityName, visitDateRanges: [DateRange()]);
+      _visitDetails[cityName] = CityVisitDetail(
+        name: cityName,
+        visitDateRanges: [DateRange()],
+      );
     }
     await _saveVisitDetails();
     notifyListeners();
   }
 
-  void updateCityDateRange(String cityName, int index, DateRange newRange) async {
+  void updateCityDateRange(
+    String cityName,
+    int index,
+    DateRange newRange,
+  ) async {
     if (_visitDetails.containsKey(cityName)) {
       final detail = _visitDetails[cityName]!;
       if (index >= 0 && index < detail.visitDateRanges.length) {
@@ -1247,9 +1405,13 @@ class CityProvider with ChangeNotifier {
     if (_visitDetails.containsKey(cityName)) {
       final detail = _visitDetails[cityName]!;
       if (index >= 0 && index < detail.visitDateRanges.length) {
-        final newRanges = List<DateRange>.from(detail.visitDateRanges)..removeAt(index);
+        final newRanges = List<DateRange>.from(detail.visitDateRanges)
+          ..removeAt(index);
 
-        if (newRanges.isEmpty && !detail.hasLived && !detail.isWishlisted && detail.rating == 0.0) {
+        if (newRanges.isEmpty &&
+            !detail.hasLived &&
+            !detail.isWishlisted &&
+            detail.rating == 0.0) {
           _visitDetails.remove(cityName);
         } else {
           _visitDetails[cityName] = detail.copyWith(visitDateRanges: newRanges);
@@ -1260,25 +1422,43 @@ class CityProvider with ChangeNotifier {
     }
   }
 
-  void updateCityMemoAndPhotos(String cityName, String memo, List<String> photos) async {
+  void updateCityMemoAndPhotos(
+    String cityName,
+    String memo,
+    List<String> photos,
+  ) async {
     if (_visitDetails.containsKey(cityName)) {
-      _visitDetails[cityName] = _visitDetails[cityName]!.copyWith(memo: memo, photos: photos);
+      _visitDetails[cityName] = _visitDetails[cityName]!.copyWith(
+        memo: memo,
+        photos: photos,
+      );
     } else {
-      _visitDetails[cityName] = CityVisitDetail(name: cityName, memo: memo, photos: photos);
+      _visitDetails[cityName] = CityVisitDetail(
+        name: cityName,
+        memo: memo,
+        photos: photos,
+      );
     }
     await _saveVisitDetails();
     notifyListeners();
   }
 
-  Future<void> addVisitWithDetails(String cityName, {DateTime? arrival, DateTime? departure, int? userDefinedDuration}) async {
+  Future<void> addVisitWithDetails(
+    String cityName, {
+    DateTime? arrival,
+    DateTime? departure,
+    int? userDefinedDuration,
+  }) async {
     final detail = _visitDetails[cityName] ?? CityVisitDetail(name: cityName);
     final newRange = DateRange(
       arrival: arrival,
       departure: departure,
       userDefinedDuration: userDefinedDuration,
-      isDurationUnknown: userDefinedDuration == null && (arrival == null || departure == null),
+      isDurationUnknown:
+          userDefinedDuration == null && (arrival == null || departure == null),
     );
-    final updatedRanges = List<DateRange>.from(detail.visitDateRanges)..add(newRange);
+    final updatedRanges = List<DateRange>.from(detail.visitDateRanges)
+      ..add(newRange);
     _visitDetails[cityName] = detail.copyWith(visitDateRanges: updatedRanges);
     await _saveVisitDetails();
     _calculateCitiesMenuStats();
@@ -1302,8 +1482,9 @@ class CityProvider with ChangeNotifier {
     // 이 로그가 찍힌다면 어딘가에서 여전히 구 경로로 reloadFromServer()를
     // 직접 부르고 있다는 뜻이므로 호출부를 찾아봐야 한다.
     debugPrint(
-        '⚠️ [CityProvider#$_instanceId] reloadFromServer() called directly — '
-            'expected path is now remount via main.dart, verify caller (user=${_auth.currentUser?.uid})');
+      '⚠️ [CityProvider#$_instanceId] reloadFromServer() called directly — '
+      'expected path is now remount via main.dart, verify caller (user=${_auth.currentUser?.uid})',
+    );
     final user = _auth.currentUser;
     Map<String, dynamic>? remoteData;
     if (user != null) {
@@ -1334,7 +1515,6 @@ class CityProvider with ChangeNotifier {
       }, SetOptions(merge: true));
     }
   }
-
 }
 
 // Helper: CopyWith Extension

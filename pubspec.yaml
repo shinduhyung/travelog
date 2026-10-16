@@ -2,7 +2,7 @@ name: jidoapp
 description: "A new Flutter project."
 publish_to: 'none'
 
-version: 1.0.1+91
+version: 1.0.27+1 # Platform release versions: platform_versions.json
 
 environment:
   sdk: ^3.8.0
@@ -54,7 +54,8 @@ dependencies:
 
   # In-App Purchase (구독)
   in_app_purchase: ^3.2.0
-  in_app_purchase_android: ^0.5.3
+  in_app_purchase_android: ^0.5.0
+  in_app_purchase_storekit: ^0.4.10
 
   # Data & Network
   http: ^1.2.1
@@ -64,7 +65,7 @@ dependencies:
   uuid: ^4.0.0
   equatable: ^2.0.5
   path_provider: ^2.1.3
-  share_plus: ^10.0.0
+  share_plus: ^12.0.1
   screenshot: ^3.0.0
 
   # Media & AI
@@ -74,7 +75,7 @@ dependencies:
 
   # WebView & Editor
   flutter_inappwebview: ^6.1.5
-  flutter_quill: ^11.0.0
+  flutter_quill: 11.5.1 # Flutter 3.44 TextInputClient compatibility
   flutter_quill_extensions: ^11.0.0
   country_flags: ^4.1.0
   geolocator: ^14.0.2
@@ -86,8 +87,9 @@ dependencies:
   # In-App Review
   in_app_review: ^2.0.9
   # Facebook
-  facebook_app_events: ^0.19.0
+  facebook_app_events: ^0.24.0
   url_launcher: ^6.3.0
+  app_tracking_transparency: ^2.0.7
 
 dev_dependencies:
   flutter_test:
@@ -102,6 +104,7 @@ flutter_launcher_icons:
   android: true
   ios: true
   image_path: "assets/icons/app_logo_large.png"
+  image_path_ios: "assets/icons/apple_icon.png"
   adaptive_icon_background: "#FFFFFF"
   adaptive_icon_foreground: "assets/icons/app_logo_large.png"
 

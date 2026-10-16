@@ -18,6 +18,7 @@
 //     one respawn was actually drawn during that visit.
 
 import 'dart:async';
+import 'dart:io';
 
 import 'package:flutter/foundation.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
@@ -33,7 +34,15 @@ class GameAdService {
   // Reuses the same real interstitial unit as the main app -- this service
   // just manages its own independent load/show lifecycle and trigger
   // rules, kept entirely separate from AdService's experiment state.
-  static const String _adUnitId = 'ca-app-pub-3945470636956441/8397434180';
+  // Android 전용 광고 단위
+  static const String _androidAdUnitId =
+      'ca-app-pub-3945470636956441/8397434180';
+
+  // iOS 전용 광고 단위 (travelog_apple_interstitial)
+  static const String _iosAdUnitId = 'ca-app-pub-3945470636956441/5308407850';
+
+  static String get _adUnitId =>
+      Platform.isIOS ? _iosAdUnitId : _androidAdUnitId;
 
   static const int _gamesPerAd = 3;
   static const Duration _postGameDelay = Duration(seconds: 2);

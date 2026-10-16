@@ -50,9 +50,21 @@ class CountriesShare {
         filesToShare.add(XFile(flagsImagePath.path));
       }
 
+      // iOS(특히 iPad, 그리고 sharePositionOrigin 없을 시 크래시가 보고된
+      // iOS 26)에서는 이 값이 없으면 공유 시트가 뜨지 않거나 크래시가 남.
+      // Android에서는 무시되므로 항상 넘겨줘도 안전함.
+      Rect? sharePositionOrigin;
+      if (context.mounted) {
+        final box = context.findRenderObject() as RenderBox?;
+        if (box != null) {
+          sharePositionOrigin = box.localToGlobal(Offset.zero) & box.size;
+        }
+      }
+
       await Share.shareXFiles(
         filesToShare,
         text: 'Check out my travel map! I have visited ${visitedCountries.length} countries via Travelog.',
+        sharePositionOrigin: sharePositionOrigin,
       );
     } catch (e) {
       debugPrint("Share Error: $e");

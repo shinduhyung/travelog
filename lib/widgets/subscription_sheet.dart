@@ -18,7 +18,8 @@ enum _PlanChoice { monthly, yearly, lifetime }
 /// want subscribers trading up to.
 class _PlanTheme {
   final List<Color> colors;
-  final bool vivid; // true only for lifetime — triggers the "fancy" hero treatment
+  final bool
+  vivid; // true only for lifetime — triggers the "fancy" hero treatment
   const _PlanTheme(this.colors, {this.vivid = false});
 
   Color get solid => colors.first;
@@ -31,10 +32,11 @@ class _PlanTheme {
 
 const _monthlyTheme = _PlanTheme([Color(0xFF34D399), Color(0xFF10B981)]);
 const _yearlyTheme = _PlanTheme([Color(0xFF3DDAD7), Color(0xFF00A39F)]);
-const _lifetimeTheme = _PlanTheme(
-  [Color(0xFF6D28D9), Color(0xFFA855F7), Color(0xFFEC4899)],
-  vivid: true,
-);
+const _lifetimeTheme = _PlanTheme([
+  Color(0xFF6D28D9),
+  Color(0xFFA855F7),
+  Color(0xFFEC4899),
+], vivid: true);
 
 _PlanTheme _themeFor(_PlanChoice choice) {
   switch (choice) {
@@ -94,7 +96,11 @@ class _SubscriptionSheetState extends State<SubscriptionSheet> {
         borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
       ),
       padding: EdgeInsets.fromLTRB(
-          24, 20, 24, MediaQuery.of(context).padding.bottom + 24),
+        24,
+        20,
+        24,
+        MediaQuery.of(context).padding.bottom + 24,
+      ),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
@@ -105,9 +111,10 @@ class _SubscriptionSheetState extends State<SubscriptionSheet> {
           const Text(
             'Travelog Premium',
             style: TextStyle(
-                fontSize: 22,
-                fontWeight: FontWeight.bold,
-                color: Color(0xFF1A1A2E)),
+              fontSize: 22,
+              fontWeight: FontWeight.bold,
+              color: Color(0xFF1A1A2E),
+            ),
           ),
           const SizedBox(height: 6),
           Text(
@@ -129,14 +136,20 @@ class _SubscriptionSheetState extends State<SubscriptionSheet> {
             child: const Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(Icons.check_circle_rounded,
-                    color: Color(0xFF3DDAD7), size: 20),
+                Icon(
+                  Icons.check_circle_rounded,
+                  color: Color(0xFF3DDAD7),
+                  size: 20,
+                ),
                 SizedBox(width: 8),
-                Text('Premium Active',
-                    style: TextStyle(
-                        color: Color(0xFF3DDAD7),
-                        fontWeight: FontWeight.bold,
-                        fontSize: 15)),
+                Text(
+                  'Premium Active',
+                  style: TextStyle(
+                    color: Color(0xFF3DDAD7),
+                    fontWeight: FontWeight.bold,
+                    fontSize: 15,
+                  ),
+                ),
               ],
             ),
           ),
@@ -146,25 +159,31 @@ class _SubscriptionSheetState extends State<SubscriptionSheet> {
           // 값(국가별로 다름)을 그대로 씀, 하드코딩 없음.
           if (!sub.isLifetime) ...[
             const SizedBox(height: 20),
-            Builder(builder: (context) {
-              final ProductDetails? lifetime =
-              sub.productDetailsFor(SubscriptionService.kLifetimeId);
-              return _GradientGlowButton(
-                theme: _lifetimeTheme,
-                enabled: !sub.isLoading && lifetime != null,
-                loading: sub.isLoading,
-                label: lifetime != null
-                    ? 'Upgrade to Lifetime — ${lifetime.price}'
-                    : 'Upgrade to Lifetime',
-                onTap: () => _handleUpgradeToLifetime(context, sub),
-              );
-            }),
+            Builder(
+              builder: (context) {
+                final ProductDetails? lifetime = sub.productDetailsFor(
+                  SubscriptionService.kLifetimeId,
+                );
+                return _GradientGlowButton(
+                  theme: _lifetimeTheme,
+                  enabled: !sub.isLoading && lifetime != null,
+                  loading: sub.isLoading,
+                  label: lifetime != null
+                      ? 'Upgrade to Lifetime — ${lifetime.price}'
+                      : 'Upgrade to Lifetime',
+                  onTap: () => _handleUpgradeToLifetime(context, sub),
+                );
+              },
+            ),
             const SizedBox(height: 8),
             Text(
-              'One-time payment for lifetime access. Your current subscription won\'t cancel automatically — cancel it separately in your Play Store subscriptions to avoid being charged for both.',
+              'One-time payment for lifetime access. Your current subscription won\'t cancel automatically — cancel it separately in your ${Platform.isIOS ? 'App Store' : 'Play Store'} subscriptions to avoid being charged for both.',
               textAlign: TextAlign.center,
               style: TextStyle(
-                  fontSize: 11, color: Colors.grey[500], height: 1.4),
+                fontSize: 11,
+                color: Colors.grey[500],
+                height: 1.4,
+              ),
             ),
           ],
         ],
@@ -173,7 +192,9 @@ class _SubscriptionSheetState extends State<SubscriptionSheet> {
   }
 
   Future<void> _handleUpgradeToLifetime(
-      BuildContext context, SubscriptionService sub) async {
+    BuildContext context,
+    SubscriptionService sub,
+  ) async {
     final bool success = await sub.buyProduct(
       SubscriptionService.kLifetimeId,
       triggerContext: 'existing_subscriber_upgrade',
@@ -184,12 +205,12 @@ class _SubscriptionSheetState extends State<SubscriptionSheet> {
   // ── Paywall ──────────────────────────────────────────────────────────
   Widget _buildPaywallSheet(BuildContext context, SubscriptionService sub) {
     final _PlanTheme theme = _themeFor(_selected);
-    final ProductDetails? selectedDetails =
-    _productDetailsFor(_selected, sub);
+    final ProductDetails? selectedDetails = _productDetailsFor(_selected, sub);
     // yearly 카드에 "월별로 냈으면 이만큼" 원가를 찍찍 긋고 보여주려면
     // monthly 가격이 항상 필요함 (선택된 게 monthly가 아니어도).
-    final ProductDetails? monthlyForCompare =
-    sub.productDetailsFor(SubscriptionService.kMonthlyId);
+    final ProductDetails? monthlyForCompare = sub.productDetailsFor(
+      SubscriptionService.kMonthlyId,
+    );
 
     return Container(
       decoration: const BoxDecoration(
@@ -197,7 +218,11 @@ class _SubscriptionSheetState extends State<SubscriptionSheet> {
         borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
       ),
       padding: EdgeInsets.fromLTRB(
-          24, 20, 24, MediaQuery.of(context).padding.bottom + 24),
+        24,
+        20,
+        24,
+        MediaQuery.of(context).padding.bottom + 24,
+      ),
       child: SingleChildScrollView(
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -209,9 +234,10 @@ class _SubscriptionSheetState extends State<SubscriptionSheet> {
             const Text(
               'Travelog Premium',
               style: TextStyle(
-                  fontSize: 22,
-                  fontWeight: FontWeight.bold,
-                  color: Color(0xFF1A1A2E)),
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+                color: Color(0xFF1A1A2E),
+              ),
             ),
             const SizedBox(height: 6),
             Text(
@@ -242,30 +268,34 @@ class _SubscriptionSheetState extends State<SubscriptionSheet> {
             // the currently-selected plan's theme, so switching plans
             // re-tints this list too.
             _BenefitRow(
-                icon: Icons.emoji_events_rounded,
-                label: 'Unlock all 500+ badges',
-                highlightWord: '500+ badges',
-                color: theme.solid,
-                tag: 'NEW'),
+              icon: Icons.emoji_events_rounded,
+              label: 'Unlock all 500+ badges',
+              highlightWord: '500+ badges',
+              color: theme.solid,
+              tag: 'NEW',
+            ),
             const SizedBox(height: 10),
             _BenefitRow(
-                icon: Icons.psychology_alt_rounded,
-                label: 'Daily Quiz — Expert mode',
-                highlightWord: 'Expert mode',
-                color: theme.solid,
-                tag: 'NEW'),
+              icon: Icons.psychology_alt_rounded,
+              label: 'Daily Quiz — Expert mode',
+              highlightWord: 'Expert mode',
+              color: theme.solid,
+              tag: 'NEW',
+            ),
             const SizedBox(height: 10),
             _BenefitRow(
-                icon: Icons.bar_chart_rounded,
-                label: 'Full stats — countries, cities, landmarks & flights',
-                highlightWord: 'Full stats',
-                color: theme.solid),
+              icon: Icons.bar_chart_rounded,
+              label: 'Full stats — countries, cities, landmarks & flights',
+              highlightWord: 'Full stats',
+              color: theme.solid,
+            ),
             const SizedBox(height: 10),
             _BenefitRow(
-                icon: Icons.block_rounded,
-                label: 'No interstitial or banner ads',
-                highlightWord: 'ads',
-                color: theme.solid),
+              icon: Icons.block_rounded,
+              label: 'No interstitial or banner ads',
+              highlightWord: 'ads',
+              color: theme.solid,
+            ),
             const SizedBox(height: 22),
 
             // ── CTA — themed to match the selected plan ────────────────
@@ -284,15 +314,19 @@ class _SubscriptionSheetState extends State<SubscriptionSheet> {
               _disclosureText(),
               textAlign: TextAlign.center,
               style: TextStyle(
-                  fontSize: 11, color: Colors.grey[500], height: 1.4),
+                fontSize: 11,
+                color: Colors.grey[500],
+                height: 1.4,
+              ),
             ),
             const SizedBox(height: 8),
 
             TextButton(
-              onPressed:
-              sub.isLoading ? null : () => sub.restorePurchases(),
-              child: Text('Restore Purchases',
-                  style: TextStyle(fontSize: 12, color: Colors.grey[500])),
+              onPressed: sub.isLoading ? null : () => sub.restorePurchases(),
+              child: Text(
+                'Restore Purchases',
+                style: TextStyle(fontSize: 12, color: Colors.grey[500]),
+              ),
             ),
           ],
         ),
@@ -303,7 +337,9 @@ class _SubscriptionSheetState extends State<SubscriptionSheet> {
   // ── Helpers ──────────────────────────────────────────────────────────
 
   ProductDetails? _productDetailsFor(
-      _PlanChoice choice, SubscriptionService sub) {
+    _PlanChoice choice,
+    SubscriptionService sub,
+  ) {
     switch (choice) {
       case _PlanChoice.monthly:
         return sub.productDetailsFor(SubscriptionService.kMonthlyId);
@@ -341,7 +377,9 @@ class _SubscriptionSheetState extends State<SubscriptionSheet> {
   }
 
   Future<void> _handlePurchase(
-      BuildContext context, SubscriptionService sub) async {
+    BuildContext context,
+    SubscriptionService sub,
+  ) async {
     final bool success = await sub.buyProduct(
       _selectedProductId(sub),
       triggerContext: widget.triggerContext,
@@ -353,7 +391,9 @@ class _SubscriptionSheetState extends State<SubscriptionSheet> {
     width: 40,
     height: 4,
     decoration: BoxDecoration(
-        color: Colors.grey[300], borderRadius: BorderRadius.circular(2)),
+      color: Colors.grey[300],
+      borderRadius: BorderRadius.circular(2),
+    ),
   );
 
   Widget _logo() => Image.asset(
@@ -361,9 +401,10 @@ class _SubscriptionSheetState extends State<SubscriptionSheet> {
     height: 56,
     fit: BoxFit.contain,
     errorBuilder: (_, __, ___) => const Icon(
-        Icons.workspace_premium_rounded,
-        size: 56,
-        color: Color(0xFF3DDAD7)),
+      Icons.workspace_premium_rounded,
+      size: 56,
+      color: Color(0xFF3DDAD7),
+    ),
   );
 }
 
@@ -386,7 +427,11 @@ class _BenefitRow extends StatelessWidget {
   });
 
   Widget _buildLabel() {
-    const baseStyle = TextStyle(fontSize: 14, color: Color(0xFF444444), height: 1.3);
+    const baseStyle = TextStyle(
+      fontSize: 14,
+      color: Color(0xFF444444),
+      height: 1.3,
+    );
 
     final word = highlightWord;
     if (word == null || !label.contains(word)) {
@@ -461,10 +506,7 @@ class _PlanSwitch extends StatelessWidget {
   final _PlanChoice selected;
   final ValueChanged<_PlanChoice> onChanged;
 
-  const _PlanSwitch({
-    required this.selected,
-    required this.onChanged,
-  });
+  const _PlanSwitch({required this.selected, required this.onChanged});
 
   @override
   Widget build(BuildContext context) {
@@ -497,11 +539,12 @@ class _PlanSwitch extends StatelessWidget {
             borderRadius: BorderRadius.circular(12),
             boxShadow: active
                 ? [
-              BoxShadow(
-                  color: theme.solid.withOpacity(0.35),
-                  blurRadius: 10,
-                  offset: const Offset(0, 3)),
-            ]
+                    BoxShadow(
+                      color: theme.solid.withOpacity(0.35),
+                      blurRadius: 10,
+                      offset: const Offset(0, 3),
+                    ),
+                  ]
                 : null,
           ),
           child: Text(
@@ -587,12 +630,15 @@ class _PlanHeroCard extends StatelessWidget {
   /// year costs if paid month-by-month, vs. [details]'s actual yearly
   /// price. Only meaningful when [choice] is yearly.
   int? get _savingsPercent {
-    if (choice != _PlanChoice.yearly || monthlyForCompare == null || details == null) {
+    if (choice != _PlanChoice.yearly ||
+        monthlyForCompare == null ||
+        details == null) {
       return null;
     }
     final double yearlyIfPaidMonthly = monthlyForCompare!.rawPrice * 12;
     if (yearlyIfPaidMonthly <= 0) return null;
-    final double savings = (yearlyIfPaidMonthly - details!.rawPrice) / yearlyIfPaidMonthly;
+    final double savings =
+        (yearlyIfPaidMonthly - details!.rawPrice) / yearlyIfPaidMonthly;
     if (savings <= 0) return null;
     return (savings * 100).round();
   }
@@ -626,10 +672,16 @@ class _PlanHeroCard extends StatelessWidget {
     // Text stays fixed dark/neutral regardless of plan — never theme.solid —
     // so it can never blend into the card's own (theme-colored) background.
     final Color labelColor = vivid ? Colors.white : const Color(0xFF1A1A2E);
-    final Color taglineColor = vivid ? Colors.white.withOpacity(0.85) : const Color(0xFF6B7280);
+    final Color taglineColor = vivid
+        ? Colors.white.withOpacity(0.85)
+        : const Color(0xFF6B7280);
     final Color priceColor = vivid ? Colors.white : const Color(0xFF1A1A2E);
-    final Color suffixColor = vivid ? Colors.white.withOpacity(0.8) : const Color(0xFF9AA0AC);
-    final Color strikeColor = vivid ? Colors.white.withOpacity(0.65) : const Color(0xFF9AA0AC);
+    final Color suffixColor = vivid
+        ? Colors.white.withOpacity(0.8)
+        : const Color(0xFF9AA0AC);
+    final Color strikeColor = vivid
+        ? Colors.white.withOpacity(0.65)
+        : const Color(0xFF9AA0AC);
 
     final int? savingsPercent = _savingsPercent;
     final String? originalAnnual = _originalAnnualText;
@@ -668,16 +720,23 @@ class _PlanHeroCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(_label,
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
-              style: TextStyle(
-                  fontSize: 15, fontWeight: FontWeight.w800, color: labelColor)),
+          Text(
+            _label,
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+            style: TextStyle(
+              fontSize: 15,
+              fontWeight: FontWeight.w800,
+              color: labelColor,
+            ),
+          ),
           const SizedBox(height: 2),
-          Text(_tagline,
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
-              style: TextStyle(fontSize: 12.5, color: taglineColor)),
+          Text(
+            _tagline,
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+            style: TextStyle(fontSize: 12.5, color: taglineColor),
+          ),
           const SizedBox(height: 14),
           Row(
             crossAxisAlignment: CrossAxisAlignment.baseline,
@@ -686,10 +745,16 @@ class _PlanHeroCard extends StatelessWidget {
               Text(
                 details?.price ?? '—',
                 style: TextStyle(
-                    fontSize: 34, fontWeight: FontWeight.w800, color: priceColor),
+                  fontSize: 34,
+                  fontWeight: FontWeight.w800,
+                  color: priceColor,
+                ),
               ),
               const SizedBox(width: 6),
-              Text(_priceSuffix, style: TextStyle(fontSize: 13, color: suffixColor)),
+              Text(
+                _priceSuffix,
+                style: TextStyle(fontSize: 13, color: suffixColor),
+              ),
             ],
           ),
           // 항상 같은 자리를 차지하는 고정 높이 슬롯 — 이게 있어야 yearly만
@@ -699,44 +764,49 @@ class _PlanHeroCard extends StatelessWidget {
             height: _bottomSlotHeight,
             child: showDiscountRow
                 ? Align(
-              alignment: Alignment.centerLeft,
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 4),
-                    decoration: BoxDecoration(
-                      gradient: theme.gradient,
-                      borderRadius: BorderRadius.circular(20),
+                    alignment: Alignment.centerLeft,
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 9,
+                            vertical: 4,
+                          ),
+                          decoration: BoxDecoration(
+                            gradient: theme.gradient,
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: Text(
+                            '-$savingsPercent% OFF',
+                            style: const TextStyle(
+                              fontSize: 12,
+                              fontWeight: FontWeight.w800,
+                              color: Colors.white,
+                              letterSpacing: 0.2,
+                            ),
+                          ),
+                        ),
+                        if (originalAnnual != null) ...[
+                          const SizedBox(width: 8),
+                          Flexible(
+                            child: Text(
+                              originalAnnual,
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                              style: TextStyle(
+                                fontSize: 13,
+                                color: strikeColor,
+                                decoration: TextDecoration.lineThrough,
+                                decorationColor: strikeColor,
+                                decorationThickness: 2,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ],
                     ),
-                    child: Text(
-                      '-$savingsPercent% OFF',
-                      style: const TextStyle(
-                          fontSize: 12,
-                          fontWeight: FontWeight.w800,
-                          color: Colors.white,
-                          letterSpacing: 0.2),
-                    ),
-                  ),
-                  if (originalAnnual != null) ...[
-                    const SizedBox(width: 8),
-                    Flexible(
-                      child: Text(
-                        originalAnnual,
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                        style: TextStyle(
-                            fontSize: 13,
-                            color: strikeColor,
-                            decoration: TextDecoration.lineThrough,
-                            decorationColor: strikeColor,
-                            decorationThickness: 2),
-                      ),
-                    ),
-                  ],
-                ],
-              ),
-            )
+                  )
                 : null,
           ),
         ],
@@ -745,8 +815,9 @@ class _PlanHeroCard extends StatelessWidget {
 
     // Monthly: flat single-color border. Yearly: static two-tone gradient
     // border. Lifetime: the same gradient, but rotating.
-    final List<Color> borderColors =
-    choice == _PlanChoice.monthly ? [theme.solid, theme.solid] : theme.colors;
+    final List<Color> borderColors = choice == _PlanChoice.monthly
+        ? [theme.solid, theme.solid]
+        : theme.colors;
 
     final Widget bordered = _CardBorder(
       colors: borderColors,
@@ -764,14 +835,16 @@ class _PlanHeroCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(_outerRadius),
           boxShadow: [
             BoxShadow(
-                color: theme.colors[0].withOpacity(0.45),
-                blurRadius: 24,
-                spreadRadius: 1,
-                offset: const Offset(0, 6)),
+              color: theme.colors[0].withOpacity(0.45),
+              blurRadius: 24,
+              spreadRadius: 1,
+              offset: const Offset(0, 6),
+            ),
             BoxShadow(
-                color: theme.colors.last.withOpacity(0.35),
-                blurRadius: 30,
-                offset: const Offset(0, 10)),
+              color: theme.colors.last.withOpacity(0.35),
+              blurRadius: 30,
+              offset: const Offset(0, 10),
+            ),
           ],
         ),
         child: bordered,
@@ -798,17 +871,21 @@ class _PlanHeroCard extends StatelessWidget {
               borderRadius: BorderRadius.circular(20),
               boxShadow: [
                 BoxShadow(
-                    color: theme.solid.withOpacity(0.4),
-                    blurRadius: 8,
-                    offset: const Offset(0, 2)),
+                  color: theme.solid.withOpacity(0.4),
+                  blurRadius: 8,
+                  offset: const Offset(0, 2),
+                ),
               ],
             ),
-            child: const Text('MOST POPULAR',
-                style: TextStyle(
-                    fontSize: 10,
-                    fontWeight: FontWeight.w800,
-                    color: Colors.white,
-                    letterSpacing: 0.4)),
+            child: const Text(
+              'MOST POPULAR',
+              style: TextStyle(
+                fontSize: 10,
+                fontWeight: FontWeight.w800,
+                color: Colors.white,
+                letterSpacing: 0.4,
+              ),
+            ),
           ),
         ),
       ],
@@ -848,9 +925,10 @@ class _CardBorderState extends State<_CardBorder>
   void initState() {
     super.initState();
     if (widget.animated) {
-      _controller =
-      AnimationController(vsync: this, duration: const Duration(seconds: 2))
-        ..repeat();
+      _controller = AnimationController(
+        vsync: this,
+        duration: const Duration(seconds: 2),
+      )..repeat();
     }
   }
 
@@ -863,8 +941,9 @@ class _CardBorderState extends State<_CardBorder>
   @override
   Widget build(BuildContext context) {
     final Widget inner = ClipRRect(
-      borderRadius:
-      BorderRadius.circular(widget.borderRadius - widget.borderWidth),
+      borderRadius: BorderRadius.circular(
+        widget.borderRadius - widget.borderWidth,
+      ),
       child: widget.child,
     );
 
@@ -898,7 +977,9 @@ class _CardBorderState extends State<_CardBorder>
                   ...widget.colors,
                   widget.colors.first,
                 ],
-                transform: GradientRotation(_controller!.value * 6.283185307179586),
+                transform: GradientRotation(
+                  _controller!.value * 6.283185307179586,
+                ),
               ),
             ),
             padding: EdgeInsets.all(widget.borderWidth),
@@ -935,16 +1016,18 @@ class _GradientGlowButton extends StatelessWidget {
         borderRadius: BorderRadius.circular(14),
         boxShadow: (enabled && theme.vivid)
             ? [
-          BoxShadow(
-              color: theme.colors[0].withOpacity(0.4),
-              blurRadius: 18,
-              spreadRadius: 1,
-              offset: const Offset(0, 5)),
-          BoxShadow(
-              color: theme.colors.last.withOpacity(0.3),
-              blurRadius: 22,
-              offset: const Offset(0, 7)),
-        ]
+                BoxShadow(
+                  color: theme.colors[0].withOpacity(0.4),
+                  blurRadius: 18,
+                  spreadRadius: 1,
+                  offset: const Offset(0, 5),
+                ),
+                BoxShadow(
+                  color: theme.colors.last.withOpacity(0.3),
+                  blurRadius: 22,
+                  offset: const Offset(0, 7),
+                ),
+              ]
             : null,
       ),
       child: SizedBox(
@@ -957,8 +1040,9 @@ class _GradientGlowButton extends StatelessWidget {
             backgroundColor: Colors.transparent,
             shadowColor: Colors.transparent,
             disabledBackgroundColor: Colors.transparent,
-            shape:
-            RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(14),
+            ),
           ),
           child: Ink(
             decoration: BoxDecoration(
@@ -971,17 +1055,21 @@ class _GradientGlowButton extends StatelessWidget {
               alignment: Alignment.center,
               child: loading
                   ? const SizedBox(
-                  width: 20,
-                  height: 20,
-                  child: CircularProgressIndicator(
-                      strokeWidth: 2,
-                      valueColor:
-                      AlwaysStoppedAnimation<Color>(Colors.white)))
-                  : Text(label,
-                  style: const TextStyle(
-                      fontSize: 15,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white)),
+                      width: 20,
+                      height: 20,
+                      child: CircularProgressIndicator(
+                        strokeWidth: 2,
+                        valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
+                      ),
+                    )
+                  : Text(
+                      label,
+                      style: const TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                    ),
             ),
           ),
         ),

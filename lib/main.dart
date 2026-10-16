@@ -1,4 +1,7 @@
+import 'dart:async';
+import 'dart:ui';
 import 'dart:convert';
+import 'dart:io' show Platform;
 import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
@@ -53,29 +56,28 @@ import 'package:jidoapp/screens/badge_collected_screen.dart';
 import 'package:jidoapp/screens/rank_collected_screen.dart';
 import 'package:jidoapp/screens/badges_screen.dart';
 import 'package:jidoapp/screens/badge_share.dart';
-import 'package:jidoapp/screens/countries_share.dart'; // TODO: 테스트용
-import 'package:screenshot/screenshot.dart'; // TODO: 테스트용
-import 'package:flutter_map/flutter_map.dart'; // TODO: 테스트용
-import 'package:latlong2/latlong.dart'; // TODO: 테스트용
+import 'package:jidoapp/screens/countries_share.dart';
+import 'package:screenshot/screenshot.dart';
+import 'package:flutter_map/flutter_map.dart';
+import 'package:latlong2/latlong.dart';
 
 import 'package:timezone/data/latest.dart' as tz;
 import 'package:google_mobile_ads/google_mobile_ads.dart';
+import 'package:app_tracking_transparency/app_tracking_transparency.dart';
+import 'package:facebook_app_events/facebook_app_events.dart';
 
-const MaterialColor mintSwatch = MaterialColor(
-  0xFF3DDAD7,
-  <int, Color>{
-    50: Color(0xFFE0F7F7),
-    100: Color(0xFFB3EAEA),
-    200: Color(0xFF80DDDC),
-    300: Color(0xFF4DD0CD),
-    400: Color(0xFF26C6C4),
-    500: Color(0xFF3DDAD7),
-    600: Color(0xFF00B3B0),
-    700: Color(0xFF00A39F),
-    800: Color(0xFF00938E),
-    900: Color(0xFF007A70),
-  },
-);
+const MaterialColor mintSwatch = MaterialColor(0xFF3DDAD7, <int, Color>{
+  50: Color(0xFFE0F7F7),
+  100: Color(0xFFB3EAEA),
+  200: Color(0xFF80DDDC),
+  300: Color(0xFF4DD0CD),
+  400: Color(0xFF26C6C4),
+  500: Color(0xFF3DDAD7),
+  600: Color(0xFF00B3B0),
+  700: Color(0xFF00A39F),
+  800: Color(0xFF00938E),
+  900: Color(0xFF007A70),
+});
 
 const SystemUiOverlayStyle _defaultSystemUiOverlayStyle = SystemUiOverlayStyle(
   statusBarColor: Colors.transparent,
@@ -92,134 +94,332 @@ void _setSystemUiMode() {
 
 final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
-// FCM 백그라운드 메시지 핸들러 (top-level 필수)
-@pragma('vm:entry-point')
-Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
-  debugPrint('📬 [FCM] 백그라운드 메시지: \${message.messageId}');
+// ── 상시 뒤로가기 버튼용 Observer/위젯 ──────────────────────────────
+// 라우트가 push/pop/replace 될 때마다 알림을 보내서 버튼의 표시 여부(투명도)를
+// 갱신할 수 있게 해줍니다.
+class _AppNavObserver extends NavigatorObserver with ChangeNotifier {
+  @override
+  void didPush(Route route, Route? previousRoute) => notifyListeners();
+  @override
+  void didPop(Route route, Route? previousRoute) => notifyListeners();
+  @override
+  void didRemove(Route route, Route? previousRoute) => notifyListeners();
+  @override
+  void didReplace({Route? newRoute, Route? oldRoute}) => notifyListeners();
 }
 
-// FCM 토큰 Firestore 저장
+final _appNavObserver = _AppNavObserver();
+
+class _FloatingBackButton extends StatelessWidget {
+  final GlobalKey<NavigatorState> navigatorKey;
+  const _FloatingBackButton({required this.navigatorKey});
+
+  @override
+  Widget build(BuildContext context) {
+    return AnimatedBuilder(
+      animation: _appNavObserver,
+      builder: (context, _) {
+        final canPop = navigatorKey.currentState?.canPop() ?? false;
+        return SafeArea(
+          child: AnimatedOpacity(
+            opacity: canPop ? 1.0 : 0.0,
+            duration: const Duration(milliseconds: 150),
+            child: IgnorePointer(
+              ignoring: !canPop,
+              child: Padding(
+                padding: const EdgeInsets.only(left: 8, top: 4),
+                child: Material(
+                  color: Colors.black.withOpacity(0.28),
+                  shape: const CircleBorder(),
+                  child: InkWell(
+                    customBorder: const CircleBorder(),
+                    onTap: () {
+                      if (navigatorKey.currentState?.canPop() ?? false) {
+                        navigatorKey.currentState!.pop();
+                      }
+                    },
+                    child: const SizedBox(
+                      width: 36,
+                      height: 36,
+                      child: Icon(
+                        Icons.arrow_back_ios_new_rounded,
+                        size: 16,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        );
+      },
+    );
+  }
+}
+// ── 상시 뒤로가기 버튼용 코드 끝 ─────────────────────────────────────
+
+@pragma('vm:entry-point')
+Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
+  debugPrint('📬 [FCM] Background message: ${message.messageId}');
+}
+
 Future<void> _saveFcmToken() async {
   try {
     final messaging = FirebaseMessaging.instance;
     final token = await messaging.getToken();
     if (token == null) return;
 
-    final user = await FirebaseMessaging.instance.getToken();
-    debugPrint('📱 [FCM] 토큰: \$token');
+    debugPrint('📱 [FCM] Token: $token');
 
-    // DailyQuizScreen에서 저장해둔 기본 모드(Normal/Expert)를 함께 실어 보내서
-    // Cloud Functions가 이 기기에 어느 쪽 일일 퀴즈 알림을 보낼지 판단하게 함.
+    final String platform = Platform.isIOS ? 'ios' : 'android';
     final prefs = await SharedPreferences.getInstance();
-    final quizMode = prefs.getString('daily_quiz_default_mode') == 'expert' ? 'expert' : 'normal';
+    final quizMode = prefs.getString('daily_quiz_default_mode') == 'expert'
+        ? 'expert'
+        : 'normal';
 
-    await FirebaseFirestore.instance
-        .collection('fcm_tokens')
-        .doc(token)
-        .set({
+    await FirebaseFirestore.instance.collection('fcm_tokens').doc(token).set({
       'token': token,
       'updatedAt': FieldValue.serverTimestamp(),
-      'platform': 'android',
+      'platform': platform,
       'quizMode': quizMode,
     }, SetOptions(merge: true));
 
     messaging.onTokenRefresh.listen((newToken) async {
       final refreshedPrefs = await SharedPreferences.getInstance();
       final refreshedQuizMode =
-      refreshedPrefs.getString('daily_quiz_default_mode') == 'expert' ? 'expert' : 'normal';
+          refreshedPrefs.getString('daily_quiz_default_mode') == 'expert'
+          ? 'expert'
+          : 'normal';
       await FirebaseFirestore.instance
           .collection('fcm_tokens')
           .doc(newToken)
           .set({
-        'token': newToken,
-        'updatedAt': FieldValue.serverTimestamp(),
-        'platform': 'android',
-        'quizMode': refreshedQuizMode,
-      }, SetOptions(merge: true));
+            'token': newToken,
+            'updatedAt': FieldValue.serverTimestamp(),
+            'platform': platform,
+            'quizMode': refreshedQuizMode,
+          }, SetOptions(merge: true));
     });
   } catch (e) {
-    debugPrint('⚠️ [FCM] 토큰 저장 오류: \$e');
+    debugPrint('⚠️ [FCM] Token save error: $e');
   }
 }
 
-// 알림 탭 → DailyQuizScreen 딥링크
-void _handleNotificationTap(RemoteMessage message) {
-  final date = message.data['date'] as String?;
-  final mode = message.data['mode'] as String?;
-  final isExpert = mode == 'expert';
+void _navigateToQuiz(
+  String? date, {
+  bool isExpert = false,
+  int retryCount = 0,
+}) {
   final context = navigatorKey.currentContext;
-  if (context == null) return;
 
-  debugPrint('🔔 [FCM] 알림 탭 → date: \$date, mode: \$mode');
+  if (context == null) {
+    if (retryCount < 20) {
+      Future.delayed(const Duration(milliseconds: 200), () {
+        _navigateToQuiz(date, isExpert: isExpert, retryCount: retryCount + 1);
+      });
+      debugPrint('🔔 [FCM] navigator not ready, retry $retryCount...');
+    } else {
+      debugPrint('🔔 [FCM] navigator still null after retries, giving up');
+    }
+    return;
+  }
 
+  debugPrint(
+    '🔔 [FCM] Navigating to DailyQuizScreen → date: $date, expert: $isExpert',
+  );
   Navigator.of(context).push(
     MaterialPageRoute(
-      builder: (_) => DailyQuizScreen(
-        initialDate: date,
-        initialExpert: isExpert,
-      ),
+      builder: (_) =>
+          DailyQuizScreen(initialDate: date, initialExpert: isExpert),
     ),
   );
 }
 
+void _handleNotificationTap(RemoteMessage message) {
+  final date = message.data['date'] as String?;
+  final mode = message.data['mode'] as String?;
+  final isExpert = mode == 'expert';
+  debugPrint('🔔 [FCM] Notification tapped → date: $date, mode: $mode');
+  _navigateToQuiz(date, isExpert: isExpert);
+}
+
 bool isOnboardingActive = true;
 
-Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  _setSystemUiMode();
+void main() {
+  // ── DEBUG: 전역 에러 핸들러 ─────────────────────────────────────
+  // 여기서부터가 진단용으로 추가된 코드입니다.
+  // Flutter 프레임워크 레벨 에러(위젯 빌드 중 예외 등)를 잡습니다.
+  FlutterError.onError = (FlutterErrorDetails details) {
+    debugPrint('🔴🔴🔴 [FlutterError] ${details.exceptionAsString()}');
+    debugPrint('🔴 [FlutterError] Stack:\n${details.stack}');
+    FlutterError.presentError(details);
+  };
 
-  await SystemChrome.setPreferredOrientations([
-    DeviceOrientation.portraitUp,
-    DeviceOrientation.portraitDown,
-  ]);
+  runZonedGuarded(
+    () async {
+      // Dart 레벨 uncaught 예외(async 함수 안에서 던져진 에러 등)를 잡습니다.
+      debugPrint('🟢 [DEBUG] main() zone 진입');
 
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
+      WidgetsFlutterBinding.ensureInitialized();
+      debugPrint('🟢 [DEBUG] 1) WidgetsFlutterBinding.ensureInitialized 완료');
+
+      // 플랫폼 레벨(네이티브 채널 등) uncaught 에러를 잡습니다.
+      PlatformDispatcher.instance.onError = (error, stack) {
+        debugPrint('🔴🔴🔴 [PlatformDispatcher] $error');
+        debugPrint('🔴 [PlatformDispatcher] Stack:\n$stack');
+        return true; // 에러를 처리했다고 표시해서 앱이 죽지 않게 함
+      };
+      debugPrint('🟢 [DEBUG] 2) PlatformDispatcher.onError 등록 완료');
+
+      _setSystemUiMode();
+      debugPrint('🟢 [DEBUG] 3) _setSystemUiMode 완료');
+
+      try {
+        await SystemChrome.setPreferredOrientations([
+          DeviceOrientation.portraitUp,
+          DeviceOrientation.portraitDown,
+        ]);
+        debugPrint('🟢 [DEBUG] 4) setPreferredOrientations 완료');
+      } catch (e, st) {
+        debugPrint('🔴 [DEBUG] 4) setPreferredOrientations 실패: $e');
+        debugPrint('🔴 Stack:\n$st');
+      }
+
+      try {
+        await Firebase.initializeApp(
+          options: DefaultFirebaseOptions.currentPlatform,
+        );
+        debugPrint('🟢 [DEBUG] 5) Firebase.initializeApp 완료');
+        debugPrint(
+          '🔥 [FIREBASE CONFIG] projectId=${DefaultFirebaseOptions.currentPlatform.projectId}',
+        );
+        debugPrint(
+          '🔥 [FIREBASE CONFIG] storageBucket=${DefaultFirebaseOptions.currentPlatform.storageBucket}',
+        );
+        debugPrint(
+          '🔥 [FIREBASE CONFIG] appId=${DefaultFirebaseOptions.currentPlatform.appId}',
+        );
+      } catch (e, st) {
+        debugPrint('🔴 [DEBUG] 5) Firebase.initializeApp 실패: $e');
+        debugPrint('🔴 Stack:\n$st');
+      }
+
+      try {
+        FirebaseMessaging.onBackgroundMessage(
+          _firebaseMessagingBackgroundHandler,
+        );
+        debugPrint('🟢 [DEBUG] 6) onBackgroundMessage 등록 완료');
+      } catch (e, st) {
+        debugPrint('🔴 [DEBUG] 6) onBackgroundMessage 등록 실패: $e');
+        debugPrint('🔴 Stack:\n$st');
+      }
+
+      try {
+        await FirebaseMessaging.instance.requestPermission(
+          alert: true,
+          badge: true,
+          sound: true,
+        );
+        debugPrint('🟢 [DEBUG] 7) FCM requestPermission 완료');
+      } catch (e, st) {
+        debugPrint('🔴 [DEBUG] 7) FCM requestPermission 실패: $e');
+        debugPrint('🔴 Stack:\n$st');
+      }
+
+      try {
+        await _saveFcmToken();
+        debugPrint('🟢 [DEBUG] 8) _saveFcmToken 완료');
+      } catch (e, st) {
+        debugPrint('🔴 [DEBUG] 8) _saveFcmToken 실패: $e');
+        debugPrint('🔴 Stack:\n$st');
+      }
+
+      try {
+        await FirebaseMessaging.instance
+            .setForegroundNotificationPresentationOptions(
+              alert: true,
+              badge: true,
+              sound: true,
+            );
+        debugPrint(
+          '🟢 [DEBUG] 9) setForegroundNotificationPresentationOptions 완료',
+        );
+      } catch (e, st) {
+        debugPrint(
+          '🔴 [DEBUG] 9) setForegroundNotificationPresentationOptions 실패: $e',
+        );
+        debugPrint('🔴 Stack:\n$st');
+      }
+
+      try {
+        await MobileAds.instance.initialize();
+        debugPrint('🟢 [DEBUG] 10) MobileAds.initialize 완료');
+      } catch (e, st) {
+        debugPrint('🔴 [DEBUG] 10) MobileAds.initialize 실패: $e');
+        debugPrint('🔴 Stack:\n$st');
+      }
+
+      try {
+        await SubscriptionService.instance.initialize();
+        debugPrint('🟢 [DEBUG] 11) SubscriptionService.initialize 완료');
+      } catch (e, st) {
+        debugPrint('🔴 [DEBUG] 11) SubscriptionService.initialize 실패: $e');
+        debugPrint('🔴 Stack:\n$st');
+      }
+
+      try {
+        await AdService.instance.initialize();
+        debugPrint('🟢 [DEBUG] 12) AdService.initialize 완료');
+      } catch (e, st) {
+        debugPrint('🔴 [DEBUG] 12) AdService.initialize 실패: $e');
+        debugPrint('🔴 Stack:\n$st');
+      }
+
+      try {
+        await dotenv.load(fileName: ".env");
+        debugPrint('🟢 [DEBUG] 13) dotenv.load 완료');
+      } catch (e, st) {
+        debugPrint('🔴 [DEBUG] 13) dotenv.load 실패: $e');
+        debugPrint('🔴 Stack:\n$st');
+      }
+
+      try {
+        await initializeDateFormatting('ko_KR', null);
+        debugPrint('🟢 [DEBUG] 14) initializeDateFormatting 완료');
+      } catch (e, st) {
+        debugPrint('🔴 [DEBUG] 14) initializeDateFormatting 실패: $e');
+        debugPrint('🔴 Stack:\n$st');
+      }
+
+      try {
+        tz.initializeTimeZones();
+        debugPrint('🟢 [DEBUG] 15) tz.initializeTimeZones 완료');
+      } catch (e, st) {
+        debugPrint('🔴 [DEBUG] 15) tz.initializeTimeZones 실패: $e');
+        debugPrint('🔴 Stack:\n$st');
+      }
+
+      debugPrint('🟢 [DEBUG] 16) runApp 직전 — 여기까지 왔으면 초기화 단계는 전부 통과');
+      runApp(const JidoRoot());
+      debugPrint('🟢 [DEBUG] 17) runApp 호출 완료');
+    },
+    (error, stack) {
+      // runZonedGuarded가 잡는 모든 uncaught 예외는 여기로 옵니다.
+      // "Lost connection to device"의 진짜 원인이 Dart 예외라면 여기 찍힙니다.
+      debugPrint('🔴🔴🔴🔴🔴 [UNCAUGHT ZONE ERROR] $error');
+      debugPrint('🔴 Stack:\n$stack');
+    },
   );
-
-  FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
-  await FirebaseMessaging.instance.requestPermission(
-    alert: true,
-    badge: true,
-    sound: true,
-  );
-  await _saveFcmToken();
-
-  await FirebaseMessaging.instance.setForegroundNotificationPresentationOptions(
-    alert: true,
-    badge: true,
-    sound: true,
-  );
-
-  final initialMessage = await FirebaseMessaging.instance.getInitialMessage();
-  if (initialMessage != null) {
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      _handleNotificationTap(initialMessage);
-    });
-  }
-
-  FirebaseMessaging.onMessageOpenedApp.listen(_handleNotificationTap);
-
-  await MobileAds.instance.initialize();
-
-  await SubscriptionService.instance.initialize();
-
-  await AdService.instance.initialize();
-
-  await dotenv.load(fileName: ".env");
-  await initializeDateFormatting('ko_KR', null);
-  tz.initializeTimeZones();
-
-  await _debugCheckLandmarkData();
-
-  runApp(const JidoRoot());
+  // ── DEBUG 코드 끝 ─────────────────────────────────────────────
 }
 
 Future<void> _debugCheckLandmarkData() async {
-  print('\n🚀 [START] main.dart :: 랜드마크 데이터 무결성 검사 시작\n');
+  print('\n🚀 [START] main.dart :: Landmark data integrity check\n');
   try {
-    final String response =
-    await rootBundle.loadString('assets/all_landmarks.json');
+    final String response = await rootBundle.loadString(
+      'assets/all_landmarks.json',
+    );
     final data = await json.decode(response);
     final List<dynamic> allLandmarks = data as List;
 
@@ -233,9 +433,9 @@ Future<void> _debugCheckLandmarkData() async {
 
       print('\n[Landmarks with Parentheses in Name Check]');
       if (bracketLandmarks.isEmpty) {
-        print('결과: 이름에 괄호가 포함된 랜드마크가 데이터셋에 하나도 없습니다.');
+        print('Result: No landmarks with parentheses in the dataset.');
       } else {
-        print('총 ${bracketLandmarks.length}개 발견:');
+        print('Total ${bracketLandmarks.length} found:');
         for (var l in bracketLandmarks) {
           print('- ${l['name']}');
         }
@@ -250,8 +450,9 @@ Future<void> _debugCheckLandmarkData() async {
         return r >= 1 && r <= 100;
       }).toList();
 
-      globalRankedList.sort((a, b) =>
-          (a['global_rank'] as int).compareTo(b['global_rank'] as int));
+      globalRankedList.sort(
+        (a, b) => (a['global_rank'] as int).compareTo(b['global_rank'] as int),
+      );
 
       print('\n[Global Rank 1-100]');
       for (var item in globalRankedList) {
@@ -261,9 +462,9 @@ Future<void> _debugCheckLandmarkData() async {
       print('Error printing global ranks: $e');
     }
   } catch (e) {
-    print('❌ [ERROR] 데이터 로딩 실패: $e');
+    print('❌ [ERROR] Data load failed: $e');
   }
-  print('\n✅ [END] main.dart :: 랜드마크 데이터 검사 종료\n');
+  print('\n✅ [END] main.dart :: Landmark data check completed\n');
 }
 
 // 🔥 FIX: provider 패키지의 ProxyProviderX는 6개까지만 지원합니다.
@@ -342,7 +543,8 @@ class _AuthGateRootState extends State<AuthGateRoot> {
               if (mounted) {
                 // [DEBUG] 리마운트 원인 추적용
                 debugPrint(
-                    '🔁 [AuthGateRoot] remount triggered: reason=logout, prevSessionKey=$_sessionKey');
+                  '🔁 [AuthGateRoot] remount triggered: reason=logout, prevSessionKey=$_sessionKey',
+                );
                 setState(() => _sessionKey++);
               }
             });
@@ -387,8 +589,10 @@ class _AuthGateRootState extends State<AuthGateRoot> {
                 // 트리거된 경우. 계정 전환 테스트 시 이 로그가 정확히
                 // "몇 번, 어떤 uid로" 찍히는지가 핵심 확인 포인트.
                 debugPrint(
-                    '🔁 [AuthGateRoot] remount triggered: reason=reload, uid=$newUid, prevSessionKey=$_sessionKey');
+                  '🔁 [AuthGateRoot] remount triggered: reason=reload, uid=$newUid, prevSessionKey=$_sessionKey',
+                );
                 setState(() => _sessionKey++);
+                unawaited(GameScoresSyncService.instance.reloadFromServer());
                 auth.clearPendingLoginAction();
               }
             });
@@ -407,7 +611,8 @@ class _AuthGateRootState extends State<AuthGateRoot> {
         if (_lastLoggedSessionKey != _sessionKey) {
           _lastLoggedSessionKey = _sessionKey;
           debugPrint(
-              '🌳 [AuthGateRoot] provider tree (re)built: sessionKey=$_sessionKey, uid=${auth.user?.uid}');
+            '🌳 [AuthGateRoot] provider tree (re)built: sessionKey=$_sessionKey, uid=${auth.user?.uid}',
+          );
         }
 
         return KeyedSubtree(
@@ -428,19 +633,27 @@ class _AuthGateRootState extends State<AuthGateRoot> {
               ),
               ChangeNotifierProvider(create: (_) => AirlineProvider()),
               ChangeNotifierProvider(create: (_) => AirportProvider()),
-              ChangeNotifierProxyProvider2<CountryProvider, CityProvider,
-                  LandmarksProvider>(
+              ChangeNotifierProxyProvider2<
+                CountryProvider,
+                CityProvider,
+                LandmarksProvider
+              >(
                 lazy: false,
                 create: (_) => LandmarksProvider(),
-                update: (context, countryProvider, cityProvider,
-                    landmarksProvider) {
-                  landmarksProvider ??= LandmarksProvider();
-                  landmarksProvider.updateProviders(
-                    countryProvider,
-                    cityProvider,
-                  );
-                  return landmarksProvider;
-                },
+                update:
+                    (
+                      context,
+                      countryProvider,
+                      cityProvider,
+                      landmarksProvider,
+                    ) {
+                      landmarksProvider ??= LandmarksProvider();
+                      landmarksProvider.updateProviders(
+                        countryProvider,
+                        cityProvider,
+                      );
+                      return landmarksProvider;
+                    },
               ),
               ChangeNotifierProvider(
                 create: (_) => UnescoProvider(),
@@ -471,8 +684,9 @@ class _AuthGateRootState extends State<AuthGateRoot> {
               ChangeNotifierProxyProvider<CountryProvider, TripLogProvider>(
                 create: (context) => TripLogProvider(context.read<AiService>()),
                 update: (context, countryProvider, tripLogProvider) {
-                  tripLogProvider ??=
-                      TripLogProvider(context.read<AiService>());
+                  tripLogProvider ??= TripLogProvider(
+                    context.read<AiService>(),
+                  );
                   tripLogProvider.updateCountryData(
                     countryProvider.countryNameToIsoMap,
                   );
@@ -480,9 +694,8 @@ class _AuthGateRootState extends State<AuthGateRoot> {
                 },
               ),
               ChangeNotifierProvider(
-                create: (context) => ItineraryProvider(
-                  context.read<AiService>(),
-                ),
+                create: (context) =>
+                    ItineraryProvider(context.read<AiService>()),
               ),
               // 🔥 FIX: provider 패키지는 ProxyProvider6까지만 제공하고
               // ProxyProvider7은 존재하지 않습니다. BadgeProvider가
@@ -491,28 +704,40 @@ class _AuthGateRootState extends State<AuthGateRoot> {
               // 그 번들 + UnescoProvider 두 개만으로 BadgeProvider를
               // 최종 생성하는 2단계 구조로 나눕니다.
               ProxyProvider6<
-                  CountryProvider,
-                  EconomyProvider,
-                  CityProvider,
-                  AirlineProvider,
-                  AirportProvider,
-                  LandmarksProvider,
-                  _BadgeCoreDeps>(
-                update: (context, countryProvider, economyProvider,
-                    cityProvider, airlineProvider, airportProvider,
-                    landmarksProvider, _) {
-                  return _BadgeCoreDeps(
-                    countryProvider: countryProvider,
-                    economyProvider: economyProvider,
-                    cityProvider: cityProvider,
-                    airlineProvider: airlineProvider,
-                    airportProvider: airportProvider,
-                    landmarksProvider: landmarksProvider,
-                  );
-                },
+                CountryProvider,
+                EconomyProvider,
+                CityProvider,
+                AirlineProvider,
+                AirportProvider,
+                LandmarksProvider,
+                _BadgeCoreDeps
+              >(
+                update:
+                    (
+                      context,
+                      countryProvider,
+                      economyProvider,
+                      cityProvider,
+                      airlineProvider,
+                      airportProvider,
+                      landmarksProvider,
+                      _,
+                    ) {
+                      return _BadgeCoreDeps(
+                        countryProvider: countryProvider,
+                        economyProvider: economyProvider,
+                        cityProvider: cityProvider,
+                        airlineProvider: airlineProvider,
+                        airportProvider: airportProvider,
+                        landmarksProvider: landmarksProvider,
+                      );
+                    },
               ),
-              ChangeNotifierProxyProvider2<_BadgeCoreDeps, UnescoProvider,
-                  BadgeProvider>(
+              ChangeNotifierProxyProvider2<
+                _BadgeCoreDeps,
+                UnescoProvider,
+                BadgeProvider
+              >(
                 create: (_) => BadgeProvider(),
                 update: (context, coreDeps, unescoProvider, badgeProvider) {
                   badgeProvider ??= BadgeProvider();
@@ -568,6 +793,7 @@ class _WidgetUpdateWrapperState extends State<WidgetUpdateWrapper> {
   static const String _tutorialVersion = '1.0';
   static const String _prefKey = 'onboarding_tutorial_version';
 
+  static final facebookAppEvents = FacebookAppEvents();
   // [FIX] addListener로 등록한 콜백을 dispose에서 정확히 removeListener 하려면
   // 익명 함수가 아니라 이 필드에 저장해둔 같은 참조를 넘겨야 한다.
   // (이전 코드는 dispose를 아예 오버라이드하지 않아서, 이 위젯이 리마운트될
@@ -575,6 +801,7 @@ class _WidgetUpdateWrapperState extends State<WidgetUpdateWrapper> {
   // AuthProvider 리스너가 계속 쌓이는 누수가 있었다.)
   AuthProvider? _listenedAuthProvider;
   void Function()? _authListener;
+  StreamSubscription<RemoteMessage>? _notificationSubscription;
 
   @override
   void initState() {
@@ -582,7 +809,57 @@ class _WidgetUpdateWrapperState extends State<WidgetUpdateWrapper> {
     WidgetsBinding.instance.addPostFrameCallback((_) {
       _listenToAuthChanges();
       _initTutorialCheck();
+      _initATTAndMetaSDK();
+      _initNotificationHandlers();
     });
+  }
+
+  Future<void> _initNotificationHandlers() async {
+    final initialMessage = await FirebaseMessaging.instance.getInitialMessage();
+    if (initialMessage != null) {
+      debugPrint('🔔 [FCM] Cold start message detected');
+      await Future.delayed(const Duration(milliseconds: 600));
+      if (mounted) _handleNotificationTap(initialMessage);
+    }
+
+    _notificationSubscription = FirebaseMessaging.onMessageOpenedApp.listen((
+      message,
+    ) {
+      debugPrint('🔔 [FCM] onMessageOpenedApp');
+      if (mounted) _handleNotificationTap(message);
+    });
+  }
+
+  Future<void> _initATTAndMetaSDK() async {
+    if (!Platform.isIOS) return;
+    try {
+      await Future.delayed(const Duration(seconds: 1));
+
+      final TrackingStatus status =
+          await AppTrackingTransparency.trackingAuthorizationStatus;
+
+      if (status == TrackingStatus.notDetermined) {
+        final result =
+            await AppTrackingTransparency.requestTrackingAuthorization();
+        if (result == TrackingStatus.authorized) {
+          await facebookAppEvents.setAdvertiserTracking(enabled: true);
+          await facebookAppEvents.activateApp();
+          debugPrint("✅ ATT Authorized: Meta SDK tracking started");
+        } else {
+          await facebookAppEvents.setAdvertiserTracking(enabled: false);
+          debugPrint("🚫 ATT Denied: Meta SDK tracking limited");
+        }
+      } else if (status == TrackingStatus.authorized) {
+        await facebookAppEvents.setAdvertiserTracking(enabled: true);
+        await facebookAppEvents.activateApp();
+        debugPrint("✅ ATT already authorized: Meta SDK tracking active");
+      } else {
+        await facebookAppEvents.setAdvertiserTracking(enabled: false);
+        debugPrint("🚫 ATT status: $status — tracking disabled");
+      }
+    } catch (e) {
+      debugPrint("ATT Error: $e");
+    }
   }
 
   @override
@@ -592,6 +869,7 @@ class _WidgetUpdateWrapperState extends State<WidgetUpdateWrapper> {
     if (_listenedAuthProvider != null && _authListener != null) {
       _listenedAuthProvider!.removeListener(_authListener!);
     }
+    _notificationSubscription?.cancel();
     super.dispose();
   }
 
@@ -617,7 +895,8 @@ class _WidgetUpdateWrapperState extends State<WidgetUpdateWrapper> {
   Future<void> _handlePendingLoginAction(AuthProvider authProvider) async {
     final action = authProvider.pendingLoginAction;
     debugPrint(
-        '🔍 [_handlePendingLoginAction] called, action=$action, _isHandlingAction=$_isHandlingAction, mounted=$mounted');
+      '🔍 [_handlePendingLoginAction] called, action=$action, _isHandlingAction=$_isHandlingAction, mounted=$mounted',
+    );
     if (action == null || !mounted) return;
 
     if (_isHandlingAction) return;
@@ -631,10 +910,11 @@ class _WidgetUpdateWrapperState extends State<WidgetUpdateWrapper> {
         waited++;
       }
       debugPrint(
-          '🔍 [LoginAction] user=${authProvider2.user?.uid}, waited=${waited * 100}ms');
+        '🔍 [LoginAction] user=${authProvider2.user?.uid}, waited=${waited * 100}ms',
+      );
 
       if (action == 'upload') {
-        debugPrint('🔼 [LoginAction] upload: 로컬 → Firestore');
+        debugPrint('🔼 [LoginAction] upload: Local → Firestore');
         await Future.wait([
           context.read<CountryProvider>().uploadLocalToFirestore(),
           context.read<CityProvider>().uploadLocalToFirestore(),
@@ -674,7 +954,6 @@ class _WidgetUpdateWrapperState extends State<WidgetUpdateWrapper> {
   Future<void> _checkTutorial() async {
     final authProvider = context.read<AuthProvider>();
 
-    // 1. 이미 로그인된 상태이면 튜토리얼 및 Welcome 화면 패스
     if (authProvider.isAuthenticated) {
       isOnboardingActive = false;
       if (mounted) {
@@ -686,7 +965,6 @@ class _WidgetUpdateWrapperState extends State<WidgetUpdateWrapper> {
       return;
     }
 
-    // 2. 비로그인 상태라도 온보딩(튜토리얼)을 이미 완료했는지 확인
     final prefs = await SharedPreferences.getInstance();
     final completed = prefs.getString(_prefKey);
 
@@ -701,7 +979,6 @@ class _WidgetUpdateWrapperState extends State<WidgetUpdateWrapper> {
       return;
     }
 
-    // 3. 로그인도 안 되어 있고 튜토리얼도 안 했다면 Welcome Screen 띄우기
     isOnboardingActive = true;
     if (mounted) {
       setState(() {
@@ -734,9 +1011,7 @@ class _WidgetUpdateWrapperState extends State<WidgetUpdateWrapper> {
     }
 
     if (_showTutorial == true) {
-      return OnboardingTutorialScreen(
-        onComplete: _completeTutorial,
-      );
+      return OnboardingTutorialScreen(onComplete: _completeTutorial);
     }
 
     final countryProvider = context.watch<CountryProvider>();
@@ -750,17 +1025,18 @@ class _WidgetUpdateWrapperState extends State<WidgetUpdateWrapper> {
       });
     }
 
-    // 모든 과정 완료 또는 생략 시 My Trips 탭 (initialIndex: 0) 으로 진입
     return const MainScreen(initialIndex: 0);
   }
 
   void _triggerWidgetUpdate(CountryProvider countryProvider) {
+    if (!Platform.isAndroid) return;
+
     final visitedNames = countryProvider.visitedCountries;
     final visitedList = countryProvider.allCountries
         .where((c) => visitedNames.contains(c.name))
         .toList();
 
-    debugPrint('✅ Widget update: ${visitedList.length}개 국가');
+    debugPrint('✅ Widget update: ${visitedList.length} countries');
 
     HomeWidgetService.updateWidget(
       widgetImage: null,
@@ -774,6 +1050,11 @@ class _WidgetUpdateWrapperState extends State<WidgetUpdateWrapper> {
 /// pending 광고(조건은 충족됐지만 아직 안 띄운 광고)가 있을 때, 실제
 /// 페이지 화면이 바뀌는 순간에만 AdService.instance.onScreenTransition()을
 /// 호출해서 광고를 내보낸다.
+///
+/// 기존 _AppNavObserver(상시 뒤로가기 버튼용)와는 목적이 달라 별도
+/// 클래스로 분리했다 — _AppNavObserver는 PopupRoute를 포함한 모든 route
+/// 변화에 반응해야 하지만(뒤로가기 버튼은 다이얼로그 위에서도 필요할 수
+/// 있음), 광고는 반드시 PageRoute 전환에만 반응해야 하기 때문이다.
 ///
 /// 주의:
 /// - showDialog()/showModalBottomSheet() 등 PopupRoute는 여기서 절대
@@ -811,9 +1092,9 @@ class AdNavigatorObserver extends NavigatorObserver {
     _notifyIfPageTransition(route: newRoute, previousRoute: oldRoute);
   }
 
-// didRemove는 의도적으로 훅하지 않음: Navigator.removeRoute()는 보통
-// 애니메이션 없이 이력만 조용히 정리하는 용도라, 이걸 "화면 전환"으로
-// 취급하면 사용자가 인지하지 못하는 시점에 광고가 부자연스럽게 뜰 수 있다.
+  // didRemove는 의도적으로 훅하지 않음: Navigator.removeRoute()는 보통
+  // 애니메이션 없이 이력만 조용히 정리하는 용도라, 이걸 "화면 전환"으로
+  // 취급하면 사용자가 인지하지 못하는 시점에 광고가 부자연스럽게 뜰 수 있다.
 }
 
 Widget _buildAppShell(Widget home, {GlobalKey<NavigatorState>? navKey}) {
@@ -821,9 +1102,7 @@ Widget _buildAppShell(Widget home, {GlobalKey<NavigatorState>? navKey}) {
     value: _defaultSystemUiOverlayStyle,
     child: MaterialApp(
       navigatorKey: navKey,
-      navigatorObservers: [
-        AdNavigatorObserver(),
-      ],
+      navigatorObservers: [_appNavObserver, AdNavigatorObserver()],
       title: 'Travelog',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
@@ -831,9 +1110,7 @@ Widget _buildAppShell(Widget home, {GlobalKey<NavigatorState>? navKey}) {
         primaryColor: const Color(0xFF3DDAD7),
         scaffoldBackgroundColor: const Color(0xFFF5F5F5),
         visualDensity: VisualDensity.adaptivePlatformDensity,
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color(0xFF3DDAD7),
-        ),
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF3DDAD7)),
         useMaterial3: true,
       ),
       builder: (context, child) {
@@ -843,7 +1120,12 @@ Widget _buildAppShell(Widget home, {GlobalKey<NavigatorState>? navKey}) {
             AdService.instance.recordGlobalTouch();
           },
           child: BadgeGlobalListener(
-            child: child ?? const SizedBox.shrink(),
+            child: Stack(
+              children: [
+                child ?? const SizedBox.shrink(),
+                if (navKey != null) _FloatingBackButton(navigatorKey: navKey),
+              ],
+            ),
           ),
         );
       },
@@ -863,14 +1145,10 @@ class BadgeGlobalListener extends StatefulWidget {
 class _BadgeGlobalListenerState extends State<BadgeGlobalListener> {
   bool _isShowingDialog = false;
 
-  // [추가] 앱 업데이트로 뱃지 400개가 새로 추가된 것을 안내하는 1회성 팝업 처리용.
-  // 기존 설치자(이전 빌드 번호 < _currentBuildNumber)에게만, 세션당 한 번만 체크한다.
   static const int _currentBuildNumber = 75;
   static const String _lastSeenBuildKey = 'last_seen_build_number';
   bool _buildExpansionCheckDone = false;
 
-  // [디버깅용] true로 두면 74 이하 유저에게 1회성 제한 없이 세션마다 계속
-  // "500+ New Badges" 팝업이 뜬다. 확인 끝나면 반드시 false로 되돌릴 것.
   static const bool _debugAlwaysShowBadgeExpansionPromo = false;
 
   @override
@@ -882,27 +1160,76 @@ class _BadgeGlobalListenerState extends State<BadgeGlobalListener> {
   }
 
   Future<void> _checkNotifications() async {
-    if (!mounted || _isShowingDialog) return;
-    if (isOnboardingActive) return;
+    debugPrint('');
+    debugPrint('════════════════════════════════════════════════════');
+    debugPrint('🏅 [BADGE DEBUG] _checkNotifications ENTER');
+    debugPrint('🏅 mounted=$mounted');
+    debugPrint('🏅 _isShowingDialog=$_isShowingDialog');
+    debugPrint('🏅 isOnboardingActive=$isOnboardingActive');
+
+    if (!mounted) {
+      debugPrint('🟠 [BADGE DEBUG] STOP: widget not mounted');
+      debugPrint('════════════════════════════════════════════════════');
+      return;
+    }
+
+    if (_isShowingDialog) {
+      debugPrint('🟠 [BADGE DEBUG] STOP: dialog already showing');
+      debugPrint('════════════════════════════════════════════════════');
+      return;
+    }
+
+    if (isOnboardingActive) {
+      debugPrint('🟠 [BADGE DEBUG] STOP: onboarding active');
+      debugPrint('════════════════════════════════════════════════════');
+      return;
+    }
 
     try {
       final badgeProvider = context.read<BadgeProvider>();
-      final overlayContext = navigatorKey.currentContext;
-      if (overlayContext == null) return;
 
-      // [추가] 뱃지 400개 추가 안내 팝업 (기존 설치자 전용, 딱 한 번만)
+      debugPrint('🏅 [BADGE DEBUG] provider read success');
+      debugPrint(
+        '🏅 newlyUnlocked.length=${badgeProvider.newlyUnlocked.length}',
+      );
+      debugPrint('🏅 newRankUnlocked=${badgeProvider.newRankUnlocked}');
+
+      if (badgeProvider.newlyUnlocked.isNotEmpty) {
+        for (int i = 0; i < badgeProvider.newlyUnlocked.length; i++) {
+          final b = badgeProvider.newlyUnlocked[i];
+          try {
+            debugPrint(
+              '🏅 [BADGE DEBUG] unlocked[$i] '
+              'name=${b.name} | imagePath=${b.imagePath} | '
+              'category=${b.category} | description=${b.description}',
+            );
+          } catch (e) {
+            debugPrint('🔴 [BADGE DEBUG] unlocked[$i] field log failed: $e');
+            debugPrint('🔴 [BADGE DEBUG] unlocked[$i] raw=$b');
+          }
+        }
+      }
+
+      final overlayContext = navigatorKey.currentContext;
+      debugPrint(
+        '🏅 [BADGE DEBUG] navigatorKey.currentContext=$overlayContext',
+      );
+
+      if (overlayContext == null) {
+        debugPrint('🔴 [BADGE DEBUG] STOP: navigator overlay context is null');
+        debugPrint('════════════════════════════════════════════════════');
+        return;
+      }
+
       if (!_buildExpansionCheckDone) {
         _buildExpansionCheckDone = true;
         final prefs = await SharedPreferences.getInstance();
         final lastSeenBuild = prefs.getInt(_lastSeenBuildKey);
 
         if (lastSeenBuild == null && !_debugAlwaysShowBadgeExpansionPromo) {
-          // 최초 설치 — 프로모 없이 현재 빌드 번호만 기준으로 저장
           await prefs.setInt(_lastSeenBuildKey, _currentBuildNumber);
         } else if (_debugAlwaysShowBadgeExpansionPromo ||
             (lastSeenBuild != null && lastSeenBuild < _currentBuildNumber)) {
-          // [디버깅용] 플래그가 켜져 있으면 seen 처리를 저장하지 않아서
-          // 앱을 재시작할 때마다(세션마다) 계속 뜬다.
           if (!_debugAlwaysShowBadgeExpansionPromo) {
             await prefs.setInt(_lastSeenBuildKey, _currentBuildNumber);
           }
@@ -912,12 +1239,12 @@ class _BadgeGlobalListenerState extends State<BadgeGlobalListener> {
           final goToBadges = await showDialog<bool>(
             context: overlayContext,
             barrierDismissible: false,
-            builder: (ctx) => const _NewBadgesExpansionDialog(newBadgeLabel: '500+'),
+            builder: (ctx) =>
+                const _NewBadgesExpansionDialog(newBadgeLabel: '500+'),
           );
           _isShowingDialog = false;
 
           if (goToBadges == true) {
-            // 뒤이어 새로 획득한 뱃지들을 하나씩 팝업으로 띄우지 않고 조용히 seen 처리
             badgeProvider.clearNewlyUnlocked();
             final navState = navigatorKey.currentState;
             if (mounted && navState != null) {
@@ -925,9 +1252,8 @@ class _BadgeGlobalListenerState extends State<BadgeGlobalListener> {
                 MaterialPageRoute(builder: (_) => const BadgesScreen()),
               );
             }
-            return; // 아래 랭크/뱃지 체인은 건너뜀
+            return;
           }
-          // '닫기'를 선택했으면 아래 로직으로 그대로 이어져서 기존 체인이 진행됨
         }
       }
 
@@ -935,16 +1261,18 @@ class _BadgeGlobalListenerState extends State<BadgeGlobalListener> {
         _isShowingDialog = true;
         final rankName = badgeProvider.newRankUnlocked!;
 
+        debugPrint('🏆 [BADGE DEBUG] rank unlock dialog OPEN: $rankName');
+
         showDialog(
           context: overlayContext,
           barrierDismissible: false,
-          builder: (ctx) => RankCollectedScreen(
-            rankName: rankName,
-          ),
+          builder: (ctx) => RankCollectedScreen(rankName: rankName),
         ).then((_) {
+          debugPrint('🏆 [BADGE DEBUG] rank unlock dialog CLOSED: $rankName');
           if (mounted) {
             _isShowingDialog = false;
             badgeProvider.markRankAsSeen();
+            debugPrint('🏆 [BADGE DEBUG] markRankAsSeen complete');
           }
         });
         return;
@@ -954,20 +1282,43 @@ class _BadgeGlobalListenerState extends State<BadgeGlobalListener> {
         final newBadge = badgeProvider.newlyUnlocked.first;
         _isShowingDialog = true;
 
+        debugPrint('');
+        debugPrint('🚨🚨🚨 [BADGE DEBUG] ABOUT TO OPEN BADGE DIALOG');
+        try {
+          debugPrint('🚨 name=${newBadge.name}');
+          debugPrint('🚨 description=${newBadge.description}');
+          debugPrint('🚨 imagePath=${newBadge.imagePath}');
+          debugPrint('🚨 category=${newBadge.category}');
+          final rawPath = newBadge.imagePath.toString();
+          final relPath = rawPath.startsWith('assets/')
+              ? rawPath.substring(7)
+              : rawPath;
+          debugPrint('🚨 expectedStoragePath=badge_images/$relPath');
+        } catch (e, st) {
+          debugPrint('🔴 [BADGE DEBUG] newBadge inspection failed: $e');
+          debugPrint('🔴 [BADGE DEBUG] stack=$st');
+        }
+        debugPrint('🚨🚨🚨 [BADGE DEBUG] OPENING BadgeCollectedScreen');
+
         showDialog(
           context: overlayContext,
           barrierDismissible: false,
-          builder: (ctx) => BadgeCollectedScreen(achievement: newBadge),
+          builder: (ctx) {
+            debugPrint('🏅 [BADGE DEBUG] BadgeCollectedScreen builder called');
+            return BadgeCollectedScreen(achievement: newBadge);
+          },
         ).then((_) async {
+          debugPrint('🏅 [BADGE DEBUG] BadgeCollectedScreen CLOSED');
           if (mounted) {
             _isShowingDialog = false;
             badgeProvider.markBadgeAsSeen(newBadge);
+            debugPrint(
+              '🏅 [BADGE DEBUG] markBadgeAsSeen complete for ${newBadge.name}',
+            );
 
-            // 뱃지 공유 프로모 팝업 조건:
-            // 1) 기기당 1회만
-            // 2) 프리미엄 유저 제외
             final prefs = await SharedPreferences.getInstance();
-            final alreadyShown = prefs.getBool('badge_share_promo_shown') ?? false;
+            final alreadyShown =
+                prefs.getBool('badge_share_promo_shown') ?? false;
             final isPremium = SubscriptionService.instance.isPremium;
             if (!alreadyShown && !isPremium && mounted) {
               final ctx = navigatorKey.currentContext;
@@ -982,8 +1333,12 @@ class _BadgeGlobalListenerState extends State<BadgeGlobalListener> {
           }
         });
       }
-    } catch (e) {
-      debugPrint('Notification check error: $e');
+    } catch (e, st) {
+      debugPrint('🔴🔴🔴 [BADGE DEBUG] Notification check error: $e');
+      debugPrint('🔴 [BADGE DEBUG] stack=$st');
+    } finally {
+      debugPrint('🏅 [BADGE DEBUG] _checkNotifications EXIT');
+      debugPrint('════════════════════════════════════════════════════');
     }
   }
 
@@ -993,10 +1348,16 @@ class _BadgeGlobalListenerState extends State<BadgeGlobalListener> {
       final badgeProvider = context.watch<BadgeProvider>();
 
       if ((badgeProvider.newlyUnlocked.isNotEmpty ||
-          badgeProvider.newRankUnlocked != null) &&
+              badgeProvider.newRankUnlocked != null) &&
           !_isShowingDialog) {
+        debugPrint(
+          '🏅 [BADGE DEBUG] build detected pending unlock '
+          'badges=${badgeProvider.newlyUnlocked.length}, '
+          'rank=${badgeProvider.newRankUnlocked}, '
+          '_isShowingDialog=$_isShowingDialog',
+        );
         WidgetsBinding.instance.addPostFrameCallback(
-              (_) => _checkNotifications(),
+          (_) => _checkNotifications(),
         );
       }
     } catch (e) {}
@@ -1005,217 +1366,8 @@ class _BadgeGlobalListenerState extends State<BadgeGlobalListener> {
   }
 }
 
-// TODO: 테스트용 - 나중에 제거
-class _PromoTestDialog extends StatefulWidget {
-  final BuildContext parentContext;
-  const _PromoTestDialog({required this.parentContext});
-
-  @override
-  State<_PromoTestDialog> createState() => _PromoTestDialogState();
-}
-
-class _PromoTestDialogState extends State<_PromoTestDialog> {
-  bool _isSharing = false;
-  final ScreenshotController _screenshotController = ScreenshotController();
-
-  Future<void> _handleShare() async {
-    if (_isSharing) return;
-    setState(() => _isSharing = true);
-
-    try {
-      final provider = Provider.of<CountryProvider>(widget.parentContext, listen: false);
-      final visitedCountries = provider.allCountries
-          .where((c) => provider.visitedCountries.contains(c.name))
-          .toList();
-
-      final Uint8List? mapImage = await _screenshotController.capture();
-
-      if (!mounted) return;
-
-      await CountriesShare.share(
-        context: widget.parentContext,
-        mapImage: mapImage ?? Uint8List(0),
-        visitedCountries: visitedCountries,
-      );
-    } catch (e) {
-      debugPrint('PromoTestDialog share error: $e');
-    } finally {
-      if (mounted) setState(() => _isSharing = false);
-    }
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Dialog(
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-      backgroundColor: Colors.white,
-      child: Stack(
-        clipBehavior: Clip.none,
-        children: [
-          Consumer<CountryProvider>(
-            builder: (context, countryProvider, _) => Positioned(
-              left: -9999,
-              top: 0,
-              width: 600,
-              height: 300,
-              child: Screenshot(
-                controller: _screenshotController,
-                child: IgnorePointer(
-                  child: FlutterMap(
-                    options: const MapOptions(
-                      initialCenter: LatLng(20, 0),
-                      initialZoom: 0.3,
-                      interactionOptions: InteractionOptions(flags: InteractiveFlag.none),
-                    ),
-                    children: [
-                      TileLayer(urlTemplate: '', backgroundColor: Colors.white),
-                      PolygonLayer(
-                        polygons: countryProvider.allCountries.expand((country) {
-                          final isVisited = countryProvider.visitedCountries.contains(country.name);
-                          final color = isVisited
-                              ? (countryProvider.continentColors[country.continent] ?? Colors.grey)
-                              : Colors.grey.withOpacity(0.15);
-                          return country.polygonsData.map((polygonData) => Polygon(
-                            points: polygonData.first,
-                            holePointsList: polygonData.length > 1 ? polygonData.sublist(1) : null,
-                            color: color,
-                            borderColor: Colors.white,
-                            borderStrokeWidth: 0.5,
-                            isFilled: true,
-                          ));
-                        }).toList(),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(20),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Align(
-                  alignment: Alignment.topRight,
-                  child: GestureDetector(
-                    onTap: () => Navigator.of(context).pop(),
-                    child: const Icon(Icons.close_rounded, size: 20, color: Color(0xFF999999)),
-                  ),
-                ),
-                const SizedBox(height: 4),
-                Container(
-                  padding: const EdgeInsets.all(16),
-                  decoration: BoxDecoration(
-                    color: const Color(0xFFFFF8F0),
-                    borderRadius: BorderRadius.circular(16),
-                    border: Border.all(color: const Color(0xFFFFB347), width: 1.5),
-                    boxShadow: [
-                      BoxShadow(
-                        color: const Color(0xFFFFB347).withOpacity(0.1),
-                        blurRadius: 8,
-                        offset: const Offset(0, 4),
-                      ),
-                    ],
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const Text('🎁', style: TextStyle(fontSize: 22)),
-                          const SizedBox(width: 12),
-                          Expanded(
-                            child: RichText(
-                              text: const TextSpan(
-                                style: TextStyle(fontSize: 13, color: Color(0xFF444444), height: 1.5),
-                                children: [
-                                  TextSpan(
-                                    text: 'Try 30 days for FREE!\n',
-                                    style: TextStyle(fontWeight: FontWeight.w800, fontSize: 14, color: Color(0xFF1A1A2E)),
-                                  ),
-                                  TextSpan(text: 'Post your map on '),
-                                  TextSpan(text: 'Instagram', style: TextStyle(fontWeight: FontWeight.w700, color: Color(0xFFE1306C))),
-                                  TextSpan(text: ' or '),
-                                  TextSpan(text: 'Facebook', style: TextStyle(fontWeight: FontWeight.w700, color: Color(0xFF1877F2))),
-                                  TextSpan(text: ' and send a screenshot to '),
-                                  TextSpan(text: 'leeahn137@gmail.com', style: TextStyle(fontWeight: FontWeight.w700, color: Color(0xFF3DDAD7))),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBox(height: 12),
-                      GestureDetector(
-                        onTap: _handleShare,
-                        child: Container(
-                          width: double.infinity,
-                          padding: const EdgeInsets.symmetric(vertical: 11),
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(10),
-                            border: Border.all(color: const Color(0xFFFFB347), width: 1.2),
-                            boxShadow: [
-                              BoxShadow(
-                                color: const Color(0xFFFFB347).withOpacity(0.15),
-                                blurRadius: 6,
-                                offset: const Offset(0, 2),
-                              ),
-                            ],
-                          ),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              _isSharing
-                                  ? const SizedBox(
-                                width: 18, height: 18,
-                                child: CircularProgressIndicator(
-                                  strokeWidth: 2,
-                                  valueColor: AlwaysStoppedAnimation<Color>(Color(0xFFFFB347)),
-                                ),
-                              )
-                                  : const Icon(Icons.share_rounded, size: 18, color: Color(0xFFFFB347)),
-                              const SizedBox(width: 8),
-                              const Text(
-                                'Share My Map',
-                                style: TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: Color(0xFFFFB347)),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                const SizedBox(height: 16),
-                SizedBox(
-                  width: double.infinity,
-                  child: TextButton(
-                    onPressed: () => Navigator.of(context).pop(),
-                    style: TextButton.styleFrom(
-                      foregroundColor: Colors.grey,
-                      padding: const EdgeInsets.symmetric(vertical: 12),
-                    ),
-                    child: const Text('Maybe later', style: TextStyle(fontSize: 14)),
-                  ),
-                ),
-              ],        // Column children
-            ),
-          ),
-        ],          // Stack children
-      ),            // Stack
-    );
-  }
-}
-
-// ─────────────────────────────────────────────
-// 뱃지 400개 추가 안내 팝업 (앱 업데이트 시 기존 설치자 전용, 1회성)
-// ─────────────────────────────────────────────
-
 class _NewBadgesExpansionDialog extends StatelessWidget {
-  final String newBadgeLabel; // 예: '500+'
+  final String newBadgeLabel;
 
   const _NewBadgesExpansionDialog({required this.newBadgeLabel});
 
@@ -1249,9 +1401,11 @@ class _NewBadgesExpansionDialog extends StatelessWidget {
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  // "NEW" 스탬프
                   Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 14,
+                      vertical: 6,
+                    ),
                     decoration: BoxDecoration(
                       gradient: const LinearGradient(
                         colors: [Color(0xFFFFD54F), Color(0xFFFFB300)],
@@ -1320,12 +1474,17 @@ class _NewBadgesExpansionDialog extends StatelessWidget {
                         backgroundColor: const Color(0xFF3DDAD7),
                         foregroundColor: const Color(0xFF1A1A2E),
                         padding: const EdgeInsets.symmetric(vertical: 15),
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(14),
+                        ),
                         elevation: 0,
                       ),
                       child: const Text(
                         'View New Badges',
-                        style: TextStyle(fontSize: 15.5, fontWeight: FontWeight.w800),
+                        style: TextStyle(
+                          fontSize: 15.5,
+                          fontWeight: FontWeight.w800,
+                        ),
                       ),
                     ),
                   ),
@@ -1344,7 +1503,6 @@ class _NewBadgesExpansionDialog extends StatelessWidget {
                 ],
               ),
             ),
-            // 상단 왕관 아이콘 배지
             Positioned(
               top: -28,
               left: 0,
@@ -1358,7 +1516,10 @@ class _NewBadgesExpansionDialog extends StatelessWidget {
                     gradient: const LinearGradient(
                       colors: [Color(0xFF3DDAD7), Color(0xFF2BA6A3)],
                     ),
-                    border: Border.all(color: const Color(0xFF1A1A2E), width: 4),
+                    border: Border.all(
+                      color: const Color(0xFF1A1A2E),
+                      width: 4,
+                    ),
                     boxShadow: [
                       BoxShadow(
                         color: const Color(0xFF3DDAD7).withOpacity(0.5),
@@ -1367,7 +1528,11 @@ class _NewBadgesExpansionDialog extends StatelessWidget {
                       ),
                     ],
                   ),
-                  child: const Icon(Icons.auto_awesome_rounded, color: Colors.white, size: 26),
+                  child: const Icon(
+                    Icons.auto_awesome_rounded,
+                    color: Colors.white,
+                    size: 26,
+                  ),
                 ),
               ),
             ),
@@ -1420,7 +1585,11 @@ class _BadgeSharePromoDialogState extends State<_BadgeSharePromoDialog> {
               alignment: Alignment.topRight,
               child: GestureDetector(
                 onTap: () => Navigator.of(context).pop(),
-                child: const Icon(Icons.close_rounded, size: 20, color: Color(0xFF999999)),
+                child: const Icon(
+                  Icons.close_rounded,
+                  size: 20,
+                  color: Color(0xFF999999),
+                ),
               ),
             ),
             const SizedBox(height: 4),
@@ -1444,23 +1613,53 @@ class _BadgeSharePromoDialogState extends State<_BadgeSharePromoDialog> {
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Text('🎁', style: TextStyle(fontSize: 22)),
+                      const Icon(
+                        Icons.card_giftcard_rounded,
+                        size: 22,
+                        color: Color(0xFFFFB347),
+                      ),
                       const SizedBox(width: 12),
                       Expanded(
                         child: RichText(
                           text: const TextSpan(
-                            style: TextStyle(fontSize: 13, color: Color(0xFF444444), height: 1.5),
+                            style: TextStyle(
+                              fontSize: 13,
+                              color: Color(0xFF444444),
+                              height: 1.5,
+                            ),
                             children: [
                               TextSpan(
                                 text: 'Try 30 days for FREE!\n',
-                                style: TextStyle(fontWeight: FontWeight.w800, fontSize: 14, color: Color(0xFF1A1A2E)),
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w800,
+                                  fontSize: 14,
+                                  color: Color(0xFF1A1A2E),
+                                ),
                               ),
                               TextSpan(text: 'Post your badge on '),
-                              TextSpan(text: 'Instagram', style: TextStyle(fontWeight: FontWeight.w700, color: Color(0xFFE1306C))),
+                              TextSpan(
+                                text: 'Instagram',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w700,
+                                  color: Color(0xFFE1306C),
+                                ),
+                              ),
                               TextSpan(text: ' or '),
-                              TextSpan(text: 'Facebook', style: TextStyle(fontWeight: FontWeight.w700, color: Color(0xFF1877F2))),
+                              TextSpan(
+                                text: 'Facebook',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w700,
+                                  color: Color(0xFF1877F2),
+                                ),
+                              ),
                               TextSpan(text: ' and send a screenshot to '),
-                              TextSpan(text: 'leeahn137@gmail.com', style: TextStyle(fontWeight: FontWeight.w700, color: Color(0xFF3DDAD7))),
+                              TextSpan(
+                                text: 'leeahn137@gmail.com',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w700,
+                                  color: Color(0xFF3DDAD7),
+                                ),
+                              ),
                             ],
                           ),
                         ),
@@ -1476,7 +1675,10 @@ class _BadgeSharePromoDialogState extends State<_BadgeSharePromoDialog> {
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(10),
-                        border: Border.all(color: const Color(0xFFFFB347), width: 1.2),
+                        border: Border.all(
+                          color: const Color(0xFFFFB347),
+                          width: 1.2,
+                        ),
                         boxShadow: [
                           BoxShadow(
                             color: const Color(0xFFFFB347).withOpacity(0.15),
@@ -1490,12 +1692,29 @@ class _BadgeSharePromoDialogState extends State<_BadgeSharePromoDialog> {
                         children: [
                           _isSharing
                               ? const SizedBox(
-                            width: 18, height: 18,
-                            child: CircularProgressIndicator(strokeWidth: 2, valueColor: AlwaysStoppedAnimation<Color>(Color(0xFFFFB347))),
-                          )
-                              : const Icon(Icons.share_rounded, size: 18, color: Color(0xFFFFB347)),
+                                  width: 18,
+                                  height: 18,
+                                  child: CircularProgressIndicator(
+                                    strokeWidth: 2,
+                                    valueColor: AlwaysStoppedAnimation<Color>(
+                                      Color(0xFFFFB347),
+                                    ),
+                                  ),
+                                )
+                              : const Icon(
+                                  Icons.share_rounded,
+                                  size: 18,
+                                  color: Color(0xFFFFB347),
+                                ),
                           const SizedBox(width: 8),
-                          const Text('Share My Badge', style: TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: Color(0xFFFFB347))),
+                          const Text(
+                            'Share My Badge',
+                            style: TextStyle(
+                              fontSize: 13,
+                              fontWeight: FontWeight.w700,
+                              color: Color(0xFFFFB347),
+                            ),
+                          ),
                         ],
                       ),
                     ),
@@ -1512,7 +1731,10 @@ class _BadgeSharePromoDialogState extends State<_BadgeSharePromoDialog> {
                   foregroundColor: Colors.grey,
                   padding: const EdgeInsets.symmetric(vertical: 12),
                 ),
-                child: const Text('Maybe later', style: TextStyle(fontSize: 14)),
+                child: const Text(
+                  'Maybe later',
+                  style: TextStyle(fontSize: 14),
+                ),
               ),
             ),
           ],

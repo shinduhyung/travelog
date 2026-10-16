@@ -70,6 +70,29 @@ class PersonalityProvider with ChangeNotifier {
                 serverHasData = true;
               }
 
+              // 🔧 FIX: traveler_type_ai_screen.dart가 만드는 AI 분석 결과
+              // (ai_analysis_result)는 예전엔 로컬 SharedPreferences에만
+              // 저장되고 Firestore로는 전혀 안 올라갔음. 여기서 앱 시작
+              // 시점에 자동으로 동기화한다 — 서버에 있으면 서버 값으로
+              // 로컬을 채우고, 서버엔 없는데 로컬엔 있으면 즉시 업로드.
+              if (data.containsKey('ai_analysis_result')) {
+                final serverAnalysis = data['ai_analysis_result'] as String?;
+                if (serverAnalysis != null) {
+                  await prefs.setString('ai_analysis_result', serverAnalysis);
+                }
+              } else {
+                final localAnalysis = prefs.getString('ai_analysis_result');
+                if (localAnalysis != null) {
+                  try {
+                    await _firestore.collection('users').doc(user.uid).set({
+                      'ai_analysis_result': localAnalysis,
+                    }, SetOptions(merge: true));
+                  } catch (e) {
+                    print("Failed to upload ai_analysis_result to server: $e");
+                  }
+                }
+              }
+
               // Reload from local after sync
               _loadFromLocal(prefs);
 
@@ -307,6 +330,12 @@ class PersonalityProvider with ChangeNotifier {
           if (data.containsKey('dna_is_calculated')) {
             await prefs.setBool('dna_is_calculated', data['dna_is_calculated']);
           }
+          if (data.containsKey('ai_analysis_result')) {
+            final serverAnalysis = data['ai_analysis_result'] as String?;
+            if (serverAnalysis != null) {
+              await prefs.setString('ai_analysis_result', serverAnalysis);
+            }
+          }
           _loadFromLocal(prefs);
         }
       } catch (e) {
@@ -319,6 +348,22 @@ class PersonalityProvider with ChangeNotifier {
   // ─── 케이스 1: 로컬 데이터를 Firestore로 업로드 ─────────────────────────
   Future<void> uploadLocalToFirestore() async {
     await _saveState();
+
+    // ai_analysis_result도 함께 업로드 (새 계정의 최초 upload 케이스 대비)
+    final user = _auth.currentUser;
+    if (user != null) {
+      try {
+        final prefs = await SharedPreferences.getInstance();
+        final localAnalysis = prefs.getString('ai_analysis_result');
+        if (localAnalysis != null) {
+          await _firestore.collection('users').doc(user.uid).set({
+            'ai_analysis_result': localAnalysis,
+          }, SetOptions(merge: true));
+        }
+      } catch (e) {
+        print("Failed to upload ai_analysis_result to server: $e");
+      }
+    }
   }
 
 }
