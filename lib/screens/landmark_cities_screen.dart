@@ -1,6 +1,7 @@
 // lib/screens/landmark_cities_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:collection/collection.dart';
 import 'package:country_flags/country_flags.dart';
@@ -80,6 +81,7 @@ class LandmarkCitiesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Consumer3<LandmarksProvider, CityProvider, CountryProvider>(
       builder: (context, landmarksProvider, cityProvider, countryProvider, _) {
         final visitedLandmarks = landmarksProvider.visitedLandmarks;
@@ -125,10 +127,10 @@ class LandmarkCitiesScreen extends StatelessWidget {
                               ),
                               const SizedBox(width: 12),
                               Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                                const Text('Iconic Cities',
+                                 Text(tr('Iconic Cities'),
                                     style: TextStyle(fontSize: 22, fontWeight: FontWeight.w900,
                                         color: Color(0xFF111827), letterSpacing: -0.6, height: 1.1)),
-                                Text('$totalCities cities · 7 landmarks each',
+                                Text(tr('$totalCities cities · 7 landmarks each'),
                                     style: TextStyle(fontSize: 12, color: Colors.grey[500], fontWeight: FontWeight.w500)),
                               ]),
                             ]),
@@ -282,7 +284,7 @@ class LandmarkCitiesScreen extends StatelessWidget {
                     ),
                   ),
                   child: Text(
-                    isCompleted ? '★ 7/7' : '$visitedCount / ${landmarkNames.length}',
+                    tr(isCompleted ? '★ 7/7' : '$visitedCount / ${landmarkNames.length}'),
                     style: TextStyle(
                       fontSize: 12,
                       fontWeight: FontWeight.w800,
@@ -298,7 +300,7 @@ class LandmarkCitiesScreen extends StatelessWidget {
                   Container(width: 3, decoration: BoxDecoration(color: themeColor, borderRadius: BorderRadius.circular(2))),
                   const SizedBox(width: 12),
                   Expanded(
-                    child: Text(description,
+                    child: Text(tr(description),
                         style: TextStyle(fontSize: 13, color: Colors.grey.shade600, height: 1.5, letterSpacing: -0.2)),
                   ),
                 ]),
@@ -336,7 +338,7 @@ class LandmarkCitiesScreen extends StatelessWidget {
           _showLandmarkDetailsModal(context, landmark, themeColor);
         } else {
           ScaffoldMessenger.of(context).showSnackBar(
-              SnackBar(content: Text('$landmarkName not found in database')));
+              SnackBar(content: Text(tr('$landmarkName not found in database'))));
         }
       },
       child: SizedBox(
@@ -438,10 +440,10 @@ class LandmarkCitiesScreen extends StatelessWidget {
               child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                 Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                   TextButton(onPressed: () => Navigator.pop(sheetContext),
-                      child: Text('Cancel', style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600))),
+                      child: Text(tr('Cancel'), style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600))),
                   ElevatedButton(onPressed: () => Navigator.pop(sheetContext),
                       style: ElevatedButton.styleFrom(backgroundColor: headerTextColor),
-                      child: Text('Done', style: TextStyle(fontWeight: FontWeight.w600, color: themeColor))),
+                      child: Text(tr('Done'), style: TextStyle(fontWeight: FontWeight.w600, color: themeColor))),
                 ]),
                 const SizedBox(height: 12),
                 Row(children: [
@@ -453,7 +455,7 @@ class LandmarkCitiesScreen extends StatelessWidget {
                 Row(children: [
                   Icon(Icons.location_on, size: 14, color: headerTextColor.withOpacity(0.8)),
                   const SizedBox(width: 4),
-                  Expanded(child: Text(locationDisplay,
+                  Expanded(child: Text(tr(locationDisplay),
                       style: Theme.of(sheetContext).textTheme.titleSmall?.copyWith(color: headerTextColor.withOpacity(0.8), fontWeight: FontWeight.normal))),
                 ]),
               ]),
@@ -463,13 +465,13 @@ class LandmarkCitiesScreen extends StatelessWidget {
               child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                 Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                   Row(mainAxisSize: MainAxisSize.min, children: [
-                    const Text('Wishlist:'),
+                     Text(tr('Wishlist:')),
                     IconButton(visualDensity: VisualDensity.compact,
                         icon: Icon(isWishlisted ? Icons.favorite : Icons.favorite_border, color: isWishlisted ? Colors.red : Colors.grey),
                         onPressed: () => provider.toggleWishlistStatus(freshLandmark.name)),
                   ]),
                   Row(mainAxisSize: MainAxisSize.min, children: [
-                    const Text('My Rating:'),
+                     Text(tr('My Rating:')),
                     const SizedBox(width: 8),
                     RatingBar.builder(initialRating: freshLandmark.rating ?? 0.0, minRating: 0,
                         direction: Axis.horizontal, allowHalfRating: true, itemCount: 5, itemSize: 28.0,
@@ -479,7 +481,7 @@ class LandmarkCitiesScreen extends StatelessWidget {
                 ]),
                 const Divider(height: 20),
                 if (totalSubCount > 1) ...[
-                  Text('Components / Locations',
+                  Text(tr('Components / Locations'),
                       style: Theme.of(sheetContext).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
                   const SizedBox(height: 4),
                   Container(
@@ -497,9 +499,9 @@ class LandmarkCitiesScreen extends StatelessWidget {
                   const Divider(height: 24),
                 ],
                 Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                  Text('History (${freshLandmark.visitDates.length} entries)',
+                  Text(tr('History (${freshLandmark.visitDates.length} entries)'),
                       style: Theme.of(sheetContext).textTheme.titleSmall),
-                  OutlinedButton.icon(icon: const Icon(Icons.add), label: const Text('Add Visit'),
+                  OutlinedButton.icon(icon: const Icon(Icons.add), label:  Text(tr('Add Visit')),
                       onPressed: () => provider.addVisitDate(freshLandmark.name)),
                 ]),
                 const SizedBox(height: 8),
@@ -512,7 +514,7 @@ class LandmarkCitiesScreen extends StatelessWidget {
                     onDelete: () => provider.removeVisitDate(freshLandmark.name, entry.key),
                     availableLocations: freshLandmark.locations,
                   ))
-                else const Center(child: Text('No visits recorded.')),
+                else  Center(child: Text(tr('No visits recorded.'))),
                 const Divider(height: 24),
                 LandmarkInfoCard(overview: freshLandmark.overview,
                     historySignificance: freshLandmark.history_significance,
@@ -545,18 +547,19 @@ class _StatBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final ratio = total > 0 ? (value / total).clamp(0.0, 1.0) : 0.0;
     final pct   = (ratio * 100).toStringAsFixed(0);
 
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
       Row(children: [
         Expanded(
-          child: Text(label,
+          child: Text(tr(label),
               style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: Colors.grey[600])),
         ),
-        Text('$value',
+        Text(tr('$value'),
             style: TextStyle(fontSize: 14, fontWeight: FontWeight.w900, color: color)),
-        Text('  $pct%',
+        Text(tr('  $pct%'),
             style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: color.withOpacity(0.6))),
       ]),
       const SizedBox(height: 5),
@@ -695,6 +698,7 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final themeColor = Theme.of(context).primaryColor;
 
     return Card(
@@ -704,20 +708,20 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
       child: ExpansionTile(
         controller: _expansionTileController,
         initiallyExpanded: _isEditing,
-        title: Text(_displayTitle.isNotEmpty ? _displayTitle : 'Visit Record',
+        title: Text(tr(_displayTitle.isNotEmpty ? _displayTitle : 'Visit Record'),
             style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15)),
-        subtitle: Text('Date: $_year-$_month-$_day',
+        subtitle: Text(tr('Date: $_year-$_month-$_day'),
             style: TextStyle(color: Colors.grey[600], fontSize: 13)),
         trailing: IconButton(
           icon: const Icon(Icons.delete_outline, color: Colors.red, size: 22),
           onPressed: () => showDialog(context: context,
               builder: (ctx) => AlertDialog(
-                title: const Text('Delete Visit Record'),
-                content: const Text('Are you sure you want to delete this visit record?'),
+                title:  Text(tr('Delete Visit Record')),
+                content:  Text(tr('Are you sure you want to delete this visit record?')),
                 actions: [
-                  TextButton(onPressed: () => Navigator.pop(ctx), child: const Text('Cancel')),
+                  TextButton(onPressed: () => Navigator.pop(ctx), child:  Text(tr('Cancel'))),
                   TextButton(onPressed: () { Navigator.pop(ctx); widget.onDelete(); },
-                      child: const Text('Delete', style: TextStyle(color: Colors.red))),
+                      child:  Text(tr('Delete'), style: TextStyle(color: Colors.red))),
                 ],
               )),
         ),
@@ -729,24 +733,24 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
             child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
               if (_isEditing) ...[
                 Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                  Text('Visit Date: $_year-$_month-$_day',
+                  Text(tr('Visit Date: $_year-$_month-$_day'),
                       style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14)),
-                  TextButton.icon(icon: const Icon(Icons.edit_calendar, size: 18), label: const Text('Edit Date'),
+                  TextButton.icon(icon: const Icon(Icons.edit_calendar, size: 18), label:  Text(tr('Edit Date')),
                       onPressed: () => _selectDate(context),
                       style: TextButton.styleFrom(visualDensity: VisualDensity.compact)),
                 ]),
                 const SizedBox(height: 12),
                 TextField(controller: _titleController,
-                    decoration: InputDecoration(labelText: 'Title', isDense: true, filled: true, fillColor: Colors.white,
+                    decoration: InputDecoration(labelText: tr('Title'), isDense: true, filled: true, fillColor: Colors.white,
                         border: OutlineInputBorder(borderRadius: BorderRadius.circular(8), borderSide: BorderSide.none))),
                 const SizedBox(height: 12),
                 TextField(controller: _memoController, maxLines: 3, minLines: 1,
-                    decoration: InputDecoration(labelText: 'Memo', isDense: true, filled: true, fillColor: Colors.white,
+                    decoration: InputDecoration(labelText: tr('Memo'), isDense: true, filled: true, fillColor: Colors.white,
                         border: OutlineInputBorder(borderRadius: BorderRadius.circular(8), borderSide: BorderSide.none))),
               ] else ...[
                 if (_displayMemo.isNotEmpty)
                   Padding(padding: const EdgeInsets.only(bottom: 12),
-                      child: Text(_displayMemo, style: TextStyle(fontSize: 14, color: Colors.grey[800], height: 1.4))),
+                      child: Text(tr(_displayMemo), style: TextStyle(fontSize: 14, color: Colors.grey[800], height: 1.4))),
               ],
               const SizedBox(height: 12),
               if (_currentPhotos.isNotEmpty || _isEditing)
@@ -765,14 +769,14 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
               Row(mainAxisAlignment: MainAxisAlignment.end, children: [
                 if (_isEditing) ...[
                   TextButton(onPressed: _cancelEditing,
-                      child: Text('Cancel', style: TextStyle(color: Colors.grey[700], fontWeight: FontWeight.w600))),
+                      child: Text(tr('Cancel'), style: TextStyle(color: Colors.grey[700], fontWeight: FontWeight.w600))),
                   const SizedBox(width: 8),
                   ElevatedButton.icon(onPressed: _saveChanges,
-                      icon: const Icon(Icons.save, size: 18), label: const Text('Save'),
+                      icon: const Icon(Icons.save, size: 18), label:  Text(tr('Save')),
                       style: ElevatedButton.styleFrom(backgroundColor: themeColor, foregroundColor: Colors.white, elevation: 0)),
                 ] else ...[
                   OutlinedButton.icon(onPressed: () => setState(() => _isEditing = true),
-                      icon: const Icon(Icons.edit, size: 16), label: const Text('Edit Record'),
+                      icon: const Icon(Icons.edit, size: 16), label:  Text(tr('Edit Record')),
                       style: OutlinedButton.styleFrom(foregroundColor: themeColor, side: BorderSide(color: themeColor.withOpacity(0.5)))),
                 ],
               ]),

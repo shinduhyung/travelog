@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 
 class CountryRegionsUpdateDialog extends StatelessWidget {
   const CountryRegionsUpdateDialog({super.key});
@@ -15,7 +16,7 @@ class CountryRegionsUpdateDialog extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                title,
+                tr(title),
                 style: const TextStyle(
                   fontWeight: FontWeight.w700,
                   fontSize: 15,
@@ -23,7 +24,7 @@ class CountryRegionsUpdateDialog extends StatelessWidget {
               ),
               const SizedBox(height: 5),
               Text(
-                body,
+                tr(body),
                 style: const TextStyle(
                   fontSize: 13,
                   height: 1.45,
@@ -39,15 +40,16 @@ class CountryRegionsUpdateDialog extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return PopScope(
       canPop: false,
       child: AlertDialog(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
-        title: const Column(
+        title:  Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'NEW · REGIONS',
+              tr('NEW · REGIONS'),
               style: TextStyle(
                 fontSize: 12,
                 fontWeight: FontWeight.w800,
@@ -56,7 +58,7 @@ class CountryRegionsUpdateDialog extends StatelessWidget {
             ),
             SizedBox(height: 8),
             Text(
-              'Explore countries, region by region',
+              tr('Explore countries, region by region'),
               style: TextStyle(fontSize: 22, fontWeight: FontWeight.w800),
             ),
           ],
@@ -105,7 +107,7 @@ class CountryRegionsUpdateDialog extends StatelessWidget {
                 backgroundColor: const Color(0xFF26A69A),
                 padding: const EdgeInsets.symmetric(vertical: 14),
               ),
-              child: const Text('Got it'),
+              child:  Text(tr('Got it')),
             ),
           ),
         ],

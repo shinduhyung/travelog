@@ -1,6 +1,7 @@
 // lib/screens/rank_collected_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 
 class RankCollectedScreen extends StatelessWidget {
   final String rankName;
@@ -26,6 +27,7 @@ class RankCollectedScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final Color levelColor = _getLevelColor(rankName);
 
     return Dialog(
@@ -50,7 +52,7 @@ class RankCollectedScreen extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 Text(
-                  "RANK PROMOTED!",
+                  tr("RANK PROMOTED!"),
                   style: TextStyle(
                     fontSize: 22,
                     fontWeight: FontWeight.w900,
@@ -59,14 +61,14 @@ class RankCollectedScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 12),
-                const Text(
-                  "Your exploration level has increased.",
+                 Text(
+                  tr("Your exploration level has increased."),
                   textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 14, color: Colors.grey, fontWeight: FontWeight.w500),
                 ),
                 const SizedBox(height: 24),
                 Text(
-                  rankName,
+                  tr(rankName),
                   style: TextStyle(
                     fontSize: 32,
                     fontWeight: FontWeight.w800,
@@ -85,8 +87,8 @@ class RankCollectedScreen extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(vertical: 16),
                       elevation: 0,
                     ),
-                    child: const Text(
-                      "Awesome!",
+                    child:  Text(
+                      tr("Awesome!"),
                       style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                     ),
                   ),

@@ -1,24 +1,262 @@
-[
-  { "name": "Chamonix", "country": "France", "latitude": 45.9237, "longitude": 6.8694 },
-  { "name": "St. Moritz", "country": "Switzerland", "latitude": 46.4958, "longitude": 9.8385 },
-  { "name": "Lake Placid", "country": "United States", "latitude": 44.2794, "longitude": -73.9806 },
-  { "name": "Garmisch-Partenkirchen", "country": "Germany", "latitude": 47.4921, "longitude": 11.0954 },
-  { "name": "Oslo", "country": "Norway", "latitude": 59.9139, "longitude": 10.7522 },
-  { "name": "Cortina d'Ampezzo", "country": "Italy", "latitude": 46.5392, "longitude": 12.1356 },
-  { "name": "Squaw Valley", "country": "United States", "latitude": 39.1969, "longitude": -120.2319 },
-  { "name": "Innsbruck", "country": "Austria", "latitude": 47.2692, "longitude": 11.4041 },
-  { "name": "Grenoble", "country": "France", "latitude": 45.1885, "longitude": 5.7245 },
-  { "name": "Sapporo", "country": "Japan", "latitude": 43.0621, "longitude": 141.3544 },
-  { "name": "Sarajevo", "country": "Bosnia and Herzegovina", "latitude": 43.8563, "longitude": 18.4131 },
-  { "name": "Calgary", "country": "Canada", "latitude": 51.0447, "longitude": -114.0719 },
-  { "name": "Albertville", "country": "France", "latitude": 45.6480, "longitude": 6.3934 },
-  { "name": "Lillehammer", "country": "Norway", "latitude": 61.1150, "longitude": 10.4674 },
-  { "name": "Nagano", "country": "Japan", "latitude": 36.6485, "longitude": 138.1877 },
-  { "name": "Salt Lake City", "country": "United States", "latitude": 40.7608, "longitude": -111.8910 },
-  { "name": "Turin", "country": "Italy", "latitude": 45.0703, "longitude": 7.6869 },
-  { "name": "Vancouver", "country": "Canada", "latitude": 49.2827, "longitude": -123.1207 },
-  { "name": "Sochi", "country": "Russia", "latitude": 43.5855, "longitude": 39.7203 },
-  { "name": "PyeongChang", "country": "South Korea", "latitude": 37.3853, "longitude": 128.6946 },
-  { "name": "Beijing", "country": "China", "latitude": 39.9042, "longitude": 116.4074 },
-  { "name": "Milan", "country": "Italy", "latitude": 45.4642, "longitude": 9.1900 }
-]
+{
+  "schema_version": 1,
+  "dataset_id": "winter_olympics_cities",
+  "metadata": {
+    "source_url": null,
+    "reference_period": null,
+    "updated_at": null
+  },
+  "legacy_layout": "list",
+  "tables": [
+    {
+      "id": "main",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "name",
+        "country"
+      ],
+      "metrics": [
+        {
+          "id": "latitude",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        },
+        {
+          "id": "longitude",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "name": "Chamonix",
+            "country": "France"
+          },
+          "values": {
+            "latitude": 45.9237,
+            "longitude": 6.8694
+          }
+        },
+        {
+          "dimensions": {
+            "name": "St. Moritz",
+            "country": "Switzerland"
+          },
+          "values": {
+            "latitude": 46.4958,
+            "longitude": 9.8385
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Lake Placid",
+            "country": "United States"
+          },
+          "values": {
+            "latitude": 44.2794,
+            "longitude": -73.9806
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Garmisch-Partenkirchen",
+            "country": "Germany"
+          },
+          "values": {
+            "latitude": 47.4921,
+            "longitude": 11.0954
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Oslo",
+            "country": "Norway"
+          },
+          "values": {
+            "latitude": 59.9139,
+            "longitude": 10.7522
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Cortina d'Ampezzo",
+            "country": "Italy"
+          },
+          "values": {
+            "latitude": 46.5392,
+            "longitude": 12.1356
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Squaw Valley",
+            "country": "United States"
+          },
+          "values": {
+            "latitude": 39.1969,
+            "longitude": -120.2319
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Innsbruck",
+            "country": "Austria"
+          },
+          "values": {
+            "latitude": 47.2692,
+            "longitude": 11.4041
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Grenoble",
+            "country": "France"
+          },
+          "values": {
+            "latitude": 45.1885,
+            "longitude": 5.7245
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Sapporo",
+            "country": "Japan"
+          },
+          "values": {
+            "latitude": 43.0621,
+            "longitude": 141.3544
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Sarajevo",
+            "country": "Bosnia and Herzegovina"
+          },
+          "values": {
+            "latitude": 43.8563,
+            "longitude": 18.4131
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Calgary",
+            "country": "Canada"
+          },
+          "values": {
+            "latitude": 51.0447,
+            "longitude": -114.0719
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Albertville",
+            "country": "France"
+          },
+          "values": {
+            "latitude": 45.648,
+            "longitude": 6.3934
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Lillehammer",
+            "country": "Norway"
+          },
+          "values": {
+            "latitude": 61.115,
+            "longitude": 10.4674
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Nagano",
+            "country": "Japan"
+          },
+          "values": {
+            "latitude": 36.6485,
+            "longitude": 138.1877
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Salt Lake City",
+            "country": "United States"
+          },
+          "values": {
+            "latitude": 40.7608,
+            "longitude": -111.891
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Turin",
+            "country": "Italy"
+          },
+          "values": {
+            "latitude": 45.0703,
+            "longitude": 7.6869
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Vancouver",
+            "country": "Canada"
+          },
+          "values": {
+            "latitude": 49.2827,
+            "longitude": -123.1207
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Sochi",
+            "country": "Russia"
+          },
+          "values": {
+            "latitude": 43.5855,
+            "longitude": 39.7203
+          }
+        },
+        {
+          "dimensions": {
+            "name": "PyeongChang",
+            "country": "South Korea"
+          },
+          "values": {
+            "latitude": 37.3853,
+            "longitude": 128.6946
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Beijing",
+            "country": "China"
+          },
+          "values": {
+            "latitude": 39.9042,
+            "longitude": 116.4074
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Milan",
+            "country": "Italy"
+          },
+          "values": {
+            "latitude": 45.4642,
+            "longitude": 9.19
+          }
+        }
+      ]
+    }
+  ]
+}

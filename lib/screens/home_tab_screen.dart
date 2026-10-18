@@ -1,6 +1,7 @@
 // lib/screens/home_tab_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/screens/badges_screen.dart';
@@ -62,6 +63,7 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final countryProvider = context.watch<CountryProvider>();
     final passportProvider = context.watch<PassportProvider>();
     final selectedPassportIso = passportProvider.selectedPassportIso;
@@ -71,7 +73,7 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Jido'),
+        title:  Text(tr('Jido')),
         elevation: 0,
         backgroundColor: seamlessBackgroundColor,
       ),
@@ -161,8 +163,8 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
                             horizontal: 12, vertical: 4),
                         child: Row(
                           children: [
-                            const Text(
-                              'By Visits',
+                             Text(
+                              tr('By Visits'),
                               style: TextStyle(
                                   fontSize: 12,
                                   fontWeight: FontWeight.bold),
@@ -310,8 +312,8 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
                                         ),
                                       ),
                                       const SizedBox(height: 4),
-                                      const Text(
-                                        'My Trips',
+                                       Text(
+                                        tr('My Trips'),
                                         style: TextStyle(
                                           fontWeight: FontWeight.bold,
                                           fontSize: 12,
@@ -349,12 +351,12 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
                                         padding: EdgeInsets.zero,
                                         elevation: 3,
                                       ),
-                                      child: const Column(
+                                      child:  Column(
                                         mainAxisAlignment:
                                         MainAxisAlignment.center,
                                         children: [
                                           Icon(Icons.emoji_events, size: 20),
-                                          Text('Badges',
+                                          Text(tr('Badges'),
                                               style: TextStyle(fontSize: 10)),
                                         ],
                                       ),
@@ -381,12 +383,12 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
                                         padding: EdgeInsets.zero,
                                         elevation: 3,
                                       ),
-                                      child: const Column(
+                                      child:  Column(
                                         mainAxisAlignment:
                                         MainAxisAlignment.center,
                                         children: [
                                           Icon(Icons.settings, size: 20),
-                                          Text('Set',
+                                          Text(tr('Set'),
                                               style: TextStyle(fontSize: 10)),
                                         ],
                                       ),

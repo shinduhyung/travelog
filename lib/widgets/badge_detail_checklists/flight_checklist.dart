@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter/services.dart'; // For TextInputFormatter
 import 'package:jidoapp/models/badge_model.dart';
 import 'package:jidoapp/models/airline_model.dart';
@@ -57,7 +58,7 @@ class FlightChecklist {
       value: value,
       isDense: true,
       decoration: InputDecoration(
-          labelText: hint,
+          labelText: tr(hint),
           border: const OutlineInputBorder(),
           contentPadding:
           const EdgeInsets.symmetric(horizontal: 10, vertical: 12)),
@@ -65,7 +66,7 @@ class FlightChecklist {
           .map((item) => DropdownMenuItem<T>(
         value: item as T?,
         child: Text(
-          item?.toString() ?? 'Unknown',
+          tr(item?.toString() ?? 'Unknown'),
           style: TextStyle(
             fontSize: (item == null) ? 11.0 : 15.0,
             color: (item == null) ? Colors.grey.shade600 : null,
@@ -161,27 +162,25 @@ class FlightChecklist {
             }
 
             return AlertDialog(
-              title: Text(isForLounge && isPerUseMemo
-                  ? 'Lounge Memo & Photos for Visit #${useIndex}'
-                  : (isPerUseMemo ? 'Memo & Photos for Use #$useIndex' : 'Memo & Photos for $iataCode')),
+              title: Text(isForLounge && isPerUseMemo ? 'Lounge Memo & Photos for Visit #${useIndex}' : (isPerUseMemo ? 'Memo & Photos for Use #$useIndex' : 'Memo & Photos for $iataCode')),
               content: SingleChildScrollView(
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text('Memo:', style: TextStyle(fontWeight: FontWeight.bold)),
+                     Text(tr('Memo:'), style: TextStyle(fontWeight: FontWeight.bold)),
                     const SizedBox(height: 8),
                     TextFormField(
                       controller: memoController,
                       maxLines: 5,
                       minLines: 3,
-                      decoration: const InputDecoration(
+                      decoration:  InputDecoration(
                         border: OutlineInputBorder(),
-                        hintText: 'Write your thoughts here...',
+                        hintText: tr('Write your thoughts here...'),
                       ),
                     ),
                     const SizedBox(height: 20),
-                    const Text('Photos:', style: TextStyle(fontWeight: FontWeight.bold)),
+                     Text(tr('Photos:'), style: TextStyle(fontWeight: FontWeight.bold)),
                     const SizedBox(height: 8),
                     Wrap(
                       spacing: 10,
@@ -198,7 +197,7 @@ class FlightChecklist {
                                     children: <Widget>[
                                       ListTile(
                                         leading: const Icon(Icons.photo_library),
-                                        title: const Text('Photo Library'),
+                                        title:  Text(tr('Photo Library')),
                                         onTap: () {
                                           Navigator.pop(modalContext);
                                           _pickImage(ImageSource.gallery);
@@ -206,7 +205,7 @@ class FlightChecklist {
                                       ),
                                       ListTile(
                                         leading: const Icon(Icons.photo_camera),
-                                        title: const Text('Camera'),
+                                        title:  Text(tr('Camera')),
                                         onTap: () {
                                           Navigator.pop(modalContext);
                                           _pickImage(ImageSource.camera);
@@ -226,12 +225,12 @@ class FlightChecklist {
                               border: Border.all(color: Colors.grey.shade400),
                               borderRadius: BorderRadius.circular(8),
                             ),
-                            child: const Center(
+                            child:  Center(
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Icon(Icons.add_a_photo, color: Colors.blue),
-                                  Text('Add Photo', style: TextStyle(fontSize: 10)),
+                                  Text(tr('Add Photo'), style: TextStyle(fontSize: 10)),
                                 ],
                               ),
                             ),
@@ -247,13 +246,13 @@ class FlightChecklist {
               ),
               actions: [
                 TextButton(
-                  child: const Text('Cancel'),
+                  child:  Text(tr('Cancel')),
                   onPressed: () {
                     Navigator.of(dialogContext).pop();
                   },
                 ),
                 ElevatedButton(
-                  child: const Text('Save'),
+                  child:  Text(tr('Save')),
                   onPressed: () {
                     if (isForLounge && isPerUseMemo) {
                       provider.updateVisitEntry(
@@ -300,7 +299,7 @@ class FlightChecklist {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            const Text('Visit Date', style: TextStyle(fontWeight: FontWeight.bold)),
+             Text(tr('Visit Date'), style: TextStyle(fontWeight: FontWeight.bold)),
             IconButton(
               visualDensity: VisualDensity.compact,
               icon: const Icon(Icons.clear, size: 20),
@@ -313,7 +312,7 @@ class FlightChecklist {
                     day: null
                 );
               },
-              tooltip: 'Clear Date',
+              tooltip: tr('Clear Date'),
             ),
           ],
         ),
@@ -391,7 +390,7 @@ class FlightChecklist {
                 children: [
                   const Icon(Icons.star, color: Colors.amber),
                   const SizedBox(width: 8),
-                  const Text('My Hub'),
+                   Text(tr('My Hub')),
                   Checkbox(
                     value: isHub,
                     onChanged: (bool? value) {
@@ -404,7 +403,7 @@ class FlightChecklist {
                 children: [
                   const Icon(Icons.favorite, color: Colors.red),
                   const SizedBox(width: 8),
-                  const Text('Favorite'),
+                   Text(tr('Favorite')),
                   Checkbox(
                     value: isFavorite,
                     onChanged: (bool? value) {
@@ -418,7 +417,7 @@ class FlightChecklist {
                 children: [
                   Icon(Icons.wine_bar, color: _wineColor),
                   const SizedBox(width: 8),
-                  Text('Business Lounge: $loungeVisitCount Visits'),
+                  Text(tr('Business Lounge: $loungeVisitCount Visits')),
                 ],
               ),
               if (loungeVisitCount > 0)
@@ -426,10 +425,10 @@ class FlightChecklist {
                   padding: const EdgeInsets.only(left: 16.0, right: 16.0, top: 4.0, bottom: 8.0),
                   child: Row(
                     children: [
-                      Text('Average Rating: ', style: Theme.of(context).textTheme.bodySmall),
+                      Text(tr('Average Rating: '), style: Theme.of(context).textTheme.bodySmall),
                       Icon(Icons.wine_bar, color: _wineColor, size: 20),
                       Text(
-                        ' (${averageLoungeRating.toStringAsFixed(1)})',
+                        tr(' (${averageLoungeRating.toStringAsFixed(1)})'),
                         style: const TextStyle(fontWeight: FontWeight.bold),
                       ),
                     ],
@@ -442,11 +441,11 @@ class FlightChecklist {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('My Rating', style: Theme.of(context).textTheme.titleSmall),
+              Text(tr('My Rating'), style: Theme.of(context).textTheme.titleSmall),
               IconButton(
                 icon: const Icon(Icons.note_alt_outlined, color: Colors.grey),
                 onPressed: () => _showMemoAndPhotoDialog(context, airport.iataCode),
-                tooltip: 'Add Memo and Photos',
+                tooltip: tr('Add Memo and Photos'),
               ),
             ],
           ),
@@ -473,12 +472,12 @@ class FlightChecklist {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                'History (${uses.length} uses)',
+                tr('History (${uses.length} uses)'),
                 style: Theme.of(context).textTheme.titleSmall,
               ),
               OutlinedButton.icon(
                 icon: const Icon(Icons.add),
-                label: const Text('Add Use'),
+                label:  Text(tr('Add Use')),
                 onPressed: () {
                   provider.addVisitEntry(airport.iataCode);
                 },
@@ -520,11 +519,11 @@ class FlightChecklist {
                           Row(
                             children: [
                               Text(
-                                '#${index + 1}: ',
+                                tr('#${index + 1}: '),
                                 style: const TextStyle(fontWeight: FontWeight.bold),
                               ),
                               Text(
-                                dateText,
+                                tr(dateText),
                                 style: const TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 14,
@@ -541,11 +540,11 @@ class FlightChecklist {
                                 padding: EdgeInsets.zero,
                                 constraints: const BoxConstraints(),
                                 onPressed: () => _showMemoAndPhotoDialog(context, airport.iataCode, useIndex: index + 1),
-                                tooltip: 'Add Memo for this Use',
+                                tooltip: tr('Add Memo for this Use'),
                               ),
                               IconButton(
                                 icon: const Icon(Icons.delete_forever, color: Colors.red),
-                                tooltip: 'Remove this use',
+                                tooltip: tr('Remove this use'),
                                 onPressed: () {
                                   provider.removeVisitEntry(airport.iataCode, index);
                                 },
@@ -567,7 +566,7 @@ class FlightChecklist {
                                     scale: 0.8,
                                     alignment: Alignment.centerLeft,
                                     child: CheckboxListTile(
-                                      title: const Text('Transfer', style: TextStyle(fontSize: 11)),
+                                      title:  Text(tr('Transfer'), style: TextStyle(fontSize: 11)),
                                       controlAffinity: ListTileControlAffinity.leading,
                                       contentPadding: EdgeInsets.zero,
                                       dense: true,
@@ -584,7 +583,7 @@ class FlightChecklist {
                                     scale: 0.8,
                                     alignment: Alignment.centerLeft,
                                     child: CheckboxListTile(
-                                      title: const Text('Layover', style: TextStyle(fontSize: 11)),
+                                      title:  Text(tr('Layover'), style: TextStyle(fontSize: 11)),
                                       controlAffinity: ListTileControlAffinity.leading,
                                       contentPadding: EdgeInsets.zero,
                                       dense: true,
@@ -601,7 +600,7 @@ class FlightChecklist {
                                     scale: 0.8,
                                     alignment: Alignment.centerLeft,
                                     child: CheckboxListTile(
-                                      title: const Text('Stopover', style: TextStyle(fontSize: 11)),
+                                      title:  Text(tr('Stopover'), style: TextStyle(fontSize: 11)),
                                       controlAffinity: ListTileControlAffinity.leading,
                                       contentPadding: EdgeInsets.zero,
                                       dense: true,
@@ -625,7 +624,7 @@ class FlightChecklist {
                                     scale: 0.9,
                                     alignment: Alignment.centerLeft,
                                     child: CheckboxListTile(
-                                      title: const Text('Lounge Use', style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold)),
+                                      title:  Text(tr('Lounge Use'), style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold)),
                                       secondary: Icon(Icons.wine_bar, color: _wineColor, size: 16),
                                       controlAffinity: ListTileControlAffinity.leading,
                                       contentPadding: EdgeInsets.zero,
@@ -670,7 +669,7 @@ class FlightChecklist {
                                                 useIndex: index + 1,
                                                 isForLounge: true,
                                               ),
-                                              tooltip: 'Add Lounge Memo & Photos for this visit',
+                                              tooltip: tr('Add Lounge Memo & Photos for this visit'),
                                             ),
                                           ],
                                         ),
@@ -709,13 +708,13 @@ class FlightChecklist {
                                                       textAlign: TextAlign.center,
                                                       keyboardType: TextInputType.number,
                                                       inputFormatters: [FilteringTextInputFormatter.digitsOnly],
-                                                      decoration: const InputDecoration(labelText: 'H', isDense: true, border: OutlineInputBorder()),
+                                                      decoration:  InputDecoration(labelText: tr('H'), isDense: true, border: OutlineInputBorder()),
                                                       onChanged: (_) => updateDuration(),
                                                     ),
                                                   ),
-                                                  const Padding(
+                                                   Padding(
                                                     padding: EdgeInsets.symmetric(horizontal: 4.0),
-                                                    child: Text(':', style: TextStyle(fontWeight: FontWeight.bold)),
+                                                    child: Text(tr(':'), style: TextStyle(fontWeight: FontWeight.bold)),
                                                   ),
                                                   Expanded(
                                                     child: TextFormField(
@@ -723,7 +722,7 @@ class FlightChecklist {
                                                       textAlign: TextAlign.center,
                                                       keyboardType: TextInputType.number,
                                                       inputFormatters: [FilteringTextInputFormatter.digitsOnly],
-                                                      decoration: const InputDecoration(labelText: 'M', isDense: true, border: OutlineInputBorder()),
+                                                      decoration:  InputDecoration(labelText: tr('M'), isDense: true, border: OutlineInputBorder()),
                                                       onChanged: (_) => updateDuration(),
                                                     ),
                                                   ),
@@ -746,9 +745,9 @@ class FlightChecklist {
             }).toList(),
 
           if (uses.isEmpty)
-            const Padding(
+             Padding(
               padding: EdgeInsets.only(top: 8.0),
-              child: Center(child: Text('No uses recorded yet. Press "Add Use" to start.')),
+              child: Center(child: Text(tr('No uses recorded yet. Press "Add Use" to start.'))),
             ),
         ],
       ),
@@ -762,7 +761,7 @@ class FlightChecklist {
       height: 42,
       alignment: Alignment.centerLeft,
       child: Text(
-        text,
+        tr(text),
         style: const TextStyle(
           fontWeight: FontWeight.w600,
           fontSize: 15,
@@ -835,13 +834,13 @@ class FlightChecklist {
                               onPressed: () {
                                 Navigator.pop(sheetContext);
                               },
-                              child: const Text('Cancel', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
+                              child:  Text(tr('Cancel'), style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
                             ),
                             ElevatedButton(
                               onPressed: () {
                                 Navigator.pop(sheetContext);
                               },
-                              child: const Text('Done', style: TextStyle(fontWeight: FontWeight.bold)),
+                              child:  Text(tr('Done'), style: TextStyle(fontWeight: FontWeight.bold)),
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: Colors.white,
                                 foregroundColor: Colors.blue.shade800,
@@ -851,7 +850,7 @@ class FlightChecklist {
                         ),
                         const SizedBox(height: 16),
                         Text(
-                          '${airport.name} (${airport.iataCode})',
+                          tr('${airport.name} (${airport.iataCode})'),
                           style: Theme.of(context).textTheme.titleLarge?.copyWith(
                             fontWeight: FontWeight.bold,
                             color: Colors.white,
@@ -865,7 +864,7 @@ class FlightChecklist {
                           children: [
                             Flexible(
                               child: Text(
-                                countryName,
+                                tr(countryName),
                                 style: const TextStyle(
                                     fontSize: 18,
                                     color: Colors.white70,
@@ -889,7 +888,7 @@ class FlightChecklist {
                                 mainAxisSize: MainAxisSize.min,
                                 children: [
                                   Text(
-                                    '$useCount',
+                                    tr('$useCount'),
                                     style: const TextStyle(
                                       fontSize: 18,
                                       fontWeight: FontWeight.bold,
@@ -898,7 +897,7 @@ class FlightChecklist {
                                   ),
                                   const SizedBox(width: 4),
                                   Text(
-                                    'uses',
+                                    tr('uses'),
                                     style: TextStyle(
                                       fontSize: 14,
                                       color: Colors.white.withOpacity(0.9),
@@ -951,7 +950,7 @@ class FlightChecklist {
                 const Icon(Icons.flight_takeoff, size: 48, color: Color(0xFFAB47BC)), // Purple
                 const SizedBox(height: 16),
                 Text(
-                  'No flights recorded yet',
+                  tr('No flights recorded yet'),
                   style: TextStyle(
                     color: Colors.grey[800],
                     fontSize: 18,
@@ -960,7 +959,7 @@ class FlightChecklist {
                 ),
                 const SizedBox(height: 8),
                 Text(
-                  'Add flight logs to track your journey',
+                  tr('Add flight logs to track your journey'),
                   style: TextStyle(
                     color: Colors.grey[600],
                     fontSize: 14,
@@ -1063,7 +1062,7 @@ class FlightChecklist {
                           ),
                           const SizedBox(height: 4),
                           Text(
-                            '${log.departureIata} → ${log.arrivalIata}',
+                            tr('${log.departureIata} → ${log.arrivalIata}'),
                             style: TextStyle(
                               fontSize: 14,
                               color: Colors.grey[600],
@@ -1071,7 +1070,7 @@ class FlightChecklist {
                           ),
                           const SizedBox(height: 4),
                           Text(
-                            dateStr,
+                            tr(dateStr),
                             style: TextStyle(
                               fontSize: 13,
                               color: Colors.grey[500],
@@ -1138,7 +1137,7 @@ class FlightChecklist {
                 subtitle: Padding(
                   padding: const EdgeInsets.only(top: 4),
                   child: Text(
-                    '${airport.iataCode} • ${airport.country}',
+                    tr('${airport.iataCode} • ${airport.country}'),
                     style: TextStyle(
                       fontSize: 13,
                       color: Colors.grey[600],
@@ -1264,7 +1263,7 @@ class FlightChecklist {
             child: Column(
               children: [
                 Text(
-                  'No airlines flown yet',
+                  tr('No airlines flown yet'),
                   style: TextStyle(
                     color: Colors.grey[600],
                     fontSize: 16,
@@ -1273,7 +1272,7 @@ class FlightChecklist {
                 ),
                 const SizedBox(height: 8),
                 Text(
-                  'Start your journey!',
+                  tr('Start your journey!'),
                   style: TextStyle(
                     color: Colors.grey[500],
                     fontSize: 14,
@@ -1355,7 +1354,7 @@ class FlightChecklist {
                 subtitle: Padding(
                   padding: const EdgeInsets.only(top: 4),
                   child: Text(
-                    '${airline.totalTimes} flights',
+                    tr('${airline.totalTimes} flights'),
                     style: TextStyle(
                       fontSize: 13,
                       color: Colors.grey[600],
@@ -1388,7 +1387,7 @@ class FlightChecklist {
             child: Column(
               children: [
                 Text(
-                  'No airports visited yet',
+                  tr('No airports visited yet'),
                   style: TextStyle(
                     color: Colors.grey[600],
                     fontSize: 16,
@@ -1397,7 +1396,7 @@ class FlightChecklist {
                 ),
                 const SizedBox(height: 8),
                 Text(
-                  'Start your journey!',
+                  tr('Start your journey!'),
                   style: TextStyle(
                     color: Colors.grey[500],
                     fontSize: 14,
@@ -1444,7 +1443,7 @@ class FlightChecklist {
                 subtitle: Padding(
                   padding: const EdgeInsets.only(top: 4),
                   child: Text(
-                    '${airport.iataCode} • $useCount visits',
+                    tr('${airport.iataCode} • $useCount visits'),
                     style: TextStyle(
                       fontSize: 13,
                       color: Colors.grey[600],
@@ -1610,7 +1609,7 @@ class FlightChecklist {
               ),
               const SizedBox(height: 16),
               Text(
-                'No airlines rated yet',
+                tr('No airlines rated yet'),
                 style: TextStyle(
                   color: Colors.grey[600],
                   fontSize: 16,
@@ -1700,7 +1699,7 @@ class FlightChecklist {
                     const Icon(Icons.star, color: Colors.amber, size: 16),
                     const SizedBox(width: 4),
                     Text(
-                      rating.toStringAsFixed(1),
+                      tr(rating.toStringAsFixed(1)),
                       style: const TextStyle(
                         fontSize: 13,
                         fontWeight: FontWeight.w600,
@@ -1752,9 +1751,9 @@ class FlightChecklist {
               ),
               const SizedBox(height: 16),
               Text(
-                achievement.requiresAirportHub
+                tr(achievement.requiresAirportHub
                     ? 'No hub airports set yet'
-                    : 'No airports rated yet',
+                    : 'No airports rated yet'),
                 style: TextStyle(
                   color: Colors.grey[600],
                   fontSize: 16,
@@ -1809,7 +1808,7 @@ class FlightChecklist {
                   height: 42,
                   alignment: Alignment.centerLeft,
                   child: Text(
-                    '${airport.name}',
+                    tr('${airport.name}'),
                     style: const TextStyle(
                       fontWeight: FontWeight.w600,
                       fontSize: 15,
@@ -1825,7 +1824,7 @@ class FlightChecklist {
                       const Icon(Icons.star, color: Colors.amber, size: 16),
                       const SizedBox(width: 4),
                       Text(
-                        rating.toStringAsFixed(1),
+                        tr(rating.toStringAsFixed(1)),
                         style: const TextStyle(
                           fontSize: 13,
                           fontWeight: FontWeight.w600,

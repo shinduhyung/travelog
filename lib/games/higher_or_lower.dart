@@ -35,6 +35,7 @@ import 'dart:convert';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -564,6 +565,7 @@ class _SoftCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Container(
       padding: padding,
       decoration: BoxDecoration(
@@ -603,6 +605,7 @@ class _GradientButtonState extends State<_GradientButton> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final fg = widget.outlined ? widget.color : Colors.white;
     return GestureDetector(
       onTapDown: (_) => setState(() => _scale = 0.97),
@@ -639,7 +642,7 @@ class _GradientButtonState extends State<_GradientButton> {
                 Icon(widget.icon, color: fg, size: 20),
                 const SizedBox(width: 8),
               ],
-              Text(widget.label,
+              Text(tr(widget.label),
                   style: TextStyle(color: fg, fontSize: 15.5, fontWeight: FontWeight.w800, letterSpacing: 0.2)),
             ],
           ),
@@ -657,6 +660,7 @@ class _ScreenBackground extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Container(
       decoration: BoxDecoration(
         gradient: LinearGradient(
@@ -702,6 +706,7 @@ class HigherOrLowerModeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Scaffold(
       backgroundColor: _kSurface,
       extendBodyBehindAppBar: true,
@@ -730,7 +735,7 @@ class HigherOrLowerModeScreen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(width: 10),
-                  const Text('CHOOSE A METRIC',
+                   Text(tr('CHOOSE A METRIC'),
                       style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, letterSpacing: 1.1, color: _kMuted)),
                 ],
               ),
@@ -784,14 +789,14 @@ class HigherOrLowerModeScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text('COMPARISON GAME',
+               Text(tr('COMPARISON GAME'),
                   style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.w800, letterSpacing: 1.6, color: _kMuted)),
               const SizedBox(height: 4),
-              const Text('Higher or Lower',
+               Text(tr('Higher or Lower'),
                   style: TextStyle(
                       fontSize: 27, fontWeight: FontWeight.w900, color: _kInk, letterSpacing: -0.6, height: 1.05)),
               const SizedBox(height: 8),
-              Text('Pick which country has more, by the numbers. Choose a metric to start.',
+              Text(tr('Pick which country has more, by the numbers. Choose a metric to start.'),
                   style: TextStyle(
                       fontSize: 12.5, color: _kMuted.withOpacity(0.9), fontWeight: FontWeight.w600, height: 1.4)),
             ],
@@ -811,6 +816,7 @@ class _MetricCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     const color = Color(0xFF2563EB);
     return GestureDetector(
       onTap: onTap,
@@ -832,9 +838,9 @@ class _MetricCard extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(_metricLabel(metric), style: const TextStyle(fontSize: 16.5, fontWeight: FontWeight.w800, color: _kInk)),
+                  Text(tr(_metricLabel(metric)), style: const TextStyle(fontSize: 16.5, fontWeight: FontWeight.w800, color: _kInk)),
                   const SizedBox(height: 4),
-                  Text(subtitle, style: const TextStyle(fontSize: 12.5, color: _kMuted, fontWeight: FontWeight.w500)),
+                  Text(tr(subtitle), style: const TextStyle(fontSize: 12.5, color: _kMuted, fontWeight: FontWeight.w500)),
                 ],
               ),
             ),
@@ -870,6 +876,7 @@ class _DifficultyScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Scaffold(
       backgroundColor: _kSurface,
       extendBodyBehindAppBar: true,
@@ -898,7 +905,7 @@ class _DifficultyScreen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(width: 10),
-                  const Text('CHOOSE A DIFFICULTY',
+                   Text(tr('CHOOSE A DIFFICULTY'),
                       style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, letterSpacing: 1.1, color: _kMuted)),
                 ],
               ),
@@ -997,14 +1004,14 @@ class _DifficultyScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text('HIGHER OR LOWER',
+               Text(tr('HIGHER OR LOWER'),
                   style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.w800, letterSpacing: 1.6, color: _kMuted)),
               const SizedBox(height: 4),
-              Text(_metricLabel(metric),
+              Text(tr(_metricLabel(metric)),
                   style: const TextStyle(
                       fontSize: 27, fontWeight: FontWeight.w900, color: _kInk, letterSpacing: -0.6, height: 1.05)),
               const SizedBox(height: 8),
-              Text('Two countries, one metric. Pick the bigger one before time runs out.',
+              Text(tr('Two countries, one metric. Pick the bigger one before time runs out.'),
                   style: TextStyle(
                       fontSize: 12.5, color: _kMuted.withOpacity(0.9), fontWeight: FontWeight.w600, height: 1.4)),
             ],
@@ -1028,6 +1035,7 @@ class _DifficultyCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final color = _diffColor(difficulty);
     final level = _diffLevel(difficulty);
     return GestureDetector(
@@ -1053,7 +1061,7 @@ class _DifficultyCard extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Text(_diffLabel(difficulty),
+                      Text(tr(_diffLabel(difficulty)),
                           style: const TextStyle(fontSize: 17.5, fontWeight: FontWeight.w900, color: _kInk, letterSpacing: -0.2)),
                       if (locked) ...[
                         const SizedBox(width: 6),
@@ -1139,6 +1147,7 @@ class _LobbyScreenState extends State<_LobbyScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final color = _diffColor(widget.difficulty);
     return Scaffold(
       backgroundColor: _kSurface,
@@ -1192,10 +1201,10 @@ class _LobbyScreenState extends State<_LobbyScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('${_diffLabel(widget.difficulty).toUpperCase()} · ${_metricLabel(widget.metric).toUpperCase()}',
+              Text(tr('${_diffLabel(widget.difficulty).toUpperCase()} · ${_metricLabel(widget.metric).toUpperCase()}'),
                   style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w800, letterSpacing: 1.2, color: _kMuted)),
               const SizedBox(height: 2),
-              Text('${_diffLabel(widget.difficulty)} Mode',
+              Text(tr('${_diffLabel(widget.difficulty)} Mode'),
                   style: const TextStyle(fontSize: 21, fontWeight: FontWeight.w900, color: _kInk, letterSpacing: -0.3)),
             ],
           ),
@@ -1217,7 +1226,7 @@ class _LobbyScreenState extends State<_LobbyScreen> {
               children: [
                 Icon(Icons.emoji_events_outlined, size: 46, color: _kFaint),
                 const SizedBox(height: 12),
-                const Text('No runs yet', style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: _kInk)),
+                 Text(tr('No runs yet'), style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: _kInk)),
               ],
             ),
           );
@@ -1225,7 +1234,7 @@ class _LobbyScreenState extends State<_LobbyScreen> {
         return Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text('LEADERBOARD',
+             Text(tr('LEADERBOARD'),
                 style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, letterSpacing: 1.0, color: _kMuted)),
             const SizedBox(height: 12),
             Expanded(
@@ -1252,6 +1261,7 @@ class _RecordTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final medal = _medalColors[rank];
     return _SoftCard(
       radius: 16,
@@ -1266,15 +1276,15 @@ class _RecordTile extends StatelessWidget {
             decoration: BoxDecoration(color: (medal ?? _kFaint).withOpacity(medal != null ? 0.18 : 0.12), shape: BoxShape.circle),
             child: medal != null
                 ? Icon(Icons.emoji_events_rounded, size: 16, color: medal)
-                : Text('$rank', style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 12, color: _kMuted)),
+                : Text(tr('$rank'), style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 12, color: _kMuted)),
           ),
           const SizedBox(width: 14),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('${record.score}', style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 16, color: _kInk)),
-                Text('${record.roundsCompleted}/${record.maxRounds} rounds · combo ${record.bestCombo}',
+                Text(tr('${record.score}'), style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 16, color: _kInk)),
+                Text(tr('${record.roundsCompleted}/${record.maxRounds} rounds · combo ${record.bestCombo}'),
                     style: const TextStyle(fontSize: 11.5, color: _kMuted)),
               ],
             ),
@@ -1472,6 +1482,7 @@ class _GameScreenState extends State<_GameScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Scaffold(
       backgroundColor: _kSurface,
       extendBodyBehindAppBar: true,
@@ -1485,7 +1496,7 @@ class _GameScreenState extends State<_GameScreen> {
             Container(width: 8, height: 8, decoration: BoxDecoration(color: _accent, shape: BoxShape.circle)),
             const SizedBox(width: 8),
             Flexible(
-              child: Text('${_diffLabel(widget.difficulty)} · ${_metricLabel(widget.metric)}',
+              child: Text(tr('${_diffLabel(widget.difficulty)} · ${_metricLabel(widget.metric)}'),
                   overflow: TextOverflow.ellipsis,
                   style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w800, color: _kInk, letterSpacing: -0.2)),
             ),
@@ -1526,10 +1537,10 @@ class _GameScreenState extends State<_GameScreen> {
           children: [
             Icon(Icons.cloud_off_rounded, size: 48, color: _kFaint),
             const SizedBox(height: 16),
-            const Text("Couldn't build a round", style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800, color: _kInk)),
+             Text(tr("Couldn't build a round"), style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800, color: _kInk)),
             const SizedBox(height: 8),
             if (_loadError != null)
-              Text(_loadError!, textAlign: TextAlign.center, style: const TextStyle(fontSize: 12.5, color: _kMuted)),
+              Text(tr(_loadError!), textAlign: TextAlign.center, style: const TextStyle(fontSize: 12.5, color: _kMuted)),
             const SizedBox(height: 24),
             _GradientButton(label: 'Retry', color: _accent, onPressed: _init),
           ],
@@ -1551,7 +1562,7 @@ class _GameScreenState extends State<_GameScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('ROUND ${_roundIndex + 1} / $_maxRounds',
+              Text(tr('ROUND ${_roundIndex + 1} / $_maxRounds'),
                   style: const TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, letterSpacing: 0.6, color: _kMuted)),
               if (_combo > 0)
                 Container(
@@ -1560,7 +1571,7 @@ class _GameScreenState extends State<_GameScreen> {
                   child: Row(mainAxisSize: MainAxisSize.min, children: [
                     const Icon(Icons.local_fire_department_rounded, size: 15, color: Color(0xFFFF5A5F)),
                     const SizedBox(width: 3),
-                    Text('$_combo', style: const TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, color: Color(0xFFFF5A5F))),
+                    Text(tr('$_combo'), style: const TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, color: Color(0xFFFF5A5F))),
                   ]),
                 ),
             ],
@@ -1579,7 +1590,7 @@ class _GameScreenState extends State<_GameScreen> {
           else
             _buildResultBanner(),
           const SizedBox(height: 20),
-          Text('WHICH HAS MORE ${_metricLabel(widget.metric).toUpperCase()}?',
+          Text(tr('WHICH HAS MORE ${_metricLabel(widget.metric).toUpperCase()}?'),
               style: const TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, letterSpacing: 0.6, color: _kMuted)),
           const SizedBox(height: 16),
           Expanded(
@@ -1595,7 +1606,7 @@ class _GameScreenState extends State<_GameScreen> {
                     decoration: BoxDecoration(color: Colors.white, shape: BoxShape.circle, boxShadow: [
                       BoxShadow(color: Colors.black.withOpacity(0.06), blurRadius: 10, offset: const Offset(0, 3)),
                     ]),
-                    child: const Text('VS', style: TextStyle(fontSize: 11, fontWeight: FontWeight.w900, color: _kMuted)),
+                    child:  Text(tr('VS'), style: TextStyle(fontSize: 11, fontWeight: FontWeight.w900, color: _kMuted)),
                   ),
                 ),
                 const SizedBox(height: 14),
@@ -1637,7 +1648,7 @@ class _GameScreenState extends State<_GameScreen> {
             ),
             const SizedBox(width: 10),
             Text(
-              pickedBigger ? 'Correct! +${_lastRoundScore ?? 0}' : (timedOut ? "Time's up" : 'Wrong'),
+              tr(pickedBigger ? 'Correct! +${_lastRoundScore ?? 0}' : (timedOut ? "Time's up" : 'Wrong')),
               style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w900, color: Colors.white),
             ),
           ],
@@ -1684,14 +1695,14 @@ class _GameScreenState extends State<_GameScreen> {
         ),
         child: Row(
           children: [
-            Text(country.flagEmoji, style: const TextStyle(fontSize: 36)),
+            Text(tr(country.flagEmoji), style: const TextStyle(fontSize: 36)),
             const SizedBox(width: 14),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Text(country.name,
+                  Text(tr(country.name),
                       maxLines: 2, overflow: TextOverflow.ellipsis,
                       style: TextStyle(fontSize: 17, fontWeight: FontWeight.w800, color: fg)),
                   AnimatedSwitcher(
@@ -1701,9 +1712,9 @@ class _GameScreenState extends State<_GameScreen> {
                       key: const ValueKey('stat'),
                       padding: const EdgeInsets.only(top: 3),
                       child: Text(
-                        stat.year != null
+                        tr(stat.year != null
                             ? '${_formatValue(stat.value, widget.metric)} (${stat.year})'
-                            : _formatValue(stat.value, widget.metric),
+                            : _formatValue(stat.value, widget.metric)),
                         style: TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: sub),
                       ),
                     )
@@ -1741,13 +1752,13 @@ class _GameScreenState extends State<_GameScreen> {
               child: const Icon(Icons.emoji_events_rounded, size: 40, color: Colors.white),
             ),
             const SizedBox(height: 18),
-            const Text('Run Complete!', style: TextStyle(fontSize: 22, fontWeight: FontWeight.w900, color: _kInk)),
+             Text(tr('Run Complete!'), style: TextStyle(fontSize: 22, fontWeight: FontWeight.w900, color: _kInk)),
             const SizedBox(height: 26),
             _SoftCard(
               padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 26),
               child: Column(children: [
-                Text('$_totalScore', style: TextStyle(fontSize: 44, fontWeight: FontWeight.w900, color: _accent)),
-                const Text('TOTAL SCORE', style: TextStyle(fontSize: 11, fontWeight: FontWeight.w800, letterSpacing: 1.0, color: _kMuted)),
+                Text(tr('$_totalScore'), style: TextStyle(fontSize: 44, fontWeight: FontWeight.w900, color: _accent)),
+                 Text(tr('TOTAL SCORE'), style: TextStyle(fontSize: 11, fontWeight: FontWeight.w800, letterSpacing: 1.0, color: _kMuted)),
                 const SizedBox(height: 18),
                 Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                   _StatChip(label: 'Rounds', value: '$_combo/$_maxRounds'),
@@ -1778,6 +1789,7 @@ class _ScoreBadge extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Padding(
       padding: const EdgeInsets.only(right: 16, top: 4, bottom: 4),
       child: Container(
@@ -1791,8 +1803,8 @@ class _ScoreBadge extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.end,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('$score', style: TextStyle(fontSize: 15, fontWeight: FontWeight.w900, color: accent)),
-            Text('best $best', style: const TextStyle(fontSize: 9.5, fontWeight: FontWeight.w700, color: _kMuted)),
+            Text(tr('$score'), style: TextStyle(fontSize: 15, fontWeight: FontWeight.w900, color: accent)),
+            Text(tr('best $best'), style: const TextStyle(fontSize: 9.5, fontWeight: FontWeight.w700, color: _kMuted)),
           ],
         ),
       ),
@@ -1808,12 +1820,13 @@ class _StatChip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
       decoration: BoxDecoration(color: _kSurface, borderRadius: BorderRadius.circular(14)),
       child: Column(children: [
-        Text(value, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w800, color: _kInk)),
-        Text(label.toUpperCase(), style: const TextStyle(fontSize: 9.5, fontWeight: FontWeight.w800, letterSpacing: 0.4, color: _kMuted)),
+        Text(tr(value), style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w800, color: _kInk)),
+        Text(tr(label.toUpperCase()), style: const TextStyle(fontSize: 9.5, fontWeight: FontWeight.w800, letterSpacing: 0.4, color: _kMuted)),
       ]),
     );
   }

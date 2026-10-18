@@ -1,6 +1,7 @@
 // lib/screens/welcome_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:jidoapp/screens/login_prompt_screen.dart';
@@ -55,6 +56,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: const SystemUiOverlayStyle(
         statusBarColor: Colors.transparent,
@@ -88,7 +90,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
 
                     // 앱 이름
                     Text(
-                      'Travelog',
+                      tr('Travelog'),
                       style: GoogleFonts.poppins(
                         color: Colors.white,
                         fontSize: 36,
@@ -100,7 +102,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
 
                     // 슬로건
                     Text(
-                      'Your journey, beautifully tracked.',
+                      tr('Your journey, beautifully tracked.'),
                       textAlign: TextAlign.center,
                       style: GoogleFonts.poppins(
                         color: Colors.white.withOpacity(0.75),
@@ -145,6 +147,7 @@ class _PrimaryButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return GestureDetector(
       onTap: onTap,
       child: Container(
@@ -163,7 +166,7 @@ class _PrimaryButton extends StatelessWidget {
         ),
         child: Center(
           child: Text(
-            label,
+            tr(label),
             style: GoogleFonts.poppins(
               color: const Color(0xFF1ABFBC),
               fontWeight: FontWeight.w700,
@@ -185,6 +188,7 @@ class _SecondaryButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return GestureDetector(
       onTap: onTap,
       child: Container(
@@ -200,7 +204,7 @@ class _SecondaryButton extends StatelessWidget {
         ),
         child: Center(
           child: Text(
-            label,
+            tr(label),
             style: GoogleFonts.poppins(
               color: Colors.white,
               fontWeight: FontWeight.w600,

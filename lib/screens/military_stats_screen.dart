@@ -1,6 +1,7 @@
 // lib/screens/military_stats_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:intl/intl.dart';
 import 'package:jidoapp/models/country_model.dart';
@@ -131,6 +132,7 @@ class MilitaryTabScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final countryProvider = Provider.of<CountryProvider>(context);
 
     if (countryProvider.isLoading) {
@@ -225,6 +227,7 @@ class MilitaryStatsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return DefaultTabController(
       length: 2,
       child: Material(
@@ -238,9 +241,9 @@ class MilitaryStatsScreen extends StatelessWidget {
                 child: TabBar(
                   labelStyle: const TextStyle(fontWeight: FontWeight.bold),
                   indicatorSize: TabBarIndicatorSize.label,
-                  tabs: const [
-                    Tab(icon: Icon(Icons.military_tech), text: 'Military'),
-                    Tab(icon: Icon(Icons.public), text: 'Geopolitics'),
+                  tabs:  [
+                    Tab(icon: Icon(Icons.military_tech), text: tr('Military')),
+                    Tab(icon: Icon(Icons.public), text: tr('Geopolitics')),
                   ],
                 ),
               ),
@@ -347,13 +350,14 @@ class _RankingCategoryCardState extends State<_RankingCategoryCard> {
 
   Widget _buildRankText(int rank, Color color) {
     return Text(
-      '$rank',
+      tr('$rank'),
       style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.grey.shade600),
     );
   }
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final theme = Theme.of(context);
     final textTheme = theme.textTheme;
     final countryProvider = Provider.of<CountryProvider>(context, listen: false);
@@ -377,7 +381,7 @@ class _RankingCategoryCardState extends State<_RankingCategoryCard> {
                   children: [
                     Icon(widget.cardIcon, color: Colors.grey.shade800),
                     const SizedBox(width: 8),
-                    Text(widget.cardTitle, style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
+                    Text(tr(widget.cardTitle), style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
                   ],
                 ),
                 const SizedBox(height: 8),
@@ -391,7 +395,7 @@ class _RankingCategoryCardState extends State<_RankingCategoryCard> {
                       value: group,
                       child: Row(children: [
                         Icon(group.icon, color: group.themeColor), const SizedBox(width: 12),
-                        Text(group.title, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
+                        Text(tr(group.title), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
                       ]),
                     )).toList(),
                     onChanged: (newValue) { if (newValue != null) { setState(() { _selectedRanking = newValue; _prepareList(); }); } },
@@ -404,7 +408,7 @@ class _RankingCategoryCardState extends State<_RankingCategoryCard> {
                     Expanded(
                         child: SegmentedButton<int>(
                           showSelectedIcon: false,
-                          segments: const [ButtonSegment<int>(value: 0, label: Text('All')), ButtonSegment<int>(value: 1, label: Text('Visited'))],
+                          segments:  [ButtonSegment<int>(value: 0, label: Text(tr('All'))), ButtonSegment<int>(value: 1, label: Text(tr('Visited')))],
                           selected: {_displaySegment},
                           onSelectionChanged: (s) { _displaySegment = s.first; _onFilterChanged(); },
                           style: SegmentedButton.styleFrom(
@@ -422,7 +426,7 @@ class _RankingCategoryCardState extends State<_RankingCategoryCard> {
                     Expanded(
                         child: SegmentedButton<int>(
                           showSelectedIcon: false,
-                          segments: [ButtonSegment<int>(value: 0, label: Text(_selectedRanking.sortAscendingForHigh ? 'Stronger' : 'High', style: const TextStyle(fontSize: 12))), ButtonSegment<int>(value: 1, label: Text(_selectedRanking.sortAscendingForHigh ? 'Weaker' : 'Low', style: const TextStyle(fontSize: 12)))],
+                          segments: [ButtonSegment<int>(value: 0, label: Text(tr(_selectedRanking.sortAscendingForHigh ? 'Stronger' : 'High'), style: const TextStyle(fontSize: 12))), ButtonSegment<int>(value: 1, label: Text(tr(_selectedRanking.sortAscendingForHigh ? 'Weaker' : 'Low'), style: const TextStyle(fontSize: 12)))],
                           selected: {_sortOrderSegment},
                           onSelectionChanged: (s) { _sortOrderSegment = s.first; _onFilterChanged(); },
                           style: SegmentedButton.styleFrom(
@@ -443,7 +447,7 @@ class _RankingCategoryCardState extends State<_RankingCategoryCard> {
                   child: DropdownButton<String>(
                     borderRadius: BorderRadius.circular(16),
                     value: _selectedContinent,
-                    items: _continents.map((String value) => DropdownMenuItem<String>(value: value, child: Text(value, style: const TextStyle(fontSize: 14)))).toList(),
+                    items: _continents.map((String value) => DropdownMenuItem<String>(value: value, child: Text(tr(value), style: const TextStyle(fontSize: 14)))).toList(),
                     onChanged: (String? newValue) { _selectedContinent = newValue!; _onFilterChanged(); },
                     underline: const SizedBox(),
                   ),
@@ -454,7 +458,7 @@ class _RankingCategoryCardState extends State<_RankingCategoryCard> {
           const Divider(height: 1),
           Expanded(
             child: _rankedList.isEmpty
-                ? const Center(child: Text('No data to display.'))
+                ?  Center(child: Text(tr('No data to display.')))
                 : ListView.builder(
               padding: const EdgeInsets.all(8.0),
               itemCount: _rankedList.length,
@@ -498,10 +502,10 @@ class _RankingCategoryCardState extends State<_RankingCategoryCard> {
                             children: [
                               _buildRankText(rank, rankingThemeColor),
                               const SizedBox(width: 8),
-                              Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 18)),
+                              Text(tr(flagEmoji(country.isoA2)), style: const TextStyle(fontSize: 18)),
                               const SizedBox(width: 6),
-                              Expanded(child: Text(country.name, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
-                              Text('$displayValue${_selectedRanking.unit}', style: theme.textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
+                              Expanded(child: Text(tr(country.name), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
+                              Text(tr('$displayValue${_selectedRanking.unit}'), style: theme.textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
                             ],
                           ),
                           const SizedBox(height: 6),
@@ -591,6 +595,7 @@ class _CombinedSpecialGroupCardState extends State<_CombinedSpecialGroupCard> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final theme = Theme.of(context);
     final textTheme = theme.textTheme;
 
@@ -618,7 +623,7 @@ class _CombinedSpecialGroupCardState extends State<_CombinedSpecialGroupCard> {
                   value: group,
                   child: Row(children: [
                     Icon(group.icon, color: group.themeColor), const SizedBox(width: 12),
-                    Expanded(child: Text(group.title, style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold), overflow: TextOverflow.ellipsis)),
+                    Expanded(child: Text(tr(group.title), style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold), overflow: TextOverflow.ellipsis)),
                   ]),
                 )).toList(),
                 onChanged: (newValue) { if (newValue != null) { setState(() { _selectedGroup = newValue; _isExpanded = false; }); } },
@@ -633,10 +638,10 @@ class _CombinedSpecialGroupCardState extends State<_CombinedSpecialGroupCard> {
                 children: [
                   Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                     Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                      Text("Visited Countries", style: theme.textTheme.bodyLarge),
+                      Text(tr("Visited Countries"), style: theme.textTheme.bodyLarge),
                       Text.rich(TextSpan(
-                        text: '$visited', style: theme.textTheme.headlineSmall?.copyWith(color: _selectedGroup.themeColor, fontWeight: FontWeight.w700),
-                        children: [TextSpan(text: ' / $total', style: theme.textTheme.titleMedium?.copyWith(color: Colors.grey.shade600))],
+                        text: tr('$visited'), style: theme.textTheme.headlineSmall?.copyWith(color: _selectedGroup.themeColor, fontWeight: FontWeight.w700),
+                        children: [TextSpan(text: tr(' / $total'), style: theme.textTheme.titleMedium?.copyWith(color: Colors.grey.shade600))],
                       )),
                     ]),
                     ElevatedButton.icon(
@@ -644,7 +649,7 @@ class _CombinedSpecialGroupCardState extends State<_CombinedSpecialGroupCard> {
                         final groups = _selectedGroup.mapGroupsBuilder(widget.countriesToDisplay);
                         Navigator.push(context, MaterialPageRoute(builder: (context) => CountriesMapScreen(highlightGroups: groups)));
                       },
-                      icon: const Icon(Icons.map_outlined), label: const Text('Map'),
+                      icon: const Icon(Icons.map_outlined), label:  Text(tr('Map')),
                       style: ElevatedButton.styleFrom(backgroundColor: _selectedGroup.themeColor, foregroundColor: Colors.white, shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30))),
                     ),
                   ]),
@@ -679,7 +684,7 @@ class _CombinedSpecialGroupCardState extends State<_CombinedSpecialGroupCard> {
                           padding: const EdgeInsets.symmetric(horizontal: 8),
                           child: Row(
                             children: [
-                              Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 14)),
+                              Text(tr(flagEmoji(country.isoA2)), style: const TextStyle(fontSize: 14)),
                               const SizedBox(width: 6),
                               Expanded(
                                 child: RichText(
@@ -688,8 +693,8 @@ class _CombinedSpecialGroupCardState extends State<_CombinedSpecialGroupCard> {
                                       style: theme.textTheme.bodyMedium,
                                       children: [
                                         if(isSubMember)
-                                          const TextSpan(text: '(*) ', style: TextStyle(color: Colors.redAccent, fontWeight: FontWeight.w700)),
-                                        TextSpan(text: country.name),
+                                           TextSpan(text: tr('(*) '), style: TextStyle(color: Colors.redAccent, fontWeight: FontWeight.w700)),
+                                        TextSpan(text: tr(country.name)),
                                       ]
                                   ),
                                 ),
@@ -706,7 +711,7 @@ class _CombinedSpecialGroupCardState extends State<_CombinedSpecialGroupCard> {
                     padding: const EdgeInsets.fromLTRB(16.0, 0, 16.0, 12.0),
                     child: Align(
                       alignment: Alignment.centerLeft,
-                      child: Text(_selectedGroup.subMemberLegend, style: const TextStyle(fontSize: 12, color: Colors.grey)),
+                      child: Text(tr(_selectedGroup.subMemberLegend), style: const TextStyle(fontSize: 12, color: Colors.grey)),
                     ),
                   ),
               ],
@@ -776,6 +781,7 @@ class _CombinedHistoricalAllianceAndMiscCardState extends State<_CombinedHistori
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final theme = Theme.of(context);
     final textTheme = theme.textTheme;
 
@@ -820,7 +826,7 @@ class _CombinedHistoricalAllianceAndMiscCardState extends State<_CombinedHistori
                   child: Row(
                     children: [
                       Icon(group.icon, color: group.themeColor), const SizedBox(width: 12),
-                      Text(group.title, style: theme.textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w700)),
+                      Text(tr(group.title), style: theme.textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w700)),
                     ],
                   ),
                 )).toList(),
@@ -842,11 +848,11 @@ class _CombinedHistoricalAllianceAndMiscCardState extends State<_CombinedHistori
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text("Visited Entities", style: theme.textTheme.bodyLarge),
+                            Text(tr("Visited Entities"), style: theme.textTheme.bodyLarge),
                             Text.rich(TextSpan(
-                              text: '$visitedEntries',
+                              text: tr('$visitedEntries'),
                               style: theme.textTheme.headlineSmall?.copyWith(color: _selectedGroup.themeColor, fontWeight: FontWeight.w700),
-                              children: [TextSpan(text: ' / $totalEntries', style: theme.textTheme.titleMedium?.copyWith(color: Colors.grey.shade600))],
+                              children: [TextSpan(text: tr(' / $totalEntries'), style: theme.textTheme.titleMedium?.copyWith(color: Colors.grey.shade600))],
                             )),
                           ],
                         ),
@@ -862,7 +868,7 @@ class _CombinedHistoricalAllianceAndMiscCardState extends State<_CombinedHistori
                             Navigator.push(context, MaterialPageRoute(builder: (context) => CountriesMapScreen(highlightGroups: groups)));
                           },
                           icon: const Icon(Icons.map_outlined),
-                          label: const Text('Map'),
+                          label:  Text(tr('Map')),
                           style: ElevatedButton.styleFrom(backgroundColor: _selectedGroup.themeColor, foregroundColor: Colors.white, shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30))),
                         ),
                       ],
@@ -914,8 +920,8 @@ class _CombinedHistoricalAllianceAndMiscCardState extends State<_CombinedHistori
                           children: [
                             Icon(isVisited ? Icons.check_circle : Icons.radio_button_unchecked, size: 20, color: isVisited ? _selectedGroup.themeColor : Colors.grey.shade400),
                             const SizedBox(width: 6),
-                            if (flag.isNotEmpty) ...[Text(flag, style: const TextStyle(fontSize: 14)), const SizedBox(width: 4)],
-                            Expanded(child: Text(entry.displayName, style: theme.textTheme.bodyMedium, overflow: TextOverflow.ellipsis)),
+                            if (flag.isNotEmpty) ...[Text(tr(flag), style: const TextStyle(fontSize: 14)), const SizedBox(width: 4)],
+                            Expanded(child: Text(tr(entry.displayName), style: theme.textTheme.bodyMedium, overflow: TextOverflow.ellipsis)),
                           ],
                         ),
                       );
@@ -1016,7 +1022,7 @@ class _CombinedHistoricalWarProgressCardState extends State<_CombinedHistoricalW
                 decoration: BoxDecoration(color: sideColor, shape: BoxShape.circle),
               ),
               const SizedBox(width: 8),
-              Text(sideName, style: theme.textTheme.titleSmall?.copyWith(
+              Text(tr(sideName), style: theme.textTheme.titleSmall?.copyWith(
                 fontWeight: FontWeight.bold, color: sideColor,
               )),
             ],
@@ -1050,10 +1056,10 @@ class _CombinedHistoricalWarProgressCardState extends State<_CombinedHistoricalW
                         color: isVisited ? sideColor : Colors.grey.shade400,
                       ),
                       const SizedBox(width: 4),
-                      Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 13)),
+                      Text(tr(flagEmoji(country.isoA2)), style: const TextStyle(fontSize: 13)),
                       const SizedBox(width: 4),
                       Expanded(
-                        child: Text(country.name,
+                        child: Text(tr(country.name),
                           style: theme.textTheme.bodySmall?.copyWith(fontWeight: FontWeight.w500),
                           overflow: TextOverflow.ellipsis,
                         ),
@@ -1071,6 +1077,7 @@ class _CombinedHistoricalWarProgressCardState extends State<_CombinedHistoricalW
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final theme = Theme.of(context);
     final textTheme = theme.textTheme;
 
@@ -1110,7 +1117,7 @@ class _CombinedHistoricalWarProgressCardState extends State<_CombinedHistoricalW
                   child: Row(
                     children: [
                       Icon(group.icon, color: group.themeColor), const SizedBox(width: 12),
-                      Text(group.title, style: theme.textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w700)),
+                      Text(tr(group.title), style: theme.textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w700)),
                     ],
                   ),
                 )).toList(),
@@ -1126,24 +1133,24 @@ class _CombinedHistoricalWarProgressCardState extends State<_CombinedHistoricalW
                 padding: const EdgeInsets.all(20.0),
                 child: Column(
                   children: [
-                    Text(info.side1Name, style: textTheme.titleMedium?.copyWith(color: info.side1Color, fontWeight: FontWeight.bold)),
+                    Text(tr(info.side1Name), style: textTheme.titleMedium?.copyWith(color: info.side1Color, fontWeight: FontWeight.bold)),
                     const SizedBox(height: 4),
                     Row(
                       children: [
                         Expanded(child: LinearProgressIndicator(value: progress1, backgroundColor: info.side1Color.withOpacity(0.2), valueColor: AlwaysStoppedAnimation<Color>(info.side1Color), minHeight: 10, borderRadius: BorderRadius.circular(5))),
                         const SizedBox(width: 12),
-                        Text('$visited1 / $total1', style: textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
+                        Text(tr('$visited1 / $total1'), style: textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
                       ],
                     ),
                     const SizedBox(height: 16),
 
-                    Text(info.side2Name, style: textTheme.titleMedium?.copyWith(color: info.side2Color, fontWeight: FontWeight.bold)),
+                    Text(tr(info.side2Name), style: textTheme.titleMedium?.copyWith(color: info.side2Color, fontWeight: FontWeight.bold)),
                     const SizedBox(height: 4),
                     Row(
                       children: [
                         Expanded(child: LinearProgressIndicator(value: progress2, backgroundColor: info.side2Color.withOpacity(0.2), valueColor: AlwaysStoppedAnimation<Color>(info.side2Color), minHeight: 10, borderRadius: BorderRadius.circular(5))),
                         const SizedBox(width: 12),
-                        Text('$visited2 / $total2', style: textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
+                        Text(tr('$visited2 / $total2'), style: textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
                       ],
                     ),
                     const SizedBox(height: 20),
@@ -1173,7 +1180,7 @@ class _CombinedHistoricalWarProgressCardState extends State<_CombinedHistoricalW
                         Navigator.push(context, MaterialPageRoute(builder: (context) => CountriesMapScreen(highlightGroups: groups)));
                       },
                       icon: const Icon(Icons.map_outlined),
-                      label: const Text('Map'),
+                      label:  Text(tr('Map')),
                       style: ElevatedButton.styleFrom(backgroundColor: info.themeColor, foregroundColor: Colors.white, shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30))),
                     ),
                   ],
@@ -1278,13 +1285,14 @@ class _CasualtyRankingCardState extends State<_CasualtyRankingCard> {
 
   Widget _buildRankText(int rank, Color color) {
     return Text(
-      '$rank',
+      tr('$rank'),
       style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.grey.shade600),
     );
   }
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final textTheme = Theme.of(context).textTheme;
     final countryProvider = Provider.of<CountryProvider>(context, listen: false);
     final useDefaultColor = countryProvider.useDefaultRankingBarColor;
@@ -1311,7 +1319,7 @@ class _CasualtyRankingCardState extends State<_CasualtyRankingCard> {
                   children: [
                     Icon(Icons.warning_amber_rounded, color: rankingThemeColor),
                     const SizedBox(width: 8),
-                    Text("Historical War Casualties", style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
+                    Text(tr("Historical War Casualties"), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
                   ],
                 ),
                 const SizedBox(height: 8),
@@ -1325,7 +1333,7 @@ class _CasualtyRankingCardState extends State<_CasualtyRankingCard> {
                       child: Row(children: [
                         Icon(group.icon, color: group.themeColor, size: 20),
                         const SizedBox(width: 12),
-                        Text(group.title, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold, fontSize: 15)),
+                        Text(tr(group.title), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold, fontSize: 15)),
                       ]),
                     )).toList(),
                     onChanged: (newValue) { if (newValue != null) { setState(() { _selectedRanking = newValue; _prepareList(); }); } },
@@ -1337,7 +1345,7 @@ class _CasualtyRankingCardState extends State<_CasualtyRankingCard> {
           const Divider(height: 1),
           Expanded(
             child: _rankedList.isEmpty
-                ? const Center(child: Text('No data to display.'))
+                ?  Center(child: Text(tr('No data to display.')))
                 : ListView.builder(
               padding: const EdgeInsets.all(8.0),
               itemCount: _rankedList.length,
@@ -1364,10 +1372,10 @@ class _CasualtyRankingCardState extends State<_CasualtyRankingCard> {
                             children: [
                               _buildRankText(rank, rankingThemeColor),
                               const SizedBox(width: 8),
-                              Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 18)),
+                              Text(tr(flagEmoji(country.isoA2)), style: const TextStyle(fontSize: 18)),
                               const SizedBox(width: 6),
-                              Expanded(child: Text(country.name, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold, fontSize: 15))),
-                              Text(numberFormat.format(value), style: textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
+                              Expanded(child: Text(tr(country.name), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold, fontSize: 15))),
+                              Text(tr(numberFormat.format(value)), style: textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
                             ],
                           ),
                           const SizedBox(height: 6),

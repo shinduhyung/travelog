@@ -7,6 +7,7 @@
 // 비어있지 않으면 이 화면을 띄우고, dismiss될 때 markPremiumClaimPromptSeen을 호출한다.
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:jidoapp/models/badge_model.dart';
 import 'package:jidoapp/widgets/subscription_sheet.dart';
 import 'package:jidoapp/widgets/premium_badge_shimmer.dart';
@@ -35,6 +36,7 @@ class BadgePremiumPendingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final categoryColor = _categoryColor(achievement.category);
     const goldColor = Color(0xFFFFC107);
 
@@ -60,7 +62,7 @@ class BadgePremiumPendingScreen extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
                   Text(
-                    "BADGE COMPLETE!",
+                    tr("BADGE COMPLETE!"),
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.w900,
@@ -73,7 +75,7 @@ class BadgePremiumPendingScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 6),
                   Text(
-                    "You've met every requirement — subscribe to claim it.",
+                    tr("You've met every requirement — subscribe to claim it."),
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 13, color: Colors.grey[600]),
                   ),
@@ -106,7 +108,7 @@ class BadgePremiumPendingScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 10),
                   Text(
-                    achievement.description,
+                    tr(achievement.description),
                     style: const TextStyle(fontSize: 14),
                     textAlign: TextAlign.center,
                   ),
@@ -125,8 +127,8 @@ class BadgePremiumPendingScreen extends StatelessWidget {
                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
                         padding: const EdgeInsets.symmetric(vertical: 12),
                       ),
-                      label: const Text(
-                        "Subscribe to Claim",
+                      label:  Text(
+                        tr("Subscribe to Claim"),
                         style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                       ),
                     ),
@@ -135,7 +137,7 @@ class BadgePremiumPendingScreen extends StatelessWidget {
                   TextButton(
                     onPressed: () => Navigator.of(context).pop(),
                     child: Text(
-                      "Not now",
+                      tr("Not now"),
                       style: TextStyle(fontSize: 14, color: Colors.grey[500]),
                     ),
                   ),

@@ -12,6 +12,7 @@ import 'dart:math' as math;
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -278,6 +279,7 @@ class _MapLabScreenState extends State<MapLabScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final style = _style;
 
     return Scaffold(
@@ -339,7 +341,7 @@ class _MapLabScreenState extends State<MapLabScreen> {
             ),
             const SizedBox(height: 12),
             Text(
-              'Map data could not be loaded.',
+              tr('Map data could not be loaded.'),
               style: TextStyle(
                 color: style.uiForeground,
                 fontWeight: FontWeight.w800,
@@ -348,7 +350,7 @@ class _MapLabScreenState extends State<MapLabScreen> {
             ),
             const SizedBox(height: 8),
             Text(
-              _error ?? '',
+              tr(_error ?? ''),
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: style.uiForeground.withOpacity(.65),
@@ -358,7 +360,7 @@ class _MapLabScreenState extends State<MapLabScreen> {
             const SizedBox(height: 16),
             FilledButton(
               onPressed: _loadData,
-              child: const Text('Retry'),
+              child:  Text(tr('Retry')),
             ),
           ],
         ),
@@ -394,7 +396,7 @@ class _MapLabScreenState extends State<MapLabScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        style.title,
+                        tr(style.title),
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                         style: TextStyle(
@@ -405,7 +407,7 @@ class _MapLabScreenState extends State<MapLabScreen> {
                       ),
                       const SizedBox(height: 2),
                       Text(
-                        '$_visitedCount countries highlighted',
+                        tr('$_visitedCount countries highlighted'),
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                         style: TextStyle(
@@ -453,7 +455,7 @@ class _MapLabScreenState extends State<MapLabScreen> {
               children: [
                 Expanded(
                   child: Text(
-                    style.subtitle,
+                    tr(style.subtitle),
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                     style: TextStyle(
@@ -482,7 +484,7 @@ class _MapLabScreenState extends State<MapLabScreen> {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   _IconToggle(
-                    tooltip: 'Visited only',
+                    tooltip: tr('Visited only'),
                     icon: Icons.visibility_rounded,
                     selected: _visitedOnly,
                     dark: style.darkUi,
@@ -1720,7 +1722,7 @@ class _WorldMapPainter extends CustomPainter {
     // detail of a real compass rose.
     final textPainter = TextPainter(
       text: TextSpan(
-        text: 'N',
+        text: tr('N'),
         style: TextStyle(
           color: style.accent.withOpacity(.80),
           fontSize: radius * .34,
@@ -1928,7 +1930,7 @@ class _WorldMapPainter extends CustomPainter {
 
     void drawLabel(String text, Offset anchor, {bool rotated = false}) {
       final tp = TextPainter(
-        text: TextSpan(text: text, style: textStyle),
+        text: TextSpan(text: tr(text), style: textStyle),
         textDirection: TextDirection.ltr,
       )..layout();
 
@@ -2163,6 +2165,7 @@ class _GlassPanel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Container(
       padding: padding,
       decoration: BoxDecoration(
@@ -2213,6 +2216,7 @@ class _GlassButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Material(
       color: (
           dark
@@ -2260,6 +2264,7 @@ class _MiniToggle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final fg =
     dark ? Colors.white : Colors.black87;
 
@@ -2286,7 +2291,7 @@ class _MiniToggle extends StatelessWidget {
           ),
         ),
         child: Text(
-          label,
+          tr(label),
           style: TextStyle(
             color: value
                 ? accent
@@ -2322,8 +2327,9 @@ class _IconToggle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Tooltip(
-      message: tooltip,
+      message: tr(tooltip),
       child: InkWell(
         onTap: onTap,
         borderRadius:
@@ -2531,11 +2537,12 @@ class _MapLabCountrySelectorState extends State<MapLabCountrySelector> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Scaffold(
       backgroundColor: const Color(0xFFF8FAFA),
       appBar: AppBar(
-        title: const Text(
-          'Select Countries',
+        title:  Text(
+          tr('Select Countries'),
           style: TextStyle(fontWeight: FontWeight.w700, color: Colors.white),
         ),
         centerTitle: true,
@@ -2554,7 +2561,7 @@ class _MapLabCountrySelectorState extends State<MapLabCountrySelector> {
             child: Align(
               alignment: Alignment.centerLeft,
               child: Text(
-                '${_selected.length} countries selected',
+                tr('${_selected.length} countries selected'),
                 style: const TextStyle(
                   color: mintDark,
                   fontWeight: FontWeight.w700,
@@ -2577,7 +2584,7 @@ class _MapLabCountrySelectorState extends State<MapLabCountrySelector> {
         controller: _searchController,
         onChanged: (value) => setState(() => _query = value),
         decoration: InputDecoration(
-          hintText: 'Search country...',
+          hintText: tr('Search country...'),
           prefixIcon: const Icon(Icons.search_rounded),
           filled: true,
           fillColor: Colors.white,
@@ -2592,7 +2599,7 @@ class _MapLabCountrySelectorState extends State<MapLabCountrySelector> {
 
   Widget _list() {
     final items = _filtered;
-    if (items.isEmpty) return const Center(child: Text('No countries found.'));
+    if (items.isEmpty) return  Center(child: Text(tr('No countries found.')));
 
     return ListView.builder(
       padding: const EdgeInsets.fromLTRB(12, 0, 12, 16),
@@ -2610,7 +2617,7 @@ class _MapLabCountrySelectorState extends State<MapLabCountrySelector> {
               Padding(
                 padding: const EdgeInsets.fromLTRB(8, 18, 8, 8),
                 child: Text(
-                  c.continent,
+                  tr(c.continent),
                   style: const TextStyle(
                     color: mintDark,
                     fontWeight: FontWeight.w800,
@@ -2652,7 +2659,7 @@ class _MapLabCountrySelectorState extends State<MapLabCountrySelector> {
                             : null,
                       ),
                       const SizedBox(width: 12),
-                      Text(_flag(c.isoA2),
+                      Text(tr(_flag(c.isoA2)),
                           style: const TextStyle(fontSize: 22)),
                       const SizedBox(width: 10),
                       Expanded(
@@ -2691,7 +2698,7 @@ class _MapLabCountrySelectorState extends State<MapLabCountrySelector> {
           Expanded(
             child: OutlinedButton(
               onPressed: () => Navigator.pop(context, false),
-              child: const Text('Cancel'),
+              child:  Text(tr('Cancel')),
             ),
           ),
           const SizedBox(width: 12),
@@ -2699,7 +2706,7 @@ class _MapLabCountrySelectorState extends State<MapLabCountrySelector> {
             child: FilledButton(
               onPressed: _apply,
               style: FilledButton.styleFrom(backgroundColor: mint),
-              child: const Text('Apply'),
+              child:  Text(tr('Apply')),
             ),
           ),
         ],
@@ -2716,12 +2723,12 @@ class _MapLabCountrySelectorState extends State<MapLabCountrySelector> {
           children: [
             const Icon(Icons.error_outline_rounded, size: 42, color: mintDark),
             const SizedBox(height: 12),
-            Text(_error ?? 'Unknown error', textAlign: TextAlign.center),
+            Text(tr(_error ?? 'Unknown error'), textAlign: TextAlign.center),
             const SizedBox(height: 16),
             FilledButton(
               onPressed: _load,
               style: FilledButton.styleFrom(backgroundColor: mint),
-              child: const Text('Retry'),
+              child:  Text(tr('Retry')),
             ),
           ],
         ),

@@ -2,6 +2,7 @@
 
 import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:jidoapp/models/country_model.dart';
@@ -201,12 +202,13 @@ class _BritishEmpireMapScreenState extends State<BritishEmpireMapScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final countryProvider = Provider.of<CountryProvider>(context);
 
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: const Text('British Empire (1920)', style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold)),
+        title:  Text(tr('British Empire (1920)'), style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold)),
         backgroundColor: Colors.white,
         elevation: 0,
         iconTheme: const IconThemeData(color: Colors.black),
@@ -254,13 +256,13 @@ class _BritishEmpireMapScreenState extends State<BritishEmpireMapScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text('Legend', style: TextStyle(fontWeight: FontWeight.bold)),
+                   Text(tr('Legend'), style: TextStyle(fontWeight: FontWeight.bold)),
                   const SizedBox(height: 8),
-                  Row(children: [Container(width: 12, height: 12, decoration: BoxDecoration(color: Colors.pink.shade700.withOpacity(0.5), shape: BoxShape.circle)), const SizedBox(width: 8), const Text('Visited (Inside Empire)')]),
+                  Row(children: [Container(width: 12, height: 12, decoration: BoxDecoration(color: Colors.pink.shade700.withOpacity(0.5), shape: BoxShape.circle)), const SizedBox(width: 8),  Text(tr('Visited (Inside Empire)'))]),
                   const SizedBox(height: 4),
-                  Row(children: [Container(width: 12, height: 12, decoration: BoxDecoration(border: Border.all(color: Colors.grey.withOpacity(0.5)), shape: BoxShape.circle)), const SizedBox(width: 8), const Text('Other Countries')]),
+                  Row(children: [Container(width: 12, height: 12, decoration: BoxDecoration(border: Border.all(color: Colors.grey.withOpacity(0.5)), shape: BoxShape.circle)), const SizedBox(width: 8),  Text(tr('Other Countries'))]),
                   const SizedBox(height: 4),
-                  Row(children: [Container(width: 12, height: 12, decoration: BoxDecoration(border: Border.all(color: Colors.black, width: 2.0), shape: BoxShape.circle)), const SizedBox(width: 8), const Text('Empire Border')]),
+                  Row(children: [Container(width: 12, height: 12, decoration: BoxDecoration(border: Border.all(color: Colors.black, width: 2.0), shape: BoxShape.circle)), const SizedBox(width: 8),  Text(tr('Empire Border'))]),
                 ],
               ),
             ),

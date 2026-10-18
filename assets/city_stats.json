@@ -1,184 +1,1594 @@
 {
-  "top_cities_instagram": [
-    {"city": "New York City", "iso2": "US"},
-    {"city": "Moscow", "iso2": "RU"},
-    {"city": "London", "iso2": "GB"},
-    {"city": "São Paulo", "iso2": "BR"},
-    {"city": "Paris", "iso2": "FR"},
-    {"city": "Los Angeles", "iso2": "US"},
-    {"city": "Saint Petersburg", "iso2": "RU"},
-    {"city": "Jakarta", "iso2": "ID"},
-    {"city": "Istanbul", "iso2": "TR"},
-    {"city": "Barcelona", "iso2": "ES"}
-  ],
-  "major_film_festival_cities": [
-    {"city": "Cannes", "iso2": "FR"},
-    {"city": "Venice", "iso2": "IT"},
-    {"city": "Berlin", "iso2": "DE"}
-  ],
-  "de_facto_capitals": [
-    {"city": "Bern", "iso2": "CH"},
-    {"city": "Yaren", "iso2": "NR"}
-  ],
-  "country_name_identical_to_capital": [
-    {"city": "Singapore", "iso2": "SG"},
-    {"city": "Monaco", "iso2": "MC"},
-    {"city": "Vatican City", "iso2": "VA"},
-    {"city": "San Marino", "iso2": "SM"},
-    {"city": "Djibouti", "iso2": "DJ"},
-    {"city": "Luxembourg", "iso2": "LU"}
-  ],
-  "capitals_with_city_in_name": [
-    {"city": "Mexico City", "iso2": "MX"},
-    {"city": "Kuwait City", "iso2": "KW"},
-    {"city": "Panama City", "iso2": "PA"},
-    {"city": "Guatemala City", "iso2": "GT"}
-  ],
-  "country_capital_high_similarity": [
-    {"city": "Tunis", "iso2": "TN"},
-    {"city": "Algiers", "iso2": "DZ"},
-    {"city": "Andorra la Vella", "iso2": "AD"},
-    {"city": "São Tomé", "iso2": "ST"}
-  ],
-  "city_states": [
-    {"city": "Singapore", "iso2": "SG"},
-    {"city": "Monaco", "iso2": "MC"},
-    {"city": "Vatican City", "iso2": "VA"}
-  ],
-  "former_capital_relocations": [
-    {"old_city": "Rio de Janeiro", "new_city": "Brasília", "iso2": "BR"},
-    {"old_city": "Istanbul", "new_city": "Ankara", "iso2": "TR"},
-    {"old_city": "Almaty", "new_city": "Astana", "iso2": "KZ"},
-    {"old_city": "Yangon", "new_city": "Naypyidaw", "iso2": "MM"},
-    {"old_city": "Lagos", "new_city": "Abuja", "iso2": "NG"},
-    {"old_city": "Karachi", "new_city": "Islamabad", "iso2": "PK"},
-    {"old_city": "Dar es Salaam", "new_city": "Dodoma", "iso2": "TZ"},
-    {"old_city": "Bonn", "new_city": "Berlin", "iso2": "DE"},
-    {"old_city": "Melbourne", "new_city": "Canberra", "iso2": "AU"}
-  ],
-  "planned_capitals": [
-    {"city": "Washington D.C.", "iso2": "US"},
-    {"city": "Brasília", "iso2": "BR"},
-    {"city": "Canberra", "iso2": "AU"},
-    {"city": "Islamabad", "iso2": "PK"},
-    {"city": "Abuja", "iso2": "NG"},
-    {"city": "Dodoma", "iso2": "TZ"},
-    {"city": "Astana", "iso2": "KZ"},
-    {"city": "Putrajaya", "iso2": "MY"},
-    {"city": "Naypyidaw", "iso2": "MM"},
-    {"city": "Belmopan", "iso2": "BZ"},
-    {"city": "Gaborone", "iso2": "BW"},
-    {"city": "Yamoussoukro", "iso2": "CI"},
-    {"city": "Palikir", "iso2": "FM"},
-    {"city": "Ngerulmud", "iso2": "PW"},
-    {"city": "New Delhi", "iso2": "IN"},
-    {"city": "Ankara", "iso2": "TR"},
-    {"city": "Pretoria", "iso2": "ZA"},
-    {"city": "Wellington", "iso2": "NZ"},
-    {"city": "Nouakchott", "iso2": "MR"}
-  ],
-  "capitals_without_international_airport": [
-    {"city": "Vaduz", "iso2": "LI"},
-    {"city": "San Marino", "iso2": "SM"},
-    {"city": "Vatican City", "iso2": "VA"},
-    {"city": "Monaco", "iso2": "MC"}
-  ],
-  "cities_all_urban_transit_modes": [
-    {"city": "Tokyo", "iso2": "JP"},
-    {"city": "Osaka", "iso2": "JP"},
-    {"city": "Chongqing", "iso2": "CN"},
-    {"city": "Wuhan", "iso2": "CN"},
-    {"city": "Seattle", "iso2": "US"},
-    {"city": "Moscow", "iso2": "RU"}
-  ],
-  "capitals_below_sea_level": [
-    {"city": "Amsterdam", "iso2": "NL"},
-    {"city": "Baku", "iso2": "AZ"}
-  ],
-  "capitals_on_major_rivers": [
-    {"city": "London", "iso2": "GB"},
-    {"city": "Paris", "iso2": "FR"},
-    {"city": "Vienna", "iso2": "AT"},
-    {"city": "Budapest", "iso2": "HU"},
-    {"city": "Bratislava", "iso2": "SK"},
-    {"city": "Belgrade", "iso2": "RS"},
-    {"city": "Berlin", "iso2": "DE"},
-    {"city": "Warsaw", "iso2": "PL"},
-    {"city": "Prague", "iso2": "CZ"},
-    {"city": "Rome", "iso2": "IT"},
-    {"city": "Madrid", "iso2": "ES"},
-    {"city": "Bucharest", "iso2": "RO"},
-    {"city": "Kyiv", "iso2": "UA"},
-    {"city": "Moscow", "iso2": "RU"},
-    {"city": "Cairo", "iso2": "EG"},
-    {"city": "Baghdad", "iso2": "IQ"},
-    {"city": "Bangkok", "iso2": "TH"},
-    {"city": "Phnom Penh", "iso2": "KH"},
-    {"city": "Vientiane", "iso2": "LA"},
-    {"city": "Hanoi", "iso2": "VN"},
-    {"city": "Beijing", "iso2": "CN"},
-    {"city": "Seoul", "iso2": "KR"},
-    {"city": "Tokyo", "iso2": "JP"},
-    {"city": "Ottawa", "iso2": "CA"},
-    {"city": "Washington D.C.", "iso2": "US"},
-    {"city": "Buenos Aires", "iso2": "AR"},
-    {"city": "Montevideo", "iso2": "UY"},
-    {"city": "Asunción", "iso2": "PY"}
-  ],
-  "capitals_above_1000m": [
-    {"city": "La Paz", "iso2": "BO"},
-    {"city": "Quito", "iso2": "EC"},
-    {"city": "Bogotá", "iso2": "CO"},
-    {"city": "Addis Ababa", "iso2": "ET"},
-    {"city": "Mexico City", "iso2": "MX"},
-    {"city": "Tehran", "iso2": "IR"},
-    {"city": "Nairobi", "iso2": "KE"}
-  ],
-  "capitals_on_tropic_of_cancer": [
-    {"city": "Havana", "iso2": "CU"},
-    {"city": "Nassau", "iso2": "BS"},
-    {"city": "Riyadh", "iso2": "SA"},
-    {"city": "Abu Dhabi", "iso2": "AE"},
-    {"city": "Muscat", "iso2": "OM"}
-  ],
-  "capitals_hot_desert_climate": [
-    {"city": "Riyadh", "iso2": "SA"},
-    {"city": "Cairo", "iso2": "EG"},
-    {"city": "Doha", "iso2": "QA"},
-    {"city": "Abu Dhabi", "iso2": "AE"},
-    {"city": "Kuwait City", "iso2": "KW"},
-    {"city": "Muscat", "iso2": "OM"},
-    {"city": "Baghdad", "iso2": "IQ"},
-    {"city": "Nouakchott", "iso2": "MR"}
-  ],
-  "capitals_no_seasonal_snowfall": [
-    {"city": "Singapore", "iso2": "SG"},
-    {"city": "Kuala Lumpur", "iso2": "MY"},
-    {"city": "Jakarta", "iso2": "ID"},
-    {"city": "Bangkok", "iso2": "TH"},
-    {"city": "Manila", "iso2": "PH"},
-    {"city": "Colombo", "iso2": "LK"},
-    {"city": "Malé", "iso2": "MV"},
-    {"city": "Port Moresby", "iso2": "PG"},
-    {"city": "Suva", "iso2": "FJ"},
-    {"city": "Apia", "iso2": "WS"}
-  ],
-  "capitals_in_two_hemispheres": [
-    {"city": "Quito", "iso2": "EC"},
-    {"city": "London", "iso2": "GB"}
-  ],
-  "transcontinental_cities": [
-    {"city": "Istanbul", "iso2": "TR"},
-    {"city": "Atyrau", "iso2": "KZ"},
-    {"city": "Oral", "iso2": "KZ"},
-    {"city": "Orenburg", "iso2": "RU"},
-    {"city": "Orsk", "iso2": "RU"},
-    {"city": "Magnitogorsk", "iso2": "RU"},
-    {"city": "Suez", "iso2": "EG"},
-    {"city": "Port Said", "iso2": "EG"},
-    {"city": "Ismailia", "iso2": "EG"},
-    {"city": "Al Qanţarah", "iso2": "EG"},
-    {"city": "Panama City", "iso2": "PA"},
-    {"city": "Colón", "iso2": "PA"}
+  "schema_version": 1,
+  "dataset_id": "city_stats",
+  "metadata": {
+    "source_url": null,
+    "reference_period": null,
+    "updated_at": null
+  },
+  "legacy_layout": "sections",
+  "tables": [
+    {
+      "id": "top_cities_instagram",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "city"
+      ],
+      "metrics": [
+        {
+          "id": "iso2",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "city": "New York City"
+          },
+          "values": {
+            "iso2": "US"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Moscow"
+          },
+          "values": {
+            "iso2": "RU"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "London"
+          },
+          "values": {
+            "iso2": "GB"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "São Paulo"
+          },
+          "values": {
+            "iso2": "BR"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Paris"
+          },
+          "values": {
+            "iso2": "FR"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Los Angeles"
+          },
+          "values": {
+            "iso2": "US"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Saint Petersburg"
+          },
+          "values": {
+            "iso2": "RU"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Jakarta"
+          },
+          "values": {
+            "iso2": "ID"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Istanbul"
+          },
+          "values": {
+            "iso2": "TR"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Barcelona"
+          },
+          "values": {
+            "iso2": "ES"
+          }
+        }
+      ]
+    },
+    {
+      "id": "major_film_festival_cities",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "city"
+      ],
+      "metrics": [
+        {
+          "id": "iso2",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "city": "Cannes"
+          },
+          "values": {
+            "iso2": "FR"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Venice"
+          },
+          "values": {
+            "iso2": "IT"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Berlin"
+          },
+          "values": {
+            "iso2": "DE"
+          }
+        }
+      ]
+    },
+    {
+      "id": "de_facto_capitals",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "city"
+      ],
+      "metrics": [
+        {
+          "id": "iso2",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "city": "Bern"
+          },
+          "values": {
+            "iso2": "CH"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Yaren"
+          },
+          "values": {
+            "iso2": "NR"
+          }
+        }
+      ]
+    },
+    {
+      "id": "country_name_identical_to_capital",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "city"
+      ],
+      "metrics": [
+        {
+          "id": "iso2",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "city": "Singapore"
+          },
+          "values": {
+            "iso2": "SG"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Monaco"
+          },
+          "values": {
+            "iso2": "MC"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Vatican City"
+          },
+          "values": {
+            "iso2": "VA"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "San Marino"
+          },
+          "values": {
+            "iso2": "SM"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Djibouti"
+          },
+          "values": {
+            "iso2": "DJ"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Luxembourg"
+          },
+          "values": {
+            "iso2": "LU"
+          }
+        }
+      ]
+    },
+    {
+      "id": "capitals_with_city_in_name",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "city"
+      ],
+      "metrics": [
+        {
+          "id": "iso2",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "city": "Mexico City"
+          },
+          "values": {
+            "iso2": "MX"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Kuwait City"
+          },
+          "values": {
+            "iso2": "KW"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Panama City"
+          },
+          "values": {
+            "iso2": "PA"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Guatemala City"
+          },
+          "values": {
+            "iso2": "GT"
+          }
+        }
+      ]
+    },
+    {
+      "id": "country_capital_high_similarity",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "city"
+      ],
+      "metrics": [
+        {
+          "id": "iso2",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "city": "Tunis"
+          },
+          "values": {
+            "iso2": "TN"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Algiers"
+          },
+          "values": {
+            "iso2": "DZ"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Andorra la Vella"
+          },
+          "values": {
+            "iso2": "AD"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "São Tomé"
+          },
+          "values": {
+            "iso2": "ST"
+          }
+        }
+      ]
+    },
+    {
+      "id": "city_states",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "city"
+      ],
+      "metrics": [
+        {
+          "id": "iso2",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "city": "Singapore"
+          },
+          "values": {
+            "iso2": "SG"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Monaco"
+          },
+          "values": {
+            "iso2": "MC"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Vatican City"
+          },
+          "values": {
+            "iso2": "VA"
+          }
+        }
+      ]
+    },
+    {
+      "id": "former_capital_relocations",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [],
+      "metrics": [
+        {
+          "id": "old_city",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        },
+        {
+          "id": "new_city",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        },
+        {
+          "id": "iso2",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {},
+          "values": {
+            "old_city": "Rio de Janeiro",
+            "new_city": "Brasília",
+            "iso2": "BR"
+          }
+        },
+        {
+          "dimensions": {},
+          "values": {
+            "old_city": "Istanbul",
+            "new_city": "Ankara",
+            "iso2": "TR"
+          }
+        },
+        {
+          "dimensions": {},
+          "values": {
+            "old_city": "Almaty",
+            "new_city": "Astana",
+            "iso2": "KZ"
+          }
+        },
+        {
+          "dimensions": {},
+          "values": {
+            "old_city": "Yangon",
+            "new_city": "Naypyidaw",
+            "iso2": "MM"
+          }
+        },
+        {
+          "dimensions": {},
+          "values": {
+            "old_city": "Lagos",
+            "new_city": "Abuja",
+            "iso2": "NG"
+          }
+        },
+        {
+          "dimensions": {},
+          "values": {
+            "old_city": "Karachi",
+            "new_city": "Islamabad",
+            "iso2": "PK"
+          }
+        },
+        {
+          "dimensions": {},
+          "values": {
+            "old_city": "Dar es Salaam",
+            "new_city": "Dodoma",
+            "iso2": "TZ"
+          }
+        },
+        {
+          "dimensions": {},
+          "values": {
+            "old_city": "Bonn",
+            "new_city": "Berlin",
+            "iso2": "DE"
+          }
+        },
+        {
+          "dimensions": {},
+          "values": {
+            "old_city": "Melbourne",
+            "new_city": "Canberra",
+            "iso2": "AU"
+          }
+        }
+      ]
+    },
+    {
+      "id": "planned_capitals",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "city"
+      ],
+      "metrics": [
+        {
+          "id": "iso2",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "city": "Washington D.C."
+          },
+          "values": {
+            "iso2": "US"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Brasília"
+          },
+          "values": {
+            "iso2": "BR"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Canberra"
+          },
+          "values": {
+            "iso2": "AU"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Islamabad"
+          },
+          "values": {
+            "iso2": "PK"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Abuja"
+          },
+          "values": {
+            "iso2": "NG"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Dodoma"
+          },
+          "values": {
+            "iso2": "TZ"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Astana"
+          },
+          "values": {
+            "iso2": "KZ"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Putrajaya"
+          },
+          "values": {
+            "iso2": "MY"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Naypyidaw"
+          },
+          "values": {
+            "iso2": "MM"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Belmopan"
+          },
+          "values": {
+            "iso2": "BZ"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Gaborone"
+          },
+          "values": {
+            "iso2": "BW"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Yamoussoukro"
+          },
+          "values": {
+            "iso2": "CI"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Palikir"
+          },
+          "values": {
+            "iso2": "FM"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Ngerulmud"
+          },
+          "values": {
+            "iso2": "PW"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "New Delhi"
+          },
+          "values": {
+            "iso2": "IN"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Ankara"
+          },
+          "values": {
+            "iso2": "TR"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Pretoria"
+          },
+          "values": {
+            "iso2": "ZA"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Wellington"
+          },
+          "values": {
+            "iso2": "NZ"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Nouakchott"
+          },
+          "values": {
+            "iso2": "MR"
+          }
+        }
+      ]
+    },
+    {
+      "id": "capitals_without_international_airport",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "city"
+      ],
+      "metrics": [
+        {
+          "id": "iso2",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "city": "Vaduz"
+          },
+          "values": {
+            "iso2": "LI"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "San Marino"
+          },
+          "values": {
+            "iso2": "SM"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Vatican City"
+          },
+          "values": {
+            "iso2": "VA"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Monaco"
+          },
+          "values": {
+            "iso2": "MC"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cities_all_urban_transit_modes",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "city"
+      ],
+      "metrics": [
+        {
+          "id": "iso2",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "city": "Tokyo"
+          },
+          "values": {
+            "iso2": "JP"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Osaka"
+          },
+          "values": {
+            "iso2": "JP"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Chongqing"
+          },
+          "values": {
+            "iso2": "CN"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Wuhan"
+          },
+          "values": {
+            "iso2": "CN"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Seattle"
+          },
+          "values": {
+            "iso2": "US"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Moscow"
+          },
+          "values": {
+            "iso2": "RU"
+          }
+        }
+      ]
+    },
+    {
+      "id": "capitals_below_sea_level",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "city"
+      ],
+      "metrics": [
+        {
+          "id": "iso2",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "city": "Amsterdam"
+          },
+          "values": {
+            "iso2": "NL"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Baku"
+          },
+          "values": {
+            "iso2": "AZ"
+          }
+        }
+      ]
+    },
+    {
+      "id": "capitals_on_major_rivers",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "city"
+      ],
+      "metrics": [
+        {
+          "id": "iso2",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "city": "London"
+          },
+          "values": {
+            "iso2": "GB"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Paris"
+          },
+          "values": {
+            "iso2": "FR"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Vienna"
+          },
+          "values": {
+            "iso2": "AT"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Budapest"
+          },
+          "values": {
+            "iso2": "HU"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Bratislava"
+          },
+          "values": {
+            "iso2": "SK"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Belgrade"
+          },
+          "values": {
+            "iso2": "RS"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Berlin"
+          },
+          "values": {
+            "iso2": "DE"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Warsaw"
+          },
+          "values": {
+            "iso2": "PL"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Prague"
+          },
+          "values": {
+            "iso2": "CZ"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Rome"
+          },
+          "values": {
+            "iso2": "IT"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Madrid"
+          },
+          "values": {
+            "iso2": "ES"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Bucharest"
+          },
+          "values": {
+            "iso2": "RO"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Kyiv"
+          },
+          "values": {
+            "iso2": "UA"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Moscow"
+          },
+          "values": {
+            "iso2": "RU"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Cairo"
+          },
+          "values": {
+            "iso2": "EG"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Baghdad"
+          },
+          "values": {
+            "iso2": "IQ"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Bangkok"
+          },
+          "values": {
+            "iso2": "TH"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Phnom Penh"
+          },
+          "values": {
+            "iso2": "KH"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Vientiane"
+          },
+          "values": {
+            "iso2": "LA"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Hanoi"
+          },
+          "values": {
+            "iso2": "VN"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Beijing"
+          },
+          "values": {
+            "iso2": "CN"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Seoul"
+          },
+          "values": {
+            "iso2": "KR"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Tokyo"
+          },
+          "values": {
+            "iso2": "JP"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Ottawa"
+          },
+          "values": {
+            "iso2": "CA"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Washington D.C."
+          },
+          "values": {
+            "iso2": "US"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Buenos Aires"
+          },
+          "values": {
+            "iso2": "AR"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Montevideo"
+          },
+          "values": {
+            "iso2": "UY"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Asunción"
+          },
+          "values": {
+            "iso2": "PY"
+          }
+        }
+      ]
+    },
+    {
+      "id": "capitals_above_1000m",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "city"
+      ],
+      "metrics": [
+        {
+          "id": "iso2",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "city": "La Paz"
+          },
+          "values": {
+            "iso2": "BO"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Quito"
+          },
+          "values": {
+            "iso2": "EC"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Bogotá"
+          },
+          "values": {
+            "iso2": "CO"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Addis Ababa"
+          },
+          "values": {
+            "iso2": "ET"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Mexico City"
+          },
+          "values": {
+            "iso2": "MX"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Tehran"
+          },
+          "values": {
+            "iso2": "IR"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Nairobi"
+          },
+          "values": {
+            "iso2": "KE"
+          }
+        }
+      ]
+    },
+    {
+      "id": "capitals_on_tropic_of_cancer",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "city"
+      ],
+      "metrics": [
+        {
+          "id": "iso2",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "city": "Havana"
+          },
+          "values": {
+            "iso2": "CU"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Nassau"
+          },
+          "values": {
+            "iso2": "BS"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Riyadh"
+          },
+          "values": {
+            "iso2": "SA"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Abu Dhabi"
+          },
+          "values": {
+            "iso2": "AE"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Muscat"
+          },
+          "values": {
+            "iso2": "OM"
+          }
+        }
+      ]
+    },
+    {
+      "id": "capitals_hot_desert_climate",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "city"
+      ],
+      "metrics": [
+        {
+          "id": "iso2",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "city": "Riyadh"
+          },
+          "values": {
+            "iso2": "SA"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Cairo"
+          },
+          "values": {
+            "iso2": "EG"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Doha"
+          },
+          "values": {
+            "iso2": "QA"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Abu Dhabi"
+          },
+          "values": {
+            "iso2": "AE"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Kuwait City"
+          },
+          "values": {
+            "iso2": "KW"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Muscat"
+          },
+          "values": {
+            "iso2": "OM"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Baghdad"
+          },
+          "values": {
+            "iso2": "IQ"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Nouakchott"
+          },
+          "values": {
+            "iso2": "MR"
+          }
+        }
+      ]
+    },
+    {
+      "id": "capitals_no_seasonal_snowfall",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "city"
+      ],
+      "metrics": [
+        {
+          "id": "iso2",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "city": "Singapore"
+          },
+          "values": {
+            "iso2": "SG"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Kuala Lumpur"
+          },
+          "values": {
+            "iso2": "MY"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Jakarta"
+          },
+          "values": {
+            "iso2": "ID"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Bangkok"
+          },
+          "values": {
+            "iso2": "TH"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Manila"
+          },
+          "values": {
+            "iso2": "PH"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Colombo"
+          },
+          "values": {
+            "iso2": "LK"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Malé"
+          },
+          "values": {
+            "iso2": "MV"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Port Moresby"
+          },
+          "values": {
+            "iso2": "PG"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Suva"
+          },
+          "values": {
+            "iso2": "FJ"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Apia"
+          },
+          "values": {
+            "iso2": "WS"
+          }
+        }
+      ]
+    },
+    {
+      "id": "capitals_in_two_hemispheres",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "city"
+      ],
+      "metrics": [
+        {
+          "id": "iso2",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "city": "Quito"
+          },
+          "values": {
+            "iso2": "EC"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "London"
+          },
+          "values": {
+            "iso2": "GB"
+          }
+        }
+      ]
+    },
+    {
+      "id": "transcontinental_cities",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "city"
+      ],
+      "metrics": [
+        {
+          "id": "iso2",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "city": "Istanbul"
+          },
+          "values": {
+            "iso2": "TR"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Atyrau"
+          },
+          "values": {
+            "iso2": "KZ"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Oral"
+          },
+          "values": {
+            "iso2": "KZ"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Orenburg"
+          },
+          "values": {
+            "iso2": "RU"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Orsk"
+          },
+          "values": {
+            "iso2": "RU"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Magnitogorsk"
+          },
+          "values": {
+            "iso2": "RU"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Suez"
+          },
+          "values": {
+            "iso2": "EG"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Port Said"
+          },
+          "values": {
+            "iso2": "EG"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Ismailia"
+          },
+          "values": {
+            "iso2": "EG"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Al Qanţarah"
+          },
+          "values": {
+            "iso2": "EG"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Panama City"
+          },
+          "values": {
+            "iso2": "PA"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Colón"
+          },
+          "values": {
+            "iso2": "PA"
+          }
+        }
+      ]
+    }
   ]
 }

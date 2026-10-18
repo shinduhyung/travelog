@@ -1,0 +1,126 @@
+# 추가 도시 통계 체크리스트
+
+각 항목은 같은 기준기간에 서로 다른 도시 10곳 이상과 서로 다른 수치 10개 이상을 확인했다. 표기: 범위 / 기준기간 / 도시 수.
+
+세계·도시권은 JRC Urban Centre, 유럽은 Eurostat 도시·확장도시, 유럽·설문은 주민 인식조사다. 서로 다른 경계를 하나의 순위에 혼합하면 안 된다.
+
+- [ ] [도로망 총연장](https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_UCDB_GLOBE_R2024A/GHS_UCDB_THEME_GLOBE_R2024A/GHS_UCDB_THEME_INFRASTRUCTURES_GLOBE_R2024A/V1-2/) — 세계·도시권 / 2024 / 11,410곳
+- [ ] [도로망 밀도](https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_UCDB_GLOBE_R2024A/GHS_UCDB_THEME_GLOBE_R2024A/GHS_UCDB_THEME_INFRASTRUCTURES_GLOBE_R2024A/V1-2/) — 세계·도시권 / 2024 / 11,410곳
+- [ ] [시가지 평균 녹색도·NDVI](https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_UCDB_GLOBE_R2024A/GHS_UCDB_THEME_GLOBE_R2024A/GHS_UCDB_THEME_GREENNESS_GLOBE_R2024A/V1-2/) — 세계·도시권 / 2025 / 11,420곳
+- [ ] [녹색도 기준을 충족하는 구역 내 시가지 비율](https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_UCDB_GLOBE_R2024A/GHS_UCDB_THEME_GLOBE_R2024A/GHS_UCDB_THEME_GREENNESS_GLOBE_R2024A/V1-2/) — 세계·도시권 / 2025 / 11,420곳
+- [ ] [고녹색도 구역 내 시가지 비율](https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_UCDB_GLOBE_R2024A/GHS_UCDB_THEME_GLOBE_R2024A/GHS_UCDB_THEME_GREENNESS_GLOBE_R2024A/V1-2/) — 세계·도시권 / 2025 / 11,420곳
+- [ ] [시가지 평균 수관 높이](https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_UCDB_GLOBE_R2024A/GHS_UCDB_THEME_GLOBE_R2024A/GHS_UCDB_THEME_GREENNESS_GLOBE_R2024A/V1-2/) — 세계·도시권 / 2020 / 11,421곳
+- [ ] [5년간 시가지 녹색도 변화](https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_UCDB_GLOBE_R2024A/GHS_UCDB_THEME_GLOBE_R2024A/GHS_UCDB_THEME_GREENNESS_GLOBE_R2024A/V1-2/) — 세계·도시권 / 2020~2025 / 11,420곳
+- [ ] [5년간 녹색도 구역 내 시가지 비율 변화](https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_UCDB_GLOBE_R2024A/GHS_UCDB_THEME_GLOBE_R2024A/GHS_UCDB_THEME_GREENNESS_GLOBE_R2024A/V1-2/) — 세계·도시권 / 2020~2025 / 11,420곳
+- [ ] [고녹색도 구역 거주 인구 비율](https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_UCDB_GLOBE_R2024A/GHS_UCDB_THEME_GLOBE_R2024A/GHS_UCDB_THEME_SDG_GLOBE_R2024A/V1-2/) — 세계·도시권 / 2025 / 11,420곳
+- [ ] [5년간 고녹색도 구역 거주 인구 비율 변화](https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_UCDB_GLOBE_R2024A/GHS_UCDB_THEME_GLOBE_R2024A/GHS_UCDB_THEME_SDG_GLOBE_R2024A/V1-2/) — 세계·도시권 / 2020~2025 / 11,420곳
+- [ ] [도시 토지 소비 증가율](https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_UCDB_GLOBE_R2024A/GHS_UCDB_THEME_GLOBE_R2024A/GHS_UCDB_THEME_SDG_GLOBE_R2024A/V1-2/) — 세계·도시권 / 2010~2020 / 11,422곳
+- [ ] [도시권 인구 증가율](https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_UCDB_GLOBE_R2024A/GHS_UCDB_THEME_GLOBE_R2024A/GHS_UCDB_THEME_SDG_GLOBE_R2024A/V1-2/) — 세계·도시권 / 2010~2020 / 11,422곳
+- [ ] [인구 증가율 대비 토지 소비 증가율·토지이용 효율 지표](https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_UCDB_GLOBE_R2024A/GHS_UCDB_THEME_GLOBE_R2024A/GHS_UCDB_THEME_SDG_GLOBE_R2024A/V1-2/) — 세계·도시권 / 2010~2020 / 9,473곳
+- [ ] [해안 도시 주변 해수면 온도](https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_UCDB_GLOBE_R2024A/GHS_UCDB_THEME_GLOBE_R2024A/GHS_UCDB_THEME_WATER_GLOBE_R2024A/V1-2/) — 세계·도시권 / 2024 / 1,334곳
+- [ ] [해안 도시 주변 해수면 상승 추세](https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_UCDB_GLOBE_R2024A/GHS_UCDB_THEME_GLOBE_R2024A/GHS_UCDB_THEME_WATER_GLOBE_R2024A/V1-2/) — 세계·도시권 / 1993~2023 / 1,334곳
+- [ ] [해안 도시 주변 해수면 온도 상승 추세](https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_UCDB_GLOBE_R2024A/GHS_UCDB_THEME_GLOBE_R2024A/GHS_UCDB_THEME_WATER_GLOBE_R2024A/V1-2/) — 세계·도시권 / 1993~2021 / 1,334곳
+- [ ] [도시권 면적 중 육상 보호구역 비율](https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_UCDB_GLOBE_R2024A/GHS_UCDB_THEME_GLOBE_R2024A/GHS_UCDB_THEME_NATURAL_SYSTEMS_GLOBE_R2024A/V1-2/) — 세계·도시권 / 2025 / 2,096곳
+- [ ] [도시권 면적 중 해양 보호구역 비율](https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_UCDB_GLOBE_R2024A/GHS_UCDB_THEME_GLOBE_R2024A/GHS_UCDB_THEME_NATURAL_SYSTEMS_GLOBE_R2024A/V1-2/) — 세계·도시권 / 2025 / 499곳
+- [ ] [도시권 내 누적 산불 소실 면적](https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_UCDB_GLOBE_R2024A/GHS_UCDB_THEME_GLOBE_R2024A/GHS_UCDB_THEME_HAZARD_RISK_GLOBE_R2024A/V1-2/) — 세계·도시권 / 2020~2024 / 11,422곳
+- [ ] [극장 수](https://ec.europa.eu/eurostat/databrowser/view/urb_ctour/default/table?lang=en&indic_ur=CR1008V) — 유럽 / 2025 / 79곳
+- [ ] [공공도서관 수](https://ec.europa.eu/eurostat/databrowser/view/urb_ctour/default/table?lang=en&indic_ur=CR1010V) — 유럽 / 2024 / 375곳
+- [ ] [공공 수영장 수](https://ec.europa.eu/eurostat/databrowser/view/urb_ctour/default/table?lang=en&indic_ur=CR1015V) — 유럽 / 2025 / 82곳
+- [ ] [영화관 총 좌석 수](https://ec.europa.eu/eurostat/databrowser/view/urb_ctour/default/table?lang=en&indic_ur=CR1003V) — 유럽 / 2025 / 136곳
+- [ ] [주민 1천 명당 영화관 좌석 수](https://ec.europa.eu/eurostat/databrowser/view/urb_ctour/default/table?lang=en&indic_ur=CR1003I) — 유럽 / 2025 / 136곳
+- [ ] [연간 영화관 관람 횟수](https://ec.europa.eu/eurostat/databrowser/view/urb_ctour/default/table?lang=en&indic_ur=CR1005V) — 유럽 / 2025 / 39곳
+- [ ] [연간 박물관 방문 횟수](https://ec.europa.eu/eurostat/databrowser/view/urb_ctour/default/table?lang=en&indic_ur=CR1007V) — 유럽 / 2024 / 230곳
+- [ ] [관광숙박시설 총 숙박일수](https://ec.europa.eu/eurostat/databrowser/view/urb_ctour/default/table?lang=en&indic_ur=CR2001V) — 유럽 / 2025 / 89곳
+- [ ] [자국 거주자의 관광숙박일수](https://ec.europa.eu/eurostat/databrowser/view/urb_ctour/default/table?lang=en&indic_ur=CR2010V) — 유럽 / 2025 / 89곳
+- [ ] [비거주자의 관광숙박일수](https://ec.europa.eu/eurostat/databrowser/view/urb_ctour/default/table?lang=en&indic_ur=CR2011V) — 유럽 / 2025 / 89곳
+- [ ] [관광숙박시설 침대 수](https://ec.europa.eu/eurostat/databrowser/view/urb_ctour/default/table?lang=en&indic_ur=CR2009V) — 유럽 / 2025 / 89곳
+- [ ] [주민 1천 명당 관광숙박시설 침대 수](https://ec.europa.eu/eurostat/databrowser/view/urb_ctour/default/table?lang=en&indic_ur=CR2010I) — 유럽 / 2025 / 89곳
+- [ ] [주민 1명당 관광숙박일수](https://ec.europa.eu/eurostat/databrowser/view/urb_ctour/default/table?lang=en&indic_ur=CR2011I) — 유럽 / 2025 / 89곳
+- [ ] [자전거 전용도로·차로 길이](https://ec.europa.eu/eurostat/databrowser/view/urb_ctran/default/table?lang=en&indic_ur=TT1079V) — 유럽 / 2024 / 151곳
+- [ ] [도심 대중교통 통합 월 정기권 가격](https://ec.europa.eu/eurostat/databrowser/view/urb_ctran/default/table?lang=en&indic_ur=TT1080V) — 유럽 / 2024 / 64곳
+- [ ] [도심행 주간 택시 5km 요금](https://ec.europa.eu/eurostat/databrowser/view/urb_ctran/default/table?lang=en&indic_ur=TT1081V) — 유럽 / 2025 / 94곳
+- [ ] [자가용 통근 비율](https://ec.europa.eu/eurostat/databrowser/view/urb_ctran/default/table?lang=en&indic_ur=TT1003V) — 유럽 / 2024 / 10곳
+- [ ] [대중교통 통근 비율](https://ec.europa.eu/eurostat/databrowser/view/urb_ctran/default/table?lang=en&indic_ur=TT1010V) — 유럽 / 2024 / 10곳
+- [ ] [오토바이 통근 비율](https://ec.europa.eu/eurostat/databrowser/view/urb_ctran/default/table?lang=en&indic_ur=TT1006V) — 유럽 / 2024 / 10곳
+- [ ] [자전거 통근 비율](https://ec.europa.eu/eurostat/databrowser/view/urb_ctran/default/table?lang=en&indic_ur=TT1007V) — 유럽 / 2024 / 10곳
+- [ ] [도보 통근 비율](https://ec.europa.eu/eurostat/databrowser/view/urb_ctran/default/table?lang=en&indic_ur=TT1008V) — 유럽 / 2024 / 10곳
+- [ ] [자가용 평균 통근 거리](https://ec.europa.eu/eurostat/databrowser/view/urb_ctran/default/table?lang=en&indic_ur=TT1020V) — 유럽 / 2023 / 10곳
+- [ ] [외부에서 도시로 들어오는 통근자 수](https://ec.europa.eu/eurostat/databrowser/view/urb_ctran/default/table?lang=en&indic_ur=TT1064V) — 유럽 / 2024 / 10곳
+- [ ] [도시 밖으로 나가는 통근자 수](https://ec.europa.eu/eurostat/databrowser/view/urb_ctran/default/table?lang=en&indic_ur=TT1065V) — 유럽 / 2024 / 10곳
+- [ ] [주민 1천 명당 등록 자동차 수](https://ec.europa.eu/eurostat/databrowser/view/urb_ctran/default/table?lang=en&indic_ur=TT1057I) — 유럽 / 2025 / 23곳
+- [ ] [주민 1만 명당 교통사고 사망자 수](https://ec.europa.eu/eurostat/databrowser/view/urb_ctran/default/table?lang=en&indic_ur=TT1060I) — 유럽 / 2025 / 32곳
+- [ ] [가구당 평균 인원](https://ec.europa.eu/eurostat/databrowser/view/urb_clivcon/default/table?lang=en&indic_ur=DE3004I) — 유럽 / 2025 / 25곳
+- [ ] [1인 가구 비율](https://ec.europa.eu/eurostat/databrowser/view/urb_clivcon/default/table?lang=en&indic_ur=DE3002I) — 유럽 / 2025 / 27곳
+- [ ] [한부모 가구 비율](https://ec.europa.eu/eurostat/databrowser/view/urb_clivcon/default/table?lang=en&indic_ur=DE3005I) — 유럽 / 2025 / 27곳
+- [ ] [독거 은퇴자 가구 비율](https://ec.europa.eu/eurostat/databrowser/view/urb_clivcon/default/table?lang=en&indic_ur=DE3008I) — 유럽 / 2025 / 27곳
+- [ ] [미성년 자녀가 있는 가구 비율](https://ec.europa.eu/eurostat/databrowser/view/urb_clivcon/default/table?lang=en&indic_ur=DE3011I) — 유럽 / 2025 / 27곳
+- [ ] [자가 거주 가구 비율](https://ec.europa.eu/eurostat/databrowser/view/urb_clivcon/default/table?lang=en&indic_ur=SA1011I) — 유럽 / 2024 / 16곳
+- [ ] [아파트 거주 가구 비율](https://ec.europa.eu/eurostat/databrowser/view/urb_clivcon/default/table?lang=en&indic_ur=SA1008I) — 유럽 / 2024 / 16곳
+- [ ] [민간 임대주택 거주 가구 수](https://ec.europa.eu/eurostat/databrowser/view/urb_clivcon/default/table?lang=en&indic_ur=SA1013V) — 유럽 / 2024 / 26곳
+- [ ] [일반 주택 수](https://ec.europa.eu/eurostat/databrowser/view/urb_clivcon/default/table?lang=en&indic_ur=SA1001V) — 유럽 / 2024 / 426곳
+- [ ] [비어 있는 일반 주택 수](https://ec.europa.eu/eurostat/databrowser/view/urb_clivcon/default/table?lang=en&indic_ur=SA1025V) — 유럽 / 2024 / 72곳
+- [ ] [1인당 평균 주거 면적](https://ec.europa.eu/eurostat/databrowser/view/urb_clivcon/default/table?lang=en&indic_ur=SA1022V) — 유럽 / 2024 / 106곳
+- [ ] [주거용 주택 ㎡당 연간 임대료](https://ec.europa.eu/eurostat/databrowser/view/urb_clivcon/default/table?lang=en&indic_ur=SA1049V) — 유럽 / 2024 / 35곳
+- [ ] [아파트를 제외한 주택 평균 매매가격](https://ec.europa.eu/eurostat/databrowser/view/urb_clivcon/default/table?lang=en&indic_ur=SA1050V) — 유럽 / 2024 / 252곳
+- [ ] [아파트 평균 매매가격](https://ec.europa.eu/eurostat/databrowser/view/urb_clivcon/default/table?lang=en&indic_ur=SA1051V) — 유럽 / 2024 / 252곳
+- [ ] [인구 중위연령](https://ec.europa.eu/eurostat/databrowser/view/urb_cpopstr/default/table?lang=en&indic_ur=DE1073V) — 유럽 / 2025 / 275곳
+- [ ] [연간 인구 증감률](https://ec.europa.eu/eurostat/databrowser/view/urb_cpopstr/default/table?lang=en&indic_ur=DE1061I) — 유럽 / 2025 / 302곳
+- [ ] [남성 100명당 여성 수](https://ec.europa.eu/eurostat/databrowser/view/urb_cpopstr/default/table?lang=en&indic_ur=DE1003I) — 유럽 / 2025 / 303곳
+- [ ] [외국 국적 인구 비율](https://ec.europa.eu/eurostat/databrowser/view/urb_cpopcb/default/table?lang=en&indic_ur=DE2007I) — 유럽 / 2025 / 272곳
+- [ ] [해외 출생 인구 비율](https://ec.europa.eu/eurostat/databrowser/view/urb_cpopcb/default/table?lang=en&indic_ur=DE2009I) — 유럽 / 2025 / 139곳
+- [ ] [전년도 국내 다른 도시에서 이주한 인구](https://ec.europa.eu/eurostat/databrowser/view/urb_cpopcb/default/table?lang=en&indic_ur=DE4003V) — 유럽 / 2025 / 41곳
+- [ ] [인구 1천 명당 출생아 수](https://ec.europa.eu/eurostat/databrowser/view/urb_cfermor/default/table?lang=en&indic_ur=SA2007I) — 유럽 / 2025 / 27곳
+- [ ] [인구 1천 명당 사망자 수](https://ec.europa.eu/eurostat/databrowser/view/urb_cfermor/default/table?lang=en&indic_ur=SA2029I) — 유럽 / 2025 / 41곳
+- [ ] [출생아 1천 명당 영아 사망자 수](https://ec.europa.eu/eurostat/databrowser/view/urb_cfermor/default/table?lang=en&indic_ur=SA2004I) — 유럽 / 2025 / 108곳
+- [ ] [고등교육기관 학생 수](https://ec.europa.eu/eurostat/databrowser/view/urb_ceduc/default/table?lang=en&indic_ur=TE1026V) — 유럽 / 2025 / 17곳
+- [ ] [주민 1천 명당 고등교육기관 학생 수](https://ec.europa.eu/eurostat/databrowser/view/urb_ceduc/default/table?lang=en&indic_ur=TE1026I) — 유럽 / 2025 / 17곳
+- [ ] [0~4세 아동 1천 명당 보육시설 이용 아동 수](https://ec.europa.eu/eurostat/databrowser/view/urb_ceduc/default/table?lang=en&indic_ur=TE1001I) — 유럽 / 2025 / 102곳
+- [ ] [25~64세 고등교육 이수자 수](https://ec.europa.eu/eurostat/databrowser/view/urb_ceduc/default/table?lang=en&indic_ur=TE2031V) — 유럽 / 2025 / 17곳
+- [ ] [실업률](https://ec.europa.eu/eurostat/databrowser/view/urb_clma/default/table?lang=en&indic_ur=EC1020I) — 유럽 / 2024 / 230곳
+- [ ] [20~64세 경제활동인구](https://ec.europa.eu/eurostat/databrowser/view/urb_clma/default/table?lang=en&indic_ur=EC1174V) — 유럽 / 2024 / 345곳
+- [ ] [20~64세 취업자 수](https://ec.europa.eu/eurostat/databrowser/view/urb_clma/default/table?lang=en&indic_ur=EC1177V) — 유럽 / 2024 / 345곳
+- [ ] [도시 내 사업장 기준 일자리 수](https://ec.europa.eu/eurostat/databrowser/view/urb_clma/default/table?lang=en&indic_ur=EC2020V) — 유럽 / 2025 / 18곳
+- [ ] [정보통신업 일자리 수](https://ec.europa.eu/eurostat/databrowser/view/urb_clma/default/table?lang=en&indic_ur=EC2033V) — 유럽 / 2025 / 17곳
+- [ ] [금융·보험업 일자리 수](https://ec.europa.eu/eurostat/databrowser/view/urb_clma/default/table?lang=en&indic_ur=EC2034V) — 유럽 / 2025 / 16곳
+- [ ] [예술·여가 등 서비스 부문 일자리 수](https://ec.europa.eu/eurostat/databrowser/view/urb_clma/default/table?lang=en&indic_ur=EC2038V) — 유럽 / 2025 / 17곳
+- [ ] [전 산업 사업체 단위 수](https://ec.europa.eu/eurostat/databrowser/view/urb_cecfi/default/table?lang=en&indic_ur=EC2039V) — 유럽 / 2022 / 96곳
+- [ ] [연간 생활·상업 폐기물 발생량](https://ec.europa.eu/eurostat/databrowser/view/urb_cenv/default/table?lang=en&indic_ur=EN4008V) — 유럽 / 2024 / 336곳
+- [ ] [대중교통 만족 응답률](https://ec.europa.eu/eurostat/databrowser/view/urb_percep/default/table?lang=en&indic_ur=PS1012V) — 유럽·설문 / 2023 / 80곳
+- [ ] [학교·교육시설 만족 응답률](https://ec.europa.eu/eurostat/databrowser/view/urb_percep/default/table?lang=en&indic_ur=PS1501V) — 유럽·설문 / 2023 / 80곳
+- [ ] [의료서비스 만족 응답률](https://ec.europa.eu/eurostat/databrowser/view/urb_percep/default/table?lang=en&indic_ur=PS1506V) — 유럽·설문 / 2023 / 80곳
+- [ ] [공원·녹지 만족 응답률](https://ec.europa.eu/eurostat/databrowser/view/urb_percep/default/table?lang=en&indic_ur=PS1052V) — 유럽·설문 / 2023 / 80곳
+- [ ] [체육시설 만족 응답률](https://ec.europa.eu/eurostat/databrowser/view/urb_percep/default/table?lang=en&indic_ur=PS1062V) — 유럽·설문 / 2023 / 80곳
+- [ ] [문화시설 만족 응답률](https://ec.europa.eu/eurostat/databrowser/view/urb_percep/default/table?lang=en&indic_ur=PS1082V) — 유럽·설문 / 2023 / 80곳
+- [ ] [광장·보행구역 등 공공공간 만족 응답률](https://ec.europa.eu/eurostat/databrowser/view/urb_percep/default/table?lang=en&indic_ur=PS3062V) — 유럽·설문 / 2023 / 80곳
+- [ ] [공기 질 만족 응답률](https://ec.europa.eu/eurostat/databrowser/view/urb_percep/default/table?lang=en&indic_ur=PS3260V) — 유럽·설문 / 2023 / 80곳
+- [ ] [도시 소음 수준 만족 응답률](https://ec.europa.eu/eurostat/databrowser/view/urb_percep/default/table?lang=en&indic_ur=PS3270V) — 유럽·설문 / 2023 / 80곳
+- [ ] [도시 청결도 만족 응답률](https://ec.europa.eu/eurostat/databrowser/view/urb_percep/default/table?lang=en&indic_ur=PS3280V) — 유럽·설문 / 2023 / 80곳
+- [ ] [좋은 일자리를 찾기 쉽다는 응답률](https://ec.europa.eu/eurostat/databrowser/view/urb_percep/default/table?lang=en&indic_ur=PS2012V) — 유럽·설문 / 2023 / 80곳
+- [ ] [적정 가격의 주거지를 찾기 쉽다는 응답률](https://ec.europa.eu/eurostat/databrowser/view/urb_percep/default/table?lang=en&indic_ur=PS2032V) — 유럽·설문 / 2023 / 80곳
+- [ ] [도시 주민을 신뢰한다는 응답률](https://ec.europa.eu/eurostat/databrowser/view/urb_percep/default/table?lang=en&indic_ur=PS3092V) — 유럽·설문 / 2023 / 80곳
+- [ ] [밤에 혼자 걸어도 안전하다는 응답률](https://ec.europa.eu/eurostat/databrowser/view/urb_percep/default/table?lang=en&indic_ur=PS3514V) — 유럽·설문 / 2023 / 80곳
+- [ ] [가구 재정상태 만족 응답률](https://ec.europa.eu/eurostat/databrowser/view/urb_percep/default/table?lang=en&indic_ur=PS3340V) — 유럽·설문 / 2023 / 80곳
+- [ ] [현재 삶에 대한 만족 응답률](https://ec.europa.eu/eurostat/databrowser/view/urb_percep/default/table?lang=en&indic_ur=PS3350V) — 유럽·설문 / 2023 / 80곳
+- [ ] [현재 도시 거주에 대한 만족 응답률](https://ec.europa.eu/eurostat/databrowser/view/urb_percep/default/table?lang=en&indic_ur=PS3360V) — 유럽·설문 / 2023 / 80곳
+- [ ] [전반적으로 살기 좋은 도시라는 응답률](https://ec.europa.eu/eurostat/databrowser/view/urb_percep/default/table?lang=en&indic_ur=PS3529V) — 유럽·설문 / 2023 / 80곳
+- [ ] [인종·민족 소수자가 살기 좋다는 응답률](https://ec.europa.eu/eurostat/databrowser/view/urb_percep/default/table?lang=en&indic_ur=PS3532V) — 유럽·설문 / 2023 / 80곳
+- [ ] [성소수자가 살기 좋다는 응답률](https://ec.europa.eu/eurostat/databrowser/view/urb_percep/default/table?lang=en&indic_ur=PS3535V) — 유럽·설문 / 2023 / 80곳
+- [ ] [이민자가 살기 좋다는 응답률](https://ec.europa.eu/eurostat/databrowser/view/urb_percep/default/table?lang=en&indic_ur=PS3538V) — 유럽·설문 / 2023 / 80곳
+- [ ] [어린 자녀가 있는 가족이 살기 좋다는 응답률](https://ec.europa.eu/eurostat/databrowser/view/urb_percep/default/table?lang=en&indic_ur=PS3541V) — 유럽·설문 / 2023 / 80곳
+- [ ] [고령자가 살기 좋다는 응답률](https://ec.europa.eu/eurostat/databrowser/view/urb_percep/default/table?lang=en&indic_ur=PS3544V) — 유럽·설문 / 2023 / 80곳
+- [ ] [대중교통 요금이 저렴하다는 응답률](https://ec.europa.eu/eurostat/databrowser/view/urb_percep/default/table?lang=en&indic_ur=PS3547V) — 유럽·설문 / 2023 / 80곳
+- [ ] [대중교통이 안전하다는 응답률](https://ec.europa.eu/eurostat/databrowser/view/urb_percep/default/table?lang=en&indic_ur=PS3552V) — 유럽·설문 / 2023 / 80곳
+- [ ] [대중교통을 이용하기 쉽다는 응답률](https://ec.europa.eu/eurostat/databrowser/view/urb_percep/default/table?lang=en&indic_ur=PS3557V) — 유럽·설문 / 2023 / 80곳
+- [ ] [대중교통 운행이 빈번하다는 응답률](https://ec.europa.eu/eurostat/databrowser/view/urb_percep/default/table?lang=en&indic_ur=PS3562V) — 유럽·설문 / 2023 / 80곳
+- [ ] [대중교통이 정시 운행한다는 응답률](https://ec.europa.eu/eurostat/databrowser/view/urb_percep/default/table?lang=en&indic_ur=PS3567V) — 유럽·설문 / 2023 / 80곳
+- [ ] [지역 경찰을 신뢰한다는 응답률](https://ec.europa.eu/eurostat/databrowser/view/urb_percep/default/table?lang=en&indic_ur=PS3572V) — 유럽·설문 / 2023 / 80곳
+- [ ] [최근 1년 본인·가구원의 절도 피해 경험률](https://ec.europa.eu/eurostat/databrowser/view/urb_percep/default/table?lang=en&indic_ur=PS3575V) — 유럽·설문 / 2023 / 80곳
+- [ ] [최근 1년 폭행·노상강도 피해 경험률](https://ec.europa.eu/eurostat/databrowser/view/urb_percep/default/table?lang=en&indic_ur=PS3578V) — 유럽·설문 / 2023 / 80곳
+- [ ] [지방행정 민원 처리시간 만족 응답률](https://ec.europa.eu/eurostat/databrowser/view/urb_percep/default/table?lang=en&indic_ur=PS3587V) — 유럽·설문 / 2023 / 80곳
+- [ ] [지방행정 절차를 이해하기 쉽다는 응답률](https://ec.europa.eu/eurostat/databrowser/view/urb_percep/default/table?lang=en&indic_ur=PS3592V) — 유럽·설문 / 2023 / 80곳
+- [ ] [지방행정 수수료가 합리적이라는 응답률](https://ec.europa.eu/eurostat/databrowser/view/urb_percep/default/table?lang=en&indic_ur=PS3601V) — 유럽·설문 / 2023 / 80곳
+- [ ] [온라인 지방행정 서비스 접근이 쉽다는 응답률](https://ec.europa.eu/eurostat/databrowser/view/urb_percep/default/table?lang=en&indic_ur=PS3606V) — 유럽·설문 / 2023 / 80곳
+- [ ] [지방행정에 부패가 있다는 응답률](https://ec.europa.eu/eurostat/databrowser/view/urb_percep/default/table?lang=en&indic_ur=PS3611V) — 유럽·설문 / 2023 / 80곳
+- [ ] [5년 전보다 삶의 질이 좋아졌다는 응답률](https://ec.europa.eu/eurostat/databrowser/view/urb_percep/default/table?lang=en&indic_ur=PS3618V) — 유럽·설문 / 2023 / 80곳
+- [ ] [본인의 건강이 좋다는 응답률](https://ec.europa.eu/eurostat/databrowser/view/urb_percep/default/table?lang=en&indic_ur=PS3620V) — 유럽·설문 / 2023 / 80곳
+- [ ] [최근 4주 대부분·항상 외로웠다는 응답률](https://ec.europa.eu/eurostat/databrowser/view/urb_percep/default/table?lang=en&indic_ur=PS3626V) — 유럽·설문 / 2023 / 80곳

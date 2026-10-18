@@ -1,7 +1,9 @@
 // lib/screens/airport_stats_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
+import 'package:jidoapp/services/statistics_repository.dart';
 import 'package:jidoapp/providers/airport_provider.dart';
 import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/models/airport_model.dart';
@@ -41,6 +43,7 @@ class _AirportStatsScreenState extends State<AirportStatsScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Scaffold(
       body: SafeArea(
         child: Column(
@@ -66,15 +69,15 @@ class _AirportStatsScreenState extends State<AirportStatsScreen> {
                     }),
                     side: MaterialStateProperty.all(BorderSide.none),
                   ),
-                  segments: const [
+                  segments:  [
                     ButtonSegment<int>(
                       value: 0,
-                      label: Text('Airport'),
+                      label: Text(tr('Airport')),
                       icon: Icon(Icons.flight),
                     ),
                     ButtonSegment<int>(
                       value: 1,
-                      label: Text('Lounge'),
+                      label: Text(tr('Lounge')),
                       icon: Icon(Icons.wine_bar),
                     ),
                   ],
@@ -107,6 +110,7 @@ class _AirportStatsBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Consumer2<AirportProvider, CountryProvider>(
       builder: (context, airportProvider, countryProvider, child) {
         if (airportProvider.isLoading || countryProvider.allCountries.isEmpty) {
@@ -122,7 +126,7 @@ class _AirportStatsBody extends StatelessWidget {
                 height: 466,
                 child: FutureBuilder(
                   future: Future.wait([
-                    rootBundle.loadString('assets/top_airports.json'),
+                    StatisticsRepository.instance.loadLegacyString('assets/top_airports.json'),
                     rootBundle.loadString('assets/airports.json'),
                   ]),
                   builder: (context, snapshot) {
@@ -130,7 +134,7 @@ class _AirportStatsBody extends StatelessWidget {
                       return const Center(child: CircularProgressIndicator());
                     }
                     if (snapshot.hasError || !snapshot.hasData) {
-                      return const Center(child: Text('Failed to load ranking data.'));
+                      return  Center(child: Text(tr('Failed to load ranking data.')));
                     }
 
                     final List<dynamic> rankingData = json.decode(snapshot.data![0] as String);
@@ -218,6 +222,7 @@ class _AirportRankingCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return _AirportRankingCardView(
       rankingData: rankingData,
       visitedAirportNames: visitedAirportNames,
@@ -253,6 +258,7 @@ class _AirportRankingCardViewState extends State<_AirportRankingCardView> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final textTheme = Theme.of(context).textTheme;
     final List<dynamic> filteredRankingData = _displaySegment == 0
         ? widget.rankingData
@@ -274,7 +280,7 @@ class _AirportRankingCardViewState extends State<_AirportRankingCardView> {
                   children: [
                     Icon(Icons.emoji_events, color: widget.themeColor[800]),
                     const SizedBox(width: 8),
-                    Text('Top 100 Airports', style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
+                    Text(tr('Top 100 Airports'), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
                   ],
                 ),
                 SizedBox(
@@ -295,9 +301,9 @@ class _AirportRankingCardViewState extends State<_AirportRankingCardView> {
                       padding: MaterialStateProperty.all(const EdgeInsets.symmetric(horizontal: 10)),
                       textStyle: MaterialStateProperty.all(const TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
                     ),
-                    segments: const [
-                      ButtonSegment<int>(value: 0, label: Center(child: Text('All'))),
-                      ButtonSegment<int>(value: 1, label: Center(child: Text('Flown'))),
+                    segments:  [
+                      ButtonSegment<int>(value: 0, label: Center(child: Text(tr('All')))),
+                      ButtonSegment<int>(value: 1, label: Center(child: Text(tr('Flown')))),
                     ],
                     selected: {_displaySegment},
                     onSelectionChanged: (Set<int> newSelection) {
@@ -313,7 +319,7 @@ class _AirportRankingCardViewState extends State<_AirportRankingCardView> {
           const Divider(height: 1),
           Expanded(
             child: filteredRankingData.isEmpty
-                ? const Center(child: Text('No data to display.'))
+                ?  Center(child: Text(tr('No data to display.')))
                 : ListView.builder(
               padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
               itemCount: filteredRankingData.length,
@@ -351,7 +357,7 @@ class _AirportRankingCardViewState extends State<_AirportRankingCardView> {
                         radius: 16,
                         backgroundColor: isVisited ? visitedColor : Colors.grey.shade400,
                         child: Text(
-                          rank.toString(),
+                          tr(rank.toString()),
                           style: textTheme.bodyMedium?.copyWith(
                               fontWeight: FontWeight.bold,
                               color: Colors.white,
@@ -373,7 +379,7 @@ class _AirportRankingCardViewState extends State<_AirportRankingCardView> {
                           const SizedBox(width: 4),
                           Expanded(
                               child: Text(
-                                countryName,
+                                tr(countryName),
                                 style: textTheme.bodyMedium
                                     ?.copyWith(color: continentColor, fontWeight: FontWeight.bold),
                                 overflow: TextOverflow.ellipsis,
@@ -533,6 +539,7 @@ class _AirportRankingByFlightsCardState extends State<_AirportRankingByFlightsCa
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final textTheme = Theme.of(context).textTheme;
     final topUses = _maxUsesInPeriod;
 
@@ -549,7 +556,7 @@ class _AirportRankingByFlightsCardState extends State<_AirportRankingByFlightsCa
               children: [
                 Icon(Icons.flight, color: widget.themeColor[800]),
                 const SizedBox(width: 8),
-                Text('Most Visited Airports', style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
+                Text(tr('Most Visited Airports'), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
               ],
             ),
           ),
@@ -576,7 +583,7 @@ class _AirportRankingByFlightsCardState extends State<_AirportRankingByFlightsCa
                         items: _periods
                             .map((String value) => DropdownMenuItem<String>(
                             value: value,
-                            child: Text(value,
+                            child: Text(tr(value),
                                 style: TextStyle(color: widget.themeColor[800], fontWeight: FontWeight.bold))))
                             .toList(),
                         onChanged: (String? newValue) {
@@ -596,9 +603,9 @@ class _AirportRankingByFlightsCardState extends State<_AirportRankingByFlightsCa
                     Expanded(
                       child: SegmentedButton<int>(
                         showSelectedIcon: false,
-                        segments: const [
-                          ButtonSegment<int>(value: 0, label: Text('High')),
-                          ButtonSegment<int>(value: 1, label: Text('Low')),
+                        segments:  [
+                          ButtonSegment<int>(value: 0, label: Text(tr('High'))),
+                          ButtonSegment<int>(value: 1, label: Text(tr('Low'))),
                         ],
                         selected: {_sortOrderSegment},
                         onSelectionChanged: (Set<int> newSelection) => setState(() {
@@ -637,7 +644,7 @@ class _AirportRankingByFlightsCardState extends State<_AirportRankingByFlightsCa
                               _selectedYear--;
                               _prepareList();
                             })),
-                        Text('$_selectedYear',
+                        Text(tr('$_selectedYear'),
                             style: textTheme.titleMedium
                                 ?.copyWith(fontWeight: FontWeight.bold, color: widget.themeColor[800])),
                         IconButton(
@@ -653,7 +660,7 @@ class _AirportRankingByFlightsCardState extends State<_AirportRankingByFlightsCa
                   Padding(
                     padding: const EdgeInsets.only(top: 8.0),
                     child: Text(
-                        'Custom Range: ${DateFormat('yyyy-MM-dd').format(_customStartDate!)} ~ ${DateFormat('yyyy-MM-dd').format(_customEndDate!)}',
+                        tr('Custom Range: ${DateFormat('yyyy-MM-dd').format(_customStartDate!)} ~ ${DateFormat('yyyy-MM-dd').format(_customEndDate!)}'),
                         style: const TextStyle(fontSize: 14, color: Colors.grey, fontStyle: FontStyle.italic)),
                   ),
               ],
@@ -661,10 +668,10 @@ class _AirportRankingByFlightsCardState extends State<_AirportRankingByFlightsCa
           ),
           Expanded(
             child: _rankedAirports.isEmpty
-                ? const Center(
+                ?  Center(
                 child: Padding(
                   padding: EdgeInsets.all(16.0),
-                  child: Text('No valid airport records available.'),
+                  child: Text(tr('No valid airport records available.')),
                 ))
                 : ListView.builder(
               padding: const EdgeInsets.all(8.0),
@@ -682,7 +689,7 @@ class _AirportRankingByFlightsCardState extends State<_AirportRankingByFlightsCa
                         children: [
                           SizedBox(
                               width: 32,
-                              child: Text('#$rank',
+                              child: Text(tr('#$rank'),
                                   style: textTheme.titleSmall
                                       ?.copyWith(color: Colors.grey.shade700, fontWeight: FontWeight.bold))),
                           Expanded(
@@ -698,7 +705,7 @@ class _AirportRankingByFlightsCardState extends State<_AirportRankingByFlightsCa
                             ),
                           ),
                           const SizedBox(width: 12),
-                          Text('$useCount',
+                          Text(tr('$useCount'),
                               style: textTheme.titleLarge
                                   ?.copyWith(fontWeight: FontWeight.bold, color: widget.themeColor[900])),
                         ],
@@ -730,7 +737,7 @@ class _AirportRankingByFlightsCardState extends State<_AirportRankingByFlightsCa
             color: widget.themeColor.withOpacity(0.05),
             padding: const EdgeInsets.symmetric(vertical: 12.0),
             child: Center(
-              child: Text('Average Uses: $_averageUses',
+              child: Text(tr('Average Uses: $_averageUses'),
                   style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: widget.themeColor[800])),
             ),
           ),
@@ -877,6 +884,7 @@ class _AirportYearlyTrendCardState extends State<_AirportYearlyTrendCard> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Container(
       decoration: BoxDecoration(
         color: Colors.white,
@@ -906,7 +914,7 @@ class _AirportYearlyTrendCardState extends State<_AirportYearlyTrendCard> {
                 ),
                 const SizedBox(width: 12),
                 Text(
-                  "Yearly Trend (10 Years)",
+                  tr("Yearly Trend (10 Years)"),
                   style: Theme.of(context).textTheme.titleLarge?.copyWith(
                     fontWeight: FontWeight.bold,
                     fontSize: 20,
@@ -918,7 +926,7 @@ class _AirportYearlyTrendCardState extends State<_AirportYearlyTrendCard> {
             SizedBox(
               height: 220,
               child: _lineChartData.isEmpty
-                  ? const Center(child: Text("No data in the last 10 years."))
+                  ?  Center(child: Text(tr("No data in the last 10 years.")))
                   : LineChart(
                 LineChartData(
                   gridData: FlGridData(
@@ -941,7 +949,7 @@ class _AirportYearlyTrendCardState extends State<_AirportYearlyTrendCard> {
                           return SideTitleWidget(
                             axisSide: meta.axisSide,
                             child: Text(
-                              value.toInt().toString(),
+                              tr(value.toInt().toString()),
                               style: TextStyle(color: Colors.grey[600], fontSize: 12, fontWeight: FontWeight.w500),
                             ),
                           );
@@ -959,7 +967,7 @@ class _AirportYearlyTrendCardState extends State<_AirportYearlyTrendCard> {
                           return SideTitleWidget(
                             axisSide: meta.axisSide,
                             child: Text(
-                              value.toInt().toString().substring(2),
+                              tr(value.toInt().toString().substring(2)),
                               style: TextStyle(fontSize: 12, color: Colors.grey[600], fontWeight: FontWeight.w500),
                             ),
                           );
@@ -1017,7 +1025,7 @@ class _AirportYearlyTrendCardState extends State<_AirportYearlyTrendCard> {
             decoration: BoxDecoration(color: color, borderRadius: BorderRadius.circular(3)),
           ),
           const SizedBox(width: 8),
-          Text(text, style: TextStyle(fontWeight: FontWeight.w600, fontSize: 11, color: Colors.grey[800])),
+          Text(tr(text), style: TextStyle(fontWeight: FontWeight.w600, fontSize: 11, color: Colors.grey[800])),
         ],
       ),
     );

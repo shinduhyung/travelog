@@ -1,172 +1,664 @@
 {
-  "internet_users_penetration_pct": [
+  "schema_version": 1,
+  "dataset_id": "technology",
+  "metadata": {
+    "source_url": null,
+    "reference_period": null,
+    "updated_at": null
+  },
+  "legacy_layout": "sections",
+  "tables": [
     {
-      "iso_a3": "ARE",
-      "internet_users_pct": 99
+      "id": "internet_users_penetration_pct",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "iso_a3"
+      ],
+      "metrics": [
+        {
+          "id": "internet_users_pct",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "iso_a3": "ARE"
+          },
+          "values": {
+            "internet_users_pct": 99
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SAU"
+          },
+          "values": {
+            "internet_users_pct": 99
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NOR"
+          },
+          "values": {
+            "internet_users_pct": 99
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DNK"
+          },
+          "values": {
+            "internet_users_pct": 99
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CHE"
+          },
+          "values": {
+            "internet_users_pct": 99
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KOR"
+          },
+          "values": {
+            "internet_users_pct": 98
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GBR"
+          },
+          "values": {
+            "internet_users_pct": 98
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NLD"
+          },
+          "values": {
+            "internet_users_pct": 98
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SWE"
+          },
+          "values": {
+            "internet_users_pct": 98
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "JPN"
+          },
+          "values": {
+            "internet_users_pct": 97
+          }
+        }
+      ]
     },
     {
-      "iso_a3": "SAU",
-      "internet_users_pct": 99
+      "id": "internet_speed_legacy",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "iso_a3"
+      ],
+      "metrics": [
+        {
+          "id": "internet_speed_mbps",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "iso_a3": "SGP"
+          },
+          "values": {
+            "internet_speed_mbps": 250
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KOR"
+          },
+          "values": {
+            "internet_speed_mbps": 240
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SWE"
+          },
+          "values": {
+            "internet_speed_mbps": 210
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "USA"
+          },
+          "values": {
+            "internet_speed_mbps": 190
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "JPN"
+          },
+          "values": {
+            "internet_speed_mbps": 180
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CHE"
+          },
+          "values": {
+            "internet_speed_mbps": 170
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ESP"
+          },
+          "values": {
+            "internet_speed_mbps": 150
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ROU"
+          },
+          "values": {
+            "internet_speed_mbps": 140
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NLD"
+          },
+          "values": {
+            "internet_speed_mbps": 140
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CAN"
+          },
+          "values": {
+            "internet_speed_mbps": 135
+          }
+        }
+      ]
     },
     {
-      "iso_a3": "NOR",
-      "internet_users_pct": 99
+      "id": "internet_users_total_million",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "iso_a3"
+      ],
+      "metrics": [
+        {
+          "id": "internet_users_million",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "iso_a3": "CHN"
+          },
+          "values": {
+            "internet_users_million": 1050
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IND"
+          },
+          "values": {
+            "internet_users_million": 850
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "USA"
+          },
+          "values": {
+            "internet_users_million": 310
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IDN"
+          },
+          "values": {
+            "internet_users_million": 220
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BRA"
+          },
+          "values": {
+            "internet_users_million": 180
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NGA"
+          },
+          "values": {
+            "internet_users_million": 160
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PAK"
+          },
+          "values": {
+            "internet_users_million": 125
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "RUS"
+          },
+          "values": {
+            "internet_users_million": 120
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "JPN"
+          },
+          "values": {
+            "internet_users_million": 118
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MEX"
+          },
+          "values": {
+            "internet_users_million": 100
+          }
+        }
+      ]
     },
     {
-      "iso_a3": "DNK",
-      "internet_users_pct": 99
+      "id": "facebook_users_2025",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "iso_a3"
+      ],
+      "metrics": [
+        {
+          "id": "facebook_users_million",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "iso_a3": "IND"
+          },
+          "values": {
+            "facebook_users_million": 581.6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "USA"
+          },
+          "values": {
+            "facebook_users_million": 279.8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BRA"
+          },
+          "values": {
+            "facebook_users_million": 175.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IDN"
+          },
+          "values": {
+            "facebook_users_million": 174.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MEX"
+          },
+          "values": {
+            "facebook_users_million": 111.4
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PHL"
+          },
+          "values": {
+            "facebook_users_million": 102.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VNM"
+          },
+          "values": {
+            "facebook_users_million": 86.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "RUS"
+          },
+          "values": {
+            "facebook_users_million": 70.6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TUR"
+          },
+          "values": {
+            "facebook_users_million": 70.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BGD"
+          },
+          "values": {
+            "facebook_users_million": 67.2
+          }
+        }
+      ]
     },
     {
-      "iso_a3": "CHE",
-      "internet_users_pct": 99
+      "id": "instagram_users_2024",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "iso_a3"
+      ],
+      "metrics": [
+        {
+          "id": "instagram_users_million",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "iso_a3": "IND"
+          },
+          "values": {
+            "instagram_users_million": 392.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "USA"
+          },
+          "values": {
+            "instagram_users_million": 172.6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BRA"
+          },
+          "values": {
+            "instagram_users_million": 141.4
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IDN"
+          },
+          "values": {
+            "instagram_users_million": 90.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "RUS"
+          },
+          "values": {
+            "instagram_users_million": 63.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TUR"
+          },
+          "values": {
+            "instagram_users_million": 58.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "JPN"
+          },
+          "values": {
+            "instagram_users_million": 55.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MEX"
+          },
+          "values": {
+            "instagram_users_million": 48.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GBR"
+          },
+          "values": {
+            "instagram_users_million": 34.7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DEU"
+          },
+          "values": {
+            "instagram_users_million": 33.8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ITA"
+          },
+          "values": {
+            "instagram_users_million": 30.7
+          }
+        }
+      ]
     },
     {
-      "iso_a3": "KOR",
-      "internet_users_pct": 98
-    },
-    {
-      "iso_a3": "GBR",
-      "internet_users_pct": 98
-    },
-    {
-      "iso_a3": "NLD",
-      "internet_users_pct": 98
-    },
-    {
-      "iso_a3": "SWE",
-      "internet_users_pct": 98
-    },
-    {
-      "iso_a3": "JPN",
-      "internet_users_pct": 97
+      "id": "youtube_users",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "iso_a3"
+      ],
+      "metrics": [
+        {
+          "id": "users",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "iso_a3": "IND"
+          },
+          "values": {
+            "users": 462000000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "USA"
+          },
+          "values": {
+            "users": 239000000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BRA"
+          },
+          "values": {
+            "users": 144000000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IDN"
+          },
+          "values": {
+            "users": 139000000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MEX"
+          },
+          "values": {
+            "users": 83100000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "JPN"
+          },
+          "values": {
+            "users": 78600000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PAK"
+          },
+          "values": {
+            "users": 71700000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DEU"
+          },
+          "values": {
+            "users": 67800000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VNM"
+          },
+          "values": {
+            "users": 63000000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TUR"
+          },
+          "values": {
+            "users": 57500000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GBR"
+          },
+          "values": {
+            "users": 56200000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FRA"
+          },
+          "values": {
+            "users": 50700000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "EGY"
+          },
+          "values": {
+            "users": 44700000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KOR"
+          },
+          "values": {
+            "users": 44300000
+          }
+        }
+      ]
     }
-  ],
-  "internet_speed_legacy": [
-    {
-      "iso_a3": "SGP",
-      "internet_speed_mbps": 250
-    },
-    {
-      "iso_a3": "KOR",
-      "internet_speed_mbps": 240
-    },
-    {
-      "iso_a3": "SWE",
-      "internet_speed_mbps": 210
-    },
-    {
-      "iso_a3": "USA",
-      "internet_speed_mbps": 190
-    },
-    {
-      "iso_a3": "JPN",
-      "internet_speed_mbps": 180
-    },
-    {
-      "iso_a3": "CHE",
-      "internet_speed_mbps": 170
-    },
-    {
-      "iso_a3": "ESP",
-      "internet_speed_mbps": 150
-    },
-    {
-      "iso_a3": "ROU",
-      "internet_speed_mbps": 140
-    },
-    {
-      "iso_a3": "NLD",
-      "internet_speed_mbps": 140
-    },
-    {
-      "iso_a3": "CAN",
-      "internet_speed_mbps": 135
-    }
-  ],
-  "internet_users_total_million": [
-    {
-      "iso_a3": "CHN",
-      "internet_users_million": 1050
-    },
-    {
-      "iso_a3": "IND",
-      "internet_users_million": 850
-    },
-    {
-      "iso_a3": "USA",
-      "internet_users_million": 310
-    },
-    {
-      "iso_a3": "IDN",
-      "internet_users_million": 220
-    },
-    {
-      "iso_a3": "BRA",
-      "internet_users_million": 180
-    },
-    {
-      "iso_a3": "NGA",
-      "internet_users_million": 160
-    },
-    {
-      "iso_a3": "PAK",
-      "internet_users_million": 125
-    },
-    {
-      "iso_a3": "RUS",
-      "internet_users_million": 120
-    },
-    {
-      "iso_a3": "JPN",
-      "internet_users_million": 118
-    },
-    {
-      "iso_a3": "MEX",
-      "internet_users_million": 100
-    }
-  ],
-
-  "facebook_users_2025": [
-    { "iso_a3": "IND", "facebook_users_million": 581.6 },
-    { "iso_a3": "USA", "facebook_users_million": 279.8 },
-    { "iso_a3": "BRA", "facebook_users_million": 175.1 },
-    { "iso_a3": "IDN", "facebook_users_million": 174.0 },
-    { "iso_a3": "MEX", "facebook_users_million": 111.4 },
-    { "iso_a3": "PHL", "facebook_users_million": 102.3 },
-    { "iso_a3": "VNM", "facebook_users_million": 86.1 },
-    { "iso_a3": "RUS", "facebook_users_million": 70.6 },
-    { "iso_a3": "TUR", "facebook_users_million": 70.3 },
-    { "iso_a3": "BGD", "facebook_users_million": 67.2 }
-  ],
-  "instagram_users_2024": [
-    { "iso_a3": "IND", "instagram_users_million": 392.5 },
-    { "iso_a3": "USA", "instagram_users_million": 172.6 },
-    { "iso_a3": "BRA", "instagram_users_million": 141.4 },
-    { "iso_a3": "IDN", "instagram_users_million": 90.2 },
-    { "iso_a3": "RUS", "instagram_users_million": 63.9 },
-    { "iso_a3": "TUR", "instagram_users_million": 58.3 },
-    { "iso_a3": "JPN", "instagram_users_million": 55.5 },
-    { "iso_a3": "MEX", "instagram_users_million": 48.9 },
-    { "iso_a3": "GBR", "instagram_users_million": 34.7 },
-    { "iso_a3": "DEU", "instagram_users_million": 33.8 },
-    { "iso_a3": "ITA", "instagram_users_million": 30.7 }
-  ],
-
-  "youtube_users": [
-    { "iso_a3": "IND", "users": 462000000 },
-    { "iso_a3": "USA", "users": 239000000 },
-    { "iso_a3": "BRA", "users": 144000000 },
-    { "iso_a3": "IDN", "users": 139000000 },
-    { "iso_a3": "MEX", "users": 83100000 },
-    { "iso_a3": "JPN", "users": 78600000 },
-    { "iso_a3": "PAK", "users": 71700000 },
-    { "iso_a3": "DEU", "users": 67800000 },
-    { "iso_a3": "VNM", "users": 63000000 },
-    { "iso_a3": "TUR", "users": 57500000 },
-    { "iso_a3": "GBR", "users": 56200000 },
-    { "iso_a3": "FRA", "users": 50700000 },
-    { "iso_a3": "EGY", "users": 44700000 },
-    { "iso_a3": "KOR", "users": 44300000 }
   ]
-
 }

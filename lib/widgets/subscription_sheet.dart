@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:in_app_purchase/in_app_purchase.dart';
 import 'package:provider/provider.dart';
 import 'package:jidoapp/services/ad_service.dart';
@@ -78,6 +79,7 @@ class _SubscriptionSheetState extends State<SubscriptionSheet> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Consumer<SubscriptionService>(
       builder: (context, sub, _) {
         if (sub.isPremium) {
@@ -108,8 +110,8 @@ class _SubscriptionSheetState extends State<SubscriptionSheet> {
           const SizedBox(height: 20),
           _logo(),
           const SizedBox(height: 14),
-          const Text(
-            'Travelog Premium',
+           Text(
+            tr('Travelog Premium'),
             style: TextStyle(
               fontSize: 22,
               fontWeight: FontWeight.bold,
@@ -118,9 +120,9 @@ class _SubscriptionSheetState extends State<SubscriptionSheet> {
           ),
           const SizedBox(height: 6),
           Text(
-            sub.isLifetime
+            tr(sub.isLifetime
                 ? 'You have lifetime Premium access ✓'
-                : 'You are subscribed to Premium ✓',
+                : 'You are subscribed to Premium ✓'),
             style: TextStyle(fontSize: 14, color: Colors.grey[600]),
             textAlign: TextAlign.center,
           ),
@@ -133,7 +135,7 @@ class _SubscriptionSheetState extends State<SubscriptionSheet> {
               borderRadius: BorderRadius.circular(14),
               border: Border.all(color: const Color(0xFF3DDAD7)),
             ),
-            child: const Row(
+            child:  Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(
@@ -143,7 +145,7 @@ class _SubscriptionSheetState extends State<SubscriptionSheet> {
                 ),
                 SizedBox(width: 8),
                 Text(
-                  'Premium Active',
+                  tr('Premium Active'),
                   style: TextStyle(
                     color: Color(0xFF3DDAD7),
                     fontWeight: FontWeight.bold,
@@ -177,7 +179,7 @@ class _SubscriptionSheetState extends State<SubscriptionSheet> {
             ),
             const SizedBox(height: 8),
             Text(
-              'One-time payment for lifetime access. Your current subscription won\'t cancel automatically — cancel it separately in your ${Platform.isIOS ? 'App Store' : 'Play Store'} subscriptions to avoid being charged for both.',
+              tr('One-time payment for lifetime access. Your current subscription won\'t cancel automatically — cancel it separately in your ${Platform.isIOS ? 'App Store' : 'Play Store'} subscriptions to avoid being charged for both.'),
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 11,
@@ -231,8 +233,8 @@ class _SubscriptionSheetState extends State<SubscriptionSheet> {
             const SizedBox(height: 20),
             _logo(),
             const SizedBox(height: 14),
-            const Text(
-              'Travelog Premium',
+             Text(
+              tr('Travelog Premium'),
               style: TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
@@ -241,7 +243,7 @@ class _SubscriptionSheetState extends State<SubscriptionSheet> {
             ),
             const SizedBox(height: 6),
             Text(
-              'Unlock everything, ad-free',
+              tr('Unlock everything, ad-free'),
               style: TextStyle(fontSize: 14, color: Colors.grey[600]),
               textAlign: TextAlign.center,
             ),
@@ -311,7 +313,7 @@ class _SubscriptionSheetState extends State<SubscriptionSheet> {
             // Auto-renew / one-time disclosure — required by store policy,
             // wording changes with the selected plan.
             Text(
-              _disclosureText(),
+              tr(_disclosureText()),
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 11,
@@ -324,7 +326,7 @@ class _SubscriptionSheetState extends State<SubscriptionSheet> {
             TextButton(
               onPressed: sub.isLoading ? null : () => sub.restorePurchases(),
               child: Text(
-                'Restore Purchases',
+                tr('Restore Purchases'),
                 style: TextStyle(fontSize: 12, color: Colors.grey[500]),
               ),
             ),
@@ -435,7 +437,7 @@ class _BenefitRow extends StatelessWidget {
 
     final word = highlightWord;
     if (word == null || !label.contains(word)) {
-      return Text(label, style: baseStyle);
+      return Text(tr(label), style: baseStyle);
     }
 
     final idx = label.indexOf(word);
@@ -447,12 +449,12 @@ class _BenefitRow extends StatelessWidget {
       text: TextSpan(
         style: baseStyle,
         children: [
-          TextSpan(text: before),
+          TextSpan(text: tr(before)),
           TextSpan(
-            text: match,
+            text: tr(match),
             style: TextStyle(color: color, fontWeight: FontWeight.w800),
           ),
-          TextSpan(text: after),
+          TextSpan(text: tr(after)),
         ],
       ),
     );
@@ -460,6 +462,7 @@ class _BenefitRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Row(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
@@ -483,7 +486,7 @@ class _BenefitRow extends StatelessWidget {
               borderRadius: BorderRadius.circular(20),
             ),
             child: Text(
-              tag!,
+              tr(tag!),
               style: const TextStyle(
                 fontSize: 10,
                 fontWeight: FontWeight.w900,
@@ -510,6 +513,7 @@ class _PlanSwitch extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Container(
       padding: const EdgeInsets.all(4),
       decoration: BoxDecoration(
@@ -548,7 +552,7 @@ class _PlanSwitch extends StatelessWidget {
                 : null,
           ),
           child: Text(
-            label,
+            tr(label),
             textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 13,
@@ -666,6 +670,7 @@ class _PlanHeroCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final bool vivid = theme.vivid;
     final bool isYearly = choice == _PlanChoice.yearly;
 
@@ -721,7 +726,7 @@ class _PlanHeroCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            _label,
+            tr(_label),
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
             style: TextStyle(
@@ -732,7 +737,7 @@ class _PlanHeroCard extends StatelessWidget {
           ),
           const SizedBox(height: 2),
           Text(
-            _tagline,
+            tr(_tagline),
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
             style: TextStyle(fontSize: 12.5, color: taglineColor),
@@ -743,7 +748,7 @@ class _PlanHeroCard extends StatelessWidget {
             textBaseline: TextBaseline.alphabetic,
             children: [
               Text(
-                details?.price ?? '—',
+                tr(details?.price ?? '—'),
                 style: TextStyle(
                   fontSize: 34,
                   fontWeight: FontWeight.w800,
@@ -752,7 +757,7 @@ class _PlanHeroCard extends StatelessWidget {
               ),
               const SizedBox(width: 6),
               Text(
-                _priceSuffix,
+                tr(_priceSuffix),
                 style: TextStyle(fontSize: 13, color: suffixColor),
               ),
             ],
@@ -778,7 +783,7 @@ class _PlanHeroCard extends StatelessWidget {
                             borderRadius: BorderRadius.circular(20),
                           ),
                           child: Text(
-                            '-$savingsPercent% OFF',
+                            tr('-$savingsPercent% OFF'),
                             style: const TextStyle(
                               fontSize: 12,
                               fontWeight: FontWeight.w800,
@@ -791,7 +796,7 @@ class _PlanHeroCard extends StatelessWidget {
                           const SizedBox(width: 8),
                           Flexible(
                             child: Text(
-                              originalAnnual,
+                              tr(originalAnnual),
                               maxLines: 1,
                               overflow: TextOverflow.ellipsis,
                               style: TextStyle(
@@ -877,8 +882,8 @@ class _PlanHeroCard extends StatelessWidget {
                 ),
               ],
             ),
-            child: const Text(
-              'MOST POPULAR',
+            child:  Text(
+              tr('MOST POPULAR'),
               style: TextStyle(
                 fontSize: 10,
                 fontWeight: FontWeight.w800,
@@ -940,6 +945,7 @@ class _CardBorderState extends State<_CardBorder>
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final Widget inner = ClipRRect(
       borderRadius: BorderRadius.circular(
         widget.borderRadius - widget.borderWidth,
@@ -1011,6 +1017,7 @@ class _GradientGlowButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(14),
@@ -1063,7 +1070,7 @@ class _GradientGlowButton extends StatelessWidget {
                       ),
                     )
                   : Text(
-                      label,
+                      tr(label),
                       style: const TextStyle(
                         fontSize: 15,
                         fontWeight: FontWeight.bold,

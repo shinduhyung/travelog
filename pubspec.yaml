@@ -10,6 +10,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
 
   # Core & UI
   cupertino_icons: ^1.0.8
@@ -17,6 +19,7 @@ dependencies:
   video_player: ^2.8.6
   provider: ^6.1.2
   shared_preferences: ^2.2.3
+  intl: ^0.20.2
   fluttertoast: ^8.2.5
   google_fonts: ^6.2.1
   blur: ^3.1.0
@@ -122,6 +125,8 @@ flutter:
   uses-material-design: true
 
   assets:
+    - assets/l10n/ko.json
+    - assets/l10n/countries_ko.json
     - .env
     - assets/custom.geo.json
     - assets/admin1_regions.geojson

@@ -1,6 +1,7 @@
 // lib/screens/trip_log_detail_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:jidoapp/models/trip_log_entry.dart';
 import 'package:jidoapp/providers/trip_log_provider.dart';
 import 'package:jidoapp/screens/edit_trip_log_screen.dart';
@@ -92,6 +93,7 @@ class _TripLogDetailScreenState extends State<TripLogDetailScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     // Updated: Use loaded state instead of Consumer
     if (_isLoading || _controller == null) {
       return Scaffold(
@@ -101,8 +103,8 @@ class _TripLogDetailScreenState extends State<TripLogDetailScreen> {
     }
 
     if (_entry == null) {
-      return const Scaffold(
-        body: Center(child: Text("Unable to find this entry.")),
+      return  Scaffold(
+        body: Center(child: Text(tr("Unable to find this entry."))),
       );
     }
 
@@ -144,7 +146,7 @@ class _TripLogDetailScreenState extends State<TripLogDetailScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              DateFormat.yMMMMd('en_US').add_jm().format(entry.date),
+              tr(DateFormat.yMMMMd(AppLocale.instance.locale.languageCode).add_jm().format(entry.date)),
               style: const TextStyle(
                 color: Colors.black54,
                 fontSize: 14,

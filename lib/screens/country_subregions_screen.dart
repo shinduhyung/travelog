@@ -1,6 +1,7 @@
 // lib/screens/country_subregions_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:jidoapp/models/country_model.dart';
@@ -88,7 +89,7 @@ class _CountrySubregionsScreenState extends State<CountrySubregionsScreen> {
       developer.log('Error loading subregion GeoJSON: $e', name: 'SubregionMapScreen');
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Error loading map data: $e. Make sure $assetPath exists.')),
+          SnackBar(content: Text(tr('Error loading map data: $e. Make sure $assetPath exists.'))),
         );
       }
     }
@@ -100,26 +101,27 @@ class _CountrySubregionsScreenState extends State<CountrySubregionsScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     // 🆕 SubregionProvider를 사용하여 상태 관리 (Consumer는 지도와 리스트에서 각각 사용)
     final subregionProvider = Provider.of<SubregionProvider>(context, listen: false);
 
     if (subregionProvider.isLoading) {
       return Scaffold(
-        appBar: AppBar(title: Text(widget.country.name)),
+        appBar: AppBar(title: Text(tr(widget.country.name))),
         body: const Center(child: CircularProgressIndicator()),
       );
     }
 
     if (_subregionNameList.isEmpty) {
       return Scaffold(
-        appBar: AppBar(title: Text(widget.country.name)),
-        body: const Center(child: Text('No subregion data available.')),
+        appBar: AppBar(title: Text(tr(widget.country.name))),
+        body:  Center(child: Text(tr('No subregion data available.'))),
       );
     }
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.country.name),
+        title: Text(tr(widget.country.name)),
       ),
       // 🆕 Stack을 사용하여 지도를 배경에, 체크리스트를 위에 띄움
       body: Stack(
@@ -185,7 +187,7 @@ class _CountrySubregionsScreenState extends State<CountrySubregionsScreen> {
                     Padding(
                       padding: const EdgeInsets.fromLTRB(16, 12, 16, 8),
                       child: Text(
-                        'Visited States',
+                        tr('Visited States'),
                         style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
                       ),
                     ),

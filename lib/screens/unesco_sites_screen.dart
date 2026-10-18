@@ -1,6 +1,7 @@
 // lib/screens/unesco_sites_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'dart:io';
@@ -284,12 +285,12 @@ class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
                               children: [
                                 TextButton(
                                   onPressed: () => Navigator.pop(sheetContext),
-                                  child: const Text('Cancel', style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600)),
+                                  child:  Text(tr('Cancel'), style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600)),
                                 ),
                                 ElevatedButton(
                                   onPressed: () => Navigator.pop(sheetContext),
                                   style: ElevatedButton.styleFrom(backgroundColor: headerTextColor),
-                                  child: Text('Done', style: TextStyle(fontWeight: FontWeight.w600, color: themeColor)),
+                                  child: Text(tr('Done'), style: TextStyle(fontWeight: FontWeight.w600, color: themeColor)),
                                 ),
                               ],
                             ),
@@ -335,7 +336,7 @@ class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
                               Padding(
                                 padding: const EdgeInsets.only(top: 12.0),
                                 child: Text(
-                                  "$visitedSubCount / $totalSubCount visited",
+                                  tr("$visitedSubCount / $totalSubCount visited"),
                                   style: Theme.of(sheetContext).textTheme.bodyMedium?.copyWith(
                                     color: headerTextColor.withOpacity(0.9),
                                     fontWeight: FontWeight.bold,
@@ -358,7 +359,7 @@ class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
                           children: [
                             Row(
                               children: [
-                                const Text('Wishlist: '),
+                                 Text(tr('Wishlist: ')),
                                 IconButton(
                                   icon: Icon(isWishlisted ? Icons.favorite : Icons.favorite_border, color: isWishlisted ? Colors.red : Colors.grey),
                                   onPressed: () => provider.toggleWishlistStatus(freshSite.name),
@@ -367,7 +368,7 @@ class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
                             ),
                             Row(
                               children: [
-                                const Text('My Rating: '),
+                                 Text(tr('My Rating: ')),
                                 RatingBar.builder(
                                   initialRating: freshSite.rating ?? 0.0,
                                   minRating: 0,
@@ -386,7 +387,7 @@ class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
                         if (totalSubCount > 1) ...[
                           Align(
                             alignment: Alignment.centerLeft,
-                            child: Text("Components / Locations", style: Theme.of(sheetContext).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
+                            child: Text(tr("Components / Locations"), style: Theme.of(sheetContext).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
                           ),
                           const SizedBox(height: 4),
                           Container(
@@ -411,7 +412,7 @@ class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
                         ],
                         OutlinedButton.icon(
                           icon: const Icon(Icons.add),
-                          label: const Text('Add Visit'),
+                          label:  Text(tr('Add Visit')),
                           onPressed: () => provider.addVisitDate(freshSite.name),
                         ),
                         const SizedBox(height: 10),
@@ -448,6 +449,7 @@ class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final countryProvider = context.read<CountryProvider>();
 
     return Consumer<UnescoProvider>(
@@ -463,7 +465,7 @@ class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
             child: isLoading
                 ? const Center(child: CircularProgressIndicator())
                 : (provider.allSites.isEmpty
-                ? const Center(child: Text('No UNESCO Sites Loaded'))
+                ?  Center(child: Text(tr('No UNESCO Sites Loaded')))
                 : _buildBody(context, provider, groupedItems, sortedGroupKeys)),
           ),
         );
@@ -539,7 +541,7 @@ class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
                         headerBadge = const Icon(Icons.flag, size: 20, color: Colors.grey);
                       }
                     } else {
-                      headerBadge = Text('${groupItems.length}', style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: mainThemeColor));
+                      headerBadge = Text(tr('${groupItems.length}'), style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: mainThemeColor));
                     }
 
                     final bool isExpanded = _expandedGroupIndex == index;
@@ -573,9 +575,9 @@ class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
                                 Expanded(
                                   child: Row(
                                     children: [
-                                      Flexible(child: Text(groupKey, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16), overflow: TextOverflow.ellipsis)),
+                                      Flexible(child: Text(tr(groupKey), style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16), overflow: TextOverflow.ellipsis)),
                                       const SizedBox(width: 8),
-                                      Text('($visitedInGroup/${groupItems.length})', style: TextStyle(color: Colors.grey[600], fontSize: 14, fontWeight: FontWeight.w500)),
+                                      Text(tr('($visitedInGroup/${groupItems.length})'), style: TextStyle(color: Colors.grey[600], fontSize: 14, fontWeight: FontWeight.w500)),
                                     ],
                                   ),
                                 ),
@@ -604,7 +606,7 @@ class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
                     Icon(Icons.search, size: 60, color: Colors.grey[300]),
                     const SizedBox(height: 16),
                     Text(
-                      "Search to find UNESCO sites",
+                      tr("Search to find UNESCO sites"),
                       style: TextStyle(color: Colors.grey[500], fontSize: 16),
                     ),
                   ],
@@ -668,7 +670,7 @@ class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
               children: [
                 Icon(Icons.history_edu, color: themeColor),
                 const SizedBox(width: 8),
-                const Text("Visit Log", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                 Text(tr("Visit Log"), style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
                 if (_isLogExpanded) ...[
                   const SizedBox(width: 12),
                   Container(
@@ -687,9 +689,9 @@ class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
                         onChanged: (LogGroupOption? newValue) {
                           if (newValue != null) setState(() => _logGroupOption = newValue);
                         },
-                        items: const [
-                          DropdownMenuItem(value: LogGroupOption.year, child: Text('By Year')),
-                          DropdownMenuItem(value: LogGroupOption.country, child: Text('By Country')),
+                        items:  [
+                          DropdownMenuItem(value: LogGroupOption.year, child: Text(tr('By Year'))),
+                          DropdownMenuItem(value: LogGroupOption.country, child: Text(tr('By Country'))),
                         ],
                       ),
                     ),
@@ -723,7 +725,7 @@ class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
                     children: [
                       Padding(
                         padding: const EdgeInsets.fromLTRB(16, 12, 16, 4),
-                        child: Text(key, style: TextStyle(fontWeight: FontWeight.bold, color: themeColor)),
+                        child: Text(tr(key), style: TextStyle(fontWeight: FontWeight.bold, color: themeColor)),
                       ),
                       ...items.map((log) => _buildLogItem(log, themeColor)).toList(),
                       if (index < sortedLogKeys.length - 1) const Divider(height: 1),
@@ -775,12 +777,12 @@ class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
                         SizedBox(width: 16, height: 12, child: CountryFlag.fromCountryCode(isoA2)),
                         const SizedBox(width: 6),
                       ],
-                      Text(countryName, style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: Colors.white)),
+                      Text(tr(countryName), style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: Colors.white)),
                     ],
                   ),
                 ),
                 const Spacer(),
-                Text("${items.length} visits", style: TextStyle(color: themeColor, fontWeight: FontWeight.bold, fontSize: 12)),
+                Text(tr("${items.length} visits"), style: TextStyle(color: themeColor, fontWeight: FontWeight.bold, fontSize: 12)),
               ],
             ),
           ),
@@ -815,15 +817,15 @@ class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
       title: Text(item.site.name, maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontWeight: FontWeight.w600)),
       subtitle: Row(
         children: [
-          Text(dateStr, style: const TextStyle(fontSize: 12)),
+          Text(tr(dateStr), style: const TextStyle(fontSize: 12)),
           const SizedBox(width: 8),
           Container(width: 1, height: 10, color: Colors.grey),
           const SizedBox(width: 8),
-          Text("${item.nthVisit}$ordinal visit", style: const TextStyle(fontSize: 12, color: Colors.blueGrey)),
+          Text(tr("${item.nthVisit}$ordinal visit"), style: const TextStyle(fontSize: 12, color: Colors.blueGrey)),
         ],
       ),
       trailing: item.site.rating != null && item.site.rating! > 0
-          ? Row(mainAxisSize: MainAxisSize.min, children: [const Icon(Icons.star, size: 14, color: Colors.amber), Text(item.site.rating!.toStringAsFixed(1), style: const TextStyle(fontSize: 12, fontWeight: FontWeight.bold))])
+          ? Row(mainAxisSize: MainAxisSize.min, children: [const Icon(Icons.star, size: 14, color: Colors.amber), Text(tr(item.site.rating!.toStringAsFixed(1)), style: const TextStyle(fontSize: 12, fontWeight: FontWeight.bold))])
           : null,
       onTap: () => _navigateToDetailsModal(context, item.site),
     );
@@ -843,7 +845,7 @@ class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
               textBaseline: TextBaseline.alphabetic,
               children: [
                 Text(
-                  'UNESCO',
+                  tr('UNESCO'),
                   style: TextStyle(
                     fontSize: 34,
                     fontWeight: FontWeight.w900,
@@ -867,7 +869,7 @@ class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
                 const SizedBox(width: 8),
                 Expanded(
                   child: Text(
-                    'World Heritage',
+                    tr('World Heritage'),
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w600,
@@ -923,7 +925,7 @@ class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
                   text: TextSpan(
                     children: [
                       TextSpan(
-                        text: '$visitedCount',
+                        text: tr('$visitedCount'),
                         style: TextStyle(
                           fontSize: 22,
                           fontWeight: FontWeight.w800,
@@ -932,7 +934,7 @@ class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
                         ),
                       ),
                       TextSpan(
-                        text: ' / $totalCount',
+                        text: tr(' / $totalCount'),
                         style: TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.w500,
@@ -944,7 +946,7 @@ class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
                 ),
                 const SizedBox(height: 2),
                 Text(
-                  'sites explored',
+                  tr('sites explored'),
                   style: TextStyle(
                     fontSize: 11,
                     color: Colors.grey[500],
@@ -964,7 +966,7 @@ class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Text(
-                  '${(percentage * 100).toStringAsFixed(1)}%',
+                  tr('${(percentage * 100).toStringAsFixed(1)}%'),
                   style: TextStyle(
                     fontSize: 13,
                     fontWeight: FontWeight.w700,
@@ -1028,14 +1030,14 @@ class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
                           children: [
                             Container(padding: const EdgeInsets.all(8), decoration: BoxDecoration(gradient: LinearGradient(colors: [themeColor, themeColor.withOpacity(0.7)]), borderRadius: BorderRadius.circular(12)), child: const Icon(Icons.emoji_events_rounded, size: 20, color: Colors.white)),
                             const SizedBox(width: 12),
-                            const Text('My Progress', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.black87, letterSpacing: -0.3)),
+                             Text(tr('My Progress'), style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.black87, letterSpacing: -0.3)),
                           ],
                         ),
                         const SizedBox(height: 4),
-                        Padding(padding: const EdgeInsets.only(left: 52), child: Text('Keep exploring!', style: TextStyle(fontSize: 12, color: Colors.grey[600], fontWeight: FontWeight.w500))),
+                        Padding(padding: const EdgeInsets.only(left: 52), child: Text(tr('Keep exploring!'), style: TextStyle(fontSize: 12, color: Colors.grey[600], fontWeight: FontWeight.w500))),
                       ],
                     ),
-                    Container(padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10), decoration: BoxDecoration(gradient: LinearGradient(colors: [themeColor.withOpacity(0.15), themeColor.withOpacity(0.08)]), borderRadius: BorderRadius.circular(20), border: Border.all(color: themeColor.withOpacity(0.2), width: 1.5)), child: Text('${(percentage * 100).toStringAsFixed(0)}%', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: themeColor, letterSpacing: -0.5))),
+                    Container(padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10), decoration: BoxDecoration(gradient: LinearGradient(colors: [themeColor.withOpacity(0.15), themeColor.withOpacity(0.08)]), borderRadius: BorderRadius.circular(20), border: Border.all(color: themeColor.withOpacity(0.2), width: 1.5)), child: Text(tr('${(percentage * 100).toStringAsFixed(0)}%'), style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: themeColor, letterSpacing: -0.5))),
                   ],
                 ),
                 const SizedBox(height: 24),
@@ -1049,8 +1051,8 @@ class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Row(children: [Container(width: 8, height: 8, decoration: BoxDecoration(shape: BoxShape.circle, color: themeColor)), const SizedBox(width: 8), Text('$visitedCount visited', style: TextStyle(fontSize: 13, color: Colors.grey[700], fontWeight: FontWeight.w600))]),
-                    Text('$totalCount sites', style: TextStyle(fontSize: 13, color: Colors.grey[600], fontWeight: FontWeight.w500)),
+                    Row(children: [Container(width: 8, height: 8, decoration: BoxDecoration(shape: BoxShape.circle, color: themeColor)), const SizedBox(width: 8), Text(tr('$visitedCount visited'), style: TextStyle(fontSize: 13, color: Colors.grey[700], fontWeight: FontWeight.w600))]),
+                    Text(tr('$totalCount sites'), style: TextStyle(fontSize: 13, color: Colors.grey[600], fontWeight: FontWeight.w500)),
                   ],
                 ),
               ],
@@ -1069,7 +1071,7 @@ class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
           decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(16), boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.04), blurRadius: 8, offset: const Offset(0, 2))]),
           child: TextField(
             controller: _searchController,
-            decoration: InputDecoration(hintText: 'Search sites or countries...', hintStyle: TextStyle(color: Colors.grey[400], fontSize: 15), prefixIcon: Icon(Icons.search, color: Colors.grey[400]), border: OutlineInputBorder(borderRadius: BorderRadius.circular(16), borderSide: BorderSide.none), contentPadding: const EdgeInsets.symmetric(vertical: 16, horizontal: 20), filled: true, fillColor: Colors.white, suffixIcon: _searchController.text.isNotEmpty ? IconButton(icon: Icon(Icons.clear, color: Colors.grey[400]), onPressed: () => _searchController.clear()) : null),
+            decoration: InputDecoration(hintText: tr('Search sites or countries...'), hintStyle: TextStyle(color: Colors.grey[400], fontSize: 15), prefixIcon: Icon(Icons.search, color: Colors.grey[400]), border: OutlineInputBorder(borderRadius: BorderRadius.circular(16), borderSide: BorderSide.none), contentPadding: const EdgeInsets.symmetric(vertical: 16, horizontal: 20), filled: true, fillColor: Colors.white, suffixIcon: _searchController.text.isNotEmpty ? IconButton(icon: Icon(Icons.clear, color: Colors.grey[400]), onPressed: () => _searchController.clear()) : null),
           ),
         ),
         const SizedBox(height: 12),
@@ -1083,10 +1085,10 @@ class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
               borderRadius: BorderRadius.circular(12),
               icon: Icon(Icons.keyboard_arrow_down, color: Colors.grey[600]),
               onChanged: (SiteSortOption? newValue) { if (newValue != null) setState(() { _sortOption = newValue; _filterAndSortList(); }); },
-              items: const [
-                DropdownMenuItem(value: SiteSortOption.nameAsc, child: Text('Name', style: TextStyle(fontSize: 14))),
-                DropdownMenuItem(value: SiteSortOption.countryAsc, child: Text('Country', style: TextStyle(fontSize: 14))),
-                DropdownMenuItem(value: SiteSortOption.inscriptionYearAsc, child: Text('Inscription Year', style: TextStyle(fontSize: 14))),
+              items:  [
+                DropdownMenuItem(value: SiteSortOption.nameAsc, child: Text(tr('Name'), style: TextStyle(fontSize: 14))),
+                DropdownMenuItem(value: SiteSortOption.countryAsc, child: Text(tr('Country'), style: TextStyle(fontSize: 14))),
+                DropdownMenuItem(value: SiteSortOption.inscriptionYearAsc, child: Text(tr('Inscription Year'), style: TextStyle(fontSize: 14))),
               ],
             ),
           ),
@@ -1095,12 +1097,12 @@ class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
         Row(
           children: [
             Wrap(spacing: 8.0, children: [
-              FilterChip(label: const Text('Cult.', style: TextStyle(fontSize: 12)), selected: _showCultural, onSelected: (val) => setState(() { _showCultural = val; _filterAndSortList(); }), visualDensity: VisualDensity.compact, selectedColor: Colors.orange.withOpacity(0.2), checkmarkColor: Colors.orange, backgroundColor: Colors.white, side: BorderSide(color: _showCultural ? Colors.orange : Colors.grey[200]!)),
-              FilterChip(label: const Text('Nat.', style: TextStyle(fontSize: 12)), selected: _showNatural, onSelected: (val) => setState(() { _showNatural = val; _filterAndSortList(); }), visualDensity: VisualDensity.compact, selectedColor: Colors.green.withOpacity(0.2), checkmarkColor: Colors.green, backgroundColor: Colors.white, side: BorderSide(color: _showNatural ? Colors.green : Colors.grey[200]!)),
-              FilterChip(label: const Text('Mix', style: TextStyle(fontSize: 12)), selected: _showMixed, onSelected: (val) => setState(() { _showMixed = val; _filterAndSortList(); }), visualDensity: VisualDensity.compact, selectedColor: Colors.teal.withOpacity(0.2), checkmarkColor: Colors.teal, backgroundColor: Colors.white, side: BorderSide(color: _showMixed ? Colors.teal : Colors.grey[200]!)),
+              FilterChip(label:  Text(tr('Cult.'), style: TextStyle(fontSize: 12)), selected: _showCultural, onSelected: (val) => setState(() { _showCultural = val; _filterAndSortList(); }), visualDensity: VisualDensity.compact, selectedColor: Colors.orange.withOpacity(0.2), checkmarkColor: Colors.orange, backgroundColor: Colors.white, side: BorderSide(color: _showCultural ? Colors.orange : Colors.grey[200]!)),
+              FilterChip(label:  Text(tr('Nat.'), style: TextStyle(fontSize: 12)), selected: _showNatural, onSelected: (val) => setState(() { _showNatural = val; _filterAndSortList(); }), visualDensity: VisualDensity.compact, selectedColor: Colors.green.withOpacity(0.2), checkmarkColor: Colors.green, backgroundColor: Colors.white, side: BorderSide(color: _showNatural ? Colors.green : Colors.grey[200]!)),
+              FilterChip(label:  Text(tr('Mix'), style: TextStyle(fontSize: 12)), selected: _showMixed, onSelected: (val) => setState(() { _showMixed = val; _filterAndSortList(); }), visualDensity: VisualDensity.compact, selectedColor: Colors.teal.withOpacity(0.2), checkmarkColor: Colors.teal, backgroundColor: Colors.white, side: BorderSide(color: _showMixed ? Colors.teal : Colors.grey[200]!)),
             ]),
             const Spacer(),
-            FilterChip(label: const Text('Visited', style: TextStyle(fontSize: 13)), selected: _showVisitedOnly, onSelected: (bool selected) => setState(() { _showVisitedOnly = selected; _filterAndSortList(); }), backgroundColor: Colors.white, selectedColor: themeColor.withOpacity(0.15), checkmarkColor: themeColor, side: BorderSide(color: Colors.grey[200]!), labelStyle: TextStyle(color: _showVisitedOnly ? themeColor : Colors.grey[700], fontWeight: _showVisitedOnly ? FontWeight.bold : FontWeight.normal)),
+            FilterChip(label:  Text(tr('Visited'), style: TextStyle(fontSize: 13)), selected: _showVisitedOnly, onSelected: (bool selected) => setState(() { _showVisitedOnly = selected; _filterAndSortList(); }), backgroundColor: Colors.white, selectedColor: themeColor.withOpacity(0.15), checkmarkColor: themeColor, side: BorderSide(color: Colors.grey[200]!), labelStyle: TextStyle(color: _showVisitedOnly ? themeColor : Colors.grey[700], fontWeight: _showVisitedOnly ? FontWeight.bold : FontWeight.normal)),
           ],
         ),
       ],
@@ -1110,7 +1112,7 @@ class _UnescoSitesScreenState extends State<UnescoSitesScreen> {
   Future<void> _handleSiteToggle(BuildContext context, UnescoSite item, bool isVisited, UnescoProvider provider) async {
     if (isVisited) {
       if (item.visitDates.isNotEmpty) {
-        final confirm = await showDialog<bool>(context: context, builder: (context) => AlertDialog(title: const Text('Confirm Removal'), content: Text('Are you sure you want to remove all visit records for ${item.name}?'), actions: [TextButton(onPressed: () => Navigator.pop(context, false), child: const Text('Cancel')), TextButton(onPressed: () => Navigator.pop(context, true), child: const Text('Yes, Remove', style: TextStyle(color: Colors.red)))]));
+        final confirm = await showDialog<bool>(context: context, builder: (context) => AlertDialog(title:  Text(tr('Confirm Removal')), content: Text(tr('Are you sure you want to remove all visit records for ${item.name}?')), actions: [TextButton(onPressed: () => Navigator.pop(context, false), child:  Text(tr('Cancel'))), TextButton(onPressed: () => Navigator.pop(context, true), child:  Text(tr('Yes, Remove'), style: TextStyle(color: Colors.red)))]));
         if (confirm == true) provider.toggleVisitedStatus(item.name);
       } else {
         provider.toggleVisitedStatus(item.name);
@@ -1352,6 +1354,7 @@ class _UnescoVisitEditorCardState extends State<_UnescoVisitEditorCard> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final themeColor = Theme.of(context).primaryColor;
     return Card(
       elevation: 1, margin: const EdgeInsets.symmetric(vertical: 4),
@@ -1359,18 +1362,18 @@ class _UnescoVisitEditorCardState extends State<_UnescoVisitEditorCard> {
       child: ExpansionTile(
         controller: _expansionTileController,
         initiallyExpanded: _isEditing,
-        title: Text(_displayTitle.isNotEmpty ? _displayTitle : 'Visit Record',
+        title: Text(tr(_displayTitle.isNotEmpty ? _displayTitle : 'Visit Record'),
             style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15)),
-        subtitle: Text('Date: $_year-$_month-$_day', style: TextStyle(color: Colors.grey[600], fontSize: 13)),
+        subtitle: Text(tr('Date: $_year-$_month-$_day'), style: TextStyle(color: Colors.grey[600], fontSize: 13)),
         trailing: IconButton(
           icon: const Icon(Icons.delete_outline, color: Colors.red, size: 22),
           onPressed: () => showDialog(context: context, builder: (ctx) => AlertDialog(
-              title: const Text('Delete Visit Record'),
-              content: const Text('Are you sure you want to delete this visit record?'),
+              title:  Text(tr('Delete Visit Record')),
+              content:  Text(tr('Are you sure you want to delete this visit record?')),
               actions: [
-                TextButton(onPressed: () => Navigator.pop(ctx), child: const Text('Cancel')),
+                TextButton(onPressed: () => Navigator.pop(ctx), child:  Text(tr('Cancel'))),
                 TextButton(onPressed: () { Navigator.pop(ctx); widget.onDelete(); },
-                    child: const Text('Delete', style: TextStyle(color: Colors.red))),
+                    child:  Text(tr('Delete'), style: TextStyle(color: Colors.red))),
               ])),
         ),
         children: [Container(
@@ -1380,27 +1383,27 @@ class _UnescoVisitEditorCardState extends State<_UnescoVisitEditorCard> {
           child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             if (_isEditing) ...[
               Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                Text('Visit Date: $_year-$_month-$_day', style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14)),
-                TextButton.icon(icon: const Icon(Icons.edit_calendar, size: 18), label: const Text('Edit Date'),
+                Text(tr('Visit Date: $_year-$_month-$_day'), style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14)),
+                TextButton.icon(icon: const Icon(Icons.edit_calendar, size: 18), label:  Text(tr('Edit Date')),
                     onPressed: () => _selectDate(context),
                     style: TextButton.styleFrom(visualDensity: VisualDensity.compact)),
               ]),
               const SizedBox(height: 12),
               TextField(controller: _titleController,
-                  decoration: InputDecoration(labelText: 'Title', isDense: true, filled: true, fillColor: Colors.white,
+                  decoration: InputDecoration(labelText: tr('Title'), isDense: true, filled: true, fillColor: Colors.white,
                       border: OutlineInputBorder(borderRadius: BorderRadius.circular(8), borderSide: BorderSide.none))),
               const SizedBox(height: 12),
               TextField(controller: _memoController, maxLines: 3, minLines: 1,
-                  decoration: InputDecoration(labelText: 'Memo', isDense: true, filled: true, fillColor: Colors.white,
+                  decoration: InputDecoration(labelText: tr('Memo'), isDense: true, filled: true, fillColor: Colors.white,
                       border: OutlineInputBorder(borderRadius: BorderRadius.circular(8), borderSide: BorderSide.none))),
             ] else if (_displayMemo.isNotEmpty)
               Padding(padding: const EdgeInsets.only(bottom: 12),
-                  child: Text(_displayMemo, style: TextStyle(fontSize: 14, color: Colors.grey[800], height: 1.4))),
+                  child: Text(tr(_displayMemo), style: TextStyle(fontSize: 14, color: Colors.grey[800], height: 1.4))),
 
             const SizedBox(height: 12),
 
             if (widget.availableLocations != null && widget.availableLocations!.isNotEmpty) ...[
-              const Text("Locations included in this visit:",
+               Text(tr("Locations included in this visit:"),
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Colors.grey)),
               const SizedBox(height: 4),
               IgnorePointer(ignoring: !_isEditing,
@@ -1434,14 +1437,14 @@ class _UnescoVisitEditorCardState extends State<_UnescoVisitEditorCard> {
             Row(mainAxisAlignment: MainAxisAlignment.end, children: [
               if (_isEditing) ...[
                 TextButton(onPressed: _cancelEditing,
-                    child: Text('Cancel', style: TextStyle(color: Colors.grey[700], fontWeight: FontWeight.w600))),
+                    child: Text(tr('Cancel'), style: TextStyle(color: Colors.grey[700], fontWeight: FontWeight.w600))),
                 const SizedBox(width: 8),
                 ElevatedButton.icon(onPressed: _saveChanges,
-                    icon: const Icon(Icons.save, size: 18), label: const Text('Save'),
+                    icon: const Icon(Icons.save, size: 18), label:  Text(tr('Save')),
                     style: ElevatedButton.styleFrom(backgroundColor: themeColor, foregroundColor: Colors.white, elevation: 0)),
               ] else
                 OutlinedButton.icon(onPressed: () => setState(() => _isEditing = true),
-                    icon: const Icon(Icons.edit, size: 16), label: const Text('Edit Record'),
+                    icon: const Icon(Icons.edit, size: 16), label:  Text(tr('Edit Record')),
                     style: OutlinedButton.styleFrom(foregroundColor: themeColor,
                         side: BorderSide(color: themeColor.withOpacity(0.5)))),
             ]),

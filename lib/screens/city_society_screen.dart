@@ -1,6 +1,7 @@
 // lib/screens/city_society_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:jidoapp/models/city_model.dart';
 import 'package:jidoapp/providers/city_provider.dart';
@@ -25,6 +26,7 @@ class CitySocietyScreen extends StatelessWidget{
   const CitySocietyScreen({super.key});
   @override
   Widget build(BuildContext context){
+    Localizations.maybeLocaleOf(context);
     return Theme(data:Theme.of(context).copyWith(scaffoldBackgroundColor:_C.bg,cardColor:_C.surface),
         child:DefaultTabController(length:2,child:Scaffold(backgroundColor:_C.bg,appBar:_AppBar(),
             body:const TabBarView(children:[CitySocietyTabScreen(),CityHistoryTabScreen()]))));
@@ -35,7 +37,7 @@ class _AppBar extends StatelessWidget implements PreferredSizeWidget{
   @override Size get preferredSize=>const Size.fromHeight(56);
   @override Widget build(BuildContext context)=>AppBar(backgroundColor:_C.surface,elevation:0,automaticallyImplyLeading:false,titleSpacing:0,
       bottom:PreferredSize(preferredSize:const Size.fromHeight(1),child:Container(height:1,color:_C.divider)),
-      title:TabBar(tabs:const[Tab(text:'Society'),Tab(text:'History')],
+      title:TabBar(tabs:[Tab(text:tr('Society')),Tab(text:tr('History'))],
           labelStyle:const TextStyle(fontSize:14,fontWeight:FontWeight.w700,letterSpacing:0.5),
           unselectedLabelStyle:const TextStyle(fontSize:14,fontWeight:FontWeight.w400,letterSpacing:0.5),
           labelColor:_C.ink,unselectedLabelColor:_C.inkLight,
@@ -56,7 +58,7 @@ class CitySocietyTabScreen extends StatelessWidget{
   });
 }
 
-class _SH extends StatelessWidget{final String label;const _SH({required this.label});@override Widget build(BuildContext context)=>Padding(padding:const EdgeInsets.fromLTRB(16,24,16,12),child:Row(children:[Text(label,style:const TextStyle(fontSize:11,fontWeight:FontWeight.w700,letterSpacing:2.0,color:_C.inkLight)),const SizedBox(width:12),Expanded(child:Container(height:1,color:_C.divider))]));}
+class _SH extends StatelessWidget{final String label;const _SH({required this.label});@override Widget build(BuildContext context)=>Padding(padding:const EdgeInsets.fromLTRB(16,24,16,12),child:Row(children:[Text(tr(label),style:const TextStyle(fontSize:11,fontWeight:FontWeight.w700,letterSpacing:2.0,color:_C.inkLight)),const SizedBox(width:12),Expanded(child:Container(height:1,color:_C.divider))]));}
 
 class _RankCard extends StatefulWidget{final CityProvider provider;const _RankCard({required this.provider});@override State<_RankCard> createState()=>_RankCardState();}
 class _RankCardState extends State<_RankCard>{
@@ -92,6 +94,7 @@ class _RankCardState extends State<_RankCard>{
 
   @override
   Widget build(BuildContext context){
+    Localizations.maybeLocaleOf(context);
     final topVal=_list.isNotEmpty?_sel.valueAccessor(_list.first).toDouble():1.0;
     return Container(
       decoration:BoxDecoration(color:_C.surface,borderRadius:BorderRadius.circular(14),border:Border.all(color:_C.divider)),
@@ -102,11 +105,11 @@ class _RankCardState extends State<_RankCard>{
             return GestureDetector(onTap:()=>setState((){_sel=r;_prep();}),
                 child:AnimatedContainer(duration:const Duration(milliseconds:180),padding:const EdgeInsets.symmetric(horizontal:12,vertical:8),
                     decoration:BoxDecoration(color:active?_C.ink:Colors.transparent,borderRadius:BorderRadius.circular(8),border:Border.all(color:active?_C.ink:_C.divider)),
-                    child:Row(mainAxisSize:MainAxisSize.min,children:[Icon(r.icon,size:14,color:active?Colors.white:_C.inkLight),const SizedBox(width:6),Text(r.title,style:TextStyle(fontSize:12,fontWeight:active?FontWeight.w700:FontWeight.w400,color:active?Colors.white:_C.inkLight))])));
+                    child:Row(mainAxisSize:MainAxisSize.min,children:[Icon(r.icon,size:14,color:active?Colors.white:_C.inkLight),const SizedBox(width:6),Text(tr(r.title),style:TextStyle(fontSize:12,fontWeight:active?FontWeight.w700:FontWeight.w400,color:active?Colors.white:_C.inkLight))])));
           }).toList()),
         ),
         SizedBox(height:360,child:_list.isEmpty
-            ?const Center(child:Text('No data',style:TextStyle(color:_C.inkLight)))
+            ? Center(child:Text(tr('No data'),style:TextStyle(color:_C.inkLight)))
             :ListView.builder(physics:const BouncingScrollPhysics(),padding:const EdgeInsets.symmetric(horizontal:12,vertical:8),itemCount:_list.length,itemBuilder:(context,index){
           final item=_list[index];final isV=widget.provider.visitedCities.contains(item.name);final rank=index+1;
           final val=_sel.valueAccessor(item);
@@ -117,12 +120,12 @@ class _RankCardState extends State<_RankCard>{
             child:Container(margin:const EdgeInsets.symmetric(vertical:3),padding:const EdgeInsets.symmetric(horizontal:10,vertical:10),
                 decoration:BoxDecoration(color:isV?_sel.themeColor.withOpacity(0.05):Colors.transparent,borderRadius:BorderRadius.circular(8),border:Border(left:BorderSide(color:isV?_sel.themeColor:Colors.transparent,width:2.5))),
                 child:Row(children:[
-                  SizedBox(width:28,child:Text(rank<=3?(rank==1?'🥇':rank==2?'🥈':'🥉'):'$rank',style:TextStyle(fontSize:rank<=3?16:12,fontWeight:FontWeight.w700,color:_C.inkLight),textAlign:TextAlign.center)),
+                  SizedBox(width:28,child:Text(tr(rank<=3?(rank==1?'🥇':rank==2?'🥈':'🥉'):'$rank'),style:TextStyle(fontSize:rank<=3?16:12,fontWeight:FontWeight.w700,color:_C.inkLight),textAlign:TextAlign.center)),
                   const SizedBox(width:10),
                   Expanded(child:Column(crossAxisAlignment:CrossAxisAlignment.start,children:[
-                    Row(children:[Expanded(child:Text(item.name,style:TextStyle(fontSize:13,fontWeight:isV?FontWeight.w700:FontWeight.w500,color:_C.ink),overflow:TextOverflow.ellipsis)),if(isV)...[const SizedBox(width:4),Icon(Icons.check_circle_rounded,size:14,color:_sel.themeColor)],const SizedBox(width:6),Text(val.toStringAsFixed(1),style:const TextStyle(fontSize:13,fontWeight:FontWeight.w700,color:_C.ink))]),
+                    Row(children:[Expanded(child:Text(item.name,style:TextStyle(fontSize:13,fontWeight:isV?FontWeight.w700:FontWeight.w500,color:_C.ink),overflow:TextOverflow.ellipsis)),if(isV)...[const SizedBox(width:4),Icon(Icons.check_circle_rounded,size:14,color:_sel.themeColor)],const SizedBox(width:6),Text(tr(val.toStringAsFixed(1)),style:const TextStyle(fontSize:13,fontWeight:FontWeight.w700,color:_C.ink))]),
                     const SizedBox(height:5),ClipRRect(borderRadius:BorderRadius.circular(3),child:LinearProgressIndicator(value:barFrac,minHeight:3,backgroundColor:_C.divider,valueColor:AlwaysStoppedAnimation<Color>(barColor))),
-                    const SizedBox(height:3),Row(children:[Text(_cf(item),style:const TextStyle(fontSize:11)),const SizedBox(width:4),Text(item.country,style:const TextStyle(fontSize:10,color:_C.inkLight))]),
+                    const SizedBox(height:3),Row(children:[Text(tr(_cf(item)),style:const TextStyle(fontSize:11)),const SizedBox(width:4),Text(tr(item.country),style:const TextStyle(fontSize:10,color:_C.inkLight))]),
                   ])),
                 ])),
           );

@@ -1,6 +1,7 @@
 // lib/screens/calendar_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:intl/intl.dart';
 import 'package:jidoapp/models/calendar_memo_model.dart';
 import 'package:jidoapp/models/itinerary_entry_model.dart';
@@ -227,6 +228,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final itineraryProvider = context.watch<ItineraryProvider>();
     final calendarProvider = context.watch<CalendarProvider>();
     final tripLogProvider = context.watch<TripLogProvider>();
@@ -250,9 +252,9 @@ class _CalendarScreenState extends State<CalendarScreen> {
               padding: const EdgeInsets.symmetric(vertical: 16.0),
               color: _pastelRedMain,
               width: double.infinity,
-              child: const Center(
+              child:  Center(
                 child: Text(
-                  'My Calendar',
+                  tr('My Calendar'),
                   style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.w900,
@@ -269,9 +271,9 @@ class _CalendarScreenState extends State<CalendarScreen> {
                 children: [
                   IconButton(icon: Icon(Icons.chevron_left, color: _pastelRedMain), onPressed: _goToPreviousMonth),
                   Row(children: [
-                    DropdownButton<int>(value: _selectedYear, items: years.map((y) => DropdownMenuItem(value: y, child: Text('$y'))).toList(), onChanged: _onYearChanged, underline: Container()),
+                    DropdownButton<int>(value: _selectedYear, items: years.map((y) => DropdownMenuItem(value: y, child: Text(tr('$y')))).toList(), onChanged: _onYearChanged, underline: Container()),
                     const SizedBox(width: 8),
-                    DropdownButton<int>(value: _selectedMonth, items: months.mapIndexed((i, m) => DropdownMenuItem(value: i + 1, child: Text(m))).toList(), onChanged: _onMonthChanged, underline: Container()),
+                    DropdownButton<int>(value: _selectedMonth, items: months.mapIndexed((i, m) => DropdownMenuItem(value: i + 1, child: Text(tr(m)))).toList(), onChanged: _onMonthChanged, underline: Container()),
                   ]),
                   IconButton(icon: Icon(Icons.chevron_right, color: _pastelRedMain), onPressed: _goToNextMonth),
                 ],
@@ -282,6 +284,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
               child: Container(
                 decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(16), boxShadow: [BoxShadow(color: _shadowColor, blurRadius: 10, offset: const Offset(0, 5))]),
                 child: TableCalendar<dynamic>(
+                  locale: AppLocale.instance.locale.languageCode,
                   firstDay: DateTime.utc(2010, 1, 1),
                   lastDay: DateTime.utc(2030, 12, 31),
                   focusedDay: _focusedDay,
@@ -380,7 +383,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
                               style: const TextStyle(fontWeight: FontWeight.w800)
                           ),
                           subtitle: Text(
-                            displayContent,
+                            tr(displayContent),
                           ),
                           onTap: () {
                             if (isEvent) {
@@ -496,7 +499,7 @@ class _MemoEditPageState extends State<_MemoEditPage> {
     final title = _titleController.text.trim().isEmpty ? null : _titleController.text.trim();
     final content = _contentController.text.trim();
     if (content.isEmpty) {
-      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Memo content cannot be empty.')));
+      ScaffoldMessenger.of(context).showSnackBar( SnackBar(content: Text(tr('Memo content cannot be empty.'))));
       return;
     }
     final calendarProvider = context.read<CalendarProvider>();
@@ -510,6 +513,7 @@ class _MemoEditPageState extends State<_MemoEditPage> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final isEditing = widget.memoToEdit != null;
     return Scaffold(
       appBar: AppBar(
@@ -519,7 +523,7 @@ class _MemoEditPageState extends State<_MemoEditPage> {
         actions: [
           TextButton(
             onPressed: _saveMemo,
-            child: Text(isEditing ? 'UPDATE' : 'SAVE', style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16)),
+            child: Text(tr(isEditing ? 'UPDATE' : 'SAVE'), style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16)),
           ),
         ],
       ),
@@ -528,12 +532,12 @@ class _MemoEditPageState extends State<_MemoEditPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(DateFormat('MMMM dd, yyyy EEEE', 'en_US').format(widget.selectedDay), style: TextStyle(fontSize: 18, color: Colors.grey.shade600, fontWeight: FontWeight.w600)),
+            Text(tr(DateFormat.yMMMMEEEEd(AppLocale.instance.locale.languageCode).format(widget.selectedDay)), style: TextStyle(fontSize: 18, color: Colors.grey.shade600, fontWeight: FontWeight.w600)),
             const SizedBox(height: 20),
             TextField(
               controller: _titleController,
               decoration: InputDecoration(
-                labelText: 'Title', hintText: "Enter memo title",
+                labelText: tr('Title'), hintText: tr("Enter memo title"),
                 border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
                 focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: widget.pastelBlueMain, width: 2), borderRadius: BorderRadius.circular(12)),
               ),
@@ -543,14 +547,14 @@ class _MemoEditPageState extends State<_MemoEditPage> {
             TextField(
               controller: _contentController,
               decoration: InputDecoration(
-                labelText: 'Content', hintText: "What happened today?", alignLabelWithHint: true,
+                labelText: tr('Content'), hintText: tr("What happened today?"), alignLabelWithHint: true,
                 border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
                 focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: widget.pastelBlueMain, width: 2), borderRadius: BorderRadius.circular(12)),
               ),
               keyboardType: TextInputType.multiline, minLines: 8, maxLines: 15, style: const TextStyle(fontSize: 16),
             ),
             const SizedBox(height: 30),
-            const Text('Photo', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+             Text(tr('Photo'), style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
             const SizedBox(height: 10),
             if (_selectedImage != null || _existingImageUrl != null && !_deleteExistingImage)
               Column(
@@ -560,17 +564,17 @@ class _MemoEditPageState extends State<_MemoEditPage> {
                     child: Image.file(
                       File(_selectedImage != null ? _selectedImage!.path : _existingImageUrl!),
                       width: double.infinity, fit: BoxFit.cover,
-                      errorBuilder: (context, error, stackTrace) => Container(height: 200, color: Colors.grey.shade200, alignment: Alignment.center, child: const Text('Image Load Error', style: TextStyle(color: Colors.red))),
+                      errorBuilder: (context, error, stackTrace) => Container(height: 200, color: Colors.grey.shade200, alignment: Alignment.center, child:  Text(tr('Image Load Error'), style: TextStyle(color: Colors.red))),
                     ),
                   ),
                   const SizedBox(height: 16),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      ElevatedButton.icon(onPressed: () => _pickImage(ImageSource.gallery), icon: const Icon(Icons.photo_library), label: const Text('Change Photo')),
+                      ElevatedButton.icon(onPressed: () => _pickImage(ImageSource.gallery), icon: const Icon(Icons.photo_library), label:  Text(tr('Change Photo'))),
                       ElevatedButton.icon(
                         onPressed: () => setState(() { _selectedImage = null; _existingImageUrl = null; _deleteExistingImage = true; }),
-                        icon: const Icon(Icons.delete_forever), label: const Text('Remove Photo'),
+                        icon: const Icon(Icons.delete_forever), label:  Text(tr('Remove Photo')),
                         style: ElevatedButton.styleFrom(backgroundColor: Colors.red.shade400, foregroundColor: Colors.white),
                       ),
                     ],
@@ -580,7 +584,7 @@ class _MemoEditPageState extends State<_MemoEditPage> {
             else
               ElevatedButton.icon(
                 onPressed: () => _pickImage(ImageSource.gallery),
-                icon: const Icon(Icons.add_a_photo), label: const Text('Add Photo'),
+                icon: const Icon(Icons.add_a_photo), label:  Text(tr('Add Photo')),
                 style: ElevatedButton.styleFrom(foregroundColor: Colors.white, backgroundColor: widget.pastelBlueMain, padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15), shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12))),
               ),
           ],

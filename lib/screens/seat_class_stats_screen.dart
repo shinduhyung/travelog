@@ -1,6 +1,7 @@
 // lib/screens/seat_class_stats_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:jidoapp/providers/airline_provider.dart';
 import 'package:jidoapp/models/airline_model.dart';
@@ -215,6 +216,7 @@ class _SeatClassStatsScreenState extends State<SeatClassStatsScreen> {
   // --- 위젯 빌드 메서드 ---
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     // 🚨 [수정] Scaffold 배경색 및 AppBar 제거
     return Scaffold(
       backgroundColor: Colors.grey[50],
@@ -295,7 +297,7 @@ class _SeatClassStatsScreenState extends State<SeatClassStatsScreen> {
                 return DropdownMenuItem<String>(
                   value: value,
                   child: Text(
-                    value,
+                    tr(value),
                     style: TextStyle(
                       fontWeight: FontWeight.w600,
                       color: _primaryColor,
@@ -330,7 +332,7 @@ class _SeatClassStatsScreenState extends State<SeatClassStatsScreen> {
                     Icon(Icons.calendar_today, size: 16, color: Colors.grey[600]),
                     const SizedBox(width: 8),
                     Text(
-                      '${DateFormat('yyyy-MM-dd').format(_customStartDate!)} ~ ${DateFormat('yyyy-MM-dd').format(_customEndDate!)}',
+                      tr('${DateFormat('yyyy-MM-dd').format(_customStartDate!)} ~ ${DateFormat('yyyy-MM-dd').format(_customEndDate!)}'),
                       style: TextStyle(
                         color: Colors.grey[700],
                         fontWeight: FontWeight.w500,
@@ -370,7 +372,7 @@ class _SeatClassStatsScreenState extends State<SeatClassStatsScreen> {
                   return DropdownMenuItem<String>(
                     value: value,
                     child: Text(
-                      value,
+                      tr(value),
                       style: TextStyle(
                         fontWeight: FontWeight.w600,
                         color: _primaryColor,
@@ -419,7 +421,7 @@ class _SeatClassStatsScreenState extends State<SeatClassStatsScreen> {
                     borderRadius: BorderRadius.circular(8),
                   ),
                   child: Text(
-                    '$_selectedYear',
+                    tr('$_selectedYear'),
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
@@ -500,12 +502,12 @@ class _SeatClassStatsScreenState extends State<SeatClassStatsScreen> {
           mainAxisSize: MainAxisSize.min,
           children: [
             Text(
-              '$_totalFlightsInPeriod',
+              tr('$_totalFlightsInPeriod'),
               style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold, color: _primaryColor),
             ),
             const SizedBox(height: 4),
             Text(
-              'Total Flights',
+              tr('Total Flights'),
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: Colors.grey[600]),
             ),
@@ -522,7 +524,7 @@ class _SeatClassStatsScreenState extends State<SeatClassStatsScreen> {
           mainAxisSize: MainAxisSize.min,
           children: [
             Text(
-              info['abbr'],
+              tr(info['abbr']),
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
@@ -530,8 +532,8 @@ class _SeatClassStatsScreenState extends State<SeatClassStatsScreen> {
               ),
             ),
             const SizedBox(height: 4),
-            Text('$count', style: const TextStyle(fontSize: 28, fontWeight: FontWeight.bold)),
-            Text('${percentage.toStringAsFixed(1)}%', style: TextStyle(fontSize: 14, color: Colors.grey[600])),
+            Text(tr('$count'), style: const TextStyle(fontSize: 28, fontWeight: FontWeight.bold)),
+            Text(tr('${percentage.toStringAsFixed(1)}%'), style: TextStyle(fontSize: 14, color: Colors.grey[600])),
           ],
         ),
       );
@@ -557,7 +559,7 @@ class _SeatClassStatsScreenState extends State<SeatClassStatsScreen> {
             Padding(
               padding: const EdgeInsets.only(bottom: 40),
               child: Text(
-                'Seat Class',
+                tr('Seat Class'),
                 style: Theme.of(context).textTheme.titleLarge?.copyWith(
                   fontWeight: FontWeight.w900,
                   fontSize: 24,
@@ -569,7 +571,7 @@ class _SeatClassStatsScreenState extends State<SeatClassStatsScreen> {
             SizedBox(
               height: 220,
               child: (_totalFlightsInPeriod == 0)
-                  ? Center(child: Column(mainAxisSize: MainAxisSize.min, children: [Icon(Icons.pie_chart_outline, size: 64, color: Colors.grey[300]), const SizedBox(height: 16), Text('No data for this period', style: TextStyle(color: Colors.grey[500], fontSize: 16))]))
+                  ? Center(child: Column(mainAxisSize: MainAxisSize.min, children: [Icon(Icons.pie_chart_outline, size: 64, color: Colors.grey[300]), const SizedBox(height: 16), Text(tr('No data for this period'), style: TextStyle(color: Colors.grey[500], fontSize: 16))]))
                   : Stack(
                 alignment: Alignment.center,
                 children: [
@@ -626,7 +628,7 @@ class _SeatClassStatsScreenState extends State<SeatClassStatsScreen> {
         children: [
           Container(width: 12, height: 12, decoration: BoxDecoration(color: color, borderRadius: BorderRadius.circular(3))),
           const SizedBox(width: 4), // 간격 축소 8->4
-          Text(text, style: TextStyle(fontWeight: FontWeight.w600, fontSize: 10, color: Colors.grey[800])), // 폰트 축소 11->10
+          Text(trSeatClass(text), style: TextStyle(fontWeight: FontWeight.w600, fontSize: 10, color: Colors.grey[800])), // 폰트 축소 11->10
         ],
       ),
     );
@@ -649,9 +651,9 @@ class _SeatClassStatsScreenState extends State<SeatClassStatsScreen> {
       child: SegmentedButton<bool>(
         // 🚨 [수정] 체크 아이콘 제거
         showSelectedIcon: false,
-        segments: const [
-          ButtonSegment<bool>(value: false, label: Text('Flight Logs'), icon: Icon(Icons.list_alt)),
-          ButtonSegment<bool>(value: true, label: Text('Ranking'), icon: Icon(Icons.emoji_events)),
+        segments:  [
+          ButtonSegment<bool>(value: false, label: Text(tr('Flight Logs')), icon: Icon(Icons.list_alt)),
+          ButtonSegment<bool>(value: true, label: Text(tr('Ranking')), icon: Icon(Icons.emoji_events)),
         ],
         selected: {_showRanking},
         onSelectionChanged: (Set<bool> newSelection) {
@@ -676,7 +678,7 @@ class _SeatClassStatsScreenState extends State<SeatClassStatsScreen> {
     final selectedColor = _seatClassInfo[_selectedSeatClass]!['color'] as Color;
 
     final inputDecoration = InputDecoration(
-      labelText: 'Seat Class',
+      labelText: tr('Seat Class'),
       labelStyle: TextStyle(color: Colors.grey[600], fontWeight: FontWeight.w500),
       prefixIcon: Icon(Icons.chair, color: selectedColor),
       border: OutlineInputBorder(borderRadius: BorderRadius.circular(16), borderSide: BorderSide(color: selectedColor.withOpacity(0.5), width: 1.5)),
@@ -710,7 +712,7 @@ class _SeatClassStatsScreenState extends State<SeatClassStatsScreen> {
                 Container(width: 8, height: 8, decoration: BoxDecoration(color: entry.value['color'], shape: BoxShape.circle)),
                 const SizedBox(width: 12),
                 Text(
-                  entry.value['name'],
+                  trSeatClass(entry.value['name']),
                   style: TextStyle(color: entry.value['color'], fontWeight: FontWeight.w600),
                 ),
               ],
@@ -757,9 +759,9 @@ class _SeatClassStatsScreenState extends State<SeatClassStatsScreen> {
             child: Icon(Icons.airplanemode_inactive, size: 48, color: Colors.grey[400]),
           ),
           const SizedBox(height: 16),
-          Text('No $type found', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600, color: Colors.grey[700])),
+          Text(tr('No $type found'), style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600, color: Colors.grey[700])),
           const SizedBox(height: 8),
-          Text('for this type in the selected period', style: TextStyle(fontSize: 14, color: Colors.grey[500])),
+          Text(tr('for this type in the selected period'), style: TextStyle(fontSize: 14, color: Colors.grey[500])),
         ],
       ),
     );
@@ -810,15 +812,15 @@ class _SeatClassStatsScreenState extends State<SeatClassStatsScreen> {
                       ),
                       child: Center(
                         child: Text(
-                          '#${index + 1}',
+                          tr('#${index + 1}'),
                           style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 14),
                         ),
                       ),
                     ),
                     const SizedBox(width: 12),
-                    Expanded(child: Text(name, style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 16), overflow: TextOverflow.ellipsis)),
+                    Expanded(child: Text(tr(name), style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 16), overflow: TextOverflow.ellipsis)),
                     const SizedBox(width: 8),
-                    Text('$count Flights', style: TextStyle(fontWeight: FontWeight.bold, color: color, fontSize: 14)),
+                    Text(tr('$count Flights'), style: TextStyle(fontWeight: FontWeight.bold, color: color, fontSize: 14)),
                   ],
                 ),
                 const SizedBox(height: 12),
@@ -869,7 +871,7 @@ class _SeatClassStatsScreenState extends State<SeatClassStatsScreen> {
                 ),
                 const SizedBox(width: 12),
                 Text(
-                  "Yearly Trend (10 Years)",
+                  tr("Yearly Trend (10 Years)"),
                   style: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold, fontSize: 20),
                 ),
               ],
@@ -894,7 +896,7 @@ class _SeatClassStatsScreenState extends State<SeatClassStatsScreen> {
                           if (value == meta.max || value == meta.min) return Container();
                           return SideTitleWidget(
                             axisSide: meta.axisSide,
-                            child: Text(value.toInt().toString(), style: TextStyle(color: Colors.grey[600], fontSize: 12, fontWeight: FontWeight.w500)),
+                            child: Text(tr(value.toInt().toString()), style: TextStyle(color: Colors.grey[600], fontSize: 12, fontWeight: FontWeight.w500)),
                           );
                         },
                       ),
@@ -909,7 +911,7 @@ class _SeatClassStatsScreenState extends State<SeatClassStatsScreen> {
                         getTitlesWidget: (value, meta) {
                           return SideTitleWidget(
                             axisSide: meta.axisSide,
-                            child: Text(value.toInt().toString().substring(2), style: const TextStyle(fontSize: 12)),
+                            child: Text(tr(value.toInt().toString().substring(2)), style: const TextStyle(fontSize: 12)),
                           );
                         },
                       ),
@@ -945,7 +947,7 @@ class _SeatClassStatsScreenState extends State<SeatClassStatsScreen> {
     if (displayDate != 'Unknown') {
       try {
         final dateTime = DateTime.parse(displayDate);
-        displayDate = DateFormat.yMMMd('en_US').format(dateTime);
+        displayDate = DateFormat.yMMMd(AppLocale.instance.locale.languageCode).format(dateTime);
       } catch (e) {/* Use original date string */}
     }
 
@@ -989,18 +991,18 @@ class _SeatClassStatsScreenState extends State<SeatClassStatsScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(log.airlineName ?? 'Unknown', style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 16)),
+                    Text(log.airlineName ?? tr('Unknown'), style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 16)),
                     const SizedBox(height: 4),
-                    Text(displayFlightNumber, style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: _primaryColor)),
+                    Text(tr(displayFlightNumber), style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: _primaryColor)),
                     const SizedBox(height: 4),
-                    Text('${log.departureIata ?? 'N/A'} → ${log.arrivalIata ?? 'N/A'}', style: TextStyle(fontSize: 14, color: Colors.grey.shade600)),
+                    Text(tr('${log.departureIata ?? 'N/A'} → ${log.arrivalIata ?? 'N/A'}'), style: TextStyle(fontSize: 14, color: Colors.grey.shade600)),
                   ],
                 ),
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
-                  Text(displayDate, style: TextStyle(fontSize: 12, color: Colors.grey.shade600, fontWeight: FontWeight.w500)),
+                  Text(tr(displayDate), style: TextStyle(fontSize: 12, color: Colors.grey.shade600, fontWeight: FontWeight.w500)),
                   if (log.rating > 0) ...[
                     const SizedBox(height: 8),
                     RatingBar.builder(

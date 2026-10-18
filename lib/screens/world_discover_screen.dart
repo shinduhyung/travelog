@@ -1,5 +1,6 @@
 // lib/screens/world_discover_screen.dart
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:collection/collection.dart';
 import 'package:cached_network_image/cached_network_image.dart';
@@ -62,6 +63,7 @@ class _WorldDiscoverScreenState extends State<WorldDiscoverScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Scaffold(
       backgroundColor: const Color(0xFFF7F8FA),
       body: SafeArea(
@@ -89,8 +91,8 @@ class _WorldDiscoverScreenState extends State<WorldDiscoverScreen> {
                     icon: const Icon(Icons.arrow_back_ios_new_rounded, color: Colors.black87, size: 20),
                     onPressed: () => Navigator.pop(context),
                   ),
-                  title: const Text(
-                    'Discover',
+                  title:  Text(
+                    tr('Discover'),
                     style: TextStyle(
                       color: Colors.black87,
                       fontWeight: FontWeight.w800,
@@ -151,7 +153,7 @@ class _WorldDiscoverScreenState extends State<WorldDiscoverScreen> {
           Icon(Icons.search_rounded, color: Colors.grey.shade400, size: 22),
           const SizedBox(width: 10),
           Text(
-            'Search destinations',
+            tr('Search destinations'),
             style: TextStyle(color: Colors.grey.shade400, fontSize: 15, fontWeight: FontWeight.w500),
           ),
         ],
@@ -182,7 +184,7 @@ class _WorldDiscoverScreenState extends State<WorldDiscoverScreen> {
               ),
               alignment: Alignment.center,
               child: Text(
-                category,
+                tr(category),
                 style: TextStyle(
                   color: isSelected ? Colors.white : Colors.grey.shade700,
                   fontWeight: FontWeight.w600,
@@ -254,7 +256,7 @@ class _WorldDiscoverScreenState extends State<WorldDiscoverScreen> {
           Row(
             children: [
               Text(
-                _getFlagEmoji(city.countryIsoA2),
+                tr(_getFlagEmoji(city.countryIsoA2)),
                 style: const TextStyle(fontSize: 16),
               ),
               const SizedBox(width: 6),
@@ -274,7 +276,7 @@ class _WorldDiscoverScreenState extends State<WorldDiscoverScreen> {
             ],
           ),
           Text(
-            city.country,
+            tr(city.country),
             style: TextStyle(
               fontSize: 12,
               color: Colors.grey.shade500,

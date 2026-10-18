@@ -3,6 +3,7 @@
 import 'dart:async';
 import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:image_picker/image_picker.dart';
@@ -403,11 +404,11 @@ class _AddFlightLogScreenState extends State<AddFlightLogScreen> {
 
   Future<void> _findFlight() async {
     if (_isDateUnknown) {
-      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Please enter a date to search.', style: TextStyle(color: Colors.white)), backgroundColor: Colors.red));
+      ScaffoldMessenger.of(context).showSnackBar( SnackBar(content: Text(tr('Please enter a date to search.'), style: TextStyle(color: Colors.white)), backgroundColor: Colors.red));
       return;
     }
     if (_isFlightNumberUnknown) {
-      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Please enter a flight number to search.', style: TextStyle(color: Colors.white)), backgroundColor: Colors.red));
+      ScaffoldMessenger.of(context).showSnackBar( SnackBar(content: Text(tr('Please enter a flight number to search.'), style: TextStyle(color: Colors.white)), backgroundColor: Colors.red));
       return;
     }
 
@@ -457,12 +458,12 @@ class _AddFlightLogScreenState extends State<AddFlightLogScreen> {
             _mileageAirlineController.text = flightInfo.airlineName;
           }
         });
-        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Flight info synced!'), backgroundColor: Colors.green));
+        ScaffoldMessenger.of(context).showSnackBar( SnackBar(content: Text(tr('Flight info synced!')), backgroundColor: Colors.green));
       } else {
-        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Flight not found.'), backgroundColor: Colors.orange));
+        ScaffoldMessenger.of(context).showSnackBar( SnackBar(content: Text(tr('Flight not found.')), backgroundColor: Colors.orange));
       }
     } catch (e) {
-      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Error: $e'), backgroundColor: Colors.red));
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(tr('Error: $e')), backgroundColor: Colors.red));
     } finally {
       if (mounted) setState(() => _isLoading = false);
     }
@@ -617,7 +618,7 @@ class _AddFlightLogScreenState extends State<AddFlightLogScreen> {
                   ),
                   const SizedBox(width: 8),
                   Text(
-                    'Fast Search',
+                    tr('Fast Search'),
                     style: TextStyle(
                       fontWeight: FontWeight.w900,
                       color: isFastSearch ? specialColor.shade900 : Colors.black87,
@@ -653,7 +654,7 @@ class _AddFlightLogScreenState extends State<AddFlightLogScreen> {
           Padding(
             padding: const EdgeInsets.only(left: 16.0, top: 4.0, bottom: 12.0),
             child: Text(
-              'Only searching for flights within the last 6 months',
+              tr('Only searching for flights within the last 6 months'),
               style: TextStyle(fontSize: 12, color: specialColor.shade700, fontStyle: FontStyle.italic),
             ),
           ),
@@ -674,7 +675,7 @@ class _AddFlightLogScreenState extends State<AddFlightLogScreen> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            title,
+            tr(title),
             style: const TextStyle(fontWeight: FontWeight.w600),
           ),
           Checkbox(
@@ -702,11 +703,11 @@ class _AddFlightLogScreenState extends State<AddFlightLogScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'My Score: ',
+                  tr('My Score: '),
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600, color: Colors.deepPurple.shade700),
                 ),
                 Text(
-                  _rating.toStringAsFixed(1),
+                  tr(_rating.toStringAsFixed(1)),
                   style: const TextStyle(fontSize: 28, fontWeight: FontWeight.w900, color: Colors.amber),
                 ),
                 const Icon(Icons.star, color: Colors.amber, size: 28),
@@ -738,16 +739,17 @@ class _AddFlightLogScreenState extends State<AddFlightLogScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     bool showUpgradeSection = ['Premium Economy', 'Business', 'First'].contains(_selectedSeatClass);
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text(''),
+        title:  Text(tr('')),
         actions: [
           if (widget.isEditing)
             IconButton(
               icon: const Icon(Icons.note_alt_outlined),
-              tooltip: 'Memo & Photos',
+              tooltip: tr('Memo & Photos'),
               onPressed: _showMemoDialog,
             )
         ],
@@ -765,7 +767,7 @@ class _AddFlightLogScreenState extends State<AddFlightLogScreen> {
 
                   _buildSectionHeader('Flight Date & Time'),
 
-                  _buildFieldRowWithUnknown(isUnknown: _isDateUnknown, onUnknownChanged: (val) => setState(() => _isDateUnknown = val), child: _buildTextFormField(controller: _dateController, labelText: 'Date', hintText: DateFormat('yyyy-MM-dd').format(DateTime.now()), icon: Icons.calendar_today, readOnly: true, onTap: () => _selectDate(_dateController), enabled: !_isDateUnknown)),
+                  _buildFieldRowWithUnknown(isUnknown: _isDateUnknown, onUnknownChanged: (val) => setState(() => _isDateUnknown = val), child: _buildTextFormField(controller: _dateController, labelText: tr('Date'), hintText: tr(DateFormat('yyyy-MM-dd').format(DateTime.now())), icon: Icons.calendar_today, readOnly: true, onTap: () => _selectDate(_dateController), enabled: !_isDateUnknown)),
                   const SizedBox(height: 15),
 
                   _buildFlightNumberField(),
@@ -778,7 +780,7 @@ class _AddFlightLogScreenState extends State<AddFlightLogScreen> {
                     const SizedBox(height: 15),
 
                     _buildSectionHeader('Route & Flight'),
-                    Row(children: [ Expanded(child: _buildTextFormField(controller: _departureAirportController, labelText: 'Departure', hintText: 'ATL', icon: Icons.flight_takeoff, isAirportCode: true)), const Padding(padding: EdgeInsets.symmetric(horizontal: 8.0), child: Icon(Icons.arrow_forward)), Expanded(child: _buildTextFormField(controller: _destinationAirportController, labelText: 'Arrival', hintText: 'PEK', icon: Icons.flight_land, isAirportCode: true)), ]),
+                    Row(children: [ Expanded(child: _buildTextFormField(controller: _departureAirportController, labelText: tr('Departure'), hintText: tr('ATL'), icon: Icons.flight_takeoff, isAirportCode: true)), const Padding(padding: EdgeInsets.symmetric(horizontal: 8.0), child: Icon(Icons.arrow_forward)), Expanded(child: _buildTextFormField(controller: _destinationAirportController, labelText: tr('Arrival'), hintText: tr('PEK'), icon: Icons.flight_land, isAirportCode: true)), ]),
                     const SizedBox(height: 15),
 
                     // 🚀 [수정] Airline 필드를 검색 다이얼로그 방식으로 변경
@@ -828,12 +830,12 @@ class _AddFlightLogScreenState extends State<AddFlightLogScreen> {
                   _buildFieldRowWithUnknown(isUnknown: _isTicketPriceUnknown, onUnknownChanged: (val) { setState(() { _isTicketPriceUnknown = val ?? true; if (_isTicketPriceUnknown) { _isVatUnknown = true; _vatController.clear(); _isThroughTicket = false; } }); }, child: _buildTicketPriceField()),
 
                   CheckboxListTile(
-                      title: const Column(
+                      title:  Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text('Through-ticket'),
+                          Text(tr('Through-ticket')),
                           Text(
-                            '(link flights with same price)',
+                            tr('(link flights with same price)'),
                             style: TextStyle(fontSize: 12, color: Colors.grey, fontStyle: FontStyle.italic),
                           ),
                         ],
@@ -859,7 +861,7 @@ class _AddFlightLogScreenState extends State<AddFlightLogScreen> {
                     _buildVatFieldRow(_vatController, _isVatUnknown, (val) => setState(() => _isVatUnknown = val))
                   ],
                   const SizedBox(height: 15),
-                  _buildFieldRowWithUnknown(isUnknown: _isBookingDateUnknown, onUnknownChanged: (val) => setState(() => _isBookingDateUnknown = val), child: _buildTextFormField(controller: _bookingDateController, labelText: 'Booking Date', icon: Icons.edit_calendar, readOnly: true, onTap: () => _selectDate(_bookingDateController), enabled: !_isBookingDateUnknown)),
+                  _buildFieldRowWithUnknown(isUnknown: _isBookingDateUnknown, onUnknownChanged: (val) => setState(() => _isBookingDateUnknown = val), child: _buildTextFormField(controller: _bookingDateController, labelText: tr('Booking Date'), icon: Icons.edit_calendar, readOnly: true, onTap: () => _selectDate(_bookingDateController), enabled: !_isBookingDateUnknown)),
                   const SizedBox(height: 15),
                   _buildFieldRowWithUnknown(isUnknown: _isSeatClassUnknown, onUnknownChanged: (val) => setState(() => _isSeatClassUnknown = val), child: _buildSeatClassDropdown()),
                   if (showUpgradeSection) _buildUpgradeSection(),
@@ -885,7 +887,7 @@ class _AddFlightLogScreenState extends State<AddFlightLogScreen> {
       readOnly: true,
       onTap: _isAirlineUnknown ? null : () => _showAirlineSearchDialog(_airlineController),
       decoration: _buildInputDecoration(
-        labelText: 'Airline',
+        labelText: tr('Airline'),
         icon: Icons.business,
         enabled: !_isAirlineUnknown,
       ),
@@ -899,7 +901,7 @@ class _AddFlightLogScreenState extends State<AddFlightLogScreen> {
       children: [
         const SizedBox(height: 10),
         CheckboxListTile(
-          title: const Text('Seat Upgrade'),
+          title:  Text(tr('Seat Upgrade')),
           value: _wasUpgraded,
           onChanged: (val) => setState(() {
             _wasUpgraded = val ?? false;
@@ -934,7 +936,7 @@ class _AddFlightLogScreenState extends State<AddFlightLogScreen> {
                     _buildVatFieldRow(_upgradeVatController, _isUpgradeVatUnknown, (val) => setState(() => _isUpgradeVatUnknown = val)),
                   ],
                   const SizedBox(height: 15),
-                  _buildFieldRowWithUnknown(isUnknown: _isUpgradeDateUnknown, onUnknownChanged: (val) => setState(() => _isUpgradeDateUnknown = val), child: _buildTextFormField(controller: _upgradeDateController, labelText: 'Upgrade Date', icon: Icons.edit_calendar, readOnly: true, onTap: () => _selectDate(_upgradeDateController), enabled: !_isUpgradeDateUnknown)),
+                  _buildFieldRowWithUnknown(isUnknown: _isUpgradeDateUnknown, onUnknownChanged: (val) => setState(() => _isUpgradeDateUnknown = val), child: _buildTextFormField(controller: _upgradeDateController, labelText: tr('Upgrade Date'), icon: Icons.edit_calendar, readOnly: true, onTap: () => _selectDate(_upgradeDateController), enabled: !_isUpgradeDateUnknown)),
                 ],
               ),
             ),
@@ -951,7 +953,7 @@ class _AddFlightLogScreenState extends State<AddFlightLogScreen> {
           Expanded(
             child: _buildTextFormField(
               controller: _aircraftController,
-              labelText: 'Aircraft (Direct Input)',
+              labelText: tr('Aircraft (Direct Input)'),
               icon: Icons.airplanemode_active,
               enabled: !_isAircraftUnknown,
             ),
@@ -959,7 +961,7 @@ class _AddFlightLogScreenState extends State<AddFlightLogScreen> {
           IconButton(
             icon: const Icon(Icons.arrow_drop_down_circle_outlined),
             color: Colors.deepPurple,
-            tooltip: 'Select from list',
+            tooltip: tr('Select from list'),
             onPressed: () {
               setState(() {
                 _isDirectAircraftInput = false;
@@ -974,7 +976,7 @@ class _AddFlightLogScreenState extends State<AddFlightLogScreen> {
         items: _aircraftModels.map((String value) {
           return DropdownMenuItem<String>(
             value: value,
-            child: Text(value, overflow: TextOverflow.ellipsis),
+            child: Text(tr(value), overflow: TextOverflow.ellipsis),
           );
         }).toList(),
         onChanged: _isAircraftUnknown ? null : (value) {
@@ -989,7 +991,7 @@ class _AddFlightLogScreenState extends State<AddFlightLogScreen> {
           });
         },
         decoration: _buildInputDecoration(
-          labelText: 'Aircraft',
+          labelText: tr('Aircraft'),
           icon: Icons.airplanemode_active,
           enabled: !_isAircraftUnknown,
         ),
@@ -1001,7 +1003,7 @@ class _AddFlightLogScreenState extends State<AddFlightLogScreen> {
   Widget _buildFieldRowWithUnknown({required Widget child, required bool isUnknown, required ValueChanged<bool> onUnknownChanged}) {
     return Row(crossAxisAlignment: CrossAxisAlignment.center, children: [
       Expanded(child: child),
-      Transform.scale(scale: 0.8, child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [const Text('Unknown', style: TextStyle(fontSize: 12)), Checkbox(value: isUnknown, onChanged: (val) => onUnknownChanged(val ?? false), visualDensity: VisualDensity.compact)])),
+      Transform.scale(scale: 0.8, child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [ Text(tr('Unknown'), style: TextStyle(fontSize: 12)), Checkbox(value: isUnknown, onChanged: (val) => onUnknownChanged(val ?? false), visualDensity: VisualDensity.compact)])),
     ]);
   }
 
@@ -1012,7 +1014,7 @@ class _AddFlightLogScreenState extends State<AddFlightLogScreen> {
       isUnknown: _isFlightNumberUnknown,
       onUnknownChanged: (val) => setState(() => _isFlightNumberUnknown = val),
       child: Row(children: [
-        Expanded(child: _buildTextFormField(controller: _flightNumberController, labelText: 'Flight Number', icon: Icons.confirmation_number, enabled: !_isFlightNumberUnknown)),
+        Expanded(child: _buildTextFormField(controller: _flightNumberController, labelText: tr('Flight Number'), icon: Icons.confirmation_number, enabled: !_isFlightNumberUnknown)),
         if (showSearchButton) ...[
           const SizedBox(width: 8),
           ElevatedButton(onPressed: _findFlight, style: ElevatedButton.styleFrom(padding: const EdgeInsets.all(16), shape: const CircleBorder(), backgroundColor: Colors.deepPurple), child: const Icon(Icons.search, color: Colors.white)),
@@ -1026,7 +1028,7 @@ class _AddFlightLogScreenState extends State<AddFlightLogScreen> {
         key: key,
         padding: const EdgeInsets.only(top: 28.0, bottom: 12.0),
         child: Text(
-            title,
+            tr(title),
             style: Theme.of(context).textTheme.headlineSmall?.copyWith(
               color: Colors.deepPurple.shade900,
               fontWeight: FontWeight.w900,
@@ -1050,7 +1052,7 @@ class _AddFlightLogScreenState extends State<AddFlightLogScreen> {
         UpperCaseTextFormatter(),
       ]
           : inputFormatters,
-      decoration: _buildInputDecoration(labelText: labelText, hintText: hintText, icon: icon, enabled: enabled),
+      decoration: _buildInputDecoration(labelText: tr(labelText), hintText: tr(hintText), icon: icon, enabled: enabled),
       validator: (value) => (enabled && (value == null || value.isEmpty)) ? 'Required' : null,
     );
   }
@@ -1059,9 +1061,9 @@ class _AddFlightLogScreenState extends State<AddFlightLogScreen> {
     return Row(children: [
       Icon(label == 'Departure' ? Icons.flight_takeoff : Icons.flight_land, color: enabled ? Colors.deepPurple : Colors.grey),
       const SizedBox(width: 10),
-      Expanded(child: _buildTextFormField(controller: h, labelText: 'Hour', hintText: '15', keyboardType: TextInputType.number, inputFormatters: [FilteringTextInputFormatter.digitsOnly, LengthLimitingTextInputFormatter(2)], enabled: enabled)),
-      const Padding(padding: EdgeInsets.symmetric(horizontal: 4), child: Text(':')),
-      Expanded(child: _buildTextFormField(controller: m, labelText: 'Minute', hintText: label == 'Departure' ? '30' : '40', keyboardType: TextInputType.number, inputFormatters: [FilteringTextInputFormatter.digitsOnly, LengthLimitingTextInputFormatter(2)], enabled: enabled)),
+      Expanded(child: _buildTextFormField(controller: h, labelText: tr('Hour'), hintText: tr('15'), keyboardType: TextInputType.number, inputFormatters: [FilteringTextInputFormatter.digitsOnly, LengthLimitingTextInputFormatter(2)], enabled: enabled)),
+       Padding(padding: EdgeInsets.symmetric(horizontal: 4), child: Text(tr(':'))),
+      Expanded(child: _buildTextFormField(controller: m, labelText: tr('Minute'), hintText: tr(label == 'Departure' ? '30' : '40'), keyboardType: TextInputType.number, inputFormatters: [FilteringTextInputFormatter.digitsOnly, LengthLimitingTextInputFormatter(2)], enabled: enabled)),
     ]);
   }
 
@@ -1070,12 +1072,12 @@ class _AddFlightLogScreenState extends State<AddFlightLogScreen> {
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
       decoration: BoxDecoration(color: enabled ? Colors.white : Colors.grey.shade200, border: Border.all(color: Colors.grey.shade300), borderRadius: BorderRadius.circular(15.0)),
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        Text(label, style: TextStyle(color: enabled ? Colors.deepPurple : Colors.grey, fontWeight: FontWeight.bold, fontSize: 16)),
+        Text(tr(label), style: TextStyle(color: enabled ? Colors.deepPurple : Colors.grey, fontWeight: FontWeight.bold, fontSize: 16)),
         const SizedBox(height: 8),
         Row(children: [
-          Expanded(child: _buildTextFormField(controller: h, labelText: 'Hours', hintText: '1', keyboardType: TextInputType.number, inputFormatters: [FilteringTextInputFormatter.digitsOnly], enabled: enabled)),
+          Expanded(child: _buildTextFormField(controller: h, labelText: tr('Hours'), hintText: tr('1'), keyboardType: TextInputType.number, inputFormatters: [FilteringTextInputFormatter.digitsOnly], enabled: enabled)),
           const SizedBox(width: 10),
-          Expanded(child: _buildTextFormField(controller: m, labelText: 'Minutes', hintText: '30', keyboardType: TextInputType.number, inputFormatters: [FilteringTextInputFormatter.digitsOnly], enabled: enabled)),
+          Expanded(child: _buildTextFormField(controller: m, labelText: tr('Minutes'), hintText: tr('30'), keyboardType: TextInputType.number, inputFormatters: [FilteringTextInputFormatter.digitsOnly], enabled: enabled)),
         ]),
       ]),
     );
@@ -1092,11 +1094,11 @@ class _AddFlightLogScreenState extends State<AddFlightLogScreen> {
 
   Widget _buildTerminalGateSectionRow({ required String title, required TextEditingController terminalController, required bool isTerminalUnknown, required ValueChanged<bool> onTerminalUnknownChanged, required String terminalHint, required TextEditingController gateController, required bool isGateUnknown, required ValueChanged<bool> onGateUnknownChanged, required String gateHint,}) {
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-      Padding(padding: const EdgeInsets.only(left: 4.0, bottom: 8.0), child: Text(title, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.black54))),
+      Padding(padding: const EdgeInsets.only(left: 4.0, bottom: 8.0), child: Text(tr(title), style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.black54))),
       Row(children: [
-        Expanded(child: _buildFieldRowWithUnknown(isUnknown: isTerminalUnknown, onUnknownChanged: onTerminalUnknownChanged, child: _buildTextFormField(controller: terminalController, labelText: 'Ter.', hintText: terminalHint, enabled: !isTerminalUnknown))),
+        Expanded(child: _buildFieldRowWithUnknown(isUnknown: isTerminalUnknown, onUnknownChanged: onTerminalUnknownChanged, child: _buildTextFormField(controller: terminalController, labelText: tr('Ter.'), hintText: tr(terminalHint), enabled: !isTerminalUnknown))),
         const SizedBox(width: 10),
-        Expanded(child: _buildFieldRowWithUnknown(isUnknown: isGateUnknown, onUnknownChanged: onGateUnknownChanged, child: _buildTextFormField(controller: gateController, labelText: 'Gate', hintText: gateHint, enabled: !isGateUnknown))),
+        Expanded(child: _buildFieldRowWithUnknown(isUnknown: isGateUnknown, onUnknownChanged: onGateUnknownChanged, child: _buildTextFormField(controller: gateController, labelText: tr('Gate'), hintText: tr(gateHint), enabled: !isGateUnknown))),
       ]),
     ]);
   }
@@ -1108,7 +1110,7 @@ class _AddFlightLogScreenState extends State<AddFlightLogScreen> {
           DropdownMenuItem(
               value: label,
               child: Text(
-                label,
+                trSeatClass(label),
                 style: TextStyle(
                   color: _seatClassColors[label],
                   fontWeight: FontWeight.bold,
@@ -1117,14 +1119,14 @@ class _AddFlightLogScreenState extends State<AddFlightLogScreen> {
           )
       ).toList(),
       onChanged: _isSeatClassUnknown ? null : (value) => setState(() => _selectedSeatClass = value ?? 'Economy'),
-      decoration: _buildInputDecoration(labelText: 'Seat Class', icon: Icons.airline_seat_recline_normal, enabled: !_isSeatClassUnknown),
+      decoration: _buildInputDecoration(labelText: tr('Seat Class'), icon: Icons.airline_seat_recline_normal, enabled: !_isSeatClassUnknown),
     );
   }
 
   Widget _buildTicketPriceField() {
     return Row(children: [
-      Expanded(child: _buildTextFormField(controller: _ticketPriceController, labelText: 'Price', icon: _isMileageTicket ? Icons.star : Icons.monetization_on, keyboardType: TextInputType.number, enabled: !_isTicketPriceUnknown)),
-      Text('USD', style: TextStyle(color: _isMileageTicket || _isTicketPriceUnknown ? Colors.grey : null)),
+      Expanded(child: _buildTextFormField(controller: _ticketPriceController, labelText: tr('Price'), icon: _isMileageTicket ? Icons.star : Icons.monetization_on, keyboardType: TextInputType.number, enabled: !_isTicketPriceUnknown)),
+      Text(tr('USD'), style: TextStyle(color: _isMileageTicket || _isTicketPriceUnknown ? Colors.grey : null)),
       Switch(
         value: _isMileageTicket,
         onChanged: _isTicketPriceUnknown ? null : (val) {
@@ -1140,14 +1142,14 @@ class _AddFlightLogScreenState extends State<AddFlightLogScreen> {
           });
         },
       ),
-      Text('Miles', style: TextStyle(color: !_isMileageTicket || _isTicketPriceUnknown ? Colors.grey : null)),
+      Text(tr('Miles'), style: TextStyle(color: !_isMileageTicket || _isTicketPriceUnknown ? Colors.grey : null)),
     ]);
   }
 
   Widget _buildUpgradePriceField() {
     return Row(children: [
-      Expanded(child: _buildTextFormField(controller: _upgradePriceController, labelText: 'Upgrade Price', icon: _isUpgradeInMiles ? Icons.star : Icons.monetization_on, keyboardType: TextInputType.number, enabled: !_isUpgradePriceUnknown)),
-      Text('USD', style: TextStyle(color: _isUpgradeInMiles || _isUpgradePriceUnknown ? Colors.grey : null)),
+      Expanded(child: _buildTextFormField(controller: _upgradePriceController, labelText: tr('Upgrade Price'), icon: _isUpgradeInMiles ? Icons.star : Icons.monetization_on, keyboardType: TextInputType.number, enabled: !_isUpgradePriceUnknown)),
+      Text(tr('USD'), style: TextStyle(color: _isUpgradeInMiles || _isUpgradePriceUnknown ? Colors.grey : null)),
       Switch(
         value: _isUpgradeInMiles,
         onChanged: _isUpgradePriceUnknown ? null : (val) {
@@ -1163,7 +1165,7 @@ class _AddFlightLogScreenState extends State<AddFlightLogScreen> {
           });
         },
       ),
-      Text('Miles', style: TextStyle(color: !_isUpgradeInMiles || _isUpgradePriceUnknown ? Colors.grey : null)),
+      Text(tr('Miles'), style: TextStyle(color: !_isUpgradeInMiles || _isUpgradePriceUnknown ? Colors.grey : null)),
     ]);
   }
 
@@ -1174,7 +1176,7 @@ class _AddFlightLogScreenState extends State<AddFlightLogScreen> {
       readOnly: true,
       onTap: () => _showAirlineSearchDialog(controller),
       decoration: _buildInputDecoration(
-        labelText: 'Mileage Program',
+        labelText: tr('Mileage Program'),
         icon: Icons.card_membership,
         enabled: isUpgrade ? !_isUpgradePriceUnknown : !_isTicketPriceUnknown,
       ),
@@ -1182,7 +1184,7 @@ class _AddFlightLogScreenState extends State<AddFlightLogScreen> {
         if ((value == null || value.isEmpty)) {
           final priceUnknown = isUpgrade ? _isUpgradePriceUnknown : _isTicketPriceUnknown;
           final isMiles = isUpgrade ? _isUpgradeInMiles : _isMileageTicket;
-          if(isMiles && !priceUnknown) return 'Please select an airline program';
+          if(isMiles && !priceUnknown) return tr('Please select an airline program');
         }
         return null;
       },
@@ -1205,7 +1207,7 @@ class _AddFlightLogScreenState extends State<AddFlightLogScreen> {
                 .toList();
 
             return AlertDialog(
-              title: const Text('Search Airline'),
+              title:  Text(tr('Search Airline')),
               content: SizedBox(
                 width: double.maxFinite,
                 child: Column(
@@ -1217,8 +1219,8 @@ class _AddFlightLogScreenState extends State<AddFlightLogScreen> {
                           searchQuery = value;
                         });
                       },
-                      decoration: const InputDecoration(
-                        labelText: 'Search',
+                      decoration:  InputDecoration(
+                        labelText: tr('Search'),
                         prefixIcon: Icon(Icons.search),
                         border: OutlineInputBorder(),
                       ),
@@ -1246,7 +1248,7 @@ class _AddFlightLogScreenState extends State<AddFlightLogScreen> {
               actions: [
                 TextButton(
                   onPressed: () => Navigator.of(context).pop(),
-                  child: const Text('Cancel'),
+                  child:  Text(tr('Cancel')),
                 ),
               ],
             );
@@ -1271,9 +1273,9 @@ class _AddFlightLogScreenState extends State<AddFlightLogScreen> {
       isUnknown: isUnknown,
       onUnknownChanged: onUnknownChanged,
       child: Row(children: [
-        Expanded(child: _buildTextFormField(controller: controller, labelText: 'VAT', icon: Icons.receipt_long_outlined, keyboardType: TextInputType.number, enabled: !isUnknown)),
+        Expanded(child: _buildTextFormField(controller: controller, labelText: tr('VAT'), icon: Icons.receipt_long_outlined, keyboardType: TextInputType.number, enabled: !isUnknown)),
         const SizedBox(width: 8),
-        Padding(padding: const EdgeInsets.only(right: 8.0), child: Text('USD', style: TextStyle(color: isUnknown ? Colors.grey : Colors.black87, fontSize: 16))),
+        Padding(padding: const EdgeInsets.only(right: 8.0), child: Text(tr('USD'), style: TextStyle(color: isUnknown ? Colors.grey : Colors.black87, fontSize: 16))),
       ]),
     );
   }
@@ -1283,12 +1285,12 @@ class _AddFlightLogScreenState extends State<AddFlightLogScreen> {
       padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 12.0),
       decoration: BoxDecoration(color: Theme.of(context).scaffoldBackgroundColor, boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.08), spreadRadius: 0, blurRadius: 6)]),
       child: Row(children: [
-        Expanded(child: OutlinedButton(onPressed: () => Navigator.pop(context), child: const Text('Cancel'), style: OutlinedButton.styleFrom(
+        Expanded(child: OutlinedButton(onPressed: () => Navigator.pop(context), child:  Text(tr('Cancel')), style: OutlinedButton.styleFrom(
           padding: const EdgeInsets.symmetric(vertical: 14),
           side: BorderSide(color: Colors.deepPurple.shade300),
         ))),
         const SizedBox(width: 12),
-        Expanded(child: ElevatedButton(onPressed: _saveFlightLog, child: Text(widget.isEditing ? 'Save Changes' : 'Save Log'), style: ElevatedButton.styleFrom(
+        Expanded(child: ElevatedButton(onPressed: _saveFlightLog, child: Text(tr(widget.isEditing ? 'Save Changes' : 'Save Log')), style: ElevatedButton.styleFrom(
           padding: const EdgeInsets.symmetric(vertical: 14),
           backgroundColor: Colors.deepPurple.shade600,
           foregroundColor: Colors.white,
@@ -1300,8 +1302,8 @@ class _AddFlightLogScreenState extends State<AddFlightLogScreen> {
 
   InputDecoration _buildInputDecoration({String? labelText, String? hintText, IconData? icon, bool enabled = true}) {
     return InputDecoration(
-      labelText: labelText,
-      hintText: hintText,
+      labelText: tr(labelText),
+      hintText: tr(hintText),
       hintStyle: TextStyle(color: Colors.grey.shade400),
       labelStyle: TextStyle(
         color: enabled ? Colors.deepPurple.shade700 : Colors.grey,
@@ -1326,8 +1328,8 @@ class _AddFlightLogScreenState extends State<AddFlightLogScreen> {
     final source = await showModalBottomSheet<ImageSource>(
       context: context,
       builder: (context) => Column(mainAxisSize: MainAxisSize.min, children: [
-        ListTile(leading: const Icon(Icons.photo_library), title: const Text('Photo Library'), onTap: () => Navigator.pop(context, ImageSource.gallery)),
-        ListTile(leading: const Icon(Icons.photo_camera), title: const Text('Camera'), onTap: () => Navigator.pop(context, ImageSource.camera)),
+        ListTile(leading: const Icon(Icons.photo_library), title:  Text(tr('Photo Library')), onTap: () => Navigator.pop(context, ImageSource.gallery)),
+        ListTile(leading: const Icon(Icons.photo_camera), title:  Text(tr('Camera')), onTap: () => Navigator.pop(context, ImageSource.camera)),
       ]),
     );
     if (source == null) return;
@@ -1340,7 +1342,7 @@ class _AddFlightLogScreenState extends State<AddFlightLogScreen> {
 
   Widget _buildTicketPhotoPicker() {
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-      Text('Ticket Photo', style: Theme.of(context).textTheme.titleSmall),
+      Text(tr('Ticket Photo'), style: Theme.of(context).textTheme.titleSmall),
       const SizedBox(height: 8),
       GestureDetector(
         onTap: () => _pickImage((path) => setState(() => _ticketPhotoPath = path)),
@@ -1377,17 +1379,17 @@ class _AddFlightLogScreenState extends State<AddFlightLogScreen> {
             }
 
             return AlertDialog(
-              title: const Text('Memo & Photos'),
+              title:  Text(tr('Memo & Photos')),
               content: SingleChildScrollView(
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text('Memo:', style: TextStyle(fontWeight: FontWeight.bold)),
+                     Text(tr('Memo:'), style: TextStyle(fontWeight: FontWeight.bold)),
                     const SizedBox(height: 8),
-                    TextFormField(controller: tempMemoController, maxLines: 5, decoration: const InputDecoration(border: OutlineInputBorder(), hintText: 'Write notes...')),
+                    TextFormField(controller: tempMemoController, maxLines: 5, decoration:  InputDecoration(border: OutlineInputBorder(), hintText: tr('Write notes...'))),
                     const SizedBox(height: 20),
-                    const Text('Photos:', style: TextStyle(fontWeight: FontWeight.bold)),
+                     Text(tr('Photos:'), style: TextStyle(fontWeight: FontWeight.bold)),
                     const SizedBox(height: 8),
                     Wrap(
                       spacing: 10,
@@ -1404,9 +1406,9 @@ class _AddFlightLogScreenState extends State<AddFlightLogScreen> {
                 ),
               ),
               actions: [
-                TextButton(child: const Text('Cancel'), onPressed: () => Navigator.of(dialogContext).pop()),
+                TextButton(child:  Text(tr('Cancel')), onPressed: () => Navigator.of(dialogContext).pop()),
                 ElevatedButton(
-                  child: const Text('Save'),
+                  child:  Text(tr('Save')),
                   onPressed: () {
                     setState(() {
                       _memoController.text = tempMemoController.text;
@@ -1435,8 +1437,8 @@ class _AddFlightLogScreenState extends State<AddFlightLogScreen> {
               if (_linkedLogs.isNotEmpty)
                 ..._linkedLogs.map((log) => ListTile(
                   leading: const Icon(Icons.flight),
-                  title: Text('${log.airlineName} ${log.flightNumber}'),
-                  subtitle: Text('${log.departureIata} → ${log.arrivalIata}'),
+                  title: Text(tr('${log.airlineName} ${log.flightNumber}')),
+                  subtitle: Text(tr('${log.departureIata} → ${log.arrivalIata}')),
                   trailing: IconButton(
                     icon: const Icon(Icons.link_off, color: Colors.red),
                     onPressed: () {
@@ -1450,7 +1452,7 @@ class _AddFlightLogScreenState extends State<AddFlightLogScreen> {
                 child: ElevatedButton.icon(
                   onPressed: _showLinkFlightDialog,
                   icon: const Icon(Icons.add_link),
-                  label: const Text('Add Flight to Link'),
+                  label:  Text(tr('Add Flight to Link')),
                 ),
               ),
             ],
@@ -1476,7 +1478,7 @@ class _AddFlightLogScreenState extends State<AddFlightLogScreen> {
         return StatefulBuilder(
           builder: (context, setStateDialog) {
             return AlertDialog(
-              title: const Text('Select Flights to Link'),
+              title:  Text(tr('Select Flights to Link')),
               content: SizedBox(
                 width: double.maxFinite,
                 child: ListView.builder(
@@ -1484,8 +1486,8 @@ class _AddFlightLogScreenState extends State<AddFlightLogScreen> {
                   itemBuilder: (context, index) {
                     final log = availableLogs[index];
                     return CheckboxListTile(
-                      title: Text('${log.airlineName} ${log.flightNumber}'),
-                      subtitle: Text('${log.date} / ${log.departureIata}→${log.arrivalIata}'),
+                      title: Text(tr('${log.airlineName} ${log.flightNumber}')),
+                      subtitle: Text(tr('${log.date} / ${log.departureIata}→${log.arrivalIata}')),
                       value: selectedLogs.contains(log),
                       onChanged: (isSelected) {
                         setStateDialog(() {
@@ -1503,7 +1505,7 @@ class _AddFlightLogScreenState extends State<AddFlightLogScreen> {
               actions: [
                 TextButton(
                   onPressed: () => Navigator.of(dialogContext).pop(),
-                  child: const Text('Cancel'),
+                  child:  Text(tr('Cancel')),
                 ),
                 ElevatedButton(
                   onPressed: () {
@@ -1512,7 +1514,7 @@ class _AddFlightLogScreenState extends State<AddFlightLogScreen> {
                     });
                     Navigator.of(dialogContext).pop();
                   },
-                  child: const Text('Link Selected'),
+                  child:  Text(tr('Link Selected')),
                 ),
               ],
             );

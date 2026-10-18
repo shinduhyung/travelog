@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:jidoapp/models/badge_model.dart';
 import 'package:jidoapp/models/country_model.dart';
 import 'package:jidoapp/providers/country_provider.dart';
@@ -43,7 +44,7 @@ class CountryChecklist {
         padding: const EdgeInsets.all(20),
         child: Center(
           child: Text(
-            'No countries found for this badge.',
+            tr('No countries found for this badge.'),
             style: TextStyle(color: Colors.grey[600]),
           ),
         ),
@@ -104,7 +105,7 @@ class CountryChecklist {
                   ),
                 ),
                 title: Text(
-                  country.name,
+                  tr(country.name),
                   style: const TextStyle(
                     fontWeight: FontWeight.w600,
                     fontSize: 15,
@@ -165,9 +166,9 @@ class CountryChecklist {
               ),
               const SizedBox(height: 16),
               Text(
-                achievement.requiresHome
+                tr(achievement.requiresHome
                     ? 'No home country set yet'
-                    : 'No countries rated yet',
+                    : 'No countries rated yet'),
                 style: TextStyle(
                   color: Colors.grey[600],
                   fontSize: 16,
@@ -237,7 +238,7 @@ class CountryChecklist {
                   ),
                 ),
                 title: Text(
-                  country.name,
+                  tr(country.name),
                   style: const TextStyle(
                     fontWeight: FontWeight.w600,
                     fontSize: 15,
@@ -250,7 +251,7 @@ class CountryChecklist {
                       const Icon(Icons.star, color: Colors.amber, size: 16),
                       const SizedBox(width: 4),
                       Text(
-                        rating.toStringAsFixed(1),
+                        tr(rating.toStringAsFixed(1)),
                         style: const TextStyle(
                           fontSize: 13,
                           fontWeight: FontWeight.w600,

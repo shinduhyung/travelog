@@ -1,6 +1,7 @@
 // lib/screens/religion_map_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:jidoapp/models/country_model.dart';
 import 'package:jidoapp/providers/country_provider.dart';
@@ -62,6 +63,7 @@ class _ReligionMapScreenState extends State<ReligionMapScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final countryProvider = Provider.of<CountryProvider>(context);
     final religionProvider = Provider.of<ReligionProvider>(context);
     final backgroundColor = Theme.of(context).scaffoldBackgroundColor;
@@ -131,7 +133,7 @@ class _ReligionMapScreenState extends State<ReligionMapScreen> {
     return Scaffold(
       backgroundColor: backgroundColor,
       appBar: AppBar(
-        title: Text(widget.denominationFilter ?? widget.religionFilter ?? 'World Religions Map'),
+        title: Text(tr(widget.denominationFilter ?? widget.religionFilter ?? 'World Religions Map')),
         backgroundColor: Colors.transparent,
         elevation: 0,
         foregroundColor: isDarkMode ? Colors.white : Colors.black, // 다크 모드/라이트 모드 제목 색상 조정
@@ -173,8 +175,8 @@ class _ReligionMapScreenState extends State<ReligionMapScreen> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          const Text(
-                            'Show Denominations',
+                           Text(
+                            tr('Show Denominations'),
                             style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
                           ),
                           Switch(
@@ -261,7 +263,7 @@ class _ReligionMapScreenState extends State<ReligionMapScreen> {
           Container(width: 12, height: 12, color: color),
           const SizedBox(width: 8),
           Text(
-            name,
+            tr(name),
             style: TextStyle(
               fontSize: 12,
               fontWeight: isHeader ? FontWeight.bold : FontWeight.normal,

@@ -1,6 +1,7 @@
 // lib/screens/airline_detail_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:intl/intl.dart';
 import 'package:jidoapp/models/airline_model.dart';
 import 'package:jidoapp/providers/airline_provider.dart';
@@ -40,13 +41,14 @@ class _AirlineDetailScreenState extends State<AirlineDetailScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Consumer<AirlineProvider>(
       builder: (context, airlineProvider, child) {
         Airline airline;
         try {
           airline = airlineProvider.airlines.firstWhere((a) => a.name == widget.airlineName);
         } catch (e) {
-          return const Scaffold(body: Center(child: Text("Airline not found.")));
+          return  Scaffold(body: Center(child: Text(tr("Airline not found."))));
         }
 
         final themeColor = colorFromHex(airline.themeColorHex, fallback: Colors.green.shade800);
@@ -187,7 +189,7 @@ class _AirlineDetailScreenState extends State<AirlineDetailScreen> {
                 children: [
                   if (allianceName != null) ...[
                     Text(
-                      allianceName,
+                      tr(allianceName),
                       style: TextStyle(
                         fontSize: 12,
                         color: Colors.grey[500],
@@ -205,7 +207,7 @@ class _AirlineDetailScreenState extends State<AirlineDetailScreen> {
                     ),
                   ],
                   Text(
-                    '${airline.code} / ${airline.code3 ?? ""}',
+                    tr('${airline.code} / ${airline.code3 ?? ""}'),
                     style: TextStyle(
                       fontSize: 12,
                       color: Colors.grey[500],
@@ -250,7 +252,7 @@ class _AirlineDetailScreenState extends State<AirlineDetailScreen> {
           Icon(Icons.circle, size: 8, color: color),
           const SizedBox(width: 6),
           Text(
-            text,
+            tr(text),
             style: TextStyle(
               color: color,
               fontWeight: FontWeight.bold,
@@ -273,7 +275,7 @@ class _AirlineDetailScreenState extends State<AirlineDetailScreen> {
             children: [
               ListTile(
                 leading: const Icon(Icons.flight_takeoff, color: Colors.blue),
-                title: const Text('Add Flight Log', style: TextStyle(fontWeight: FontWeight.bold)),
+                title:  Text(tr('Add Flight Log'), style: TextStyle(fontWeight: FontWeight.bold)),
                 onTap: () {
                   Navigator.pop(ctx);
                   Navigator.push(context, MaterialPageRoute(builder: (context) => AddFlightLogScreen(initialAirlineName: widget.airlineName)));
@@ -282,7 +284,7 @@ class _AirlineDetailScreenState extends State<AirlineDetailScreen> {
               const Divider(),
               ListTile(
                 leading: Icon(Icons.star, color: _mileageThemeColor),
-                title: const Text('Book Award Flight (Miles)'),
+                title:  Text(tr('Book Award Flight (Miles)')),
                 onTap: () {
                   Navigator.pop(ctx);
                   Navigator.push(context, MaterialPageRoute(builder: (context) => AddFlightLogScreen(initialAirlineName: widget.airlineName, initialIsMileage: true)));
@@ -290,7 +292,7 @@ class _AirlineDetailScreenState extends State<AirlineDetailScreen> {
               ),
               ListTile(
                 leading: Icon(Icons.upgrade, color: _mileageThemeColor),
-                title: const Text('Upgrade Seat (Miles)'),
+                title:  Text(tr('Upgrade Seat (Miles)')),
                 onTap: () {
                   Navigator.pop(ctx);
                   _showFlightSelectionForUpgrade(context, airline.name);
@@ -298,7 +300,7 @@ class _AirlineDetailScreenState extends State<AirlineDetailScreen> {
               ),
               ListTile(
                 leading: Icon(Icons.shopping_bag_outlined, color: _mileageThemeColor),
-                title: const Text('Other Mileage Usage'),
+                title:  Text(tr('Other Mileage Usage')),
                 onTap: () {
                   Navigator.pop(ctx);
                   _showOtherMileageUsageDialog(context);
@@ -338,8 +340,8 @@ class _AirlineDetailScreenState extends State<AirlineDetailScreen> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text(
-          'Flight Logs',
+         Text(
+          tr('Flight Logs'),
           style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
         ),
         const SizedBox(height: 8),
@@ -347,25 +349,25 @@ class _AirlineDetailScreenState extends State<AirlineDetailScreen> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              'Total Flights: ${airline.totalTimes}',
+              tr('Total Flights: ${airline.totalTimes}'),
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.grey.shade600),
             ),
             Text(
-              'Total Cash Spent: \$${numberFormatter.format(totalCashSpent)}',
+              tr('Total Cash Spent: \$${numberFormatter.format(totalCashSpent)}'),
               style: TextStyle(fontSize: 16, color: themeColor.withOpacity(0.8), fontWeight: FontWeight.bold),
             ),
           ],
         ),
         const SizedBox(height: 16),
         if (sortedLogs.isEmpty)
-          const Padding(
+           Padding(
             padding: EdgeInsets.all(32.0),
             child: Center(
               child: Column(
                 children: [
                   Icon(Icons.info_outline, size: 48, color: Colors.grey),
                   SizedBox(height: 16),
-                  Text('No flight logs yet.', style: TextStyle(color: Colors.grey)),
+                  Text(tr('No flight logs yet.'), style: TextStyle(color: Colors.grey)),
                 ],
               ),
             ),
@@ -437,8 +439,8 @@ class _AirlineDetailScreenState extends State<AirlineDetailScreen> {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            const Text(
-              'Mileage Program',
+             Text(
+              tr('Mileage Program'),
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             IconButton(
@@ -459,7 +461,7 @@ class _AirlineDetailScreenState extends State<AirlineDetailScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Current Balance',
+                tr('Current Balance'),
                 style: TextStyle(fontSize: 14, color: _mileageThemeColor.shade700, fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 4),
@@ -468,10 +470,10 @@ class _AirlineDetailScreenState extends State<AirlineDetailScreen> {
                   style: TextStyle(color: _mileageThemeColor, fontFamily: Theme.of(context).textTheme.bodyLarge?.fontFamily),
                   children: [
                     TextSpan(
-                      text: numberFormatter.format(airline.mileageBalance ?? 0),
+                      text: tr(numberFormatter.format(airline.mileageBalance ?? 0)),
                       style: const TextStyle(fontSize: 32, fontWeight: FontWeight.w900),
                     ),
-                    const TextSpan(text: ' miles', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+                     TextSpan(text: tr(' miles'), style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
                   ],
                 ),
               ),
@@ -480,24 +482,24 @@ class _AirlineDetailScreenState extends State<AirlineDetailScreen> {
         ),
         const SizedBox(height: 12),
         Text(
-          'Total Mileage Spent: ${numberFormatter.format(totalMileageSpent)} miles',
+          tr('Total Mileage Spent: ${numberFormatter.format(totalMileageSpent)} miles'),
           style: TextStyle(fontSize: 14, color: _mileageThemeColor[800], fontWeight: FontWeight.w600),
         ),
         const SizedBox(height: 24),
         Text(
-          'Usage History',
+          tr('Usage History'),
           style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: _mileageThemeColor),
         ),
         const SizedBox(height: 8),
         if (combinedUsageHistory.isEmpty)
-          const Padding(
+           Padding(
             padding: EdgeInsets.all(32.0),
             child: Center(
               child: Column(
                 children: [
                   Icon(Icons.history_edu, size: 48, color: Colors.grey),
                   SizedBox(height: 16),
-                  Text('No mileage usage history yet.', style: TextStyle(color: Colors.grey)),
+                  Text(tr('No mileage usage history yet.'), style: TextStyle(color: Colors.grey)),
                 ],
               ),
             ),
@@ -536,16 +538,16 @@ class _AirlineDetailScreenState extends State<AirlineDetailScreen> {
       context: context,
       builder: (context) {
         return AlertDialog(
-          title: const Text('Edit Mileage Balance'),
+          title:  Text(tr('Edit Mileage Balance')),
           content: TextField(
             controller: mileageController,
             keyboardType: const TextInputType.numberWithOptions(decimal: false),
-            decoration: const InputDecoration(labelText: 'Miles'),
+            decoration:  InputDecoration(labelText: tr('Miles')),
           ),
           actions: [
             TextButton(
               onPressed: () => Navigator.pop(context),
-              child: const Text('Cancel'),
+              child:  Text(tr('Cancel')),
             ),
             ElevatedButton(
               onPressed: () {
@@ -555,7 +557,7 @@ class _AirlineDetailScreenState extends State<AirlineDetailScreen> {
                 }
                 Navigator.pop(context);
               },
-              child: const Text('Save'),
+              child:  Text(tr('Save')),
             ),
           ],
         );
@@ -572,7 +574,7 @@ class _AirlineDetailScreenState extends State<AirlineDetailScreen> {
             children: <Widget>[
               ListTile(
                 leading: Icon(Icons.flight_takeoff, color: _mileageThemeColor),
-                title: const Text('Book a Flight with Miles'),
+                title:  Text(tr('Book a Flight with Miles')),
                 onTap: () {
                   Navigator.pop(ctx);
                   Navigator.push(
@@ -588,7 +590,7 @@ class _AirlineDetailScreenState extends State<AirlineDetailScreen> {
               ),
               ListTile(
                 leading: Icon(Icons.upgrade, color: _mileageThemeColor),
-                title: const Text('Upgrade a Seat'),
+                title:  Text(tr('Upgrade a Seat')),
                 onTap: () {
                   Navigator.pop(ctx);
                   _showFlightSelectionForUpgrade(context, airline.name);
@@ -596,7 +598,7 @@ class _AirlineDetailScreenState extends State<AirlineDetailScreen> {
               ),
               ListTile(
                 leading: Icon(Icons.shopping_bag_outlined, color: _mileageThemeColor),
-                title: const Text('Other Usage (Hotel, Shopping, etc.)'),
+                title:  Text(tr('Other Usage (Hotel, Shopping, etc.)')),
                 onTap: () {
                   Navigator.pop(ctx);
                   _showOtherMileageUsageDialog(context);
@@ -641,14 +643,14 @@ class _AirlineDetailScreenState extends State<AirlineDetailScreen> {
                       SliverToBoxAdapter(
                         child: Padding(
                           padding: const EdgeInsets.all(16.0),
-                          child: Text('Select Flight to Upgrade', style: Theme.of(context).textTheme.titleLarge),
+                          child: Text(tr('Select Flight to Upgrade'), style: Theme.of(context).textTheme.titleLarge),
                         ),
                       ),
                       if (flightsByCurrentAirline.isNotEmpty)
                         SliverToBoxAdapter(
                           child: Padding(
                             padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-                            child: Text('Flights by $currentAirlineName', style: Theme.of(context).textTheme.titleMedium),
+                            child: Text(tr('Flights by $currentAirlineName'), style: Theme.of(context).textTheme.titleMedium),
                           ),
                         ),
                       SliverList(
@@ -664,7 +666,7 @@ class _AirlineDetailScreenState extends State<AirlineDetailScreen> {
                         SliverToBoxAdapter(
                           child: Padding(
                             padding: const EdgeInsets.fromLTRB(16.0, 24.0, 16.0, 8.0),
-                            child: Text('Flights by Other Airlines', style: Theme.of(context).textTheme.titleMedium),
+                            child: Text(tr('Flights by Other Airlines'), style: Theme.of(context).textTheme.titleMedium),
                           ),
                         ),
                       SliverList(
@@ -677,8 +679,8 @@ class _AirlineDetailScreenState extends State<AirlineDetailScreen> {
                         ),
                       ),
                       if (flightsByCurrentAirline.isEmpty && flightsByOtherAirlines.isEmpty)
-                        const SliverFillRemaining(
-                          child: Center(child: Text('No upgradeable flights found.')),
+                         SliverFillRemaining(
+                          child: Center(child: Text(tr('No upgradeable flights found.'))),
                         ),
                     ],
                   ),
@@ -700,16 +702,16 @@ class _AirlineDetailScreenState extends State<AirlineDetailScreen> {
           text: TextSpan(
             style: DefaultTextStyle.of(context).style.copyWith(fontSize: 16),
             children: [
-              TextSpan(text: '${log.airlineName} ${log.flightNumber.isNotEmpty ? log.flightNumber : ""}(${log.departureIata} → ${log.arrivalIata})'),
+              TextSpan(text: tr('${log.airlineName} ${log.flightNumber.isNotEmpty ? log.flightNumber : ""}(${log.departureIata} → ${log.arrivalIata})')),
               if (isUpgraded)
-                const TextSpan(
-                  text: ' (upgraded)',
+                 TextSpan(
+                  text: tr(' (upgraded)'),
                   style: TextStyle(color: Colors.green, fontWeight: FontWeight.bold, fontSize: 14),
                 ),
             ],
           ),
         ),
-        subtitle: Text('${log.date} ・ ${log.seatClass}'),
+        subtitle: Text('${log.date} ・ ${trSeatClass(log.seatClass)}'),
         onTap: () {
           Navigator.pop(context);
           Navigator.push(
@@ -743,7 +745,7 @@ class _AirlineDetailScreenState extends State<AirlineDetailScreen> {
       context: context,
       builder: (ctx) {
         return AlertDialog(
-          title: const Text('Log Other Mileage Usage'),
+          title:  Text(tr('Log Other Mileage Usage')),
           content: Form(
             key: formKey,
             child: SingleChildScrollView(
@@ -752,7 +754,7 @@ class _AirlineDetailScreenState extends State<AirlineDetailScreen> {
                 children: [
                   TextFormField(
                     controller: dateController,
-                    decoration: const InputDecoration(labelText: 'Date', icon: Icon(Icons.calendar_today)),
+                    decoration:  InputDecoration(labelText: tr('Date'), icon: Icon(Icons.calendar_today)),
                     readOnly: true,
                     onTap: () async {
                       DateTime? picked = await showDatePicker(context: context, initialDate: DateTime.now(), firstDate: DateTime(2000), lastDate: DateTime(2101));
@@ -763,25 +765,25 @@ class _AirlineDetailScreenState extends State<AirlineDetailScreen> {
                   ),
                   DropdownButtonFormField<String>(
                     value: selectedCategory,
-                    hint: const Text('Category'),
-                    items: categories.map((c) => DropdownMenuItem(value: c, child: Text(c))).toList(),
+                    hint:  Text(tr('Category')),
+                    items: categories.map((c) => DropdownMenuItem(value: c, child: Text(tr(c)))).toList(),
                     onChanged: (val) => selectedCategory = val,
                     validator: (val) => val == null ? 'Please select a category' : null,
                   ),
                   TextFormField(
                     controller: descriptionController,
-                    decoration: const InputDecoration(labelText: 'Description', icon: Icon(Icons.description)),
+                    decoration:  InputDecoration(labelText: tr('Description'), icon: Icon(Icons.description)),
                     validator: (val) => val == null || val.isEmpty ? 'Required' : null,
                   ),
                   TextFormField(
                     controller: milesController,
-                    decoration: const InputDecoration(labelText: 'Miles Used', icon: Icon(Icons.star)),
+                    decoration:  InputDecoration(labelText: tr('Miles Used'), icon: Icon(Icons.star)),
                     keyboardType: TextInputType.number,
                     validator: (val) => val == null || val.isEmpty ? 'Required' : null,
                   ),
                   TextFormField(
                     controller: vatController,
-                    decoration: const InputDecoration(labelText: 'Additional Payment (USD)', icon: Icon(Icons.monetization_on)),
+                    decoration:  InputDecoration(labelText: tr('Additional Payment (USD)'), icon: Icon(Icons.monetization_on)),
                     keyboardType: TextInputType.number,
                   ),
                 ],
@@ -791,7 +793,7 @@ class _AirlineDetailScreenState extends State<AirlineDetailScreen> {
           actions: [
             TextButton(
               onPressed: () => Navigator.pop(ctx),
-              child: const Text('Cancel'),
+              child:  Text(tr('Cancel')),
             ),
             ElevatedButton(
               onPressed: () {
@@ -807,7 +809,7 @@ class _AirlineDetailScreenState extends State<AirlineDetailScreen> {
                   Navigator.pop(ctx);
                 }
               },
-              child: const Text('Save'),
+              child:  Text(tr('Save')),
             )
           ],
         );
@@ -844,17 +846,17 @@ class _AirlineDetailScreenState extends State<AirlineDetailScreen> {
                 children: [
                   Expanded(
                     child: Text(
-                      'Upgrade: ${log.airlineName} ${log.flightNumber} (to ${log.seatClass})',
+                      tr('Upgrade: ${log.airlineName} ${log.flightNumber} (to ${trSeatClass(log.seatClass)})'),
                       style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                       overflow: TextOverflow.ellipsis,
                     ),
                   ),
-                  Text(log.upgradeDate ?? '', style: TextStyle(color: Colors.grey.shade700)),
+                  Text(tr(log.upgradeDate ?? ''), style: TextStyle(color: Colors.grey.shade700)),
                 ],
               ),
               const SizedBox(height: 8),
               Text(
-                'Route: ${log.departureIata} → ${log.arrivalIata}',
+                tr('Route: ${log.departureIata} → ${log.arrivalIata}'),
                 style: TextStyle(fontStyle: FontStyle.italic, color: Colors.grey.shade600),
               ),
               const Divider(height: 20),
@@ -866,12 +868,12 @@ class _AirlineDetailScreenState extends State<AirlineDetailScreen> {
                         style: TextStyle(fontSize: 16, color: Colors.black87, fontFamily: Theme.of(context).textTheme.bodyLarge?.fontFamily),
                         children: [
                           TextSpan(
-                            text: '${numberFormatter.format(log.upgradePrice ?? 0)} miles',
+                            text: tr('${numberFormatter.format(log.upgradePrice ?? 0)} miles'),
                             style: TextStyle(fontWeight: FontWeight.bold, color: _mileageThemeColor[700]),
                           ),
                           if (log.upgradeVat != null && log.upgradeVat! > 0)
                             TextSpan(
-                              text: ' + \$${numberFormatter.format(log.upgradeVat)}',
+                              text: tr(' + \$${numberFormatter.format(log.upgradeVat)}'),
                               style: TextStyle(fontWeight: FontWeight.bold, color: Colors.amber.shade800),
                             ),
                         ]
@@ -916,17 +918,17 @@ class _AirlineDetailScreenState extends State<AirlineDetailScreen> {
                 children: [
                   Expanded(
                     child: Text(
-                      '${log.departureIata} → ${log.arrivalIata}',
+                      tr('${log.departureIata} → ${log.arrivalIata}'),
                       style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                     ),
                   ),
-                  Text(log.date, style: TextStyle(color: Colors.grey.shade700)),
+                  Text(tr(log.date), style: TextStyle(color: Colors.grey.shade700)),
                 ],
               ),
               const SizedBox(height: 8),
               if (isDifferentOperator)
                 Text(
-                  'Operated by: ${log.airlineName}',
+                  tr('Operated by: ${log.airlineName}'),
                   style: TextStyle(fontStyle: FontStyle.italic, color: Colors.grey.shade600),
                 ),
               const Divider(height: 20),
@@ -938,12 +940,12 @@ class _AirlineDetailScreenState extends State<AirlineDetailScreen> {
                         style: TextStyle(fontSize: 16, color: Colors.black87, fontFamily: Theme.of(context).textTheme.bodyLarge?.fontFamily),
                         children: [
                           TextSpan(
-                            text: '${numberFormatter.format(log.ticketPrice ?? 0)} miles',
+                            text: tr('${numberFormatter.format(log.ticketPrice ?? 0)} miles'),
                             style: TextStyle(fontWeight: FontWeight.bold, color: _mileageThemeColor[700]),
                           ),
                           if (log.vat != null && log.vat! > 0)
                             TextSpan(
-                              text: ' + \$${numberFormatter.format(log.vat)}',
+                              text: tr(' + \$${numberFormatter.format(log.vat)}'),
                               style: TextStyle(fontWeight: FontWeight.bold, color: Colors.amber.shade800),
                             ),
                         ]
@@ -974,16 +976,16 @@ class _AirlineDetailScreenState extends State<AirlineDetailScreen> {
               children: [
                 Expanded(
                   child: Text(
-                    usage.description,
+                    tr(usage.description),
                     style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                   ),
                 ),
-                Text(usage.date, style: TextStyle(color: Colors.grey.shade700)),
+                Text(tr(usage.date), style: TextStyle(color: Colors.grey.shade700)),
               ],
             ),
             const SizedBox(height: 8),
             Text(
-              'Category: ${usage.category}',
+              tr('Category: ${usage.category}'),
               style: TextStyle(fontStyle: FontStyle.italic, color: Colors.grey.shade600),
             ),
             const Divider(height: 20),
@@ -995,12 +997,12 @@ class _AirlineDetailScreenState extends State<AirlineDetailScreen> {
                       style: TextStyle(fontSize: 16, color: Colors.black87, fontFamily: Theme.of(context).textTheme.bodyLarge?.fontFamily),
                       children: [
                         TextSpan(
-                          text: '${numberFormatter.format(usage.miles)} miles',
+                          text: tr('${numberFormatter.format(usage.miles)} miles'),
                           style: TextStyle(fontWeight: FontWeight.bold, color: _mileageThemeColor[700]),
                         ),
                         if (usage.cashAmount != null && usage.cashAmount! > 0)
                           TextSpan(
-                            text: ' + \$${numberFormatter.format(usage.cashAmount)}',
+                            text: tr(' + \$${numberFormatter.format(usage.cashAmount)}'),
                             style: TextStyle(fontWeight: FontWeight.bold, color: Colors.amber.shade800),
                           ),
                       ]
@@ -1043,7 +1045,7 @@ class _AirlineDetailScreenState extends State<AirlineDetailScreen> {
                 children: [
                   Expanded(
                     child: Text(
-                      log.flightNumber.isNotEmpty ? log.flightNumber : 'Unknown Flight',
+                      tr(log.flightNumber.isNotEmpty ? log.flightNumber : 'Unknown Flight'),
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
@@ -1055,14 +1057,14 @@ class _AirlineDetailScreenState extends State<AirlineDetailScreen> {
                   Row(
                     children: [
                       Text(
-                        log.date,
+                        tr(log.date),
                         style: TextStyle(fontSize: 14, color: Colors.grey.shade600),
                       ),
                       IconButton(
                         padding: const EdgeInsets.only(left: 8, right: 0),
                         constraints: const BoxConstraints(),
                         icon: const Icon(Icons.sync_alt, color: Colors.orange),
-                        tooltip: 'Connect Itinerary',
+                        tooltip: tr('Connect Itinerary'),
                         onPressed: () {
                           Navigator.push(
                             context,
@@ -1080,7 +1082,7 @@ class _AirlineDetailScreenState extends State<AirlineDetailScreen> {
                 Padding(
                   padding: const EdgeInsets.only(top: 8.0),
                   child: Chip(
-                    label: const Text('CANCELED'),
+                    label:  Text(tr('CANCELED')),
                     backgroundColor: Colors.red.shade400,
                     labelStyle: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                   ),
@@ -1099,7 +1101,7 @@ class _AirlineDetailScreenState extends State<AirlineDetailScreen> {
                 ),
               const SizedBox(height: 8),
               Text(
-                '${log.departureIata ?? 'N/A'} → ${log.arrivalIata ?? 'N/A'}',
+                tr('${log.departureIata ?? 'N/A'} → ${log.arrivalIata ?? 'N/A'}'),
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500, color: Colors.grey.shade800),
               ),
               const Divider(height: 20, thickness: 1),
@@ -1155,8 +1157,8 @@ class _AirlineDetailScreenState extends State<AirlineDetailScreen> {
         children: [
           Icon(icon, size: 16, color: Colors.grey.shade700),
           const SizedBox(width: 8),
-          Text('$label: ', style: TextStyle(fontSize: 14, color: Colors.grey.shade800, fontWeight: FontWeight.w500)),
-          Expanded(child: Text(value, style: TextStyle(fontSize: 14, color: Colors.grey.shade600), textAlign: TextAlign.end,)),
+          Text(tr('$label: '), style: TextStyle(fontSize: 14, color: Colors.grey.shade800, fontWeight: FontWeight.w500)),
+          Expanded(child: Text(tr(value), style: TextStyle(fontSize: 14, color: Colors.grey.shade600), textAlign: TextAlign.end,)),
         ],
       ),
     );
@@ -1167,23 +1169,23 @@ class _AirlineDetailScreenState extends State<AirlineDetailScreen> {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: const Text('Delete Flight Log'),
-          content: Text('Are you sure you want to delete flight ${log.flightNumber} on ${log.date}?'),
+          title:  Text(tr('Delete Flight Log')),
+          content: Text(tr('Are you sure you want to delete flight ${log.flightNumber} on ${log.date}?')),
           actions: <Widget>[
             TextButton(
-              child: const Text('Cancel'),
+              child:  Text(tr('Cancel')),
               onPressed: () {
                 Navigator.of(context).pop();
               },
             ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
-              child: const Text('Delete', style: TextStyle(color: Colors.white)),
+              child:  Text(tr('Delete'), style: TextStyle(color: Colors.white)),
               onPressed: () {
                 airlineProvider.removeFlightLog(log);
                 Navigator.of(context).pop();
                 ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text('Flight log deleted successfully!')),
+                   SnackBar(content: Text(tr('Flight log deleted successfully!'))),
                 );
               },
             ),

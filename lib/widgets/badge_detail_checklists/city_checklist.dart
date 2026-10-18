@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:jidoapp/models/badge_model.dart';
 import 'package:jidoapp/models/city_model.dart';
 import 'package:jidoapp/providers/city_provider.dart';
@@ -130,9 +131,9 @@ class CityChecklist {
               ),
               const SizedBox(height: 16),
               Text(
-                achievement.requiresHome
+                tr(achievement.requiresHome
                     ? 'No home cities set yet'
-                    : 'No cities rated yet',
+                    : 'No cities rated yet'),
                 style: TextStyle(
                   color: Colors.grey[600],
                   fontSize: 16,
@@ -217,7 +218,7 @@ class CityChecklist {
                             const Icon(Icons.star, color: Colors.amber, size: 16),
                             const SizedBox(width: 4),
                             Text(
-                              rating.toStringAsFixed(1),
+                              tr(rating.toStringAsFixed(1)),
                               style: const TextStyle(
                                 fontSize: 13,
                                 fontWeight: FontWeight.w600,
@@ -234,7 +235,7 @@ class CityChecklist {
                             Icon(Icons.home, color: Colors.blue.shade600, size: 16),
                             const SizedBox(width: 4),
                             Text(
-                              'Home',
+                              tr('Home'),
                               style: TextStyle(
                                 fontSize: 13,
                                 color: Colors.blue.shade700,
@@ -262,9 +263,9 @@ class CityChecklist {
         children: [
           Icon(icon, size: 20, color: themeColor),
           const SizedBox(width: 12),
-          Text(label, style: const TextStyle(fontSize: 15, color: Colors.black87)),
+          Text(tr(label), style: const TextStyle(fontSize: 15, color: Colors.black87)),
           const Spacer(),
-          Text(value, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
+          Text(tr(value), style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
         ],
       ),
     );
@@ -287,7 +288,7 @@ class CityChecklist {
               Icon(Icons.location_city, size: 60, color: Colors.grey[300]),
               const SizedBox(height: 16),
               Text(
-                'No cities visited yet',
+                tr('No cities visited yet'),
                 style: TextStyle(
                   color: Colors.grey[600],
                   fontSize: 16,
@@ -296,7 +297,7 @@ class CityChecklist {
               ),
               const SizedBox(height: 8),
               Text(
-                'Start exploring cities!',
+                tr('Start exploring cities!'),
                 style: TextStyle(
                   color: Colors.grey[500],
                   fontSize: 14,
@@ -402,7 +403,7 @@ class CityChecklist {
           child: Column(
             children: [
               Text(
-                'No capital cities visited yet',
+                tr('No capital cities visited yet'),
                 style: TextStyle(
                   color: Colors.grey[600],
                   fontSize: 16,
@@ -411,7 +412,7 @@ class CityChecklist {
               ),
               const SizedBox(height: 8),
               Text(
-                'Start your journey!',
+                tr('Start your journey!'),
                 style: TextStyle(
                   color: Colors.grey[500],
                   fontSize: 14,
@@ -479,7 +480,7 @@ class CityChecklist {
               subtitle: Padding(
                 padding: const EdgeInsets.only(top: 4),
                 child: Text(
-                  city.country,
+                  tr(city.country),
                   style: TextStyle(
                     fontSize: 13,
                     color: Colors.grey[600],
@@ -532,7 +533,7 @@ class CityChecklist {
           child: Column(
             children: [
               Text(
-                'No matching cities visited yet',
+                tr('No matching cities visited yet'),
                 style: TextStyle(
                   color: Colors.grey[600],
                   fontSize: 16,
@@ -541,7 +542,7 @@ class CityChecklist {
               ),
               const SizedBox(height: 8),
               Text(
-                'Start your journey!',
+                tr('Start your journey!'),
                 style: TextStyle(
                   color: Colors.grey[500],
                   fontSize: 14,
@@ -613,7 +614,7 @@ class CityChecklist {
               subtitle: Padding(
                 padding: const EdgeInsets.only(top: 4),
                 child: Text(
-                  subtitle,
+                  tr(subtitle),
                   style: TextStyle(
                     fontSize: 13,
                     color: Colors.grey[600],

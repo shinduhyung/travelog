@@ -3,6 +3,7 @@
 import 'dart:math';
 import 'dart:math' as math;
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter_map/flutter_map.dart'; // 이 단일 임포트만으로 모든 관련 클래스를 사용하도록 합니다.
 import 'package:latlong2/latlong.dart';
 import 'dart:async';
@@ -268,8 +269,8 @@ class _TripMapScreenState extends State<TripMapScreen>
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             // 속도 조절 라벨
-            const Text(
-              'Speed:',
+             Text(
+              tr('Speed:'),
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 14,
@@ -332,7 +333,7 @@ class _TripMapScreenState extends State<TripMapScreen>
           onPressed: onPressed,
         ),
         Text(
-          label,
+          tr(label),
           style: TextStyle(color: color, fontSize: 10),
         ),
       ],
@@ -1352,6 +1353,7 @@ class _TripMapScreenState extends State<TripMapScreen>
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return FutureBuilder<List<Marker>>(
       future: _locationMarkersFuture, // 마커 로딩 퓨처를 감시
       builder: (context, locationMarkersSnapshot) {
@@ -1359,7 +1361,7 @@ class _TripMapScreenState extends State<TripMapScreen>
           // 마커 로딩 중이면 로딩 인디케이터 표시
           return Scaffold(
             appBar: AppBar(
-              title: const Text('여행 지도 로딩 중...'),
+              title:  Text(tr('여행 지도 로딩 중...')),
               backgroundColor: Colors.blueGrey,
               foregroundColor: Colors.white,
             ),
@@ -1372,12 +1374,12 @@ class _TripMapScreenState extends State<TripMapScreen>
           developer.log("Error loading location markers: ${locationMarkersSnapshot.error}", name: 'TripMapScreen.build');
           return Scaffold(
             appBar: AppBar(
-              title: const Text('여행 지도'),
+              title:  Text(tr('여행 지도')),
               backgroundColor: Colors.blueGrey,
               foregroundColor: Colors.white,
             ),
             body: Center(
-              child: Text('위치 마커 로딩 중 오류 발생: ${locationMarkersSnapshot.error}'),
+              child: Text(tr('위치 마커 로딩 중 오류 발생: ${locationMarkersSnapshot.error}')),
             ),
           );
         } else if (locationMarkersSnapshot.hasData) {
@@ -1409,7 +1411,7 @@ class _TripMapScreenState extends State<TripMapScreen>
                       Icons.location_city,
                       color: _showLocationPanel ? Colors.yellow : Colors.white,
                     ),
-                    tooltip: 'Locations',
+                    tooltip: tr('Locations'),
                   ),
                   // Transportation 버튼
                   IconButton(
@@ -1423,7 +1425,7 @@ class _TripMapScreenState extends State<TripMapScreen>
                       Icons.directions,
                       color: _showTransportPanel ? Colors.yellow : Colors.white,
                     ),
-                    tooltip: 'Transportation',
+                    tooltip: tr('Transportation'),
                   ),
                   // Edit Mode 버튼
                   IconButton(
@@ -1444,7 +1446,7 @@ class _TripMapScreenState extends State<TripMapScreen>
                         }
                       });
                     },
-                    tooltip: 'Edit Mode',
+                    tooltip: tr('Edit Mode'),
                   ),
                   // 재생/일시정지 버튼
                   IconButton(
@@ -1464,7 +1466,7 @@ class _TripMapScreenState extends State<TripMapScreen>
                         }
                       });
                     },
-                    tooltip: 'Play/Pause Animation',
+                    tooltip: tr('Play/Pause Animation'),
                   ),
                   // 정지 버튼
                   IconButton(
@@ -1478,7 +1480,7 @@ class _TripMapScreenState extends State<TripMapScreen>
                         _isAnimationPlaying = false;
                       });
                     },
-                    tooltip: 'Stop Animation',
+                    tooltip: tr('Stop Animation'),
                   ),
                   // 설정 버튼 (PopupMenuButton)
                   PopupMenuButton<int>(
@@ -1489,8 +1491,8 @@ class _TripMapScreenState extends State<TripMapScreen>
                         child: StatefulBuilder(
                           builder: (BuildContext context, StateSetter menuSetState) {
                             return SwitchListTile(
-                              title: const Text(
-                                'Edit Mode',
+                              title:  Text(
+                                tr('Edit Mode'),
                                 style: TextStyle(fontSize: 14, fontWeight: FontWeight.normal),
                               ),
                               value: _isEditMode,
@@ -1521,8 +1523,8 @@ class _TripMapScreenState extends State<TripMapScreen>
                             return Column(
                               children: [
                                 SwitchListTile(
-                                  title: const Text(
-                                    'Cities/Airports Icons',
+                                  title:  Text(
+                                    tr('Cities/Airports Icons'),
                                     style: TextStyle(fontSize: 14, fontWeight: FontWeight.normal),
                                   ),
                                   value: _showCitiesAirportsIcons,
@@ -1540,7 +1542,7 @@ class _TripMapScreenState extends State<TripMapScreen>
                                     padding: const EdgeInsets.symmetric(horizontal: 16.0),
                                     child: Row(
                                       children: [
-                                        const Text('Size:', style: TextStyle(fontSize: 12)),
+                                         Text(tr('Size:'), style: TextStyle(fontSize: 12)),
                                         Expanded(
                                           child: Slider(
                                             value: _markerIconSize,
@@ -1556,7 +1558,7 @@ class _TripMapScreenState extends State<TripMapScreen>
                                             },
                                           ),
                                         ),
-                                        Text('${(_markerIconSize * 100).round()}%',
+                                        Text(tr('${(_markerIconSize * 100).round()}%'),
                                             style: const TextStyle(fontSize: 10)),
                                       ],
                                     ),
@@ -1573,8 +1575,8 @@ class _TripMapScreenState extends State<TripMapScreen>
                             return Column(
                               children: [
                                 SwitchListTile(
-                                  title: const Text(
-                                    'Cities/Airports Names',
+                                  title:  Text(
+                                    tr('Cities/Airports Names'),
                                     style: TextStyle(fontSize: 14, fontWeight: FontWeight.normal),
                                   ),
                                   value: _showCitiesAirportsNames,
@@ -1592,7 +1594,7 @@ class _TripMapScreenState extends State<TripMapScreen>
                                     padding: const EdgeInsets.symmetric(horizontal: 16.0),
                                     child: Row(
                                       children: [
-                                        const Text('Size:', style: TextStyle(fontSize: 12)),
+                                         Text(tr('Size:'), style: TextStyle(fontSize: 12)),
                                         Expanded(
                                           child: Slider(
                                             value: _markerNameSize,
@@ -1608,7 +1610,7 @@ class _TripMapScreenState extends State<TripMapScreen>
                                             },
                                           ),
                                         ),
-                                        Text('${(_markerNameSize * 100).round()}%',
+                                        Text(tr('${(_markerNameSize * 100).round()}%'),
                                             style: const TextStyle(fontSize: 10)),
                                       ],
                                     ),
@@ -1625,8 +1627,8 @@ class _TripMapScreenState extends State<TripMapScreen>
                             return Column(
                               children: [
                                 SwitchListTile(
-                                  title: const Text(
-                                    'Transportation',
+                                  title:  Text(
+                                    tr('Transportation'),
                                     style: TextStyle(fontSize: 14, fontWeight: FontWeight.normal),
                                   ),
                                   value: _showTransportation,
@@ -1644,7 +1646,7 @@ class _TripMapScreenState extends State<TripMapScreen>
                                     padding: const EdgeInsets.symmetric(horizontal: 16.0),
                                     child: Row(
                                       children: [
-                                        const Text('Width:', style: TextStyle(fontSize: 12)),
+                                         Text(tr('Width:'), style: TextStyle(fontSize: 12)),
                                         Expanded(
                                           child: Slider(
                                             value: _transportationWidth,
@@ -1660,7 +1662,7 @@ class _TripMapScreenState extends State<TripMapScreen>
                                             },
                                           ),
                                         ),
-                                        Text('${(_transportationWidth * 100).round()}%',
+                                        Text(tr('${(_transportationWidth * 100).round()}%'),
                                             style: const TextStyle(fontSize: 10)),
                                       ],
                                     ),
@@ -1672,13 +1674,13 @@ class _TripMapScreenState extends State<TripMapScreen>
                       ),
                     ],
                     icon: const Icon(Icons.settings),
-                    tooltip: 'Settings',
+                    tooltip: tr('Settings'),
                   ),
                   // 제자리 버튼 (Fit Bounds)
                   IconButton(
                     icon: const Icon(Icons.my_location),
                     onPressed: () => _fitBounds(_currentLocationMarkers),
-                    tooltip: 'Fit Bounds',
+                    tooltip: tr('Fit Bounds'),
                   ),
                 ],
               ),
@@ -1718,7 +1720,7 @@ class _TripMapScreenState extends State<TripMapScreen>
                               if (_newLegOriginLatLng == null) {
                                 _newLegOriginLatLng = latLng;
                                 ScaffoldMessenger.of(context).showSnackBar(
-                                  const SnackBar(content: Text('Origin selected. Tap destination on the map!')),
+                                   SnackBar(content: Text(tr('Origin selected. Tap destination on the map!'))),
                                 );
                               } else if (_newLegDestinationLatLng == null) {
                                 _newLegDestinationLatLng = latLng;
@@ -1873,12 +1875,12 @@ class _TripMapScreenState extends State<TripMapScreen>
           // 데이터가 없지만 오류도 아닌 경우 (빈 리스트일 때 등)
           return Scaffold(
             appBar: AppBar(
-              title: const Text('여행 지도'),
+              title:  Text(tr('여행 지도')),
               backgroundColor: Colors.blueGrey,
               foregroundColor: Colors.white,
             ),
-            body: const Center(
-              child: Text('표시할 도시 정보가 없습니다.'),
+            body:  Center(
+              child: Text(tr('표시할 도시 정보가 없습니다.')),
             ),
           );
         }
@@ -1917,7 +1919,7 @@ class _TripMapScreenState extends State<TripMapScreen>
                 });
               },
               icon: const Icon(Icons.cancel),
-              label: const Text('Cancel'),
+              label:  Text(tr('Cancel')),
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.grey,
                 foregroundColor: Colors.white,
@@ -1939,9 +1941,9 @@ class _TripMapScreenState extends State<TripMapScreen>
               },
               icon: const Icon(Icons.delete),
               label: Text(
-                  _selectedMarkerKeys.isNotEmpty
+                  tr(_selectedMarkerKeys.isNotEmpty
                       ? 'Delete (${_selectedMarkerKeys.length})'
-                      : 'Delete (${_selectedLegKeys.length})'
+                      : 'Delete (${_selectedLegKeys.length})')
               ),
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.redAccent,
@@ -1972,7 +1974,7 @@ class _TripMapScreenState extends State<TripMapScreen>
                   }
                 },
                 icon: const Icon(Icons.edit),
-                label: const Text('Edit'),
+                label:  Text(tr('Edit')),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.blueAccent,
                   foregroundColor: Colors.white,
@@ -1993,12 +1995,12 @@ class _TripMapScreenState extends State<TripMapScreen>
                 // 'Add New Location' 버튼을 누르면 먼저 지도에서 위치 선택을 유도
                 _newMarkerLatLng = null; // 새 추가 시작 시 기존 임시 위치 초기화
                 ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text('Tap on the map to select a location for a new marker!')),
+                   SnackBar(content: Text(tr('Tap on the map to select a location for a new marker!'))),
                 );
                 // 지도를 탭하여 위치를 선택하면 자동으로 _showAddMarkerInfoDialog가 열릴 것임
               },
               icon: const Icon(Icons.add_location_alt),
-              label: const Text('Add New Location'),
+              label:  Text(tr('Add New Location')),
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.green,
                 foregroundColor: Colors.white,
@@ -2015,7 +2017,7 @@ class _TripMapScreenState extends State<TripMapScreen>
                 _startAddLegProcess();
               },
               icon: const Icon(Icons.alt_route),
-              label: const Text('Add New Route'),
+              label:  Text(tr('Add New Route')),
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.teal,
                 foregroundColor: Colors.white,
@@ -2093,24 +2095,24 @@ class _TripMapScreenState extends State<TripMapScreen>
         return StatefulBuilder(
           builder: (context, setStateInDialog) {
             return AlertDialog(
-              title: const Text('Edit Location'),
+              title:  Text(tr('Edit Location')),
               content: SingleChildScrollView(
                 child: ListBody(
                   children: <Widget>[
                     TextFormField(
                       controller: nameController,
-                      decoration: const InputDecoration(labelText: 'Location Name'),
+                      decoration:  InputDecoration(labelText: tr('Location Name')),
                     ),
                     if (currentMarkerChar == null) // 일반 도시 마커일 때만 기간 편집 가능
                       TextFormField(
                         controller: durationController,
-                        decoration: const InputDecoration(labelText: 'Duration (days)'),
+                        decoration:  InputDecoration(labelText: tr('Duration (days)')),
                         keyboardType: TextInputType.number,
                       ),
                     const SizedBox(height: 10),
                     DropdownButtonFormField<String>(
                       value: initialColorName, // 초기 선택 값
-                      decoration: const InputDecoration(labelText: 'Marker Color'),
+                      decoration:  InputDecoration(labelText: tr('Marker Color')),
                       items: availableColors.keys.map((String colorName) {
                         return DropdownMenuItem<String>(
                           value: colorName,
@@ -2125,7 +2127,7 @@ class _TripMapScreenState extends State<TripMapScreen>
                                 ),
                               ),
                               const SizedBox(width: 10),
-                              Text(colorName),
+                              Text(tr(colorName)),
                             ],
                           ),
                         );
@@ -2145,7 +2147,7 @@ class _TripMapScreenState extends State<TripMapScreen>
               ),
               actions: <Widget>[
                 TextButton(
-                  child: const Text('Cancel'),
+                  child:  Text(tr('Cancel')),
                   onPressed: () {
                     Navigator.of(dialogContext).pop();
                     setState(() {
@@ -2154,7 +2156,7 @@ class _TripMapScreenState extends State<TripMapScreen>
                   },
                 ),
                 TextButton(
-                  child: const Text('Save'),
+                  child:  Text(tr('Save')),
                   onPressed: () {
                     setState(() {
                       final int index = _currentLocationMarkers.indexOf(markerToEdit);
@@ -2223,7 +2225,7 @@ class _TripMapScreenState extends State<TripMapScreen>
     // 따라서, 단순히 사용자에게 지도를 탭하도록 안내하는 역할만 수행합니다.
     _newMarkerLatLng = null; // 새 추가 시작 시 기존 임시 위치 초기화
     ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(content: Text('Tap on the map to select a location for a new marker!')),
+       SnackBar(content: Text(tr('Tap on the map to select a location for a new marker!'))),
     );
   }
 
@@ -2259,35 +2261,35 @@ class _TripMapScreenState extends State<TripMapScreen>
         return StatefulBuilder(
           builder: (context, setStateInDialog) {
             return AlertDialog(
-              title: const Text('Add New Location Details'),
+              title:  Text(tr('Add New Location Details')),
               content: SingleChildScrollView(
                 child: ListBody(
                   children: <Widget>[
-                    Text(locationText), // 지도에서 선택된 위치 표시
+                    Text(tr(locationText)), // 지도에서 선택된 위치 표시
                     const SizedBox(height: 10),
                     DropdownButtonFormField<String>(
                       value: selectedMarkerType,
-                      hint: const Text('Select Marker Type'),
-                      items: const <DropdownMenuItem<String>>[
+                      hint:  Text(tr('Select Marker Type')),
+                      items:  <DropdownMenuItem<String>>[
                         DropdownMenuItem<String>(
                           value: 'city',
-                          child: Text('City (Normal)'),
+                          child: Text(tr('City (Normal)')),
                         ),
                         DropdownMenuItem<String>(
                           value: 'D',
-                          child: Text('Departure (D)'),
+                          child: Text(tr('Departure (D)')),
                         ),
                         DropdownMenuItem<String>(
                           value: 'A',
-                          child: Text('Arrival (A)'),
+                          child: Text(tr('Arrival (A)')),
                         ),
                         DropdownMenuItem<String>(
                           value: 'H',
-                          child: Text('Home/Round Trip (H)'),
+                          child: Text(tr('Home/Round Trip (H)')),
                         ),
                         DropdownMenuItem<String>(
                           value: 'T',
-                          child: Text('Transit (T)'),
+                          child: Text(tr('Transit (T)')),
                         ),
                       ],
                       onChanged: (String? newValue) {
@@ -2303,18 +2305,18 @@ class _TripMapScreenState extends State<TripMapScreen>
                     const SizedBox(height: 10),
                     TextFormField(
                       controller: newNameController,
-                      decoration: const InputDecoration(labelText: 'Location Name'),
+                      decoration:  InputDecoration(labelText: tr('Location Name')),
                     ),
                     if (selectedMarkerType == 'city' || selectedMarkerType == null) // 일반 도시 마커일 때만 기간 입력 필드 표시
                       TextFormField(
                         controller: newDurationController,
-                        decoration: const InputDecoration(labelText: 'Duration (days)'),
+                        decoration:  InputDecoration(labelText: tr('Duration (days)')),
                         keyboardType: TextInputType.number,
                       ),
                     const SizedBox(height: 10),
                     DropdownButtonFormField<String>(
                       value: initialColorName, // 초기 선택 값
-                      decoration: const InputDecoration(labelText: 'Marker Color'),
+                      decoration:  InputDecoration(labelText: tr('Marker Color')),
                       items: availableColors.keys.map((String colorName) {
                         return DropdownMenuItem<String>(
                           value: colorName,
@@ -2329,7 +2331,7 @@ class _TripMapScreenState extends State<TripMapScreen>
                                 ),
                               ),
                               const SizedBox(width: 10),
-                              Text(colorName),
+                              Text(tr(colorName)),
                             ],
                           ),
                         );
@@ -2348,7 +2350,7 @@ class _TripMapScreenState extends State<TripMapScreen>
               ),
               actions: <Widget>[
                 TextButton(
-                  child: const Text('Cancel'),
+                  child:  Text(tr('Cancel')),
                   onPressed: () {
                     Navigator.of(dialogContext).pop();
                     setState(() {
@@ -2357,7 +2359,7 @@ class _TripMapScreenState extends State<TripMapScreen>
                   },
                 ),
                 TextButton(
-                  child: const Text('Add'),
+                  child:  Text(tr('Add')),
                   onPressed: () {
                     final String finalSelectedMarkerType = selectedMarkerType ?? 'city';
                     final String? finalMarkerChar = (finalSelectedMarkerType == 'city') ? null : finalSelectedMarkerType;
@@ -2398,7 +2400,7 @@ class _TripMapScreenState extends State<TripMapScreen>
 
                     Navigator.of(dialogContext).pop();
                     ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(content: Text('New marker added!')),
+                       SnackBar(content: Text(tr('New marker added!'))),
                     );
                   },
                 ),
@@ -2420,7 +2422,7 @@ class _TripMapScreenState extends State<TripMapScreen>
       _selectedLegKeys.clear(); // 경로 선택 초기화
     });
     ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(content: Text('Tap on the map to select the origin for the new route!')),
+       SnackBar(content: Text(tr('Tap on the map to select the origin for the new route!'))),
     );
   }
 
@@ -2490,7 +2492,7 @@ class _TripMapScreenState extends State<TripMapScreen>
         return StatefulBuilder(
           builder: (context, setStateInDialog) {
             return AlertDialog(
-              title: const Text('Add New Route Details'),
+              title:  Text(tr('Add New Route Details')),
               content: SingleChildScrollView(
                 child: ListBody(
                   children: <Widget>[
@@ -2504,31 +2506,31 @@ class _TripMapScreenState extends State<TripMapScreen>
                           borderRadius: BorderRadius.circular(8),
                         ),
                         child: Text(
-                          errorMessage!,
+                          tr(errorMessage!),
                           style: const TextStyle(color: Colors.red, fontWeight: FontWeight.bold),
                         ),
                       ),
                     TextFormField(
                       controller: originController,
-                      decoration: const InputDecoration(
-                        labelText: 'Origin (출발지)',
-                        hintText: 'e.g., ICN, Seoul, Paris',
+                      decoration:  InputDecoration(
+                        labelText: tr('Origin (출발지)'),
+                        hintText: tr('e.g., ICN, Seoul, Paris'),
                       ),
                     ),
                     const SizedBox(height: 10),
                     TextFormField(
                       controller: destinationController,
-                      decoration: const InputDecoration(
-                        labelText: 'Destination (도착지)',
-                        hintText: 'e.g., CDG, Tokyo, London',
+                      decoration:  InputDecoration(
+                        labelText: tr('Destination (도착지)'),
+                        hintText: tr('e.g., CDG, Tokyo, London'),
                       ),
                     ),
                     const SizedBox(height: 10),
                     TextFormField(
                       controller: identifierController,
-                      decoration: const InputDecoration(
-                        labelText: 'Flight Number / Train Name (선택사항)',
-                        hintText: 'e.g., KE901, TGV, optional',
+                      decoration:  InputDecoration(
+                        labelText: tr('Flight Number / Train Name (선택사항)'),
+                        hintText: tr('e.g., KE901, TGV, optional'),
                       ),
                     ),
 
@@ -2559,9 +2561,9 @@ class _TripMapScreenState extends State<TripMapScreen>
                             const Icon(Icons.calendar_today),
                             const SizedBox(width: 10),
                             Text(
-                              selectedDate != null
+                              tr(selectedDate != null
                                   ? '${selectedDate!.year}-${selectedDate!.month.toString().padLeft(2, '0')}-${selectedDate!.day.toString().padLeft(2, '0')}'
-                                  : 'Select Date (날짜 선택)',
+                                  : 'Select Date (날짜 선택)'),
                               style: TextStyle(
                                 color: selectedDate != null ? Colors.black : Colors.grey,
                               ),
@@ -2578,41 +2580,41 @@ class _TripMapScreenState extends State<TripMapScreen>
                         Expanded(
                           child: TextFormField(
                             controller: hoursController,
-                            decoration: const InputDecoration(
-                              labelText: 'Hours (시간)',
-                              hintText: '0',
+                            decoration:  InputDecoration(
+                              labelText: tr('Hours (시간)'),
+                              hintText: tr('0'),
                             ),
                             keyboardType: TextInputType.number,
                           ),
                         ),
                         const SizedBox(width: 10),
-                        const Text('h'),
+                         Text(tr('h')),
                         const SizedBox(width: 10),
                         Expanded(
                           child: TextFormField(
                             controller: minutesController,
-                            decoration: const InputDecoration(
-                              labelText: 'Minutes (분)',
-                              hintText: '0',
+                            decoration:  InputDecoration(
+                              labelText: tr('Minutes (분)'),
+                              hintText: tr('0'),
                             ),
                             keyboardType: TextInputType.number,
                           ),
                         ),
                         const SizedBox(width: 10),
-                        const Text('m'),
+                         Text(tr('m')),
                       ],
                     ),
 
                     const SizedBox(height: 10),
                     DropdownButtonFormField<String>(
                       value: selectedTransportType,
-                      hint: const Text('Select Transport Type'),
-                      items: const <DropdownMenuItem<String>>[
-                        DropdownMenuItem<String>(value: 'flight', child: Text('Flight')),
-                        DropdownMenuItem<String>(value: 'train', child: Text('Train')),
-                        DropdownMenuItem<String>(value: 'bus', child: Text('Bus')),
-                        DropdownMenuItem<String>(value: 'ferry', child: Text('Ferry')),
-                        DropdownMenuItem<String>(value: 'car', child: Text('Car')),
+                      hint:  Text(tr('Select Transport Type')),
+                      items:  <DropdownMenuItem<String>>[
+                        DropdownMenuItem<String>(value: 'flight', child: Text(tr('Flight'))),
+                        DropdownMenuItem<String>(value: 'train', child: Text(tr('Train'))),
+                        DropdownMenuItem<String>(value: 'bus', child: Text(tr('Bus'))),
+                        DropdownMenuItem<String>(value: 'ferry', child: Text(tr('Ferry'))),
+                        DropdownMenuItem<String>(value: 'car', child: Text(tr('Car'))),
                       ],
                       onChanged: (String? newValue) {
                         setStateInDialog(() {
@@ -2629,7 +2631,7 @@ class _TripMapScreenState extends State<TripMapScreen>
                     const SizedBox(height: 10),
                     DropdownButtonFormField<String>(
                       value: initialColorName,
-                      decoration: const InputDecoration(labelText: 'Route Color'),
+                      decoration:  InputDecoration(labelText: tr('Route Color')),
                       items: availableColors.keys.map((String colorName) {
                         return DropdownMenuItem<String>(
                           value: colorName,
@@ -2644,7 +2646,7 @@ class _TripMapScreenState extends State<TripMapScreen>
                                 ),
                               ),
                               const SizedBox(width: 10),
-                              Text(colorName),
+                              Text(tr(colorName)),
                             ],
                           ),
                         );
@@ -2661,11 +2663,11 @@ class _TripMapScreenState extends State<TripMapScreen>
                     const SizedBox(height: 10),
                     DropdownButtonFormField<String>(
                       value: initialLineStyleName,
-                      decoration: const InputDecoration(labelText: 'Line Style'),
+                      decoration:  InputDecoration(labelText: tr('Line Style')),
                       items: availableLineStyles.keys.map((String styleName) {
                         return DropdownMenuItem<String>(
                           value: styleName,
-                          child: Text(styleName),
+                          child: Text(tr(styleName)),
                         );
                       }).toList(),
                       onChanged: (String? newValue) {
@@ -2682,7 +2684,7 @@ class _TripMapScreenState extends State<TripMapScreen>
               ),
               actions: <Widget>[
                 TextButton(
-                  child: const Text('Cancel'),
+                  child:  Text(tr('Cancel')),
                   onPressed: () {
                     Navigator.of(dialogContext).pop();
                     setState(() {
@@ -2693,7 +2695,7 @@ class _TripMapScreenState extends State<TripMapScreen>
                   },
                 ),
                 TextButton(
-                  child: const Text('Add Route'),
+                  child:  Text(tr('Add Route')),
                   onPressed: () {
                     if (selectedTransportType == null) {
                       setStateInDialog(() {
@@ -2766,7 +2768,7 @@ class _TripMapScreenState extends State<TripMapScreen>
                     });
                     Navigator.of(dialogContext).pop();
                     ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(content: Text('New route added!')),
+                       SnackBar(content: Text(tr('New route added!'))),
                     );
                   },
                 ),
@@ -2830,31 +2832,31 @@ class _TripMapScreenState extends State<TripMapScreen>
         return StatefulBuilder(
           builder: (context, setStateInDialog) {
             return AlertDialog(
-              title: const Text('Edit Route'),
+              title:  Text(tr('Edit Route')),
               content: SingleChildScrollView(
                 child: ListBody(
                   children: <Widget>[
                     TextFormField(
                       controller: originController,
-                      decoration: const InputDecoration(
-                        labelText: 'Origin (출발지)',
-                        hintText: 'e.g., ICN, Seoul, Paris',
+                      decoration:  InputDecoration(
+                        labelText: tr('Origin (출발지)'),
+                        hintText: tr('e.g., ICN, Seoul, Paris'),
                       ),
                     ),
                     const SizedBox(height: 10),
                     TextFormField(
                       controller: destinationController,
-                      decoration: const InputDecoration(
-                        labelText: 'Destination (도착지)',
-                        hintText: 'e.g., CDG, Tokyo, London',
+                      decoration:  InputDecoration(
+                        labelText: tr('Destination (도착지)'),
+                        hintText: tr('e.g., CDG, Tokyo, London'),
                       ),
                     ),
                     const SizedBox(height: 10),
                     TextFormField(
                       controller: identifierController,
-                      decoration: const InputDecoration(
-                        labelText: 'Flight Number / Train Name (선택사항)',
-                        hintText: 'e.g., KE901, TGV, optional',
+                      decoration:  InputDecoration(
+                        labelText: tr('Flight Number / Train Name (선택사항)'),
+                        hintText: tr('e.g., KE901, TGV, optional'),
                       ),
                     ),
                     const SizedBox(height: 10),
@@ -2884,9 +2886,9 @@ class _TripMapScreenState extends State<TripMapScreen>
                             const Icon(Icons.calendar_today),
                             const SizedBox(width: 10),
                             Text(
-                              selectedDate != null
+                              tr(selectedDate != null
                                   ? '${selectedDate!.year}-${selectedDate!.month.toString().padLeft(2, '0')}-${selectedDate!.day.toString().padLeft(2, '0')}'
-                                  : 'Select Date (날짜 선택)',
+                                  : 'Select Date (날짜 선택)'),
                               style: TextStyle(
                                 color: selectedDate != null ? Colors.black : Colors.grey,
                               ),
@@ -2902,40 +2904,40 @@ class _TripMapScreenState extends State<TripMapScreen>
                         Expanded(
                           child: TextFormField(
                             controller: hoursController,
-                            decoration: const InputDecoration(
-                              labelText: 'Hours (시간)',
-                              hintText: '0',
+                            decoration:  InputDecoration(
+                              labelText: tr('Hours (시간)'),
+                              hintText: tr('0'),
                             ),
                             keyboardType: TextInputType.number,
                           ),
                         ),
                         const SizedBox(width: 10),
-                        const Text('h'),
+                         Text(tr('h')),
                         const SizedBox(width: 10),
                         Expanded(
                           child: TextFormField(
                             controller: minutesController,
-                            decoration: const InputDecoration(
-                              labelText: 'Minutes (분)',
-                              hintText: '0',
+                            decoration:  InputDecoration(
+                              labelText: tr('Minutes (분)'),
+                              hintText: tr('0'),
                             ),
                             keyboardType: TextInputType.number,
                           ),
                         ),
                         const SizedBox(width: 10),
-                        const Text('m'),
+                         Text(tr('m')),
                       ],
                     ),
                     const SizedBox(height: 10),
                     DropdownButtonFormField<String>(
                       value: selectedTransportType,
-                      decoration: const InputDecoration(labelText: 'Transport Type'),
-                      items: const <DropdownMenuItem<String>>[
-                        DropdownMenuItem<String>(value: 'flight', child: Text('Flight')),
-                        DropdownMenuItem<String>(value: 'train', child: Text('Train')),
-                        DropdownMenuItem<String>(value: 'bus', child: Text('Bus')),
-                        DropdownMenuItem<String>(value: 'ferry', child: Text('Ferry')),
-                        DropdownMenuItem<String>(value: 'car', child: Text('Car')),
+                      decoration:  InputDecoration(labelText: tr('Transport Type')),
+                      items:  <DropdownMenuItem<String>>[
+                        DropdownMenuItem<String>(value: 'flight', child: Text(tr('Flight'))),
+                        DropdownMenuItem<String>(value: 'train', child: Text(tr('Train'))),
+                        DropdownMenuItem<String>(value: 'bus', child: Text(tr('Bus'))),
+                        DropdownMenuItem<String>(value: 'ferry', child: Text(tr('Ferry'))),
+                        DropdownMenuItem<String>(value: 'car', child: Text(tr('Car'))),
                       ],
                       onChanged: (String? newValue) {
                         setStateInDialog(() {
@@ -2946,7 +2948,7 @@ class _TripMapScreenState extends State<TripMapScreen>
                     const SizedBox(height: 10),
                     DropdownButtonFormField<String>(
                       value: initialColorName,
-                      decoration: const InputDecoration(labelText: 'Route Color'),
+                      decoration:  InputDecoration(labelText: tr('Route Color')),
                       items: availableColors.keys.map((String colorName) {
                         return DropdownMenuItem<String>(
                           value: colorName,
@@ -2961,7 +2963,7 @@ class _TripMapScreenState extends State<TripMapScreen>
                                 ),
                               ),
                               const SizedBox(width: 10),
-                              Text(colorName),
+                              Text(tr(colorName)),
                             ],
                           ),
                         );
@@ -2978,11 +2980,11 @@ class _TripMapScreenState extends State<TripMapScreen>
                     const SizedBox(height: 10),
                     DropdownButtonFormField<String>(
                       value: initialLineStyleName,
-                      decoration: const InputDecoration(labelText: 'Line Style'),
+                      decoration:  InputDecoration(labelText: tr('Line Style')),
                       items: availableLineStyles.keys.map((String styleName) {
                         return DropdownMenuItem<String>(
                           value: styleName,
-                          child: Text(styleName),
+                          child: Text(tr(styleName)),
                         );
                       }).toList(),
                       onChanged: (String? newValue) {
@@ -2999,7 +3001,7 @@ class _TripMapScreenState extends State<TripMapScreen>
               ),
               actions: <Widget>[
                 TextButton(
-                  child: const Text('Cancel'),
+                  child:  Text(tr('Cancel')),
                   onPressed: () {
                     Navigator.of(dialogContext).pop();
                     setState(() {
@@ -3008,7 +3010,7 @@ class _TripMapScreenState extends State<TripMapScreen>
                   },
                 ),
                 TextButton(
-                  child: const Text('Save'),
+                  child:  Text(tr('Save')),
                   onPressed: () {
                     setState(() {
                       final int index = _currentTripLegs.indexOf(legToEdit);
@@ -3441,7 +3443,7 @@ class _TripMapScreenState extends State<TripMapScreen>
                     color: bgColor,
                     child: Center(
                       child: Text(
-                        charToDisplay,
+                        tr(charToDisplay),
                         style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
@@ -3456,7 +3458,7 @@ class _TripMapScreenState extends State<TripMapScreen>
                 color: bgColor,
                 child: Center(
                   child: Text(
-                    charToDisplay,
+                    tr(charToDisplay),
                     style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
@@ -3492,7 +3494,7 @@ class _TripMapScreenState extends State<TripMapScreen>
             child: Column(
               children: [
                 Text(
-                  nameToDisplay,
+                  tr(nameToDisplay),
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 11.0 * _markerNameSize,
@@ -3519,7 +3521,7 @@ class _TripMapScreenState extends State<TripMapScreen>
       info = leg.transportType;
     }
     return Text(
-      info,
+      tr(info),
       style: const TextStyle(
         color: Colors.white,
         fontSize: 10,
@@ -4010,8 +4012,8 @@ class _TripMapScreenState extends State<TripMapScreen>
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
-              'Transport Styles',
+             Text(
+              tr('Transport Styles'),
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 14,
@@ -4131,8 +4133,8 @@ class _TripMapScreenState extends State<TripMapScreen>
                 children: [
                   const Icon(Icons.location_city, color: Colors.white),
                   const SizedBox(width: 10),
-                  const Text(
-                    'Locations',
+                   Text(
+                    tr('Locations'),
                     style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),
                   ),
                   const Spacer(),
@@ -4157,7 +4159,7 @@ class _TripMapScreenState extends State<TripMapScreen>
                     children: [
                       // 날짜 헤더
                       Text(
-                        entry.key,
+                        tr(entry.key),
                         style: const TextStyle(
                           color: Colors.yellow,
                           fontSize: 16,
@@ -4183,12 +4185,12 @@ class _TripMapScreenState extends State<TripMapScreen>
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      item['name'],
+                                      tr(item['name']),
                                       style: const TextStyle(color: Colors.white, fontSize: 14, fontWeight: FontWeight.bold),
                                     ),
                                     if (item['duration'] != null)
                                       Text(
-                                        '${item['stayInfo']} ${item['duration'] != null ? "(${item['duration']})" : ""}',
+                                        tr('${item['stayInfo']} ${item['duration'] != null ? "(${item['duration']})" : ""}'),
                                         style: const TextStyle(color: Colors.white70, fontSize: 12),
                                       ),
                                   ],
@@ -4564,8 +4566,8 @@ class _TripMapScreenState extends State<TripMapScreen>
                 children: [
                   const Icon(Icons.directions, color: Colors.white, size: 20),
                   const SizedBox(width: 8),
-                  const Text(
-                    'Transportation',
+                   Text(
+                    tr('Transportation'),
                     style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
@@ -4588,9 +4590,9 @@ class _TripMapScreenState extends State<TripMapScreen>
             // 날짜 헤더와 교통수단 카드를 함께 가로 배치
             Expanded(
               child: sortedTransportEntries.isEmpty
-                  ? const Center(
+                  ?  Center(
                 child: Text(
-                  'No transportation data available',
+                  tr('No transportation data available'),
                   style: TextStyle(color: Colors.white70, fontSize: 16),
                 ),
               )
@@ -4610,7 +4612,7 @@ class _TripMapScreenState extends State<TripMapScreen>
                         Padding(
                           padding: const EdgeInsets.symmetric(vertical: 8),
                           child: Text(
-                            entry.key,
+                            tr(entry.key),
                             style: const TextStyle(
                               color: Colors.yellow,
                               fontSize: 14,
@@ -4686,7 +4688,7 @@ class _TripMapScreenState extends State<TripMapScreen>
                 ),
                 const SizedBox(width: 4),
                 Text(
-                  item['title'],
+                  tr(item['title']),
                   style: TextStyle(
                     color: isAnimating ? Colors.yellow : Colors.white,
                     fontWeight: isAnimating ? FontWeight.w900 : FontWeight.bold,
@@ -4698,7 +4700,7 @@ class _TripMapScreenState extends State<TripMapScreen>
             const SizedBox(height: 4),
             // 메인 식별자 (항공편 번호, 기차/버스 회사, 페리 이름)
             Text(
-              item['identifier'] ?? item['company'] ?? item['transportType'],
+              tr(item['identifier'] ?? item['company'] ?? item['transportType']),
               style: TextStyle(
                 color: isAnimating
                     ? Colors.white
@@ -4711,7 +4713,7 @@ class _TripMapScreenState extends State<TripMapScreen>
             // 이동 시간 정보
             if (item['duration'] != null && item['duration'] != 'Unknown')
               Text(
-                _formatDuration(item['duration']),
+                tr(_formatDuration(item['duration'])),
                 style: TextStyle(
                   color: isAnimating
                       ? Colors.white.withOpacity(0.9)
@@ -4802,7 +4804,7 @@ class _TripMapScreenState extends State<TripMapScreen>
                         ),
                         const SizedBox(height: 8),
                         Text(
-                          title,
+                          tr(title),
                           style: const TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.w700,
@@ -4819,7 +4821,7 @@ class _TripMapScreenState extends State<TripMapScreen>
                         ),
                         if (company != null || identifier != null)
                           Text(
-                            '${company ?? ""}${identifier != null ? " $identifier" : ""}',
+                            tr('${company ?? ""}${identifier != null ? " $identifier" : ""}'),
                             style: const TextStyle(
                               fontSize: 11,
                               color: Colors.white70,
@@ -4828,7 +4830,7 @@ class _TripMapScreenState extends State<TripMapScreen>
                           ),
                         if (duration != null && duration != 'Unknown')
                           Text(
-                            duration,
+                            tr(duration),
                             style: const TextStyle(
                               fontSize: 10,
                               color: Colors.white60,
@@ -4917,7 +4919,7 @@ class _TripMapScreenState extends State<TripMapScreen>
           const SizedBox(width: 8),
           Expanded(
             child: Text(
-              transportType.toUpperCase(),
+              tr(transportType.toUpperCase()),
               style: const TextStyle(color: Colors.white, fontSize: 12),
             ),
           ),
@@ -4932,7 +4934,7 @@ class _TripMapScreenState extends State<TripMapScreen>
                 borderRadius: BorderRadius.circular(8),
               ),
               child: Text(
-                getStyleName(currentStyle),
+                tr(getStyleName(currentStyle)),
                 style: const TextStyle(color: Colors.white, fontSize: 10),
               ),
             ),
@@ -4956,12 +4958,12 @@ class _TripMapScreenState extends State<TripMapScreen>
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Text('Change ${transportType.toUpperCase()} Line Style'),
+          title: Text(tr('Change ${transportType.toUpperCase()} Line Style')),
           content: Column(
             mainAxisSize: MainAxisSize.min,
             children: styleOptions.entries.map((entry) {
               return ListTile(
-                title: Text(entry.key),
+                title: Text(tr(entry.key)),
                 leading: Radio<String>(
                   value: entry.value,
                   groupValue: currentStyle,
@@ -4985,7 +4987,7 @@ class _TripMapScreenState extends State<TripMapScreen>
           ),
           actions: [
             TextButton(
-              child: const Text('Cancel'),
+              child:  Text(tr('Cancel')),
               onPressed: () => Navigator.of(context).pop(),
             ),
           ],

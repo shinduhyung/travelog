@@ -1,26 +1,282 @@
-[
-  { "name": "Athens", "country": "Greece", "latitude": 37.9838, "longitude": 23.7275 },
-  { "name": "Paris", "country": "France", "latitude": 48.8566, "longitude": 2.3522 },
-  { "name": "St. Louis", "country": "United States", "latitude": 38.6270, "longitude": -90.1994 },
-  { "name": "London", "country": "United Kingdom", "latitude": 51.5074, "longitude": -0.1278 },
-  { "name": "Stockholm", "country": "Sweden", "latitude": 59.3293, "longitude": 18.0686 },
-  { "name": "Antwerp", "country": "Belgium", "latitude": 51.2194, "longitude": 4.4025 },
-  { "name": "Amsterdam", "country": "Netherlands", "latitude": 52.3676, "longitude": 4.9041 },
-  { "name": "Los Angeles", "country": "United States", "latitude": 34.0522, "longitude": -118.2437 },
-  { "name": "Berlin", "country": "Germany", "latitude": 52.5200, "longitude": 13.4050 },
-  { "name": "Helsinki", "country": "Finland", "latitude": 60.1695, "longitude": 24.9354 },
-  { "name": "Melbourne", "country": "Australia", "latitude": -37.8136, "longitude": 144.9631 },
-  { "name": "Rome", "country": "Italy", "latitude": 41.9028, "longitude": 12.4964 },
-  { "name": "Tokyo", "country": "Japan", "latitude": 35.6895, "longitude": 139.6917 },
-  { "name": "Mexico City", "country": "Mexico", "latitude": 19.4326, "longitude": -99.1332 },
-  { "name": "Munich", "country": "Germany", "latitude": 48.1351, "longitude": 11.5820 },
-  { "name": "Montreal", "country": "Canada", "latitude": 45.5017, "longitude": -73.5673 },
-  { "name": "Moscow", "country": "Russia", "latitude": 55.7558, "longitude": 37.6173 },
-  { "name": "Seoul", "country": "South Korea", "latitude": 37.5665, "longitude": 126.9780 },
-  { "name": "Barcelona", "country": "Spain", "latitude": 41.3851, "longitude": 2.1734 },
-  { "name": "Atlanta", "country": "United States", "latitude": 33.7490, "longitude": -84.3880 },
-  { "name": "Sydney", "country": "Australia", "latitude": -33.8688, "longitude": 151.2093 },
-  { "name": "Gimpo", "country": "China", "latitude": 39.9042, "longitude": 116.4074 },
-  { "name": "Rio de Janeiro", "country": "Brazil", "latitude": -22.9068, "longitude": -43.1729 },
-  { "name": "Brisbane", "country": "Australia", "latitude": -27.4698, "longitude": 153.0251 }
-]
+{
+  "schema_version": 1,
+  "dataset_id": "summer_olympics_cities",
+  "metadata": {
+    "source_url": null,
+    "reference_period": null,
+    "updated_at": null
+  },
+  "legacy_layout": "list",
+  "tables": [
+    {
+      "id": "main",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "name",
+        "country"
+      ],
+      "metrics": [
+        {
+          "id": "latitude",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        },
+        {
+          "id": "longitude",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "name": "Athens",
+            "country": "Greece"
+          },
+          "values": {
+            "latitude": 37.9838,
+            "longitude": 23.7275
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Paris",
+            "country": "France"
+          },
+          "values": {
+            "latitude": 48.8566,
+            "longitude": 2.3522
+          }
+        },
+        {
+          "dimensions": {
+            "name": "St. Louis",
+            "country": "United States"
+          },
+          "values": {
+            "latitude": 38.627,
+            "longitude": -90.1994
+          }
+        },
+        {
+          "dimensions": {
+            "name": "London",
+            "country": "United Kingdom"
+          },
+          "values": {
+            "latitude": 51.5074,
+            "longitude": -0.1278
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Stockholm",
+            "country": "Sweden"
+          },
+          "values": {
+            "latitude": 59.3293,
+            "longitude": 18.0686
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Antwerp",
+            "country": "Belgium"
+          },
+          "values": {
+            "latitude": 51.2194,
+            "longitude": 4.4025
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Amsterdam",
+            "country": "Netherlands"
+          },
+          "values": {
+            "latitude": 52.3676,
+            "longitude": 4.9041
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Los Angeles",
+            "country": "United States"
+          },
+          "values": {
+            "latitude": 34.0522,
+            "longitude": -118.2437
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Berlin",
+            "country": "Germany"
+          },
+          "values": {
+            "latitude": 52.52,
+            "longitude": 13.405
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Helsinki",
+            "country": "Finland"
+          },
+          "values": {
+            "latitude": 60.1695,
+            "longitude": 24.9354
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Melbourne",
+            "country": "Australia"
+          },
+          "values": {
+            "latitude": -37.8136,
+            "longitude": 144.9631
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Rome",
+            "country": "Italy"
+          },
+          "values": {
+            "latitude": 41.9028,
+            "longitude": 12.4964
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Tokyo",
+            "country": "Japan"
+          },
+          "values": {
+            "latitude": 35.6895,
+            "longitude": 139.6917
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Mexico City",
+            "country": "Mexico"
+          },
+          "values": {
+            "latitude": 19.4326,
+            "longitude": -99.1332
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Munich",
+            "country": "Germany"
+          },
+          "values": {
+            "latitude": 48.1351,
+            "longitude": 11.582
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Montreal",
+            "country": "Canada"
+          },
+          "values": {
+            "latitude": 45.5017,
+            "longitude": -73.5673
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Moscow",
+            "country": "Russia"
+          },
+          "values": {
+            "latitude": 55.7558,
+            "longitude": 37.6173
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Seoul",
+            "country": "South Korea"
+          },
+          "values": {
+            "latitude": 37.5665,
+            "longitude": 126.978
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Barcelona",
+            "country": "Spain"
+          },
+          "values": {
+            "latitude": 41.3851,
+            "longitude": 2.1734
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Atlanta",
+            "country": "United States"
+          },
+          "values": {
+            "latitude": 33.749,
+            "longitude": -84.388
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Sydney",
+            "country": "Australia"
+          },
+          "values": {
+            "latitude": -33.8688,
+            "longitude": 151.2093
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Gimpo",
+            "country": "China"
+          },
+          "values": {
+            "latitude": 39.9042,
+            "longitude": 116.4074
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Rio de Janeiro",
+            "country": "Brazil"
+          },
+          "values": {
+            "latitude": -22.9068,
+            "longitude": -43.1729
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Brisbane",
+            "country": "Australia"
+          },
+          "values": {
+            "latitude": -27.4698,
+            "longitude": 153.0251
+          }
+        }
+      ]
+    }
+  ]
+}

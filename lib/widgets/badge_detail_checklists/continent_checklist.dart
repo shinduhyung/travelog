@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:jidoapp/models/badge_model.dart';
 import 'package:jidoapp/providers/country_provider.dart';
 
@@ -54,6 +55,7 @@ class ContinentChecklist extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     // 6대주 목록
     final List<String> allContinents = [
       'Asia',
@@ -136,7 +138,7 @@ class ContinentChecklist extends StatelessWidget {
                 ),
               ),
               title: Text(
-                continent,
+                tr(continent),
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 16,

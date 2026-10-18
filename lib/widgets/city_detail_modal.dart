@@ -3,6 +3,7 @@
 import 'dart:convert';
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'package:cached_network_image/cached_network_image.dart';
@@ -167,7 +168,7 @@ class _CityDetailSheetState extends State<_CityDetailSheet> {
         decoration: BoxDecoration(color: bg, borderRadius: BorderRadius.circular(20)),
         child: Row(mainAxisSize: MainAxisSize.min, children: [
           if (icon != null) ...[Icon(icon, size: 13, color: fg), const SizedBox(width: 4)],
-          Text(label, style: TextStyle(fontSize: 11, fontWeight: FontWeight.w600, color: fg)),
+          Text(tr(label), style: TextStyle(fontSize: 11, fontWeight: FontWeight.w600, color: fg)),
         ]),
       );
 
@@ -178,7 +179,7 @@ class _CityDetailSheetState extends State<_CityDetailSheet> {
     decoration: BoxDecoration(color: themeColor.withOpacity(0.06), borderRadius: BorderRadius.circular(12)),
     child: Row(children: [
       Icon(icon, size: 18, color: themeColor), const SizedBox(width: 8),
-      Text(title, style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: themeColor)),
+      Text(tr(title), style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: themeColor)),
     ]),
   );
 
@@ -190,7 +191,7 @@ class _CityDetailSheetState extends State<_CityDetailSheet> {
         Container(margin: const EdgeInsets.only(top: 7), width: 5, height: 5,
             decoration: BoxDecoration(color: themeColor, shape: BoxShape.circle)),
         const SizedBox(width: 10),
-        Expanded(child: Text(t, style: const TextStyle(fontSize: 14, height: 1.5, color: Colors.black87))),
+        Expanded(child: Text(tr(t), style: const TextStyle(fontSize: 14, height: 1.5, color: Colors.black87))),
       ]),
     )).toList());
   }
@@ -199,9 +200,9 @@ class _CityDetailSheetState extends State<_CityDetailSheet> {
     padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
     decoration: BoxDecoration(color: Colors.grey.shade50, borderRadius: BorderRadius.circular(10)),
     child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-      Text(label, style: TextStyle(fontSize: 11, color: Colors.grey.shade600)),
+      Text(tr(label), style: TextStyle(fontSize: 11, color: Colors.grey.shade600)),
       const SizedBox(height: 3),
-      Text(value, style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600,
+      Text(tr(value), style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600,
           color: highlight ? themeColor : Colors.black87),
           maxLines: 1, overflow: TextOverflow.ellipsis),
     ]),
@@ -217,7 +218,7 @@ class _CityDetailSheetState extends State<_CityDetailSheet> {
             Icon(isActive ? iconActive : icon, size: 24,
                 color: isActive ? activeColor : Colors.grey.shade400),
             const SizedBox(height: 3),
-            Text(label, style: TextStyle(fontSize: 10,
+            Text(tr(label), style: TextStyle(fontSize: 10,
                 color: isActive ? activeColor : Colors.grey.shade600,
                 fontWeight: isActive ? FontWeight.bold : FontWeight.normal)),
           ]),
@@ -327,7 +328,7 @@ class _CityDetailSheetState extends State<_CityDetailSheet> {
                         Icon(isVisited ? Icons.check_rounded : Icons.location_on_outlined,
                             size: 16, color: isVisited ? themeColor : Colors.grey.shade500),
                         const SizedBox(width: 4),
-                        Text(isVisited ? 'Visited' : 'Not visited',
+                        Text(tr(isVisited ? 'Visited' : 'Not visited'),
                             style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600,
                                 color: isVisited ? themeColor : Colors.grey.shade500)),
                       ]),
@@ -336,7 +337,7 @@ class _CityDetailSheetState extends State<_CityDetailSheet> {
 
                   if (freshL.attributes.isNotEmpty) ...[
                     const SizedBox(height: 4),
-                    Text(freshL.attributes.take(2).join(' · '),
+                    Text(tr(freshL.attributes.take(2).join(' · ')),
                         style: TextStyle(fontSize: 12, color: Colors.grey.shade500)),
                   ],
                   if (freshL.overview != null && freshL.overview!.isNotEmpty) ...[
@@ -358,18 +359,18 @@ class _CityDetailSheetState extends State<_CityDetailSheet> {
                     Row(children: [
                       Icon(Icons.history, size: 18, color: themeColor),
                       const SizedBox(width: 8),
-                      Text('Visit history', style: TextStyle(fontSize: 15,
+                      Text(tr('Visit history'), style: TextStyle(fontSize: 15,
                           fontWeight: FontWeight.w700, color: Colors.grey.shade800)),
                       const SizedBox(width: 6),
                       Container(
                           padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2),
                           decoration: BoxDecoration(color: Colors.grey.shade200, borderRadius: BorderRadius.circular(10)),
-                          child: Text('${freshL.visitDates.length}',
+                          child: Text(tr('${freshL.visitDates.length}'),
                               style: TextStyle(fontSize: 11, fontWeight: FontWeight.w700, color: Colors.grey.shade700))),
                     ]),
                     OutlinedButton.icon(
                       icon: const Icon(Icons.add, size: 16),
-                      label: const Text('Add'),
+                      label:  Text(tr('Add')),
                       onPressed: () => _pickLmDate(ctx, freshL.name, lp),
                       style: OutlinedButton.styleFrom(foregroundColor: themeColor,
                           side: BorderSide(color: themeColor),
@@ -379,7 +380,7 @@ class _CityDetailSheetState extends State<_CityDetailSheet> {
                   const SizedBox(height: 8),
                   if (freshL.visitDates.isEmpty)
                     Padding(padding: const EdgeInsets.symmetric(vertical: 12),
-                        child: Text('No visits recorded.', style: TextStyle(color: Colors.grey.shade500)))
+                        child: Text(tr('No visits recorded.'), style: TextStyle(color: Colors.grey.shade500)))
                   else
                     ...freshL.visitDates.asMap().entries.map((e) =>
                         _LandmarkVisitTile(visitDate: e.value, index: e.key,
@@ -404,23 +405,23 @@ class _CityDetailSheetState extends State<_CityDetailSheet> {
   Widget _lmSec(String title, IconData icon, String body) => Column(
       crossAxisAlignment: CrossAxisAlignment.start, children: [
     Row(children: [Icon(icon, size: 16, color: themeColor), const SizedBox(width: 6),
-      Text(title, style: TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: themeColor))]),
+      Text(tr(title), style: TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: themeColor))]),
     const SizedBox(height: 6),
-    Text(body, style: const TextStyle(fontSize: 13, color: Colors.black54, height: 1.6)),
+    Text(tr(body), style: const TextStyle(fontSize: 13, color: Colors.black54, height: 1.6)),
   ]);
 
   Widget _hlSec(String raw) {
     final lines = raw.split('\n').map((l) => l.trim()).where((l) => l.isNotEmpty).toList();
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
       Row(children: [Icon(Icons.star_outline, size: 16, color: themeColor), const SizedBox(width: 6),
-        Text('Highlights', style: TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: themeColor))]),
+        Text(tr('Highlights'), style: TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: themeColor))]),
       const SizedBox(height: 6),
       ...lines.map((line) => Padding(padding: const EdgeInsets.only(bottom: 6),
           child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
             Container(margin: const EdgeInsets.only(top: 6), width: 5, height: 5,
                 decoration: BoxDecoration(color: themeColor, shape: BoxShape.circle)),
             const SizedBox(width: 8),
-            Expanded(child: Text(line, style: const TextStyle(fontSize: 13, color: Colors.black54, height: 1.5))),
+            Expanded(child: Text(tr(line), style: const TextStyle(fontSize: 13, color: Colors.black54, height: 1.5))),
           ]))),
     ]);
   }
@@ -428,6 +429,7 @@ class _CityDetailSheetState extends State<_CityDetailSheet> {
   // ── build ──────────────────────────────────────────────────────────────────
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final cp = context.watch<CityProvider>();
     final countryProvider = context.watch<CountryProvider>();
     final lp = context.watch<LandmarksProvider>();
@@ -512,7 +514,7 @@ class _CityDetailSheetState extends State<_CityDetailSheet> {
 
               // title
               Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                Text(_flag(city.countryIsoA2), style: const TextStyle(fontSize: 22)),
+                Text(tr(_flag(city.countryIsoA2)), style: const TextStyle(fontSize: 22)),
                 const SizedBox(width: 8),
                 Expanded(child: Text(city.name,
                     style: GoogleFonts.poppins(fontSize: 22, fontWeight: FontWeight.bold, color: Colors.black87))),
@@ -520,10 +522,10 @@ class _CityDetailSheetState extends State<_CityDetailSheet> {
                   Container(margin: const EdgeInsets.only(top: 4),
                       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                       decoration: BoxDecoration(color: const Color(0xFFFAEEDA), borderRadius: BorderRadius.circular(20)),
-                      child: Text(city.gawcTier, style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w700, color: Color(0xFF854F0B)))),
+                      child: Text(tr(city.gawcTier), style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w700, color: Color(0xFF854F0B)))),
               ]),
               const SizedBox(height: 3),
-              Text([city.country, if (country?.continent != null) country!.continent!].join(' · '),
+              Text(tr([city.country, if (country?.continent != null) country!.continent!].join(' · ')),
                   style: TextStyle(fontSize: 13, color: Colors.grey.shade600)),
 
               const SizedBox(height: 10),
@@ -551,9 +553,9 @@ class _CityDetailSheetState extends State<_CityDetailSheet> {
               const SizedBox(height: 4),
 
               // visit count
-              Text(visitCount > 0
+              Text(tr(visitCount > 0
                   ? '$visitCount ${visitCount == 1 ? 'visit' : 'visits'} · $totalDays ${totalDays == 1 ? 'day' : 'days'}'
-                  : 'Not visited yet',
+                  : 'Not visited yet'),
                   style: TextStyle(fontSize: 13, color: Colors.grey.shade600)),
               const SizedBox(height: 10),
 
@@ -580,7 +582,7 @@ class _CityDetailSheetState extends State<_CityDetailSheet> {
                         itemBuilder: (_, __) => const Icon(Icons.star, color: Colors.amber),
                         onRatingUpdate: (r) => cp.setCityRating(city.name, r)),
                     const SizedBox(height: 4),
-                    Text(rating > 0 ? rating.toStringAsFixed(1) : 'Rate',
+                    Text(tr(rating > 0 ? rating.toStringAsFixed(1) : 'Rate'),
                         style: TextStyle(fontSize: 11, color: Colors.amber.shade800, fontWeight: FontWeight.bold)),
                   ]),
                 ),
@@ -589,11 +591,11 @@ class _CityDetailSheetState extends State<_CityDetailSheet> {
               // ── Add Visit → addCityDateRange (즉시 생성, unknown) ─────────
               const SizedBox(height: 14),
               Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                Text('History ($visitCount visits, $totalDays days)',
+                Text(tr('History ($visitCount visits, $totalDays days)'),
                     style: Theme.of(context).textTheme.titleSmall),
                 OutlinedButton.icon(
                   icon: const Icon(Icons.add),
-                  label: const Text('Add Visit'),
+                  label:  Text(tr('Add Visit')),
                   onPressed: () {
                     cp.addCityDateRange(city.name);
                     HapticFeedback.mediumImpact();
@@ -618,7 +620,7 @@ class _CityDetailSheetState extends State<_CityDetailSheet> {
                 }).toList()
               else
                 Padding(padding: const EdgeInsets.symmetric(vertical: 8),
-                    child: Text('No visits recorded.',
+                    child: Text(tr('No visits recorded.'),
                         style: TextStyle(color: Colors.grey.shade500))),
 
               Divider(color: Colors.grey.shade100, height: 36),
@@ -647,7 +649,7 @@ class _CityDetailSheetState extends State<_CityDetailSheet> {
                         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                         decoration: BoxDecoration(color: Colors.grey.shade100, borderRadius: BorderRadius.circular(20),
                             border: Border.all(color: Colors.grey.shade200)),
-                        child: Text(t, style: TextStyle(fontSize: 12, color: Colors.grey.shade700)))).toList()),
+                        child: Text(tr(t), style: TextStyle(fontSize: 12, color: Colors.grey.shade700)))).toList()),
                 const SizedBox(height: 16),
               ],
 
@@ -664,7 +666,7 @@ class _CityDetailSheetState extends State<_CityDetailSheet> {
                   final groups = attrGroups(byCategory[cat]!);
                   return [
                     Padding(padding: const EdgeInsets.only(top: 4, bottom: 8),
-                        child: Text(cat, style: TextStyle(fontSize: 13, fontWeight: FontWeight.w700,
+                        child: Text(tr(cat), style: TextStyle(fontSize: 13, fontWeight: FontWeight.w700,
                             color: Colors.grey.shade700, letterSpacing: 0.3))),
                     Container(
                       decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(12),
@@ -674,7 +676,7 @@ class _CityDetailSheetState extends State<_CityDetailSheet> {
                           children: groups.entries.expand((entry) => [
                             if (groups.length > 1)
                               Padding(padding: const EdgeInsets.only(top: 10, bottom: 2),
-                                  child: Text(entry.key, style: TextStyle(fontSize: 11,
+                                  child: Text(tr(entry.key), style: TextStyle(fontSize: 11,
                                       fontWeight: FontWeight.w600, color: themeColor, letterSpacing: 0.2))),
                             ...entry.value.map((l) => _groupedRow(context, l, lp, isHighlight: hlNames.contains(l.name))),
                           ]).toList()),
@@ -761,7 +763,7 @@ class _CityVisitDetailEditorSheetState extends State<_CityVisitDetailEditorSheet
       final dep = DateTime(_departureYear!, _departureMonth!, _departureDay!);
       if (dep.isBefore(arr)) {
         ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(content: Text('Departure date cannot be before arrival date.')));
+             SnackBar(content: Text(tr('Departure date cannot be before arrival date.'))));
         return;
       }
     }
@@ -807,6 +809,7 @@ class _CityVisitDetailEditorSheetState extends State<_CityVisitDetailEditorSheet
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final int? calc = _calculateDuration();
     final int? finalDuration = widget.range.userDefinedDuration ?? calc;
     final String durationText = finalDuration?.toString() ?? (widget.range.isDurationUnknown ? 'Unknown' : '');
@@ -828,11 +831,11 @@ class _CityVisitDetailEditorSheetState extends State<_CityVisitDetailEditorSheet
       elevation: 1,
       child: ExpansionTile(
         controller: _expansionTileController,
-        title: Text(widget.range.title.isNotEmpty ? widget.range.title : 'Visit Record'),
+        title: Text(tr(widget.range.title.isNotEmpty ? widget.range.title : 'Visit Record')),
         subtitle: Text(
-          '${widget.range.arrival != null ? DateFormat('yyyy-MM-dd').format(widget.range.arrival!) : 'Unknown'}'
+          tr('${widget.range.arrival != null ? DateFormat('yyyy-MM-dd').format(widget.range.arrival!) : 'Unknown'}'
               ' - ${widget.range.departure != null ? DateFormat('yyyy-MM-dd').format(widget.range.departure!) : 'Unknown'}'
-              ' (Duration: $durationText days)',
+              ' (Duration: $durationText days)'),
           style: const TextStyle(fontSize: 11),
           overflow: TextOverflow.ellipsis,
         ),
@@ -844,23 +847,23 @@ class _CityVisitDetailEditorSheetState extends State<_CityVisitDetailEditorSheet
             padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
             child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
               TextField(controller: _titleController,
-                  decoration: const InputDecoration(labelText: 'Title', border: OutlineInputBorder()),
+                  decoration:  InputDecoration(labelText: tr('Title'), border: OutlineInputBorder()),
                   onChanged: (val) => widget.onSave(widget.range.copyWith(title: val))),
               const SizedBox(height: 12),
               TextField(controller: _memoController,
-                  decoration: const InputDecoration(labelText: 'Memo', border: OutlineInputBorder()),
+                  decoration:  InputDecoration(labelText: tr('Memo'), border: OutlineInputBorder()),
                   maxLines: 3,
                   onChanged: (val) => widget.onSave(widget.range.copyWith(memo: val))),
               const SizedBox(height: 16),
-              const Text('Photos:', style: TextStyle(fontWeight: FontWeight.bold)),
+               Text(tr('Photos:'), style: TextStyle(fontWeight: FontWeight.bold)),
               const SizedBox(height: 8),
               Wrap(spacing: 10, runSpacing: 10, children: [
                 GestureDetector(
                   onTap: () => showModalBottomSheet(context: context,
                       builder: (ctx) => SafeArea(child: Column(mainAxisSize: MainAxisSize.min, children: [
-                        ListTile(leading: const Icon(Icons.photo_library), title: const Text('Photo Library'),
+                        ListTile(leading: const Icon(Icons.photo_library), title:  Text(tr('Photo Library')),
                             onTap: () { Navigator.pop(ctx); _pickImage(ImageSource.gallery); }),
-                        ListTile(leading: const Icon(Icons.photo_camera), title: const Text('Camera'),
+                        ListTile(leading: const Icon(Icons.photo_camera), title:  Text(tr('Camera')),
                             onTap: () { Navigator.pop(ctx); _pickImage(ImageSource.camera); }),
                       ]))),
                   child: Container(width: 80, height: 80,
@@ -889,21 +892,21 @@ class _CityVisitDetailEditorSheetState extends State<_CityVisitDetailEditorSheet
               }),
               const SizedBox(height: 12),
               TextField(controller: _durationController,
-                  decoration: const InputDecoration(labelText: 'Duration (days)', border: OutlineInputBorder()),
+                  decoration:  InputDecoration(labelText: tr('Duration (days)'), border: OutlineInputBorder()),
                   keyboardType: TextInputType.number,
                   inputFormatters: [FilteringTextInputFormatter.digitsOnly],
                   onChanged: (val) => widget.onSave(widget.range.copyWith(userDefinedDuration: int.tryParse(val)))),
               const SizedBox(height: 12),
               Row(children: [
                 Expanded(child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                  const Text('Transfer'),
+                   Text(tr('Transfer')),
                   Checkbox(value: _isTransfer, onChanged: (val) {
                     setState(() => _isTransfer = val ?? false);
                     widget.onSave(widget.range.copyWith(isTransfer: val ?? false));
                   }),
                 ])),
                 Expanded(child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                  const Text('Layover'),
+                   Text(tr('Layover')),
                   Checkbox(value: _isLayover, onChanged: (val) {
                     setState(() => _isLayover = val ?? false);
                     widget.onSave(widget.range.copyWith(isLayover: val ?? false));
@@ -914,11 +917,11 @@ class _CityVisitDetailEditorSheetState extends State<_CityVisitDetailEditorSheet
               Row(children: [
                 Expanded(child: OutlinedButton(onPressed: widget.onDelete,
                     style: OutlinedButton.styleFrom(padding: const EdgeInsets.symmetric(vertical: 12)),
-                    child: const Text('Delete', style: TextStyle(color: Colors.red)))),
+                    child:  Text(tr('Delete'), style: TextStyle(color: Colors.red)))),
                 const SizedBox(width: 8),
                 Expanded(child: ElevatedButton(onPressed: _handleSave,
                     style: ElevatedButton.styleFrom(padding: const EdgeInsets.symmetric(vertical: 12)),
-                    child: const Text('Save'))),
+                    child:  Text(tr('Save')))),
               ]),
             ]),
           ),
@@ -938,7 +941,7 @@ class _CityVisitDetailEditorSheetState extends State<_CityVisitDetailEditorSheet
     final days = [null, ...List.generate(daysInMonth, (i) => i + 1)];
     final currentDay = (day != null && day <= daysInMonth) ? day : null;
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-      Text(label, style: Theme.of(context).textTheme.titleSmall),
+      Text(tr(label), style: Theme.of(context).textTheme.titleSmall),
       const SizedBox(height: 8),
       Row(children: [
         Expanded(child: _buildDropdown('Year', year, years, (val) => onChanged(val, month, currentDay))),
@@ -953,10 +956,10 @@ class _CityVisitDetailEditorSheetState extends State<_CityVisitDetailEditorSheet
   Widget _buildDropdown<T>(String hint, T? value, List<T> items, ValueChanged<T?> onChanged) =>
       DropdownButtonFormField<T>(
         value: value, isDense: true,
-        decoration: InputDecoration(labelText: hint, border: const OutlineInputBorder(),
+        decoration: InputDecoration(labelText: tr(hint), border: const OutlineInputBorder(),
             contentPadding: const EdgeInsets.symmetric(horizontal: 10, vertical: 12)),
         items: items.map((item) => DropdownMenuItem<T>(value: item,
-            child: Text(item?.toString() ?? 'Unknown',
+            child: Text(tr(item?.toString() ?? 'Unknown'),
                 style: TextStyle(fontSize: item == null ? 11.0 : 15.0,
                     color: item == null ? Colors.grey.shade600 : null),
                 overflow: TextOverflow.ellipsis))).toList(),
@@ -1013,6 +1016,7 @@ class _LandmarkVisitTileState extends State<_LandmarkVisitTile> {
   }
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final tc = widget.themeColor;
     return Container(
       margin: const EdgeInsets.only(bottom: 8),
@@ -1023,9 +1027,9 @@ class _LandmarkVisitTileState extends State<_LandmarkVisitTile> {
             child: Row(children: [
               Icon(Icons.calendar_today_outlined, size: 16, color: tc),
               const SizedBox(width: 8),
-              Expanded(child: Text(_titleCtrl.text.isNotEmpty ? _titleCtrl.text : 'Visit ${widget.index+1}',
+              Expanded(child: Text(tr(_titleCtrl.text.isNotEmpty ? _titleCtrl.text : 'Visit ${widget.index+1}'),
                   style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w600))),
-              Text(_dateLabel, style: TextStyle(fontSize: 12, color: Colors.grey.shade500)),
+              Text(tr(_dateLabel), style: TextStyle(fontSize: 12, color: Colors.grey.shade500)),
               const SizedBox(width: 8),
               GestureDetector(onTap: () => setState(() => _editing = !_editing),
                   child: Icon(_editing ? Icons.keyboard_arrow_up : Icons.edit_outlined,
@@ -1033,13 +1037,13 @@ class _LandmarkVisitTileState extends State<_LandmarkVisitTile> {
               const SizedBox(width: 6),
               GestureDetector(
                   onTap: () => showDialog(context: context, builder: (_) => AlertDialog(
-                    title: const Text('Delete visit?'),
+                    title:  Text(tr('Delete visit?')),
                     actions: [
-                      TextButton(onPressed: () => Navigator.pop(context), child: const Text('Cancel')),
+                      TextButton(onPressed: () => Navigator.pop(context), child:  Text(tr('Cancel'))),
                       TextButton(onPressed: () {
                         Navigator.pop(context);
                         context.read<LandmarksProvider>().removeVisitDate(widget.landmarkName, widget.index);
-                      }, child: const Text('Delete', style: TextStyle(color: Colors.red))),
+                      }, child:  Text(tr('Delete'), style: TextStyle(color: Colors.red))),
                     ],
                   )),
                   child: Icon(Icons.delete_outline, size: 18, color: Colors.red.shade300)),
@@ -1053,27 +1057,27 @@ class _LandmarkVisitTileState extends State<_LandmarkVisitTile> {
                         border: Border.all(color: Colors.grey.shade300)),
                     child: Row(children: [
                       Icon(Icons.edit_calendar, size: 16, color: tc), const SizedBox(width: 8),
-                      Text(_dateLabel, style: TextStyle(fontSize: 13,
+                      Text(tr(_dateLabel), style: TextStyle(fontSize: 13,
                           color: _year != null ? Colors.black87 : Colors.grey)),
                       const Spacer(),
-                      Text('Tap to change', style: TextStyle(fontSize: 11, color: Colors.grey.shade400)),
+                      Text(tr('Tap to change'), style: TextStyle(fontSize: 11, color: Colors.grey.shade400)),
                     ]))),
             const SizedBox(height: 8),
             TextField(controller: _titleCtrl,
-                decoration: InputDecoration(labelText: 'Title', isDense: true, filled: true, fillColor: Colors.white,
+                decoration: InputDecoration(labelText: tr('Title'), isDense: true, filled: true, fillColor: Colors.white,
                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(8), borderSide: BorderSide.none))),
             const SizedBox(height: 8),
             TextField(controller: _memoCtrl, maxLines: 2, minLines: 1,
-                decoration: InputDecoration(labelText: 'Memo', isDense: true, filled: true, fillColor: Colors.white,
+                decoration: InputDecoration(labelText: tr('Memo'), isDense: true, filled: true, fillColor: Colors.white,
                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(8), borderSide: BorderSide.none))),
             const SizedBox(height: 10),
             Row(mainAxisAlignment: MainAxisAlignment.end, children: [
-              TextButton(onPressed: () => setState(() => _editing = false), child: const Text('Cancel')),
+              TextButton(onPressed: () => setState(() => _editing = false), child:  Text(tr('Cancel'))),
               const SizedBox(width: 8),
               ElevatedButton(onPressed: _save,
                   style: ElevatedButton.styleFrom(backgroundColor: tc, foregroundColor: Colors.white,
                       elevation: 0, padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8)),
-                  child: const Text('Save')),
+                  child:  Text(tr('Save'))),
             ]),
           ]),
         ),

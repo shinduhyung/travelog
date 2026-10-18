@@ -1,5 +1,6 @@
 // lib/screens/travelog_games_screen.dart
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:jidoapp/games/flag_guess.dart';
 import 'package:jidoapp/games/which_is_farther.dart';
 import 'package:jidoapp/games/border_chain.dart';
@@ -47,6 +48,7 @@ class _FlowingGradientBackgroundState extends State<_FlowingGradientBackground>
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final loopColors = [...widget.colors, ...widget.colors];
     return LayoutBuilder(
       builder: (context, constraints) {
@@ -133,6 +135,7 @@ class _TravelogGamesScreenState extends State<TravelogGamesScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Scaffold(
       backgroundColor: pageBackground,
       body: SafeArea(
@@ -417,8 +420,8 @@ class _TravelogGamesScreenState extends State<TravelogGamesScreen> {
                                   width: 0.8,
                                 ),
                               ),
-                              child: const Text(
-                                'PLAY & EXPLORE',
+                              child:  Text(
+                                tr('PLAY & EXPLORE'),
                                 style: TextStyle(
                                   color: Color(0xFFE2FFF8),
                                   fontSize: 8.5,
@@ -429,7 +432,7 @@ class _TravelogGamesScreenState extends State<TravelogGamesScreen> {
                             ),
                             const SizedBox(height: 6),
                             RichText(
-                              text: const TextSpan(
+                              text:  TextSpan(
                                 style: TextStyle(
                                   fontSize: 23,
                                   fontWeight: FontWeight.w900,
@@ -437,14 +440,14 @@ class _TravelogGamesScreenState extends State<TravelogGamesScreen> {
                                   height: 1.05,
                                 ),
                                 children: [
-                                  TextSpan(text: 'Travelog ', style: TextStyle(color: Colors.white)),
-                                  TextSpan(text: 'Games', style: TextStyle(color: Color(0xFFD1FAE5))),
+                                  TextSpan(text: tr('Travelog '), style: TextStyle(color: Colors.white)),
+                                  TextSpan(text: tr('Games'), style: TextStyle(color: Color(0xFFD1FAE5))),
                                 ],
                               ),
                             ),
                             const SizedBox(height: 4),
                             Text(
-                              'Test your travel smarts',
+                              tr('Test your travel smarts'),
                               style: TextStyle(
                                 fontSize: 13,
                                 fontWeight: FontWeight.w600,
@@ -483,6 +486,7 @@ class _GameListCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return GestureDetector(
       onTap: onTap,
       child: Container(
@@ -528,7 +532,7 @@ class _GameListCard extends StatelessWidget {
                     shaderCallback: (bounds) => LinearGradient(
                       colors: [color, Color.lerp(color, Colors.black, 0.35)!],
                     ).createShader(bounds),
-                    child: Text(title,
+                    child: Text(tr(title),
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                         style: const TextStyle(
@@ -538,7 +542,7 @@ class _GameListCard extends StatelessWidget {
                             color: Colors.white)),
                   ),
                   const SizedBox(height: 3),
-                  Text(subtitle,
+                  Text(tr(subtitle),
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                       style: TextStyle(

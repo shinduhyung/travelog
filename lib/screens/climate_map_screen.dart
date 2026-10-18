@@ -1,6 +1,7 @@
 // lib/screens/climate_map_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:jidoapp/models/country_model.dart';
 import 'package:jidoapp/providers/country_provider.dart';
@@ -36,6 +37,7 @@ class _ClimateMapScreenState extends State<ClimateMapScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final countryProvider = Provider.of<CountryProvider>(context);
     final backgroundColor = Theme.of(context).scaffoldBackgroundColor;
     final isDarkMode = Theme.of(context).brightness == Brightness.dark;
@@ -75,7 +77,7 @@ class _ClimateMapScreenState extends State<ClimateMapScreen> {
     return Scaffold(
       backgroundColor: backgroundColor,
       appBar: AppBar(
-        title: const Text('World Climate Map'),
+        title:  Text(tr('World Climate Map')),
         backgroundColor: Colors.transparent,
         elevation: 0,
       ),
@@ -136,7 +138,7 @@ class _ClimateMapScreenState extends State<ClimateMapScreen> {
           Container(width: 12, height: 12, color: color),
           const SizedBox(width: 8),
           Text(
-            name,
+            tr(name),
             style: const TextStyle(
               fontSize: 12,
               fontWeight: FontWeight.normal,

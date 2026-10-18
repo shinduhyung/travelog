@@ -1,6 +1,7 @@
 // lib/screens/edit_itinerary_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:jidoapp/models/itinerary_entry_model.dart';
 import 'package:jidoapp/providers/itinerary_provider.dart';
 import 'package:provider/provider.dart';
@@ -38,7 +39,7 @@ class _EditItineraryScreenState extends State<EditItineraryScreen> {
   Future<void> _generateAndSaveChanges() async {
     if (_titleController.text.isEmpty || _contentController.text.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Title and itinerary content cannot be empty.')),
+         SnackBar(content: Text(tr('Title and itinerary content cannot be empty.'))),
       );
       return;
     }
@@ -67,7 +68,7 @@ class _EditItineraryScreenState extends State<EditItineraryScreen> {
     } catch (e) {
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Error: $e')),
+          SnackBar(content: Text(tr('Error: $e'))),
         );
       }
     } finally {
@@ -79,9 +80,10 @@ class _EditItineraryScreenState extends State<EditItineraryScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.entry == null ? 'New Itinerary' : 'Edit Itinerary'),
+        title: Text(tr(widget.entry == null ? 'New Itinerary' : 'Edit Itinerary')),
         // --- actions (저장 아이콘) 제거 ---
       ),
       body: Padding(
@@ -90,8 +92,8 @@ class _EditItineraryScreenState extends State<EditItineraryScreen> {
           children: [
             TextField(
               controller: _titleController,
-              decoration: const InputDecoration(
-                labelText: 'Trip Title',
+              decoration:  InputDecoration(
+                labelText: tr('Trip Title'),
                 border: OutlineInputBorder(),
               ),
             ),
@@ -102,8 +104,8 @@ class _EditItineraryScreenState extends State<EditItineraryScreen> {
                 maxLines: null,
                 expands: true,
                 textAlignVertical: TextAlignVertical.top,
-                decoration: const InputDecoration(
-                  labelText: 'Your Travel Plan',
+                decoration:  InputDecoration(
+                  labelText: tr('Your Travel Plan'),
                   border: OutlineInputBorder(),
                 ),
               ),
@@ -114,7 +116,7 @@ class _EditItineraryScreenState extends State<EditItineraryScreen> {
               icon: _isLoading
                   ? const SizedBox(width: 24, height: 24, child: CircularProgressIndicator(strokeWidth: 2))
                   : const Icon(Icons.auto_awesome),
-              label: Text(_isLoading ? 'Generating...' : 'Generate Itinerary'),
+              label: Text(tr(_isLoading ? 'Generating...' : 'Generate Itinerary')),
               style: ElevatedButton.styleFrom(
                 minimumSize: const Size(double.infinity, 50),
                 textStyle: const TextStyle(fontSize: 18),

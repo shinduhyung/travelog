@@ -1,212 +1,373 @@
-[
-  {
-    "name": "Seoul",
-    "country": "South Korea",
-    "continent": "Asia",
-    "country_iso": "KR",
-    "student": "100"
+{
+  "schema_version": 1,
+  "dataset_id": "student",
+  "metadata": {
+    "source_url": null,
+    "reference_period": null,
+    "updated_at": null
   },
-  {
-    "name": "Tokyo",
-    "country": "Japan",
-    "continent": "Asia",
-    "country_iso": "JP",
-    "student": "99.9"
-  },
-  {
-    "name": "London",
-    "country": "UK",
-    "continent": "Europe",
-    "country_iso": "GB",
-    "student": "97.1"
-  },
-  {
-    "name": "Munich",
-    "country": "Germany",
-    "continent": "Europe",
-    "country_iso": "DE",
-    "student": "96.3"
-  },
-  {
-    "name": "Melbourne",
-    "country": "Australia",
-    "continent": "Oceania",
-    "country_iso": "AU",
-    "student": "95.7"
-  },
-  {
-    "name": "Sydney",
-    "country": "Australia",
-    "continent": "Oceania",
-    "country_iso": "AU",
-    "student": "94.7"
-  },
-  {
-    "name": "Berlin",
-    "country": "Germany",
-    "continent": "Europe",
-    "country_iso": "DE",
-    "student": "93.3"
-  },
-  {
-    "name": "Paris",
-    "country": "France",
-    "continent": "Europe",
-    "country_iso": "FR",
-    "student": "93.3"
-  },
-  {
-    "name": "Zurich",
-    "country": "Switzerland",
-    "continent": "Europe",
-    "country_iso": "CH",
-    "student": "91.5"
-  },
-  {
-    "name": "Vienna",
-    "country": "Austria",
-    "continent": "Europe",
-    "country_iso": "AT",
-    "student": "90.8"
-  },
-  {
-    "name": "Singapore",
-    "country": "Singapore",
-    "continent": "Asia",
-    "country_iso": "SG",
-    "student": "90.6"
-  },
-  {
-    "name": "Kuala Lumpur",
-    "country": "Malaysia",
-    "continent": "Asia",
-    "country_iso": "MY",
-    "student": "90.3"
-  },
-  {
-    "name": "Beijing",
-    "country": "China",
-    "continent": "Asia",
-    "country_iso": "CN",
-    "student": "89.7"
-  },
-  {
-    "name": "Taipei",
-    "country": "Taiwan",
-    "continent": "Asia",
-    "country_iso": "TW",
-    "student": "89.1"
-  },
-  {
-    "name": "Boston",
-    "country": "United States",
-    "continent": "North America",
-    "country_iso": "US",
-    "student": "88.5"
-  },
-  {
-    "name": "Edinburgh",
-    "country": "UK",
-    "continent": "Europe",
-    "country_iso": "GB",
-    "student": "88.5"
-  },
-  {
-    "name": "Hong Kong",
-    "country": "Hong Kong",
-    "continent": "Asia",
-    "country_iso": "HK",
-    "student": "88.3"
-  },
-  {
-    "name": "Kyoto",
-    "country": "Japan",
-    "continent": "Asia",
-    "country_iso": "JP",
-    "student": "87.8"
-  },
-  {
-    "name": "Montreal",
-    "country": "Canada",
-    "continent": "North America",
-    "country_iso": "CA",
-    "student": "87.8"
-  },
-  {
-    "name": "Amsterdam",
-    "country": "Netherlands",
-    "continent": "Europe",
-    "country_iso": "NL",
-    "student": "87.4"
-  },
-  {
-    "name": "Lausanne",
-    "country": "Switzerland",
-    "continent": "Europe",
-    "country_iso": "CH",
-    "student": "87.1"
-  },
-  {
-    "name": "Toronto",
-    "country": "Canada",
-    "continent": "North America",
-    "country_iso": "CA",
-    "student": "87"
-  },
-  {
-    "name": "New York",
-    "country": "United States",
-    "continent": "North America",
-    "country_iso": "US",
-    "student": "86.1"
-  },
-  {
-    "name": "Stockholm",
-    "country": "Sweden",
-    "continent": "Europe",
-    "country_iso": "SE",
-    "student": "85.2"
-  },
-  {
-    "name": "Auckland",
-    "country": "New Zealand",
-    "continent": "Oceania",
-    "country_iso": "NZ",
-    "student": "84.7"
-  },
-  {
-    "name": "Brisbane",
-    "country": "Australia",
-    "continent": "Oceania",
-    "country_iso": "AU",
-    "student": "84.3"
-  },
-  {
-    "name": "Shanghai",
-    "country": "China",
-    "continent": "Asia",
-    "country_iso": "CN",
-    "student": "84"
-  },
-  {
-    "name": "Madrid",
-    "country": "Spain",
-    "continent": "Europe",
-    "country_iso": "ES",
-    "student": "83.9"
-  },
-  {
-    "name": "Prague",
-    "country": "Czechia",
-    "continent": "Europe",
-    "country_iso": "CZ",
-    "student": "83.4"
-  },
-  {
-    "name": "Vancouver",
-    "country": "Canada",
-    "continent": "North America",
-    "country_iso": "CA",
-    "student": "83.4"
-  }
-]
+  "legacy_layout": "list",
+  "tables": [
+    {
+      "id": "main",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "name",
+        "country",
+        "country_iso"
+      ],
+      "metrics": [
+        {
+          "id": "continent",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        },
+        {
+          "id": "student",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "name": "Seoul",
+            "country": "South Korea",
+            "country_iso": "KR"
+          },
+          "values": {
+            "continent": "Asia",
+            "student": "100"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Tokyo",
+            "country": "Japan",
+            "country_iso": "JP"
+          },
+          "values": {
+            "continent": "Asia",
+            "student": "99.9"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "London",
+            "country": "UK",
+            "country_iso": "GB"
+          },
+          "values": {
+            "continent": "Europe",
+            "student": "97.1"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Munich",
+            "country": "Germany",
+            "country_iso": "DE"
+          },
+          "values": {
+            "continent": "Europe",
+            "student": "96.3"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Melbourne",
+            "country": "Australia",
+            "country_iso": "AU"
+          },
+          "values": {
+            "continent": "Oceania",
+            "student": "95.7"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Sydney",
+            "country": "Australia",
+            "country_iso": "AU"
+          },
+          "values": {
+            "continent": "Oceania",
+            "student": "94.7"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Berlin",
+            "country": "Germany",
+            "country_iso": "DE"
+          },
+          "values": {
+            "continent": "Europe",
+            "student": "93.3"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Paris",
+            "country": "France",
+            "country_iso": "FR"
+          },
+          "values": {
+            "continent": "Europe",
+            "student": "93.3"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Zurich",
+            "country": "Switzerland",
+            "country_iso": "CH"
+          },
+          "values": {
+            "continent": "Europe",
+            "student": "91.5"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Vienna",
+            "country": "Austria",
+            "country_iso": "AT"
+          },
+          "values": {
+            "continent": "Europe",
+            "student": "90.8"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Singapore",
+            "country": "Singapore",
+            "country_iso": "SG"
+          },
+          "values": {
+            "continent": "Asia",
+            "student": "90.6"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Kuala Lumpur",
+            "country": "Malaysia",
+            "country_iso": "MY"
+          },
+          "values": {
+            "continent": "Asia",
+            "student": "90.3"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Beijing",
+            "country": "China",
+            "country_iso": "CN"
+          },
+          "values": {
+            "continent": "Asia",
+            "student": "89.7"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Taipei",
+            "country": "Taiwan",
+            "country_iso": "TW"
+          },
+          "values": {
+            "continent": "Asia",
+            "student": "89.1"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Boston",
+            "country": "United States",
+            "country_iso": "US"
+          },
+          "values": {
+            "continent": "North America",
+            "student": "88.5"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Edinburgh",
+            "country": "UK",
+            "country_iso": "GB"
+          },
+          "values": {
+            "continent": "Europe",
+            "student": "88.5"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Hong Kong",
+            "country": "Hong Kong",
+            "country_iso": "HK"
+          },
+          "values": {
+            "continent": "Asia",
+            "student": "88.3"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Kyoto",
+            "country": "Japan",
+            "country_iso": "JP"
+          },
+          "values": {
+            "continent": "Asia",
+            "student": "87.8"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Montreal",
+            "country": "Canada",
+            "country_iso": "CA"
+          },
+          "values": {
+            "continent": "North America",
+            "student": "87.8"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Amsterdam",
+            "country": "Netherlands",
+            "country_iso": "NL"
+          },
+          "values": {
+            "continent": "Europe",
+            "student": "87.4"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Lausanne",
+            "country": "Switzerland",
+            "country_iso": "CH"
+          },
+          "values": {
+            "continent": "Europe",
+            "student": "87.1"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Toronto",
+            "country": "Canada",
+            "country_iso": "CA"
+          },
+          "values": {
+            "continent": "North America",
+            "student": "87"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "New York",
+            "country": "United States",
+            "country_iso": "US"
+          },
+          "values": {
+            "continent": "North America",
+            "student": "86.1"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Stockholm",
+            "country": "Sweden",
+            "country_iso": "SE"
+          },
+          "values": {
+            "continent": "Europe",
+            "student": "85.2"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Auckland",
+            "country": "New Zealand",
+            "country_iso": "NZ"
+          },
+          "values": {
+            "continent": "Oceania",
+            "student": "84.7"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Brisbane",
+            "country": "Australia",
+            "country_iso": "AU"
+          },
+          "values": {
+            "continent": "Oceania",
+            "student": "84.3"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Shanghai",
+            "country": "China",
+            "country_iso": "CN"
+          },
+          "values": {
+            "continent": "Asia",
+            "student": "84"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Madrid",
+            "country": "Spain",
+            "country_iso": "ES"
+          },
+          "values": {
+            "continent": "Europe",
+            "student": "83.9"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Prague",
+            "country": "Czechia",
+            "country_iso": "CZ"
+          },
+          "values": {
+            "continent": "Europe",
+            "student": "83.4"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Vancouver",
+            "country": "Canada",
+            "country_iso": "CA"
+          },
+          "values": {
+            "continent": "North America",
+            "student": "83.4"
+          }
+        }
+      ]
+    }
+  ]
+}

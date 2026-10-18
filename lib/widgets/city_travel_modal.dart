@@ -24,6 +24,7 @@
 
 import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter/services.dart' show rootBundle, AssetManifest;
 import 'package:provider/provider.dart';
 import 'package:collection/collection.dart';
@@ -348,6 +349,7 @@ class _CityTravelSheet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     debugPrint('[ToursDEBUG] _CityTravelSheet.build() for city="${city.name}"');
     return Container(
       decoration: const BoxDecoration(
@@ -446,7 +448,7 @@ class _CityTravelSheet extends StatelessWidget {
             bottom: 18,
             child: Row(
               children: [
-                Text(_flag(city.countryIsoA2), style: const TextStyle(fontSize: 22)),
+                Text(tr(_flag(city.countryIsoA2)), style: const TextStyle(fontSize: 22)),
                 const SizedBox(width: 8),
                 Expanded(
                   child: Column(
@@ -457,7 +459,7 @@ class _CityTravelSheet extends StatelessWidget {
                         style: const TextStyle(fontSize: 24, fontWeight: FontWeight.w800, color: Colors.white),
                       ),
                       Text(
-                        city.country,
+                        tr(city.country),
                         style: TextStyle(fontSize: 13, fontWeight: FontWeight.w500, color: Colors.white.withOpacity(0.85)),
                       ),
                     ],
@@ -476,7 +478,7 @@ class _CityTravelSheet extends StatelessWidget {
       children: [
         Icon(icon, size: 18, color: themeColor),
         const SizedBox(width: 8),
-        Text(title, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w800, color: Color(0xFF111827))),
+        Text(tr(title), style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w800, color: Color(0xFF111827))),
       ],
     );
   }
@@ -524,9 +526,9 @@ class _CityTravelSheet extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text('Set your home airport', style: TextStyle(fontSize: 14, fontWeight: FontWeight.w700, color: Color(0xFF111827))),
+                     Text(tr('Set your home airport'), style: TextStyle(fontSize: 14, fontWeight: FontWeight.w700, color: Color(0xFF111827))),
                     const SizedBox(height: 2),
-                    Text('Tap to set your hub and see prices instantly', style: TextStyle(fontSize: 12, color: Colors.grey.shade500)),
+                    Text(tr('Tap to set your hub and see prices instantly'), style: TextStyle(fontSize: 12, color: Colors.grey.shade500)),
                   ],
                 ),
               ),
@@ -572,7 +574,7 @@ class _CityTravelSheet extends StatelessWidget {
                       children: [
                         Text('${hubAirport.iataCode} → ${city.name}', style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w800, color: Color(0xFF111827))),
                         const SizedBox(height: 4),
-                        Text('Search flights', style: TextStyle(fontSize: 12, color: Colors.grey.shade500)),
+                        Text(tr('Search flights'), style: TextStyle(fontSize: 12, color: Colors.grey.shade500)),
                       ],
                     ),
                   ),
@@ -630,7 +632,7 @@ class _CityTravelSheet extends StatelessWidget {
                   ),
                   const Spacer(),
                   Text(
-                    type['label']!,
+                    tr(type['label']!),
                     style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: Color(0xFF111827)),
                   ),
                 ],
@@ -797,7 +799,7 @@ class _CityTravelSheet extends StatelessWidget {
                                       children: [
                                         Icon(Icons.check_circle, size: 13, color: themeColor),
                                         const SizedBox(width: 4),
-                                        Text('Visited', style: TextStyle(fontSize: 11, fontWeight: FontWeight.w700, color: themeColor)),
+                                        Text(tr('Visited'), style: TextStyle(fontSize: 11, fontWeight: FontWeight.w700, color: themeColor)),
                                       ],
                                     ),
                                   ),
@@ -864,9 +866,9 @@ class _CityTravelSheet extends StatelessWidget {
                 const SizedBox(width: 6),
                 Expanded(
                   child: Text(
-                    unvisitedCount > 0
+                    tr(unvisitedCount > 0
                         ? 'Take this tour to unlock $unvisitedCount new landmark quest${unvisitedCount > 1 ? 's' : ''}'
-                        : 'You\'ve already visited all ${matchedLandmarks.length} landmarks on this tour',
+                        : 'You\'ve already visited all ${matchedLandmarks.length} landmarks on this tour'),
                     style: const TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, color: Color(0xFF111827), height: 1.3),
                   ),
                 ),
@@ -968,7 +970,7 @@ class _CityTravelSheet extends StatelessWidget {
                             Icon(Icons.check_circle_rounded, size: 14, color: themeColor),
                             const SizedBox(width: 6),
                             Expanded(
-                              child: Text(h, style: const TextStyle(fontSize: 11.5, color: Color(0xFF374151), height: 1.35)),
+                              child: Text(tr(h), style: const TextStyle(fontSize: 11.5, color: Color(0xFF374151), height: 1.35)),
                             ),
                           ],
                         ),
@@ -989,7 +991,7 @@ class _CityTravelSheet extends StatelessWidget {
                         color: themeColor.withOpacity(0.08),
                         borderRadius: BorderRadius.circular(20),
                       ),
-                      child: Text(b, style: TextStyle(fontSize: 10, fontWeight: FontWeight.w600, color: themeColor)),
+                      child: Text(tr(b), style: TextStyle(fontSize: 10, fontWeight: FontWeight.w600, color: themeColor)),
                     )).toList(),
                   ),
                   const SizedBox(height: 10),
@@ -1000,7 +1002,7 @@ class _CityTravelSheet extends StatelessWidget {
                   children: [
                     Expanded(
                       child: Text(
-                        tour.title,
+                        tr(tour.title),
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                         style: const TextStyle(fontSize: 12.5, fontWeight: FontWeight.w700, color: Color(0xFF111827)),
@@ -1016,18 +1018,18 @@ class _CityTravelSheet extends StatelessWidget {
                   spacing: 6,
                   runSpacing: 2,
                   children: [
-                    Text(tour.provider, style: TextStyle(fontSize: 11, color: Colors.grey.shade500)),
+                    Text(tr(tour.provider), style: TextStyle(fontSize: 11, color: Colors.grey.shade500)),
                     if (tour.rating != null) ...[
-                      Text('·', style: TextStyle(fontSize: 11, color: Colors.grey.shade400)),
+                      Text(tr('·'), style: TextStyle(fontSize: 11, color: Colors.grey.shade400)),
                       Icon(Icons.star_rounded, size: 12, color: Colors.amber.shade600),
                       Text(
-                        tour.reviewCount != null ? '${tour.rating} (${tour.reviewCount})' : '${tour.rating}',
+                        tr(tour.reviewCount != null ? '${tour.rating} (${tour.reviewCount})' : '${tour.rating}'),
                         style: TextStyle(fontSize: 11, fontWeight: FontWeight.w600, color: Colors.grey.shade600),
                       ),
                     ],
                     if (tour.duration != null) ...[
-                      Text('·', style: TextStyle(fontSize: 11, color: Colors.grey.shade400)),
-                      Text(tour.duration!, style: TextStyle(fontSize: 11, color: Colors.grey.shade500)),
+                      Text(tr('·'), style: TextStyle(fontSize: 11, color: Colors.grey.shade400)),
+                      Text(tr(tour.duration!), style: TextStyle(fontSize: 11, color: Colors.grey.shade500)),
                     ],
                   ],
                 ),
@@ -1039,13 +1041,13 @@ class _CityTravelSheet extends StatelessWidget {
                     if (tour.price != null) ...[
                       if (tour.originalPrice != null) ...[
                         Text(
-                          tour.originalPrice!,
+                          tr(tour.originalPrice!),
                           style: TextStyle(fontSize: 10, color: Colors.grey.shade400, decoration: TextDecoration.lineThrough),
                         ),
                         const SizedBox(width: 4),
                       ],
                       Text(
-                        tour.price!,
+                        tr(tour.price!),
                         style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w800, color: Color(0xFF111827)),
                       ),
                     ],
@@ -1053,7 +1055,7 @@ class _CityTravelSheet extends StatelessWidget {
                     Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        Text('View tour', style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.w700, color: themeColor)),
+                        Text(tr('View tour'), style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.w700, color: themeColor)),
                         const SizedBox(width: 2),
                         Icon(Icons.arrow_forward_rounded, size: 13, color: themeColor),
                       ],
@@ -1088,9 +1090,9 @@ class _CityTravelSheet extends StatelessWidget {
           children: [
             Icon(icon, color: themeColor, size: 22),
             const SizedBox(height: 10),
-            Text(label, style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: Color(0xFF111827))),
+            Text(tr(label), style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: Color(0xFF111827))),
             const SizedBox(height: 2),
-            Text(subtitle, style: TextStyle(fontSize: 11, color: Colors.grey.shade500)),
+            Text(tr(subtitle), style: TextStyle(fontSize: 11, color: Colors.grey.shade500)),
           ],
         ),
       ),
@@ -1123,9 +1125,9 @@ class _CityTravelSheet extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('Get an eSIM for ${city.name}',
+                  Text(tr('Get an eSIM for ${city.name}', entities: [city.name]),
                       style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w700, color: Colors.white)),
-                  Text('Stay connected in ${city.country} from day one',
+                  Text(tr('Stay connected in ${city.country} from day one'),
                       style: TextStyle(fontSize: 12, color: Colors.white.withOpacity(0.85))),
                 ],
               ),
@@ -1162,10 +1164,10 @@ class _CityTravelSheet extends StatelessWidget {
                 children: [
                   Icon(item['icon'] as IconData, color: Colors.grey.shade500, size: 20),
                   const Spacer(),
-                  Text(item['label'] as String,
+                  Text(tr(item['label'] as String),
                       style: TextStyle(fontSize: 11, fontWeight: FontWeight.w700, color: Colors.grey.shade700)),
                   const SizedBox(height: 2),
-                  Text('Coming soon', style: TextStyle(fontSize: 9, color: Colors.grey.shade400)),
+                  Text(tr('Coming soon'), style: TextStyle(fontSize: 9, color: Colors.grey.shade400)),
                 ],
               ),
             ),
@@ -1189,9 +1191,9 @@ class _CityTravelSheet extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(tip['title'] as String, style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: Color(0xFF111827))),
+                Text(tr(tip['title'] as String), style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: Color(0xFF111827))),
                 const SizedBox(height: 3),
-                Text(tip['body'] as String, style: TextStyle(fontSize: 12, color: Colors.grey.shade600, height: 1.4)),
+                Text(tr(tip['body'] as String), style: TextStyle(fontSize: 12, color: Colors.grey.shade600, height: 1.4)),
               ],
             ),
           ),
@@ -1202,7 +1204,7 @@ class _CityTravelSheet extends StatelessWidget {
 
   Widget _buildAffiliateDisclosure() {
     return Text(
-      'We may earn a commission from bookings made through links in this app, at no extra cost to you.',
+      tr('We may earn a commission from bookings made through links in this app, at no extra cost to you.'),
       style: TextStyle(fontSize: 11, color: Colors.grey.shade400, fontStyle: FontStyle.italic),
     );
   }
@@ -1382,7 +1384,7 @@ class _FlightSearchCardState extends State<_FlightSearchCard> {
           children: [
             Icon(icon, size: 13, color: widget.themeColor),
             const SizedBox(width: 5),
-            Text(label, style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: widget.themeColor)),
+            Text(tr(label), style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: widget.themeColor)),
           ],
         ),
       ),
@@ -1422,7 +1424,7 @@ class _FlightSearchCardState extends State<_FlightSearchCard> {
                   border: Border.all(color: widget.themeColor.withOpacity(0.15)),
                 ),
                 child: Text(
-                  _stops == 'direct' ? 'Direct only' : 'Any stops',
+                  tr(_stops == 'direct' ? 'Direct only' : 'Any stops'),
                   style: TextStyle(
                     fontSize: 12,
                     fontWeight: FontWeight.w700,
@@ -1447,7 +1449,7 @@ class _FlightSearchCardState extends State<_FlightSearchCard> {
             ),
           ),
           child: Text(
-            'Change home airport',
+            tr('Change home airport'),
             style: TextStyle(
               fontSize: 11,
               fontWeight: FontWeight.w600,
@@ -1462,6 +1464,7 @@ class _FlightSearchCardState extends State<_FlightSearchCard> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final routeLabel = '$_originIata → $_destinationIata';
 
     return Container(
@@ -1489,7 +1492,7 @@ class _FlightSearchCardState extends State<_FlightSearchCard> {
                       child: CircularProgressIndicator(strokeWidth: 2, color: widget.themeColor),
                     ),
                     const SizedBox(width: 12),
-                    Text('Checking fares for $routeLabel…', style: TextStyle(fontSize: 13, color: Colors.grey.shade500)),
+                    Text(tr('Checking fares for $routeLabel…'), style: TextStyle(fontSize: 13, color: Colors.grey.shade500)),
                   ],
                 );
               }
@@ -1504,7 +1507,7 @@ class _FlightSearchCardState extends State<_FlightSearchCard> {
                   child: Row(
                     children: [
                       Expanded(
-                        child: Text('Price unavailable for this date — tap to search',
+                        child: Text(tr('Price unavailable for this date — tap to search'),
                             style: TextStyle(fontSize: 13, color: Colors.grey.shade500)),
                       ),
                       Icon(Icons.arrow_forward_ios_rounded, size: 14, color: Colors.grey.shade300),
@@ -1524,7 +1527,7 @@ class _FlightSearchCardState extends State<_FlightSearchCard> {
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
                             Text(
-                              result.priceFormatted ?? '-',
+                              tr(result.priceFormatted ?? '-'),
                               style: TextStyle(fontSize: 22, fontWeight: FontWeight.w800, color: widget.themeColor),
                             ),
                             const SizedBox(width: 6),
@@ -1537,7 +1540,7 @@ class _FlightSearchCardState extends State<_FlightSearchCard> {
                                   borderRadius: BorderRadius.circular(6),
                                 ),
                                 child: Text(
-                                  result.isTripComPrice ? 'Trip.com price' : 'Estimated',
+                                  tr(result.isTripComPrice ? 'Trip.com price' : 'Estimated'),
                                   style: TextStyle(
                                     fontSize: 9.5,
                                     fontWeight: FontWeight.w700,
@@ -1550,10 +1553,10 @@ class _FlightSearchCardState extends State<_FlightSearchCard> {
                         ),
                         const SizedBox(height: 2),
                         Text(
-                          [
+                          tr([
                             if (result.isDirect) 'Direct' else if (result.stopCount != null) '${result.stopCount} stop(s)',
                             if (result.carrier != null) result.carrier!,
-                          ].join(' · '),
+                          ].join(' · ')),
                           style: TextStyle(fontSize: 11, color: Colors.grey.shade500),
                         ),
                       ],
@@ -1570,7 +1573,7 @@ class _FlightSearchCardState extends State<_FlightSearchCard> {
                         height: 14,
                         child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white),
                       )
-                          : const Text('Book', style: TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: Colors.white)),
+                          :  Text(tr('Book'), style: TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: Colors.white)),
                     ),
                   ),
                 ],
@@ -1637,6 +1640,7 @@ class _AirportPickerSheetState extends State<_AirportPickerSheet> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final results = _filteredAirports();
 
     return Padding(
@@ -1664,7 +1668,7 @@ class _AirportPickerSheetState extends State<_AirportPickerSheet> {
                   padding: const EdgeInsets.fromLTRB(20, 16, 20, 8),
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text(widget.title, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w800)),
+                    child: Text(tr(widget.title), style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w800)),
                   ),
                 ),
                 Padding(
@@ -1674,7 +1678,7 @@ class _AirportPickerSheetState extends State<_AirportPickerSheet> {
                     autofocus: true,
                     onChanged: (value) => setState(() => _query = value),
                     decoration: InputDecoration(
-                      hintText: 'e.g. ICN, Incheon International',
+                      hintText: tr('e.g. ICN, Incheon International'),
                       prefixIcon: const Icon(Icons.search),
                       suffixIcon: _query.isNotEmpty
                           ? IconButton(
@@ -1706,7 +1710,7 @@ class _AirportPickerSheetState extends State<_AirportPickerSheet> {
                         children: [
                           Icon(Icons.travel_explore, size: 40, color: Colors.grey[400]),
                           const SizedBox(height: 12),
-                          Text('Start typing to find an airport', style: TextStyle(color: Colors.grey[500])),
+                          Text(tr('Start typing to find an airport'), style: TextStyle(color: Colors.grey[500])),
                         ],
                       ),
                     ),
@@ -1720,7 +1724,7 @@ class _AirportPickerSheetState extends State<_AirportPickerSheet> {
                         children: [
                           Icon(Icons.search_off, size: 40, color: Colors.grey[400]),
                           const SizedBox(height: 12),
-                          Text('No matching airports found', style: TextStyle(color: Colors.grey[500])),
+                          Text(tr('No matching airports found'), style: TextStyle(color: Colors.grey[500])),
                         ],
                       ),
                     ),
@@ -1742,7 +1746,7 @@ class _AirportPickerSheetState extends State<_AirportPickerSheet> {
                             color: widget.themeColor.withOpacity(0.08),
                             borderRadius: BorderRadius.circular(10),
                           ),
-                          child: Text(_flagEmoji(airport.country), style: const TextStyle(fontSize: 22)),
+                          child: Text(tr(_flagEmoji(airport.country)), style: const TextStyle(fontSize: 22)),
                         ),
                         title: Text(
                           airport.name,
@@ -1824,7 +1828,7 @@ class _TravelModalHubSetupSheetState extends State<_TravelModalHubSetupSheet> {
     Navigator.of(context).pop();
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
-        content: Text('${airport.name} is now set as your Hub'),
+        content: Text(tr('${airport.name} is now set as your Hub', entities: [airport.name])),
         backgroundColor: widget.themeColor,
         behavior: SnackBarBehavior.floating,
       ),
@@ -1833,6 +1837,7 @@ class _TravelModalHubSetupSheetState extends State<_TravelModalHubSetupSheet> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final results = _filteredAirports();
 
     return Padding(
@@ -1869,12 +1874,12 @@ class _TravelModalHubSetupSheetState extends State<_TravelModalHubSetupSheet> {
                         child: Icon(Icons.add_location_alt, color: widget.themeColor),
                       ),
                       const SizedBox(width: 12),
-                      const Expanded(
+                       Expanded(
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text('Set Your Hub', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800)),
-                            Text('Search by airport name or IATA code',
+                            Text(tr('Set Your Hub'), style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800)),
+                            Text(tr('Search by airport name or IATA code'),
                                 style: TextStyle(fontSize: 12, color: Colors.grey)),
                           ],
                         ),
@@ -1889,7 +1894,7 @@ class _TravelModalHubSetupSheetState extends State<_TravelModalHubSetupSheet> {
                     autofocus: true,
                     onChanged: (value) => setState(() => _query = value),
                     decoration: InputDecoration(
-                      hintText: 'e.g. ICN, Incheon International',
+                      hintText: tr('e.g. ICN, Incheon International'),
                       prefixIcon: const Icon(Icons.search),
                       suffixIcon: _query.isNotEmpty
                           ? IconButton(
@@ -1921,7 +1926,7 @@ class _TravelModalHubSetupSheetState extends State<_TravelModalHubSetupSheet> {
                         children: [
                           Icon(Icons.travel_explore, size: 40, color: Colors.grey[400]),
                           const SizedBox(height: 12),
-                          Text('Start typing to find your airport', style: TextStyle(color: Colors.grey[500])),
+                          Text(tr('Start typing to find your airport'), style: TextStyle(color: Colors.grey[500])),
                         ],
                       ),
                     ),
@@ -1935,7 +1940,7 @@ class _TravelModalHubSetupSheetState extends State<_TravelModalHubSetupSheet> {
                         children: [
                           Icon(Icons.search_off, size: 40, color: Colors.grey[400]),
                           const SizedBox(height: 12),
-                          Text('No matching airports found', style: TextStyle(color: Colors.grey[500])),
+                          Text(tr('No matching airports found'), style: TextStyle(color: Colors.grey[500])),
                         ],
                       ),
                     ),
@@ -1957,7 +1962,7 @@ class _TravelModalHubSetupSheetState extends State<_TravelModalHubSetupSheet> {
                             color: widget.themeColor.withOpacity(0.08),
                             borderRadius: BorderRadius.circular(10),
                           ),
-                          child: Text(_flagEmoji(airport.country), style: const TextStyle(fontSize: 22)),
+                          child: Text(tr(_flagEmoji(airport.country)), style: const TextStyle(fontSize: 22)),
                         ),
                         title: Text(
                           airport.name,

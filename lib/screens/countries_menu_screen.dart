@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'dart:async';
 import 'package:jidoapp/services/country_regions_notice_service.dart';
 import 'package:jidoapp/services/ad_service.dart';
@@ -129,8 +130,8 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
                 color: const Color(0xFFFF7043),
                 borderRadius: BorderRadius.circular(5),
               ),
-              child: const Text(
-                'NEW',
+              child:  Text(
+                tr('NEW'),
                 style: TextStyle(
                   fontSize: 8,
                   fontWeight: FontWeight.w800,
@@ -441,8 +442,8 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Text(
-                      'Travelog',
+                     Text(
+                      tr('Travelog'),
                       style: TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.w900,
@@ -458,7 +459,7 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
                         borderRadius: BorderRadius.circular(20),
                       ),
                       child: Text(
-                        '${visitedList.length} Countries',
+                        tr('${visitedList.length} Countries'),
                         style: const TextStyle(
                           color: Colors.white,
                           fontSize: 10,
@@ -534,7 +535,7 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
               const SizedBox(width: 3),
               Expanded(
                 child: Text(
-                  name,
+                  tr(name),
                   style: const TextStyle(
                     fontSize: 8,
                     fontWeight: FontWeight.bold,
@@ -546,7 +547,7 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
           ),
           const SizedBox(height: 2),
           Text(
-            '$count/$total',
+            tr('$count/$total'),
             style: TextStyle(
               fontSize: 11,
               fontWeight: FontWeight.w900,
@@ -654,6 +655,7 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Scaffold(
       backgroundColor: Colors.white,
       body: Stack(
@@ -779,7 +781,7 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
                                                             width: 6,
                                                           ),
                                                           Text(
-                                                            'Countries',
+                                                            tr('Countries'),
                                                             style: TextStyle(
                                                               fontSize: 12,
                                                               fontWeight:
@@ -837,7 +839,7 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
                                                                     ],
                                                                   ).createShader(bounds),
                                                                   child: Text(
-                                                                    '${val.toInt()}',
+                                                                    tr('${val.toInt()}'),
                                                                     style: const TextStyle(
                                                                       fontSize:
                                                                           64,
@@ -862,7 +864,7 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
                                                                 left: 8,
                                                               ),
                                                           child: Text(
-                                                            '/ $totalCountries',
+                                                            tr('/ $totalCountries'),
                                                             style: TextStyle(
                                                               fontSize: 18,
                                                               fontWeight:
@@ -931,7 +933,7 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
                                                       ],
                                                     ),
                                                     child: Text(
-                                                      '${val.toInt()}%',
+                                                      tr('${val.toInt()}%'),
                                                       style: const TextStyle(
                                                         fontSize: 24,
                                                         fontWeight:
@@ -1005,9 +1007,9 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
                                         mainAxisSize: MainAxisSize.min,
                                         children: [
                                           Tooltip(
-                                            message: _showRegions
+                                            message: tr(_showRegions
                                                 ? 'Show visited countries'
-                                                : 'Show visited regions',
+                                                : 'Show visited regions'),
                                             child: Material(
                                               color: _showRegions
                                                   ? Theme.of(
@@ -1203,7 +1205,7 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
                                             CrossAxisAlignment.start,
                                         children: [
                                           Text(
-                                            statisticsItems[_selectedStatIndex]['title'],
+                                            tr(statisticsItems[_selectedStatIndex]['title']),
                                             style: const TextStyle(
                                               fontSize: 18,
                                               fontWeight: FontWeight.w700,
@@ -1211,7 +1213,7 @@ class _CountriesMenuScreenState extends State<CountriesMenuScreen> {
                                           ),
                                           const SizedBox(height: 2),
                                           Text(
-                                            'View detailed statistics',
+                                            tr('View detailed statistics'),
                                             style: TextStyle(
                                               fontSize: 13,
                                               color: Colors.grey.shade500,
@@ -1275,6 +1277,7 @@ class _AnimatedProgressBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Stack(
       clipBehavior: Clip.none,
       children: [

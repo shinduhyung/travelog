@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:collection/collection.dart';
 import 'package:country_flags/country_flags.dart';
@@ -34,6 +35,7 @@ class TopOrchestrasScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final landmarksProvider = context.watch<LandmarksProvider>();
     final allLandmarks = landmarksProvider.allLandmarks;
 
@@ -73,8 +75,8 @@ class TopOrchestrasScreen extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(width: 12),
-                      const Text(
-                        'Best Orchestras',
+                       Text(
+                        tr('Best Orchestras'),
                         style: TextStyle(
                           fontSize: 26,
                           fontWeight: FontWeight.bold,
@@ -86,7 +88,7 @@ class TopOrchestrasScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 8),
                   Text(
-                    'World\'s finest symphony orchestras',
+                    tr('World\'s finest symphony orchestras'),
                     style: TextStyle(
                       fontSize: 14,
                       color: Colors.grey[600],
@@ -117,7 +119,7 @@ class TopOrchestrasScreen extends StatelessWidget {
                         _showLandmarkDetailsModal(context, landmark, const Color(0xFF6B4EFF));
                       } else {
                         ScaffoldMessenger.of(context).showSnackBar(
-                          SnackBar(content: Text("$name details not found in database")),
+                          SnackBar(content: Text(tr("$name details not found in database"))),
                         );
                       }
                     },
@@ -155,7 +157,7 @@ class TopOrchestrasScreen extends StatelessWidget {
                             ),
                             child: Center(
                               child: Text(
-                                '$rank',
+                                tr('$rank'),
                                 style: TextStyle(
                                   fontSize: 16,
                                   fontWeight: FontWeight.bold,
@@ -170,7 +172,7 @@ class TopOrchestrasScreen extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  orchestra,
+                                  tr(orchestra),
                                   style: const TextStyle(
                                     fontSize: 16,
                                     fontWeight: FontWeight.w600,
@@ -181,7 +183,7 @@ class TopOrchestrasScreen extends StatelessWidget {
                                 ),
                                 const SizedBox(height: 4),
                                 Text(
-                                  name,
+                                  tr(name),
                                   style: TextStyle(
                                     fontSize: 13,
                                     color: Colors.grey[600],
@@ -277,7 +279,7 @@ class TopOrchestrasScreen extends StatelessWidget {
                         children: [
                           ElevatedButton(
                               onPressed: () => Navigator.pop(sheetContext),
-                              child: Text('Done', style: TextStyle(fontWeight: FontWeight.w600, color: themeColor)),
+                              child: Text(tr('Done'), style: TextStyle(fontWeight: FontWeight.w600, color: themeColor)),
                               style: ElevatedButton.styleFrom(backgroundColor: headerTextColor)),
                         ],
                       ),
@@ -297,7 +299,7 @@ class TopOrchestrasScreen extends StatelessWidget {
                           Icon(Icons.location_on, size: 14, color: headerTextColor.withOpacity(0.8)),
                           const SizedBox(width: 4),
                           Expanded(
-                              child: Text(locationDisplay,
+                              child: Text(tr(locationDisplay),
                                   style: Theme.of(sheetContext).textTheme.titleSmall?.copyWith(
                                       color: headerTextColor.withOpacity(0.8), fontWeight: FontWeight.normal))),
                         ],
@@ -317,12 +319,12 @@ class TopOrchestrasScreen extends StatelessWidget {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Row(mainAxisSize: MainAxisSize.min, children: [const Text('Wishlist:'), IconButton(visualDensity: VisualDensity.compact, icon: Icon(isWishlisted ? Icons.favorite : Icons.favorite_border, color: isWishlisted ? Colors.red : Colors.grey), onPressed: () => provider.toggleWishlistStatus(freshLandmark.name))]),
-                                Row(mainAxisSize: MainAxisSize.min, children: [const Text('My Rating:'), const SizedBox(width: 8), RatingBar.builder(initialRating: freshLandmark.rating ?? 0.0, minRating: 0, direction: Axis.horizontal, allowHalfRating: true, itemCount: 5, itemSize: 28.0, itemBuilder: (context, _) => const Icon(Icons.star, color: Colors.amber), onRatingUpdate: (rating) => provider.updateLandmarkRating(freshLandmark.name, rating))]),
+                                Row(mainAxisSize: MainAxisSize.min, children: [ Text(tr('Wishlist:')), IconButton(visualDensity: VisualDensity.compact, icon: Icon(isWishlisted ? Icons.favorite : Icons.favorite_border, color: isWishlisted ? Colors.red : Colors.grey), onPressed: () => provider.toggleWishlistStatus(freshLandmark.name))]),
+                                Row(mainAxisSize: MainAxisSize.min, children: [ Text(tr('My Rating:')), const SizedBox(width: 8), RatingBar.builder(initialRating: freshLandmark.rating ?? 0.0, minRating: 0, direction: Axis.horizontal, allowHalfRating: true, itemCount: 5, itemSize: 28.0, itemBuilder: (context, _) => const Icon(Icons.star, color: Colors.amber), onRatingUpdate: (rating) => provider.updateLandmarkRating(freshLandmark.name, rating))]),
                               ],
                             ),
                             const Divider(height: 20),
-                            Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [Text('History (${freshLandmark.visitDates.length} entries)', style: Theme.of(sheetContext).textTheme.titleSmall), OutlinedButton.icon(icon: const Icon(Icons.add), label: const Text('Add Visit'), onPressed: () => provider.addVisitDate(freshLandmark.name))]),
+                            Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [Text(tr('History (${freshLandmark.visitDates.length} entries)'), style: Theme.of(sheetContext).textTheme.titleSmall), OutlinedButton.icon(icon: const Icon(Icons.add), label:  Text(tr('Add Visit')), onPressed: () => provider.addVisitDate(freshLandmark.name))]),
                             const SizedBox(height: 8),
                             if (freshLandmark.visitDates.isNotEmpty) ...freshLandmark.visitDates.asMap().entries.map((entry) => _LandmarkVisitEditorCard(
                               key: ValueKey('${freshLandmark.name}_${entry.key}'),
@@ -331,7 +333,7 @@ class TopOrchestrasScreen extends StatelessWidget {
                               index: entry.key,
                               onDelete: () => provider.removeVisitDate(freshLandmark.name, entry.key),
                               availableLocations: freshLandmark.locations,
-                            )) else const Center(child: Text('No visits recorded.')),
+                            )) else  Center(child: Text(tr('No visits recorded.'))),
                             const Divider(height: 24),
                             LandmarkInfoCard(overview: freshLandmark.overview, historySignificance: freshLandmark.history_significance, highlights: freshLandmark.highlights, themeColor: themeColor),
                             const SizedBox(height: 40),
@@ -407,12 +409,13 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final provider = context.read<LandmarksProvider>();
     return Card(
       elevation: 1, margin: const EdgeInsets.symmetric(vertical: 4),
       child: ExpansionTile(
-        title: Text(widget.visitDate.title.isNotEmpty ? widget.visitDate.title : 'Visit Record'),
-        subtitle: Text('Date: $_year-$_month-$_day'),
+        title: Text(tr(widget.visitDate.title.isNotEmpty ? widget.visitDate.title : 'Visit Record')),
+        subtitle: Text(tr('Date: $_year-$_month-$_day')),
         trailing: IconButton(icon: const Icon(Icons.delete, color: Colors.red, size: 20), onPressed: widget.onDelete),
         children: [
           Padding(
@@ -420,9 +423,9 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
             child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  TextField(controller: _titleController, decoration: const InputDecoration(labelText: 'Title', isDense: true), onEditingComplete: () => provider.updateLandmarkVisit(widget.landmarkName, widget.index, title: _titleController.text)),
+                  TextField(controller: _titleController, decoration:  InputDecoration(labelText: tr('Title'), isDense: true), onEditingComplete: () => provider.updateLandmarkVisit(widget.landmarkName, widget.index, title: _titleController.text)),
                   const SizedBox(height: 8),
-                  TextField(controller: _memoController, decoration: const InputDecoration(labelText: 'Memo', isDense: true), onEditingComplete: () => provider.updateLandmarkVisit(widget.landmarkName, widget.index, memo: _memoController.text)),
+                  TextField(controller: _memoController, decoration:  InputDecoration(labelText: tr('Memo'), isDense: true), onEditingComplete: () => provider.updateLandmarkVisit(widget.landmarkName, widget.index, memo: _memoController.text)),
                   const SizedBox(height: 12),
                   SingleChildScrollView(scrollDirection: Axis.horizontal, child: Row(children: [IconButton(icon: const Icon(Icons.camera_alt), onPressed: () => _pickImage(ImageSource.gallery)), ..._currentPhotos.asMap().entries.map((e) => _buildPhotoPreview(e.value, e.key)).toList()])),
                 ]),

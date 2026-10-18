@@ -1,6 +1,7 @@
 // lib/screens/climate_stats_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:intl/intl.dart';
 import 'package:jidoapp/models/country_model.dart';
 import 'package:jidoapp/providers/country_provider.dart';
@@ -66,6 +67,7 @@ class ClimateStatsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Consumer<CountryProvider>(
       builder: (context, provider, child) {
         if (provider.isLoading) {
@@ -133,6 +135,7 @@ class _ClimateMapButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 8),
       child: Container(
@@ -161,8 +164,8 @@ class _ClimateMapButton extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 8),
           ),
           icon: const Icon(Icons.rocket_launch, color: Colors.white, size: 20),
-          label: const Text(
-            'World Climate Map',
+          label:  Text(
+            tr('World Climate Map'),
             style: TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.w600,
@@ -226,6 +229,7 @@ class _ClimateZoneSectionState extends State<_ClimateZoneSection> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final List<Widget> zoneTiles = widget.climateZonesToShow.map((zoneCode) {
       final countriesInZone = widget.countriesByClimateZone[zoneCode] ?? [];
       if (countriesInZone.isEmpty) {
@@ -278,6 +282,7 @@ class _ClimateZoneTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final total = countries.length;
     final visited = countries.where((c) => visitedNames.contains(c.name)).length;
     final percentage = total > 0 ? (visited / total) : 0.0;
@@ -312,7 +317,7 @@ class _ClimateZoneTile extends StatelessWidget {
                     children: [
                       Expanded(
                         child: Text(
-                          title,
+                          tr(title),
                           style: theme.textTheme.titleMedium?.copyWith(
                             fontWeight: isExpanded ? FontWeight.w900 : FontWeight.bold,
                             fontSize: 16,
@@ -322,7 +327,7 @@ class _ClimateZoneTile extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        '${(percentage * 100).toStringAsFixed(0)}%',
+                        tr('${(percentage * 100).toStringAsFixed(0)}%'),
                         style: theme.textTheme.titleMedium?.copyWith(
                           fontWeight: FontWeight.w800,
                           fontSize: 16,
@@ -347,7 +352,7 @@ class _ClimateZoneTile extends StatelessWidget {
                       ),
                       const SizedBox(width: 12),
                       Text(
-                        '$visited / $total Countries',
+                        tr('$visited / $total Countries'),
                         style: theme.textTheme.bodyMedium?.copyWith(
                           color: Colors.grey.shade600,
                           fontWeight: FontWeight.w500,
@@ -396,11 +401,11 @@ class _ClimateZoneTile extends StatelessWidget {
                                 color: isVisited ? color : Colors.grey,
                               ),
                               const SizedBox(width: 6),
-                              Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 14)), // 국기 추가
+                              Text(tr(flagEmoji(country.isoA2)), style: const TextStyle(fontSize: 14)), // 국기 추가
                               const SizedBox(width: 4),
                               Expanded(
                                 child: Text(
-                                  country.name,
+                                  tr(country.name),
                                   style: theme.textTheme.bodyMedium,
                                   overflow: TextOverflow.ellipsis,
                                 ),
@@ -480,7 +485,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
 
   Widget _buildRankText(int rank, Color color) {
     return Text(
-      '$rank',
+      tr('$rank'),
       style: TextStyle(
         fontSize: 16,
         fontWeight: FontWeight.bold,
@@ -491,6 +496,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final textTheme = Theme.of(context).textTheme;
     final countryProvider = Provider.of<CountryProvider>(context, listen: false);
     final useDefaultColor = countryProvider.useDefaultRankingBarColor;
@@ -520,7 +526,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                       value: group,
                       child: Row(children: [
                         Icon(group.icon, color: group.themeColor), const SizedBox(width: 12),
-                        Text(group.title, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
+                        Text(tr(group.title), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
                       ]),
                     )).toList(),
                     onChanged: (newValue) { if (newValue != null) { setState(() { _selectedRanking = newValue; _prepareList(); }); } },
@@ -532,7 +538,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                     Expanded(
                         child: SegmentedButton<int>(
                           showSelectedIcon: false,
-                          segments: const [ButtonSegment<int>(value: 0, label: Text('All')), ButtonSegment<int>(value: 1, label: Text('Visited'))],
+                          segments:  [ButtonSegment<int>(value: 0, label: Text(tr('All'))), ButtonSegment<int>(value: 1, label: Text(tr('Visited')))],
                           selected: {_displaySegment},
                           onSelectionChanged: (s) { _displaySegment = s.first; _onFilterChanged(); },
                           style: SegmentedButton.styleFrom(
@@ -550,7 +556,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                     Expanded(
                         child: SegmentedButton<int>(
                           showSelectedIcon: false,
-                          segments: const [ButtonSegment<int>(value: 0, label: Text('High')), ButtonSegment<int>(value: 1, label: Text('Low'))],
+                          segments:  [ButtonSegment<int>(value: 0, label: Text(tr('High'))), ButtonSegment<int>(value: 1, label: Text(tr('Low')))],
                           selected: {_sortOrderSegment},
                           onSelectionChanged: (s) { _sortOrderSegment = s.first; _onFilterChanged(); },
                           style: SegmentedButton.styleFrom(
@@ -571,7 +577,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                   child: DropdownButton<String>(
                     borderRadius: BorderRadius.circular(16), // 둥근 모서리 적용
                     value: _selectedContinent,
-                    items: _continents.map((String value) => DropdownMenuItem<String>(value: value, child: Text(value, style: const TextStyle(fontSize: 14)))).toList(),
+                    items: _continents.map((String value) => DropdownMenuItem<String>(value: value, child: Text(tr(value), style: const TextStyle(fontSize: 14)))).toList(),
                     onChanged: (String? newValue) { _selectedContinent = newValue!; _onFilterChanged(); },
                     underline: const SizedBox(),
                   ),
@@ -582,7 +588,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
           const Divider(height: 1),
           Expanded(
             child: _rankedList.isEmpty
-                ? const Center(child: Text('No data to display.'))
+                ?  Center(child: Text(tr('No data to display.')))
                 : ListView.builder(
               padding: const EdgeInsets.all(8.0),
               itemCount: _rankedList.length,
@@ -616,10 +622,10 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                             children: [
                               _buildRankText(rank, rankingThemeColor),
                               const SizedBox(width: 12),
-                              Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 18)), // 국기 추가
+                              Text(tr(flagEmoji(country.isoA2)), style: const TextStyle(fontSize: 18)), // 국기 추가
                               const SizedBox(width: 8),
-                              Expanded(child: Text(country.name, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
-                              Text('$displayValue${_selectedRanking.unit}', style: textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
+                              Expanded(child: Text(tr(country.name), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
+                              Text(tr('$displayValue${_selectedRanking.unit}'), style: textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
                             ],
                           ),
                           const SizedBox(height: 6),
@@ -666,7 +672,7 @@ Widget _buildHorizontalBar({
         children: [
           SizedBox(
             width: 60,
-            child: Text(label, style: const TextStyle(fontWeight: FontWeight.bold)),
+            child: Text(tr(label), style: const TextStyle(fontWeight: FontWeight.bold)),
           ),
           Expanded(
             child: Container(
@@ -692,7 +698,7 @@ Widget _buildHorizontalBar({
           SizedBox(
             width: 80,
             child: Text(
-              '${formatter.format(value)}$suffix',
+              tr('${formatter.format(value)}$suffix'),
               textAlign: TextAlign.right,
               style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12),
             ),

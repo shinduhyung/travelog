@@ -1,6 +1,7 @@
 // lib/screens/city_map_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:jidoapp/models/city_model.dart';
 import 'package:jidoapp/models/city_visit_detail_model.dart';
@@ -99,13 +100,14 @@ class _CityMapScreenState extends State<CityMapScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final cityProvider = Provider.of<CityProvider>(context);
     final countryProvider = Provider.of<CountryProvider>(context); // 공유 시 국가 데이터 필요
     final visitDetails = cityProvider.visitDetails;
     const double sizeRatio = 0.7;
 
     return Scaffold(
-      appBar: AppBar(title: Text(widget.title)),
+      appBar: AppBar(title: Text(tr(widget.title))),
       body: Column(
         children: [
           Padding(
@@ -206,7 +208,7 @@ class _CityMapScreenState extends State<CityMapScreen> {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Text(label, style: const TextStyle(fontSize: 12)),
+        Text(tr(label), style: const TextStyle(fontSize: 12)),
         Switch(
           value: _sizingMode == mode,
           onChanged: (value) {

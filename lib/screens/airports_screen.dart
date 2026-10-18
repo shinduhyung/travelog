@@ -1,6 +1,7 @@
 // lib/screens/airports_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:jidoapp/models/airport_model.dart';
@@ -358,27 +359,25 @@ class _AirportsScreenState extends State<AirportsScreen> {
             }
 
             return AlertDialog(
-              title: Text(isForLounge && isPerUseMemo
-                  ? 'Lounge Memo & Photos for Visit #${useIndex}'
-                  : (isPerUseMemo ? 'Memo & Photos for Use #$useIndex' : 'Memo & Photos for $iataCode')),
+              title: Text(isForLounge && isPerUseMemo ? 'Lounge Memo & Photos for Visit #${useIndex}' : (isPerUseMemo ? 'Memo & Photos for Use #$useIndex' : 'Memo & Photos for $iataCode')),
               content: SingleChildScrollView(
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text('Memo:', style: TextStyle(fontWeight: FontWeight.bold)),
+                     Text(tr('Memo:'), style: TextStyle(fontWeight: FontWeight.bold)),
                     const SizedBox(height: 8),
                     TextFormField(
                       controller: memoController,
                       maxLines: 5,
                       minLines: 3,
-                      decoration: const InputDecoration(
+                      decoration:  InputDecoration(
                         border: OutlineInputBorder(),
-                        hintText: 'Write your thoughts here...',
+                        hintText: tr('Write your thoughts here...'),
                       ),
                     ),
                     const SizedBox(height: 20),
-                    const Text('Photos:', style: TextStyle(fontWeight: FontWeight.bold)),
+                     Text(tr('Photos:'), style: TextStyle(fontWeight: FontWeight.bold)),
                     const SizedBox(height: 8),
                     Wrap(
                       spacing: 10,
@@ -395,7 +394,7 @@ class _AirportsScreenState extends State<AirportsScreen> {
                                     children: <Widget>[
                                       ListTile(
                                         leading: const Icon(Icons.photo_library),
-                                        title: const Text('Photo Library'),
+                                        title:  Text(tr('Photo Library')),
                                         onTap: () {
                                           Navigator.pop(modalContext);
                                           _pickImage(ImageSource.gallery);
@@ -403,7 +402,7 @@ class _AirportsScreenState extends State<AirportsScreen> {
                                       ),
                                       ListTile(
                                         leading: const Icon(Icons.photo_camera),
-                                        title: const Text('Camera'),
+                                        title:  Text(tr('Camera')),
                                         onTap: () {
                                           Navigator.pop(modalContext);
                                           _pickImage(ImageSource.camera);
@@ -423,12 +422,12 @@ class _AirportsScreenState extends State<AirportsScreen> {
                               border: Border.all(color: Colors.grey.shade400),
                               borderRadius: BorderRadius.circular(8),
                             ),
-                            child: const Center(
+                            child:  Center(
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Icon(Icons.add_a_photo, color: Colors.blue),
-                                  Text('Add Photo', style: TextStyle(fontSize: 10)),
+                                  Text(tr('Add Photo'), style: TextStyle(fontSize: 10)),
                                 ],
                               ),
                             ),
@@ -444,13 +443,13 @@ class _AirportsScreenState extends State<AirportsScreen> {
               ),
               actions: [
                 TextButton(
-                  child: const Text('Cancel'),
+                  child:  Text(tr('Cancel')),
                   onPressed: () {
                     Navigator.of(dialogContext).pop();
                   },
                 ),
                 ElevatedButton(
-                  child: const Text('Save'),
+                  child:  Text(tr('Save')),
                   onPressed: () {
                     if (isForLounge && isPerUseMemo) {
                       provider.updateVisitEntry(
@@ -483,7 +482,7 @@ class _AirportsScreenState extends State<AirportsScreen> {
       value: value,
       isDense: true,
       decoration: InputDecoration(
-          labelText: hint,
+          labelText: tr(hint),
           border: const OutlineInputBorder(),
           contentPadding:
           const EdgeInsets.symmetric(horizontal: 10, vertical: 12)),
@@ -491,7 +490,7 @@ class _AirportsScreenState extends State<AirportsScreen> {
           .map((item) => DropdownMenuItem<T>(
         value: item as T?,
         child: Text(
-          item?.toString() ?? 'Unknown',
+          tr(item?.toString() ?? 'Unknown'),
           style: TextStyle(
             fontSize: (item == null) ? 11.0 : 15.0,
             color: (item == null) ? Colors.grey.shade600 : null,
@@ -524,7 +523,7 @@ class _AirportsScreenState extends State<AirportsScreen> {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            const Text('Visit Date', style: TextStyle(fontWeight: FontWeight.bold)),
+             Text(tr('Visit Date'), style: TextStyle(fontWeight: FontWeight.bold)),
             IconButton(
               visualDensity: VisualDensity.compact,
               icon: const Icon(Icons.clear, size: 20),
@@ -537,7 +536,7 @@ class _AirportsScreenState extends State<AirportsScreen> {
                     day: null
                 );
               },
-              tooltip: 'Clear Date',
+              tooltip: tr('Clear Date'),
             ),
           ],
         ),
@@ -615,7 +614,7 @@ class _AirportsScreenState extends State<AirportsScreen> {
                 children: [
                   const Icon(Icons.star, color: Colors.amber),
                   const SizedBox(width: 8),
-                  const Text('My Hub'),
+                   Text(tr('My Hub')),
                   Checkbox(
                     value: isHub,
                     onChanged: (bool? value) async {
@@ -637,18 +636,18 @@ class _AirportsScreenState extends State<AirportsScreen> {
                             context: context,
                             builder: (dialogContext) {
                               return AlertDialog(
-                                title: const Text('Change Hub Airport'),
+                                title:  Text(tr('Change Hub Airport')),
                                 content: Text(
-                                  'Currently "$currentHubName" is set as your Hub. Do you want to change it to "${airport.name}"?',
+                                  tr('Currently "$currentHubName" is set as your Hub. Do you want to change it to "${airport.name}"?'),
                                 ),
                                 actions: [
                                   TextButton(
                                     onPressed: () => Navigator.of(dialogContext).pop(false),
-                                    child: const Text('No'),
+                                    child:  Text(tr('No')),
                                   ),
                                   TextButton(
                                     onPressed: () => Navigator.of(dialogContext).pop(true),
-                                    child: const Text('Yes'),
+                                    child:  Text(tr('Yes')),
                                   ),
                                 ],
                               );
@@ -668,7 +667,7 @@ class _AirportsScreenState extends State<AirportsScreen> {
                 children: [
                   const Icon(Icons.favorite, color: Colors.red),
                   const SizedBox(width: 8),
-                  const Text('Favorite'),
+                   Text(tr('Favorite')),
                   Checkbox(
                     value: isFavorite,
                     onChanged: (bool? value) {
@@ -682,7 +681,7 @@ class _AirportsScreenState extends State<AirportsScreen> {
                 children: [
                   Icon(Icons.wine_bar, color: _wineColor),
                   const SizedBox(width: 8),
-                  Text('Business Lounge: $loungeVisitCount Visits'),
+                  Text(tr('Business Lounge: $loungeVisitCount Visits')),
                 ],
               ),
               if (loungeVisitCount > 0)
@@ -690,10 +689,10 @@ class _AirportsScreenState extends State<AirportsScreen> {
                   padding: const EdgeInsets.only(left: 16.0, right: 16.0, top: 4.0, bottom: 8.0),
                   child: Row(
                     children: [
-                      Text('Average Rating: ', style: Theme.of(context).textTheme.bodySmall),
+                      Text(tr('Average Rating: '), style: Theme.of(context).textTheme.bodySmall),
                       Icon(Icons.wine_bar, color: _wineColor, size: 20),
                       Text(
-                        ' (${averageLoungeRating.toStringAsFixed(1)})',
+                        tr(' (${averageLoungeRating.toStringAsFixed(1)})'),
                         style: const TextStyle(fontWeight: FontWeight.bold),
                       ),
                     ],
@@ -706,11 +705,11 @@ class _AirportsScreenState extends State<AirportsScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('My Rating', style: Theme.of(context).textTheme.titleSmall),
+              Text(tr('My Rating'), style: Theme.of(context).textTheme.titleSmall),
               IconButton(
                 icon: const Icon(Icons.note_alt_outlined, color: Colors.grey),
                 onPressed: () => _showMemoAndPhotoDialog(context, airport.iataCode),
-                tooltip: 'Add Memo and Photos',
+                tooltip: tr('Add Memo and Photos'),
               ),
             ],
           ),
@@ -737,12 +736,12 @@ class _AirportsScreenState extends State<AirportsScreen> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                'History (${uses.length} uses)',
+                tr('History (${uses.length} uses)'),
                 style: Theme.of(context).textTheme.titleSmall,
               ),
               OutlinedButton.icon(
                 icon: const Icon(Icons.add),
-                label: const Text('Add Use'),
+                label:  Text(tr('Add Use')),
                 onPressed: () {
                   provider.addVisitEntry(airport.iataCode);
                 },
@@ -784,11 +783,11 @@ class _AirportsScreenState extends State<AirportsScreen> {
                           Row(
                             children: [
                               Text(
-                                '#${index + 1}: ',
+                                tr('#${index + 1}: '),
                                 style: const TextStyle(fontWeight: FontWeight.bold),
                               ),
                               Text(
-                                dateText,
+                                tr(dateText),
                                 style: const TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 14,
@@ -805,11 +804,11 @@ class _AirportsScreenState extends State<AirportsScreen> {
                                 padding: EdgeInsets.zero,
                                 constraints: const BoxConstraints(),
                                 onPressed: () => _showMemoAndPhotoDialog(context, airport.iataCode, useIndex: index + 1),
-                                tooltip: 'Add Memo for this Use',
+                                tooltip: tr('Add Memo for this Use'),
                               ),
                               IconButton(
                                 icon: const Icon(Icons.delete_forever, color: Colors.red),
-                                tooltip: 'Remove this use',
+                                tooltip: tr('Remove this use'),
                                 onPressed: () {
                                   provider.removeVisitEntry(airport.iataCode, index);
                                 },
@@ -831,7 +830,7 @@ class _AirportsScreenState extends State<AirportsScreen> {
                                     scale: 0.8,
                                     alignment: Alignment.centerLeft,
                                     child: CheckboxListTile(
-                                      title: const Text('Transfer', style: TextStyle(fontSize: 11)),
+                                      title:  Text(tr('Transfer'), style: TextStyle(fontSize: 11)),
                                       controlAffinity: ListTileControlAffinity.leading,
                                       contentPadding: EdgeInsets.zero,
                                       dense: true,
@@ -848,7 +847,7 @@ class _AirportsScreenState extends State<AirportsScreen> {
                                     scale: 0.8,
                                     alignment: Alignment.centerLeft,
                                     child: CheckboxListTile(
-                                      title: const Text('Layover', style: TextStyle(fontSize: 11)),
+                                      title:  Text(tr('Layover'), style: TextStyle(fontSize: 11)),
                                       controlAffinity: ListTileControlAffinity.leading,
                                       contentPadding: EdgeInsets.zero,
                                       dense: true,
@@ -865,7 +864,7 @@ class _AirportsScreenState extends State<AirportsScreen> {
                                     scale: 0.8,
                                     alignment: Alignment.centerLeft,
                                     child: CheckboxListTile(
-                                      title: const Text('Stopover', style: TextStyle(fontSize: 11)),
+                                      title:  Text(tr('Stopover'), style: TextStyle(fontSize: 11)),
                                       controlAffinity: ListTileControlAffinity.leading,
                                       contentPadding: EdgeInsets.zero,
                                       dense: true,
@@ -889,7 +888,7 @@ class _AirportsScreenState extends State<AirportsScreen> {
                                     scale: 0.9,
                                     alignment: Alignment.centerLeft,
                                     child: CheckboxListTile(
-                                      title: const Text('Lounge Use', style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold)),
+                                      title:  Text(tr('Lounge Use'), style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold)),
                                       secondary: Icon(Icons.wine_bar, color: _wineColor, size: 16),
                                       controlAffinity: ListTileControlAffinity.leading,
                                       contentPadding: EdgeInsets.zero,
@@ -934,7 +933,7 @@ class _AirportsScreenState extends State<AirportsScreen> {
                                                 useIndex: index + 1,
                                                 isForLounge: true,
                                               ),
-                                              tooltip: 'Add Lounge Memo & Photos for this visit',
+                                              tooltip: tr('Add Lounge Memo & Photos for this visit'),
                                             ),
                                           ],
                                         ),
@@ -973,13 +972,13 @@ class _AirportsScreenState extends State<AirportsScreen> {
                                                       textAlign: TextAlign.center,
                                                       keyboardType: TextInputType.number,
                                                       inputFormatters: [FilteringTextInputFormatter.digitsOnly],
-                                                      decoration: const InputDecoration(labelText: 'H', isDense: true, border: OutlineInputBorder()),
+                                                      decoration:  InputDecoration(labelText: tr('H'), isDense: true, border: OutlineInputBorder()),
                                                       onChanged: (_) => updateDuration(),
                                                     ),
                                                   ),
-                                                  const Padding(
+                                                   Padding(
                                                     padding: EdgeInsets.symmetric(horizontal: 4.0),
-                                                    child: Text(':', style: TextStyle(fontWeight: FontWeight.bold)),
+                                                    child: Text(tr(':'), style: TextStyle(fontWeight: FontWeight.bold)),
                                                   ),
                                                   Expanded(
                                                     child: TextFormField(
@@ -987,7 +986,7 @@ class _AirportsScreenState extends State<AirportsScreen> {
                                                       textAlign: TextAlign.center,
                                                       keyboardType: TextInputType.number,
                                                       inputFormatters: [FilteringTextInputFormatter.digitsOnly],
-                                                      decoration: const InputDecoration(labelText: 'M', isDense: true, border: OutlineInputBorder()),
+                                                      decoration:  InputDecoration(labelText: tr('M'), isDense: true, border: OutlineInputBorder()),
                                                       onChanged: (_) => updateDuration(),
                                                     ),
                                                   ),
@@ -1010,9 +1009,9 @@ class _AirportsScreenState extends State<AirportsScreen> {
             }).toList(),
 
           if (uses.isEmpty)
-            const Padding(
+             Padding(
               padding: EdgeInsets.only(top: 8.0),
-              child: Center(child: Text('No uses recorded yet. Press "Add Use" to start.')),
+              child: Center(child: Text(tr('No uses recorded yet. Press "Add Use" to start.'))),
             ),
         ],
       ),
@@ -1060,13 +1059,13 @@ class _AirportsScreenState extends State<AirportsScreen> {
                               onPressed: () {
                                 Navigator.pop(sheetContext);
                               },
-                              child: const Text('Cancel', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
+                              child:  Text(tr('Cancel'), style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
                             ),
                             ElevatedButton(
                               onPressed: () {
                                 Navigator.pop(sheetContext);
                               },
-                              child: const Text('Done', style: TextStyle(fontWeight: FontWeight.bold)),
+                              child:  Text(tr('Done'), style: TextStyle(fontWeight: FontWeight.bold)),
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: Colors.white,
                                 foregroundColor: Colors.blue.shade800,
@@ -1076,7 +1075,7 @@ class _AirportsScreenState extends State<AirportsScreen> {
                         ),
                         const SizedBox(height: 16),
                         Text(
-                          '${airport.name} (${airport.iataCode})',
+                          tr('${airport.name} (${airport.iataCode})'),
                           style: Theme.of(context).textTheme.titleLarge?.copyWith(
                             fontWeight: FontWeight.bold,
                             color: Colors.white,
@@ -1090,7 +1089,7 @@ class _AirportsScreenState extends State<AirportsScreen> {
                           children: [
                             Flexible(
                               child: Text(
-                                countryName,
+                                tr(countryName),
                                 style: const TextStyle(
                                     fontSize: 18,
                                     color: Colors.white70,
@@ -1114,7 +1113,7 @@ class _AirportsScreenState extends State<AirportsScreen> {
                                 mainAxisSize: MainAxisSize.min,
                                 children: [
                                   Text(
-                                    '$useCount',
+                                    tr('$useCount'),
                                     style: const TextStyle(
                                       fontSize: 18,
                                       fontWeight: FontWeight.bold,
@@ -1123,7 +1122,7 @@ class _AirportsScreenState extends State<AirportsScreen> {
                                   ),
                                   const SizedBox(width: 4),
                                   Text(
-                                    'uses',
+                                    tr('uses'),
                                     style: TextStyle(
                                       fontSize: 14,
                                       color: Colors.white.withOpacity(0.9),
@@ -1198,7 +1197,7 @@ class _AirportsScreenState extends State<AirportsScreen> {
                       ),
                       child: Center(
                         child: Text(
-                          _getFlagEmoji(airport.country),
+                          tr(_getFlagEmoji(airport.country)),
                           style: const TextStyle(fontSize: 26),
                         ),
                       ),
@@ -1242,7 +1241,7 @@ class _AirportsScreenState extends State<AirportsScreen> {
                                 Icon(Icons.flight_takeoff, size: 12, color: Colors.grey.shade500),
                                 const SizedBox(width: 4),
                                 Text(
-                                  '$useCount ${useCount == 1 ? 'use' : 'uses'}',
+                                  tr('$useCount ${useCount == 1 ? 'use' : 'uses'}'),
                                   style: TextStyle(
                                     fontSize: 12,
                                     color: Colors.grey.shade600,
@@ -1254,7 +1253,7 @@ class _AirportsScreenState extends State<AirportsScreen> {
                                   Icon(Icons.star, size: 12, color: Colors.amber.shade600),
                                   const SizedBox(width: 3),
                                   Text(
-                                    rating.toStringAsFixed(1),
+                                    tr(rating.toStringAsFixed(1)),
                                     style: TextStyle(
                                       fontSize: 12,
                                       color: Colors.grey.shade600,
@@ -1264,7 +1263,7 @@ class _AirportsScreenState extends State<AirportsScreen> {
                                 ],
                               ] else
                                 Text(
-                                  'Not visited',
+                                  tr('Not visited'),
                                   style: TextStyle(fontSize: 12, color: Colors.grey.shade400),
                                 ),
                             ],
@@ -1390,6 +1389,7 @@ class _AirportsScreenState extends State<AirportsScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Scaffold(
       backgroundColor: Colors.grey[50],
       body: Consumer2<AirportProvider, CountryProvider>(
@@ -1398,7 +1398,7 @@ class _AirportsScreenState extends State<AirportsScreen> {
             return const Center(child: CircularProgressIndicator());
           }
           if (airportProvider.error != null) {
-            return Center(child: Text('Error: ${airportProvider.error}'));
+            return Center(child: Text(tr('Error: ${airportProvider.error}')));
           }
 
           List<Airport> filteredList = airportProvider.allAirports.where((airport) {
@@ -1431,8 +1431,8 @@ class _AirportsScreenState extends State<AirportsScreen> {
                 backgroundColor: Colors.white,
                 flexibleSpace: FlexibleSpaceBar(
                   centerTitle: false,
-                  title: const Text(
-                    'Airports',
+                  title:  Text(
+                    tr('Airports'),
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Colors.black87,
@@ -1514,8 +1514,8 @@ class _AirportsScreenState extends State<AirportsScreen> {
                                   child: Column(
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
-                                      const Text(
-                                        'View Statistics',
+                                       Text(
+                                        tr('View Statistics'),
                                         style: TextStyle(
                                           color: Colors.white,
                                           fontSize: 20,
@@ -1524,7 +1524,7 @@ class _AirportsScreenState extends State<AirportsScreen> {
                                       ),
                                       const SizedBox(height: 4),
                                       Text(
-                                        'Explore your airport data',
+                                        tr('Explore your airport data'),
                                         style: TextStyle(
                                           color: Colors.white.withOpacity(0.9),
                                           fontSize: 13,
@@ -1580,7 +1580,7 @@ class _AirportsScreenState extends State<AirportsScreen> {
                         child: TextField(
                           controller: _searchController,
                           decoration: InputDecoration(
-                            hintText: 'Search airports',
+                            hintText: tr('Search airports'),
                             hintStyle: TextStyle(
                               color: Colors.grey[400],
                               fontSize: 15,
@@ -1624,14 +1624,14 @@ class _AirportsScreenState extends State<AirportsScreen> {
                               color: Colors.grey[800],
                               fontWeight: FontWeight.w600,
                             ),
-                            items: const [
+                            items:  [
                               DropdownMenuItem(
                                 value: AirportSortOption.alphabetical,
                                 child: Row(
                                   children: [
                                     Icon(Icons.sort_by_alpha, size: 20, color: Colors.grey),
                                     SizedBox(width: 10),
-                                    Text('A-Z'),
+                                    Text(tr('A-Z')),
                                   ],
                                 ),
                               ),
@@ -1641,7 +1641,7 @@ class _AirportsScreenState extends State<AirportsScreen> {
                                   children: [
                                     Icon(Icons.trending_up, size: 20, color: Colors.blue),
                                     SizedBox(width: 10),
-                                    Text('Most Uses'),
+                                    Text(tr('Most Uses')),
                                   ],
                                 ),
                               ),
@@ -1651,7 +1651,7 @@ class _AirportsScreenState extends State<AirportsScreen> {
                                   children: [
                                     Icon(Icons.schedule, size: 20, color: Colors.grey),
                                     SizedBox(width: 10),
-                                    Text('Recent Visit'),
+                                    Text(tr('Recent Visit')),
                                   ],
                                 ),
                               ),
@@ -1661,7 +1661,7 @@ class _AirportsScreenState extends State<AirportsScreen> {
                                   children: [
                                     Icon(Icons.star, size: 20, color: Colors.amber),
                                     SizedBox(width: 10),
-                                    Text('Top Rated'),
+                                    Text(tr('Top Rated')),
                                   ],
                                 ),
                               ),
@@ -1671,7 +1671,7 @@ class _AirportsScreenState extends State<AirportsScreen> {
                                   children: [
                                     Icon(Icons.home, size: 20, color: Colors.black),
                                     SizedBox(width: 10),
-                                    Text('My Hubs Only'),
+                                    Text(tr('My Hubs Only')),
                                   ],
                                 ),
                               ),
@@ -1681,7 +1681,7 @@ class _AirportsScreenState extends State<AirportsScreen> {
                                   children: [
                                     Icon(Icons.favorite, size: 20, color: Colors.red),
                                     SizedBox(width: 10),
-                                    Text('Favorites Only'),
+                                    Text(tr('Favorites Only')),
                                   ],
                                 ),
                               ),

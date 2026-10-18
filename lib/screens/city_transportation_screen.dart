@@ -1,6 +1,7 @@
 // lib/screens/city_transportation_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:intl/intl.dart';
 import 'package:jidoapp/models/city_model.dart';
 import 'package:jidoapp/providers/city_provider.dart';
@@ -37,6 +38,7 @@ class CityTransportationScreen extends StatelessWidget{
   const CityTransportationScreen({super.key});
   @override
   Widget build(BuildContext context){
+    Localizations.maybeLocaleOf(context);
     return Consumer<CityProvider>(builder:(context,provider,child){
       if(provider.isLoading)return const Center(child:CircularProgressIndicator(strokeWidth:2,color:_C.ink));
       final subwayCities=List<City>.from(provider.transportationCities)..sort((a,b)=>a.name.compareTo(b.name));
@@ -60,7 +62,7 @@ class CityTransportationScreen extends StatelessWidget{
   }
 }
 
-class _SH extends StatelessWidget{final String label;const _SH({required this.label});@override Widget build(BuildContext context)=>Padding(padding:const EdgeInsets.fromLTRB(16,24,16,12),child:Row(children:[Text(label,style:const TextStyle(fontSize:11,fontWeight:FontWeight.w700,letterSpacing:2.0,color:_C.inkLight)),const SizedBox(width:12),Expanded(child:Container(height:1,color:_C.divider))]));}
+class _SH extends StatelessWidget{final String label;const _SH({required this.label});@override Widget build(BuildContext context)=>Padding(padding:const EdgeInsets.fromLTRB(16,24,16,12),child:Row(children:[Text(tr(label),style:const TextStyle(fontSize:11,fontWeight:FontWeight.w700,letterSpacing:2.0,color:_C.inkLight)),const SizedBox(width:12),Expanded(child:Container(height:1,color:_C.divider))]));}
 
 // ── Ranking Card
 class _RCard extends StatefulWidget{final CityProvider provider;const _RCard({required this.provider});@override State<_RCard> createState()=>_RCardState();}
@@ -80,6 +82,7 @@ class _RCardState extends State<_RCard>{
   }
   @override
   Widget build(BuildContext context){
+    Localizations.maybeLocaleOf(context);
     final fmt=NumberFormat.compact();
     final top=_list.isNotEmpty?_sel.valueAccessor(_list.first):1;
     return Container(
@@ -102,7 +105,7 @@ class _RCardState extends State<_RCard>{
                     child:Row(mainAxisAlignment:MainAxisAlignment.center,children:[
                       Icon(r.icon,size:15,color:active?Colors.white:_C.inkLight),
                       const SizedBox(width:6),
-                      Text(r.title,style:TextStyle(fontSize:12,fontWeight:active?FontWeight.w700:FontWeight.w400,color:active?Colors.white:_C.inkLight)),
+                      Text(tr(r.title),style:TextStyle(fontSize:12,fontWeight:active?FontWeight.w700:FontWeight.w400,color:active?Colors.white:_C.inkLight)),
                     ]),
                   ),
                 ),
@@ -111,7 +114,7 @@ class _RCardState extends State<_RCard>{
           ),
         ),
         SizedBox(height:360,child:_list.isEmpty
-            ?const Center(child:Text('No data',style:TextStyle(color:_C.inkLight)))
+            ? Center(child:Text(tr('No data'),style:TextStyle(color:_C.inkLight)))
             :ListView.builder(
           physics:const BouncingScrollPhysics(),
           padding:const EdgeInsets.symmetric(horizontal:12,vertical:8),
@@ -135,7 +138,7 @@ class _RCardState extends State<_RCard>{
                   border:Border(left:BorderSide(color:isVisited?_sel.themeColor:Colors.transparent,width:2.5)),
                 ),
                 child:Row(children:[
-                  SizedBox(width:28,child:Text(rank<=3?(rank==1?'🥇':rank==2?'🥈':'🥉'):'$rank',
+                  SizedBox(width:28,child:Text(tr(rank<=3?(rank==1?'🥇':rank==2?'🥈':'🥉'):'$rank'),
                       style:TextStyle(fontSize:rank<=3?16:12,fontWeight:FontWeight.w700,color:_C.inkLight),textAlign:TextAlign.center)),
                   const SizedBox(width:10),
                   Expanded(child:Column(crossAxisAlignment:CrossAxisAlignment.start,children:[
@@ -143,12 +146,12 @@ class _RCardState extends State<_RCard>{
                       Expanded(child:Text(item.name,style:TextStyle(fontSize:13,fontWeight:isVisited?FontWeight.w700:FontWeight.w500,color:_C.ink),overflow:TextOverflow.ellipsis)),
                       if(isVisited)...[const SizedBox(width:4),Icon(Icons.check_circle_rounded,size:14,color:_sel.themeColor)],
                       const SizedBox(width:6),
-                      Text(dStr,style:const TextStyle(fontSize:13,fontWeight:FontWeight.w700,color:_C.ink)),
+                      Text(tr(dStr),style:const TextStyle(fontSize:13,fontWeight:FontWeight.w700,color:_C.ink)),
                     ]),
                     const SizedBox(height:5),
                     ClipRRect(borderRadius:BorderRadius.circular(3),child:LinearProgressIndicator(value:barFrac,minHeight:3,backgroundColor:_C.divider,valueColor:AlwaysStoppedAnimation<Color>(barColor))),
                     const SizedBox(height:3),
-                    Row(children:[Text(_cf(item),style:const TextStyle(fontSize:11)),const SizedBox(width:4),Text(item.country,style:const TextStyle(fontSize:10,color:_C.inkLight))]),
+                    Row(children:[Text(tr(_cf(item)),style:const TextStyle(fontSize:11)),const SizedBox(width:4),Text(tr(item.country),style:const TextStyle(fontSize:10,color:_C.inkLight))]),
                   ])),
                 ]),
               ),
@@ -167,12 +170,13 @@ class _SumBar extends StatelessWidget{
   final List<_TG> groups;final Set<String> visited;final int completed;
   const _SumBar({required this.groups,required this.visited,required this.completed});
   @override Widget build(BuildContext context){
+    Localizations.maybeLocaleOf(context);
     final total=groups.length;final pct=total>0?completed/total:0.0;
     return Container(padding:const EdgeInsets.all(16),decoration:BoxDecoration(color:_C.ink,borderRadius:BorderRadius.circular(14)),child:Row(children:[
       Expanded(child:Column(crossAxisAlignment:CrossAxisAlignment.start,children:[
-        Text('$completed of $total collections',style:const TextStyle(fontSize:22,fontWeight:FontWeight.w800,color:Colors.white,letterSpacing:-0.5)),
+        Text(tr('$completed of $total collections'),style:const TextStyle(fontSize:22,fontWeight:FontWeight.w800,color:Colors.white,letterSpacing:-0.5)),
         const SizedBox(height:4),
-        Text(completed==0?'No collections fully completed yet':completed==total?'All collections completed! 🎉':'${total-completed} remaining to complete',style:const TextStyle(fontSize:12,color:Color(0xFF888888))),
+        Text(tr(completed==0?'No collections fully completed yet':completed==total?'All collections completed! 🎉':'${total-completed} remaining to complete'),style:const TextStyle(fontSize:12,color:Color(0xFF888888))),
         const SizedBox(height:14),
         _SegBar(groups:groups,visited:visited),
       ])),
@@ -186,6 +190,7 @@ class _SegBar extends StatelessWidget{
   final List<_TG> groups;final Set<String> visited;
   const _SegBar({required this.groups,required this.visited});
   @override Widget build(BuildContext context){
+    Localizations.maybeLocaleOf(context);
     final total=groups.fold<int>(0,(s,g)=>s+(g.names?.length??g.cities?.length??0));
     if(total==0)return const SizedBox.shrink();
     return ClipRRect(borderRadius:BorderRadius.circular(4),child:SizedBox(height:6,child:Row(children:groups.map((g){
@@ -197,9 +202,9 @@ class _SegBar extends StatelessWidget{
   }
 }
 
-class _AP extends StatelessWidget{final double value;const _AP({required this.value});@override Widget build(BuildContext context)=>SizedBox(width:68,height:68,child:Stack(alignment:Alignment.center,children:[CustomPaint(size:const Size(68,68),painter:_APainter(value:value)),Column(mainAxisSize:MainAxisSize.min,children:[Text('${(value*100).round()}',style:const TextStyle(fontSize:20,fontWeight:FontWeight.w800,color:Colors.white,height:1)),const Text('%',style:TextStyle(fontSize:10,color:Color(0xFF888888)))])]));}
+class _AP extends StatelessWidget{final double value;const _AP({required this.value});@override Widget build(BuildContext context)=>SizedBox(width:68,height:68,child:Stack(alignment:Alignment.center,children:[CustomPaint(size:const Size(68,68),painter:_APainter(value:value)),Column(mainAxisSize:MainAxisSize.min,children:[Text(tr('${(value*100).round()}'),style:const TextStyle(fontSize:20,fontWeight:FontWeight.w800,color:Colors.white,height:1)), Text(tr('%'),style:TextStyle(fontSize:10,color:Color(0xFF888888)))])]));}
 class _APainter extends CustomPainter{final double value;const _APainter({required this.value});@override void paint(Canvas canvas,Size size){final c=Offset(size.width/2,size.height/2);final r=size.width/2-4;canvas.drawCircle(c,r,Paint()..color=const Color(0xFF2E2E2E)..style=PaintingStyle.stroke..strokeWidth=4.0);if(value>0)canvas.drawArc(Rect.fromCircle(center:c,radius:r),-math.pi/2,2*math.pi*value,false,Paint()..color=Colors.white..style=PaintingStyle.stroke..strokeWidth=4.0..strokeCap=StrokeCap.round);}@override bool shouldRepaint(_APainter old)=>old.value!=value;}
-class _Ch extends StatelessWidget{final String label,value;final Color color;const _Ch({required this.label,required this.value,required this.color});@override Widget build(BuildContext context)=>Row(mainAxisSize:MainAxisSize.min,crossAxisAlignment:CrossAxisAlignment.baseline,textBaseline:TextBaseline.alphabetic,children:[Text(value,style:TextStyle(fontSize:16,fontWeight:FontWeight.w800,color:color)),const SizedBox(width:3),Text(label,style:const TextStyle(fontSize:10,fontWeight:FontWeight.w500,color:_C.inkLight,letterSpacing:0.3))]);}
+class _Ch extends StatelessWidget{final String label,value;final Color color;const _Ch({required this.label,required this.value,required this.color});@override Widget build(BuildContext context)=>Row(mainAxisSize:MainAxisSize.min,crossAxisAlignment:CrossAxisAlignment.baseline,textBaseline:TextBaseline.alphabetic,children:[Text(tr(value),style:TextStyle(fontSize:16,fontWeight:FontWeight.w800,color:color)),const SizedBox(width:3),Text(tr(label),style:const TextStyle(fontSize:10,fontWeight:FontWeight.w500,color:_C.inkLight,letterSpacing:0.3))]);}
 
 class _ColCard extends StatefulWidget{final _TG data;final Set<String> visitedNames;final CityProvider provider;const _ColCard({required this.data,required this.visitedNames,required this.provider});@override State<_ColCard> createState()=>_ColCardState();}
 class _ColCardState extends State<_ColCard> with SingleTickerProviderStateMixin{
@@ -209,6 +214,7 @@ class _ColCardState extends State<_ColCard> with SingleTickerProviderStateMixin{
   void _toggle(){setState((){_exp=!_exp;_exp?_ctrl.forward():_ctrl.reverse();});}
   @override
   Widget build(BuildContext context){
+    Localizations.maybeLocaleOf(context);
     final g=widget.data;
     final ns=g.names??g.cities!.map((c)=>c.name).toList();
     final total=ns.length;
@@ -222,14 +228,14 @@ class _ColCardState extends State<_ColCard> with SingleTickerProviderStateMixin{
           Container(width:42,height:42,decoration:BoxDecoration(color:g.color.withOpacity(0.10),borderRadius:BorderRadius.circular(10)),child:Icon(g.icon,size:20,color:g.color)),
           const SizedBox(width:14),
           Expanded(child:Column(crossAxisAlignment:CrossAxisAlignment.start,children:[
-            Text(g.label,style:TextStyle(fontSize:10,fontWeight:FontWeight.w700,letterSpacing:1.5,color:g.color)),
+            Text(tr(g.label),style:TextStyle(fontSize:10,fontWeight:FontWeight.w700,letterSpacing:1.5,color:g.color)),
             const SizedBox(height:2),
-            Text(g.title,style:const TextStyle(fontSize:15,fontWeight:FontWeight.w700,color:_C.ink,letterSpacing:-0.2)),
+            Text(tr(g.title),style:const TextStyle(fontSize:15,fontWeight:FontWeight.w700,color:_C.ink,letterSpacing:-0.2)),
           ])),
           GestureDetector(
             onTap:()=>Navigator.push(context,MaterialPageRoute(builder:(_)=>CityStatsMapScreen(cities:mapC,title:g.title,markerColor:g.color))),
             child:Container(padding:const EdgeInsets.symmetric(horizontal:10,vertical:6),decoration:BoxDecoration(color:_C.bg,borderRadius:BorderRadius.circular(8),border:Border.all(color:_C.divider)),
-                child:Row(mainAxisSize:MainAxisSize.min,children:const[Icon(Icons.map_outlined,size:14,color:_C.inkMid),SizedBox(width:4),Text('Map',style:TextStyle(fontSize:12,fontWeight:FontWeight.w600,color:_C.inkMid))])),
+                child:Row(mainAxisSize:MainAxisSize.min,children:[Icon(Icons.map_outlined,size:14,color:_C.inkMid),SizedBox(width:4),Text(tr('Map'),style:TextStyle(fontSize:12,fontWeight:FontWeight.w600,color:_C.inkMid))])),
           ),
           const SizedBox(width:4),
           RotationTransition(turns:_rA,child:const Icon(Icons.keyboard_arrow_down_rounded,size:22,color:_C.inkLight)),
@@ -237,7 +243,7 @@ class _ColCardState extends State<_ColCard> with SingleTickerProviderStateMixin{
         Padding(padding:const EdgeInsets.fromLTRB(16,0,16,14),child:Column(children:[
           ClipRRect(borderRadius:BorderRadius.circular(4),child:LinearProgressIndicator(value:pct,minHeight:5,backgroundColor:_C.divider,valueColor:AlwaysStoppedAnimation<Color>(g.color))),
           const SizedBox(height:8),
-          Row(children:[_Ch(label:'Visited',value:'$vis',color:g.color),const SizedBox(width:8),_Ch(label:'Remaining',value:'${total-vis}',color:_C.inkLight),const Spacer(),Text('${(pct*100).round()}%',style:TextStyle(fontSize:20,fontWeight:FontWeight.w800,color:pct>0?g.color:_C.inkLight,letterSpacing:-0.5))]),
+          Row(children:[_Ch(label:'Visited',value:'$vis',color:g.color),const SizedBox(width:8),_Ch(label:'Remaining',value:'${total-vis}',color:_C.inkLight),const Spacer(),Text(tr('${(pct*100).round()}%'),style:TextStyle(fontSize:20,fontWeight:FontWeight.w800,color:pct>0?g.color:_C.inkLight,letterSpacing:-0.5))]),
         ])),
         AnimatedSize(duration:const Duration(milliseconds:280),curve:Curves.easeInOut,child:_exp
             ?FadeTransition(opacity:_fA,child:Container(width:double.infinity,padding:const EdgeInsets.fromLTRB(16,4,16,16),decoration:const BoxDecoration(border:Border(top:BorderSide(color:_C.divider))),
@@ -248,7 +254,7 @@ class _ColCardState extends State<_ColCard> with SingleTickerProviderStateMixin{
             return GestureDetector(
               onTap:cityObj!=null?()=>_showCityModal(context,cityObj):null,
               child:Container(padding:const EdgeInsets.symmetric(horizontal:11,vertical:6),decoration:BoxDecoration(color:isV?g.color:_C.bg,borderRadius:BorderRadius.circular(20),border:Border.all(color:isV?g.color:_C.divider)),
-                  child:Row(mainAxisSize:MainAxisSize.min,children:[if(flag.isNotEmpty)...[Text(flag,style:const TextStyle(fontSize:11)),const SizedBox(width:5)],Text(name,style:TextStyle(fontSize:12,fontWeight:isV?FontWeight.w700:FontWeight.w500,color:isV?Colors.white:_C.inkMid))])),
+                  child:Row(mainAxisSize:MainAxisSize.min,children:[if(flag.isNotEmpty)...[Text(tr(flag),style:const TextStyle(fontSize:11)),const SizedBox(width:5)],Text(name,style:TextStyle(fontSize:12,fontWeight:isV?FontWeight.w700:FontWeight.w500,color:isV?Colors.white:_C.inkMid))])),
             );
           }).toList()),
         ))

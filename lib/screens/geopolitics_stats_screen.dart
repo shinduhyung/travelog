@@ -1,11 +1,12 @@
 // lib/screens/geopolitics_stats_screen.dart
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
+import 'package:jidoapp/services/statistics_repository.dart';
 import 'package:jidoapp/models/country_model.dart';
 import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/screens/countries_map_screen.dart';
 import 'package:jidoapp/screens/country_detail_screen.dart';
-import 'package:flutter/services.dart'; // rootBundle
 import 'dart:convert'; // json.decode
 import 'package:collection/collection.dart'; // for list.firstWhereOrNull
 import 'dart:math' as math; // For math.max
@@ -59,6 +60,7 @@ class GeopoliticsStatsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final countryProvider = Provider.of<CountryProvider>(context);
 
     if (countryProvider.isLoading) {
@@ -229,6 +231,7 @@ class _CombinedMembershipCardState extends State<_CombinedMembershipCard> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final theme = Theme.of(context);
     final textTheme = theme.textTheme;
 
@@ -268,7 +271,7 @@ class _CombinedMembershipCardState extends State<_CombinedMembershipCard> {
                       children: [
                         Icon(group.icon, color: group.themeColor),
                         const SizedBox(width: 12),
-                        Text(group.title, style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
+                        Text(tr(group.title), style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
                       ],
                     ),
                   );
@@ -296,14 +299,14 @@ class _CombinedMembershipCardState extends State<_CombinedMembershipCard> {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text("Visited", style: textTheme.bodyLarge),
+                            Text(tr("Visited"), style: textTheme.bodyLarge),
                             Text.rich(
                                 TextSpan(
-                                    text: '$visited',
+                                    text: tr('$visited'),
                                     style: textTheme.headlineSmall?.copyWith(color: _selectedGroup.themeColor, fontWeight: FontWeight.bold),
                                     children: [
                                       TextSpan(
-                                          text: ' / $total',
+                                          text: tr(' / $total'),
                                           style: textTheme.titleMedium?.copyWith(color: Colors.grey.shade600)
                                       ),
                                     ]
@@ -333,7 +336,7 @@ class _CombinedMembershipCardState extends State<_CombinedMembershipCard> {
                             Navigator.push(context, MaterialPageRoute(builder: (context) => CountriesMapScreen(highlightGroups: groups)));
                           },
                           icon: const Icon(Icons.map_outlined),
-                          label: const Text('Map'),
+                          label:  Text(tr('Map')),
                           style: ElevatedButton.styleFrom(
                             backgroundColor: _selectedGroup.themeColor,
                             foregroundColor: Colors.white,
@@ -397,11 +400,11 @@ class _CombinedMembershipCardState extends State<_CombinedMembershipCard> {
                               color: isVisited ? _selectedGroup.themeColor : Colors.grey.shade400,
                             ),
                             const SizedBox(width: 4),
-                            Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 14)),
+                            Text(tr(flagEmoji(country.isoA2)), style: const TextStyle(fontSize: 14)),
                             const SizedBox(width: 4),
                             Expanded(
                               child: Text(
-                                country.name,
+                                tr(country.name),
                                 style: textTheme.bodyMedium,
                                 overflow: TextOverflow.ellipsis,
                               ),
@@ -417,7 +420,7 @@ class _CombinedMembershipCardState extends State<_CombinedMembershipCard> {
                 if (_selectedGroup.note != null)
                   Padding(
                     padding: const EdgeInsets.fromLTRB(16.0, 0, 16.0, 16.0),
-                    child: Text(_selectedGroup.note!, style: textTheme.bodySmall?.copyWith(color: Colors.grey.shade600)),
+                    child: Text(tr(_selectedGroup.note!), style: textTheme.bodySmall?.copyWith(color: Colors.grey.shade600)),
                   ),
               ],
             )
@@ -486,6 +489,7 @@ class _CombinedRecognitionCardState extends State<_CombinedRecognitionCard> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final theme = Theme.of(context);
     final textTheme = theme.textTheme;
 
@@ -525,7 +529,7 @@ class _CombinedRecognitionCardState extends State<_CombinedRecognitionCard> {
                       children: [
                         Icon(group.icon, color: group.themeColor),
                         const SizedBox(width: 12),
-                        Text(group.title, style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
+                        Text(tr(group.title), style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
                       ],
                     ),
                   );
@@ -553,14 +557,14 @@ class _CombinedRecognitionCardState extends State<_CombinedRecognitionCard> {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text("Visited", style: textTheme.bodyLarge),
+                            Text(tr("Visited"), style: textTheme.bodyLarge),
                             Text.rich(
                                 TextSpan(
-                                    text: '$visited',
+                                    text: tr('$visited'),
                                     style: textTheme.headlineSmall?.copyWith(color: _selectedGroup.themeColor, fontWeight: FontWeight.bold),
                                     children: [
                                       TextSpan(
-                                          text: ' / $total',
+                                          text: tr(' / $total'),
                                           style: textTheme.titleMedium?.copyWith(color: Colors.grey.shade600)
                                       ),
                                     ]
@@ -580,7 +584,7 @@ class _CombinedRecognitionCardState extends State<_CombinedRecognitionCard> {
                             Navigator.push(context, MaterialPageRoute(builder: (context) => CountriesMapScreen(highlightGroups: groups)));
                           },
                           icon: const Icon(Icons.map_outlined),
-                          label: const Text('Map'),
+                          label:  Text(tr('Map')),
                           style: ElevatedButton.styleFrom(
                             backgroundColor: _selectedGroup.themeColor,
                             foregroundColor: Colors.white,
@@ -642,11 +646,11 @@ class _CombinedRecognitionCardState extends State<_CombinedRecognitionCard> {
                               color: isVisited ? _selectedGroup.themeColor : Colors.grey.shade400,
                             ),
                             const SizedBox(width: 4),
-                            Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 14)),
+                            Text(tr(flagEmoji(country.isoA2)), style: const TextStyle(fontSize: 14)),
                             const SizedBox(width: 4),
                             Expanded(
                               child: Text(
-                                country.name,
+                                tr(country.name),
                                 style: textTheme.bodyMedium,
                                 overflow: TextOverflow.ellipsis,
                               ),
@@ -705,7 +709,7 @@ class _ColdWarGeopoliticsSectionState
   Future<void> _loadColdWarData() async {
     try {
       final String response =
-      await rootBundle.loadString('assets/cold_war.json');
+      await StatisticsRepository.instance.loadLegacyString('assets/cold_war.json');
       final List<dynamic> data = json.decode(response);
       setState(() {
         _coldWarData = {
@@ -748,6 +752,7 @@ class _ColdWarGeopoliticsSectionState
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     if (_isLoadingColdWarData) {
       return const Center(child: CircularProgressIndicator());
     }
@@ -802,8 +807,8 @@ class _ColdWarGeopoliticsSectionState
                 padding: const EdgeInsets.symmetric(vertical: 8),
               ),
               icon: const Icon(Icons.public, color: Colors.white, size: 20),
-              label: const Text(
-                'Cold War Geopolitics Map',
+              label:  Text(
+                tr('Cold War Geopolitics Map'),
                 style: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w600,
@@ -921,6 +926,7 @@ class _ColdWarStatusTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final theme = Theme.of(context);
     final total = countries.length;
     final visited = countries.where((c) => visitedNames.contains(c.name)).length;
@@ -955,7 +961,7 @@ class _ColdWarStatusTile extends StatelessWidget {
                       // Title
                       Expanded(
                         child: Text(
-                          title,
+                          tr(title),
                           style: theme.textTheme.titleMedium?.copyWith(
                             fontWeight: isExpanded ? FontWeight.w900 : FontWeight.bold,
                             fontSize: 16,
@@ -966,7 +972,7 @@ class _ColdWarStatusTile extends StatelessWidget {
                       ),
                       // Percentage
                       Text(
-                        '${(percentage * 100).toStringAsFixed(0)}%',
+                        tr('${(percentage * 100).toStringAsFixed(0)}%'),
                         style: theme.textTheme.titleMedium?.copyWith(
                           fontWeight: FontWeight.w800,
                           fontSize: 16,
@@ -994,7 +1000,7 @@ class _ColdWarStatusTile extends StatelessWidget {
                       ),
                       const SizedBox(width: 12),
                       Text(
-                        '$visited / $total Countries',
+                        tr('$visited / $total Countries'),
                         style: theme.textTheme.bodyMedium?.copyWith(
                           color: Colors.grey.shade600,
                           fontWeight: FontWeight.w500,
@@ -1045,11 +1051,11 @@ class _ColdWarStatusTile extends StatelessWidget {
                                 color: isVisited ? color : Colors.grey,
                               ),
                               const SizedBox(width: 4),
-                              Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 14)),
+                              Text(tr(flagEmoji(country.isoA2)), style: const TextStyle(fontSize: 14)),
                               const SizedBox(width: 4),
                               Expanded(
                                 child: Text(
-                                  country.name,
+                                  tr(country.name),
                                   style: theme.textTheme.bodyMedium,
                                   overflow: TextOverflow.ellipsis,
                                 ),

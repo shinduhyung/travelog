@@ -1,22 +1,242 @@
-[
-  {"name": "Colima", "country": "Mexico", "homicide": "181.94", "continent": "North America"},
-  {"name": "Durán", "country": "Ecuador", "homicide": "148", "continent": "South America"},
-  {"name": "Ciudad Obregón", "country": "Mexico", "homicide": "138.23", "continent": "North America"},
-  {"name": "Zacatecas", "country": "Mexico", "homicide": "134.62", "continent": "North America"},
-  {"name": "Gqeberha", "country": "South Africa", "homicide": "102.82", "continent": "Africa"},
-  {"name": "Tijuana", "country": "Mexico", "homicide": "87.88", "continent": "North America"},
-  {"name": "Guayaquil", "country": "Ecuador", "homicide": "83.80", "continent": "South America"},
-  {"name": "Uruapan", "country": "Mexico", "homicide": "78.26", "continent": "North America"},
-  {"name": "Machala", "country": "Ecuador", "homicide": "77.50", "continent": "South America"},
-  {"name": "Durban", "country": "South Africa", "homicide": "76.89", "continent": "Africa"},
-  {"name": "Portoviejo", "country": "Ecuador", "homicide": "76.00", "continent": "South America"},
-  {"name": "Feira de Santana", "country": "Brazil", "homicide": "74.65", "continent": "South America"},
-  {"name": "Kingston", "country": "Jamaica", "homicide": "70.73", "continent": "North America"},
-  {"name": "Celaya", "country": "Mexico", "homicide": "68.07", "continent": "North America"},
-  {"name": "Macapá", "country": "Brazil", "homicide": "67.75", "continent": "South America"},
-  {"name": "Port-au-Prince", "country": "Haiti", "homicide": "67.20", "continent": "North America"},
-  {"name": "Cape Town", "country": "South Africa", "homicide": "66.80", "continent": "Africa"},
-  {"name": "Ciudad Juárez", "country": "Mexico", "homicide": "66.20", "continent": "North America"},
-  {"name": "Guerrero", "country": "Mexico", "homicide": "65.55", "continent": "North America"},
-  {"name": "East London", "country": "South Africa", "homicide": "65.59", "continent": "Africa"}
- ]
+{
+  "schema_version": 1,
+  "dataset_id": "city_homicide_rate",
+  "metadata": {
+    "source_url": null,
+    "reference_period": null,
+    "updated_at": null
+  },
+  "legacy_layout": "list",
+  "tables": [
+    {
+      "id": "main",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "name",
+        "country"
+      ],
+      "metrics": [
+        {
+          "id": "homicide",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        },
+        {
+          "id": "continent",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "name": "Colima",
+            "country": "Mexico"
+          },
+          "values": {
+            "homicide": "181.94",
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Durán",
+            "country": "Ecuador"
+          },
+          "values": {
+            "homicide": "148",
+            "continent": "South America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Ciudad Obregón",
+            "country": "Mexico"
+          },
+          "values": {
+            "homicide": "138.23",
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Zacatecas",
+            "country": "Mexico"
+          },
+          "values": {
+            "homicide": "134.62",
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Gqeberha",
+            "country": "South Africa"
+          },
+          "values": {
+            "homicide": "102.82",
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Tijuana",
+            "country": "Mexico"
+          },
+          "values": {
+            "homicide": "87.88",
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Guayaquil",
+            "country": "Ecuador"
+          },
+          "values": {
+            "homicide": "83.80",
+            "continent": "South America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Uruapan",
+            "country": "Mexico"
+          },
+          "values": {
+            "homicide": "78.26",
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Machala",
+            "country": "Ecuador"
+          },
+          "values": {
+            "homicide": "77.50",
+            "continent": "South America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Durban",
+            "country": "South Africa"
+          },
+          "values": {
+            "homicide": "76.89",
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Portoviejo",
+            "country": "Ecuador"
+          },
+          "values": {
+            "homicide": "76.00",
+            "continent": "South America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Feira de Santana",
+            "country": "Brazil"
+          },
+          "values": {
+            "homicide": "74.65",
+            "continent": "South America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Kingston",
+            "country": "Jamaica"
+          },
+          "values": {
+            "homicide": "70.73",
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Celaya",
+            "country": "Mexico"
+          },
+          "values": {
+            "homicide": "68.07",
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Macapá",
+            "country": "Brazil"
+          },
+          "values": {
+            "homicide": "67.75",
+            "continent": "South America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Port-au-Prince",
+            "country": "Haiti"
+          },
+          "values": {
+            "homicide": "67.20",
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Cape Town",
+            "country": "South Africa"
+          },
+          "values": {
+            "homicide": "66.80",
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Ciudad Juárez",
+            "country": "Mexico"
+          },
+          "values": {
+            "homicide": "66.20",
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Guerrero",
+            "country": "Mexico"
+          },
+          "values": {
+            "homicide": "65.55",
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "East London",
+            "country": "South Africa"
+          },
+          "values": {
+            "homicide": "65.59",
+            "continent": "Africa"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,32 +1,342 @@
-[
-  {"name": "Hong Kong", "country": "Hong Kong", "skyscraper": "567", "continent": "Asia"},
-  {"name": "Shenzhen", "country": "China", "skyscraper": "444", "continent": "Asia"},
-  {"name": "New York City", "country": "United States", "skyscraper": "317", "continent": "North America"},
-  {"name": "Dubai", "country": "United Arab Emirates", "skyscraper": "269", "continent": "Asia"},
-  {"name": "Mumbai", "country": "India", "skyscraper": "251", "continent": "Asia"},
-  {"name": "Guangzhou", "country": "China", "skyscraper": "204", "continent": "Asia"},
-  {"name": "Shanghai", "country": "China", "skyscraper": "197", "continent": "Asia"},
-  {"name": "Kuala Lumpur", "country": "Malaysia", "skyscraper": "193", "continent": "Asia"},
-  {"name": "Wuhan", "country": "China", "skyscraper": "193", "continent": "Asia"},
-  {"name": "Bangkok", "country": "Thailand", "skyscraper": "190", "continent": "Asia"},
-  {"name": "Tokyo", "country": "Japan", "skyscraper": "175", "continent": "Asia"},
-  {"name": "Chongqing", "country": "China", "skyscraper": "149", "continent": "Asia"},
-  {"name": "Chicago", "country": "United States", "skyscraper": "137", "continent": "North America"},
-  {"name": "Chengdu", "country": "China", "skyscraper": "127", "continent": "Asia"},
-  {"name": "Seoul", "country": "South Korea", "skyscraper": "126", "continent": "Asia"},
-  {"name": "Jakarta", "country": "Indonesia", "skyscraper": "117", "continent": "Asia"},
-  {"name": "Moscow", "country": "Russia", "skyscraper": "111", "continent": "Europe"},
-  {"name": "Toronto", "country": "Canada", "skyscraper": "107", "continent": "North America"},
-  {"name": "Shenyang", "country": "China", "skyscraper": "101", "continent": "Asia"},
-  {"name": "Singapore", "country": "Singapore", "skyscraper": "100", "continent": "Asia"},
-  {"name": "Nanning", "country": "China", "skyscraper": "93", "continent": "Asia"},
-  {"name": "Hangzhou", "country": "China", "skyscraper": "90", "continent": "Asia"},
-  {"name": "Changsha", "country": "China", "skyscraper": "85", "continent": "Asia"},
-  {"name": "Nanjing", "country": "China", "skyscraper": "80", "continent": "Asia"},
-  {"name": "Busan", "country": "South Korea", "skyscraper": "77", "continent": "Asia"},
-  {"name": "Melbourne", "country": "Australia", "skyscraper": "77", "continent": "Oceania"},
-  {"name": "Tianjin", "country": "China", "skyscraper": "76", "continent": "Asia"},
-  {"name": "Miami", "country": "United States", "skyscraper": "74", "continent": "North America"},
-  {"name": "Beijing", "country": "China", "skyscraper": "70", "continent": "Asia"},
-  {"name": "Panama City", "country": "Panama", "skyscraper": "67", "continent": "North America"}
-]
+{
+  "schema_version": 1,
+  "dataset_id": "skyscraper",
+  "metadata": {
+    "source_url": null,
+    "reference_period": null,
+    "updated_at": null
+  },
+  "legacy_layout": "list",
+  "tables": [
+    {
+      "id": "main",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "name",
+        "country"
+      ],
+      "metrics": [
+        {
+          "id": "skyscraper",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        },
+        {
+          "id": "continent",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "name": "Hong Kong",
+            "country": "Hong Kong"
+          },
+          "values": {
+            "skyscraper": "567",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Shenzhen",
+            "country": "China"
+          },
+          "values": {
+            "skyscraper": "444",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "New York City",
+            "country": "United States"
+          },
+          "values": {
+            "skyscraper": "317",
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Dubai",
+            "country": "United Arab Emirates"
+          },
+          "values": {
+            "skyscraper": "269",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Mumbai",
+            "country": "India"
+          },
+          "values": {
+            "skyscraper": "251",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Guangzhou",
+            "country": "China"
+          },
+          "values": {
+            "skyscraper": "204",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Shanghai",
+            "country": "China"
+          },
+          "values": {
+            "skyscraper": "197",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Kuala Lumpur",
+            "country": "Malaysia"
+          },
+          "values": {
+            "skyscraper": "193",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Wuhan",
+            "country": "China"
+          },
+          "values": {
+            "skyscraper": "193",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Bangkok",
+            "country": "Thailand"
+          },
+          "values": {
+            "skyscraper": "190",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Tokyo",
+            "country": "Japan"
+          },
+          "values": {
+            "skyscraper": "175",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Chongqing",
+            "country": "China"
+          },
+          "values": {
+            "skyscraper": "149",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Chicago",
+            "country": "United States"
+          },
+          "values": {
+            "skyscraper": "137",
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Chengdu",
+            "country": "China"
+          },
+          "values": {
+            "skyscraper": "127",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Seoul",
+            "country": "South Korea"
+          },
+          "values": {
+            "skyscraper": "126",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Jakarta",
+            "country": "Indonesia"
+          },
+          "values": {
+            "skyscraper": "117",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Moscow",
+            "country": "Russia"
+          },
+          "values": {
+            "skyscraper": "111",
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Toronto",
+            "country": "Canada"
+          },
+          "values": {
+            "skyscraper": "107",
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Shenyang",
+            "country": "China"
+          },
+          "values": {
+            "skyscraper": "101",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Singapore",
+            "country": "Singapore"
+          },
+          "values": {
+            "skyscraper": "100",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Nanning",
+            "country": "China"
+          },
+          "values": {
+            "skyscraper": "93",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Hangzhou",
+            "country": "China"
+          },
+          "values": {
+            "skyscraper": "90",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Changsha",
+            "country": "China"
+          },
+          "values": {
+            "skyscraper": "85",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Nanjing",
+            "country": "China"
+          },
+          "values": {
+            "skyscraper": "80",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Busan",
+            "country": "South Korea"
+          },
+          "values": {
+            "skyscraper": "77",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Melbourne",
+            "country": "Australia"
+          },
+          "values": {
+            "skyscraper": "77",
+            "continent": "Oceania"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Tianjin",
+            "country": "China"
+          },
+          "values": {
+            "skyscraper": "76",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Miami",
+            "country": "United States"
+          },
+          "values": {
+            "skyscraper": "74",
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Beijing",
+            "country": "China"
+          },
+          "values": {
+            "skyscraper": "70",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Panama City",
+            "country": "Panama"
+          },
+          "values": {
+            "skyscraper": "67",
+            "continent": "North America"
+          }
+        }
+      ]
+    }
+  ]
+}

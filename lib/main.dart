@@ -4,6 +4,9 @@ import 'dart:convert';
 import 'dart:io' show Platform;
 import 'dart:typed_data';
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_quill/flutter_quill.dart' show FlutterQuillLocalizations;
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:jidoapp/screens/daily_quiz_screen.dart';
@@ -116,6 +119,7 @@ class _FloatingBackButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return AnimatedBuilder(
       animation: _appNavObserver,
       builder: (context, _) {
@@ -262,6 +266,7 @@ void main() {
       debugPrint('🟢 [DEBUG] main() zone 진입');
 
       WidgetsFlutterBinding.ensureInitialized();
+      await AppLocale.instance.load();
       debugPrint('🟢 [DEBUG] 1) WidgetsFlutterBinding.ensureInitialized 완료');
 
       // 플랫폼 레벨(네이티브 채널 등) uncaught 에러를 잡습니다.
@@ -495,6 +500,7 @@ class JidoRoot extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return ChangeNotifierProvider(
       create: (_) => AuthProvider(),
       child: const AuthGateRoot(),
@@ -525,6 +531,7 @@ class _AuthGateRootState extends State<AuthGateRoot> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Consumer<AuthProvider>(
       builder: (context, auth, _) {
         if (!auth.isAuthReady) {
@@ -997,6 +1004,7 @@ class _WidgetUpdateWrapperState extends State<WidgetUpdateWrapper> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     if (_showTutorial == null && !_showWelcome) {
       return const Scaffold(backgroundColor: Color(0xFF1ABFBC));
     }
@@ -1098,9 +1106,17 @@ class AdNavigatorObserver extends NavigatorObserver {
 }
 
 Widget _buildAppShell(Widget home, {GlobalKey<NavigatorState>? navKey}) {
-  return AnnotatedRegion<SystemUiOverlayStyle>(
+  return AnimatedBuilder(
+    animation: AppLocale.instance,
+    builder: (context, _) => AnnotatedRegion<SystemUiOverlayStyle>(
     value: _defaultSystemUiOverlayStyle,
     child: MaterialApp(
+      locale: AppLocale.instance.locale,
+      supportedLocales: AppLocale.supportedLocales,
+      localizationsDelegates: [
+        ...GlobalMaterialLocalizations.delegates,
+        FlutterQuillLocalizations.delegate,
+      ],
       navigatorKey: navKey,
       navigatorObservers: [_appNavObserver, AdNavigatorObserver()],
       title: 'Travelog',
@@ -1130,6 +1146,7 @@ Widget _buildAppShell(Widget home, {GlobalKey<NavigatorState>? navKey}) {
         );
       },
       home: home,
+    ),
     ),
   );
 }
@@ -1344,6 +1361,7 @@ class _BadgeGlobalListenerState extends State<BadgeGlobalListener> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     try {
       final badgeProvider = context.watch<BadgeProvider>();
 
@@ -1373,6 +1391,7 @@ class _NewBadgesExpansionDialog extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Dialog(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
       backgroundColor: Colors.transparent,
@@ -1419,8 +1438,8 @@ class _NewBadgesExpansionDialog extends StatelessWidget {
                         ),
                       ],
                     ),
-                    child: const Text(
-                      'NEW',
+                    child:  Text(
+                      tr('NEW'),
                       style: TextStyle(
                         fontSize: 12,
                         fontWeight: FontWeight.w900,
@@ -1435,7 +1454,7 @@ class _NewBadgesExpansionDialog extends StatelessWidget {
                       colors: [Color(0xFF3DDAD7), Color(0xFFFFD54F)],
                     ).createShader(bounds),
                     child: Text(
-                      newBadgeLabel,
+                      tr(newBadgeLabel),
                       style: const TextStyle(
                         fontSize: 48,
                         fontWeight: FontWeight.w900,
@@ -1446,8 +1465,8 @@ class _NewBadgesExpansionDialog extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 6),
-                  const Text(
-                    'New Badges Just Landed',
+                   Text(
+                    tr('New Badges Just Landed'),
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.w800,
@@ -1457,7 +1476,7 @@ class _NewBadgesExpansionDialog extends StatelessWidget {
                   ),
                   const SizedBox(height: 10),
                   Text(
-                    'Countries, cities, landmarks, and flights — a huge batch of new achievements is ready to collect. A few might already be unlocked from your past trips.',
+                    tr('Countries, cities, landmarks, and flights — a huge batch of new achievements is ready to collect. A few might already be unlocked from your past trips.'),
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 13.5,
@@ -1479,8 +1498,8 @@ class _NewBadgesExpansionDialog extends StatelessWidget {
                         ),
                         elevation: 0,
                       ),
-                      child: const Text(
-                        'View New Badges',
+                      child:  Text(
+                        tr('View New Badges'),
                         style: TextStyle(
                           fontSize: 15.5,
                           fontWeight: FontWeight.w800,
@@ -1492,7 +1511,7 @@ class _NewBadgesExpansionDialog extends StatelessWidget {
                   TextButton(
                     onPressed: () => Navigator.of(context).pop(false),
                     child: Text(
-                      'Close',
+                      tr('Close'),
                       style: TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.w600,
@@ -1573,6 +1592,7 @@ class _BadgeSharePromoDialogState extends State<_BadgeSharePromoDialog> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Dialog(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       backgroundColor: Colors.white,
@@ -1621,7 +1641,7 @@ class _BadgeSharePromoDialogState extends State<_BadgeSharePromoDialog> {
                       const SizedBox(width: 12),
                       Expanded(
                         child: RichText(
-                          text: const TextSpan(
+                          text:  TextSpan(
                             style: TextStyle(
                               fontSize: 13,
                               color: Color(0xFF444444),
@@ -1629,32 +1649,32 @@ class _BadgeSharePromoDialogState extends State<_BadgeSharePromoDialog> {
                             ),
                             children: [
                               TextSpan(
-                                text: 'Try 30 days for FREE!\n',
+                                text: tr('Try 30 days for FREE!\n'),
                                 style: TextStyle(
                                   fontWeight: FontWeight.w800,
                                   fontSize: 14,
                                   color: Color(0xFF1A1A2E),
                                 ),
                               ),
-                              TextSpan(text: 'Post your badge on '),
+                              TextSpan(text: tr('Post your badge on ')),
                               TextSpan(
-                                text: 'Instagram',
+                                text: tr('Instagram'),
                                 style: TextStyle(
                                   fontWeight: FontWeight.w700,
                                   color: Color(0xFFE1306C),
                                 ),
                               ),
-                              TextSpan(text: ' or '),
+                              TextSpan(text: tr(' or ')),
                               TextSpan(
-                                text: 'Facebook',
+                                text: tr('Facebook'),
                                 style: TextStyle(
                                   fontWeight: FontWeight.w700,
                                   color: Color(0xFF1877F2),
                                 ),
                               ),
-                              TextSpan(text: ' and send a screenshot to '),
+                              TextSpan(text: tr(' and send a screenshot to ')),
                               TextSpan(
-                                text: 'leeahn137@gmail.com',
+                                text: tr('leeahn137@gmail.com'),
                                 style: TextStyle(
                                   fontWeight: FontWeight.w700,
                                   color: Color(0xFF3DDAD7),
@@ -1707,8 +1727,8 @@ class _BadgeSharePromoDialogState extends State<_BadgeSharePromoDialog> {
                                   color: Color(0xFFFFB347),
                                 ),
                           const SizedBox(width: 8),
-                          const Text(
-                            'Share My Badge',
+                           Text(
+                            tr('Share My Badge'),
                             style: TextStyle(
                               fontSize: 13,
                               fontWeight: FontWeight.w700,
@@ -1731,8 +1751,8 @@ class _BadgeSharePromoDialogState extends State<_BadgeSharePromoDialog> {
                   foregroundColor: Colors.grey,
                   padding: const EdgeInsets.symmetric(vertical: 12),
                 ),
-                child: const Text(
-                  'Maybe later',
+                child:  Text(
+                  tr('Maybe later'),
                   style: TextStyle(fontSize: 14),
                 ),
               ),

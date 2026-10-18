@@ -3,6 +3,7 @@
 import 'package:jidoapp/services/country_region_access.dart';
 import 'package:jidoapp/widgets/country_region_access_gate.dart';
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:jidoapp/models/country_model.dart';
@@ -100,7 +101,7 @@ class _CountrySelectionScreenState extends State<CountrySelectionScreen> {
         : widget.allCountries
               .where(
                 (c) =>
-                    c.name.toLowerCase().contains(_searchQuery.toLowerCase()),
+                    AppLocale.instance.matchesCountry(c.name, _searchQuery),
               )
               .toList();
 
@@ -157,28 +158,28 @@ class _CountrySelectionScreenState extends State<CountrySelectionScreen> {
               borderRadius: BorderRadius.circular(20),
             ),
             title: Text(
-              'Confirm Removal',
+              tr('Confirm Removal'),
               style: GoogleFonts.poppins(
                 fontWeight: FontWeight.bold,
                 color: Colors.black87,
               ),
             ),
             content: Text(
-              'Are you sure you want to remove all $recordCount visit records for ${country.name}?',
+              tr('Are you sure you want to remove all $recordCount visit records for ${country.name}?'),
               style: GoogleFonts.poppins(color: Colors.black54),
             ),
             actions: [
               TextButton(
                 onPressed: () => Navigator.pop(context, false),
                 child: Text(
-                  'Cancel',
+                  tr('Cancel'),
                   style: GoogleFonts.poppins(color: Colors.grey),
                 ),
               ),
               TextButton(
                 onPressed: () => Navigator.pop(context, true),
                 child: Text(
-                  'Yes, Remove',
+                  tr('Yes, Remove'),
                   style: GoogleFonts.poppins(
                     color: Colors.redAccent,
                     fontWeight: FontWeight.bold,
@@ -221,11 +222,12 @@ class _CountrySelectionScreenState extends State<CountrySelectionScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Scaffold(
       backgroundColor: const Color(0xFFF9FAFB), // 아주 연한 쿨그레이 배경 (민트와 잘 어울림)
       appBar: AppBar(
         title: Text(
-          'Select Countries',
+          tr('Select Countries'),
           style: GoogleFonts.poppins(
             fontWeight: FontWeight.w600,
             color: Colors.white,
@@ -247,7 +249,7 @@ class _CountrySelectionScreenState extends State<CountrySelectionScreen> {
               style: GoogleFonts.poppins(),
               cursorColor: _mintDark,
               decoration: InputDecoration(
-                hintText: 'Search Country...',
+                hintText: tr('Search Country...'),
                 hintStyle: GoogleFonts.poppins(color: Colors.grey.shade500),
                 prefixIcon: const Icon(Icons.search, color: Colors.grey),
                 filled: true,
@@ -306,7 +308,7 @@ class _CountrySelectionScreenState extends State<CountrySelectionScreen> {
                             borderRadius: BorderRadius.circular(12),
                           ),
                           child: Text(
-                            item.stats,
+                            tr(item.stats),
                             style: GoogleFonts.poppins(
                               fontSize: 12,
                               fontWeight: FontWeight.w600,
@@ -386,13 +388,13 @@ class _CountrySelectionScreenState extends State<CountrySelectionScreen> {
                                         : null,
                                   ),
                                   Text(
-                                    _countryFlag(country.isoA2),
+                                    tr(_countryFlag(country.isoA2)),
                                     style: const TextStyle(fontSize: 22),
                                   ),
                                   const SizedBox(width: 10),
                                   Expanded(
                                     child: Text(
-                                      country.name,
+                                      tr(country.name),
                                       style: GoogleFonts.poppins(
                                         fontSize: 16,
                                         fontWeight: isSelected
@@ -407,7 +409,7 @@ class _CountrySelectionScreenState extends State<CountrySelectionScreen> {
                                   IconButton(
                                     icon: const Icon(Icons.book, size: 20),
                                     color: Colors.grey.shade400,
-                                    tooltip: 'Details',
+                                    tooltip: tr('Details'),
                                     onPressed: () => Navigator.push(
                                       context,
                                       MaterialPageRoute(
@@ -427,9 +429,9 @@ class _CountrySelectionScreenState extends State<CountrySelectionScreen> {
                                     color: expanded
                                         ? _mintPrimary
                                         : Colors.grey.shade400,
-                                    tooltip: expanded
+                                    tooltip: tr(expanded
                                         ? 'Hide regions'
-                                        : 'Show regions',
+                                        : 'Show regions'),
                                     onPressed: () {
                                       if (!CountryRegionAccess.isUnlocked(
                                         country.isoA2,
@@ -519,7 +521,7 @@ class _CountrySelectionScreenState extends State<CountrySelectionScreen> {
                         foregroundColor: Colors.grey.shade600,
                       ),
                       child: Text(
-                        'Cancel',
+                        tr('Cancel'),
                         style: GoogleFonts.poppins(fontWeight: FontWeight.w500),
                       ),
                     ),
@@ -614,7 +616,7 @@ class _CountrySelectionScreenState extends State<CountrySelectionScreen> {
                         ),
                       ),
                       child: Text(
-                        'Apply Changes',
+                        tr('Apply Changes'),
                         style: GoogleFonts.poppins(
                           fontWeight: FontWeight.w600,
                           fontSize: 16,
@@ -637,6 +639,7 @@ class _PromoDialog extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Dialog(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       backgroundColor: Colors.white,
@@ -676,11 +679,11 @@ class _PromoDialog extends StatelessWidget {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text('🎁', style: TextStyle(fontSize: 22)),
+                   Text(tr('🎁'), style: TextStyle(fontSize: 22)),
                   const SizedBox(width: 12),
                   Expanded(
                     child: RichText(
-                      text: const TextSpan(
+                      text:  TextSpan(
                         style: TextStyle(
                           fontSize: 13,
                           color: Color(0xFF444444),
@@ -688,32 +691,32 @@ class _PromoDialog extends StatelessWidget {
                         ),
                         children: [
                           TextSpan(
-                            text: 'Try 30 days for FREE!\n',
+                            text: tr('Try 30 days for FREE!\n'),
                             style: TextStyle(
                               fontWeight: FontWeight.w800,
                               fontSize: 14,
                               color: Color(0xFF1A1A2E),
                             ),
                           ),
-                          TextSpan(text: 'Post your map on '),
+                          TextSpan(text: tr('Post your map on ')),
                           TextSpan(
-                            text: 'Instagram',
+                            text: tr('Instagram'),
                             style: TextStyle(
                               fontWeight: FontWeight.w700,
                               color: Color(0xFFE1306C),
                             ),
                           ),
-                          TextSpan(text: ' or '),
+                          TextSpan(text: tr(' or ')),
                           TextSpan(
-                            text: 'Facebook',
+                            text: tr('Facebook'),
                             style: TextStyle(
                               fontWeight: FontWeight.w700,
                               color: Color(0xFF1877F2),
                             ),
                           ),
-                          TextSpan(text: ' and send a screenshot to '),
+                          TextSpan(text: tr(' and send a screenshot to ')),
                           TextSpan(
-                            text: 'leeahn137@gmail.com',
+                            text: tr('leeahn137@gmail.com'),
                             style: TextStyle(
                               fontWeight: FontWeight.w700,
                               color: Color(0xFF3DDAD7),
@@ -736,8 +739,8 @@ class _PromoDialog extends StatelessWidget {
                   foregroundColor: Colors.grey[600],
                   padding: const EdgeInsets.symmetric(vertical: 12),
                 ),
-                child: const Text(
-                  'Maybe later',
+                child:  Text(
+                  tr('Maybe later'),
                   style: TextStyle(fontSize: 14),
                 ),
               ),

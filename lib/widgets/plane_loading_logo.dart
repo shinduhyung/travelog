@@ -1,6 +1,7 @@
 // lib/widgets/plane_loading_logo.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:video_player/video_player.dart';
 
 class PlaneLoadingLogo extends StatefulWidget {
@@ -56,13 +57,14 @@ class _PlaneLoadingLogoState extends State<PlaneLoadingLogo> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     // 1. 에러 처리
     if (_hasError) {
       return Container(
         color: Colors.white,
-        child: const Center(
+        child:  Center(
           child: Text(
-            "VIDEO LOAD ERROR\n(Check pubspec.yaml)",
+            tr("VIDEO LOAD ERROR\n(Check pubspec.yaml)"),
             textAlign: TextAlign.center,
             style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold),
           ),

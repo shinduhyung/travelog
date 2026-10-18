@@ -1,16 +1,146 @@
-[
-  { "iso_a3": "USA", "aircraft_carriers_total": 20 },
-  { "iso_a3": "CHN", "aircraft_carriers_total": 7 },
-  { "iso_a3": "JPN", "aircraft_carriers_total": 4 },
-  { "iso_a3": "FRA", "aircraft_carriers_total": 4 },
-  { "iso_a3": "IND", "aircraft_carriers_total": 2 },
-  { "iso_a3": "EGY", "aircraft_carriers_total": 2 },
-  { "iso_a3": "GBR", "aircraft_carriers_total": 2 },
-  { "iso_a3": "ITA", "aircraft_carriers_total": 2 },
-  { "iso_a3": "KOR", "aircraft_carriers_total": 2 },
-  { "iso_a3": "AUS", "aircraft_carriers_total": 2 },
-  { "iso_a3": "BRA", "aircraft_carriers_total": 1 },
-  { "iso_a3": "RUS", "aircraft_carriers_total": 1 },
-  { "iso_a3": "TUR", "aircraft_carriers_total": 1 },
-  { "iso_a3": "THA", "aircraft_carriers_total": 1 }
-]
+{
+  "schema_version": 1,
+  "dataset_id": "aircraft_carries",
+  "metadata": {
+    "source_url": null,
+    "reference_period": null,
+    "updated_at": null
+  },
+  "legacy_layout": "list",
+  "tables": [
+    {
+      "id": "main",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "iso_a3"
+      ],
+      "metrics": [
+        {
+          "id": "aircraft_carriers_total",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "iso_a3": "USA"
+          },
+          "values": {
+            "aircraft_carriers_total": 20
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CHN"
+          },
+          "values": {
+            "aircraft_carriers_total": 7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "JPN"
+          },
+          "values": {
+            "aircraft_carriers_total": 4
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FRA"
+          },
+          "values": {
+            "aircraft_carriers_total": 4
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IND"
+          },
+          "values": {
+            "aircraft_carriers_total": 2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "EGY"
+          },
+          "values": {
+            "aircraft_carriers_total": 2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GBR"
+          },
+          "values": {
+            "aircraft_carriers_total": 2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ITA"
+          },
+          "values": {
+            "aircraft_carriers_total": 2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KOR"
+          },
+          "values": {
+            "aircraft_carriers_total": 2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AUS"
+          },
+          "values": {
+            "aircraft_carriers_total": 2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BRA"
+          },
+          "values": {
+            "aircraft_carriers_total": 1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "RUS"
+          },
+          "values": {
+            "aircraft_carriers_total": 1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TUR"
+          },
+          "values": {
+            "aircraft_carriers_total": 1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "THA"
+          },
+          "values": {
+            "aircraft_carriers_total": 1
+          }
+        }
+      ]
+    }
+  ]
+}

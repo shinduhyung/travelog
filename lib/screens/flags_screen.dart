@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:jidoapp/models/country_model.dart';
 import 'package:jidoapp/providers/country_provider.dart';
@@ -23,9 +24,10 @@ class _FlagsScreenState extends State<FlagsScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Visited Flags'),
+        title:  Text(tr('Visited Flags')),
         actions: [
           // 그룹핑 옵션 메뉴 버튼
           PopupMenuButton<GroupOption>(
@@ -36,13 +38,13 @@ class _FlagsScreenState extends State<FlagsScreen> {
               });
             },
             itemBuilder: (BuildContext context) => <PopupMenuEntry<GroupOption>>[
-              const PopupMenuItem<GroupOption>(
+               PopupMenuItem<GroupOption>(
                 value: GroupOption.all,
-                child: Text('All'),
+                child: Text(tr('All')),
               ),
-              const PopupMenuItem<GroupOption>(
+               PopupMenuItem<GroupOption>(
                 value: GroupOption.continent,
-                child: Text('By Continent'),
+                child: Text(tr('By Continent')),
               ),
             ],
           ),
@@ -55,13 +57,13 @@ class _FlagsScreenState extends State<FlagsScreen> {
               });
             },
             itemBuilder: (BuildContext context) => <PopupMenuEntry<SortOption>>[
-              const PopupMenuItem<SortOption>(
+               PopupMenuItem<SortOption>(
                 value: SortOption.alphabet,
-                child: Text('Alphabetical'),
+                child: Text(tr('Alphabetical')),
               ),
-              const PopupMenuItem<SortOption>(
+               PopupMenuItem<SortOption>(
                 value: SortOption.visitOrder,
-                child: Text('Visit Order'),
+                child: Text(tr('Visit Order')),
               ),
             ],
           ),
@@ -77,7 +79,7 @@ class _FlagsScreenState extends State<FlagsScreen> {
           var visitedCountries = provider.allCountries.where((c) => provider.visitedCountries.contains(c.name)).toList();
 
           if (visitedCountries.isEmpty) {
-            return const Center(child: Text("You haven't visited any countries yet."));
+            return  Center(child: Text(tr("You haven't visited any countries yet.")));
           }
 
           // 정렬 로직 (현재는 둘 다 알파벳 순)
@@ -137,7 +139,7 @@ class _FlagsScreenState extends State<FlagsScreen> {
             Padding(
               padding: const EdgeInsets.fromLTRB(16, 16, 16, 8),
               child: Text(
-                continent,
+                tr(continent),
                 style: Theme.of(context).textTheme.titleLarge,
               ),
             ),
@@ -194,7 +196,7 @@ class _FlagsScreenState extends State<FlagsScreen> {
           Padding(
             padding: const EdgeInsets.all(4.0),
             child: Text(
-              country.name,
+              tr(country.name),
               textAlign: TextAlign.center,
               overflow: TextOverflow.ellipsis,
               style: const TextStyle(fontSize: 12),

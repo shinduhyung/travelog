@@ -1,6 +1,7 @@
 // lib/screens/city_overview_stats_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter/foundation.dart';
 import 'package:provider/provider.dart';
 import 'package:jidoapp/providers/city_provider.dart';
@@ -126,6 +127,7 @@ class _CityOverviewTabScreenState extends State<CityOverviewTabScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final cityProvider = Provider.of<CityProvider>(context);
     final countryProvider = Provider.of<CountryProvider>(context);
 
@@ -161,10 +163,11 @@ class CityOverviewStatsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const List<Tab> tabs = <Tab>[
-      Tab(icon: Icon(Icons.insights), text: 'Overview'),
-      Tab(icon: Icon(Icons.groups), text: 'Population'),
-      Tab(icon: Icon(Icons.monetization_on), text: 'Economy'),
+    Localizations.maybeLocaleOf(context);
+    final List<Tab> tabs = <Tab>[
+      Tab(icon: Icon(Icons.insights), text: tr('Overview')),
+      Tab(icon: Icon(Icons.groups), text: tr('Population')),
+      Tab(icon: Icon(Icons.monetization_on), text: tr('Economy')),
     ];
 
     final List<Widget> screens = <Widget>[
@@ -194,10 +197,10 @@ class CityOverviewStatsScreen extends StatelessWidget {
                 child: Container(height: 1, color: const Color(0xFFE8E8E4)),
               ),
               title: TabBar(
-                tabs: const [
-                  Tab(text: 'Overview'),
-                  Tab(text: 'Population'),
-                  Tab(text: 'Economy'),
+                tabs:  [
+                  Tab(text: tr('Overview')),
+                  Tab(text: tr('Population')),
+                  Tab(text: tr('Economy')),
                 ],
                 labelStyle: const TextStyle(fontSize: 14, fontWeight: FontWeight.w700, letterSpacing: 0.5),
                 unselectedLabelStyle: const TextStyle(fontSize: 14, fontWeight: FontWeight.w400, letterSpacing: 0.5),
@@ -354,8 +357,8 @@ class _OverviewContentState extends State<_OverviewContent> {
         data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
         child: ExpansionTile(
           initiallyExpanded: false,
-          title: const Text(
-            'Visited Cities',
+          title:  Text(
+            tr('Visited Cities'),
             style: TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.w900,
@@ -369,11 +372,11 @@ class _OverviewContentState extends State<_OverviewContent> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: widget.filteredCities.isEmpty
-                    ? const [
+                    ?  [
                   Center(
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
-                      child: Text('No cities selected by current filters.'),
+                      child: Text(tr('No cities selected by current filters.')),
                     ),
                   )
                 ]
@@ -439,7 +442,7 @@ class _OverviewContentState extends State<_OverviewContent> {
                       _buildFlag(isoA2, size: 18),
                       const SizedBox(width: 8),
                       Text(
-                        citiesInCountry.countryName,
+                        tr(citiesInCountry.countryName),
                         style: const TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w900,
@@ -451,7 +454,7 @@ class _OverviewContentState extends State<_OverviewContent> {
                 ),
                 const Spacer(),
                 Text(
-                  '$cityCount ${cityCount == 1 ? 'city' : 'cities'}',
+                  tr('$cityCount ${cityCount == 1 ? 'city' : 'cities'}'),
                   style: const TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.bold,
@@ -508,7 +511,7 @@ class _OverviewContentState extends State<_OverviewContent> {
                     const SizedBox(width: 6),
                     Expanded(
                       child: Text(
-                        displayCityName,
+                        tr(displayCityName),
                         style: const TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.bold,
@@ -523,7 +526,7 @@ class _OverviewContentState extends State<_OverviewContent> {
                         borderRadius: BorderRadius.circular(8),
                       ),
                       child: Text(
-                        '$visitCount ${visitCount == 1 ? 'visit' : 'visits'}',
+                        tr('$visitCount ${visitCount == 1 ? 'visit' : 'visits'}'),
                         style: TextStyle(
                           fontSize: 12,
                           fontWeight: FontWeight.w700,
@@ -540,14 +543,14 @@ class _OverviewContentState extends State<_OverviewContent> {
                       const Icon(Icons.star, size: 12, color: Colors.amber),
                       const SizedBox(width: 4),
                       Text(
-                        cityDetail.rating.toStringAsFixed(1),
+                        tr(cityDetail.rating.toStringAsFixed(1)),
                         style: TextStyle(fontSize: 11, color: Colors.amber.shade700, fontWeight: FontWeight.w500),
                       ),
                       const SizedBox(width: 16),
                       Icon(Icons.access_time, size: 12, color: Colors.grey[600]),
                       const SizedBox(width: 4),
                       Text(
-                        '${cityDetail.totalDurationInDays()} days',
+                        tr('${cityDetail.totalDurationInDays()} days'),
                         style: TextStyle(fontSize: 11, color: Colors.grey.shade700),
                       ),
                     ],
@@ -578,7 +581,7 @@ class _OverviewContentState extends State<_OverviewContent> {
                   children: [
                     Icon(Icons.insights, color: Theme.of(context).primaryColor),
                     const SizedBox(width: 8),
-                    Text('Data Explorer', style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
+                    Text(tr('Data Explorer'), style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
                   ],
                 ),
                 const SizedBox(height: 16),
@@ -632,7 +635,7 @@ class _OverviewContentState extends State<_OverviewContent> {
               ),
             ),
             const SizedBox(width: 6),
-            Text(continent, style: const TextStyle(fontSize: 11, color: Colors.black87)),
+            Text(tr(continent), style: const TextStyle(fontSize: 11, color: Colors.black87)),
           ],
         );
       }).toList(),
@@ -641,6 +644,7 @@ class _OverviewContentState extends State<_OverviewContent> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return SingleChildScrollView(
       padding: const EdgeInsets.all(16.0),
       child: Column(
@@ -693,7 +697,7 @@ class _OverviewContentState extends State<_OverviewContent> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                "Cities Visited",
+                                tr("Cities Visited"),
                                 style: Theme.of(context).textTheme.titleSmall?.copyWith(
                                   fontSize: 13,
                                   fontWeight: FontWeight.w600,
@@ -703,7 +707,7 @@ class _OverviewContentState extends State<_OverviewContent> {
                               ),
                               const SizedBox(height: 4),
                               Text(
-                                "${widget.filteredCities.length}",
+                                tr("${widget.filteredCities.length}"),
                                 style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                                   fontSize: 32,
                                   fontWeight: FontWeight.bold,
@@ -734,7 +738,7 @@ class _OverviewContentState extends State<_OverviewContent> {
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
                           Text(
-                            "Cities by Continent",
+                            tr("Cities by Continent"),
                             style: TextStyle(
                               fontSize: 14,
                               fontWeight: FontWeight.bold,
@@ -843,7 +847,7 @@ class _OverviewContentState extends State<_OverviewContent> {
                 const SizedBox(width: 10),
                 Expanded(
                   child: Text(
-                    name,
+                    tr(name),
                     style: TextStyle(
                       fontSize: 13,
                       fontWeight: FontWeight.w600,
@@ -852,7 +856,7 @@ class _OverviewContentState extends State<_OverviewContent> {
                   ),
                 ),
                 Text(
-                  "$count (${percentage.toStringAsFixed(1)}%)",
+                  tr("$count (${percentage.toStringAsFixed(1)}%)"),
                   style: TextStyle(
                     fontSize: 12,
                     fontWeight: FontWeight.bold,
@@ -918,7 +922,7 @@ class _OverviewContentState extends State<_OverviewContent> {
               Container(
                 padding: const EdgeInsets.all(6),
                 decoration: BoxDecoration(color: Theme.of(context).primaryColor.withOpacity(0.1), borderRadius: BorderRadius.circular(6)),
-                child: Text('X', style: TextStyle(fontWeight: FontWeight.bold, color: Theme.of(context).primaryColor)),
+                child: Text(tr('X'), style: TextStyle(fontWeight: FontWeight.bold, color: Theme.of(context).primaryColor)),
               ),
               const SizedBox(width: 12),
               Expanded(
@@ -928,11 +932,11 @@ class _OverviewContentState extends State<_OverviewContent> {
                     value: widget.xAxisMetric,
                     isExpanded: true,
                     style: const TextStyle(fontSize: 13, color: Colors.black),
-                    items: const [
-                      DropdownMenuItem(value: 'visitCount', child: Text('Visit Count')),
-                      DropdownMenuItem(value: 'totalDays', child: Text('Total Days')),
-                      DropdownMenuItem(value: 'rating', child: Text('Rating')),
-                      DropdownMenuItem(value: 'population', child: Text('Population')),
+                    items:  [
+                      DropdownMenuItem(value: 'visitCount', child: Text(tr('Visit Count'))),
+                      DropdownMenuItem(value: 'totalDays', child: Text(tr('Total Days'))),
+                      DropdownMenuItem(value: 'rating', child: Text(tr('Rating'))),
+                      DropdownMenuItem(value: 'population', child: Text(tr('Population'))),
                     ],
                     onChanged: (value) {
                       if (value != null) widget.onXAxisChanged(value);
@@ -943,7 +947,7 @@ class _OverviewContentState extends State<_OverviewContent> {
               Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  const Text('Log', style: TextStyle(fontSize: 12, color: Colors.grey)),
+                   Text(tr('Log'), style: TextStyle(fontSize: 12, color: Colors.grey)),
                   const SizedBox(width: 4),
                   SizedBox(
                     height: 24,
@@ -967,7 +971,7 @@ class _OverviewContentState extends State<_OverviewContent> {
               Container(
                 padding: const EdgeInsets.all(6),
                 decoration: BoxDecoration(color: Colors.orange.withOpacity(0.1), borderRadius: BorderRadius.circular(6)),
-                child: const Text('Y', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.orange)),
+                child:  Text(tr('Y'), style: TextStyle(fontWeight: FontWeight.bold, color: Colors.orange)),
               ),
               const SizedBox(width: 12),
               Expanded(
@@ -977,11 +981,11 @@ class _OverviewContentState extends State<_OverviewContent> {
                     value: widget.yAxisMetric,
                     isExpanded: true,
                     style: const TextStyle(fontSize: 13, color: Colors.black),
-                    items: const [
-                      DropdownMenuItem(value: 'visitCount', child: Text('Visit Count')),
-                      DropdownMenuItem(value: 'totalDays', child: Text('Total Days')),
-                      DropdownMenuItem(value: 'rating', child: Text('Rating')),
-                      DropdownMenuItem(value: 'population', child: Text('Population')),
+                    items:  [
+                      DropdownMenuItem(value: 'visitCount', child: Text(tr('Visit Count'))),
+                      DropdownMenuItem(value: 'totalDays', child: Text(tr('Total Days'))),
+                      DropdownMenuItem(value: 'rating', child: Text(tr('Rating'))),
+                      DropdownMenuItem(value: 'population', child: Text(tr('Population'))),
                     ],
                     onChanged: (value) {
                       if (value != null) widget.onYAxisChanged(value);
@@ -992,7 +996,7 @@ class _OverviewContentState extends State<_OverviewContent> {
               Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  const Text('Log', style: TextStyle(fontSize: 12, color: Colors.grey)),
+                   Text(tr('Log'), style: TextStyle(fontSize: 12, color: Colors.grey)),
                   const SizedBox(width: 4),
                   SizedBox(
                     height: 24,
@@ -1030,7 +1034,7 @@ class _OverviewContentState extends State<_OverviewContent> {
 
   Widget _buildFilterChip(BuildContext context, String label, bool value, ValueChanged<bool> onChanged) {
     return FilterChip(
-      label: Text(label, style: const TextStyle(fontSize: 12)),
+      label: Text(tr(label), style: const TextStyle(fontSize: 12)),
       selected: value,
       onSelected: onChanged,
       showCheckmark: false,
@@ -1048,7 +1052,7 @@ class _OverviewContentState extends State<_OverviewContent> {
       return Container(
         height: 300,
         alignment: Alignment.center,
-        child: const Text('No cities to display.', style: TextStyle(color: Colors.grey)),
+        child:  Text(tr('No cities to display.'), style: TextStyle(color: Colors.grey)),
       );
     }
 
@@ -1087,7 +1091,7 @@ class _OverviewContentState extends State<_OverviewContent> {
       return Container(
         height: 300,
         alignment: Alignment.center,
-        child: const Text('No data available for selected metrics', style: TextStyle(color: Colors.grey)),
+        child:  Text(tr('No data available for selected metrics'), style: TextStyle(color: Colors.grey)),
       );
     }
 
@@ -1112,7 +1116,7 @@ class _OverviewContentState extends State<_OverviewContent> {
               maxY: finalMaxY,
               titlesData: FlTitlesData(
                 leftTitles: AxisTitles(
-                    axisNameWidget: Text(widget.yAxisMetric, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 11, color: Colors.grey)),
+                    axisNameWidget: Text(tr(widget.yAxisMetric), style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 11, color: Colors.grey)),
                     sideTitles: SideTitles(
                         showTitles: true,
                         reservedSize: 40,
@@ -1122,13 +1126,13 @@ class _OverviewContentState extends State<_OverviewContent> {
                           double original = widget.yLogScale ? pow(10, value).toDouble() : value;
                           return SideTitleWidget(
                             axisSide: meta.axisSide,
-                            child: Text(_formatNumber(original), style: const TextStyle(fontSize: 10, color: Colors.black54)),
+                            child: Text(tr(_formatNumber(original)), style: const TextStyle(fontSize: 10, color: Colors.black54)),
                           );
                         })),
                 bottomTitles: AxisTitles(
                     axisNameWidget: Padding(
                       padding: const EdgeInsets.only(top: 12.0),
-                      child: Text(widget.xAxisMetric, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 11, color: Colors.grey)),
+                      child: Text(tr(widget.xAxisMetric), style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 11, color: Colors.grey)),
                     ),
                     sideTitles: SideTitles(
                         showTitles: true,
@@ -1139,7 +1143,7 @@ class _OverviewContentState extends State<_OverviewContent> {
                           double original = widget.xLogScale ? pow(10, value).toDouble() : value;
                           return SideTitleWidget(
                             axisSide: meta.axisSide,
-                            child: Text(_formatNumber(original), style: const TextStyle(fontSize: 10, color: Colors.black54)),
+                            child: Text(tr(_formatNumber(original)), style: const TextStyle(fontSize: 10, color: Colors.black54)),
                           );
                         })),
                 rightTitles: const AxisTitles(sideTitles: SideTitles(showTitles: false)),
@@ -1210,7 +1214,7 @@ class _OverviewContentState extends State<_OverviewContent> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Text('Selected City', style: TextStyle(fontSize: 10, color: Colors.grey, fontWeight: FontWeight.bold)),
+                       Text(tr('Selected City'), style: TextStyle(fontSize: 10, color: Colors.grey, fontWeight: FontWeight.bold)),
                       Text(_selectedCity!.name, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
                     ],
                   ),
@@ -1379,7 +1383,7 @@ class _CityOverviewRankingCardState extends State<_CityOverviewRankingCard> {
 
   Widget _buildFilterChip(String label, bool value, Function(bool) onChanged) {
     return FilterChip(
-      label: Text(label, style: const TextStyle(fontSize: 11)),
+      label: Text(tr(label), style: const TextStyle(fontSize: 11)),
       selected: value,
       onSelected: (newValue) => onChanged(newValue),
       showCheckmark: false,
@@ -1407,6 +1411,7 @@ class _CityOverviewRankingCardState extends State<_CityOverviewRankingCard> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final textTheme = Theme.of(context).textTheme;
     final topValue = _rankedList.isNotEmpty ? _rankedList.first.value : 1.0;
     final rankingThemeColor = _selectedRanking.themeColor;
@@ -1445,7 +1450,7 @@ class _CityOverviewRankingCardState extends State<_CityOverviewRankingCard> {
                           child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                             Icon(r.icon, size: 15, color: active ? Colors.white : const Color(0xFFAAAAAA)),
                             const SizedBox(width: 6),
-                            Text(r.title, style: TextStyle(
+                            Text(tr(r.title), style: TextStyle(
                               fontSize: 12, fontWeight: active ? FontWeight.w700 : FontWeight.w400,
                               color: active ? Colors.white : const Color(0xFFAAAAAA),
                             )),
@@ -1473,7 +1478,7 @@ class _CityOverviewRankingCardState extends State<_CityOverviewRankingCard> {
                           value: _selectedContinent,
                           icon: const Icon(Icons.keyboard_arrow_down_rounded, size: 16, color: Color(0xFF5C5C5C)),
                           style: const TextStyle(fontSize: 12, color: Color(0xFF141414), fontWeight: FontWeight.w600),
-                          items: _continents.map((v) => DropdownMenuItem(value: v, child: Text(v))).toList(),
+                          items: _continents.map((v) => DropdownMenuItem(value: v, child: Text(tr(v)))).toList(),
                           onChanged: (v) { if (v != null) setState(() { _selectedContinent = v; _updateCountryList(); _prepareList(); }); },
                         ),
                       ),
@@ -1495,7 +1500,7 @@ class _CityOverviewRankingCardState extends State<_CityOverviewRankingCard> {
                           value: _selectedCountry,
                           icon: const Icon(Icons.keyboard_arrow_down_rounded, size: 16, color: Color(0xFF5C5C5C)),
                           style: const TextStyle(fontSize: 12, color: Color(0xFF141414), fontWeight: FontWeight.w600),
-                          items: _countries.map((v) => DropdownMenuItem(value: v, child: Text(v))).toList(),
+                          items: _countries.map((v) => DropdownMenuItem(value: v, child: Text(tr(v)))).toList(),
                           onChanged: (v) { if (v != null) setState(() { _selectedCountry = v; _prepareList(); }); },
                         ),
                       ),
@@ -1518,7 +1523,7 @@ class _CityOverviewRankingCardState extends State<_CityOverviewRankingCard> {
           ),
           SizedBox(
             height: 350,
-            child: _rankedList.isEmpty ? const Center(child: Text('No cities to display.')) : ListView.builder(
+            child: _rankedList.isEmpty ?  Center(child: Text(tr('No cities to display.'))) : ListView.builder(
               padding: const EdgeInsets.all(8.0),
               itemCount: _rankedList.length,
               itemBuilder: (context, index) {
@@ -1547,7 +1552,7 @@ class _CityOverviewRankingCardState extends State<_CityOverviewRankingCard> {
                         SizedBox(
                           width: 28,
                           child: Text(
-                            rank <= 3 ? (rank == 1 ? '🥇' : rank == 2 ? '🥈' : '🥉') : '$rank',
+                            tr(rank <= 3 ? (rank == 1 ? '🥇' : rank == 2 ? '🥈' : '🥉') : '$rank'),
                             style: TextStyle(fontSize: rank <= 3 ? 16 : 12, fontWeight: FontWeight.w700, color: const Color(0xFFAAAAAA)),
                             textAlign: TextAlign.center,
                           ),
@@ -1563,7 +1568,7 @@ class _CityOverviewRankingCardState extends State<_CityOverviewRankingCard> {
                                 Expanded(child: Text(city.name, style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: Color(0xFF141414)), overflow: TextOverflow.ellipsis)),
                                 Icon(Icons.check_circle_rounded, size: 14, color: themeColor),
                                 const SizedBox(width: 6),
-                                Text('${value.toInt()}${_selectedRanking.unit}', style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: Color(0xFF141414))),
+                                Text(tr('${value.toInt()}${_selectedRanking.unit}'), style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: Color(0xFF141414))),
                               ]),
                               const SizedBox(height: 5),
                               ClipRRect(
@@ -1571,7 +1576,7 @@ class _CityOverviewRankingCardState extends State<_CityOverviewRankingCard> {
                                 child: LinearProgressIndicator(value: barFrac, minHeight: 3, backgroundColor: const Color(0xFFE8E8E4), valueColor: AlwaysStoppedAnimation<Color>(barColor)),
                               ),
                               const SizedBox(height: 3),
-                              Text(city.country, style: const TextStyle(fontSize: 10, color: Color(0xFFAAAAAA))),
+                              Text(tr(city.country), style: const TextStyle(fontSize: 10, color: Color(0xFFAAAAAA))),
                             ],
                           ),
                         ),
@@ -1619,6 +1624,7 @@ class _CityRatingTierCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final textTheme = Theme.of(context).textTheme;
     final Map<double, List<City>> citiesByRating = {};
 
@@ -1667,7 +1673,7 @@ class _CityRatingTierCard extends StatelessWidget {
                       children: [
                         const Icon(Icons.star_rounded, color: Colors.amber, size: 20),
                         const SizedBox(height: 4),
-                        Text(tier.toStringAsFixed(1), style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Colors.amber.shade800)),
+                        Text(tr(tier.toStringAsFixed(1)), style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Colors.amber.shade800)),
                       ],
                     ),
                   ),
@@ -1714,7 +1720,7 @@ class _CityRatingTierCard extends StatelessWidget {
                   children: [
                     const Icon(Icons.star_rounded, color: Colors.amber),
                     const SizedBox(width: 8),
-                    Text('Rating Tiers', style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
+                    Text(tr('Rating Tiers'), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
                   ],
                 ),
                 IconButton(
@@ -1734,7 +1740,7 @@ class _CityRatingTierCard extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: tierWidgets.isEmpty
-                ? const Center(child: Padding(padding: EdgeInsets.all(16.0), child: Text("No cities with ratings to display.", style: TextStyle(color: Colors.grey))))
+                ?  Center(child: Padding(padding: EdgeInsets.all(16.0), child: Text(tr("No cities with ratings to display."), style: TextStyle(color: Colors.grey))))
                 : Column(children: tierWidgets),
           ),
         ],

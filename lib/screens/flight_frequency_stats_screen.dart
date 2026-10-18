@@ -1,6 +1,7 @@
 // lib/screens/flight_frequency_stats_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter/services.dart';
 import 'package:jidoapp/models/airport_visit_entry.dart';
 import 'package:jidoapp/providers/country_provider.dart';
@@ -127,6 +128,7 @@ class _FlightFrequencyStatsScreenState
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     // 🚨 [수정] 스크린 타이틀 헤더 제거 (AppBar 제거 후 추가했던 Padding 위젯도 제거)
     return Scaffold(
       backgroundColor: Colors.grey.shade50,
@@ -185,7 +187,7 @@ class _FlightFrequencyStatsScreenState
             Padding(
               padding: const EdgeInsets.only(left: 4.0, bottom: 8.0),
               child: Text(
-                'Flight Streaks',
+                tr('Flight Streaks'),
                 style: Theme.of(context).textTheme.titleLarge?.copyWith(
                   fontWeight: FontWeight.bold,
                   color: _primaryColor.darken(0.1),
@@ -234,13 +236,13 @@ class _FlightFrequencyStatsScreenState
           );
         } else if (snapshot.hasError) {
           trailingWidget = const Icon(Icons.error_outline, color: Colors.red);
-          subtitleWidget = Text('Error', style: textTheme.bodyMedium?.copyWith(color: Colors.red));
+          subtitleWidget = Text(tr('Error'), style: textTheme.bodyMedium?.copyWith(color: Colors.red));
         } else if (snapshot.hasData) {
           final count = snapshot.data!['count'] ?? 0;
           final period = snapshot.data!['period'] as String?;
 
           trailingWidget = Text(
-            '$count',
+            tr('$count'),
             style: textTheme.headlineSmall?.copyWith(
               fontWeight: FontWeight.bold,
               color: iconColor,
@@ -251,7 +253,7 @@ class _FlightFrequencyStatsScreenState
             subtitleWidget = Padding(
               padding: const EdgeInsets.only(top: 2.0),
               child: Text(
-                'Longest: $period',
+                tr('Longest: $period'),
                 style: textTheme.bodySmall?.copyWith(
                   color: Colors.grey.shade600,
                   fontWeight: FontWeight.w500,
@@ -259,16 +261,16 @@ class _FlightFrequencyStatsScreenState
               ),
             );
           } else {
-            trailingWidget = Text('0', style: textTheme.headlineSmall?.copyWith(color: Colors.grey.shade400));
+            trailingWidget = Text(tr('0'), style: textTheme.headlineSmall?.copyWith(color: Colors.grey.shade400));
             subtitleWidget = Text(
-              'No record',
+              tr('No record'),
               style: textTheme.bodySmall?.copyWith(
                 color: Colors.grey.shade500,
               ),
             );
           }
         } else {
-          trailingWidget = Text('0', style: textTheme.headlineSmall?.copyWith(color: Colors.grey.shade400));
+          trailingWidget = Text(tr('0'), style: textTheme.headlineSmall?.copyWith(color: Colors.grey.shade400));
         }
 
         return ListTile(
@@ -282,7 +284,7 @@ class _FlightFrequencyStatsScreenState
             child: Icon(icon, color: iconColor, size: 28),
           ),
           title: Text(
-            title,
+            tr(title),
             style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w600),
           ),
           subtitle: subtitleWidget,
@@ -302,8 +304,8 @@ class _FlightFrequencyStatsScreenState
         // 🚨 [수정] 체크 표시 없애기: showSelectedIcon 명시 (기존 유지)
         showSelectedIcon: false,
         segments: [
-          ButtonSegment(value: StatSource.flights, label: const Text('Flights'), icon: const Icon(Icons.flight_takeoff)),
-          ButtonSegment(value: StatSource.airports, label: const Text('Airports'), icon: const Icon(Icons.connecting_airports)),
+          ButtonSegment(value: StatSource.flights, label:  Text(tr('Flights')), icon: const Icon(Icons.flight_takeoff)),
+          ButtonSegment(value: StatSource.airports, label:  Text(tr('Airports')), icon: const Icon(Icons.connecting_airports)),
         ],
         selected: {_selectedStatSource},
         onSelectionChanged: (Set<StatSource> newSelection) {
@@ -343,7 +345,7 @@ class _FlightFrequencyStatsScreenState
       child: DropdownButtonFormField<FrequencyChartType>(
         value: _selectedChartType,
         decoration: InputDecoration(
-          labelText: 'Analysis Type',
+          labelText: tr('Analysis Type'),
           labelStyle: TextStyle(color: Colors.grey.shade600),
           prefixIcon: Icon(Icons.bar_chart, color: _getThemeColor()),
           border: OutlineInputBorder(borderRadius: BorderRadius.circular(16), borderSide: BorderSide.none),
@@ -354,7 +356,7 @@ class _FlightFrequencyStatsScreenState
         items: availableTypes.map((type) {
           return DropdownMenuItem(
             value: type,
-            child: Text(type.title, style: const TextStyle(fontWeight: FontWeight.w500)),
+            child: Text(tr(type.title), style: const TextStyle(fontWeight: FontWeight.w500)),
           );
         }).toList(),
         onChanged: (FrequencyChartType? newValue) {
@@ -372,10 +374,10 @@ class _FlightFrequencyStatsScreenState
       child: SegmentedButton<TimeType>(
         // 🚨 [수정] 체크 표시 없애기: showSelectedIcon 명시 (기존 유지)
         showSelectedIcon: false,
-        segments: const [
-          ButtonSegment(value: TimeType.departure, label: Text('Departure'), icon: Icon(Icons.flight_takeoff)),
-          ButtonSegment(value: TimeType.arrival, label: Text('Arrival'), icon: Icon(Icons.flight_land)),
-          ButtonSegment(value: TimeType.inFlight, label: Text('In-Flight'), icon: Icon(Icons.airplanemode_active)),
+        segments:  [
+          ButtonSegment(value: TimeType.departure, label: Text(tr('Departure')), icon: Icon(Icons.flight_takeoff)),
+          ButtonSegment(value: TimeType.arrival, label: Text(tr('Arrival')), icon: Icon(Icons.flight_land)),
+          ButtonSegment(value: TimeType.inFlight, label: Text(tr('In-Flight')), icon: Icon(Icons.airplanemode_active)),
         ],
         selected: {_selectedTimeType},
         onSelectionChanged: (Set<TimeType> newSelection) {
@@ -404,7 +406,7 @@ class _FlightFrequencyStatsScreenState
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Text(
-              _selectedChartType.title,
+              tr(_selectedChartType.title),
               style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                 fontWeight: FontWeight.bold,
                 color: _primaryColor.darken(0.1),
@@ -430,7 +432,7 @@ class _FlightFrequencyStatsScreenState
                         style: Theme.of(context).textTheme.titleMedium,
                         children: [
                           TextSpan(
-                            text: '$_mostFrequent ',
+                            text: tr('$_mostFrequent '),
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               color: _getThemeColor().darken(0.2),
@@ -438,7 +440,7 @@ class _FlightFrequencyStatsScreenState
                             ),
                           ),
                           TextSpan(
-                            text: '($_count $unit)',
+                            text: tr('($_count $unit)'),
                             style: TextStyle(
                               color: Colors.grey.shade600,
                               fontSize: 16,
@@ -452,7 +454,7 @@ class _FlightFrequencyStatsScreenState
                 ),
               )
             else
-              Center(child: Text("No data", style: TextStyle(color: Colors.grey.shade600, fontSize: 18))),
+              Center(child: Text(tr("No data"), style: TextStyle(color: Colors.grey.shade600, fontSize: 18))),
             const SizedBox(height: 24),
             SizedBox(
               height: 200,
@@ -485,7 +487,7 @@ class _FlightFrequencyStatsScreenState
               children: [
                 Expanded(
                   child: Text(
-                    isDuration ? 'Flight Duration Distribution' : 'Flight Distance Distribution',
+                    tr(isDuration ? 'Flight Duration Distribution' : 'Flight Distance Distribution'),
                     style: Theme.of(context).textTheme.titleLarge?.copyWith(
                       fontWeight: FontWeight.bold,
                       color: _primaryColor.darken(0.1),
@@ -504,9 +506,9 @@ class _FlightFrequencyStatsScreenState
                     underline: const SizedBox.shrink(),
                     icon: Icon(Icons.arrow_drop_down, color: _primaryColor),
                     style: TextStyle(color: _primaryColor, fontWeight: FontWeight.w600, fontSize: 14),
-                    items: const [
-                      DropdownMenuItem(value: DistributionType.duration, child: Text('Duration', style: TextStyle(fontWeight: FontWeight.w500))),
-                      DropdownMenuItem(value: DistributionType.distance, child: Text('Distance', style: TextStyle(fontWeight: FontWeight.w500))),
+                    items:  [
+                      DropdownMenuItem(value: DistributionType.duration, child: Text(tr('Duration'), style: TextStyle(fontWeight: FontWeight.w500))),
+                      DropdownMenuItem(value: DistributionType.distance, child: Text(tr('Distance'), style: TextStyle(fontWeight: FontWeight.w500))),
                     ],
                     onChanged: (DistributionType? newValue) {
                       if (newValue != null) {
@@ -572,7 +574,7 @@ class _FlightFrequencyStatsScreenState
           children: [
             // 🚨 [수정] Scatter 제거
             Text(
-              'Duration vs Distance',
+              tr('Duration vs Distance'),
               style: Theme.of(context).textTheme.titleLarge?.copyWith(
                 fontWeight: FontWeight.bold,
                 color: _primaryColor.darken(0.1),
@@ -582,7 +584,7 @@ class _FlightFrequencyStatsScreenState
             SizedBox(
               height: 300,
               child: _scatterPlotData.isEmpty
-                  ? Center(child: Text('No flight data for scatter plot.', style: TextStyle(color: Colors.grey.shade600)))
+                  ? Center(child: Text(tr('No flight data for scatter plot.'), style: TextStyle(color: Colors.grey.shade600)))
                   : ScatterChart(
                 ScatterChartData(
                   scatterSpots: _scatterPlotData.map((point) {
@@ -609,17 +611,17 @@ class _FlightFrequencyStatsScreenState
                   borderData: FlBorderData(show: true, border: Border.all(color: Colors.grey.shade300)),
                   titlesData: FlTitlesData(
                     leftTitles: AxisTitles(
-                      axisNameWidget: const Text('Distance (km)', style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500)),
+                      axisNameWidget:  Text(tr('Distance (km)'), style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500)),
                       sideTitles: SideTitles(showTitles: true, reservedSize: 40, getTitlesWidget: (value, meta) {
                         if (value.toInt() % (meta.max ~/ 4) != 0 || value == meta.max || value == meta.min) return const SizedBox();
-                        return Text((value / 1000).toStringAsFixed(0) + 'k', style: const TextStyle(fontSize: 10));
+                        return Text(tr((value / 1000).toStringAsFixed(0) + 'k'), style: const TextStyle(fontSize: 10));
                       }),
                     ),
                     bottomTitles: AxisTitles(
-                      axisNameWidget: const Text('Duration (hours)', style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500)),
+                      axisNameWidget:  Text(tr('Duration (hours)'), style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500)),
                       sideTitles: SideTitles(showTitles: true, reservedSize: 30, interval: 120, getTitlesWidget: (value, meta) {
                         if (value == meta.min || value == meta.max) return const SizedBox();
-                        return Text((value / 60).toStringAsFixed(0) + 'h', style: const TextStyle(fontSize: 10));
+                        return Text(tr((value / 60).toStringAsFixed(0) + 'h'), style: const TextStyle(fontSize: 10));
                       }),
                     ),
                     topTitles: const AxisTitles(sideTitles: SideTitles(showTitles: false)),
@@ -679,8 +681,8 @@ class _FlightFrequencyStatsScreenState
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       child: ListTile(
         leading: Icon(Icons.flight_takeoff, color: _accentColor),
-        title: Text('${log.airlineName ?? 'Unknown'} ${log.flightNumber}', style: const TextStyle(fontWeight: FontWeight.w600)),
-        subtitle: Text('${log.date} / ${log.departureIata} → ${log.arrivalIata}'),
+        title: Text(tr('${log.airlineName ?? 'Unknown'} ${log.flightNumber}'), style: const TextStyle(fontWeight: FontWeight.w600)),
+        subtitle: Text(tr('${log.date} / ${log.departureIata} → ${log.arrivalIata}')),
         trailing: const Icon(Icons.chevron_right, color: Colors.grey),
         onTap: () {
           Navigator.push(
@@ -735,7 +737,7 @@ class _FlightFrequencyStatsScreenState
     String? Function(int index, String key)? getCategoryLabel,
   }) {
     if (chartData.values.every((v) => v == 0)) {
-      return Center(child: Text('No data to display.', style: TextStyle(color: Colors.grey.shade600)));
+      return Center(child: Text(tr('No data to display.'), style: TextStyle(color: Colors.grey.shade600)));
     }
 
     final keys = orderedKeys ?? chartData.keys.toList();
@@ -790,7 +792,7 @@ class _FlightFrequencyStatsScreenState
               return BarTooltipItem(
                 '$key\n',
                 const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 14),
-                children: <TextSpan>[ TextSpan(text: displayValue, style: const TextStyle(color: Colors.white70, fontSize: 14, fontWeight: FontWeight.w500))],
+                children: <TextSpan>[ TextSpan(text: tr(displayValue), style: const TextStyle(color: Colors.white70, fontSize: 14, fontWeight: FontWeight.w500))],
               );
             },
           ),
@@ -813,7 +815,7 @@ class _FlightFrequencyStatsScreenState
                     axisSide: meta.axisSide,
                     space: 8.0,
                     child: Text(
-                      text,
+                      tr(text),
                       style: TextStyle(fontSize: 10, color: Colors.grey.shade700, fontWeight: FontWeight.w500),
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
@@ -831,7 +833,7 @@ class _FlightFrequencyStatsScreenState
                   getTitlesWidget: (value, meta) {
                     if (value == meta.max || value == meta.min) return const SizedBox();
                     return Text(
-                      value.toInt().toString(),
+                      tr(value.toInt().toString()),
                       style: TextStyle(fontSize: 10, color: Colors.grey.shade700),
                     );
                   }
@@ -983,6 +985,7 @@ class _MostFrequentRoutesCardState extends State<_MostFrequentRoutesCard> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final textTheme = Theme.of(context).textTheme;
     final displayList = _selectedSegment == 0 ? _rankedAirportRoutes : _rankedCountryRoutes;
     final iataToAirportMap = {for (var airport in widget.airportProvider.allAirports) airport.iataCode: airport};
@@ -1005,7 +1008,7 @@ class _MostFrequentRoutesCardState extends State<_MostFrequentRoutesCard> {
               children: [
                 // 🚨 [수정] 제목을 Frequent Routes로 변경 (유지)
                 Text(
-                  'Frequent Routes',
+                  tr('Frequent Routes'),
                   style: textTheme.titleLarge?.copyWith(
                     fontWeight: FontWeight.bold,
                     color: widget.themeColor.darken(0.1),
@@ -1020,7 +1023,7 @@ class _MostFrequentRoutesCardState extends State<_MostFrequentRoutesCard> {
             child: displayList.isEmpty
                 ? Center(
               child: Text(
-                'No route data available.',
+                tr('No route data available.'),
                 style: TextStyle(color: Colors.grey.shade600),
               ),
             )
@@ -1091,7 +1094,7 @@ class _MostFrequentRoutesCardState extends State<_MostFrequentRoutesCard> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        country1,
+                        tr(country1),
                         // 🚨 [수정] 글씨 작게 만들기: fontSize를 14로 명시
                         style: textTheme.titleMedium?.copyWith(fontSize: 14, color: color1, fontWeight: FontWeight.bold),
                         maxLines: 1,
@@ -1103,7 +1106,7 @@ class _MostFrequentRoutesCardState extends State<_MostFrequentRoutesCard> {
                         child: Icon(Icons.swap_horiz, color: Colors.grey.shade500, size: 20),
                       ),
                       Text(
-                        country2,
+                        tr(country2),
                         // 🚨 [수정] 글씨 작게 만들기: fontSize를 14로 명시
                         style: textTheme.titleMedium?.copyWith(fontSize: 14, color: color2, fontWeight: FontWeight.bold),
                         maxLines: 1,
@@ -1146,7 +1149,7 @@ class _MostFrequentRoutesCardState extends State<_MostFrequentRoutesCard> {
                         ),
                         child: Center(
                           child: Text(
-                            '#$rank',
+                            tr('#$rank'),
                             style: const TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.w800,
@@ -1164,7 +1167,7 @@ class _MostFrequentRoutesCardState extends State<_MostFrequentRoutesCard> {
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Text(
-                          '$count',
+                          tr('$count'),
                           style: textTheme.titleMedium?.copyWith(
                             color: widget.themeColor.darken(0.2),
                             fontWeight: FontWeight.bold,
@@ -1226,7 +1229,7 @@ class _MostFrequentRoutesCardState extends State<_MostFrequentRoutesCard> {
       ),
       child: Center(
         child: Text(
-          text,
+          tr(text),
           style: TextStyle(
             color: isSelected ? Colors.white : widget.themeColor.darken(0.2),
             fontWeight: FontWeight.bold,
@@ -1265,11 +1268,11 @@ class _MostFrequentRoutesCardState extends State<_MostFrequentRoutesCard> {
                           children: [
                             TextButton(
                               onPressed: () => Navigator.pop(sheetContext),
-                              child: const Text('Cancel', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
+                              child:  Text(tr('Cancel'), style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
                             ),
                             ElevatedButton(
                               onPressed: () => Navigator.pop(sheetContext),
-                              child: const Text('Done', style: TextStyle(fontWeight: FontWeight.bold)),
+                              child:  Text(tr('Done'), style: TextStyle(fontWeight: FontWeight.bold)),
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: Colors.white,
                                 foregroundColor: widget.themeColor.shade800,
@@ -1279,11 +1282,11 @@ class _MostFrequentRoutesCardState extends State<_MostFrequentRoutesCard> {
                         ),
                         const SizedBox(height: 8),
                         Text(
-                          '${airport.name} (${airport.iataCode})',
+                          tr('${airport.name} (${airport.iataCode})'),
                           style: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold, color: Colors.white),
                         ),
                         Text(
-                          '${airport.country} | Uses: $useCount | Hub: ${isHub ? 'Yes' : 'No'}',
+                          tr('${airport.country} | Uses: $useCount | Hub: ${isHub ? 'Yes' : 'No'}'),
                           style: Theme.of(context).textTheme.titleSmall?.copyWith(color: Colors.white70),
                         ),
                       ],
@@ -1323,7 +1326,7 @@ class _MostFrequentRoutesCardState extends State<_MostFrequentRoutesCard> {
                 children: [
                   const Icon(Icons.star, color: Colors.amber),
                   const SizedBox(width: 8),
-                  const Text('My Hub'),
+                   Text(tr('My Hub')),
                   Checkbox(
                     value: isHub,
                     onChanged: (bool? value) {
@@ -1337,7 +1340,7 @@ class _MostFrequentRoutesCardState extends State<_MostFrequentRoutesCard> {
                 children: [
                   Icon(Icons.wine_bar, color: _wineColor),
                   const SizedBox(width: 8),
-                  Text('Business Lounge: $loungeVisitCount Visits'),
+                  Text(tr('Business Lounge: $loungeVisitCount Visits')),
                 ],
               ),
               if (loungeVisitCount > 0)
@@ -1345,10 +1348,10 @@ class _MostFrequentRoutesCardState extends State<_MostFrequentRoutesCard> {
                   padding: const EdgeInsets.only(left: 16.0, right: 16.0, top: 4.0, bottom: 8.0),
                   child: Row(
                     children: [
-                      Text('Average Rating: ', style: Theme.of(context).textTheme.bodySmall),
+                      Text(tr('Average Rating: '), style: Theme.of(context).textTheme.bodySmall),
                       Icon(Icons.wine_bar, color: _wineColor, size: 20),
                       Text(
-                        ' (${averageLoungeRating.toStringAsFixed(1)})',
+                        tr(' (${averageLoungeRating.toStringAsFixed(1)})'),
                         style: const TextStyle(fontWeight: FontWeight.bold),
                       ),
                     ],
@@ -1360,11 +1363,11 @@ class _MostFrequentRoutesCardState extends State<_MostFrequentRoutesCard> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('My Rating', style: Theme.of(context).textTheme.titleSmall),
+              Text(tr('My Rating'), style: Theme.of(context).textTheme.titleSmall),
               IconButton(
                 icon: const Icon(Icons.note_alt_outlined, color: Colors.grey),
                 onPressed: () => _showMemoAndPhotoDialog(context, airport.iataCode),
-                tooltip: 'Add Memo and Photos',
+                tooltip: tr('Add Memo and Photos'),
               ),
             ],
           ),
@@ -1390,12 +1393,12 @@ class _MostFrequentRoutesCardState extends State<_MostFrequentRoutesCard> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                'History (${uses.length} uses)',
+                tr('History (${uses.length} uses)'),
                 style: Theme.of(context).textTheme.titleSmall,
               ),
               OutlinedButton.icon(
                 icon: const Icon(Icons.add),
-                label: const Text('Add Use'),
+                label:  Text(tr('Add Use')),
                 onPressed: () {
                   provider.addVisitEntry(airport.iataCode);
                 },
@@ -1429,11 +1432,11 @@ class _MostFrequentRoutesCardState extends State<_MostFrequentRoutesCard> {
                           Row(
                             children: [
                               Text(
-                                '#${index + 1}: ',
+                                tr('#${index + 1}: '),
                                 style: const TextStyle(fontWeight: FontWeight.bold),
                               ),
                               Text(
-                                dateText,
+                                tr(dateText),
                                 style: const TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 14,
@@ -1450,11 +1453,11 @@ class _MostFrequentRoutesCardState extends State<_MostFrequentRoutesCard> {
                                 padding: EdgeInsets.zero,
                                 constraints: const BoxConstraints(),
                                 onPressed: () => _showMemoAndPhotoDialog(context, airport.iataCode, useIndex: index + 1),
-                                tooltip: 'Add Memo for this Use',
+                                tooltip: tr('Add Memo for this Use'),
                               ),
                               IconButton(
                                 icon: const Icon(Icons.delete_forever, color: Colors.red),
-                                tooltip: 'Remove this use',
+                                tooltip: tr('Remove this use'),
                                 onPressed: () {
                                   provider.removeVisitEntry(airport.iataCode, index);
                                 },
@@ -1475,7 +1478,7 @@ class _MostFrequentRoutesCardState extends State<_MostFrequentRoutesCard> {
                                     scale: 0.8,
                                     alignment: Alignment.centerLeft,
                                     child: CheckboxListTile(
-                                      title: const Text('Transfer', style: TextStyle(fontSize: 11)),
+                                      title:  Text(tr('Transfer'), style: TextStyle(fontSize: 11)),
                                       controlAffinity: ListTileControlAffinity.leading,
                                       contentPadding: EdgeInsets.zero,
                                       dense: true,
@@ -1492,7 +1495,7 @@ class _MostFrequentRoutesCardState extends State<_MostFrequentRoutesCard> {
                                     scale: 0.8,
                                     alignment: Alignment.centerLeft,
                                     child: CheckboxListTile(
-                                      title: const Text('Layover', style: TextStyle(fontSize: 11)),
+                                      title:  Text(tr('Layover'), style: TextStyle(fontSize: 11)),
                                       controlAffinity: ListTileControlAffinity.leading,
                                       contentPadding: EdgeInsets.zero,
                                       dense: true,
@@ -1509,7 +1512,7 @@ class _MostFrequentRoutesCardState extends State<_MostFrequentRoutesCard> {
                                     scale: 0.8,
                                     alignment: Alignment.centerLeft,
                                     child: CheckboxListTile(
-                                      title: const Text('Stopover', style: TextStyle(fontSize: 11)),
+                                      title:  Text(tr('Stopover'), style: TextStyle(fontSize: 11)),
                                       controlAffinity: ListTileControlAffinity.leading,
                                       contentPadding: EdgeInsets.zero,
                                       dense: true,
@@ -1533,7 +1536,7 @@ class _MostFrequentRoutesCardState extends State<_MostFrequentRoutesCard> {
                                     scale: 0.9,
                                     alignment: Alignment.centerLeft,
                                     child: CheckboxListTile(
-                                      title: const Text('Lounge Use', style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold)),
+                                      title:  Text(tr('Lounge Use'), style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold)),
                                       secondary: Icon(Icons.wine_bar, color: _wineColor, size: 16),
                                       controlAffinity: ListTileControlAffinity.leading,
                                       contentPadding: EdgeInsets.zero,
@@ -1578,7 +1581,7 @@ class _MostFrequentRoutesCardState extends State<_MostFrequentRoutesCard> {
                                                 useIndex: index + 1,
                                                 isForLounge: true,
                                               ),
-                                              tooltip: 'Add Lounge Memo & Photos for this visit',
+                                              tooltip: tr('Add Lounge Memo & Photos for this visit'),
                                             ),
                                           ],
                                         ),
@@ -1612,13 +1615,13 @@ class _MostFrequentRoutesCardState extends State<_MostFrequentRoutesCard> {
                                                       textAlign: TextAlign.center,
                                                       keyboardType: TextInputType.number,
                                                       inputFormatters: [FilteringTextInputFormatter.digitsOnly],
-                                                      decoration: const InputDecoration(labelText: 'H', isDense: true, border: OutlineInputBorder()),
+                                                      decoration:  InputDecoration(labelText: tr('H'), isDense: true, border: OutlineInputBorder()),
                                                       onChanged: (_) => updateDuration(),
                                                     ),
                                                   ),
-                                                  const Padding(
+                                                   Padding(
                                                     padding: EdgeInsets.symmetric(horizontal: 4.0),
-                                                    child: Text(':', style: TextStyle(fontWeight: FontWeight.bold)),
+                                                    child: Text(tr(':'), style: TextStyle(fontWeight: FontWeight.bold)),
                                                   ),
                                                   Expanded(
                                                     child: TextFormField(
@@ -1626,7 +1629,7 @@ class _MostFrequentRoutesCardState extends State<_MostFrequentRoutesCard> {
                                                       textAlign: TextAlign.center,
                                                       keyboardType: TextInputType.number,
                                                       inputFormatters: [FilteringTextInputFormatter.digitsOnly],
-                                                      decoration: const InputDecoration(labelText: 'M', isDense: true, border: OutlineInputBorder()),
+                                                      decoration:  InputDecoration(labelText: tr('M'), isDense: true, border: OutlineInputBorder()),
                                                       onChanged: (_) => updateDuration(),
                                                     ),
                                                   ),
@@ -1648,9 +1651,9 @@ class _MostFrequentRoutesCardState extends State<_MostFrequentRoutesCard> {
               );
             }).toList(),
           if (uses.isEmpty)
-            const Padding(
+             Padding(
               padding: EdgeInsets.only(top: 8.0),
-              child: Center(child: Text('No uses recorded yet. Press "Add Use" to start.')),
+              child: Center(child: Text(tr('No uses recorded yet. Press "Add Use" to start.'))),
             ),
         ],
       ),
@@ -1689,36 +1692,34 @@ class _MostFrequentRoutesCardState extends State<_MostFrequentRoutesCard> {
                   currentPhotos.add(pickedFile.path);
                 });
                 ScaffoldMessenger.of(dialogContext).showSnackBar(
-                  const SnackBar(content: Text('Photo selected and path saved.')),
+                   SnackBar(content: Text(tr('Photo selected and path saved.'))),
                 );
               } else {
                 ScaffoldMessenger.of(dialogContext).showSnackBar(
-                  const SnackBar(content: Text('Image selection cancelled.')),
+                   SnackBar(content: Text(tr('Image selection cancelled.'))),
                 );
               }
             }
             return AlertDialog(
-              title: Text(isForLounge && isPerUseMemo
-                  ? 'Lounge Memo & Photos for Visit #${useIndex}'
-                  : (isPerUseMemo ? 'Memo & Photos for Use #$useIndex' : 'Memo & Photos for $iataCode')),
+              title: Text(isForLounge && isPerUseMemo ? 'Lounge Memo & Photos for Visit #${useIndex}' : (isPerUseMemo ? 'Memo & Photos for Use #$useIndex' : 'Memo & Photos for $iataCode')),
               content: SingleChildScrollView(
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text('Memo:', style: TextStyle(fontWeight: FontWeight.bold)),
+                     Text(tr('Memo:'), style: TextStyle(fontWeight: FontWeight.bold)),
                     const SizedBox(height: 8),
                     TextFormField(
                       controller: memoController,
                       maxLines: 5,
                       minLines: 3,
-                      decoration: const InputDecoration(
+                      decoration:  InputDecoration(
                         border: OutlineInputBorder(),
-                        hintText: 'Write your thoughts here...',
+                        hintText: tr('Write your thoughts here...'),
                       ),
                     ),
                     const SizedBox(height: 20),
-                    const Text('Photos:', style: TextStyle(fontWeight: FontWeight.bold)),
+                     Text(tr('Photos:'), style: TextStyle(fontWeight: FontWeight.bold)),
                     const SizedBox(height: 8),
                     Wrap(
                       spacing: 10,
@@ -1735,7 +1736,7 @@ class _MostFrequentRoutesCardState extends State<_MostFrequentRoutesCard> {
                                     children: <Widget>[
                                       ListTile(
                                         leading: const Icon(Icons.photo_library),
-                                        title: const Text('Photo Library'),
+                                        title:  Text(tr('Photo Library')),
                                         onTap: () {
                                           Navigator.pop(modalContext);
                                           _pickImage(ImageSource.gallery);
@@ -1743,7 +1744,7 @@ class _MostFrequentRoutesCardState extends State<_MostFrequentRoutesCard> {
                                       ),
                                       ListTile(
                                         leading: const Icon(Icons.photo_camera),
-                                        title: const Text('Camera'),
+                                        title:  Text(tr('Camera')),
                                         onTap: () {
                                           Navigator.pop(modalContext);
                                           _pickImage(ImageSource.camera);
@@ -1763,12 +1764,12 @@ class _MostFrequentRoutesCardState extends State<_MostFrequentRoutesCard> {
                               border: Border.all(color: Colors.grey.shade400),
                               borderRadius: BorderRadius.circular(8),
                             ),
-                            child: const Center(
+                            child:  Center(
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Icon(Icons.add_a_photo, color: Colors.blue),
-                                  Text('Add Photo', style: TextStyle(fontSize: 10)),
+                                  Text(tr('Add Photo'), style: TextStyle(fontSize: 10)),
                                 ],
                               ),
                             ),
@@ -1788,11 +1789,11 @@ class _MostFrequentRoutesCardState extends State<_MostFrequentRoutesCard> {
               ),
               actions: [
                 TextButton(
-                  child: const Text('Cancel'),
+                  child:  Text(tr('Cancel')),
                   onPressed: () => Navigator.of(dialogContext).pop(),
                 ),
                 ElevatedButton(
-                  child: const Text('Save'),
+                  child:  Text(tr('Save')),
                   onPressed: () {
                     if (isForLounge && isPerUseMemo) {
                       provider.updateVisitEntry(
@@ -1802,11 +1803,11 @@ class _MostFrequentRoutesCardState extends State<_MostFrequentRoutesCard> {
                         loungePhotos: currentPhotos,
                       );
                       ScaffoldMessenger.of(dialogContext).showSnackBar(
-                        const SnackBar(content: Text('Lounge memo and photos for this visit saved.')),
+                         SnackBar(content: Text(tr('Lounge memo and photos for this visit saved.'))),
                       );
                     } else if (isPerUseMemo) {
                       ScaffoldMessenger.of(dialogContext).showSnackBar(
-                        const SnackBar(content: Text('Memo and photos for use saved (Model update required).')),
+                         SnackBar(content: Text(tr('Memo and photos for use saved (Model update required).'))),
                       );
                     } else {
                       provider.updateMemoAndPhotos(
@@ -1815,7 +1816,7 @@ class _MostFrequentRoutesCardState extends State<_MostFrequentRoutesCard> {
                           currentPhotos
                       );
                       ScaffoldMessenger.of(dialogContext).showSnackBar(
-                        const SnackBar(content: Text('Memo and photos saved.')),
+                         SnackBar(content: Text(tr('Memo and photos saved.'))),
                       );
                     }
                     Navigator.of(dialogContext).pop();
@@ -1851,7 +1852,7 @@ class _MostFrequentRoutesCardState extends State<_MostFrequentRoutesCard> {
             child: Padding(
               padding: const EdgeInsets.all(4.0),
               child: Text(
-                  'File Not Found: ${photoPath.substring(photoPath.length > 8 ? photoPath.length - 8 : 0)}',
+                  tr('File Not Found: ${photoPath.substring(photoPath.length > 8 ? photoPath.length - 8 : 0)}'),
                   style: const TextStyle(fontSize: 8, color: Colors.red),
                   textAlign: TextAlign.center
               ),
@@ -1884,7 +1885,7 @@ class _MostFrequentRoutesCardState extends State<_MostFrequentRoutesCard> {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            const Text('Visit Date', style: TextStyle(fontWeight: FontWeight.bold)),
+             Text(tr('Visit Date'), style: TextStyle(fontWeight: FontWeight.bold)),
             IconButton(
               visualDensity: VisualDensity.compact,
               icon: const Icon(Icons.clear, size: 20),
@@ -1897,7 +1898,7 @@ class _MostFrequentRoutesCardState extends State<_MostFrequentRoutesCard> {
                     day: null
                 );
               },
-              tooltip: 'Clear Date',
+              tooltip: tr('Clear Date'),
             ),
           ],
         ),
@@ -1932,7 +1933,7 @@ class _MostFrequentRoutesCardState extends State<_MostFrequentRoutesCard> {
       value: value,
       isDense: true,
       decoration: InputDecoration(
-          labelText: hint,
+          labelText: tr(hint),
           border: const OutlineInputBorder(),
           contentPadding:
           const EdgeInsets.symmetric(horizontal: 10, vertical: 12)),
@@ -1940,7 +1941,7 @@ class _MostFrequentRoutesCardState extends State<_MostFrequentRoutesCard> {
           .map((item) => DropdownMenuItem<T>(
         value: item as T?,
         child: Text(
-          item?.toString() ?? 'Unknown',
+          tr(item?.toString() ?? 'Unknown'),
           style: TextStyle(
             fontSize: (item == null) ? 11.0 : 15.0,
             color: (item == null) ? Colors.grey.shade600 : null,

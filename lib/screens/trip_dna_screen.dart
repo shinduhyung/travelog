@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:jidoapp/providers/personality_provider.dart';
 import 'package:jidoapp/models/personality_question.dart';
@@ -16,6 +17,7 @@ class CustomSliderWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final double valueToDisplay = selectedValue?.toDouble() ?? 0.0;
     final bool isAnswered = selectedValue != null;
 
@@ -65,7 +67,7 @@ class CustomSliderWidget extends StatelessWidget {
                 ),
                 alignment: Alignment.center,
                 child: Text(
-                  '$score',
+                  tr('$score'),
                   style: TextStyle(
                     fontSize: 14,
                     fontWeight: isSelected && isAnswered ? FontWeight.bold : FontWeight.normal,
@@ -106,6 +108,7 @@ class _TripDnaScreenState extends State<TripDnaScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final provider = context.watch<PersonalityProvider>();
     final questions = provider.questions;
     final allAnswered = questions.isNotEmpty && provider.responses.length == questions.length;
@@ -153,7 +156,7 @@ class _TripDnaScreenState extends State<TripDnaScreen> {
                         borderRadius: BorderRadius.circular(20),
                       ),
                       child: Text(
-                        'PERSONALITY TEST',
+                        tr('PERSONALITY TEST'),
                         style: TextStyle(
                           fontSize: 11,
                           fontWeight: FontWeight.w700,
@@ -164,7 +167,7 @@ class _TripDnaScreenState extends State<TripDnaScreen> {
                     ),
                     const SizedBox(height: 12),
                     Text(
-                      'Travel Personality\nQuiz',
+                      tr('Travel Personality\nQuiz'),
                       style: TextStyle(
                         fontSize: 32,
                         fontWeight: FontWeight.w900,
@@ -202,7 +205,7 @@ class _TripDnaScreenState extends State<TripDnaScreen> {
                 IconButton(
                   icon: Icon(Icons.refresh_rounded, color: Theme.of(context).primaryColor),
                   onPressed: provider.resetQuiz,
-                  tooltip: 'Reset Quiz',
+                  tooltip: tr('Reset Quiz'),
                 )
             ],
           ),
@@ -261,7 +264,7 @@ class _TripDnaScreenState extends State<TripDnaScreen> {
                                 color: Theme.of(context).primaryColor,
                               )
                                   : Text(
-                                "${index + 1}",
+                                tr("${index + 1}"),
                                 style: TextStyle(
                                   fontSize: 14,
                                   fontWeight: FontWeight.w700,
@@ -273,7 +276,7 @@ class _TripDnaScreenState extends State<TripDnaScreen> {
                           const SizedBox(width: 12),
                           Expanded(
                             child: Text(
-                              "Question ${index + 1}",
+                              tr("Question ${index + 1}"),
                               style: TextStyle(
                                 color: isAnswered
                                     ? Theme.of(context).primaryColor
@@ -290,7 +293,7 @@ class _TripDnaScreenState extends State<TripDnaScreen> {
 
                       // 질문 텍스트
                       Text(
-                        question.text,
+                        tr(question.text),
                         style: const TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.w600,
@@ -305,7 +308,7 @@ class _TripDnaScreenState extends State<TripDnaScreen> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            'Disagree',
+                            tr('Disagree'),
                             style: TextStyle(
                               fontSize: 13,
                               fontWeight: FontWeight.w600,
@@ -313,7 +316,7 @@ class _TripDnaScreenState extends State<TripDnaScreen> {
                             ),
                           ),
                           Text(
-                            'Agree',
+                            tr('Agree'),
                             style: TextStyle(
                               fontSize: 13,
                               fontWeight: FontWeight.w600,
@@ -380,7 +383,7 @@ class _TripDnaScreenState extends State<TripDnaScreen> {
           ),
           onPressed: allAnswered ? () => provider.calculateScores() : null,
           child: Text(
-            "View Results",
+            tr("View Results"),
             style: TextStyle(
               fontSize: 17,
               fontWeight: FontWeight.w700,
@@ -415,7 +418,7 @@ class _TripDnaScreenState extends State<TripDnaScreen> {
                         borderRadius: BorderRadius.circular(20),
                       ),
                       child: Text(
-                        'YOUR RESULTS',
+                        tr('YOUR RESULTS'),
                         style: TextStyle(
                           fontSize: 11,
                           fontWeight: FontWeight.w700,
@@ -425,8 +428,8 @@ class _TripDnaScreenState extends State<TripDnaScreen> {
                       ),
                     ),
                     const SizedBox(height: 12),
-                    const Text(
-                      "Travel DNA",
+                     Text(
+                      tr("Travel DNA"),
                       style: TextStyle(
                         fontSize: 32,
                         fontWeight: FontWeight.w900,
@@ -471,7 +474,7 @@ class _TripDnaScreenState extends State<TripDnaScreen> {
                 child: IconButton(
                   icon: Icon(Icons.refresh_rounded, color: Theme.of(context).primaryColor),
                   onPressed: provider.resetQuiz,
-                  tooltip: 'Retake Quiz',
+                  tooltip: tr('Retake Quiz'),
                 ),
               ),
             ],
@@ -522,7 +525,7 @@ class _TripDnaScreenState extends State<TripDnaScreen> {
                                 borderRadius: BorderRadius.circular(12),
                               ),
                               child: Text(
-                                leftLabel,
+                                tr(leftLabel),
                                 textAlign: TextAlign.left,
                                 style: TextStyle(
                                   fontSize: 15,
@@ -545,7 +548,7 @@ class _TripDnaScreenState extends State<TripDnaScreen> {
                                 borderRadius: BorderRadius.circular(12),
                               ),
                               child: Text(
-                                rightLabel,
+                                tr(rightLabel),
                                 textAlign: TextAlign.right,
                                 style: TextStyle(
                                   fontSize: 15,
@@ -624,7 +627,7 @@ class _TripDnaScreenState extends State<TripDnaScreen> {
                                     ),
                                   ),
                                   child: Text(
-                                    "${score.round()}",
+                                    tr("${score.round()}"),
                                     style: TextStyle(
                                       fontSize: 11,
                                       fontWeight: FontWeight.w900,

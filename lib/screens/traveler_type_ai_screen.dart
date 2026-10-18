@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -167,7 +168,7 @@ class _TravelerTypeAiScreenState extends State<TravelerTypeAiScreen> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'Your 8 Personality Dimensions',
+            tr('Your 8 Personality Dimensions'),
             style: TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.w700,
@@ -189,14 +190,14 @@ class _TravelerTypeAiScreenState extends State<TravelerTypeAiScreen> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        leftLabel,
+                        tr(leftLabel),
                         style: TextStyle(
                             fontSize: 12,
                             fontWeight: FontWeight.w600,
                             color: Colors.grey.shade600),
                       ),
                       Text(
-                        rightLabel,
+                        tr(rightLabel),
                         style: TextStyle(
                             fontSize: 12,
                             fontWeight: FontWeight.w600,
@@ -232,7 +233,7 @@ class _TravelerTypeAiScreenState extends State<TravelerTypeAiScreen> {
       return Center(
           child: Padding(
             padding: const EdgeInsets.all(24.0),
-            child: Text(_error!, style: const TextStyle(color: Colors.red)),
+            child: Text(tr(_error!), style: const TextStyle(color: Colors.red)),
           ));
     }
 
@@ -247,7 +248,7 @@ class _TravelerTypeAiScreenState extends State<TravelerTypeAiScreen> {
             child: Padding(
               padding: const EdgeInsets.all(24.0),
               child: Text(
-                'Analysis failed to generate scores.\nDebug Info: $debugInfo',
+                tr('Analysis failed to generate scores.\nDebug Info: $debugInfo'),
                 textAlign: TextAlign.center,
                 style: const TextStyle(color: Colors.redAccent),
               ),
@@ -286,7 +287,7 @@ class _TravelerTypeAiScreenState extends State<TravelerTypeAiScreen> {
           const SizedBox(height: 24),
 
           Text(
-            'Traveler Type Scores',
+            tr('Traveler Type Scores'),
             style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.w800,
@@ -332,7 +333,7 @@ class _TravelerTypeAiScreenState extends State<TravelerTypeAiScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          label,
+                          tr(label),
                           style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.w700,
@@ -340,7 +341,7 @@ class _TravelerTypeAiScreenState extends State<TravelerTypeAiScreen> {
                           ),
                         ),
                         Text(
-                          '${adjustedScore.toStringAsFixed(1)}%',
+                          tr('${adjustedScore.toStringAsFixed(1)}%'),
                           style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.w800,
@@ -353,22 +354,22 @@ class _TravelerTypeAiScreenState extends State<TravelerTypeAiScreen> {
 
                     if (isTopType) ...[
                       Text(
-                        desc,
+                        tr(desc),
                         style: TextStyle(fontSize: 13, color: Colors.grey.shade700, fontStyle: FontStyle.italic),
                       ),
                       const Divider(height: 24),
-                      const Text(
-                        'Analysis based on your travel data:',
+                       Text(
+                        tr('Analysis based on your travel data:'),
                         style: TextStyle(fontSize: 15, height: 1.4, fontWeight: FontWeight.bold),
                       ),
                       const SizedBox(height: 8),
                       Text(
-                        aiExplanation,
+                        tr(aiExplanation),
                         style: TextStyle(fontSize: 15, height: 1.4, color: Colors.grey.shade800),
                       ),
                     ] else ...[
                       Text(
-                        desc,
+                        tr(desc),
                         style: TextStyle(
                             fontSize: 13,
                             height: 1.4,
@@ -386,9 +387,9 @@ class _TravelerTypeAiScreenState extends State<TravelerTypeAiScreen> {
       );
     }
 
-    return const Center(
+    return  Center(
       child: Text(
-        'Press "Run AI Analysis" to calculate your Traveler Type.',
+        tr('Press "Run AI Analysis" to calculate your Traveler Type.'),
         textAlign: TextAlign.center,
       ),
     );
@@ -396,6 +397,7 @@ class _TravelerTypeAiScreenState extends State<TravelerTypeAiScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     String buttonText = 'Run AI Analysis';
     if (_isLoading) {
       buttonText = 'Analyzing...';
@@ -419,7 +421,7 @@ class _TravelerTypeAiScreenState extends State<TravelerTypeAiScreen> {
               icon: Icon(Icons.psychology_alt,
                   color: _isLoading ? Colors.white70 : Colors.white),
               label: Text(
-                buttonText,
+                tr(buttonText),
                 style: const TextStyle(fontSize: 16, color: Colors.white),
               ),
               style: ElevatedButton.styleFrom(

@@ -3,6 +3,7 @@
 import 'dart:async';
 import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_map/flutter_map.dart';
@@ -542,14 +543,14 @@ class _CitiesScreenState extends State<CitiesScreen> {
 
       if (cityName.isEmpty || lat == null || lon == null || countryIsoA2.isEmpty || continent == null) {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Please fill in all required fields (Name, Lat/Lon, ISO, Continent).')),
+           SnackBar(content: Text(tr('Please fill in all required fields (Name, Lat/Lon, ISO, Continent).'))),
         );
         return;
       }
 
       if (lat < -90 || lat > 90 || lon < -180 || lon > 180) {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Latitude must be between -90 and 90, and Longitude between -180 and 180.')),
+           SnackBar(content: Text(tr('Latitude must be between -90 and 90, and Longitude between -180 and 180.'))),
         );
         return;
       }
@@ -578,7 +579,7 @@ class _CitiesScreenState extends State<CitiesScreen> {
 
       Navigator.of(context).pop();
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('City "$cityName" added successfully!')),
+        SnackBar(content: Text(tr('City "$cityName" added successfully!', entities: [cityName]))),
       );
     }
 
@@ -588,19 +589,19 @@ class _CitiesScreenState extends State<CitiesScreen> {
         return StatefulBuilder(
           builder: (context, setStateDialog) {
             return AlertDialog(
-              title: const Text('Add New Custom City'),
+              title:  Text(tr('Add New Custom City')),
               content: SingleChildScrollView(
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    TextField(controller: nameController, decoration: const InputDecoration(labelText: 'City Name')),
+                    TextField(controller: nameController, decoration:  InputDecoration(labelText: tr('City Name'))),
                     const SizedBox(height: 12),
                     Row(
                       children: [
                         Expanded(
                           child: TextField(
                             controller: latController,
-                            decoration: const InputDecoration(labelText: 'Latitude'),
+                            decoration:  InputDecoration(labelText: tr('Latitude')),
                             keyboardType: const TextInputType.numberWithOptions(decimal: true, signed: true),
                           ),
                         ),
@@ -608,7 +609,7 @@ class _CitiesScreenState extends State<CitiesScreen> {
                         Expanded(
                           child: TextField(
                             controller: lonController,
-                            decoration: const InputDecoration(labelText: 'Longitude'),
+                            decoration:  InputDecoration(labelText: tr('Longitude')),
                             keyboardType: const TextInputType.numberWithOptions(decimal: true, signed: true),
                           ),
                         ),
@@ -619,11 +620,11 @@ class _CitiesScreenState extends State<CitiesScreen> {
                       alignment: Alignment.centerLeft,
                       child: OutlinedButton.icon(
                         icon: const Icon(Icons.touch_app, size: 18),
-                        label: const Text('Tap on map to select', style: TextStyle(fontSize: 12)),
+                        label:  Text(tr('Tap on map to select'), style: TextStyle(fontSize: 12)),
                         onPressed: () {
                           Navigator.of(dialogContext).pop();
                           ScaffoldMessenger.of(context).showSnackBar(
-                            const SnackBar(content: Text('Tap a location on the map, then re-open the Add City dialog.')),
+                             SnackBar(content: Text(tr('Tap a location on the map, then re-open the Add City dialog.'))),
                           );
                         },
                       ),
@@ -631,17 +632,17 @@ class _CitiesScreenState extends State<CitiesScreen> {
                     const SizedBox(height: 12),
                     TextField(
                       controller: countryIsoController,
-                      decoration: const InputDecoration(labelText: 'Country ISO A2 (e.g., US)', counterText: ''),
+                      decoration:  InputDecoration(labelText: tr('Country ISO A2 (e.g., US)'), counterText: ''),
                       textCapitalization: TextCapitalization.characters,
                       maxLength: 2,
                     ),
                     const SizedBox(height: 12),
                     DropdownButtonFormField<String>(
                       value: selectedContinent,
-                      decoration: const InputDecoration(labelText: 'Continent', border: OutlineInputBorder()),
-                      hint: const Text('Select Continent'),
+                      decoration:  InputDecoration(labelText: tr('Continent'), border: OutlineInputBorder()),
+                      hint:  Text(tr('Select Continent')),
                       items: continents.map((continent) {
-                        return DropdownMenuItem(value: continent, child: Text(continent));
+                        return DropdownMenuItem(value: continent, child: Text(tr(continent)));
                       }).toList(),
                       onChanged: (String? newValue) {
                         setStateDialog(() {
@@ -653,11 +654,11 @@ class _CitiesScreenState extends State<CitiesScreen> {
                     const SizedBox(height: 12),
                     DropdownButtonFormField<String>(
                       value: selectedSubregion,
-                      decoration: const InputDecoration(labelText: 'Subregion', border: OutlineInputBorder()),
-                      hint: const Text('Select Subregion (Optional)'),
+                      decoration:  InputDecoration(labelText: tr('Subregion'), border: OutlineInputBorder()),
+                      hint:  Text(tr('Select Subregion (Optional)')),
                       items: selectedContinent != null
                           ? getSubregionsForContinent(selectedContinent!).map((subregion) {
-                        return DropdownMenuItem(value: subregion, child: Text(subregion));
+                        return DropdownMenuItem(value: subregion, child: Text(tr(subregion)));
                       }).toList()
                           : [],
                       onChanged: selectedContinent != null
@@ -667,21 +668,21 @@ class _CitiesScreenState extends State<CitiesScreen> {
                         });
                       }
                           : null,
-                      disabledHint: const Text('Select a Continent first'),
+                      disabledHint:  Text(tr('Select a Continent first')),
                     ),
                     const SizedBox(height: 12),
                     TextField(
                       controller: populationController,
-                      decoration: const InputDecoration(labelText: 'Population (Leave blank for Unknown)'),
+                      decoration:  InputDecoration(labelText: tr('Population (Leave blank for Unknown)')),
                       keyboardType: TextInputType.number,
                     ),
-                    const Padding(padding: EdgeInsets.only(top: 10), child: Text('Unknown population will be set to 0 in data.', style: TextStyle(fontSize: 12, color: Colors.grey))),
+                     Padding(padding: EdgeInsets.only(top: 10), child: Text(tr('Unknown population will be set to 0 in data.'), style: TextStyle(fontSize: 12, color: Colors.grey))),
                   ],
                 ),
               ),
               actions: [
-                TextButton(onPressed: () => Navigator.of(dialogContext).pop(), child: const Text('Cancel')),
-                ElevatedButton(onPressed: () => validateAndAddCity(setStateDialog), child: const Text('Add City')),
+                TextButton(onPressed: () => Navigator.of(dialogContext).pop(), child:  Text(tr('Cancel'))),
+                ElevatedButton(onPressed: () => validateAndAddCity(setStateDialog), child:  Text(tr('Add City'))),
               ],
             );
           },
@@ -761,7 +762,7 @@ class _CitiesScreenState extends State<CitiesScreen> {
           children: [
             Icon(icon, size: 18, color: value ? Colors.white : activeColor),
             const SizedBox(width: 4),
-            Text(label),
+            Text(tr(label)),
           ],
         ),
         selected: value,
@@ -823,6 +824,7 @@ class _CitiesScreenState extends State<CitiesScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Scaffold(
       body: Consumer2<CityProvider, CountryProvider>(
         builder: (context, cityProvider, countryProvider, child) {
@@ -1024,7 +1026,7 @@ class _CitiesScreenState extends State<CitiesScreen> {
                   constraints: const BoxConstraints(),
                   padding: const EdgeInsets.all(8),
                   onPressed: _showColorSettingsDialog,
-                  tooltip: 'Color Settings',
+                  tooltip: tr('Color Settings'),
                 ),
               ),
               const SizedBox(width: 4),
@@ -1040,7 +1042,7 @@ class _CitiesScreenState extends State<CitiesScreen> {
                     _showLegend = !_showLegend;
                     _saveColorSettings();
                   }),
-                  tooltip: _showLegend ? 'Hide Legend' : 'Show Legend',
+                  tooltip: tr(_showLegend ? 'Hide Legend' : 'Show Legend'),
                 ),
               ),
             ],
@@ -1082,7 +1084,7 @@ class _CitiesScreenState extends State<CitiesScreen> {
                       stayFactor: 1.0,
                     );
                   },
-                  tooltip: 'Share Map',
+                  tooltip: tr('Share Map'),
                 ),
               ),
               const SizedBox(width: 4),
@@ -1095,7 +1097,7 @@ class _CitiesScreenState extends State<CitiesScreen> {
                   constraints: const BoxConstraints(),
                   padding: const EdgeInsets.all(8),
                   onPressed: () => _showAddCityDialog(context),
-                  tooltip: 'Add Custom City',
+                  tooltip: tr('Add Custom City'),
                 ),
               ),
             ],
@@ -1187,7 +1189,7 @@ class _CitiesScreenState extends State<CitiesScreen> {
           child: TextField(
             controller: _searchController,
             decoration: InputDecoration(
-              labelText: 'Search Cities',
+              labelText: tr('Search Cities'),
               prefixIcon: const Icon(Icons.search),
               border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
               suffixIcon: _searchController.text.isNotEmpty
@@ -1239,18 +1241,18 @@ class _CitiesScreenState extends State<CitiesScreen> {
                         context: context,
                         builder: (context) => AlertDialog(
                           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-                          title: Text('Confirm Removal', style: GoogleFonts.poppins(fontWeight: FontWeight.bold, color: Colors.black87)),
+                          title: Text(tr('Confirm Removal'), style: GoogleFonts.poppins(fontWeight: FontWeight.bold, color: Colors.black87)),
                           content: Text(
-                              'Are you sure you want to remove all $recordCount visit records for ${city.name}?',
+                              tr('Are you sure you want to remove all $recordCount visit records for ${city.name}?'),
                               style: GoogleFonts.poppins(color: Colors.black54)),
                           actions: [
                             TextButton(
                               onPressed: () => Navigator.pop(context, false),
-                              child: Text('Cancel', style: GoogleFonts.poppins(color: Colors.grey)),
+                              child: Text(tr('Cancel'), style: GoogleFonts.poppins(color: Colors.grey)),
                             ),
                             TextButton(
                               onPressed: () => Navigator.pop(context, true),
-                              child: Text('Yes, Remove', style: GoogleFonts.poppins(color: Colors.redAccent, fontWeight: FontWeight.bold)),
+                              child: Text(tr('Yes, Remove'), style: GoogleFonts.poppins(color: Colors.redAccent, fontWeight: FontWeight.bold)),
                             ),
                           ],
                         ),
@@ -1333,7 +1335,7 @@ class _CitiesScreenState extends State<CitiesScreen> {
         return StatefulBuilder(
           builder: (context, setStateDialog) {
             return AlertDialog(
-              title: Text('Memo & Photos for $cityName'),
+              title: Text(tr('Memo & Photos for $cityName', entities: [cityName])),
               content: SingleChildScrollView(
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
@@ -1342,13 +1344,13 @@ class _CitiesScreenState extends State<CitiesScreen> {
                     TextFormField(
                       controller: memoController,
                       maxLines: 3,
-                      decoration: const InputDecoration(
-                        labelText: 'Memo',
+                      decoration:  InputDecoration(
+                        labelText: tr('Memo'),
                         border: OutlineInputBorder(),
                       ),
                     ),
                     const SizedBox(height: 16),
-                    const Text('Photos:', style: TextStyle(fontWeight: FontWeight.bold)),
+                     Text(tr('Photos:'), style: TextStyle(fontWeight: FontWeight.bold)),
                     const SizedBox(height: 8),
                     Wrap(
                       spacing: 10,
@@ -1364,7 +1366,7 @@ class _CitiesScreenState extends State<CitiesScreen> {
                                   children: [
                                     ListTile(
                                       leading: const Icon(Icons.photo_library),
-                                      title: const Text('Photo Library'),
+                                      title:  Text(tr('Photo Library')),
                                       onTap: () {
                                         Navigator.pop(modalContext);
                                         _pickImage(ImageSource.gallery, setStateDialog);
@@ -1372,7 +1374,7 @@ class _CitiesScreenState extends State<CitiesScreen> {
                                     ),
                                     ListTile(
                                       leading: const Icon(Icons.photo_camera),
-                                      title: const Text('Camera'),
+                                      title:  Text(tr('Camera')),
                                       onTap: () {
                                         Navigator.pop(modalContext);
                                         _pickImage(ImageSource.camera, setStateDialog);
@@ -1405,14 +1407,14 @@ class _CitiesScreenState extends State<CitiesScreen> {
               actions: [
                 TextButton(
                   onPressed: () => Navigator.pop(dialogContext),
-                  child: const Text('Cancel'),
+                  child:  Text(tr('Cancel')),
                 ),
                 ElevatedButton(
                   onPressed: () {
                     onSave(memoController.text, currentPhotos);
                     Navigator.pop(dialogContext);
                   },
-                  child: const Text('Save'),
+                  child:  Text(tr('Save')),
                 ),
               ],
             );
@@ -1507,7 +1509,7 @@ class _CitiesScreenState extends State<CitiesScreen> {
                                       onPressed: () {
                                         Navigator.pop(sheetContext);
                                       },
-                                      child: const Text('Cancel', style: TextStyle(color: headerTextColor, fontWeight: FontWeight.bold)),
+                                      child:  Text(tr('Cancel'), style: TextStyle(color: headerTextColor, fontWeight: FontWeight.bold)),
                                     ),
                                     ElevatedButton(
                                       onPressed: () {
@@ -1516,7 +1518,7 @@ class _CitiesScreenState extends State<CitiesScreen> {
                                       style: ElevatedButton.styleFrom(
                                         backgroundColor: headerTextColor,
                                       ),
-                                      child: Text('Done', style: TextStyle(fontWeight: FontWeight.bold, color: headerColor)),
+                                      child: Text(tr('Done'), style: TextStyle(fontWeight: FontWeight.bold, color: headerColor)),
                                     ),
                                   ],
                                 ),
@@ -1554,7 +1556,7 @@ class _CitiesScreenState extends State<CitiesScreen> {
                                 ),
                                 const SizedBox(height: 6),
                                 Text(
-                                  '$countryName | Lived: ${hasLived ? 'Yes' : 'No'} | Home: ${isHome ? 'Yes' : 'No'} | Wishlist: ${isWishlisted ? 'Yes' : 'No'}',
+                                  tr('$countryName | Lived: ${hasLived ? 'Yes' : 'No'} | Home: ${isHome ? 'Yes' : 'No'} | Wishlist: ${isWishlisted ? 'Yes' : 'No'}'),
                                   style: Theme.of(context).textTheme.titleSmall?.copyWith(color: headerTextColor.withOpacity(0.8)),
                                 ),
                               ],
@@ -1609,7 +1611,7 @@ class _CitiesScreenState extends State<CitiesScreen> {
                 },
               ),
               const SizedBox(width: 6),
-              const Text('Lived:', style: TextStyle(fontSize: 14)),
+               Text(tr('Lived:'), style: TextStyle(fontSize: 14)),
               const SizedBox(width: 4),
               Checkbox(
                 visualDensity: VisualDensity.compact,
@@ -1644,12 +1646,12 @@ class _CitiesScreenState extends State<CitiesScreen> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                'History ($visitedCount visits, $totalDuration days)',
+                tr('History ($visitedCount visits, $totalDuration days)'),
                 style: Theme.of(context).textTheme.titleSmall,
               ),
               OutlinedButton.icon(
                 icon: const Icon(Icons.add),
-                label: const Text('Add Visit'),
+                label:  Text(tr('Add Visit')),
                 onPressed: () {
                   provider.addCityDateRange(city.name);
                 },
@@ -1673,7 +1675,7 @@ class _CitiesScreenState extends State<CitiesScreen> {
               );
             }).toList()
           else
-            const Center(child: Text('No visits recorded.')),
+             Center(child: Text(tr('No visits recorded.'))),
         ],
       ),
     );
@@ -1829,7 +1831,7 @@ class _CitiesScreenState extends State<CitiesScreen> {
         children: [
           Container(width: 12, height: 12, color: color),
           const SizedBox(width: 6),
-          Text(name, style: const TextStyle(fontSize: 10)),
+          Text(tr(name), style: const TextStyle(fontSize: 10)),
         ],
       ),
     );
@@ -1891,9 +1893,9 @@ class _CitiesScreenState extends State<CitiesScreen> {
       showDialog(
         context: context,
         builder: (context) => AlertDialog(
-          title: const Text('Invalid Input'),
-          content: Text(message),
-          actions: [TextButton(onPressed: () => Navigator.pop(context), child: const Text('OK'))],
+          title:  Text(tr('Invalid Input')),
+          content: Text(tr(message)),
+          actions: [TextButton(onPressed: () => Navigator.pop(context), child:  Text(tr('OK')))],
         ),
       );
     }
@@ -2006,7 +2008,7 @@ class _CitiesScreenState extends State<CitiesScreen> {
           showDialog(
             context: context,
             builder: (context) => AlertDialog(
-              title: const Text('Pick a color'),
+              title:  Text(tr('Pick a color')),
               content: SingleChildScrollView(
                 child: ColorPicker(
                   pickerColor: currentColor,
@@ -2015,7 +2017,7 @@ class _CitiesScreenState extends State<CitiesScreen> {
               ),
               actions: <Widget>[
                 ElevatedButton(
-                  child: const Text('Select'),
+                  child:  Text(tr('Select')),
                   onPressed: () => Navigator.of(context).pop(),
                 ),
               ],
@@ -2041,7 +2043,7 @@ class _CitiesScreenState extends State<CitiesScreen> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(label),
+            Text(tr(label)),
             buildColorPicker(currentColor, onColorChanged),
           ],
         ),
@@ -2052,11 +2054,11 @@ class _CitiesScreenState extends State<CitiesScreen> {
       return Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text('Home & Lived Colors', style: TextStyle(fontWeight: FontWeight.bold)),
+           Text(tr('Home & Lived Colors'), style: TextStyle(fontWeight: FontWeight.bold)),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const Text('Show Home Color'),
+               Text(tr('Show Home Color')),
               Switch(
                 value: tempShowHome,
                 onChanged: (value) => setStateDialog(() => tempShowHome = value),
@@ -2069,7 +2071,7 @@ class _CitiesScreenState extends State<CitiesScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const Text('Show Lived Color'),
+               Text(tr('Show Lived Color')),
               Switch(
                 value: tempShowLived,
                 onChanged: (value) => setStateDialog(() => tempShowLived = value),
@@ -2079,11 +2081,11 @@ class _CitiesScreenState extends State<CitiesScreen> {
           if (tempShowLived)
             buildColorPickerRow('Lived Color', tempLivedColor, (color) => setStateDialog(() => tempLivedColor = color)),
           const Divider(),
-          const Text('Wishlist', style: TextStyle(fontWeight: FontWeight.bold)),
+           Text(tr('Wishlist'), style: TextStyle(fontWeight: FontWeight.bold)),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const Text('Show Wishlist'),
+               Text(tr('Show Wishlist')),
               Switch(
                 value: tempShowWishlist,
                 onChanged: (value) => setStateDialog(() => tempShowWishlist = value),
@@ -2104,17 +2106,17 @@ class _CitiesScreenState extends State<CitiesScreen> {
         return StatefulBuilder(
           builder: (context, setStateDialog) {
             return AlertDialog(
-              title: const Text('City Map Color Settings'),
+              title:  Text(tr('City Map Color Settings')),
               content: SingleChildScrollView(
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text('Marker Style', style: TextStyle(fontWeight: FontWeight.bold)),
+                     Text(tr('Marker Style'), style: TextStyle(fontWeight: FontWeight.bold)),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        const Text('Show Flags instead of Dots'),
+                         Text(tr('Show Flags instead of Dots')),
                         Switch(
                           value: tempShowFlags,
                           onChanged: (val) => setStateDialog(() => tempShowFlags = val),
@@ -2123,11 +2125,11 @@ class _CitiesScreenState extends State<CitiesScreen> {
                     ),
                     const Divider(),
 
-                    const Text('Marker Sizing', style: TextStyle(fontWeight: FontWeight.bold)),
+                     Text(tr('Marker Sizing'), style: TextStyle(fontWeight: FontWeight.bold)),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        const Text('By Population'),
+                         Text(tr('By Population')),
                         Switch(
                           value: tempSizingMode == SizingMode.population,
                           onChanged: (val) => updateSizingMode(setStateDialog, SizingMode.population, val),
@@ -2137,7 +2139,7 @@ class _CitiesScreenState extends State<CitiesScreen> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        const Text('By Duration'),
+                         Text(tr('By Duration')),
                         Switch(
                           value: tempSizingMode == SizingMode.duration,
                           onChanged: (val) => updateSizingMode(setStateDialog, SizingMode.duration, val),
@@ -2147,7 +2149,7 @@ class _CitiesScreenState extends State<CitiesScreen> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        const Text('By Visit Count'),
+                         Text(tr('By Visit Count')),
                         Switch(
                           value: tempSizingMode == SizingMode.visitCount,
                           onChanged: (val) => updateSizingMode(setStateDialog, SizingMode.visitCount, val),
@@ -2160,7 +2162,7 @@ class _CitiesScreenState extends State<CitiesScreen> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           const SizedBox(height: 8),
-                          Text('Fixed Marker Size: ${tempFixedMarkerRadius.toStringAsFixed(1)} (1.0 ~ 6.0)'),
+                          Text(tr('Fixed Marker Size: ${tempFixedMarkerRadius.toStringAsFixed(1)} (1.0 ~ 6.0)')),
                           Slider(
                             value: tempFixedMarkerRadius,
                             min: 1.0,
@@ -2177,9 +2179,9 @@ class _CitiesScreenState extends State<CitiesScreen> {
                       ),
                     const Divider(),
                     buildHomeLivedSettings(setStateDialog),
-                    const Text('Color Mode', style: TextStyle(fontWeight: FontWeight.bold)),
+                     Text(tr('Color Mode'), style: TextStyle(fontWeight: FontWeight.bold)),
                     RadioListTile<CitiesColorMode>(
-                      title: const Text('Same Color'),
+                      title:  Text(tr('Same Color')),
                       value: CitiesColorMode.sameColor,
                       groupValue: tempColorMode,
                       onChanged: (value) => setStateDialog(() => tempColorMode = value!),
@@ -2190,38 +2192,38 @@ class _CitiesScreenState extends State<CitiesScreen> {
                         child: buildColorPickerRow('Visited Cities Color', tempSameColor, (color) => setStateDialog(() => tempSameColor = color)),
                       ),
                     RadioListTile<CitiesColorMode>(
-                      title: const Text('By Visits'),
+                      title:  Text(tr('By Visits')),
                       value: CitiesColorMode.byVisits,
                       groupValue: tempColorMode,
                       onChanged: (value) => setStateDialog(() => tempColorMode = value!),
                     ),
                     RadioListTile<CitiesColorMode>(
-                      title: const Text('By Duration'),
+                      title:  Text(tr('By Duration')),
                       value: CitiesColorMode.byDuration,
                       groupValue: tempColorMode,
                       onChanged: (value) => setStateDialog(() => tempColorMode = value!),
                     ),
                     RadioListTile<CitiesColorMode>(
-                      title: const Text('By Rating'),
+                      title:  Text(tr('By Rating')),
                       value: CitiesColorMode.byRating,
                       groupValue: tempColorMode,
                       onChanged: (value) => setStateDialog(() => tempColorMode = value!),
                     ),
                     RadioListTile<CitiesColorMode>(
-                      title: const Text('By Continent'),
+                      title:  Text(tr('By Continent')),
                       value: CitiesColorMode.byContinent,
                       groupValue: tempColorMode,
                       onChanged: (value) => setStateDialog(() => tempColorMode = value!),
                     ),
                     RadioListTile<CitiesColorMode>(
-                      title: const Text('By Subregion'),
+                      title:  Text(tr('By Subregion')),
                       value: CitiesColorMode.bySubregion,
                       groupValue: tempColorMode,
                       onChanged: (value) => setStateDialog(() => tempColorMode = value!),
                     ),
                     const Divider(),
                     if (tempColorMode == CitiesColorMode.byVisits) ...[
-                      const Text('Visit Count Ranges', style: TextStyle(fontWeight: FontWeight.bold)),
+                       Text(tr('Visit Count Ranges'), style: TextStyle(fontWeight: FontWeight.bold)),
                       ...List.generate(tempByVisitRanges.length, (index) {
                         final range = tempByVisitRanges[index];
                         return Padding(
@@ -2233,14 +2235,14 @@ class _CitiesScreenState extends State<CitiesScreen> {
                                 child: TextFormField(
                                   controller: range.controller,
                                   decoration: InputDecoration(
-                                    labelText: index < tempByVisitRanges.length - 1 ? 'From' : 'From (and up)',
+                                    labelText: tr(index < tempByVisitRanges.length - 1 ? 'From' : 'From (and up)'),
                                     isDense: true,
                                   ),
                                   keyboardType: TextInputType.number,
                                 ),
                               ),
                               const SizedBox(width: 10),
-                              const Expanded(flex: 2, child: Text("Visits")),
+                               Expanded(flex: 2, child: Text(tr("Visits"))),
                               buildColorPicker(range.color, (newColor) => setStateDialog(() => range.color = newColor)),
                             ],
                           ),
@@ -2256,7 +2258,7 @@ class _CitiesScreenState extends State<CitiesScreen> {
                                 tempByVisitRanges.removeLast();
                               }),
                             ),
-                          Text('${tempByVisitRanges.length} Categories'),
+                          Text(tr('${tempByVisitRanges.length} Categories')),
                           if (tempByVisitRanges.length < 10)
                             IconButton(
                               icon: const Icon(Icons.add_circle, color: Colors.green),
@@ -2270,7 +2272,7 @@ class _CitiesScreenState extends State<CitiesScreen> {
                     ],
 
                     if (tempColorMode == CitiesColorMode.byDuration) ...[
-                      const Text('Visit Duration Ranges (in days)', style: TextStyle(fontWeight: FontWeight.bold)),
+                       Text(tr('Visit Duration Ranges (in days)'), style: TextStyle(fontWeight: FontWeight.bold)),
                       buildColorPickerRow('Unknown / Invalid Duration', tempUnknownDurationColor, (color) => setStateDialog(() => tempUnknownDurationColor = color)),
                       const Divider(),
                       ...List.generate(tempByDurationRanges.length, (index) {
@@ -2286,7 +2288,7 @@ class _CitiesScreenState extends State<CitiesScreen> {
                                 child: TextFormField(
                                   controller: range.controller,
                                   decoration: InputDecoration(
-                                    labelText: index < tempByDurationRanges.length - 1 ? 'From' : 'From (and up)',
+                                    labelText: tr(index < tempByDurationRanges.length - 1 ? 'From' : 'From (and up)'),
                                     isDense: true,
                                     filled: isFixedZero,
                                     fillColor: isFixedZero ? Colors.grey.shade200 : null,
@@ -2296,7 +2298,7 @@ class _CitiesScreenState extends State<CitiesScreen> {
                                 ),
                               ),
                               const SizedBox(width: 10),
-                              const Expanded(flex: 2, child: Text("Days")),
+                               Expanded(flex: 2, child: Text(tr("Days"))),
                               buildColorPicker(range.color, (newColor) => setStateDialog(() => range.color = newColor)),
                             ],
                           ),
@@ -2312,7 +2314,7 @@ class _CitiesScreenState extends State<CitiesScreen> {
                                 tempByDurationRanges.removeLast();
                               }),
                             ),
-                          Text('${tempByDurationRanges.length} Categories'),
+                          Text(tr('${tempByDurationRanges.length} Categories')),
                           if (tempByDurationRanges.length < 10)
                             IconButton(
                               icon: const Icon(Icons.add_circle, color: Colors.green),
@@ -2327,7 +2329,7 @@ class _CitiesScreenState extends State<CitiesScreen> {
                     ],
 
                     if (tempColorMode == CitiesColorMode.byRating) ...[
-                      const Text('Rating Categories', style: TextStyle(fontWeight: FontWeight.bold)),
+                       Text(tr('Rating Categories'), style: TextStyle(fontWeight: FontWeight.bold)),
                       buildColorPickerRow('Unknown Rating', tempUnknownRatingColor, (color) => setStateDialog(() => tempUnknownRatingColor = color)),
                       const Divider(),
                       ...List.generate(tempByRatingRanges.length, (index) {
@@ -2340,7 +2342,7 @@ class _CitiesScreenState extends State<CitiesScreen> {
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text(index < tempByRatingRanges.length - 1 ? "From" : "From (and up)", style: TextStyle(fontSize: 12, color: Colors.grey.shade600)),
+                                  Text(tr(index < tempByRatingRanges.length - 1 ? "From" : "From (and up)"), style: TextStyle(fontSize: 12, color: Colors.grey.shade600)),
                                   RatingBar.builder(
                                     initialRating: category.rating,
                                     minRating: 0.5,
@@ -2368,7 +2370,7 @@ class _CitiesScreenState extends State<CitiesScreen> {
                                 tempByRatingRanges.removeLast();
                               }),
                             ),
-                          Text('${tempByRatingRanges.length} Categories'),
+                          Text(tr('${tempByRatingRanges.length} Categories')),
                           if (tempByRatingRanges.length < 10)
                             IconButton(
                               icon: const Icon(Icons.add_circle, color: Colors.green),
@@ -2381,7 +2383,7 @@ class _CitiesScreenState extends State<CitiesScreen> {
                       ),
                     ],
                     if (tempColorMode == CitiesColorMode.byContinent) ...[
-                      const Text('Continent Colors', style: TextStyle(fontWeight: FontWeight.bold)),
+                       Text(tr('Continent Colors'), style: TextStyle(fontWeight: FontWeight.bold)),
                       ...tempByContinentColors.entries.map((entry) => buildColorPickerRow(
                         entry.key,
                         entry.value,
@@ -2390,7 +2392,7 @@ class _CitiesScreenState extends State<CitiesScreen> {
                     ],
 
                     if (tempColorMode == CitiesColorMode.bySubregion) ...[
-                      const Text('Subregion Colors', style: TextStyle(fontWeight: FontWeight.bold)),
+                       Text(tr('Subregion Colors'), style: TextStyle(fontWeight: FontWeight.bold)),
                       ...tempBySubregionColors.entries.map((entry) => buildColorPickerRow(
                         entry.key,
                         entry.value,
@@ -2412,7 +2414,7 @@ class _CitiesScreenState extends State<CitiesScreen> {
                             backgroundColor: Theme.of(context).buttonTheme.colorScheme?.secondary ?? Theme.of(context).primaryColor,
                             foregroundColor: Colors.white,
                           ),
-                          child: const Text('Defaults', style: TextStyle(fontSize: 8)),
+                          child:  Text(tr('Defaults'), style: TextStyle(fontSize: 8)),
                           onPressed: () {
                             setStateDialog(() {
                               tempSizingMode = SizingMode.population;
@@ -2512,7 +2514,7 @@ class _CitiesScreenState extends State<CitiesScreen> {
                       child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 2.0),
                         child: ElevatedButton(
-                          child: const Text('Cancel', style: TextStyle(fontSize: 9)),
+                          child:  Text(tr('Cancel'), style: TextStyle(fontSize: 9)),
                           onPressed: () => Navigator.pop(context),
                         ),
                       ),
@@ -2525,7 +2527,7 @@ class _CitiesScreenState extends State<CitiesScreen> {
                             backgroundColor: Theme.of(context).primaryColor,
                             foregroundColor: Colors.white,
                           ),
-                          child: const Text('Done', style: TextStyle(fontSize: 9)),
+                          child:  Text(tr('Done'), style: TextStyle(fontSize: 9)),
                           onPressed: validateAndSave,
                         ),
                       ),
@@ -2554,6 +2556,7 @@ class _StarRating extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return RatingBar.builder(
       initialRating: rating,
       minRating: 0.5,
@@ -2599,6 +2602,7 @@ class CityVisitControlTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final cityProvider = context.watch<CityProvider>();
     final isVisited = cityProvider.isVisited(city.name);
 
@@ -2635,7 +2639,7 @@ class CityVisitControlTile extends StatelessWidget {
                     Text(city.name, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
                     const SizedBox(height: 2),
                     Text(
-                        '$countryName  ${NumberFormat.compact().format(city.population)}',
+                        tr('$countryName  ${NumberFormat.compact().format(city.population)}'),
                         style: TextStyle(color: Colors.grey.shade600, fontSize: 12)
                     ),
                   ],
@@ -2649,7 +2653,7 @@ class CityVisitControlTile extends StatelessWidget {
                     icon: const Icon(Icons.explore, size: 20),
                     visualDensity: VisualDensity.compact,
                     onPressed: onCenterMap,
-                    tooltip: 'Center map',
+                    tooltip: tr('Center map'),
                   ),
                   if (showWishlistControls)
                     IconButton(
@@ -2660,7 +2664,7 @@ class CityVisitControlTile extends StatelessWidget {
                       ),
                       visualDensity: VisualDensity.compact,
                       onPressed: onToggleWishlist,
-                      tooltip: isWishlisted ? 'Remove from wishlist' : 'Add to wishlist',
+                      tooltip: tr(isWishlisted ? 'Remove from wishlist' : 'Add to wishlist'),
                     ),
                 ],
               ),
@@ -2776,7 +2780,7 @@ class _CityVisitDetailEditorSheetState extends State<_CityVisitDetailEditorSheet
       final departureDate = DateTime(_departureYear!, _departureMonth!, _departureDay!);
       if (departureDate.isBefore(arrivalDate)) {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Departure date cannot be before arrival date.')),
+           SnackBar(content: Text(tr('Departure date cannot be before arrival date.'))),
         );
         return;
       }
@@ -2858,6 +2862,7 @@ class _CityVisitDetailEditorSheetState extends State<_CityVisitDetailEditorSheet
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final int? calculatedDuration = _calculateDuration();
     final int? finalDuration = widget.range.userDefinedDuration ?? calculatedDuration;
     final String durationText = finalDuration?.toString() ?? (widget.range.isDurationUnknown ? 'Unknown' : '');
@@ -2884,9 +2889,9 @@ class _CityVisitDetailEditorSheetState extends State<_CityVisitDetailEditorSheet
       elevation: 1,
       child: ExpansionTile(
         controller: _expansionTileController,
-        title: Text(widget.range.title.isNotEmpty ? widget.range.title : 'Visit Record'),
-        subtitle: Text('${widget.range.arrival != null ? DateFormat('yyyy-MM-dd').format(widget.range.arrival!) : 'Unknown'} - '
-            '${widget.range.departure != null ? DateFormat('yyyy-MM-dd').format(widget.range.departure!) : 'Unknown'} (Duration: $durationText days)'),
+        title: Text(tr(widget.range.title.isNotEmpty ? widget.range.title : 'Visit Record')),
+        subtitle: Text(tr('${widget.range.arrival != null ? DateFormat('yyyy-MM-dd').format(widget.range.arrival!) : 'Unknown'} - '
+            '${widget.range.departure != null ? DateFormat('yyyy-MM-dd').format(widget.range.departure!) : 'Unknown'} (Duration: $durationText days)')),
         trailing: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -2904,7 +2909,7 @@ class _CityVisitDetailEditorSheetState extends State<_CityVisitDetailEditorSheet
               children: [
                 TextField(
                   controller: _titleController,
-                  decoration: const InputDecoration(labelText: 'Title', border: OutlineInputBorder()),
+                  decoration:  InputDecoration(labelText: tr('Title'), border: OutlineInputBorder()),
                   onChanged: (val) {
                     final updatedRange = widget.range.copyWith(title: val);
                     widget.onSave(updatedRange);
@@ -2913,7 +2918,7 @@ class _CityVisitDetailEditorSheetState extends State<_CityVisitDetailEditorSheet
                 const SizedBox(height: 12),
                 TextField(
                   controller: _memoController,
-                  decoration: const InputDecoration(labelText: 'Memo', border: const OutlineInputBorder()),
+                  decoration:  InputDecoration(labelText: tr('Memo'), border: const OutlineInputBorder()),
                   maxLines: 3,
                   onChanged: (val) {
                     final updatedRange = widget.range.copyWith(memo: val);
@@ -2921,7 +2926,7 @@ class _CityVisitDetailEditorSheetState extends State<_CityVisitDetailEditorSheet
                   },
                 ),
                 const SizedBox(height: 16),
-                const Text('Photos:', style: TextStyle(fontWeight: FontWeight.bold)),
+                 Text(tr('Photos:'), style: TextStyle(fontWeight: FontWeight.bold)),
                 const SizedBox(height: 8),
                 Wrap(
                   spacing: 10,
@@ -2935,8 +2940,8 @@ class _CityVisitDetailEditorSheetState extends State<_CityVisitDetailEditorSheet
                             child: Column(
                               mainAxisSize: MainAxisSize.min,
                               children: <Widget>[
-                                ListTile(leading: const Icon(Icons.photo_library), title: const Text('Photo Library'), onTap: () { Navigator.pop(modalContext); _pickImage(ImageSource.gallery); }),
-                                ListTile(leading: const Icon(Icons.photo_camera), title: const Text('Camera'), onTap: () { Navigator.pop(modalContext); _pickImage(ImageSource.camera); }),
+                                ListTile(leading: const Icon(Icons.photo_library), title:  Text(tr('Photo Library')), onTap: () { Navigator.pop(modalContext); _pickImage(ImageSource.gallery); }),
+                                ListTile(leading: const Icon(Icons.photo_camera), title:  Text(tr('Camera')), onTap: () { Navigator.pop(modalContext); _pickImage(ImageSource.camera); }),
                               ],
                             ),
                           ),
@@ -2982,7 +2987,7 @@ class _CityVisitDetailEditorSheetState extends State<_CityVisitDetailEditorSheet
                 const SizedBox(height: 12),
                 TextField(
                   controller: _durationController,
-                  decoration: const InputDecoration(labelText: 'Duration (days)', border: OutlineInputBorder()),
+                  decoration:  InputDecoration(labelText: tr('Duration (days)'), border: OutlineInputBorder()),
                   keyboardType: TextInputType.number,
                   inputFormatters: [FilteringTextInputFormatter.digitsOnly],
                   onChanged: (val) {
@@ -3000,7 +3005,7 @@ class _CityVisitDetailEditorSheetState extends State<_CityVisitDetailEditorSheet
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          const Text('Transfer'),
+                           Text(tr('Transfer')),
                           Checkbox(
                             value: _isTransfer,
                             onChanged: (val) {
@@ -3015,7 +3020,7 @@ class _CityVisitDetailEditorSheetState extends State<_CityVisitDetailEditorSheet
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          const Text('Layover'),
+                           Text(tr('Layover')),
                           Checkbox(
                             value: _isLayover,
                             onChanged: (val) {
@@ -3035,7 +3040,7 @@ class _CityVisitDetailEditorSheetState extends State<_CityVisitDetailEditorSheet
                       child: OutlinedButton(
                         onPressed: widget.onDelete,
                         style: OutlinedButton.styleFrom(padding: const EdgeInsets.symmetric(vertical: 12)),
-                        child: const Text('Delete', style: TextStyle(color: Colors.red)),
+                        child:  Text(tr('Delete'), style: TextStyle(color: Colors.red)),
                       ),
                     ),
                     const SizedBox(width: 8),
@@ -3043,7 +3048,7 @@ class _CityVisitDetailEditorSheetState extends State<_CityVisitDetailEditorSheet
                       child: ElevatedButton(
                         onPressed: _handleSave,
                         style: ElevatedButton.styleFrom(padding: const EdgeInsets.symmetric(vertical: 12)),
-                        child: const Text('Save'),
+                        child:  Text(tr('Save')),
                       ),
                     ),
                   ],
@@ -3076,7 +3081,7 @@ class _CityVisitDetailEditorSheetState extends State<_CityVisitDetailEditorSheet
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(label, style: Theme.of(context).textTheme.titleSmall),
+        Text(tr(label), style: Theme.of(context).textTheme.titleSmall),
         const SizedBox(height: 8),
         Row(
           children: [
@@ -3103,14 +3108,14 @@ class _CityVisitDetailEditorSheetState extends State<_CityVisitDetailEditorSheet
       value: value,
       isDense: true,
       decoration: InputDecoration(
-          labelText: hint,
+          labelText: tr(hint),
           border: const OutlineInputBorder(),
           contentPadding: const EdgeInsets.symmetric(horizontal: 10, vertical: 12)),
       items: items
           .map((item) => DropdownMenuItem<T>(
         value: item,
         child: Text(
-          item?.toString() ?? 'Unknown',
+          tr(item?.toString() ?? 'Unknown'),
           style: TextStyle(
             fontSize: (item == null) ? 11.0 : 15.0,
             color: (item == null) ? Colors.grey.shade600 : null,
@@ -3186,7 +3191,7 @@ void showExternalCityDetailsModal(BuildContext context, City city) {
         return StatefulBuilder(
           builder: (context, setStateDialog) {
             return AlertDialog(
-              title: Text('Memo & Photos for $cityName'),
+              title: Text(tr('Memo & Photos for $cityName', entities: [cityName])),
               content: SingleChildScrollView(
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
@@ -3195,13 +3200,13 @@ void showExternalCityDetailsModal(BuildContext context, City city) {
                     TextFormField(
                       controller: memoController,
                       maxLines: 3,
-                      decoration: const InputDecoration(
-                        labelText: 'Memo',
+                      decoration:  InputDecoration(
+                        labelText: tr('Memo'),
                         border: OutlineInputBorder(),
                       ),
                     ),
                     const SizedBox(height: 16),
-                    const Text('Photos:', style: TextStyle(fontWeight: FontWeight.bold)),
+                     Text(tr('Photos:'), style: TextStyle(fontWeight: FontWeight.bold)),
                     const SizedBox(height: 8),
                     Wrap(
                       spacing: 10,
@@ -3217,7 +3222,7 @@ void showExternalCityDetailsModal(BuildContext context, City city) {
                                   children: [
                                     ListTile(
                                       leading: const Icon(Icons.photo_library),
-                                      title: const Text('Photo Library'),
+                                      title:  Text(tr('Photo Library')),
                                       onTap: () {
                                         Navigator.pop(modalContext);
                                         pickImage(ImageSource.gallery, setStateDialog);
@@ -3225,7 +3230,7 @@ void showExternalCityDetailsModal(BuildContext context, City city) {
                                     ),
                                     ListTile(
                                       leading: const Icon(Icons.photo_camera),
-                                      title: const Text('Camera'),
+                                      title:  Text(tr('Camera')),
                                       onTap: () {
                                         Navigator.pop(modalContext);
                                         pickImage(ImageSource.camera, setStateDialog);
@@ -3258,14 +3263,14 @@ void showExternalCityDetailsModal(BuildContext context, City city) {
               actions: [
                 TextButton(
                   onPressed: () => Navigator.pop(dialogContext),
-                  child: const Text('Cancel'),
+                  child:  Text(tr('Cancel')),
                 ),
                 ElevatedButton(
                   onPressed: () {
                     onSave(memoController.text, currentPhotos);
                     Navigator.pop(dialogContext);
                   },
-                  child: const Text('Save'),
+                  child:  Text(tr('Save')),
                 ),
               ],
             );
@@ -3356,7 +3361,7 @@ void showExternalCityDetailsModal(BuildContext context, City city) {
                                     onPressed: () {
                                       Navigator.pop(sheetContext);
                                     },
-                                    child: const Text('Cancel', style: TextStyle(color: headerTextColor, fontWeight: FontWeight.bold)),
+                                    child:  Text(tr('Cancel'), style: TextStyle(color: headerTextColor, fontWeight: FontWeight.bold)),
                                   ),
                                   ElevatedButton(
                                     onPressed: () {
@@ -3365,7 +3370,7 @@ void showExternalCityDetailsModal(BuildContext context, City city) {
                                     style: ElevatedButton.styleFrom(
                                       backgroundColor: headerTextColor,
                                     ),
-                                    child: Text('Done', style: TextStyle(fontWeight: FontWeight.bold, color: headerColor)),
+                                    child: Text(tr('Done'), style: TextStyle(fontWeight: FontWeight.bold, color: headerColor)),
                                   ),
                                 ],
                               ),
@@ -3403,7 +3408,7 @@ void showExternalCityDetailsModal(BuildContext context, City city) {
                               ),
                               const SizedBox(height: 6),
                               Text(
-                                '$countryName | Lived: ${hasLived ? 'Yes' : 'No'} | Home: ${isHome ? 'Yes' : 'No'} | Wishlist: ${isWishlisted ? 'Yes' : 'No'}',
+                                tr('$countryName | Lived: ${hasLived ? 'Yes' : 'No'} | Home: ${isHome ? 'Yes' : 'No'} | Wishlist: ${isWishlisted ? 'Yes' : 'No'}'),
                                 style: Theme.of(context).textTheme.titleSmall?.copyWith(color: headerTextColor.withOpacity(0.8)),
                               ),
                             ],
@@ -3434,7 +3439,7 @@ void showExternalCityDetailsModal(BuildContext context, City city) {
                                   },
                                 ),
                                 const SizedBox(width: 6),
-                                const Text('Lived:', style: TextStyle(fontSize: 14)),
+                                 Text(tr('Lived:'), style: TextStyle(fontSize: 14)),
                                 const SizedBox(width: 4),
                                 Checkbox(
                                   visualDensity: VisualDensity.compact,
@@ -3469,12 +3474,12 @@ void showExternalCityDetailsModal(BuildContext context, City city) {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
-                                  'History ($visitedCount visits, $totalDuration days)',
+                                  tr('History ($visitedCount visits, $totalDuration days)'),
                                   style: Theme.of(context).textTheme.titleSmall,
                                 ),
                                 OutlinedButton.icon(
                                   icon: const Icon(Icons.add),
-                                  label: const Text('Add Visit'),
+                                  label:  Text(tr('Add Visit')),
                                   onPressed: () {
                                     provider.addCityDateRange(city.name);
                                   },
@@ -3498,7 +3503,7 @@ void showExternalCityDetailsModal(BuildContext context, City city) {
                                 );
                               }).toList()
                             else
-                              const Center(child: Text('No visits recorded.')),
+                               Center(child: Text(tr('No visits recorded.'))),
                           ],
                         ),
                       ),

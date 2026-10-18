@@ -2,6 +2,7 @@
 
 import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:jidoapp/models/country_model.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:jidoapp/models/visa_data_model.dart';
@@ -222,7 +223,7 @@ class _PassportScreenState extends State<PassportScreen> {
 
   InputDecoration _inputDecoration(String label, IconData icon) {
     return InputDecoration(
-      labelText: label,
+      labelText: tr(label),
       labelStyle: TextStyle(color: Colors.grey[600], fontWeight: FontWeight.w500),
       prefixIcon: Icon(icon, color: purple),
       filled: true,
@@ -245,6 +246,7 @@ class _PassportScreenState extends State<PassportScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return DefaultTabController(
       length: 2,
       child: Scaffold(
@@ -252,15 +254,15 @@ class _PassportScreenState extends State<PassportScreen> {
         body: SafeArea(
           child: Column(
             children: [
-              const TabBar(
+               TabBar(
                 labelColor: purple,
                 unselectedLabelColor: Colors.grey,
                 indicatorColor: purple,
                 indicatorWeight: 3,
                 labelStyle: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
                 tabs: [
-                  Tab(text: 'My Passport'),
-                  Tab(text: 'Global Rankings'),
+                  Tab(text: tr('My Passport')),
+                  Tab(text: tr('Global Rankings')),
                 ],
               ),
               Expanded(
@@ -354,7 +356,7 @@ class _PassportScreenState extends State<PassportScreen> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'Nationality',
+            tr('Nationality'),
             style: TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.bold,
@@ -380,7 +382,7 @@ class _PassportScreenState extends State<PassportScreen> {
                   return DropdownMenuItem<String>(
                     value: item.key,
                     child: Text(
-                      item.value,
+                      tr(item.value),
                       style: const TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.w600,
@@ -437,7 +439,7 @@ class _PassportScreenState extends State<PassportScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        displayName,
+                        tr(displayName),
                         style: const TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.w800,
@@ -463,8 +465,8 @@ class _PassportScreenState extends State<PassportScreen> {
             height: 50,
             child: ElevatedButton.icon(
               icon: const Icon(Icons.map_outlined, color: Colors.white),
-              label: const Text(
-                'View Visa Map',
+              label:  Text(
+                tr('View Visa Map'),
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.white),
               ),
               style: ElevatedButton.styleFrom(
@@ -496,12 +498,12 @@ class _PassportScreenState extends State<PassportScreen> {
     return Row(
       children: [
         Text(
-          label,
+          tr(label),
           style: TextStyle(fontSize: 14, color: Colors.grey[600], fontWeight: FontWeight.w500),
         ),
         const Spacer(),
         Text(
-          value,
+          tr(value),
           style: const TextStyle(fontSize: 15, color: Colors.black87, fontWeight: FontWeight.w700),
         ),
       ],
@@ -517,7 +519,7 @@ class _PassportScreenState extends State<PassportScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Personal Details',
+              tr('Personal Details'),
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
@@ -563,7 +565,7 @@ class _PassportScreenState extends State<PassportScreen> {
                     items: ['Male', 'Female', 'Other'].map((String value) {
                       return DropdownMenuItem<String>(
                         value: value,
-                        child: Text(value),
+                        child: Text(tr(value)),
                       );
                     }).toList(),
                     onChanged: (newValue) {
@@ -606,8 +608,8 @@ class _PassportScreenState extends State<PassportScreen> {
               height: 50,
               child: ElevatedButton.icon(
                 icon: const Icon(Icons.save_alt_rounded, color: Colors.white),
-                label: const Text(
-                  'Save Details',
+                label:  Text(
+                  tr('Save Details'),
                   style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16),
                 ),
                 style: ElevatedButton.styleFrom(
@@ -710,7 +712,7 @@ class _PassportScreenState extends State<PassportScreen> {
               Icon(Icons.credit_card_off_outlined, size: 48, color: Colors.grey[300]),
               const SizedBox(height: 12),
               Text(
-                'No saved details',
+                tr('No saved details'),
                 style: TextStyle(color: Colors.grey[500], fontWeight: FontWeight.w500),
               ),
             ],
@@ -750,13 +752,13 @@ class _PassportScreenState extends State<PassportScreen> {
               child: const Icon(Icons.person_rounded, color: purple),
             ),
             title: Text(
-              passport.passportNumber,
+              tr(passport.passportNumber),
               style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
             ),
             subtitle: Padding(
               padding: const EdgeInsets.only(top: 4),
               child: Text(
-                '${passport.surname.toUpperCase()}, ${passport.givenNames}\nExpires: ${passport.expiryDate}',
+                tr('${passport.surname.toUpperCase()}, ${passport.givenNames}\nExpires: ${passport.expiryDate}'),
                 style: TextStyle(color: Colors.grey[600], fontSize: 13, height: 1.4),
               ),
             ),
@@ -794,7 +796,7 @@ class _PassportScreenState extends State<PassportScreen> {
 
           final name = countryProvider.isoToCountryNameMap[entry.key] ?? entry.value.passportName;
           final query = _searchQuery.toLowerCase();
-          return name.toLowerCase().contains(query);
+          return AppLocale.instance.matchesCountry(name, query);
         }).toList();
 
         filteredPassportList.sort((a, b) {
@@ -833,7 +835,7 @@ class _PassportScreenState extends State<PassportScreen> {
               child: TextField(
                 controller: _searchController,
                 decoration: InputDecoration(
-                  hintText: 'Search country...',
+                  hintText: tr('Search country...'),
                   prefixIcon: const Icon(Icons.search, color: Colors.grey),
                   filled: true,
                   fillColor: Colors.grey[100],
@@ -904,7 +906,7 @@ class _PassportScreenState extends State<PassportScreen> {
                           shape: BoxShape.circle,
                         ),
                         child: Text(
-                          '#$rank',
+                          tr('#$rank'),
                           style: TextStyle(
                             fontWeight: FontWeight.w800,
                             color: isMyPassport
@@ -918,7 +920,7 @@ class _PassportScreenState extends State<PassportScreen> {
                         children: [
                           Flexible(
                             child: Text(
-                              displayName,
+                              tr(displayName),
                               style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                               overflow: TextOverflow.ellipsis,
                             ),
@@ -931,8 +933,8 @@ class _PassportScreenState extends State<PassportScreen> {
                                 color: purple.withOpacity(0.1),
                                 borderRadius: BorderRadius.circular(6),
                               ),
-                              child: const Text(
-                                'ME',
+                              child:  Text(
+                                tr('ME'),
                                 style: TextStyle(
                                     color: purple, fontSize: 10, fontWeight: FontWeight.bold),
                               ),
@@ -941,7 +943,7 @@ class _PassportScreenState extends State<PassportScreen> {
                         ],
                       ),
                       subtitle: Text(
-                        '${passportData.visaFreeCountries} visa-free destinations',
+                        tr('${passportData.visaFreeCountries} visa-free destinations'),
                         style: TextStyle(color: Colors.grey[500], fontSize: 13),
                       ),
                       trailing:

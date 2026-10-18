@@ -2,6 +2,7 @@
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:country_flags/country_flags.dart';
 import 'package:collection/collection.dart';
@@ -209,7 +210,7 @@ class _LandmarkVisitLogScreenState extends State<LandmarkVisitLogScreen> {
                                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                                     padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                                   ),
-                                  child: const Text('Cancel',
+                                  child:  Text(tr('Cancel'),
                                       style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600, fontSize: 13)),
                                 ),
                                 ElevatedButton(
@@ -221,7 +222,7 @@ class _LandmarkVisitLogScreenState extends State<LandmarkVisitLogScreen> {
                                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                                     padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 8),
                                   ),
-                                  child: const Text('Done', style: TextStyle(fontWeight: FontWeight.w700, fontSize: 13)),
+                                  child:  Text(tr('Done'), style: TextStyle(fontWeight: FontWeight.w700, fontSize: 13)),
                                 ),
                               ],
                             ),
@@ -251,7 +252,7 @@ class _LandmarkVisitLogScreenState extends State<LandmarkVisitLogScreen> {
                                       const SizedBox(width: 4),
                                       Flexible(
                                         child: Text(
-                                          countryNames,
+                                          tr(countryNames),
                                           overflow: TextOverflow.ellipsis,
                                           style: TextStyle(
                                             fontSize: 12.5,
@@ -276,7 +277,7 @@ class _LandmarkVisitLogScreenState extends State<LandmarkVisitLogScreen> {
                                       children: [
                                         Icon(Icons.check_circle, size: 13, color: finalColor),
                                         const SizedBox(width: 4),
-                                        Text('Visited',
+                                        Text(tr('Visited'),
                                             style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: finalColor)),
                                       ],
                                     ),
@@ -296,7 +297,7 @@ class _LandmarkVisitLogScreenState extends State<LandmarkVisitLogScreen> {
                     _buildLandmarkHeroImage(freshLandmark),
                     Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                       Row(children: [
-                        const Text('Wishlist:'),
+                         Text(tr('Wishlist:')),
                         IconButton(
                             icon: Icon(isWishlisted ? Icons.favorite : Icons.favorite_border,
                                 color: isWishlisted ? Colors.red : Colors.grey),
@@ -312,11 +313,11 @@ class _LandmarkVisitLogScreenState extends State<LandmarkVisitLogScreen> {
 
                     // ── Visit History ───────────────────────
                     Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                      Text('History (${freshLandmark.visitDates.length} entries)',
+                      Text(tr('History (${freshLandmark.visitDates.length} entries)'),
                           style: Theme.of(sheetContext).textTheme.titleSmall),
                       OutlinedButton.icon(
                         icon: const Icon(Icons.add),
-                        label: const Text('Add Visit'),
+                        label:  Text(tr('Add Visit')),
                         onPressed: () => provider.addVisitDate(freshLandmark.name),
                       ),
                     ]),
@@ -331,7 +332,7 @@ class _LandmarkVisitLogScreenState extends State<LandmarkVisitLogScreen> {
                         availableLocations: freshLandmark.locations,
                       ))
                     else
-                      const Center(child: Text('No visits recorded.')),
+                       Center(child: Text(tr('No visits recorded.'))),
 
                     const Divider(height: 24),
                     LandmarkInfoCard(
@@ -351,6 +352,7 @@ class _LandmarkVisitLogScreenState extends State<LandmarkVisitLogScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final provider        = context.watch<LandmarksProvider>();
     final countryProvider = context.read<CountryProvider>();
 
@@ -415,10 +417,10 @@ class _LandmarkVisitLogScreenState extends State<LandmarkVisitLogScreen> {
                     ),
                     const SizedBox(width: 12),
                     Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                      const Text('Visit Log',
+                       Text(tr('Visit Log'),
                           style: TextStyle(fontSize: 22, fontWeight: FontWeight.w900,
                               color: Color(0xFF111827), letterSpacing: -0.6, height: 1.1)),
-                      Text('$totalLogs total entries',
+                      Text(tr('$totalLogs total entries'),
                           style: TextStyle(fontSize: 12, color: Colors.grey[500], fontWeight: FontWeight.w500)),
                     ])),
                     // 그룹 토글 — 작은 세그먼트 형태
@@ -447,7 +449,7 @@ class _LandmarkVisitLogScreenState extends State<LandmarkVisitLogScreen> {
                   ? Center(child: Column(mainAxisSize: MainAxisSize.min, children: [
                 Icon(Icons.history_edu_rounded, size: 52, color: Colors.grey[300]),
                 const SizedBox(height: 12),
-                Text('No visits recorded yet', style: TextStyle(color: Colors.grey[500], fontSize: 14)),
+                Text(tr('No visits recorded yet'), style: TextStyle(color: Colors.grey[500], fontSize: 14)),
               ]))
                   : ListView.builder(
                 padding: const EdgeInsets.only(bottom: 20),
@@ -465,11 +467,11 @@ class _LandmarkVisitLogScreenState extends State<LandmarkVisitLogScreen> {
                           Container(width: 3, height: 16,
                               decoration: BoxDecoration(color: _kTheme, borderRadius: BorderRadius.circular(2))),
                           const SizedBox(width: 8),
-                          Text(key,
+                          Text(tr(key),
                               style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w800,
                                   color: Color(0xFF111827), letterSpacing: -0.3)),
                           const SizedBox(width: 8),
-                          Text('${items.length}',
+                          Text(tr('${items.length}'),
                               style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: Colors.grey[500])),
                         ]),
                       ),
@@ -496,7 +498,7 @@ class _LandmarkVisitLogScreenState extends State<LandmarkVisitLogScreen> {
           borderRadius: BorderRadius.circular(8),
           boxShadow: active ? [BoxShadow(color: Colors.black.withOpacity(0.08), blurRadius: 4, offset: const Offset(0, 1))] : [],
         ),
-        child: Text(label,
+        child: Text(tr(label),
             style: TextStyle(
               fontSize: 12, fontWeight: FontWeight.w700,
               color: active ? _kTheme : Colors.grey[500],
@@ -530,7 +532,7 @@ class _LandmarkVisitLogScreenState extends State<LandmarkVisitLogScreen> {
                 style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 14, color: Color(0xFF111827))),
             const SizedBox(height: 2),
             Text(
-              hasTitle ? '${item.visit.title}  ·  $dateStr' : dateStr,
+              tr(hasTitle ? '${item.visit.title}  ·  $dateStr' : dateStr),
               style: TextStyle(fontSize: 12, color: Colors.grey[500]),
             ),
           ])),
@@ -540,7 +542,7 @@ class _LandmarkVisitLogScreenState extends State<LandmarkVisitLogScreen> {
             Row(mainAxisSize: MainAxisSize.min, children: [
               const Icon(Icons.star_rounded, size: 15, color: Colors.amber),
               const SizedBox(width: 2),
-              Text(item.site.rating!.toStringAsFixed(1),
+              Text(tr(item.site.rating!.toStringAsFixed(1)),
                   style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 12, color: Color(0xFF374151))),
             ]),
         ]),
@@ -658,23 +660,24 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final tc = _kTheme;
     return Card(
       elevation: 1, margin: const EdgeInsets.symmetric(vertical: 4),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       child: ExpansionTile(
         controller: _expansionTileController, initiallyExpanded: _isEditing,
-        title: Text(_displayTitle.isNotEmpty ? _displayTitle : 'Visit Record',
+        title: Text(tr(_displayTitle.isNotEmpty ? _displayTitle : 'Visit Record'),
             style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15)),
-        subtitle: Text('Date: $_year-$_month-$_day', style: TextStyle(color: Colors.grey[600], fontSize: 13)),
+        subtitle: Text(tr('Date: $_year-$_month-$_day'), style: TextStyle(color: Colors.grey[600], fontSize: 13)),
         trailing: IconButton(icon: const Icon(Icons.delete_outline, color: Colors.red, size: 22),
             onPressed: () => showDialog(context: context, builder: (ctx) => AlertDialog(
-                title: const Text('Delete Visit Record'),
-                content: const Text('Are you sure you want to delete this visit record?'),
+                title:  Text(tr('Delete Visit Record')),
+                content:  Text(tr('Are you sure you want to delete this visit record?')),
                 actions: [
-                  TextButton(onPressed: () => Navigator.pop(ctx), child: const Text('Cancel')),
+                  TextButton(onPressed: () => Navigator.pop(ctx), child:  Text(tr('Cancel'))),
                   TextButton(onPressed: () { Navigator.pop(ctx); widget.onDelete(); },
-                      child: const Text('Delete', style: TextStyle(color: Colors.red))),
+                      child:  Text(tr('Delete'), style: TextStyle(color: Colors.red))),
                 ]))),
         children: [Container(
           padding: const EdgeInsets.all(16),
@@ -683,21 +686,21 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
           child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             if (_isEditing) ...[
               Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                Text('Visit Date: $_year-$_month-$_day', style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14)),
-                TextButton.icon(icon: const Icon(Icons.edit_calendar, size: 18), label: const Text('Edit Date'),
+                Text(tr('Visit Date: $_year-$_month-$_day'), style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14)),
+                TextButton.icon(icon: const Icon(Icons.edit_calendar, size: 18), label:  Text(tr('Edit Date')),
                     onPressed: () => _selectDate(context), style: TextButton.styleFrom(visualDensity: VisualDensity.compact)),
               ]),
               const SizedBox(height: 12),
               TextField(controller: _titleController,
-                  decoration: InputDecoration(labelText: 'Title', isDense: true, filled: true, fillColor: Colors.white,
+                  decoration: InputDecoration(labelText: tr('Title'), isDense: true, filled: true, fillColor: Colors.white,
                       border: OutlineInputBorder(borderRadius: BorderRadius.circular(8), borderSide: BorderSide.none))),
               const SizedBox(height: 12),
               TextField(controller: _memoController, maxLines: 3, minLines: 1,
-                  decoration: InputDecoration(labelText: 'Memo', isDense: true, filled: true, fillColor: Colors.white,
+                  decoration: InputDecoration(labelText: tr('Memo'), isDense: true, filled: true, fillColor: Colors.white,
                       border: OutlineInputBorder(borderRadius: BorderRadius.circular(8), borderSide: BorderSide.none))),
             ] else if (_displayMemo.isNotEmpty)
               Padding(padding: const EdgeInsets.only(bottom: 12),
-                  child: Text(_displayMemo, style: TextStyle(fontSize: 14, color: Colors.grey[800], height: 1.4))),
+                  child: Text(tr(_displayMemo), style: TextStyle(fontSize: 14, color: Colors.grey[800], height: 1.4))),
             const SizedBox(height: 12),
             if (_currentPhotos.isNotEmpty || _isEditing)
               Padding(padding: const EdgeInsets.only(top: 8),
@@ -714,14 +717,14 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
             Row(mainAxisAlignment: MainAxisAlignment.end, children: [
               if (_isEditing) ...[
                 TextButton(onPressed: _cancelEditing,
-                    child: Text('Cancel', style: TextStyle(color: Colors.grey[700], fontWeight: FontWeight.w600))),
+                    child: Text(tr('Cancel'), style: TextStyle(color: Colors.grey[700], fontWeight: FontWeight.w600))),
                 const SizedBox(width: 8),
                 ElevatedButton.icon(onPressed: _saveChanges,
-                    icon: const Icon(Icons.save, size: 18), label: const Text('Save'),
+                    icon: const Icon(Icons.save, size: 18), label:  Text(tr('Save')),
                     style: ElevatedButton.styleFrom(backgroundColor: tc, foregroundColor: Colors.white, elevation: 0)),
               ] else
                 OutlinedButton.icon(onPressed: () => setState(() => _isEditing = true),
-                    icon: const Icon(Icons.edit, size: 16), label: const Text('Edit Record'),
+                    icon: const Icon(Icons.edit, size: 16), label:  Text(tr('Edit Record')),
                     style: OutlinedButton.styleFrom(foregroundColor: tc,
                         side: BorderSide(color: tc.withOpacity(0.5)))),
             ]),
@@ -771,6 +774,7 @@ class _FallbackNetworkImageState extends State<_FallbackNetworkImage> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     if (widget.urls.isEmpty) return widget.emptyBuilder(context);
 
     final allFailed = widget.urls.every(_failed.contains);

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:jidoapp/providers/auth_provider.dart';
 import 'package:jidoapp/screens/login_prompt_screen.dart';
@@ -11,6 +12,7 @@ class ActivitiesMenuScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final cultureAndArtsItems = [
       {'title': 'Painting & Artworks', 'imagePath': 'assets/explore_icons/paintings.png', 'attributes': ['Painting', 'Artwork']},
       {'title': 'Libraries & Bookstores', 'imagePath': 'assets/explore_icons/library.png', 'attributes': ['Library', 'Bookstore']},
@@ -63,7 +65,7 @@ class ActivitiesMenuScreen extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Activities',
+                                tr('Activities'),
                                 style: TextStyle(
                                   fontSize: 37,
                                   fontWeight: FontWeight.w900,
@@ -127,7 +129,7 @@ class ActivitiesMenuScreen extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    'Top Activities',
+                                    tr('Top Activities'),
                                     style: TextStyle(
                                       fontSize: 22,
                                       fontWeight: FontWeight.w800,
@@ -138,7 +140,7 @@ class ActivitiesMenuScreen extends StatelessWidget {
                                   ),
                                   const SizedBox(height: 3),
                                   Text(
-                                    'Must-visit destinations',
+                                    tr('Must-visit destinations'),
                                     style: TextStyle(
                                       fontSize: 13,
                                       color: accentBlack.withOpacity(0.4),
@@ -240,7 +242,7 @@ class ActivitiesMenuScreen extends StatelessWidget {
               const SizedBox(width: 14),
               Expanded(
                 child: Text(
-                  title,
+                  tr(title),
                   style: TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.w800,
@@ -250,7 +252,7 @@ class ActivitiesMenuScreen extends StatelessWidget {
                 ),
               ),
               Text(
-                '${items.length}',
+                tr('${items.length}'),
                 style: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w700,
@@ -370,7 +372,7 @@ class ActivitiesMenuScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(16),
               child: Text(
-                item['title'] as String,
+                tr(item['title'] as String),
                 textAlign: TextAlign.center,
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,

@@ -1,6 +1,7 @@
 // lib/screens/badges_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:jidoapp/models/badge_model.dart';
 import 'package:jidoapp/providers/badge_provider.dart';
 import 'package:jidoapp/providers/country_provider.dart';
@@ -113,6 +114,7 @@ class _BadgesScreenState extends State<BadgesScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final badgeProvider = context.watch<BadgeProvider>();
     final countryProvider = context.watch<CountryProvider>();
     final cityProvider = context.watch<CityProvider>();
@@ -207,7 +209,7 @@ class _BadgesScreenState extends State<BadgesScreen> {
                     Icon(Icons.filter_list_off, size: 48, color: Colors.grey[400]),
                     const SizedBox(height: 16),
                     Text(
-                      "No badges match filters",
+                      tr("No badges match filters"),
                       style: TextStyle(
                         color: Colors.grey[600],
                         fontSize: 16,
@@ -310,7 +312,7 @@ class _BadgesScreenState extends State<BadgesScreen> {
                           ),
                         ),
                         child: Text(
-                          'CURRENT RANK',
+                          tr('CURRENT RANK'),
                           style: TextStyle(
                             fontSize: 9,
                             fontWeight: FontWeight.w700,
@@ -321,7 +323,7 @@ class _BadgesScreenState extends State<BadgesScreen> {
                       ),
                       const SizedBox(height: 6),
                       Text(
-                        currentLevel,
+                        tr(currentLevel),
                         style: TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.w800,
@@ -338,7 +340,7 @@ class _BadgesScreenState extends State<BadgesScreen> {
                         textBaseline: TextBaseline.alphabetic,
                         children: [
                           Text(
-                            '$currentPoints',
+                            tr('$currentPoints'),
                             style: TextStyle(
                               fontSize: 32,
                               fontWeight: FontWeight.w900,
@@ -350,7 +352,7 @@ class _BadgesScreenState extends State<BadgesScreen> {
                           ),
                           const SizedBox(width: 6),
                           Text(
-                            'POINTS',
+                            tr('POINTS'),
                             style: TextStyle(
                               fontSize: 10,
                               fontWeight: FontWeight.w600,
@@ -638,7 +640,7 @@ class _BadgesScreenState extends State<BadgesScreen> {
                         ),
                         const SizedBox(width: 12),
                         Text(
-                          selectedCat['label'] as String,
+                          tr(selectedCat['label'] as String),
                           style: TextStyle(
                             fontSize: 15,
                             fontWeight: FontWeight.w600,
@@ -717,7 +719,7 @@ class _BadgesScreenState extends State<BadgesScreen> {
                           ),
                           const SizedBox(width: 12),
                           Text(
-                            cat['label'] as String,
+                            tr(cat['label'] as String),
                             style: TextStyle(
                               fontSize: 14,
                               color: Colors.grey[700],
@@ -813,7 +815,7 @@ class _BadgesScreenState extends State<BadgesScreen> {
               ),
               const SizedBox(height: 16),
               Text(
-                levelName,
+                tr(levelName),
                 style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.w800,
@@ -828,7 +830,7 @@ class _BadgesScreenState extends State<BadgesScreen> {
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: Text(
-                  '$points Points Required',
+                  tr('$points Points Required'),
                   style: TextStyle(
                     fontSize: 15,
                     fontWeight: FontWeight.w600,
@@ -1082,7 +1084,7 @@ class _BadgesScreenState extends State<BadgesScreen> {
                             borderRadius: BorderRadius.circular(8),
                           ),
                           child: Text(
-                            '+ ${achievement.points}',
+                            tr('+ ${achievement.points}'),
                             style: TextStyle(
                               fontSize: 13,
                               fontWeight: FontWeight.w700,
@@ -1094,7 +1096,7 @@ class _BadgesScreenState extends State<BadgesScreen> {
                     ),
                     const SizedBox(height: 16),
                     Text(
-                      achievement.description,
+                      tr(achievement.description),
                       textAlign: TextAlign.center,
                       style: TextStyle(color: Colors.grey[700], fontSize: 14, height: 1.4),
                     ),
@@ -1104,8 +1106,8 @@ class _BadgesScreenState extends State<BadgesScreen> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Text('Progress', style: TextStyle(fontSize: 12, color: Colors.grey[600])),
-                            Text(progressString, style: const TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
+                            Text(tr('Progress'), style: TextStyle(fontSize: 12, color: Colors.grey[600])),
+                            Text(tr(progressString), style: const TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
                           ],
                         ),
                         const SizedBox(height: 8),
@@ -1143,7 +1145,7 @@ class _BadgesScreenState extends State<BadgesScreen> {
                           elevation: 0,
                         ),
                         child: Text(
-                          isPremiumPendingClaim ? 'Subscribe to Claim' : 'View Checklist',
+                          tr(isPremiumPendingClaim ? 'Subscribe to Claim' : 'View Checklist'),
                           style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                         ),
                       ),
@@ -1212,6 +1214,7 @@ class _BadgeShareButtonState extends State<_BadgeShareButton> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return GestureDetector(
       onTap: _isSharing
           ? null

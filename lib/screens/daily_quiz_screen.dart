@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter/services.dart' show HapticFeedback;
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -480,6 +481,7 @@ class _DailyQuizScreenState extends State<DailyQuizScreen>
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     _isPremium = context.watch<SubscriptionService>().isPremium;
 
     return Scaffold(
@@ -492,20 +494,20 @@ class _DailyQuizScreenState extends State<DailyQuizScreen>
             key: const ValueKey('expert_title'),
             shaderCallback: (bounds) =>
                 LinearGradient(colors: _accentGradient).createShader(bounds),
-            child: const Row(
+            child:  Row(
               mainAxisSize: MainAxisSize.min,
               children: [
                 Icon(Icons.local_fire_department_rounded, size: 18, color: Colors.white),
                 SizedBox(width: 6),
                 Text(
-                  "Daily Quiz · Expert",
+                  tr("Daily Quiz · Expert"),
                   style: TextStyle(fontWeight: FontWeight.w800, color: Colors.white),
                 ),
               ],
             ),
           )
-              : const Text(
-            "Daily Quiz",
+              :  Text(
+            tr("Daily Quiz"),
             key: ValueKey('normal_title'),
             style: TextStyle(fontWeight: FontWeight.w800, color: Colors.black87),
           ),
@@ -580,9 +582,9 @@ class _DailyQuizScreenState extends State<DailyQuizScreen>
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
           backgroundColor: expert ? const Color(0xFF7C3AED) : const Color(0xFF6366F1),
           content: Text(
-            expert
+            tr(expert
                 ? 'Expert Quiz set as your default ✓'
-                : 'Normal Quiz set as your default ✓',
+                : 'Normal Quiz set as your default ✓'),
             style: const TextStyle(fontWeight: FontWeight.w700, color: Colors.white),
           ),
         ),
@@ -633,11 +635,11 @@ class _DailyQuizScreenState extends State<DailyQuizScreen>
                   TextSpan(
                     children: [
                       TextSpan(
-                        text: 'Default: ',
+                        text: tr('Default: '),
                         style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: Colors.grey.shade500),
                       ),
                       TextSpan(
-                        text: _defaultIsExpert ? 'Expert' : 'Normal',
+                        text: tr(_defaultIsExpert ? 'Expert' : 'Normal'),
                         style: TextStyle(
                           fontSize: 12,
                           fontWeight: FontWeight.w800,
@@ -679,7 +681,7 @@ class _DailyQuizScreenState extends State<DailyQuizScreen>
             Icon(Icons.notifications_active_rounded, size: 16, color: Colors.grey.shade400),
             const SizedBox(width: 8),
             Text(
-              'Default',
+              tr('Default'),
               style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: Colors.grey.shade500),
             ),
             const Spacer(),
@@ -735,7 +737,7 @@ class _DailyQuizScreenState extends State<DailyQuizScreen>
             Icon(icon, size: 13, color: selected ? Colors.white : Colors.grey.shade500),
             const SizedBox(width: 4),
             Text(
-              label,
+              tr(label),
               style: TextStyle(
                 fontSize: 12,
                 fontWeight: FontWeight.w800,
@@ -889,7 +891,7 @@ class _DailyQuizScreenState extends State<DailyQuizScreen>
                 children: [
                   Icon(icon, size: 16, color: selected ? Colors.white : Colors.grey.shade500),
                   const SizedBox(width: 6),
-                  Text(label),
+                  Text(tr(label)),
                 ],
               ),
             ),
@@ -941,7 +943,7 @@ class _DailyQuizScreenState extends State<DailyQuizScreen>
                 Padding(
                   padding: const EdgeInsets.only(left: 8, bottom: 4),
                   child: Text(
-                    DateFormat('yyyy MMM').format(date).toUpperCase(),
+                    tr(DateFormat('yyyy MMM').format(date).toUpperCase()),
                     style: TextStyle(
                       fontSize: 10,
                       fontWeight: FontWeight.w700,
@@ -992,7 +994,7 @@ class _DailyQuizScreenState extends State<DailyQuizScreen>
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        DateFormat('E').format(date),
+                        tr(DateFormat('E').format(date)),
                         style: TextStyle(
                           color: isSelected
                               ? Colors.white70
@@ -1004,7 +1006,7 @@ class _DailyQuizScreenState extends State<DailyQuizScreen>
                       ),
                       const SizedBox(height: 4),
                       Text(
-                        date.day.toString(),
+                        tr(date.day.toString()),
                         style: TextStyle(
                           color: isSelected
                               ? Colors.white
@@ -1113,7 +1115,7 @@ class _DailyQuizScreenState extends State<DailyQuizScreen>
                     ],
                   ),
                   const SizedBox(height: 18),
-                  Text(_question,
+                  Text(tr(_question),
                       style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Color(0xFF1E293B), height: 1.4),
                       textAlign: TextAlign.center),
                 ],
@@ -1158,12 +1160,12 @@ class _DailyQuizScreenState extends State<DailyQuizScreen>
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 11, vertical: 6),
             decoration: BoxDecoration(gradient: LinearGradient(colors: _accentGradient)),
-            child: const Row(
+            child:  Row(
               mainAxisSize: MainAxisSize.min,
               children: [
                 Icon(Icons.lock_rounded, size: 12, color: Colors.white),
                 SizedBox(width: 4),
-                Text('PREMIUM',
+                Text(tr('PREMIUM'),
                     style: TextStyle(
                         fontSize: 10,
                         fontWeight: FontWeight.w800,
@@ -1303,7 +1305,7 @@ class _DailyQuizScreenState extends State<DailyQuizScreen>
             ),
             alignment: Alignment.center,
             child: Text(
-              "${index + 1}",
+              tr("${index + 1}"),
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 color: _hasSolved && (isCorrect || (isSelected && !_isUserCorrect))
@@ -1319,7 +1321,7 @@ class _DailyQuizScreenState extends State<DailyQuizScreen>
             child: Stack(
               clipBehavior: Clip.none,
               children: [
-                Text(optionText,
+                Text(tr(optionText),
                     style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xFF334155))),
                 if (isVisited)
                   Positioned(
@@ -1331,12 +1333,12 @@ class _DailyQuizScreenState extends State<DailyQuizScreen>
                         color: const Color(0xFF1ABFBC),
                         borderRadius: BorderRadius.circular(6),
                       ),
-                      child: const Row(
+                      child:  Row(
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           Icon(Icons.check, size: 9, color: Colors.white),
                           SizedBox(width: 2),
-                          Text('visited', style: TextStyle(fontSize: 9, color: Colors.white, fontWeight: FontWeight.w700)),
+                          Text(tr('visited'), style: TextStyle(fontSize: 9, color: Colors.white, fontWeight: FontWeight.w700)),
                         ],
                       ),
                     ),
@@ -1407,10 +1409,10 @@ class _DailyQuizScreenState extends State<DailyQuizScreen>
           Row(children: [
             Icon(Icons.lightbulb, color: iconColor, size: 20),
             const SizedBox(width: 8),
-            Text("Explanation", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: titleColor)),
+            Text(tr("Explanation"), style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: titleColor)),
           ]),
           const SizedBox(height: 12),
-          Text(_explanation, style: TextStyle(fontSize: 15, color: bodyColor, height: 1.5)),
+          Text(tr(_explanation), style: TextStyle(fontSize: 15, color: bodyColor, height: 1.5)),
         ],
       ),
     );
@@ -1441,7 +1443,7 @@ class _DailyQuizScreenState extends State<DailyQuizScreen>
           ),
           const SizedBox(height: 20),
           Text(
-            _isExpertMode ? "No expert quiz found for this date." : "No quiz found for this date.",
+            tr(_isExpertMode ? "No expert quiz found for this date." : "No quiz found for this date."),
             style: TextStyle(color: Colors.grey.shade500, fontSize: 16, fontWeight: FontWeight.w600),
           ),
         ],
@@ -1502,7 +1504,7 @@ class _DailyQuizScreenState extends State<DailyQuizScreen>
     debugPrint("모달 연결 실패: $optionText");
 
     ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text("No details found for '$optionText'")),
+      SnackBar(content: Text(tr("No details found for '$optionText'"))),
     );
   }
 
@@ -1558,6 +1560,7 @@ class _PressableScaleState extends State<_PressableScale> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     Widget child = AnimatedScale(
       scale: _pressed ? 0.97 : 1.0,
       duration: const Duration(milliseconds: 120),
@@ -1589,6 +1592,7 @@ class _CelebrationOverlay extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final size = MediaQuery.of(context).size;
     return AnimatedBuilder(
       animation: controller,
@@ -1642,6 +1646,7 @@ class _CelebrationBadge extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final popT = Curves.elasticOut.transform((progress / 0.25).clamp(0.0, 1.0));
     final fadeT = 1.0 - Curves.easeIn.transform(((progress - 0.65) / 0.35).clamp(0.0, 1.0));
     final riseOffset = (1.0 - fadeT) * -18;
@@ -1667,12 +1672,12 @@ class _CelebrationBadge extends StatelessWidget {
                 ),
               ],
             ),
-            child: const Row(
+            child:  Row(
               mainAxisSize: MainAxisSize.min,
               children: [
                 Icon(Icons.check_circle_rounded, color: Colors.white, size: 22),
                 SizedBox(width: 8),
-                Text('Correct!',
+                Text(tr('Correct!'),
                     style: TextStyle(
                         color: Colors.white, fontWeight: FontWeight.w800, fontSize: 17)),
               ],
@@ -1788,6 +1793,7 @@ class _QuizLandmarkModal extends StatefulWidget {
 class _QuizLandmarkModalState extends State<_QuizLandmarkModal> {
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Consumer2<LandmarksProvider, CountryProvider>(
       builder: (context, provider, countryProvider, _) {
         final freshLandmark = provider.allLandmarks.firstWhereOrNull(
@@ -1897,7 +1903,7 @@ class _QuizLandmarkModalState extends State<_QuizLandmarkModal> {
                                   TextButton.icon(
                                     onPressed: () => Navigator.pop(context),
                                     icon: const Icon(Icons.close, color: headerTextColor, size: 20),
-                                    label: const Text('Close', style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600)),
+                                    label:  Text(tr('Close'), style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600)),
                                     style: TextButton.styleFrom(
                                       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
                                     ),
@@ -1916,7 +1922,7 @@ class _QuizLandmarkModalState extends State<_QuizLandmarkModal> {
                                           const Icon(Icons.emoji_events, size: 16, color: Colors.amber),
                                           const SizedBox(width: 4),
                                           Text(
-                                            '#${freshLandmark.global_rank}',
+                                            tr('#${freshLandmark.global_rank}'),
                                             style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w800, color: headerTextColor),
                                           ),
                                         ],
@@ -1963,7 +1969,7 @@ class _QuizLandmarkModalState extends State<_QuizLandmarkModal> {
                                         if (displayCity.trim().isNotEmpty) ...[
                                           const SizedBox(height: 6),
                                           Text(
-                                            displayCity,
+                                            tr(displayCity),
                                             style: TextStyle(fontSize: 14, color: headerTextColor.withOpacity(0.9), fontWeight: FontWeight.w500),
                                           ),
                                         ],
@@ -1979,7 +1985,7 @@ class _QuizLandmarkModalState extends State<_QuizLandmarkModal> {
                                     Icon(Icons.layers, size: 16, color: headerTextColor.withOpacity(0.9)),
                                     const SizedBox(width: 6),
                                     Text(
-                                      '$visitedSubCount / $totalSubCount locations visited',
+                                      tr('$visitedSubCount / $totalSubCount locations visited'),
                                       style: TextStyle(fontSize: 13, color: headerTextColor.withOpacity(0.85), fontWeight: FontWeight.w500),
                                     ),
                                   ],
@@ -2013,7 +2019,7 @@ class _QuizLandmarkModalState extends State<_QuizLandmarkModal> {
                                   children: [
                                     Icon(Icons.favorite_border, size: 20, color: Colors.grey[700]),
                                     const SizedBox(width: 8),
-                                    Text('Wishlist', style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600, color: Colors.grey[800])),
+                                    Text(tr('Wishlist'), style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600, color: Colors.grey[800])),
                                     const Spacer(),
                                     IconButton(
                                       visualDensity: VisualDensity.compact,
@@ -2031,7 +2037,7 @@ class _QuizLandmarkModalState extends State<_QuizLandmarkModal> {
                                   children: [
                                     Icon(Icons.star_border, size: 20, color: Colors.grey[700]),
                                     const SizedBox(width: 8),
-                                    Text('My Rating', style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600, color: Colors.grey[800])),
+                                    Text(tr('My Rating'), style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600, color: Colors.grey[800])),
                                     const Spacer(),
                                     RatingBar.builder(
                                       initialRating: freshLandmark.rating ?? 0.0,
@@ -2058,7 +2064,7 @@ class _QuizLandmarkModalState extends State<_QuizLandmarkModal> {
                                 child: Icon(Icons.layers, size: 18, color: themeColor),
                               ),
                               const SizedBox(width: 12),
-                              Text('Components / Locations', style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.grey[900])),
+                              Text(tr('Components / Locations'), style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.grey[900])),
                             ]),
                             const SizedBox(height: 12),
                             Container(
@@ -2092,17 +2098,17 @@ class _QuizLandmarkModalState extends State<_QuizLandmarkModal> {
                               child: Icon(Icons.history, size: 18, color: themeColor),
                             ),
                             const SizedBox(width: 12),
-                            Text('Visit History', style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.grey[900])),
+                            Text(tr('Visit History'), style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.grey[900])),
                             const SizedBox(width: 8),
                             Container(
                               padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
                               decoration: BoxDecoration(color: Colors.grey[200], borderRadius: BorderRadius.circular(12)),
-                              child: Text('${freshLandmark.visitDates.length}', style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: Colors.grey[700])),
+                              child: Text(tr('${freshLandmark.visitDates.length}'), style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: Colors.grey[700])),
                             ),
                             const Spacer(),
                             OutlinedButton.icon(
                               icon: const Icon(Icons.add, size: 18),
-                              label: const Text('Add'),
+                              label:  Text(tr('Add')),
                               onPressed: () => provider.addVisitDate(freshLandmark.name),
                               style: OutlinedButton.styleFrom(
                                 padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
@@ -2129,7 +2135,7 @@ class _QuizLandmarkModalState extends State<_QuizLandmarkModal> {
                                   children: [
                                     Icon(Icons.event_busy, size: 48, color: Colors.grey[400]),
                                     const SizedBox(height: 8),
-                                    Text('No visits recorded', style: TextStyle(color: Colors.grey[600], fontSize: 14)),
+                                    Text(tr('No visits recorded'), style: TextStyle(color: Colors.grey[600], fontSize: 14)),
                                   ],
                                 ),
                               ),
@@ -2362,6 +2368,7 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final themeColor = Theme.of(context).primaryColor;
 
     return Card(
@@ -2372,29 +2379,29 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
         controller: _expansionTileController,
         initiallyExpanded: _isEditing,
         title: Text(
-          _displayTitle.isNotEmpty ? _displayTitle : 'Visit Record',
+          tr(_displayTitle.isNotEmpty ? _displayTitle : 'Visit Record'),
           style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15),
         ),
-        subtitle: Text('Date: $_year-$_month-$_day', style: TextStyle(color: Colors.grey[600], fontSize: 13)),
+        subtitle: Text(tr('Date: $_year-$_month-$_day'), style: TextStyle(color: Colors.grey[600], fontSize: 13)),
         trailing: IconButton(
           icon: const Icon(Icons.delete_outline, color: Colors.red, size: 22),
           onPressed: () {
             showDialog(
               context: context,
               builder: (context) => AlertDialog(
-                title: const Text('Delete Visit Record'),
-                content: const Text('Are you sure you want to delete this visit record?'),
+                title:  Text(tr('Delete Visit Record')),
+                content:  Text(tr('Are you sure you want to delete this visit record?')),
                 actions: [
                   TextButton(
                     onPressed: () => Navigator.pop(context),
-                    child: const Text('Cancel'),
+                    child:  Text(tr('Cancel')),
                   ),
                   TextButton(
                     onPressed: () {
                       Navigator.pop(context);
                       widget.onDelete();
                     },
-                    child: const Text('Delete', style: TextStyle(color: Colors.red)),
+                    child:  Text(tr('Delete'), style: TextStyle(color: Colors.red)),
                   ),
                 ],
               ),
@@ -2418,10 +2425,10 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text('Visit Date: $_year-$_month-$_day', style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14)),
+                      Text(tr('Visit Date: $_year-$_month-$_day'), style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14)),
                       TextButton.icon(
                         icon: const Icon(Icons.edit_calendar, size: 18),
-                        label: const Text('Edit Date'),
+                        label:  Text(tr('Edit Date')),
                         onPressed: () => _selectDate(context),
                         style: TextButton.styleFrom(visualDensity: VisualDensity.compact),
                       ),
@@ -2431,7 +2438,7 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
                   TextField(
                     controller: _titleController,
                     decoration: InputDecoration(
-                      labelText: 'Title',
+                      labelText: tr('Title'),
                       isDense: true,
                       filled: true,
                       fillColor: Colors.white,
@@ -2444,7 +2451,7 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
                     maxLines: 3,
                     minLines: 1,
                     decoration: InputDecoration(
-                      labelText: 'Memo',
+                      labelText: tr('Memo'),
                       isDense: true,
                       filled: true,
                       fillColor: Colors.white,
@@ -2456,7 +2463,7 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
                     Padding(
                       padding: const EdgeInsets.only(bottom: 12.0),
                       child: Text(
-                        _displayMemo,
+                        tr(_displayMemo),
                         style: TextStyle(fontSize: 14, color: Colors.grey[800], height: 1.4),
                       ),
                     ),
@@ -2465,7 +2472,7 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
                 const SizedBox(height: 12),
 
                 if (widget.availableLocations != null && widget.availableLocations!.length > 1) ...[
-                  Text("Locations included in this visit:",
+                  Text(tr("Locations included in this visit:"),
                       style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Colors.grey[700])),
                   const SizedBox(height: 8),
                   IgnorePointer(
@@ -2530,13 +2537,13 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
                     if (_isEditing) ...[
                       TextButton(
                         onPressed: _cancelEditing,
-                        child: Text('Cancel', style: TextStyle(color: Colors.grey[700], fontWeight: FontWeight.w600)),
+                        child: Text(tr('Cancel'), style: TextStyle(color: Colors.grey[700], fontWeight: FontWeight.w600)),
                       ),
                       const SizedBox(width: 8),
                       ElevatedButton.icon(
                         onPressed: _saveChanges,
                         icon: const Icon(Icons.save, size: 18),
-                        label: const Text('Save'),
+                        label:  Text(tr('Save')),
                         style: ElevatedButton.styleFrom(
                           backgroundColor: themeColor,
                           foregroundColor: Colors.white,
@@ -2551,7 +2558,7 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
                           });
                         },
                         icon: const Icon(Icons.edit, size: 16),
-                        label: const Text('Edit Record'),
+                        label:  Text(tr('Edit Record')),
                         style: OutlinedButton.styleFrom(
                           foregroundColor: themeColor,
                           side: BorderSide(color: themeColor.withOpacity(0.5)),

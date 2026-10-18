@@ -2,6 +2,7 @@
 
 import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:jidoapp/screens/trip_dna_screen.dart';
 import 'package:jidoapp/screens/traveler_type_ai_screen.dart';
@@ -120,6 +121,7 @@ class _TravelerTypeSelectorScreenState extends State<TravelerTypeSelectorScreen>
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Scaffold(
       backgroundColor: const Color(0xFFFAFAFA),
       body: SafeArea(
@@ -169,7 +171,7 @@ class _TravelerTypeSelectorScreenState extends State<TravelerTypeSelectorScreen>
             borderRadius: BorderRadius.circular(20),
           ),
           child: Text(
-            'YOUR PROFILE',
+            tr('YOUR PROFILE'),
             style: TextStyle(
               fontSize: 11,
               fontWeight: FontWeight.w800,
@@ -180,7 +182,7 @@ class _TravelerTypeSelectorScreenState extends State<TravelerTypeSelectorScreen>
         ),
         const SizedBox(height: 16),
         Text(
-          'Travel Type',
+          tr('Travel Type'),
           style: TextStyle(
             fontSize: 36,
             fontWeight: FontWeight.w900,
@@ -288,7 +290,7 @@ class _TravelerTypeSelectorScreenState extends State<TravelerTypeSelectorScreen>
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    _topTypeLabel!,
+                    tr(_topTypeLabel!),
                     style: const TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.w900,
@@ -305,7 +307,7 @@ class _TravelerTypeSelectorScreenState extends State<TravelerTypeSelectorScreen>
                       borderRadius: BorderRadius.circular(8),
                     ),
                     child: Text(
-                      scoreString,
+                      tr(scoreString),
                       style: TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.w800,
@@ -322,7 +324,7 @@ class _TravelerTypeSelectorScreenState extends State<TravelerTypeSelectorScreen>
         Expanded(
           child: SingleChildScrollView(
             child: Text(
-              rationale,
+              tr(rationale),
               style: TextStyle(
                 fontSize: 14,
                 height: 1.6,
@@ -347,7 +349,7 @@ class _TravelerTypeSelectorScreenState extends State<TravelerTypeSelectorScreen>
         ),
         const SizedBox(height: 20),
         Text(
-          'No Analysis Yet',
+          tr('No Analysis Yet'),
           style: TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.w800,
@@ -356,7 +358,7 @@ class _TravelerTypeSelectorScreenState extends State<TravelerTypeSelectorScreen>
         ),
         const SizedBox(height: 8),
         Text(
-          'Complete a test below to discover\nyour travel personality type',
+          tr('Complete a test below to discover\nyour travel personality type'),
           style: TextStyle(
             fontSize: 14,
             color: Colors.grey[500],
@@ -477,7 +479,7 @@ class _TravelerTypeSelectorScreenState extends State<TravelerTypeSelectorScreen>
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    title,
+                    tr(title),
                     style: const TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w800,
@@ -487,7 +489,7 @@ class _TravelerTypeSelectorScreenState extends State<TravelerTypeSelectorScreen>
                   ),
                   const SizedBox(height: 4),
                   Text(
-                    subtitle,
+                    tr(subtitle),
                     style: TextStyle(
                       fontSize: 13,
                       color: Colors.grey[600],

@@ -1,7 +1,7 @@
 // lib/utils/city_utils.dart
 
 import 'dart:convert';
-import 'package:flutter/services.dart';
+import 'package:jidoapp/services/statistics_repository.dart';
 // City 모델 임포트는 더 이상 직접 사용하지 않지만, 다른 곳에서 필요할 수 있으므로 유지합니다.
 // import 'package:jidoapp/models/city_model.dart'; // 이 부분은 주석 처리하거나 제거 가능
 
@@ -14,7 +14,7 @@ import 'package:flutter/services.dart';
 Future<Map<String, List<Map<String, dynamic>>>> findDuplicateCityNames(String assetPath) async {
   try {
     // 1. JSON 파일 로드
-    final String jsonString = await rootBundle.loadString(assetPath);
+    final String jsonString = await StatisticsRepository.instance.loadLegacyString(assetPath);
 
     // 2. JSON 문자열을 원본 Map<String, dynamic> 리스트로 파싱
     final List<dynamic> parsedJson = json.decode(jsonString);

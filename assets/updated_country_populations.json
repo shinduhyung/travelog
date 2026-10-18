@@ -1,235 +1,2132 @@
-[
-  { "iso_a3": "IND", "name": "India", "population_est": 1417492000 },
-  { "iso_a3": "CHN", "name": "China", "population_est": 1408280000 },
-  { "iso_a3": "USA", "name": "United States", "population_est": 340110988 },
-  { "iso_a3": "IDN", "name": "Indonesia", "population_est": 284438782 },
-  { "iso_a3": "PAK", "name": "Pakistan", "population_est": 241499431 },
-  { "iso_a3": "NGA", "name": "Nigeria", "population_est": 223800000 },
-  { "iso_a3": "BRA", "name": "Brazil", "population_est": 212583750 },
-  { "iso_a3": "BGD", "name": "Bangladesh", "population_est": 169828911 },
-  { "iso_a3": "RUS", "name": "Russia", "population_est": 146028325 },
-  { "iso_a3": "MEX", "name": "Mexico", "population_est": 130417144 },
-  { "iso_a3": "JPN", "name": "Japan", "population_est": 123360000 },
-  { "iso_a3": "PHL", "name": "Philippines", "population_est": 114123600 },
-  { "iso_a3": "COD", "name": "Democratic Republic of the Congo", "population_est": 112832000 },
-  { "iso_a3": "ETH", "name": "Ethiopia", "population_est": 111652998 },
-  { "iso_a3": "GIB", "name": "Gibraltar", "population_est": 40724 },
-  { "iso_a3": "EGY", "name": "Egypt", "population_est": 107271260 },
-  { "iso_a3": "VNM", "name": "Vietnam", "population_est": 101343800 },
-  { "iso_a3": "IRN", "name": "Iran", "population_est": 85961000 },
-  { "iso_a3": "TUR", "name": "Turkey", "population_est": 85664944 },
-  { "iso_a3": "DEU", "name": "Germany", "population_est": 83577140 },
-  { "iso_a3": "FRA", "name": "France", "population_est": 68649000 },
-  { "iso_a3": "GBR", "name": "United Kingdom", "population_est": 68265209 },
-  { "iso_a3": "TZA", "name": "Tanzania", "population_est": 68153004 },
-  { "iso_a3": "THA", "name": "Thailand", "population_est": 65870610 },
-  { "iso_a3": "ZAF", "name": "South Africa", "population_est": 63015904 },
-  { "iso_a3": "ITA", "name": "Italy", "population_est": 58918231 },
-  { "iso_a3": "KEN", "name": "Kenya", "population_est": 53330978 },
-  { "iso_a3": "COL", "name": "Colombia", "population_est": 52695952 },
-  { "iso_a3": "SDN", "name": "Sudan", "population_est": 51662000 },
-  { "iso_a3": "MMR", "name": "Myanmar", "population_est": 51316756 },
-  { "iso_a3": "KOR", "name": "South Korea", "population_est": 51164582 },
-  { "iso_a3": "ESP", "name": "Spain", "population_est": 49153849 },
-  { "iso_a3": "DZA", "name": "Algeria", "population_est": 47400000 },
-  { "iso_a3": "ARG", "name": "Argentina", "population_est": 47067641 },
-  { "iso_a3": "IRQ", "name": "Iraq", "population_est": 46118793 },
-  { "iso_a3": "UGA", "name": "Uganda", "population_est": 45935046 },
-  { "iso_a3": "UKR", "name": "Ukraine", "population_est": 39794000 },
-  { "iso_a3": "CAN", "name": "Canada", "population_est": 40751963 },
-  { "iso_a3": "POL", "name": "Poland", "population_est": 37626000 },
-  { "iso_a3": "MAR", "name": "Morocco", "population_est": 37077000 },
-  { "iso_a3": "UZB", "name": "Uzbekistan", "population_est": 36799400 },
-  { "iso_a3": "SAU", "name": "Saudi Arabia", "population_est": 36170000 },
-  { "iso_a3": "PER", "name": "Peru", "population_est": 34107000 },
-  { "iso_a3": "AFG", "name": "Afghanistan", "population_est": 41128771 },
-  { "iso_a3": "VEN", "name": "Venezuela", "population_est": 28833000 },
-  { "iso_a3": "MYS", "name": "Malaysia", "population_est": 34000000 },
-  { "iso_a3": "GHA", "name": "Ghana", "population_est": 33475877 },
-  { "iso_a3": "NPL", "name": "Nepal", "population_est": 30600000 },
-  { "iso_a3": "YEM", "name": "Yemen", "population_est": 34449825 },
-  { "iso_a3": "AGO", "name": "Angola", "population_est": 36132000 },
-  { "iso_a3": "MOZ", "name": "Mozambique", "population_est": 32518569 },
-  { "iso_a3": "AUS", "name": "Australia", "population_est": 26900000 },
-  { "iso_a3": "SYR", "name": "Syria", "population_est": 23200000 },
-  { "iso_a3": "CIV", "name": "Ivory Coast", "population_est": 29389000 },
-  { "iso_a3": "MDG", "name": "Madagascar", "population_est": 29611719 },
-  { "iso_a3": "CMR", "name": "Cameroon", "population_est": 28659100 },
-  { "iso_a3": "NER", "name": "Niger", "population_est": 27200000 },
-  { "iso_a3": "MLI", "name": "Mali", "population_est": 22395489 },
-  { "iso_a3": "TWN", "name": "Taiwan", "population_est": 23900000 },
-  { "iso_a3": "BFA", "name": "Burkina Faso", "population_est": 23025000 },
-  { "iso_a3": "LKA", "name": "Sri Lanka", "population_est": 21803000 },
-  { "iso_a3": "ECU", "name": "Ecuador", "population_est": 18270000 },
-  { "iso_a3": "KAZ", "name": "Kazakhstan", "population_est": 19800000 },
-  { "iso_a3": "CHL", "name": "Chile", "population_est": 19600000 },
-  { "iso_a3": "ROU", "name": "Romania", "population_est": 19053000 },
-  { "iso_a3": "NLD", "name": "Netherlands", "population_est": 17900000 },
-  { "iso_a3": "MWI", "name": "Malawi", "population_est": 20412155 },
-  { "iso_a3": "GTM", "name": "Guatemala", "population_est": 18000000 },
-  { "iso_a3": "SOM", "name": "Somalia", "population_est": 17000000 },
-  { "iso_a3": "TCD", "name": "Chad", "population_est": 18278000 },
-  { "iso_a3": "SEN", "name": "Senegal", "population_est": 17800000 },
-  { "iso_a3": "KHM", "name": "Cambodia", "population_est": 16900000 },
-  { "iso_a3": "ZWE", "name": "Zimbabwe", "population_est": 16500000 },
-  { "iso_a3": "RWA", "name": "Rwanda", "population_est": 14000000 },
-  { "iso_a3": "BEN", "name": "Benin", "population_est": 13712000 },
-  { "iso_a3": "BOL", "name": "Bolivia", "population_est": 12200000 },
-  { "iso_a3": "BEL", "name": "Belgium", "population_est": 11800000 },
-  { "iso_a3": "CUB", "name": "Cuba", "population_est": 11200000 },
-  { "iso_a3": "TUN", "name": "Tunisia", "population_est": 12000000 },
-  { "iso_a3": "HTI", "name": "Haiti", "population_est": 11500000 },
-  { "iso_a3": "GRC", "name": "Greece", "population_est": 10300000 },
-  { "iso_a3": "CZE", "name": "Czech Republic", "population_est": 10500000 },
-  { "iso_a3": "SWE", "name": "Sweden", "population_est": 10500000 },
-  { "iso_a3": "PRT", "name": "Portugal", "population_est": 10200000 },
-  { "iso_a3": "AZE", "name": "Azerbaijan", "population_est": 10100000 },
-  { "iso_a3": "DOM", "name": "Dominican Republic", "population_est": 11300000 },
-  { "iso_a3": "HND", "name": "Honduras", "population_est": 10400000 },
-  { "iso_a3": "BDI", "name": "Burundi", "population_est": 13200000 },
-  { "iso_a3": "ARE", "name": "United Arab Emirates", "population_est": 9900000 },
-  { "iso_a3": "AUT", "name": "Austria", "population_est": 9000000 },
-  { "iso_a3": "CHE", "name": "Switzerland", "population_est": 8800000 },
-  { "iso_a3": "BGR", "name": "Bulgaria", "population_est": 6400000 },
-  { "iso_a3": "KGZ", "name": "Kyrgyzstan", "population_est": 7000000 },
-  { "iso_a3": "TJK", "name": "Tajikistan", "population_est": 10100000 },
-  { "iso_a3": "SLE", "name": "Sierra Leone", "population_est": 8400000 },
-  { "iso_a3": "LAO", "name": "Laos", "population_est": 7500000 },
-  { "iso_a3": "PNG", "name": "Papua New Guinea", "population_est": 9900000 },
-  { "iso_a3": "SLV", "name": "El Salvador", "population_est": 6300000 },
-  { "iso_a3": "LBY", "name": "Libya", "population_est": 6800000 },
-  { "iso_a3": "SGP", "name": "Singapore", "population_est": 5600000 },
-  { "iso_a3": "DNK", "name": "Denmark", "population_est": 5900000 },
-  { "iso_a3": "FIN", "name": "Finland", "population_est": 5600000 },
-  { "iso_a3": "NOR", "name": "Norway", "population_est": 5500000 },
-  { "iso_a3": "IRL", "name": "Ireland", "population_est": 5000000 },
-  { "iso_a3": "OMN", "name": "Oman", "population_est": 4600000 },
-  { "iso_a3": "KWT", "name": "Kuwait", "population_est": 4300000 },
-  { "iso_a3": "GEO", "name": "Georgia", "population_est": 3700000 },
-  { "iso_a3": "HRV", "name": "Croatia", "population_est": 3800000 },
-  { "iso_a3": "ERI", "name": "Eritrea", "population_est": 3700000 },
-  { "iso_a3": "PAN", "name": "Panama", "population_est": 4400000 },
-  { "iso_a3": "URY", "name": "Uruguay", "population_est": 3500000 },
-  { "iso_a3": "MNG", "name": "Mongolia", "population_est": 3400000 },
-  { "iso_a3": "QAT", "name": "Qatar", "population_est": 2700000 },
-  { "iso_a3": "NZL", "name": "New Zealand", "population_est": 5100000 },
-  { "iso_a3": "SVK", "name": "Slovakia", "population_est": 5400000 },
-  { "iso_a3": "LBN", "name": "Lebanon", "population_est": 5300000 },
-  { "iso_a3": "PSE", "name": "Palestine", "population_est": 5300000 },
-  { "iso_a3": "PRI", "name": "Puerto Rico", "population_est": 3200000 },
-  { "iso_a3": "LTU", "name": "Lithuania", "population_est": 2800000 },
-  { "iso_a3": "ALB", "name": "Albania", "population_est": 2800000 },
-  { "iso_a3": "JOR", "name": "Jordan", "population_est": 11300000 },
-  { "iso_a3": "EST", "name": "Estonia", "population_est": 1300000 },
-  { "iso_a3": "CYP", "name": "Cyprus", "population_est": 1200000 },
-  { "iso_a3": "FJI", "name": "Fiji", "population_est": 900000 },
-  { "iso_a3": "LUX", "name": "Luxembourg", "population_est": 600000 },
-  { "iso_a3": "ISL", "name": "Iceland", "population_est": 400000 },
-  { "iso_a3": "MLT", "name": "Malta", "population_est": 500000 },
-  { "iso_a3": "MDV", "name": "Maldives", "population_est": 500000 },
-  { "iso_a3": "BLZ", "name": "Belize", "population_est": 400000 },
-  { "iso_a3": "BHR", "name": "Bahrain", "population_est": 1500000 },
-  { "iso_a3": "GNQ", "name": "Equatorial Guinea", "population_est": 1700000 },
-  { "iso_a3": "GAB", "name": "Gabon", "population_est": 2400000 },
-  { "iso_a3": "GMB", "name": "Gambia", "population_est": 2700000 },
-  { "iso_a3": "NAM", "name": "Namibia", "population_est": 2600000 },
-  { "iso_a3": "BWA", "name": "Botswana", "population_est": 2700000 },
-  { "iso_a3": "GIN", "name": "Guinea", "population_est": 14100000 },
-  { "iso_a3": "CAF", "name": "Central African Republic", "population_est": 5900000 },
-  { "iso_a3": "COG", "name": "Republic of the Congo", "population_est": 5800000 },
-  { "iso_a3": "DJI", "name": "Djibouti", "population_est": 1100000 },
-  { "iso_a3": "COM", "name": "Comoros", "population_est": 900000 },
-  { "iso_a3": "LSO", "name": "Lesotho", "population_est": 2300000 },
-  { "iso_a3": "SWZ", "name": "Eswatini", "population_est": 1200000 },
-  { "iso_a3": "CPV", "name": "Cape Verde", "population_est": 590000 },
-  { "iso_a3": "SLB", "name": "Solomon Islands", "population_est": 700000 },
-  { "iso_a3": "VUT", "name": "Vanuatu", "population_est": 300000 },
-  { "iso_a3": "WSM", "name": "Samoa", "population_est": 200000 },
-  { "iso_a3": "TON", "name": "Tonga", "population_est": 100000 },
-  { "iso_a3": "FSM", "name": "Federated States of Micronesia", "population_est": 100000 },
-  { "iso_a3": "KIR", "name": "Kiribati", "population_est": 100000 },
-  { "iso_a3": "NRU", "name": "Nauru", "population_est": 10000 },
-  { "iso_a3": "PLW", "name": "Palau", "population_est": 18000 },
-  { "iso_a3": "MHL", "name": "Marshall Islands", "population_est": 60000 },
-  { "iso_a3": "TUV", "name": "Tuvalu", "population_est": 10000 },
-  { "iso_a3": "SMR", "name": "San Marino", "population_est": 34000 },
-  { "iso_a3": "LIE", "name": "Liechtenstein", "population_est": 40000 },
-  { "iso_a3": "MCO", "name": "Monaco", "population_est": 36000 },
-  { "iso_a3": "VAT", "name": "Vatican City", "population_est": 800 },
-  { "iso_a3": "AND", "name": "Andorra", "population_est": 80000 },
-  { "iso_a3": "IMN", "name": "Isle of Man", "population_est": 85000 },
-  { "iso_a3": "JEY", "name": "Jersey", "population_est": 100000 },
-  { "iso_a3": "GGY", "name": "Guernsey", "population_est": 65000 },
-  { "iso_a3": "FLK", "name": "Falkland Islands", "population_est": 3000 },
-  { "iso_a3": "GRL", "name": "Greenland", "population_est": 56000 },
-  { "iso_a3": "ALA", "name": "Åland Islands", "population_est": 30000 },
-  { "iso_a3": "PCN", "name": "Pitcairn Islands", "population_est": 50 },
-  { "iso_a3": "WLF", "name": "Wallis and Futuna", "population_est": 11000 },
-  { "iso_a3": "NCL", "name": "New Caledonia", "population_est": 280000 },
-  { "iso_a3": "PYF", "name": "French Polynesia", "population_est": 300000 },
-  { "iso_a3": "SPM", "name": "Saint Pierre and Miquelon", "population_est": 6000 },
-  { "iso_a3": "BLM", "name": "Saint Barthélemy", "population_est": 10000 },
-  { "iso_a3": "MAF", "name": "Saint Martin", "population_est": 35000 },
-  { "iso_a3": "CUW", "name": "Curaçao", "population_est": 150000 },
-  { "iso_a3": "SXM", "name": "Sint Maarten", "population_est": 40000 },
-  { "iso_a3": "ABW", "name": "Aruba", "population_est": 100000 },
-  { "iso_a3": "BMU", "name": "Bermuda", "population_est": 60000 },
-  { "iso_a3": "VGB", "name": "British Virgin Islands", "population_est": 30000 },
-  { "iso_a3": "CYM", "name": "Cayman Islands", "population_est": 70000 },
-  { "iso_a3": "TCA", "name": "Turks and Caicos Islands", "population_est": 40000 },
-  { "iso_a3": "VIR", "name": "U.S. Virgin Islands", "population_est": 100000 },
-  { "iso_a3": "MSR", "name": "Montserrat", "population_est": 5000 },
-  { "iso_a3": "ATG", "name": "Antigua and Barbuda", "population_est": 100000 },
-  { "iso_a3": "GRD", "name": "Grenada", "population_est": 110000 },
-  { "iso_a3": "LCA", "name": "Saint Lucia", "population_est": 180000 },
-  { "iso_a3": "VCT", "name": "Saint Vincent and the Grenadines", "population_est": 100000 },
-  { "iso_a3": "BRB", "name": "Barbados", "population_est": 280000 },
-  { "iso_a3": "DMA", "name": "Dominica", "population_est": 70000 },
-  { "iso_a3": "KNA", "name": "Saint Kitts and Nevis", "population_est": 50000 },
-  { "iso_a3": "AIA", "name": "Anguilla", "population_est": 16000 },
-  { "iso_a3": "NFK", "name": "Norfolk Island", "population_est": 2000 },
-  { "iso_a3": "COK", "name": "Cook Islands", "population_est": 17000 },
-  { "iso_a3": "NIU", "name": "Niue", "population_est": 2000 },
-  { "iso_a3": "ASM", "name": "American Samoa", "population_est": 45000 },
-  { "iso_a3": "GUM", "name": "Guam", "population_est": 170000 },
-  { "iso_a3": "MNP", "name": "Northern Mariana Islands", "population_est": 47000 },
-  { "iso_a3": "HKG", "name": "Hong Kong", "population_est": 7500000 },
-  { "iso_a3": "MAC", "name": "Macau", "population_est": 690000 },
-  { "iso_a3": "MUS", "name": "Mauritius", "population_est": 1261000 },
-  { "iso_a3": "FRO", "name": "Faroe Islands", "population_est": 54000 },
-  { "iso_a3": "SYC", "name": "Seychelles", "population_est": 132779 },
-  { "iso_a3": "CRI", "name": "Costa Rica", "population_est": 5212173 },
-  { "iso_a3": "NIC", "name": "Nicaragua", "population_est": 7142529 },
-  { "iso_a3": "BHS", "name": "Bahamas", "population_est": 415235 },
-  { "iso_a3": "TTO", "name": "Trinidad and Tobago", "population_est": 1541037 },
-  { "iso_a3": "JAM", "name": "Jamaica", "population_est": 2824915 },
-  { "iso_a3": "ISR", "name": "Israel", "population_est": 9387021 },
-  { "iso_a3": "PRK", "name": "North Korea", "population_est": 26355349 },
-  { "iso_a3": "BTN", "name": "Bhutan", "population_est": 794357 },
-  { "iso_a3": "ARM", "name": "Armenia", "population_est": 2777979 },
-  { "iso_a3": "TLS", "name": "Timor-Leste", "population_est": 1388031 },
-  { "iso_a3": "BRN", "name": "Brunei", "population_est": 455799 },
-  { "iso_a3": "TKM", "name": "Turkmenistan", "population_est": 6642131 },
-  { "iso_a3": "SUR", "name": "Suriname", "population_est": 628796 },
-  { "iso_a3": "GUY", "name": "Guyana", "population_est": 819323 },
-  { "iso_a3": "PRY", "name": "Paraguay", "population_est": 6948645 },
-  { "iso_a3": "SSD", "name": "South Sudan", "population_est": 11276632 },
-  { "iso_a3": "SML", "name": "Somaliland", "population_est": 3500000 },
-  { "iso_a3": "ESH", "name": "Western Sahara", "population_est": 597339 },
-  { "iso_a3": "ZMB", "name": "Zambia", "population_est": 21147547 },
-  { "iso_a3": "LBR", "name": "Liberia", "population_est": 5621943 },
-  { "iso_a3": "TGO", "name": "Togo", "population_est": 9259169 },
-  { "iso_a3": "GNB", "name": "Guinea-Bissau", "population_est": 2195044 },
-  { "iso_a3": "MRT", "name": "Mauritania", "population_est": 4994274 },
-  { "iso_a3": "STP", "name": "São Tomé and Principe", "population_est": 236379 },
-  { "iso_a3": "BLR", "name": "Belarus", "population_est": 9483491 },
-  { "iso_a3": "LVA", "name": "Latvia", "population_est": 1806681 },
-  { "iso_a3": "MKD", "name": "North Macedonia", "population_est": 2085679 },
-  { "iso_a3": "KOS", "name": "Kosovo", "population_est": 1761985 },
-  { "iso_a3": "HUN", "name": "Hungary", "population_est": 10129737 },
-  { "iso_a3": "SRB", "name": "Serbia", "population_est": 7099395 },
-  { "iso_a3": "SVN", "name": "Slovenia", "population_est": 2119675 },
-  { "iso_a3": "MNE", "name": "Montenegro", "population_est": 626485 },
-  { "iso_a3": "BIH", "name": "Bosnia and Herzegovina", "population_est": 3210847 },
-  { "iso_a3": "MDA", "name": "Moldova", "population_est": 3289877 }
-]
+{
+  "schema_version": 1,
+  "dataset_id": "updated_country_populations",
+  "metadata": {
+    "source_url": null,
+    "reference_period": null,
+    "updated_at": null
+  },
+  "legacy_layout": "list",
+  "tables": [
+    {
+      "id": "main",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "iso_a3",
+        "name"
+      ],
+      "metrics": [
+        {
+          "id": "population_est",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "iso_a3": "IND",
+            "name": "India"
+          },
+          "values": {
+            "population_est": 1417492000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CHN",
+            "name": "China"
+          },
+          "values": {
+            "population_est": 1408280000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "USA",
+            "name": "United States"
+          },
+          "values": {
+            "population_est": 340110988
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IDN",
+            "name": "Indonesia"
+          },
+          "values": {
+            "population_est": 284438782
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PAK",
+            "name": "Pakistan"
+          },
+          "values": {
+            "population_est": 241499431
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NGA",
+            "name": "Nigeria"
+          },
+          "values": {
+            "population_est": 223800000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BRA",
+            "name": "Brazil"
+          },
+          "values": {
+            "population_est": 212583750
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BGD",
+            "name": "Bangladesh"
+          },
+          "values": {
+            "population_est": 169828911
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "RUS",
+            "name": "Russia"
+          },
+          "values": {
+            "population_est": 146028325
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MEX",
+            "name": "Mexico"
+          },
+          "values": {
+            "population_est": 130417144
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "JPN",
+            "name": "Japan"
+          },
+          "values": {
+            "population_est": 123360000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PHL",
+            "name": "Philippines"
+          },
+          "values": {
+            "population_est": 114123600
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "COD",
+            "name": "Democratic Republic of the Congo"
+          },
+          "values": {
+            "population_est": 112832000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ETH",
+            "name": "Ethiopia"
+          },
+          "values": {
+            "population_est": 111652998
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GIB",
+            "name": "Gibraltar"
+          },
+          "values": {
+            "population_est": 40724
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "EGY",
+            "name": "Egypt"
+          },
+          "values": {
+            "population_est": 107271260
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VNM",
+            "name": "Vietnam"
+          },
+          "values": {
+            "population_est": 101343800
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IRN",
+            "name": "Iran"
+          },
+          "values": {
+            "population_est": 85961000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TUR",
+            "name": "Turkey"
+          },
+          "values": {
+            "population_est": 85664944
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DEU",
+            "name": "Germany"
+          },
+          "values": {
+            "population_est": 83577140
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FRA",
+            "name": "France"
+          },
+          "values": {
+            "population_est": 68649000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GBR",
+            "name": "United Kingdom"
+          },
+          "values": {
+            "population_est": 68265209
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TZA",
+            "name": "Tanzania"
+          },
+          "values": {
+            "population_est": 68153004
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "THA",
+            "name": "Thailand"
+          },
+          "values": {
+            "population_est": 65870610
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ZAF",
+            "name": "South Africa"
+          },
+          "values": {
+            "population_est": 63015904
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ITA",
+            "name": "Italy"
+          },
+          "values": {
+            "population_est": 58918231
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KEN",
+            "name": "Kenya"
+          },
+          "values": {
+            "population_est": 53330978
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "COL",
+            "name": "Colombia"
+          },
+          "values": {
+            "population_est": 52695952
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SDN",
+            "name": "Sudan"
+          },
+          "values": {
+            "population_est": 51662000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MMR",
+            "name": "Myanmar"
+          },
+          "values": {
+            "population_est": 51316756
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KOR",
+            "name": "South Korea"
+          },
+          "values": {
+            "population_est": 51164582
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ESP",
+            "name": "Spain"
+          },
+          "values": {
+            "population_est": 49153849
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DZA",
+            "name": "Algeria"
+          },
+          "values": {
+            "population_est": 47400000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ARG",
+            "name": "Argentina"
+          },
+          "values": {
+            "population_est": 47067641
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IRQ",
+            "name": "Iraq"
+          },
+          "values": {
+            "population_est": 46118793
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "UGA",
+            "name": "Uganda"
+          },
+          "values": {
+            "population_est": 45935046
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "UKR",
+            "name": "Ukraine"
+          },
+          "values": {
+            "population_est": 39794000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CAN",
+            "name": "Canada"
+          },
+          "values": {
+            "population_est": 40751963
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "POL",
+            "name": "Poland"
+          },
+          "values": {
+            "population_est": 37626000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MAR",
+            "name": "Morocco"
+          },
+          "values": {
+            "population_est": 37077000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "UZB",
+            "name": "Uzbekistan"
+          },
+          "values": {
+            "population_est": 36799400
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SAU",
+            "name": "Saudi Arabia"
+          },
+          "values": {
+            "population_est": 36170000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PER",
+            "name": "Peru"
+          },
+          "values": {
+            "population_est": 34107000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AFG",
+            "name": "Afghanistan"
+          },
+          "values": {
+            "population_est": 41128771
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VEN",
+            "name": "Venezuela"
+          },
+          "values": {
+            "population_est": 28833000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MYS",
+            "name": "Malaysia"
+          },
+          "values": {
+            "population_est": 34000000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GHA",
+            "name": "Ghana"
+          },
+          "values": {
+            "population_est": 33475877
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NPL",
+            "name": "Nepal"
+          },
+          "values": {
+            "population_est": 30600000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "YEM",
+            "name": "Yemen"
+          },
+          "values": {
+            "population_est": 34449825
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AGO",
+            "name": "Angola"
+          },
+          "values": {
+            "population_est": 36132000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MOZ",
+            "name": "Mozambique"
+          },
+          "values": {
+            "population_est": 32518569
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AUS",
+            "name": "Australia"
+          },
+          "values": {
+            "population_est": 26900000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SYR",
+            "name": "Syria"
+          },
+          "values": {
+            "population_est": 23200000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CIV",
+            "name": "Ivory Coast"
+          },
+          "values": {
+            "population_est": 29389000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MDG",
+            "name": "Madagascar"
+          },
+          "values": {
+            "population_est": 29611719
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CMR",
+            "name": "Cameroon"
+          },
+          "values": {
+            "population_est": 28659100
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NER",
+            "name": "Niger"
+          },
+          "values": {
+            "population_est": 27200000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MLI",
+            "name": "Mali"
+          },
+          "values": {
+            "population_est": 22395489
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TWN",
+            "name": "Taiwan"
+          },
+          "values": {
+            "population_est": 23900000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BFA",
+            "name": "Burkina Faso"
+          },
+          "values": {
+            "population_est": 23025000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LKA",
+            "name": "Sri Lanka"
+          },
+          "values": {
+            "population_est": 21803000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ECU",
+            "name": "Ecuador"
+          },
+          "values": {
+            "population_est": 18270000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KAZ",
+            "name": "Kazakhstan"
+          },
+          "values": {
+            "population_est": 19800000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CHL",
+            "name": "Chile"
+          },
+          "values": {
+            "population_est": 19600000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ROU",
+            "name": "Romania"
+          },
+          "values": {
+            "population_est": 19053000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NLD",
+            "name": "Netherlands"
+          },
+          "values": {
+            "population_est": 17900000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MWI",
+            "name": "Malawi"
+          },
+          "values": {
+            "population_est": 20412155
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GTM",
+            "name": "Guatemala"
+          },
+          "values": {
+            "population_est": 18000000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SOM",
+            "name": "Somalia"
+          },
+          "values": {
+            "population_est": 17000000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TCD",
+            "name": "Chad"
+          },
+          "values": {
+            "population_est": 18278000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SEN",
+            "name": "Senegal"
+          },
+          "values": {
+            "population_est": 17800000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KHM",
+            "name": "Cambodia"
+          },
+          "values": {
+            "population_est": 16900000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ZWE",
+            "name": "Zimbabwe"
+          },
+          "values": {
+            "population_est": 16500000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "RWA",
+            "name": "Rwanda"
+          },
+          "values": {
+            "population_est": 14000000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BEN",
+            "name": "Benin"
+          },
+          "values": {
+            "population_est": 13712000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BOL",
+            "name": "Bolivia"
+          },
+          "values": {
+            "population_est": 12200000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BEL",
+            "name": "Belgium"
+          },
+          "values": {
+            "population_est": 11800000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CUB",
+            "name": "Cuba"
+          },
+          "values": {
+            "population_est": 11200000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TUN",
+            "name": "Tunisia"
+          },
+          "values": {
+            "population_est": 12000000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HTI",
+            "name": "Haiti"
+          },
+          "values": {
+            "population_est": 11500000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GRC",
+            "name": "Greece"
+          },
+          "values": {
+            "population_est": 10300000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CZE",
+            "name": "Czech Republic"
+          },
+          "values": {
+            "population_est": 10500000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SWE",
+            "name": "Sweden"
+          },
+          "values": {
+            "population_est": 10500000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PRT",
+            "name": "Portugal"
+          },
+          "values": {
+            "population_est": 10200000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AZE",
+            "name": "Azerbaijan"
+          },
+          "values": {
+            "population_est": 10100000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DOM",
+            "name": "Dominican Republic"
+          },
+          "values": {
+            "population_est": 11300000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HND",
+            "name": "Honduras"
+          },
+          "values": {
+            "population_est": 10400000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BDI",
+            "name": "Burundi"
+          },
+          "values": {
+            "population_est": 13200000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ARE",
+            "name": "United Arab Emirates"
+          },
+          "values": {
+            "population_est": 9900000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AUT",
+            "name": "Austria"
+          },
+          "values": {
+            "population_est": 9000000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CHE",
+            "name": "Switzerland"
+          },
+          "values": {
+            "population_est": 8800000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BGR",
+            "name": "Bulgaria"
+          },
+          "values": {
+            "population_est": 6400000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KGZ",
+            "name": "Kyrgyzstan"
+          },
+          "values": {
+            "population_est": 7000000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TJK",
+            "name": "Tajikistan"
+          },
+          "values": {
+            "population_est": 10100000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SLE",
+            "name": "Sierra Leone"
+          },
+          "values": {
+            "population_est": 8400000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LAO",
+            "name": "Laos"
+          },
+          "values": {
+            "population_est": 7500000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PNG",
+            "name": "Papua New Guinea"
+          },
+          "values": {
+            "population_est": 9900000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SLV",
+            "name": "El Salvador"
+          },
+          "values": {
+            "population_est": 6300000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LBY",
+            "name": "Libya"
+          },
+          "values": {
+            "population_est": 6800000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SGP",
+            "name": "Singapore"
+          },
+          "values": {
+            "population_est": 5600000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DNK",
+            "name": "Denmark"
+          },
+          "values": {
+            "population_est": 5900000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FIN",
+            "name": "Finland"
+          },
+          "values": {
+            "population_est": 5600000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NOR",
+            "name": "Norway"
+          },
+          "values": {
+            "population_est": 5500000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IRL",
+            "name": "Ireland"
+          },
+          "values": {
+            "population_est": 5000000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "OMN",
+            "name": "Oman"
+          },
+          "values": {
+            "population_est": 4600000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KWT",
+            "name": "Kuwait"
+          },
+          "values": {
+            "population_est": 4300000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GEO",
+            "name": "Georgia"
+          },
+          "values": {
+            "population_est": 3700000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HRV",
+            "name": "Croatia"
+          },
+          "values": {
+            "population_est": 3800000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ERI",
+            "name": "Eritrea"
+          },
+          "values": {
+            "population_est": 3700000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PAN",
+            "name": "Panama"
+          },
+          "values": {
+            "population_est": 4400000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "URY",
+            "name": "Uruguay"
+          },
+          "values": {
+            "population_est": 3500000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MNG",
+            "name": "Mongolia"
+          },
+          "values": {
+            "population_est": 3400000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "QAT",
+            "name": "Qatar"
+          },
+          "values": {
+            "population_est": 2700000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NZL",
+            "name": "New Zealand"
+          },
+          "values": {
+            "population_est": 5100000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SVK",
+            "name": "Slovakia"
+          },
+          "values": {
+            "population_est": 5400000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LBN",
+            "name": "Lebanon"
+          },
+          "values": {
+            "population_est": 5300000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PSE",
+            "name": "Palestine"
+          },
+          "values": {
+            "population_est": 5300000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PRI",
+            "name": "Puerto Rico"
+          },
+          "values": {
+            "population_est": 3200000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LTU",
+            "name": "Lithuania"
+          },
+          "values": {
+            "population_est": 2800000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ALB",
+            "name": "Albania"
+          },
+          "values": {
+            "population_est": 2800000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "JOR",
+            "name": "Jordan"
+          },
+          "values": {
+            "population_est": 11300000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "EST",
+            "name": "Estonia"
+          },
+          "values": {
+            "population_est": 1300000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CYP",
+            "name": "Cyprus"
+          },
+          "values": {
+            "population_est": 1200000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FJI",
+            "name": "Fiji"
+          },
+          "values": {
+            "population_est": 900000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LUX",
+            "name": "Luxembourg"
+          },
+          "values": {
+            "population_est": 600000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ISL",
+            "name": "Iceland"
+          },
+          "values": {
+            "population_est": 400000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MLT",
+            "name": "Malta"
+          },
+          "values": {
+            "population_est": 500000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MDV",
+            "name": "Maldives"
+          },
+          "values": {
+            "population_est": 500000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BLZ",
+            "name": "Belize"
+          },
+          "values": {
+            "population_est": 400000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BHR",
+            "name": "Bahrain"
+          },
+          "values": {
+            "population_est": 1500000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GNQ",
+            "name": "Equatorial Guinea"
+          },
+          "values": {
+            "population_est": 1700000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GAB",
+            "name": "Gabon"
+          },
+          "values": {
+            "population_est": 2400000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GMB",
+            "name": "Gambia"
+          },
+          "values": {
+            "population_est": 2700000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NAM",
+            "name": "Namibia"
+          },
+          "values": {
+            "population_est": 2600000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BWA",
+            "name": "Botswana"
+          },
+          "values": {
+            "population_est": 2700000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GIN",
+            "name": "Guinea"
+          },
+          "values": {
+            "population_est": 14100000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CAF",
+            "name": "Central African Republic"
+          },
+          "values": {
+            "population_est": 5900000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "COG",
+            "name": "Republic of the Congo"
+          },
+          "values": {
+            "population_est": 5800000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DJI",
+            "name": "Djibouti"
+          },
+          "values": {
+            "population_est": 1100000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "COM",
+            "name": "Comoros"
+          },
+          "values": {
+            "population_est": 900000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LSO",
+            "name": "Lesotho"
+          },
+          "values": {
+            "population_est": 2300000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SWZ",
+            "name": "Eswatini"
+          },
+          "values": {
+            "population_est": 1200000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CPV",
+            "name": "Cape Verde"
+          },
+          "values": {
+            "population_est": 590000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SLB",
+            "name": "Solomon Islands"
+          },
+          "values": {
+            "population_est": 700000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VUT",
+            "name": "Vanuatu"
+          },
+          "values": {
+            "population_est": 300000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "WSM",
+            "name": "Samoa"
+          },
+          "values": {
+            "population_est": 200000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TON",
+            "name": "Tonga"
+          },
+          "values": {
+            "population_est": 100000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FSM",
+            "name": "Federated States of Micronesia"
+          },
+          "values": {
+            "population_est": 100000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KIR",
+            "name": "Kiribati"
+          },
+          "values": {
+            "population_est": 100000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NRU",
+            "name": "Nauru"
+          },
+          "values": {
+            "population_est": 10000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PLW",
+            "name": "Palau"
+          },
+          "values": {
+            "population_est": 18000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MHL",
+            "name": "Marshall Islands"
+          },
+          "values": {
+            "population_est": 60000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TUV",
+            "name": "Tuvalu"
+          },
+          "values": {
+            "population_est": 10000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SMR",
+            "name": "San Marino"
+          },
+          "values": {
+            "population_est": 34000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LIE",
+            "name": "Liechtenstein"
+          },
+          "values": {
+            "population_est": 40000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MCO",
+            "name": "Monaco"
+          },
+          "values": {
+            "population_est": 36000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VAT",
+            "name": "Vatican City"
+          },
+          "values": {
+            "population_est": 800
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AND",
+            "name": "Andorra"
+          },
+          "values": {
+            "population_est": 80000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IMN",
+            "name": "Isle of Man"
+          },
+          "values": {
+            "population_est": 85000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "JEY",
+            "name": "Jersey"
+          },
+          "values": {
+            "population_est": 100000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GGY",
+            "name": "Guernsey"
+          },
+          "values": {
+            "population_est": 65000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FLK",
+            "name": "Falkland Islands"
+          },
+          "values": {
+            "population_est": 3000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GRL",
+            "name": "Greenland"
+          },
+          "values": {
+            "population_est": 56000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ALA",
+            "name": "Åland Islands"
+          },
+          "values": {
+            "population_est": 30000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PCN",
+            "name": "Pitcairn Islands"
+          },
+          "values": {
+            "population_est": 50
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "WLF",
+            "name": "Wallis and Futuna"
+          },
+          "values": {
+            "population_est": 11000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NCL",
+            "name": "New Caledonia"
+          },
+          "values": {
+            "population_est": 280000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PYF",
+            "name": "French Polynesia"
+          },
+          "values": {
+            "population_est": 300000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SPM",
+            "name": "Saint Pierre and Miquelon"
+          },
+          "values": {
+            "population_est": 6000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BLM",
+            "name": "Saint Barthélemy"
+          },
+          "values": {
+            "population_est": 10000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MAF",
+            "name": "Saint Martin"
+          },
+          "values": {
+            "population_est": 35000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CUW",
+            "name": "Curaçao"
+          },
+          "values": {
+            "population_est": 150000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SXM",
+            "name": "Sint Maarten"
+          },
+          "values": {
+            "population_est": 40000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ABW",
+            "name": "Aruba"
+          },
+          "values": {
+            "population_est": 100000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BMU",
+            "name": "Bermuda"
+          },
+          "values": {
+            "population_est": 60000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VGB",
+            "name": "British Virgin Islands"
+          },
+          "values": {
+            "population_est": 30000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CYM",
+            "name": "Cayman Islands"
+          },
+          "values": {
+            "population_est": 70000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TCA",
+            "name": "Turks and Caicos Islands"
+          },
+          "values": {
+            "population_est": 40000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VIR",
+            "name": "U.S. Virgin Islands"
+          },
+          "values": {
+            "population_est": 100000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MSR",
+            "name": "Montserrat"
+          },
+          "values": {
+            "population_est": 5000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ATG",
+            "name": "Antigua and Barbuda"
+          },
+          "values": {
+            "population_est": 100000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GRD",
+            "name": "Grenada"
+          },
+          "values": {
+            "population_est": 110000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LCA",
+            "name": "Saint Lucia"
+          },
+          "values": {
+            "population_est": 180000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VCT",
+            "name": "Saint Vincent and the Grenadines"
+          },
+          "values": {
+            "population_est": 100000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BRB",
+            "name": "Barbados"
+          },
+          "values": {
+            "population_est": 280000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DMA",
+            "name": "Dominica"
+          },
+          "values": {
+            "population_est": 70000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KNA",
+            "name": "Saint Kitts and Nevis"
+          },
+          "values": {
+            "population_est": 50000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AIA",
+            "name": "Anguilla"
+          },
+          "values": {
+            "population_est": 16000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NFK",
+            "name": "Norfolk Island"
+          },
+          "values": {
+            "population_est": 2000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "COK",
+            "name": "Cook Islands"
+          },
+          "values": {
+            "population_est": 17000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NIU",
+            "name": "Niue"
+          },
+          "values": {
+            "population_est": 2000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ASM",
+            "name": "American Samoa"
+          },
+          "values": {
+            "population_est": 45000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GUM",
+            "name": "Guam"
+          },
+          "values": {
+            "population_est": 170000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MNP",
+            "name": "Northern Mariana Islands"
+          },
+          "values": {
+            "population_est": 47000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HKG",
+            "name": "Hong Kong"
+          },
+          "values": {
+            "population_est": 7500000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MAC",
+            "name": "Macau"
+          },
+          "values": {
+            "population_est": 690000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MUS",
+            "name": "Mauritius"
+          },
+          "values": {
+            "population_est": 1261000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FRO",
+            "name": "Faroe Islands"
+          },
+          "values": {
+            "population_est": 54000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SYC",
+            "name": "Seychelles"
+          },
+          "values": {
+            "population_est": 132779
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CRI",
+            "name": "Costa Rica"
+          },
+          "values": {
+            "population_est": 5212173
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NIC",
+            "name": "Nicaragua"
+          },
+          "values": {
+            "population_est": 7142529
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BHS",
+            "name": "Bahamas"
+          },
+          "values": {
+            "population_est": 415235
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TTO",
+            "name": "Trinidad and Tobago"
+          },
+          "values": {
+            "population_est": 1541037
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "JAM",
+            "name": "Jamaica"
+          },
+          "values": {
+            "population_est": 2824915
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ISR",
+            "name": "Israel"
+          },
+          "values": {
+            "population_est": 9387021
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PRK",
+            "name": "North Korea"
+          },
+          "values": {
+            "population_est": 26355349
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BTN",
+            "name": "Bhutan"
+          },
+          "values": {
+            "population_est": 794357
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ARM",
+            "name": "Armenia"
+          },
+          "values": {
+            "population_est": 2777979
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TLS",
+            "name": "Timor-Leste"
+          },
+          "values": {
+            "population_est": 1388031
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BRN",
+            "name": "Brunei"
+          },
+          "values": {
+            "population_est": 455799
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TKM",
+            "name": "Turkmenistan"
+          },
+          "values": {
+            "population_est": 6642131
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SUR",
+            "name": "Suriname"
+          },
+          "values": {
+            "population_est": 628796
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GUY",
+            "name": "Guyana"
+          },
+          "values": {
+            "population_est": 819323
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PRY",
+            "name": "Paraguay"
+          },
+          "values": {
+            "population_est": 6948645
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SSD",
+            "name": "South Sudan"
+          },
+          "values": {
+            "population_est": 11276632
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SML",
+            "name": "Somaliland"
+          },
+          "values": {
+            "population_est": 3500000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ESH",
+            "name": "Western Sahara"
+          },
+          "values": {
+            "population_est": 597339
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ZMB",
+            "name": "Zambia"
+          },
+          "values": {
+            "population_est": 21147547
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LBR",
+            "name": "Liberia"
+          },
+          "values": {
+            "population_est": 5621943
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TGO",
+            "name": "Togo"
+          },
+          "values": {
+            "population_est": 9259169
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GNB",
+            "name": "Guinea-Bissau"
+          },
+          "values": {
+            "population_est": 2195044
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MRT",
+            "name": "Mauritania"
+          },
+          "values": {
+            "population_est": 4994274
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "STP",
+            "name": "São Tomé and Principe"
+          },
+          "values": {
+            "population_est": 236379
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BLR",
+            "name": "Belarus"
+          },
+          "values": {
+            "population_est": 9483491
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LVA",
+            "name": "Latvia"
+          },
+          "values": {
+            "population_est": 1806681
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MKD",
+            "name": "North Macedonia"
+          },
+          "values": {
+            "population_est": 2085679
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KOS",
+            "name": "Kosovo"
+          },
+          "values": {
+            "population_est": 1761985
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HUN",
+            "name": "Hungary"
+          },
+          "values": {
+            "population_est": 10129737
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SRB",
+            "name": "Serbia"
+          },
+          "values": {
+            "population_est": 7099395
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SVN",
+            "name": "Slovenia"
+          },
+          "values": {
+            "population_est": 2119675
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MNE",
+            "name": "Montenegro"
+          },
+          "values": {
+            "population_est": 626485
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BIH",
+            "name": "Bosnia and Herzegovina"
+          },
+          "values": {
+            "population_est": 3210847
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MDA",
+            "name": "Moldova"
+          },
+          "values": {
+            "population_est": 3289877
+          }
+        }
+      ]
+    }
+  ]
+}

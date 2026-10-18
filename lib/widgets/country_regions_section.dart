@@ -11,6 +11,7 @@ import 'package:jidoapp/services/subscription_service.dart';
 
 import 'package:jidoapp/widgets/country_region_access_gate.dart';
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
@@ -39,9 +40,9 @@ void _toggleRegion(
     ..showSnackBar(
       SnackBar(
         content: Text(
-          nowVisited
+          tr(nowVisited
               ? '${region.name} marked as visited'
-              : '${region.name} unmarked',
+              : '${region.name} unmarked'),
         ),
         duration: const Duration(milliseconds: 900),
         behavior: SnackBarBehavior.floating,
@@ -96,6 +97,7 @@ class _CountryRegionsSectionState extends State<CountryRegionsSection> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return FutureBuilder<List<AdminRegion>>(
       future: _regionsFuture,
       builder: (context, snapshot) {
@@ -142,9 +144,9 @@ class _CountryRegionsSectionState extends State<CountryRegionsSection> {
             ),
           ),
           const SizedBox(height: 8),
-          const Text(
-            'Subdivision boundaries are unavailable for this area. '
-            'The map shows the whole area; region tracking is unavailable.',
+           Text(
+            tr('Subdivision boundaries are unavailable for this area. '
+            'The map shows the whole area; region tracking is unavailable.'),
             style: TextStyle(fontSize: 12, color: Colors.black54),
           ),
         ],
@@ -182,14 +184,14 @@ class _CountryRegionsSectionState extends State<CountryRegionsSection> {
                     children: [
                       _MapOverlayButton(
                         icon: Icons.open_in_full_rounded,
-                        tooltip: 'Full screen',
+                        tooltip: tr('Full screen'),
                         color: themeColor,
                         onTap: () => _openFullScreen(regions),
                       ),
                       const SizedBox(height: 8),
                       _MapOverlayButton(
                         icon: Icons.format_list_bulleted_rounded,
-                        tooltip: 'Region list',
+                        tooltip: tr('Region list'),
                         color: themeColor,
                         onTap: () => showRegionListSheet(
                           context,
@@ -221,7 +223,7 @@ class _CountryRegionsSectionState extends State<CountryRegionsSection> {
             ),
             const SizedBox(width: 4),
             Text(
-              'Tap a region on the map to mark it visited',
+              tr('Tap a region on the map to mark it visited'),
               style: TextStyle(fontSize: 12, color: Colors.grey.shade500),
             ),
           ],
@@ -248,6 +250,7 @@ class _RegionMap extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final provider = context.watch<SubregionProvider>();
     final visitedFill = themeColor.withOpacity(0.85);
 
@@ -315,6 +318,7 @@ class _MapOverlayButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Material(
       color: Colors.white,
       shape: const CircleBorder(),
@@ -324,7 +328,7 @@ class _MapOverlayButton extends StatelessWidget {
         customBorder: const CircleBorder(),
         onTap: onTap,
         child: Tooltip(
-          message: tooltip,
+          message: tr(tooltip),
           child: Padding(
             padding: const EdgeInsets.all(8),
             child: Icon(icon, size: 18, color: color),
@@ -348,6 +352,7 @@ class _RegionProgress extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final provider = context.watch<SubregionProvider>();
     final visited = provider.visitedRegionCount(countryIsoA3, regions);
     final total = regions.length;
@@ -360,7 +365,7 @@ class _RegionProgress extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             Text(
-              '$visited',
+              tr('$visited'),
               style: TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.w800,
@@ -371,7 +376,7 @@ class _RegionProgress extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 4, bottom: 1),
               child: Text(
-                '/ $total regions visited',
+                tr('/ $total regions visited'),
                 style: TextStyle(
                   fontSize: 13,
                   fontWeight: FontWeight.w600,
@@ -381,7 +386,7 @@ class _RegionProgress extends StatelessWidget {
             ),
             const Spacer(),
             Text(
-              '${(ratio * 100).round()}%',
+              tr('${(ratio * 100).round()}%'),
               style: const TextStyle(
                 fontSize: 14,
                 fontWeight: FontWeight.w700,
@@ -421,13 +426,14 @@ class CountryRegionsMapScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return AnimatedBuilder(
       animation: SubscriptionService.instance,
       builder: (context, _) {
         if (CountryRegionAccess.isUnlocked(country.isoA2))
           return _buildMapScreen(context);
         return Scaffold(
-          appBar: AppBar(title: Text('${country.name} · Regions')),
+          appBar: AppBar(title: Text(tr('${country.name} · Regions'))),
           body: CountryRegionAccessGate(
             countryIsoA2: country.isoA2,
             builder: _buildMapScreen,
@@ -445,7 +451,7 @@ class CountryRegionsMapScreen extends StatelessWidget {
         surfaceTintColor: Colors.white,
         elevation: 0,
         title: Text(
-          '${country.name} · Regions',
+          tr('${country.name} · Regions'),
           style: TextStyle(fontWeight: FontWeight.bold, color: themeColor),
         ),
         iconTheme: IconThemeData(color: themeColor),
@@ -456,7 +462,7 @@ class CountryRegionsMapScreen extends StatelessWidget {
             ThemeData.estimateBrightnessForColor(themeColor) == Brightness.dark
             ? Colors.white
             : Colors.black87,
-        tooltip: 'Region list',
+        tooltip: tr('Region list'),
         onPressed: () => showRegionListSheet(
           context,
           country: country,
@@ -552,6 +558,7 @@ class _RegionListSheetState extends State<_RegionListSheet> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return CountryRegionAccessGate(
       countryIsoA2: widget.country.isoA2,
       builder: _buildList,
@@ -594,7 +601,7 @@ class _RegionListSheetState extends State<_RegionListSheet> {
                 children: [
                   Expanded(
                     child: Text(
-                      'Regions of ${widget.country.name}',
+                      tr('Regions of ${widget.country.name}'),
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
@@ -612,7 +619,7 @@ class _RegionListSheetState extends State<_RegionListSheet> {
                       borderRadius: BorderRadius.circular(12),
                     ),
                     child: Text(
-                      '$visitedCount / ${widget.regions.length}',
+                      tr('$visitedCount / ${widget.regions.length}'),
                       style: TextStyle(
                         fontSize: 13,
                         fontWeight: FontWeight.w700,
@@ -627,7 +634,7 @@ class _RegionListSheetState extends State<_RegionListSheet> {
               padding: const EdgeInsets.symmetric(horizontal: 16),
               child: TextField(
                 decoration: InputDecoration(
-                  hintText: 'Search regions',
+                  hintText: tr('Search regions'),
                   prefixIcon: const Icon(Icons.search),
                   filled: true,
                   fillColor: Colors.grey.shade100,
@@ -645,7 +652,7 @@ class _RegionListSheetState extends State<_RegionListSheet> {
               child: filtered.isEmpty
                   ? Center(
                       child: Text(
-                        'No matching regions.',
+                        tr('No matching regions.'),
                         style: TextStyle(color: Colors.grey.shade600),
                       ),
                     )
@@ -675,7 +682,7 @@ class _RegionListSheetState extends State<_RegionListSheet> {
                                     ),
                                     if (region.typeLabel.isNotEmpty)
                                       Text(
-                                        region.typeLabel,
+                                        tr(region.typeLabel),
                                         style: TextStyle(
                                           fontSize: 12,
                                           color: Colors.grey.shade600,

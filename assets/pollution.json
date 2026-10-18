@@ -1,12 +1,142 @@
-[
-  {"name": "Byrnihat", "country": "India", "pollution": "128.2", "continent": "Asia"},
-  {"name": "Delhi", "country": "India", "pollution": "108.3", "continent": "Asia"},
-  {"name": "Karaganda", "country": "Kazakhstan", "pollution": "104.8", "continent": "Asia"},
-  {"name": "Mullanpur", "country": "India", "pollution": "102.3", "continent": "Asia"},
-  {"name": "Lahore", "country": "Pakistan", "pollution": "102.1", "continent": "Asia"},
-  {"name": "Faridabad", "country": "India", "pollution": "101.2", "continent": "Asia"},
-  {"name": "Dera Ismail Khan", "country": "Pakistan", "pollution": "93", "continent": "Asia"},
-  {"name": "N'Djamena", "country": "Chad", "pollution": "91.8", "continent": "Africa"},
-  {"name": "Loni", "country": "India", "pollution": "91.7", "continent": "Asia"},
-  {"name": "New Delhi", "country": "India", "pollution": "91.6", "continent": "Asia"}
-]
+{
+  "schema_version": 1,
+  "dataset_id": "pollution",
+  "metadata": {
+    "source_url": null,
+    "reference_period": null,
+    "updated_at": null
+  },
+  "legacy_layout": "list",
+  "tables": [
+    {
+      "id": "main",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "name",
+        "country"
+      ],
+      "metrics": [
+        {
+          "id": "pollution",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        },
+        {
+          "id": "continent",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "name": "Byrnihat",
+            "country": "India"
+          },
+          "values": {
+            "pollution": "128.2",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Delhi",
+            "country": "India"
+          },
+          "values": {
+            "pollution": "108.3",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Karaganda",
+            "country": "Kazakhstan"
+          },
+          "values": {
+            "pollution": "104.8",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Mullanpur",
+            "country": "India"
+          },
+          "values": {
+            "pollution": "102.3",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Lahore",
+            "country": "Pakistan"
+          },
+          "values": {
+            "pollution": "102.1",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Faridabad",
+            "country": "India"
+          },
+          "values": {
+            "pollution": "101.2",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Dera Ismail Khan",
+            "country": "Pakistan"
+          },
+          "values": {
+            "pollution": "93",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "N'Djamena",
+            "country": "Chad"
+          },
+          "values": {
+            "pollution": "91.8",
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Loni",
+            "country": "India"
+          },
+          "values": {
+            "pollution": "91.7",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "New Delhi",
+            "country": "India"
+          },
+          "values": {
+            "pollution": "91.6",
+            "continent": "Asia"
+          }
+        }
+      ]
+    }
+  ]
+}

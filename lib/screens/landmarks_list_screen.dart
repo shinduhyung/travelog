@@ -4,6 +4,7 @@ import 'dart:io';
 import 'dart:ui';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:image_picker/image_picker.dart';
@@ -464,7 +465,7 @@ class _LandmarksListScreenState extends State<LandmarksListScreen> {
                     border: Border.all(color: headerTextColor.withOpacity(0.4), width: 1),
                   ),
                   child: Text(
-                    text,
+                    tr(text),
                     style: const TextStyle(
                       fontSize: 13,
                       fontWeight: FontWeight.w700,
@@ -476,7 +477,7 @@ class _LandmarksListScreenState extends State<LandmarksListScreen> {
                   Padding(
                     padding: const EdgeInsets.only(left: 8),
                     child: Text(
-                      openedText,
+                      tr(openedText),
                       style: TextStyle(
                         fontSize: 13,
                         fontWeight: FontWeight.w600,
@@ -497,7 +498,7 @@ class _LandmarksListScreenState extends State<LandmarksListScreen> {
             customHeaderWidget = Padding(
               padding: const EdgeInsets.only(top: 10, bottom: 2),
               child: Text(
-                subInfos.join(' • '),
+                tr(subInfos.join(' • ')),
                 style: TextStyle(
                     fontSize: 13,
                     fontWeight: FontWeight.w600,
@@ -512,7 +513,7 @@ class _LandmarksListScreenState extends State<LandmarksListScreen> {
           customHeaderWidget = Padding(
             padding: const EdgeInsets.only(top: 10, bottom: 2),
             child: Text(
-              freshLandmark.month!,
+              tr(freshLandmark.month!),
               style: TextStyle(
                 fontSize: 15,
                 fontWeight: FontWeight.w700,
@@ -536,7 +537,7 @@ class _LandmarksListScreenState extends State<LandmarksListScreen> {
             customHeaderWidget = Padding(
               padding: const EdgeInsets.only(top: 10, bottom: 2),
               child: Text(
-                text,
+                tr(text),
                 style: TextStyle(
                   fontSize: 13,
                   fontWeight: FontWeight.w600,
@@ -550,7 +551,7 @@ class _LandmarksListScreenState extends State<LandmarksListScreen> {
           customHeaderWidget = Padding(
             padding: const EdgeInsets.only(top: 10, bottom: 2),
             child: Text(
-              freshLandmark.type!,
+              tr(freshLandmark.type!),
               style: TextStyle(
                 fontSize: 14,
                 fontWeight: FontWeight.w600,
@@ -642,7 +643,7 @@ class _LandmarksListScreenState extends State<LandmarksListScreen> {
                                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                                     padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                                   ),
-                                  child: const Text('Cancel',
+                                  child:  Text(tr('Cancel'),
                                       style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600, fontSize: 13)),
                                 ),
                                 ElevatedButton(
@@ -654,13 +655,13 @@ class _LandmarksListScreenState extends State<LandmarksListScreen> {
                                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                                     padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 8),
                                   ),
-                                  child: const Text('Done', style: TextStyle(fontWeight: FontWeight.w700, fontSize: 13)),
+                                  child:  Text(tr('Done'), style: TextStyle(fontWeight: FontWeight.w700, fontSize: 13)),
                                 ),
                               ],
                             ),
                             const SizedBox(height: 16),
                             Text(
-                              displayTitle,
+                              tr(displayTitle),
                               style: const TextStyle(
                                 fontWeight: FontWeight.w800,
                                 fontSize: 26,
@@ -674,7 +675,7 @@ class _LandmarksListScreenState extends State<LandmarksListScreen> {
                               Padding(
                                 padding: const EdgeInsets.only(top: 6.0),
                                 child: Text(
-                                  metricLabel,
+                                  tr(metricLabel),
                                   style: TextStyle(
                                     fontSize: 15,
                                     fontWeight: FontWeight.w700,
@@ -701,7 +702,7 @@ class _LandmarksListScreenState extends State<LandmarksListScreen> {
                                       const SizedBox(width: 4),
                                       Flexible(
                                         child: Text(
-                                          locationDisplay,
+                                          tr(locationDisplay),
                                           overflow: TextOverflow.ellipsis,
                                           style: TextStyle(
                                             fontSize: 12.5,
@@ -726,7 +727,7 @@ class _LandmarksListScreenState extends State<LandmarksListScreen> {
                                       children: [
                                         Icon(Icons.check_circle, size: 13, color: themeColor),
                                         const SizedBox(width: 4),
-                                        Text('Visited',
+                                        Text(tr('Visited'),
                                             style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: themeColor)),
                                       ],
                                     ),
@@ -767,7 +768,7 @@ class _LandmarksListScreenState extends State<LandmarksListScreen> {
                                     borderRadius: BorderRadius.circular(20),
                                   ),
                                   child: Text(
-                                    "$visitedSubCount / $totalSubCount visited",
+                                    tr("$visitedSubCount / $totalSubCount visited"),
                                     style: TextStyle(
                                       fontSize: 12,
                                       fontWeight: FontWeight.w700,
@@ -791,23 +792,23 @@ class _LandmarksListScreenState extends State<LandmarksListScreen> {
                         children: [
                           _buildLandmarkHeroImage(freshLandmark),
                           if (_isItemCategory(freshLandmark, 'Painting') || _isItemCategory(freshLandmark, 'Artwork')) ...[
-                            if (freshLandmark.artist != null) Text(freshLandmark.artist!, style: Theme.of(sheetContext).textTheme.displaySmall?.copyWith(fontWeight: FontWeight.bold, fontSize: 32)),
-                            if (freshLandmark.created != null) Padding(padding: const EdgeInsets.only(top: 4), child: Text(freshLandmark.created!, style: Theme.of(sheetContext).textTheme.headlineSmall?.copyWith(color: Colors.black54, fontStyle: FontStyle.italic))),
-                            if (freshLandmark.museum != null) Padding(padding: const EdgeInsets.only(top: 8), child: Row(children: [Icon(Icons.museum_outlined, color: themeColor, size: 20), const SizedBox(width: 8), Text(freshLandmark.museum!, style: Theme.of(sheetContext).textTheme.titleMedium)])),
+                            if (freshLandmark.artist != null) Text(tr(freshLandmark.artist!), style: Theme.of(sheetContext).textTheme.displaySmall?.copyWith(fontWeight: FontWeight.bold, fontSize: 32)),
+                            if (freshLandmark.created != null) Padding(padding: const EdgeInsets.only(top: 4), child: Text(tr(freshLandmark.created!), style: Theme.of(sheetContext).textTheme.headlineSmall?.copyWith(color: Colors.black54, fontStyle: FontStyle.italic))),
+                            if (freshLandmark.museum != null) Padding(padding: const EdgeInsets.only(top: 8), child: Row(children: [Icon(Icons.museum_outlined, color: themeColor, size: 20), const SizedBox(width: 8), Text(tr(freshLandmark.museum!), style: Theme.of(sheetContext).textTheme.titleMedium)])),
                             const Padding(padding: EdgeInsets.symmetric(vertical: 16), child: Divider(thickness: 1)),
                           ],
 
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Row(mainAxisSize: MainAxisSize.min, children: [const Text('Wishlist:'), IconButton(visualDensity: VisualDensity.compact, icon: Icon(isWishlisted ? Icons.favorite : Icons.favorite_border, color: isWishlisted ? Colors.red : Colors.grey), onPressed: () => provider.toggleWishlistStatus(freshLandmark.name))]),
-                              Row(mainAxisSize: MainAxisSize.min, children: [const Text('My Rating:'), const SizedBox(width: 8), RatingBar.builder(initialRating: freshLandmark.rating ?? 0.0, minRating: 0, direction: Axis.horizontal, allowHalfRating: true, itemCount: 5, itemSize: 28.0, itemBuilder: (context, _) => const Icon(Icons.star, color: Colors.amber), onRatingUpdate: (rating) => provider.updateLandmarkRating(freshLandmark.name, rating))]),
+                              Row(mainAxisSize: MainAxisSize.min, children: [ Text(tr('Wishlist:')), IconButton(visualDensity: VisualDensity.compact, icon: Icon(isWishlisted ? Icons.favorite : Icons.favorite_border, color: isWishlisted ? Colors.red : Colors.grey), onPressed: () => provider.toggleWishlistStatus(freshLandmark.name))]),
+                              Row(mainAxisSize: MainAxisSize.min, children: [ Text(tr('My Rating:')), const SizedBox(width: 8), RatingBar.builder(initialRating: freshLandmark.rating ?? 0.0, minRating: 0, direction: Axis.horizontal, allowHalfRating: true, itemCount: 5, itemSize: 28.0, itemBuilder: (context, _) => const Icon(Icons.star, color: Colors.amber), onRatingUpdate: (rating) => provider.updateLandmarkRating(freshLandmark.name, rating))]),
                             ],
                           ),
                           const Divider(height: 20),
 
                           if (totalSubCount > 1) ...[
-                            Text("Components / Locations",
+                            Text(tr("Components / Locations"),
                                 style: Theme.of(sheetContext)
                                     .textTheme
                                     .titleMedium
@@ -837,7 +838,7 @@ class _LandmarksListScreenState extends State<LandmarksListScreen> {
                             const Divider(height: 24),
                           ],
 
-                          Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [Text('History (${freshLandmark.visitDates.length} entries)', style: Theme.of(sheetContext).textTheme.titleSmall), OutlinedButton.icon(icon: const Icon(Icons.add), label: const Text('Add Visit'), onPressed: () => provider.addVisitDate(freshLandmark.name))]),
+                          Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [Text(tr('History (${freshLandmark.visitDates.length} entries)'), style: Theme.of(sheetContext).textTheme.titleSmall), OutlinedButton.icon(icon: const Icon(Icons.add), label:  Text(tr('Add Visit')), onPressed: () => provider.addVisitDate(freshLandmark.name))]),
                           const SizedBox(height: 8),
                           if (freshLandmark.visitDates.isNotEmpty) ...freshLandmark.visitDates.asMap().entries.map((entry) => LandmarkVisitEditorCard(
                             key: ValueKey('${freshLandmark.name}_${entry.key}'),
@@ -846,7 +847,7 @@ class _LandmarksListScreenState extends State<LandmarksListScreen> {
                             index: entry.key,
                             onDelete: () => provider.removeVisitDate(freshLandmark.name, entry.key),
                             availableLocations: freshLandmark.locations,
-                          )) else const Center(child: Text('No visits recorded.')),
+                          )) else  Center(child: Text(tr('No visits recorded.'))),
                           const Divider(height: 24),
 
                           if (_isItemCategory(freshLandmark, 'Food')) ...[
@@ -904,7 +905,7 @@ class _LandmarksListScreenState extends State<LandmarksListScreen> {
   }
 
   Widget _buildInfoText(String title, String content, Color themeColor) {
-    return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [Text(title, style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: themeColor)), const SizedBox(height: 4), Text(content, style: TextStyle(color: Colors.grey[800], height: 1.4)), const SizedBox(height: 16)]);
+    return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [Text(tr(title), style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: themeColor)), const SizedBox(height: 4), Text(tr(content), style: TextStyle(color: Colors.grey[800], height: 1.4)), const SizedBox(height: 16)]);
   }
 
   Widget _buildHeroDashboard(BuildContext context, double percentage, int visitedCount, int totalCount, List<Landmark> items) {
@@ -930,10 +931,10 @@ class _LandmarksListScreenState extends State<LandmarksListScreen> {
                       children: [
                         const Icon(Icons.emoji_events_rounded, size: 20, color: Colors.white),
                         const SizedBox(width: 8),
-                        const Text('Progress', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.white)),
+                         Text(tr('Progress'), style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.white)),
                       ],
                     ),
-                    Text('${(percentage * 100).toStringAsFixed(0)}%', style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white)),
+                    Text(tr('${(percentage * 100).toStringAsFixed(0)}%'), style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white)),
                   ],
                 ),
                 const SizedBox(height: 12),
@@ -964,7 +965,7 @@ class _LandmarksListScreenState extends State<LandmarksListScreen> {
                             children: [
                               const Icon(Icons.map_outlined, color: Colors.white, size: 16),
                               const SizedBox(width: 6),
-                              const Text('View Map', style: TextStyle(color: Colors.white, fontSize: 13, fontWeight: FontWeight.w600)),
+                               Text(tr('View Map'), style: TextStyle(color: Colors.white, fontSize: 13, fontWeight: FontWeight.w600)),
                             ],
                           ),
                         ),
@@ -973,7 +974,7 @@ class _LandmarksListScreenState extends State<LandmarksListScreen> {
                       const SizedBox.shrink(),
 
                     Text(
-                        '$visitedCount / $totalCount visited',
+                        tr('$visitedCount / $totalCount visited'),
                         style: TextStyle(fontSize: 13, color: Colors.white.withOpacity(0.9), fontWeight: FontWeight.w500)
                     ),
                   ],
@@ -990,6 +991,7 @@ class _LandmarksListScreenState extends State<LandmarksListScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Consumer<LandmarksProvider>(
       builder: (context, provider, child) {
         final countryProvider = context.watch<CountryProvider>();
@@ -1041,7 +1043,7 @@ class _LandmarksListScreenState extends State<LandmarksListScreen> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              widget.title,
+                              tr(widget.title),
                               style: const TextStyle(
                                 fontSize: 28,
                                 fontWeight: FontWeight.bold,
@@ -1076,7 +1078,7 @@ class _LandmarksListScreenState extends State<LandmarksListScreen> {
                           child: TextField(
                             controller: _searchController,
                             decoration: InputDecoration(
-                              hintText: 'Search...',
+                              hintText: tr('Search...'),
                               hintStyle: TextStyle(color: Colors.grey[400], fontSize: 15),
                               prefixIcon: Icon(Icons.search, color: Colors.grey[400]),
                               border: OutlineInputBorder(borderRadius: BorderRadius.circular(16), borderSide: BorderSide.none),
@@ -1113,33 +1115,33 @@ class _LandmarksListScreenState extends State<LandmarksListScreen> {
                                       }
                                     },
                                     items: [
-                                      const DropdownMenuItem(
+                                       DropdownMenuItem(
                                         value: LandmarkSortOption.nameAsc,
-                                        child: Text("Name (A-Z)", style: TextStyle(fontSize: 14)),
+                                        child: Text(tr("Name (A-Z)"), style: TextStyle(fontSize: 14)),
                                       ),
-                                      const DropdownMenuItem(
+                                       DropdownMenuItem(
                                         value: LandmarkSortOption.country,
-                                        child: Text("Country", style: TextStyle(fontSize: 14)),
+                                        child: Text(tr("Country"), style: TextStyle(fontSize: 14)),
                                       ),
                                       if (widget.attributes.contains('River'))
-                                        const DropdownMenuItem(
+                                         DropdownMenuItem(
                                           value: LandmarkSortOption.metricDesc,
-                                          child: Text("Length", style: TextStyle(fontSize: 14)),
+                                          child: Text(tr("Length"), style: TextStyle(fontSize: 14)),
                                         ),
                                       if (widget.attributes.contains('Lake'))
-                                        const DropdownMenuItem(
+                                         DropdownMenuItem(
                                           value: LandmarkSortOption.metricDesc,
-                                          child: Text("Area", style: TextStyle(fontSize: 14)),
+                                          child: Text(tr("Area"), style: TextStyle(fontSize: 14)),
                                         ),
                                       if (widget.attributes.contains('Mountain') || widget.attributes.contains('Falls') || widget.attributes.contains('Waterfall'))
-                                        const DropdownMenuItem(
+                                         DropdownMenuItem(
                                           value: LandmarkSortOption.metricDesc,
-                                          child: Text("Height", style: TextStyle(fontSize: 14)),
+                                          child: Text(tr("Height"), style: TextStyle(fontSize: 14)),
                                         ),
                                       if (widget.attributes.contains('Fast Food'))
-                                        const DropdownMenuItem(
+                                         DropdownMenuItem(
                                           value: LandmarkSortOption.metricDesc,
-                                          child: Text("Number of Locations", style: TextStyle(fontSize: 14)),
+                                          child: Text(tr("Number of Locations"), style: TextStyle(fontSize: 14)),
                                         ),
                                     ],
                                   ),
@@ -1148,7 +1150,7 @@ class _LandmarksListScreenState extends State<LandmarksListScreen> {
                             ),
                             const SizedBox(width: 12),
                             FilterChip(
-                              label: const Text('Visited', style: TextStyle(fontSize: 13)),
+                              label:  Text(tr('Visited'), style: TextStyle(fontSize: 13)),
                               selected: _showVisitedOnly,
                               onSelected: (bool selected) {
                                 setState(() {
@@ -1226,7 +1228,7 @@ class _LandmarksListScreenState extends State<LandmarksListScreen> {
 
                                     Expanded(
                                       child: Text(
-                                          "$groupKey $visitedInGroup/${groupItems.length}",
+                                          tr("$groupKey $visitedInGroup/${groupItems.length}"),
                                           style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.black87)
                                       ),
                                     ),
@@ -1262,16 +1264,16 @@ class _LandmarksListScreenState extends State<LandmarksListScreen> {
         final confirm = await showDialog<bool>(
           context: context,
           builder: (context) => AlertDialog(
-            title: const Text('Confirm Removal'),
-            content: Text('Are you sure you want to remove all visit records for ${item.name}?'),
+            title:  Text(tr('Confirm Removal')),
+            content: Text(tr('Are you sure you want to remove all visit records for ${item.name}?')),
             actions: [
               TextButton(
                   onPressed: () => Navigator.pop(context, false),
-                  child: const Text('Cancel')
+                  child:  Text(tr('Cancel'))
               ),
               TextButton(
                   onPressed: () => Navigator.pop(context, true),
-                  child: const Text('Yes, Remove', style: TextStyle(color: Colors.red))
+                  child:  Text(tr('Yes, Remove'), style: TextStyle(color: Colors.red))
               ),
             ],
           ),
@@ -1408,7 +1410,7 @@ class _LandmarksListScreenState extends State<LandmarksListScreen> {
                         if (metricText.isNotEmpty)
                           Padding(
                             padding: const EdgeInsets.only(top: 2.0),
-                            child: Text(metricText, style: TextStyle(fontSize: 12, color: Colors.grey[600], fontWeight: FontWeight.w500)),
+                            child: Text(tr(metricText), style: TextStyle(fontSize: 12, color: Colors.grey[600], fontWeight: FontWeight.w500)),
                           ),
                       ],
                     ),
@@ -1499,6 +1501,7 @@ class _FallbackNetworkImageState extends State<_FallbackNetworkImage> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     if (widget.urls.isEmpty) return widget.emptyBuilder(context);
 
     final allFailed = widget.urls.every(_failed.contains);

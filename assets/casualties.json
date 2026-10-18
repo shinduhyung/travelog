@@ -1,36 +1,296 @@
 {
-  "world_war_2_casualties": [
-    { "iso_a3": "RUS", "estimated_total_casualties": 26600000 },
-    { "iso_a3": "CHN", "estimated_total_casualties": 20000000 },
-    { "iso_a3": "DEU", "estimated_total_casualties": 7400000 },
-    { "iso_a3": "POL", "estimated_total_casualties": 6000000 },
-    { "iso_a3": "IDN", "estimated_total_casualties": 3500000 },
-    { "iso_a3": "JPN", "estimated_total_casualties": 3100000 },
-    { "iso_a3": "IND", "estimated_total_casualties": 2200000 },
-    { "iso_a3": "YUG", "estimated_total_casualties": 1700000 },
-    { "iso_a3": "VNM", "estimated_total_casualties": 1500000 },
-    { "iso_a3": "PHL", "estimated_total_casualties": 1000000 },
-    { "iso_a3": "ROU", "estimated_total_casualties": 800000 },
-    { "iso_a3": "HUN", "estimated_total_casualties": 580000 },
-    { "iso_a3": "FRA", "estimated_total_casualties": 567000 },
-    { "iso_a3": "ITA", "estimated_total_casualties": 490000 },
-    { "iso_a3": "GBR", "estimated_total_casualties": 450000 }
-  ],
-  "world_war_1_casualties": [
-    { "iso_a3": "RUS", "estimated_total_casualties": 3300000 },
-    { "iso_a3": "TUR", "estimated_total_casualties": 2900000 },
-    { "iso_a3": "DEU", "estimated_total_casualties": 2500000 },
-    { "iso_a3": "AUT", "estimated_total_casualties": 1860000 },
-    { "iso_a3": "FRA", "estimated_total_casualties": 1700000 },
-    { "iso_a3": "ITA", "estimated_total_casualties": 1200000 },
-    { "iso_a3": "GBR", "estimated_total_casualties": 1000000 },
-    { "iso_a3": "SRB", "estimated_total_casualties": 1100000 },
-    { "iso_a3": "ROU", "estimated_total_casualties": 600000 },
-    { "iso_a3": "IND", "estimated_total_casualties": 74000 },
-    { "iso_a3": "USA", "estimated_total_casualties": 117000 },
-    { "iso_a3": "BGR", "estimated_total_casualties": 187000 },
-    { "iso_a3": "GRC", "estimated_total_casualties": 176000 },
-    { "iso_a3": "BEL", "estimated_total_casualties": 120000 },
-    { "iso_a3": "PRT", "estimated_total_casualties": 89000 }
+  "schema_version": 1,
+  "dataset_id": "casualties",
+  "metadata": {
+    "source_url": null,
+    "reference_period": null,
+    "updated_at": null
+  },
+  "legacy_layout": "sections",
+  "tables": [
+    {
+      "id": "world_war_2_casualties",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "iso_a3"
+      ],
+      "metrics": [
+        {
+          "id": "estimated_total_casualties",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "iso_a3": "RUS"
+          },
+          "values": {
+            "estimated_total_casualties": 26600000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CHN"
+          },
+          "values": {
+            "estimated_total_casualties": 20000000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DEU"
+          },
+          "values": {
+            "estimated_total_casualties": 7400000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "POL"
+          },
+          "values": {
+            "estimated_total_casualties": 6000000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IDN"
+          },
+          "values": {
+            "estimated_total_casualties": 3500000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "JPN"
+          },
+          "values": {
+            "estimated_total_casualties": 3100000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IND"
+          },
+          "values": {
+            "estimated_total_casualties": 2200000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "YUG"
+          },
+          "values": {
+            "estimated_total_casualties": 1700000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VNM"
+          },
+          "values": {
+            "estimated_total_casualties": 1500000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PHL"
+          },
+          "values": {
+            "estimated_total_casualties": 1000000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ROU"
+          },
+          "values": {
+            "estimated_total_casualties": 800000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HUN"
+          },
+          "values": {
+            "estimated_total_casualties": 580000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FRA"
+          },
+          "values": {
+            "estimated_total_casualties": 567000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ITA"
+          },
+          "values": {
+            "estimated_total_casualties": 490000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GBR"
+          },
+          "values": {
+            "estimated_total_casualties": 450000
+          }
+        }
+      ]
+    },
+    {
+      "id": "world_war_1_casualties",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "iso_a3"
+      ],
+      "metrics": [
+        {
+          "id": "estimated_total_casualties",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "iso_a3": "RUS"
+          },
+          "values": {
+            "estimated_total_casualties": 3300000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TUR"
+          },
+          "values": {
+            "estimated_total_casualties": 2900000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DEU"
+          },
+          "values": {
+            "estimated_total_casualties": 2500000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AUT"
+          },
+          "values": {
+            "estimated_total_casualties": 1860000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FRA"
+          },
+          "values": {
+            "estimated_total_casualties": 1700000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ITA"
+          },
+          "values": {
+            "estimated_total_casualties": 1200000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GBR"
+          },
+          "values": {
+            "estimated_total_casualties": 1000000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SRB"
+          },
+          "values": {
+            "estimated_total_casualties": 1100000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ROU"
+          },
+          "values": {
+            "estimated_total_casualties": 600000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IND"
+          },
+          "values": {
+            "estimated_total_casualties": 74000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "USA"
+          },
+          "values": {
+            "estimated_total_casualties": 117000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BGR"
+          },
+          "values": {
+            "estimated_total_casualties": 187000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GRC"
+          },
+          "values": {
+            "estimated_total_casualties": 176000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BEL"
+          },
+          "values": {
+            "estimated_total_casualties": 120000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PRT"
+          },
+          "values": {
+            "estimated_total_casualties": 89000
+          }
+        }
+      ]
+    }
   ]
 }

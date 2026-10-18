@@ -1,6 +1,7 @@
 // lib/screens/top_rivers_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:collection/collection.dart';
 import 'package:country_flags/country_flags.dart';
@@ -46,6 +47,7 @@ class TopRiversScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final landmarksProvider = context.watch<LandmarksProvider>();
     final allLandmarks = landmarksProvider.allLandmarks;
 
@@ -73,13 +75,13 @@ class TopRiversScreen extends StatelessWidget {
                   Row(children: [
                     const Icon(Icons.waves_rounded, size: 14, color: _kTheme),
                     const SizedBox(width: 5),
-                    const Text('Longest Rivers', style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: _kTheme, letterSpacing: 0.3)),
+                     Text(tr('Longest Rivers'), style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: _kTheme, letterSpacing: 0.3)),
                   ]),
                   const SizedBox(height: 6),
-                  const Text('Top 16 Longest',
+                   Text(tr('Top 16 Longest'),
                       style: TextStyle(fontSize: 28, fontWeight: FontWeight.w900, color: Color(0xFF111827), letterSpacing: -1.0, height: 1.1)),
                   const SizedBox(height: 4),
-                  Text('The world\'s longest waterways', style: TextStyle(fontSize: 12, color: Colors.grey[500], fontWeight: FontWeight.w500)),
+                  Text(tr('The world\'s longest waterways'), style: TextStyle(fontSize: 12, color: Colors.grey[500], fontWeight: FontWeight.w500)),
                 ])),
                 Consumer<LandmarksProvider>(builder: (context, provider, _) {
                   final visited = _top16Rivers.where((m) => provider.visitedLandmarks.contains(m['name'])).length;
@@ -91,10 +93,10 @@ class TopRiversScreen extends StatelessWidget {
                       border: Border.all(color: _kTheme.withOpacity(0.2)),
                     ),
                     child: Column(children: [
-                      Text('$visited', style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w900, color: _kTheme, height: 1.0)),
-                      const Text('/ 16', style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: _kTheme, height: 1.2)),
+                      Text(tr('$visited'), style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w900, color: _kTheme, height: 1.0)),
+                       Text(tr('/ 16'), style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: _kTheme, height: 1.2)),
                       const SizedBox(height: 2),
-                      const Text('visited', style: TextStyle(fontSize: 10, fontWeight: FontWeight.w500, color: _kTheme)),
+                       Text(tr('visited'), style: TextStyle(fontSize: 10, fontWeight: FontWeight.w500, color: _kTheme)),
                     ]),
                   );
                 }),
@@ -125,7 +127,7 @@ class TopRiversScreen extends StatelessWidget {
                       if (landmark != null) {
                         _showLandmarkDetailsModal(context, landmark, _kTheme);
                       } else {
-                        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('$name details not found in database')));
+                        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(tr('$name details not found in database'))));
                       }
                     },
                     child: Container(
@@ -139,18 +141,18 @@ class TopRiversScreen extends StatelessWidget {
                       ),
                       child: Column(children: [
                         Row(children: [
-                          SizedBox(width: 36, child: Text('$rank',
+                          SizedBox(width: 36, child: Text(tr('$rank'),
                               textAlign: TextAlign.center,
                               style: TextStyle(fontSize: rank <= 3 ? 22 : 20, fontWeight: FontWeight.w900, color: rankColor, letterSpacing: -0.5, height: 1.0))),
                           const SizedBox(width: 10),
                           ClipRRect(borderRadius: BorderRadius.circular(4),
                               child: SizedBox(width: 30, height: 22, child: CountryFlag.fromCountryCode(iso))),
                           const SizedBox(width: 12),
-                          Expanded(child: Text(name,
+                          Expanded(child: Text(tr(name),
                               style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: Color(0xFF111827)),
                               maxLines: 1, overflow: TextOverflow.ellipsis)),
-                          const Text('', style: TextStyle(color: _kTheme)), // spacer trick
-                          Text(stat, style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: _kTheme)),
+                           Text(tr(''), style: TextStyle(color: _kTheme)), // spacer trick
+                          Text(tr(stat), style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: _kTheme)),
                           const SizedBox(width: 10),
                           if (isVisited)
                             Container(padding: const EdgeInsets.all(3),
@@ -217,10 +219,10 @@ class TopRiversScreen extends StatelessWidget {
                 child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                   Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                     TextButton(onPressed: () => Navigator.pop(sheetContext),
-                        child: const Text('Cancel', style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600))),
+                        child:  Text(tr('Cancel'), style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600))),
                     ElevatedButton(onPressed: () => Navigator.pop(sheetContext),
                         style: ElevatedButton.styleFrom(backgroundColor: headerTextColor),
-                        child: const Text('Done', style: TextStyle(fontWeight: FontWeight.w600, color: themeColor))),
+                        child:  Text(tr('Done'), style: TextStyle(fontWeight: FontWeight.w600, color: themeColor))),
                   ]),
                   const SizedBox(height: 12),
                   Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -237,13 +239,13 @@ class TopRiversScreen extends StatelessWidget {
               child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                 Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                   Row(mainAxisSize: MainAxisSize.min, children: [
-                    const Text('Wishlist:'),
+                     Text(tr('Wishlist:')),
                     IconButton(visualDensity: VisualDensity.compact,
                         icon: Icon(isWishlisted ? Icons.favorite : Icons.favorite_border, color: isWishlisted ? Colors.red : Colors.grey),
                         onPressed: () => provider.toggleWishlistStatus(freshLandmark.name)),
                   ]),
                   Row(mainAxisSize: MainAxisSize.min, children: [
-                    const Text('My Rating:'),
+                     Text(tr('My Rating:')),
                     const SizedBox(width: 8),
                     RatingBar.builder(initialRating: freshLandmark.rating ?? 0.0, minRating: 0,
                         direction: Axis.horizontal, allowHalfRating: true, itemCount: 5, itemSize: 28.0,
@@ -253,8 +255,8 @@ class TopRiversScreen extends StatelessWidget {
                 ]),
                 const Divider(height: 20),
                 Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                  Text('History (${freshLandmark.visitDates.length} entries)', style: Theme.of(sheetContext).textTheme.titleSmall),
-                  OutlinedButton.icon(icon: const Icon(Icons.add), label: const Text('Add Visit'),
+                  Text(tr('History (${freshLandmark.visitDates.length} entries)'), style: Theme.of(sheetContext).textTheme.titleSmall),
+                  OutlinedButton.icon(icon: const Icon(Icons.add), label:  Text(tr('Add Visit')),
                       onPressed: () => provider.addVisitDate(freshLandmark.name)),
                 ]),
                 const SizedBox(height: 8),
@@ -264,7 +266,7 @@ class TopRiversScreen extends StatelessWidget {
                       landmarkName: freshLandmark.name, visitDate: entry.value, index: entry.key,
                       onDelete: () => provider.removeVisitDate(freshLandmark.name, entry.key),
                       availableLocations: freshLandmark.locations))
-                else const Center(child: Text('No visits recorded.')),
+                else  Center(child: Text(tr('No visits recorded.'))),
                 const Divider(height: 24),
                 LandmarkInfoCard(overview: freshLandmark.overview,
                     historySignificance: freshLandmark.history_significance,
@@ -336,17 +338,18 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final provider = context.read<LandmarksProvider>();
     return Card(
       elevation: 1, margin: const EdgeInsets.symmetric(vertical: 4),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       child: ExpansionTile(
-        title: Text(widget.visitDate.title.isNotEmpty ? widget.visitDate.title : 'Visit Record',
+        title: Text(tr(widget.visitDate.title.isNotEmpty ? widget.visitDate.title : 'Visit Record'),
             style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15)),
         subtitle: GestureDetector(
           onTap: () => _selectDate(context),
           child: Row(mainAxisSize: MainAxisSize.min, children: [
-            Text('$_year-$_month-$_day', style: TextStyle(color: Colors.grey[600], fontSize: 13)),
+            Text(tr('$_year-$_month-$_day'), style: TextStyle(color: Colors.grey[600], fontSize: 13)),
             const SizedBox(width: 4),
             Icon(Icons.edit_calendar_outlined, size: 13, color: Colors.grey[400]),
           ]),
@@ -355,17 +358,17 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
         children: [Padding(
           padding: const EdgeInsets.all(12.0),
           child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            TextField(controller: _titleController, decoration: const InputDecoration(labelText: 'Title', isDense: true),
+            TextField(controller: _titleController, decoration:  InputDecoration(labelText: tr('Title'), isDense: true),
                 onEditingComplete: () => provider.updateLandmarkVisit(widget.landmarkName, widget.index, title: _titleController.text),
                 onTapOutside: (_) => provider.updateLandmarkVisit(widget.landmarkName, widget.index, title: _titleController.text)),
             const SizedBox(height: 8),
-            TextField(controller: _memoController, decoration: const InputDecoration(labelText: 'Memo', isDense: true),
+            TextField(controller: _memoController, decoration:  InputDecoration(labelText: tr('Memo'), isDense: true),
                 onEditingComplete: () => provider.updateLandmarkVisit(widget.landmarkName, widget.index, memo: _memoController.text),
                 onTapOutside: (_) => provider.updateLandmarkVisit(widget.landmarkName, widget.index, memo: _memoController.text)),
             const SizedBox(height: 12),
             OutlinedButton.icon(
               icon: const Icon(Icons.edit_calendar, size: 16),
-              label: Text('Change Date  ($_year-$_month-$_day)'),
+              label: Text(tr('Change Date  ($_year-$_month-$_day)')),
               onPressed: () => _selectDate(context),
               style: OutlinedButton.styleFrom(foregroundColor: _kTheme, side: const BorderSide(color: _kTheme), visualDensity: VisualDensity.compact),
             ),

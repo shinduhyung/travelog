@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'dart:io';
 import 'dart:typed_data';
 import 'package:path_provider/path_provider.dart';
@@ -70,7 +71,7 @@ class CountriesShare {
       debugPrint("Share Error: $e");
       if (context.mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Failed to generate share image: $e')),
+          SnackBar(content: Text(tr('Failed to generate share image: $e'))),
         );
       }
     }
@@ -174,7 +175,7 @@ class CountriesShare {
                   ),
                   const SizedBox(width: 10),
                   Text(
-                    'Travelog',
+                    tr('Travelog'),
                     style: TextStyle(
                       fontSize: 28,
                       fontWeight: FontWeight.w900,
@@ -205,7 +206,7 @@ class CountriesShare {
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     Text(
-                      '$totalCountries',
+                      tr('$totalCountries'),
                       style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.w900,
@@ -218,7 +219,7 @@ class CountriesShare {
                     Padding(
                       padding: const EdgeInsets.only(bottom: 2),
                       child: Text(
-                        'Countries',
+                        tr('Countries'),
                         style: TextStyle(
                           fontSize: 11,
                           fontWeight: FontWeight.w600,
@@ -353,7 +354,7 @@ class CountriesShare {
                 const SizedBox(width: 4),
                 Expanded(
                   child: Text(
-                    displayName,
+                    tr(displayName),
                     style: const TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 9,
@@ -369,7 +370,7 @@ class CountriesShare {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  count > 0 ? '$count/$total' : '-',
+                  tr(count > 0 ? '$count/$total' : '-'),
                   style: TextStyle(
                     fontSize: 13,
                     fontWeight: FontWeight.w900,
@@ -465,7 +466,7 @@ class CountriesShare {
                   SizedBox(
                     width: 44,
                     child: Text(
-                      country.name,
+                      tr(country.name),
                       textAlign: TextAlign.center,
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,

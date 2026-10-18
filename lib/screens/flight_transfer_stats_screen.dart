@@ -1,6 +1,7 @@
 // lib/screens/flight_transfer_stats_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:jidoapp/providers/airline_provider.dart';
 import 'package:jidoapp/providers/airport_provider.dart';
@@ -101,8 +102,8 @@ class _FlightTransferStatsScreenState extends State<FlightTransferStatsScreen> {
                   ),
                 ),
                 const SizedBox(width: 12),
-                const Text(
-                  'Connect Flights',
+                 Text(
+                  tr('Connect Flights'),
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 18,
@@ -421,6 +422,7 @@ class _FlightTransferStatsScreenState extends State<FlightTransferStatsScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Scaffold(
       backgroundColor: Colors.grey[50],
       body: SafeArea(
@@ -470,12 +472,12 @@ class _FlightTransferStatsScreenState extends State<FlightTransferStatsScreen> {
       ),
       child: SwitchListTile(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-        title: const Text(
-          'Group by Itinerary',
+        title:  Text(
+          tr('Group by Itinerary'),
           style: TextStyle(fontWeight: FontWeight.w600),
         ),
         subtitle: Text(
-          'Connected flights as a single item', // Count 제거
+          tr('Connected flights as a single item'), // Count 제거
           style: Theme.of(context).textTheme.bodySmall?.copyWith(
             color: Colors.grey[600],
             fontSize: 12,
@@ -542,7 +544,7 @@ class _FlightTransferStatsScreenState extends State<FlightTransferStatsScreen> {
           ),
           const SizedBox(height: 16),
           Text(
-            'No $type found',
+            tr('No $type found'),
             style: TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.w600,
@@ -551,7 +553,7 @@ class _FlightTransferStatsScreenState extends State<FlightTransferStatsScreen> {
           ),
           const SizedBox(height: 8),
           Text(
-            'for this type in the selected period',
+            tr('for this type in the selected period'),
             style: TextStyle(
               fontSize: 14,
               color: Colors.grey[500],
@@ -616,7 +618,7 @@ class _FlightTransferStatsScreenState extends State<FlightTransferStatsScreen> {
                           ),
                           child: Center(
                             child: Text(
-                              '#${index + 1}',
+                              tr('#${index + 1}'),
                               style: const TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,
@@ -628,7 +630,7 @@ class _FlightTransferStatsScreenState extends State<FlightTransferStatsScreen> {
                         const SizedBox(width: 12),
                         Expanded(
                           child: Text(
-                            name,
+                            tr(name),
                             style: const TextStyle(
                               fontWeight: FontWeight.w600,
                               fontSize: 16,
@@ -645,7 +647,7 @@ class _FlightTransferStatsScreenState extends State<FlightTransferStatsScreen> {
                             borderRadius: BorderRadius.circular(8),
                           ),
                           child: Text(
-                            '$count $unit',
+                            tr('$count $unit'),
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               color: selectedTypeColor,
@@ -702,7 +704,7 @@ class _FlightTransferStatsScreenState extends State<FlightTransferStatsScreen> {
                 ),
                 const SizedBox(width: 12),
                 Text(
-                  'Interline Connections: $_interlineConnectionsCount',
+                  tr('Interline Connections: $_interlineConnectionsCount'),
                   style: TextStyle(
                     fontWeight: FontWeight.w600,
                     color: Colors.purple.shade900,
@@ -720,7 +722,7 @@ class _FlightTransferStatsScreenState extends State<FlightTransferStatsScreen> {
     final airport = visit['airport'] as Airport;
     final entry = visit['entry'] as AirportVisitEntry;
     final date = entry.date;
-    final displayDate = date != null ? DateFormat.yMMMd('en_US').format(date) : 'Unknown Date';
+    final displayDate = date != null ? DateFormat.yMMMd(AppLocale.instance.locale.languageCode).format(date) : 'Unknown Date';
     final selectedTypeColor = _visitTypeInfo[_selectedVisitType]!['color'] as Color;
 
     return Container(
@@ -764,11 +766,11 @@ class _FlightTransferStatsScreenState extends State<FlightTransferStatsScreen> {
           style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15),
         ),
         subtitle: Text(
-          airport.country,
+          tr(airport.country),
           style: TextStyle(color: Colors.grey[600], fontSize: 13),
         ),
         trailing: Text(
-          displayDate,
+          tr(displayDate),
           style: TextStyle(
             color: Colors.grey[600],
             fontSize: 12,
@@ -780,7 +782,7 @@ class _FlightTransferStatsScreenState extends State<FlightTransferStatsScreen> {
   }
 
   Widget _buildAirlineLogItem(FlightLog log) {
-    final displayDate = log.date != 'Unknown' ? DateFormat.yMMMd('en_US').format(DateTime.parse(log.date)) : 'Unknown';
+    final displayDate = log.date != 'Unknown' ? DateFormat.yMMMd(AppLocale.instance.locale.languageCode).format(DateTime.parse(log.date)) : 'Unknown';
     final selectedTypeColor = _visitTypeInfo[_selectedVisitType]!['color'] as Color;
 
     return Container(
@@ -809,15 +811,15 @@ class _FlightTransferStatsScreenState extends State<FlightTransferStatsScreen> {
           child: Icon(Icons.flight, color: selectedTypeColor, size: 24),
         ),
         title: Text(
-          '${log.airlineName} ${log.flightNumber}',
+          tr('${log.airlineName} ${log.flightNumber}'),
           style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15),
         ),
         subtitle: Text(
-          '${log.departureIata} → ${log.arrivalIata}',
+          tr('${log.departureIata} → ${log.arrivalIata}'),
           style: TextStyle(color: Colors.grey[600], fontSize: 13),
         ),
         trailing: Text(
-          displayDate,
+          tr(displayDate),
           style: TextStyle(
             color: Colors.grey[600],
             fontSize: 12,
@@ -899,7 +901,7 @@ class _FlightTransferStatsScreenState extends State<FlightTransferStatsScreen> {
           const SizedBox(width: 10),
           // 해당 타입 색상의 텍스트
           Text(
-            info.type.toUpperCase(),
+            tr(info.type.toUpperCase()),
             style: TextStyle(
               color: typeColor,
               fontWeight: FontWeight.bold,
@@ -923,7 +925,7 @@ class _FlightTransferStatsScreenState extends State<FlightTransferStatsScreen> {
                   Icon(Icons.access_time, size: 12, color: typeColor),
                   const SizedBox(width: 4),
                   Text(
-                    info.duration!,
+                    tr(info.duration!),
                     style: TextStyle(
                       color: typeColor.darken(0.1), // 텍스트는 약간 더 진하게
                       fontSize: 12,
@@ -942,7 +944,7 @@ class _FlightTransferStatsScreenState extends State<FlightTransferStatsScreen> {
     String displayDate = log.date;
     if (displayDate != 'Unknown') {
       try {
-        displayDate = DateFormat.yMMMd('en_US').format(DateTime.parse(displayDate));
+        displayDate = DateFormat.yMMMd(AppLocale.instance.locale.languageCode).format(DateTime.parse(displayDate));
       } catch (e) { /* Use original date string */ }
     }
 
@@ -981,7 +983,7 @@ class _FlightTransferStatsScreenState extends State<FlightTransferStatsScreen> {
                       ),
                       const SizedBox(height: 6),
                       Text(
-                        displayFlightNumber,
+                        tr(displayFlightNumber),
                         style: TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.bold,
@@ -1002,7 +1004,7 @@ class _FlightTransferStatsScreenState extends State<FlightTransferStatsScreen> {
                         borderRadius: BorderRadius.circular(8),
                       ),
                       child: Text(
-                        displayDate,
+                        tr(displayDate),
                         style: TextStyle(
                           fontSize: 12,
                           color: Colors.grey[700],
@@ -1014,7 +1016,7 @@ class _FlightTransferStatsScreenState extends State<FlightTransferStatsScreen> {
                     Row(
                       children: [
                         Text(
-                          log.departureIata ?? 'N/A',
+                          tr(log.departureIata ?? 'N/A'),
                           style: TextStyle(
                             fontSize: 18,
                             color: Colors.grey[800],
@@ -1030,7 +1032,7 @@ class _FlightTransferStatsScreenState extends State<FlightTransferStatsScreen> {
                           ),
                         ),
                         Text(
-                          log.arrivalIata ?? 'N/A',
+                          tr(log.arrivalIata ?? 'N/A'),
                           style: TextStyle(
                             fontSize: 18,
                             color: Colors.grey[800],
@@ -1082,7 +1084,7 @@ class _FlightTransferStatsScreenState extends State<FlightTransferStatsScreen> {
           mainAxisSize: MainAxisSize.min,
           children: [
             Text(
-              '$_totalItemsInPeriod',
+              tr('$_totalItemsInPeriod'),
               style: TextStyle(
                 fontSize: 32,
                 fontWeight: FontWeight.bold,
@@ -1092,7 +1094,7 @@ class _FlightTransferStatsScreenState extends State<FlightTransferStatsScreen> {
             ),
             const SizedBox(height: 4),
             Text(
-              title,
+              tr(title),
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 14,
@@ -1113,7 +1115,7 @@ class _FlightTransferStatsScreenState extends State<FlightTransferStatsScreen> {
           mainAxisSize: MainAxisSize.min,
           children: [
             Text(
-              info['abbr'],
+              tr(info['abbr']),
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
@@ -1122,14 +1124,14 @@ class _FlightTransferStatsScreenState extends State<FlightTransferStatsScreen> {
             ),
             const SizedBox(height: 4),
             Text(
-              '$count',
+              tr('$count'),
               style: const TextStyle(
                 fontSize: 28,
                 fontWeight: FontWeight.bold,
               ),
             ),
             Text(
-              '${percentage.toStringAsFixed(1)}%',
+              tr('${percentage.toStringAsFixed(1)}%'),
               style: TextStyle(
                 fontSize: 14,
                 color: Colors.grey[600],
@@ -1160,7 +1162,7 @@ class _FlightTransferStatsScreenState extends State<FlightTransferStatsScreen> {
             Padding(
               padding: const EdgeInsets.only(bottom: 40), // 🚨 [수정] 간격 12 -> 40
               child: Text(
-                'Connection Type', // 🚨 [수정] 'Distribution' 제거
+                tr('Connection Type'), // 🚨 [수정] 'Distribution' 제거
                 style: Theme.of(context).textTheme.titleLarge?.copyWith(
                   fontWeight: FontWeight.w900, // 🚨 [수정] 폰트 굵기
                   fontSize: 24, // 🚨 [수정] 폰트 크기
@@ -1179,7 +1181,7 @@ class _FlightTransferStatsScreenState extends State<FlightTransferStatsScreen> {
                     Icon(Icons.pie_chart_outline, size: 64, color: Colors.grey[300]),
                     const SizedBox(height: 16),
                     Text(
-                      'No data for this period',
+                      tr('No data for this period'),
                       style: TextStyle(
                         color: Colors.grey[500],
                         fontSize: 16,
@@ -1249,15 +1251,15 @@ class _FlightTransferStatsScreenState extends State<FlightTransferStatsScreen> {
       child: SegmentedButton<String>(
         // 🚨 [수정] 체크 표시 제거
         showSelectedIcon: false,
-        segments: const [
+        segments:  [
           ButtonSegment<String>(
             value: 'Airports',
-            label: Text('Airports'),
+            label: Text(tr('Airports')),
             icon: Icon(Icons.connecting_airports),
           ),
           ButtonSegment<String>(
             value: 'Flights',
-            label: Text('Flights'),
+            label: Text(tr('Flights')),
             icon: Icon(Icons.flight_takeoff),
           ),
         ],
@@ -1339,7 +1341,7 @@ class _FlightTransferStatsScreenState extends State<FlightTransferStatsScreen> {
                   value: value,
                   // 🚨 [수정] 드롭다운 항목 텍스트 핑크색 적용
                   child: Text(
-                    value,
+                    tr(value),
                     style: TextStyle(
                       fontWeight: FontWeight.w600,
                       color: _primaryColor,
@@ -1375,7 +1377,7 @@ class _FlightTransferStatsScreenState extends State<FlightTransferStatsScreen> {
                     Icon(Icons.calendar_today, size: 16, color: Colors.grey[600]),
                     const SizedBox(width: 8),
                     Text(
-                      '${DateFormat('yyyy-MM-dd').format(_customStartDate!)} ~ ${DateFormat('yyyy-MM-dd').format(_customEndDate!)}',
+                      tr('${DateFormat('yyyy-MM-dd').format(_customStartDate!)} ~ ${DateFormat('yyyy-MM-dd').format(_customEndDate!)}'),
                       style: TextStyle(
                         color: Colors.grey[700],
                         fontWeight: FontWeight.w500,
@@ -1417,7 +1419,7 @@ class _FlightTransferStatsScreenState extends State<FlightTransferStatsScreen> {
                   return DropdownMenuItem<String>(
                     value: value,
                     child: Text(
-                      value,
+                      tr(value),
                       style: TextStyle(
                         fontWeight: FontWeight.w600,
                         color: _primaryColor, // 🚨 [수정] 드롭다운 항목 텍스트 핑크색
@@ -1469,7 +1471,7 @@ class _FlightTransferStatsScreenState extends State<FlightTransferStatsScreen> {
                     borderRadius: BorderRadius.circular(8),
                   ),
                   child: Text(
-                    '$_selectedYear',
+                    tr('$_selectedYear'),
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
@@ -1551,7 +1553,7 @@ class _FlightTransferStatsScreenState extends State<FlightTransferStatsScreen> {
           ),
           const SizedBox(width: 8),
           Text(
-            text,
+            tr(text),
             style: TextStyle(
               fontWeight: FontWeight.w600,
               fontSize: 11, // 12 -> 11로 축소
@@ -1580,15 +1582,15 @@ class _FlightTransferStatsScreenState extends State<FlightTransferStatsScreen> {
       child: SegmentedButton<bool>(
         // 🚨 [수정] 체크 표시 제거
         showSelectedIcon: false,
-        segments: const [
+        segments:  [
           ButtonSegment<bool>(
             value: false,
-            label: Text('Logs'),
+            label: Text(tr('Logs')),
             icon: Icon(Icons.list_alt),
           ),
           ButtonSegment<bool>(
             value: true,
-            label: Text('Ranking'),
+            label: Text(tr('Ranking')),
             icon: Icon(Icons.emoji_events),
           ),
         ],
@@ -1623,7 +1625,7 @@ class _FlightTransferStatsScreenState extends State<FlightTransferStatsScreen> {
 
     // 🚨 [수정] 드롭다운 전체 컨테이너에 테두리와 그림자 추가
     final inputDecoration = InputDecoration(
-      labelText: 'Visit Type',
+      labelText: tr('Visit Type'),
       labelStyle: TextStyle(
         color: Colors.grey[600],
         fontWeight: FontWeight.w500,
@@ -1683,7 +1685,7 @@ class _FlightTransferStatsScreenState extends State<FlightTransferStatsScreen> {
                 ),
                 const SizedBox(width: 12),
                 Text(
-                  name,
+                  tr(name),
                   style: TextStyle(
                     color: entry.value['color'],
                     fontWeight: FontWeight.w600,
@@ -1737,7 +1739,7 @@ class _FlightTransferStatsScreenState extends State<FlightTransferStatsScreen> {
                 ),
                 const SizedBox(width: 12),
                 Text(
-                  "Yearly Trend (10 Years)",
+                  tr("Yearly Trend (10 Years)"),
                   style: Theme.of(context).textTheme.titleLarge?.copyWith(
                     fontWeight: FontWeight.bold,
                     fontSize: 20,
@@ -1771,7 +1773,7 @@ class _FlightTransferStatsScreenState extends State<FlightTransferStatsScreen> {
                           return SideTitleWidget(
                             axisSide: meta.axisSide,
                             child: Text(
-                              value.toInt().toString(),
+                              tr(value.toInt().toString()),
                               style: TextStyle(
                                 color: Colors.grey[600],
                                 fontSize: 12,
@@ -1792,7 +1794,7 @@ class _FlightTransferStatsScreenState extends State<FlightTransferStatsScreen> {
                         getTitlesWidget: (value, meta) => SideTitleWidget(
                           axisSide: meta.axisSide,
                           child: Text(
-                            value.toInt().toString().substring(2),
+                            tr(value.toInt().toString().substring(2)),
                             style: TextStyle(
                               fontSize: 12,
                               color: Colors.grey[600],

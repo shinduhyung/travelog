@@ -1,6 +1,7 @@
 // lib/screens/login_prompt_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:jidoapp/services/ad_service.dart';
 import 'package:provider/provider.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
@@ -29,6 +30,7 @@ class _LoginPromptScreenState extends State<LoginPromptScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     // 기기의 실제 상단 상태바 높이를 가져옵니다
     final double statusBarHeight = MediaQuery.of(context).padding.top;
     // 모달 환경 등에서 높이가 0으로 잡힐 때를 대비한 최소 여백(40) 확보
@@ -75,8 +77,8 @@ class _LoginPromptScreenState extends State<LoginPromptScreen> {
                   const SizedBox(height: 24),
 
                   // 헤더 텍스트
-                  const Text(
-                    "Sign in to continue",
+                   Text(
+                    tr("Sign in to continue"),
                     style: TextStyle(
                       fontSize: 22,
                       fontWeight: FontWeight.w500,
@@ -87,7 +89,7 @@ class _LoginPromptScreenState extends State<LoginPromptScreen> {
                   const SizedBox(height: 8),
                   RichText(
                     textAlign: TextAlign.center,
-                    text: const TextSpan(
+                    text:  TextSpan(
                       style: TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.w300,
@@ -95,25 +97,25 @@ class _LoginPromptScreenState extends State<LoginPromptScreen> {
                         height: 1.6,
                       ),
                       children: [
-                        TextSpan(text: "Sign in to enjoy "),
+                        TextSpan(text: tr("Sign in to enjoy ")),
                         TextSpan(
-                          text: "Travelog",
+                          text: tr("Travelog"),
                           style: TextStyle(
                             fontWeight: FontWeight.w700,
                             fontStyle: FontStyle.italic,
                             color: Color(0xFF5B8DEF),
                           ),
                         ),
-                        TextSpan(text: " for "),
+                        TextSpan(text: tr(" for ")),
                         TextSpan(
-                          text: "free",
+                          text: tr("free"),
                           style: TextStyle(
                             fontWeight: FontWeight.w800,
                             color: Color(0xFF1D9E75),
                             fontSize: 16,
                           ),
                         ),
-                        TextSpan(text: ".\nNo payment needed to get started."),
+                        TextSpan(text: tr(".\nNo payment needed to get started.")),
                       ],
                     ),
                   ),
@@ -130,8 +132,8 @@ class _LoginPromptScreenState extends State<LoginPromptScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text(
-                          "WHY SIGN IN?",
+                         Text(
+                          tr("WHY SIGN IN?"),
                           style: TextStyle(
                             fontSize: 10,
                             fontWeight: FontWeight.w600,
@@ -177,8 +179,8 @@ class _LoginPromptScreenState extends State<LoginPromptScreen> {
                   const SizedBox(height: 16),
 
                   // 약관 안내
-                  const Text(
-                    "By signing in you agree to our Terms & Privacy Policy",
+                   Text(
+                    tr("By signing in you agree to our Terms & Privacy Policy"),
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 11,
@@ -214,6 +216,7 @@ class _BenefitRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -232,7 +235,7 @@ class _BenefitRow extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                title,
+                tr(title),
                 style: const TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.w500,
@@ -241,7 +244,7 @@ class _BenefitRow extends StatelessWidget {
               ),
               const SizedBox(height: 2),
               Text(
-                subtitle,
+                tr(subtitle),
                 style: const TextStyle(
                   fontSize: 12,
                   color: Colors.grey,
@@ -261,6 +264,7 @@ class _GoogleSignInButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final authProvider = Provider.of<AuthProvider>(context, listen: false);
 
     return InkWell(
@@ -300,7 +304,7 @@ class _GoogleSignInButton extends StatelessWidget {
         } catch (e) {
           if (context.mounted) {
             ScaffoldMessenger.of(context).showSnackBar(
-              SnackBar(content: Text("Login failed: $e")),
+              SnackBar(content: Text(tr("Login failed: $e"))),
             );
           }
         }
@@ -320,11 +324,11 @@ class _GoogleSignInButton extends StatelessWidget {
             ),
           ],
         ),
-        child: const Row(
+        child:  Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              "G",
+              tr("G"),
               style: TextStyle(
                 fontWeight: FontWeight.w900,
                 fontSize: 20,
@@ -334,7 +338,7 @@ class _GoogleSignInButton extends StatelessWidget {
             ),
             SizedBox(width: 12),
             Text(
-              "Sign in with Google",
+              tr("Sign in with Google"),
               style: TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.w500,
@@ -353,6 +357,7 @@ class _AppleSignInButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final authProvider = Provider.of<AuthProvider>(context, listen: false);
 
     return InkWell(
@@ -392,7 +397,7 @@ class _AppleSignInButton extends StatelessWidget {
         } catch (e) {
           if (context.mounted) {
             ScaffoldMessenger.of(context).showSnackBar(
-              SnackBar(content: Text("Apple Login failed: $e")),
+              SnackBar(content: Text(tr("Apple Login failed: $e"))),
             );
           }
         }
@@ -411,7 +416,7 @@ class _AppleSignInButton extends StatelessWidget {
             ),
           ],
         ),
-        child: const Row(
+        child:  Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Icon(
@@ -421,7 +426,7 @@ class _AppleSignInButton extends StatelessWidget {
             ),
             SizedBox(width: 10),
             Text(
-              "Sign in with Apple",
+              tr("Sign in with Apple"),
               style: TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.w500,

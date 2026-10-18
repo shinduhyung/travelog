@@ -1,12 +1,142 @@
-[
-  {"name": "Monaco", "country": "Monaco", "price": "38,800", "continent": "Europe"},
-  {"name": "New York City", "country": "USA", "price": "27,500", "continent": "North America"},
-  {"name": "Hong Kong", "country": "Hong Kong", "price": "26,300", "continent": "Asia"},
-  {"name": "London", "country": "UK", "price": "24,000", "continent": "Europe"},
-  {"name": "Saint-Jean-Cap-Ferrat", "country": "France", "price": "21,200", "continent": "Europe"},
-  {"name": "Paris", "country": "France", "price": "20,400", "continent": "Europe"},
-  {"name": "Sydney", "country": "Australia", "price": "19,500", "continent": "Oceania"},
-  {"name": "Palm Beach", "country": "USA", "price": "18,000", "continent": "North America"},
-  {"name": "Miami Beach", "country": "USA", "price": "17,800", "continent": "North America"},
-  {"name": "Los Angeles", "country": "USA", "price": "17,500", "continent": "North America"}
-]
+{
+  "schema_version": 1,
+  "dataset_id": "average_price",
+  "metadata": {
+    "source_url": null,
+    "reference_period": null,
+    "updated_at": null
+  },
+  "legacy_layout": "list",
+  "tables": [
+    {
+      "id": "main",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "name",
+        "country"
+      ],
+      "metrics": [
+        {
+          "id": "price",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        },
+        {
+          "id": "continent",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "name": "Monaco",
+            "country": "Monaco"
+          },
+          "values": {
+            "price": "38,800",
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "New York City",
+            "country": "USA"
+          },
+          "values": {
+            "price": "27,500",
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Hong Kong",
+            "country": "Hong Kong"
+          },
+          "values": {
+            "price": "26,300",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "London",
+            "country": "UK"
+          },
+          "values": {
+            "price": "24,000",
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Saint-Jean-Cap-Ferrat",
+            "country": "France"
+          },
+          "values": {
+            "price": "21,200",
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Paris",
+            "country": "France"
+          },
+          "values": {
+            "price": "20,400",
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Sydney",
+            "country": "Australia"
+          },
+          "values": {
+            "price": "19,500",
+            "continent": "Oceania"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Palm Beach",
+            "country": "USA"
+          },
+          "values": {
+            "price": "18,000",
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Miami Beach",
+            "country": "USA"
+          },
+          "values": {
+            "price": "17,800",
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Los Angeles",
+            "country": "USA"
+          },
+          "values": {
+            "price": "17,500",
+            "continent": "North America"
+          }
+        }
+      ]
+    }
+  ]
+}

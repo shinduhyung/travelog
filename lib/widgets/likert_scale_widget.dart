@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 
 class LikertScaleWidget extends StatelessWidget {
   final int? selectedValue; // 1 to 7
@@ -12,17 +13,18 @@ class LikertScaleWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Column(
       children: [
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text("Agree",
+            Text(tr("Agree"),
                 style: TextStyle(
                     color: const Color(0xFF009688), // Greenish
                     fontWeight: FontWeight.bold,
                     fontSize: 14)),
-            Text("Disagree",
+            Text(tr("Disagree"),
                 style: TextStyle(
                     color: const Color(0xFF7B1FA2), // Purpleish
                     fontWeight: FontWeight.bold,

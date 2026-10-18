@@ -1,6 +1,7 @@
 // lib/screens/my_trips_tab_screen.dart
 import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 // ⭐️ Firebase Auth와 명칭 충돌을 막기 위해 custom_auth로 alias 지정
 import 'package:jidoapp/providers/auth_provider.dart' as custom_auth;
 import 'package:jidoapp/screens/profile_screen.dart';
@@ -46,6 +47,7 @@ class _SparkleNewBadge extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
       decoration: BoxDecoration(
@@ -62,13 +64,13 @@ class _SparkleNewBadge extends StatelessWidget {
           ),
         ],
       ),
-      child: const Row(
+      child:  Row(
         mainAxisSize: MainAxisSize.min,
         children: [
           Icon(Icons.auto_awesome_rounded, size: 9, color: Colors.white),
           SizedBox(width: 2),
           Text(
-            'NEW',
+            tr('NEW'),
             style: TextStyle(
               fontSize: 9,
               fontWeight: FontWeight.w900,
@@ -118,6 +120,7 @@ class _FlowingGradientBackgroundState extends State<_FlowingGradientBackground>
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     // 색상 리스트를 두 번 이어 붙여서 "끝 -> 처음"이 자연스럽게 이어지도록 함.
     final loopColors = [...widget.colors, ...widget.colors];
     return LayoutBuilder(
@@ -174,6 +177,7 @@ class _TravelogGamesCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return GestureDetector(
       onTap: onTap,
       child: Container(
@@ -412,8 +416,8 @@ class _TravelogGamesCard extends StatelessWidget {
                               width: 0.8,
                             ),
                           ),
-                          child: const Text(
-                            'PLAY & EXPLORE',
+                          child:  Text(
+                            tr('PLAY & EXPLORE'),
                             style: TextStyle(
                               color: Color(0xFFE2FFF8),
                               fontSize: 8.5,
@@ -425,8 +429,8 @@ class _TravelogGamesCard extends StatelessWidget {
 
                         const SizedBox(height: 6),
 
-                        const Text(
-                          'Travelog Games',
+                         Text(
+                          tr('Travelog Games'),
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
                           style: TextStyle(
@@ -707,6 +711,7 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Scaffold(
       backgroundColor: const Color(0xFFF8F9FA),
       body: Stack(
@@ -779,8 +784,8 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                         height: 220,
                         padding: const EdgeInsets.symmetric(horizontal: 28),
                         alignment: Alignment.centerLeft,
-                        child: const Text(
-                          'Travelog',
+                        child:  Text(
+                          tr('Travelog'),
                           style: TextStyle(
                             fontSize: 42,
                             fontWeight: FontWeight.w900,
@@ -824,7 +829,7 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                       ),
                       const SizedBox(width: 8),
                       Text(
-                        'My Documents',
+                        tr('My Documents'),
                         style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.w700,
@@ -980,7 +985,7 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  user?.email ?? 'Sign in to sync',
+                                  tr(user?.email ?? 'Sign in to sync'),
                                   overflow: TextOverflow.ellipsis,
                                   style: const TextStyle(
                                       fontSize: 15,
@@ -1003,14 +1008,14 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                                             if (PremiumTheme.isVivid(kind))
                                               ShaderMask(
                                                 shaderCallback: (bounds) => LinearGradient(colors: colors).createShader(bounds),
-                                                child: const Text(
-                                                  'Lifetime Premium',
+                                                child:  Text(
+                                                  tr('Lifetime Premium'),
                                                   style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: Colors.white),
                                                 ),
                                               )
                                             else
                                               Text(
-                                                'Premium Active',
+                                                tr('Premium Active'),
                                                 style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: colors[0]),
                                               ),
                                           ],
@@ -1039,13 +1044,13 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                                               ),
                                             ],
                                           ),
-                                          child: const Row(
+                                          child:  Row(
                                             mainAxisSize: MainAxisSize.min,
                                             children: [
                                               Icon(Icons.workspace_premium_rounded, size: 14, color: Colors.white),
                                               SizedBox(width: 6),
                                               Text(
-                                                'Go Premium',
+                                                tr('Go Premium'),
                                                 style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, color: Colors.white),
                                               ),
                                               SizedBox(width: 4),
@@ -1107,16 +1112,16 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text('Traveler Type',
+                                Text(tr('Traveler Type'),
                                     style: TextStyle(
                                         fontSize: 12,
                                         fontWeight: FontWeight.w600,
                                         color: Colors.grey.shade500)),
                                 const SizedBox(height: 2),
                                 Text(
-                                    _travelerType?.isNotEmpty == true
+                                    tr(_travelerType?.isNotEmpty == true
                                         ? _travelerType!
-                                        : 'Analyze DNA',
+                                        : 'Analyze DNA'),
                                     style: TextStyle(
                                         fontSize: 15,
                                         fontWeight: FontWeight.w700,
@@ -1166,14 +1171,14 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text('Rank',
+                                Text(tr('Rank'),
                                     style: TextStyle(
                                         fontSize: 12,
                                         fontWeight: FontWeight.w600,
                                         color: Colors.grey.shade500)),
                                 const SizedBox(height: 2),
                                 Text(
-                                  currentLevel,
+                                  tr(currentLevel),
                                   style: TextStyle(
                                       fontSize: 15,
                                       fontWeight: FontWeight.w700,
@@ -1190,7 +1195,7 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                                   borderRadius: BorderRadius.circular(8),
                                   border: Border.all(
                                       color: Colors.grey.shade200)),
-                              child: Text('$totalPoints pts',
+                              child: Text(tr('$totalPoints pts'),
                                   style: TextStyle(
                                       fontSize: 12,
                                       fontWeight: FontWeight.w700,
@@ -1289,8 +1294,8 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                                     ? ShaderMask(
                                   shaderCallback: (bounds) =>
                                       LinearGradient(colors: _quizExpertGradient).createShader(bounds),
-                                  child: const Text(
-                                    'Daily Quiz · Expert',
+                                  child:  Text(
+                                    tr('Daily Quiz · Expert'),
                                     style: TextStyle(
                                       fontSize: 12,
                                       fontWeight: FontWeight.w800,
@@ -1300,7 +1305,7 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                                   ),
                                 )
                                     : Text(
-                                  'Daily Quiz',
+                                  tr('Daily Quiz'),
                                   style: TextStyle(
                                     fontSize: 12,
                                     fontWeight: FontWeight.w600,
@@ -1309,11 +1314,11 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                                 ),
                                 const SizedBox(height: 2),
                                 Text(
-                                  !_quizLoadingDone
+                                  tr(!_quizLoadingDone
                                       ? '...'
                                       : _quizSolvedToday
                                       ? 'Completed today!'
-                                      : "Today's quiz is waiting!",
+                                      : "Today's quiz is waiting!"),
                                   style: TextStyle(
                                     fontSize: 15,
                                     fontWeight: FontWeight.w700,
@@ -1337,8 +1342,8 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                                 ),
                                 borderRadius: BorderRadius.circular(8),
                               ),
-                              child: const Text(
-                                'Go!',
+                              child:  Text(
+                                tr('Go!'),
                                 style: TextStyle(
                                   fontSize: 11,
                                   fontWeight: FontWeight.w700,
@@ -1563,7 +1568,7 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
           ),
           child: Center(
             child: emoji != null
-                ? Text(emoji, style: const TextStyle(fontSize: 22))
+                ? Text(tr(emoji), style: const TextStyle(fontSize: 22))
                 : Icon(icon, color: iconColor, size: 22),
           ),
         ),
@@ -1576,7 +1581,7 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    labelTop,
+                    tr(labelTop),
                     style: TextStyle(
                       fontSize: 12,
                       fontWeight: FontWeight.w600,
@@ -1584,7 +1589,7 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                     ),
                   ),
                   Text(
-                    labelBottom,
+                    tr(labelBottom),
                     style: TextStyle(
                       fontSize: 12,
                       fontWeight: FontWeight.w700,
@@ -1804,14 +1809,14 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
               child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(title,
+                    Text(tr(title),
                         style: const TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.w700,
                             color: Colors.black87)),
                     if (subtitle.isNotEmpty) ...[
                       const SizedBox(height: 2),
-                      Text(subtitle,
+                      Text(tr(subtitle),
                           style: TextStyle(
                               fontSize: 13,
                               color: Colors.grey.shade500,
@@ -1830,7 +1835,7 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
               ),
               child: Icon(icon, color: color, size: 24)),
           const SizedBox(height: 12),
-          Text(title,
+          Text(tr(title),
               textAlign: TextAlign.center,
               style: const TextStyle(
                   fontSize: 14,
@@ -1897,7 +1902,7 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
             child: Column(children: [
               Icon(icon, color: color, size: 32),
               const SizedBox(height: 12),
-              Text(title,
+              Text(tr(title),
                   style: const TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.w600,
@@ -1923,8 +1928,8 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
               Icon(Icons.settings_outlined,
                   color: Colors.grey.shade700, size: 24),
               const SizedBox(width: 16),
-              const Expanded(
-                  child: Text('Settings',
+               Expanded(
+                  child: Text(tr('Settings'),
                       style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w600,

@@ -11,6 +11,7 @@ import 'package:collection/collection.dart';
 import 'package:jidoapp/models/city_visit_detail_model.dart';
 import 'package:http/http.dart' as http;
 import 'package:latlong2/latlong.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 
 class DatedTripItem {
   final DateTime date;
@@ -26,6 +27,12 @@ class AiService {
   static const String _deepSeekEndpoint = 'https://api.deepseek.com/chat/completions';
   final Distance distance = const Distance();
   final double travelThresholdKm = 70.0;
+
+  String get _displayLanguageInstruction =>
+      'Write headings and explanatory prose in '
+      '${AppLocale.instance.locale.languageCode == 'ko' ? 'Korean' : 'English'}. '
+      'Use that language for country display names. Keep city, landmark, '
+      'UNESCO site, airport, airline, hotel and other proper names in English.';
 
   Future<String> analyzeTripDna(String aggregatedData) async {
     const String systemPrompt = """
@@ -51,7 +58,7 @@ Structure your output exactly as follows, using the specified emojis. Be insight
 📝 **Summary:**
 [Provide a 2-3 sentence narrative summary of the user's travel style, combining the elements above into a cohesive description.]
 """;
-    return _callDeepSeekApi(systemPrompt, aggregatedData);
+    return _callDeepSeekApi('$systemPrompt\n$_displayLanguageInstruction', aggregatedData);
   }
 
   Future<String> recommendDestinations(String aggregatedData) async {
@@ -91,7 +98,7 @@ For each recommendation, provide a compelling reason that connects to their past
 - [Activity 2]
 - [Activity 3]
 """;
-    return _callDeepSeekApi(systemPrompt, aggregatedData);
+    return _callDeepSeekApi('$systemPrompt\n$_displayLanguageInstruction', aggregatedData);
   }
 
   // Gemini GenerativeModel 호출부를 대체하는 DeepSeek(OpenAI 호환) 공용 헬퍼

@@ -1,6 +1,7 @@
 // lib/screens/specific_countries_stats_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:jidoapp/models/country_model.dart';
 import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/screens/country_subregions_screen.dart'; // 🆕 곧 만들 파일
@@ -12,6 +13,7 @@ class SpecificCountriesStatsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final countryProvider = Provider.of<CountryProvider>(context);
     if (countryProvider.isLoading) {
       return const Center(child: CircularProgressIndicator());
@@ -31,7 +33,7 @@ class SpecificCountriesStatsScreen extends StatelessWidget {
       itemBuilder: (context, index) {
         final country = countries[index];
         return ListTile(
-          title: Text(country.name),
+          title: Text(tr(country.name)),
           trailing: const Icon(Icons.arrow_forward_ios, size: 16),
           onTap: () {
             // 탭하면 해당 국가의 세부 지역 화면으로 이동

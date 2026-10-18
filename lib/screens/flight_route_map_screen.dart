@@ -2,6 +2,7 @@
 
 import 'dart:io'; // ⭐️ [DEBUG] 타일 URL 직접 요청 테스트용
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:jidoapp/models/airport_model.dart';
 import 'package:jidoapp/models/airline_model.dart';
@@ -288,7 +289,7 @@ class _FlightRouteMapScreenState extends State<FlightRouteMapScreen>
           context: context,
           builder: (context) => AlertDialog(
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-            title: Text('Pick a color', style: GoogleFonts.poppins(fontWeight: FontWeight.bold)),
+            title: Text(tr('Pick a color'), style: GoogleFonts.poppins(fontWeight: FontWeight.bold)),
             content: SingleChildScrollView(
               child: ColorPicker(
                 pickerColor: currentColor,
@@ -301,7 +302,7 @@ class _FlightRouteMapScreenState extends State<FlightRouteMapScreen>
             actions: <Widget>[
               ElevatedButton(
                 style: ElevatedButton.styleFrom(shape: const StadiumBorder()),
-                child: const Text('Select'),
+                child:  Text(tr('Select')),
                 onPressed: () => Navigator.of(context).pop(),
               ),
             ],
@@ -333,20 +334,20 @@ class _FlightRouteMapScreenState extends State<FlightRouteMapScreen>
           builder: (context, settingsProvider, child) {
             return AlertDialog(
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-              title: Text('Map Settings', style: GoogleFonts.poppins(fontWeight: FontWeight.bold)),
+              title: Text(tr('Map Settings'), style: GoogleFonts.poppins(fontWeight: FontWeight.bold)),
               content: SingleChildScrollView(
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     SwitchListTile(
-                      title: Text('Thicker lines for frequent routes', style: GoogleFonts.poppins(fontSize: 14)),
+                      title: Text(tr('Thicker lines for frequent routes'), style: GoogleFonts.poppins(fontSize: 14)),
                       value: settingsProvider.useThicknessByFrequency,
                       activeColor: Colors.teal,
                       onChanged: (val) => settingsProvider.setThicknessByFrequency(val),
                     ),
                     const Divider(),
                     SwitchListTile(
-                      title: Text('Highlight Hub Airports', style: GoogleFonts.poppins(fontSize: 14)),
+                      title: Text(tr('Highlight Hub Airports'), style: GoogleFonts.poppins(fontSize: 14)),
                       value: settingsProvider.showHubs,
                       activeColor: Colors.teal,
                       onChanged: (val) => settingsProvider.setShowHubs(val),
@@ -357,7 +358,7 @@ class _FlightRouteMapScreenState extends State<FlightRouteMapScreen>
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text('Route Gradient', style: GoogleFonts.poppins(fontSize: 14, fontWeight: FontWeight.w500)),
+                          Text(tr('Route Gradient'), style: GoogleFonts.poppins(fontSize: 14, fontWeight: FontWeight.w500)),
                           Row(
                             children: [
                               _buildColorPicker(settingsProvider.routeColor1, (c) => settingsProvider.setRouteColor1(c)),
@@ -377,10 +378,10 @@ class _FlightRouteMapScreenState extends State<FlightRouteMapScreen>
               actions: [
                 TextButton(
                   onPressed: () => settingsProvider.resetSettings(),
-                  child: Text('Reset', style: GoogleFonts.poppins(color: Colors.redAccent)),
+                  child: Text(tr('Reset'), style: GoogleFonts.poppins(color: Colors.redAccent)),
                 ),
                 TextButton(
-                  child: Text('Close', style: GoogleFonts.poppins(color: Colors.grey)),
+                  child: Text(tr('Close'), style: GoogleFonts.poppins(color: Colors.grey)),
                   onPressed: () => Navigator.of(context).pop(),
                 ),
               ],
@@ -393,6 +394,7 @@ class _FlightRouteMapScreenState extends State<FlightRouteMapScreen>
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final settings = Provider.of<FlightMapSettingsProvider>(context);
     final airlineProvider = Provider.of<AirlineProvider>(context); // ⭐️ Provider 추가
     final airportProvider = Provider.of<AirportProvider>(context, listen: false);
@@ -436,7 +438,7 @@ class _FlightRouteMapScreenState extends State<FlightRouteMapScreen>
         height: 20,
         point: LatLng(airport.latitude, airport.longitude),
         child: Tooltip(
-          message: tooltipMsg,
+          message: tr(tooltipMsg),
           child: isHubHighlighted
               ? Stack(
             alignment: Alignment.center,
@@ -562,7 +564,7 @@ class _FlightRouteMapScreenState extends State<FlightRouteMapScreen>
                     child: IconButton(
                       icon: const Icon(Icons.settings, color: Colors.white),
                       onPressed: _showSettingsDialog,
-                      tooltip: 'Map Settings',
+                      tooltip: tr('Map Settings'),
                     ),
                   ),
                 ),
@@ -596,7 +598,7 @@ class _FlightRouteMapScreenState extends State<FlightRouteMapScreen>
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          'My Routes',
+                          tr('My Routes'),
                           style: GoogleFonts.poppins(
                             color: Colors.white,
                             fontSize: 22,
@@ -611,7 +613,7 @@ class _FlightRouteMapScreenState extends State<FlightRouteMapScreen>
                             border: Border.all(color: settings.routeColor1.withOpacity(0.5)),
                           ),
                           child: Text(
-                            '${visibleRouteData.length} Routes',
+                            tr('${visibleRouteData.length} Routes'),
                             style: GoogleFonts.poppins(
                               color: settings.routeColor1,
                               fontSize: 12,
@@ -669,7 +671,7 @@ class _FlightRouteMapScreenState extends State<FlightRouteMapScreen>
                                 children: [
                                   Flexible(
                                     child: Text(
-                                      depText,
+                                      tr(depText),
                                       overflow: TextOverflow.ellipsis,
                                       style: GoogleFonts.poppins(
                                         color: Colors.white,
@@ -689,7 +691,7 @@ class _FlightRouteMapScreenState extends State<FlightRouteMapScreen>
                                   ),
                                   Flexible(
                                     child: Text(
-                                      arrText,
+                                      tr(arrText),
                                       overflow: TextOverflow.ellipsis,
                                       style: GoogleFonts.poppins(
                                         color: Colors.white,
@@ -710,7 +712,7 @@ class _FlightRouteMapScreenState extends State<FlightRouteMapScreen>
                                         borderRadius: BorderRadius.circular(8),
                                       ),
                                       child: Text(
-                                        visibleLogCount > 1 ? 'x$visibleLogCount' : '1',
+                                        tr(visibleLogCount > 1 ? 'x$visibleLogCount' : '1'),
                                         style: GoogleFonts.poppins(
                                           color: Colors.grey[300],
                                           fontSize: 12,
@@ -792,7 +794,7 @@ class _FlightRouteMapScreenState extends State<FlightRouteMapScreen>
                                                     crossAxisAlignment: CrossAxisAlignment.start,
                                                     children: [
                                                       Text(
-                                                        '${log.airlineName} ${log.flightNumber}',
+                                                        tr('${log.airlineName} ${log.flightNumber}'),
                                                         style: GoogleFonts.poppins(
                                                           color: Colors.white,
                                                           fontSize: 14,
@@ -800,7 +802,7 @@ class _FlightRouteMapScreenState extends State<FlightRouteMapScreen>
                                                         ),
                                                       ),
                                                       Text(
-                                                        '${log.date}  •  ${log.times} flight(s)',
+                                                        tr('${log.date}  •  ${log.times} flight(s)'),
                                                         style: GoogleFonts.poppins(
                                                           color: Colors.grey[500],
                                                           fontSize: 12,

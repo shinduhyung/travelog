@@ -1,6 +1,7 @@
 // lib/screens/ai_itinerary_view.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter/services.dart';
 import 'package:jidoapp/models/trip_log_entry.dart';
 import 'package:jidoapp/models/itinerary_entry_model.dart'; // Itinerary 모델 추가
@@ -204,7 +205,7 @@ class _AiItineraryViewState extends State<AiItineraryView> {
 
     if (mounted) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Changes saved successfully!')),
+         SnackBar(content: Text(tr('Changes saved successfully!'))),
       );
     }
   }
@@ -246,7 +247,7 @@ class _AiItineraryViewState extends State<AiItineraryView> {
         return StatefulBuilder(
           builder: (context, setDialogState) {
             return AlertDialog(
-              title: const Text('Edit Activity'),
+              title:  Text(tr('Edit Activity')),
               content: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
@@ -267,7 +268,7 @@ class _AiItineraryViewState extends State<AiItineraryView> {
                               border: isSelected ? Border.all(color: orange) : null,
                               borderRadius: BorderRadius.circular(8),
                             ),
-                            child: Text(e, style: const TextStyle(fontSize: 24)),
+                            child: Text(tr(e), style: const TextStyle(fontSize: 24)),
                           ),
                         );
                       }).toList(),
@@ -276,13 +277,13 @@ class _AiItineraryViewState extends State<AiItineraryView> {
                   const SizedBox(height: 16),
                   TextField(
                     controller: textController,
-                    decoration: const InputDecoration(labelText: 'Activity Details', border: OutlineInputBorder()),
+                    decoration:  InputDecoration(labelText: tr('Activity Details'), border: OutlineInputBorder()),
                     maxLines: 2,
                   ),
                 ],
               ),
               actions: [
-                TextButton(onPressed: () => Navigator.pop(ctx), child: const Text('Cancel')),
+                TextButton(onPressed: () => Navigator.pop(ctx), child:  Text(tr('Cancel'))),
                 ElevatedButton(
                   onPressed: () {
                     setState(() {
@@ -293,7 +294,7 @@ class _AiItineraryViewState extends State<AiItineraryView> {
                     Navigator.pop(ctx);
                   },
                   style: ElevatedButton.styleFrom(backgroundColor: orange),
-                  child: const Text('Save', style: TextStyle(color: Colors.white)),
+                  child:  Text(tr('Save'), style: TextStyle(color: Colors.white)),
                 ),
               ],
             );
@@ -305,12 +306,13 @@ class _AiItineraryViewState extends State<AiItineraryView> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Scaffold(
       backgroundColor: Colors.grey[50],
       appBar: AppBar(
         backgroundColor: orange,
         foregroundColor: Colors.white,
-        title: Text(widget.title, style: const TextStyle(fontWeight: FontWeight.bold)), // title 사용
+        title: Text(tr(widget.title), style: const TextStyle(fontWeight: FontWeight.bold)), // title 사용
         // ... (나머지 AppBar 및 Body 코드는 이전과 동일)
         actions: [
           // 복사 버튼 등 기존 코드 유지
@@ -319,7 +321,7 @@ class _AiItineraryViewState extends State<AiItineraryView> {
       body: _isLoading
           ? const Center(child: CircularProgressIndicator(valueColor: AlwaysStoppedAnimation<Color>(orange)))
           : _errorMessage != null
-          ? Center(child: Text(_errorMessage!))
+          ? Center(child: Text(tr(_errorMessage!)))
           : Column(
         children: [
           // Top navigation, PageView 등 기존 UI 코드 그대로 사용
@@ -352,9 +354,9 @@ class _AiItineraryViewState extends State<AiItineraryView> {
           Expanded(
             child: Column(
               children: [
-                Text(_dailyPages[_currentPage].date, style: const TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold)),
+                Text(tr(_dailyPages[_currentPage].date), style: const TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold)),
                 if (_dailyPages[_currentPage].dayName.isNotEmpty)
-                  Text(_dailyPages[_currentPage].dayName, style: TextStyle(color: Colors.white.withOpacity(0.9), fontSize: 14)),
+                  Text(tr(_dailyPages[_currentPage].dayName), style: TextStyle(color: Colors.white.withOpacity(0.9), fontSize: 14)),
               ],
             ),
           ),
@@ -392,13 +394,13 @@ class _AiItineraryViewState extends State<AiItineraryView> {
                     Container(
                       padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 7),
                       decoration: BoxDecoration(color: Colors.white.withOpacity(0.3), borderRadius: BorderRadius.circular(20)),
-                      child: Text('DAY $pageNum', style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 12)),
+                      child: Text(tr('DAY $pageNum'), style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 12)),
                     ),
-                    Text('$pageNum / $totalPages', style: TextStyle(color: Colors.white.withOpacity(0.8), fontSize: 14)),
+                    Text(tr('$pageNum / $totalPages'), style: TextStyle(color: Colors.white.withOpacity(0.8), fontSize: 14)),
                   ],
                 ),
                 const SizedBox(height: 14),
-                Text(pageData.date, style: const TextStyle(color: Colors.white, fontSize: 24, fontWeight: FontWeight.bold)),
+                Text(tr(pageData.date), style: const TextStyle(color: Colors.white, fontSize: 24, fontWeight: FontWeight.bold)),
               ],
             ),
           ),
@@ -421,11 +423,11 @@ class _AiItineraryViewState extends State<AiItineraryView> {
                       Container(
                         width: 44, height: 44,
                         decoration: BoxDecoration(color: orange.withOpacity(0.1), borderRadius: BorderRadius.circular(12)),
-                        child: Center(child: Text(item.emoji, style: const TextStyle(fontSize: 22))),
+                        child: Center(child: Text(tr(item.emoji), style: const TextStyle(fontSize: 22))),
                       ),
                       const SizedBox(width: 14),
                       Expanded(
-                        child: Text(item.content, style: const TextStyle(fontSize: 15, height: 1.6, color: Colors.black87, fontWeight: FontWeight.w500)),
+                        child: Text(tr(item.content), style: const TextStyle(fontSize: 15, height: 1.6, color: Colors.black87, fontWeight: FontWeight.w500)),
                       ),
                       Icon(Icons.edit, size: 16, color: Colors.grey[300]),
                     ],

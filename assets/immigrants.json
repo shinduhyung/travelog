@@ -1,107 +1,208 @@
-[
-  {
-    "name": "Miami",
-    "country": "United States",
-    "continent": "North America",
-    "country_iso": "US",
-    "Foreign": "40.9"
+{
+  "schema_version": 1,
+  "dataset_id": "immigrants",
+  "metadata": {
+    "source_url": null,
+    "reference_period": null,
+    "updated_at": null
   },
-  {
-    "name": "San Jose",
-    "country": "United States",
-    "continent": "North America",
-    "country_iso": "US",
-    "Foreign": "39.1"
-  },
-  {
-    "name": "Los Angeles",
-    "country": "United States",
-    "continent": "North America",
-    "country_iso": "US",
-    "Foreign": "32.7"
-  },
-  {
-    "name": "San Francisco",
-    "country": "United States",
-    "continent": "North America",
-    "country_iso": "US",
-    "Foreign": "30.7"
-  },
-  {
-    "name": "New York City",
-    "country": "United States",
-    "continent": "North America",
-    "country_iso": "US",
-    "Foreign": "29.3"
-  },
-  {
-    "name": "Houston",
-    "country": "United States",
-    "continent": "North America",
-    "country_iso": "US",
-    "Foreign": "23.3"
-  },
-  {
-    "name": "San Diego",
-    "country": "United States",
-    "continent": "North America",
-    "country_iso": "US",
-    "Foreign": "22.9"
-  },
-  {
-    "name": "Washington",
-    "country": "United States",
-    "continent": "North America",
-    "country_iso": "US",
-    "Foreign": "22.8"
-  },
-  {
-    "name": "Las Vegas",
-    "country": "United States",
-    "continent": "North America",
-    "country_iso": "US",
-    "Foreign": "22.1"
-  },
-  {
-    "name": "Riverside",
-    "country": "United States",
-    "continent": "North America",
-    "country_iso": "US",
-    "Foreign": "21.1"
-  },
-  {
-    "name": "Seattle",
-    "country": "United States",
-    "continent": "North America",
-    "country_iso": "US",
-    "Foreign": "19.2"
-  },
-  {
-    "name": "Boston",
-    "country": "United States",
-    "continent": "North America",
-    "country_iso": "US",
-    "Foreign": "18.9"
-  },
-  {
-    "name": "Orlando",
-    "country": "United States",
-    "continent": "North America",
-    "country_iso": "US",
-    "Foreign": "18.8"
-  },
-  {
-    "name": "Dallas",
-    "country": "United States",
-    "continent": "North America",
-    "country_iso": "US",
-    "Foreign": "18.5"
-  },
-  {
-    "name": "Sacramento",
-    "country": "United States",
-    "continent": "North America",
-    "country_iso": "US",
-    "Foreign": "18.5"
-  }
-]
+  "legacy_layout": "list",
+  "tables": [
+    {
+      "id": "main",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "name",
+        "country",
+        "country_iso"
+      ],
+      "metrics": [
+        {
+          "id": "continent",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        },
+        {
+          "id": "Foreign",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "name": "Miami",
+            "country": "United States",
+            "country_iso": "US"
+          },
+          "values": {
+            "continent": "North America",
+            "Foreign": "40.9"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "San Jose",
+            "country": "United States",
+            "country_iso": "US"
+          },
+          "values": {
+            "continent": "North America",
+            "Foreign": "39.1"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Los Angeles",
+            "country": "United States",
+            "country_iso": "US"
+          },
+          "values": {
+            "continent": "North America",
+            "Foreign": "32.7"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "San Francisco",
+            "country": "United States",
+            "country_iso": "US"
+          },
+          "values": {
+            "continent": "North America",
+            "Foreign": "30.7"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "New York City",
+            "country": "United States",
+            "country_iso": "US"
+          },
+          "values": {
+            "continent": "North America",
+            "Foreign": "29.3"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Houston",
+            "country": "United States",
+            "country_iso": "US"
+          },
+          "values": {
+            "continent": "North America",
+            "Foreign": "23.3"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "San Diego",
+            "country": "United States",
+            "country_iso": "US"
+          },
+          "values": {
+            "continent": "North America",
+            "Foreign": "22.9"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Washington",
+            "country": "United States",
+            "country_iso": "US"
+          },
+          "values": {
+            "continent": "North America",
+            "Foreign": "22.8"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Las Vegas",
+            "country": "United States",
+            "country_iso": "US"
+          },
+          "values": {
+            "continent": "North America",
+            "Foreign": "22.1"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Riverside",
+            "country": "United States",
+            "country_iso": "US"
+          },
+          "values": {
+            "continent": "North America",
+            "Foreign": "21.1"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Seattle",
+            "country": "United States",
+            "country_iso": "US"
+          },
+          "values": {
+            "continent": "North America",
+            "Foreign": "19.2"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Boston",
+            "country": "United States",
+            "country_iso": "US"
+          },
+          "values": {
+            "continent": "North America",
+            "Foreign": "18.9"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Orlando",
+            "country": "United States",
+            "country_iso": "US"
+          },
+          "values": {
+            "continent": "North America",
+            "Foreign": "18.8"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Dallas",
+            "country": "United States",
+            "country_iso": "US"
+          },
+          "values": {
+            "continent": "North America",
+            "Foreign": "18.5"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Sacramento",
+            "country": "United States",
+            "country_iso": "US"
+          },
+          "values": {
+            "continent": "North America",
+            "Foreign": "18.5"
+          }
+        }
+      ]
+    }
+  ]
+}

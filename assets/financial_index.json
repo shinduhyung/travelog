@@ -1,182 +1,342 @@
-[
-  {
-    "name": "New York City",
-    "country": "USA",
-    "financial_index": "763",
-    "continent": "North America"
+{
+  "schema_version": 1,
+  "dataset_id": "financial_index",
+  "metadata": {
+    "source_url": null,
+    "reference_period": null,
+    "updated_at": null
   },
-  {
-    "name": "London",
-    "country": "UK",
-    "financial_index": "750",
-    "continent": "Europe"
-  },
-  {
-    "name": "Hong Kong",
-    "country": "Hong Kong",
-    "financial_index": "749",
-    "continent": "Asia"
-  },
-  {
-    "name": "Singapore",
-    "country": "Singapore",
-    "financial_index": "747",
-    "continent": "Asia"
-  },
-  {
-    "name": "San Francisco",
-    "country": "USA",
-    "financial_index": "742",
-    "continent": "North America"
-  },
-  {
-    "name": "Chicago",
-    "country": "USA",
-    "financial_index": "740",
-    "continent": "North America"
-  },
-  {
-    "name": "Los Angeles",
-    "country": "USA",
-    "financial_index": "739",
-    "continent": "North America"
-  },
-  {
-    "name": "Shanghai",
-    "country": "China",
-    "financial_index": "738",
-    "continent": "Asia"
-  },
-  {
-    "name": "Shenzhen",
-    "country": "China",
-    "financial_index": "732",
-    "continent": "Asia"
-  },
-  {
-    "name": "Paris",
-    "country": "France",
-    "financial_index": "730",
-    "continent": "Europe"
-  },
-  {
-    "name": "Seoul",
-    "country": "South Korea",
-    "financial_index": "729",
-    "continent": "Asia"
-  },
-  {
-    "name": "Washington D.C.",
-    "country": "USA",
-    "financial_index": "728",
-    "continent": "North America"
-  },
-  {
-    "name": "Geneva",
-    "country": "Switzerland",
-    "financial_index": "726",
-    "continent": "Europe"
-  },
-  {
-    "name": "Dublin",
-    "country": "Ireland",
-    "financial_index": "725",
-    "continent": "Europe"
-  },
-  {
-    "name": "Frankfurt",
-    "country": "Germany",
-    "financial_index": "724",
-    "continent": "Europe"
-  },
-  {
-    "name": "Dubai",
-    "country": "United Arab Emirates",
-    "financial_index": "723",
-    "continent": "Asia"
-  },
-  {
-    "name": "Zurich",
-    "country": "Switzerland",
-    "financial_index": "722",
-    "continent": "Europe"
-  },
-  {
-    "name": "Beijing",
-    "country": "China",
-    "financial_index": "721",
-    "continent": "Asia"
-  },
-  {
-    "name": "Luxembourg",
-    "country": "Luxembourg",
-    "financial_index": "720",
-    "continent": "Europe"
-  },
-  {
-    "name": "Tokyo",
-    "country": "Japan",
-    "financial_index": "719",
-    "continent": "Asia"
-  },
-  {
-    "name": "San Diego",
-    "country": "USA",
-    "financial_index": "718",
-    "continent": "North America"
-  },
-  {
-    "name": "Boston",
-    "country": "USA",
-    "financial_index": "717",
-    "continent": "North America"
-  },
-  {
-    "name": "Toronto",
-    "country": "Canada",
-    "financial_index": "716",
-    "continent": "North America"
-  },
-  {
-    "name": "Montreal",
-    "country": "Canada",
-    "financial_index": "715",
-    "continent": "North America"
-  },
-  {
-    "name": "Busan",
-    "country": "South Korea",
-    "financial_index": "714",
-    "continent": "Asia"
-  },
-  {
-    "name": "Lugano",
-    "country": "Switzerland",
-    "financial_index": "713",
-    "continent": "Europe"
-  },
-  {
-    "name": "Amsterdam",
-    "country": "Netherlands",
-    "financial_index": "712",
-    "continent": "Europe"
-  },
-  {
-    "name": "Sydney",
-    "country": "Australia",
-    "financial_index": "711",
-    "continent": "Oceania"
-  },
-  {
-    "name": "Edinburgh",
-    "country": "UK",
-    "financial_index": "710",
-    "continent": "Europe"
-  },
-  {
-    "name": "Saint Helier",
-    "country": "JE",
-    "financial_index": "709",
-    "continent": "Europe"
-  }
-]
+  "legacy_layout": "list",
+  "tables": [
+    {
+      "id": "main",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "name",
+        "country"
+      ],
+      "metrics": [
+        {
+          "id": "financial_index",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        },
+        {
+          "id": "continent",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "name": "New York City",
+            "country": "USA"
+          },
+          "values": {
+            "financial_index": "763",
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "London",
+            "country": "UK"
+          },
+          "values": {
+            "financial_index": "750",
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Hong Kong",
+            "country": "Hong Kong"
+          },
+          "values": {
+            "financial_index": "749",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Singapore",
+            "country": "Singapore"
+          },
+          "values": {
+            "financial_index": "747",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "San Francisco",
+            "country": "USA"
+          },
+          "values": {
+            "financial_index": "742",
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Chicago",
+            "country": "USA"
+          },
+          "values": {
+            "financial_index": "740",
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Los Angeles",
+            "country": "USA"
+          },
+          "values": {
+            "financial_index": "739",
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Shanghai",
+            "country": "China"
+          },
+          "values": {
+            "financial_index": "738",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Shenzhen",
+            "country": "China"
+          },
+          "values": {
+            "financial_index": "732",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Paris",
+            "country": "France"
+          },
+          "values": {
+            "financial_index": "730",
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Seoul",
+            "country": "South Korea"
+          },
+          "values": {
+            "financial_index": "729",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Washington D.C.",
+            "country": "USA"
+          },
+          "values": {
+            "financial_index": "728",
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Geneva",
+            "country": "Switzerland"
+          },
+          "values": {
+            "financial_index": "726",
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Dublin",
+            "country": "Ireland"
+          },
+          "values": {
+            "financial_index": "725",
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Frankfurt",
+            "country": "Germany"
+          },
+          "values": {
+            "financial_index": "724",
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Dubai",
+            "country": "United Arab Emirates"
+          },
+          "values": {
+            "financial_index": "723",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Zurich",
+            "country": "Switzerland"
+          },
+          "values": {
+            "financial_index": "722",
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Beijing",
+            "country": "China"
+          },
+          "values": {
+            "financial_index": "721",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Luxembourg",
+            "country": "Luxembourg"
+          },
+          "values": {
+            "financial_index": "720",
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Tokyo",
+            "country": "Japan"
+          },
+          "values": {
+            "financial_index": "719",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "San Diego",
+            "country": "USA"
+          },
+          "values": {
+            "financial_index": "718",
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Boston",
+            "country": "USA"
+          },
+          "values": {
+            "financial_index": "717",
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Toronto",
+            "country": "Canada"
+          },
+          "values": {
+            "financial_index": "716",
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Montreal",
+            "country": "Canada"
+          },
+          "values": {
+            "financial_index": "715",
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Busan",
+            "country": "South Korea"
+          },
+          "values": {
+            "financial_index": "714",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Lugano",
+            "country": "Switzerland"
+          },
+          "values": {
+            "financial_index": "713",
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Amsterdam",
+            "country": "Netherlands"
+          },
+          "values": {
+            "financial_index": "712",
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Sydney",
+            "country": "Australia"
+          },
+          "values": {
+            "financial_index": "711",
+            "continent": "Oceania"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Edinburgh",
+            "country": "UK"
+          },
+          "values": {
+            "financial_index": "710",
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Saint Helier",
+            "country": "JE"
+          },
+          "values": {
+            "financial_index": "709",
+            "continent": "Europe"
+          }
+        }
+      ]
+    }
+  ]
+}

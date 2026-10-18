@@ -1,101 +1,826 @@
-[
-  { "iso_a3": "CHN", "navy_ships_total": 730 },
-  { "iso_a3": "RUS", "navy_ships_total": 598 },
-  { "iso_a3": "USA", "navy_ships_total": 490 },
-  { "iso_a3": "PRK", "navy_ships_total": 450 },
-  { "iso_a3": "IDN", "navy_ships_total": 324 },
-  { "iso_a3": "IRN", "navy_ships_total": 296 },
-  { "iso_a3": "EGY", "navy_ships_total": 245 },
-  { "iso_a3": "IND", "navy_ships_total": 202 },
-  { "iso_a3": "TUR", "navy_ships_total": 186 },
-  { "iso_a3": "COL", "navy_ships_total": 178 },
-  { "iso_a3": "THA", "navy_ships_total": 162 },
-  { "iso_a3": "ITA", "navy_ships_total": 156 },
-  { "iso_a3": "MEX", "navy_ships_total": 155 },
-  { "iso_a3": "MMR", "navy_ships_total": 155 },
-  { "iso_a3": "TWN", "navy_ships_total": 139 },
-  { "iso_a3": "PAK", "navy_ships_total": 128 },
-  { "iso_a3": "ESP", "navy_ships_total": 126 },
-  { "iso_a3": "FIN", "navy_ships_total": 124 },
-  { "iso_a3": "BRA", "navy_ships_total": 117 },
-  { "iso_a3": "GRC", "navy_ships_total": 115 },
-  { "iso_a3": "DZA", "navy_ships_total": 110 },
-  { "iso_a3": "KOR", "navy_ships_total": 110 },
-  { "iso_a3": "JPN", "navy_ships_total": 102 },
-  { "iso_a3": "BGD", "navy_ships_total": 100 },
-  { "iso_a3": "SWE", "navy_ships_total": 96 },
-  { "iso_a3": "QAT", "navy_ships_total": 92 },
-  { "iso_a3": "FRA", "navy_ships_total": 90 },
-  { "iso_a3": "GBR", "navy_ships_total": 90 },
-  { "iso_a3": "PHL", "navy_ships_total": 85 },
-  { "iso_a3": "NGA", "navy_ships_total": 85 },
-  { "iso_a3": "MAR", "navy_ships_total": 84 },
-  { "iso_a3": "ARE", "navy_ships_total": 81 },
-  { "iso_a3": "VNM", "navy_ships_total": 80 },
-  { "iso_a3": "KWT", "navy_ships_total": 78 },
-  { "iso_a3": "LKA", "navy_ships_total": 75 },
-  { "iso_a3": "NLD", "navy_ships_total": 72 },
-  { "iso_a3": "SAU", "navy_ships_total": 67 },
-  { "iso_a3": "DEU", "navy_ships_total": 65 },
-  { "iso_a3": "PER", "navy_ships_total": 62 },
-  { "iso_a3": "KHM", "navy_ships_total": 60 },
-  { "iso_a3": "NOR", "navy_ships_total": 59 },
-  { "iso_a3": "TUN", "navy_ships_total": 55 },
-  { "iso_a3": "CHL", "navy_ships_total": 52 },
-  { "iso_a3": "MYS", "navy_ships_total": 50 },
-  { "iso_a3": "ECU", "navy_ships_total": 48 },
-  { "iso_a3": "UKR", "navy_ships_total": 46 },
-  { "iso_a3": "DNK", "navy_ships_total": 45 },
-  { "iso_a3": "ROU", "navy_ships_total": 45 },
-  { "iso_a3": "PRT", "navy_ships_total": 42 },
-  { "iso_a3": "ARG", "navy_ships_total": 41 },
-  { "iso_a3": "CAN", "navy_ships_total": 40 },
-  { "iso_a3": "ISR", "navy_ships_total": 40 },
-  { "iso_a3": "POL", "navy_ships_total": 39 },
-  { "iso_a3": "AUS", "navy_ships_total": 38 },
-  { "iso_a3": "VEN", "navy_ships_total": 35 },
-  { "iso_a3": "IRQ", "navy_ships_total": 34 },
-  { "iso_a3": "ZAF", "navy_ships_total": 31 },
-  { "iso_a3": "KEN", "navy_ships_total": 29 },
-  { "iso_a3": "BEL", "navy_ships_total": 27 },
-  { "iso_a3": "BHR", "navy_ships_total": 27 },
-  { "iso_a3": "BRN", "navy_ships_total": 25 },
-  { "iso_a3": "LBY", "navy_ships_total": 25 },
-  { "iso_a3": "AGO", "navy_ships_total": 23 },
-  { "iso_a3": "AZE", "navy_ships_total": 22 },
-  { "iso_a3": "CUB", "navy_ships_total": 21 },
-  { "iso_a3": "TZA", "navy_ships_total": 21 },
-  { "iso_a3": "KAZ", "navy_ships_total": 20 },
-  { "iso_a3": "OMN", "navy_ships_total": 19 },
-  { "iso_a3": "SGP", "navy_ships_total": 18 },
-  { "iso_a3": "DOM", "navy_ships_total": 17 },
-  { "iso_a3": "TKM", "navy_ships_total": 16 },
-  { "iso_a3": "CZE", "navy_ships_total": 15 },
-  { "iso_a3": "GTM", "navy_ships_total": 15 },
-  { "iso_a3": "HRV", "navy_ships_total": 14 },
-  { "iso_a3": "URY", "navy_ships_total": 14 },
-  { "iso_a3": "DJI", "navy_ships_total": 13 },
-  { "iso_a3": "NZL", "navy_ships_total": 13 },
-  { "iso_a3": "EST", "navy_ships_total": 12 },
-  { "iso_a3": "HND", "navy_ships_total": 12 },
-  { "iso_a3": "PRY", "navy_ships_total": 11 },
-  { "iso_a3": "MOZ", "navy_ships_total": 10 },
-  { "iso_a3": "BGR", "navy_ships_total": 9 },
-  { "iso_a3": "GEO", "navy_ships_total": 9 },
-  { "iso_a3": "GAB", "navy_ships_total": 8 },
-  { "iso_a3": "JOR", "navy_ships_total": 8 },
-  { "iso_a3": "SEN", "navy_ships_total": 8 },
-  { "iso_a3": "ALB", "navy_ships_total": 7 },
-  { "iso_a3": "BOL", "navy_ships_total": 7 },
-  { "iso_a3": "CRI", "navy_ships_total": 7 },
-  { "iso_a3": "IRL", "navy_ships_total": 7 },
-  { "iso_a3": "LTU", "navy_ships_total": 7 },
-  { "iso_a3": "LVA", "navy_ships_total": 7 },
-  { "iso_a3": "GHA", "navy_ships_total": 6 },
-  { "iso_a3": "MNE", "navy_ships_total": 6 },
-  { "iso_a3": "SRB", "navy_ships_total": 6 },
-  { "iso_a3": "UGA", "navy_ships_total": 6 },
-  { "iso_a3": "CYP", "navy_ships_total": 5 },
-  { "iso_a3": "YEM", "navy_ships_total": 5 },
-  { "iso_a3": "SUR", "navy_ships_total": 3 }
-]
+{
+  "schema_version": 1,
+  "dataset_id": "navy_ships",
+  "metadata": {
+    "source_url": null,
+    "reference_period": null,
+    "updated_at": null
+  },
+  "legacy_layout": "list",
+  "tables": [
+    {
+      "id": "main",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "iso_a3"
+      ],
+      "metrics": [
+        {
+          "id": "navy_ships_total",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "iso_a3": "CHN"
+          },
+          "values": {
+            "navy_ships_total": 730
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "RUS"
+          },
+          "values": {
+            "navy_ships_total": 598
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "USA"
+          },
+          "values": {
+            "navy_ships_total": 490
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PRK"
+          },
+          "values": {
+            "navy_ships_total": 450
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IDN"
+          },
+          "values": {
+            "navy_ships_total": 324
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IRN"
+          },
+          "values": {
+            "navy_ships_total": 296
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "EGY"
+          },
+          "values": {
+            "navy_ships_total": 245
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IND"
+          },
+          "values": {
+            "navy_ships_total": 202
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TUR"
+          },
+          "values": {
+            "navy_ships_total": 186
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "COL"
+          },
+          "values": {
+            "navy_ships_total": 178
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "THA"
+          },
+          "values": {
+            "navy_ships_total": 162
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ITA"
+          },
+          "values": {
+            "navy_ships_total": 156
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MEX"
+          },
+          "values": {
+            "navy_ships_total": 155
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MMR"
+          },
+          "values": {
+            "navy_ships_total": 155
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TWN"
+          },
+          "values": {
+            "navy_ships_total": 139
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PAK"
+          },
+          "values": {
+            "navy_ships_total": 128
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ESP"
+          },
+          "values": {
+            "navy_ships_total": 126
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FIN"
+          },
+          "values": {
+            "navy_ships_total": 124
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BRA"
+          },
+          "values": {
+            "navy_ships_total": 117
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GRC"
+          },
+          "values": {
+            "navy_ships_total": 115
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DZA"
+          },
+          "values": {
+            "navy_ships_total": 110
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KOR"
+          },
+          "values": {
+            "navy_ships_total": 110
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "JPN"
+          },
+          "values": {
+            "navy_ships_total": 102
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BGD"
+          },
+          "values": {
+            "navy_ships_total": 100
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SWE"
+          },
+          "values": {
+            "navy_ships_total": 96
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "QAT"
+          },
+          "values": {
+            "navy_ships_total": 92
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FRA"
+          },
+          "values": {
+            "navy_ships_total": 90
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GBR"
+          },
+          "values": {
+            "navy_ships_total": 90
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PHL"
+          },
+          "values": {
+            "navy_ships_total": 85
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NGA"
+          },
+          "values": {
+            "navy_ships_total": 85
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MAR"
+          },
+          "values": {
+            "navy_ships_total": 84
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ARE"
+          },
+          "values": {
+            "navy_ships_total": 81
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VNM"
+          },
+          "values": {
+            "navy_ships_total": 80
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KWT"
+          },
+          "values": {
+            "navy_ships_total": 78
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LKA"
+          },
+          "values": {
+            "navy_ships_total": 75
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NLD"
+          },
+          "values": {
+            "navy_ships_total": 72
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SAU"
+          },
+          "values": {
+            "navy_ships_total": 67
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DEU"
+          },
+          "values": {
+            "navy_ships_total": 65
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PER"
+          },
+          "values": {
+            "navy_ships_total": 62
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KHM"
+          },
+          "values": {
+            "navy_ships_total": 60
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NOR"
+          },
+          "values": {
+            "navy_ships_total": 59
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TUN"
+          },
+          "values": {
+            "navy_ships_total": 55
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CHL"
+          },
+          "values": {
+            "navy_ships_total": 52
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MYS"
+          },
+          "values": {
+            "navy_ships_total": 50
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ECU"
+          },
+          "values": {
+            "navy_ships_total": 48
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "UKR"
+          },
+          "values": {
+            "navy_ships_total": 46
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DNK"
+          },
+          "values": {
+            "navy_ships_total": 45
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ROU"
+          },
+          "values": {
+            "navy_ships_total": 45
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PRT"
+          },
+          "values": {
+            "navy_ships_total": 42
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ARG"
+          },
+          "values": {
+            "navy_ships_total": 41
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CAN"
+          },
+          "values": {
+            "navy_ships_total": 40
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ISR"
+          },
+          "values": {
+            "navy_ships_total": 40
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "POL"
+          },
+          "values": {
+            "navy_ships_total": 39
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AUS"
+          },
+          "values": {
+            "navy_ships_total": 38
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VEN"
+          },
+          "values": {
+            "navy_ships_total": 35
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IRQ"
+          },
+          "values": {
+            "navy_ships_total": 34
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ZAF"
+          },
+          "values": {
+            "navy_ships_total": 31
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KEN"
+          },
+          "values": {
+            "navy_ships_total": 29
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BEL"
+          },
+          "values": {
+            "navy_ships_total": 27
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BHR"
+          },
+          "values": {
+            "navy_ships_total": 27
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BRN"
+          },
+          "values": {
+            "navy_ships_total": 25
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LBY"
+          },
+          "values": {
+            "navy_ships_total": 25
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AGO"
+          },
+          "values": {
+            "navy_ships_total": 23
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AZE"
+          },
+          "values": {
+            "navy_ships_total": 22
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CUB"
+          },
+          "values": {
+            "navy_ships_total": 21
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TZA"
+          },
+          "values": {
+            "navy_ships_total": 21
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KAZ"
+          },
+          "values": {
+            "navy_ships_total": 20
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "OMN"
+          },
+          "values": {
+            "navy_ships_total": 19
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SGP"
+          },
+          "values": {
+            "navy_ships_total": 18
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DOM"
+          },
+          "values": {
+            "navy_ships_total": 17
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TKM"
+          },
+          "values": {
+            "navy_ships_total": 16
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CZE"
+          },
+          "values": {
+            "navy_ships_total": 15
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GTM"
+          },
+          "values": {
+            "navy_ships_total": 15
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HRV"
+          },
+          "values": {
+            "navy_ships_total": 14
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "URY"
+          },
+          "values": {
+            "navy_ships_total": 14
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DJI"
+          },
+          "values": {
+            "navy_ships_total": 13
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NZL"
+          },
+          "values": {
+            "navy_ships_total": 13
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "EST"
+          },
+          "values": {
+            "navy_ships_total": 12
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HND"
+          },
+          "values": {
+            "navy_ships_total": 12
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PRY"
+          },
+          "values": {
+            "navy_ships_total": 11
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MOZ"
+          },
+          "values": {
+            "navy_ships_total": 10
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BGR"
+          },
+          "values": {
+            "navy_ships_total": 9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GEO"
+          },
+          "values": {
+            "navy_ships_total": 9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GAB"
+          },
+          "values": {
+            "navy_ships_total": 8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "JOR"
+          },
+          "values": {
+            "navy_ships_total": 8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SEN"
+          },
+          "values": {
+            "navy_ships_total": 8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ALB"
+          },
+          "values": {
+            "navy_ships_total": 7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BOL"
+          },
+          "values": {
+            "navy_ships_total": 7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CRI"
+          },
+          "values": {
+            "navy_ships_total": 7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IRL"
+          },
+          "values": {
+            "navy_ships_total": 7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LTU"
+          },
+          "values": {
+            "navy_ships_total": 7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LVA"
+          },
+          "values": {
+            "navy_ships_total": 7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GHA"
+          },
+          "values": {
+            "navy_ships_total": 6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MNE"
+          },
+          "values": {
+            "navy_ships_total": 6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SRB"
+          },
+          "values": {
+            "navy_ships_total": 6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "UGA"
+          },
+          "values": {
+            "navy_ships_total": 6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CYP"
+          },
+          "values": {
+            "navy_ships_total": 5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "YEM"
+          },
+          "values": {
+            "navy_ships_total": 5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SUR"
+          },
+          "values": {
+            "navy_ships_total": 3
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,192 +1,1751 @@
-[
-  {"iso_a3":"AFG", "gini_index":31.0, "continent":"Asia"},
-  {"iso_a3":"ALB", "gini_index":29.4, "continent":"Europe"},
-  {"iso_a3":"DZA", "gini_index":27.6, "continent":"Africa"},
-  {"iso_a3":"AND", "gini_index":27.96, "continent":"Europe"},
-  {"iso_a3":"AGO", "gini_index":51.3, "continent":"Africa"},
-  {"iso_a3":"ARG", "gini_index":42.4, "continent":"South America"},
-  {"iso_a3":"ARM", "gini_index":27.2, "continent":"Asia"},
-  {"iso_a3":"AUS", "gini_index":34.3, "continent":"Oceania"},
-  {"iso_a3":"AUT", "gini_index":30.9, "continent":"Europe"},
-  {"iso_a3":"AZE", "gini_index":26.6, "continent":"Asia"},
-  {"iso_a3":"BHS", "gini_index":41.4, "continent":"North America"},
-  {"iso_a3":"BHR", "gini_index":45.7, "continent":"Asia"},
-  {"iso_a3":"BGD", "gini_index":33.4, "continent":"Asia"},
-  {"iso_a3":"BRB", "gini_index":32.0, "continent":"North America"},
-  {"iso_a3":"BLR", "gini_index":24.4, "continent":"Europe"},
-  {"iso_a3":"BEL", "gini_index":26.4, "continent":"Europe"},
-  {"iso_a3":"BLZ", "gini_index":39.9, "continent":"North America"},
-  {"iso_a3":"BEN", "gini_index":34.4, "continent":"Africa"},
-  {"iso_a3":"BTN", "gini_index":28.5, "continent":"Asia"},
-  {"iso_a3":"BOL", "gini_index":42.1, "continent":"South America"},
-  {"iso_a3":"BIH", "gini_index":33.0, "continent":"Europe"},
-  {"iso_a3":"BWA", "gini_index":54.2, "continent":"Africa"},
-  {"iso_a3":"BRA", "gini_index":48.6, "continent":"South America"},
-  {"iso_a3":"BRN", "gini_index":34.7, "continent":"Asia"},
-  {"iso_a3":"BGR", "gini_index":40.8, "continent":"Europe"},
-  {"iso_a3":"BFA", "gini_index":37.4, "continent":"Africa"},
-  {"iso_a3":"BDI", "gini_index":42.4, "continent":"Africa"},
-  {"iso_a3":"KHM", "gini_index":32.0, "continent":"Asia"},
-  {"iso_a3":"CMR", "gini_index":46.6, "continent":"Africa"},
-  {"iso_a3":"CAN", "gini_index":31.7, "continent":"North America"},
-  {"iso_a3":"CPV", "gini_index":42.4, "continent":"Africa"},
-  {"iso_a3":"CAF", "gini_index":56.2, "continent":"Africa"},
-  {"iso_a3":"TCD", "gini_index":43.3, "continent":"Africa"},
-  {"iso_a3":"CHL", "gini_index":44.4, "continent":"South America"},
-  {"iso_a3":"CHN", "gini_index":38.2, "continent":"Asia"},
-  {"iso_a3":"COL", "gini_index":51.2, "continent":"South America"},
-  {"iso_a3":"COM", "gini_index":45.3, "continent":"Africa"},
-  {"iso_a3":"COG", "gini_index":48.9, "continent":"Africa"},
-  {"iso_a3":"COD", "gini_index":42.1, "continent":"Africa"},
-  {"iso_a3":"CRI", "gini_index":49.2, "continent":"North America"},
-  {"iso_a3":"CIV", "gini_index":41.5, "continent":"Africa"},
-  {"iso_a3":"HRV", "gini_index":29.6, "continent":"Europe"},
-  {"iso_a3":"CUB", "gini_index":38.0, "continent":"North America"},
-  {"iso_a3":"CYP", "gini_index":31.5, "continent":"Europe"},
-  {"iso_a3":"CZE", "gini_index":25.0, "continent":"Europe"},
-  {"iso_a3":"DNK", "gini_index":28.2, "continent":"Europe"},
-  {"iso_a3":"DJI", "gini_index":37.8, "continent":"Africa"},
-  {"iso_a3":"DMA", "gini_index":43.9, "continent":"North America"},
-  {"iso_a3":"DOM", "gini_index":41.9, "continent":"North America"},
-  {"iso_a3":"ECU", "gini_index":45.1, "continent":"South America"},
-  {"iso_a3":"EGY", "gini_index":31.5, "continent":"Africa"},
-  {"iso_a3":"SLV", "gini_index":38.8, "continent":"North America"},
-  {"iso_a3":"GNQ", "gini_index":44.2, "continent":"Africa"},
-  {"iso_a3":"ERI", "gini_index":30.0, "continent":"Africa"},
-  {"iso_a3":"EST", "gini_index":30.3, "continent":"Europe"},
-  {"iso_a3":"SWZ", "gini_index":54.6, "continent":"Africa"},
-  {"iso_a3":"ETH", "gini_index":35.0, "continent":"Africa"},
-  {"iso_a3":"FJI", "gini_index":36.4, "continent":"Oceania"},
-  {"iso_a3":"FIN", "gini_index":27.3, "continent":"Europe"},
-  {"iso_a3":"FRA", "gini_index":32.7, "continent":"Europe"},
-  {"iso_a3":"GAB", "gini_index":38.0, "continent":"Africa"},
-  {"iso_a3":"GMB", "gini_index":35.9, "continent":"Africa"},
-  {"iso_a3":"GEO", "gini_index":36.4, "continent":"Asia"},
-  {"iso_a3":"DEU", "gini_index":31.7, "continent":"Europe"},
-  {"iso_a3":"GHA", "gini_index":42.4, "continent":"Africa"},
-  {"iso_a3":"GRC", "gini_index":32.8, "continent":"Europe"},
-  {"iso_a3":"GRD", "gini_index":44.8, "continent":"North America"},
-  {"iso_a3":"GTM", "gini_index":48.4, "continent":"North America"},
-  {"iso_a3":"GIN", "gini_index":33.7, "continent":"Africa"},
-  {"iso_a3":"GNB", "gini_index":43.0, "continent":"Africa"},
-  {"iso_a3":"GUY", "gini_index":45.2, "continent":"South America"},
-  {"iso_a3":"HTI", "gini_index":41.1, "continent":"North America"},
-  {"iso_a3":"HND", "gini_index":48.5, "continent":"North America"},
-  {"iso_a3":"HUN", "gini_index":28.7, "continent":"Europe"},
-  {"iso_a3":"ISL", "gini_index":26.6, "continent":"Europe"},
-  {"iso_a3":"IND", "gini_index":35.7, "continent":"Asia"},
-  {"iso_a3":"IDN", "gini_index":38.0, "continent":"Asia"},
-  {"iso_a3":"IRN", "gini_index":44.5, "continent":"Asia"},
-  {"iso_a3":"IRQ", "gini_index":30.9, "continent":"Asia"},
-  {"iso_a3":"IRL", "gini_index":29.2, "continent":"Europe"},
-  {"iso_a3":"ISR", "gini_index":39.0, "continent":"Asia"},
-  {"iso_a3":"ITA", "gini_index":32.2, "continent":"Europe"},
-  {"iso_a3":"JAM", "gini_index":45.5, "continent":"North America"},
-  {"iso_a3":"JPN", "gini_index":32.9, "continent":"Asia"},
-  {"iso_a3":"JOR", "gini_index":33.7, "continent":"Asia"},
-  {"iso_a3":"KAZ", "gini_index":27.8, "continent":"Asia"},
-  {"iso_a3":"KEN", "gini_index":40.8, "continent":"Africa"},
-  {"iso_a3":"KIR", "gini_index":38.1, "continent":"Oceania"},
-  {"iso_a3":"KOR", "gini_index":31.0, "continent":"Asia"},
-  {"iso_a3":"KWT", "gini_index":27.8, "continent":"Asia"},
-  {"iso_a3":"KGZ", "gini_index":29.7, "continent":"Asia"},
-  {"iso_a3":"LAO", "gini_index":38.8, "continent":"Asia"},
-  {"iso_a3":"LVA", "gini_index":34.2, "continent":"Europe"},
-  {"iso_a3":"LBN", "gini_index":36.5, "continent":"Asia"},
-  {"iso_a3":"LSO", "gini_index":44.9, "continent":"Africa"},
-  {"iso_a3":"LBR", "gini_index":35.3, "continent":"Africa"},
-  {"iso_a3":"LBY", "gini_index":35.0, "continent":"Africa"},
-  {"iso_a3":"LIE", "gini_index":29.6, "continent":"Europe"},
-  {"iso_a3":"LTU", "gini_index":35.6, "continent":"Europe"},
-  {"iso_a3":"LUX", "gini_index":31.0, "continent":"Europe"},
-  {"iso_a3":"MDG", "gini_index":41.2, "continent":"Africa"},
-  {"iso_a3":"MWI", "gini_index":44.9, "continent":"Africa"},
-  {"iso_a3":"MYS", "gini_index":41.2, "continent":"Asia"},
-  {"iso_a3":"MDV", "gini_index":30.3, "continent":"Asia"},
-  {"iso_a3":"MLI", "gini_index":33.0, "continent":"Africa"},
-  {"iso_a3":"MLT", "gini_index":28.2, "continent":"Europe"},
-  {"iso_a3":"MHL", "gini_index":38.2, "continent":"Oceania"},
-  {"iso_a3":"MRT", "gini_index":32.6, "continent":"Africa"},
-  {"iso_a3":"MUS", "gini_index":36.8, "continent":"Africa"},
-  {"iso_a3":"MEX", "gini_index":45.4, "continent":"North America"},
-  {"iso_a3":"MDA", "gini_index":26.0, "continent":"Europe"},
-  {"iso_a3":"MCO", "gini_index":35.0, "continent":"Europe"},
-  {"iso_a3":"MNG", "gini_index":32.5, "continent":"Asia"},
-  {"iso_a3": "SYC", "gini_index": 32.1, "continent": "Africa"},
-  {"iso_a3": "MUS", "gini_index": 36.8, "continent": "Africa"},
-  {"iso_a3":"MNE", "gini_index":34.3, "continent":"Europe"},
-  {"iso_a3":"MAR", "gini_index":40.0, "continent":"Africa"},
-  {"iso_a3":"MOZ", "gini_index":47.3, "continent":"Africa"},
-  {"iso_a3":"MMR", "gini_index":34.6, "continent":"Asia"},
-  {"iso_a3":"NAM", "gini_index":63.9, "continent":"Africa"},
-  {"iso_a3":"NRU", "gini_index":29.7, "continent":"Oceania"},
-  {"iso_a3":"NPL", "gini_index":32.8, "continent":"Asia"},
-  {"iso_a3":"NLD", "gini_index":28.2, "continent":"Europe"},
-  {"iso_a3":"NZL", "gini_index":33.9, "continent":"Oceania"},
-  {"iso_a3":"NIC", "gini_index":46.2, "continent":"North America"},
-  {"iso_a3":"NER", "gini_index":34.3, "continent":"Africa"},
-  {"iso_a3":"NGA", "gini_index":35.1, "continent":"Africa"},
-  {"iso_a3":"NOR", "gini_index":27.0, "continent":"Europe"},
-  {"iso_a3":"OMN", "gini_index":30.7, "continent":"Asia"},
-  {"iso_a3":"PAK", "gini_index":29.6, "continent":"Asia"},
-  {"iso_a3":"PAN", "gini_index":49.8, "continent":"North America"},
-  {"iso_a3":"PNG", "gini_index":41.9, "continent":"Oceania"},
-  {"iso_a3":"PRY", "gini_index":47.2, "continent":"South America"},
-  {"iso_a3":"PER", "gini_index":42.8, "continent":"South America"},
-  {"iso_a3":"PHL", "gini_index":42.3, "continent":"Asia"},
-  {"iso_a3":"POL", "gini_index":30.2, "continent":"Europe"},
-  {"iso_a3":"PRT", "gini_index":33.5, "continent":"Europe"},
-  {"iso_a3":"QAT", "gini_index":45.3, "continent":"Asia"},
-  {"iso_a3":"ROU", "gini_index":34.4, "continent":"Europe"},
-  {"iso_a3":"RUS", "gini_index":34.9, "continent":"Europe"},
-  {"iso_a3":"RWA", "gini_index":43.7, "continent":"Africa"},
-  {"iso_a3":"KNA", "gini_index":39.0, "continent":"North America"},
-  {"iso_a3":"LCA", "gini_index":43.1, "continent":"North America"},
-  {"iso_a3":"VCT", "gini_index":41.7, "continent":"North America"},
-  {"iso_a3":"WSM", "gini_index":37.7, "continent":"Oceania"},
-  {"iso_a3":"SMR", "gini_index":29.7, "continent":"Europe"},
-  {"iso_a3":"STP", "gini_index":56.3, "continent":"Africa"},
-  {"iso_a3":"SAU", "gini_index":37.7, "continent":"Asia"},
-  {"iso_a3":"SEN", "gini_index":39.2, "continent":"Africa"},
-  {"iso_a3":"SRB", "gini_index":34.4, "continent":"Europe"},
-  {"iso_a3":"SYC", "gini_index":32.1, "continent":"Africa"},
-  {"iso_a3":"SLE", "gini_index":35.7, "continent":"Africa"},
-  {"iso_a3":"SGP", "gini_index":45.9, "continent":"Asia"},
-  {"iso_a3":"SVK", "gini_index":25.2, "continent":"Europe"},
-  {"iso_a3":"SVN", "gini_index":24.6, "continent":"Europe"},
-  {"iso_a3":"SLB", "gini_index":44.6, "continent":"Oceania"},
-  {"iso_a3":"SOM", "gini_index":39.7, "continent":"Africa"},
-  {"iso_a3":"ZAF", "gini_index":63.0, "continent":"Africa"},
-  {"iso_a3":"ESP", "gini_index":34.7, "continent":"Europe"},
-  {"iso_a3":"LKA", "gini_index":39.6, "continent":"Asia"},
-  {"iso_a3":"SDN", "gini_index":34.2, "continent":"Africa"},
-  {"iso_a3":"SUR", "gini_index":40.7, "continent":"South America"},
-  {"iso_a3":"SWE", "gini_index":28.8, "continent":"Europe"},
-  {"iso_a3":"CHE", "gini_index":29.7, "continent":"Europe"},
-  {"iso_a3":"SYR", "gini_index":35.8, "continent":"Asia"},
-  {"iso_a3":"TWN", "gini_index":34.6, "continent":"Asia"},
-  {"iso_a3":"TJK", "gini_index":36.0, "continent":"Asia"},
-  {"iso_a3":"TZA", "gini_index":40.5, "continent":"Africa"},
-  {"iso_a3":"THA", "gini_index":36.6, "continent":"Asia"},
-  {"iso_a3":"TLS", "gini_index":28.7, "continent":"Asia"},
-  {"iso_a3":"TGO", "gini_index":43.1, "continent":"Africa"},
-  {"iso_a3":"TON", "gini_index":37.0, "continent":"Oceania"},
-  {"iso_a3":"TTO", "gini_index":40.3, "continent":"North America"},
-  {"iso_a3":"TUN", "gini_index":32.8, "continent":"Africa"},
-  {"iso_a3":"TUR", "gini_index":41.9, "continent":"Asia"},
-  {"iso_a3":"TKM", "gini_index":26.6, "continent":"Asia"},
-  {"iso_a3":"TUV", "gini_index":39.1, "continent":"Oceania"},
-  {"iso_a3":"UGA", "gini_index":42.7, "continent":"Africa"},
-  {"iso_a3":"UKR", "gini_index":26.1, "continent":"Europe"},
-  {"iso_a3":"ARE", "gini_index":31.6, "continent":"Asia"},
-  {"iso_a3":"GBR", "gini_index":33.1, "continent":"Europe"},
-  {"iso_a3":"USA", "gini_index":41.1, "continent":"North America"},
-  {"iso_a3":"URY", "gini_index":39.7, "continent":"South America"},
-  {"iso_a3":"UZB", "gini_index":35.2, "continent":"Asia"},
-  {"iso_a3":"VUT", "gini_index":35.4, "continent":"Oceania"},
-  {"iso_a3":"VEN", "gini_index":44.8, "continent":"South America"},
-  {"iso_a3":"VNM", "gini_index":35.7, "continent":"Asia"},
-  {"iso_a3":"YEM", "gini_index":36.7, "continent":"Asia"},
-  {"iso_a3":"ZMB", "gini_index":51.5, "continent":"Africa"},
-  {"iso_a3":"ZWE", "gini_index":50.3, "continent":"Africa"}
-]
+{
+  "schema_version": 1,
+  "dataset_id": "gini_data",
+  "metadata": {
+    "source_url": null,
+    "reference_period": null,
+    "updated_at": null
+  },
+  "legacy_layout": "list",
+  "tables": [
+    {
+      "id": "main",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "iso_a3"
+      ],
+      "metrics": [
+        {
+          "id": "gini_index",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        },
+        {
+          "id": "continent",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "iso_a3": "AFG"
+          },
+          "values": {
+            "gini_index": 31.0,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ALB"
+          },
+          "values": {
+            "gini_index": 29.4,
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DZA"
+          },
+          "values": {
+            "gini_index": 27.6,
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AND"
+          },
+          "values": {
+            "gini_index": 27.96,
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AGO"
+          },
+          "values": {
+            "gini_index": 51.3,
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ARG"
+          },
+          "values": {
+            "gini_index": 42.4,
+            "continent": "South America"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ARM"
+          },
+          "values": {
+            "gini_index": 27.2,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AUS"
+          },
+          "values": {
+            "gini_index": 34.3,
+            "continent": "Oceania"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AUT"
+          },
+          "values": {
+            "gini_index": 30.9,
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AZE"
+          },
+          "values": {
+            "gini_index": 26.6,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BHS"
+          },
+          "values": {
+            "gini_index": 41.4,
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BHR"
+          },
+          "values": {
+            "gini_index": 45.7,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BGD"
+          },
+          "values": {
+            "gini_index": 33.4,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BRB"
+          },
+          "values": {
+            "gini_index": 32.0,
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BLR"
+          },
+          "values": {
+            "gini_index": 24.4,
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BEL"
+          },
+          "values": {
+            "gini_index": 26.4,
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BLZ"
+          },
+          "values": {
+            "gini_index": 39.9,
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BEN"
+          },
+          "values": {
+            "gini_index": 34.4,
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BTN"
+          },
+          "values": {
+            "gini_index": 28.5,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BOL"
+          },
+          "values": {
+            "gini_index": 42.1,
+            "continent": "South America"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BIH"
+          },
+          "values": {
+            "gini_index": 33.0,
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BWA"
+          },
+          "values": {
+            "gini_index": 54.2,
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BRA"
+          },
+          "values": {
+            "gini_index": 48.6,
+            "continent": "South America"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BRN"
+          },
+          "values": {
+            "gini_index": 34.7,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BGR"
+          },
+          "values": {
+            "gini_index": 40.8,
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BFA"
+          },
+          "values": {
+            "gini_index": 37.4,
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BDI"
+          },
+          "values": {
+            "gini_index": 42.4,
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KHM"
+          },
+          "values": {
+            "gini_index": 32.0,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CMR"
+          },
+          "values": {
+            "gini_index": 46.6,
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CAN"
+          },
+          "values": {
+            "gini_index": 31.7,
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CPV"
+          },
+          "values": {
+            "gini_index": 42.4,
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CAF"
+          },
+          "values": {
+            "gini_index": 56.2,
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TCD"
+          },
+          "values": {
+            "gini_index": 43.3,
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CHL"
+          },
+          "values": {
+            "gini_index": 44.4,
+            "continent": "South America"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CHN"
+          },
+          "values": {
+            "gini_index": 38.2,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "COL"
+          },
+          "values": {
+            "gini_index": 51.2,
+            "continent": "South America"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "COM"
+          },
+          "values": {
+            "gini_index": 45.3,
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "COG"
+          },
+          "values": {
+            "gini_index": 48.9,
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "COD"
+          },
+          "values": {
+            "gini_index": 42.1,
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CRI"
+          },
+          "values": {
+            "gini_index": 49.2,
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CIV"
+          },
+          "values": {
+            "gini_index": 41.5,
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HRV"
+          },
+          "values": {
+            "gini_index": 29.6,
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CUB"
+          },
+          "values": {
+            "gini_index": 38.0,
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CYP"
+          },
+          "values": {
+            "gini_index": 31.5,
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CZE"
+          },
+          "values": {
+            "gini_index": 25.0,
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DNK"
+          },
+          "values": {
+            "gini_index": 28.2,
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DJI"
+          },
+          "values": {
+            "gini_index": 37.8,
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DMA"
+          },
+          "values": {
+            "gini_index": 43.9,
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DOM"
+          },
+          "values": {
+            "gini_index": 41.9,
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ECU"
+          },
+          "values": {
+            "gini_index": 45.1,
+            "continent": "South America"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "EGY"
+          },
+          "values": {
+            "gini_index": 31.5,
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SLV"
+          },
+          "values": {
+            "gini_index": 38.8,
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GNQ"
+          },
+          "values": {
+            "gini_index": 44.2,
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ERI"
+          },
+          "values": {
+            "gini_index": 30.0,
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "EST"
+          },
+          "values": {
+            "gini_index": 30.3,
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SWZ"
+          },
+          "values": {
+            "gini_index": 54.6,
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ETH"
+          },
+          "values": {
+            "gini_index": 35.0,
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FJI"
+          },
+          "values": {
+            "gini_index": 36.4,
+            "continent": "Oceania"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FIN"
+          },
+          "values": {
+            "gini_index": 27.3,
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FRA"
+          },
+          "values": {
+            "gini_index": 32.7,
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GAB"
+          },
+          "values": {
+            "gini_index": 38.0,
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GMB"
+          },
+          "values": {
+            "gini_index": 35.9,
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GEO"
+          },
+          "values": {
+            "gini_index": 36.4,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DEU"
+          },
+          "values": {
+            "gini_index": 31.7,
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GHA"
+          },
+          "values": {
+            "gini_index": 42.4,
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GRC"
+          },
+          "values": {
+            "gini_index": 32.8,
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GRD"
+          },
+          "values": {
+            "gini_index": 44.8,
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GTM"
+          },
+          "values": {
+            "gini_index": 48.4,
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GIN"
+          },
+          "values": {
+            "gini_index": 33.7,
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GNB"
+          },
+          "values": {
+            "gini_index": 43.0,
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GUY"
+          },
+          "values": {
+            "gini_index": 45.2,
+            "continent": "South America"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HTI"
+          },
+          "values": {
+            "gini_index": 41.1,
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HND"
+          },
+          "values": {
+            "gini_index": 48.5,
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HUN"
+          },
+          "values": {
+            "gini_index": 28.7,
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ISL"
+          },
+          "values": {
+            "gini_index": 26.6,
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IND"
+          },
+          "values": {
+            "gini_index": 35.7,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IDN"
+          },
+          "values": {
+            "gini_index": 38.0,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IRN"
+          },
+          "values": {
+            "gini_index": 44.5,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IRQ"
+          },
+          "values": {
+            "gini_index": 30.9,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IRL"
+          },
+          "values": {
+            "gini_index": 29.2,
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ISR"
+          },
+          "values": {
+            "gini_index": 39.0,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ITA"
+          },
+          "values": {
+            "gini_index": 32.2,
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "JAM"
+          },
+          "values": {
+            "gini_index": 45.5,
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "JPN"
+          },
+          "values": {
+            "gini_index": 32.9,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "JOR"
+          },
+          "values": {
+            "gini_index": 33.7,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KAZ"
+          },
+          "values": {
+            "gini_index": 27.8,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KEN"
+          },
+          "values": {
+            "gini_index": 40.8,
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KIR"
+          },
+          "values": {
+            "gini_index": 38.1,
+            "continent": "Oceania"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KOR"
+          },
+          "values": {
+            "gini_index": 31.0,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KWT"
+          },
+          "values": {
+            "gini_index": 27.8,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KGZ"
+          },
+          "values": {
+            "gini_index": 29.7,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LAO"
+          },
+          "values": {
+            "gini_index": 38.8,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LVA"
+          },
+          "values": {
+            "gini_index": 34.2,
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LBN"
+          },
+          "values": {
+            "gini_index": 36.5,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LSO"
+          },
+          "values": {
+            "gini_index": 44.9,
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LBR"
+          },
+          "values": {
+            "gini_index": 35.3,
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LBY"
+          },
+          "values": {
+            "gini_index": 35.0,
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LIE"
+          },
+          "values": {
+            "gini_index": 29.6,
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LTU"
+          },
+          "values": {
+            "gini_index": 35.6,
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LUX"
+          },
+          "values": {
+            "gini_index": 31.0,
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MDG"
+          },
+          "values": {
+            "gini_index": 41.2,
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MWI"
+          },
+          "values": {
+            "gini_index": 44.9,
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MYS"
+          },
+          "values": {
+            "gini_index": 41.2,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MDV"
+          },
+          "values": {
+            "gini_index": 30.3,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MLI"
+          },
+          "values": {
+            "gini_index": 33.0,
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MLT"
+          },
+          "values": {
+            "gini_index": 28.2,
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MHL"
+          },
+          "values": {
+            "gini_index": 38.2,
+            "continent": "Oceania"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MRT"
+          },
+          "values": {
+            "gini_index": 32.6,
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MUS"
+          },
+          "values": {
+            "gini_index": 36.8,
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MEX"
+          },
+          "values": {
+            "gini_index": 45.4,
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MDA"
+          },
+          "values": {
+            "gini_index": 26.0,
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MCO"
+          },
+          "values": {
+            "gini_index": 35.0,
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MNG"
+          },
+          "values": {
+            "gini_index": 32.5,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SYC"
+          },
+          "values": {
+            "gini_index": 32.1,
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MUS"
+          },
+          "values": {
+            "gini_index": 36.8,
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MNE"
+          },
+          "values": {
+            "gini_index": 34.3,
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MAR"
+          },
+          "values": {
+            "gini_index": 40.0,
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MOZ"
+          },
+          "values": {
+            "gini_index": 47.3,
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MMR"
+          },
+          "values": {
+            "gini_index": 34.6,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NAM"
+          },
+          "values": {
+            "gini_index": 63.9,
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NRU"
+          },
+          "values": {
+            "gini_index": 29.7,
+            "continent": "Oceania"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NPL"
+          },
+          "values": {
+            "gini_index": 32.8,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NLD"
+          },
+          "values": {
+            "gini_index": 28.2,
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NZL"
+          },
+          "values": {
+            "gini_index": 33.9,
+            "continent": "Oceania"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NIC"
+          },
+          "values": {
+            "gini_index": 46.2,
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NER"
+          },
+          "values": {
+            "gini_index": 34.3,
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NGA"
+          },
+          "values": {
+            "gini_index": 35.1,
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NOR"
+          },
+          "values": {
+            "gini_index": 27.0,
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "OMN"
+          },
+          "values": {
+            "gini_index": 30.7,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PAK"
+          },
+          "values": {
+            "gini_index": 29.6,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PAN"
+          },
+          "values": {
+            "gini_index": 49.8,
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PNG"
+          },
+          "values": {
+            "gini_index": 41.9,
+            "continent": "Oceania"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PRY"
+          },
+          "values": {
+            "gini_index": 47.2,
+            "continent": "South America"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PER"
+          },
+          "values": {
+            "gini_index": 42.8,
+            "continent": "South America"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PHL"
+          },
+          "values": {
+            "gini_index": 42.3,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "POL"
+          },
+          "values": {
+            "gini_index": 30.2,
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PRT"
+          },
+          "values": {
+            "gini_index": 33.5,
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "QAT"
+          },
+          "values": {
+            "gini_index": 45.3,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ROU"
+          },
+          "values": {
+            "gini_index": 34.4,
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "RUS"
+          },
+          "values": {
+            "gini_index": 34.9,
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "RWA"
+          },
+          "values": {
+            "gini_index": 43.7,
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KNA"
+          },
+          "values": {
+            "gini_index": 39.0,
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LCA"
+          },
+          "values": {
+            "gini_index": 43.1,
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VCT"
+          },
+          "values": {
+            "gini_index": 41.7,
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "WSM"
+          },
+          "values": {
+            "gini_index": 37.7,
+            "continent": "Oceania"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SMR"
+          },
+          "values": {
+            "gini_index": 29.7,
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "STP"
+          },
+          "values": {
+            "gini_index": 56.3,
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SAU"
+          },
+          "values": {
+            "gini_index": 37.7,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SEN"
+          },
+          "values": {
+            "gini_index": 39.2,
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SRB"
+          },
+          "values": {
+            "gini_index": 34.4,
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SYC"
+          },
+          "values": {
+            "gini_index": 32.1,
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SLE"
+          },
+          "values": {
+            "gini_index": 35.7,
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SGP"
+          },
+          "values": {
+            "gini_index": 45.9,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SVK"
+          },
+          "values": {
+            "gini_index": 25.2,
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SVN"
+          },
+          "values": {
+            "gini_index": 24.6,
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SLB"
+          },
+          "values": {
+            "gini_index": 44.6,
+            "continent": "Oceania"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SOM"
+          },
+          "values": {
+            "gini_index": 39.7,
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ZAF"
+          },
+          "values": {
+            "gini_index": 63.0,
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ESP"
+          },
+          "values": {
+            "gini_index": 34.7,
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LKA"
+          },
+          "values": {
+            "gini_index": 39.6,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SDN"
+          },
+          "values": {
+            "gini_index": 34.2,
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SUR"
+          },
+          "values": {
+            "gini_index": 40.7,
+            "continent": "South America"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SWE"
+          },
+          "values": {
+            "gini_index": 28.8,
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CHE"
+          },
+          "values": {
+            "gini_index": 29.7,
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SYR"
+          },
+          "values": {
+            "gini_index": 35.8,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TWN"
+          },
+          "values": {
+            "gini_index": 34.6,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TJK"
+          },
+          "values": {
+            "gini_index": 36.0,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TZA"
+          },
+          "values": {
+            "gini_index": 40.5,
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "THA"
+          },
+          "values": {
+            "gini_index": 36.6,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TLS"
+          },
+          "values": {
+            "gini_index": 28.7,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TGO"
+          },
+          "values": {
+            "gini_index": 43.1,
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TON"
+          },
+          "values": {
+            "gini_index": 37.0,
+            "continent": "Oceania"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TTO"
+          },
+          "values": {
+            "gini_index": 40.3,
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TUN"
+          },
+          "values": {
+            "gini_index": 32.8,
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TUR"
+          },
+          "values": {
+            "gini_index": 41.9,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TKM"
+          },
+          "values": {
+            "gini_index": 26.6,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TUV"
+          },
+          "values": {
+            "gini_index": 39.1,
+            "continent": "Oceania"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "UGA"
+          },
+          "values": {
+            "gini_index": 42.7,
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "UKR"
+          },
+          "values": {
+            "gini_index": 26.1,
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ARE"
+          },
+          "values": {
+            "gini_index": 31.6,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GBR"
+          },
+          "values": {
+            "gini_index": 33.1,
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "USA"
+          },
+          "values": {
+            "gini_index": 41.1,
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "URY"
+          },
+          "values": {
+            "gini_index": 39.7,
+            "continent": "South America"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "UZB"
+          },
+          "values": {
+            "gini_index": 35.2,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VUT"
+          },
+          "values": {
+            "gini_index": 35.4,
+            "continent": "Oceania"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VEN"
+          },
+          "values": {
+            "gini_index": 44.8,
+            "continent": "South America"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VNM"
+          },
+          "values": {
+            "gini_index": 35.7,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "YEM"
+          },
+          "values": {
+            "gini_index": 36.7,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ZMB"
+          },
+          "values": {
+            "gini_index": 51.5,
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ZWE"
+          },
+          "values": {
+            "gini_index": 50.3,
+            "continent": "Africa"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,5 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:jidoapp/providers/unesco_provider.dart';
 import 'package:jidoapp/providers/landmarks_provider.dart';
@@ -25,6 +26,7 @@ class ExploreMenuScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final isPremium = context.watch<SubscriptionService>().isPremium;
 
     void gated(VoidCallback action) {
@@ -71,7 +73,7 @@ class ExploreMenuScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Ready for an adventure?',
+                          tr('Ready for an adventure?'),
                           style: TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.w600,
@@ -81,8 +83,8 @@ class ExploreMenuScreen extends StatelessWidget {
                           ),
                         ),
                         const SizedBox(height: 6),
-                        const Text(
-                          'Explore',
+                         Text(
+                          tr('Explore'),
                           style: TextStyle(
                             fontSize: 46,
                             fontWeight: FontWeight.w900,
@@ -219,7 +221,7 @@ class ExploreMenuScreen extends StatelessWidget {
                                       crossAxisAlignment: CrossAxisAlignment.end,
                                       children: [
                                         Text(
-                                          '$visited',
+                                          tr('$visited'),
                                           style: const TextStyle(
                                             fontSize: 34,
                                             fontWeight: FontWeight.w800,
@@ -232,7 +234,7 @@ class ExploreMenuScreen extends StatelessWidget {
                                         Padding(
                                           padding: const EdgeInsets.only(bottom: 3),
                                           child: Text(
-                                            '/ $total',
+                                            tr('/ $total'),
                                             style: TextStyle(
                                               fontSize: 16,
                                               fontWeight: FontWeight.w600,
@@ -269,7 +271,7 @@ class ExploreMenuScreen extends StatelessWidget {
                                   ),
                                 ),
                                 child: Text(
-                                  '${(progress * 100).toStringAsFixed(0)}%',
+                                  tr('${(progress * 100).toStringAsFixed(0)}%'),
                                   style: const TextStyle(
                                     fontSize: 18,
                                     fontWeight: FontWeight.w800,
@@ -341,7 +343,7 @@ class ExploreMenuScreen extends StatelessWidget {
             Icon(icon, size: 18, color: color),
             const SizedBox(width: 8),
             Text(
-              label,
+              tr(label),
               style: TextStyle(
                 fontSize: 14,
                 fontWeight: FontWeight.w600,
@@ -363,8 +365,8 @@ class ExploreMenuScreen extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text(
-          'Landmarks',
+         Text(
+          tr('Landmarks'),
           style: TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.w700,
@@ -484,7 +486,7 @@ class ExploreMenuScreen extends StatelessWidget {
                 right: 16,
                 bottom: 16,
                 child: Text(
-                  title,
+                  tr(title),
                   style: const TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.w800,
@@ -547,7 +549,7 @@ class ExploreMenuScreen extends StatelessWidget {
                 ),
               ),
               Text(
-                title,
+                tr(title),
                 style: TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.w700,
@@ -565,8 +567,8 @@ class ExploreMenuScreen extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text(
-          'Activities',
+         Text(
+          tr('Activities'),
           style: TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.w700,
@@ -622,8 +624,8 @@ class ExploreMenuScreen extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisAlignment: MainAxisAlignment.end,
                             children: [
-                              const Text(
-                                'Browse Activities',
+                               Text(
+                                tr('Browse Activities'),
                                 style: TextStyle(
                                   fontSize: 26,
                                   fontWeight: FontWeight.w800,
@@ -633,7 +635,7 @@ class ExploreMenuScreen extends StatelessWidget {
                               ),
                               const SizedBox(height: 4),
                               Text(
-                                'Paintings, Foods, Amusement Parks & More',
+                                tr('Paintings, Foods, Amusement Parks & More'),
                                 style: TextStyle(
                                   fontSize: 12,
                                   fontWeight: FontWeight.w500,

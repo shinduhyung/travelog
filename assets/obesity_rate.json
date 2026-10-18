@@ -1,191 +1,1546 @@
-[
-  {"iso_a3": "TON", "obesity_rate": 70.5},
-  {"iso_a3": "NRU", "obesity_rate": 70.2},
-  {"iso_a3": "TUV", "obesity_rate": 63.9},
-  {"iso_a3": "WSM", "obesity_rate": 61.2},
-  {"iso_a3": "BHS", "obesity_rate": 47.6},
-  {"iso_a3": "MHL", "obesity_rate": 47.3},
-  {"iso_a3": "KNA", "obesity_rate": 46.6},
-  {"iso_a3": "KIR", "obesity_rate": 46.2},
-  {"iso_a3": "FSM", "obesity_rate": 45.6},
-  {"iso_a3": "KWT", "obesity_rate": 45.2},
-  {"iso_a3": "QAT", "obesity_rate": 43.8},
-  {"iso_a3": "EGY", "obesity_rate": 43.0},
-  {"iso_a3": "USA", "obesity_rate": 42.9},
-  {"iso_a3": "PLW", "obesity_rate": 42.2},
-  {"iso_a3": "BLZ", "obesity_rate": 41.9},
-  {"iso_a3": "SAU", "obesity_rate": 41.4},
-  {"iso_a3": "CHL", "obesity_rate": 39.5},
-  {"iso_a3": "GEO", "obesity_rate": 38.9},
-  {"iso_a3": "ROU", "obesity_rate": 38.2},
-  {"iso_a3": "BRB", "obesity_rate": 38.2},
-  {"iso_a3": "IRQ", "obesity_rate": 37.4},
-  {"iso_a3": "BHR", "obesity_rate": 37.2},
-  {"iso_a3": "HUN", "obesity_rate": 36.4},
-  {"iso_a3": "LBY", "obesity_rate": 36.2},
-  {"iso_a3": "MEX", "obesity_rate": 36.1},
-  {"iso_a3": "PAN", "obesity_rate": 36.1},
-  {"iso_a3": "ARG", "obesity_rate": 36.0},
-  {"iso_a3": "HRV", "obesity_rate": 35.7},
-  {"iso_a3": "JOR", "obesity_rate": 35.6},
-  {"iso_a3": "URY", "obesity_rate": 34.7},
-  {"iso_a3": "MLT", "obesity_rate": 34.6},
-  {"iso_a3": "TUR", "obesity_rate": 34.3},
-  {"iso_a3": "NZL", "obesity_rate": 34.2},
-  {"iso_a3": "JAM", "obesity_rate": 34.2},
-  {"iso_a3": "ATG", "obesity_rate": 34.1},
-  {"iso_a3": "LCA", "obesity_rate": 33.9},
-  {"iso_a3": "FJI", "obesity_rate": 33.8},
-  {"iso_a3": "GRC", "obesity_rate": 33.7},
-  {"iso_a3": "VCT", "obesity_rate": 33.6},
-  {"iso_a3": "NIC", "obesity_rate": 32.4},
-  {"iso_a3": "BRN", "obesity_rate": 32.4},
-  {"iso_a3": "PRY", "obesity_rate": 32.1},
-  {"iso_a3": "CRI", "obesity_rate": 32.0},
-  {"iso_a3": "AUS", "obesity_rate": 31.8},
-  {"iso_a3": "ARE", "obesity_rate": 31.5},
-  {"iso_a3": "DMA", "obesity_rate": 31.5},
-  {"iso_a3": "POL", "obesity_rate": 31.4},
-  {"iso_a3": "CZE", "obesity_rate": 31.3},
-  {"iso_a3": "SYR", "obesity_rate": 31.2},
-  {"iso_a3": "LTU", "obesity_rate": 31.1},
-  {"iso_a3": "LBN", "obesity_rate": 31.1},
-  {"iso_a3": "IRL", "obesity_rate": 30.8},
-  {"iso_a3": "MKD", "obesity_rate": 30.6},
-  {"iso_a3": "GRD", "obesity_rate": 30.5},
-  {"iso_a3": "SVK", "obesity_rate": 30.3},
-  {"iso_a3": "SYC", "obesity_rate": 30.3},
-  {"iso_a3": "OMN", "obesity_rate": 30.2},
-  {"iso_a3": "ZAF", "obesity_rate": 30.0},
-  {"iso_a3": "SLV", "obesity_rate": 29.9},
-  {"iso_a3": "LVA", "obesity_rate": 29.8},
-  {"iso_a3": "UKR", "obesity_rate": 29.2},
-  {"iso_a3": "TTO", "obesity_rate": 29.2},
-  {"iso_a3": "DOM", "obesity_rate": 29.1},
-  {"iso_a3": "SUR", "obesity_rate": 29.0},
-  {"iso_a3": "BRA", "obesity_rate": 28.8},
-  {"iso_a3": "GBR", "obesity_rate": 28.7},
-  {"iso_a3": "HND", "obesity_rate": 28.5},
-  {"iso_a3": "UZB", "obesity_rate": 28.5},
-  {"iso_a3": "TUN", "obesity_rate": 28.3},
-  {"iso_a3": "GRL", "obesity_rate": 28.2},
-  {"iso_a3": "RUS", "obesity_rate": 28.0},
-  {"iso_a3": "GUY", "obesity_rate": 28.0},
-  {"iso_a3": "ARM", "obesity_rate": 27.9},
-  {"iso_a3": "BOL", "obesity_rate": 27.8},
-  {"iso_a3": "AZE", "obesity_rate": 27.5},
-  {"iso_a3": "CAN", "obesity_rate": 27.3},
-  {"iso_a3": "SWZ", "obesity_rate": 27.3},
-  {"iso_a3": "PER", "obesity_rate": 27.2},
-  {"iso_a3": "PRT", "obesity_rate": 27.1},
-  {"iso_a3": "ECU", "obesity_rate": 27.0},
-  {"iso_a3": "EST", "obesity_rate": 26.7},
-  {"iso_a3": "ALB", "obesity_rate": 26.6},
-  {"iso_a3": "BLR", "obesity_rate": 26.6},
-  {"iso_a3": "SRB", "obesity_rate": 26.1},
-  {"iso_a3": "MDA", "obesity_rate": 25.6},
-  {"iso_a3": "BIH", "obesity_rate": 25.5},
-  {"iso_a3": "IRN", "obesity_rate": 25.3},
-  {"iso_a3": "GTM", "obesity_rate": 25.2},
-  {"iso_a3": "CYP", "obesity_rate": 25.1},
-  {"iso_a3": "KGZ", "obesity_rate": 24.4},
-  {"iso_a3": "DZA", "obesity_rate": 24.2},
-  {"iso_a3": "BGR", "obesity_rate": 24.2},
-  {"iso_a3": "DEU", "obesity_rate": 24.2},
-  {"iso_a3": "MNG", "obesity_rate": 24.0},
-  {"iso_a3": "COL", "obesity_rate": 23.9},
-  {"iso_a3": "FIN", "obesity_rate": 23.7},
-  {"iso_a3": "CUB", "obesity_rate": 23.5},
-  {"iso_a3": "ISR", "obesity_rate": 23.4},
-  {"iso_a3": "VEN", "obesity_rate": 22.8},
-  {"iso_a3": "ISL", "obesity_rate": 22.6},
-  {"iso_a3": "MYS", "obesity_rate": 22.4},
-  {"iso_a3": "SVN", "obesity_rate": 22.2},
-  {"iso_a3": "MAR", "obesity_rate": 22.1},
-  {"iso_a3": "BEL", "obesity_rate": 22.0},
-  {"iso_a3": "PAK", "obesity_rate": 21.8},
-  {"iso_a3": "SLB", "obesity_rate": 21.6},
-  {"iso_a3": "ITA", "obesity_rate": 21.6},
-  {"iso_a3": "MNE", "obesity_rate": 21.1},
-  {"iso_a3": "MRT", "obesity_rate": 20.8},
-  {"iso_a3": "TJK", "obesity_rate": 20.8},
-  {"iso_a3": "AND", "obesity_rate": 20.5},
-  {"iso_a3": "LUX", "obesity_rate": 20.2},
-  {"iso_a3": "TKM", "obesity_rate": 20.2},
-  {"iso_a3": "PNG", "obesity_rate": 20.1},
-  {"iso_a3": "GAB", "obesity_rate": 20.0},
-  {"iso_a3": "VUT", "obesity_rate": 19.9},
-  {"iso_a3": "NOR", "obesity_rate": 19.8},
-  {"iso_a3": "MUS", "obesity_rate": 19.5},
-  {"iso_a3": "KAZ", "obesity_rate": 19.3},
-  {"iso_a3": "LSO", "obesity_rate": 19.3},
-  {"iso_a3": "ESP", "obesity_rate": 19.2},
-  {"iso_a3": "AFG", "obesity_rate": 17.6},
-  {"iso_a3": "MDV", "obesity_rate": 17.6},
-  {"iso_a3": "BWA", "obesity_rate": 17.5},
-  {"iso_a3": "GNQ", "obesity_rate": 17.2},
-  {"iso_a3": "AUT", "obesity_rate": 17.0},
-  {"iso_a3": "NLD", "obesity_rate": 16.9},
-  {"iso_a3": "SWE", "obesity_rate": 16.4},
-  {"iso_a3": "LBR", "obesity_rate": 16.2},
-  {"iso_a3": "COM", "obesity_rate": 15.5},
-  {"iso_a3": "SDN", "obesity_rate": 15.5},
-  {"iso_a3": "NAM", "obesity_rate": 15.3},
-  {"iso_a3": "CPV", "obesity_rate": 15.1},
-  {"iso_a3": "STP", "obesity_rate": 15.0},
-  {"iso_a3": "THA", "obesity_rate": 14.5},
-  {"iso_a3": "DNK", "obesity_rate": 14.3},
-  {"iso_a3": "CHE", "obesity_rate": 13.7},
-  {"iso_a3": "SGP", "obesity_rate": 13.5},
-  {"iso_a3": "CMR", "obesity_rate": 13.4},
-  {"iso_a3": "GMB", "obesity_rate": 13.2},
-  {"iso_a3": "SOM", "obesity_rate": 12.7},
-  {"iso_a3": "ZWE", "obesity_rate": 12.4},
-  {"iso_a3": "GHA", "obesity_rate": 12.1},
-  {"iso_a3": "BTN", "obesity_rate": 12.0},
-  {"iso_a3": "YEM", "obesity_rate": 11.6},
-  {"iso_a3": "IDN", "obesity_rate": 11.5},
-  {"iso_a3": "TZA", "obesity_rate": 11.4},
-  {"iso_a3": "KEN", "obesity_rate": 11.0},
-  {"iso_a3": "FRA", "obesity_rate": 10.9},
-  {"iso_a3": "PRK", "obesity_rate": 10.9},
-  {"iso_a3": "DJI", "obesity_rate": 10.9},
-  {"iso_a3": "NGA", "obesity_rate": 10.8},
-  {"iso_a3": "LKA", "obesity_rate": 10.6},
-  {"iso_a3": "CIV", "obesity_rate": 10.6},
-  {"iso_a3": "AGO", "obesity_rate": 10.5},
-  {"iso_a3": "TGO", "obesity_rate": 10.4},
-  {"iso_a3": "GNB", "obesity_rate": 10.1},
-  {"iso_a3": "MLI", "obesity_rate": 10.0},
-  {"iso_a3": "BEN", "obesity_rate": 9.9},
-  {"iso_a3": "ZMB", "obesity_rate": 9.4},
-  {"iso_a3": "MOZ", "obesity_rate": 8.8},
-  {"iso_a3": "PHL", "obesity_rate": 8.7},
-  {"iso_a3": "SEN", "obesity_rate": 8.7},
-  {"iso_a3": "GIN", "obesity_rate": 8.3},
-  {"iso_a3": "CHN", "obesity_rate": 8.2},
-  {"iso_a3": "SSD", "obesity_rate": 8.0},
-  {"iso_a3": "COG", "obesity_rate": 8.0},
-  {"iso_a3": "LAO", "obesity_rate": 7.8},
-  {"iso_a3": "CAF", "obesity_rate": 7.7},
-  {"iso_a3": "MMR", "obesity_rate": 7.5},
-  {"iso_a3": "IND", "obesity_rate": 7.2},
-  {"iso_a3": "UGA", "obesity_rate": 6.9},
-  {"iso_a3": "KOR", "obesity_rate": 6.7},
-  {"iso_a3": "NPL", "obesity_rate": 6.6},
-  {"iso_a3": "SLE", "obesity_rate": 6.5},
-  {"iso_a3": "MWI", "obesity_rate": 6.4},
-  {"iso_a3": "BFA", "obesity_rate": 6.1},
-  {"iso_a3": "COD", "obesity_rate": 5.8},
-  {"iso_a3": "TCD", "obesity_rate": 5.7},
-  {"iso_a3": "NER", "obesity_rate": 5.3},
-  {"iso_a3": "BGD", "obesity_rate": 5.3},
-  {"iso_a3": "JPN", "obesity_rate": 4.9},
-  {"iso_a3": "ERI", "obesity_rate": 4.2},
-  {"iso_a3": "RWA", "obesity_rate": 4.6},
-  {"iso_a3": "KHM", "obesity_rate": 4.4},
-  {"iso_a3": "MDG", "obesity_rate": 3.8},
-  {"iso_a3": "ETH", "obesity_rate": 2.4},
-  {"iso_a3": "TLS", "obesity_rate": 2.2},
-  {"iso_a3": "VNM", "obesity_rate": 2.1}
-]
+{
+  "schema_version": 1,
+  "dataset_id": "obesity_rate",
+  "metadata": {
+    "source_url": null,
+    "reference_period": null,
+    "updated_at": null
+  },
+  "legacy_layout": "list",
+  "tables": [
+    {
+      "id": "main",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "iso_a3"
+      ],
+      "metrics": [
+        {
+          "id": "obesity_rate",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "iso_a3": "TON"
+          },
+          "values": {
+            "obesity_rate": 70.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NRU"
+          },
+          "values": {
+            "obesity_rate": 70.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TUV"
+          },
+          "values": {
+            "obesity_rate": 63.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "WSM"
+          },
+          "values": {
+            "obesity_rate": 61.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BHS"
+          },
+          "values": {
+            "obesity_rate": 47.6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MHL"
+          },
+          "values": {
+            "obesity_rate": 47.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KNA"
+          },
+          "values": {
+            "obesity_rate": 46.6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KIR"
+          },
+          "values": {
+            "obesity_rate": 46.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FSM"
+          },
+          "values": {
+            "obesity_rate": 45.6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KWT"
+          },
+          "values": {
+            "obesity_rate": 45.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "QAT"
+          },
+          "values": {
+            "obesity_rate": 43.8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "EGY"
+          },
+          "values": {
+            "obesity_rate": 43.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "USA"
+          },
+          "values": {
+            "obesity_rate": 42.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PLW"
+          },
+          "values": {
+            "obesity_rate": 42.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BLZ"
+          },
+          "values": {
+            "obesity_rate": 41.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SAU"
+          },
+          "values": {
+            "obesity_rate": 41.4
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CHL"
+          },
+          "values": {
+            "obesity_rate": 39.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GEO"
+          },
+          "values": {
+            "obesity_rate": 38.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ROU"
+          },
+          "values": {
+            "obesity_rate": 38.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BRB"
+          },
+          "values": {
+            "obesity_rate": 38.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IRQ"
+          },
+          "values": {
+            "obesity_rate": 37.4
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BHR"
+          },
+          "values": {
+            "obesity_rate": 37.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HUN"
+          },
+          "values": {
+            "obesity_rate": 36.4
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LBY"
+          },
+          "values": {
+            "obesity_rate": 36.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MEX"
+          },
+          "values": {
+            "obesity_rate": 36.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PAN"
+          },
+          "values": {
+            "obesity_rate": 36.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ARG"
+          },
+          "values": {
+            "obesity_rate": 36.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HRV"
+          },
+          "values": {
+            "obesity_rate": 35.7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "JOR"
+          },
+          "values": {
+            "obesity_rate": 35.6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "URY"
+          },
+          "values": {
+            "obesity_rate": 34.7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MLT"
+          },
+          "values": {
+            "obesity_rate": 34.6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TUR"
+          },
+          "values": {
+            "obesity_rate": 34.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NZL"
+          },
+          "values": {
+            "obesity_rate": 34.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "JAM"
+          },
+          "values": {
+            "obesity_rate": 34.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ATG"
+          },
+          "values": {
+            "obesity_rate": 34.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LCA"
+          },
+          "values": {
+            "obesity_rate": 33.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FJI"
+          },
+          "values": {
+            "obesity_rate": 33.8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GRC"
+          },
+          "values": {
+            "obesity_rate": 33.7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VCT"
+          },
+          "values": {
+            "obesity_rate": 33.6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NIC"
+          },
+          "values": {
+            "obesity_rate": 32.4
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BRN"
+          },
+          "values": {
+            "obesity_rate": 32.4
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PRY"
+          },
+          "values": {
+            "obesity_rate": 32.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CRI"
+          },
+          "values": {
+            "obesity_rate": 32.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AUS"
+          },
+          "values": {
+            "obesity_rate": 31.8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ARE"
+          },
+          "values": {
+            "obesity_rate": 31.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DMA"
+          },
+          "values": {
+            "obesity_rate": 31.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "POL"
+          },
+          "values": {
+            "obesity_rate": 31.4
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CZE"
+          },
+          "values": {
+            "obesity_rate": 31.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SYR"
+          },
+          "values": {
+            "obesity_rate": 31.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LTU"
+          },
+          "values": {
+            "obesity_rate": 31.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LBN"
+          },
+          "values": {
+            "obesity_rate": 31.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IRL"
+          },
+          "values": {
+            "obesity_rate": 30.8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MKD"
+          },
+          "values": {
+            "obesity_rate": 30.6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GRD"
+          },
+          "values": {
+            "obesity_rate": 30.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SVK"
+          },
+          "values": {
+            "obesity_rate": 30.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SYC"
+          },
+          "values": {
+            "obesity_rate": 30.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "OMN"
+          },
+          "values": {
+            "obesity_rate": 30.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ZAF"
+          },
+          "values": {
+            "obesity_rate": 30.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SLV"
+          },
+          "values": {
+            "obesity_rate": 29.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LVA"
+          },
+          "values": {
+            "obesity_rate": 29.8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "UKR"
+          },
+          "values": {
+            "obesity_rate": 29.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TTO"
+          },
+          "values": {
+            "obesity_rate": 29.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DOM"
+          },
+          "values": {
+            "obesity_rate": 29.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SUR"
+          },
+          "values": {
+            "obesity_rate": 29.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BRA"
+          },
+          "values": {
+            "obesity_rate": 28.8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GBR"
+          },
+          "values": {
+            "obesity_rate": 28.7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HND"
+          },
+          "values": {
+            "obesity_rate": 28.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "UZB"
+          },
+          "values": {
+            "obesity_rate": 28.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TUN"
+          },
+          "values": {
+            "obesity_rate": 28.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GRL"
+          },
+          "values": {
+            "obesity_rate": 28.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "RUS"
+          },
+          "values": {
+            "obesity_rate": 28.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GUY"
+          },
+          "values": {
+            "obesity_rate": 28.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ARM"
+          },
+          "values": {
+            "obesity_rate": 27.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BOL"
+          },
+          "values": {
+            "obesity_rate": 27.8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AZE"
+          },
+          "values": {
+            "obesity_rate": 27.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CAN"
+          },
+          "values": {
+            "obesity_rate": 27.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SWZ"
+          },
+          "values": {
+            "obesity_rate": 27.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PER"
+          },
+          "values": {
+            "obesity_rate": 27.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PRT"
+          },
+          "values": {
+            "obesity_rate": 27.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ECU"
+          },
+          "values": {
+            "obesity_rate": 27.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "EST"
+          },
+          "values": {
+            "obesity_rate": 26.7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ALB"
+          },
+          "values": {
+            "obesity_rate": 26.6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BLR"
+          },
+          "values": {
+            "obesity_rate": 26.6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SRB"
+          },
+          "values": {
+            "obesity_rate": 26.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MDA"
+          },
+          "values": {
+            "obesity_rate": 25.6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BIH"
+          },
+          "values": {
+            "obesity_rate": 25.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IRN"
+          },
+          "values": {
+            "obesity_rate": 25.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GTM"
+          },
+          "values": {
+            "obesity_rate": 25.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CYP"
+          },
+          "values": {
+            "obesity_rate": 25.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KGZ"
+          },
+          "values": {
+            "obesity_rate": 24.4
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DZA"
+          },
+          "values": {
+            "obesity_rate": 24.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BGR"
+          },
+          "values": {
+            "obesity_rate": 24.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DEU"
+          },
+          "values": {
+            "obesity_rate": 24.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MNG"
+          },
+          "values": {
+            "obesity_rate": 24.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "COL"
+          },
+          "values": {
+            "obesity_rate": 23.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FIN"
+          },
+          "values": {
+            "obesity_rate": 23.7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CUB"
+          },
+          "values": {
+            "obesity_rate": 23.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ISR"
+          },
+          "values": {
+            "obesity_rate": 23.4
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VEN"
+          },
+          "values": {
+            "obesity_rate": 22.8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ISL"
+          },
+          "values": {
+            "obesity_rate": 22.6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MYS"
+          },
+          "values": {
+            "obesity_rate": 22.4
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SVN"
+          },
+          "values": {
+            "obesity_rate": 22.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MAR"
+          },
+          "values": {
+            "obesity_rate": 22.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BEL"
+          },
+          "values": {
+            "obesity_rate": 22.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PAK"
+          },
+          "values": {
+            "obesity_rate": 21.8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SLB"
+          },
+          "values": {
+            "obesity_rate": 21.6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ITA"
+          },
+          "values": {
+            "obesity_rate": 21.6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MNE"
+          },
+          "values": {
+            "obesity_rate": 21.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MRT"
+          },
+          "values": {
+            "obesity_rate": 20.8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TJK"
+          },
+          "values": {
+            "obesity_rate": 20.8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AND"
+          },
+          "values": {
+            "obesity_rate": 20.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LUX"
+          },
+          "values": {
+            "obesity_rate": 20.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TKM"
+          },
+          "values": {
+            "obesity_rate": 20.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PNG"
+          },
+          "values": {
+            "obesity_rate": 20.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GAB"
+          },
+          "values": {
+            "obesity_rate": 20.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VUT"
+          },
+          "values": {
+            "obesity_rate": 19.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NOR"
+          },
+          "values": {
+            "obesity_rate": 19.8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MUS"
+          },
+          "values": {
+            "obesity_rate": 19.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KAZ"
+          },
+          "values": {
+            "obesity_rate": 19.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LSO"
+          },
+          "values": {
+            "obesity_rate": 19.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ESP"
+          },
+          "values": {
+            "obesity_rate": 19.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AFG"
+          },
+          "values": {
+            "obesity_rate": 17.6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MDV"
+          },
+          "values": {
+            "obesity_rate": 17.6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BWA"
+          },
+          "values": {
+            "obesity_rate": 17.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GNQ"
+          },
+          "values": {
+            "obesity_rate": 17.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AUT"
+          },
+          "values": {
+            "obesity_rate": 17.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NLD"
+          },
+          "values": {
+            "obesity_rate": 16.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SWE"
+          },
+          "values": {
+            "obesity_rate": 16.4
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LBR"
+          },
+          "values": {
+            "obesity_rate": 16.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "COM"
+          },
+          "values": {
+            "obesity_rate": 15.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SDN"
+          },
+          "values": {
+            "obesity_rate": 15.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NAM"
+          },
+          "values": {
+            "obesity_rate": 15.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CPV"
+          },
+          "values": {
+            "obesity_rate": 15.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "STP"
+          },
+          "values": {
+            "obesity_rate": 15.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "THA"
+          },
+          "values": {
+            "obesity_rate": 14.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DNK"
+          },
+          "values": {
+            "obesity_rate": 14.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CHE"
+          },
+          "values": {
+            "obesity_rate": 13.7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SGP"
+          },
+          "values": {
+            "obesity_rate": 13.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CMR"
+          },
+          "values": {
+            "obesity_rate": 13.4
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GMB"
+          },
+          "values": {
+            "obesity_rate": 13.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SOM"
+          },
+          "values": {
+            "obesity_rate": 12.7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ZWE"
+          },
+          "values": {
+            "obesity_rate": 12.4
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GHA"
+          },
+          "values": {
+            "obesity_rate": 12.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BTN"
+          },
+          "values": {
+            "obesity_rate": 12.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "YEM"
+          },
+          "values": {
+            "obesity_rate": 11.6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IDN"
+          },
+          "values": {
+            "obesity_rate": 11.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TZA"
+          },
+          "values": {
+            "obesity_rate": 11.4
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KEN"
+          },
+          "values": {
+            "obesity_rate": 11.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FRA"
+          },
+          "values": {
+            "obesity_rate": 10.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PRK"
+          },
+          "values": {
+            "obesity_rate": 10.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DJI"
+          },
+          "values": {
+            "obesity_rate": 10.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NGA"
+          },
+          "values": {
+            "obesity_rate": 10.8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LKA"
+          },
+          "values": {
+            "obesity_rate": 10.6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CIV"
+          },
+          "values": {
+            "obesity_rate": 10.6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AGO"
+          },
+          "values": {
+            "obesity_rate": 10.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TGO"
+          },
+          "values": {
+            "obesity_rate": 10.4
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GNB"
+          },
+          "values": {
+            "obesity_rate": 10.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MLI"
+          },
+          "values": {
+            "obesity_rate": 10.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BEN"
+          },
+          "values": {
+            "obesity_rate": 9.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ZMB"
+          },
+          "values": {
+            "obesity_rate": 9.4
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MOZ"
+          },
+          "values": {
+            "obesity_rate": 8.8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PHL"
+          },
+          "values": {
+            "obesity_rate": 8.7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SEN"
+          },
+          "values": {
+            "obesity_rate": 8.7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GIN"
+          },
+          "values": {
+            "obesity_rate": 8.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CHN"
+          },
+          "values": {
+            "obesity_rate": 8.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SSD"
+          },
+          "values": {
+            "obesity_rate": 8.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "COG"
+          },
+          "values": {
+            "obesity_rate": 8.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LAO"
+          },
+          "values": {
+            "obesity_rate": 7.8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CAF"
+          },
+          "values": {
+            "obesity_rate": 7.7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MMR"
+          },
+          "values": {
+            "obesity_rate": 7.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IND"
+          },
+          "values": {
+            "obesity_rate": 7.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "UGA"
+          },
+          "values": {
+            "obesity_rate": 6.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KOR"
+          },
+          "values": {
+            "obesity_rate": 6.7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NPL"
+          },
+          "values": {
+            "obesity_rate": 6.6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SLE"
+          },
+          "values": {
+            "obesity_rate": 6.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MWI"
+          },
+          "values": {
+            "obesity_rate": 6.4
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BFA"
+          },
+          "values": {
+            "obesity_rate": 6.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "COD"
+          },
+          "values": {
+            "obesity_rate": 5.8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TCD"
+          },
+          "values": {
+            "obesity_rate": 5.7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NER"
+          },
+          "values": {
+            "obesity_rate": 5.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BGD"
+          },
+          "values": {
+            "obesity_rate": 5.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "JPN"
+          },
+          "values": {
+            "obesity_rate": 4.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ERI"
+          },
+          "values": {
+            "obesity_rate": 4.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "RWA"
+          },
+          "values": {
+            "obesity_rate": 4.6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KHM"
+          },
+          "values": {
+            "obesity_rate": 4.4
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MDG"
+          },
+          "values": {
+            "obesity_rate": 3.8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ETH"
+          },
+          "values": {
+            "obesity_rate": 2.4
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TLS"
+          },
+          "values": {
+            "obesity_rate": 2.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VNM"
+          },
+          "values": {
+            "obesity_rate": 2.1
+          }
+        }
+      ]
+    }
+  ]
+}

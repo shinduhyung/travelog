@@ -1,145 +1,1178 @@
-[
-  {"iso_a3": "USA", "PwrIndx": 0.0744},
-  {"iso_a3": "RUS", "PwrIndx": 0.0788},
-  {"iso_a3": "CHN", "PwrIndx": 0.0788},
-  {"iso_a3": "IND", "PwrIndx": 0.1184},
-  {"iso_a3": "KOR", "PwrIndx": 0.1656},
-  {"iso_a3": "GBR", "PwrIndx": 0.1785},
-  {"iso_a3": "FRA", "PwrIndx": 0.1878},
-  {"iso_a3": "JPN", "PwrIndx": 0.1839},
-  {"iso_a3": "TUR", "PwrIndx": 0.1902},
-  {"iso_a3": "ITA", "PwrIndx": 0.2164},
-  {"iso_a3": "BRA", "PwrIndx": 0.2415},
-  {"iso_a3": "PAK", "PwrIndx": 0.2513},
-  {"iso_a3": "IDN", "PwrIndx": 0.2557},
-  {"iso_a3": "DEU", "PwrIndx": 0.2601},
-  {"iso_a3": "ISR", "PwrIndx": 0.2661},
-  {"iso_a3": "IRN", "PwrIndx": 0.3048},
-  {"iso_a3": "ESP", "PwrIndx": 0.3242},
-  {"iso_a3": "AUS", "PwrIndx": 0.3298},
-  {"iso_a3": "EGY", "PwrIndx": 0.3427},
-  {"iso_a3": "UKR", "PwrIndx": 0.3755},
-  {"iso_a3": "POL", "PwrIndx": 0.3776},
-  {"iso_a3": "TWN", "PwrIndx": 0.3988},
-  {"iso_a3": "VEN", "PwrIndx": 0.4024},
-  {"iso_a3": "SAU", "PwrIndx": 0.4201},
-  {"iso_a3": "THA", "PwrIndx": 0.4536},
-  {"iso_a3": "DZA", "PwrIndx": 0.3589},
-  {"iso_a3": "SWE", "PwrIndx": 0.4835},
-  {"iso_a3": "CAN", "PwrIndx": 0.5179},
-  {"iso_a3": "SGP", "PwrIndx": 0.5271},
-  {"iso_a3": "GRC", "PwrIndx": 0.5337},
-  {"iso_a3": "NGA", "PwrIndx": 0.5771},
-  {"iso_a3": "MEX", "PwrIndx": 0.5965},
-  {"iso_a3": "ARG", "PwrIndx": 0.6013},
-  {"iso_a3": "BGD", "PwrIndx": 0.6062},
-  {"iso_a3": "NLD", "PwrIndx": 0.6412},
-  {"iso_a3": "MMR", "PwrIndx": 0.6735},
-  {"iso_a3": "NOR", "PwrIndx": 0.6811},
-  {"iso_a3": "PRT", "PwrIndx": 0.6856},
-  {"iso_a3": "ZAF", "PwrIndx": 0.6889},
-  {"iso_a3": "PHL", "PwrIndx": 0.6987},
-  {"iso_a3": "MYS", "PwrIndx": 0.7429},
-  {"iso_a3": "IRQ", "PwrIndx": 0.7738},
-  {"iso_a3": "SWZ", "PwrIndx": 0.7869},
-  {"iso_a3": "DNK", "PwrIndx": 0.8109},
-  {"iso_a3": "COL", "PwrIndx": 0.8353},
-  {"iso_a3": "CHL", "PwrIndx": 0.8361},
-  {"iso_a3": "FIN", "PwrIndx": 0.8437},
-  {"iso_a3": "PER", "PwrIndx": 0.8588},
-  {"iso_a3": "ROU", "PwrIndx": 0.8984},
-  {"iso_a3": "ETH", "PwrIndx": 0.9305},
-  {"iso_a3": "CZE", "PwrIndx": 0.9994},
-  {"iso_a3": "ARE", "PwrIndx": 1.0186},
-  {"iso_a3": "HUN", "PwrIndx": 1.0259},
-  {"iso_a3": "AGO", "PwrIndx": 1.0961},
-  {"iso_a3": "KAZ", "PwrIndx": 1.1016},
-  {"iso_a3": "UZB", "PwrIndx": 1.1121},
-  {"iso_a3": "MAR", "PwrIndx": 1.1273},
-  {"iso_a3": "AZE", "PwrIndx": 1.2531},
-  {"iso_a3": "BEL", "PwrIndx": 1.2564},
-  {"iso_a3": "BGR", "PwrIndx": 1.2563},
-  {"iso_a3": "SRB", "PwrIndx": 1.2576},
-  {"iso_a3": "SYR", "PwrIndx": 1.2771},
-  {"iso_a3": "ECU", "PwrIndx": 1.3021},
-  {"iso_a3": "COD", "PwrIndx": 1.3111},
-  {"iso_a3": "CUB", "PwrIndx": 1.3286},
-  {"iso_a3": "ATG", "PwrIndx": 1.3704},
-  {"iso_a3": "SRB", "PwrIndx": 1.3941},
-  {"iso_a3": "BLR", "PwrIndx": 1.3954},
-  {"iso_a3": "SVK", "PwrIndx": 1.3978},
-  {"iso_a3": "QAT", "PwrIndx": 1.4307},
-  {"iso_a3": "SDN", "PwrIndx": 1.4756},
-  {"iso_a3": "HRV", "PwrIndx": 1.5074},
-  {"iso_a3": "JOR", "PwrIndx": 1.6139},
-  {"iso_a3": "LBY", "PwrIndx": 1.4449},
-  {"iso_a3": "TKM", "PwrIndx": 1.6512},
-  {"iso_a3": "ALB", "PwrIndx": 1.6815},
-  {"iso_a3": "KWT", "PwrIndx": 1.6982},
-  {"iso_a3": "BOL", "PwrIndx": 1.7221},
-  {"iso_a3": "BHR", "PwrIndx": 1.7448},
-  {"iso_a3": "OMN", "PwrIndx": 1.8047},
-  {"iso_a3": "KEN", "PwrIndx": 1.8135},
-  {"iso_a3": "TCD", "PwrIndx": 1.8712},
-  {"iso_a3": "YEM", "PwrIndx": 1.8901},
-  {"iso_a3": "NZL", "PwrIndx": 1.9039},
-  {"iso_a3": "PRY", "PwrIndx": 1.9044},
-  {"iso_a3": "LTU", "PwrIndx": 1.9075},
-  {"iso_a3": "MOZ", "PwrIndx": 1.9265},
-  {"iso_a3": "TUN", "PwrIndx": 1.9538},
-  {"iso_a3": "ARM", "PwrIndx": 2.0373},
-  {"iso_a3": "TZA", "PwrIndx": 2.0416},
-  {"iso_a3": "CMR", "PwrIndx": 2.0501},
-  {"iso_a3": "GEO", "PwrIndx": 2.0695},
-  {"iso_a3": "KHM", "PwrIndx": 2.0752},
-  {"iso_a3": "SLE", "PwrIndx": 2.1016},
-  {"iso_a3": "IRL", "PwrIndx": 2.1103},
-  {"iso_a3": "MNG", "PwrIndx": 2.1135},
-  {"iso_a3": "LVA", "PwrIndx": 2.1246},
-  {"iso_a3": "URY", "PwrIndx": 2.1385},
-  {"iso_a3": "HND", "PwrIndx": 2.1679},
-  {"iso_a3": "CIV", "PwrIndx": 2.1796},
-  {"iso_a3": "GTM", "PwrIndx": 2.1956},
-  {"iso_a3": "MYS", "PwrIndx": 2.2379},
-  {"iso_a3": "KGZ", "PwrIndx": 2.2543},
-  {"iso_a3": "LAO", "PwrIndx": 2.2663},
-  {"iso_a3": "EST", "PwrIndx": 2.2917},
-  {"iso_a3": "TJK", "PwrIndx": 2.3049},
-  {"iso_a3": "ZMB", "PwrIndx": 2.3411},
-  {"iso_a3": "GHA", "PwrIndx": 2.3775},
-  {"iso_a3": "ZWE", "PwrIndx": 2.3863},
-  {"iso_a3": "MAC", "PwrIndx": 2.4042},
-  {"iso_a3": "SSD", "PwrIndx": 2.4321},
-  {"iso_a3": "UGA", "PwrIndx": 2.4767},
-  {"iso_a3": "LBN", "PwrIndx": 2.5981},
-  {"iso_a3": "NAM", "PwrIndx": 2.6384},
-  {"iso_a3": "LUX", "PwrIndx": 2.6415},
-  {"iso_a3": "AFG", "PwrIndx": 2.6442},
-  {"iso_a3": "NGA", "PwrIndx": 2.6689},
-  {"iso_a3": "ERI", "PwrIndx": 2.6985},
-  {"iso_a3": "COG", "PwrIndx": 2.7282},
-  {"iso_a3": "BWA", "PwrIndx": 2.7509},
-  {"iso_a3": "MUS", "PwrIndx": 2.7977},
-  {"iso_a3": "DOM", "PwrIndx": 2.8023},
-  {"iso_a3": "SEN", "PwrIndx": 2.8116},
-  {"iso_a3": "NPL", "PwrIndx": 2.8915},
-  {"iso_a3": "MTN", "PwrIndx": 2.9216},
-  {"iso_a3": "SVK", "PwrIndx": 2.9371},
-  {"iso_a3": "BFA", "PwrIndx": 2.9734},
-  {"iso_a3": "MDG", "PwrIndx": 3.0609},
-  {"iso_a3": "NIC", "PwrIndx": 3.0966},
-  {"iso_a3": "BIH", "PwrIndx": 3.0799},
-  {"iso_a3": "GAB", "PwrIndx": 3.1805},
-  {"iso_a3": "MDA", "PwrIndx": 3.2555},
-  {"iso_a3": "ISL", "PwrIndx": 3.5181},
-  {"iso_a3": "PAN", "PwrIndx": 3.6575},
-  {"iso_a3": "BLZ", "PwrIndx": 3.7191},
-  {"iso_a3": "LBR", "PwrIndx": 3.7781},
-  {"iso_a3": "SUR", "PwrIndx": 3.9127},
-  {"iso_a3": "SLE", "PwrIndx": 3.9701},
-  {"iso_a3": "KOS", "PwrIndx": 4.9141},
-  {"iso_a3": "SOM", "PwrIndx": 4.2037},
-  {"iso_a3": "CAF", "PwrIndx": 4.2347},
-  {"iso_a3": "BEN", "PwrIndx": 4.3156},
-  {"iso_a3": "BTN", "PwrIndx": 6.3934}
-]
+{
+  "schema_version": 1,
+  "dataset_id": "power_index",
+  "metadata": {
+    "source_url": null,
+    "reference_period": null,
+    "updated_at": null
+  },
+  "legacy_layout": "list",
+  "tables": [
+    {
+      "id": "main",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "iso_a3"
+      ],
+      "metrics": [
+        {
+          "id": "PwrIndx",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "iso_a3": "USA"
+          },
+          "values": {
+            "PwrIndx": 0.0744
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "RUS"
+          },
+          "values": {
+            "PwrIndx": 0.0788
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CHN"
+          },
+          "values": {
+            "PwrIndx": 0.0788
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IND"
+          },
+          "values": {
+            "PwrIndx": 0.1184
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KOR"
+          },
+          "values": {
+            "PwrIndx": 0.1656
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GBR"
+          },
+          "values": {
+            "PwrIndx": 0.1785
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FRA"
+          },
+          "values": {
+            "PwrIndx": 0.1878
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "JPN"
+          },
+          "values": {
+            "PwrIndx": 0.1839
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TUR"
+          },
+          "values": {
+            "PwrIndx": 0.1902
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ITA"
+          },
+          "values": {
+            "PwrIndx": 0.2164
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BRA"
+          },
+          "values": {
+            "PwrIndx": 0.2415
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PAK"
+          },
+          "values": {
+            "PwrIndx": 0.2513
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IDN"
+          },
+          "values": {
+            "PwrIndx": 0.2557
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DEU"
+          },
+          "values": {
+            "PwrIndx": 0.2601
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ISR"
+          },
+          "values": {
+            "PwrIndx": 0.2661
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IRN"
+          },
+          "values": {
+            "PwrIndx": 0.3048
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ESP"
+          },
+          "values": {
+            "PwrIndx": 0.3242
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AUS"
+          },
+          "values": {
+            "PwrIndx": 0.3298
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "EGY"
+          },
+          "values": {
+            "PwrIndx": 0.3427
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "UKR"
+          },
+          "values": {
+            "PwrIndx": 0.3755
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "POL"
+          },
+          "values": {
+            "PwrIndx": 0.3776
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TWN"
+          },
+          "values": {
+            "PwrIndx": 0.3988
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VEN"
+          },
+          "values": {
+            "PwrIndx": 0.4024
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SAU"
+          },
+          "values": {
+            "PwrIndx": 0.4201
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "THA"
+          },
+          "values": {
+            "PwrIndx": 0.4536
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DZA"
+          },
+          "values": {
+            "PwrIndx": 0.3589
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SWE"
+          },
+          "values": {
+            "PwrIndx": 0.4835
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CAN"
+          },
+          "values": {
+            "PwrIndx": 0.5179
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SGP"
+          },
+          "values": {
+            "PwrIndx": 0.5271
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GRC"
+          },
+          "values": {
+            "PwrIndx": 0.5337
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NGA"
+          },
+          "values": {
+            "PwrIndx": 0.5771
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MEX"
+          },
+          "values": {
+            "PwrIndx": 0.5965
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ARG"
+          },
+          "values": {
+            "PwrIndx": 0.6013
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BGD"
+          },
+          "values": {
+            "PwrIndx": 0.6062
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NLD"
+          },
+          "values": {
+            "PwrIndx": 0.6412
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MMR"
+          },
+          "values": {
+            "PwrIndx": 0.6735
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NOR"
+          },
+          "values": {
+            "PwrIndx": 0.6811
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PRT"
+          },
+          "values": {
+            "PwrIndx": 0.6856
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ZAF"
+          },
+          "values": {
+            "PwrIndx": 0.6889
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PHL"
+          },
+          "values": {
+            "PwrIndx": 0.6987
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MYS"
+          },
+          "values": {
+            "PwrIndx": 0.7429
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IRQ"
+          },
+          "values": {
+            "PwrIndx": 0.7738
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SWZ"
+          },
+          "values": {
+            "PwrIndx": 0.7869
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DNK"
+          },
+          "values": {
+            "PwrIndx": 0.8109
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "COL"
+          },
+          "values": {
+            "PwrIndx": 0.8353
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CHL"
+          },
+          "values": {
+            "PwrIndx": 0.8361
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FIN"
+          },
+          "values": {
+            "PwrIndx": 0.8437
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PER"
+          },
+          "values": {
+            "PwrIndx": 0.8588
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ROU"
+          },
+          "values": {
+            "PwrIndx": 0.8984
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ETH"
+          },
+          "values": {
+            "PwrIndx": 0.9305
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CZE"
+          },
+          "values": {
+            "PwrIndx": 0.9994
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ARE"
+          },
+          "values": {
+            "PwrIndx": 1.0186
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HUN"
+          },
+          "values": {
+            "PwrIndx": 1.0259
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AGO"
+          },
+          "values": {
+            "PwrIndx": 1.0961
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KAZ"
+          },
+          "values": {
+            "PwrIndx": 1.1016
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "UZB"
+          },
+          "values": {
+            "PwrIndx": 1.1121
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MAR"
+          },
+          "values": {
+            "PwrIndx": 1.1273
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AZE"
+          },
+          "values": {
+            "PwrIndx": 1.2531
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BEL"
+          },
+          "values": {
+            "PwrIndx": 1.2564
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BGR"
+          },
+          "values": {
+            "PwrIndx": 1.2563
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SRB"
+          },
+          "values": {
+            "PwrIndx": 1.2576
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SYR"
+          },
+          "values": {
+            "PwrIndx": 1.2771
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ECU"
+          },
+          "values": {
+            "PwrIndx": 1.3021
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "COD"
+          },
+          "values": {
+            "PwrIndx": 1.3111
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CUB"
+          },
+          "values": {
+            "PwrIndx": 1.3286
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ATG"
+          },
+          "values": {
+            "PwrIndx": 1.3704
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SRB"
+          },
+          "values": {
+            "PwrIndx": 1.3941
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BLR"
+          },
+          "values": {
+            "PwrIndx": 1.3954
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SVK"
+          },
+          "values": {
+            "PwrIndx": 1.3978
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "QAT"
+          },
+          "values": {
+            "PwrIndx": 1.4307
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SDN"
+          },
+          "values": {
+            "PwrIndx": 1.4756
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HRV"
+          },
+          "values": {
+            "PwrIndx": 1.5074
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "JOR"
+          },
+          "values": {
+            "PwrIndx": 1.6139
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LBY"
+          },
+          "values": {
+            "PwrIndx": 1.4449
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TKM"
+          },
+          "values": {
+            "PwrIndx": 1.6512
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ALB"
+          },
+          "values": {
+            "PwrIndx": 1.6815
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KWT"
+          },
+          "values": {
+            "PwrIndx": 1.6982
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BOL"
+          },
+          "values": {
+            "PwrIndx": 1.7221
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BHR"
+          },
+          "values": {
+            "PwrIndx": 1.7448
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "OMN"
+          },
+          "values": {
+            "PwrIndx": 1.8047
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KEN"
+          },
+          "values": {
+            "PwrIndx": 1.8135
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TCD"
+          },
+          "values": {
+            "PwrIndx": 1.8712
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "YEM"
+          },
+          "values": {
+            "PwrIndx": 1.8901
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NZL"
+          },
+          "values": {
+            "PwrIndx": 1.9039
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PRY"
+          },
+          "values": {
+            "PwrIndx": 1.9044
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LTU"
+          },
+          "values": {
+            "PwrIndx": 1.9075
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MOZ"
+          },
+          "values": {
+            "PwrIndx": 1.9265
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TUN"
+          },
+          "values": {
+            "PwrIndx": 1.9538
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ARM"
+          },
+          "values": {
+            "PwrIndx": 2.0373
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TZA"
+          },
+          "values": {
+            "PwrIndx": 2.0416
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CMR"
+          },
+          "values": {
+            "PwrIndx": 2.0501
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GEO"
+          },
+          "values": {
+            "PwrIndx": 2.0695
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KHM"
+          },
+          "values": {
+            "PwrIndx": 2.0752
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SLE"
+          },
+          "values": {
+            "PwrIndx": 2.1016
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IRL"
+          },
+          "values": {
+            "PwrIndx": 2.1103
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MNG"
+          },
+          "values": {
+            "PwrIndx": 2.1135
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LVA"
+          },
+          "values": {
+            "PwrIndx": 2.1246
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "URY"
+          },
+          "values": {
+            "PwrIndx": 2.1385
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HND"
+          },
+          "values": {
+            "PwrIndx": 2.1679
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CIV"
+          },
+          "values": {
+            "PwrIndx": 2.1796
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GTM"
+          },
+          "values": {
+            "PwrIndx": 2.1956
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MYS"
+          },
+          "values": {
+            "PwrIndx": 2.2379
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KGZ"
+          },
+          "values": {
+            "PwrIndx": 2.2543
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LAO"
+          },
+          "values": {
+            "PwrIndx": 2.2663
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "EST"
+          },
+          "values": {
+            "PwrIndx": 2.2917
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TJK"
+          },
+          "values": {
+            "PwrIndx": 2.3049
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ZMB"
+          },
+          "values": {
+            "PwrIndx": 2.3411
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GHA"
+          },
+          "values": {
+            "PwrIndx": 2.3775
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ZWE"
+          },
+          "values": {
+            "PwrIndx": 2.3863
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MAC"
+          },
+          "values": {
+            "PwrIndx": 2.4042
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SSD"
+          },
+          "values": {
+            "PwrIndx": 2.4321
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "UGA"
+          },
+          "values": {
+            "PwrIndx": 2.4767
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LBN"
+          },
+          "values": {
+            "PwrIndx": 2.5981
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NAM"
+          },
+          "values": {
+            "PwrIndx": 2.6384
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LUX"
+          },
+          "values": {
+            "PwrIndx": 2.6415
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AFG"
+          },
+          "values": {
+            "PwrIndx": 2.6442
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NGA"
+          },
+          "values": {
+            "PwrIndx": 2.6689
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ERI"
+          },
+          "values": {
+            "PwrIndx": 2.6985
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "COG"
+          },
+          "values": {
+            "PwrIndx": 2.7282
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BWA"
+          },
+          "values": {
+            "PwrIndx": 2.7509
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MUS"
+          },
+          "values": {
+            "PwrIndx": 2.7977
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DOM"
+          },
+          "values": {
+            "PwrIndx": 2.8023
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SEN"
+          },
+          "values": {
+            "PwrIndx": 2.8116
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NPL"
+          },
+          "values": {
+            "PwrIndx": 2.8915
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MTN"
+          },
+          "values": {
+            "PwrIndx": 2.9216
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SVK"
+          },
+          "values": {
+            "PwrIndx": 2.9371
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BFA"
+          },
+          "values": {
+            "PwrIndx": 2.9734
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MDG"
+          },
+          "values": {
+            "PwrIndx": 3.0609
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NIC"
+          },
+          "values": {
+            "PwrIndx": 3.0966
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BIH"
+          },
+          "values": {
+            "PwrIndx": 3.0799
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GAB"
+          },
+          "values": {
+            "PwrIndx": 3.1805
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MDA"
+          },
+          "values": {
+            "PwrIndx": 3.2555
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ISL"
+          },
+          "values": {
+            "PwrIndx": 3.5181
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PAN"
+          },
+          "values": {
+            "PwrIndx": 3.6575
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BLZ"
+          },
+          "values": {
+            "PwrIndx": 3.7191
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LBR"
+          },
+          "values": {
+            "PwrIndx": 3.7781
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SUR"
+          },
+          "values": {
+            "PwrIndx": 3.9127
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SLE"
+          },
+          "values": {
+            "PwrIndx": 3.9701
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KOS"
+          },
+          "values": {
+            "PwrIndx": 4.9141
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SOM"
+          },
+          "values": {
+            "PwrIndx": 4.2037
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CAF"
+          },
+          "values": {
+            "PwrIndx": 4.2347
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BEN"
+          },
+          "values": {
+            "PwrIndx": 4.3156
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BTN"
+          },
+          "values": {
+            "PwrIndx": 6.3934
+          }
+        }
+      ]
+    }
+  ]
+}

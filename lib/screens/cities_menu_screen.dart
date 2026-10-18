@@ -7,6 +7,7 @@ import 'dart:typed_data';
 import 'package:collection/collection.dart';
 import 'package:country_flags/country_flags.dart';
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:jidoapp/providers/city_provider.dart';
 import 'package:jidoapp/providers/country_provider.dart';
@@ -484,6 +485,7 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     const primaryColor = Colors.amber;
     const backgroundColor = Colors.white;
 
@@ -691,7 +693,7 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
                                                 CrossAxisAlignment.start,
                                             children: [
                                               Text(
-                                                'Total Visited',
+                                                tr('Total Visited'),
                                                 style: TextStyle(
                                                   fontSize: 13,
                                                   fontWeight: FontWeight.w600,
@@ -718,7 +720,7 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
                                                     builder:
                                                         (context, val, child) {
                                                           return Text(
-                                                            '${val.toInt()}',
+                                                            tr('${val.toInt()}'),
                                                             style:
                                                                 const TextStyle(
                                                                   fontSize: 32,
@@ -735,8 +737,8 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
                                                         },
                                                   ),
                                                   const SizedBox(width: 6),
-                                                  const Text(
-                                                    'cities',
+                                                   Text(
+                                                    tr('cities'),
                                                     style: TextStyle(
                                                       fontSize: 16,
                                                       fontWeight:
@@ -863,7 +865,7 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
                                                         ),
                                                         Expanded(
                                                           child: Text(
-                                                            'Top Country',
+                                                            tr('Top Country'),
                                                             style: TextStyle(
                                                               fontSize: 11,
                                                               fontWeight:
@@ -881,7 +883,7 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
                                                     ),
                                                     const SizedBox(height: 12),
                                                     Text(
-                                                      topCountryName,
+                                                      tr(topCountryName),
                                                       style: TextStyle(
                                                         fontSize: 17,
                                                         fontWeight:
@@ -936,7 +938,7 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
                                                         ],
                                                       ),
                                                       child: Text(
-                                                        '$topCountryCityCount ${topCountryCityCount == 1 ? 'city' : 'cities'}',
+                                                        tr('$topCountryCityCount ${topCountryCityCount == 1 ? 'city' : 'cities'}'),
                                                         style: TextStyle(
                                                           fontSize: 14,
                                                           fontWeight:
@@ -1027,7 +1029,7 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
                                                       const SizedBox(width: 8),
                                                       Expanded(
                                                         child: Text(
-                                                          'Top Region',
+                                                          tr('Top Region'),
                                                           style: TextStyle(
                                                             fontSize: 11,
                                                             fontWeight:
@@ -1043,13 +1045,13 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
                                                   ),
                                                   const SizedBox(height: 12),
                                                   Text(
-                                                    topContinent ==
+                                                    tr(topContinent ==
                                                             'North America'
                                                         ? 'N. America'
                                                         : topContinent ==
                                                               'South America'
                                                         ? 'S. America'
-                                                        : topContinent,
+                                                        : topContinent),
                                                     style: TextStyle(
                                                       fontSize: 17,
                                                       fontWeight:
@@ -1101,7 +1103,7 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
                                                       ],
                                                     ),
                                                     child: Text(
-                                                      '$topContinentCount ${topContinentCount == 1 ? 'city' : 'cities'}',
+                                                      tr('$topContinentCount ${topContinentCount == 1 ? 'city' : 'cities'}'),
                                                       style: TextStyle(
                                                         fontSize: 14,
                                                         fontWeight:
@@ -1364,7 +1366,7 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
                                               CrossAxisAlignment.start,
                                           children: [
                                             Text(
-                                              statisticsItems[_selectedStatIndex]['title'],
+                                              tr(statisticsItems[_selectedStatIndex]['title']),
                                               style: const TextStyle(
                                                 fontSize: 18,
                                                 fontWeight: FontWeight.w700,
@@ -1372,7 +1374,7 @@ class _CitiesMenuScreenState extends State<CitiesMenuScreen> {
                                             ),
                                             const SizedBox(height: 2),
                                             Text(
-                                              statisticsItems[_selectedStatIndex]['description'],
+                                              tr(statisticsItems[_selectedStatIndex]['description']),
                                               style: TextStyle(
                                                 fontSize: 13,
                                                 color: Colors.grey.shade500,

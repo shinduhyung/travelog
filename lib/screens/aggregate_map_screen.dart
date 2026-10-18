@@ -2,6 +2,7 @@
 
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:jidoapp/models/landmarks_model.dart';
@@ -104,8 +105,9 @@ class _AggregateMapScreenState extends State<AggregateMapScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Scaffold(
-      appBar: AppBar(title: Text(widget.title)),
+      appBar: AppBar(title: Text(tr(widget.title))),
       body: Column(
         children: [
           Expanded(flex: 3, child: _buildMap(widget.visitedItems)),
@@ -194,7 +196,7 @@ class _AggregateMapScreenState extends State<AggregateMapScreen> {
               child: Row(
                 children: [
                   ChoiceChip(
-                    label: const Text('All'),
+                    label:  Text(tr('All')),
                     selected: _mapFilter == MapFilter.all,
                     onSelected: (selected) {
                       if (selected) setState(() => _mapFilter = MapFilter.all);
@@ -208,7 +210,7 @@ class _AggregateMapScreenState extends State<AggregateMapScreen> {
                   ),
                   const SizedBox(width: 2),
                   ChoiceChip(
-                    label: const Text('Visited'),
+                    label:  Text(tr('Visited')),
                     selected: _mapFilter == MapFilter.visited,
                     onSelected: (selected) {
                       if (selected) setState(() => _mapFilter = MapFilter.visited);
@@ -237,7 +239,7 @@ class _AggregateMapScreenState extends State<AggregateMapScreen> {
           child: TextField(
             controller: _searchController,
             decoration: InputDecoration(
-              labelText: 'Search ${widget.title}',
+              labelText: tr('Search ${widget.title}'),
               prefixIcon: const Icon(Icons.search),
               border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
               suffixIcon: _searchController.text.isNotEmpty
@@ -279,11 +281,11 @@ class _AggregateMapScreenState extends State<AggregateMapScreen> {
                     return AlertDialog(
                       title: Text(item.name),
                       content: SingleChildScrollView(
-                        child: Text(infoText.trim()),
+                        child: Text(tr(infoText.trim())),
                       ),
                       actions: <Widget>[
                         TextButton(
-                          child: const Text('close'),
+                          child:  Text(tr('close')),
                           onPressed: () {
                             Navigator.of(context).pop();
                           },
@@ -296,7 +298,7 @@ class _AggregateMapScreenState extends State<AggregateMapScreen> {
 
               return ListTile(
                 title: Text(item.name),
-                subtitle: Text(item.countriesIsoA3.join(', ')),
+                subtitle: Text(tr(item.countriesIsoA3.join(', '))),
                 onTap: () {
                   widget.onToggleVisited(item.name);
                 },
@@ -306,7 +308,7 @@ class _AggregateMapScreenState extends State<AggregateMapScreen> {
                     IconButton(
                       icon: const Icon(Icons.info_outline),
                       onPressed: showLandmarkInfoDialog,
-                      tooltip: 'View Info',
+                      tooltip: tr('View Info'),
                     ),
                     Checkbox(
                       value: isVisited,

@@ -1,6 +1,7 @@
 // lib/screens/login_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:jidoapp/providers/auth_provider.dart';
 
@@ -9,6 +10,7 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
@@ -33,8 +35,8 @@ class LoginScreen extends StatelessWidget {
               const SizedBox(height: 25),
 
               // 2. 부드럽고 Cursive한 느낌의 텍스트 스타일
-              const Text(
-                "Travelog",
+               Text(
+                tr("Travelog"),
                 style: TextStyle(
                   fontSize: 40,
                   // 과한 굵기(Bold) 대신 가벼운 느낌
@@ -48,8 +50,8 @@ class LoginScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 8),
-              const Text(
-                "AI Travel Journal",
+               Text(
+                tr("AI Travel Journal"),
                 style: TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.w300, // 얇게 처리하여 세련됨 강조
@@ -70,6 +72,7 @@ class LoginScreen extends StatelessWidget {
 class _GoogleSignInButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final authProvider = Provider.of<AuthProvider>(context, listen: false);
 
     return InkWell(
@@ -78,7 +81,7 @@ class _GoogleSignInButton extends StatelessWidget {
           await authProvider.signInWithGoogle();
         } catch (e) {
           ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(content: Text("Login Failed: $e")),
+            SnackBar(content: Text(tr("Login Failed: $e"))),
           );
         }
       },
@@ -101,8 +104,8 @@ class _GoogleSignInButton extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             // Google 로고 텍스트 대신 깔끔한 디자인
-            const Text(
-              "G",
+             Text(
+              tr("G"),
               style: TextStyle(
                 fontWeight: FontWeight.w900,
                 fontSize: 22,
@@ -111,8 +114,8 @@ class _GoogleSignInButton extends StatelessWidget {
               ),
             ),
             const SizedBox(width: 12),
-            const Text(
-              "Sign in with Google",
+             Text(
+              tr("Sign in with Google"),
               style: TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.w500, // 너무 두껍지 않게

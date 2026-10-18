@@ -1,6 +1,7 @@
 // lib/screens/settings_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:jidoapp/providers/airport_provider.dart';
 import 'package:jidoapp/providers/airline_provider.dart';
 import 'package:jidoapp/providers/auth_provider.dart';
@@ -51,7 +52,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
     if (mounted) {
       setState(() {
         _themeMode = ThemeMode.values.firstWhere(
-              (e) => e.toString().split('.').last == themeString,
+          (e) => e.toString().split('.').last == themeString,
           orElse: () => ThemeMode.system,
         );
         _isLoading = false;
@@ -85,18 +86,21 @@ class _SettingsScreenState extends State<SettingsScreen> {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: const Text('Confirm Reset'),
-          content: const Text(
-              'Are you sure you want to reset all data? This will clear all your visited countries, cities, landmarks, trip logs, and other records. This action cannot be undone.'),
+          title: Text(tr('Confirm Reset')),
+          content: Text(
+            tr(
+              'Are you sure you want to reset all data? This will clear all your visited countries, cities, landmarks, trip logs, and other records. This action cannot be undone.',
+            ),
+          ),
           actions: <Widget>[
             TextButton(
               onPressed: () => Navigator.of(context).pop(false),
-              child: const Text('Cancel'),
+              child: Text(tr('Cancel')),
             ),
             TextButton(
               onPressed: () => Navigator.of(context).pop(true),
               style: TextButton.styleFrom(foregroundColor: Colors.red),
-              child: const Text('Reset'),
+              child: Text(tr('Reset')),
             ),
           ],
         );
@@ -206,12 +210,12 @@ class _SettingsScreenState extends State<SettingsScreen> {
       await showDialog(
         context: context,
         builder: (_) => AlertDialog(
-          title: const Text('Reset Complete'),
-          content: const Text('All data has been reset.'),
+          title: Text(tr('Reset Complete')),
+          content: Text(tr('All data has been reset.')),
           actions: [
             TextButton(
               onPressed: () => Navigator.of(context).pop(),
-              child: const Text('OK'),
+              child: Text(tr('OK')),
             ),
           ],
         ),
@@ -221,6 +225,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final countryProvider = Provider.of<CountryProvider>(context);
     final cityProvider = Provider.of<CityProvider>(context);
 
@@ -231,171 +236,220 @@ class _SettingsScreenState extends State<SettingsScreen> {
         child: _isLoading
             ? const Center(child: CircularProgressIndicator())
             : ListView(
-          padding: const EdgeInsets.all(16.0),
-          children: [
-            const Padding(
-              padding: EdgeInsets.symmetric(vertical: 16.0),
-              child: Center(
-                child: Text(
-                  'Settings',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w800,
-                    color: Colors.black87,
-                  ),
-                ),
-              ),
-            ),
-
-            // ── Premium / Remove Ads ──────────────────────────
-            Consumer<SubscriptionService>(
-              builder: (context, sub, _) => GestureDetector(
-                onTap: () => SubscriptionSheet.show(context, triggerContext: 'settings'),
-                child: Container(
-                  margin: const EdgeInsets.only(bottom: 16),
-                  padding: const EdgeInsets.all(16),
-                  decoration: BoxDecoration(
-                    gradient: const LinearGradient(
-                      colors: [Color(0xFF3DDAD7), Color(0xFF00A39F)],
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                    ),
-                    borderRadius: BorderRadius.circular(16),
-                    boxShadow: [
-                      BoxShadow(
-                        color: const Color(0xFF3DDAD7).withOpacity(0.3),
-                        blurRadius: 12,
-                        offset: const Offset(0, 4),
+                padding: const EdgeInsets.all(16.0),
+                children: [
+                  Padding(
+                    padding: EdgeInsets.symmetric(vertical: 16.0),
+                    child: Center(
+                      child: Text(
+                        tr('Settings'),
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w800,
+                          color: Colors.black87,
+                        ),
                       ),
-                    ],
+                    ),
                   ),
-                  child: Row(
-                    children: [
-                      const Icon(Icons.workspace_premium_rounded,
-                          color: Colors.white, size: 28),
-                      const SizedBox(width: 12),
-                      Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
+
+                  // ── Premium / Remove Ads ──────────────────────────
+                  ListenableBuilder(
+                    listenable: AppLocale.instance,
+                    builder: (context, _) => ListTile(
+                      leading: const Icon(Icons.language),
+                      title: Text(tr('Language')),
+                      trailing: DropdownButton<String>(
+                        value: AppLocale.instance.language ?? 'system',
+                        onChanged: (value) => AppLocale.instance.setLanguage(
+                          value == 'system' ? null : value,
+                        ),
+                        items: [
+                          DropdownMenuItem(
+                            value: 'system',
+                            child: Text(tr('System Default')),
+                          ),
+                          DropdownMenuItem(value: 'ko', child: Text(tr('한국어'))),
+                          const DropdownMenuItem(
+                            value: 'en',
+                            child: Text('English'),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  const Divider(),
+                  Consumer<SubscriptionService>(
+                    builder: (context, sub, _) => GestureDetector(
+                      onTap: () => SubscriptionSheet.show(
+                        context,
+                        triggerContext: 'settings',
+                      ),
+                      child: Container(
+                        margin: const EdgeInsets.only(bottom: 16),
+                        padding: const EdgeInsets.all(16),
+                        decoration: BoxDecoration(
+                          gradient: const LinearGradient(
+                            colors: [Color(0xFF3DDAD7), Color(0xFF00A39F)],
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                          ),
+                          borderRadius: BorderRadius.circular(16),
+                          boxShadow: [
+                            BoxShadow(
+                              color: const Color(0xFF3DDAD7).withOpacity(0.3),
+                              blurRadius: 12,
+                              offset: const Offset(0, 4),
+                            ),
+                          ],
+                        ),
+                        child: Row(
                           children: [
-                            Text(
-                              sub.isPremium
-                                  ? 'Premium Active'
-                                  : 'Remove Ads',
-                              style: const TextStyle(
-                                color: Colors.white,
-                                fontSize: 16,
-                                fontWeight: FontWeight.w700,
+                            const Icon(
+                              Icons.workspace_premium_rounded,
+                              color: Colors.white,
+                              size: 28,
+                            ),
+                            const SizedBox(width: 12),
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    tr(
+                                      sub.isPremium
+                                          ? 'Premium Active'
+                                          : 'Remove Ads',
+                                    ),
+                                    style: const TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w700,
+                                    ),
+                                  ),
+                                  Text(
+                                    tr(
+                                      sub.isPremium
+                                          ? 'You are subscribed. Thank you!'
+                                          : sub.productDetailsFor(
+                                                  sub.yearlyProductIdToOffer,
+                                                ) !=
+                                                null
+                                          ? 'Go ad-free for ${sub.productDetailsFor(sub.yearlyProductIdToOffer)!.price} / year'
+                                          : 'Go ad-free',
+                                    ),
+                                    style: TextStyle(
+                                      color: Colors.white.withOpacity(0.85),
+                                      fontSize: 12,
+                                    ),
+                                  ),
+                                ],
                               ),
                             ),
-                            Text(
+                            Icon(
                               sub.isPremium
-                                  ? 'You are subscribed. Thank you!'
-                                  : sub.productDetailsFor(sub.yearlyProductIdToOffer) != null
-                                  ? 'Go ad-free for ${sub.productDetailsFor(sub.yearlyProductIdToOffer)!.price} / year'
-                                  : 'Go ad-free',
-                              style: TextStyle(
-                                color: Colors.white.withOpacity(0.85),
-                                fontSize: 12,
-                              ),
+                                  ? Icons.check_circle_rounded
+                                  : Icons.arrow_forward_ios,
+                              color: Colors.white,
+                              size: sub.isPremium ? 22 : 14,
                             ),
                           ],
                         ),
                       ),
-                      Icon(
-                        sub.isPremium
-                            ? Icons.check_circle_rounded
-                            : Icons.arrow_forward_ios,
-                        color: Colors.white,
-                        size: sub.isPremium ? 22 : 14,
-                      ),
-                    ],
+                    ),
                   ),
-                ),
-              ),
-            ),
 
-            // ── Theme ─────────────────────────────────────────
-            ListTile(
-              leading: const Icon(Icons.palette_outlined),
-              title: const Text('Theme'),
-              trailing: DropdownButton<ThemeMode>(
-                value: _themeMode,
-                onChanged: _setThemeMode,
-                items: const [
-                  DropdownMenuItem(
-                    value: ThemeMode.system,
-                    child: Text('System Default'),
+                  // ── Theme ─────────────────────────────────────────
+                  ListTile(
+                    leading: const Icon(Icons.palette_outlined),
+                    title: Text(tr('Theme')),
+                    trailing: DropdownButton<ThemeMode>(
+                      value: _themeMode,
+                      onChanged: _setThemeMode,
+                      items: [
+                        DropdownMenuItem(
+                          value: ThemeMode.system,
+                          child: Text(tr('System Default')),
+                        ),
+                        DropdownMenuItem(
+                          value: ThemeMode.light,
+                          child: Text(tr('Light')),
+                        ),
+                        DropdownMenuItem(
+                          value: ThemeMode.dark,
+                          child: Text(tr('Dark')),
+                        ),
+                      ],
+                    ),
                   ),
-                  DropdownMenuItem(
-                    value: ThemeMode.light,
-                    child: Text('Light'),
+                  const Divider(),
+
+                  SwitchListTile(
+                    secondary: const Icon(Icons.public_off_outlined),
+                    title: Text(tr('Include Territories')),
+                    subtitle: Text(tr('Include territories in all statistics')),
+                    value: countryProvider.includeTerritories,
+                    onChanged: (bool value) {
+                      countryProvider.toggleIncludeTerritories();
+                    },
                   ),
-                  DropdownMenuItem(
-                    value: ThemeMode.dark,
-                    child: Text('Dark'),
+                  const Divider(),
+
+                  SwitchListTile(
+                    secondary: const Icon(Icons.border_color_outlined),
+                    title: Text(tr('Use White Borders')),
+                    subtitle: Text(
+                      tr(
+                        'Use white borders instead of dark borders for country boundaries',
+                      ),
+                    ),
+                    value: _useWhiteBorders,
+                    onChanged: _setUseWhiteBorders,
+                  ),
+                  const Divider(),
+
+                  SwitchListTile(
+                    secondary: const Icon(Icons.color_lens_outlined),
+                    title: Text(tr('Use Default Country Ranking Bar Color')),
+                    subtitle: Text(
+                      tr(
+                        'Use a single primary color for all country ranking bars instead of continent-specific colors.',
+                      ),
+                    ),
+                    value: countryProvider.useDefaultRankingBarColor,
+                    onChanged: (bool value) {
+                      countryProvider.setUseDefaultRankingBarColor(value);
+                    },
+                  ),
+                  const Divider(),
+
+                  SwitchListTile(
+                    secondary: const Icon(Icons.location_city_outlined),
+                    title: Text(tr('Use Default City Ranking Bar Color')),
+                    subtitle: Text(
+                      tr(
+                        'Use a single primary color for all city ranking bars instead of continent-specific colors.',
+                      ),
+                    ),
+                    value: cityProvider.useDefaultCityRankingBarColor,
+                    onChanged: (bool value) {
+                      cityProvider.setUseDefaultCityRankingBarColor(value);
+                    },
+                  ),
+                  const Divider(),
+
+                  ListTile(
+                    leading: const Icon(
+                      Icons.warning_amber_rounded,
+                      color: Colors.red,
+                    ),
+                    title: Text(tr('Reset All Data')),
+                    subtitle: Text(
+                      tr('Deletes all visited records, logs, and settings.'),
+                    ),
+                    onTap: () => _resetAllData(context),
                   ),
                 ],
               ),
-            ),
-            const Divider(),
-
-            SwitchListTile(
-              secondary: const Icon(Icons.public_off_outlined),
-              title: const Text('Include Territories'),
-              subtitle:
-              const Text('Include territories in all statistics'),
-              value: countryProvider.includeTerritories,
-              onChanged: (bool value) {
-                countryProvider.toggleIncludeTerritories();
-              },
-            ),
-            const Divider(),
-
-            SwitchListTile(
-              secondary: const Icon(Icons.border_color_outlined),
-              title: const Text('Use White Borders'),
-              subtitle: const Text(
-                  'Use white borders instead of dark borders for country boundaries'),
-              value: _useWhiteBorders,
-              onChanged: _setUseWhiteBorders,
-            ),
-            const Divider(),
-
-            SwitchListTile(
-              secondary: const Icon(Icons.color_lens_outlined),
-              title: const Text('Use Default Country Ranking Bar Color'),
-              subtitle: const Text(
-                  'Use a single primary color for all country ranking bars instead of continent-specific colors.'),
-              value: countryProvider.useDefaultRankingBarColor,
-              onChanged: (bool value) {
-                countryProvider.setUseDefaultRankingBarColor(value);
-              },
-            ),
-            const Divider(),
-
-            SwitchListTile(
-              secondary: const Icon(Icons.location_city_outlined),
-              title: const Text('Use Default City Ranking Bar Color'),
-              subtitle: const Text(
-                  'Use a single primary color for all city ranking bars instead of continent-specific colors.'),
-              value: cityProvider.useDefaultCityRankingBarColor,
-              onChanged: (bool value) {
-                cityProvider.setUseDefaultCityRankingBarColor(value);
-              },
-            ),
-            const Divider(),
-
-            ListTile(
-              leading: const Icon(Icons.warning_amber_rounded,
-                  color: Colors.red),
-              title: const Text('Reset All Data'),
-              subtitle: const Text(
-                  'Deletes all visited records, logs, and settings.'),
-              onTap: () => _resetAllData(context),
-            ),
-          ],
-        ),
       ),
     );
   }

@@ -1,162 +1,1314 @@
-[
-  {"iso_a3": "AFG", "military_expenditure": 1.8},
-  {"iso_a3": "ALB", "military_expenditure": 1.7},
-  {"iso_a3": "DZA", "military_expenditure": 8.2},
-  {"iso_a3": "AGO", "military_expenditure": 1.3},
-  {"iso_a3": "ARG", "military_expenditure": 0.5},
-  {"iso_a3": "ARM", "military_expenditure": 5.5},
-  {"iso_a3": "AUS", "military_expenditure": 1.9},
-  {"iso_a3": "AUT", "military_expenditure": 0.8},
-  {"iso_a3": "AZE", "military_expenditure": 4.6},
-  {"iso_a3": "BHR", "military_expenditure": 3.1},
-  {"iso_a3": "BGD", "military_expenditure": 1.0},
-  {"iso_a3": "BLR", "military_expenditure": 1.8},
-  {"iso_a3": "BEL", "military_expenditure": 1.2},
-  {"iso_a3": "BLZ", "military_expenditure": 0.8},
-  {"iso_a3": "BEN", "military_expenditure": 0.7},
-  {"iso_a3": "BOL", "military_expenditure": 1.4},
-  {"iso_a3": "BIH", "military_expenditure": 0.8},
-  {"iso_a3": "BWA", "military_expenditure": 2.5},
-  {"iso_a3": "BRA", "military_expenditure": 1.1},
-  {"iso_a3": "BRN", "military_expenditure": 3.0},
-  {"iso_a3": "BGR", "military_expenditure": 1.8},
-  {"iso_a3": "BFA", "military_expenditure": 4.0},
-  {"iso_a3": "BDI", "military_expenditure": 3.7},
-  {"iso_a3": "CPV", "military_expenditure": 0.5},
-  {"iso_a3": "KHM", "military_expenditure": 2.1},
-  {"iso_a3": "CMR", "military_expenditure": 0.9},
-  {"iso_a3": "CAN", "military_expenditure": 1.3},
-  {"iso_a3": "CAF", "military_expenditure": 2.3},
-  {"iso_a3": "TCD", "military_expenditure": 2.9},
-  {"iso_a3": "CHL", "military_expenditure": 1.6},
-  {"iso_a3": "CHN", "military_expenditure": 1.7},
-  {"iso_a3": "COL", "military_expenditure": 2.9},
-  {"iso_a3": "COD", "military_expenditure": 1.2},
-  {"iso_a3": "COG", "military_expenditure": 2.0},
-  {"iso_a3": "CIV", "military_expenditure": 0.9},
-  {"iso_a3": "HRV", "military_expenditure": 1.8},
-  {"iso_a3": "CUB", "military_expenditure": 2.9},
-  {"iso_a3": "CYP", "military_expenditure": 1.8},
-  {"iso_a3": "CZE", "military_expenditure": 1.5},
-  {"iso_a3": "DNK", "military_expenditure": 2.0},
-  {"iso_a3": "DOM", "military_expenditure": 0.7},
-  {"iso_a3": "ECU", "military_expenditure": 2.3},
-  {"iso_a3": "EGY", "military_expenditure": 0.9},
-  {"iso_a3": "SLV", "military_expenditure": 1.3},
-  {"iso_a3": "GNQ", "military_expenditure": 1.6},
-  {"iso_a3": "ERI", "military_expenditure": 20.9},
-  {"iso_a3": "EST", "military_expenditure": 2.9},
-  {"iso_a3": "SWZ", "military_expenditure": 1.6},
-  {"iso_a3": "ETH", "military_expenditure": 0.8},
-  {"iso_a3": "FJI", "military_expenditure": 1.3},
-  {"iso_a3": "FIN", "military_expenditure": 2.4},
-  {"iso_a3": "FRA", "military_expenditure": 2.1},
-  {"iso_a3": "GAB", "military_expenditure": 1.2},
-  {"iso_a3": "GMB", "military_expenditure": 0.6},
-  {"iso_a3": "GEO", "military_expenditure": 1.7},
-  {"iso_a3": "DEU", "military_expenditure": 1.5},
-  {"iso_a3": "GHA", "military_expenditure": 0.4},
-  {"iso_a3": "GRC", "military_expenditure": 3.2},
-  {"iso_a3": "GTM", "military_expenditure": 0.4},
-  {"iso_a3": "GIN", "military_expenditure": 2.1},
-  {"iso_a3": "GNB", "military_expenditure": 1.5},
-  {"iso_a3": "GUY", "military_expenditure": 0.6},
-  {"iso_a3": "HTI", "military_expenditure": 0.1},
-  {"iso_a3": "HND", "military_expenditure": 1.6},
-  {"iso_a3": "HUN", "military_expenditure": 2.1},
-  {"iso_a3": "IND", "military_expenditure": 2.4},
-  {"iso_a3": "IDN", "military_expenditure": 0.7},
-  {"iso_a3": "IRN", "military_expenditure": 2.1},
-  {"iso_a3": "IRQ", "military_expenditure": 2.1},
-  {"iso_a3": "IRL", "military_expenditure": 0.2},
-  {"iso_a3": "ISR", "military_expenditure": 5.3},
-  {"iso_a3": "ITA", "military_expenditure": 1.6},
-  {"iso_a3": "JAM", "military_expenditure": 1.2},
-  {"iso_a3": "JPN", "military_expenditure": 1.2},
-  {"iso_a3": "JOR", "military_expenditure": 4.9},
-  {"iso_a3": "KAZ", "military_expenditure": 0.5},
-  {"iso_a3": "KEN", "military_expenditure": 0.9},
-  {"iso_a3": "KOR", "military_expenditure": 2.8},
-  {"iso_a3": "KOS", "military_expenditure": 1.3},
-  {"iso_a3": "KWT", "military_expenditure": 4.9},
-  {"iso_a3": "KGZ", "military_expenditure": 3.6},
-  {"iso_a3": "LAO", "military_expenditure": 0.2},
-  {"iso_a3": "LVA", "military_expenditure": 2.3},
-  {"iso_a3": "LBN", "military_expenditure": 8.9},
-  {"iso_a3": "LSO", "military_expenditure": 1.5},
-  {"iso_a3": "LBR", "military_expenditure": 2.3},
-  {"iso_a3": "LBY", "military_expenditure": 15.5},
-  {"iso_a3": "LTU", "military_expenditure": 2.7},
-  {"iso_a3": "LUX", "military_expenditure": 0.7},
-  {"iso_a3": "MDG", "military_expenditure": 0.7},
-  {"iso_a3": "MWI", "military_expenditure": 1.0},
-  {"iso_a3": "MYS", "military_expenditure": 0.9},
-  {"iso_a3": "MLI", "military_expenditure": 3.8},
-  {"iso_a3": "MLT", "military_expenditure": 0.6},
-  {"iso_a3": "MRT", "military_expenditure": 2.5},
-  {"iso_a3": "MUS", "military_expenditure": 0.2},
-  {"iso_a3": "MEX", "military_expenditure": 0.7},
-  {"iso_a3": "MDA", "military_expenditure": 0.5},
-  {"iso_a3": "MNG", "military_expenditure": 0.6},
-  {"iso_a3": "MNE", "military_expenditure": 1.6},
-  {"iso_a3": "MAR", "military_expenditure": 3.6},
-  {"iso_a3": "MOZ", "military_expenditure": 1.7},
-  {"iso_a3": "MMR", "military_expenditure": 3.8},
-  {"iso_a3": "NAM", "military_expenditure": 2.7},
-  {"iso_a3": "NPL", "military_expenditure": 1.1},
-  {"iso_a3": "NLD", "military_expenditure": 1.5},
-  {"iso_a3": "NZL", "military_expenditure": 1.2},
-  {"iso_a3": "NIC", "military_expenditure": 0.5},
-  {"iso_a3": "NER", "military_expenditure": 2.1},
-  {"iso_a3": "NGA", "military_expenditure": 0.8},
-  {"iso_a3": "MKD", "military_expenditure": 1.7},
-  {"iso_a3": "NOR", "military_expenditure": 1.6},
-  {"iso_a3": "OMN", "military_expenditure": 5.4},
-  {"iso_a3": "PAK", "military_expenditure": 2.8},
-  {"iso_a3": "PAN", "military_expenditure": 1.0},
-  {"iso_a3": "PNG", "military_expenditure": 0.3},
-  {"iso_a3": "PRY", "military_expenditure": 0.9},
-  {"iso_a3": "PER", "military_expenditure": 1.1},
-  {"iso_a3": "PHL", "military_expenditure": 1.2},
-  {"iso_a3": "POL", "military_expenditure": 3.8},
-  {"iso_a3": "PRT", "military_expenditure": 1.5},
-  {"iso_a3": "QAT", "military_expenditure": 7.0},
-  {"iso_a3": "ROU", "military_expenditure": 1.6},
-  {"iso_a3": "RUS", "military_expenditure": 5.9},
-  {"iso_a3": "RWA", "military_expenditure": 1.3},
-  {"iso_a3": "SAU", "military_expenditure": 7.1},
-  {"iso_a3": "SEN", "military_expenditure": 1.5},
-  {"iso_a3": "SRB", "military_expenditure": 2.9},
-  {"iso_a3": "SYC", "military_expenditure": 1.7},
-  {"iso_a3": "SLE", "military_expenditure": 0.6},
-  {"iso_a3": "SGP", "military_expenditure": 2.7},
-  {"iso_a3": "SVK", "military_expenditure": 2.0},
-  {"iso_a3": "SVN", "military_expenditure": 1.3},
-  {"iso_a3": "SOM", "military_expenditure": 1.5},
-  {"iso_a3": "ZAF", "military_expenditure": 0.7},
-  {"iso_a3": "SSD", "military_expenditure": 6.3},
-  {"iso_a3": "ESP", "military_expenditure": 1.5},
-  {"iso_a3": "LKA", "military_expenditure": 1.6},
-  {"iso_a3": "SDN", "military_expenditure": 0.9},
-  {"iso_a3": "SWE", "military_expenditure": 1.5},
-  {"iso_a3": "CHE", "military_expenditure": 0.7},
-  {"iso_a3": "SYR", "military_expenditure": 4.1},
-  {"iso_a3": "TJK", "military_expenditure": 1.2},
-  {"iso_a3": "TZA", "military_expenditure": 1.2},
-  {"iso_a3": "THA", "military_expenditure": 1.2},
-  {"iso_a3": "TLS", "military_expenditure": 1.3},
-  {"iso_a3": "TGO", "military_expenditure": 4.0},
-  {"iso_a3": "TTO", "military_expenditure": 0.9},
-  {"iso_a3": "TUN", "military_expenditure": 2.4},
-  {"iso_a3": "TUR", "military_expenditure": 1.5},
-  {"iso_a3": "UGA", "military_expenditure": 2.0},
-  {"iso_a3": "UKR", "military_expenditure": 36.7},
-  {"iso_a3": "GBR", "military_expenditure": 2.3},
-  {"iso_a3": "USA", "military_expenditure": 3.4},
-  {"iso_a3": "URY", "military_expenditure": 2.0},
-  {"iso_a3": "UZB", "military_expenditure": 3.6},
-  {"iso_a3": "VEN", "military_expenditure": 0.5},
-  {"iso_a3": "YEM", "military_expenditure": 4.0},
-  {"iso_a3": "ZMB", "military_expenditure": 1.3},
-  {"iso_a3": "ZWE", "military_expenditure": 0.2}
-]
+{
+  "schema_version": 1,
+  "dataset_id": "military_expenditure",
+  "metadata": {
+    "source_url": null,
+    "reference_period": null,
+    "updated_at": null
+  },
+  "legacy_layout": "list",
+  "tables": [
+    {
+      "id": "main",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "iso_a3"
+      ],
+      "metrics": [
+        {
+          "id": "military_expenditure",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "iso_a3": "AFG"
+          },
+          "values": {
+            "military_expenditure": 1.8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ALB"
+          },
+          "values": {
+            "military_expenditure": 1.7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DZA"
+          },
+          "values": {
+            "military_expenditure": 8.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AGO"
+          },
+          "values": {
+            "military_expenditure": 1.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ARG"
+          },
+          "values": {
+            "military_expenditure": 0.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ARM"
+          },
+          "values": {
+            "military_expenditure": 5.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AUS"
+          },
+          "values": {
+            "military_expenditure": 1.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AUT"
+          },
+          "values": {
+            "military_expenditure": 0.8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AZE"
+          },
+          "values": {
+            "military_expenditure": 4.6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BHR"
+          },
+          "values": {
+            "military_expenditure": 3.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BGD"
+          },
+          "values": {
+            "military_expenditure": 1.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BLR"
+          },
+          "values": {
+            "military_expenditure": 1.8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BEL"
+          },
+          "values": {
+            "military_expenditure": 1.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BLZ"
+          },
+          "values": {
+            "military_expenditure": 0.8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BEN"
+          },
+          "values": {
+            "military_expenditure": 0.7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BOL"
+          },
+          "values": {
+            "military_expenditure": 1.4
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BIH"
+          },
+          "values": {
+            "military_expenditure": 0.8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BWA"
+          },
+          "values": {
+            "military_expenditure": 2.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BRA"
+          },
+          "values": {
+            "military_expenditure": 1.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BRN"
+          },
+          "values": {
+            "military_expenditure": 3.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BGR"
+          },
+          "values": {
+            "military_expenditure": 1.8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BFA"
+          },
+          "values": {
+            "military_expenditure": 4.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BDI"
+          },
+          "values": {
+            "military_expenditure": 3.7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CPV"
+          },
+          "values": {
+            "military_expenditure": 0.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KHM"
+          },
+          "values": {
+            "military_expenditure": 2.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CMR"
+          },
+          "values": {
+            "military_expenditure": 0.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CAN"
+          },
+          "values": {
+            "military_expenditure": 1.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CAF"
+          },
+          "values": {
+            "military_expenditure": 2.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TCD"
+          },
+          "values": {
+            "military_expenditure": 2.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CHL"
+          },
+          "values": {
+            "military_expenditure": 1.6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CHN"
+          },
+          "values": {
+            "military_expenditure": 1.7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "COL"
+          },
+          "values": {
+            "military_expenditure": 2.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "COD"
+          },
+          "values": {
+            "military_expenditure": 1.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "COG"
+          },
+          "values": {
+            "military_expenditure": 2.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CIV"
+          },
+          "values": {
+            "military_expenditure": 0.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HRV"
+          },
+          "values": {
+            "military_expenditure": 1.8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CUB"
+          },
+          "values": {
+            "military_expenditure": 2.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CYP"
+          },
+          "values": {
+            "military_expenditure": 1.8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CZE"
+          },
+          "values": {
+            "military_expenditure": 1.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DNK"
+          },
+          "values": {
+            "military_expenditure": 2.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DOM"
+          },
+          "values": {
+            "military_expenditure": 0.7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ECU"
+          },
+          "values": {
+            "military_expenditure": 2.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "EGY"
+          },
+          "values": {
+            "military_expenditure": 0.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SLV"
+          },
+          "values": {
+            "military_expenditure": 1.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GNQ"
+          },
+          "values": {
+            "military_expenditure": 1.6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ERI"
+          },
+          "values": {
+            "military_expenditure": 20.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "EST"
+          },
+          "values": {
+            "military_expenditure": 2.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SWZ"
+          },
+          "values": {
+            "military_expenditure": 1.6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ETH"
+          },
+          "values": {
+            "military_expenditure": 0.8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FJI"
+          },
+          "values": {
+            "military_expenditure": 1.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FIN"
+          },
+          "values": {
+            "military_expenditure": 2.4
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FRA"
+          },
+          "values": {
+            "military_expenditure": 2.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GAB"
+          },
+          "values": {
+            "military_expenditure": 1.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GMB"
+          },
+          "values": {
+            "military_expenditure": 0.6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GEO"
+          },
+          "values": {
+            "military_expenditure": 1.7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DEU"
+          },
+          "values": {
+            "military_expenditure": 1.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GHA"
+          },
+          "values": {
+            "military_expenditure": 0.4
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GRC"
+          },
+          "values": {
+            "military_expenditure": 3.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GTM"
+          },
+          "values": {
+            "military_expenditure": 0.4
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GIN"
+          },
+          "values": {
+            "military_expenditure": 2.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GNB"
+          },
+          "values": {
+            "military_expenditure": 1.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GUY"
+          },
+          "values": {
+            "military_expenditure": 0.6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HTI"
+          },
+          "values": {
+            "military_expenditure": 0.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HND"
+          },
+          "values": {
+            "military_expenditure": 1.6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HUN"
+          },
+          "values": {
+            "military_expenditure": 2.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IND"
+          },
+          "values": {
+            "military_expenditure": 2.4
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IDN"
+          },
+          "values": {
+            "military_expenditure": 0.7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IRN"
+          },
+          "values": {
+            "military_expenditure": 2.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IRQ"
+          },
+          "values": {
+            "military_expenditure": 2.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IRL"
+          },
+          "values": {
+            "military_expenditure": 0.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ISR"
+          },
+          "values": {
+            "military_expenditure": 5.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ITA"
+          },
+          "values": {
+            "military_expenditure": 1.6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "JAM"
+          },
+          "values": {
+            "military_expenditure": 1.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "JPN"
+          },
+          "values": {
+            "military_expenditure": 1.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "JOR"
+          },
+          "values": {
+            "military_expenditure": 4.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KAZ"
+          },
+          "values": {
+            "military_expenditure": 0.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KEN"
+          },
+          "values": {
+            "military_expenditure": 0.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KOR"
+          },
+          "values": {
+            "military_expenditure": 2.8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KOS"
+          },
+          "values": {
+            "military_expenditure": 1.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KWT"
+          },
+          "values": {
+            "military_expenditure": 4.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KGZ"
+          },
+          "values": {
+            "military_expenditure": 3.6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LAO"
+          },
+          "values": {
+            "military_expenditure": 0.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LVA"
+          },
+          "values": {
+            "military_expenditure": 2.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LBN"
+          },
+          "values": {
+            "military_expenditure": 8.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LSO"
+          },
+          "values": {
+            "military_expenditure": 1.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LBR"
+          },
+          "values": {
+            "military_expenditure": 2.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LBY"
+          },
+          "values": {
+            "military_expenditure": 15.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LTU"
+          },
+          "values": {
+            "military_expenditure": 2.7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LUX"
+          },
+          "values": {
+            "military_expenditure": 0.7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MDG"
+          },
+          "values": {
+            "military_expenditure": 0.7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MWI"
+          },
+          "values": {
+            "military_expenditure": 1.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MYS"
+          },
+          "values": {
+            "military_expenditure": 0.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MLI"
+          },
+          "values": {
+            "military_expenditure": 3.8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MLT"
+          },
+          "values": {
+            "military_expenditure": 0.6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MRT"
+          },
+          "values": {
+            "military_expenditure": 2.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MUS"
+          },
+          "values": {
+            "military_expenditure": 0.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MEX"
+          },
+          "values": {
+            "military_expenditure": 0.7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MDA"
+          },
+          "values": {
+            "military_expenditure": 0.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MNG"
+          },
+          "values": {
+            "military_expenditure": 0.6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MNE"
+          },
+          "values": {
+            "military_expenditure": 1.6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MAR"
+          },
+          "values": {
+            "military_expenditure": 3.6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MOZ"
+          },
+          "values": {
+            "military_expenditure": 1.7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MMR"
+          },
+          "values": {
+            "military_expenditure": 3.8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NAM"
+          },
+          "values": {
+            "military_expenditure": 2.7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NPL"
+          },
+          "values": {
+            "military_expenditure": 1.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NLD"
+          },
+          "values": {
+            "military_expenditure": 1.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NZL"
+          },
+          "values": {
+            "military_expenditure": 1.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NIC"
+          },
+          "values": {
+            "military_expenditure": 0.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NER"
+          },
+          "values": {
+            "military_expenditure": 2.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NGA"
+          },
+          "values": {
+            "military_expenditure": 0.8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MKD"
+          },
+          "values": {
+            "military_expenditure": 1.7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NOR"
+          },
+          "values": {
+            "military_expenditure": 1.6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "OMN"
+          },
+          "values": {
+            "military_expenditure": 5.4
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PAK"
+          },
+          "values": {
+            "military_expenditure": 2.8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PAN"
+          },
+          "values": {
+            "military_expenditure": 1.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PNG"
+          },
+          "values": {
+            "military_expenditure": 0.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PRY"
+          },
+          "values": {
+            "military_expenditure": 0.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PER"
+          },
+          "values": {
+            "military_expenditure": 1.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PHL"
+          },
+          "values": {
+            "military_expenditure": 1.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "POL"
+          },
+          "values": {
+            "military_expenditure": 3.8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PRT"
+          },
+          "values": {
+            "military_expenditure": 1.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "QAT"
+          },
+          "values": {
+            "military_expenditure": 7.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ROU"
+          },
+          "values": {
+            "military_expenditure": 1.6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "RUS"
+          },
+          "values": {
+            "military_expenditure": 5.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "RWA"
+          },
+          "values": {
+            "military_expenditure": 1.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SAU"
+          },
+          "values": {
+            "military_expenditure": 7.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SEN"
+          },
+          "values": {
+            "military_expenditure": 1.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SRB"
+          },
+          "values": {
+            "military_expenditure": 2.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SYC"
+          },
+          "values": {
+            "military_expenditure": 1.7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SLE"
+          },
+          "values": {
+            "military_expenditure": 0.6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SGP"
+          },
+          "values": {
+            "military_expenditure": 2.7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SVK"
+          },
+          "values": {
+            "military_expenditure": 2.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SVN"
+          },
+          "values": {
+            "military_expenditure": 1.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SOM"
+          },
+          "values": {
+            "military_expenditure": 1.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ZAF"
+          },
+          "values": {
+            "military_expenditure": 0.7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SSD"
+          },
+          "values": {
+            "military_expenditure": 6.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ESP"
+          },
+          "values": {
+            "military_expenditure": 1.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LKA"
+          },
+          "values": {
+            "military_expenditure": 1.6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SDN"
+          },
+          "values": {
+            "military_expenditure": 0.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SWE"
+          },
+          "values": {
+            "military_expenditure": 1.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CHE"
+          },
+          "values": {
+            "military_expenditure": 0.7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SYR"
+          },
+          "values": {
+            "military_expenditure": 4.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TJK"
+          },
+          "values": {
+            "military_expenditure": 1.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TZA"
+          },
+          "values": {
+            "military_expenditure": 1.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "THA"
+          },
+          "values": {
+            "military_expenditure": 1.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TLS"
+          },
+          "values": {
+            "military_expenditure": 1.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TGO"
+          },
+          "values": {
+            "military_expenditure": 4.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TTO"
+          },
+          "values": {
+            "military_expenditure": 0.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TUN"
+          },
+          "values": {
+            "military_expenditure": 2.4
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TUR"
+          },
+          "values": {
+            "military_expenditure": 1.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "UGA"
+          },
+          "values": {
+            "military_expenditure": 2.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "UKR"
+          },
+          "values": {
+            "military_expenditure": 36.7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GBR"
+          },
+          "values": {
+            "military_expenditure": 2.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "USA"
+          },
+          "values": {
+            "military_expenditure": 3.4
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "URY"
+          },
+          "values": {
+            "military_expenditure": 2.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "UZB"
+          },
+          "values": {
+            "military_expenditure": 3.6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VEN"
+          },
+          "values": {
+            "military_expenditure": 0.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "YEM"
+          },
+          "values": {
+            "military_expenditure": 4.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ZMB"
+          },
+          "values": {
+            "military_expenditure": 1.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ZWE"
+          },
+          "values": {
+            "military_expenditure": 0.2
+          }
+        }
+      ]
+    }
+  ]
+}

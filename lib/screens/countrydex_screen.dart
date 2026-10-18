@@ -4,6 +4,7 @@ import 'package:jidoapp/services/country_region_access.dart';
 import 'package:jidoapp/services/subscription_service.dart';
 import 'package:jidoapp/widgets/country_region_access_gate.dart';
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:jidoapp/models/country_model.dart';
 import 'package:jidoapp/models/visit_details_model.dart';
 import 'package:jidoapp/models/admin_region.dart';
@@ -128,6 +129,7 @@ class _CountryDexScreenState extends State<CountryDexScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Scaffold(
       backgroundColor: mintBackground,
       appBar: AppBar(
@@ -149,8 +151,8 @@ class _CountryDexScreenState extends State<CountryDexScreen> {
               child: const Icon(Icons.menu_book, color: Colors.white, size: 20),
             ),
             const SizedBox(width: 12),
-            const Text(
-              'CountryDex',
+             Text(
+              tr('CountryDex'),
               style: TextStyle(
                 color: Colors.black87,
                 fontWeight: FontWeight.bold,
@@ -208,7 +210,7 @@ class _CountryDexScreenState extends State<CountryDexScreen> {
               });
             },
             decoration: InputDecoration(
-              hintText: 'Search Country...',
+              hintText: tr('Search Country...'),
               hintStyle: TextStyle(color: Colors.grey.shade500),
               prefixIcon: Icon(Icons.search, color: mintDark),
               suffixIcon: _searchQuery.isNotEmpty
@@ -263,18 +265,18 @@ class _CountryDexScreenState extends State<CountryDexScreen> {
                   borderRadius: BorderRadius.circular(12),
                 ),
               ),
-              segments: const [
+              segments:  [
                 ButtonSegment(
                   value: true,
                   label: Text(
-                    'Newest First',
+                    tr('Newest First'),
                     style: TextStyle(fontWeight: FontWeight.w600),
                   ),
                 ),
                 ButtonSegment(
                   value: false,
                   label: Text(
-                    'Oldest First',
+                    tr('Oldest First'),
                     style: TextStyle(fontWeight: FontWeight.w600),
                   ),
                 ),
@@ -301,7 +303,7 @@ class _CountryDexScreenState extends State<CountryDexScreen> {
                       CircularProgressIndicator(color: mintPrimary),
                       const SizedBox(height: 16),
                       Text(
-                        'Loading countries...',
+                        tr('Loading countries...'),
                         style: TextStyle(color: Colors.grey.shade600),
                       ),
                     ],
@@ -311,7 +313,7 @@ class _CountryDexScreenState extends State<CountryDexScreen> {
 
               // 1st Filtering: Provider's filter + Search Query
               List<Country> countriesToDisplay = provider.filteredCountries
-                  .where((c) => c.name.toLowerCase().contains(_searchQuery))
+                  .where((c) => AppLocale.instance.matchesCountry(c.name, _searchQuery))
                   .toList();
 
               final visitDetailsMap = provider.visitDetails;
@@ -382,7 +384,7 @@ class _CountryDexScreenState extends State<CountryDexScreen> {
             ),
             const SizedBox(width: 12),
             Text(
-              text,
+              tr(text),
               style: TextStyle(
                 fontWeight: isSelected ? FontWeight.w600 : FontWeight.normal,
                 color: isSelected ? mintDark : Colors.black87,
@@ -575,7 +577,7 @@ class _CountryDexScreenState extends State<CountryDexScreen> {
               child: Row(
                 children: [
                   Text(
-                    title,
+                    tr(title),
                     style: const TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
@@ -593,7 +595,7 @@ class _CountryDexScreenState extends State<CountryDexScreen> {
                       borderRadius: BorderRadius.circular(12),
                     ),
                     child: Text(
-                      '${groupCountries.length}',
+                      tr('${groupCountries.length}'),
                       style: const TextStyle(
                         color: Colors.white,
                         fontSize: 12,
@@ -749,7 +751,7 @@ class _CountryDexScreenState extends State<CountryDexScreen> {
                         children: [
                           Flexible(
                             child: Text(
-                              country.name,
+                              tr(country.name),
                               style: TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.bold,
@@ -822,7 +824,7 @@ class _CountryDexScreenState extends State<CountryDexScreen> {
                                   ),
                                   const SizedBox(width: 4),
                                   Text(
-                                    '$visitCount time${visitCount > 1 ? 's' : ''}',
+                                    tr('$visitCount time${visitCount > 1 ? 's' : ''}'),
                                     style: TextStyle(
                                       fontSize: 12,
                                       color: mintDark,
@@ -832,7 +834,7 @@ class _CountryDexScreenState extends State<CountryDexScreen> {
                                   if (totalDays > 0) ...[
                                     const SizedBox(width: 4),
                                     Text(
-                                      '• $totalDays days',
+                                      tr('• $totalDays days'),
                                       style: TextStyle(
                                         fontSize: 12,
                                         color: mintDark,
@@ -864,7 +866,7 @@ class _CountryDexScreenState extends State<CountryDexScreen> {
                                   ),
                                   const SizedBox(width: 4),
                                   Text(
-                                    'Wishlisted',
+                                    tr('Wishlisted'),
                                     style: TextStyle(
                                       fontSize: 12,
                                       color: Colors.pink.shade700,
@@ -886,7 +888,7 @@ class _CountryDexScreenState extends State<CountryDexScreen> {
                                 borderRadius: BorderRadius.circular(8),
                               ),
                               child: Text(
-                                'Unvisited',
+                                tr('Unvisited'),
                                 style: TextStyle(
                                   fontSize: 12,
                                   color: Colors.grey.shade600,
@@ -929,14 +931,14 @@ class _CountryDexScreenState extends State<CountryDexScreen> {
         if (!CountryRegionAccess.isUnlocked(country.isoA2)) {
           return InkWell(
             onTap: () => showCountryRegionsPremiumDialog(context),
-            child: const Padding(
+            child:  Padding(
               padding: EdgeInsets.symmetric(horizontal: 6, vertical: 2),
               child: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Icon(Icons.lock_outline_rounded, size: 12),
                   SizedBox(width: 3),
-                  Text('Premium', style: TextStyle(fontSize: 11)),
+                  Text(tr('Premium'), style: TextStyle(fontSize: 11)),
                 ],
               ),
             ),
@@ -972,7 +974,7 @@ class _CountryDexScreenState extends State<CountryDexScreen> {
               ),
               const SizedBox(width: 3),
               Text(
-                '$visited/${regions.length}',
+                tr('$visited/${regions.length}'),
                 style: TextStyle(
                   fontSize: 11,
                   fontWeight: FontWeight.w700,
@@ -1020,7 +1022,7 @@ class _CountryDexScreenState extends State<CountryDexScreen> {
           Icon(icon, color: contentColor, size: 14),
           const SizedBox(width: 4),
           Text(
-            text,
+            tr(text),
             style: TextStyle(
               fontSize: 12,
               color: contentColor,

@@ -1,12 +1,142 @@
-[
-  {"name": "Los Angeles", "country": "USA", "hollywood": "543", "continent": "North America"},
-  {"name": "London", "country": "UK", "hollywood": "529", "continent": "Europe"},
-  {"name": "New York City", "country": "USA", "hollywood": "319", "continent": "North America"},
-  {"name": "Paris", "country": "France", "hollywood": "99", "continent": "Europe"},
-  {"name": "San Francisco", "country": "USA", "hollywood": "59", "continent": "North America"},
-  {"name": "Chicago", "country": "USA", "hollywood": "51", "continent": "North America"},
-  {"name": "Toronto", "country": "Canada", "hollywood": "47", "continent": "North America"},
-  {"name": "Boston", "country": "USA", "hollywood": "24", "continent": "North America"},
-  {"name": "Philadelphia", "country": "USA", "hollywood": "23", "continent": "North America"},
-  {"name": "Pittsburgh", "country": "USA", "hollywood": "22", "continent": "North America"}
-]
+{
+  "schema_version": 1,
+  "dataset_id": "hollywood",
+  "metadata": {
+    "source_url": null,
+    "reference_period": null,
+    "updated_at": null
+  },
+  "legacy_layout": "list",
+  "tables": [
+    {
+      "id": "main",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "name",
+        "country"
+      ],
+      "metrics": [
+        {
+          "id": "hollywood",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        },
+        {
+          "id": "continent",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "name": "Los Angeles",
+            "country": "USA"
+          },
+          "values": {
+            "hollywood": "543",
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "London",
+            "country": "UK"
+          },
+          "values": {
+            "hollywood": "529",
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "New York City",
+            "country": "USA"
+          },
+          "values": {
+            "hollywood": "319",
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Paris",
+            "country": "France"
+          },
+          "values": {
+            "hollywood": "99",
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "San Francisco",
+            "country": "USA"
+          },
+          "values": {
+            "hollywood": "59",
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Chicago",
+            "country": "USA"
+          },
+          "values": {
+            "hollywood": "51",
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Toronto",
+            "country": "Canada"
+          },
+          "values": {
+            "hollywood": "47",
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Boston",
+            "country": "USA"
+          },
+          "values": {
+            "hollywood": "24",
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Philadelphia",
+            "country": "USA"
+          },
+          "values": {
+            "hollywood": "23",
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Pittsburgh",
+            "country": "USA"
+          },
+          "values": {
+            "hollywood": "22",
+            "continent": "North America"
+          }
+        }
+      ]
+    }
+  ]
+}

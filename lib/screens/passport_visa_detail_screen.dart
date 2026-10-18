@@ -1,6 +1,7 @@
 // lib/screens/passport_visa_detail_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:jidoapp/models/country_model.dart';
 import 'package:jidoapp/models/visa_data_model.dart';
@@ -40,16 +41,17 @@ class PassportVisaDetailScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return DefaultTabController(
       length: 2,
       child: Scaffold(
         body: SafeArea(
           child: Column(
             children: [
-              const TabBar(
+               TabBar(
                 tabs: [
-                  Tab(icon: Icon(Icons.map_outlined), text: 'Map View'),
-                  Tab(icon: Icon(Icons.list_alt_rounded), text: 'List View'),
+                  Tab(icon: Icon(Icons.map_outlined), text: tr('Map View')),
+                  Tab(icon: Icon(Icons.list_alt_rounded), text: tr('List View')),
                 ],
               ),
               Expanded(
@@ -166,7 +168,7 @@ class PassportVisaDetailScreen extends StatelessWidget {
           Container(width: 12, height: 12, decoration: BoxDecoration(color: color, shape: BoxShape.circle)),
           const SizedBox(width: 8),
           Text(
-              text,
+              tr(text),
               style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.white, fontSize: 11)
           ),
         ],
@@ -204,7 +206,7 @@ class PassportVisaDetailScreen extends StatelessWidget {
 
       continentTiles.add(
         ExpansionTile(
-          title: Text(continent, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+          title: Text(tr(continent), style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
           initiallyExpanded: false,
           children: items.map((item) {
 
@@ -231,7 +233,7 @@ class PassportVisaDetailScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   Text(
-                    displayStatus.toUpperCase(),
+                    tr(displayStatus.toUpperCase()),
                     style: TextStyle(
                       color: statusColor,
                       fontWeight: FontWeight.bold,
@@ -240,7 +242,7 @@ class PassportVisaDetailScreen extends StatelessWidget {
                   ),
                   if (duration.isNotEmpty && !isTerritory)
                     Text(
-                      duration,
+                      tr(duration),
                       style: const TextStyle(fontSize: 12, color: Colors.grey),
                     ),
                 ],

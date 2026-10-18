@@ -1,6 +1,7 @@
 // lib/widgets/badge_detail_checklists/landmark_checklist.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:intl/intl.dart';
 import 'package:jidoapp/models/badge_model.dart';
 import 'package:jidoapp/models/landmarks_model.dart';
@@ -151,7 +152,7 @@ class LandmarkChecklist {
         padding: const EdgeInsets.all(20),
         child: Center(
           child: Text(
-            'No landmarks found for this badge.',
+            tr('No landmarks found for this badge.'),
             style: TextStyle(color: Colors.grey[600]),
           ),
         ),
@@ -224,7 +225,7 @@ class LandmarkChecklist {
                 subtitle: Padding(
                   padding: const EdgeInsets.only(top: 4),
                   child: Text(
-                    _getDisplayCityName(landmark, landmarksProvider),
+                    tr(_getDisplayCityName(landmark, landmarksProvider)),
                     style: TextStyle(
                       fontSize: 13,
                       color: Colors.grey[600],
@@ -316,7 +317,7 @@ class LandmarkChecklist {
               Icon(Icons.location_off_outlined, size: 60, color: Colors.grey[300]),
               const SizedBox(height: 16),
               Text(
-                'No ${attribute.toLowerCase()}s visited yet',
+                tr('No ${attribute.toLowerCase()}s visited yet'),
                 style: TextStyle(
                   color: Colors.grey[600],
                   fontSize: 16,
@@ -325,7 +326,7 @@ class LandmarkChecklist {
               ),
               const SizedBox(height: 8),
               Text(
-                'Explore and discover!',
+                tr('Explore and discover!'),
                 style: TextStyle(
                   color: Colors.grey[500],
                   fontSize: 14,
@@ -405,7 +406,7 @@ class LandmarkChecklist {
                     Padding(
                       padding: const EdgeInsets.only(top: 4),
                       child: Text(
-                        _getDisplayCityName(landmark, landmarksProvider),
+                        tr(_getDisplayCityName(landmark, landmarksProvider)),
                         style: TextStyle(
                           fontSize: 13,
                           color: Colors.grey[600],
@@ -415,7 +416,7 @@ class LandmarkChecklist {
                     Padding(
                       padding: const EdgeInsets.only(top: 4),
                       child: Text(
-                        dateStr,
+                        tr(dateStr),
                         style: TextStyle(
                           fontSize: 13,
                           color: Colors.grey[600],
@@ -476,9 +477,9 @@ class LandmarkChecklist {
               ),
               const SizedBox(height: 16),
               Text(
-                isCultural
+                tr(isCultural
                     ? 'No cultural landmarks visited yet'
-                    : 'No natural landmarks visited yet',
+                    : 'No natural landmarks visited yet'),
                 style: TextStyle(
                   color: Colors.grey[600],
                   fontSize: 16,
@@ -556,7 +557,7 @@ class LandmarkChecklist {
                 subtitle: Padding(
                   padding: const EdgeInsets.only(top: 4),
                   child: Text(
-                    dateStr,
+                    tr(dateStr),
                     style: TextStyle(
                       fontSize: 13,
                       color: Colors.grey[600],
@@ -603,7 +604,7 @@ class LandmarkChecklist {
               ),
               const SizedBox(height: 16),
               Text(
-                'No landmarks rated yet',
+                tr('No landmarks rated yet'),
                 style: TextStyle(
                   color: Colors.grey[600],
                   fontSize: 16,
@@ -684,7 +685,7 @@ class LandmarkChecklist {
                       const Icon(Icons.star, color: Colors.amber, size: 16),
                       const SizedBox(width: 4),
                       Text(
-                        rating.toStringAsFixed(1),
+                        tr(rating.toStringAsFixed(1)),
                         style: const TextStyle(
                           fontSize: 13,
                           fontWeight: FontWeight.w600,

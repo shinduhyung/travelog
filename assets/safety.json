@@ -1,32 +1,342 @@
-[
-  {"name": "Abu Dhabi", "country": "United Arab Emirates", "safety": "97.73", "continent": "Asia"},
-  {"name": "Taipei", "country": "Taiwan", "safety": "97.53", "continent": "Asia"},
-  {"name": "Doha", "country": "Qatar", "safety": "97.35", "continent": "Asia"},
-  {"name": "Ajman", "country": "United Arab Emirates", "safety": "97.04", "continent": "Asia"},
-  {"name": "Dubai", "country": "United Arab Emirates", "safety": "97.03", "continent": "Asia"},
-  {"name": "Ras Al Khaimah City", "country": "United Arab Emirates", "safety": "96.98", "continent": "Asia"},
-  {"name": "Muscat", "country": "Oman", "safety": "96.93", "continent": "Asia"},
-  {"name": "The Hague", "country": "Netherlands", "safety": "96.89", "continent": "Europe"},
-  {"name": "Bern", "country": "Switzerland", "safety": "96.79", "continent": "Europe"},
-  {"name": "Munich", "country": "Germany", "safety": "96.67", "continent": "Europe"},
-  {"name": "Trondheim", "country": "Norway", "safety": "96.15", "continent": "Europe"},
-  {"name": "Ljubljana", "country": "Slovenia", "safety": "96.07", "continent": "Europe"},
-  {"name": "Groningen", "country": "Netherlands", "safety": "95.93", "continent": "Europe"},
-  {"name": "Zagreb", "country": "Croatia", "safety": "95.79", "continent": "Europe"},
-  {"name": "Hong Kong", "country": "Hong Kong", "safety": "95.56", "continent": "Asia"},
-  {"name": "Yerevan", "country": "Armenia", "safety": "95.48", "continent": "Asia"},
-  {"name": "Eindhoven", "country": "Netherlands", "safety": "94.94", "continent": "Europe"},
-  {"name": "Québec City", "country": "Canada", "safety": "94.9", "continent": "North America"},
-  {"name": "Cluj-Napoca", "country": "Romania", "safety": "94.36", "continent": "Europe"},
-  {"name": "Zurich", "country": "Switzerland", "safety": "94.35", "continent": "Europe"},
-  {"name": "Tallinn", "country": "Estonia", "safety": "94.17", "continent": "Europe"},
-  {"name": "Chiang Mai", "country": "Thailand", "safety": "94.13", "continent": "Asia"},
-  {"name": "Singapore", "country": "Singapore", "safety": "94", "continent": "Asia"},
-  {"name": "Basel", "country": "Switzerland", "safety": "93.68", "continent": "Europe"},
-  {"name": "Tokyo", "country": "Japan", "safety": "93.44", "continent": "Asia"},
-  {"name": "Reykjavík", "country": "Iceland", "safety": "93.27", "continent": "Europe"},
-  {"name": "Seoul", "country": "South Korea", "safety": "93.11", "continent": "Asia"},
-  {"name": "Prague", "country": "Czech Republic", "safety": "93.08", "continent": "Europe"},
-  {"name": "Helsinki", "country": "Finland", "safety": "93", "continent": "Europe"},
-  {"name": "Mérida", "country": "Mexico", "safety": "92.74", "continent": "North America"}
-]
+{
+  "schema_version": 1,
+  "dataset_id": "safety",
+  "metadata": {
+    "source_url": null,
+    "reference_period": null,
+    "updated_at": null
+  },
+  "legacy_layout": "list",
+  "tables": [
+    {
+      "id": "main",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "name",
+        "country"
+      ],
+      "metrics": [
+        {
+          "id": "safety",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        },
+        {
+          "id": "continent",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "name": "Abu Dhabi",
+            "country": "United Arab Emirates"
+          },
+          "values": {
+            "safety": "97.73",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Taipei",
+            "country": "Taiwan"
+          },
+          "values": {
+            "safety": "97.53",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Doha",
+            "country": "Qatar"
+          },
+          "values": {
+            "safety": "97.35",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Ajman",
+            "country": "United Arab Emirates"
+          },
+          "values": {
+            "safety": "97.04",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Dubai",
+            "country": "United Arab Emirates"
+          },
+          "values": {
+            "safety": "97.03",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Ras Al Khaimah City",
+            "country": "United Arab Emirates"
+          },
+          "values": {
+            "safety": "96.98",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Muscat",
+            "country": "Oman"
+          },
+          "values": {
+            "safety": "96.93",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "The Hague",
+            "country": "Netherlands"
+          },
+          "values": {
+            "safety": "96.89",
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Bern",
+            "country": "Switzerland"
+          },
+          "values": {
+            "safety": "96.79",
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Munich",
+            "country": "Germany"
+          },
+          "values": {
+            "safety": "96.67",
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Trondheim",
+            "country": "Norway"
+          },
+          "values": {
+            "safety": "96.15",
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Ljubljana",
+            "country": "Slovenia"
+          },
+          "values": {
+            "safety": "96.07",
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Groningen",
+            "country": "Netherlands"
+          },
+          "values": {
+            "safety": "95.93",
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Zagreb",
+            "country": "Croatia"
+          },
+          "values": {
+            "safety": "95.79",
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Hong Kong",
+            "country": "Hong Kong"
+          },
+          "values": {
+            "safety": "95.56",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Yerevan",
+            "country": "Armenia"
+          },
+          "values": {
+            "safety": "95.48",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Eindhoven",
+            "country": "Netherlands"
+          },
+          "values": {
+            "safety": "94.94",
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Québec City",
+            "country": "Canada"
+          },
+          "values": {
+            "safety": "94.9",
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Cluj-Napoca",
+            "country": "Romania"
+          },
+          "values": {
+            "safety": "94.36",
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Zurich",
+            "country": "Switzerland"
+          },
+          "values": {
+            "safety": "94.35",
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Tallinn",
+            "country": "Estonia"
+          },
+          "values": {
+            "safety": "94.17",
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Chiang Mai",
+            "country": "Thailand"
+          },
+          "values": {
+            "safety": "94.13",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Singapore",
+            "country": "Singapore"
+          },
+          "values": {
+            "safety": "94",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Basel",
+            "country": "Switzerland"
+          },
+          "values": {
+            "safety": "93.68",
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Tokyo",
+            "country": "Japan"
+          },
+          "values": {
+            "safety": "93.44",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Reykjavík",
+            "country": "Iceland"
+          },
+          "values": {
+            "safety": "93.27",
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Seoul",
+            "country": "South Korea"
+          },
+          "values": {
+            "safety": "93.11",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Prague",
+            "country": "Czech Republic"
+          },
+          "values": {
+            "safety": "93.08",
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Helsinki",
+            "country": "Finland"
+          },
+          "values": {
+            "safety": "93",
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Mérida",
+            "country": "Mexico"
+          },
+          "values": {
+            "safety": "92.74",
+            "continent": "North America"
+          }
+        }
+      ]
+    }
+  ]
+}

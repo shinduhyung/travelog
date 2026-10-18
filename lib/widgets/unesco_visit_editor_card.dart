@@ -1,6 +1,7 @@
 // lib/widgets/unesco_visit_editor_card.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import 'dart:io';
 import 'package:image_picker/image_picker.dart';
@@ -151,6 +152,7 @@ class _UnescoVisitEditorCardState extends State<UnescoVisitEditorCard> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final themeColor = Theme.of(context).primaryColor;
 
     return Card(
@@ -161,11 +163,11 @@ class _UnescoVisitEditorCardState extends State<UnescoVisitEditorCard> {
         controller: _expansionTileController,
         initiallyExpanded: _isEditing,
         title: Text(
-          _displayTitle.isNotEmpty ? _displayTitle : 'Visit Record',
+          tr(_displayTitle.isNotEmpty ? _displayTitle : 'Visit Record'),
           style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15),
         ),
         subtitle: Text(
-          'Date: $_year-$_month-$_day',
+          tr('Date: $_year-$_month-$_day'),
           style: TextStyle(color: Colors.grey[600], fontSize: 13),
         ),
         trailing: IconButton(
@@ -173,13 +175,13 @@ class _UnescoVisitEditorCardState extends State<UnescoVisitEditorCard> {
           onPressed: () => showDialog(
             context: context,
             builder: (ctx) => AlertDialog(
-              title: const Text('Delete Visit Record'),
-              content: const Text('Are you sure you want to delete this visit record?'),
+              title:  Text(tr('Delete Visit Record')),
+              content:  Text(tr('Are you sure you want to delete this visit record?')),
               actions: [
-                TextButton(onPressed: () => Navigator.pop(ctx), child: const Text('Cancel')),
+                TextButton(onPressed: () => Navigator.pop(ctx), child:  Text(tr('Cancel'))),
                 TextButton(
                   onPressed: () { Navigator.pop(ctx); widget.onDelete(); },
-                  child: const Text('Delete', style: TextStyle(color: Colors.red)),
+                  child:  Text(tr('Delete'), style: TextStyle(color: Colors.red)),
                 ),
               ],
             ),
@@ -198,11 +200,11 @@ class _UnescoVisitEditorCardState extends State<UnescoVisitEditorCard> {
             child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
               if (_isEditing) ...[
                 Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                  Text('Visit Date: $_year-$_month-$_day',
+                  Text(tr('Visit Date: $_year-$_month-$_day'),
                       style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14)),
                   TextButton.icon(
                     icon: const Icon(Icons.edit_calendar, size: 18),
-                    label: const Text('Edit Date'),
+                    label:  Text(tr('Edit Date')),
                     onPressed: () => _selectDate(context),
                     style: TextButton.styleFrom(visualDensity: VisualDensity.compact),
                   ),
@@ -211,7 +213,7 @@ class _UnescoVisitEditorCardState extends State<UnescoVisitEditorCard> {
                 TextField(
                   controller: _titleController,
                   decoration: InputDecoration(
-                    labelText: 'Title', isDense: true, filled: true, fillColor: Colors.white,
+                    labelText: tr('Title'), isDense: true, filled: true, fillColor: Colors.white,
                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(8), borderSide: BorderSide.none),
                   ),
                 ),
@@ -220,20 +222,20 @@ class _UnescoVisitEditorCardState extends State<UnescoVisitEditorCard> {
                   controller: _memoController,
                   maxLines: 3, minLines: 1,
                   decoration: InputDecoration(
-                    labelText: 'Memo', isDense: true, filled: true, fillColor: Colors.white,
+                    labelText: tr('Memo'), isDense: true, filled: true, fillColor: Colors.white,
                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(8), borderSide: BorderSide.none),
                   ),
                 ),
               ] else if (_displayMemo.isNotEmpty)
                 Padding(
                   padding: const EdgeInsets.only(bottom: 12),
-                  child: Text(_displayMemo, style: TextStyle(fontSize: 14, color: Colors.grey[800], height: 1.4)),
+                  child: Text(tr(_displayMemo), style: TextStyle(fontSize: 14, color: Colors.grey[800], height: 1.4)),
                 ),
 
               const SizedBox(height: 12),
 
               if (widget.availableLocations.isNotEmpty) ...[
-                const Text('Locations included in this visit:',
+                 Text(tr('Locations included in this visit:'),
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Colors.grey)),
                 const SizedBox(height: 4),
                 IgnorePointer(
@@ -286,13 +288,13 @@ class _UnescoVisitEditorCardState extends State<UnescoVisitEditorCard> {
                 if (_isEditing) ...[
                   TextButton(
                     onPressed: _cancelEditing,
-                    child: Text('Cancel', style: TextStyle(color: Colors.grey[700], fontWeight: FontWeight.w600)),
+                    child: Text(tr('Cancel'), style: TextStyle(color: Colors.grey[700], fontWeight: FontWeight.w600)),
                   ),
                   const SizedBox(width: 8),
                   ElevatedButton.icon(
                     onPressed: _saveChanges,
                     icon: const Icon(Icons.save, size: 18),
-                    label: const Text('Save'),
+                    label:  Text(tr('Save')),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: themeColor, foregroundColor: Colors.white, elevation: 0,
                     ),
@@ -301,7 +303,7 @@ class _UnescoVisitEditorCardState extends State<UnescoVisitEditorCard> {
                   OutlinedButton.icon(
                     onPressed: () => setState(() => _isEditing = true),
                     icon: const Icon(Icons.edit, size: 16),
-                    label: const Text('Edit Record'),
+                    label:  Text(tr('Edit Record')),
                     style: OutlinedButton.styleFrom(
                       foregroundColor: themeColor,
                       side: BorderSide(color: themeColor.withOpacity(0.5)),

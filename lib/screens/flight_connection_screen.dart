@@ -1,6 +1,7 @@
 // lib/screens/flight_connection_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:jidoapp/models/airline_model.dart';
 import 'package:provider/provider.dart';
 import 'package:jidoapp/providers/airline_provider.dart';
@@ -78,6 +79,7 @@ class _FlightConnectionScreenState extends State<FlightConnectionScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Scaffold(
       backgroundColor: Colors.grey[50],
       body: SafeArea(
@@ -90,7 +92,7 @@ class _FlightConnectionScreenState extends State<FlightConnectionScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'My Trips',
+                    tr('My Trips'),
                     style: TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w600,
@@ -99,8 +101,8 @@ class _FlightConnectionScreenState extends State<FlightConnectionScreen> {
                     ),
                   ),
                   const SizedBox(height: 4),
-                  const Text(
-                    'Connected Flights',
+                   Text(
+                    tr('Connected Flights'),
                     style: TextStyle(
                       fontSize: 32,
                       fontWeight: FontWeight.w800,
@@ -126,12 +128,12 @@ class _FlightConnectionScreenState extends State<FlightConnectionScreen> {
                           Icon(Icons.flight_takeoff, size: 80, color: Colors.orange.shade100),
                           const SizedBox(height: 20),
                           Text(
-                            'No itineraries yet.',
+                            tr('No itineraries yet.'),
                             style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.grey.shade600),
                           ),
                           const SizedBox(height: 8),
                           Text(
-                            'Tap the + button to start your journey!',
+                            tr('Tap the + button to start your journey!'),
                             style: TextStyle(fontSize: 16, color: Colors.grey.shade500),
                           ),
                         ],
@@ -171,18 +173,18 @@ class _FlightConnectionScreenState extends State<FlightConnectionScreen> {
                           return await showDialog(
                             context: context,
                             builder: (BuildContext context) => AlertDialog(
-                              title: const Text("Delete Itinerary?"),
-                              content: const Text("This action cannot be undone."),
+                              title:  Text(tr("Delete Itinerary?")),
+                              content:  Text(tr("This action cannot be undone.")),
                               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
                               actions: <Widget>[
                                 TextButton(
                                   onPressed: () => Navigator.of(context).pop(false),
-                                  child: const Text("Keep"),
+                                  child:  Text(tr("Keep")),
                                 ),
                                 TextButton(
                                   style: TextButton.styleFrom(foregroundColor: Colors.red),
                                   onPressed: () => Navigator.of(context).pop(true),
-                                  child: const Text("Delete"),
+                                  child:  Text(tr("Delete")),
                                 ),
                               ],
                             ),
@@ -192,7 +194,7 @@ class _FlightConnectionScreenState extends State<FlightConnectionScreen> {
                           provider.removeFlightConnection(connection.id);
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(
-                              content: Text('Deleted "${connection.name ?? 'Itinerary'}"'),
+                              content: Text(tr('Deleted "${connection.name ?? 'Itinerary'}"')),
                               behavior: SnackBarBehavior.floating,
                               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
                             ),
@@ -270,7 +272,7 @@ class _FlightConnectionScreenState extends State<FlightConnectionScreen> {
                                 borderRadius: BorderRadius.circular(6),
                               ),
                               child: Text(
-                                startDate,
+                                tr(startDate),
                                 style: TextStyle(
                                     fontSize: 12,
                                     color: Colors.grey.shade600,
@@ -289,7 +291,7 @@ class _FlightConnectionScreenState extends State<FlightConnectionScreen> {
                         borderRadius: BorderRadius.circular(12),
                       ),
                       child: Text(
-                        '$count flights',
+                        tr('$count flights'),
                         style: TextStyle(fontSize: 12, color: Colors.orange.shade800, fontWeight: FontWeight.bold),
                       ),
                     )
@@ -300,7 +302,7 @@ class _FlightConnectionScreenState extends State<FlightConnectionScreen> {
                   children: [
                     Expanded(
                       child: Text(
-                        routeText,
+                        tr(routeText),
                         style: const TextStyle(
                             fontSize: 16,
                             color: Colors.black87,
@@ -474,8 +476,8 @@ class _ItineraryBuilderScreenState extends State<_ItineraryBuilderScreen> {
                                       keyboardType: TextInputType.number,
                                       textAlign: TextAlign.center,
                                       style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-                                      decoration: const InputDecoration(
-                                        labelText: 'Hours',
+                                      decoration:  InputDecoration(
+                                        labelText: tr('Hours'),
                                         floatingLabelBehavior: FloatingLabelBehavior.always,
                                         border: OutlineInputBorder(borderSide: BorderSide.none),
                                         contentPadding: EdgeInsets.symmetric(vertical: 12),
@@ -485,9 +487,9 @@ class _ItineraryBuilderScreenState extends State<_ItineraryBuilderScreen> {
                                 ],
                               ),
                             ),
-                            const Padding(
+                             Padding(
                               padding: EdgeInsets.symmetric(horizontal: 12),
-                              child: Text(":", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.grey)),
+                              child: Text(tr(":"), style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.grey)),
                             ),
                             Expanded(
                               child: Column(
@@ -502,8 +504,8 @@ class _ItineraryBuilderScreenState extends State<_ItineraryBuilderScreen> {
                                       keyboardType: TextInputType.number,
                                       textAlign: TextAlign.center,
                                       style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-                                      decoration: const InputDecoration(
-                                        labelText: 'Mins',
+                                      decoration:  InputDecoration(
+                                        labelText: tr('Mins'),
                                         floatingLabelBehavior: FloatingLabelBehavior.always,
                                         border: OutlineInputBorder(borderSide: BorderSide.none),
                                         contentPadding: EdgeInsets.symmetric(vertical: 12),
@@ -525,8 +527,8 @@ class _ItineraryBuilderScreenState extends State<_ItineraryBuilderScreen> {
                         borderRadius: BorderRadius.circular(12),
                       ),
                       child: SwitchListTile(
-                        title: const Text(
-                          "Unknown",
+                        title:  Text(
+                          tr("Unknown"),
                           style: TextStyle(fontWeight: FontWeight.w600, fontSize: 15),
                         ),
                         value: isUnknown,
@@ -545,7 +547,7 @@ class _ItineraryBuilderScreenState extends State<_ItineraryBuilderScreen> {
                 actions: [
                   TextButton(
                     onPressed: () => Navigator.pop(context),
-                    child: const Text('Cancel', style: TextStyle(color: Colors.grey)),
+                    child:  Text(tr('Cancel'), style: TextStyle(color: Colors.grey)),
                   ),
                   TextButton(
                     onPressed: () {
@@ -568,7 +570,7 @@ class _ItineraryBuilderScreenState extends State<_ItineraryBuilderScreen> {
                         foregroundColor: Colors.orange,
                         textStyle: const TextStyle(fontWeight: FontWeight.bold) // ⭐️ 수정됨
                     ),
-                    child: const Text('Confirm'),
+                    child:  Text(tr('Confirm')),
                   ),
                 ],
               );
@@ -586,7 +588,7 @@ class _ItineraryBuilderScreenState extends State<_ItineraryBuilderScreen> {
 
   void _saveItinerary() {
     if (_flights.any((log) => log == null)) {
-      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Please select all flights.'), backgroundColor: Colors.red));
+      ScaffoldMessenger.of(context).showSnackBar( SnackBar(content: Text(tr('Please select all flights.')), backgroundColor: Colors.red));
       return;
     }
 
@@ -603,10 +605,11 @@ class _ItineraryBuilderScreenState extends State<_ItineraryBuilderScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Scaffold(
       backgroundColor: Colors.grey[50],
       appBar: AppBar(
-        title: Text(widget.existingConnection != null ? 'Edit Itinerary' : 'Add Itinerary',
+        title: Text(tr(widget.existingConnection != null ? 'Edit Itinerary' : 'Add Itinerary'),
             style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.black)),
         backgroundColor: Colors.white,
         foregroundColor: Colors.black,
@@ -621,8 +624,8 @@ class _ItineraryBuilderScreenState extends State<_ItineraryBuilderScreen> {
             child: TextField(
               controller: _nameController,
               decoration: InputDecoration(
-                labelText: 'Trip Name',
-                hintText: 'e.g. Summer Vacation',
+                labelText: tr('Trip Name'),
+                hintText: tr('e.g. Summer Vacation'),
                 filled: true,
                 fillColor: Colors.grey[100],
                 border: OutlineInputBorder(borderRadius: BorderRadius.circular(12), borderSide: BorderSide.none),
@@ -646,7 +649,7 @@ class _ItineraryBuilderScreenState extends State<_ItineraryBuilderScreen> {
       ),
       floatingActionButton: FloatingActionButton.extended(
         onPressed: _addFlightSlot,
-        label: const Text('Add Flight'),
+        label:  Text(tr('Add Flight')),
         icon: const Icon(Icons.add),
         backgroundColor: Colors.orange.shade800,
         foregroundColor: Colors.white,
@@ -663,7 +666,7 @@ class _ItineraryBuilderScreenState extends State<_ItineraryBuilderScreen> {
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
               elevation: 0
           ),
-          child: const Text('Save Itinerary', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+          child:  Text(tr('Save Itinerary'), style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
         ),
       ),
     );
@@ -702,7 +705,7 @@ class _ItineraryBuilderScreenState extends State<_ItineraryBuilderScreen> {
     child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
       Icon(Icons.add_circle, color: Colors.orange.shade200, size: 40),
       const SizedBox(height: 10),
-      Text('Tap to select Flight ${index + 1}',
+      Text(tr('Tap to select Flight ${index + 1}'),
           style: TextStyle(color: Colors.orange.shade800, fontSize: 16, fontWeight: FontWeight.w600)
       ),
     ]),
@@ -718,7 +721,7 @@ class _ItineraryBuilderScreenState extends State<_ItineraryBuilderScreen> {
             decoration: BoxDecoration(color: Colors.grey[100], borderRadius: BorderRadius.circular(8)),
             child: Text(log.airlineName ?? 'Airline', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12)),
           ),
-          Text(log.date ?? '', style: const TextStyle(color: Colors.grey, fontSize: 12)),
+          Text(tr(log.date ?? ''), style: const TextStyle(color: Colors.grey, fontSize: 12)),
         ],
       ),
       const SizedBox(height: 12),
@@ -729,7 +732,7 @@ class _ItineraryBuilderScreenState extends State<_ItineraryBuilderScreen> {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(log.departureIata ?? 'DEP', style: const TextStyle(fontSize: 28, fontWeight: FontWeight.w900, color: Colors.black)),
+              Text(tr(log.departureIata ?? 'DEP'), style: const TextStyle(fontSize: 28, fontWeight: FontWeight.w900, color: Colors.black)),
             ],
           ),
           Expanded(
@@ -739,7 +742,7 @@ class _ItineraryBuilderScreenState extends State<_ItineraryBuilderScreen> {
                 children: [
                   const Icon(Icons.flight_takeoff, color: Colors.orange, size: 20),
                   Divider(color: Colors.orange.shade200, thickness: 2),
-                  Text(log.flightNumber ?? '', style: TextStyle(fontSize: 12, color: Colors.orange.shade800, fontWeight: FontWeight.bold)),
+                  Text(tr(log.flightNumber ?? ''), style: TextStyle(fontSize: 12, color: Colors.orange.shade800, fontWeight: FontWeight.bold)),
                 ],
               ),
             ),
@@ -747,7 +750,7 @@ class _ItineraryBuilderScreenState extends State<_ItineraryBuilderScreen> {
           Column(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
-              Text(log.arrivalIata ?? 'ARR', style: const TextStyle(fontSize: 28, fontWeight: FontWeight.w900, color: Colors.black)),
+              Text(tr(log.arrivalIata ?? 'ARR'), style: const TextStyle(fontSize: 28, fontWeight: FontWeight.w900, color: Colors.black)),
             ],
           ),
         ],
@@ -765,7 +768,7 @@ class _ItineraryBuilderScreenState extends State<_ItineraryBuilderScreen> {
             );
           },
           icon: const Icon(Icons.edit, size: 16),
-          label: const Text("Edit Details"),
+          label:  Text(tr("Edit Details")),
           style: TextButton.styleFrom(
             foregroundColor: Colors.grey,
             padding: EdgeInsets.zero,
@@ -807,7 +810,7 @@ class _ItineraryBuilderScreenState extends State<_ItineraryBuilderScreen> {
                   return DropdownMenuItem(
                     value: value,
                     child: Text(
-                      value,
+                      tr(value),
                       style: TextStyle(
                         color: itemColor,
                         fontWeight: FontWeight.w600,
@@ -845,9 +848,9 @@ class _ItineraryBuilderScreenState extends State<_ItineraryBuilderScreen> {
                   ),
                   const SizedBox(width: 6),
                   Text(
-                    hasDuration
+                    tr(hasDuration
                         ? (durationStr == 'Unknown' ? 'Unknown' : durationStr!)
-                        : 'Set Duration',
+                        : 'Set Duration'),
                     style: TextStyle(
                       color: hasDuration ? themeColor : Colors.grey[400],
                       fontWeight: FontWeight.w600,
@@ -871,15 +874,16 @@ class _FlightPickerDialog extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return AlertDialog(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-      title: const Text('Select Flight', style: TextStyle(fontWeight: FontWeight.bold)),
+      title:  Text(tr('Select Flight'), style: TextStyle(fontWeight: FontWeight.bold)),
       content: SizedBox(
         width: double.maxFinite,
         child: logs.isEmpty
-            ? const Padding(
+            ?  Padding(
           padding: EdgeInsets.symmetric(vertical: 20),
-          child: Text('No available flights found.', textAlign: TextAlign.center, style: TextStyle(color: Colors.grey)),
+          child: Text(tr('No available flights found.'), textAlign: TextAlign.center, style: TextStyle(color: Colors.grey)),
         )
             : ListView.separated(
           shrinkWrap: true,
@@ -889,8 +893,8 @@ class _FlightPickerDialog extends StatelessWidget {
             final log = logs[index];
             return ListTile(
               contentPadding: EdgeInsets.zero,
-              title: Text('${log.departureIata} ➔ ${log.arrivalIata}', style: const TextStyle(fontWeight: FontWeight.bold)),
-              subtitle: Text('${log.airlineName} ${log.flightNumber} • ${log.date}'),
+              title: Text(tr('${log.departureIata} ➔ ${log.arrivalIata}'), style: const TextStyle(fontWeight: FontWeight.bold)),
+              subtitle: Text(tr('${log.airlineName} ${log.flightNumber} • ${log.date}')),
               onTap: () => Navigator.of(context).pop(log),
               trailing: const Icon(Icons.add_circle_outline, color: Colors.orange),
             );
@@ -900,7 +904,7 @@ class _FlightPickerDialog extends StatelessWidget {
       actions: [
         TextButton(
             onPressed: () => Navigator.of(context).pop(),
-            child: const Text('Cancel', style: TextStyle(color: Colors.grey))
+            child:  Text(tr('Cancel'), style: TextStyle(color: Colors.grey))
         )
       ],
     );

@@ -1,402 +1,650 @@
-[
-  {
-    "name": "San Francisco",
-    "country": "USA",
-    "continent": "North America",
-    "country_iso": "US",
-    "Millionaires": "675",
-    "Billionaires": "68"
+{
+  "schema_version": 1,
+  "dataset_id": "millionaire",
+  "metadata": {
+    "source_url": null,
+    "reference_period": null,
+    "updated_at": null
   },
-  {
-    "name": "New York City",
-    "country": "USA",
-    "continent": "North America",
-    "country_iso": "US",
-    "Millionaires": "744",
-    "Billionaires": "60"
-  },
-  {
-    "name": "Los Angeles",
-    "country": "USA",
-    "continent": "North America",
-    "country_iso": "US",
-    "Millionaires": "496",
-    "Billionaires": "43"
-  },
-  {
-    "name": "Beijing",
-    "country": "China",
-    "continent": "Asia",
-    "country_iso": "CN",
-    "Millionaires": "347",
-    "Billionaires": "42"
-  },
-  {
-    "name": "Shanghai",
-    "country": "China",
-    "continent": "Asia",
-    "country_iso": "CN",
-    "Millionaires": "322",
-    "Billionaires": "39"
-  },
-  {
-    "name": "London",
-    "country": "UK",
-    "continent": "Europe",
-    "country_iso": "GB",
-    "Millionaires": "370",
-    "Billionaires": "35"
-  },
-  {
-    "name": "Hong Kong",
-    "country": "Hong Kong (SAR China)",
-    "continent": "Asia",
-    "country_iso": "HK",
-    "Millionaires": "320",
-    "Billionaires": "35"
-  },
-  {
-    "name": "Singapore",
-    "country": "Singapore",
-    "continent": "Asia",
-    "country_iso": "SG",
-    "Millionaires": "336",
-    "Billionaires": "30"
-  },
-  {
-    "name": "Mumbai",
-    "country": "India",
-    "continent": "Asia",
-    "country_iso": "IN",
-    "Millionaires": "236",
-    "Billionaires": "29"
-  },
-  {
-    "name": "Chicago",
-    "country": "USA",
-    "continent": "North America",
-    "country_iso": "US",
-    "Millionaires": "290",
-    "Billionaires": "24"
-  },
-  {
-    "name": "Paris",
-    "country": "France",
-    "continent": "Europe",
-    "country_iso": "FR",
-    "Millionaires": "286",
-    "Billionaires": "23"
-  },
-  {
-    "name": "Moscow",
-    "country": "Russian Federation",
-    "continent": "Europe",
-    "country_iso": "RU",
-    "Millionaires": "207",
-    "Billionaires": "23"
-  },
-  {
-    "name": "Shenzhen",
-    "country": "China",
-    "continent": "Asia",
-    "country_iso": "CN",
-    "Millionaires": "154",
-    "Billionaires": "22"
-  },
-  {
-    "name": "Sydney",
-    "country": "Australia",
-    "continent": "Oceania",
-    "country_iso": "AU",
-    "Millionaires": "205",
-    "Billionaires": "20"
-  },
-  {
-    "name": "Seoul",
-    "country": "South Korea",
-    "continent": "Asia",
-    "country_iso": "KR",
-    "Millionaires": "195",
-    "Billionaires": "20"
-  },
-  {
-    "name": "Toronto",
-    "country": "Canada",
-    "continent": "North America",
-    "country_iso": "CA",
-    "Millionaires": "195",
-    "Billionaires": "18"
-  },
-  {
-    "name": "Houston",
-    "country": "USA",
-    "continent": "North America",
-    "country_iso": "US",
-    "Millionaires": "258",
-    "Billionaires": "18"
-  },
-  {
-    "name": "Delhi",
-    "country": "India",
-    "continent": "Asia",
-    "country_iso": "IN",
-    "Millionaires": "123",
-    "Billionaires": "16"
-  },
-  {
-    "name": "Milan",
-    "country": "Italy",
-    "continent": "Europe",
-    "country_iso": "IT",
-    "Millionaires": "165",
-    "Billionaires": "15"
-  },
-  {
-    "name": "Frankfurt",
-    "country": "Germany",
-    "continent": "Europe",
-    "country_iso": "DE",
-    "Millionaires": "155",
-    "Billionaires": "15"
-  },
-  {
-    "name": "Dubai",
-    "country": "UAE",
-    "continent": "Asia",
-    "country_iso": "AE",
-    "Millionaires": "212",
-    "Billionaires": "15"
-  },
-  {
-    "name": "Dallas",
-    "country": "USA",
-    "continent": "North America",
-    "country_iso": "US",
-    "Millionaires": "125",
-    "Billionaires": "15"
-  },
-  {
-    "name": "Miami",
-    "country": "USA",
-    "continent": "North America",
-    "country_iso": "US",
-    "Millionaires": "164",
-    "Billionaires": "15"
-  },
-  {
-    "name": "Taipei",
-    "country": "Taiwan",
-    "continent": "Asia",
-    "country_iso": "TW",
-    "Millionaires": "82",
-    "Billionaires": "15"
-  },
-  {
-    "name": "Tokyo",
-    "country": "Japan",
-    "continent": "Asia",
-    "country_iso": "JP",
-    "Millionaires": "267",
-    "Billionaires": "14"
-  },
-  {
-    "name": "Geneva",
-    "country": "Switzerland",
-    "continent": "Europe",
-    "country_iso": "CH",
-    "Millionaires": "244",
-    "Billionaires": "14"
-  },
-  {
-    "name": "Hangzhou",
-    "country": "China",
-    "continent": "Asia",
-    "country_iso": "CN",
-    "Millionaires": "102",
-    "Billionaires": "12"
-  },
-  {
-    "name": "Washington D.C.",
-    "country": "USA",
-    "continent": "North America",
-    "country_iso": "US",
-    "Millionaires": "88",
-    "Billionaires": "12"
-  },
-  {
-    "name": "Stockholm",
-    "country": "Sweden",
-    "continent": "Europe",
-    "country_iso": "SE",
-    "Millionaires": "64",
-    "Billionaires": "12"
-  },
-  {
-    "name": "Munich",
-    "country": "Germany",
-    "continent": "Europe",
-    "country_iso": "DE",
-    "Millionaires": "85",
-    "Billionaires": "11"
-  },
-  {
-    "name": "Seattle",
-    "country": "USA",
-    "continent": "North America",
-    "country_iso": "US",
-    "Millionaires": "130",
-    "Billionaires": "11"
-  },
-  {
-    "name": "Melbourne",
-    "country": "Australia",
-    "continent": "Oceania",
-    "country_iso": "AU",
-    "Millionaires": "112",
-    "Billionaires": "10"
-  },
-  {
-    "name": "Zurich",
-    "country": "Switzerland",
-    "continent": "Europe",
-    "country_iso": "CH",
-    "Millionaires": "205",
-    "Billionaires": "10"
-  },
-  {
-    "name": "Rome",
-    "country": "Italy",
-    "continent": "Europe",
-    "country_iso": "IT",
-    "Millionaires": "92",
-    "Billionaires": "10"
-  },
-  {
-    "name": "Vancouver",
-    "country": "Canada",
-    "continent": "North America",
-    "country_iso": "CA",
-    "Millionaires": "80",
-    "Billionaires": "10"
-  },
-  {
-    "name": "Austin",
-    "country": "USA",
-    "continent": "North America",
-    "country_iso": "US",
-    "Millionaires": "92",
-    "Billionaires": "10"
-  },
-  {
-    "name": "Tel Aviv",
-    "country": "Israel",
-    "continent": "Asia",
-    "country_iso": "IL",
-    "Millionaires": "82",
-    "Billionaires": "10"
-  },
-  {
-    "name": "Amsterdam",
-    "country": "Netherlands",
-    "continent": "Europe",
-    "country_iso": "NL",
-    "Millionaires": "91",
-    "Billionaires": "9"
-  },
-  {
-    "name": "Nice",
-    "country": "France",
-    "continent": "Europe",
-    "country_iso": "FR",
-    "Millionaires": "95",
-    "Billionaires": "9"
-  },
-  {
-    "name": "Guangzhou",
-    "country": "China",
-    "continent": "Asia",
-    "country_iso": "CN",
-    "Millionaires": "70",
-    "Billionaires": "9"
-  },
-  {
-    "name": "Boston",
-    "country": "USA",
-    "continent": "North America",
-    "country_iso": "US",
-    "Millionaires": "107",
-    "Billionaires": "8"
-  },
-  {
-    "name": "Madrid",
-    "country": "Spain",
-    "continent": "Europe",
-    "country_iso": "ES",
-    "Millionaires": "74",
-    "Billionaires": "8"
-  },
-  {
-    "name": "Perth",
-    "country": "Australia",
-    "continent": "Oceania",
-    "country_iso": "AU",
-    "Millionaires": "64",
-    "Billionaires": "8"
-  },
-  {
-    "name": "Vienna",
-    "country": "Austria",
-    "continent": "Europe",
-    "country_iso": "AT",
-    "Millionaires": "70",
-    "Billionaires": "7"
-  },
-  {
-    "name": "Manchester",
-    "country": "UK",
-    "continent": "Europe",
-    "country_iso": "GB",
-    "Millionaires": "67",
-    "Billionaires": "7"
-  },
-  {
-    "name": "Osaka",
-    "country": "Japan",
-    "continent": "Asia",
-    "country_iso": "JP",
-    "Millionaires": "69",
-    "Billionaires": "5"
-  },
-  {
-    "name": "Berlin",
-    "country": "Germany",
-    "continent": "Europe",
-    "country_iso": "DE",
-    "Millionaires": "47",
-    "Billionaires": "5"
-  },
-  {
-    "name": "Dublin",
-    "country": "Ireland",
-    "continent": "Europe",
-    "country_iso": "IE",
-    "Millionaires": "43",
-    "Billionaires": "5"
-  },
-  {
-    "name": "Brisbane",
-    "country": "Australia",
-    "continent": "Oceania",
-    "country_iso": "AU",
-    "Millionaires": "40",
-    "Billionaires": "4"
-  },
-  {
-    "name": "Auckland",
-    "country": "New Zealand",
-    "continent": "Oceania",
-    "country_iso": "NZ",
-    "Millionaires": "42",
-    "Billionaires": "4"
-  }
-]
+  "legacy_layout": "list",
+  "tables": [
+    {
+      "id": "main",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "name",
+        "country",
+        "country_iso"
+      ],
+      "metrics": [
+        {
+          "id": "continent",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        },
+        {
+          "id": "Millionaires",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        },
+        {
+          "id": "Billionaires",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "name": "San Francisco",
+            "country": "USA",
+            "country_iso": "US"
+          },
+          "values": {
+            "continent": "North America",
+            "Millionaires": "675",
+            "Billionaires": "68"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "New York City",
+            "country": "USA",
+            "country_iso": "US"
+          },
+          "values": {
+            "continent": "North America",
+            "Millionaires": "744",
+            "Billionaires": "60"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Los Angeles",
+            "country": "USA",
+            "country_iso": "US"
+          },
+          "values": {
+            "continent": "North America",
+            "Millionaires": "496",
+            "Billionaires": "43"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Beijing",
+            "country": "China",
+            "country_iso": "CN"
+          },
+          "values": {
+            "continent": "Asia",
+            "Millionaires": "347",
+            "Billionaires": "42"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Shanghai",
+            "country": "China",
+            "country_iso": "CN"
+          },
+          "values": {
+            "continent": "Asia",
+            "Millionaires": "322",
+            "Billionaires": "39"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "London",
+            "country": "UK",
+            "country_iso": "GB"
+          },
+          "values": {
+            "continent": "Europe",
+            "Millionaires": "370",
+            "Billionaires": "35"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Hong Kong",
+            "country": "Hong Kong (SAR China)",
+            "country_iso": "HK"
+          },
+          "values": {
+            "continent": "Asia",
+            "Millionaires": "320",
+            "Billionaires": "35"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Singapore",
+            "country": "Singapore",
+            "country_iso": "SG"
+          },
+          "values": {
+            "continent": "Asia",
+            "Millionaires": "336",
+            "Billionaires": "30"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Mumbai",
+            "country": "India",
+            "country_iso": "IN"
+          },
+          "values": {
+            "continent": "Asia",
+            "Millionaires": "236",
+            "Billionaires": "29"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Chicago",
+            "country": "USA",
+            "country_iso": "US"
+          },
+          "values": {
+            "continent": "North America",
+            "Millionaires": "290",
+            "Billionaires": "24"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Paris",
+            "country": "France",
+            "country_iso": "FR"
+          },
+          "values": {
+            "continent": "Europe",
+            "Millionaires": "286",
+            "Billionaires": "23"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Moscow",
+            "country": "Russian Federation",
+            "country_iso": "RU"
+          },
+          "values": {
+            "continent": "Europe",
+            "Millionaires": "207",
+            "Billionaires": "23"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Shenzhen",
+            "country": "China",
+            "country_iso": "CN"
+          },
+          "values": {
+            "continent": "Asia",
+            "Millionaires": "154",
+            "Billionaires": "22"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Sydney",
+            "country": "Australia",
+            "country_iso": "AU"
+          },
+          "values": {
+            "continent": "Oceania",
+            "Millionaires": "205",
+            "Billionaires": "20"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Seoul",
+            "country": "South Korea",
+            "country_iso": "KR"
+          },
+          "values": {
+            "continent": "Asia",
+            "Millionaires": "195",
+            "Billionaires": "20"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Toronto",
+            "country": "Canada",
+            "country_iso": "CA"
+          },
+          "values": {
+            "continent": "North America",
+            "Millionaires": "195",
+            "Billionaires": "18"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Houston",
+            "country": "USA",
+            "country_iso": "US"
+          },
+          "values": {
+            "continent": "North America",
+            "Millionaires": "258",
+            "Billionaires": "18"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Delhi",
+            "country": "India",
+            "country_iso": "IN"
+          },
+          "values": {
+            "continent": "Asia",
+            "Millionaires": "123",
+            "Billionaires": "16"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Milan",
+            "country": "Italy",
+            "country_iso": "IT"
+          },
+          "values": {
+            "continent": "Europe",
+            "Millionaires": "165",
+            "Billionaires": "15"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Frankfurt",
+            "country": "Germany",
+            "country_iso": "DE"
+          },
+          "values": {
+            "continent": "Europe",
+            "Millionaires": "155",
+            "Billionaires": "15"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Dubai",
+            "country": "UAE",
+            "country_iso": "AE"
+          },
+          "values": {
+            "continent": "Asia",
+            "Millionaires": "212",
+            "Billionaires": "15"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Dallas",
+            "country": "USA",
+            "country_iso": "US"
+          },
+          "values": {
+            "continent": "North America",
+            "Millionaires": "125",
+            "Billionaires": "15"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Miami",
+            "country": "USA",
+            "country_iso": "US"
+          },
+          "values": {
+            "continent": "North America",
+            "Millionaires": "164",
+            "Billionaires": "15"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Taipei",
+            "country": "Taiwan",
+            "country_iso": "TW"
+          },
+          "values": {
+            "continent": "Asia",
+            "Millionaires": "82",
+            "Billionaires": "15"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Tokyo",
+            "country": "Japan",
+            "country_iso": "JP"
+          },
+          "values": {
+            "continent": "Asia",
+            "Millionaires": "267",
+            "Billionaires": "14"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Geneva",
+            "country": "Switzerland",
+            "country_iso": "CH"
+          },
+          "values": {
+            "continent": "Europe",
+            "Millionaires": "244",
+            "Billionaires": "14"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Hangzhou",
+            "country": "China",
+            "country_iso": "CN"
+          },
+          "values": {
+            "continent": "Asia",
+            "Millionaires": "102",
+            "Billionaires": "12"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Washington D.C.",
+            "country": "USA",
+            "country_iso": "US"
+          },
+          "values": {
+            "continent": "North America",
+            "Millionaires": "88",
+            "Billionaires": "12"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Stockholm",
+            "country": "Sweden",
+            "country_iso": "SE"
+          },
+          "values": {
+            "continent": "Europe",
+            "Millionaires": "64",
+            "Billionaires": "12"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Munich",
+            "country": "Germany",
+            "country_iso": "DE"
+          },
+          "values": {
+            "continent": "Europe",
+            "Millionaires": "85",
+            "Billionaires": "11"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Seattle",
+            "country": "USA",
+            "country_iso": "US"
+          },
+          "values": {
+            "continent": "North America",
+            "Millionaires": "130",
+            "Billionaires": "11"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Melbourne",
+            "country": "Australia",
+            "country_iso": "AU"
+          },
+          "values": {
+            "continent": "Oceania",
+            "Millionaires": "112",
+            "Billionaires": "10"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Zurich",
+            "country": "Switzerland",
+            "country_iso": "CH"
+          },
+          "values": {
+            "continent": "Europe",
+            "Millionaires": "205",
+            "Billionaires": "10"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Rome",
+            "country": "Italy",
+            "country_iso": "IT"
+          },
+          "values": {
+            "continent": "Europe",
+            "Millionaires": "92",
+            "Billionaires": "10"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Vancouver",
+            "country": "Canada",
+            "country_iso": "CA"
+          },
+          "values": {
+            "continent": "North America",
+            "Millionaires": "80",
+            "Billionaires": "10"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Austin",
+            "country": "USA",
+            "country_iso": "US"
+          },
+          "values": {
+            "continent": "North America",
+            "Millionaires": "92",
+            "Billionaires": "10"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Tel Aviv",
+            "country": "Israel",
+            "country_iso": "IL"
+          },
+          "values": {
+            "continent": "Asia",
+            "Millionaires": "82",
+            "Billionaires": "10"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Amsterdam",
+            "country": "Netherlands",
+            "country_iso": "NL"
+          },
+          "values": {
+            "continent": "Europe",
+            "Millionaires": "91",
+            "Billionaires": "9"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Nice",
+            "country": "France",
+            "country_iso": "FR"
+          },
+          "values": {
+            "continent": "Europe",
+            "Millionaires": "95",
+            "Billionaires": "9"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Guangzhou",
+            "country": "China",
+            "country_iso": "CN"
+          },
+          "values": {
+            "continent": "Asia",
+            "Millionaires": "70",
+            "Billionaires": "9"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Boston",
+            "country": "USA",
+            "country_iso": "US"
+          },
+          "values": {
+            "continent": "North America",
+            "Millionaires": "107",
+            "Billionaires": "8"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Madrid",
+            "country": "Spain",
+            "country_iso": "ES"
+          },
+          "values": {
+            "continent": "Europe",
+            "Millionaires": "74",
+            "Billionaires": "8"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Perth",
+            "country": "Australia",
+            "country_iso": "AU"
+          },
+          "values": {
+            "continent": "Oceania",
+            "Millionaires": "64",
+            "Billionaires": "8"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Vienna",
+            "country": "Austria",
+            "country_iso": "AT"
+          },
+          "values": {
+            "continent": "Europe",
+            "Millionaires": "70",
+            "Billionaires": "7"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Manchester",
+            "country": "UK",
+            "country_iso": "GB"
+          },
+          "values": {
+            "continent": "Europe",
+            "Millionaires": "67",
+            "Billionaires": "7"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Osaka",
+            "country": "Japan",
+            "country_iso": "JP"
+          },
+          "values": {
+            "continent": "Asia",
+            "Millionaires": "69",
+            "Billionaires": "5"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Berlin",
+            "country": "Germany",
+            "country_iso": "DE"
+          },
+          "values": {
+            "continent": "Europe",
+            "Millionaires": "47",
+            "Billionaires": "5"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Dublin",
+            "country": "Ireland",
+            "country_iso": "IE"
+          },
+          "values": {
+            "continent": "Europe",
+            "Millionaires": "43",
+            "Billionaires": "5"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Brisbane",
+            "country": "Australia",
+            "country_iso": "AU"
+          },
+          "values": {
+            "continent": "Oceania",
+            "Millionaires": "40",
+            "Billionaires": "4"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Auckland",
+            "country": "New Zealand",
+            "country_iso": "NZ"
+          },
+          "values": {
+            "continent": "Oceania",
+            "Millionaires": "42",
+            "Billionaires": "4"
+          }
+        }
+      ]
+    }
+  ]
+}

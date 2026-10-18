@@ -1,6 +1,7 @@
 // lib/screens/flights_lounge_stats_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:jidoapp/providers/airport_provider.dart';
 import 'package:jidoapp/models/airport_model.dart';
@@ -157,6 +158,7 @@ class _LoungeStatsScreenState extends State<LoungeStatsScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     int totalLoungeVisits = _loungeVisitsInPeriod.length;
     double totalAvgRating = 0;
     if(totalLoungeVisits > 0) {
@@ -193,7 +195,7 @@ class _LoungeStatsScreenState extends State<LoungeStatsScreen> {
         DropdownButtonFormField<String>(
           value: _selectedPeriod,
           decoration: InputDecoration(contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8), border: OutlineInputBorder(borderRadius: BorderRadius.circular(20))),
-          items: _periods.map((String value) => DropdownMenuItem<String>(value: value, child: Text(value))).toList(),
+          items: _periods.map((String value) => DropdownMenuItem<String>(value: value, child: Text(tr(value)))).toList(),
           onChanged: (String? newValue) {
             if (newValue == 'Custom') { _showCustomDateRangePicker(); }
             else if (newValue != null) { setState(() { _selectedPeriod = newValue; }); _prepareData(); }
@@ -204,7 +206,7 @@ class _LoungeStatsScreenState extends State<LoungeStatsScreen> {
             padding: const EdgeInsets.symmetric(vertical: 8.0),
             child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
               IconButton(icon: const Icon(Icons.arrow_back_ios), onPressed: () => setState(() { _selectedYear--; _prepareData(); })),
-              Text('$_selectedYear', style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
+              Text(tr('$_selectedYear'), style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
               IconButton(icon: const Icon(Icons.arrow_forward_ios), onPressed: () => setState(() { _selectedYear++; _prepareData(); }))
             ]),
           ),
@@ -236,13 +238,13 @@ class _LoungeStatsScreenState extends State<LoungeStatsScreen> {
     Widget statItem(String title, String value, {Widget? icon}) {
       return Column(
         children: [
-          Text(title, style: Theme.of(context).textTheme.titleSmall),
+          Text(tr(title), style: Theme.of(context).textTheme.titleSmall),
           const SizedBox(height: 8),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               if(icon != null) ...[icon, const SizedBox(width: 8)],
-              Text(value, style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold, color: _themeColor)),
+              Text(tr(value), style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold, color: _themeColor)),
             ],
           )
         ],
@@ -305,7 +307,7 @@ class _LoungeStatsScreenState extends State<LoungeStatsScreen> {
                 border: OutlineInputBorder(borderRadius: BorderRadius.circular(12), borderSide: BorderSide.none),
               ),
               items: LoungeSortType.values.map((type) {
-                return DropdownMenuItem(value: type, child: Text(getSortTypeName(type), style: const TextStyle(fontWeight: FontWeight.bold)));
+                return DropdownMenuItem(value: type, child: Text(tr(getSortTypeName(type)), style: const TextStyle(fontWeight: FontWeight.bold)));
               }).toList(),
               onChanged: (type) {
                 if (type != null) {
@@ -316,7 +318,7 @@ class _LoungeStatsScreenState extends State<LoungeStatsScreen> {
             ),
             const Divider(height: 24),
             _processedData.isEmpty
-                ? const SizedBox(height: 150, child: Center(child: Text('No lounge visits in this period.')))
+                ?  SizedBox(height: 150, child: Center(child: Text(tr('No lounge visits in this period.'))))
                 : ListView.builder(
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
@@ -341,13 +343,13 @@ class _LoungeStatsScreenState extends State<LoungeStatsScreen> {
     Widget trailing;
     switch(_sortType) {
       case LoungeSortType.rate:
-        trailing = Text('${((item['rate'] as double) * 100).toStringAsFixed(1)}%', style: TextStyle(color: _themeColor, fontWeight: FontWeight.bold, fontSize: 16));
+        trailing = Text(tr('${((item['rate'] as double) * 100).toStringAsFixed(1)}%'), style: TextStyle(color: _themeColor, fontWeight: FontWeight.bold, fontSize: 16));
         break;
       case LoungeSortType.duration:
-        trailing = Text(formatDuration(item['totalDuration']), style: TextStyle(color: _themeColor, fontWeight: FontWeight.bold, fontSize: 16));
+        trailing = Text(tr(formatDuration(item['totalDuration'])), style: TextStyle(color: _themeColor, fontWeight: FontWeight.bold, fontSize: 16));
         break;
       case LoungeSortType.avgRating:
-        trailing = Row(children: [Icon(Icons.wine_bar, color: _themeColor, size: 18), Text(' ${(item['avgRating'] as double).toStringAsFixed(2)}', style: TextStyle(color: _themeColor, fontWeight: FontWeight.bold, fontSize: 16))]);
+        trailing = Row(children: [Icon(Icons.wine_bar, color: _themeColor, size: 18), Text(tr(' ${(item['avgRating'] as double).toStringAsFixed(2)}'), style: TextStyle(color: _themeColor, fontWeight: FontWeight.bold, fontSize: 16))]);
         break;
       case LoungeSortType.highestRating:
         final visit = item['highestRatedVisit'] as AirportVisitEntry?;
@@ -361,22 +363,22 @@ class _LoungeStatsScreenState extends State<LoungeStatsScreen> {
         trailing = Column(
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
-            Row(children: [Icon(Icons.wine_bar, color: _themeColor, size: 18), Text(' ${(visit?.loungeRating ?? 0).toStringAsFixed(1)}', style: TextStyle(color: _themeColor, fontWeight: FontWeight.bold, fontSize: 16))]),
-            Text(dateString, style: Theme.of(context).textTheme.bodySmall)
+            Row(children: [Icon(Icons.wine_bar, color: _themeColor, size: 18), Text(tr(' ${(visit?.loungeRating ?? 0).toStringAsFixed(1)}'), style: TextStyle(color: _themeColor, fontWeight: FontWeight.bold, fontSize: 16))]),
+            Text(tr(dateString), style: Theme.of(context).textTheme.bodySmall)
           ],
         );
         break;
       case LoungeSortType.mostVisits:
       default:
-        trailing = Text('${item['visitCount']} Visits', style: TextStyle(color: _themeColor, fontWeight: FontWeight.bold, fontSize: 16));
+        trailing = Text(tr('${item['visitCount']} Visits'), style: TextStyle(color: _themeColor, fontWeight: FontWeight.bold, fontSize: 16));
     }
 
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8.0),
       child: Row(
         children: [
-          SizedBox(width: 30, child: Text('#${index + 1}', style: const TextStyle(fontSize: 16, color: Colors.grey))),
-          Expanded(child: Text(item['name'], style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16), overflow: TextOverflow.ellipsis)),
+          SizedBox(width: 30, child: Text(tr('#${index + 1}'), style: const TextStyle(fontSize: 16, color: Colors.grey))),
+          Expanded(child: Text(tr(item['name']), style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16), overflow: TextOverflow.ellipsis)),
           const SizedBox(width: 8),
           trailing,
         ],
@@ -402,7 +404,7 @@ class _LoungeStatsScreenState extends State<LoungeStatsScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("Lounge Log", style: Theme.of(context).textTheme.titleLarge),
+            Text(tr("Lounge Log"), style: Theme.of(context).textTheme.titleLarge),
             const Divider(),
             ListView.builder(
               shrinkWrap: true,
@@ -423,14 +425,14 @@ class _LoungeStatsScreenState extends State<LoungeStatsScreen> {
 
                 return ListTile(
                   title: Text(airport.name, style: const TextStyle(fontWeight: FontWeight.bold)),
-                  subtitle: Text(dateString),
+                  subtitle: Text(tr(dateString)),
                   trailing: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      Text(formatDuration(entry.loungeDurationInMinutes), style: const TextStyle(color: Colors.black54)),
+                      Text(tr(formatDuration(entry.loungeDurationInMinutes)), style: const TextStyle(color: Colors.black54)),
                       const SizedBox(width: 8),
                       Icon(Icons.wine_bar, color: _themeColor, size: 18),
-                      Text(' ${(entry.loungeRating ?? 0).toStringAsFixed(1)}', style: const TextStyle(fontWeight: FontWeight.bold)),
+                      Text(tr(' ${(entry.loungeRating ?? 0).toStringAsFixed(1)}'), style: const TextStyle(fontWeight: FontWeight.bold)),
                     ],
                   ),
                 );
@@ -467,7 +469,7 @@ class _LoungeStatsScreenState extends State<LoungeStatsScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("Yearly Trend", style: Theme.of(context).textTheme.titleLarge),
+            Text(tr("Yearly Trend"), style: Theme.of(context).textTheme.titleLarge),
             const SizedBox(height: 20),
             SizedBox(
               height: 200,
@@ -475,8 +477,8 @@ class _LoungeStatsScreenState extends State<LoungeStatsScreen> {
                 LineChartData(
                   gridData: const FlGridData(show: true),
                   titlesData: FlTitlesData(
-                    bottomTitles: AxisTitles(sideTitles: SideTitles(showTitles: true, interval: 1, getTitlesWidget: (v, m) => Text(v.toInt().toString().substring(2)))),
-                    leftTitles: AxisTitles(sideTitles: SideTitles(showTitles: true, reservedSize: 30, getTitlesWidget: (value, meta) => Text(value.toInt().toString()))),
+                    bottomTitles: AxisTitles(sideTitles: SideTitles(showTitles: true, interval: 1, getTitlesWidget: (v, m) => Text(tr(v.toInt().toString().substring(2))))),
+                    leftTitles: AxisTitles(sideTitles: SideTitles(showTitles: true, reservedSize: 30, getTitlesWidget: (value, meta) => Text(tr(value.toInt().toString())))),
                     topTitles: const AxisTitles(sideTitles: SideTitles(showTitles: false)),
                     rightTitles: const AxisTitles(sideTitles: SideTitles(showTitles: false)),
                   ),

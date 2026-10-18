@@ -70,6 +70,7 @@ import 'dart:convert';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -343,6 +344,7 @@ class _SoftCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Container(
       padding: padding,
       decoration: BoxDecoration(
@@ -382,6 +384,7 @@ class _GradientButtonState extends State<_GradientButton> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final fg = widget.outlined ? widget.color : Colors.white;
     return GestureDetector(
       onTapDown: (_) => setState(() => _scale = 0.97),
@@ -419,7 +422,7 @@ class _GradientButtonState extends State<_GradientButton> {
                 Icon(widget.icon, color: fg, size: 20),
                 const SizedBox(width: 8),
               ],
-              Text(widget.label,
+              Text(tr(widget.label),
                   style: TextStyle(color: fg, fontSize: 15.5, fontWeight: FontWeight.w800, letterSpacing: 0.2)),
             ],
           ),
@@ -436,6 +439,7 @@ class _ScreenBackground extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Container(
       decoration: const BoxDecoration(
         gradient: LinearGradient(
@@ -640,6 +644,7 @@ class BorderChainDifficultyScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Scaffold(
       backgroundColor: _kSurface,
       extendBodyBehindAppBar: true,
@@ -667,7 +672,7 @@ class BorderChainDifficultyScreen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(width: 10),
-                  const Text('CHOOSE A DIFFICULTY',
+                   Text(tr('CHOOSE A DIFFICULTY'),
                       style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, letterSpacing: 1.1, color: _kMuted)),
                 ],
               ),
@@ -754,14 +759,14 @@ class BorderChainDifficultyScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text('BORDER PUZZLE',
+               Text(tr('BORDER PUZZLE'),
                   style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.w800, letterSpacing: 1.6, color: _kMuted)),
               const SizedBox(height: 4),
-              const Text('Border Chain',
+               Text(tr('Border Chain'),
                   style: TextStyle(
                       fontSize: 27, fontWeight: FontWeight.w900, color: _kInk, letterSpacing: -0.6, height: 1.05)),
               const SizedBox(height: 8),
-              Text('Link neighboring countries along the shortest path. Chains get longer, decoys get sneakier.',
+              Text(tr('Link neighboring countries along the shortest path. Chains get longer, decoys get sneakier.'),
                   style: TextStyle(
                       fontSize: 12.5, color: _kMuted.withOpacity(0.9), fontWeight: FontWeight.w600, height: 1.4)),
             ],
@@ -794,6 +799,7 @@ class _DifficultyCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final color = _accentFor(difficulty);
     final level = _diffLevel(difficulty);
     return GestureDetector(
@@ -825,7 +831,7 @@ class _DifficultyCard extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Text(_labelFor(difficulty),
+                      Text(tr(_labelFor(difficulty)),
                           style: const TextStyle(fontSize: 17.5, fontWeight: FontWeight.w900, color: _kInk, letterSpacing: -0.2)),
                       if (locked) ...[
                         const SizedBox(width: 6),
@@ -911,6 +917,7 @@ class _BorderChainLobbyScreenState extends State<_BorderChainLobbyScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Scaffold(
       backgroundColor: _kSurface,
       extendBodyBehindAppBar: true,
@@ -943,7 +950,7 @@ class _BorderChainLobbyScreenState extends State<_BorderChainLobbyScreen> {
                       const SizedBox(width: 14),
                       Expanded(
                         child: Text(
-                          switch (widget.difficulty) {
+                          tr(switch (widget.difficulty) {
                             _BorderChainDifficulty.easy =>
                             'Tap a real neighbor each step. Only real borders shown. Hop count to the target is visible.',
                             _BorderChainDifficulty.medium =>
@@ -952,7 +959,7 @@ class _BorderChainLobbyScreenState extends State<_BorderChainLobbyScreen> {
                             'Still tap-to-pick, but with lots of decoys and longer chains. Hop count is visible.',
                             _BorderChainDifficulty.insane =>
                             'Search and pick any country yourself. Hop count is kept secret — just find the shortest path.',
-                          },
+                          }),
                           style: const TextStyle(fontSize: 12.5, fontWeight: FontWeight.w600, color: _kMuted),
                         ),
                       ),
@@ -999,10 +1006,10 @@ class _BorderChainLobbyScreenState extends State<_BorderChainLobbyScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text('DIFFICULTY',
+               Text(tr('DIFFICULTY'),
                   style: TextStyle(fontSize: 11, fontWeight: FontWeight.w800, letterSpacing: 1.4, color: _kMuted)),
               const SizedBox(height: 2),
-              Text('${_labelFor(widget.difficulty)} Mode',
+              Text(tr('${_labelFor(widget.difficulty)} Mode'),
                   style: const TextStyle(fontSize: 21, fontWeight: FontWeight.w900, color: _kInk, letterSpacing: -0.3)),
             ],
           ),
@@ -1026,10 +1033,10 @@ class _BorderChainLobbyScreenState extends State<_BorderChainLobbyScreen> {
               children: [
                 Icon(Icons.emoji_events_outlined, size: 46, color: _kFaint),
                 const SizedBox(height: 12),
-                const Text('No runs yet',
+                 Text(tr('No runs yet'),
                     style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: _kInk)),
                 const SizedBox(height: 4),
-                const Text('Play a round to start your leaderboard',
+                 Text(tr('Play a round to start your leaderboard'),
                     style: TextStyle(fontSize: 12.5, color: _kMuted)),
               ],
             ),
@@ -1041,9 +1048,9 @@ class _BorderChainLobbyScreenState extends State<_BorderChainLobbyScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text('LEADERBOARD',
+                 Text(tr('LEADERBOARD'),
                     style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, letterSpacing: 1.0, color: _kMuted)),
-                Text('${records.length} run${records.length == 1 ? '' : 's'}',
+                Text(tr('${records.length} run${records.length == 1 ? '' : 's'}'),
                     style: const TextStyle(fontSize: 12, color: _kFaint, fontWeight: FontWeight.w600)),
               ],
             ),
@@ -1081,6 +1088,7 @@ class _RecordTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final medal = _medalColors[rank];
     return _SoftCard(
       radius: 16,
@@ -1098,18 +1106,18 @@ class _RecordTile extends StatelessWidget {
             ),
             child: medal != null
                 ? Icon(Icons.emoji_events_rounded, size: 16, color: medal)
-                : Text('$rank', style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 12, color: _kMuted)),
+                : Text(tr('$rank'), style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 12, color: _kMuted)),
           ),
           const SizedBox(width: 14),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('${record.score} pts',
+                Text(tr('${record.score} pts'),
                     style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 15, color: _kInk)),
                 const SizedBox(height: 2),
                 Text(
-                  '${record.roundsSolved}/${record.maxRounds} solved · longest path ${record.bestPathLength} · ${_formatDate(record.playedAt)}',
+                  tr('${record.roundsSolved}/${record.maxRounds} solved · longest path ${record.bestPathLength} · ${_formatDate(record.playedAt)}'),
                   style: const TextStyle(fontSize: 11.5, color: _kMuted),
                 ),
               ],
@@ -1314,6 +1322,7 @@ class _BorderChainGameScreenState extends State<_BorderChainGameScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Scaffold(
       backgroundColor: _kSurface,
       extendBodyBehindAppBar: true,
@@ -1326,7 +1335,7 @@ class _BorderChainGameScreenState extends State<_BorderChainGameScreen> {
           children: [
             Container(width: 8, height: 8, decoration: BoxDecoration(color: _accent, shape: BoxShape.circle)),
             const SizedBox(width: 8),
-            Text('${_labelFor(widget.difficulty)} Mode',
+            Text(tr('${_labelFor(widget.difficulty)} Mode'),
                 style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w800, color: _kInk, letterSpacing: -0.2)),
           ],
         ),
@@ -1360,10 +1369,10 @@ class _BorderChainGameScreenState extends State<_BorderChainGameScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('ROUND ${_roundIndex + 1} / $_maxRounds',
+              Text(tr('ROUND ${_roundIndex + 1} / $_maxRounds'),
                   style: const TextStyle(fontSize: 11.5, fontWeight: FontWeight.w800, letterSpacing: 0.6, color: _kMuted)),
               Text(
-                _isEasy ? 'SHORTEST PATH: ${_puzzle.shortestDistance} HOPS' : 'SHORTEST PATH: ??? HOPS',
+                tr(_isEasy ? 'SHORTEST PATH: ${_puzzle.shortestDistance} HOPS' : 'SHORTEST PATH: ??? HOPS'),
                 style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.w800, letterSpacing: 0.4, color: _accent),
               ),
             ],
@@ -1385,9 +1394,7 @@ class _BorderChainGameScreenState extends State<_BorderChainGameScreen> {
           if (!resolved) ...[
             if (!compact)
               Text(
-                _isEasy
-                    ? 'WHICH COUNTRY BORDERS ${_current.name.toUpperCase()}?'
-                    : 'SEARCH FOR A COUNTRY BORDERING ${_current.name.toUpperCase()}',
+                _isEasy ? 'WHICH COUNTRY BORDERS ${_current.name.toUpperCase()}?' : 'SEARCH FOR A COUNTRY BORDERING ${_current.name.toUpperCase()}',
                 style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w800, letterSpacing: 0.5, color: _kMuted),
               ),
             if (!compact) const SizedBox(height: 8),
@@ -1405,11 +1412,11 @@ class _BorderChainGameScreenState extends State<_BorderChainGameScreen> {
   Widget _buildCompactCurrentRow() {
     return Row(
       children: [
-        Text(_current.emoji, style: const TextStyle(fontSize: 18)),
+        Text(tr(_current.emoji), style: const TextStyle(fontSize: 18)),
         const SizedBox(width: 8),
         Expanded(
           child: Text(
-            'Searching neighbors of ${_current.name}',
+            tr('Searching neighbors of ${_current.name}'),
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
             style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: _kInk),
@@ -1442,12 +1449,12 @@ class _BorderChainGameScreenState extends State<_BorderChainGameScreen> {
   Widget _buildEndpointChip(_BorderCountry country, String label) {
     return Column(
       children: [
-        Text(country.emoji, style: const TextStyle(fontSize: 26)),
+        Text(tr(country.emoji), style: const TextStyle(fontSize: 26)),
         const SizedBox(height: 2),
-        Text(country.name,
+        Text(tr(country.name),
             textAlign: TextAlign.center,
             style: const TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, color: _kInk)),
-        Text(label,
+        Text(tr(label),
             style: TextStyle(fontSize: 9, fontWeight: FontWeight.w800, letterSpacing: 0.6, color: _accent)),
       ],
     );
@@ -1476,7 +1483,7 @@ class _BorderChainGameScreenState extends State<_BorderChainGameScreen> {
             child: Row(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Text(c.emoji, style: const TextStyle(fontSize: 13)),
+                Text(tr(c.emoji), style: const TextStyle(fontSize: 13)),
                 const SizedBox(width: 5),
                 Text(c.name,
                     style: TextStyle(
@@ -1496,13 +1503,13 @@ class _BorderChainGameScreenState extends State<_BorderChainGameScreen> {
       padding: const EdgeInsets.symmetric(vertical: 18, horizontal: 20),
       child: Row(
         children: [
-          Text(_current.emoji, style: const TextStyle(fontSize: 38)),
+          Text(tr(_current.emoji), style: const TextStyle(fontSize: 38)),
           const SizedBox(width: 14),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text('CURRENTLY IN',
+                 Text(tr('CURRENTLY IN'),
                     style: TextStyle(fontSize: 10, fontWeight: FontWeight.w800, letterSpacing: 0.8, color: _kMuted)),
                 const SizedBox(height: 2),
                 Text(_current.name,
@@ -1511,7 +1518,7 @@ class _BorderChainGameScreenState extends State<_BorderChainGameScreen> {
             ),
           ),
           if (_isEasy)
-            Text('$_remaining hop${_remaining == 1 ? '' : 's'} left',
+            Text(tr('$_remaining hop${_remaining == 1 ? '' : 's'} left'),
                 style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: _accent)),
         ],
       ),
@@ -1542,7 +1549,7 @@ class _BorderChainGameScreenState extends State<_BorderChainGameScreen> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(c.emoji, style: const TextStyle(fontSize: 18)),
+                Text(tr(c.emoji), style: const TextStyle(fontSize: 18)),
                 const SizedBox(width: 6),
                 Flexible(
                   child: Text(c.name,
@@ -1574,7 +1581,7 @@ class _BorderChainGameScreenState extends State<_BorderChainGameScreen> {
           controller: _searchController,
           onChanged: (v) => setState(() => _query = v),
           decoration: InputDecoration(
-            hintText: 'Search a country…',
+            hintText: tr('Search a country…'),
             prefixIcon: const Icon(Icons.search_rounded, color: _kFaint),
             filled: true,
             fillColor: Colors.white,
@@ -1589,7 +1596,7 @@ class _BorderChainGameScreenState extends State<_BorderChainGameScreen> {
         Expanded(
           child: options.isEmpty
               ? Center(
-            child: Text('No countries match "$_query"',
+            child: Text(tr('No countries match "$_query"'),
                 style: const TextStyle(fontSize: 13, color: _kMuted)),
           )
               : ListView.separated(
@@ -1610,7 +1617,7 @@ class _BorderChainGameScreenState extends State<_BorderChainGameScreen> {
                   ),
                   child: Row(
                     children: [
-                      Text(c.emoji, style: const TextStyle(fontSize: 20)),
+                      Text(tr(c.emoji), style: const TextStyle(fontSize: 20)),
                       const SizedBox(width: 12),
                       Expanded(
                         child: Text(c.name,
@@ -1671,12 +1678,12 @@ class _BorderChainGameScreenState extends State<_BorderChainGameScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    solved ? 'Shortest path found! +${_puzzle.shortestDistance}' : 'Not the shortest path',
+                    tr(solved ? 'Shortest path found! +${_puzzle.shortestDistance}' : 'Not the shortest path'),
                     style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w900, color: Colors.white),
                   ),
                   if (!solved && wrongCountry != null)
                     Text(
-                      _wrongMoveExplanation(wrongCountry),
+                      tr(_wrongMoveExplanation(wrongCountry)),
                       style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: Colors.white70),
                     ),
                 ],
@@ -1707,15 +1714,15 @@ class _BorderChainGameScreenState extends State<_BorderChainGameScreen> {
               child: const Icon(Icons.emoji_events_rounded, size: 40, color: Colors.white),
             ),
             const SizedBox(height: 18),
-            const Text('Run Complete!',
+             Text(tr('Run Complete!'),
                 style: TextStyle(fontSize: 22, fontWeight: FontWeight.w900, color: _kInk)),
             const SizedBox(height: 26),
             _SoftCard(
               padding: const EdgeInsets.symmetric(vertical: 22, horizontal: 24),
               child: Column(children: [
-                Text('$_totalScore',
+                Text(tr('$_totalScore'),
                     style: TextStyle(fontSize: 44, fontWeight: FontWeight.w900, color: _accent)),
-                const Text('TOTAL SCORE',
+                 Text(tr('TOTAL SCORE'),
                     style: TextStyle(fontSize: 11, fontWeight: FontWeight.w800, letterSpacing: 1.0, color: _kMuted)),
                 const SizedBox(height: 16),
                 Row(mainAxisAlignment: MainAxisAlignment.center, children: [
@@ -1748,6 +1755,7 @@ class _ScoreBadge extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Padding(
       padding: const EdgeInsets.only(right: 16, top: 4, bottom: 4),
       child: Container(
@@ -1762,7 +1770,7 @@ class _ScoreBadge extends StatelessWidget {
           children: [
             const Icon(Icons.alt_route_rounded, size: 14, color: _kAccent),
             const SizedBox(width: 4),
-            Text('$score',
+            Text(tr('$score'),
                 style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w900, color: _kAccent)),
           ],
         ),
@@ -1779,13 +1787,14 @@ class _StatChip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
       decoration: BoxDecoration(color: _kSurface, borderRadius: BorderRadius.circular(14)),
       child: Column(children: [
-        Text(value, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w800, color: _kInk)),
+        Text(tr(value), style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w800, color: _kInk)),
         const SizedBox(height: 2),
-        Text(label.toUpperCase(),
+        Text(tr(label.toUpperCase()),
             style: const TextStyle(fontSize: 9.5, fontWeight: FontWeight.w800, letterSpacing: 0.4, color: _kMuted)),
       ]),
     );

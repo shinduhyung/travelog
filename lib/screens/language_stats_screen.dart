@@ -1,6 +1,7 @@
 // lib/screens/language_stats_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:jidoapp/models/country_model.dart';
 import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/providers/language_family_provider.dart';
@@ -116,6 +117,7 @@ class _LanguageStatsScreenState extends State<LanguageStatsScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Scaffold(
       body: Consumer3<CountryProvider, LanguageProvider, LanguageFamilyProvider>(
         builder: (context, countryProvider, languageProvider, langFamilyProvider, child) {
@@ -135,9 +137,9 @@ class _LanguageStatsScreenState extends State<LanguageStatsScreen> {
                     // 1. Languages / Families 세그먼트 버튼 (왼쪽 배치)
                     Expanded(
                       child: SegmentedButton<LanguageStatView>(
-                        segments: const [
-                          ButtonSegment(value: LanguageStatView.languages, label: Text('Languages')),
-                          ButtonSegment(value: LanguageStatView.families, label: Text('Families')),
+                        segments:  [
+                          ButtonSegment(value: LanguageStatView.languages, label: Text(tr('Languages'))),
+                          ButtonSegment(value: LanguageStatView.families, label: Text(tr('Families'))),
                         ],
                         selected: {_currentView},
                         onSelectionChanged: (newSelection) {
@@ -167,7 +169,7 @@ class _LanguageStatsScreenState extends State<LanguageStatsScreen> {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         Text(
-                          'Non-dominant',
+                          tr('Non-dominant'),
                           style: TextStyle(
                             fontSize: 12,
                             fontWeight: FontWeight.bold,
@@ -249,7 +251,7 @@ class _LanguageStatsScreenState extends State<LanguageStatsScreen> {
           ),
           icon: Icon(mapIcon, color: Colors.white, size: 20),
           label: Text(
-            isFamilyView ? 'Language Family Map' : 'Global Language Map',
+            tr(isFamilyView ? 'Language Family Map' : 'Global Language Map'),
             style: const TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.w600,
@@ -460,7 +462,7 @@ class _LanguageStatsScreenState extends State<LanguageStatsScreen> {
                       children: [
                         Expanded(
                           child: Text(
-                            title,
+                            tr(title),
                             style: theme.textTheme.titleMedium?.copyWith(
                               fontWeight: isExpanded ? FontWeight.w900 : FontWeight.bold,
                               fontSize: 16,
@@ -470,7 +472,7 @@ class _LanguageStatsScreenState extends State<LanguageStatsScreen> {
                           ),
                         ),
                         Text(
-                          '${(percentage * 100).toStringAsFixed(0)}%',
+                          tr('${(percentage * 100).toStringAsFixed(0)}%'),
                           style: theme.textTheme.titleMedium?.copyWith(
                             fontWeight: FontWeight.w800,
                             fontSize: 16,
@@ -497,7 +499,7 @@ class _LanguageStatsScreenState extends State<LanguageStatsScreen> {
                         ),
                         const SizedBox(width: 12),
                         Text(
-                          '$visited / $total Countries',
+                          tr('$visited / $total Countries'),
                           style: theme.textTheme.bodyMedium?.copyWith(
                             color: Colors.grey.shade600,
                             fontWeight: FontWeight.w500,
@@ -548,11 +550,11 @@ class _LanguageStatsScreenState extends State<LanguageStatsScreen> {
                                   color: isVisited ? langColor : Colors.grey.shade400,
                                 ),
                                 const SizedBox(width: 4),
-                                Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 14)), // 국기 추가
+                                Text(tr(flagEmoji(country.isoA2)), style: const TextStyle(fontSize: 14)), // 국기 추가
                                 const SizedBox(width: 4),
                                 Expanded(
                                   child: Text(
-                                    country.name,
+                                    tr(country.name),
                                     style: theme.textTheme.bodySmall,
                                     overflow: TextOverflow.ellipsis,
                                     maxLines: 1,
@@ -570,7 +572,7 @@ class _LanguageStatsScreenState extends State<LanguageStatsScreen> {
                         alignment: Alignment.centerRight,
                         child: TextButton.icon(
                           icon: Icon(Icons.map_outlined, color: langColor),
-                          label: Text('View on Map', style: TextStyle(color: langColor)),
+                          label: Text(tr('View on Map'), style: TextStyle(color: langColor)),
                           onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (_) => LanguageMapScreen(languageFilter: title))),
                         ),
                       ),
@@ -652,11 +654,11 @@ class _LanguageStatsScreenState extends State<LanguageStatsScreen> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Expanded(
-                          child: Text(displayTitle, style: titleStyle, overflow: TextOverflow.ellipsis),
+                          child: Text(tr(displayTitle), style: titleStyle, overflow: TextOverflow.ellipsis),
                         ),
                         if (total > 0)
                           Text(
-                            '${(percentage * 100).toStringAsFixed(0)}%',
+                            tr('${(percentage * 100).toStringAsFixed(0)}%'),
                             style: theme.textTheme.titleMedium?.copyWith(
                               fontWeight: FontWeight.w800,
                               fontSize: 16,
@@ -684,7 +686,7 @@ class _LanguageStatsScreenState extends State<LanguageStatsScreen> {
                           ),
                           const SizedBox(width: 12),
                           Text(
-                            '$visited / $total Countries',
+                            tr('$visited / $total Countries'),
                             style: theme.textTheme.bodyMedium?.copyWith(
                               color: Colors.grey.shade600,
                               fontWeight: FontWeight.w500,
@@ -702,7 +704,7 @@ class _LanguageStatsScreenState extends State<LanguageStatsScreen> {
                     else
                       Padding(
                         padding: const EdgeInsets.symmetric(vertical: 4.0),
-                        child: Text('No countries in this group.', style: theme.textTheme.bodyMedium?.copyWith(color: Colors.grey.shade500)),
+                        child: Text(tr('No countries in this group.'), style: theme.textTheme.bodyMedium?.copyWith(color: Colors.grey.shade500)),
                       )
                   ],
                 ),
@@ -745,11 +747,11 @@ class _LanguageStatsScreenState extends State<LanguageStatsScreen> {
                                     color: isVisited ? itemColor : Colors.grey.shade400,
                                   ),
                                   const SizedBox(width: 4),
-                                  Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 14)), // 국기 추가
+                                  Text(tr(flagEmoji(country.isoA2)), style: const TextStyle(fontSize: 14)), // 국기 추가
                                   const SizedBox(width: 4),
                                   Expanded(
                                     child: Text(
-                                      country.name,
+                                      tr(country.name),
                                       style: theme.textTheme.bodySmall,
                                       overflow: TextOverflow.ellipsis,
                                       maxLines: 1,
@@ -768,7 +770,7 @@ class _LanguageStatsScreenState extends State<LanguageStatsScreen> {
                           alignment: Alignment.centerRight,
                           child: TextButton.icon(
                             icon: Icon(Icons.map_outlined, color: itemColor),
-                            label: Text('View on Map', style: TextStyle(color: itemColor)),
+                            label: Text(tr('View on Map'), style: TextStyle(color: itemColor)),
                             onPressed: onMapTap,
                           ),
                         ),

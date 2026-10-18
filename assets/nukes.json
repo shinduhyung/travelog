@@ -1,11 +1,106 @@
-[
-  { "iso_a3": "RUS", "nukes_total": 5460 },
-  { "iso_a3": "USA", "nukes_total": 5180 },
-  { "iso_a3": "CHN", "nukes_total": 600 },
-  { "iso_a3": "FRA", "nukes_total": 290 },
-  { "iso_a3": "GBR", "nukes_total": 225 },
-  { "iso_a3": "IND", "nukes_total": 180 },
-  { "iso_a3": "PAK", "nukes_total": 170 },
-  { "iso_a3": "ISR", "nukes_total": 90 },
-  { "iso_a3": "PRK", "nukes_total": 50 }
-]
+{
+  "schema_version": 1,
+  "dataset_id": "nukes",
+  "metadata": {
+    "source_url": null,
+    "reference_period": null,
+    "updated_at": null
+  },
+  "legacy_layout": "list",
+  "tables": [
+    {
+      "id": "main",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "iso_a3"
+      ],
+      "metrics": [
+        {
+          "id": "nukes_total",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "iso_a3": "RUS"
+          },
+          "values": {
+            "nukes_total": 5460
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "USA"
+          },
+          "values": {
+            "nukes_total": 5180
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CHN"
+          },
+          "values": {
+            "nukes_total": 600
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FRA"
+          },
+          "values": {
+            "nukes_total": 290
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GBR"
+          },
+          "values": {
+            "nukes_total": 225
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IND"
+          },
+          "values": {
+            "nukes_total": 180
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PAK"
+          },
+          "values": {
+            "nukes_total": 170
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ISR"
+          },
+          "values": {
+            "nukes_total": 90
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PRK"
+          },
+          "values": {
+            "nukes_total": 50
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,12 +1,142 @@
-[
-  {"name": "Barranquilla", "country": "Colombia", "traffic": "36 min 6 s", "continent": "South America"},
-  {"name": "Kolkata", "country": "India", "traffic": "34 min 33 s", "continent": "Asia"},
-  {"name": "Bengaluru", "country": "India", "traffic": "34 min 10 s", "continent": "Asia"},
-  {"name": "Pune", "country": "India", "traffic": "33 min 22 s", "continent": "Asia"},
-  {"name": "London", "country": "UK", "traffic": "33 min 17 s", "continent": "Europe"},
-  {"name": "Kyoto", "country": "Japan", "traffic": "33 min 16 s", "continent": "Asia"},
-  {"name": "Lima", "country": "Peru", "traffic": "33 min 12 s", "continent": "South America"},
-  {"name": "Trujillo", "country": "Peru", "traffic": "32 min 56 s", "continent": "South America"},
-  {"name": "Dublin", "country": "Ireland", "traffic": "32 min 45 s", "continent": "Europe"},
-  {"name": "Bandung", "country": "Indonesia", "traffic": "32 min 37 s", "continent": "Asia"}
-]
+{
+  "schema_version": 1,
+  "dataset_id": "traffic",
+  "metadata": {
+    "source_url": null,
+    "reference_period": null,
+    "updated_at": null
+  },
+  "legacy_layout": "list",
+  "tables": [
+    {
+      "id": "main",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "name",
+        "country"
+      ],
+      "metrics": [
+        {
+          "id": "traffic",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        },
+        {
+          "id": "continent",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "name": "Barranquilla",
+            "country": "Colombia"
+          },
+          "values": {
+            "traffic": "36 min 6 s",
+            "continent": "South America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Kolkata",
+            "country": "India"
+          },
+          "values": {
+            "traffic": "34 min 33 s",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Bengaluru",
+            "country": "India"
+          },
+          "values": {
+            "traffic": "34 min 10 s",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Pune",
+            "country": "India"
+          },
+          "values": {
+            "traffic": "33 min 22 s",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "London",
+            "country": "UK"
+          },
+          "values": {
+            "traffic": "33 min 17 s",
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Kyoto",
+            "country": "Japan"
+          },
+          "values": {
+            "traffic": "33 min 16 s",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Lima",
+            "country": "Peru"
+          },
+          "values": {
+            "traffic": "33 min 12 s",
+            "continent": "South America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Trujillo",
+            "country": "Peru"
+          },
+          "values": {
+            "traffic": "32 min 56 s",
+            "continent": "South America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Dublin",
+            "country": "Ireland"
+          },
+          "values": {
+            "traffic": "32 min 45 s",
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Bandung",
+            "country": "Indonesia"
+          },
+          "values": {
+            "traffic": "32 min 37 s",
+            "continent": "Asia"
+          }
+        }
+      ]
+    }
+  ]
+}

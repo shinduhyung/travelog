@@ -1,6 +1,7 @@
 // lib/screens/my_journey_screen.dart
 import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 // ⭐️ Firebase Auth와 명칭 충돌을 막기 위해 custom_auth로 alias 지정
 import 'package:jidoapp/providers/auth_provider.dart' as custom_auth;
 import 'package:jidoapp/screens/login_prompt_screen.dart';
@@ -115,14 +116,15 @@ class _MyJourneyScreenState extends State<MyJourneyScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Scaffold(
       backgroundColor: const Color(0xFFF8F9FA),
       appBar: AppBar(
         backgroundColor: const Color(0xFFF8F9FA),
         elevation: 0,
         scrolledUnderElevation: 0,
-        title: const Text(
-          'My Journey',
+        title:  Text(
+          tr('My Journey'),
           style: TextStyle(
             fontWeight: FontWeight.w800,
             color: Colors.black87,
@@ -151,7 +153,7 @@ class _MyJourneyScreenState extends State<MyJourneyScreen> {
                   ),
                   const SizedBox(width: 8),
                   Text(
-                    'My Documents',
+                    tr('My Documents'),
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w700,
@@ -208,16 +210,16 @@ class _MyJourneyScreenState extends State<MyJourneyScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('Traveler Type',
+                  Text(tr('Traveler Type'),
                       style: TextStyle(
                           fontSize: 12,
                           fontWeight: FontWeight.w600,
                           color: Colors.grey.shade500)),
                   const SizedBox(height: 2),
                   Text(
-                      _travelerType?.isNotEmpty == true
+                      tr(_travelerType?.isNotEmpty == true
                           ? _travelerType!
-                          : 'Analyze DNA',
+                          : 'Analyze DNA'),
                       style: TextStyle(
                           fontSize: 15,
                           fontWeight: FontWeight.w700,
@@ -328,14 +330,14 @@ class _MyJourneyScreenState extends State<MyJourneyScreen> {
               child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(title,
+                    Text(tr(title),
                         style: const TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.w700,
                             color: Colors.black87)),
                     if (subtitle.isNotEmpty) ...[
                       const SizedBox(height: 2),
-                      Text(subtitle,
+                      Text(tr(subtitle),
                           style: TextStyle(
                               fontSize: 13,
                               color: Colors.grey.shade500,
@@ -354,7 +356,7 @@ class _MyJourneyScreenState extends State<MyJourneyScreen> {
               ),
               child: Icon(icon, color: color, size: 24)),
           const SizedBox(height: 12),
-          Text(title,
+          Text(tr(title),
               textAlign: TextAlign.center,
               style: const TextStyle(
                   fontSize: 14,
@@ -421,7 +423,7 @@ class _MyJourneyScreenState extends State<MyJourneyScreen> {
             child: Column(children: [
               Icon(icon, color: color, size: 32),
               const SizedBox(height: 12),
-              Text(title,
+              Text(tr(title),
                   style: const TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.w600,
@@ -447,8 +449,8 @@ class _MyJourneyScreenState extends State<MyJourneyScreen> {
               Icon(Icons.settings_outlined,
                   color: Colors.grey.shade700, size: 24),
               const SizedBox(width: 16),
-              const Expanded(
-                  child: Text('Settings',
+               Expanded(
+                  child: Text(tr('Settings'),
                       style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w600,

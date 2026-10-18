@@ -1,6 +1,7 @@
 // lib/screens/aircraft_stats_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:jidoapp/providers/airline_provider.dart';
 import 'package:jidoapp/models/airline_model.dart';
@@ -261,6 +262,7 @@ class _AircraftStatsScreenState extends State<AircraftStatsScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Scaffold(
       backgroundColor: Colors.grey[50],
       // AppBar를 제거하고, SafeArea 아래에 SingleChildScrollView를 바로 사용
@@ -348,7 +350,7 @@ class _AircraftStatsScreenState extends State<AircraftStatsScreen> {
                 return DropdownMenuItem<String>(
                   value: value,
                   child: Text(
-                    value,
+                    tr(value),
                     style: TextStyle( // 🚨 [수정] 글씨 색깔을 테마색으로 변경
                       fontWeight: FontWeight.w600,
                       color: _primaryColor,
@@ -380,7 +382,7 @@ class _AircraftStatsScreenState extends State<AircraftStatsScreen> {
                   children: [
                     Icon(Icons.calendar_today, size: 16, color: Colors.grey[600]),
                     const SizedBox(width: 8),
-                    Text('${DateFormat('yyyy-MM-dd').format(_customStartDate!)} ~ ${DateFormat('yyyy-MM-dd').format(_customEndDate!)}', style: TextStyle(color: Colors.grey[700], fontWeight: FontWeight.w500, fontSize: 13)),
+                    Text(tr('${DateFormat('yyyy-MM-dd').format(_customStartDate!)} ~ ${DateFormat('yyyy-MM-dd').format(_customEndDate!)}'), style: TextStyle(color: Colors.grey[700], fontWeight: FontWeight.w500, fontSize: 13)),
                   ],
                 ),
               ),
@@ -416,7 +418,7 @@ class _AircraftStatsScreenState extends State<AircraftStatsScreen> {
                   return DropdownMenuItem<String>(
                     value: value,
                     child: Text(
-                      value,
+                      tr(value),
                       style: TextStyle( // 🚨 [수정] 글씨 색깔을 테마색으로 변경
                         fontWeight: FontWeight.w600,
                         color: _primaryColor,
@@ -462,7 +464,7 @@ class _AircraftStatsScreenState extends State<AircraftStatsScreen> {
                     borderRadius: BorderRadius.circular(8),
                   ),
                   child: Text(
-                    '$_selectedYear',
+                    tr('$_selectedYear'),
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
@@ -547,12 +549,12 @@ class _AircraftStatsScreenState extends State<AircraftStatsScreen> {
           mainAxisSize: MainAxisSize.min,
           children: [
             Text(
-              '$_totalFlightsInPeriod',
+              tr('$_totalFlightsInPeriod'),
               style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold, color: _primaryColor),
             ),
             const SizedBox(height: 4),
             Text(
-              'Total Flights',
+              tr('Total Flights'),
               style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: Colors.grey[600]),
             ),
           ],
@@ -568,12 +570,12 @@ class _AircraftStatsScreenState extends State<AircraftStatsScreen> {
           mainAxisSize: MainAxisSize.min,
           children: [
             Text(
-              info['abbr'],
+              tr(info['abbr']),
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: info['color']),
             ),
             const SizedBox(height: 4),
-            Text('$count', style: const TextStyle(fontSize: 28, fontWeight: FontWeight.bold)),
-            Text('${percentage.toStringAsFixed(1)}%', style: TextStyle(fontSize: 14, color: Colors.grey[600])),
+            Text(tr('$count'), style: const TextStyle(fontSize: 28, fontWeight: FontWeight.bold)),
+            Text(tr('${percentage.toStringAsFixed(1)}%'), style: TextStyle(fontSize: 14, color: Colors.grey[600])),
           ],
         ),
       );
@@ -599,7 +601,7 @@ class _AircraftStatsScreenState extends State<AircraftStatsScreen> {
             Padding(
               padding: const EdgeInsets.only(bottom: 40), // 🚨 [수정] 간격을 32에서 40으로 늘림
               child: Text(
-                'Aircraft Type',
+                tr('Aircraft Type'),
                 style: Theme.of(context).textTheme.titleLarge?.copyWith(
                   fontWeight: FontWeight.w900,
                   fontSize: 24,
@@ -611,7 +613,7 @@ class _AircraftStatsScreenState extends State<AircraftStatsScreen> {
             SizedBox(
               height: 220,
               child: (pieData.isEmpty || _totalFlightsInPeriod == 0)
-                  ? Center(child: Text('No data for this period.', style: TextStyle(color: Colors.grey.shade600)))
+                  ? Center(child: Text(tr('No data for this period.'), style: TextStyle(color: Colors.grey.shade600)))
                   : Stack(
                 alignment: Alignment.center,
                 children: [
@@ -666,7 +668,7 @@ class _AircraftStatsScreenState extends State<AircraftStatsScreen> {
         children: [
           Container(width: 12, height: 12, decoration: BoxDecoration(color: color, borderRadius: BorderRadius.circular(3))),
           const SizedBox(width: 8),
-          Text(text, style: TextStyle(fontWeight: FontWeight.w600, fontSize: 11, color: Colors.grey[800])),
+          Text(tr(text), style: TextStyle(fontWeight: FontWeight.w600, fontSize: 11, color: Colors.grey[800])),
         ],
       ),
     );
@@ -685,9 +687,9 @@ class _AircraftStatsScreenState extends State<AircraftStatsScreen> {
       child: SegmentedButton<bool>(
         // 🚨 [수정] 체크 표시 제거
         showSelectedIcon: false,
-        segments: const [
-          ButtonSegment<bool>(value: false, label: Text('Flight Logs'), icon: Icon(Icons.list_alt)),
-          ButtonSegment<bool>(value: true, label: Text('Ranking'), icon: Icon(Icons.format_list_numbered)),
+        segments:  [
+          ButtonSegment<bool>(value: false, label: Text(tr('Flight Logs')), icon: Icon(Icons.list_alt)),
+          ButtonSegment<bool>(value: true, label: Text(tr('Ranking')), icon: Icon(Icons.format_list_numbered)),
         ],
         selected: {_showRanking},
         onSelectionChanged: (Set<bool> newSelection) {
@@ -719,9 +721,9 @@ class _AircraftStatsScreenState extends State<AircraftStatsScreen> {
       child: SegmentedButton<RankingType>(
         // 🚨 [수정] 체크 표시 제거
         showSelectedIcon: false,
-        segments: const [
-          ButtonSegment<RankingType>(value: RankingType.aircraft, label: Text('By Aircraft Type'), icon: Icon(Icons.airplanemode_active)),
-          ButtonSegment<RankingType>(value: RankingType.airline, label: Text('By Airline'), icon: Icon(Icons.business)),
+        segments:  [
+          ButtonSegment<RankingType>(value: RankingType.aircraft, label: Text(tr('By Aircraft Type')), icon: Icon(Icons.airplanemode_active)),
+          ButtonSegment<RankingType>(value: RankingType.airline, label: Text(tr('By Airline')), icon: Icon(Icons.business)),
         ],
         selected: {_selectedRankingType},
         onSelectionChanged: (Set<RankingType> newSelection) {
@@ -745,7 +747,7 @@ class _AircraftStatsScreenState extends State<AircraftStatsScreen> {
     final selectedColor = _aircraftGroupInfo[_selectedAircraftGroup]!['color'] as Color;
 
     final inputDecoration = InputDecoration(
-      labelText: 'Aircraft Manufacturer',
+      labelText: tr('Aircraft Manufacturer'),
       labelStyle: TextStyle(color: Colors.grey[600], fontWeight: FontWeight.w500),
       prefixIcon: Icon(Icons.airplanemode_active, color: selectedColor),
       border: OutlineInputBorder(
@@ -785,7 +787,7 @@ class _AircraftStatsScreenState extends State<AircraftStatsScreen> {
           return DropdownMenuItem<String>(
             value: key,
             child: Text(
-              entry['name'],
+              tr(entry['name']),
               style: TextStyle(color: entry['color'], fontWeight: FontWeight.bold, fontSize: 14),
             ),
           );
@@ -811,7 +813,7 @@ class _AircraftStatsScreenState extends State<AircraftStatsScreen> {
             // 수정됨: Icons.flight_off -> Icons.airplanemode_inactive
             Icon(Icons.airplanemode_inactive, size: 48, color: Colors.grey[300]),
             const SizedBox(height: 16),
-            Text('No flights found', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600, color: Colors.grey[700])),
+            Text(tr('No flights found'), style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600, color: Colors.grey[700])),
           ],
         ),
       );
@@ -833,7 +835,7 @@ class _AircraftStatsScreenState extends State<AircraftStatsScreen> {
             Padding(
               padding: const EdgeInsets.fromLTRB(4, 16, 4, 8),
               child: Text(
-                aircraftModel,
+                tr(aircraftModel),
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: color),
               ),
             ),
@@ -846,7 +848,7 @@ class _AircraftStatsScreenState extends State<AircraftStatsScreen> {
 
   Widget _buildAirlineRankingList() {
     if (_rankedAirlines.isEmpty) {
-      return const Center(heightFactor: 5, child: Text('No airlines to rank.'));
+      return  Center(heightFactor: 5, child: Text(tr('No airlines to rank.')));
     }
     final maxCount = _rankedAirlines.isNotEmpty ? _rankedAirlines.first['count'] as int : 1;
     final color = _aircraftGroupInfo[_selectedAircraftGroup]!['color'] as Color;
@@ -870,7 +872,7 @@ class _AircraftStatsScreenState extends State<AircraftStatsScreen> {
 
   Widget _buildAircraftRankingList() {
     if (_rankedAircrafts.isEmpty) {
-      return const Center(heightFactor: 5, child: Text('No aircraft to rank.'));
+      return  Center(heightFactor: 5, child: Text(tr('No aircraft to rank.')));
     }
     final maxCount = _rankedAircrafts.isNotEmpty ? _rankedAircrafts.first['count'] as int : 1;
 
@@ -917,15 +919,15 @@ class _AircraftStatsScreenState extends State<AircraftStatsScreen> {
                     gradient: LinearGradient(colors: [color, color.withOpacity(0.7)]),
                     borderRadius: BorderRadius.circular(8),
                   ),
-                  child: Center(child: Text('#${index + 1}', style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 14))),
+                  child: Center(child: Text(tr('#${index + 1}'), style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 14))),
                 ),
                 const SizedBox(width: 12),
-                Expanded(child: Text(name, style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 16), overflow: TextOverflow.ellipsis)),
+                Expanded(child: Text(tr(name), style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 16), overflow: TextOverflow.ellipsis)),
                 const SizedBox(width: 12),
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                   decoration: BoxDecoration(color: color.withOpacity(0.1), borderRadius: BorderRadius.circular(8)),
-                  child: Text('$count Flights', style: TextStyle(fontWeight: FontWeight.bold, color: color, fontSize: 14)),
+                  child: Text(tr('$count Flights'), style: TextStyle(fontWeight: FontWeight.bold, color: color, fontSize: 14)),
                 ),
               ],
             ),
@@ -975,7 +977,7 @@ class _AircraftStatsScreenState extends State<AircraftStatsScreen> {
                 ),
                 const SizedBox(width: 12),
                 Text(
-                  "Yearly Trend (10 Years)",
+                  tr("Yearly Trend (10 Years)"),
                   style: Theme.of(context).textTheme.titleLarge?.copyWith(
                     fontWeight: FontWeight.bold,
                     fontSize: 20,
@@ -999,12 +1001,12 @@ class _AircraftStatsScreenState extends State<AircraftStatsScreen> {
                   titlesData: FlTitlesData(
                     leftTitles: AxisTitles(sideTitles: SideTitles(showTitles: true, reservedSize: 40, getTitlesWidget: (value, meta) {
                       if (value == meta.max || value == meta.min) return Container();
-                      return SideTitleWidget(axisSide: meta.axisSide, child: Text(value.toInt().toString(), style: TextStyle(color: Colors.grey[600], fontSize: 12, fontWeight: FontWeight.w500)));
+                      return SideTitleWidget(axisSide: meta.axisSide, child: Text(tr(value.toInt().toString()), style: TextStyle(color: Colors.grey[600], fontSize: 12, fontWeight: FontWeight.w500)));
                     })),
                     topTitles: const AxisTitles(sideTitles: SideTitles(showTitles: false)),
                     rightTitles: const AxisTitles(sideTitles: SideTitles(showTitles: false)),
                     bottomTitles: AxisTitles(sideTitles: SideTitles(showTitles: true, reservedSize: 30, interval: 1, getTitlesWidget: (value, meta) {
-                      return SideTitleWidget(axisSide: meta.axisSide, child: Text(value.toInt().toString().substring(2), style: TextStyle(fontSize: 12, color: Colors.grey[600], fontWeight: FontWeight.w500)));
+                      return SideTitleWidget(axisSide: meta.axisSide, child: Text(tr(value.toInt().toString().substring(2)), style: TextStyle(fontSize: 12, color: Colors.grey[600], fontWeight: FontWeight.w500)));
                     })),
                   ),
                   borderData: FlBorderData(show: true, border: Border(bottom: BorderSide(color: Colors.grey[300]!, width: 1), left: BorderSide(color: Colors.grey[300]!, width: 1))),
@@ -1036,7 +1038,7 @@ class _AircraftStatsScreenState extends State<AircraftStatsScreen> {
     String displayDate = log.date;
     if (displayDate != 'Unknown') {
       try {
-        displayDate = DateFormat.yMMMd('en_US').format(DateTime.parse(displayDate));
+        displayDate = DateFormat.yMMMd(AppLocale.instance.locale.languageCode).format(DateTime.parse(displayDate));
       } catch (e) {}
     }
 
@@ -1074,18 +1076,18 @@ class _AircraftStatsScreenState extends State<AircraftStatsScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(log.airlineName ?? 'Unknown', style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 16, color: Colors.black87)),
+                    Text(log.airlineName ?? tr('Unknown'), style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 16, color: Colors.black87)),
                     const SizedBox(height: 4),
-                    Text(displayAircraft, style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: color)),
+                    Text(tr(displayAircraft), style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: color)),
                     const SizedBox(height: 8),
-                    Text('${log.departureIata ?? 'N/A'} → ${log.arrivalIata ?? 'N/A'}', style: TextStyle(fontSize: 14, color: Colors.grey[600], fontWeight: FontWeight.w500)),
+                    Text(tr('${log.departureIata ?? 'N/A'} → ${log.arrivalIata ?? 'N/A'}'), style: TextStyle(fontSize: 14, color: Colors.grey[600], fontWeight: FontWeight.w500)),
                   ],
                 ),
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
-                  Text(displayDate, style: TextStyle(fontSize: 12, color: Colors.grey[600], fontWeight: FontWeight.w500)),
+                  Text(tr(displayDate), style: TextStyle(fontSize: 12, color: Colors.grey[600], fontWeight: FontWeight.w500)),
                   if (log.rating > 0) ...[
                     const SizedBox(height: 8),
                     RatingBar.builder(

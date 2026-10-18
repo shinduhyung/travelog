@@ -1,196 +1,1586 @@
-[
-  {"iso_a3": "ISL", "hdi": 0.972},
-  {"iso_a3": "NOR", "hdi": 0.970},
-  {"iso_a3": "CHE", "hdi": 0.970},
-  {"iso_a3": "DNK", "hdi": 0.962},
-  {"iso_a3": "DEU", "hdi": 0.959},
-  {"iso_a3": "SWE", "hdi": 0.959},
-  {"iso_a3": "AUS", "hdi": 0.958},
-  {"iso_a3": "NLD", "hdi": 0.955},
-  {"iso_a3": "HKG", "hdi": 0.955},
-  {"iso_a3": "BEL", "hdi": 0.951},
-  {"iso_a3": "IRL", "hdi": 0.949},
-  {"iso_a3": "FIN", "hdi": 0.948},
-  {"iso_a3": "SGP", "hdi": 0.946},
-  {"iso_a3": "GBR", "hdi": 0.946},
-  {"iso_a3": "ARE", "hdi": 0.940},
-  {"iso_a3": "CAN", "hdi": 0.939},
-  {"iso_a3": "LIE", "hdi": 0.938},
-  {"iso_a3": "NZL", "hdi": 0.938},
-  {"iso_a3": "USA", "hdi": 0.938},
-  {"iso_a3": "KOR", "hdi": 0.937},
-  {"iso_a3": "TWN", "hdi": 0.926},
-  {"iso_a3": "SVN", "hdi": 0.931},
-  {"iso_a3": "AUT", "hdi": 0.930},
-  {"iso_a3": "JPN", "hdi": 0.925},
-  {"iso_a3": "MLT", "hdi": 0.924},
-  {"iso_a3": "LUX", "hdi": 0.922},
-  {"iso_a3": "FRA", "hdi": 0.920},
-  {"iso_a3": "ISR", "hdi": 0.919},
-  {"iso_a3": "ESP", "hdi": 0.918},
-  {"iso_a3": "CZE", "hdi": 0.915},
-  {"iso_a3": "ITA", "hdi": 0.915},
-  {"iso_a3": "SMR", "hdi": 0.915},
-  {"iso_a3": "AND", "hdi": 0.913},
-  {"iso_a3": "CYP", "hdi": 0.913},
-  {"iso_a3": "GRC", "hdi": 0.908},
-  {"iso_a3": "POL", "hdi": 0.906},
-  {"iso_a3": "EST", "hdi": 0.905},
-  {"iso_a3": "SAU", "hdi": 0.900},
-  {"iso_a3": "BHR", "hdi": 0.899},
-  {"iso_a3": "LTU", "hdi": 0.895},
-  {"iso_a3": "PRT", "hdi": 0.890},
-  {"iso_a3": "HRV", "hdi": 0.889},
-  {"iso_a3": "LVA", "hdi": 0.889},
-  {"iso_a3": "QAT", "hdi": 0.886},
-  {"iso_a3": "SVK", "hdi": 0.880},
-  {"iso_a3": "CHL", "hdi": 0.878},
-  {"iso_a3": "HUN", "hdi": 0.870},
-  {"iso_a3": "ARG", "hdi": 0.865},
-  {"iso_a3": "MNE", "hdi": 0.862},
-  {"iso_a3": "URY", "hdi": 0.862},
-  {"iso_a3": "OMN", "hdi": 0.858},
-  {"iso_a3": "TUR", "hdi": 0.853},
-  {"iso_a3": "KWT", "hdi": 0.852},
-  {"iso_a3": "ATG", "hdi": 0.851},
-  {"iso_a3": "SYC", "hdi": 0.848},
-  {"iso_a3": "BGR", "hdi": 0.845},
-  {"iso_a3": "ROU", "hdi": 0.845},
-  {"iso_a3": "GEO", "hdi": 0.844},
-  {"iso_a3": "KNA", "hdi": 0.840},
-  {"iso_a3": "PAN", "hdi": 0.839},
-  {"iso_a3": "BRN", "hdi": 0.837},
-  {"iso_a3": "KAZ", "hdi": 0.837},
-  {"iso_a3": "CRI", "hdi": 0.833},
-  {"iso_a3": "SRB", "hdi": 0.833},
-  {"iso_a3": "RUS", "hdi": 0.832},
-  {"iso_a3": "BLR", "hdi": 0.824},
-  {"iso_a3": "BHS", "hdi": 0.820},
-  {"iso_a3": "MYS", "hdi": 0.819},
-  {"iso_a3": "MKD", "hdi": 0.815},
-  {"iso_a3": "BRB", "hdi": 0.811},
-  {"iso_a3": "ARM", "hdi": 0.811},
-  {"iso_a3": "ALB", "hdi": 0.810},
-  {"iso_a3": "TTO", "hdi": 0.807},
-  {"iso_a3": "MUS", "hdi": 0.806},
-  {"iso_a3": "BIH", "hdi": 0.804},
-  {"iso_a3": "IRN", "hdi": 0.799},
-  {"iso_a3": "VCT", "hdi": 0.798},
-  {"iso_a3": "THA", "hdi": 0.798},
-  {"iso_a3": "CHN", "hdi": 0.797},
-  {"iso_a3": "PER", "hdi": 0.794},
-  {"iso_a3": "GRD", "hdi": 0.791},
-  {"iso_a3": "AZE", "hdi": 0.789},
-  {"iso_a3": "MEX", "hdi": 0.789},
-  {"iso_a3": "COL", "hdi": 0.788},
-  {"iso_a3": "BRA", "hdi": 0.786},
-  {"iso_a3": "PLW", "hdi": 0.786},
-  {"iso_a3": "MDA", "hdi": 0.785},
-  {"iso_a3": "UKR", "hdi": 0.779},
-  {"iso_a3": "ECU", "hdi": 0.777},
-  {"iso_a3": "DOM", "hdi": 0.776},
-  {"iso_a3": "GUY", "hdi": 0.776},
-  {"iso_a3": "LKA", "hdi": 0.776},
-  {"iso_a3": "TON", "hdi": 0.769},
-  {"iso_a3": "MDV", "hdi": 0.766},
-  {"iso_a3": "VNM", "hdi": 0.766},
-  {"iso_a3": "TKM", "hdi": 0.764},
-  {"iso_a3": "DZA", "hdi": 0.763},
-  {"iso_a3": "CUB", "hdi": 0.762},
-  {"iso_a3": "DMA", "hdi": 0.761},
-  {"iso_a3": "PRY", "hdi": 0.756},
-  {"iso_a3": "EGY", "hdi": 0.754},
-  {"iso_a3": "JOR", "hdi": 0.754},
-  {"iso_a3": "LBN", "hdi": 0.752},
-  {"iso_a3": "LCA", "hdi": 0.748},
-  {"iso_a3": "MNG", "hdi": 0.747},
-  {"iso_a3": "TUN", "hdi": 0.746},
-  {"iso_a3": "ZAF", "hdi": 0.741},
-  {"iso_a3": "UZB", "hdi": 0.740},
-  {"iso_a3": "BOL", "hdi": 0.733},
-  {"iso_a3": "GAB", "hdi": 0.733},
-  {"iso_a3": "MHL", "hdi": 0.733},
-  {"iso_a3": "BWA", "hdi": 0.731},
-  {"iso_a3": "FJI", "hdi": 0.731},
-  {"iso_a3": "IDN", "hdi": 0.728},
-  {"iso_a3": "SUR", "hdi": 0.722},
-  {"iso_a3": "BLZ", "hdi": 0.721},
-  {"iso_a3": "LBY", "hdi": 0.721},
-  {"iso_a3": "JAM", "hdi": 0.720},
-  {"iso_a3": "KGZ", "hdi": 0.720},
-  {"iso_a3": "PHL", "hdi": 0.720},
-  {"iso_a3": "MAR", "hdi": 0.710},
-  {"iso_a3": "VEN", "hdi": 0.709},
-  {"iso_a3": "WSM", "hdi": 0.708},
-  {"iso_a3": "NIC", "hdi": 0.706},
-  {"iso_a3": "NRU", "hdi": 0.703},
-  {"iso_a3": "BTN", "hdi": 0.698},
-  {"iso_a3": "SWZ", "hdi": 0.695},
-  {"iso_a3": "IRQ", "hdi": 0.695},
-  {"iso_a3": "TJK", "hdi": 0.691},
-  {"iso_a3": "TUV", "hdi": 0.689},
-  {"iso_a3": "BGD", "hdi": 0.685},
-  {"iso_a3": "IND", "hdi": 0.685},
-  {"iso_a3": "SLV", "hdi": 0.678},
-  {"iso_a3": "GNQ", "hdi": 0.674},
-  {"iso_a3": "PSE", "hdi": 0.674},
-  {"iso_a3": "CPV", "hdi": 0.668},
-  {"iso_a3": "NAM", "hdi": 0.665},
-  {"iso_a3": "GTM", "hdi": 0.662},
-  {"iso_a3": "COG", "hdi": 0.649},
-  {"iso_a3": "HND", "hdi": 0.645},
-  {"iso_a3": "KIR", "hdi": 0.644},
-  {"iso_a3": "STP", "hdi": 0.637},
-  {"iso_a3": "TLS", "hdi": 0.634},
-  {"iso_a3": "GHA", "hdi": 0.628},
-  {"iso_a3": "KEN", "hdi": 0.628},
-  {"iso_a3": "NPL", "hdi": 0.622},
-  {"iso_a3": "VUT", "hdi": 0.621},
-  {"iso_a3": "LAO", "hdi": 0.617},
-  {"iso_a3": "AGO", "hdi": 0.616},
-  {"iso_a3": "FSM", "hdi": 0.615},
-  {"iso_a3": "MMR", "hdi": 0.609},
-  {"iso_a3": "KHM", "hdi": 0.606},
-  {"iso_a3": "COM", "hdi": 0.603},
-  {"iso_a3": "ZWE", "hdi": 0.598},
-  {"iso_a3": "ZMB", "hdi": 0.595},
-  {"iso_a3": "CMR", "hdi": 0.588},
-  {"iso_a3": "SLB", "hdi": 0.584},
-  {"iso_a3": "CIV", "hdi": 0.582},
-  {"iso_a3": "UGA", "hdi": 0.582},
-  {"iso_a3": "RWA", "hdi": 0.578},
-  {"iso_a3": "PNG", "hdi": 0.576},
-  {"iso_a3": "TGO", "hdi": 0.571},
-  {"iso_a3": "SYR", "hdi": 0.564},
-  {"iso_a3": "MRT", "hdi": 0.563},
-  {"iso_a3": "NGA", "hdi": 0.560},
-  {"iso_a3": "TZA", "hdi": 0.555},
-  {"iso_a3": "HTI", "hdi": 0.554},
-  {"iso_a3": "LSO", "hdi": 0.550},
-  {"iso_a3": "PAK", "hdi": 0.544},
-  {"iso_a3": "SEN", "hdi": 0.530},
-  {"iso_a3": "GMB", "hdi": 0.524},
-  {"iso_a3": "COD", "hdi": 0.522},
-  {"iso_a3": "MWI", "hdi": 0.517},
-  {"iso_a3": "BEN", "hdi": 0.515},
-  {"iso_a3": "GNB", "hdi": 0.514},
-  {"iso_a3": "DJI", "hdi": 0.513},
-  {"iso_a3": "SDN", "hdi": 0.511},
-  {"iso_a3": "LBR", "hdi": 0.510},
-  {"iso_a3": "ERI", "hdi": 0.503},
-  {"iso_a3": "GIN", "hdi": 0.500},
-  {"iso_a3": "ETH", "hdi": 0.497},
-  {"iso_a3": "AFG", "hdi": 0.496},
-  {"iso_a3": "MOZ", "hdi": 0.493},
-  {"iso_a3": "MDG", "hdi": 0.487},
-  {"iso_a3": "YEM", "hdi": 0.470},
-  {"iso_a3": "SLE", "hdi": 0.467},
-  {"iso_a3": "BFA", "hdi": 0.459},
-  {"iso_a3": "BDI", "hdi": 0.439},
-  {"iso_a3": "MLI", "hdi": 0.419},
-  {"iso_a3": "NER", "hdi": 0.419},
-  {"iso_a3": "TCD", "hdi": 0.416},
-  {"iso_a3": "CAF", "hdi": 0.414},
-  {"iso_a3": "SOM", "hdi": 0.404},
-  {"iso_a3": "SSD", "hdi": 0.388}
-]
+{
+  "schema_version": 1,
+  "dataset_id": "hdi_data",
+  "metadata": {
+    "source_url": null,
+    "reference_period": null,
+    "updated_at": null
+  },
+  "legacy_layout": "list",
+  "tables": [
+    {
+      "id": "main",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "iso_a3"
+      ],
+      "metrics": [
+        {
+          "id": "hdi",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "iso_a3": "ISL"
+          },
+          "values": {
+            "hdi": 0.972
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NOR"
+          },
+          "values": {
+            "hdi": 0.97
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CHE"
+          },
+          "values": {
+            "hdi": 0.97
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DNK"
+          },
+          "values": {
+            "hdi": 0.962
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DEU"
+          },
+          "values": {
+            "hdi": 0.959
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SWE"
+          },
+          "values": {
+            "hdi": 0.959
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AUS"
+          },
+          "values": {
+            "hdi": 0.958
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NLD"
+          },
+          "values": {
+            "hdi": 0.955
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HKG"
+          },
+          "values": {
+            "hdi": 0.955
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BEL"
+          },
+          "values": {
+            "hdi": 0.951
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IRL"
+          },
+          "values": {
+            "hdi": 0.949
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FIN"
+          },
+          "values": {
+            "hdi": 0.948
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SGP"
+          },
+          "values": {
+            "hdi": 0.946
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GBR"
+          },
+          "values": {
+            "hdi": 0.946
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ARE"
+          },
+          "values": {
+            "hdi": 0.94
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CAN"
+          },
+          "values": {
+            "hdi": 0.939
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LIE"
+          },
+          "values": {
+            "hdi": 0.938
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NZL"
+          },
+          "values": {
+            "hdi": 0.938
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "USA"
+          },
+          "values": {
+            "hdi": 0.938
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KOR"
+          },
+          "values": {
+            "hdi": 0.937
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TWN"
+          },
+          "values": {
+            "hdi": 0.926
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SVN"
+          },
+          "values": {
+            "hdi": 0.931
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AUT"
+          },
+          "values": {
+            "hdi": 0.93
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "JPN"
+          },
+          "values": {
+            "hdi": 0.925
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MLT"
+          },
+          "values": {
+            "hdi": 0.924
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LUX"
+          },
+          "values": {
+            "hdi": 0.922
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FRA"
+          },
+          "values": {
+            "hdi": 0.92
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ISR"
+          },
+          "values": {
+            "hdi": 0.919
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ESP"
+          },
+          "values": {
+            "hdi": 0.918
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CZE"
+          },
+          "values": {
+            "hdi": 0.915
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ITA"
+          },
+          "values": {
+            "hdi": 0.915
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SMR"
+          },
+          "values": {
+            "hdi": 0.915
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AND"
+          },
+          "values": {
+            "hdi": 0.913
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CYP"
+          },
+          "values": {
+            "hdi": 0.913
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GRC"
+          },
+          "values": {
+            "hdi": 0.908
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "POL"
+          },
+          "values": {
+            "hdi": 0.906
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "EST"
+          },
+          "values": {
+            "hdi": 0.905
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SAU"
+          },
+          "values": {
+            "hdi": 0.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BHR"
+          },
+          "values": {
+            "hdi": 0.899
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LTU"
+          },
+          "values": {
+            "hdi": 0.895
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PRT"
+          },
+          "values": {
+            "hdi": 0.89
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HRV"
+          },
+          "values": {
+            "hdi": 0.889
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LVA"
+          },
+          "values": {
+            "hdi": 0.889
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "QAT"
+          },
+          "values": {
+            "hdi": 0.886
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SVK"
+          },
+          "values": {
+            "hdi": 0.88
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CHL"
+          },
+          "values": {
+            "hdi": 0.878
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HUN"
+          },
+          "values": {
+            "hdi": 0.87
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ARG"
+          },
+          "values": {
+            "hdi": 0.865
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MNE"
+          },
+          "values": {
+            "hdi": 0.862
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "URY"
+          },
+          "values": {
+            "hdi": 0.862
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "OMN"
+          },
+          "values": {
+            "hdi": 0.858
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TUR"
+          },
+          "values": {
+            "hdi": 0.853
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KWT"
+          },
+          "values": {
+            "hdi": 0.852
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ATG"
+          },
+          "values": {
+            "hdi": 0.851
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SYC"
+          },
+          "values": {
+            "hdi": 0.848
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BGR"
+          },
+          "values": {
+            "hdi": 0.845
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ROU"
+          },
+          "values": {
+            "hdi": 0.845
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GEO"
+          },
+          "values": {
+            "hdi": 0.844
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KNA"
+          },
+          "values": {
+            "hdi": 0.84
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PAN"
+          },
+          "values": {
+            "hdi": 0.839
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BRN"
+          },
+          "values": {
+            "hdi": 0.837
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KAZ"
+          },
+          "values": {
+            "hdi": 0.837
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CRI"
+          },
+          "values": {
+            "hdi": 0.833
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SRB"
+          },
+          "values": {
+            "hdi": 0.833
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "RUS"
+          },
+          "values": {
+            "hdi": 0.832
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BLR"
+          },
+          "values": {
+            "hdi": 0.824
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BHS"
+          },
+          "values": {
+            "hdi": 0.82
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MYS"
+          },
+          "values": {
+            "hdi": 0.819
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MKD"
+          },
+          "values": {
+            "hdi": 0.815
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BRB"
+          },
+          "values": {
+            "hdi": 0.811
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ARM"
+          },
+          "values": {
+            "hdi": 0.811
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ALB"
+          },
+          "values": {
+            "hdi": 0.81
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TTO"
+          },
+          "values": {
+            "hdi": 0.807
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MUS"
+          },
+          "values": {
+            "hdi": 0.806
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BIH"
+          },
+          "values": {
+            "hdi": 0.804
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IRN"
+          },
+          "values": {
+            "hdi": 0.799
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VCT"
+          },
+          "values": {
+            "hdi": 0.798
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "THA"
+          },
+          "values": {
+            "hdi": 0.798
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CHN"
+          },
+          "values": {
+            "hdi": 0.797
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PER"
+          },
+          "values": {
+            "hdi": 0.794
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GRD"
+          },
+          "values": {
+            "hdi": 0.791
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AZE"
+          },
+          "values": {
+            "hdi": 0.789
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MEX"
+          },
+          "values": {
+            "hdi": 0.789
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "COL"
+          },
+          "values": {
+            "hdi": 0.788
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BRA"
+          },
+          "values": {
+            "hdi": 0.786
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PLW"
+          },
+          "values": {
+            "hdi": 0.786
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MDA"
+          },
+          "values": {
+            "hdi": 0.785
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "UKR"
+          },
+          "values": {
+            "hdi": 0.779
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ECU"
+          },
+          "values": {
+            "hdi": 0.777
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DOM"
+          },
+          "values": {
+            "hdi": 0.776
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GUY"
+          },
+          "values": {
+            "hdi": 0.776
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LKA"
+          },
+          "values": {
+            "hdi": 0.776
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TON"
+          },
+          "values": {
+            "hdi": 0.769
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MDV"
+          },
+          "values": {
+            "hdi": 0.766
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VNM"
+          },
+          "values": {
+            "hdi": 0.766
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TKM"
+          },
+          "values": {
+            "hdi": 0.764
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DZA"
+          },
+          "values": {
+            "hdi": 0.763
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CUB"
+          },
+          "values": {
+            "hdi": 0.762
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DMA"
+          },
+          "values": {
+            "hdi": 0.761
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PRY"
+          },
+          "values": {
+            "hdi": 0.756
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "EGY"
+          },
+          "values": {
+            "hdi": 0.754
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "JOR"
+          },
+          "values": {
+            "hdi": 0.754
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LBN"
+          },
+          "values": {
+            "hdi": 0.752
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LCA"
+          },
+          "values": {
+            "hdi": 0.748
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MNG"
+          },
+          "values": {
+            "hdi": 0.747
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TUN"
+          },
+          "values": {
+            "hdi": 0.746
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ZAF"
+          },
+          "values": {
+            "hdi": 0.741
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "UZB"
+          },
+          "values": {
+            "hdi": 0.74
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BOL"
+          },
+          "values": {
+            "hdi": 0.733
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GAB"
+          },
+          "values": {
+            "hdi": 0.733
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MHL"
+          },
+          "values": {
+            "hdi": 0.733
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BWA"
+          },
+          "values": {
+            "hdi": 0.731
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FJI"
+          },
+          "values": {
+            "hdi": 0.731
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IDN"
+          },
+          "values": {
+            "hdi": 0.728
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SUR"
+          },
+          "values": {
+            "hdi": 0.722
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BLZ"
+          },
+          "values": {
+            "hdi": 0.721
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LBY"
+          },
+          "values": {
+            "hdi": 0.721
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "JAM"
+          },
+          "values": {
+            "hdi": 0.72
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KGZ"
+          },
+          "values": {
+            "hdi": 0.72
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PHL"
+          },
+          "values": {
+            "hdi": 0.72
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MAR"
+          },
+          "values": {
+            "hdi": 0.71
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VEN"
+          },
+          "values": {
+            "hdi": 0.709
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "WSM"
+          },
+          "values": {
+            "hdi": 0.708
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NIC"
+          },
+          "values": {
+            "hdi": 0.706
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NRU"
+          },
+          "values": {
+            "hdi": 0.703
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BTN"
+          },
+          "values": {
+            "hdi": 0.698
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SWZ"
+          },
+          "values": {
+            "hdi": 0.695
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IRQ"
+          },
+          "values": {
+            "hdi": 0.695
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TJK"
+          },
+          "values": {
+            "hdi": 0.691
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TUV"
+          },
+          "values": {
+            "hdi": 0.689
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BGD"
+          },
+          "values": {
+            "hdi": 0.685
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IND"
+          },
+          "values": {
+            "hdi": 0.685
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SLV"
+          },
+          "values": {
+            "hdi": 0.678
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GNQ"
+          },
+          "values": {
+            "hdi": 0.674
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PSE"
+          },
+          "values": {
+            "hdi": 0.674
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CPV"
+          },
+          "values": {
+            "hdi": 0.668
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NAM"
+          },
+          "values": {
+            "hdi": 0.665
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GTM"
+          },
+          "values": {
+            "hdi": 0.662
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "COG"
+          },
+          "values": {
+            "hdi": 0.649
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HND"
+          },
+          "values": {
+            "hdi": 0.645
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KIR"
+          },
+          "values": {
+            "hdi": 0.644
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "STP"
+          },
+          "values": {
+            "hdi": 0.637
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TLS"
+          },
+          "values": {
+            "hdi": 0.634
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GHA"
+          },
+          "values": {
+            "hdi": 0.628
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KEN"
+          },
+          "values": {
+            "hdi": 0.628
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NPL"
+          },
+          "values": {
+            "hdi": 0.622
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VUT"
+          },
+          "values": {
+            "hdi": 0.621
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LAO"
+          },
+          "values": {
+            "hdi": 0.617
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AGO"
+          },
+          "values": {
+            "hdi": 0.616
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FSM"
+          },
+          "values": {
+            "hdi": 0.615
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MMR"
+          },
+          "values": {
+            "hdi": 0.609
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KHM"
+          },
+          "values": {
+            "hdi": 0.606
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "COM"
+          },
+          "values": {
+            "hdi": 0.603
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ZWE"
+          },
+          "values": {
+            "hdi": 0.598
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ZMB"
+          },
+          "values": {
+            "hdi": 0.595
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CMR"
+          },
+          "values": {
+            "hdi": 0.588
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SLB"
+          },
+          "values": {
+            "hdi": 0.584
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CIV"
+          },
+          "values": {
+            "hdi": 0.582
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "UGA"
+          },
+          "values": {
+            "hdi": 0.582
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "RWA"
+          },
+          "values": {
+            "hdi": 0.578
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PNG"
+          },
+          "values": {
+            "hdi": 0.576
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TGO"
+          },
+          "values": {
+            "hdi": 0.571
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SYR"
+          },
+          "values": {
+            "hdi": 0.564
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MRT"
+          },
+          "values": {
+            "hdi": 0.563
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NGA"
+          },
+          "values": {
+            "hdi": 0.56
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TZA"
+          },
+          "values": {
+            "hdi": 0.555
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HTI"
+          },
+          "values": {
+            "hdi": 0.554
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LSO"
+          },
+          "values": {
+            "hdi": 0.55
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PAK"
+          },
+          "values": {
+            "hdi": 0.544
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SEN"
+          },
+          "values": {
+            "hdi": 0.53
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GMB"
+          },
+          "values": {
+            "hdi": 0.524
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "COD"
+          },
+          "values": {
+            "hdi": 0.522
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MWI"
+          },
+          "values": {
+            "hdi": 0.517
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BEN"
+          },
+          "values": {
+            "hdi": 0.515
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GNB"
+          },
+          "values": {
+            "hdi": 0.514
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DJI"
+          },
+          "values": {
+            "hdi": 0.513
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SDN"
+          },
+          "values": {
+            "hdi": 0.511
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LBR"
+          },
+          "values": {
+            "hdi": 0.51
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ERI"
+          },
+          "values": {
+            "hdi": 0.503
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GIN"
+          },
+          "values": {
+            "hdi": 0.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ETH"
+          },
+          "values": {
+            "hdi": 0.497
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AFG"
+          },
+          "values": {
+            "hdi": 0.496
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MOZ"
+          },
+          "values": {
+            "hdi": 0.493
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MDG"
+          },
+          "values": {
+            "hdi": 0.487
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "YEM"
+          },
+          "values": {
+            "hdi": 0.47
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SLE"
+          },
+          "values": {
+            "hdi": 0.467
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BFA"
+          },
+          "values": {
+            "hdi": 0.459
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BDI"
+          },
+          "values": {
+            "hdi": 0.439
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MLI"
+          },
+          "values": {
+            "hdi": 0.419
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NER"
+          },
+          "values": {
+            "hdi": 0.419
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TCD"
+          },
+          "values": {
+            "hdi": 0.416
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CAF"
+          },
+          "values": {
+            "hdi": 0.414
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SOM"
+          },
+          "values": {
+            "hdi": 0.404
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SSD"
+          },
+          "values": {
+            "hdi": 0.388
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,14 +1,162 @@
-[
-  {"name": "Taiyuan", "country": "China", "surveillance": "117.0", "continent": "Asia"},
-  {"name": "Wuxi", "country": "China", "surveillance": "90.5", "continent": "Asia"},
-  {"name": "London", "country": "UK", "surveillance": "73.3", "continent": "Europe"},
-  {"name": "Indore", "country": "India", "surveillance": "64.4", "continent": "Asia"},
-  {"name": "Changsha", "country": "China", "surveillance": "55.8", "continent": "Asia"},
-  {"name": "Beijing", "country": "China", "surveillance": "55.0", "continent": "Asia"},
-  {"name": "Hangzhou", "country": "China", "surveillance": "51.0", "continent": "Asia"},
-  {"name": "Qingdao", "country": "China", "surveillance": "45.6", "continent": "Asia"},
-  {"name": "Kunming", "country": "China", "surveillance": "44.0", "continent": "Asia"},
-  {"name": "Xiamen", "country": "China", "surveillance": "39.6", "continent": "Asia"},
-  {"name": "Harbin", "country": "China", "surveillance": "38.1", "continent": "Asia"},
-  {"name": "Hyderabad", "country": "India", "surveillance": "36.5", "continent": "Asia"}
-]
+{
+  "schema_version": 1,
+  "dataset_id": "surveillance",
+  "metadata": {
+    "source_url": null,
+    "reference_period": null,
+    "updated_at": null
+  },
+  "legacy_layout": "list",
+  "tables": [
+    {
+      "id": "main",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "name",
+        "country"
+      ],
+      "metrics": [
+        {
+          "id": "surveillance",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        },
+        {
+          "id": "continent",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "name": "Taiyuan",
+            "country": "China"
+          },
+          "values": {
+            "surveillance": "117.0",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Wuxi",
+            "country": "China"
+          },
+          "values": {
+            "surveillance": "90.5",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "London",
+            "country": "UK"
+          },
+          "values": {
+            "surveillance": "73.3",
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Indore",
+            "country": "India"
+          },
+          "values": {
+            "surveillance": "64.4",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Changsha",
+            "country": "China"
+          },
+          "values": {
+            "surveillance": "55.8",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Beijing",
+            "country": "China"
+          },
+          "values": {
+            "surveillance": "55.0",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Hangzhou",
+            "country": "China"
+          },
+          "values": {
+            "surveillance": "51.0",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Qingdao",
+            "country": "China"
+          },
+          "values": {
+            "surveillance": "45.6",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Kunming",
+            "country": "China"
+          },
+          "values": {
+            "surveillance": "44.0",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Xiamen",
+            "country": "China"
+          },
+          "values": {
+            "surveillance": "39.6",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Harbin",
+            "country": "China"
+          },
+          "values": {
+            "surveillance": "38.1",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Hyderabad",
+            "country": "India"
+          },
+          "values": {
+            "surveillance": "36.5",
+            "continent": "Asia"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -8,6 +8,7 @@ import 'dart:ui'; // For ImageFilter
 import 'package:collection/collection.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_colorpicker/flutter_colorpicker.dart';
 import 'package:flutter_map/flutter_map.dart';
@@ -431,7 +432,7 @@ class _LandmarkMapScreenState extends State<LandmarkMapScreen> {
     return IconButton(
       icon: Icon(icon, size: 22, color: Colors.grey.shade800),
       onPressed: onPressed,
-      tooltip: tooltip,
+      tooltip: tr(tooltip),
       visualDensity: VisualDensity.compact,
       splashRadius: 20,
     );
@@ -439,6 +440,7 @@ class _LandmarkMapScreenState extends State<LandmarkMapScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final countryProvider = Provider.of<CountryProvider>(context, listen: false);
     Color? themeColor;
 
@@ -582,7 +584,7 @@ class _LandmarkMapScreenState extends State<LandmarkMapScreen> {
                   _buildIconButton(
                     icon: Icons.settings_rounded,
                     onPressed: _showColorSettingsDialog,
-                    tooltip: 'Settings',
+                    tooltip: tr('Settings'),
                   ),
                 ],
               ),
@@ -603,8 +605,8 @@ class _LandmarkMapScreenState extends State<LandmarkMapScreen> {
               child: TextField(
                 controller: _searchController,
                 style: const TextStyle(fontSize: 12),
-                decoration: const InputDecoration(
-                  hintText: 'Search...',
+                decoration:  InputDecoration(
+                  hintText: tr('Search...'),
                   border: InputBorder.none,
                   prefixIcon: Icon(Icons.search, size: 16),
                   contentPadding: EdgeInsets.symmetric(vertical: 8, horizontal: 8),
@@ -634,7 +636,7 @@ class _LandmarkMapScreenState extends State<LandmarkMapScreen> {
 
               return ListTile(
                 title: Text(item.name),
-                subtitle: Text(item.countriesIsoA3.join(', ')),
+                subtitle: Text(tr(item.countriesIsoA3.join(', '))),
                 onTap: () => provider.toggleVisitedStatus(item.name),
                 trailing: Row(
                   mainAxisSize: MainAxisSize.min,
@@ -642,14 +644,14 @@ class _LandmarkMapScreenState extends State<LandmarkMapScreen> {
                     IconButton(
                         icon: const Icon(Icons.info_outline),
                         onPressed: () => _showLandmarkDetailsModal(item, themeColor),
-                        tooltip: 'Show Details'),
+                        tooltip: tr('Show Details')),
                     IconButton(
                       icon: Icon(
                         isWishlisted ? Icons.favorite : Icons.favorite_border,
                         color: isWishlisted ? Colors.red : Colors.grey,
                       ),
                       onPressed: () => provider.toggleWishlistStatus(item.name),
-                      tooltip: isWishlisted ? 'Remove from wishlist' : 'Add to wishlist',
+                      tooltip: tr(isWishlisted ? 'Remove from wishlist' : 'Add to wishlist'),
                     ),
                     Checkbox(value: isVisited, onChanged: (bool? value) => provider.toggleVisitedStatus(item.name)),
                   ],
@@ -690,7 +692,7 @@ class _LandmarkMapScreenState extends State<LandmarkMapScreen> {
                   Row(
                     children: [
                       Text(
-                        "Visits: $visitCount ${isWishlisted ? ' | Wishlisted' : ''}",
+                        tr("Visits: $visitCount ${isWishlisted ? ' | Wishlisted' : ''}"),
                         style: TextStyle(fontSize: 10, color: Colors.grey[700]),
                       ),
                       const SizedBox(width: 6),
@@ -765,11 +767,11 @@ class _LandmarkMapScreenState extends State<LandmarkMapScreen> {
                       children: [
                         TextButton(
                           onPressed: () => Navigator.pop(sheetContext),
-                          child: Text('Cancel', style: TextStyle(color: headerTextColor, fontWeight: FontWeight.bold)),
+                          child: Text(tr('Cancel'), style: TextStyle(color: headerTextColor, fontWeight: FontWeight.bold)),
                         ),
                         ElevatedButton(
                           onPressed: () => Navigator.pop(sheetContext),
-                          child: Text('Done', style: TextStyle(fontWeight: FontWeight.bold, color: themeColor)),
+                          child: Text(tr('Done'), style: TextStyle(fontWeight: FontWeight.bold, color: themeColor)),
                           style: ElevatedButton.styleFrom(backgroundColor: headerTextColor),
                         ),
                       ],
@@ -786,7 +788,7 @@ class _LandmarkMapScreenState extends State<LandmarkMapScreen> {
                       ],
                     ),
                     Text(
-                      countryNames,
+                      tr(countryNames),
                       style: Theme.of(sheetContext).textTheme.titleSmall?.copyWith(color: headerTextColor.withOpacity(0.8)),
                     ),
                   ],
@@ -819,7 +821,7 @@ class _LandmarkMapScreenState extends State<LandmarkMapScreen> {
               Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  const Text('Wishlist:'),
+                   Text(tr('Wishlist:')),
                   IconButton(
                     visualDensity: VisualDensity.compact,
                     padding: const EdgeInsets.symmetric(horizontal: 4),
@@ -836,7 +838,7 @@ class _LandmarkMapScreenState extends State<LandmarkMapScreen> {
               Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  const Text('My Rating:'),
+                   Text(tr('My Rating:')),
                   const SizedBox(width: 8),
                   RatingBar.builder(
                     initialRating: landmark.rating ?? 0.0,
@@ -858,10 +860,10 @@ class _LandmarkMapScreenState extends State<LandmarkMapScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('History (${landmark.visitDates.length} visits)', style: Theme.of(sheetContext).textTheme.titleSmall),
+              Text(tr('History (${landmark.visitDates.length} visits)'), style: Theme.of(sheetContext).textTheme.titleSmall),
               OutlinedButton.icon(
                 icon: const Icon(Icons.add),
-                label: const Text('Add Visit'),
+                label:  Text(tr('Add Visit')),
                 onPressed: () => sheetContext.read<LandmarksProvider>().addVisitDate(landmark.name),
               ),
             ],
@@ -879,7 +881,7 @@ class _LandmarkMapScreenState extends State<LandmarkMapScreen> {
               );
             })
           else
-            const Center(child: Text('No visits recorded.')),
+             Center(child: Text(tr('No visits recorded.'))),
 
           const Divider(height: 24),
           LandmarkInfoCard(
@@ -947,7 +949,7 @@ class _LandmarkMapScreenState extends State<LandmarkMapScreen> {
             context: context,
             builder: (context) => AlertDialog(
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-              title: Text('Pick a color', style: GoogleFonts.poppins(fontWeight: FontWeight.bold)),
+              title: Text(tr('Pick a color'), style: GoogleFonts.poppins(fontWeight: FontWeight.bold)),
               content: SingleChildScrollView(
                 child: ColorPicker(
                   pickerColor: currentColor,
@@ -959,7 +961,7 @@ class _LandmarkMapScreenState extends State<LandmarkMapScreen> {
               ),
               actions: <Widget>[
                 ElevatedButton(
-                  child: const Text('Select'),
+                  child:  Text(tr('Select')),
                   onPressed: () => Navigator.of(context).pop(),
                 ),
               ],
@@ -985,7 +987,7 @@ class _LandmarkMapScreenState extends State<LandmarkMapScreen> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Expanded(child: Text(label, style: GoogleFonts.poppins(fontSize: 13), overflow: TextOverflow.ellipsis)),
+            Expanded(child: Text(tr(label), style: GoogleFonts.poppins(fontSize: 13), overflow: TextOverflow.ellipsis)),
             buildColorPicker(currentColor, onColorChanged),
           ],
         ),
@@ -999,7 +1001,7 @@ class _LandmarkMapScreenState extends State<LandmarkMapScreen> {
           builder: (context, setStateDialog) {
             return AlertDialog(
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-              title: Text('Map Color Settings', style: GoogleFonts.poppins(fontWeight: FontWeight.bold)),
+              title: Text(tr('Map Color Settings'), style: GoogleFonts.poppins(fontWeight: FontWeight.bold)),
               content: SizedBox(
                 width: double.maxFinite,
                 child: SingleChildScrollView(
@@ -1007,12 +1009,12 @@ class _LandmarkMapScreenState extends State<LandmarkMapScreen> {
                     mainAxisSize: MainAxisSize.min,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('General', style: GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 14)),
+                      Text(tr('General'), style: GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 14)),
                       const SizedBox(height: 8),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text('Show Unvisited', style: GoogleFonts.poppins()),
+                          Text(tr('Show Unvisited'), style: GoogleFonts.poppins()),
                           Switch(
                               value: tempShowUnvisited,
                               onChanged: (v) => setStateDialog(() => tempShowUnvisited = v),
@@ -1023,7 +1025,7 @@ class _LandmarkMapScreenState extends State<LandmarkMapScreen> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text('Show Wishlist', style: GoogleFonts.poppins()),
+                          Text(tr('Show Wishlist'), style: GoogleFonts.poppins()),
                           Switch(
                               value: tempShowWishlist,
                               onChanged: (v) => setStateDialog(() => tempShowWishlist = v),
@@ -1037,14 +1039,14 @@ class _LandmarkMapScreenState extends State<LandmarkMapScreen> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text('Wishlist Color', style: GoogleFonts.poppins(fontSize: 13)),
+                              Text(tr('Wishlist Color'), style: GoogleFonts.poppins(fontSize: 13)),
                               buildColorPicker(tempWishlistColor, (c) => setStateDialog(() => tempWishlistColor = c))
                             ],
                           ),
                         ),
 
                       const Divider(height: 24),
-                      Text('Color Mode', style: GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 14)),
+                      Text(tr('Color Mode'), style: GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 14)),
 
                       ...LandmarkColorMode.values.map((mode) {
                         String title;
@@ -1057,7 +1059,7 @@ class _LandmarkMapScreenState extends State<LandmarkMapScreen> {
                           case LandmarkColorMode.wishlist: title = "Wishlist Only"; break;
                         }
                         return RadioListTile<LandmarkColorMode>(
-                          title: Text(title, style: GoogleFonts.poppins(fontSize: 13)),
+                          title: Text(tr(title), style: GoogleFonts.poppins(fontSize: 13)),
                           value: mode,
                           groupValue: tempColorMode,
                           onChanged: (v) => setStateDialog(() => tempColorMode = v!),
@@ -1073,7 +1075,7 @@ class _LandmarkMapScreenState extends State<LandmarkMapScreen> {
                         buildColorPickerRow('Visited Marker Color', tempSameColor, (color) => setStateDialog(() => tempSameColor = color)),
 
                       if (tempColorMode == LandmarkColorMode.byVisits) ...[
-                        const Text('Visit Count Ranges', style: TextStyle(fontWeight: FontWeight.bold)),
+                         Text(tr('Visit Count Ranges'), style: TextStyle(fontWeight: FontWeight.bold)),
                         ...List.generate(tempByVisitRanges.length, (index) {
                           final range = tempByVisitRanges[index];
                           return Padding(
@@ -1085,7 +1087,7 @@ class _LandmarkMapScreenState extends State<LandmarkMapScreen> {
                                   child: TextFormField(
                                     controller: range.controller,
                                     decoration: InputDecoration(
-                                      labelText: index < tempByVisitRanges.length - 1 ? 'From' : 'From (and up)',
+                                      labelText: tr(index < tempByVisitRanges.length - 1 ? 'From' : 'From (and up)'),
                                       isDense: true,
                                     ),
                                     keyboardType: TextInputType.number,
@@ -1093,7 +1095,7 @@ class _LandmarkMapScreenState extends State<LandmarkMapScreen> {
                                   ),
                                 ),
                                 const SizedBox(width: 10),
-                                const Expanded(flex: 2, child: Text("Visits")),
+                                 Expanded(flex: 2, child: Text(tr("Visits"))),
                                 buildColorPicker(range.color, (newColor) => setStateDialog(() => range.color = newColor)),
                               ],
                             ),
@@ -1103,7 +1105,7 @@ class _LandmarkMapScreenState extends State<LandmarkMapScreen> {
                       ],
 
                       if (tempColorMode == LandmarkColorMode.byRating) ...[
-                        const Text('Rating Categories', style: TextStyle(fontWeight: FontWeight.bold)),
+                         Text(tr('Rating Categories'), style: TextStyle(fontWeight: FontWeight.bold)),
                         buildColorPickerRow('Unknown Rating', tempUnknownRatingColor, (color) => setStateDialog(() => tempUnknownRatingColor = color)),
                         const Divider(),
                         ...List.generate(tempByRatingRanges.length, (index) {
@@ -1116,7 +1118,7 @@ class _LandmarkMapScreenState extends State<LandmarkMapScreen> {
                                 Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Text(index < tempByRatingRanges.length - 1 ? "From" : "From (and up)", style: TextStyle(fontSize: 12, color: Colors.grey.shade600)),
+                                    Text(tr(index < tempByRatingRanges.length - 1 ? "From" : "From (and up)"), style: TextStyle(fontSize: 12, color: Colors.grey.shade600)),
                                     RatingBar.builder(
                                       initialRating: category.rating,
                                       minRating: 0.5,
@@ -1138,7 +1140,7 @@ class _LandmarkMapScreenState extends State<LandmarkMapScreen> {
                       ],
 
                       if (tempColorMode == LandmarkColorMode.byContinent) ...[
-                        const Text('Continent Colors', style: TextStyle(fontWeight: FontWeight.bold)),
+                         Text(tr('Continent Colors'), style: TextStyle(fontWeight: FontWeight.bold)),
                         buildColorPickerRow('Multi-Continent Marker', tempMultiContinentColor, (color) => setStateDialog(() => tempMultiContinentColor = color)),
                         buildColorPickerRow('Default/Fallback', tempDefaultVisitedColor, (color) => setStateDialog(() => tempDefaultVisitedColor = color)),
                         const Divider(),
@@ -1150,7 +1152,7 @@ class _LandmarkMapScreenState extends State<LandmarkMapScreen> {
                       ],
 
                       if (tempColorMode == LandmarkColorMode.bySubregion) ...[
-                        const Text('Subregion Colors', style: TextStyle(fontWeight: FontWeight.bold)),
+                         Text(tr('Subregion Colors'), style: TextStyle(fontWeight: FontWeight.bold)),
                         buildColorPickerRow('Multi-Region Marker', tempMultiRegionColor, (color) => setStateDialog(() => tempMultiRegionColor = color)),
                         buildColorPickerRow('Default/Fallback', tempDefaultVisitedColor, (color) => setStateDialog(() => tempDefaultVisitedColor = color)),
                         const Divider(),
@@ -1166,14 +1168,14 @@ class _LandmarkMapScreenState extends State<LandmarkMapScreen> {
               ),
               actions: [
                 TextButton(
-                  child: Text('Reset', style: GoogleFonts.poppins(color: Colors.redAccent)),
+                  child: Text(tr('Reset'), style: GoogleFonts.poppins(color: Colors.redAccent)),
                   onPressed: () {
                     // Reset Logic (Simplified)
                     Navigator.pop(context);
                   },
                 ),
                 TextButton(
-                  child: Text('Cancel', style: GoogleFonts.poppins(color: Colors.grey)),
+                  child: Text(tr('Cancel'), style: GoogleFonts.poppins(color: Colors.grey)),
                   onPressed: () {
                     for (var range in tempByVisitRanges) { range.controller.dispose(); }
                     Navigator.pop(context);
@@ -1185,7 +1187,7 @@ class _LandmarkMapScreenState extends State<LandmarkMapScreen> {
                       backgroundColor: Colors.teal,
                       foregroundColor: Colors.white
                   ),
-                  child: Text('Done', style: GoogleFonts.poppins(fontWeight: FontWeight.w600)),
+                  child: Text(tr('Done'), style: GoogleFonts.poppins(fontWeight: FontWeight.w600)),
                   onPressed: validateAndSave,
                 ),
               ],
@@ -1349,6 +1351,7 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final provider = context.read<LandmarksProvider>();
 
     final years = [null, ...List.generate(101, (index) => DateTime.now().year - index)];
@@ -1379,8 +1382,8 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
       elevation: 1,
       child: ExpansionTile(
         controller: _expansionTileController,
-        title: Text(widget.visitDate.title.isNotEmpty ? widget.visitDate.title : 'Visit Record'),
-        subtitle: Text(_formatDate()),
+        title: Text(tr(widget.visitDate.title.isNotEmpty ? widget.visitDate.title : 'Visit Record')),
+        subtitle: Text(tr(_formatDate())),
         trailing: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -1398,7 +1401,7 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
               children: [
                 TextField(
                   controller: _titleController,
-                  decoration: const InputDecoration(labelText: 'Title', border: OutlineInputBorder()),
+                  decoration:  InputDecoration(labelText: tr('Title'), border: OutlineInputBorder()),
                   onEditingComplete: () {
                     if (mounted) {
                       provider.updateLandmarkVisit(widget.landmarkName, widget.index, title: _titleController.text);
@@ -1408,7 +1411,7 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
                 const SizedBox(height: 12),
                 TextField(
                   controller: _memoController,
-                  decoration: const InputDecoration(labelText: 'Memo', border: OutlineInputBorder()),
+                  decoration:  InputDecoration(labelText: tr('Memo'), border: OutlineInputBorder()),
                   maxLines: 3,
                   onEditingComplete: () {
                     if (mounted) {
@@ -1417,7 +1420,7 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
                   },
                 ),
                 const SizedBox(height: 16),
-                const Text('Photos:', style: TextStyle(fontWeight: FontWeight.bold)),
+                 Text(tr('Photos:'), style: TextStyle(fontWeight: FontWeight.bold)),
                 const SizedBox(height: 8),
                 Wrap(
                   spacing: 10,
@@ -1432,8 +1435,8 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
                             child: Column(
                               mainAxisSize: MainAxisSize.min,
                               children: <Widget>[
-                                ListTile(leading: const Icon(Icons.photo_library), title: const Text('Photo Library'), onTap: () { Navigator.pop(modalContext); _pickImage(ImageSource.gallery); }),
-                                ListTile(leading: const Icon(Icons.photo_camera), title: const Text('Camera'), onTap: () { Navigator.pop(modalContext); _pickImage(ImageSource.camera); }),
+                                ListTile(leading: const Icon(Icons.photo_library), title:  Text(tr('Photo Library')), onTap: () { Navigator.pop(modalContext); _pickImage(ImageSource.gallery); }),
+                                ListTile(leading: const Icon(Icons.photo_camera), title:  Text(tr('Camera')), onTap: () { Navigator.pop(modalContext); _pickImage(ImageSource.camera); }),
                               ],
                             ),
                           ),
@@ -1484,7 +1487,7 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
                       onPressed: () {
                         _expansionTileController.collapse();
                       },
-                      child: const Text('Done'),
+                      child:  Text(tr('Done')),
                     ),
                   ],
                 ),
@@ -1501,7 +1504,7 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
       value: value,
       isDense: true,
       decoration: InputDecoration(
-        labelText: hint,
+        labelText: tr(hint),
         border: const OutlineInputBorder(),
         contentPadding: const EdgeInsets.symmetric(horizontal: 10, vertical: 12),
         disabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.grey.shade300)),
@@ -1510,7 +1513,7 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
       ),
       items: items.map((item) => DropdownMenuItem<T>(
         value: item,
-        child: Text(item?.toString() ?? '?', style: TextStyle(fontSize: 14, color: (item == null) ? Colors.grey.shade600 : null)),
+        child: Text(tr(item?.toString() ?? '?'), style: TextStyle(fontSize: 14, color: (item == null) ? Colors.grey.shade600 : null)),
       )).toList(),
       onChanged: enabled ? onChanged : null,
     );

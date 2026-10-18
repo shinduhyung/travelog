@@ -1,72 +1,153 @@
-[
-  {
-    "name": "Seoul",
-    "country": "Korea",
-    "continent": "Asia",
-    "country_iso": "KR",
-    "Starbucks": 284
+{
+  "schema_version": 1,
+  "dataset_id": "starbucks",
+  "metadata": {
+    "source_url": null,
+    "reference_period": null,
+    "updated_at": null
   },
-  {
-    "name": "New York City",
-    "country": "United States",
-    "continent": "North America",
-    "country_iso": "US",
-    "Starbucks": 277
-  },
-  {
-    "name": "Shanghai",
-    "country": "China",
-    "continent": "Asia",
-    "country_iso": "CN",
-    "Starbucks": 256
-  },
-  {
-    "name": "London",
-    "country": "United Kingdom",
-    "continent": "Europe",
-    "country_iso": "GB",
-    "Starbucks": 202
-  },
-  {
-    "name": "Chicago",
-    "country": "United States",
-    "continent": "North America",
-    "country_iso": "US",
-    "Starbucks": 164
-  },
-  {
-    "name": "Toronto",
-    "country": "Canada",
-    "continent": "North America",
-    "country_iso": "CA",
-    "Starbucks": 160
-  },
-  {
-    "name": "Mexico City",
-    "country": "Mexico",
-    "continent": "North America",
-    "country_iso": "MX",
-    "Starbucks": 160
-  },
-  {
-    "name": "Seattle",
-    "country": "United States",
-    "continent": "North America",
-    "country_iso": "US",
-    "Starbucks": 142
-  },
-  {
-    "name": "Beijing",
-    "country": "China",
-    "continent": "Asia",
-    "country_iso": "CN",
-    "Starbucks": 137
-  },
-  {
-    "name": "Las Vegas",
-    "country": "United States",
-    "continent": "North America",
-    "country_iso": "US",
-    "Starbucks": 136
-  }
-]
+  "legacy_layout": "list",
+  "tables": [
+    {
+      "id": "main",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "name",
+        "country",
+        "country_iso"
+      ],
+      "metrics": [
+        {
+          "id": "continent",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        },
+        {
+          "id": "Starbucks",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "name": "Seoul",
+            "country": "Korea",
+            "country_iso": "KR"
+          },
+          "values": {
+            "continent": "Asia",
+            "Starbucks": 284
+          }
+        },
+        {
+          "dimensions": {
+            "name": "New York City",
+            "country": "United States",
+            "country_iso": "US"
+          },
+          "values": {
+            "continent": "North America",
+            "Starbucks": 277
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Shanghai",
+            "country": "China",
+            "country_iso": "CN"
+          },
+          "values": {
+            "continent": "Asia",
+            "Starbucks": 256
+          }
+        },
+        {
+          "dimensions": {
+            "name": "London",
+            "country": "United Kingdom",
+            "country_iso": "GB"
+          },
+          "values": {
+            "continent": "Europe",
+            "Starbucks": 202
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Chicago",
+            "country": "United States",
+            "country_iso": "US"
+          },
+          "values": {
+            "continent": "North America",
+            "Starbucks": 164
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Toronto",
+            "country": "Canada",
+            "country_iso": "CA"
+          },
+          "values": {
+            "continent": "North America",
+            "Starbucks": 160
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Mexico City",
+            "country": "Mexico",
+            "country_iso": "MX"
+          },
+          "values": {
+            "continent": "North America",
+            "Starbucks": 160
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Seattle",
+            "country": "United States",
+            "country_iso": "US"
+          },
+          "values": {
+            "continent": "North America",
+            "Starbucks": 142
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Beijing",
+            "country": "China",
+            "country_iso": "CN"
+          },
+          "values": {
+            "continent": "Asia",
+            "Starbucks": 137
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Las Vegas",
+            "country": "United States",
+            "country_iso": "US"
+          },
+          "values": {
+            "continent": "North America",
+            "Starbucks": 136
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -29,6 +29,7 @@ import 'dart:convert';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -167,6 +168,7 @@ class _SoftCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Container(
       padding: padding,
       decoration: BoxDecoration(
@@ -206,6 +208,7 @@ class _GradientButtonState extends State<_GradientButton> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final fg = widget.outlined ? widget.color : Colors.white;
     return GestureDetector(
       onTapDown: (_) => setState(() => _scale = 0.97),
@@ -242,7 +245,7 @@ class _GradientButtonState extends State<_GradientButton> {
                 Icon(widget.icon, color: fg, size: 20),
                 const SizedBox(width: 8),
               ],
-              Text(widget.label,
+              Text(tr(widget.label),
                   style: TextStyle(color: fg, fontSize: 15.5, fontWeight: FontWeight.w800, letterSpacing: 0.2)),
             ],
           ),
@@ -260,6 +263,7 @@ class _ScreenBackground extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Container(
       decoration: BoxDecoration(
         gradient: LinearGradient(
@@ -308,13 +312,14 @@ class _SecondCityLobbyScreenState extends State<SecondCityLobbyScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Scaffold(
       backgroundColor: _kSurface,
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        title: const Text('Second City',
+        title:  Text(tr('Second City'),
             style: TextStyle(fontSize: 20, fontWeight: FontWeight.w900, color: _kInk)),
         iconTheme: const IconThemeData(color: _kInk),
       ),
@@ -337,9 +342,9 @@ class _SecondCityLobbyScreenState extends State<SecondCityLobbyScreen> {
                         child: const Icon(Icons.location_city_rounded, color: _kAccent, size: 24),
                       ),
                       const SizedBox(width: 14),
-                      const Expanded(
+                       Expanded(
                         child: Text(
-                          "Name the 2nd-largest city by population — not just \"another big city.\"",
+                          tr("Name the 2nd-largest city by population — not just \"another big city.\""),
                           style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w600, color: _kMuted),
                         ),
                       ),
@@ -371,7 +376,7 @@ class _SecondCityLobbyScreenState extends State<SecondCityLobbyScreen> {
               children: [
                 Icon(Icons.emoji_events_outlined, size: 46, color: _kFaint),
                 const SizedBox(height: 12),
-                const Text('No runs yet', style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: _kInk)),
+                 Text(tr('No runs yet'), style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: _kInk)),
               ],
             ),
           );
@@ -379,7 +384,7 @@ class _SecondCityLobbyScreenState extends State<SecondCityLobbyScreen> {
         return Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text('LEADERBOARD',
+             Text(tr('LEADERBOARD'),
                 style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, letterSpacing: 1.0, color: _kMuted)),
             const SizedBox(height: 12),
             Expanded(
@@ -406,6 +411,7 @@ class _RecordTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final medal = _medalColors[rank];
     return _SoftCard(
       radius: 16,
@@ -420,15 +426,15 @@ class _RecordTile extends StatelessWidget {
             decoration: BoxDecoration(color: (medal ?? _kFaint).withOpacity(medal != null ? 0.18 : 0.12), shape: BoxShape.circle),
             child: medal != null
                 ? Icon(Icons.emoji_events_rounded, size: 16, color: medal)
-                : Text('$rank', style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 12, color: _kMuted)),
+                : Text(tr('$rank'), style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 12, color: _kMuted)),
           ),
           const SizedBox(width: 14),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('${record.score}', style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 16, color: _kInk)),
-                Text('${record.roundsCompleted}/${record.maxRounds} rounds · combo ${record.bestCombo}',
+                Text(tr('${record.score}'), style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 16, color: _kInk)),
+                Text(tr('${record.roundsCompleted}/${record.maxRounds} rounds · combo ${record.bestCombo}'),
                     style: const TextStyle(fontSize: 11.5, color: _kMuted)),
               ],
             ),
@@ -622,13 +628,14 @@ class _GameScreenState extends State<_GameScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Scaffold(
       backgroundColor: _kSurface,
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        title: const Text('Second City',
+        title:  Text(tr('Second City'),
             style: TextStyle(fontSize: 17, fontWeight: FontWeight.w800, color: _kInk)),
         iconTheme: const IconThemeData(color: _kInk),
         actions: (_phase == _RoundPhase.loading || _phase == _RoundPhase.error || _phase == _RoundPhase.complete)
@@ -665,10 +672,10 @@ class _GameScreenState extends State<_GameScreen> {
           children: [
             Icon(Icons.cloud_off_rounded, size: 48, color: _kFaint),
             const SizedBox(height: 16),
-            const Text("Couldn't load data", style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800, color: _kInk)),
+             Text(tr("Couldn't load data"), style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800, color: _kInk)),
             const SizedBox(height: 8),
             if (_loadError != null)
-              Text(_loadError!, textAlign: TextAlign.center, style: const TextStyle(fontSize: 12.5, color: _kMuted)),
+              Text(tr(_loadError!), textAlign: TextAlign.center, style: const TextStyle(fontSize: 12.5, color: _kMuted)),
             const SizedBox(height: 24),
             _GradientButton(label: 'Retry', color: _kAccent, onPressed: _load),
           ],
@@ -689,7 +696,7 @@ class _GameScreenState extends State<_GameScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('ROUND ${_roundIndex + 1} / $_maxRounds',
+              Text(tr('ROUND ${_roundIndex + 1} / $_maxRounds'),
                   style: const TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, letterSpacing: 0.6, color: _kMuted)),
               if (_combo > 0)
                 Container(
@@ -698,7 +705,7 @@ class _GameScreenState extends State<_GameScreen> {
                   child: Row(mainAxisSize: MainAxisSize.min, children: [
                     const Icon(Icons.local_fire_department_rounded, size: 15, color: Color(0xFFFF5A5F)),
                     const SizedBox(width: 3),
-                    Text('$_combo', style: const TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, color: Color(0xFFFF5A5F))),
+                    Text(tr('$_combo'), style: const TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, color: Color(0xFFFF5A5F))),
                   ]),
                 ),
             ],
@@ -725,12 +732,12 @@ class _GameScreenState extends State<_GameScreen> {
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    Text(_current.flagEmoji, style: const TextStyle(fontSize: 56)),
+                    Text(tr(_current.flagEmoji), style: const TextStyle(fontSize: 56)),
                     const SizedBox(height: 10),
-                    Text(_current.country,
+                    Text(tr(_current.country),
                         style: const TextStyle(fontSize: 24, fontWeight: FontWeight.w900, color: _kInk)),
                     const SizedBox(height: 6),
-                    const Text("SECOND CITY?", style: TextStyle(fontSize: 11, fontWeight: FontWeight.w800, letterSpacing: 1.2, color: _kFaint)),
+                     Text(tr("SECOND CITY?"), style: TextStyle(fontSize: 11, fontWeight: FontWeight.w800, letterSpacing: 1.2, color: _kFaint)),
                   ],
                 ),
               ),
@@ -781,9 +788,9 @@ class _GameScreenState extends State<_GameScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(correct ? 'Correct! +${_lastRoundScore ?? 0}' : 'Wrong',
+                  Text(tr(correct ? 'Correct! +${_lastRoundScore ?? 0}' : 'Wrong'),
                       style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w900, color: Colors.white)),
-                  Text('${_current.secondCity} (pop. ${_formatPop(_current.population)})',
+                  Text(tr('${_current.secondCity} (pop. ${_formatPop(_current.population)})', entities: [_current.secondCity]),
                       style: const TextStyle(fontSize: 12.5, fontWeight: FontWeight.w600, color: Colors.white70)),
                 ],
               ),
@@ -859,13 +866,13 @@ class _GameScreenState extends State<_GameScreen> {
               child: const Icon(Icons.emoji_events_rounded, size: 40, color: Colors.white),
             ),
             const SizedBox(height: 18),
-            const Text('Run Complete!', style: TextStyle(fontSize: 22, fontWeight: FontWeight.w900, color: _kInk)),
+             Text(tr('Run Complete!'), style: TextStyle(fontSize: 22, fontWeight: FontWeight.w900, color: _kInk)),
             const SizedBox(height: 26),
             _SoftCard(
               padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 26),
               child: Column(children: [
-                Text('$_totalScore', style: TextStyle(fontSize: 44, fontWeight: FontWeight.w900, color: _kAccent)),
-                const Text('TOTAL SCORE', style: TextStyle(fontSize: 11, fontWeight: FontWeight.w800, letterSpacing: 1.0, color: _kMuted)),
+                Text(tr('$_totalScore'), style: TextStyle(fontSize: 44, fontWeight: FontWeight.w900, color: _kAccent)),
+                 Text(tr('TOTAL SCORE'), style: TextStyle(fontSize: 11, fontWeight: FontWeight.w800, letterSpacing: 1.0, color: _kMuted)),
                 const SizedBox(height: 18),
                 Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                   _StatChip(label: 'Rounds', value: '$_combo/$_maxRounds'),
@@ -895,6 +902,7 @@ class _ScoreBadge extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Padding(
       padding: const EdgeInsets.only(right: 16, top: 4, bottom: 4),
       child: Container(
@@ -908,8 +916,8 @@ class _ScoreBadge extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.end,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('$score', style: TextStyle(fontSize: 15, fontWeight: FontWeight.w900, color: _kAccent)),
-            Text('best $best', style: const TextStyle(fontSize: 9.5, fontWeight: FontWeight.w700, color: _kMuted)),
+            Text(tr('$score'), style: TextStyle(fontSize: 15, fontWeight: FontWeight.w900, color: _kAccent)),
+            Text(tr('best $best'), style: const TextStyle(fontSize: 9.5, fontWeight: FontWeight.w700, color: _kMuted)),
           ],
         ),
       ),
@@ -925,12 +933,13 @@ class _StatChip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
       decoration: BoxDecoration(color: _kSurface, borderRadius: BorderRadius.circular(14)),
       child: Column(children: [
-        Text(value, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w800, color: _kInk)),
-        Text(label.toUpperCase(), style: const TextStyle(fontSize: 9.5, fontWeight: FontWeight.w800, letterSpacing: 0.4, color: _kMuted)),
+        Text(tr(value), style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w800, color: _kInk)),
+        Text(tr(label.toUpperCase()), style: const TextStyle(fontSize: 9.5, fontWeight: FontWeight.w800, letterSpacing: 0.4, color: _kMuted)),
       ]),
     );
   }

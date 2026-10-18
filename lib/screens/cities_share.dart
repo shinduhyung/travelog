@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'dart:io';
 import 'dart:typed_data';
 import 'package:path_provider/path_provider.dart';
@@ -49,7 +50,7 @@ class CitiesShare {
       debugPrint("Share Error: $e");
       if (context.mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Failed to generate share image: $e')),
+          SnackBar(content: Text(tr('Failed to generate share image: $e'))),
         );
       }
     }
@@ -140,7 +141,7 @@ class CitiesShare {
                   ),
                   const SizedBox(width: 10),
                   Text(
-                    'Travelog',
+                    tr('Travelog'),
                     style: TextStyle(
                       fontSize: 28,
                       fontWeight: FontWeight.w900,
@@ -171,7 +172,7 @@ class CitiesShare {
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     Text(
-                      '$totalCities',
+                      tr('$totalCities'),
                       style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.w900,
@@ -184,7 +185,7 @@ class CitiesShare {
                     Padding(
                       padding: const EdgeInsets.only(bottom: 2),
                       child: Text(
-                        'Cities',
+                        tr('Cities'),
                         style: TextStyle(
                           fontSize: 11,
                           fontWeight: FontWeight.w600,
@@ -325,7 +326,7 @@ class CitiesShare {
                 const SizedBox(width: 4),
                 Expanded(
                   child: Text(
-                    displayName,
+                    tr(displayName),
                     style: const TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 9,
@@ -345,7 +346,7 @@ class CitiesShare {
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     Text(
-                      '$count',
+                      tr('$count'),
                       style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.w900,
@@ -356,7 +357,7 @@ class CitiesShare {
                     ),
                     if (count > 0)
                       Text(
-                        '$percentage%',
+                        tr('$percentage%'),
                         style: TextStyle(
                           fontSize: 10,
                           fontWeight: FontWeight.w600,

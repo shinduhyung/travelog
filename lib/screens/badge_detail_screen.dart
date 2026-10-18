@@ -2,6 +2,7 @@
 
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:intl/intl.dart';
 import 'package:jidoapp/models/badge_model.dart';
 import 'package:jidoapp/models/country_model.dart';
@@ -158,7 +159,7 @@ class BadgeDetailScreen extends StatelessWidget {
       height: 42, // 2줄 높이에 해당하는 고정 높이 설정
       alignment: Alignment.centerLeft,
       child: Text(
-        text,
+        tr(text),
         style: const TextStyle(
           fontWeight: FontWeight.w600,
           fontSize: 15,
@@ -171,6 +172,7 @@ class BadgeDetailScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final countryProvider = context.watch<CountryProvider>();
     final cityProvider = context.watch<CityProvider>();
     final economyProvider = context.watch<EconomyProvider>();
@@ -222,7 +224,7 @@ class BadgeDetailScreen extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: Text(
-                  _getSectionTitle(),
+                  tr(_getSectionTitle()),
                   style: const TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
@@ -383,7 +385,7 @@ class BadgeDetailScreen extends StatelessWidget {
                             borderRadius: BorderRadius.circular(8),
                           ),
                           child: Text(
-                            '${achievement.points} points',
+                            tr('${achievement.points} points'),
                             style: TextStyle(
                               fontSize: 13,
                               fontWeight: FontWeight.bold,
@@ -398,7 +400,7 @@ class BadgeDetailScreen extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               Text(
-                achievement.description,
+                tr(achievement.description),
                 style: TextStyle(
                   fontSize: 15,
                   color: Colors.grey[700],
@@ -413,7 +415,7 @@ class BadgeDetailScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        'Progress',
+                        tr('Progress'),
                         style: TextStyle(
                           fontSize: 14,
                           color: Colors.grey[600],
@@ -421,7 +423,7 @@ class BadgeDetailScreen extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        progressDetailText,
+                        tr(progressDetailText),
                         style: const TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.bold,
@@ -441,7 +443,7 @@ class BadgeDetailScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 8),
                   Text(
-                    '${(progress * 100).toStringAsFixed(0)}% Complete',
+                    tr('${(progress * 100).toStringAsFixed(0)}% Complete'),
                     style: TextStyle(
                       fontSize: 13,
                       color: Colors.grey[600],
@@ -456,8 +458,8 @@ class BadgeDetailScreen extends StatelessWidget {
                           SubscriptionSheet.show(context, triggerContext: 'badge_moment_claim');
                         },
                         icon: const Icon(Icons.workspace_premium_rounded, size: 20),
-                        label: const Text(
-                          'Subscribe to Claim',
+                        label:  Text(
+                          tr('Subscribe to Claim'),
                           style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
                         ),
                         style: ElevatedButton.styleFrom(
@@ -547,7 +549,7 @@ class BadgeDetailScreen extends StatelessWidget {
             ),
             child: Center(
               child: Text(
-                'No visited sites listed yet.',
+                tr('No visited sites listed yet.'),
                 style: TextStyle(color: Colors.grey[500], fontSize: 14),
               ),
             ),
@@ -618,7 +620,7 @@ class BadgeDetailScreen extends StatelessWidget {
                       children: [
                         Expanded(
                           child: Text(
-                            site.city,
+                            tr(site.city),
                             style: TextStyle(fontSize: 13, color: Colors.grey[600]),
                             overflow: TextOverflow.ellipsis,
                           ),
@@ -631,8 +633,8 @@ class BadgeDetailScreen extends StatelessWidget {
                               color: Colors.blue.withOpacity(0.1),
                               borderRadius: BorderRadius.circular(4),
                             ),
-                            child: const Text(
-                              'Multinational',
+                            child:  Text(
+                              tr('Multinational'),
                               style: TextStyle(
                                 fontSize: 10,
                                 fontWeight: FontWeight.bold,
@@ -863,7 +865,7 @@ class BadgeDetailScreen extends StatelessWidget {
               Icon(Icons.explore_off_outlined, size: 60, color: Colors.grey[300]),
               const SizedBox(height: 16),
               Text(
-                'No countries visited yet',
+                tr('No countries visited yet'),
                 style: TextStyle(
                   color: Colors.grey[600],
                   fontSize: 16,
@@ -872,7 +874,7 @@ class BadgeDetailScreen extends StatelessWidget {
               ),
               const SizedBox(height: 8),
               Text(
-                'Start your journey!',
+                tr('Start your journey!'),
                 style: TextStyle(
                   color: Colors.grey[500],
                   fontSize: 14,
@@ -985,7 +987,7 @@ class BadgeDetailScreen extends StatelessWidget {
                   ),
                 ),
                 title: Text(
-                  country.name,
+                  tr(country.name),
                   style: const TextStyle(
                     fontWeight: FontWeight.w600,
                     fontSize: 15,
@@ -998,7 +1000,7 @@ class BadgeDetailScreen extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.only(top: 4),
                         child: Text(
-                          subtitleText,
+                          tr(subtitleText),
                           style: TextStyle(
                             fontSize: 13,
                             color: Colors.grey[600],
@@ -1013,7 +1015,7 @@ class BadgeDetailScreen extends StatelessWidget {
                             const Icon(Icons.star, color: Colors.amber, size: 16),
                             const SizedBox(width: 4),
                             Text(
-                              rating.toStringAsFixed(1),
+                              tr(rating.toStringAsFixed(1)),
                               style: const TextStyle(
                                 fontSize: 13,
                                 fontWeight: FontWeight.w600,
@@ -1030,7 +1032,7 @@ class BadgeDetailScreen extends StatelessWidget {
                             Icon(Icons.home, color: Colors.blue.shade600, size: 16),
                             const SizedBox(width: 4),
                             Text(
-                              'Home',
+                              tr('Home'),
                               style: TextStyle(
                                 fontSize: 13,
                                 color: Colors.blue.shade700,
@@ -1115,10 +1117,10 @@ class BadgeDetailScreen extends StatelessWidget {
                       children: [
                         TextButton(
                             onPressed: () => Navigator.pop(sheetContext),
-                            child: Text('Cancel', style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600))),
+                            child: Text(tr('Cancel'), style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600))),
                         ElevatedButton(
                             onPressed: () => Navigator.pop(sheetContext),
-                            child: Text('Done', style: TextStyle(fontWeight: FontWeight.w600, color: themeColor)),
+                            child: Text(tr('Done'), style: TextStyle(fontWeight: FontWeight.w600, color: themeColor)),
                             style: ElevatedButton.styleFrom(backgroundColor: headerTextColor)),
                       ],
                     ),
@@ -1137,7 +1139,7 @@ class BadgeDetailScreen extends StatelessWidget {
                       children: [
                         Icon(Icons.location_on, size: 14, color: headerTextColor.withOpacity(0.8)),
                         const SizedBox(width: 4),
-                        Expanded(child: Text(locationDisplay, style: Theme.of(sheetContext).textTheme.titleSmall?.copyWith(color: headerTextColor.withOpacity(0.8), fontWeight: FontWeight.normal))),
+                        Expanded(child: Text(tr(locationDisplay), style: Theme.of(sheetContext).textTheme.titleSmall?.copyWith(color: headerTextColor.withOpacity(0.8), fontWeight: FontWeight.normal))),
                       ],
                     ),
                   ],
@@ -1153,13 +1155,13 @@ class BadgeDetailScreen extends StatelessWidget {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Row(mainAxisSize: MainAxisSize.min, children: [const Text('Wishlist:'), IconButton(visualDensity: VisualDensity.compact, icon: Icon(isWishlisted ? Icons.favorite : Icons.favorite_border, color: isWishlisted ? Colors.red : Colors.grey), onPressed: () => provider.toggleWishlistStatus(freshLandmark.name))]),
-                            Row(mainAxisSize: MainAxisSize.min, children: [const Text('My Rating:'), const SizedBox(width: 8), RatingBar.builder(initialRating: freshLandmark.rating ?? 0.0, minRating: 0, direction: Axis.horizontal, allowHalfRating: true, itemCount: 5, itemSize: 28.0, itemBuilder: (context, _) => const Icon(Icons.star, color: Colors.amber), onRatingUpdate: (rating) => provider.updateLandmarkRating(freshLandmark.name, rating))]),
+                            Row(mainAxisSize: MainAxisSize.min, children: [ Text(tr('Wishlist:')), IconButton(visualDensity: VisualDensity.compact, icon: Icon(isWishlisted ? Icons.favorite : Icons.favorite_border, color: isWishlisted ? Colors.red : Colors.grey), onPressed: () => provider.toggleWishlistStatus(freshLandmark.name))]),
+                            Row(mainAxisSize: MainAxisSize.min, children: [ Text(tr('My Rating:')), const SizedBox(width: 8), RatingBar.builder(initialRating: freshLandmark.rating ?? 0.0, minRating: 0, direction: Axis.horizontal, allowHalfRating: true, itemCount: 5, itemSize: 28.0, itemBuilder: (context, _) => const Icon(Icons.star, color: Colors.amber), onRatingUpdate: (rating) => provider.updateLandmarkRating(freshLandmark.name, rating))]),
                           ],
                         ),
                         const Divider(height: 20),
                         if (totalSubCount > 1) ...[
-                          Text("Components / Locations",
+                          Text(tr("Components / Locations"),
                               style: Theme.of(sheetContext).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
                           const SizedBox(height: 4),
                           Container(
@@ -1185,7 +1187,7 @@ class BadgeDetailScreen extends StatelessWidget {
                           ),
                           const Divider(height: 24),
                         ],
-                        Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [Text('History (${freshLandmark.visitDates.length} entries)', style: Theme.of(sheetContext).textTheme.titleSmall), OutlinedButton.icon(icon: const Icon(Icons.add), label: const Text('Add Visit'), onPressed: () => provider.addVisitDate(freshLandmark.name))]),
+                        Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [Text(tr('History (${freshLandmark.visitDates.length} entries)'), style: Theme.of(sheetContext).textTheme.titleSmall), OutlinedButton.icon(icon: const Icon(Icons.add), label:  Text(tr('Add Visit')), onPressed: () => provider.addVisitDate(freshLandmark.name))]),
                         const SizedBox(height: 8),
                         if (freshLandmark.visitDates.isNotEmpty) ...freshLandmark.visitDates.asMap().entries.map((entry) => _LandmarkVisitEditorCard(
                           key: ValueKey('${freshLandmark.name}_${entry.key}'),
@@ -1194,7 +1196,7 @@ class BadgeDetailScreen extends StatelessWidget {
                           index: entry.key,
                           onDelete: () => provider.removeVisitDate(freshLandmark.name, entry.key),
                           availableLocations: freshLandmark.locations,
-                        )) else const Center(child: Text('No visits recorded.')),
+                        )) else  Center(child: Text(tr('No visits recorded.'))),
                         const Divider(height: 24),
                         LandmarkInfoCard(overview: freshLandmark.overview, historySignificance: freshLandmark.history_significance, highlights: freshLandmark.highlights, themeColor: themeColor),
                         const SizedBox(height: 40),
@@ -1248,7 +1250,7 @@ class BadgeDetailScreen extends StatelessWidget {
                           children: [
                             TextButton(
                               onPressed: () => Navigator.pop(context),
-                              child: Text('Close', style: TextStyle(color: headerTextColor, fontWeight: FontWeight.bold)),
+                              child: Text(tr('Close'), style: TextStyle(color: headerTextColor, fontWeight: FontWeight.bold)),
                             ),
                             if (countryModel != null)
                               Container(
@@ -1279,7 +1281,7 @@ class BadgeDetailScreen extends StatelessWidget {
                           ],
                         ),
                         Text(
-                          countryModel?.name ?? countryCode,
+                          tr(countryModel?.name ?? countryCode),
                           style: TextStyle(
                             fontSize: 16,
                             color: headerTextColor.withOpacity(0.8),
@@ -1301,7 +1303,7 @@ class BadgeDetailScreen extends StatelessWidget {
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  const Text('My Rating', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Colors.grey)),
+                                   Text(tr('My Rating'), style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Colors.grey)),
                                   const SizedBox(height: 4),
                                   RatingBar.builder(
                                     initialRating: cityVisitDetail.rating,
@@ -1337,10 +1339,10 @@ class BadgeDetailScreen extends StatelessWidget {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              const Text('Visits', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                               Text(tr('Visits'), style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
                               TextButton.icon(
                                 icon: const Icon(Icons.add),
-                                label: const Text('Add'),
+                                label:  Text(tr('Add')),
                                 onPressed: () {
                                   final updated = cityVisitDetail.copyWith(
                                     visitDateRanges: [...cityVisitDetail.visitDateRanges, DateRange()],
@@ -1359,10 +1361,10 @@ class BadgeDetailScreen extends StatelessWidget {
                               onDelete: () => provider.removeCityDateRange(cityName, entry.key),
                             ))
                           else
-                            const Center(
+                             Center(
                               child: Padding(
                                 padding: EdgeInsets.symmetric(vertical: 20),
-                                child: Text('No visits recorded.'),
+                                child: Text(tr('No visits recorded.')),
                               ),
                             ),
                         ],
@@ -1385,9 +1387,9 @@ class BadgeDetailScreen extends StatelessWidget {
         children: [
           Icon(icon, size: 20, color: themeColor),
           const SizedBox(width: 12),
-          Text(label, style: const TextStyle(fontSize: 15, color: Colors.black87)),
+          Text(tr(label), style: const TextStyle(fontSize: 15, color: Colors.black87)),
           const Spacer(),
-          Text(value, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
+          Text(tr(value), style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
         ],
       ),
     );
@@ -1447,11 +1449,11 @@ class BadgeDetailScreen extends StatelessWidget {
                             children: [
                               TextButton(
                                   onPressed: () => Navigator.pop(sheetContext),
-                                  child: Text('Cancel', style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600))),
+                                  child: Text(tr('Cancel'), style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600))),
                               ElevatedButton(
                                   onPressed: () => Navigator.pop(sheetContext),
                                   style: ElevatedButton.styleFrom(backgroundColor: headerTextColor),
-                                  child: Text('Done', style: TextStyle(fontWeight: FontWeight.w600, color: themeColor))),
+                                  child: Text(tr('Done'), style: TextStyle(fontWeight: FontWeight.w600, color: themeColor))),
                             ],
                           ),
                           const SizedBox(height: 12),
@@ -1469,7 +1471,7 @@ class BadgeDetailScreen extends StatelessWidget {
                               Icon(Icons.location_on, size: 14, color: headerTextColor.withOpacity(0.8)),
                               const SizedBox(width: 4),
                               Expanded(
-                                  child: Text("${freshSite.city}, ${freshSite.countriesIsoA3.join(', ')}",
+                                  child: Text(tr("${freshSite.city}, ${freshSite.countriesIsoA3.join(', ')}"),
                                       style: TextStyle(color: headerTextColor.withOpacity(0.8), fontSize: 14))),
                             ],
                           ),
@@ -1489,7 +1491,7 @@ class BadgeDetailScreen extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Row(children: [
-                                  const Text('Wishlist:'),
+                                   Text(tr('Wishlist:')),
                                   IconButton(
                                     icon: Icon(isWishlisted ? Icons.favorite : Icons.favorite_border,
                                         color: isWishlisted ? Colors.red : Colors.grey),
@@ -1497,7 +1499,7 @@ class BadgeDetailScreen extends StatelessWidget {
                                   ),
                                 ]),
                                 Row(children: [
-                                  const Text('My Rating:'),
+                                   Text(tr('My Rating:')),
                                   const SizedBox(width: 8),
                                   RatingBar.builder(
                                     initialRating: freshSite.rating ?? 0.0,
@@ -1517,11 +1519,11 @@ class BadgeDetailScreen extends StatelessWidget {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Text('Visit History (${freshSite.visitDates.length})',
+                                Text(tr('Visit History (${freshSite.visitDates.length})'),
                                     style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
                                 OutlinedButton.icon(
                                   icon: const Icon(Icons.add),
-                                  label: const Text('Add Visit'),
+                                  label:  Text(tr('Add Visit')),
                                   onPressed: () => provider.addVisitDate(freshSite.name),
                                 ),
                               ],
@@ -1536,9 +1538,9 @@ class BadgeDetailScreen extends StatelessWidget {
                                 availableLocations: freshSite.locations, // 여기서 List<UnescoSubLocation>이 전달됨
                               ))
                             else
-                              const Center(child: Padding(
+                               Center(child: Padding(
                                 padding: EdgeInsets.symmetric(vertical: 20),
-                                child: Text('No visits recorded.'),
+                                child: Text(tr('No visits recorded.')),
                               )),
 
                             const Divider(height: 40),
@@ -1589,6 +1591,7 @@ class _BadgeShareButtonState extends State<_BadgeShareButton> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return IconButton(
       icon: _isSharing
           ? SizedBox(
@@ -1708,23 +1711,24 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final tc = Theme.of(context).primaryColor;
     return Card(
       elevation: 1, margin: const EdgeInsets.symmetric(vertical: 4),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       child: ExpansionTile(
         controller: _expansionTileController, initiallyExpanded: _isEditing,
-        title: Text(_displayTitle.isNotEmpty ? _displayTitle : 'Visit Record',
+        title: Text(tr(_displayTitle.isNotEmpty ? _displayTitle : 'Visit Record'),
             style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15)),
-        subtitle: Text('Date: $_year-$_month-$_day', style: TextStyle(color: Colors.grey[600], fontSize: 13)),
+        subtitle: Text(tr('Date: $_year-$_month-$_day'), style: TextStyle(color: Colors.grey[600], fontSize: 13)),
         trailing: IconButton(icon: const Icon(Icons.delete_outline, color: Colors.red, size: 22),
             onPressed: () => showDialog(context: context, builder: (ctx) => AlertDialog(
-                title: const Text('Delete Visit Record'),
-                content: const Text('Are you sure you want to delete this visit record?'),
+                title:  Text(tr('Delete Visit Record')),
+                content:  Text(tr('Are you sure you want to delete this visit record?')),
                 actions: [
-                  TextButton(onPressed: () => Navigator.pop(ctx), child: const Text('Cancel')),
+                  TextButton(onPressed: () => Navigator.pop(ctx), child:  Text(tr('Cancel'))),
                   TextButton(onPressed: () { Navigator.pop(ctx); widget.onDelete(); },
-                      child: const Text('Delete', style: TextStyle(color: Colors.red))),
+                      child:  Text(tr('Delete'), style: TextStyle(color: Colors.red))),
                 ]))),
         children: [Container(
           padding: const EdgeInsets.all(16),
@@ -1733,21 +1737,21 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
           child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             if (_isEditing) ...[
               Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                Text('Visit Date: $_year-$_month-$_day', style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14)),
-                TextButton.icon(icon: const Icon(Icons.edit_calendar, size: 18), label: const Text('Edit Date'),
+                Text(tr('Visit Date: $_year-$_month-$_day'), style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14)),
+                TextButton.icon(icon: const Icon(Icons.edit_calendar, size: 18), label:  Text(tr('Edit Date')),
                     onPressed: () => _selectDate(context), style: TextButton.styleFrom(visualDensity: VisualDensity.compact)),
               ]),
               const SizedBox(height: 12),
               TextField(controller: _titleController,
-                  decoration: InputDecoration(labelText: 'Title', isDense: true, filled: true, fillColor: Colors.white,
+                  decoration: InputDecoration(labelText: tr('Title'), isDense: true, filled: true, fillColor: Colors.white,
                       border: OutlineInputBorder(borderRadius: BorderRadius.circular(8), borderSide: BorderSide.none))),
               const SizedBox(height: 12),
               TextField(controller: _memoController, maxLines: 3, minLines: 1,
-                  decoration: InputDecoration(labelText: 'Memo', isDense: true, filled: true, fillColor: Colors.white,
+                  decoration: InputDecoration(labelText: tr('Memo'), isDense: true, filled: true, fillColor: Colors.white,
                       border: OutlineInputBorder(borderRadius: BorderRadius.circular(8), borderSide: BorderSide.none))),
             ] else if (_displayMemo.isNotEmpty)
               Padding(padding: const EdgeInsets.only(bottom: 12),
-                  child: Text(_displayMemo, style: TextStyle(fontSize: 14, color: Colors.grey[800], height: 1.4))),
+                  child: Text(tr(_displayMemo), style: TextStyle(fontSize: 14, color: Colors.grey[800], height: 1.4))),
             const SizedBox(height: 12),
             if (_currentPhotos.isNotEmpty || _isEditing)
               Padding(padding: const EdgeInsets.only(top: 8),
@@ -1764,14 +1768,14 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
             Row(mainAxisAlignment: MainAxisAlignment.end, children: [
               if (_isEditing) ...[
                 TextButton(onPressed: _cancelEditing,
-                    child: Text('Cancel', style: TextStyle(color: Colors.grey[700], fontWeight: FontWeight.w600))),
+                    child: Text(tr('Cancel'), style: TextStyle(color: Colors.grey[700], fontWeight: FontWeight.w600))),
                 const SizedBox(width: 8),
                 ElevatedButton.icon(onPressed: _saveChanges,
-                    icon: const Icon(Icons.save, size: 18), label: const Text('Save'),
+                    icon: const Icon(Icons.save, size: 18), label:  Text(tr('Save')),
                     style: ElevatedButton.styleFrom(backgroundColor: tc, foregroundColor: Colors.white, elevation: 0)),
               ] else
                 OutlinedButton.icon(onPressed: () => setState(() => _isEditing = true),
-                    icon: const Icon(Icons.edit, size: 16), label: const Text('Edit Record'),
+                    icon: const Icon(Icons.edit, size: 16), label:  Text(tr('Edit Record')),
                     style: OutlinedButton.styleFrom(foregroundColor: tc, side: BorderSide(color: tc.withOpacity(0.5)))),
             ]),
           ]),
@@ -1875,23 +1879,24 @@ class _UnescoVisitEditorInBadgeState extends State<_UnescoVisitEditorInBadge> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final tc = Theme.of(context).primaryColor;
     return Card(
       elevation: 1, margin: const EdgeInsets.symmetric(vertical: 4),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       child: ExpansionTile(
         controller: _expansionTileController, initiallyExpanded: _isEditing,
-        title: Text(_displayTitle.isNotEmpty ? _displayTitle : 'Visit Record',
+        title: Text(tr(_displayTitle.isNotEmpty ? _displayTitle : 'Visit Record'),
             style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15)),
-        subtitle: Text('Date: $_year-$_month-$_day', style: TextStyle(color: Colors.grey[600], fontSize: 13)),
+        subtitle: Text(tr('Date: $_year-$_month-$_day'), style: TextStyle(color: Colors.grey[600], fontSize: 13)),
         trailing: IconButton(icon: const Icon(Icons.delete_outline, color: Colors.red, size: 22),
             onPressed: () => showDialog(context: context, builder: (ctx) => AlertDialog(
-                title: const Text('Delete Visit Record'),
-                content: const Text('Are you sure you want to delete this visit record?'),
+                title:  Text(tr('Delete Visit Record')),
+                content:  Text(tr('Are you sure you want to delete this visit record?')),
                 actions: [
-                  TextButton(onPressed: () => Navigator.pop(ctx), child: const Text('Cancel')),
+                  TextButton(onPressed: () => Navigator.pop(ctx), child:  Text(tr('Cancel'))),
                   TextButton(onPressed: () { Navigator.pop(ctx); widget.onDelete(); },
-                      child: const Text('Delete', style: TextStyle(color: Colors.red))),
+                      child:  Text(tr('Delete'), style: TextStyle(color: Colors.red))),
                 ]))),
         children: [Container(
           padding: const EdgeInsets.all(16),
@@ -1900,24 +1905,24 @@ class _UnescoVisitEditorInBadgeState extends State<_UnescoVisitEditorInBadge> {
           child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             if (_isEditing) ...[
               Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                Text('Visit Date: $_year-$_month-$_day', style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14)),
-                TextButton.icon(icon: const Icon(Icons.edit_calendar, size: 18), label: const Text('Edit Date'),
+                Text(tr('Visit Date: $_year-$_month-$_day'), style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14)),
+                TextButton.icon(icon: const Icon(Icons.edit_calendar, size: 18), label:  Text(tr('Edit Date')),
                     onPressed: () => _selectDate(context), style: TextButton.styleFrom(visualDensity: VisualDensity.compact)),
               ]),
               const SizedBox(height: 12),
               TextField(controller: _titleController,
-                  decoration: InputDecoration(labelText: 'Title', isDense: true, filled: true, fillColor: Colors.white,
+                  decoration: InputDecoration(labelText: tr('Title'), isDense: true, filled: true, fillColor: Colors.white,
                       border: OutlineInputBorder(borderRadius: BorderRadius.circular(8), borderSide: BorderSide.none))),
               const SizedBox(height: 12),
               TextField(controller: _memoController, maxLines: 3, minLines: 1,
-                  decoration: InputDecoration(labelText: 'Memo', isDense: true, filled: true, fillColor: Colors.white,
+                  decoration: InputDecoration(labelText: tr('Memo'), isDense: true, filled: true, fillColor: Colors.white,
                       border: OutlineInputBorder(borderRadius: BorderRadius.circular(8), borderSide: BorderSide.none))),
             ] else if (_displayMemo.isNotEmpty)
               Padding(padding: const EdgeInsets.only(bottom: 12),
-                  child: Text(_displayMemo, style: TextStyle(fontSize: 14, color: Colors.grey[800], height: 1.4))),
+                  child: Text(tr(_displayMemo), style: TextStyle(fontSize: 14, color: Colors.grey[800], height: 1.4))),
             const SizedBox(height: 12),
             if (widget.availableLocations != null && widget.availableLocations!.isNotEmpty) ...[
-              const Text('Visited Locations:', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Colors.grey)),
+               Text(tr('Visited Locations:'), style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Colors.grey)),
               const SizedBox(height: 4),
               IgnorePointer(ignoring: !_isEditing,
                   child: Wrap(spacing: 8.0, runSpacing: 4.0,
@@ -1948,14 +1953,14 @@ class _UnescoVisitEditorInBadgeState extends State<_UnescoVisitEditorInBadge> {
             Row(mainAxisAlignment: MainAxisAlignment.end, children: [
               if (_isEditing) ...[
                 TextButton(onPressed: _cancelEditing,
-                    child: Text('Cancel', style: TextStyle(color: Colors.grey[700], fontWeight: FontWeight.w600))),
+                    child: Text(tr('Cancel'), style: TextStyle(color: Colors.grey[700], fontWeight: FontWeight.w600))),
                 const SizedBox(width: 8),
                 ElevatedButton.icon(onPressed: _saveChanges,
-                    icon: const Icon(Icons.save, size: 18), label: const Text('Save'),
+                    icon: const Icon(Icons.save, size: 18), label:  Text(tr('Save')),
                     style: ElevatedButton.styleFrom(backgroundColor: tc, foregroundColor: Colors.white, elevation: 0)),
               ] else
                 OutlinedButton.icon(onPressed: () => setState(() => _isEditing = true),
-                    icon: const Icon(Icons.edit, size: 16), label: const Text('Edit Record'),
+                    icon: const Icon(Icons.edit, size: 16), label:  Text(tr('Edit Record')),
                     style: OutlinedButton.styleFrom(foregroundColor: tc, side: BorderSide(color: tc.withOpacity(0.5)))),
             ]),
           ]),
@@ -2013,6 +2018,7 @@ class _CityVisitCardState extends State<_CityVisitCard> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Card(
       elevation: 1,
       margin: const EdgeInsets.symmetric(vertical: 6),
@@ -2026,13 +2032,13 @@ class _CityVisitCardState extends State<_CityVisitCard> {
                   child: InkWell(
                     onTap: () => _selectDate(context, true),
                     child: InputDecorator(
-                      decoration: const InputDecoration(
-                        labelText: 'Arrival',
+                      decoration:  InputDecoration(
+                        labelText: tr('Arrival'),
                         border: OutlineInputBorder(),
                         isDense: true,
                       ),
                       child: Text(
-                        _arrivalDate != null ? DateFormat('MMM d, yyyy').format(_arrivalDate!) : 'Select date',
+                        tr(_arrivalDate != null ? DateFormat('MMM d, yyyy').format(_arrivalDate!) : 'Select date'),
                         style: TextStyle(color: _arrivalDate != null ? Colors.black : Colors.grey),
                       ),
                     ),
@@ -2043,13 +2049,13 @@ class _CityVisitCardState extends State<_CityVisitCard> {
                   child: InkWell(
                     onTap: () => _selectDate(context, false),
                     child: InputDecorator(
-                      decoration: const InputDecoration(
-                        labelText: 'Departure',
+                      decoration:  InputDecoration(
+                        labelText: tr('Departure'),
                         border: OutlineInputBorder(),
                         isDense: true,
                       ),
                       child: Text(
-                        _departureDate != null ? DateFormat('MMM d, yyyy').format(_departureDate!) : 'Select date',
+                        tr(_departureDate != null ? DateFormat('MMM d, yyyy').format(_departureDate!) : 'Select date'),
                         style: TextStyle(color: _departureDate != null ? Colors.black : Colors.grey),
                       ),
                     ),
@@ -2108,13 +2114,13 @@ void showAirportDetailsModal(BuildContext context, Airport airport, AirportProvi
                         onPressed: () {
                           Navigator.pop(sheetContext);
                         },
-                        child: const Text('Cancel', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
+                        child:  Text(tr('Cancel'), style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
                       ),
                       ElevatedButton(
                         onPressed: () {
                           Navigator.pop(sheetContext);
                         },
-                        child: const Text('Done', style: TextStyle(fontWeight: FontWeight.bold)),
+                        child:  Text(tr('Done'), style: TextStyle(fontWeight: FontWeight.bold)),
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.white,
                           foregroundColor: Colors.blue.shade800,
@@ -2124,7 +2130,7 @@ void showAirportDetailsModal(BuildContext context, Airport airport, AirportProvi
                   ),
                   const SizedBox(height: 16),
                   Text(
-                    '${airport.name} (${airport.iataCode})',
+                    tr('${airport.name} (${airport.iataCode})'),
                     style: const TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Colors.white,
@@ -2138,7 +2144,7 @@ void showAirportDetailsModal(BuildContext context, Airport airport, AirportProvi
                     children: [
                       Flexible(
                         child: Text(
-                          countryName,
+                          tr(countryName),
                           style: const TextStyle(
                               fontSize: 18,
                               color: Colors.white70,
@@ -2162,7 +2168,7 @@ void showAirportDetailsModal(BuildContext context, Airport airport, AirportProvi
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             Text(
-                              '$useCount',
+                              tr('$useCount'),
                               style: const TextStyle(
                                 fontSize: 18,
                                 fontWeight: FontWeight.bold,
@@ -2171,7 +2177,7 @@ void showAirportDetailsModal(BuildContext context, Airport airport, AirportProvi
                             ),
                             const SizedBox(width: 4),
                             Text(
-                              'uses',
+                              tr('uses'),
                               style: TextStyle(
                                 fontSize: 14,
                                 color: Colors.white.withOpacity(0.9),
@@ -2218,7 +2224,7 @@ void showAirportDetailsModal(BuildContext context, Airport airport, AirportProvi
                                   children: [
                                     Icon(Icons.star, color: isHub ? Colors.amber : Colors.grey),
                                     const SizedBox(width: 8),
-                                    const Text('My Hub'),
+                                     Text(tr('My Hub')),
                                   ],
                                 ),
                               ),
@@ -2238,7 +2244,7 @@ void showAirportDetailsModal(BuildContext context, Airport airport, AirportProvi
                                   children: [
                                     Icon(Icons.favorite, color: isFavorite ? Colors.red : Colors.grey),
                                     const SizedBox(width: 8),
-                                    const Text('Favorite'),
+                                     Text(tr('Favorite')),
                                   ],
                                 ),
                               ),
@@ -2249,8 +2255,8 @@ void showAirportDetailsModal(BuildContext context, Airport airport, AirportProvi
 
                         // Rating
                         if (rating > 0) ...[
-                          const Text(
-                            'My Rating',
+                           Text(
+                            tr('My Rating'),
                             style: TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.bold,
@@ -2262,7 +2268,7 @@ void showAirportDetailsModal(BuildContext context, Airport airport, AirportProvi
                               Icon(Icons.star, color: Colors.amber, size: 20),
                               const SizedBox(width: 8),
                               Text(
-                                '${rating.toStringAsFixed(1)} / 5.0',
+                                tr('${rating.toStringAsFixed(1)} / 5.0'),
                                 style: const TextStyle(
                                   fontSize: 16,
                                   fontWeight: FontWeight.w600,
@@ -2275,8 +2281,8 @@ void showAirportDetailsModal(BuildContext context, Airport airport, AirportProvi
 
                         // Lounge Info
                         if (loungeVisitCount > 0) ...[
-                          const Text(
-                            'Business Lounge',
+                           Text(
+                            tr('Business Lounge'),
                             style: TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.bold,
@@ -2297,7 +2303,7 @@ void showAirportDetailsModal(BuildContext context, Airport airport, AirportProvi
                                   children: [
                                     Icon(Icons.wine_bar, color: Colors.purple.shade700),
                                     const SizedBox(width: 8),
-                                    Text('$loungeVisitCount visits'),
+                                    Text(tr('$loungeVisitCount visits')),
                                   ],
                                 ),
                                 if (avgLoungeRating > 0) ...[
@@ -2306,7 +2312,7 @@ void showAirportDetailsModal(BuildContext context, Airport airport, AirportProvi
                                     children: [
                                       Icon(Icons.star, color: Colors.amber, size: 18),
                                       const SizedBox(width: 8),
-                                      Text('Average: ${avgLoungeRating.toStringAsFixed(1)}'),
+                                      Text(tr('Average: ${avgLoungeRating.toStringAsFixed(1)}')),
                                     ],
                                   ),
                                 ],
@@ -2318,7 +2324,7 @@ void showAirportDetailsModal(BuildContext context, Airport airport, AirportProvi
 
                         // Visit History
                         Text(
-                          'Visit History (${visits.length})',
+                          tr('Visit History (${visits.length})'),
                           style: const TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
@@ -2330,7 +2336,7 @@ void showAirportDetailsModal(BuildContext context, Airport airport, AirportProvi
                             child: Padding(
                               padding: const EdgeInsets.all(20),
                               child: Text(
-                                'No visits recorded',
+                                tr('No visits recorded'),
                                 style: TextStyle(
                                   color: Colors.grey[600],
                                 ),
@@ -2369,16 +2375,16 @@ void showAirportDetailsModal(BuildContext context, Airport airport, AirportProvi
                                       crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
                                         Text(
-                                          dateStr,
+                                          tr(dateStr),
                                           style: const TextStyle(
                                             fontWeight: FontWeight.w600,
                                           ),
                                         ),
                                         if (visit.isTransfer || visit.isLayover || visit.isStopover)
                                           Text(
-                                            visit.isTransfer ? 'Transfer' :
+                                            tr(visit.isTransfer ? 'Transfer' :
                                             visit.isLayover ? 'Layover' :
-                                            'Stopover',
+                                            'Stopover'),
                                             style: TextStyle(
                                               fontSize: 12,
                                               color: Colors.grey[600],

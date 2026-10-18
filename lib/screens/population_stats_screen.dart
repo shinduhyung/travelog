@@ -2,6 +2,7 @@
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 import 'package:jidoapp/models/country_model.dart';
@@ -57,6 +58,7 @@ class PopulationStatsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final numberFormatter = NumberFormat.decimalPattern('en_US');
     final compactFormatter = NumberFormat.compact();
 
@@ -164,7 +166,7 @@ class PopulationStatsScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Global Reach',
+                          tr('Global Reach'),
                           style: TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.w600,
@@ -174,7 +176,7 @@ class PopulationStatsScreen extends StatelessWidget {
                         ),
                         const SizedBox(height: 4),
                         Text(
-                          'Total Population',
+                          tr('Total Population'),
                           style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                             fontWeight: FontWeight.bold,
                             color: Colors.black87,
@@ -190,7 +192,7 @@ class PopulationStatsScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(20),
                       ),
                       child: Text(
-                        '${percentage.toStringAsFixed(1)}%',
+                        tr('${percentage.toStringAsFixed(1)}%'),
                         style: TextStyle(
                           color: primaryColor,
                           fontWeight: FontWeight.bold,
@@ -290,7 +292,7 @@ class PopulationStatsScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                label,
+                tr(label),
                 style: TextStyle(
                   fontSize: 12,
                   color: Colors.grey.shade600,
@@ -298,7 +300,7 @@ class PopulationStatsScreen extends StatelessWidget {
                 ),
               ),
               Text(
-                value,
+                tr(value),
                 style: const TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
@@ -319,7 +321,7 @@ class PopulationStatsScreen extends StatelessWidget {
       children: [
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 4.0),
-          child: Text('Population by Continent', style: Theme.of(context).textTheme.titleLarge?.copyWith(
+          child: Text(tr('Population by Continent'), style: Theme.of(context).textTheme.titleLarge?.copyWith(
             fontWeight: FontWeight.bold,
             fontSize: 20,
             color: Colors.black,
@@ -379,7 +381,7 @@ class PopulationStatsScreen extends StatelessWidget {
                       const SizedBox(width: 8),
                       Expanded(
                         child: Text(
-                          name,
+                          tr(name),
                           style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
                           overflow: TextOverflow.ellipsis,
                         ),
@@ -394,7 +396,7 @@ class PopulationStatsScreen extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.end,
                         children: [
                           Text(
-                            '${(percent * 100).toStringAsFixed(1)}%',
+                            tr('${(percent * 100).toStringAsFixed(1)}%'),
                             style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.w800,
@@ -403,7 +405,7 @@ class PopulationStatsScreen extends StatelessWidget {
                           ),
                           Flexible(
                             child: Text(
-                              '${formatter.format(visitedPop)} / ${formatter.format(totalPop)}',
+                              tr('${formatter.format(visitedPop)} / ${formatter.format(totalPop)}'),
                               style: TextStyle(
                                 fontSize: 11,
                                 color: Colors.grey.shade500,
@@ -456,7 +458,7 @@ class PopulationStatsScreen extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('Average Population per Country', style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
+          Text(tr('Average Population per Country'), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
           const SizedBox(height: 24),
           _buildHorizontalBar(
             context: context,
@@ -504,7 +506,7 @@ class PopulationStatsScreen extends StatelessWidget {
                 Icon(icon, size: 16, color: color),
                 const SizedBox(width: 8),
                 Text(
-                  label,
+                  tr(label),
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.grey.shade700,
@@ -513,7 +515,7 @@ class PopulationStatsScreen extends StatelessWidget {
                 ),
                 const Spacer(),
                 Text(
-                  formatter.format(value.round()),
+                  tr(formatter.format(value.round())),
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: color,
@@ -626,7 +628,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
   Widget _buildRankIcon(int rank, Color color) {
     // 1위, 2위, 3위 포함 모든 순위를 일반 텍스트로 표시
     return Text(
-      '$rank',
+      tr('$rank'),
       style: TextStyle(
         fontSize: 16,
         fontWeight: FontWeight.bold,
@@ -638,6 +640,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final textTheme = Theme.of(context).textTheme;
     final compactFormatter = NumberFormat.compact();
     final topValue = _rankedList.isNotEmpty ? _selectedRanking.valueAccessor(_rankedList.first) ?? 1.0 : 1.0;
@@ -670,7 +673,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                   children: [
                     Icon(_selectedRanking.icon, color: rankingThemeColor),
                     const SizedBox(width: 12),
-                    Text(_selectedRanking.title, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
+                    Text(tr(_selectedRanking.title), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
                   ],
                 ),
                 const SizedBox(height: 8),
@@ -680,9 +683,9 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                     Expanded(
                       child: SegmentedButton<int>(
                         showSelectedIcon: false,
-                        segments: const [
-                          ButtonSegment<int>(value: 0, label: Text('All')),
-                          ButtonSegment<int>(value: 1, label: Text('Visited')),
+                        segments:  [
+                          ButtonSegment<int>(value: 0, label: Text(tr('All'))),
+                          ButtonSegment<int>(value: 1, label: Text(tr('Visited'))),
                         ],
                         selected: {_displaySegment},
                         onSelectionChanged: (s) { _displaySegment = s.first; _onFilterChanged(); },
@@ -703,9 +706,9 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                     Expanded(
                       child: SegmentedButton<int>(
                         showSelectedIcon: false,
-                        segments: const [
-                          ButtonSegment<int>(value: 0, label: Text('High')),
-                          ButtonSegment<int>(value: 1, label: Text('Low')),
+                        segments:  [
+                          ButtonSegment<int>(value: 0, label: Text(tr('High'))),
+                          ButtonSegment<int>(value: 1, label: Text(tr('Low'))),
                         ],
                         selected: {_sortOrderSegment},
                         onSelectionChanged: (s) { _sortOrderSegment = s.first; _onFilterChanged(); },
@@ -728,7 +731,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                   child: DropdownButton<String>(
                     borderRadius: BorderRadius.circular(16), // 둥근 모서리 적용
                     value: _selectedContinent,
-                    items: _continents.map((String value) => DropdownMenuItem<String>(value: value, child: Text(value, style: const TextStyle(fontSize: 14)))).toList(),
+                    items: _continents.map((String value) => DropdownMenuItem<String>(value: value, child: Text(tr(value), style: const TextStyle(fontSize: 14)))).toList(),
                     onChanged: (String? newValue) { _selectedContinent = newValue!; _onFilterChanged(); },
                     underline: const SizedBox(),
                   ),
@@ -740,7 +743,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
           // 랭킹 리스트
           Expanded(
             child: _rankedList.isEmpty
-                ? const Center(child: Text('No data to display.'))
+                ?  Center(child: Text(tr('No data to display.')))
                 : ListView.builder(
               padding: const EdgeInsets.all(8.0),
               itemCount: _rankedList.length,
@@ -769,10 +772,10 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                               // 순위 표시 함수 사용 (1, 2, 3위도 숫자로 표시됨)
                               _buildRankIcon(rank, rankingThemeColor),
                               const SizedBox(width: 12),
-                              Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 18)), // 국기 추가
+                              Text(tr(flagEmoji(country.isoA2)), style: const TextStyle(fontSize: 18)), // 국기 추가
                               const SizedBox(width: 8),
-                              Expanded(child: Text(country.name, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
-                              Text(compactFormatter.format(value), style: textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
+                              Expanded(child: Text(tr(country.name), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
+                              Text(tr(compactFormatter.format(value)), style: textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
                             ],
                           ),
                           const SizedBox(height: 6),

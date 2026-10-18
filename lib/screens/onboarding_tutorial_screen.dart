@@ -1,6 +1,7 @@
 // lib/screens/onboarding_tutorial_screen.dart
 import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -218,7 +219,7 @@ class _OnboardingTutorialScreenState extends State<OnboardingTutorialScreen>
                   const SizedBox(height: 16),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 20),
-                    child: Text('Add a country',
+                    child: Text(tr('Add a country'),
                         style: GoogleFonts.poppins(color: Colors.white, fontSize: 18, fontWeight: FontWeight.w700)),
                   ),
                   const SizedBox(height: 12),
@@ -235,7 +236,7 @@ class _OnboardingTutorialScreenState extends State<OnboardingTutorialScreen>
                         onChanged: (v) => setModalState(() => searchText = v),
                         style: GoogleFonts.poppins(color: Colors.white, fontSize: 14),
                         decoration: InputDecoration(
-                          hintText: 'Search country...',
+                          hintText: tr('Search country...'),
                           hintStyle: GoogleFonts.poppins(color: Colors.white60, fontSize: 14),
                           prefixIcon: const Icon(Icons.search, color: Colors.white70, size: 18),
                           border: InputBorder.none,
@@ -296,6 +297,7 @@ class _OnboardingTutorialScreenState extends State<OnboardingTutorialScreen>
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: const SystemUiOverlayStyle(
         statusBarColor: Colors.transparent,
@@ -422,6 +424,7 @@ class _Step1PassportAirportState extends State<_Step1PassportAirport> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final isoA3 = widget.country.isoA3;
     final airportList = _hubAirports[isoA3] ?? [];
     final airportProvider = context.read<AirportProvider>();
@@ -444,7 +447,7 @@ class _Step1PassportAirportState extends State<_Step1PassportAirport> {
                     color: Colors.white54, strokeWidth: 2))
                 : airportList.isEmpty
                 ? Center(
-                child: Text('No airports found',
+                child: Text(tr('No airports found'),
                     style: GoogleFonts.poppins(
                         color: Colors.white70, fontSize: 14)))
                 : ListView.builder(
@@ -659,7 +662,7 @@ class _Step0HomeCountryState extends State<_Step0HomeCountry> {
                 Container(width: 40, height: 4,
                     decoration: BoxDecoration(color: Colors.white.withOpacity(0.4), borderRadius: BorderRadius.circular(2))),
                 const SizedBox(height: 14),
-                Text('Select Passport', style: GoogleFonts.poppins(color: Colors.white, fontSize: 17, fontWeight: FontWeight.w700)),
+                Text(tr('Select Passport'), style: GoogleFonts.poppins(color: Colors.white, fontSize: 17, fontWeight: FontWeight.w700)),
                 const SizedBox(height: 10),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -670,7 +673,7 @@ class _Step0HomeCountryState extends State<_Step0HomeCountry> {
                       onChanged: (v) => setModal(() {}),
                       style: GoogleFonts.poppins(color: Colors.white, fontSize: 14),
                       decoration: InputDecoration(
-                        hintText: 'Search passport...',
+                        hintText: tr('Search passport...'),
                         hintStyle: GoogleFonts.poppins(color: Colors.white60, fontSize: 14),
                         prefixIcon: const Icon(Icons.search, color: Colors.white60, size: 18),
                         border: InputBorder.none,
@@ -699,7 +702,7 @@ class _Step0HomeCountryState extends State<_Step0HomeCountry> {
                             border: Border.all(color: isSelected ? Colors.white.withOpacity(0.6) : Colors.transparent),
                           ),
                           child: Row(children: [
-                            Text(name, style: GoogleFonts.poppins(color: Colors.white, fontSize: 13,
+                            Text(tr(name), style: GoogleFonts.poppins(color: Colors.white, fontSize: 13,
                                 fontWeight: isSelected ? FontWeight.w600 : FontWeight.w400)),
                             const Spacer(),
                             if (isSelected) const Icon(Icons.check, color: Colors.white, size: 16),
@@ -719,6 +722,7 @@ class _Step0HomeCountryState extends State<_Step0HomeCountry> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     // 경량 JSON 로딩 완료 시 사용, 실패 시 CountryProvider fallback
     final countryProvider = context.watch<CountryProvider>();
     final bool isLoading = _lightLoading;
@@ -770,10 +774,10 @@ class _Step0HomeCountryState extends State<_Step0HomeCountry> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('Passport', style: GoogleFonts.poppins(color: Colors.white.withOpacity(0.65), fontSize: 11)),
+                        Text(tr('Passport'), style: GoogleFonts.poppins(color: Colors.white.withOpacity(0.65), fontSize: 11)),
                         const SizedBox(height: 2),
                         Text(
-                          countryProvider.isoToCountryNameMap[passportIso] ?? passportIso ?? '',
+                          tr(countryProvider.isoToCountryNameMap[passportIso] ?? passportIso ?? ''),
                           style: GoogleFonts.poppins(color: Colors.white, fontSize: 14, fontWeight: FontWeight.w600),
                           maxLines: 1, overflow: TextOverflow.ellipsis,
                         ),
@@ -790,7 +794,7 @@ class _Step0HomeCountryState extends State<_Step0HomeCountry> {
                             child: Row(mainAxisSize: MainAxisSize.min, children: [
                               const Icon(Icons.swap_horiz, color: Colors.white, size: 13),
                               const SizedBox(width: 4),
-                              Text('Change passport', style: GoogleFonts.poppins(color: Colors.white, fontSize: 11, fontWeight: FontWeight.w500)),
+                              Text(tr('Change passport'), style: GoogleFonts.poppins(color: Colors.white, fontSize: 11, fontWeight: FontWeight.w500)),
                             ]),
                           ),
                         ),
@@ -865,6 +869,7 @@ class _Step2Highlights extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final landmarksProvider = context.watch<LandmarksProvider>();
     final highlights = _getHighlights(context);
     final themeColor = const Color(0xFF3DDAD7);
@@ -879,7 +884,7 @@ class _Step2Highlights extends StatelessWidget {
             child: landmarksProvider.isLoading
                 ? const Center(child: CircularProgressIndicator(color: Colors.white54, strokeWidth: 2))
                 : highlights.isEmpty
-                ? Center(child: Text('No highlights found', style: GoogleFonts.poppins(color: Colors.white70, fontSize: 15)))
+                ? Center(child: Text(tr('No highlights found'), style: GoogleFonts.poppins(color: Colors.white70, fontSize: 15)))
                 : GridView.builder(
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
               physics: const BouncingScrollPhysics(),
@@ -930,6 +935,7 @@ class _Step3PopularCountries extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final countryProvider = context.watch<CountryProvider>();
 
     final allVisitedNames = <String>{
@@ -1003,6 +1009,7 @@ class _WorldMap extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Container(
       height: 190,
       margin: const EdgeInsets.symmetric(horizontal: 16),
@@ -1049,6 +1056,7 @@ class _AddCountryButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return GestureDetector(
       onTap: onTap,
       child: Container(
@@ -1068,7 +1076,7 @@ class _AddCountryButton extends StatelessWidget {
               child: const Icon(Icons.add, color: Colors.white, size: 18),
             ),
             const SizedBox(width: 10),
-            Text('Add another country',
+            Text(tr('Add another country'),
                 style: GoogleFonts.poppins(color: Colors.white, fontSize: 14, fontWeight: FontWeight.w500)),
           ],
         ),
@@ -1093,6 +1101,7 @@ class _LightCountryListTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return GestureDetector(
       onTap: onTap,
       child: AnimatedContainer(
@@ -1114,7 +1123,7 @@ class _LightCountryListTile extends StatelessWidget {
               child: SizedBox(width: 32, height: 22, child: CountryFlag.fromCountryCode(country.isoA2)),
             ),
             const SizedBox(width: 14),
-            Expanded(child: Text(country.name,
+            Expanded(child: Text(tr(country.name),
                 style: GoogleFonts.poppins(color: Colors.white, fontSize: 14,
                     fontWeight: isSelected ? FontWeight.w600 : FontWeight.w400))),
             if (isSelected) const Icon(Icons.check_circle, color: Colors.white, size: 20),
@@ -1133,15 +1142,16 @@ class _AnimatedTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 28),
       child: Column(
         children: [
-          Text(title,
+          Text(tr(title),
               textAlign: TextAlign.center,
               style: GoogleFonts.poppins(fontSize: 26, fontWeight: FontWeight.w700, color: Colors.white, height: 1.25)),
           const SizedBox(height: 6),
-          Text(subtitle,
+          Text(tr(subtitle),
               textAlign: TextAlign.center,
               style: GoogleFonts.poppins(fontSize: 14, color: Colors.white.withOpacity(0.75), fontWeight: FontWeight.w400)),
         ],
@@ -1157,6 +1167,7 @@ class _SearchField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Container(
       decoration: BoxDecoration(
         color: Colors.white.withOpacity(0.2),
@@ -1167,7 +1178,7 @@ class _SearchField extends StatelessWidget {
         onChanged: onChanged,
         style: GoogleFonts.poppins(color: Colors.white, fontSize: 15),
         decoration: InputDecoration(
-          hintText: hint,
+          hintText: tr(hint),
           hintStyle: GoogleFonts.poppins(color: Colors.white.withOpacity(0.6), fontSize: 15),
           prefixIcon: const Icon(Icons.search, color: Colors.white70, size: 20),
           border: InputBorder.none,
@@ -1186,6 +1197,7 @@ class _CountryListTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return GestureDetector(
       onTap: onTap,
       child: AnimatedContainer(
@@ -1207,7 +1219,7 @@ class _CountryListTile extends StatelessWidget {
               child: SizedBox(width: 32, height: 22, child: CountryFlag.fromCountryCode(country.isoA2)),
             ),
             const SizedBox(width: 14),
-            Expanded(child: Text(country.name,
+            Expanded(child: Text(tr(country.name),
                 style: GoogleFonts.poppins(color: Colors.white, fontSize: 14,
                     fontWeight: isSelected ? FontWeight.w600 : FontWeight.w400))),
             if (isSelected) const Icon(Icons.check_circle, color: Colors.white, size: 20),
@@ -1227,6 +1239,7 @@ class _LandmarkCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final imageUrl = _landmarkImageUrl(landmark.name);
     return GestureDetector(
       onTap: onTap,
@@ -1305,6 +1318,7 @@ class _PopularCountryTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return GestureDetector(
       onTap: onToggle,
       child: AnimatedContainer(
@@ -1330,10 +1344,10 @@ class _PopularCountryTile extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(name, style: GoogleFonts.poppins(
+                  Text(tr(name), style: GoogleFonts.poppins(
                       color: Colors.white, fontSize: 14,
                       fontWeight: isOn ? FontWeight.w600 : FontWeight.w400)),
-                  if (isHome) Text('Your home country',
+                  if (isHome) Text(tr('Your home country'),
                       style: GoogleFonts.poppins(color: Colors.white.withOpacity(0.6), fontSize: 11)),
                 ],
               ),
@@ -1342,7 +1356,7 @@ class _PopularCountryTile extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                 decoration: BoxDecoration(color: Colors.white.withOpacity(0.25), borderRadius: BorderRadius.circular(8)),
-                child: Text('Home', style: GoogleFonts.poppins(color: Colors.white, fontSize: 11, fontWeight: FontWeight.w600)),
+                child: Text(tr('Home'), style: GoogleFonts.poppins(color: Colors.white, fontSize: 11, fontWeight: FontWeight.w600)),
               )
             else
               AnimatedContainer(
@@ -1386,6 +1400,7 @@ class _Step4GawcCities extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return SafeArea(
       child: Column(
         children: [
@@ -1453,6 +1468,7 @@ class _GawcCityCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final imageUrl = _cityImageUrl(name);
 
     return GestureDetector(
@@ -1537,7 +1553,7 @@ class _GawcCityCard extends StatelessWidget {
                   const SizedBox(width: 5),
                   Expanded(
                     child: Text(
-                      displayName,
+                      tr(displayName),
                       style: GoogleFonts.poppins(
                         color: Colors.white,
                         fontSize: 9.5,
@@ -1582,6 +1598,7 @@ class _Step5TopLandmarks extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final landmarksProvider = context.watch<LandmarksProvider>();
 
     // global_rank 1~50 필터 + 정렬
@@ -1603,7 +1620,7 @@ class _Step5TopLandmarks extends StatelessWidget {
             child: landmarksProvider.isLoading
                 ? const Center(child: CircularProgressIndicator(color: Colors.white54, strokeWidth: 2))
                 : top50.isEmpty
-                ? Center(child: Text('No data', style: GoogleFonts.poppins(color: Colors.white70)))
+                ? Center(child: Text(tr('No data'), style: GoogleFonts.poppins(color: Colors.white70)))
                 : GridView.builder(
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
               physics: const BouncingScrollPhysics(),
@@ -1654,6 +1671,7 @@ class _TopLandmarkCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return GestureDetector(
       onTap: onTap,
       child: AnimatedContainer(
@@ -1705,7 +1723,7 @@ class _TopLandmarkCard extends StatelessWidget {
                   color: Colors.black.withOpacity(0.55),
                   borderRadius: BorderRadius.circular(8),
                 ),
-                child: Text('#${landmark.global_rank}',
+                child: Text(tr('#${landmark.global_rank}'),
                     style: GoogleFonts.poppins(color: Colors.white, fontSize: 11, fontWeight: FontWeight.w700)),
               ),
             ),
@@ -1750,6 +1768,7 @@ class _BottomButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 8),
       child: Column(
@@ -1765,7 +1784,7 @@ class _BottomButton extends StatelessWidget {
                 boxShadow: enabled ? [BoxShadow(color: Colors.black.withOpacity(0.15), blurRadius: 16, offset: const Offset(0, 6))] : [],
               ),
               child: Center(
-                child: Text(label, style: GoogleFonts.poppins(
+                child: Text(tr(label), style: GoogleFonts.poppins(
                     color: enabled ? const Color(0xFF1ABFBC) : Colors.white.withOpacity(0.5),
                     fontWeight: FontWeight.w700, fontSize: 15, letterSpacing: 1)),
               ),
@@ -1787,7 +1806,7 @@ class _BottomButton extends StatelessWidget {
                   children: [
                     Icon(Icons.skip_next_rounded, color: Colors.white.withOpacity(0.9), size: 16),
                     const SizedBox(width: 6),
-                    Text(subLabel!,
+                    Text(tr(subLabel!),
                         style: GoogleFonts.poppins(
                             color: Colors.white.withOpacity(0.9),
                             fontSize: 13,

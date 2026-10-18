@@ -25,6 +25,7 @@ import 'dart:convert';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -66,6 +67,10 @@ class _FlagCountry {
   const _FlagCountry(this.name, this.code,
       {String? emoji, this.assetPath, this.imageUrl, this.era})
       : _emojiOverride = emoji;
+
+  String get displayName => code.length == 2
+      ? AppLocale.instance.countryName(name)
+      : name;
 
   /// Emoji to render, or null if this entry renders from an image instead.
   String? get emoji {
@@ -1032,6 +1037,7 @@ class _SoftCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Container(
       padding: padding,
       decoration: BoxDecoration(
@@ -1073,6 +1079,7 @@ class _GradientButtonState extends State<_GradientButton> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final fg = widget.outlined ? widget.color : Colors.white;
     return GestureDetector(
       onTapDown: (_) => setState(() => _scale = 0.97),
@@ -1110,7 +1117,7 @@ class _GradientButtonState extends State<_GradientButton> {
                 Icon(widget.icon, color: fg, size: 20),
                 const SizedBox(width: 8),
               ],
-              Text(widget.label,
+              Text(tr(widget.label),
                   style: TextStyle(color: fg, fontSize: 15.5, fontWeight: FontWeight.w800, letterSpacing: 0.2)),
             ],
           ),
@@ -1130,6 +1137,7 @@ class _ScreenBackground extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Container(
       decoration: BoxDecoration(
         gradient: LinearGradient(
@@ -1156,6 +1164,7 @@ class FlagGuessDifficultyScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Scaffold(
       backgroundColor: _kSurface,
       extendBodyBehindAppBar: true,
@@ -1184,7 +1193,7 @@ class FlagGuessDifficultyScreen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(width: 10),
-                  const Text('CHOOSE A DIFFICULTY',
+                   Text(tr('CHOOSE A DIFFICULTY'),
                       style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, letterSpacing: 1.1, color: _kMuted)),
                 ],
               ),
@@ -1271,14 +1280,14 @@ class FlagGuessDifficultyScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text('FLAG QUIZ',
+               Text(tr('FLAG QUIZ'),
                   style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.w800, letterSpacing: 1.6, color: _kMuted)),
               const SizedBox(height: 4),
-              const Text('Flag Guess',
+               Text(tr('Flag Guess'),
                   style: TextStyle(
                       fontSize: 27, fontWeight: FontWeight.w900, color: _kInk, letterSpacing: -0.6, height: 1.05)),
               const SizedBox(height: 8),
-              Text('Name the country from its flag before time runs out.',
+              Text(tr('Name the country from its flag before time runs out.'),
                   style: TextStyle(
                       fontSize: 12.5, color: _kMuted.withOpacity(0.9), fontWeight: FontWeight.w600, height: 1.4)),
             ],
@@ -1324,6 +1333,7 @@ class _DifficultyCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final color = _accentFor(difficulty);
     final level = _diffLevel(difficulty);
     return GestureDetector(
@@ -1355,7 +1365,7 @@ class _DifficultyCard extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Text(_labelFor(difficulty),
+                      Text(tr(_labelFor(difficulty)),
                           style: const TextStyle(fontSize: 17.5, fontWeight: FontWeight.w900, color: _kInk, letterSpacing: -0.2)),
                       if (locked) ...[
                         const SizedBox(width: 6),
@@ -1440,6 +1450,7 @@ class _FlagGuessLobbyScreenState extends State<_FlagGuessLobbyScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final accent = _accentFor(widget.difficulty);
     return Scaffold(
       backgroundColor: _kSurface,
@@ -1498,10 +1509,10 @@ class _FlagGuessLobbyScreenState extends State<_FlagGuessLobbyScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text('DIFFICULTY',
+               Text(tr('DIFFICULTY'),
                   style: TextStyle(fontSize: 11, fontWeight: FontWeight.w800, letterSpacing: 1.4, color: _kMuted)),
               const SizedBox(height: 2),
-              Text('${_labelFor(widget.difficulty)} Mode',
+              Text(tr('${_labelFor(widget.difficulty)} Mode'),
                   style: const TextStyle(fontSize: 21, fontWeight: FontWeight.w900, color: _kInk, letterSpacing: -0.3)),
             ],
           ),
@@ -1525,10 +1536,10 @@ class _FlagGuessLobbyScreenState extends State<_FlagGuessLobbyScreen> {
               children: [
                 Icon(Icons.emoji_events_outlined, size: 46, color: _kFaint),
                 const SizedBox(height: 12),
-                const Text('No runs yet',
+                 Text(tr('No runs yet'),
                     style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: _kInk)),
                 const SizedBox(height: 4),
-                Text('Play a round to start your leaderboard',
+                Text(tr('Play a round to start your leaderboard'),
                     style: TextStyle(fontSize: 12.5, color: _kMuted)),
               ],
             ),
@@ -1540,10 +1551,10 @@ class _FlagGuessLobbyScreenState extends State<_FlagGuessLobbyScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text('LEADERBOARD',
+                Text(tr('LEADERBOARD'),
                     style: TextStyle(
                         fontSize: 12.5, fontWeight: FontWeight.w800, letterSpacing: 1.0, color: _kMuted)),
-                Text('${records.length} run${records.length == 1 ? '' : 's'}',
+                Text(tr('${records.length} run${records.length == 1 ? '' : 's'}'),
                     style: TextStyle(fontSize: 12, color: _kFaint, fontWeight: FontWeight.w600)),
               ],
             ),
@@ -1586,6 +1597,7 @@ class _RecordTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final medal = _medalColors[rank];
     return _SoftCard(
       radius: 16,
@@ -1603,18 +1615,18 @@ class _RecordTile extends StatelessWidget {
             ),
             child: medal != null
                 ? Icon(Icons.emoji_events_rounded, size: 16, color: medal)
-                : Text('$rank', style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 12, color: _kMuted)),
+                : Text(tr('$rank'), style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 12, color: _kMuted)),
           ),
           const SizedBox(width: 14),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(record.score.toStringAsFixed(1),
+                Text(tr(record.score.toStringAsFixed(1)),
                     style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 16, color: _kInk)),
                 const SizedBox(height: 2),
                 Text(
-                  '${record.roundsCompleted}/${record.maxRounds} rounds · combo ${record.bestCombo} · ${_formatDate(record.playedAt)}',
+                  tr('${record.roundsCompleted}/${record.maxRounds} rounds · combo ${record.bestCombo} · ${_formatDate(record.playedAt)}'),
                   style: const TextStyle(fontSize: 11.5, color: _kMuted),
                 ),
               ],
@@ -1911,6 +1923,7 @@ class _FlagGuessGameScreenState extends State<_FlagGuessGameScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Scaffold(
       backgroundColor: _kSurface,
       extendBodyBehindAppBar: true,
@@ -1923,7 +1936,7 @@ class _FlagGuessGameScreenState extends State<_FlagGuessGameScreen> {
           children: [
             Container(width: 8, height: 8, decoration: BoxDecoration(color: _accent, shape: BoxShape.circle)),
             const SizedBox(width: 8),
-            Text('${_labelFor(widget.difficulty)} Mode',
+            Text(tr('${_labelFor(widget.difficulty)} Mode'),
                 style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w800, color: _kInk, letterSpacing: -0.2)),
           ],
         ),
@@ -1951,7 +1964,7 @@ class _FlagGuessGameScreenState extends State<_FlagGuessGameScreen> {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Text('ROUND ${_roundIndex + 1} OF $_maxRounds',
+          Text(tr('ROUND ${_roundIndex + 1} OF $_maxRounds'),
               style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, letterSpacing: 1.0, color: _kMuted)),
           const SizedBox(height: 18),
           TweenAnimationBuilder<double>(
@@ -1974,13 +1987,13 @@ class _FlagGuessGameScreenState extends State<_FlagGuessGameScreen> {
                 boxShadow: [BoxShadow(color: _accent.withOpacity(0.35), blurRadius: 24, offset: const Offset(0, 10))],
               ),
               child: Text(
-                _prepCountdown > 0 ? '$_prepCountdown' : 'GO',
+                tr(_prepCountdown > 0 ? '$_prepCountdown' : 'GO'),
                 style: const TextStyle(fontSize: 38, fontWeight: FontWeight.w900, color: Colors.white),
               ),
             ),
           ),
           const SizedBox(height: 18),
-          Text('Get ready...', style: TextStyle(fontSize: 14, color: _kMuted, fontWeight: FontWeight.w600)),
+          Text(tr('Get ready...'), style: TextStyle(fontSize: 14, color: _kMuted, fontWeight: FontWeight.w600)),
         ],
       ),
     );
@@ -1998,7 +2011,7 @@ class _FlagGuessGameScreenState extends State<_FlagGuessGameScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('ROUND ${_roundIndex + 1} / $_maxRounds',
+              Text(tr('ROUND ${_roundIndex + 1} / $_maxRounds'),
                   style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, letterSpacing: 0.6, color: _kMuted)),
               if (_combo > 0)
                 Container(
@@ -2010,7 +2023,7 @@ class _FlagGuessGameScreenState extends State<_FlagGuessGameScreen> {
                   child: Row(mainAxisSize: MainAxisSize.min, children: [
                     const Icon(Icons.local_fire_department_rounded, size: 15, color: Color(0xFFFF5A5F)),
                     const SizedBox(width: 3),
-                    Text('$_combo',
+                    Text(tr('$_combo'),
                         style: const TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, color: Color(0xFFFF5A5F))),
                   ]),
                 ),
@@ -2056,7 +2069,7 @@ class _FlagGuessGameScreenState extends State<_FlagGuessGameScreen> {
         const SizedBox(height: 6),
         Align(
           alignment: Alignment.centerRight,
-          child: Text('${_remaining.toStringAsFixed(1)}s',
+          child: Text(tr('${_remaining.toStringAsFixed(1)}s'),
               style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w700, color: barColor)),
         ),
       ],
@@ -2099,12 +2112,12 @@ class _FlagGuessGameScreenState extends State<_FlagGuessGameScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    correct ? 'Correct! +${_lastRoundScore!.toStringAsFixed(1)}' : 'Wrong',
+                    tr(correct ? 'Correct! +${_lastRoundScore!.toStringAsFixed(1)}' : 'Wrong'),
                     style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w900, color: Colors.white),
                   ),
                   if (!correct) ...[
                     const SizedBox(height: 2),
-                    Text('Answer: ${_answer!.name}',
+                    Text(tr('Answer: ${_answer!.displayName}', entities: [_answer!.displayName]),
                         style: const TextStyle(
                             fontSize: 13.5, fontWeight: FontWeight.w600, color: Colors.white)),
                   ],
@@ -2135,7 +2148,7 @@ class _FlagGuessGameScreenState extends State<_FlagGuessGameScreen> {
       width: width,
       height: height,
       alignment: Alignment.center,
-      child: Text(country.emojiFallback, style: TextStyle(fontSize: emojiSize)),
+      child: Text(tr(country.emojiFallback), style: TextStyle(fontSize: emojiSize)),
     );
 
     Widget networkFallback() {
@@ -2180,7 +2193,7 @@ class _FlagGuessGameScreenState extends State<_FlagGuessGameScreen> {
         child: networkFallback(),
       );
     }
-    return Text(country.emojiFallback, style: TextStyle(fontSize: emojiSize));
+    return Text(tr(country.emojiFallback), style: TextStyle(fontSize: emojiSize));
   }
 
   Widget _buildFlagVisual() {
@@ -2206,7 +2219,7 @@ class _FlagGuessGameScreenState extends State<_FlagGuessGameScreen> {
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 5),
             decoration: BoxDecoration(color: _kInk.withOpacity(0.06), borderRadius: BorderRadius.circular(20)),
-            child: Text(country.era!, style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: _kMuted)),
+            child: Text(tr(country.era!), style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: _kMuted)),
           ),
         ],
       ],
@@ -2246,7 +2259,7 @@ class _FlagGuessGameScreenState extends State<_FlagGuessGameScreen> {
             BoxShadow(color: Colors.black.withOpacity(0.04), blurRadius: 10, offset: const Offset(0, 4)),
           ],
         ),
-        child: Text(choice.name,
+        child: Text(choice.displayName,
             textAlign: TextAlign.center,
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
@@ -2275,19 +2288,19 @@ class _FlagGuessGameScreenState extends State<_FlagGuessGameScreen> {
               child: Icon(completed ? Icons.emoji_events_rounded : Icons.flag_rounded, size: 40, color: Colors.white),
             ),
             const SizedBox(height: 18),
-            Text(completed ? 'All Rounds Complete!' : 'Game Over',
+            Text(tr(completed ? 'All Rounds Complete!' : 'Game Over'),
                 style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w900, color: _kInk)),
             const SizedBox(height: 6),
             if (!completed && _answer != null)
-              Text('Answer: ${_answer!.name}',
+              Text(tr('Answer: ${_answer!.displayName}', entities: [_answer!.displayName]),
                   style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color: _kMuted)),
             const SizedBox(height: 26),
             _SoftCard(
               padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 26),
               child: Column(children: [
-                Text(_totalScore.toStringAsFixed(1),
+                Text(tr(_totalScore.toStringAsFixed(1)),
                     style: TextStyle(fontSize: 44, fontWeight: FontWeight.w900, color: _accent)),
-                const Text('TOTAL SCORE',
+                 Text(tr('TOTAL SCORE'),
                     style: TextStyle(fontSize: 11, fontWeight: FontWeight.w800, letterSpacing: 1.0, color: _kMuted)),
                 const SizedBox(height: 18),
                 Row(mainAxisAlignment: MainAxisAlignment.center, children: [
@@ -2324,6 +2337,7 @@ class _ScoreBadge extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Padding(
       padding: const EdgeInsets.only(right: 16, top: 4, bottom: 4),
       child: Container(
@@ -2337,9 +2351,9 @@ class _ScoreBadge extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.end,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(total.toStringAsFixed(1),
+            Text(tr(total.toStringAsFixed(1)),
                 style: TextStyle(fontSize: 15, fontWeight: FontWeight.w900, color: accent)),
-            Text('best ${best.toStringAsFixed(1)}',
+            Text(tr('best ${best.toStringAsFixed(1)}'),
                 style: const TextStyle(fontSize: 9.5, fontWeight: FontWeight.w700, color: _kMuted)),
           ],
         ),
@@ -2356,13 +2370,14 @@ class _StatChip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
       decoration: BoxDecoration(color: _kSurface, borderRadius: BorderRadius.circular(14)),
       child: Column(children: [
-        Text(value, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w800, color: _kInk)),
+        Text(tr(value), style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w800, color: _kInk)),
         const SizedBox(height: 2),
-        Text(label.toUpperCase(),
+        Text(tr(label.toUpperCase()),
             style: const TextStyle(fontSize: 9.5, fontWeight: FontWeight.w800, letterSpacing: 0.4, color: _kMuted)),
       ]),
     );

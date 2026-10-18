@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 
 class LandmarkInfoCard extends StatelessWidget {
   final String? overview;
@@ -16,6 +17,7 @@ class LandmarkInfoCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final bool hasOverview = overview != null && overview!.trim().isNotEmpty;
     final bool hasHistory = historySignificance != null && historySignificance!.trim().isNotEmpty;
     final bool hasHighlights = highlights != null && highlights!.trim().isNotEmpty;
@@ -28,9 +30,9 @@ class LandmarkInfoCard extends StatelessWidget {
           color: Colors.grey.shade50,
           borderRadius: BorderRadius.circular(12.0),
         ),
-        child: const Center(
+        child:  Center(
           child: Text(
-            'No detailed information available.',
+            tr('No detailed information available.'),
             style: TextStyle(color: Colors.grey),
           ),
         ),
@@ -79,7 +81,7 @@ class LandmarkInfoCard extends StatelessWidget {
             Icon(icon, size: 20, color: themeColor),
             const SizedBox(width: 8),
             Text(
-              title,
+              tr(title),
               style: const TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.bold,
@@ -92,7 +94,7 @@ class LandmarkInfoCard extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(left: 4.0),
           child: Text(
-            content,
+            tr(content),
             style: TextStyle(
               fontSize: 14,
               height: 1.6,

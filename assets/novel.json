@@ -1,88 +1,722 @@
-[
-  {"iso_a3": "USA", "novel": 420},
-  {"iso_a3": "GBR", "novel": 142},
-  {"iso_a3": "DEU", "novel": 115},
-  {"iso_a3": "FRA", "novel": 75},
-  {"iso_a3": "SWE", "novel": 34},
-  {"iso_a3": "JPN", "novel": 31},
-  {"iso_a3": "RUS", "novel": 30},
-  {"iso_a3": "CAN", "novel": 28},
-  {"iso_a3": "AUT", "novel": 25},
-  {"iso_a3": "CHE", "novel": 25},
-  {"iso_a3": "NLD", "novel": 22},
-  {"iso_a3": "ITA", "novel": 21},
-  {"iso_a3": "POL", "novel": 18},
-  {"iso_a3": "HUN", "novel": 15},
-  {"iso_a3": "AUS", "novel": 14},
-  {"iso_a3": "DNK", "novel": 14},
-  {"iso_a3": "NOR", "novel": 14},
-  {"iso_a3": "IND", "novel": 13},
-  {"iso_a3": "ISR", "novel": 13},
-  {"iso_a3": "BEL", "novel": 11},
-  {"iso_a3": "IRL", "novel": 11},
-  {"iso_a3": "ZAF", "novel": 11},
-  {"iso_a3": "CHN", "novel": 8},
-  {"iso_a3": "ESP", "novel": 8},
-  {"iso_a3": "EGY", "novel": 6},
-  {"iso_a3": "BLR", "novel": 6},
-  {"iso_a3": "CZE", "novel": 6},
-  {"iso_a3": "UKR", "novel": 6},
-  {"iso_a3": "ARG", "novel": 5},
-  {"iso_a3": "FIN", "novel": 5},
-  {"iso_a3": "ROU", "novel": 4},
-  {"iso_a3": "TWN", "novel": 4},
-  {"iso_a3": "TUR", "novel": 4},
-  {"iso_a3": "ARM", "novel": 3},
-  {"iso_a3": "LTU", "novel": 3},
-  {"iso_a3": "MEX", "novel": 3},
-  {"iso_a3": "NZL", "novel": 3},
-  {"iso_a3": "KOR", "novel": 3},
-  {"iso_a3": "TUN", "novel": 3},
-  {"iso_a3": "YUG", "novel": 3},
-  {"iso_a3": "BIH", "novel": 2},
-  {"iso_a3": "CHL", "novel": 2},
-  {"iso_a3": "COL", "novel": 2},
-  {"iso_a3": "HRV", "novel": 2},
-  {"iso_a3": "CYP", "novel": 2},
-  {"iso_a3": "TLS", "novel": 2},
-  {"iso_a3": "GRC", "novel": 2},
-  {"iso_a3": "GTM", "novel": 2},
-  {"iso_a3": "LBR", "novel": 2},
-  {"iso_a3": "LUX", "novel": 2},
-  {"iso_a3": "PRT", "novel": 2},
-  {"iso_a3": "LCA", "novel": 2},
-  {"iso_a3": "IRN", "novel": 2},
-  {"iso_a3": "PAK", "novel": 2},
-  {"iso_a3": "DZA", "novel": 2},
-  {"iso_a3": "AZE", "novel": 2},
-  {"iso_a3": "BGD", "novel": 1},
-  {"iso_a3": "BRA", "novel": 1},
-  {"iso_a3": "BGR", "novel": 1},
-  {"iso_a3": "CRI", "novel": 1},
-  {"iso_a3": "COD", "novel": 1},
-  {"iso_a3": "EST", "novel": 1},
-  {"iso_a3": "ETH", "novel": 1},
-  {"iso_a3": "FRO", "novel": 1},
-  {"iso_a3": "GHA", "novel": 1},
-  {"iso_a3": "HKG", "novel": 1},
-  {"iso_a3": "ISL", "novel": 1},
-  {"iso_a3": "IRQ", "novel": 1},
-  {"iso_a3": "KEN", "novel": 1},
-  {"iso_a3": "LVA", "novel": 1},
-  {"iso_a3": "LBN", "novel": 1},
-  {"iso_a3": "MKD", "novel": 1},
-  {"iso_a3": "MAR", "novel": 1},
-  {"iso_a3": "MMR", "novel": 1},
-  {"iso_a3": "NGA", "novel": 1},
-  {"iso_a3": "PSE", "novel": 1},
-  {"iso_a3": "PER", "novel": 1},
-  {"iso_a3": "PHL", "novel": 1},
-  {"iso_a3": "SVN", "novel": 1},
-  {"iso_a3": "TZA", "novel": 1},
-  {"iso_a3": "TIB", "novel": 1},
-  {"iso_a3": "TTO", "novel": 1},
-  {"iso_a3": "VEN", "novel": 1},
-  {"iso_a3": "VNM", "novel": 1},
-  {"iso_a3": "YEM", "novel": 1},
-  {"iso_a3": "ZWE", "novel": 1}
-]
+{
+  "schema_version": 1,
+  "dataset_id": "novel",
+  "metadata": {
+    "source_url": null,
+    "reference_period": null,
+    "updated_at": null
+  },
+  "legacy_layout": "list",
+  "tables": [
+    {
+      "id": "main",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "iso_a3"
+      ],
+      "metrics": [
+        {
+          "id": "novel",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "iso_a3": "USA"
+          },
+          "values": {
+            "novel": 420
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GBR"
+          },
+          "values": {
+            "novel": 142
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DEU"
+          },
+          "values": {
+            "novel": 115
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FRA"
+          },
+          "values": {
+            "novel": 75
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SWE"
+          },
+          "values": {
+            "novel": 34
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "JPN"
+          },
+          "values": {
+            "novel": 31
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "RUS"
+          },
+          "values": {
+            "novel": 30
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CAN"
+          },
+          "values": {
+            "novel": 28
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AUT"
+          },
+          "values": {
+            "novel": 25
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CHE"
+          },
+          "values": {
+            "novel": 25
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NLD"
+          },
+          "values": {
+            "novel": 22
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ITA"
+          },
+          "values": {
+            "novel": 21
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "POL"
+          },
+          "values": {
+            "novel": 18
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HUN"
+          },
+          "values": {
+            "novel": 15
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AUS"
+          },
+          "values": {
+            "novel": 14
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DNK"
+          },
+          "values": {
+            "novel": 14
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NOR"
+          },
+          "values": {
+            "novel": 14
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IND"
+          },
+          "values": {
+            "novel": 13
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ISR"
+          },
+          "values": {
+            "novel": 13
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BEL"
+          },
+          "values": {
+            "novel": 11
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IRL"
+          },
+          "values": {
+            "novel": 11
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ZAF"
+          },
+          "values": {
+            "novel": 11
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CHN"
+          },
+          "values": {
+            "novel": 8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ESP"
+          },
+          "values": {
+            "novel": 8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "EGY"
+          },
+          "values": {
+            "novel": 6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BLR"
+          },
+          "values": {
+            "novel": 6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CZE"
+          },
+          "values": {
+            "novel": 6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "UKR"
+          },
+          "values": {
+            "novel": 6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ARG"
+          },
+          "values": {
+            "novel": 5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FIN"
+          },
+          "values": {
+            "novel": 5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ROU"
+          },
+          "values": {
+            "novel": 4
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TWN"
+          },
+          "values": {
+            "novel": 4
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TUR"
+          },
+          "values": {
+            "novel": 4
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ARM"
+          },
+          "values": {
+            "novel": 3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LTU"
+          },
+          "values": {
+            "novel": 3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MEX"
+          },
+          "values": {
+            "novel": 3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NZL"
+          },
+          "values": {
+            "novel": 3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KOR"
+          },
+          "values": {
+            "novel": 3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TUN"
+          },
+          "values": {
+            "novel": 3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "YUG"
+          },
+          "values": {
+            "novel": 3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BIH"
+          },
+          "values": {
+            "novel": 2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CHL"
+          },
+          "values": {
+            "novel": 2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "COL"
+          },
+          "values": {
+            "novel": 2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HRV"
+          },
+          "values": {
+            "novel": 2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CYP"
+          },
+          "values": {
+            "novel": 2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TLS"
+          },
+          "values": {
+            "novel": 2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GRC"
+          },
+          "values": {
+            "novel": 2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GTM"
+          },
+          "values": {
+            "novel": 2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LBR"
+          },
+          "values": {
+            "novel": 2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LUX"
+          },
+          "values": {
+            "novel": 2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PRT"
+          },
+          "values": {
+            "novel": 2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LCA"
+          },
+          "values": {
+            "novel": 2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IRN"
+          },
+          "values": {
+            "novel": 2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PAK"
+          },
+          "values": {
+            "novel": 2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DZA"
+          },
+          "values": {
+            "novel": 2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AZE"
+          },
+          "values": {
+            "novel": 2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BGD"
+          },
+          "values": {
+            "novel": 1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BRA"
+          },
+          "values": {
+            "novel": 1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BGR"
+          },
+          "values": {
+            "novel": 1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CRI"
+          },
+          "values": {
+            "novel": 1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "COD"
+          },
+          "values": {
+            "novel": 1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "EST"
+          },
+          "values": {
+            "novel": 1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ETH"
+          },
+          "values": {
+            "novel": 1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FRO"
+          },
+          "values": {
+            "novel": 1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GHA"
+          },
+          "values": {
+            "novel": 1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HKG"
+          },
+          "values": {
+            "novel": 1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ISL"
+          },
+          "values": {
+            "novel": 1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IRQ"
+          },
+          "values": {
+            "novel": 1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KEN"
+          },
+          "values": {
+            "novel": 1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LVA"
+          },
+          "values": {
+            "novel": 1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LBN"
+          },
+          "values": {
+            "novel": 1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MKD"
+          },
+          "values": {
+            "novel": 1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MAR"
+          },
+          "values": {
+            "novel": 1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MMR"
+          },
+          "values": {
+            "novel": 1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NGA"
+          },
+          "values": {
+            "novel": 1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PSE"
+          },
+          "values": {
+            "novel": 1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PER"
+          },
+          "values": {
+            "novel": 1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PHL"
+          },
+          "values": {
+            "novel": 1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SVN"
+          },
+          "values": {
+            "novel": 1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TZA"
+          },
+          "values": {
+            "novel": 1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TIB"
+          },
+          "values": {
+            "novel": 1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TTO"
+          },
+          "values": {
+            "novel": 1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VEN"
+          },
+          "values": {
+            "novel": 1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VNM"
+          },
+          "values": {
+            "novel": 1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "YEM"
+          },
+          "values": {
+            "novel": 1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ZWE"
+          },
+          "values": {
+            "novel": 1
+          }
+        }
+      ]
+    }
+  ]
+}

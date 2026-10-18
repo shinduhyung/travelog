@@ -1,6 +1,7 @@
 // lib/screens/city_specials_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:jidoapp/models/city_model.dart';
 import 'package:jidoapp/providers/city_provider.dart';
 import 'package:provider/provider.dart';
@@ -174,6 +175,7 @@ class CitySpecialsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Theme(
       data: Theme.of(context).copyWith(
         scaffoldBackgroundColor: _AppTheme.bg,
@@ -206,6 +208,7 @@ class _SpecialsAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return AppBar(
       backgroundColor: _AppTheme.surface,
       elevation: 0,
@@ -216,9 +219,9 @@ class _SpecialsAppBar extends StatelessWidget implements PreferredSizeWidget {
         child: Container(height: 1, color: _AppTheme.divider),
       ),
       title: TabBar(
-        tabs: const [
-          Tab(text: 'Specials'),
-          Tab(text: 'Sports'),
+        tabs:  [
+          Tab(text: tr('Specials')),
+          Tab(text: tr('Sports')),
         ],
         labelStyle: const TextStyle(
           fontSize: 14,
@@ -251,6 +254,7 @@ class _SpecialsTabContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Consumer<CityProvider>(
       builder: (context, provider, child) {
         if (provider.isLoading) {
@@ -264,7 +268,7 @@ class _SpecialsTabContent extends StatelessWidget {
                 ),
                 const SizedBox(height: 16),
                 Text(
-                  'Loading specials...',
+                  tr('Loading specials...'),
                   style: TextStyle(
                     fontSize: 13,
                     color: _AppTheme.inkLight,
@@ -401,12 +405,13 @@ class _SectionHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Padding(
       padding: const EdgeInsets.fromLTRB(16, 24, 16, 12),
       child: Row(
         children: [
           Text(
-            label,
+            tr(label),
             style: const TextStyle(
               fontSize: 11,
               fontWeight: FontWeight.w700,
@@ -437,6 +442,7 @@ class _CollectionSummaryRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     // 완료된 컬렉션 = 모든 도시를 방문한 그룹
     final completedGroups = groups.where((g) {
       if (g.cities.isEmpty) return false;
@@ -459,7 +465,7 @@ class _CollectionSummaryRow extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  '$completedGroups of $totalGroups collections',
+                  tr('$completedGroups of $totalGroups collections'),
                   style: const TextStyle(
                     fontSize: 22,
                     fontWeight: FontWeight.w800,
@@ -469,11 +475,11 @@ class _CollectionSummaryRow extends StatelessWidget {
                 ),
                 const SizedBox(height: 4),
                 Text(
-                  completedGroups == 0
+                  tr(completedGroups == 0
                       ? 'No collections fully completed yet'
                       : completedGroups == totalGroups
                       ? 'All collections completed! 🎉'
-                      : '${totalGroups - completedGroups} remaining to complete',
+                      : '${totalGroups - completedGroups} remaining to complete'),
                   style: const TextStyle(
                     fontSize: 12,
                     color: Color(0xFF888888),
@@ -506,6 +512,7 @@ class _SegmentedProgressBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final totalCities = groups.fold<int>(0, (s, g) => s + g.cities.length);
     if (totalCities == 0) return const SizedBox.shrink();
 
@@ -548,6 +555,7 @@ class _CirclePercent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return SizedBox(
       width: 68,
       height: 68,
@@ -562,7 +570,7 @@ class _CirclePercent extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: [
               Text(
-                '${(value * 100).round()}',
+                tr('${(value * 100).round()}'),
                 style: const TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.w800,
@@ -570,8 +578,8 @@ class _CirclePercent extends StatelessWidget {
                   height: 1,
                 ),
               ),
-              const Text(
-                '%',
+               Text(
+                tr('%'),
                 style: TextStyle(
                   fontSize: 10,
                   fontWeight: FontWeight.w500,
@@ -686,6 +694,7 @@ class _RankingCardState extends State<_RankingCard> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final compactFormatter = NumberFormat.compact();
     final topValue =
     _rankedList.isNotEmpty ? _selectedRanking.valueAccessor(_rankedList.first) : 1;
@@ -732,7 +741,7 @@ class _RankingCardState extends State<_RankingCard> {
                           ),
                           const SizedBox(width: 6),
                           Text(
-                            r.title,
+                            tr(r.title),
                             style: TextStyle(
                               fontSize: 12,
                               fontWeight: isActive ? FontWeight.w700 : FontWeight.w400,
@@ -808,6 +817,7 @@ class _RankingRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     Color rankColor;
     if (rank == 1) rankColor = const Color(0xFFC4922A);
     else if (rank == 2) rankColor = const Color(0xFF888888);
@@ -831,7 +841,7 @@ class _RankingRow extends StatelessWidget {
             SizedBox(
               width: 28,
               child: Text(
-                rank <= 3 ? '${rank == 1 ? '🥇' : rank == 2 ? '🥈' : '🥉'}' : '$rank',
+                tr(rank <= 3 ? '${rank == 1 ? '🥇' : rank == 2 ? '🥈' : '🥉'}' : '$rank'),
                 style: TextStyle(fontSize: rank <= 3 ? 16 : 12, fontWeight: FontWeight.w700, color: rankColor),
                 textAlign: TextAlign.center,
               ),
@@ -859,7 +869,7 @@ class _RankingRow extends StatelessWidget {
                         Icon(Icons.check_circle_rounded, size: 14, color: accentColor),
                       ],
                       const SizedBox(width: 6),
-                      Text(value, style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: _AppTheme.ink)),
+                      Text(tr(value), style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: _AppTheme.ink)),
                     ],
                   ),
                   const SizedBox(height: 5),
@@ -875,9 +885,9 @@ class _RankingRow extends StatelessWidget {
                   const SizedBox(height: 3),
                   Row(
                     children: [
-                      Text(_cityFlagEmoji(city), style: const TextStyle(fontSize: 11)),
+                      Text(tr(_cityFlagEmoji(city)), style: const TextStyle(fontSize: 11)),
                       const SizedBox(width: 4),
-                      Text(city.country, style: const TextStyle(fontSize: 10, color: _AppTheme.inkLight, letterSpacing: 0.1)),
+                      Text(tr(city.country), style: const TextStyle(fontSize: 10, color: _AppTheme.inkLight, letterSpacing: 0.1)),
                     ],
                   ),
                 ],
@@ -959,6 +969,7 @@ class _CollectionCardState extends State<_CollectionCard>
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final g = widget.data;
     final displayCities = List<City>.from(g.cities)..sort((a, b) => a.name.compareTo(b.name));
     final total = displayCities.length;
@@ -1001,7 +1012,7 @@ class _CollectionCardState extends State<_CollectionCard>
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          g.label,
+                          tr(g.label),
                           style: TextStyle(
                             fontSize: 10,
                             fontWeight: FontWeight.w700,
@@ -1011,7 +1022,7 @@ class _CollectionCardState extends State<_CollectionCard>
                         ),
                         const SizedBox(height: 2),
                         Text(
-                          g.title,
+                          tr(g.title),
                           style: const TextStyle(
                             fontSize: 15,
                             fontWeight: FontWeight.w700,
@@ -1080,7 +1091,7 @@ class _CollectionCardState extends State<_CollectionCard>
                     ),
                     const Spacer(),
                     Text(
-                      '${(pct * 100).round()}%',
+                      tr('${(pct * 100).round()}%'),
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.w800,
@@ -1148,13 +1159,14 @@ class _StatChip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Row(
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.baseline,
       textBaseline: TextBaseline.alphabetic,
       children: [
         Text(
-          value,
+          tr(value),
           style: TextStyle(
             fontSize: 16,
             fontWeight: FontWeight.w800,
@@ -1163,7 +1175,7 @@ class _StatChip extends StatelessWidget {
         ),
         const SizedBox(width: 3),
         Text(
-          label,
+          tr(label),
           style: const TextStyle(
             fontSize: 10,
             fontWeight: FontWeight.w500,
@@ -1189,6 +1201,7 @@ class _CityChip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final flag = _cityFlagEmoji(city);
     return GestureDetector(
       onTap: () => _showCityModal(context, city),
@@ -1203,7 +1216,7 @@ class _CityChip extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             if (flag.isNotEmpty) ...[
-              Text(flag, style: const TextStyle(fontSize: 11)),
+              Text(tr(flag), style: const TextStyle(fontSize: 11)),
               const SizedBox(width: 5),
             ],
             Text(
@@ -1228,6 +1241,7 @@ class _MapButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return GestureDetector(
       onTap: onTap,
       child: Container(
@@ -1239,11 +1253,11 @@ class _MapButton extends StatelessWidget {
         ),
         child: Row(
           mainAxisSize: MainAxisSize.min,
-          children: const [
+          children:  [
             Icon(Icons.map_outlined, size: 14, color: _AppTheme.inkMid),
             SizedBox(width: 4),
             Text(
-              'Map',
+              tr('Map'),
               style: TextStyle(
                 fontSize: 12,
                 fontWeight: FontWeight.w600,

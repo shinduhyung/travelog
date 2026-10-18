@@ -2,6 +2,7 @@
 
 import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:intl/intl.dart';
@@ -164,6 +165,7 @@ class _HistoryStatsScreenState extends State<HistoryStatsScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final countryProvider = Provider.of<CountryProvider>(context);
     final visitedSet = countryProvider.visitedCountries;
     final allCountries = countryProvider.allCountries;
@@ -324,7 +326,7 @@ class _HistoryStatsScreenState extends State<HistoryStatsScreen> {
                     Icon(Icons.public, color: Colors.white.withOpacity(0.9), size: 24),
                     const SizedBox(width: 12),
                     Text(
-                      'View $title Map',
+                      tr('View $title Map'),
                       style: const TextStyle(
                         color: Colors.white,
                         fontSize: 16,
@@ -382,8 +384,8 @@ class _HistoryStatsScreenState extends State<HistoryStatsScreen> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Expanded(child: Text("Territory Stats", style: theme.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold, fontSize: 15, color: Colors.grey.shade700))),
-                      Text('${(percentage * 100).toStringAsFixed(1)}%', style: theme.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w800, fontSize: 18, color: color)),
+                      Expanded(child: Text(tr("Territory Stats"), style: theme.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold, fontSize: 15, color: Colors.grey.shade700))),
+                      Text(tr('${(percentage * 100).toStringAsFixed(1)}%'), style: theme.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w800, fontSize: 18, color: color)),
                     ],
                   ),
                   const SizedBox(height: 10),
@@ -395,7 +397,7 @@ class _HistoryStatsScreenState extends State<HistoryStatsScreen> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text('${numberFormat.format(visitedCount)} / ${numberFormat.format(totalCount)} countries visited', style: theme.textTheme.bodySmall?.copyWith(color: Colors.grey.shade600)),
+                      Text(tr('${numberFormat.format(visitedCount)} / ${numberFormat.format(totalCount)} countries visited'), style: theme.textTheme.bodySmall?.copyWith(color: Colors.grey.shade600)),
                       Icon(isExpanded ? Icons.keyboard_arrow_up : Icons.keyboard_arrow_down, color: Colors.grey.shade400),
                     ],
                   ),
@@ -433,19 +435,19 @@ class _HistoryStatsScreenState extends State<HistoryStatsScreen> {
                                 Icon(isVisited ? Icons.check_circle_rounded : Icons.radio_button_unchecked_rounded, size: 20, color: isVisited ? color : Colors.grey.shade300),
                                 const SizedBox(width: 8),
                                 if (countryObj != null) ...[
-                                  Text(flagEmoji(countryObj.isoA2), style: const TextStyle(fontSize: 16)), // 국기 추가
+                                  Text(tr(flagEmoji(countryObj.isoA2)), style: const TextStyle(fontSize: 16)), // 국기 추가
                                   const SizedBox(width: 8),
                                 ],
                                 Expanded(
                                   child: Column(
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
-                                      Text(countryName, style: theme.textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.bold, color: isVisited ? Colors.black87 : Colors.grey.shade500)),
-                                      Text('${numberFormat.format(area.round())} km²', style: theme.textTheme.bodySmall?.copyWith(color: Colors.grey.shade400)),
+                                      Text(tr(countryName), style: theme.textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.bold, color: isVisited ? Colors.black87 : Colors.grey.shade500)),
+                                      Text(tr('${numberFormat.format(area.round())} km²'), style: theme.textTheme.bodySmall?.copyWith(color: Colors.grey.shade400)),
                                     ],
                                   ),
                                 ),
-                                Text('${share.toStringAsFixed(1)}%', style: theme.textTheme.bodyMedium?.copyWith(color: Colors.grey.shade500, fontWeight: FontWeight.w500)),
+                                Text(tr('${share.toStringAsFixed(1)}%'), style: theme.textTheme.bodyMedium?.copyWith(color: Colors.grey.shade500, fontWeight: FontWeight.w500)),
                               ],
                             ),
                           ),
@@ -525,6 +527,7 @@ class _CombinedHistoricalUnionCardState extends State<_CombinedHistoricalUnionCa
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final theme = Theme.of(context);
     final textTheme = theme.textTheme;
 
@@ -564,7 +567,7 @@ class _CombinedHistoricalUnionCardState extends State<_CombinedHistoricalUnionCa
                       children: [
                         Icon(group.icon, color: group.themeColor),
                         const SizedBox(width: 12),
-                        Text(group.title, style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
+                        Text(tr(group.title), style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
                       ],
                     ),
                   );
@@ -592,14 +595,14 @@ class _CombinedHistoricalUnionCardState extends State<_CombinedHistoricalUnionCa
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text("Visited", style: theme.textTheme.bodyLarge),
+                            Text(tr("Visited"), style: theme.textTheme.bodyLarge),
                             Text.rich(
                                 TextSpan(
-                                    text: '$visited',
+                                    text: tr('$visited'),
                                     style: theme.textTheme.headlineSmall?.copyWith(color: _selectedGroup.themeColor, fontWeight: FontWeight.bold),
                                     children: [
                                       TextSpan(
-                                          text: ' / $total',
+                                          text: tr(' / $total'),
                                           style: theme.textTheme.titleMedium?.copyWith(color: Colors.grey.shade600)
                                       ),
                                     ]
@@ -631,7 +634,7 @@ class _CombinedHistoricalUnionCardState extends State<_CombinedHistoricalUnionCa
                             Navigator.push(context, MaterialPageRoute(builder: (context) => CountriesMapScreen(highlightGroups: groups)));
                           },
                           icon: const Icon(Icons.map_outlined),
-                          label: const Text('Map'),
+                          label:  Text(tr('Map')),
                           style: ElevatedButton.styleFrom(
                             backgroundColor: _selectedGroup.themeColor,
                             foregroundColor: Colors.white,
@@ -695,11 +698,11 @@ class _CombinedHistoricalUnionCardState extends State<_CombinedHistoricalUnionCa
                               color: isVisited ? _selectedGroup.themeColor : Colors.grey.shade400,
                             ),
                             const SizedBox(width: 6),
-                            Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 14)), // 국기 추가
+                            Text(tr(flagEmoji(country.isoA2)), style: const TextStyle(fontSize: 14)), // 국기 추가
                             const SizedBox(width: 4),
                             Expanded(
                               child: Text(
-                                country.name,
+                                tr(country.name),
                                 style: theme.textTheme.bodyMedium,
                                 overflow: TextOverflow.ellipsis,
                               ),
@@ -715,7 +718,7 @@ class _CombinedHistoricalUnionCardState extends State<_CombinedHistoricalUnionCa
                 if (_selectedGroup.note != null)
                   Padding(
                     padding: const EdgeInsets.fromLTRB(16.0, 0, 16.0, 16.0),
-                    child: Text(_selectedGroup.note!, style: theme.textTheme.bodySmall?.copyWith(color: Colors.grey.shade600)),
+                    child: Text(tr(_selectedGroup.note!), style: theme.textTheme.bodySmall?.copyWith(color: Colors.grey.shade600)),
                   ),
               ],
             )

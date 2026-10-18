@@ -1,233 +1,2358 @@
-[
-  {"iso_a3":"IND","avg_temp":23.7,"avg_precipitation":1083,"climate_zone":"A"},
-  {"iso_a3":"AFG","avg_temp":12.6,"avg_precipitation":327,"climate_zone":"B"},
-  {"iso_a3":"ALB","avg_temp":11.4,"avg_precipitation":1485,"climate_zone":"C"},
-  {"iso_a3":"DZA","avg_temp":22.5,"avg_precipitation":89,"climate_zone":"B"},
-  {"iso_a3":"AGO","avg_temp":21.6,"avg_precipitation":1010,"climate_zone":"A"},
-  {"iso_a3":"ARG","avg_temp":14.8,"avg_precipitation":591,"climate_zone":"C"},
-  {"iso_a3":"ARM","avg_temp":7.2,"avg_precipitation":562,"climate_zone":"D"},
-  {"iso_a3":"AUS","avg_temp":21.7,"avg_precipitation":534,"climate_zone":"B"},
-  {"iso_a3":"AUT","avg_temp":6.4,"avg_precipitation":1110,"climate_zone":"C"},
-  {"iso_a3":"AZE","avg_temp":12.1,"avg_precipitation":500,"climate_zone":"B"},
-  {"iso_a3":"BHS","avg_temp":24.9,"avg_precipitation":1400,"climate_zone":"A"},
-  {"iso_a3":"BGD","avg_temp":25.0,"avg_precipitation":2666,"climate_zone":"A"},
-  {"iso_a3":"BLR","avg_temp":6.1,"avg_precipitation":690,"climate_zone":"D"},
-  {"iso_a3":"BEL","avg_temp":9.6,"avg_precipitation":852,"climate_zone":"C"},
-  {"iso_a3":"BLZ","avg_temp":25.3,"avg_precipitation":2000,"climate_zone":"A"},
-  {"iso_a3":"BEN","avg_temp":27.2,"avg_precipitation":1000,"climate_zone":"A"},
-  {"iso_a3":"BTN","avg_temp":13.4,"avg_precipitation":1500,"climate_zone":"C"},
-  {"iso_a3":"BOL","avg_temp":20.2,"avg_precipitation":1095,"climate_zone":"D"},
-  {"iso_a3":"BIH","avg_temp":9.8,"avg_precipitation":992,"climate_zone":"D"},
-  {"iso_a3":"BWA","avg_temp":21.5,"avg_precipitation":450,"climate_zone":"B"},
-  {"iso_a3":"BRA","avg_temp":24.9,"avg_precipitation":1761,"climate_zone":"A"},
-  {"iso_a3":"BRN","avg_temp":26.9,"avg_precipitation":2700,"climate_zone":"A"},
-  {"iso_a3":"BGR","avg_temp":10.6,"avg_precipitation":599,"climate_zone":"C"},
-  {"iso_a3":"BFA","avg_temp":28.3,"avg_precipitation":790,"climate_zone":"A"},
-  {"iso_a3":"BDI","avg_temp":19.8,"avg_precipitation":1200,"climate_zone":"A"},
-  {"iso_a3":"KHM","avg_temp":26.8,"avg_precipitation":1500,"climate_zone":"A"},
-  {"iso_a3":"CMR","avg_temp":24.6,"avg_precipitation":1600,"climate_zone":"A"},
-  {"iso_a3":"CAN","avg_temp":-5.3,"avg_precipitation":537,"climate_zone":"D"},
-  {"iso_a3":"CAF","avg_temp":24.9,"avg_precipitation":1540,"climate_zone":"A"},
-  {"iso_a3":"TCD","avg_temp":26.6,"avg_precipitation":320,"climate_zone":"B"},
-  {"iso_a3":"CHL","avg_temp":8.4,"avg_precipitation":650,"climate_zone":"C"},
-  {"iso_a3":"CHN","avg_temp":6.9,"avg_precipitation":645,"climate_zone":"C"},
-  {"iso_a3":"COL","avg_temp":24.5,"avg_precipitation":3240,"climate_zone":"A"},
-  {"iso_a3":"COG","avg_temp":24.5,"avg_precipitation":1600,"climate_zone":"A"},
-  {"iso_a3":"COD","avg_temp":24.0,"avg_precipitation":1545,"climate_zone":"A"},
-  {"iso_a3":"CRI","avg_temp":24.4,"avg_precipitation":2926,"climate_zone":"A"},
-  {"iso_a3":"CIV","avg_temp":26.3,"avg_precipitation":1347,"climate_zone":"A"},
-  {"iso_a3":"HRV","avg_temp":10.9,"avg_precipitation":1018,"climate_zone":"C"},
-  {"iso_a3":"CUB","avg_temp":25.2,"avg_precipitation":1222,"climate_zone":"A"},
-  {"iso_a3":"CYP","avg_temp":18.4,"avg_precipitation":500,"climate_zone":"C"},
-  {"iso_a3":"CZE","avg_temp":7.6,"avg_precipitation":678,"climate_zone":"C"},
-  {"iso_a3":"DNK","avg_temp":7.5,"avg_precipitation":711,"climate_zone":"C"},
-  {"iso_a3":"DJI","avg_temp":28.0,"avg_precipitation":160,"climate_zone":"B"},
-  {"iso_a3":"DOM","avg_temp":25.0,"avg_precipitation":1450,"climate_zone":"A"},
-  {"iso_a3":"ECU","avg_temp":21.8,"avg_precipitation":1900,"climate_zone":"A"},
-  {"iso_a3":"EGY","avg_temp":22.1,"avg_precipitation":51,"climate_zone":"B"},
-  {"iso_a3":"SLV","avg_temp":24.5,"avg_precipitation":1784,"climate_zone":"A"},
-  {"iso_a3":"GNQ","avg_temp":24.6,"avg_precipitation":2156,"climate_zone":"A"},
-  {"iso_a3":"ERI","avg_temp":25.5,"avg_precipitation":400,"climate_zone":"B"},
-  {"iso_a3":"EST","avg_temp":5.1,"avg_precipitation":670,"climate_zone":"C"},
-  {"iso_a3":"ETH","avg_temp":22.2,"avg_precipitation":810,"climate_zone":"A"},
-  {"iso_a3":"FJI","avg_temp":25.2,"avg_precipitation":2400,"climate_zone":"A"},
-  {"iso_a3":"FIN","avg_temp":1.7,"avg_precipitation":600,"climate_zone":"D"},
-  {"iso_a3":"FRA","avg_temp":11.2,"avg_precipitation":867,"climate_zone":"C"},
-  {"iso_a3":"GAB","avg_temp":25.0,"avg_precipitation":1800,"climate_zone":"A"},
-  {"iso_a3":"GMB","avg_temp":27.7,"avg_precipitation":1000,"climate_zone":"A"},
-  {"iso_a3":"GEO","avg_temp":12.8,"avg_precipitation":550,"climate_zone":"C"},
-  {"iso_a3":"DEU","avg_temp":8.5,"avg_precipitation":700,"climate_zone":"C"},
-  {"iso_a3":"GHA","avg_temp":27.0,"avg_precipitation":1187,"climate_zone":"A"},
-  {"iso_a3": "GIB", "avg_temp": 18.6, "avg_precipitation": 838, "climate_zone": "C"},
-  {"iso_a3":"GRC","avg_temp":15.4,"avg_precipitation":652,"climate_zone":"C"},
-  {"iso_a3":"GRL","avg_temp":-19.6,"avg_precipitation":300,"climate_zone":"E"},
-  {"iso_a3":"GTM","avg_temp":22.9,"avg_precipitation":1600,"climate_zone":"A"},
-  {"iso_a3":"GIN","avg_temp":25.4,"avg_precipitation":1900,"climate_zone":"A"},
-  {"iso_a3":"GNB","avg_temp":26.6,"avg_precipitation":1600,"climate_zone":"A"},
-  {"iso_a3":"GUY","avg_temp":26.0,"avg_precipitation":2500,"climate_zone":"A"},
-  {"iso_a3":"HTI","avg_temp":24.9,"avg_precipitation":1350,"climate_zone":"A"},
-  {"iso_a3":"HND","avg_temp":23.5,"avg_precipitation":1600,"climate_zone":"A"},
-  {"iso_a3":"HUN","avg_temp":9.8,"avg_precipitation":597,"climate_zone":"C"},
-  {"iso_a3":"ISL","avg_temp":1.8,"avg_precipitation":800,"climate_zone":"E"},
-  {"iso_a3":"IDN","avg_temp":25.9,"avg_precipitation":2700,"climate_zone":"A"},
-  {"iso_a3":"IRN","avg_temp":17.3,"avg_precipitation":228,"climate_zone":"B"},
-  {"iso_a3":"IRQ","avg_temp":21.4,"avg_precipitation":180,"climate_zone":"B"},
-  {"iso_a3":"IRL","avg_temp":9.3,"avg_precipitation":1000,"climate_zone":"C"},
-  {"iso_a3":"ISR","avg_temp":19.2,"avg_precipitation":420,"climate_zone":"C"},
-  {"iso_a3":"ITA","avg_temp":13.5,"avg_precipitation":950,"climate_zone":"C"},
-  {"iso_a3":"JAM","avg_temp":26.0,"avg_precipitation":1500,"climate_zone":"A"},
-  {"iso_a3":"JPN","avg_temp":11.2,"avg_precipitation":1668,"climate_zone":"C"},
-  {"iso_a3":"JOR","avg_temp":18.3,"avg_precipitation":111,"climate_zone":"B"},
-  {"iso_a3":"KAZ","avg_temp":5.4,"avg_precipitation":330,"climate_zone":"D"},
-  {"iso_a3":"KEN","avg_temp":23.5,"avg_precipitation":700,"climate_zone":"A"},
-  {"iso_a3":"KWT","avg_temp":25.4,"avg_precipitation":121,"climate_zone":"B"},
-  {"iso_a3":"KGZ","avg_temp":1.5,"avg_precipitation":535,"climate_zone":"D"},
-  {"iso_a3":"LAO","avg_temp":24.1,"avg_precipitation":1700,"climate_zone":"A"},
-  {"iso_a3":"LVA","avg_temp":5.6,"avg_precipitation":680,"climate_zone":"C"},
-  {"iso_a3":"LBN","avg_temp":19.3,"avg_precipitation":700,"climate_zone":"C"},
-  {"iso_a3":"LSO","avg_temp":11.8,"avg_precipitation":788,"climate_zone":"C"},
-  {"iso_a3":"LBR","avg_temp":25.4,"avg_precipitation":2500,"climate_zone":"A"},
-  {"iso_a3":"LBY","avg_temp":20.0,"avg_precipitation":56,"climate_zone":"B"},
-  {"iso_a3":"LTU","avg_temp":6.2,"avg_precipitation":660,"climate_zone":"D"},
-  {"iso_a3":"LUX","avg_temp":8.7,"avg_precipitation":890,"climate_zone":"C"},
-  {"iso_a3":"MDG","avg_temp":22.6,"avg_precipitation":1500,"climate_zone":"A"},
-  {"iso_a3":"MWI","avg_temp":21.9,"avg_precipitation":1000,"climate_zone":"A"},
-  {"iso_a3":"MYS","avg_temp":25.4,"avg_precipitation":2875,"climate_zone":"A"},
-  {"iso_a3":"MLI","avg_temp":28.3,"avg_precipitation":282,"climate_zone":"B"},
-  {"iso_a3":"MRT","avg_temp":27.7,"avg_precipitation":92,"climate_zone":"B"},
-  {"iso_a3":"MEX","avg_temp":21.0,"avg_precipitation":740,"climate_zone":"B"},
-  {"iso_a3":"MDA","avg_temp":9.3,"avg_precipitation":550,"climate_zone":"D"},
-  {"iso_a3":"MNG","avg_temp":-0.7,"avg_precipitation":250,"climate_zone":"D"},
-  {"iso_a3":"MNE","avg_temp":10.6,"avg_precipitation":1200,"climate_zone":"C"},
-  {"iso_a3":"MAR","avg_temp":17.1,"avg_precipitation":350,"climate_zone":"B"},
-  {"iso_a3":"MOZ","avg_temp":23.0,"avg_precipitation":1000,"climate_zone":"A"},
-  {"iso_a3":"MMR","avg_temp":23.3,"avg_precipitation":2300,"climate_zone":"A"},
-  {"iso_a3":"NAM","avg_temp":19.9,"avg_precipitation":285,"climate_zone":"B"},
-  {"iso_a3":"NPL","avg_temp":10.9,"avg_precipitation":1500,"climate_zone":"C"},
-  {"iso_a3":"NLD","avg_temp":9.3,"avg_precipitation":778,"climate_zone":"C"},
-  {"iso_a3":"NZL","avg_temp":10.6,"avg_precipitation":1200,"climate_zone":"C"},
-  {"iso_a3":"NIC","avg_temp":24.9,"avg_precipitation":1900,"climate_zone":"A"},
-  {"iso_a3":"NER","avg_temp":27.9,"avg_precipitation":180,"climate_zone":"B"},
-  {"iso_a3":"NGA","avg_temp":26.8,"avg_precipitation":1150,"climate_zone":"A"},
-  {"iso_a3":"PRK","avg_temp":5.7,"avg_precipitation":1000,"climate_zone":"C"},
-  {"iso_a3":"MKD","avg_temp":10.4,"avg_precipitation":600,"climate_zone":"C"},
-  {"iso_a3":"NOR","avg_temp":1.5,"avg_precipitation":1414,"climate_zone":"C"},
-  {"iso_a3":"OMN","avg_temp":26.1,"avg_precipitation":125,"climate_zone":"B"},
-  {"iso_a3":"PAK","avg_temp":20.2,"avg_precipitation":494,"climate_zone":"B"},
-  {"iso_a3":"PAN","avg_temp":25.5,"avg_precipitation":2600,"climate_zone":"A"},
-  {"iso_a3":"PNG","avg_temp":24.5,"avg_precipitation":2500,"climate_zone":"A"},
-  {"iso_a3":"PRY","avg_temp":23.2,"avg_precipitation":1400,"climate_zone":"A"},
-  {"iso_a3":"PER","avg_temp":19.6,"avg_precipitation":1200,"climate_zone":"A"},
-  {"iso_a3":"PHL","avg_temp":26.1,"avg_precipitation":2350,"climate_zone":"A"},
-  {"iso_a3":"POL","avg_temp":7.8,"avg_precipitation":600,"climate_zone":"C"},
-  {"iso_a3":"PRT","avg_temp":15.1,"avg_precipitation":900,"climate_zone":"C"},
-  {"iso_a3":"PRI","avg_temp":25.5,"avg_precipitation":1600,"climate_zone":"A"},
-  {"iso_a3":"QAT","avg_temp":27.2,"avg_precipitation":75,"climate_zone":"B"},
-  {"iso_a3":"ROU","avg_temp":8.8,"avg_precipitation":637,"climate_zone":"C"},
-  {"iso_a3":"RUS","avg_temp":-5.1,"avg_precipitation":460,"climate_zone":"D"},
-  {"iso_a3":"RWA","avg_temp":19.6,"avg_precipitation":1100,"climate_zone":"A"},
-  {"iso_a3":"SAU","avg_temp":24.7,"avg_precipitation":59,"climate_zone":"B"},
-  {"iso_a3":"SEN","avg_temp":27.9,"avg_precipitation":740,"climate_zone":"A"},
-  {"iso_a3":"SRB","avg_temp":10.6,"avg_precipitation":650,"climate_zone":"D"},
-  {"iso_a3":"SLE","avg_temp":26.0,"avg_precipitation":2500,"climate_zone":"A"},
-  {"iso_a3":"SVK","avg_temp":7.8,"avg_precipitation":700,"climate_zone":"C"},
-  {"iso_a3":"SVN","avg_temp":8.9,"avg_precipitation":1370,"climate_zone":"C"},
-  {"iso_a3":"SOM","avg_temp":27.1,"avg_precipitation":282,"climate_zone":"B"},
-  {"iso_a3":"ZAF","avg_temp":17.7,"avg_precipitation":495,"climate_zone":"C"},
-  {"iso_a3":"KOR","avg_temp":12.5,"avg_precipitation":1274,"climate_zone":"C"},
-  {"iso_a3":"SSD","avg_temp":26.3,"avg_precipitation":900,"climate_zone":"A"},
-  {"iso_a3":"ESP","avg_temp":14.7,"avg_precipitation":630,"climate_zone":"C"},
-  {"iso_a3":"LKA","avg_temp":26.9,"avg_precipitation":1800,"climate_zone":"A"},
-  {"iso_a3":"SDN","avg_temp":26.9,"avg_precipitation":200,"climate_zone":"B"},
-  {"iso_a3":"SUR","avg_temp":25.7,"avg_precipitation":2200,"climate_zone":"A"},
-  {"iso_a3":"SWE","avg_temp":2.1,"avg_precipitation":550,"climate_zone":"C"},
-  {"iso_a3":"CHE","avg_temp":5.5,"avg_precipitation":1537,"climate_zone":"C"},
-  {"iso_a3":"SYR","avg_temp":17.8,"avg_precipitation":250,"climate_zone":"B"},
-  {"iso_a3":"TWN","avg_temp":23.0,"avg_precipitation":2500,"climate_zone":"A"},
-  {"iso_a3":"TJK","avg_temp":2.2,"avg_precipitation":691,"climate_zone":"D"},
-  {"iso_a3":"TZA","avg_temp":22.4,"avg_precipitation":1050,"climate_zone":"A"},
-  {"iso_a3":"THA","avg_temp":26.3,"avg_precipitation":1600,"climate_zone":"A"},
-  {"iso_a3":"TLS","avg_temp":25.5,"avg_precipitation":1500,"climate_zone":"A"},
-  {"iso_a3":"TGO","avg_temp":26.7,"avg_precipitation":1200,"climate_zone":"A"},
-  {"iso_a3":"TTO","avg_temp":25.8,"avg_precipitation":1800,"climate_zone":"A"},
-  {"iso_a3":"TUN","avg_temp":19.1,"avg_precipitation":250,"climate_zone":"B"},
-  {"iso_a3":"TUR","avg_temp":11.2,"avg_precipitation":590,"climate_zone":"C"},
-  {"iso_a3":"TKM","avg_temp":15.1,"avg_precipitation":200,"climate_zone":"B"},
-  {"iso_a3":"UGA","avg_temp":22.8,"avg_precipitation":1150,"climate_zone":"A"},
-  {"iso_a3":"UKR","avg_temp":8.3,"avg_precipitation":600,"climate_zone":"D"},
-  {"iso_a3":"ARE","avg_temp":27.0,"avg_precipitation":78,"climate_zone":"B"},
-  {"iso_a3":"GBR","avg_temp":8.5,"avg_precipitation":1220,"climate_zone":"C"},
-  {"iso_a3":"USA","avg_temp":8.6,"avg_precipitation":715,"climate_zone":"C"},
-  {"iso_a3":"URY","avg_temp":17.5,"avg_precipitation":1100,"climate_zone":"C"},
-  {"iso_a3":"UZB","avg_temp":12.1,"avg_precipitation":250,"climate_zone":"B"},
-  {"iso_a3":"VUT","avg_temp":24.3,"avg_precipitation":2300,"climate_zone":"A"},
-  {"iso_a3":"VEN","avg_temp":25.3,"avg_precipitation":1300,"climate_zone":"A"},
-  {"iso_a3":"VNM","avg_temp":24.5,"avg_precipitation":1800,"climate_zone":"A"},
-  {"iso_a3":"YEM","avg_temp":23.8,"avg_precipitation":167,"climate_zone":"B"},
-  {"iso_a3":"ZMB","avg_temp":21.3,"avg_precipitation":1000,"climate_zone":"A"},
-  {"iso_a3":"ZWE","avg_temp":21.0,"avg_precipitation":650,"climate_zone":"A"},
-  {"iso_a3":"MAF","avg_temp":27.0,"avg_precipitation":1047,"climate_zone":"A"},
-  {"iso_a3":"SXM","avg_temp":27.0,"avg_precipitation":1047,"climate_zone":"A"},
-  {"iso_a3":"SPM","avg_temp":5.3,"avg_precipitation":1323,"climate_zone":"C"},
-  {"iso_a3":"VCT","avg_temp":27.0,"avg_precipitation":2912,"climate_zone":"A"},
-  {"iso_a3":"DMA","avg_temp":26.0,"avg_precipitation":2500,"climate_zone":"A"},
-  {"iso_a3":"MSR","avg_temp":26.4,"avg_precipitation":1500,"climate_zone":"A"},
-  {"iso_a3":"KNA","avg_temp":26.4,"avg_precipitation":1300,"climate_zone":"A"},
-  {"iso_a3":"VIR","avg_temp":26.5,"avg_precipitation":1000,"climate_zone":"A"},
-  {"iso_a3":"BLM","avg_temp":26.5,"avg_precipitation":990,"climate_zone":"A"},
-  {"iso_a3":"AIA","avg_temp":27.0,"avg_precipitation":950,"climate_zone":"A"},
-  {"iso_a3":"VGB","avg_temp":26.5,"avg_precipitation":1000,"climate_zone":"A"},
-  {"iso_a3":"CYM","avg_temp":27.7,"avg_precipitation":1393,"climate_zone":"A"},
-  {"iso_a3":"BMU","avg_temp":20.3,"avg_precipitation":1420,"climate_zone":"C"},
-  {"iso_a3":"PSE","avg_temp":19.2,"avg_precipitation":420,"climate_zone":"C"},
-  {"iso_a3":"KOS","avg_temp":9.8,"avg_precipitation":700,"climate_zone":"D"},
-  {"iso_a3":"SML","avg_temp":27.2,"avg_precipitation":370,"climate_zone":"B"},
-  {"iso_a3":"HKG","avg_temp":23.3,"avg_precipitation":2398,"climate_zone":"C"},
-  {"iso_a3":"SGP","avg_temp":27.0,"avg_precipitation":2343,"climate_zone":"A"},
-  {"iso_a3":"BHR","avg_temp":27.2,"avg_precipitation":72,"climate_zone":"B"},
-  {"iso_a3":"MAC","avg_temp":22.6,"avg_precipitation":2120,"climate_zone":"C"},
-  {"iso_a3":"FLK","avg_temp":5.6,"avg_precipitation":610,"climate_zone":"E"},
-  {"iso_a3":"SWZ","avg_temp":20.5,"avg_precipitation":750,"climate_zone":"A"},
-  {"iso_a3":"COM","avg_temp":25.5,"avg_precipitation":2700,"climate_zone":"A"},
-  {"iso_a3":"STP","avg_temp":25.9,"avg_precipitation":3200,"climate_zone":"A"},
-  {"iso_a3":"CPV","avg_temp":24.3,"avg_precipitation":226,"climate_zone":"B"},
-  {"iso_a3":"ALA","avg_temp":6.5,"avg_precipitation":550,"climate_zone":"D"},
-  {"iso_a3":"JEY","avg_temp":11.1,"avg_precipitation":880,"climate_zone":"C"},
-  {"iso_a3":"GGY","avg_temp":11.1,"avg_precipitation":780,"climate_zone":"C"},
-  {"iso_a3":"IMN","avg_temp":8.9,"avg_precipitation":1230,"climate_zone":"C"},
-  {"iso_a3":"VAT","avg_temp":15.2,"avg_precipitation":830,"climate_zone":"C"},
-  {"iso_a3":"LIE","avg_temp":9.6,"avg_precipitation":950,"climate_zone":"C"},
-  {"iso_a3":"SMR","avg_temp":11.8,"avg_precipitation":800,"climate_zone":"C"},
-  {"iso_a3":"MCO","avg_temp":16.3,"avg_precipitation":770,"climate_zone":"C"},
-  {"iso_a3":"AND","avg_temp":9.3,"avg_precipitation":1023,"climate_zone":"C"},
-  {"iso_a3":"FRO","avg_temp":6.6,"avg_precipitation":1321,"climate_zone":"C"},
-  {"iso_a3":"NCL","avg_temp":23.3,"avg_precipitation":1680,"climate_zone":"A"},
-  {"iso_a3":"PCN","avg_temp":20.9,"avg_precipitation":1680,"climate_zone":"C"},
-  {"iso_a3":"PYF","avg_temp":26.0,"avg_precipitation":1800,"climate_zone":"A"},
-  {"iso_a3":"KIR","avg_temp":28.2,"avg_precipitation":2000,"climate_zone":"A"},
-  {"iso_a3":"MHL","avg_temp":27.7,"avg_precipitation":3350,"climate_zone":"A"},
-  {"iso_a3":"NFK","avg_temp":19.3,"avg_precipitation":1312,"climate_zone":"C"},
-  {"iso_a3":"COK","avg_temp":24.8,"avg_precipitation":2080,"climate_zone":"A"},
-  {"iso_a3":"TON","avg_temp":24.5,"avg_precipitation":1720,"climate_zone":"A"},
-  {"iso_a3":"WLF","avg_temp":27.7,"avg_precipitation":3300,"climate_zone":"A"},
-  {"iso_a3":"WSM","avg_temp":26.7,"avg_precipitation":2900,"climate_zone":"A"},
-  {"iso_a3":"SLB","avg_temp":26.5,"avg_precipitation":3028,"climate_zone":"A"},
-  {"iso_a3":"TUV","avg_temp":28.0,"avg_precipitation":3400,"climate_zone":"A"},
-  {"iso_a3":"NRU","avg_temp":27.5,"avg_precipitation":2000,"climate_zone":"A"},
-  {"iso_a3":"FSM","avg_temp":27.2,"avg_precipitation":3000,"climate_zone":"A"},
-  {"iso_a3":"NIU","avg_temp":24.7,"avg_precipitation":2040,"climate_zone":"A"},
-  {"iso_a3":"ASM","avg_temp":27.2,"avg_precipitation":3100,"climate_zone":"A"},
-  {"iso_a3":"PLW","avg_temp":27.6,"avg_precipitation":3730,"climate_zone":"A"},
-  {"iso_a3":"GUM","avg_temp":27.4,"avg_precipitation":2500,"climate_zone":"A"},
-  {"iso_a3":"MNP","avg_temp":27.2,"avg_precipitation":2100,"climate_zone":"A"},
-  {"iso_a3":"MDV","avg_temp":28.0,"avg_precipitation":1970,"climate_zone":"A"},
-  {"iso_a3":"ATG","avg_temp":27.0,"avg_precipitation":1100,"climate_zone":"A"},
-  {"iso_a3":"BRB","avg_temp":27.1,"avg_precipitation":1260,"climate_zone":"A"},
-  {"iso_a3":"ABW","avg_temp":28.1,"avg_precipitation":432,"climate_zone":"B"},
-  {"iso_a3":"CUW","avg_temp":27.8,"avg_precipitation":553,"climate_zone":"B"},
-  {"iso_a3":"ESH","avg_temp":22.9,"avg_precipitation":45,"climate_zone":"B"},
-  {"iso_a3":"GRD","avg_temp":26.0,"avg_precipitation":2350,"climate_zone":"A"},
-  {"iso_a3":"LCA","avg_temp":26.6,"avg_precipitation":2000,"climate_zone":"A"},
-  {"iso_a3":"MLT","avg_temp":19.3,"avg_precipitation":553,"climate_zone":"C"},
-  {"iso_a3":"TCA","avg_temp":26.7,"avg_precipitation":940,"climate_zone":"A"}
-]
+{
+  "schema_version": 1,
+  "dataset_id": "climate_data",
+  "metadata": {
+    "source_url": null,
+    "reference_period": null,
+    "updated_at": null
+  },
+  "legacy_layout": "list",
+  "tables": [
+    {
+      "id": "main",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "iso_a3"
+      ],
+      "metrics": [
+        {
+          "id": "avg_temp",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        },
+        {
+          "id": "avg_precipitation",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        },
+        {
+          "id": "climate_zone",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "iso_a3": "IND"
+          },
+          "values": {
+            "avg_temp": 23.7,
+            "avg_precipitation": 1083,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AFG"
+          },
+          "values": {
+            "avg_temp": 12.6,
+            "avg_precipitation": 327,
+            "climate_zone": "B"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ALB"
+          },
+          "values": {
+            "avg_temp": 11.4,
+            "avg_precipitation": 1485,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DZA"
+          },
+          "values": {
+            "avg_temp": 22.5,
+            "avg_precipitation": 89,
+            "climate_zone": "B"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AGO"
+          },
+          "values": {
+            "avg_temp": 21.6,
+            "avg_precipitation": 1010,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ARG"
+          },
+          "values": {
+            "avg_temp": 14.8,
+            "avg_precipitation": 591,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ARM"
+          },
+          "values": {
+            "avg_temp": 7.2,
+            "avg_precipitation": 562,
+            "climate_zone": "D"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AUS"
+          },
+          "values": {
+            "avg_temp": 21.7,
+            "avg_precipitation": 534,
+            "climate_zone": "B"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AUT"
+          },
+          "values": {
+            "avg_temp": 6.4,
+            "avg_precipitation": 1110,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AZE"
+          },
+          "values": {
+            "avg_temp": 12.1,
+            "avg_precipitation": 500,
+            "climate_zone": "B"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BHS"
+          },
+          "values": {
+            "avg_temp": 24.9,
+            "avg_precipitation": 1400,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BGD"
+          },
+          "values": {
+            "avg_temp": 25.0,
+            "avg_precipitation": 2666,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BLR"
+          },
+          "values": {
+            "avg_temp": 6.1,
+            "avg_precipitation": 690,
+            "climate_zone": "D"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BEL"
+          },
+          "values": {
+            "avg_temp": 9.6,
+            "avg_precipitation": 852,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BLZ"
+          },
+          "values": {
+            "avg_temp": 25.3,
+            "avg_precipitation": 2000,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BEN"
+          },
+          "values": {
+            "avg_temp": 27.2,
+            "avg_precipitation": 1000,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BTN"
+          },
+          "values": {
+            "avg_temp": 13.4,
+            "avg_precipitation": 1500,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BOL"
+          },
+          "values": {
+            "avg_temp": 20.2,
+            "avg_precipitation": 1095,
+            "climate_zone": "D"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BIH"
+          },
+          "values": {
+            "avg_temp": 9.8,
+            "avg_precipitation": 992,
+            "climate_zone": "D"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BWA"
+          },
+          "values": {
+            "avg_temp": 21.5,
+            "avg_precipitation": 450,
+            "climate_zone": "B"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BRA"
+          },
+          "values": {
+            "avg_temp": 24.9,
+            "avg_precipitation": 1761,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BRN"
+          },
+          "values": {
+            "avg_temp": 26.9,
+            "avg_precipitation": 2700,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BGR"
+          },
+          "values": {
+            "avg_temp": 10.6,
+            "avg_precipitation": 599,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BFA"
+          },
+          "values": {
+            "avg_temp": 28.3,
+            "avg_precipitation": 790,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BDI"
+          },
+          "values": {
+            "avg_temp": 19.8,
+            "avg_precipitation": 1200,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KHM"
+          },
+          "values": {
+            "avg_temp": 26.8,
+            "avg_precipitation": 1500,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CMR"
+          },
+          "values": {
+            "avg_temp": 24.6,
+            "avg_precipitation": 1600,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CAN"
+          },
+          "values": {
+            "avg_temp": -5.3,
+            "avg_precipitation": 537,
+            "climate_zone": "D"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CAF"
+          },
+          "values": {
+            "avg_temp": 24.9,
+            "avg_precipitation": 1540,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TCD"
+          },
+          "values": {
+            "avg_temp": 26.6,
+            "avg_precipitation": 320,
+            "climate_zone": "B"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CHL"
+          },
+          "values": {
+            "avg_temp": 8.4,
+            "avg_precipitation": 650,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CHN"
+          },
+          "values": {
+            "avg_temp": 6.9,
+            "avg_precipitation": 645,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "COL"
+          },
+          "values": {
+            "avg_temp": 24.5,
+            "avg_precipitation": 3240,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "COG"
+          },
+          "values": {
+            "avg_temp": 24.5,
+            "avg_precipitation": 1600,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "COD"
+          },
+          "values": {
+            "avg_temp": 24.0,
+            "avg_precipitation": 1545,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CRI"
+          },
+          "values": {
+            "avg_temp": 24.4,
+            "avg_precipitation": 2926,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CIV"
+          },
+          "values": {
+            "avg_temp": 26.3,
+            "avg_precipitation": 1347,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HRV"
+          },
+          "values": {
+            "avg_temp": 10.9,
+            "avg_precipitation": 1018,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CUB"
+          },
+          "values": {
+            "avg_temp": 25.2,
+            "avg_precipitation": 1222,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CYP"
+          },
+          "values": {
+            "avg_temp": 18.4,
+            "avg_precipitation": 500,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CZE"
+          },
+          "values": {
+            "avg_temp": 7.6,
+            "avg_precipitation": 678,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DNK"
+          },
+          "values": {
+            "avg_temp": 7.5,
+            "avg_precipitation": 711,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DJI"
+          },
+          "values": {
+            "avg_temp": 28.0,
+            "avg_precipitation": 160,
+            "climate_zone": "B"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DOM"
+          },
+          "values": {
+            "avg_temp": 25.0,
+            "avg_precipitation": 1450,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ECU"
+          },
+          "values": {
+            "avg_temp": 21.8,
+            "avg_precipitation": 1900,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "EGY"
+          },
+          "values": {
+            "avg_temp": 22.1,
+            "avg_precipitation": 51,
+            "climate_zone": "B"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SLV"
+          },
+          "values": {
+            "avg_temp": 24.5,
+            "avg_precipitation": 1784,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GNQ"
+          },
+          "values": {
+            "avg_temp": 24.6,
+            "avg_precipitation": 2156,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ERI"
+          },
+          "values": {
+            "avg_temp": 25.5,
+            "avg_precipitation": 400,
+            "climate_zone": "B"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "EST"
+          },
+          "values": {
+            "avg_temp": 5.1,
+            "avg_precipitation": 670,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ETH"
+          },
+          "values": {
+            "avg_temp": 22.2,
+            "avg_precipitation": 810,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FJI"
+          },
+          "values": {
+            "avg_temp": 25.2,
+            "avg_precipitation": 2400,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FIN"
+          },
+          "values": {
+            "avg_temp": 1.7,
+            "avg_precipitation": 600,
+            "climate_zone": "D"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FRA"
+          },
+          "values": {
+            "avg_temp": 11.2,
+            "avg_precipitation": 867,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GAB"
+          },
+          "values": {
+            "avg_temp": 25.0,
+            "avg_precipitation": 1800,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GMB"
+          },
+          "values": {
+            "avg_temp": 27.7,
+            "avg_precipitation": 1000,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GEO"
+          },
+          "values": {
+            "avg_temp": 12.8,
+            "avg_precipitation": 550,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DEU"
+          },
+          "values": {
+            "avg_temp": 8.5,
+            "avg_precipitation": 700,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GHA"
+          },
+          "values": {
+            "avg_temp": 27.0,
+            "avg_precipitation": 1187,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GIB"
+          },
+          "values": {
+            "avg_temp": 18.6,
+            "avg_precipitation": 838,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GRC"
+          },
+          "values": {
+            "avg_temp": 15.4,
+            "avg_precipitation": 652,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GRL"
+          },
+          "values": {
+            "avg_temp": -19.6,
+            "avg_precipitation": 300,
+            "climate_zone": "E"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GTM"
+          },
+          "values": {
+            "avg_temp": 22.9,
+            "avg_precipitation": 1600,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GIN"
+          },
+          "values": {
+            "avg_temp": 25.4,
+            "avg_precipitation": 1900,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GNB"
+          },
+          "values": {
+            "avg_temp": 26.6,
+            "avg_precipitation": 1600,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GUY"
+          },
+          "values": {
+            "avg_temp": 26.0,
+            "avg_precipitation": 2500,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HTI"
+          },
+          "values": {
+            "avg_temp": 24.9,
+            "avg_precipitation": 1350,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HND"
+          },
+          "values": {
+            "avg_temp": 23.5,
+            "avg_precipitation": 1600,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HUN"
+          },
+          "values": {
+            "avg_temp": 9.8,
+            "avg_precipitation": 597,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ISL"
+          },
+          "values": {
+            "avg_temp": 1.8,
+            "avg_precipitation": 800,
+            "climate_zone": "E"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IDN"
+          },
+          "values": {
+            "avg_temp": 25.9,
+            "avg_precipitation": 2700,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IRN"
+          },
+          "values": {
+            "avg_temp": 17.3,
+            "avg_precipitation": 228,
+            "climate_zone": "B"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IRQ"
+          },
+          "values": {
+            "avg_temp": 21.4,
+            "avg_precipitation": 180,
+            "climate_zone": "B"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IRL"
+          },
+          "values": {
+            "avg_temp": 9.3,
+            "avg_precipitation": 1000,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ISR"
+          },
+          "values": {
+            "avg_temp": 19.2,
+            "avg_precipitation": 420,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ITA"
+          },
+          "values": {
+            "avg_temp": 13.5,
+            "avg_precipitation": 950,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "JAM"
+          },
+          "values": {
+            "avg_temp": 26.0,
+            "avg_precipitation": 1500,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "JPN"
+          },
+          "values": {
+            "avg_temp": 11.2,
+            "avg_precipitation": 1668,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "JOR"
+          },
+          "values": {
+            "avg_temp": 18.3,
+            "avg_precipitation": 111,
+            "climate_zone": "B"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KAZ"
+          },
+          "values": {
+            "avg_temp": 5.4,
+            "avg_precipitation": 330,
+            "climate_zone": "D"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KEN"
+          },
+          "values": {
+            "avg_temp": 23.5,
+            "avg_precipitation": 700,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KWT"
+          },
+          "values": {
+            "avg_temp": 25.4,
+            "avg_precipitation": 121,
+            "climate_zone": "B"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KGZ"
+          },
+          "values": {
+            "avg_temp": 1.5,
+            "avg_precipitation": 535,
+            "climate_zone": "D"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LAO"
+          },
+          "values": {
+            "avg_temp": 24.1,
+            "avg_precipitation": 1700,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LVA"
+          },
+          "values": {
+            "avg_temp": 5.6,
+            "avg_precipitation": 680,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LBN"
+          },
+          "values": {
+            "avg_temp": 19.3,
+            "avg_precipitation": 700,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LSO"
+          },
+          "values": {
+            "avg_temp": 11.8,
+            "avg_precipitation": 788,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LBR"
+          },
+          "values": {
+            "avg_temp": 25.4,
+            "avg_precipitation": 2500,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LBY"
+          },
+          "values": {
+            "avg_temp": 20.0,
+            "avg_precipitation": 56,
+            "climate_zone": "B"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LTU"
+          },
+          "values": {
+            "avg_temp": 6.2,
+            "avg_precipitation": 660,
+            "climate_zone": "D"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LUX"
+          },
+          "values": {
+            "avg_temp": 8.7,
+            "avg_precipitation": 890,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MDG"
+          },
+          "values": {
+            "avg_temp": 22.6,
+            "avg_precipitation": 1500,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MWI"
+          },
+          "values": {
+            "avg_temp": 21.9,
+            "avg_precipitation": 1000,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MYS"
+          },
+          "values": {
+            "avg_temp": 25.4,
+            "avg_precipitation": 2875,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MLI"
+          },
+          "values": {
+            "avg_temp": 28.3,
+            "avg_precipitation": 282,
+            "climate_zone": "B"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MRT"
+          },
+          "values": {
+            "avg_temp": 27.7,
+            "avg_precipitation": 92,
+            "climate_zone": "B"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MEX"
+          },
+          "values": {
+            "avg_temp": 21.0,
+            "avg_precipitation": 740,
+            "climate_zone": "B"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MDA"
+          },
+          "values": {
+            "avg_temp": 9.3,
+            "avg_precipitation": 550,
+            "climate_zone": "D"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MNG"
+          },
+          "values": {
+            "avg_temp": -0.7,
+            "avg_precipitation": 250,
+            "climate_zone": "D"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MNE"
+          },
+          "values": {
+            "avg_temp": 10.6,
+            "avg_precipitation": 1200,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MAR"
+          },
+          "values": {
+            "avg_temp": 17.1,
+            "avg_precipitation": 350,
+            "climate_zone": "B"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MOZ"
+          },
+          "values": {
+            "avg_temp": 23.0,
+            "avg_precipitation": 1000,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MMR"
+          },
+          "values": {
+            "avg_temp": 23.3,
+            "avg_precipitation": 2300,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NAM"
+          },
+          "values": {
+            "avg_temp": 19.9,
+            "avg_precipitation": 285,
+            "climate_zone": "B"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NPL"
+          },
+          "values": {
+            "avg_temp": 10.9,
+            "avg_precipitation": 1500,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NLD"
+          },
+          "values": {
+            "avg_temp": 9.3,
+            "avg_precipitation": 778,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NZL"
+          },
+          "values": {
+            "avg_temp": 10.6,
+            "avg_precipitation": 1200,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NIC"
+          },
+          "values": {
+            "avg_temp": 24.9,
+            "avg_precipitation": 1900,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NER"
+          },
+          "values": {
+            "avg_temp": 27.9,
+            "avg_precipitation": 180,
+            "climate_zone": "B"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NGA"
+          },
+          "values": {
+            "avg_temp": 26.8,
+            "avg_precipitation": 1150,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PRK"
+          },
+          "values": {
+            "avg_temp": 5.7,
+            "avg_precipitation": 1000,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MKD"
+          },
+          "values": {
+            "avg_temp": 10.4,
+            "avg_precipitation": 600,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NOR"
+          },
+          "values": {
+            "avg_temp": 1.5,
+            "avg_precipitation": 1414,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "OMN"
+          },
+          "values": {
+            "avg_temp": 26.1,
+            "avg_precipitation": 125,
+            "climate_zone": "B"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PAK"
+          },
+          "values": {
+            "avg_temp": 20.2,
+            "avg_precipitation": 494,
+            "climate_zone": "B"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PAN"
+          },
+          "values": {
+            "avg_temp": 25.5,
+            "avg_precipitation": 2600,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PNG"
+          },
+          "values": {
+            "avg_temp": 24.5,
+            "avg_precipitation": 2500,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PRY"
+          },
+          "values": {
+            "avg_temp": 23.2,
+            "avg_precipitation": 1400,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PER"
+          },
+          "values": {
+            "avg_temp": 19.6,
+            "avg_precipitation": 1200,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PHL"
+          },
+          "values": {
+            "avg_temp": 26.1,
+            "avg_precipitation": 2350,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "POL"
+          },
+          "values": {
+            "avg_temp": 7.8,
+            "avg_precipitation": 600,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PRT"
+          },
+          "values": {
+            "avg_temp": 15.1,
+            "avg_precipitation": 900,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PRI"
+          },
+          "values": {
+            "avg_temp": 25.5,
+            "avg_precipitation": 1600,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "QAT"
+          },
+          "values": {
+            "avg_temp": 27.2,
+            "avg_precipitation": 75,
+            "climate_zone": "B"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ROU"
+          },
+          "values": {
+            "avg_temp": 8.8,
+            "avg_precipitation": 637,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "RUS"
+          },
+          "values": {
+            "avg_temp": -5.1,
+            "avg_precipitation": 460,
+            "climate_zone": "D"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "RWA"
+          },
+          "values": {
+            "avg_temp": 19.6,
+            "avg_precipitation": 1100,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SAU"
+          },
+          "values": {
+            "avg_temp": 24.7,
+            "avg_precipitation": 59,
+            "climate_zone": "B"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SEN"
+          },
+          "values": {
+            "avg_temp": 27.9,
+            "avg_precipitation": 740,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SRB"
+          },
+          "values": {
+            "avg_temp": 10.6,
+            "avg_precipitation": 650,
+            "climate_zone": "D"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SLE"
+          },
+          "values": {
+            "avg_temp": 26.0,
+            "avg_precipitation": 2500,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SVK"
+          },
+          "values": {
+            "avg_temp": 7.8,
+            "avg_precipitation": 700,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SVN"
+          },
+          "values": {
+            "avg_temp": 8.9,
+            "avg_precipitation": 1370,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SOM"
+          },
+          "values": {
+            "avg_temp": 27.1,
+            "avg_precipitation": 282,
+            "climate_zone": "B"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ZAF"
+          },
+          "values": {
+            "avg_temp": 17.7,
+            "avg_precipitation": 495,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KOR"
+          },
+          "values": {
+            "avg_temp": 12.5,
+            "avg_precipitation": 1274,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SSD"
+          },
+          "values": {
+            "avg_temp": 26.3,
+            "avg_precipitation": 900,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ESP"
+          },
+          "values": {
+            "avg_temp": 14.7,
+            "avg_precipitation": 630,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LKA"
+          },
+          "values": {
+            "avg_temp": 26.9,
+            "avg_precipitation": 1800,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SDN"
+          },
+          "values": {
+            "avg_temp": 26.9,
+            "avg_precipitation": 200,
+            "climate_zone": "B"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SUR"
+          },
+          "values": {
+            "avg_temp": 25.7,
+            "avg_precipitation": 2200,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SWE"
+          },
+          "values": {
+            "avg_temp": 2.1,
+            "avg_precipitation": 550,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CHE"
+          },
+          "values": {
+            "avg_temp": 5.5,
+            "avg_precipitation": 1537,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SYR"
+          },
+          "values": {
+            "avg_temp": 17.8,
+            "avg_precipitation": 250,
+            "climate_zone": "B"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TWN"
+          },
+          "values": {
+            "avg_temp": 23.0,
+            "avg_precipitation": 2500,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TJK"
+          },
+          "values": {
+            "avg_temp": 2.2,
+            "avg_precipitation": 691,
+            "climate_zone": "D"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TZA"
+          },
+          "values": {
+            "avg_temp": 22.4,
+            "avg_precipitation": 1050,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "THA"
+          },
+          "values": {
+            "avg_temp": 26.3,
+            "avg_precipitation": 1600,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TLS"
+          },
+          "values": {
+            "avg_temp": 25.5,
+            "avg_precipitation": 1500,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TGO"
+          },
+          "values": {
+            "avg_temp": 26.7,
+            "avg_precipitation": 1200,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TTO"
+          },
+          "values": {
+            "avg_temp": 25.8,
+            "avg_precipitation": 1800,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TUN"
+          },
+          "values": {
+            "avg_temp": 19.1,
+            "avg_precipitation": 250,
+            "climate_zone": "B"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TUR"
+          },
+          "values": {
+            "avg_temp": 11.2,
+            "avg_precipitation": 590,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TKM"
+          },
+          "values": {
+            "avg_temp": 15.1,
+            "avg_precipitation": 200,
+            "climate_zone": "B"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "UGA"
+          },
+          "values": {
+            "avg_temp": 22.8,
+            "avg_precipitation": 1150,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "UKR"
+          },
+          "values": {
+            "avg_temp": 8.3,
+            "avg_precipitation": 600,
+            "climate_zone": "D"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ARE"
+          },
+          "values": {
+            "avg_temp": 27.0,
+            "avg_precipitation": 78,
+            "climate_zone": "B"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GBR"
+          },
+          "values": {
+            "avg_temp": 8.5,
+            "avg_precipitation": 1220,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "USA"
+          },
+          "values": {
+            "avg_temp": 8.6,
+            "avg_precipitation": 715,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "URY"
+          },
+          "values": {
+            "avg_temp": 17.5,
+            "avg_precipitation": 1100,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "UZB"
+          },
+          "values": {
+            "avg_temp": 12.1,
+            "avg_precipitation": 250,
+            "climate_zone": "B"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VUT"
+          },
+          "values": {
+            "avg_temp": 24.3,
+            "avg_precipitation": 2300,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VEN"
+          },
+          "values": {
+            "avg_temp": 25.3,
+            "avg_precipitation": 1300,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VNM"
+          },
+          "values": {
+            "avg_temp": 24.5,
+            "avg_precipitation": 1800,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "YEM"
+          },
+          "values": {
+            "avg_temp": 23.8,
+            "avg_precipitation": 167,
+            "climate_zone": "B"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ZMB"
+          },
+          "values": {
+            "avg_temp": 21.3,
+            "avg_precipitation": 1000,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ZWE"
+          },
+          "values": {
+            "avg_temp": 21.0,
+            "avg_precipitation": 650,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MAF"
+          },
+          "values": {
+            "avg_temp": 27.0,
+            "avg_precipitation": 1047,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SXM"
+          },
+          "values": {
+            "avg_temp": 27.0,
+            "avg_precipitation": 1047,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SPM"
+          },
+          "values": {
+            "avg_temp": 5.3,
+            "avg_precipitation": 1323,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VCT"
+          },
+          "values": {
+            "avg_temp": 27.0,
+            "avg_precipitation": 2912,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DMA"
+          },
+          "values": {
+            "avg_temp": 26.0,
+            "avg_precipitation": 2500,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MSR"
+          },
+          "values": {
+            "avg_temp": 26.4,
+            "avg_precipitation": 1500,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KNA"
+          },
+          "values": {
+            "avg_temp": 26.4,
+            "avg_precipitation": 1300,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VIR"
+          },
+          "values": {
+            "avg_temp": 26.5,
+            "avg_precipitation": 1000,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BLM"
+          },
+          "values": {
+            "avg_temp": 26.5,
+            "avg_precipitation": 990,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AIA"
+          },
+          "values": {
+            "avg_temp": 27.0,
+            "avg_precipitation": 950,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VGB"
+          },
+          "values": {
+            "avg_temp": 26.5,
+            "avg_precipitation": 1000,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CYM"
+          },
+          "values": {
+            "avg_temp": 27.7,
+            "avg_precipitation": 1393,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BMU"
+          },
+          "values": {
+            "avg_temp": 20.3,
+            "avg_precipitation": 1420,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PSE"
+          },
+          "values": {
+            "avg_temp": 19.2,
+            "avg_precipitation": 420,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KOS"
+          },
+          "values": {
+            "avg_temp": 9.8,
+            "avg_precipitation": 700,
+            "climate_zone": "D"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SML"
+          },
+          "values": {
+            "avg_temp": 27.2,
+            "avg_precipitation": 370,
+            "climate_zone": "B"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HKG"
+          },
+          "values": {
+            "avg_temp": 23.3,
+            "avg_precipitation": 2398,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SGP"
+          },
+          "values": {
+            "avg_temp": 27.0,
+            "avg_precipitation": 2343,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BHR"
+          },
+          "values": {
+            "avg_temp": 27.2,
+            "avg_precipitation": 72,
+            "climate_zone": "B"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MAC"
+          },
+          "values": {
+            "avg_temp": 22.6,
+            "avg_precipitation": 2120,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FLK"
+          },
+          "values": {
+            "avg_temp": 5.6,
+            "avg_precipitation": 610,
+            "climate_zone": "E"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SWZ"
+          },
+          "values": {
+            "avg_temp": 20.5,
+            "avg_precipitation": 750,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "COM"
+          },
+          "values": {
+            "avg_temp": 25.5,
+            "avg_precipitation": 2700,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "STP"
+          },
+          "values": {
+            "avg_temp": 25.9,
+            "avg_precipitation": 3200,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CPV"
+          },
+          "values": {
+            "avg_temp": 24.3,
+            "avg_precipitation": 226,
+            "climate_zone": "B"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ALA"
+          },
+          "values": {
+            "avg_temp": 6.5,
+            "avg_precipitation": 550,
+            "climate_zone": "D"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "JEY"
+          },
+          "values": {
+            "avg_temp": 11.1,
+            "avg_precipitation": 880,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GGY"
+          },
+          "values": {
+            "avg_temp": 11.1,
+            "avg_precipitation": 780,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IMN"
+          },
+          "values": {
+            "avg_temp": 8.9,
+            "avg_precipitation": 1230,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VAT"
+          },
+          "values": {
+            "avg_temp": 15.2,
+            "avg_precipitation": 830,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LIE"
+          },
+          "values": {
+            "avg_temp": 9.6,
+            "avg_precipitation": 950,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SMR"
+          },
+          "values": {
+            "avg_temp": 11.8,
+            "avg_precipitation": 800,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MCO"
+          },
+          "values": {
+            "avg_temp": 16.3,
+            "avg_precipitation": 770,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AND"
+          },
+          "values": {
+            "avg_temp": 9.3,
+            "avg_precipitation": 1023,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FRO"
+          },
+          "values": {
+            "avg_temp": 6.6,
+            "avg_precipitation": 1321,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NCL"
+          },
+          "values": {
+            "avg_temp": 23.3,
+            "avg_precipitation": 1680,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PCN"
+          },
+          "values": {
+            "avg_temp": 20.9,
+            "avg_precipitation": 1680,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PYF"
+          },
+          "values": {
+            "avg_temp": 26.0,
+            "avg_precipitation": 1800,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KIR"
+          },
+          "values": {
+            "avg_temp": 28.2,
+            "avg_precipitation": 2000,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MHL"
+          },
+          "values": {
+            "avg_temp": 27.7,
+            "avg_precipitation": 3350,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NFK"
+          },
+          "values": {
+            "avg_temp": 19.3,
+            "avg_precipitation": 1312,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "COK"
+          },
+          "values": {
+            "avg_temp": 24.8,
+            "avg_precipitation": 2080,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TON"
+          },
+          "values": {
+            "avg_temp": 24.5,
+            "avg_precipitation": 1720,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "WLF"
+          },
+          "values": {
+            "avg_temp": 27.7,
+            "avg_precipitation": 3300,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "WSM"
+          },
+          "values": {
+            "avg_temp": 26.7,
+            "avg_precipitation": 2900,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SLB"
+          },
+          "values": {
+            "avg_temp": 26.5,
+            "avg_precipitation": 3028,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TUV"
+          },
+          "values": {
+            "avg_temp": 28.0,
+            "avg_precipitation": 3400,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NRU"
+          },
+          "values": {
+            "avg_temp": 27.5,
+            "avg_precipitation": 2000,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FSM"
+          },
+          "values": {
+            "avg_temp": 27.2,
+            "avg_precipitation": 3000,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NIU"
+          },
+          "values": {
+            "avg_temp": 24.7,
+            "avg_precipitation": 2040,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ASM"
+          },
+          "values": {
+            "avg_temp": 27.2,
+            "avg_precipitation": 3100,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PLW"
+          },
+          "values": {
+            "avg_temp": 27.6,
+            "avg_precipitation": 3730,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GUM"
+          },
+          "values": {
+            "avg_temp": 27.4,
+            "avg_precipitation": 2500,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MNP"
+          },
+          "values": {
+            "avg_temp": 27.2,
+            "avg_precipitation": 2100,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MDV"
+          },
+          "values": {
+            "avg_temp": 28.0,
+            "avg_precipitation": 1970,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ATG"
+          },
+          "values": {
+            "avg_temp": 27.0,
+            "avg_precipitation": 1100,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BRB"
+          },
+          "values": {
+            "avg_temp": 27.1,
+            "avg_precipitation": 1260,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ABW"
+          },
+          "values": {
+            "avg_temp": 28.1,
+            "avg_precipitation": 432,
+            "climate_zone": "B"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CUW"
+          },
+          "values": {
+            "avg_temp": 27.8,
+            "avg_precipitation": 553,
+            "climate_zone": "B"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ESH"
+          },
+          "values": {
+            "avg_temp": 22.9,
+            "avg_precipitation": 45,
+            "climate_zone": "B"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GRD"
+          },
+          "values": {
+            "avg_temp": 26.0,
+            "avg_precipitation": 2350,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LCA"
+          },
+          "values": {
+            "avg_temp": 26.6,
+            "avg_precipitation": 2000,
+            "climate_zone": "A"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MLT"
+          },
+          "values": {
+            "avg_temp": 19.3,
+            "avg_precipitation": 553,
+            "climate_zone": "C"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TCA"
+          },
+          "values": {
+            "avg_temp": 26.7,
+            "avg_precipitation": 940,
+            "climate_zone": "A"
+          }
+        }
+      ]
+    }
+  ]
+}

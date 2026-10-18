@@ -1,6 +1,7 @@
 // lib/screens/flights_share.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'dart:io';
 import 'dart:math' as math;
 import 'dart:typed_data';
@@ -60,7 +61,7 @@ class FlightsShare {
       debugPrint("Flight Share Error: $e");
       if (context.mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Failed to generate share image: $e')),
+          SnackBar(content: Text(tr('Failed to generate share image: $e'))),
         );
       }
     }
@@ -228,8 +229,8 @@ class FlightsShare {
                     errorBuilder: (_, __, ___) => const Icon(Icons.public, size: 36, color: primaryColor),
                   ),
                   const SizedBox(width: 12),
-                  const Text(
-                    'Travelog',
+                   Text(
+                    tr('Travelog'),
                     style: TextStyle(
                       fontSize: 32,
                       fontWeight: FontWeight.w900,
@@ -262,7 +263,7 @@ class FlightsShare {
                   textBaseline: TextBaseline.alphabetic,
                   children: [
                     Text(
-                      stats['flights'] ?? '0',
+                      tr(stats['flights'] ?? '0'),
                       style: const TextStyle(
                         fontSize: 26,
                         fontWeight: FontWeight.w900,
@@ -273,7 +274,7 @@ class FlightsShare {
                     ),
                     const SizedBox(width: 4),
                     Text(
-                      'Flights',
+                      tr('Flights'),
                       style: TextStyle(
                         fontSize: 12,
                         fontWeight: FontWeight.w600,
@@ -405,7 +406,7 @@ class FlightsShare {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    value,
+                    tr(value),
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w900,
@@ -418,7 +419,7 @@ class FlightsShare {
                   ),
                   const SizedBox(height: 4),
                   Text(
-                    label,
+                    tr(label),
                     style: TextStyle(
                       fontSize: 11,
                       fontWeight: FontWeight.w600,

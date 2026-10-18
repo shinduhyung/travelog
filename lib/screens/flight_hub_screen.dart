@@ -1,6 +1,7 @@
 // lib/screens/flight_hub_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'dart:math' as math;
@@ -27,6 +28,7 @@ class FlightHubScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark);
 
     final airlineProvider = Provider.of<AirlineProvider>(context);
@@ -92,7 +94,7 @@ class FlightHubScreen extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Flight Hub',
+                                tr('Flight Hub'),
                                 style: TextStyle(
                                   fontSize: 36,
                                   fontWeight: FontWeight.w900,
@@ -122,7 +124,7 @@ class FlightHubScreen extends StatelessWidget {
                                     ),
                                     const SizedBox(width: 6),
                                     Text(
-                                      'All systems active',
+                                      tr('All systems active'),
                                       style: TextStyle(
                                         fontSize: 12,
                                         color: Colors.white,
@@ -161,7 +163,7 @@ class FlightHubScreen extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 24),
                     child: Text(
-                      'Quick Access',
+                      tr('Quick Access'),
                       style: TextStyle(
                         fontSize: 22,
                         fontWeight: FontWeight.w800,
@@ -222,7 +224,7 @@ class FlightHubScreen extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 24),
                 child: Text(
-                  'Flight Analytics',
+                  tr('Flight Analytics'),
                   style: TextStyle(
                     fontSize: 22,
                     fontWeight: FontWeight.w800,
@@ -385,7 +387,7 @@ class FlightHubScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Flight Logs',
+                    tr('Flight Logs'),
                     style: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.w800,
@@ -395,7 +397,7 @@ class FlightHubScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 4),
                   Text(
-                    'View all your flights',
+                    tr('View all your flights'),
                     style: TextStyle(
                       fontSize: 14,
                       color: Colors.white.withOpacity(0.9),
@@ -409,7 +411,7 @@ class FlightHubScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Text(
-                  '$totalFlights',
+                  tr('$totalFlights'),
                   style: TextStyle(
                     fontSize: 36,
                     fontWeight: FontWeight.w900,
@@ -419,7 +421,7 @@ class FlightHubScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 2),
                 Text(
-                  'flights',
+                  tr('flights'),
                   style: TextStyle(
                     fontSize: 13,
                     color: Colors.white.withOpacity(0.85),
@@ -483,7 +485,7 @@ class FlightHubScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  title,
+                  tr(title),
                   style: TextStyle(
                     fontSize: 17,
                     fontWeight: FontWeight.w700,
@@ -493,7 +495,7 @@ class FlightHubScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 4),
                 Text(
-                  subtitle,
+                  tr(subtitle),
                   style: TextStyle(
                     fontSize: 13,
                     color: Colors.grey.shade600,
@@ -579,7 +581,7 @@ class FlightHubScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Route Map',
+                        tr('Route Map'),
                         style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.w700,
@@ -589,7 +591,7 @@ class FlightHubScreen extends StatelessWidget {
                       ),
                       const SizedBox(height: 2),
                       Text(
-                        'Explore World',
+                        tr('Explore World'),
                         style: TextStyle(
                           fontSize: 12,
                           color: Colors.white.withOpacity(0.6),
@@ -667,7 +669,7 @@ class FlightHubScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Explore Route Map',
+                        tr('Explore Route Map'),
                         style: TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.w800,
@@ -677,7 +679,7 @@ class FlightHubScreen extends StatelessWidget {
                       ),
                       const SizedBox(height: 4),
                       Text(
-                        'View your global flight network',
+                        tr('View your global flight network'),
                         style: TextStyle(
                           fontSize: 14,
                           color: Colors.white.withOpacity(0.9),
@@ -734,7 +736,7 @@ class FlightHubScreen extends StatelessWidget {
                 ),
                 const SizedBox(width: 12),
                 Text(
-                  'Flight Overview',
+                  tr('Flight Overview'),
                   style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.w700,
@@ -755,7 +757,7 @@ class FlightHubScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        '$totalFlights',
+                        tr('$totalFlights'),
                         style: TextStyle(
                           fontSize: 28,
                           fontWeight: FontWeight.w900,
@@ -765,7 +767,7 @@ class FlightHubScreen extends StatelessWidget {
                       ),
                       const SizedBox(height: 4),
                       Text(
-                        'Total Flights',
+                        tr('Total Flights'),
                         style: TextStyle(
                           fontSize: 13,
                           color: Colors.grey.shade600,
@@ -786,7 +788,7 @@ class FlightHubScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        '$uniqueRoutes',
+                        tr('$uniqueRoutes'),
                         style: TextStyle(
                           fontSize: 28,
                           fontWeight: FontWeight.w900,
@@ -796,7 +798,7 @@ class FlightHubScreen extends StatelessWidget {
                       ),
                       const SizedBox(height: 4),
                       Text(
-                        'Unique Routes',
+                        tr('Unique Routes'),
                         style: TextStyle(
                           fontSize: 13,
                           color: Colors.grey.shade600,
@@ -861,7 +863,7 @@ class FlightHubScreen extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             Text(
-              'Flight Overview',
+              tr('Flight Overview'),
               style: TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.w700,
@@ -877,7 +879,7 @@ class FlightHubScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        '$totalFlights',
+                        tr('$totalFlights'),
                         style: TextStyle(
                           fontSize: 32,
                           fontWeight: FontWeight.w900,
@@ -887,7 +889,7 @@ class FlightHubScreen extends StatelessWidget {
                       ),
                       const SizedBox(height: 2),
                       Text(
-                        'Total Flights',
+                        tr('Total Flights'),
                         style: TextStyle(
                           fontSize: 13,
                           color: Colors.white.withOpacity(0.85),
@@ -908,7 +910,7 @@ class FlightHubScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        '$uniqueRoutes',
+                        tr('$uniqueRoutes'),
                         style: TextStyle(
                           fontSize: 32,
                           fontWeight: FontWeight.w900,
@@ -918,7 +920,7 @@ class FlightHubScreen extends StatelessWidget {
                       ),
                       const SizedBox(height: 2),
                       Text(
-                        'Unique Routes',
+                        tr('Unique Routes'),
                         style: TextStyle(
                           fontSize: 13,
                           color: Colors.white.withOpacity(0.85),
@@ -978,7 +980,7 @@ class FlightHubScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    title,
+                    tr(title),
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.w700,
@@ -988,7 +990,7 @@ class FlightHubScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 4),
                   Text(
-                    subtitle,
+                    tr(subtitle),
                     style: TextStyle(
                       fontSize: 14,
                       color: Colors.grey.shade600,
@@ -1044,7 +1046,7 @@ class FlightHubScreen extends StatelessWidget {
             ),
             const SizedBox(height: 18),
             Text(
-              title,
+              tr(title),
               style: TextStyle(
                 fontSize: 17,
                 fontWeight: FontWeight.w700,
@@ -1054,7 +1056,7 @@ class FlightHubScreen extends StatelessWidget {
             ),
             const SizedBox(height: 4),
             Text(
-              subtitle,
+              tr(subtitle),
               style: TextStyle(
                 fontSize: 13,
                 color: Colors.grey.shade600,
@@ -1107,7 +1109,7 @@ class FlightHubScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    title,
+                    tr(title),
                     style: TextStyle(
                       fontSize: 17,
                       fontWeight: FontWeight.w700,
@@ -1116,7 +1118,7 @@ class FlightHubScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 2),
                   Text(
-                    subtitle,
+                    tr(subtitle),
                     style: TextStyle(
                       fontSize: 13,
                       color: Colors.grey.shade600,
@@ -1169,7 +1171,7 @@ class FlightHubScreen extends StatelessWidget {
                 const SizedBox(width: 10),
                 Expanded(
                   child: Text(
-                    title,
+                    tr(title),
                     style: TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.w700,
@@ -1184,7 +1186,7 @@ class FlightHubScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  count,
+                  tr(count),
                   style: TextStyle(
                     fontSize: 32,
                     fontWeight: FontWeight.w900,
@@ -1195,7 +1197,7 @@ class FlightHubScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 2),
                 Text(
-                  unit,
+                  tr(unit),
                   style: TextStyle(
                     fontSize: 13,
                     color: Colors.grey.shade500,
@@ -1223,6 +1225,7 @@ class _GatedAnalyticsWrapper extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return GestureDetector(
       behavior: HitTestBehavior.opaque,
       onTap: () {

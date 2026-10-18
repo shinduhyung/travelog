@@ -1,6 +1,7 @@
 // lib/screens/visa_map_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:jidoapp/models/country_model.dart';
 import 'package:jidoapp/models/visa_data_model.dart';
@@ -18,6 +19,7 @@ class VisaMapScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final backgroundColor = Theme.of(context).scaffoldBackgroundColor;
     final List<Polygon> allPolygons = [];
 
@@ -91,8 +93,8 @@ class VisaMapScreen extends StatelessWidget {
                       )
                     ],
                   ),
-                  child: const Text(
-                    'Visa Requirements Map',
+                  child:  Text(
+                    tr('Visa Requirements Map'),
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w800,
@@ -149,7 +151,7 @@ class VisaMapScreen extends StatelessWidget {
           ),
           const SizedBox(width: 8),
           Text(
-              text,
+              tr(text),
               style: Theme.of(context).textTheme.bodySmall?.copyWith(
                   color: Colors.white,
                   fontSize: 12,

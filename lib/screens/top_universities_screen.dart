@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:collection/collection.dart';
 import 'package:country_flags/country_flags.dart';
@@ -151,6 +152,7 @@ class TopUniversitiesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final landmarksProvider = context.watch<LandmarksProvider>();
     final allLandmarks = landmarksProvider.allLandmarks;
 
@@ -187,12 +189,12 @@ class TopUniversitiesScreen extends StatelessWidget {
                         ),
                         child: Row(
                           mainAxisSize: MainAxisSize.min,
-                          children: const [
+                          children:  [
                             Icon(Icons.school_rounded,
                                 size: 12, color: Color(0xFF7B9CAE)),
                             SizedBox(width: 4),
                             Text(
-                              'QS World Rankings',
+                              tr('QS World Rankings'),
                               style: TextStyle(
                                 fontSize: 11,
                                 fontWeight: FontWeight.w700,
@@ -208,10 +210,10 @@ class TopUniversitiesScreen extends StatelessWidget {
                   const SizedBox(height: 12),
                   // 메인 타이틀 — "Top 100" 강조
                   RichText(
-                    text: const TextSpan(
+                    text:  TextSpan(
                       children: [
                         TextSpan(
-                          text: 'Top ',
+                          text: tr('Top '),
                           style: TextStyle(
                             fontSize: 28,
                             fontWeight: FontWeight.w900,
@@ -221,7 +223,7 @@ class TopUniversitiesScreen extends StatelessWidget {
                           ),
                         ),
                         TextSpan(
-                          text: '100',
+                          text: tr('100'),
                           style: TextStyle(
                             fontSize: 34,
                             fontWeight: FontWeight.w900,
@@ -231,7 +233,7 @@ class TopUniversitiesScreen extends StatelessWidget {
                           ),
                         ),
                         TextSpan(
-                          text: '\nUniversities',
+                          text: tr('\nUniversities'),
                           style: TextStyle(
                             fontSize: 28,
                             fontWeight: FontWeight.w900,
@@ -245,7 +247,7 @@ class TopUniversitiesScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 6),
                   Text(
-                    "World's most prestigious institutions",
+                    tr("World's most prestigious institutions"),
                     style: TextStyle(
                       fontSize: 13,
                       color: Colors.grey[500],
@@ -265,8 +267,8 @@ class TopUniversitiesScreen extends StatelessWidget {
                   child: CircularProgressIndicator(
                       color: Color(0xFF7B9CAE)))
                   : universityList.isEmpty
-                  ? const Center(
-                  child: Text('No university data found.'))
+                  ?  Center(
+                  child: Text(tr('No university data found.')))
                   : ListView.builder(
                 padding: const EdgeInsets.symmetric(
                     horizontal: 16.0, vertical: 10.0),
@@ -328,7 +330,7 @@ class TopUniversitiesScreen extends StatelessWidget {
                               CrossAxisAlignment.center,
                               children: [
                                 Text(
-                                  '${university.attribute_rank}',
+                                  tr('${university.attribute_rank}'),
                                   style: TextStyle(
                                     fontSize:
                                     university.attribute_rank >=
@@ -386,7 +388,7 @@ class TopUniversitiesScreen extends StatelessWidget {
                                 ),
                                 const SizedBox(height: 3),
                                 Text(
-                                  '${university.city}, ${landmarksProvider.getCountryNames(university.countriesIsoA3)}',
+                                  tr('${university.city}, ${landmarksProvider.getCountryNames(university.countriesIsoA3)}'),
                                   style: TextStyle(
                                     fontSize: 12,
                                     fontWeight: FontWeight.w500,
@@ -494,7 +496,7 @@ class TopUniversitiesScreen extends StatelessWidget {
                       children: [
                         TextButton(
                             onPressed: () => Navigator.pop(sheetContext),
-                            child: Text('Cancel',
+                            child: Text(tr('Cancel'),
                                 style: TextStyle(
                                     color: headerTextColor,
                                     fontWeight: FontWeight.w600))),
@@ -502,7 +504,7 @@ class TopUniversitiesScreen extends StatelessWidget {
                             onPressed: () => Navigator.pop(sheetContext),
                             style: ElevatedButton.styleFrom(
                                 backgroundColor: headerTextColor),
-                            child: Text('Done',
+                            child: Text(tr('Done'),
                                 style: TextStyle(
                                     fontWeight: FontWeight.w600,
                                     color: themeColor))),
@@ -533,7 +535,7 @@ class TopUniversitiesScreen extends StatelessWidget {
                             color: headerTextColor.withOpacity(0.8)),
                         const SizedBox(width: 4),
                         Expanded(
-                            child: Text(locationDisplay,
+                            child: Text(tr(locationDisplay),
                                 style: Theme.of(sheetContext)
                                     .textTheme
                                     .titleSmall
@@ -556,7 +558,7 @@ class TopUniversitiesScreen extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Row(mainAxisSize: MainAxisSize.min, children: [
-                              const Text('Wishlist:'),
+                               Text(tr('Wishlist:')),
                               IconButton(
                                   visualDensity: VisualDensity.compact,
                                   icon: Icon(
@@ -571,7 +573,7 @@ class TopUniversitiesScreen extends StatelessWidget {
                                           freshLandmark.name))
                             ]),
                             Row(mainAxisSize: MainAxisSize.min, children: [
-                              const Text('My Rating:'),
+                               Text(tr('My Rating:')),
                               const SizedBox(width: 8),
                               RatingBar.builder(
                                   initialRating: freshLandmark.rating ?? 0.0,
@@ -594,13 +596,13 @@ class TopUniversitiesScreen extends StatelessWidget {
                             MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
-                                  'History (${freshLandmark.visitDates.length} entries)',
+                                  tr('History (${freshLandmark.visitDates.length} entries)'),
                                   style: Theme.of(sheetContext)
                                       .textTheme
                                       .titleSmall),
                               OutlinedButton.icon(
                                   icon: const Icon(Icons.add),
-                                  label: const Text('Add Visit'),
+                                  label:  Text(tr('Add Visit')),
                                   onPressed: () => provider
                                       .addVisitDate(freshLandmark.name))
                             ]),
@@ -622,7 +624,7 @@ class TopUniversitiesScreen extends StatelessWidget {
                             freshLandmark.locations,
                           ))
                         else
-                          const Center(child: Text('No visits recorded.')),
+                           Center(child: Text(tr('No visits recorded.'))),
                         const Divider(height: 24),
                         LandmarkInfoCard(
                             overview: freshLandmark.overview,
@@ -816,6 +818,7 @@ class _LandmarkVisitEditorCardState
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final themeColor = Theme.of(context).primaryColor;
 
     return Card(
@@ -827,11 +830,11 @@ class _LandmarkVisitEditorCardState
         controller: _expansionTileController,
         initiallyExpanded: _isEditing,
         title: Text(
-          _displayTitle.isNotEmpty ? _displayTitle : 'Visit Record',
+          tr(_displayTitle.isNotEmpty ? _displayTitle : 'Visit Record'),
           style: const TextStyle(
               fontWeight: FontWeight.w600, fontSize: 15),
         ),
-        subtitle: Text('Date: $_year-$_month-$_day',
+        subtitle: Text(tr('Date: $_year-$_month-$_day'),
             style: TextStyle(color: Colors.grey[600], fontSize: 13)),
         trailing: IconButton(
           icon: const Icon(Icons.delete_outline,
@@ -840,20 +843,20 @@ class _LandmarkVisitEditorCardState
             showDialog(
               context: context,
               builder: (context) => AlertDialog(
-                title: const Text('Delete Visit Record'),
-                content: const Text(
-                    'Are you sure you want to delete this visit record?'),
+                title:  Text(tr('Delete Visit Record')),
+                content:  Text(
+                    tr('Are you sure you want to delete this visit record?')),
                 actions: [
                   TextButton(
                     onPressed: () => Navigator.pop(context),
-                    child: const Text('Cancel'),
+                    child:  Text(tr('Cancel')),
                   ),
                   TextButton(
                     onPressed: () {
                       Navigator.pop(context);
                       widget.onDelete();
                     },
-                    child: const Text('Delete',
+                    child:  Text(tr('Delete'),
                         style: TextStyle(color: Colors.red)),
                   ),
                 ],
@@ -878,12 +881,12 @@ class _LandmarkVisitEditorCardState
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text('Visit Date: $_year-$_month-$_day',
+                      Text(tr('Visit Date: $_year-$_month-$_day'),
                           style: const TextStyle(
                               fontWeight: FontWeight.w600, fontSize: 14)),
                       TextButton.icon(
                         icon: const Icon(Icons.edit_calendar, size: 18),
-                        label: const Text('Edit Date'),
+                        label:  Text(tr('Edit Date')),
                         onPressed: () => _selectDate(context),
                         style: TextButton.styleFrom(
                             visualDensity: VisualDensity.compact),
@@ -894,7 +897,7 @@ class _LandmarkVisitEditorCardState
                   TextField(
                     controller: _titleController,
                     decoration: InputDecoration(
-                      labelText: 'Title',
+                      labelText: tr('Title'),
                       isDense: true,
                       filled: true,
                       fillColor: Colors.white,
@@ -909,7 +912,7 @@ class _LandmarkVisitEditorCardState
                     maxLines: 3,
                     minLines: 1,
                     decoration: InputDecoration(
-                      labelText: 'Memo',
+                      labelText: tr('Memo'),
                       isDense: true,
                       filled: true,
                       fillColor: Colors.white,
@@ -923,7 +926,7 @@ class _LandmarkVisitEditorCardState
                     Padding(
                       padding: const EdgeInsets.only(bottom: 12.0),
                       child: Text(
-                        _displayMemo,
+                        tr(_displayMemo),
                         style: TextStyle(
                             fontSize: 14,
                             color: Colors.grey[800],
@@ -974,7 +977,7 @@ class _LandmarkVisitEditorCardState
                     if (_isEditing) ...[
                       TextButton(
                         onPressed: _cancelEditing,
-                        child: Text('Cancel',
+                        child: Text(tr('Cancel'),
                             style: TextStyle(
                                 color: Colors.grey[700],
                                 fontWeight: FontWeight.w600)),
@@ -983,7 +986,7 @@ class _LandmarkVisitEditorCardState
                       ElevatedButton.icon(
                         onPressed: _saveChanges,
                         icon: const Icon(Icons.save, size: 18),
-                        label: const Text('Save'),
+                        label:  Text(tr('Save')),
                         style: ElevatedButton.styleFrom(
                           backgroundColor: themeColor,
                           foregroundColor: Colors.white,
@@ -995,7 +998,7 @@ class _LandmarkVisitEditorCardState
                         onPressed: () =>
                             setState(() => _isEditing = true),
                         icon: const Icon(Icons.edit, size: 16),
-                        label: const Text('Edit Record'),
+                        label:  Text(tr('Edit Record')),
                         style: OutlinedButton.styleFrom(
                           foregroundColor: themeColor,
                           side: BorderSide(

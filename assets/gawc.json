@@ -1,1514 +1,2318 @@
-[
-  {
-    "name": "London",
-    "latitude": 51.5074,
-    "longitude": -0.1278,
-    "tier": "Alpha++",
-    "country": "United Kingdom",
-    "country_iso": "GB"
-  },
-  {
-    "name": "New York City",
-    "latitude": 40.7128,
-    "longitude": -74.006,
-    "tier": "Alpha++",
-    "country": "United States",
-    "country_iso": "US"
-  },
-  {
-    "name": "Beijing",
-    "latitude": 39.9042,
-    "longitude": 116.4074,
-    "tier": "Alpha+",
-    "country": "China",
-    "country_iso": "CN"
-  },
-  {
-    "name": "Dubai",
-    "latitude": 25.2048,
-    "longitude": 55.2708,
-    "tier": "Alpha+",
-    "country": "United Arab Emirates",
-    "country_iso": "AE"
-  },
-  {
-    "name": "Hong Kong",
-    "latitude": 22.3193,
-    "longitude": 114.1694,
-    "tier": "Alpha+",
-    "country": "Hong Kong",
-    "country_iso": "HK"
-  },
-  {
-    "name": "Paris",
-    "latitude": 48.8566,
-    "longitude": 2.3522,
-    "tier": "Alpha+",
-    "country": "France",
-    "country_iso": "FR"
-  },
-  {
-    "name": "Shanghai",
-    "latitude": 31.2304,
-    "longitude": 121.4737,
-    "tier": "Alpha+",
-    "country": "China",
-    "country_iso": "CN"
-  },
-  {
-    "name": "Singapore",
-    "latitude": 1.3521,
-    "longitude": 103.8198,
-    "tier": "Alpha+",
-    "country": "Singapore",
-    "country_iso": "SG"
-  },
-  {
-    "name": "Sydney",
-    "latitude": -33.8688,
-    "longitude": 151.2093,
-    "tier": "Alpha+",
-    "country": "Australia",
-    "country_iso": "AU"
-  },
-  {
-    "name": "Tokyo",
-    "latitude": 35.6895,
-    "longitude": 139.6917,
-    "tier": "Alpha+",
-    "country": "Japan",
-    "country_iso": "JP"
-  },
-  {
-    "name": "Amsterdam",
-    "latitude": 52.3676,
-    "longitude": 4.9041,
-    "tier": "Alpha",
-    "country": "Netherlands",
-    "country_iso": "NL"
-  },
-  {
-    "name": "Bangkok",
-    "latitude": 13.7563,
-    "longitude": 100.5018,
-    "tier": "Alpha",
-    "country": "Thailand",
-    "country_iso": "TH"
-  },
-  {
-    "name": "Chicago",
-    "latitude": 41.8781,
-    "longitude": -87.6298,
-    "tier": "Alpha",
-    "country": "United States",
-    "country_iso": "US"
-  },
-  {
-    "name": "Frankfurt",
-    "latitude": 50.1109,
-    "longitude": 8.6821,
-    "tier": "Alpha",
-    "country": "Germany",
-    "country_iso": "DE"
-  },
-  {
-    "name": "Guangzhou",
-    "latitude": 23.1291,
-    "longitude": 113.2644,
-    "tier": "Alpha",
-    "country": "China",
-    "country_iso": "CN"
-  },
-  {
-    "name": "Istanbul",
-    "latitude": 41.0082,
-    "longitude": 28.9784,
-    "tier": "Alpha",
-    "country": "Turkey",
-    "country_iso": "TR"
-  },
-  {
-    "name": "Jakarta",
-    "latitude": -6.2088,
-    "longitude": 106.8456,
-    "tier": "Alpha",
-    "country": "Indonesia",
-    "country_iso": "ID"
-  },
-  {
-    "name": "Kuala Lumpur",
-    "latitude": 3.139,
-    "longitude": 101.6869,
-    "tier": "Alpha",
-    "country": "Malaysia",
-    "country_iso": "MY"
-  },
-  {
-    "name": "Los Angeles",
-    "latitude": 34.0522,
-    "longitude": -118.2437,
-    "tier": "Alpha",
-    "country": "United States",
-    "country_iso": "US"
-  },
-  {
-    "name": "Madrid",
-    "latitude": 40.4168,
-    "longitude": -3.7038,
-    "tier": "Alpha",
-    "country": "Spain",
-    "country_iso": "ES"
-  },
-  {
-    "name": "Mexico City",
-    "latitude": 19.4326,
-    "longitude": -99.1332,
-    "tier": "Alpha",
-    "country": "Mexico",
-    "country_iso": "MX"
-  },
-  {
-    "name": "Milan",
-    "latitude": 45.4642,
-    "longitude": 9.19,
-    "tier": "Alpha",
-    "country": "Italy",
-    "country_iso": "IT"
-  },
-  {
-    "name": "Mumbai",
-    "latitude": 19.076,
-    "longitude": 72.8777,
-    "tier": "Alpha",
-    "country": "India",
-    "country_iso": "IN"
-  },
-  {
-    "name": "São Paulo",
-    "latitude": -23.5505,
-    "longitude": -46.6333,
-    "tier": "Alpha",
-    "country": "Brazil",
-    "country_iso": "BR"
-  },
-  {
-    "name": "Seoul",
-    "latitude": 37.5665,
-    "longitude": 126.978,
-    "tier": "Alpha",
-    "country": "South Korea",
-    "country_iso": "KR"
-  },
-  {
-    "name": "Toronto",
-    "latitude": 43.6532,
-    "longitude": -79.3832,
-    "tier": "Alpha",
-    "country": "Canada",
-    "country_iso": "CA"
-  },
-  {
-    "name": "Warsaw",
-    "latitude": 52.2297,
-    "longitude": 21.0122,
-    "tier": "Alpha",
-    "country": "Poland",
-    "country_iso": "PL"
-  },
-  {
-    "name": "Berlin",
-    "latitude": 52.52,
-    "longitude": 13.405,
-    "tier": "Alpha-",
-    "country": "Germany",
-    "country_iso": "DE"
-  },
-  {
-    "name": "Boston",
-    "latitude": 42.3601,
-    "longitude": -71.0589,
-    "tier": "Alpha-",
-    "country": "United States",
-    "country_iso": "US"
-  },
-  {
-    "name": "Brussels",
-    "latitude": 50.8503,
-    "longitude": 4.3517,
-    "tier": "Alpha-",
-    "country": "Belgium",
-    "country_iso": "BE"
-  },
-  {
-    "name": "Buenos Aires",
-    "latitude": -34.6037,
-    "longitude": -58.3816,
-    "tier": "Alpha-",
-    "country": "Argentina",
-    "country_iso": "AR"
-  },
-  {
-    "name": "Dublin",
-    "latitude": 53.3498,
-    "longitude": -6.2603,
-    "tier": "Alpha-",
-    "country": "Ireland",
-    "country_iso": "IE"
-  },
-  {
-    "name": "Düsseldorf",
-    "latitude": 51.2277,
-    "longitude": 6.7735,
-    "tier": "Alpha-",
-    "country": "Germany",
-    "country_iso": "DE"
-  },
-  {
-    "name": "Houston",
-    "latitude": 29.7604,
-    "longitude": -95.3698,
-    "tier": "Alpha-",
-    "country": "United States",
-    "country_iso": "US"
-  },
-  {
-    "name": "Johannesburg",
-    "latitude": -26.2041,
-    "longitude": 28.0473,
-    "tier": "Alpha-",
-    "country": "South Africa",
-    "country_iso": "ZA"
-  },
-  {
-    "name": "Lisbon",
-    "latitude": 38.7223,
-    "longitude": -9.1393,
-    "tier": "Alpha-",
-    "country": "Portugal",
-    "country_iso": "PT"
-  },
-  {
-    "name": "Luxembourg",
-    "latitude": 49.6116,
-    "longitude": 6.1319,
-    "tier": "Alpha-",
-    "country": "Luxembourg",
-    "country_iso": "LU"
-  },
-  {
-    "name": "Melbourne",
-    "latitude": -37.8136,
-    "longitude": 144.9631,
-    "tier": "Alpha-",
-    "country": "Australia",
-    "country_iso": "AU"
-  },
-  {
-    "name": "Munich",
-    "latitude": 48.1351,
-    "longitude": 11.582,
-    "tier": "Alpha-",
-    "country": "Germany",
-    "country_iso": "DE"
-  },
-  {
-    "name": "New Delhi",
-    "latitude": 28.6139,
-    "longitude": 77.209,
-    "tier": "Alpha-",
-    "country": "India",
-    "country_iso": "IN"
-  },
-  {
-    "name": "Riyadh",
-    "latitude": 24.7136,
-    "longitude": 46.6753,
-    "tier": "Alpha-",
-    "country": "Saudi Arabia",
-    "country_iso": "SA"
-  },
-  {
-    "name": "San Francisco",
-    "latitude": 37.7749,
-    "longitude": -122.4194,
-    "tier": "Alpha-",
-    "country": "United States",
-    "country_iso": "US"
-  },
-  {
-    "name": "Santiago",
-    "latitude": -33.4489,
-    "longitude": -70.6693,
-    "tier": "Alpha-",
-    "country": "Chile",
-    "country_iso": "CL"
-  },
-  {
-    "name": "Shenzhen",
-    "latitude": 22.5429,
-    "longitude": 114.0596,
-    "tier": "Alpha-",
-    "country": "China",
-    "country_iso": "CN"
-  },
-  {
-    "name": "Stockholm",
-    "latitude": 59.3293,
-    "longitude": 18.0686,
-    "tier": "Alpha-",
-    "country": "Sweden",
-    "country_iso": "SE"
-  },
-  {
-    "name": "Taipei",
-    "latitude": 25.0325,
-    "longitude": 121.568,
-    "tier": "Alpha-",
-    "country": "Taiwan",
-    "country_iso": "TW"
-  },
-  {
-    "name": "Vienna",
-    "latitude": 48.2082,
-    "longitude": 16.3738,
-    "tier": "Alpha-",
-    "country": "Austria",
-    "country_iso": "AT"
-  },
-  {
-    "name": "Washington D.C.",
-    "latitude": 38.8951,
-    "longitude": -77.0364,
-    "tier": "Alpha-",
-    "country": "United States",
-    "country_iso": "US"
-  },
-  {
-    "name": "Zurich",
-    "latitude": 47.3769,
-    "longitude": 8.5417,
-    "tier": "Alpha-",
-    "country": "Switzerland",
-    "country_iso": "CH"
-  },
-  {
-    "name": "Athens",
-    "latitude": 37.98381,
-    "longitude": 23.72754,
-    "tier": "Beta+",
-    "country": "Greece",
-    "country_iso": "GR"
-  },
-  {
-    "name": "Atlanta",
-    "latitude": 33.7489954,
-    "longitude": -84.3879824,
-    "tier": "Beta+",
-    "country": "United States",
-    "country_iso": "US"
-  },
-  {
-    "name": "Auckland",
-    "latitude": -36.8484597,
-    "longitude": 174.7633315,
-    "tier": "Beta+",
-    "country": "New Zealand",
-    "country_iso": "NZ"
-  },
-  {
-    "name": "Barcelona",
-    "latitude": 41.390205,
-    "longitude": 2.154007,
-    "tier": "Beta+",
-    "country": "Spain",
-    "country_iso": "ES"
-  },
-  {
-    "name": "Bengaluru",
-    "latitude": 12.9791198,
-    "longitude": 77.5912997,
-    "tier": "Beta+",
-    "country": "India",
-    "country_iso": "IN"
-  },
-  {
-    "name": "Bogotá",
-    "latitude": 4.60971,
-    "longitude": -74.08175,
-    "tier": "Beta+",
-    "country": "Colombia",
-    "country_iso": "CO"
-  },
-  {
-    "name": "Bucharest",
-    "latitude": 44.43225,
-    "longitude": 26.10626,
-    "tier": "Beta+",
-    "country": "Romania",
-    "country_iso": "RO"
-  },
-  {
-    "name": "Budapest",
-    "latitude": 47.497913,
-    "longitude": 19.040236,
-    "tier": "Beta+",
-    "country": "Hungary",
-    "country_iso": "HU"
-  },
-  {
-    "name": "Chengdu",
-    "latitude": 30.572815,
-    "longitude": 104.066803,
-    "tier": "Beta+",
-    "country": "China",
-    "country_iso": "CN"
-  },
-  {
-    "name": "Dallas",
-    "latitude": 32.776664,
-    "longitude": -96.796988,
-    "tier": "Beta+",
-    "country": "United States",
-    "country_iso": "US"
-  },
-  {
-    "name": "Doha",
-    "latitude": 25.2854,
-    "longitude": 51.531,
-    "tier": "Beta+",
-    "country": "Qatar",
-    "country_iso": "QA"
-  },
-  {
-    "name": "Hamburg",
-    "latitude": 53.552645,
-    "longitude": 9.966287,
-    "tier": "Beta+",
-    "country": "Germany",
-    "country_iso": "DE"
-  },
-  {
-    "name": "Hangzhou",
-    "latitude": 30.25,
-    "longitude": 120.166664,
-    "tier": "Beta+",
-    "country": "China",
-    "country_iso": "CN"
-  },
-  {
-    "name": "Ho Chi Minh City",
-    "latitude": 10.762622,
-    "longitude": 106.660172,
-    "tier": "Beta+",
-    "country": "Vietnam",
-    "country_iso": "VN"
-  },
-  {
-    "name": "Lima",
-    "latitude": -12.046374,
-    "longitude": -77.042793,
-    "tier": "Beta+",
-    "country": "Peru",
-    "country_iso": "PE"
-  },
-  {
-    "name": "Miami",
-    "latitude": 25.761681,
-    "longitude": -80.191788,
-    "tier": "Beta+",
-    "country": "United States",
-    "country_iso": "US"
-  },
-  {
-    "name": "Montreal",
-    "latitude": 45.508888,
-    "longitude": -73.561668,
-    "tier": "Beta+",
-    "country": "Canada",
-    "country_iso": "CA"
-  },
-  {
-    "name": "Prague",
-    "latitude": 50.073658,
-    "longitude": 14.41854,
-    "tier": "Beta+",
-    "country": "Czech Republic",
-    "country_iso": "CZ"
-  },
-  {
-    "name": "Rome",
-    "latitude": 41.902784,
-    "longitude": 12.496366,
-    "tier": "Beta+",
-    "country": "Italy",
-    "country_iso": "IT"
-  },
-  {
-    "name": "Tianjin",
-    "latitude": 39.343357,
-    "longitude": 117.361649,
-    "tier": "Beta+",
-    "country": "China",
-    "country_iso": "CN"
-  },
-  {
-    "name": "Abu Dhabi",
-    "latitude": 24.453884,
-    "longitude": 54.3773438,
-    "tier": "Beta",
-    "country": "United Arab Emirates",
-    "country_iso": "AE"
-  },
-  {
-    "name": "Brisbane",
-    "latitude": -27.4697707,
-    "longitude": 153.0251235,
-    "tier": "Beta",
-    "country": "Australia",
-    "country_iso": "AU"
-  },
-  {
-    "name": "Cairo",
-    "latitude": 30.04442,
-    "longitude": 31.235712,
-    "tier": "Beta",
-    "country": "Egypt",
-    "country_iso": "EG"
-  },
-  {
-    "name": "Calgary",
-    "latitude": 51.044733,
-    "longitude": -114.071883,
-    "tier": "Beta",
-    "country": "Canada",
-    "country_iso": "CA"
-  },
-  {
-    "name": "Chongqing",
-    "latitude": 29.56301,
-    "longitude": 106.551556,
-    "tier": "Beta",
-    "country": "China",
-    "country_iso": "CN"
-  },
-  {
-    "name": "Copenhagen",
-    "latitude": 55.676098,
-    "longitude": 12.568337,
-    "tier": "Beta",
-    "country": "Denmark",
-    "country_iso": "DK"
-  },
-  {
-    "name": "Geneva",
-    "latitude": 46.204391,
-    "longitude": 6.143158,
-    "tier": "Beta",
-    "country": "Switzerland",
-    "country_iso": "CH"
-  },
-  {
-    "name": "Hanoi",
-    "latitude": 21.028511,
-    "longitude": 105.804817,
-    "tier": "Beta",
-    "country": "Vietnam",
-    "country_iso": "VN"
-  },
-  {
-    "name": "Jinan",
-    "latitude": 36.651216,
-    "longitude": 117.120047,
-    "tier": "Beta",
-    "country": "China",
-    "country_iso": "CN"
-  },
-  {
-    "name": "Kyiv",
-    "latitude": 50.4501,
-    "longitude": 30.5234,
-    "tier": "Beta",
-    "country": "Ukraine",
-    "country_iso": "UA"
-  },
-  {
-    "name": "Manama",
-    "latitude": 26.228516,
-    "longitude": 50.586049,
-    "tier": "Beta",
-    "country": "Bahrain",
-    "country_iso": "BH"
-  },
-  {
-    "name": "Manila",
-    "latitude": 14.599512,
-    "longitude": 120.984222,
-    "tier": "Beta",
-    "country": "Philippines",
-    "country_iso": "PH"
-  },
-  {
-    "name": "Nairobi",
-    "latitude": -1.292066,
-    "longitude": 36.821945,
-    "tier": "Beta",
-    "country": "Kenya",
-    "country_iso": "KE"
-  },
-  {
-    "name": "Nanjing",
-    "latitude": 32.060255,
-    "longitude": 118.796877,
-    "tier": "Beta",
-    "country": "China",
-    "country_iso": "CN"
-  },
-  {
-    "name": "Oslo",
-    "latitude": 59.913868,
-    "longitude": 10.752245,
-    "tier": "Beta",
-    "country": "Norway",
-    "country_iso": "NO"
-  },
-  {
-    "name": "Perth",
-    "latitude": -31.950527,
-    "longitude": 115.860457,
-    "tier": "Beta",
-    "country": "Australia",
-    "country_iso": "AU"
-  },
-  {
-    "name": "Shenyang",
-    "latitude": 41.805699,
-    "longitude": 123.431472,
-    "tier": "Beta",
-    "country": "China",
-    "country_iso": "CN"
-  },
-  {
-    "name": "Suzhou",
-    "latitude": 31.29834,
-    "longitude": 120.58319,
-    "tier": "Beta",
-    "country": "China",
-    "country_iso": "CN"
-  },
-  {
-    "name": "Tel Aviv",
-    "latitude": 32.0853,
-    "longitude": 34.7818,
-    "tier": "Beta",
-    "country": "Israel",
-    "country_iso": "IL"
-  },
-  {
-    "name": "Wuhan",
-    "latitude": 30.595105,
-    "longitude": 114.299935,
-    "tier": "Beta",
-    "country": "China",
-    "country_iso": "CN"
-  },
-  {
-    "name": "Xiamen",
-    "latitude": 24.479834,
-    "longitude": 118.089425,
-    "tier": "Beta",
-    "country": "China",
-    "country_iso": "CN"
-  },
-  {
-    "name": "Zhengzhou",
-    "latitude": 34.746611,
-    "longitude": 113.625328,
-    "tier": "Beta",
-    "country": "China",
-    "country_iso": "CN"
-  },
-  {
-    "name": "Beirut",
-    "latitude": 33.8937913,
-    "longitude": 35.5017767,
-    "tier": "Beta-",
-    "country": "Lebanon",
-    "country_iso": "LB"
-  },
-  {
-    "name": "Belgrade",
-    "latitude": 44.786568,
-    "longitude": 20.448921,
-    "tier": "Beta-",
-    "country": "Serbia",
-    "country_iso": "RS"
-  },
-  {
-    "name": "Bratislava",
-    "latitude": 48.1486,
-    "longitude": 17.1077,
-    "tier": "Beta-",
-    "country": "Slovakia",
-    "country_iso": "SK"
-  },
-  {
-    "name": "Caracas",
-    "latitude": 10.480594,
-    "longitude": -66.903606,
-    "tier": "Beta-",
-    "country": "Venezuela",
-    "country_iso": "VE"
-  },
-  {
-    "name": "Casablanca",
-    "latitude": 33.5731104,
-    "longitude": -7.5898434,
-    "tier": "Beta-",
-    "country": "Morocco",
-    "country_iso": "MA"
-  },
-  {
-    "name": "Changsha",
-    "latitude": 28.228209,
-    "longitude": 112.938814,
-    "tier": "Beta-",
-    "country": "China",
-    "country_iso": "CN"
-  },
-  {
-    "name": "Chennai",
-    "latitude": 13.08268,
-    "longitude": 80.270718,
-    "tier": "Beta-",
-    "country": "India",
-    "country_iso": "IN"
-  },
-  {
-    "name": "Denver",
-    "latitude": 39.739236,
-    "longitude": -104.990251,
-    "tier": "Beta-",
-    "country": "United States",
-    "country_iso": "US"
-  },
-  {
-    "name": "Hefei",
-    "latitude": 31.820587,
-    "longitude": 117.227219,
-    "tier": "Beta-",
-    "country": "China",
-    "country_iso": "CN"
-  },
-  {
-    "name": "Helsinki",
-    "latitude": 60.169856,
-    "longitude": 24.938379,
-    "tier": "Beta-",
-    "country": "Finland",
-    "country_iso": "FI"
-  },
-  {
-    "name": "Karachi",
-    "latitude": 24.860735,
-    "longitude": 67.001137,
-    "tier": "Beta-",
-    "country": "Pakistan",
-    "country_iso": "PK"
-  },
-  {
-    "name": "Kunming",
-    "latitude": 25.03889,
-    "longitude": 102.718278,
-    "tier": "Beta-",
-    "country": "China",
-    "country_iso": "CN"
-  },
-  {
-    "name": "Lagos",
-    "latitude": 6.524379,
-    "longitude": 3.379206,
-    "tier": "Beta-",
-    "country": "Nigeria",
-    "country_iso": "NG"
-  },
-  {
-    "name": "Lyon",
-    "latitude": 45.764043,
-    "longitude": 4.835659,
-    "tier": "Beta-",
-    "country": "France",
-    "country_iso": "FR"
-  },
-  {
-    "name": "Manchester",
-    "latitude": 53.480759,
-    "longitude": -2.242631,
-    "tier": "Beta-",
-    "country": "United Kingdom",
-    "country_iso": "GB"
-  },
-  {
-    "name": "Montevideo",
-    "latitude": -34.901112,
-    "longitude": -56.164532,
-    "tier": "Beta-",
-    "country": "Uruguay",
-    "country_iso": "UY"
-  },
-  {
-    "name": "Nicosia",
-    "latitude": 35.185566,
-    "longitude": 33.382276,
-    "tier": "Beta-",
-    "country": "Cyprus",
-    "country_iso": "CY"
-  },
-  {
-    "name": "Panama City",
-    "latitude": 8.982379,
-    "longitude": -79.51987,
-    "tier": "Beta-",
-    "country": "Panama",
-    "country_iso": "PA"
-  },
-  {
-    "name": "Philadelphia",
-    "latitude": 39.952583,
-    "longitude": -75.165222,
-    "tier": "Beta-",
-    "country": "United States",
-    "country_iso": "US"
-  },
-  {
-    "name": "Port Louis",
-    "latitude": -20.166896,
-    "longitude": 57.501221,
-    "tier": "Beta-",
-    "country": "Mauritius",
-    "country_iso": "MU"
-  },
-  {
-    "name": "Qingdao",
-    "latitude": 36.067108,
-    "longitude": 120.382609,
-    "tier": "Beta-",
-    "country": "China",
-    "country_iso": "CN"
-  },
-  {
-    "name": "Rio de Janeiro",
-    "latitude": -22.906847,
-    "longitude": -43.172896,
-    "tier": "Beta-",
-    "country": "Brazil",
-    "country_iso": "BR"
-  },
-  {
-    "name": "Seattle",
-    "latitude": 47.606209,
-    "longitude": -122.332071,
-    "tier": "Beta-",
-    "country": "United States",
-    "country_iso": "US"
-  },
-  {
-    "name": "Sofia",
-    "latitude": 42.697708,
-    "longitude": 23.321868,
-    "tier": "Beta-",
-    "country": "Bulgaria",
-    "country_iso": "BG"
-  },
-  {
-    "name": "Stuttgart",
-    "latitude": 48.775846,
-    "longitude": 9.182932,
-    "tier": "Beta-",
-    "country": "Germany",
-    "country_iso": "DE"
-  },
-  {
-    "name": "Vancouver",
-    "latitude": 49.282729,
-    "longitude": -123.120738,
-    "tier": "Beta-",
-    "country": "Canada",
-    "country_iso": "CA"
-  },
-  {
-    "name": "Xi'an",
-    "latitude": 34.341575,
-    "longitude": 108.93977,
-    "tier": "Beta-",
-    "country": "China",
-    "country_iso": "CN"
-  },
-  {
-    "name": "Zagreb",
-    "latitude": 45.81501,
-    "longitude": 15.981919,
-    "tier": "Beta-",
-    "country": "Croatia",
-    "country_iso": "HR"
-  },
-  {
-    "name": "Adelaide",
-    "latitude": -34.9285,
-    "longitude": 138.6007,
-    "tier": "Gamma+",
-    "country": "Australia",
-    "country_iso": "AU"
-  },
-  {
-    "name": "Almaty",
-    "latitude": 43.2389,
-    "longitude": 76.8897,
-    "tier": "Gamma+",
-    "country": "Kazakhstan",
-    "country_iso": "KZ"
-  },
-  {
-    "name": "Amman",
-    "latitude": 31.9566,
-    "longitude": 35.9457,
-    "tier": "Gamma+",
-    "country": "Jordan",
-    "country_iso": "JO"
-  },
-  {
-    "name": "Antwerp",
-    "latitude": 51.2194,
-    "longitude": 4.4025,
-    "tier": "Gamma+",
-    "country": "Belgium",
-    "country_iso": "BE"
-  },
-  {
-    "name": "Austin",
-    "latitude": 30.2672,
-    "longitude": -97.7431,
-    "tier": "Gamma+",
-    "country": "United States",
-    "country_iso": "US"
-  },
-  {
-    "name": "Cape Town",
-    "latitude": -33.9249,
-    "longitude": 18.4241,
-    "tier": "Gamma+",
-    "country": "South Africa",
-    "country_iso": "ZA"
-  },
-  {
-    "name": "Colombo",
-    "latitude": 6.9271,
-    "longitude": 79.8612,
-    "tier": "Gamma+",
-    "country": "Sri Lanka",
-    "country_iso": "LK"
-  },
-  {
-    "name": "Dhaka",
-    "latitude": 23.8103,
-    "longitude": 90.4125,
-    "tier": "Gamma+",
-    "country": "Bangladesh",
-    "country_iso": "BD"
-  },
-  {
-    "name": "Fuzhou",
-    "latitude": 26.0745,
-    "longitude": 119.2965,
-    "tier": "Gamma+",
-    "country": "China",
-    "country_iso": "CN"
-  },
-  {
-    "name": "Guatemala City",
-    "latitude": 14.6349,
-    "longitude": -90.5069,
-    "tier": "Gamma+",
-    "country": "Guatemala",
-    "country_iso": "GT"
-  },
-  {
-    "name": "Hyderabad",
-    "latitude": 17.385,
-    "longitude": 78.4867,
-    "tier": "Gamma+",
-    "country": "India",
-    "country_iso": "IN"
-  },
-  {
-    "name": "Kuwait City",
-    "latitude": 29.3759,
-    "longitude": 47.9774,
-    "tier": "Gamma+",
-    "country": "Kuwait",
-    "country_iso": "KW"
-  },
-  {
-    "name": "Lahore",
-    "latitude": 31.5497,
-    "longitude": 74.3436,
-    "tier": "Gamma+",
-    "country": "Pakistan",
-    "country_iso": "PK"
-  },
-  {
-    "name": "Minneapolis",
-    "latitude": 44.9778,
-    "longitude": -93.265,
-    "tier": "Gamma+",
-    "country": "United States",
-    "country_iso": "US"
-  },
-  {
-    "name": "Porto",
-    "latitude": 41.1579,
-    "longitude": -8.6291,
-    "tier": "Gamma+",
-    "country": "Portugal",
-    "country_iso": "PT"
-  },
-  {
-    "name": "Rotterdam",
-    "latitude": 51.9225,
-    "longitude": 4.47917,
-    "tier": "Gamma+",
-    "country": "Netherlands",
-    "country_iso": "NL"
-  },
-  {
-    "name": "San Diego",
-    "latitude": 32.7157,
-    "longitude": -117.1611,
-    "tier": "Gamma+",
-    "country": "United States",
-    "country_iso": "US"
-  },
-  {
-    "name": "Santo Domingo",
-    "latitude": 18.4861,
-    "longitude": -69.9312,
-    "tier": "Gamma+",
-    "country": "Dominican Republic",
-    "country_iso": "DO"
-  },
-  {
-    "name": "Taiyuan",
-    "latitude": 37.8706,
-    "longitude": 112.5489,
-    "tier": "Gamma+",
-    "country": "China",
-    "country_iso": "CN"
-  },
-  {
-    "name": "Tunis",
-    "latitude": 36.8065,
-    "longitude": 10.1815,
-    "tier": "Gamma+",
-    "country": "Tunisia",
-    "country_iso": "TN"
-  },
-  {
-    "name": "Ahmedabad",
-    "latitude": 23.0225,
-    "longitude": 72.5714,
-    "tier": "Gamma",
-    "country": "India",
-    "country_iso": "IN"
-  },
-  {
-    "name": "Birmingham",
-    "latitude": 52.4862,
-    "longitude": -1.8904,
-    "tier": "Gamma",
-    "country": "United Kingdom",
-    "country_iso": "GB"
-  },
-  {
-    "name": "Bologna",
-    "latitude": 44.4949,
-    "longitude": 11.3426,
-    "tier": "Gamma",
-    "country": "Italy",
-    "country_iso": "IT"
-  },
-  {
-    "name": "Bristol",
-    "latitude": 51.4545,
-    "longitude": -2.5879,
-    "tier": "Gamma",
-    "country": "United Kingdom",
-    "country_iso": "GB"
-  },
-  {
-    "name": "Detroit",
-    "latitude": 42.3314,
-    "longitude": -83.0458,
-    "tier": "Gamma",
-    "country": "United States",
-    "country_iso": "US"
-  },
-  {
-    "name": "Haikou",
-    "latitude": 20.044,
-    "longitude": 110.1983,
-    "tier": "Gamma",
-    "country": "China",
-    "country_iso": "CN"
-  },
-  {
-    "name": "Harbin",
-    "latitude": 45.8038,
-    "longitude": 126.5349,
-    "tier": "Gamma",
-    "country": "China",
-    "country_iso": "CN"
-  },
-  {
-    "name": "Islamabad",
-    "latitude": 33.6844,
-    "longitude": 73.0479,
-    "tier": "Gamma",
-    "country": "Pakistan",
-    "country_iso": "PK"
-  },
-  {
-    "name": "Kampala",
-    "latitude": 0.3476,
-    "longitude": 32.5825,
-    "tier": "Gamma",
-    "country": "Uganda",
-    "country_iso": "UG"
-  },
-  {
-    "name": "Monterrey",
-    "latitude": 25.6866,
-    "longitude": -100.3161,
-    "tier": "Gamma",
-    "country": "Mexico",
-    "country_iso": "MX"
-  },
-  {
-    "name": "Muscat",
-    "latitude": 23.588,
-    "longitude": 58.3829,
-    "tier": "Gamma",
-    "country": "Oman",
-    "country_iso": "OM"
-  },
-  {
-    "name": "Nashville",
-    "latitude": 36.1627,
-    "longitude": -86.7816,
-    "tier": "Gamma",
-    "country": "United States",
-    "country_iso": "US"
-  },
-  {
-    "name": "Ningbo",
-    "latitude": 29.8683,
-    "longitude": 121.544,
-    "tier": "Gamma",
-    "country": "China",
-    "country_iso": "CN"
-  },
-  {
-    "name": "Osaka",
-    "latitude": 34.6937,
-    "longitude": 135.5022,
-    "tier": "Gamma",
-    "country": "Japan",
-    "country_iso": "JP"
-  },
-  {
-    "name": "Phnom Penh",
-    "latitude": 11.5564,
-    "longitude": 104.9282,
-    "tier": "Gamma",
-    "country": "Cambodia",
-    "country_iso": "KH"
-  },
-  {
-    "name": "Pune",
-    "latitude": 18.5204,
-    "longitude": 73.8567,
-    "tier": "Gamma",
-    "country": "India",
-    "country_iso": "IN"
-  },
-  {
-    "name": "Quito",
-    "latitude": -0.1807,
-    "longitude": -78.4678,
-    "tier": "Gamma",
-    "country": "Ecuador",
-    "country_iso": "EC"
-  },
-  {
-    "name": "Riga",
-    "latitude": 56.9496,
-    "longitude": 24.1052,
-    "tier": "Gamma",
-    "country": "Latvia",
-    "country_iso": "LV"
-  },
-  {
-    "name": "San José",
-    "latitude": 9.9281,
-    "longitude": -84.0907,
-    "tier": "Gamma",
-    "country": "Costa Rica",
-    "country_iso": "CR"
-  },
-  {
-    "name": "San Jose",
-    "latitude": 37.3382,
-    "longitude": -121.8863,
-    "tier": "Gamma",
-    "country": "United States",
-    "country_iso": "US"
-  },
-  {
-    "name": "San Salvador",
-    "latitude": 13.6929,
-    "longitude": -89.2182,
-    "tier": "Gamma",
-    "country": "El Salvador",
-    "country_iso": "SV"
-  },
-  {
-    "name": "Tampa",
-    "latitude": 27.9506,
-    "longitude": -82.4572,
-    "tier": "Gamma",
-    "country": "United States",
-    "country_iso": "US"
-  },
-  {
-    "name": "Tbilisi",
-    "latitude": 41.7167,
-    "longitude": 44.7833,
-    "tier": "Gamma",
-    "country": "Georgia",
-    "country_iso": "GE"
-  },
-  {
-    "name": "Tegucigalpa",
-    "latitude": 14.0723,
-    "longitude": -87.1921,
-    "tier": "Gamma",
-    "country": "Honduras",
-    "country_iso": "HN"
-  },
-  {
-    "name": "Tirana",
-    "latitude": 41.3275,
-    "longitude": 19.8189,
-    "tier": "Gamma",
-    "country": "Albania",
-    "country_iso": "AL"
-  },
-  {
-    "name": "Accra",
-    "latitude": 5.6037,
-    "longitude": -0.187,
-    "tier": "Gamma-",
-    "country": "Ghana",
-    "country_iso": "GH"
-  },
-  {
-    "name": "Baku",
-    "latitude": 40.4093,
-    "longitude": 49.8671,
-    "tier": "Gamma-",
-    "country": "Azerbaijan",
-    "country_iso": "AZ"
-  },
-  {
-    "name": "Baltimore",
-    "latitude": 39.2904,
-    "longitude": -76.6122,
-    "tier": "Gamma-",
-    "country": "United States",
-    "country_iso": "US"
-  },
-  {
-    "name": "Bilbao",
-    "latitude": 43.263,
-    "longitude": -2.935,
-    "tier": "Gamma-",
-    "country": "Spain",
-    "country_iso": "ES"
-  },
-  {
-    "name": "Cali",
-    "latitude": 3.4516,
-    "longitude": -76.532,
-    "tier": "Gamma-",
-    "country": "Colombia",
-    "country_iso": "CO"
-  },
-  {
-    "name": "Changchun",
-    "latitude": 43.8171,
-    "longitude": 125.3235,
-    "tier": "Gamma-",
-    "country": "China",
-    "country_iso": "CN"
-  },
-  {
-    "name": "Charlotte",
-    "latitude": 35.2271,
-    "longitude": -80.8431,
-    "tier": "Gamma-",
-    "country": "United States",
-    "country_iso": "US"
-  },
-  {
-    "name": "Cleveland",
-    "latitude": 41.4993,
-    "longitude": -81.6944,
-    "tier": "Gamma-",
-    "country": "United States",
-    "country_iso": "US"
-  },
-  {
-    "name": "Dar es Salaam",
-    "latitude": -6.7924,
-    "longitude": 39.2083,
-    "tier": "Gamma-",
-    "country": "Tanzania",
-    "country_iso": "TZ"
-  },
-  {
-    "name": "Edinburgh",
-    "latitude": 55.9533,
-    "longitude": -3.1883,
-    "tier": "Gamma-",
-    "country": "United Kingdom",
-    "country_iso": "GB"
-  },
-  {
-    "name": "Jeddah",
-    "latitude": 21.4858,
-    "longitude": 39.1925,
-    "tier": "Gamma-",
-    "country": "Saudi Arabia",
-    "country_iso": "SA"
-  },
-  {
-    "name": "Katowice",
-    "latitude": 50.2649,
-    "longitude": 19.0238,
-    "tier": "Gamma-",
-    "country": "Poland",
-    "country_iso": "PL"
-  },
-  {
-    "name": "Labuan",
-    "latitude": 5.2831,
-    "longitude": 115.2308,
-    "tier": "Gamma-",
-    "country": "Malaysia",
-    "country_iso": "MY"
-  },
-  {
-    "name": "Ljubljana",
-    "latitude": 46.0569,
-    "longitude": 14.5058,
-    "tier": "Gamma-",
-    "country": "Slovenia",
-    "country_iso": "SI"
-  },
-  {
-    "name": "Managua",
-    "latitude": 12.114993,
-    "longitude": -86.236174,
-    "tier": "Gamma-",
-    "country": "Nicaragua",
-    "country_iso": "NI"
-  },
-  {
-    "name": "Marseille",
-    "latitude": 43.2965,
-    "longitude": 5.3698,
-    "tier": "Gamma-",
-    "country": "France",
-    "country_iso": "FR"
-  },
-  {
-    "name": "Nanchang",
-    "latitude": 28.6829,
-    "longitude": 115.8582,
-    "tier": "Gamma-",
-    "country": "China",
-    "country_iso": "CN"
-  },
-  {
-    "name": "George Town",
-    "latitude": 5.4164,
-    "longitude": 100.3327,
-    "tier": "Gamma-",
-    "country": "Malaysia",
-    "country_iso": "MY"
-  },
-  {
-    "name": "Pittsburgh",
-    "latitude": 40.4406,
-    "longitude": -79.9959,
-    "tier": "Gamma-",
-    "country": "United States",
-    "country_iso": "US"
-  },
-  {
-    "name": "Poznań",
-    "latitude": 52.4064,
-    "longitude": 16.9252,
-    "tier": "Gamma-",
-    "country": "Poland",
-    "country_iso": "PL"
-  },
-  {
-    "name": "St. Louis",
-    "latitude": 38.627,
-    "longitude": -90.1994,
-    "tier": "Gamma-",
-    "country": "United States",
-    "country_iso": "US"
-  },
-  {
-    "name": "Surabaya",
-    "latitude": -7.2575,
-    "longitude": 112.7521,
-    "tier": "Gamma-",
-    "country": "Indonesia",
-    "country_iso": "ID"
-  },
-  {
-    "name": "Turin",
-    "latitude": 45.0703,
-    "longitude": 7.6869,
-    "tier": "Gamma-",
-    "country": "Italy",
-    "country_iso": "IT"
-  },
-  {
-    "name": "Valencia",
-    "latitude": 39.4699,
-    "longitude": -0.3763,
-    "tier": "Gamma-",
-    "country": "Spain",
-    "country_iso": "ES"
-  },
-  {
-    "name": "Wellington",
-    "latitude": -41.2865,
-    "longitude": 174.7762,
-    "tier": "Gamma-",
-    "country": "New Zealand",
-    "country_iso": "NZ"
-  }
-]
+{
+  "schema_version": 1,
+  "dataset_id": "gawc",
+  "metadata": {
+    "source_url": null,
+    "reference_period": null,
+    "updated_at": null
+  },
+  "legacy_layout": "list",
+  "tables": [
+    {
+      "id": "main",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "name",
+        "country",
+        "country_iso"
+      ],
+      "metrics": [
+        {
+          "id": "latitude",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        },
+        {
+          "id": "longitude",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        },
+        {
+          "id": "tier",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "name": "London",
+            "country": "United Kingdom",
+            "country_iso": "GB"
+          },
+          "values": {
+            "latitude": 51.5074,
+            "longitude": -0.1278,
+            "tier": "Alpha++"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "New York City",
+            "country": "United States",
+            "country_iso": "US"
+          },
+          "values": {
+            "latitude": 40.7128,
+            "longitude": -74.006,
+            "tier": "Alpha++"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Beijing",
+            "country": "China",
+            "country_iso": "CN"
+          },
+          "values": {
+            "latitude": 39.9042,
+            "longitude": 116.4074,
+            "tier": "Alpha+"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Dubai",
+            "country": "United Arab Emirates",
+            "country_iso": "AE"
+          },
+          "values": {
+            "latitude": 25.2048,
+            "longitude": 55.2708,
+            "tier": "Alpha+"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Hong Kong",
+            "country": "Hong Kong",
+            "country_iso": "HK"
+          },
+          "values": {
+            "latitude": 22.3193,
+            "longitude": 114.1694,
+            "tier": "Alpha+"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Paris",
+            "country": "France",
+            "country_iso": "FR"
+          },
+          "values": {
+            "latitude": 48.8566,
+            "longitude": 2.3522,
+            "tier": "Alpha+"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Shanghai",
+            "country": "China",
+            "country_iso": "CN"
+          },
+          "values": {
+            "latitude": 31.2304,
+            "longitude": 121.4737,
+            "tier": "Alpha+"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Singapore",
+            "country": "Singapore",
+            "country_iso": "SG"
+          },
+          "values": {
+            "latitude": 1.3521,
+            "longitude": 103.8198,
+            "tier": "Alpha+"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Sydney",
+            "country": "Australia",
+            "country_iso": "AU"
+          },
+          "values": {
+            "latitude": -33.8688,
+            "longitude": 151.2093,
+            "tier": "Alpha+"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Tokyo",
+            "country": "Japan",
+            "country_iso": "JP"
+          },
+          "values": {
+            "latitude": 35.6895,
+            "longitude": 139.6917,
+            "tier": "Alpha+"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Amsterdam",
+            "country": "Netherlands",
+            "country_iso": "NL"
+          },
+          "values": {
+            "latitude": 52.3676,
+            "longitude": 4.9041,
+            "tier": "Alpha"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Bangkok",
+            "country": "Thailand",
+            "country_iso": "TH"
+          },
+          "values": {
+            "latitude": 13.7563,
+            "longitude": 100.5018,
+            "tier": "Alpha"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Chicago",
+            "country": "United States",
+            "country_iso": "US"
+          },
+          "values": {
+            "latitude": 41.8781,
+            "longitude": -87.6298,
+            "tier": "Alpha"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Frankfurt",
+            "country": "Germany",
+            "country_iso": "DE"
+          },
+          "values": {
+            "latitude": 50.1109,
+            "longitude": 8.6821,
+            "tier": "Alpha"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Guangzhou",
+            "country": "China",
+            "country_iso": "CN"
+          },
+          "values": {
+            "latitude": 23.1291,
+            "longitude": 113.2644,
+            "tier": "Alpha"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Istanbul",
+            "country": "Turkey",
+            "country_iso": "TR"
+          },
+          "values": {
+            "latitude": 41.0082,
+            "longitude": 28.9784,
+            "tier": "Alpha"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Jakarta",
+            "country": "Indonesia",
+            "country_iso": "ID"
+          },
+          "values": {
+            "latitude": -6.2088,
+            "longitude": 106.8456,
+            "tier": "Alpha"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Kuala Lumpur",
+            "country": "Malaysia",
+            "country_iso": "MY"
+          },
+          "values": {
+            "latitude": 3.139,
+            "longitude": 101.6869,
+            "tier": "Alpha"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Los Angeles",
+            "country": "United States",
+            "country_iso": "US"
+          },
+          "values": {
+            "latitude": 34.0522,
+            "longitude": -118.2437,
+            "tier": "Alpha"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Madrid",
+            "country": "Spain",
+            "country_iso": "ES"
+          },
+          "values": {
+            "latitude": 40.4168,
+            "longitude": -3.7038,
+            "tier": "Alpha"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Mexico City",
+            "country": "Mexico",
+            "country_iso": "MX"
+          },
+          "values": {
+            "latitude": 19.4326,
+            "longitude": -99.1332,
+            "tier": "Alpha"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Milan",
+            "country": "Italy",
+            "country_iso": "IT"
+          },
+          "values": {
+            "latitude": 45.4642,
+            "longitude": 9.19,
+            "tier": "Alpha"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Mumbai",
+            "country": "India",
+            "country_iso": "IN"
+          },
+          "values": {
+            "latitude": 19.076,
+            "longitude": 72.8777,
+            "tier": "Alpha"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "São Paulo",
+            "country": "Brazil",
+            "country_iso": "BR"
+          },
+          "values": {
+            "latitude": -23.5505,
+            "longitude": -46.6333,
+            "tier": "Alpha"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Seoul",
+            "country": "South Korea",
+            "country_iso": "KR"
+          },
+          "values": {
+            "latitude": 37.5665,
+            "longitude": 126.978,
+            "tier": "Alpha"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Toronto",
+            "country": "Canada",
+            "country_iso": "CA"
+          },
+          "values": {
+            "latitude": 43.6532,
+            "longitude": -79.3832,
+            "tier": "Alpha"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Warsaw",
+            "country": "Poland",
+            "country_iso": "PL"
+          },
+          "values": {
+            "latitude": 52.2297,
+            "longitude": 21.0122,
+            "tier": "Alpha"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Berlin",
+            "country": "Germany",
+            "country_iso": "DE"
+          },
+          "values": {
+            "latitude": 52.52,
+            "longitude": 13.405,
+            "tier": "Alpha-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Boston",
+            "country": "United States",
+            "country_iso": "US"
+          },
+          "values": {
+            "latitude": 42.3601,
+            "longitude": -71.0589,
+            "tier": "Alpha-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Brussels",
+            "country": "Belgium",
+            "country_iso": "BE"
+          },
+          "values": {
+            "latitude": 50.8503,
+            "longitude": 4.3517,
+            "tier": "Alpha-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Buenos Aires",
+            "country": "Argentina",
+            "country_iso": "AR"
+          },
+          "values": {
+            "latitude": -34.6037,
+            "longitude": -58.3816,
+            "tier": "Alpha-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Dublin",
+            "country": "Ireland",
+            "country_iso": "IE"
+          },
+          "values": {
+            "latitude": 53.3498,
+            "longitude": -6.2603,
+            "tier": "Alpha-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Düsseldorf",
+            "country": "Germany",
+            "country_iso": "DE"
+          },
+          "values": {
+            "latitude": 51.2277,
+            "longitude": 6.7735,
+            "tier": "Alpha-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Houston",
+            "country": "United States",
+            "country_iso": "US"
+          },
+          "values": {
+            "latitude": 29.7604,
+            "longitude": -95.3698,
+            "tier": "Alpha-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Johannesburg",
+            "country": "South Africa",
+            "country_iso": "ZA"
+          },
+          "values": {
+            "latitude": -26.2041,
+            "longitude": 28.0473,
+            "tier": "Alpha-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Lisbon",
+            "country": "Portugal",
+            "country_iso": "PT"
+          },
+          "values": {
+            "latitude": 38.7223,
+            "longitude": -9.1393,
+            "tier": "Alpha-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Luxembourg",
+            "country": "Luxembourg",
+            "country_iso": "LU"
+          },
+          "values": {
+            "latitude": 49.6116,
+            "longitude": 6.1319,
+            "tier": "Alpha-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Melbourne",
+            "country": "Australia",
+            "country_iso": "AU"
+          },
+          "values": {
+            "latitude": -37.8136,
+            "longitude": 144.9631,
+            "tier": "Alpha-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Munich",
+            "country": "Germany",
+            "country_iso": "DE"
+          },
+          "values": {
+            "latitude": 48.1351,
+            "longitude": 11.582,
+            "tier": "Alpha-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "New Delhi",
+            "country": "India",
+            "country_iso": "IN"
+          },
+          "values": {
+            "latitude": 28.6139,
+            "longitude": 77.209,
+            "tier": "Alpha-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Riyadh",
+            "country": "Saudi Arabia",
+            "country_iso": "SA"
+          },
+          "values": {
+            "latitude": 24.7136,
+            "longitude": 46.6753,
+            "tier": "Alpha-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "San Francisco",
+            "country": "United States",
+            "country_iso": "US"
+          },
+          "values": {
+            "latitude": 37.7749,
+            "longitude": -122.4194,
+            "tier": "Alpha-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Santiago",
+            "country": "Chile",
+            "country_iso": "CL"
+          },
+          "values": {
+            "latitude": -33.4489,
+            "longitude": -70.6693,
+            "tier": "Alpha-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Shenzhen",
+            "country": "China",
+            "country_iso": "CN"
+          },
+          "values": {
+            "latitude": 22.5429,
+            "longitude": 114.0596,
+            "tier": "Alpha-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Stockholm",
+            "country": "Sweden",
+            "country_iso": "SE"
+          },
+          "values": {
+            "latitude": 59.3293,
+            "longitude": 18.0686,
+            "tier": "Alpha-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Taipei",
+            "country": "Taiwan",
+            "country_iso": "TW"
+          },
+          "values": {
+            "latitude": 25.0325,
+            "longitude": 121.568,
+            "tier": "Alpha-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Vienna",
+            "country": "Austria",
+            "country_iso": "AT"
+          },
+          "values": {
+            "latitude": 48.2082,
+            "longitude": 16.3738,
+            "tier": "Alpha-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Washington D.C.",
+            "country": "United States",
+            "country_iso": "US"
+          },
+          "values": {
+            "latitude": 38.8951,
+            "longitude": -77.0364,
+            "tier": "Alpha-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Zurich",
+            "country": "Switzerland",
+            "country_iso": "CH"
+          },
+          "values": {
+            "latitude": 47.3769,
+            "longitude": 8.5417,
+            "tier": "Alpha-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Athens",
+            "country": "Greece",
+            "country_iso": "GR"
+          },
+          "values": {
+            "latitude": 37.98381,
+            "longitude": 23.72754,
+            "tier": "Beta+"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Atlanta",
+            "country": "United States",
+            "country_iso": "US"
+          },
+          "values": {
+            "latitude": 33.7489954,
+            "longitude": -84.3879824,
+            "tier": "Beta+"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Auckland",
+            "country": "New Zealand",
+            "country_iso": "NZ"
+          },
+          "values": {
+            "latitude": -36.8484597,
+            "longitude": 174.7633315,
+            "tier": "Beta+"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Barcelona",
+            "country": "Spain",
+            "country_iso": "ES"
+          },
+          "values": {
+            "latitude": 41.390205,
+            "longitude": 2.154007,
+            "tier": "Beta+"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Bengaluru",
+            "country": "India",
+            "country_iso": "IN"
+          },
+          "values": {
+            "latitude": 12.9791198,
+            "longitude": 77.5912997,
+            "tier": "Beta+"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Bogotá",
+            "country": "Colombia",
+            "country_iso": "CO"
+          },
+          "values": {
+            "latitude": 4.60971,
+            "longitude": -74.08175,
+            "tier": "Beta+"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Bucharest",
+            "country": "Romania",
+            "country_iso": "RO"
+          },
+          "values": {
+            "latitude": 44.43225,
+            "longitude": 26.10626,
+            "tier": "Beta+"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Budapest",
+            "country": "Hungary",
+            "country_iso": "HU"
+          },
+          "values": {
+            "latitude": 47.497913,
+            "longitude": 19.040236,
+            "tier": "Beta+"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Chengdu",
+            "country": "China",
+            "country_iso": "CN"
+          },
+          "values": {
+            "latitude": 30.572815,
+            "longitude": 104.066803,
+            "tier": "Beta+"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Dallas",
+            "country": "United States",
+            "country_iso": "US"
+          },
+          "values": {
+            "latitude": 32.776664,
+            "longitude": -96.796988,
+            "tier": "Beta+"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Doha",
+            "country": "Qatar",
+            "country_iso": "QA"
+          },
+          "values": {
+            "latitude": 25.2854,
+            "longitude": 51.531,
+            "tier": "Beta+"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Hamburg",
+            "country": "Germany",
+            "country_iso": "DE"
+          },
+          "values": {
+            "latitude": 53.552645,
+            "longitude": 9.966287,
+            "tier": "Beta+"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Hangzhou",
+            "country": "China",
+            "country_iso": "CN"
+          },
+          "values": {
+            "latitude": 30.25,
+            "longitude": 120.166664,
+            "tier": "Beta+"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Ho Chi Minh City",
+            "country": "Vietnam",
+            "country_iso": "VN"
+          },
+          "values": {
+            "latitude": 10.762622,
+            "longitude": 106.660172,
+            "tier": "Beta+"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Lima",
+            "country": "Peru",
+            "country_iso": "PE"
+          },
+          "values": {
+            "latitude": -12.046374,
+            "longitude": -77.042793,
+            "tier": "Beta+"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Miami",
+            "country": "United States",
+            "country_iso": "US"
+          },
+          "values": {
+            "latitude": 25.761681,
+            "longitude": -80.191788,
+            "tier": "Beta+"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Montreal",
+            "country": "Canada",
+            "country_iso": "CA"
+          },
+          "values": {
+            "latitude": 45.508888,
+            "longitude": -73.561668,
+            "tier": "Beta+"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Prague",
+            "country": "Czech Republic",
+            "country_iso": "CZ"
+          },
+          "values": {
+            "latitude": 50.073658,
+            "longitude": 14.41854,
+            "tier": "Beta+"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Rome",
+            "country": "Italy",
+            "country_iso": "IT"
+          },
+          "values": {
+            "latitude": 41.902784,
+            "longitude": 12.496366,
+            "tier": "Beta+"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Tianjin",
+            "country": "China",
+            "country_iso": "CN"
+          },
+          "values": {
+            "latitude": 39.343357,
+            "longitude": 117.361649,
+            "tier": "Beta+"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Abu Dhabi",
+            "country": "United Arab Emirates",
+            "country_iso": "AE"
+          },
+          "values": {
+            "latitude": 24.453884,
+            "longitude": 54.3773438,
+            "tier": "Beta"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Brisbane",
+            "country": "Australia",
+            "country_iso": "AU"
+          },
+          "values": {
+            "latitude": -27.4697707,
+            "longitude": 153.0251235,
+            "tier": "Beta"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Cairo",
+            "country": "Egypt",
+            "country_iso": "EG"
+          },
+          "values": {
+            "latitude": 30.04442,
+            "longitude": 31.235712,
+            "tier": "Beta"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Calgary",
+            "country": "Canada",
+            "country_iso": "CA"
+          },
+          "values": {
+            "latitude": 51.044733,
+            "longitude": -114.071883,
+            "tier": "Beta"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Chongqing",
+            "country": "China",
+            "country_iso": "CN"
+          },
+          "values": {
+            "latitude": 29.56301,
+            "longitude": 106.551556,
+            "tier": "Beta"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Copenhagen",
+            "country": "Denmark",
+            "country_iso": "DK"
+          },
+          "values": {
+            "latitude": 55.676098,
+            "longitude": 12.568337,
+            "tier": "Beta"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Geneva",
+            "country": "Switzerland",
+            "country_iso": "CH"
+          },
+          "values": {
+            "latitude": 46.204391,
+            "longitude": 6.143158,
+            "tier": "Beta"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Hanoi",
+            "country": "Vietnam",
+            "country_iso": "VN"
+          },
+          "values": {
+            "latitude": 21.028511,
+            "longitude": 105.804817,
+            "tier": "Beta"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Jinan",
+            "country": "China",
+            "country_iso": "CN"
+          },
+          "values": {
+            "latitude": 36.651216,
+            "longitude": 117.120047,
+            "tier": "Beta"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Kyiv",
+            "country": "Ukraine",
+            "country_iso": "UA"
+          },
+          "values": {
+            "latitude": 50.4501,
+            "longitude": 30.5234,
+            "tier": "Beta"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Manama",
+            "country": "Bahrain",
+            "country_iso": "BH"
+          },
+          "values": {
+            "latitude": 26.228516,
+            "longitude": 50.586049,
+            "tier": "Beta"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Manila",
+            "country": "Philippines",
+            "country_iso": "PH"
+          },
+          "values": {
+            "latitude": 14.599512,
+            "longitude": 120.984222,
+            "tier": "Beta"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Nairobi",
+            "country": "Kenya",
+            "country_iso": "KE"
+          },
+          "values": {
+            "latitude": -1.292066,
+            "longitude": 36.821945,
+            "tier": "Beta"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Nanjing",
+            "country": "China",
+            "country_iso": "CN"
+          },
+          "values": {
+            "latitude": 32.060255,
+            "longitude": 118.796877,
+            "tier": "Beta"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Oslo",
+            "country": "Norway",
+            "country_iso": "NO"
+          },
+          "values": {
+            "latitude": 59.913868,
+            "longitude": 10.752245,
+            "tier": "Beta"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Perth",
+            "country": "Australia",
+            "country_iso": "AU"
+          },
+          "values": {
+            "latitude": -31.950527,
+            "longitude": 115.860457,
+            "tier": "Beta"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Shenyang",
+            "country": "China",
+            "country_iso": "CN"
+          },
+          "values": {
+            "latitude": 41.805699,
+            "longitude": 123.431472,
+            "tier": "Beta"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Suzhou",
+            "country": "China",
+            "country_iso": "CN"
+          },
+          "values": {
+            "latitude": 31.29834,
+            "longitude": 120.58319,
+            "tier": "Beta"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Tel Aviv",
+            "country": "Israel",
+            "country_iso": "IL"
+          },
+          "values": {
+            "latitude": 32.0853,
+            "longitude": 34.7818,
+            "tier": "Beta"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Wuhan",
+            "country": "China",
+            "country_iso": "CN"
+          },
+          "values": {
+            "latitude": 30.595105,
+            "longitude": 114.299935,
+            "tier": "Beta"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Xiamen",
+            "country": "China",
+            "country_iso": "CN"
+          },
+          "values": {
+            "latitude": 24.479834,
+            "longitude": 118.089425,
+            "tier": "Beta"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Zhengzhou",
+            "country": "China",
+            "country_iso": "CN"
+          },
+          "values": {
+            "latitude": 34.746611,
+            "longitude": 113.625328,
+            "tier": "Beta"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Beirut",
+            "country": "Lebanon",
+            "country_iso": "LB"
+          },
+          "values": {
+            "latitude": 33.8937913,
+            "longitude": 35.5017767,
+            "tier": "Beta-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Belgrade",
+            "country": "Serbia",
+            "country_iso": "RS"
+          },
+          "values": {
+            "latitude": 44.786568,
+            "longitude": 20.448921,
+            "tier": "Beta-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Bratislava",
+            "country": "Slovakia",
+            "country_iso": "SK"
+          },
+          "values": {
+            "latitude": 48.1486,
+            "longitude": 17.1077,
+            "tier": "Beta-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Caracas",
+            "country": "Venezuela",
+            "country_iso": "VE"
+          },
+          "values": {
+            "latitude": 10.480594,
+            "longitude": -66.903606,
+            "tier": "Beta-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Casablanca",
+            "country": "Morocco",
+            "country_iso": "MA"
+          },
+          "values": {
+            "latitude": 33.5731104,
+            "longitude": -7.5898434,
+            "tier": "Beta-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Changsha",
+            "country": "China",
+            "country_iso": "CN"
+          },
+          "values": {
+            "latitude": 28.228209,
+            "longitude": 112.938814,
+            "tier": "Beta-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Chennai",
+            "country": "India",
+            "country_iso": "IN"
+          },
+          "values": {
+            "latitude": 13.08268,
+            "longitude": 80.270718,
+            "tier": "Beta-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Denver",
+            "country": "United States",
+            "country_iso": "US"
+          },
+          "values": {
+            "latitude": 39.739236,
+            "longitude": -104.990251,
+            "tier": "Beta-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Hefei",
+            "country": "China",
+            "country_iso": "CN"
+          },
+          "values": {
+            "latitude": 31.820587,
+            "longitude": 117.227219,
+            "tier": "Beta-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Helsinki",
+            "country": "Finland",
+            "country_iso": "FI"
+          },
+          "values": {
+            "latitude": 60.169856,
+            "longitude": 24.938379,
+            "tier": "Beta-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Karachi",
+            "country": "Pakistan",
+            "country_iso": "PK"
+          },
+          "values": {
+            "latitude": 24.860735,
+            "longitude": 67.001137,
+            "tier": "Beta-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Kunming",
+            "country": "China",
+            "country_iso": "CN"
+          },
+          "values": {
+            "latitude": 25.03889,
+            "longitude": 102.718278,
+            "tier": "Beta-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Lagos",
+            "country": "Nigeria",
+            "country_iso": "NG"
+          },
+          "values": {
+            "latitude": 6.524379,
+            "longitude": 3.379206,
+            "tier": "Beta-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Lyon",
+            "country": "France",
+            "country_iso": "FR"
+          },
+          "values": {
+            "latitude": 45.764043,
+            "longitude": 4.835659,
+            "tier": "Beta-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Manchester",
+            "country": "United Kingdom",
+            "country_iso": "GB"
+          },
+          "values": {
+            "latitude": 53.480759,
+            "longitude": -2.242631,
+            "tier": "Beta-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Montevideo",
+            "country": "Uruguay",
+            "country_iso": "UY"
+          },
+          "values": {
+            "latitude": -34.901112,
+            "longitude": -56.164532,
+            "tier": "Beta-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Nicosia",
+            "country": "Cyprus",
+            "country_iso": "CY"
+          },
+          "values": {
+            "latitude": 35.185566,
+            "longitude": 33.382276,
+            "tier": "Beta-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Panama City",
+            "country": "Panama",
+            "country_iso": "PA"
+          },
+          "values": {
+            "latitude": 8.982379,
+            "longitude": -79.51987,
+            "tier": "Beta-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Philadelphia",
+            "country": "United States",
+            "country_iso": "US"
+          },
+          "values": {
+            "latitude": 39.952583,
+            "longitude": -75.165222,
+            "tier": "Beta-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Port Louis",
+            "country": "Mauritius",
+            "country_iso": "MU"
+          },
+          "values": {
+            "latitude": -20.166896,
+            "longitude": 57.501221,
+            "tier": "Beta-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Qingdao",
+            "country": "China",
+            "country_iso": "CN"
+          },
+          "values": {
+            "latitude": 36.067108,
+            "longitude": 120.382609,
+            "tier": "Beta-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Rio de Janeiro",
+            "country": "Brazil",
+            "country_iso": "BR"
+          },
+          "values": {
+            "latitude": -22.906847,
+            "longitude": -43.172896,
+            "tier": "Beta-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Seattle",
+            "country": "United States",
+            "country_iso": "US"
+          },
+          "values": {
+            "latitude": 47.606209,
+            "longitude": -122.332071,
+            "tier": "Beta-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Sofia",
+            "country": "Bulgaria",
+            "country_iso": "BG"
+          },
+          "values": {
+            "latitude": 42.697708,
+            "longitude": 23.321868,
+            "tier": "Beta-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Stuttgart",
+            "country": "Germany",
+            "country_iso": "DE"
+          },
+          "values": {
+            "latitude": 48.775846,
+            "longitude": 9.182932,
+            "tier": "Beta-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Vancouver",
+            "country": "Canada",
+            "country_iso": "CA"
+          },
+          "values": {
+            "latitude": 49.282729,
+            "longitude": -123.120738,
+            "tier": "Beta-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Xi'an",
+            "country": "China",
+            "country_iso": "CN"
+          },
+          "values": {
+            "latitude": 34.341575,
+            "longitude": 108.93977,
+            "tier": "Beta-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Zagreb",
+            "country": "Croatia",
+            "country_iso": "HR"
+          },
+          "values": {
+            "latitude": 45.81501,
+            "longitude": 15.981919,
+            "tier": "Beta-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Adelaide",
+            "country": "Australia",
+            "country_iso": "AU"
+          },
+          "values": {
+            "latitude": -34.9285,
+            "longitude": 138.6007,
+            "tier": "Gamma+"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Almaty",
+            "country": "Kazakhstan",
+            "country_iso": "KZ"
+          },
+          "values": {
+            "latitude": 43.2389,
+            "longitude": 76.8897,
+            "tier": "Gamma+"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Amman",
+            "country": "Jordan",
+            "country_iso": "JO"
+          },
+          "values": {
+            "latitude": 31.9566,
+            "longitude": 35.9457,
+            "tier": "Gamma+"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Antwerp",
+            "country": "Belgium",
+            "country_iso": "BE"
+          },
+          "values": {
+            "latitude": 51.2194,
+            "longitude": 4.4025,
+            "tier": "Gamma+"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Austin",
+            "country": "United States",
+            "country_iso": "US"
+          },
+          "values": {
+            "latitude": 30.2672,
+            "longitude": -97.7431,
+            "tier": "Gamma+"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Cape Town",
+            "country": "South Africa",
+            "country_iso": "ZA"
+          },
+          "values": {
+            "latitude": -33.9249,
+            "longitude": 18.4241,
+            "tier": "Gamma+"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Colombo",
+            "country": "Sri Lanka",
+            "country_iso": "LK"
+          },
+          "values": {
+            "latitude": 6.9271,
+            "longitude": 79.8612,
+            "tier": "Gamma+"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Dhaka",
+            "country": "Bangladesh",
+            "country_iso": "BD"
+          },
+          "values": {
+            "latitude": 23.8103,
+            "longitude": 90.4125,
+            "tier": "Gamma+"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Fuzhou",
+            "country": "China",
+            "country_iso": "CN"
+          },
+          "values": {
+            "latitude": 26.0745,
+            "longitude": 119.2965,
+            "tier": "Gamma+"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Guatemala City",
+            "country": "Guatemala",
+            "country_iso": "GT"
+          },
+          "values": {
+            "latitude": 14.6349,
+            "longitude": -90.5069,
+            "tier": "Gamma+"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Hyderabad",
+            "country": "India",
+            "country_iso": "IN"
+          },
+          "values": {
+            "latitude": 17.385,
+            "longitude": 78.4867,
+            "tier": "Gamma+"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Kuwait City",
+            "country": "Kuwait",
+            "country_iso": "KW"
+          },
+          "values": {
+            "latitude": 29.3759,
+            "longitude": 47.9774,
+            "tier": "Gamma+"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Lahore",
+            "country": "Pakistan",
+            "country_iso": "PK"
+          },
+          "values": {
+            "latitude": 31.5497,
+            "longitude": 74.3436,
+            "tier": "Gamma+"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Minneapolis",
+            "country": "United States",
+            "country_iso": "US"
+          },
+          "values": {
+            "latitude": 44.9778,
+            "longitude": -93.265,
+            "tier": "Gamma+"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Porto",
+            "country": "Portugal",
+            "country_iso": "PT"
+          },
+          "values": {
+            "latitude": 41.1579,
+            "longitude": -8.6291,
+            "tier": "Gamma+"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Rotterdam",
+            "country": "Netherlands",
+            "country_iso": "NL"
+          },
+          "values": {
+            "latitude": 51.9225,
+            "longitude": 4.47917,
+            "tier": "Gamma+"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "San Diego",
+            "country": "United States",
+            "country_iso": "US"
+          },
+          "values": {
+            "latitude": 32.7157,
+            "longitude": -117.1611,
+            "tier": "Gamma+"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Santo Domingo",
+            "country": "Dominican Republic",
+            "country_iso": "DO"
+          },
+          "values": {
+            "latitude": 18.4861,
+            "longitude": -69.9312,
+            "tier": "Gamma+"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Taiyuan",
+            "country": "China",
+            "country_iso": "CN"
+          },
+          "values": {
+            "latitude": 37.8706,
+            "longitude": 112.5489,
+            "tier": "Gamma+"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Tunis",
+            "country": "Tunisia",
+            "country_iso": "TN"
+          },
+          "values": {
+            "latitude": 36.8065,
+            "longitude": 10.1815,
+            "tier": "Gamma+"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Ahmedabad",
+            "country": "India",
+            "country_iso": "IN"
+          },
+          "values": {
+            "latitude": 23.0225,
+            "longitude": 72.5714,
+            "tier": "Gamma"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Birmingham",
+            "country": "United Kingdom",
+            "country_iso": "GB"
+          },
+          "values": {
+            "latitude": 52.4862,
+            "longitude": -1.8904,
+            "tier": "Gamma"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Bologna",
+            "country": "Italy",
+            "country_iso": "IT"
+          },
+          "values": {
+            "latitude": 44.4949,
+            "longitude": 11.3426,
+            "tier": "Gamma"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Bristol",
+            "country": "United Kingdom",
+            "country_iso": "GB"
+          },
+          "values": {
+            "latitude": 51.4545,
+            "longitude": -2.5879,
+            "tier": "Gamma"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Detroit",
+            "country": "United States",
+            "country_iso": "US"
+          },
+          "values": {
+            "latitude": 42.3314,
+            "longitude": -83.0458,
+            "tier": "Gamma"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Haikou",
+            "country": "China",
+            "country_iso": "CN"
+          },
+          "values": {
+            "latitude": 20.044,
+            "longitude": 110.1983,
+            "tier": "Gamma"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Harbin",
+            "country": "China",
+            "country_iso": "CN"
+          },
+          "values": {
+            "latitude": 45.8038,
+            "longitude": 126.5349,
+            "tier": "Gamma"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Islamabad",
+            "country": "Pakistan",
+            "country_iso": "PK"
+          },
+          "values": {
+            "latitude": 33.6844,
+            "longitude": 73.0479,
+            "tier": "Gamma"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Kampala",
+            "country": "Uganda",
+            "country_iso": "UG"
+          },
+          "values": {
+            "latitude": 0.3476,
+            "longitude": 32.5825,
+            "tier": "Gamma"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Monterrey",
+            "country": "Mexico",
+            "country_iso": "MX"
+          },
+          "values": {
+            "latitude": 25.6866,
+            "longitude": -100.3161,
+            "tier": "Gamma"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Muscat",
+            "country": "Oman",
+            "country_iso": "OM"
+          },
+          "values": {
+            "latitude": 23.588,
+            "longitude": 58.3829,
+            "tier": "Gamma"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Nashville",
+            "country": "United States",
+            "country_iso": "US"
+          },
+          "values": {
+            "latitude": 36.1627,
+            "longitude": -86.7816,
+            "tier": "Gamma"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Ningbo",
+            "country": "China",
+            "country_iso": "CN"
+          },
+          "values": {
+            "latitude": 29.8683,
+            "longitude": 121.544,
+            "tier": "Gamma"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Osaka",
+            "country": "Japan",
+            "country_iso": "JP"
+          },
+          "values": {
+            "latitude": 34.6937,
+            "longitude": 135.5022,
+            "tier": "Gamma"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Phnom Penh",
+            "country": "Cambodia",
+            "country_iso": "KH"
+          },
+          "values": {
+            "latitude": 11.5564,
+            "longitude": 104.9282,
+            "tier": "Gamma"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Pune",
+            "country": "India",
+            "country_iso": "IN"
+          },
+          "values": {
+            "latitude": 18.5204,
+            "longitude": 73.8567,
+            "tier": "Gamma"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Quito",
+            "country": "Ecuador",
+            "country_iso": "EC"
+          },
+          "values": {
+            "latitude": -0.1807,
+            "longitude": -78.4678,
+            "tier": "Gamma"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Riga",
+            "country": "Latvia",
+            "country_iso": "LV"
+          },
+          "values": {
+            "latitude": 56.9496,
+            "longitude": 24.1052,
+            "tier": "Gamma"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "San José",
+            "country": "Costa Rica",
+            "country_iso": "CR"
+          },
+          "values": {
+            "latitude": 9.9281,
+            "longitude": -84.0907,
+            "tier": "Gamma"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "San Jose",
+            "country": "United States",
+            "country_iso": "US"
+          },
+          "values": {
+            "latitude": 37.3382,
+            "longitude": -121.8863,
+            "tier": "Gamma"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "San Salvador",
+            "country": "El Salvador",
+            "country_iso": "SV"
+          },
+          "values": {
+            "latitude": 13.6929,
+            "longitude": -89.2182,
+            "tier": "Gamma"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Tampa",
+            "country": "United States",
+            "country_iso": "US"
+          },
+          "values": {
+            "latitude": 27.9506,
+            "longitude": -82.4572,
+            "tier": "Gamma"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Tbilisi",
+            "country": "Georgia",
+            "country_iso": "GE"
+          },
+          "values": {
+            "latitude": 41.7167,
+            "longitude": 44.7833,
+            "tier": "Gamma"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Tegucigalpa",
+            "country": "Honduras",
+            "country_iso": "HN"
+          },
+          "values": {
+            "latitude": 14.0723,
+            "longitude": -87.1921,
+            "tier": "Gamma"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Tirana",
+            "country": "Albania",
+            "country_iso": "AL"
+          },
+          "values": {
+            "latitude": 41.3275,
+            "longitude": 19.8189,
+            "tier": "Gamma"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Accra",
+            "country": "Ghana",
+            "country_iso": "GH"
+          },
+          "values": {
+            "latitude": 5.6037,
+            "longitude": -0.187,
+            "tier": "Gamma-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Baku",
+            "country": "Azerbaijan",
+            "country_iso": "AZ"
+          },
+          "values": {
+            "latitude": 40.4093,
+            "longitude": 49.8671,
+            "tier": "Gamma-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Baltimore",
+            "country": "United States",
+            "country_iso": "US"
+          },
+          "values": {
+            "latitude": 39.2904,
+            "longitude": -76.6122,
+            "tier": "Gamma-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Bilbao",
+            "country": "Spain",
+            "country_iso": "ES"
+          },
+          "values": {
+            "latitude": 43.263,
+            "longitude": -2.935,
+            "tier": "Gamma-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Cali",
+            "country": "Colombia",
+            "country_iso": "CO"
+          },
+          "values": {
+            "latitude": 3.4516,
+            "longitude": -76.532,
+            "tier": "Gamma-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Changchun",
+            "country": "China",
+            "country_iso": "CN"
+          },
+          "values": {
+            "latitude": 43.8171,
+            "longitude": 125.3235,
+            "tier": "Gamma-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Charlotte",
+            "country": "United States",
+            "country_iso": "US"
+          },
+          "values": {
+            "latitude": 35.2271,
+            "longitude": -80.8431,
+            "tier": "Gamma-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Cleveland",
+            "country": "United States",
+            "country_iso": "US"
+          },
+          "values": {
+            "latitude": 41.4993,
+            "longitude": -81.6944,
+            "tier": "Gamma-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Dar es Salaam",
+            "country": "Tanzania",
+            "country_iso": "TZ"
+          },
+          "values": {
+            "latitude": -6.7924,
+            "longitude": 39.2083,
+            "tier": "Gamma-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Edinburgh",
+            "country": "United Kingdom",
+            "country_iso": "GB"
+          },
+          "values": {
+            "latitude": 55.9533,
+            "longitude": -3.1883,
+            "tier": "Gamma-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Jeddah",
+            "country": "Saudi Arabia",
+            "country_iso": "SA"
+          },
+          "values": {
+            "latitude": 21.4858,
+            "longitude": 39.1925,
+            "tier": "Gamma-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Katowice",
+            "country": "Poland",
+            "country_iso": "PL"
+          },
+          "values": {
+            "latitude": 50.2649,
+            "longitude": 19.0238,
+            "tier": "Gamma-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Labuan",
+            "country": "Malaysia",
+            "country_iso": "MY"
+          },
+          "values": {
+            "latitude": 5.2831,
+            "longitude": 115.2308,
+            "tier": "Gamma-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Ljubljana",
+            "country": "Slovenia",
+            "country_iso": "SI"
+          },
+          "values": {
+            "latitude": 46.0569,
+            "longitude": 14.5058,
+            "tier": "Gamma-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Managua",
+            "country": "Nicaragua",
+            "country_iso": "NI"
+          },
+          "values": {
+            "latitude": 12.114993,
+            "longitude": -86.236174,
+            "tier": "Gamma-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Marseille",
+            "country": "France",
+            "country_iso": "FR"
+          },
+          "values": {
+            "latitude": 43.2965,
+            "longitude": 5.3698,
+            "tier": "Gamma-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Nanchang",
+            "country": "China",
+            "country_iso": "CN"
+          },
+          "values": {
+            "latitude": 28.6829,
+            "longitude": 115.8582,
+            "tier": "Gamma-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "George Town",
+            "country": "Malaysia",
+            "country_iso": "MY"
+          },
+          "values": {
+            "latitude": 5.4164,
+            "longitude": 100.3327,
+            "tier": "Gamma-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Pittsburgh",
+            "country": "United States",
+            "country_iso": "US"
+          },
+          "values": {
+            "latitude": 40.4406,
+            "longitude": -79.9959,
+            "tier": "Gamma-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Poznań",
+            "country": "Poland",
+            "country_iso": "PL"
+          },
+          "values": {
+            "latitude": 52.4064,
+            "longitude": 16.9252,
+            "tier": "Gamma-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "St. Louis",
+            "country": "United States",
+            "country_iso": "US"
+          },
+          "values": {
+            "latitude": 38.627,
+            "longitude": -90.1994,
+            "tier": "Gamma-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Surabaya",
+            "country": "Indonesia",
+            "country_iso": "ID"
+          },
+          "values": {
+            "latitude": -7.2575,
+            "longitude": 112.7521,
+            "tier": "Gamma-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Turin",
+            "country": "Italy",
+            "country_iso": "IT"
+          },
+          "values": {
+            "latitude": 45.0703,
+            "longitude": 7.6869,
+            "tier": "Gamma-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Valencia",
+            "country": "Spain",
+            "country_iso": "ES"
+          },
+          "values": {
+            "latitude": 39.4699,
+            "longitude": -0.3763,
+            "tier": "Gamma-"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Wellington",
+            "country": "New Zealand",
+            "country_iso": "NZ"
+          },
+          "values": {
+            "latitude": -41.2865,
+            "longitude": 174.7762,
+            "tier": "Gamma-"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 // lib/screens/flights_menu_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'dart:ui';
 import 'dart:typed_data';
 import 'package:jidoapp/screens/airlines_list_screen.dart';
@@ -331,7 +332,7 @@ class _FlightsMenuScreenState extends State<FlightsMenuScreen>
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        "FLIGHT HUB",
+                        tr("FLIGHT HUB"),
                         style: TextStyle(
                           color: Colors.white.withOpacity(0.8),
                           fontSize: 12,
@@ -341,7 +342,7 @@ class _FlightsMenuScreenState extends State<FlightsMenuScreen>
                       ),
                       const SizedBox(height: 4),
                       Text(
-                        "Logs, Maps & Stats",
+                        tr("Logs, Maps & Stats"),
                         style: TextStyle(
                           color: Colors.white.withOpacity(0.9),
                           fontSize: 14,
@@ -351,7 +352,7 @@ class _FlightsMenuScreenState extends State<FlightsMenuScreen>
                   ),
                   const Spacer(),
                   Text(
-                    "$count",
+                    tr("$count"),
                     style: const TextStyle(
                       color: Colors.white,
                       fontSize: 32,
@@ -505,7 +506,7 @@ class _FlightsMenuScreenState extends State<FlightsMenuScreen>
                           Row(
                             children: [
                               Text(
-                                (isHubPrompt ? "SET UP HUB" : title).toUpperCase(),
+                                tr((isHubPrompt ? "SET UP HUB" : title).toUpperCase()),
                                 style: TextStyle(
                                   fontSize: 11,
                                   fontWeight: FontWeight.w700,
@@ -525,7 +526,7 @@ class _FlightsMenuScreenState extends State<FlightsMenuScreen>
                                     borderRadius: BorderRadius.circular(6),
                                   ),
                                   child: Text(
-                                    "$count",
+                                    tr("$count"),
                                     style: TextStyle(
                                       fontSize: 11,
                                       fontWeight: FontWeight.w800,
@@ -538,7 +539,7 @@ class _FlightsMenuScreenState extends State<FlightsMenuScreen>
                           ),
                           const SizedBox(height: 6),
                           Text(
-                            isHubPrompt ? "Tap to set your Hub" : displayValue,
+                            tr(isHubPrompt ? "Tap to set your Hub" : displayValue),
                             style: TextStyle(
                               fontSize: isAirports ? 16 : 18,
                               fontWeight: FontWeight.w800,
@@ -550,7 +551,7 @@ class _FlightsMenuScreenState extends State<FlightsMenuScreen>
                           ),
                           const SizedBox(height: 2),
                           Text(
-                            isHubPrompt ? "Select your home airport" : subLabel,
+                            tr(isHubPrompt ? "Select your home airport" : subLabel),
                             style: TextStyle(
                               fontSize: 12,
                               fontWeight: FontWeight.w500,
@@ -585,6 +586,7 @@ class _FlightsMenuScreenState extends State<FlightsMenuScreen>
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     const accentBlue = Colors.blueAccent;
     const accentGreen = Colors.green;
 
@@ -693,7 +695,7 @@ class _FlightsMenuScreenState extends State<FlightsMenuScreen>
                 height: 20,
                 point: LatLng(airport.latitude, airport.longitude),
                 child: Tooltip(
-                  message: '${airport.name} (${airport.iataCode})',
+                  message: tr('${airport.name} (${airport.iataCode})'),
                   child: isHubHighlighted
                       ? Stack(
                     alignment: Alignment.center,
@@ -1019,6 +1021,7 @@ class _HubSetupSheetState extends State<_HubSetupSheet> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final results = _filteredAirports();
 
     return Padding(
@@ -1061,19 +1064,19 @@ class _HubSetupSheetState extends State<_HubSetupSheet> {
                             color: Colors.deepOrange),
                       ),
                       const SizedBox(width: 12),
-                      const Expanded(
+                       Expanded(
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              'Set Your Hub',
+                              tr('Set Your Hub'),
                               style: TextStyle(
                                 fontSize: 18,
                                 fontWeight: FontWeight.w800,
                               ),
                             ),
                             Text(
-                              'Search by airport name or IATA code',
+                              tr('Search by airport name or IATA code'),
                               style: TextStyle(
                                 fontSize: 12,
                                 color: Colors.grey,
@@ -1092,7 +1095,7 @@ class _HubSetupSheetState extends State<_HubSetupSheet> {
                     autofocus: true,
                     onChanged: (value) => setState(() => _query = value),
                     decoration: InputDecoration(
-                      hintText: 'e.g. CDG, Charles de Gaulle',
+                      hintText: tr('e.g. CDG, Charles de Gaulle'),
                       prefixIcon: const Icon(Icons.search),
                       suffixIcon: _query.isNotEmpty
                           ? IconButton(
@@ -1137,7 +1140,7 @@ class _HubSetupSheetState extends State<_HubSetupSheet> {
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: Text(
-                            _getFlagEmoji(airport.country),
+                            tr(_getFlagEmoji(airport.country)),
                             style: const TextStyle(fontSize: 22),
                           ),
                         ),
@@ -1167,6 +1170,7 @@ class _HubSetupEmptyState extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Center(
       child: Padding(
         padding: const EdgeInsets.all(24),
@@ -1176,7 +1180,7 @@ class _HubSetupEmptyState extends StatelessWidget {
             Icon(Icons.travel_explore, size: 40, color: Colors.grey[400]),
             const SizedBox(height: 12),
             Text(
-              'Start typing to find your airport',
+              tr('Start typing to find your airport'),
               style: TextStyle(color: Colors.grey[500]),
             ),
           ],
@@ -1191,6 +1195,7 @@ class _HubSetupNoResults extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Center(
       child: Padding(
         padding: const EdgeInsets.all(24),
@@ -1200,7 +1205,7 @@ class _HubSetupNoResults extends StatelessWidget {
             Icon(Icons.search_off, size: 40, color: Colors.grey[400]),
             const SizedBox(height: 12),
             Text(
-              'No matching airports found',
+              tr('No matching airports found'),
               style: TextStyle(color: Colors.grey[500]),
             ),
           ],

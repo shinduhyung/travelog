@@ -2,6 +2,7 @@
 
 import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:jidoapp/providers/airline_provider.dart';
 import 'package:jidoapp/providers/airport_provider.dart';
@@ -557,7 +558,7 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
                 const SizedBox(width: 12),
                 Expanded(
                   child: Text(
-                    period,
+                    tr(period),
                     style: TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.w500,
@@ -586,7 +587,7 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
                 const SizedBox(width: 12),
                 Expanded(
                   child: Text(
-                    period,
+                    tr(period),
                     style: TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.w500,
@@ -595,7 +596,7 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
                   ),
                 ),
                 Text(
-                  'Error',
+                  tr('Error'),
                   style: TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.w600,
@@ -647,7 +648,7 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
                 const SizedBox(width: 12),
                 Expanded(
                   child: Text(
-                    period,
+                    tr(period),
                     style: TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.w500,
@@ -656,7 +657,7 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
                   ),
                 ),
                 Text(
-                  formattedValue,
+                  tr(formattedValue),
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
@@ -679,7 +680,7 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
                 const SizedBox(width: 12),
                 Expanded(
                   child: Text(
-                    period,
+                    tr(period),
                     style: TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.w500,
@@ -688,7 +689,7 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
                   ),
                 ),
                 Text(
-                  'No data',
+                  tr('No data'),
                   style: TextStyle(
                     fontSize: 14,
                     color: Colors.grey.shade500,
@@ -786,7 +787,7 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
               ),
               const SizedBox(height: 4),
               Text(
-                label,
+                tr(label),
                 style: TextStyle(
                   fontSize: 13,
                   fontWeight: isSelected ? FontWeight.w600 : FontWeight.w500,
@@ -852,7 +853,7 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
               : null,
         ),
         child: Text(
-          label,
+          tr(label),
           style: TextStyle(
             fontSize: 13,
             fontWeight: isSelected ? FontWeight.w600 : FontWeight.w500,
@@ -905,7 +906,7 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
                 ),
                 const SizedBox(width: 12),
                 Text(
-                  title,
+                  tr(title),
                   style: const TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
@@ -929,7 +930,7 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
                 } else if (snapshot.hasError) {
                   return Center(
                     child: Text(
-                      'Error loading data.',
+                      tr('Error loading data.'),
                       style: TextStyle(color: Colors.red.shade600),
                     ),
                   );
@@ -960,7 +961,7 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
                           child: Padding(
                             padding: const EdgeInsets.all(20.0),
                             child: Text(
-                              'No flights in this period.',
+                              tr('No flights in this period.'),
                               style: TextStyle(color: Colors.grey.shade600),
                             ),
                           ),
@@ -970,7 +971,7 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
                 } else {
                   return Center(
                     child: Text(
-                      'No data available.',
+                      tr('No data available.'),
                       style: TextStyle(color: Colors.grey.shade600),
                     ),
                   );
@@ -1028,7 +1029,7 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
                   borderRadius: BorderRadius.circular(8),
                 ),
                 child: Text(
-                  label,
+                  tr(label),
                   style: TextStyle(
                     fontSize: 12,
                     fontWeight: FontWeight.w600,
@@ -1039,9 +1040,9 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
               ),
               const Spacer(),
               Text(
-                flight.date != 'Unknown'
+                tr(flight.date != 'Unknown'
                     ? DateFormat('MMM d, y').format(DateTime.parse(flight.date))
-                    : 'Unknown',
+                    : 'Unknown'),
                 style: TextStyle(
                   fontSize: 13,
                   color: Colors.grey.shade600,
@@ -1057,7 +1058,7 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      flight.departureIata ?? 'N/A',
+                      tr(flight.departureIata ?? 'N/A'),
                       style: const TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
@@ -1103,7 +1104,7 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     Text(
-                      flight.arrivalIata ?? 'N/A',
+                      tr(flight.arrivalIata ?? 'N/A'),
                       style: const TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
@@ -1159,7 +1160,7 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
         Icon(icon, size: 16, color: Colors.grey.shade600),
         const SizedBox(height: 4),
         Text(
-          label,
+          tr(label),
           style: TextStyle(
             fontSize: 11,
             color: Colors.grey.shade600,
@@ -1167,7 +1168,7 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
         ),
         const SizedBox(height: 2),
         Text(
-          value,
+          tr(value),
           style: const TextStyle(
             fontSize: 14,
             fontWeight: FontWeight.bold,
@@ -1231,7 +1232,7 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
                       : null,
                 ),
                 child: Text(
-                  label,
+                  tr(label),
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 13,
@@ -1286,8 +1287,8 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
                   ),
                 ),
                 const SizedBox(width: 12),
-                const Text(
-                  'Most Frequent Period',
+                 Text(
+                  tr('Most Frequent Period'),
                   style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
@@ -1311,7 +1312,7 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
                 } else if (snapshot.hasError) {
                   return Center(
                     child: Text(
-                      'Error loading data.',
+                      tr('Error loading data.'),
                       style: TextStyle(color: Colors.red.shade600),
                     ),
                   );
@@ -1342,7 +1343,7 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
                           child: Padding(
                             padding: const EdgeInsets.all(20.0),
                             child: Text(
-                              'No data available.',
+                              tr('No data available.'),
                               style: TextStyle(color: Colors.grey.shade600),
                             ),
                           ),
@@ -1352,7 +1353,7 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
                 } else {
                   return Center(
                     child: Text(
-                      'No data available.',
+                      tr('No data available.'),
                       style: TextStyle(color: Colors.grey.shade600),
                     ),
                   );
@@ -1414,7 +1415,7 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
                     borderRadius: BorderRadius.circular(6),
                   ),
                   child: Text(
-                    label,
+                    tr(label),
                     style: TextStyle(
                       fontSize: 11,
                       fontWeight: FontWeight.w600,
@@ -1425,7 +1426,7 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
                 ),
                 const SizedBox(height: 8),
                 Text(
-                  period,
+                  tr(period),
                   style: const TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
@@ -1438,7 +1439,7 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               Text(
-                '$count',
+                tr('$count'),
                 style: TextStyle(
                   fontSize: 28,
                   fontWeight: FontWeight.bold,
@@ -1446,7 +1447,7 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
                 ),
               ),
               Text(
-                'flights',
+                tr('flights'),
                 style: TextStyle(
                   fontSize: 12,
                   color: Colors.grey.shade600,
@@ -1509,7 +1510,7 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
                       : null,
                 ),
                 child: Text(
-                  label,
+                  tr(label),
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 13,
@@ -1585,14 +1586,14 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Yearly Trend (${valueKey})',
+                      tr('Yearly Trend (${valueKey})'),
                       style: const TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                     Text(
-                      'Last 10 Years',
+                      tr('Last 10 Years'),
                       style: TextStyle(
                         fontSize: 13,
                         color: Colors.grey.shade600,
@@ -1618,7 +1619,7 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
                     child: Padding(
                       padding: const EdgeInsets.all(20.0),
                       child: Text(
-                        'Error loading trend data.',
+                        tr('Error loading trend data.'),
                         style: TextStyle(color: Colors.red.shade600),
                       ),
                     ),
@@ -1636,7 +1637,7 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
                       child: Padding(
                         padding: const EdgeInsets.all(40.0),
                         child: Text(
-                          'No ${valueKey} data in the last 10 years',
+                          tr('No ${valueKey} data in the last 10 years'),
                           style: TextStyle(
                             color: Colors.grey.shade600,
                             fontSize: 15,
@@ -1685,7 +1686,7 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
                                 }
 
                                 return Text(
-                                  text,
+                                  tr(text),
                                   style: TextStyle(
                                     color: Colors.grey.shade600,
                                     fontSize: 11,
@@ -1786,7 +1787,7 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
                     child: Padding(
                       padding: const EdgeInsets.all(20.0),
                       child: Text(
-                        'No data available.',
+                        tr('No data available.'),
                         style: TextStyle(color: Colors.grey.shade600),
                       ),
                     ),
@@ -1980,6 +1981,7 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Scaffold(
       backgroundColor: Colors.grey.shade50,
       body: SafeArea(
@@ -2011,8 +2013,8 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            _selectedStatType.toString().split('.').last.substring(0, 1).toUpperCase() +
-                                _selectedStatType.toString().split('.').last.substring(1),
+                            tr(_selectedStatType.toString().split('.').last.substring(0, 1).toUpperCase() +
+                                _selectedStatType.toString().split('.').last.substring(1)),
                             style: const TextStyle(
                               fontSize: 24,
                               fontWeight: FontWeight.bold,
@@ -2058,8 +2060,8 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
                             ),
                           ),
                           const SizedBox(width: 10),
-                          const Text(
-                            'Custom Date Range',
+                           Text(
+                            tr('Custom Date Range'),
                             style: TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.bold,
@@ -2081,8 +2083,8 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
                             backgroundColor: Theme.of(context).primaryColor.withOpacity(0.1),
                             foregroundColor: Theme.of(context).primaryColor,
                           ),
-                          child: const Text(
-                            'Select Date Range',
+                          child:  Text(
+                            tr('Select Date Range'),
                             style: TextStyle(
                               fontSize: 15,
                               fontWeight: FontWeight.w600,
@@ -2110,7 +2112,7 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
                                   ),
                                   const SizedBox(width: 8),
                                   Text(
-                                    '${DateFormat('MMM d, y').format(_customStartDate!)} - ${DateFormat('MMM d, y').format(_customEndDate!)}',
+                                    tr('${DateFormat('MMM d, y').format(_customStartDate!)} - ${DateFormat('MMM d, y').format(_customEndDate!)}'),
                                     style: TextStyle(
                                       fontSize: 14,
                                       fontWeight: FontWeight.w500,
@@ -2128,7 +2130,7 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
                                       return const Center(child: CircularProgressIndicator());
                                     } else if (snapshot.hasError) {
                                       return Text(
-                                        'Error loading data.',
+                                        tr('Error loading data.'),
                                         style: TextStyle(color: Colors.red.shade600),
                                       );
                                     } else if (snapshot.hasData) {
@@ -2136,7 +2138,7 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
                                           ? snapshot.data!['average']!
                                           : snapshot.data!['total']!;
                                       return Text(
-                                        '${_formatDistance(value)} km',
+                                        tr('${_formatDistance(value)} km'),
                                         style: TextStyle(
                                           fontSize: 22,
                                           fontWeight: FontWeight.bold,
@@ -2145,7 +2147,7 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
                                       );
                                     } else {
                                       return Text(
-                                        'No data for this date range.',
+                                        tr('No data for this date range.'),
                                         style: TextStyle(color: Colors.grey.shade600),
                                       );
                                     }
@@ -2159,7 +2161,7 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
                                       return const Center(child: CircularProgressIndicator());
                                     } else if (snapshot.hasError) {
                                       return Text(
-                                        'Error loading data.',
+                                        tr('Error loading data.'),
                                         style: TextStyle(color: Colors.red.shade600),
                                       );
                                     } else if (snapshot.hasData) {
@@ -2168,7 +2170,7 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
                                           : snapshot.data!['total']!;
                                       final formattedValue = _formatDuration(value);
                                       return Text(
-                                        formattedValue,
+                                        tr(formattedValue),
                                         style: TextStyle(
                                           fontSize: 22,
                                           fontWeight: FontWeight.bold,
@@ -2177,7 +2179,7 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
                                       );
                                     } else {
                                       return Text(
-                                        'No data for this date range.',
+                                        tr('No data for this date range.'),
                                         style: TextStyle(color: Colors.grey.shade600),
                                       );
                                     }
@@ -2191,7 +2193,7 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
                                       return const Center(child: CircularProgressIndicator());
                                     } else if (snapshot.hasError) {
                                       return Text(
-                                        'Error loading data.',
+                                        tr('Error loading data.'),
                                         style: TextStyle(color: Colors.red.shade600),
                                       );
                                     } else if (snapshot.hasData) {
@@ -2199,7 +2201,7 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
                                       _showAverageCount ? snapshot.data!['average']! : snapshot.data!['total']!;
                                       final formattedValue = _formatCount(value, isAverage: _showAverageCount);
                                       return Text(
-                                        '$formattedValue flights',
+                                        tr('$formattedValue flights'),
                                         style: TextStyle(
                                           fontSize: 22,
                                           fontWeight: FontWeight.bold,
@@ -2208,7 +2210,7 @@ class _FlightOverviewStatsScreenState extends State<FlightOverviewStatsScreen> {
                                       );
                                     } else {
                                       return Text(
-                                        'No data for this date range.',
+                                        tr('No data for this date range.'),
                                         style: TextStyle(color: Colors.grey.shade600),
                                       );
                                     }

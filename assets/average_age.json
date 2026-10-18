@@ -1,95 +1,774 @@
 {
-  "median_age": [
-    { "iso_a3": "NER", "median_age": 15.2 },
-    { "iso_a3": "UGA", "median_age": 16.2 },
-    { "iso_a3": "AGO", "median_age": 16.3 },
-    { "iso_a3": "MLI", "median_age": 16.4 },
-    { "iso_a3": "TCD", "median_age": 16.7 },
-    { "iso_a3": "COD", "median_age": 16.9 },
-    { "iso_a3": "BEN", "median_age": 17.2 },
-    { "iso_a3": "MOZ", "median_age": 17.3 },
-    { "iso_a3": "ZMB", "median_age": 18.4 },
-    { "iso_a3": "BDI", "median_age": 18.4 },
-    { "iso_a3": "GNB", "median_age": 18.4 },
-    { "iso_a3": "BFA", "median_age": 18.7 },
-    { "iso_a3": "SSD", "median_age": 18.7 },
-    { "iso_a3": "CMR", "median_age": 18.9 },
-    { "iso_a3": "MCO", "median_age": 56.9 },
-    { "iso_a3": "JPN", "median_age": 49.9 },
-    { "iso_a3": "AND", "median_age": 48.8 },
-    { "iso_a3": "ITA", "median_age": 48.4 },
-    { "iso_a3": "HKG", "median_age": 47.2 },
-    { "iso_a3": "DEU", "median_age": 46.8 },
-    { "iso_a3": "ESP", "median_age": 46.8 },
-    { "iso_a3": "GRC", "median_age": 46.5 },
-    { "iso_a3": "PRT", "median_age": 46.4 },
-    { "iso_a3": "SVN", "median_age": 46.3 },
-    { "iso_a3": "PRI", "median_age": 46.1 },
-    { "iso_a3": "SMR", "median_age": 46.1 },
-    { "iso_a3": "KOR", "median_age": 45.5 },
-    { "iso_a3": "ROU", "median_age": 45.5 },
-    { "iso_a3": "LVA", "median_age": 45.5 }
-  ],
-  "age_at_first_marriage": [
-    { "iso_a3": "COL", "age_at_first_marriage": 18.1 },
-    { "iso_a3": "TZA", "age_at_first_marriage": 19.0 },
-    { "iso_a3": "LBR", "age_at_first_marriage": 19.0 },
-    { "iso_a3": "MLI", "age_at_first_marriage": 19.1 },
-    { "iso_a3": "TCD", "age_at_first_marriage": 19.1 },
-    { "iso_a3": "STP", "age_at_first_marriage": 19.1 },
-    { "iso_a3": "NGA", "age_at_first_marriage": 19.2 },
-    { "iso_a3": "NER", "age_at_first_marriage": 19.2 },
-    { "iso_a3": "MRT", "age_at_first_marriage": 19.2 },
-    { "iso_a3": "CIV", "age_at_first_marriage": 19.5 },
-    { "iso_a3": "CMR", "age_at_first_marriage": 19.6 },
-    { "iso_a3": "GIN", "age_at_first_marriage": 19.8 },
-    { "iso_a3": "ESP", "age_at_first_marriage": 38.8 },
-    { "iso_a3": "CHL", "age_at_first_marriage": 37.8 },
-    { "iso_a3": "NLD", "age_at_first_marriage": 37.6 },
-    { "iso_a3": "KOR", "age_at_first_marriage": 37.0 },
-    { "iso_a3": "ARG", "age_at_first_marriage": 36.8 },
-    { "iso_a3": "NOR", "age_at_first_marriage": 36.8 },
-    { "iso_a3": "BRA", "age_at_first_marriage": 35.6 },
-    { "iso_a3": "IRL", "age_at_first_marriage": 35.0 },
-    { "iso_a3": "LCA", "age_at_first_marriage": 34.9 },
-    { "iso_a3": "URY", "age_at_first_marriage": 34.8 },
-    { "iso_a3": "DEU", "age_at_first_marriage": 34.4 },
-    { "iso_a3": "SWE", "age_at_first_marriage": 33.9 },
-    { "iso_a3": "JAM", "age_at_first_marriage": 33.8 },
-    { "iso_a3": "ITA", "age_at_first_marriage": 33.6 }
-  ],
-  "average_age_at_first_birth": [
-    { "iso_a3": "TCD", "average_age_at_first_birth": 18.1 },
-    { "iso_a3": "NER", "average_age_at_first_birth": 18.5 },
-    { "iso_a3": "BGD", "average_age_at_first_birth": 18.6 },
-    { "iso_a3": "MWI", "average_age_at_first_birth": 19.1 },
-    { "iso_a3": "LBR", "average_age_at_first_birth": 19.1 },
-    { "iso_a3": "MOZ", "average_age_at_first_birth": 19.2 },
-    { "iso_a3": "MLI", "average_age_at_first_birth": 19.2 },
-    { "iso_a3": "ZMB", "average_age_at_first_birth": 19.2 },
-    { "iso_a3": "NIC", "average_age_at_first_birth": 19.2 },
-    { "iso_a3": "ETH", "average_age_at_first_birth": 19.3 },
-    { "iso_a3": "UGA", "average_age_at_first_birth": 19.4 },
-    { "iso_a3": "AGO", "average_age_at_first_birth": 19.4 },
-    { "iso_a3": "STP", "average_age_at_first_birth": 19.4 },
-    { "iso_a3": "MDG", "average_age_at_first_birth": 19.5 },
-    { "iso_a3": "CIV", "average_age_at_first_birth": 19.6 },
-    { "iso_a3": "AND", "average_age_at_first_birth": 32.8 },
-    { "iso_a3": "KOR", "average_age_at_first_birth": 32.2 },
-    { "iso_a3": "SMR", "average_age_at_first_birth": 31.9 },
-    { "iso_a3": "ITA", "average_age_at_first_birth": 31.4 },
-    { "iso_a3": "LIE", "average_age_at_first_birth": 31.3 },
-    { "iso_a3": "ESP", "average_age_at_first_birth": 31.2 },
-    { "iso_a3": "CHE", "average_age_at_first_birth": 31.1 },
-    { "iso_a3": "LUX", "average_age_at_first_birth": 31.0 },
-    { "iso_a3": "IRL", "average_age_at_first_birth": 30.9 },
-    { "iso_a3": "JPN", "average_age_at_first_birth": 30.7 },
-    { "iso_a3": "SGP", "average_age_at_first_birth": 30.5 },
-    { "iso_a3": "NLD", "average_age_at_first_birth": 30.2 },
-    { "iso_a3": "CYP", "average_age_at_first_birth": 30.0 },
-    { "iso_a3": "PRT", "average_age_at_first_birth": 29.9 },
-    { "iso_a3": "HKG", "average_age_at_first_birth": 29.8 },
-    { "iso_a3": "DNK", "average_age_at_first_birth": 29.8 },
-    { "iso_a3": "NOR", "average_age_at_first_birth": 29.8 }
+  "schema_version": 1,
+  "dataset_id": "average_age",
+  "metadata": {
+    "source_url": null,
+    "reference_period": null,
+    "updated_at": null
+  },
+  "legacy_layout": "sections",
+  "tables": [
+    {
+      "id": "median_age",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "iso_a3"
+      ],
+      "metrics": [
+        {
+          "id": "median_age",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "iso_a3": "NER"
+          },
+          "values": {
+            "median_age": 15.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "UGA"
+          },
+          "values": {
+            "median_age": 16.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AGO"
+          },
+          "values": {
+            "median_age": 16.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MLI"
+          },
+          "values": {
+            "median_age": 16.4
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TCD"
+          },
+          "values": {
+            "median_age": 16.7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "COD"
+          },
+          "values": {
+            "median_age": 16.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BEN"
+          },
+          "values": {
+            "median_age": 17.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MOZ"
+          },
+          "values": {
+            "median_age": 17.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ZMB"
+          },
+          "values": {
+            "median_age": 18.4
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BDI"
+          },
+          "values": {
+            "median_age": 18.4
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GNB"
+          },
+          "values": {
+            "median_age": 18.4
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BFA"
+          },
+          "values": {
+            "median_age": 18.7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SSD"
+          },
+          "values": {
+            "median_age": 18.7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CMR"
+          },
+          "values": {
+            "median_age": 18.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MCO"
+          },
+          "values": {
+            "median_age": 56.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "JPN"
+          },
+          "values": {
+            "median_age": 49.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AND"
+          },
+          "values": {
+            "median_age": 48.8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ITA"
+          },
+          "values": {
+            "median_age": 48.4
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HKG"
+          },
+          "values": {
+            "median_age": 47.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DEU"
+          },
+          "values": {
+            "median_age": 46.8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ESP"
+          },
+          "values": {
+            "median_age": 46.8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GRC"
+          },
+          "values": {
+            "median_age": 46.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PRT"
+          },
+          "values": {
+            "median_age": 46.4
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SVN"
+          },
+          "values": {
+            "median_age": 46.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PRI"
+          },
+          "values": {
+            "median_age": 46.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SMR"
+          },
+          "values": {
+            "median_age": 46.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KOR"
+          },
+          "values": {
+            "median_age": 45.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ROU"
+          },
+          "values": {
+            "median_age": 45.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LVA"
+          },
+          "values": {
+            "median_age": 45.5
+          }
+        }
+      ]
+    },
+    {
+      "id": "age_at_first_marriage",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "iso_a3"
+      ],
+      "metrics": [
+        {
+          "id": "age_at_first_marriage",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "iso_a3": "COL"
+          },
+          "values": {
+            "age_at_first_marriage": 18.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TZA"
+          },
+          "values": {
+            "age_at_first_marriage": 19.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LBR"
+          },
+          "values": {
+            "age_at_first_marriage": 19.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MLI"
+          },
+          "values": {
+            "age_at_first_marriage": 19.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TCD"
+          },
+          "values": {
+            "age_at_first_marriage": 19.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "STP"
+          },
+          "values": {
+            "age_at_first_marriage": 19.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NGA"
+          },
+          "values": {
+            "age_at_first_marriage": 19.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NER"
+          },
+          "values": {
+            "age_at_first_marriage": 19.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MRT"
+          },
+          "values": {
+            "age_at_first_marriage": 19.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CIV"
+          },
+          "values": {
+            "age_at_first_marriage": 19.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CMR"
+          },
+          "values": {
+            "age_at_first_marriage": 19.6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GIN"
+          },
+          "values": {
+            "age_at_first_marriage": 19.8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ESP"
+          },
+          "values": {
+            "age_at_first_marriage": 38.8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CHL"
+          },
+          "values": {
+            "age_at_first_marriage": 37.8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NLD"
+          },
+          "values": {
+            "age_at_first_marriage": 37.6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KOR"
+          },
+          "values": {
+            "age_at_first_marriage": 37.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ARG"
+          },
+          "values": {
+            "age_at_first_marriage": 36.8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NOR"
+          },
+          "values": {
+            "age_at_first_marriage": 36.8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BRA"
+          },
+          "values": {
+            "age_at_first_marriage": 35.6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IRL"
+          },
+          "values": {
+            "age_at_first_marriage": 35.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LCA"
+          },
+          "values": {
+            "age_at_first_marriage": 34.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "URY"
+          },
+          "values": {
+            "age_at_first_marriage": 34.8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DEU"
+          },
+          "values": {
+            "age_at_first_marriage": 34.4
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SWE"
+          },
+          "values": {
+            "age_at_first_marriage": 33.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "JAM"
+          },
+          "values": {
+            "age_at_first_marriage": 33.8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ITA"
+          },
+          "values": {
+            "age_at_first_marriage": 33.6
+          }
+        }
+      ]
+    },
+    {
+      "id": "average_age_at_first_birth",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "iso_a3"
+      ],
+      "metrics": [
+        {
+          "id": "average_age_at_first_birth",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "iso_a3": "TCD"
+          },
+          "values": {
+            "average_age_at_first_birth": 18.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NER"
+          },
+          "values": {
+            "average_age_at_first_birth": 18.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BGD"
+          },
+          "values": {
+            "average_age_at_first_birth": 18.6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MWI"
+          },
+          "values": {
+            "average_age_at_first_birth": 19.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LBR"
+          },
+          "values": {
+            "average_age_at_first_birth": 19.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MOZ"
+          },
+          "values": {
+            "average_age_at_first_birth": 19.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MLI"
+          },
+          "values": {
+            "average_age_at_first_birth": 19.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ZMB"
+          },
+          "values": {
+            "average_age_at_first_birth": 19.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NIC"
+          },
+          "values": {
+            "average_age_at_first_birth": 19.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ETH"
+          },
+          "values": {
+            "average_age_at_first_birth": 19.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "UGA"
+          },
+          "values": {
+            "average_age_at_first_birth": 19.4
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AGO"
+          },
+          "values": {
+            "average_age_at_first_birth": 19.4
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "STP"
+          },
+          "values": {
+            "average_age_at_first_birth": 19.4
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MDG"
+          },
+          "values": {
+            "average_age_at_first_birth": 19.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CIV"
+          },
+          "values": {
+            "average_age_at_first_birth": 19.6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AND"
+          },
+          "values": {
+            "average_age_at_first_birth": 32.8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KOR"
+          },
+          "values": {
+            "average_age_at_first_birth": 32.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SMR"
+          },
+          "values": {
+            "average_age_at_first_birth": 31.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ITA"
+          },
+          "values": {
+            "average_age_at_first_birth": 31.4
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LIE"
+          },
+          "values": {
+            "average_age_at_first_birth": 31.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ESP"
+          },
+          "values": {
+            "average_age_at_first_birth": 31.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CHE"
+          },
+          "values": {
+            "average_age_at_first_birth": 31.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LUX"
+          },
+          "values": {
+            "average_age_at_first_birth": 31.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IRL"
+          },
+          "values": {
+            "average_age_at_first_birth": 30.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "JPN"
+          },
+          "values": {
+            "average_age_at_first_birth": 30.7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SGP"
+          },
+          "values": {
+            "average_age_at_first_birth": 30.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NLD"
+          },
+          "values": {
+            "average_age_at_first_birth": 30.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CYP"
+          },
+          "values": {
+            "average_age_at_first_birth": 30.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PRT"
+          },
+          "values": {
+            "average_age_at_first_birth": 29.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HKG"
+          },
+          "values": {
+            "average_age_at_first_birth": 29.8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DNK"
+          },
+          "values": {
+            "average_age_at_first_birth": 29.8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NOR"
+          },
+          "values": {
+            "average_age_at_first_birth": 29.8
+          }
+        }
+      ]
+    }
   ]
 }

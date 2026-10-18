@@ -1,0 +1,2772 @@
+{
+  "reviewed_at": "2026-10-17",
+  "country_count": 24,
+  "city_count": 9,
+  "rules": [
+    "Existing metrics are excluded even if moved from country to city scope: internet, medical facilities, basic prices, traffic, liveability, GDP, safety, population totals and skyscraper counts.",
+    "Do not repeat a metric in both country and city lists. Renewable energy usage and solar resource potential answer different questions; GDP is a denominator only for structural fiscal/economic indicators.",
+    "Do not inflate counts with sex/age/sector splits, inverse ratios, total vs per-capita versions, or every disaster return period.",
+    "Country national saving rate is not household bank-account ownership. Safe drinking-water access is not physical water-resource stress.",
+    "City housing price/income measures purchasing housing; local purchasing power measures income adjusted for consumption prices.",
+    "All retained candidates have >=10 distinct non-European numerical values for a common reference period; JRC periods can denote historical or modelled reference layers.",
+    "Available numerical coverage is source coverage, not guaranteed matching to app city boundaries.",
+    "Culture/sport, conference and startup additions are not proposed without ten verified numerical observations. Happiness figure fetch failed (403); conference counts not extracted; startup ranks alone were not treated as underlying values."
+  ],
+  "country": [
+    {
+      "scope": "country",
+      "domain": "언론",
+      "id": "RSF_2026",
+      "label": "언론자유지수",
+      "year": 2026,
+      "url": "https://rsf.org/en/index",
+      "same_year_count": 180,
+      "non_europe_count": 136,
+      "distinct_non_europe_values": 134,
+      "non_europe_samples": [
+        {
+          "iso_a3": "CAN",
+          "name": "Canada",
+          "value": 78.76
+        },
+        {
+          "iso_a3": "ZAF",
+          "name": "South Africa",
+          "value": 77.95
+        },
+        {
+          "iso_a3": "NZL",
+          "name": "New Zealand",
+          "value": 77.38
+        },
+        {
+          "iso_a3": "NAM",
+          "name": "Namibia",
+          "value": 76.97
+        },
+        {
+          "iso_a3": "FJI",
+          "name": "Fiji",
+          "value": 76.76
+        },
+        {
+          "iso_a3": "JAM",
+          "name": "Jamaica",
+          "value": 75.87
+        },
+        {
+          "iso_a3": "TWN",
+          "name": "Taiwan",
+          "value": 75.44
+        },
+        {
+          "iso_a3": "TLS",
+          "name": "Timor-Leste",
+          "value": 75.29
+        },
+        {
+          "iso_a3": "TTO",
+          "name": "Trinidad and Tobago",
+          "value": 74.7
+        },
+        {
+          "iso_a3": "AUS",
+          "name": "Australia",
+          "value": 74.58
+        },
+        {
+          "iso_a3": "SUR",
+          "name": "Suriname",
+          "value": 73.2
+        },
+        {
+          "iso_a3": "SYC",
+          "name": "Seychelles",
+          "value": 73.04
+        }
+      ]
+    },
+    {
+      "scope": "country",
+      "domain": "공공 청렴",
+      "id": "TI_CPI_2025",
+      "label": "공공부문 부패인식지수·CPI",
+      "year": 2025,
+      "url": "https://www.transparency.org/en/cpi/2025/index/usa/",
+      "verified_non_europe_sample_count": 16,
+      "distinct_non_europe_values": 10,
+      "non_europe_samples": [
+        {
+          "iso_a3": "SGP",
+          "name": "Singapore",
+          "value": 84
+        },
+        {
+          "iso_a3": "NZL",
+          "name": "New Zealand",
+          "value": 81
+        },
+        {
+          "iso_a3": "AUS",
+          "name": "Australia",
+          "value": 76
+        },
+        {
+          "iso_a3": "HKG",
+          "name": "Hong Kong",
+          "value": 76
+        },
+        {
+          "iso_a3": "CAN",
+          "name": "Canada",
+          "value": 75
+        },
+        {
+          "iso_a3": "URY",
+          "name": "Uruguay",
+          "value": 73
+        },
+        {
+          "iso_a3": "BTN",
+          "name": "Bhutan",
+          "value": 71
+        },
+        {
+          "iso_a3": "JPN",
+          "name": "Japan",
+          "value": 71
+        },
+        {
+          "iso_a3": "ARE",
+          "name": "United Arab Emirates",
+          "value": 69
+        },
+        {
+          "iso_a3": "BRB",
+          "name": "Barbados",
+          "value": 68
+        },
+        {
+          "iso_a3": "SYC",
+          "name": "Seychelles",
+          "value": 68
+        },
+        {
+          "iso_a3": "TWN",
+          "name": "Taiwan",
+          "value": 68
+        },
+        {
+          "iso_a3": "BHS",
+          "name": "Bahamas",
+          "value": 64
+        },
+        {
+          "iso_a3": "USA",
+          "name": "United States of America",
+          "value": 64
+        },
+        {
+          "iso_a3": "BRN",
+          "name": "Brunei Darussalam",
+          "value": 63
+        },
+        {
+          "iso_a3": "CHL",
+          "name": "Chile",
+          "value": 63
+        }
+      ],
+      "note": "Official publisher public results list: 16 non-European numerical results read directly; not a claim of full dataset ingestion."
+    },
+    {
+      "scope": "country",
+      "domain": "정치 참여",
+      "id": "SG.GEN.PARL.ZS",
+      "label": "국회의 여성 의석 비율",
+      "year": 2025,
+      "url": "https://data.worldbank.org/indicator/SG.GEN.PARL.ZS",
+      "same_year_count": 184,
+      "non_europe_count": 141,
+      "distinct_non_europe_values": 132,
+      "non_europe_samples": [
+        {
+          "iso_a3": "AGO",
+          "value": 39.0909090909091,
+          "year": 2025
+        },
+        {
+          "iso_a3": "ARE",
+          "value": 50,
+          "year": 2025
+        },
+        {
+          "iso_a3": "ARG",
+          "value": 41.2451361867704,
+          "year": 2025
+        },
+        {
+          "iso_a3": "ARM",
+          "value": 38.3177570093458,
+          "year": 2025
+        },
+        {
+          "iso_a3": "ATG",
+          "value": 5.55555555555556,
+          "year": 2025
+        },
+        {
+          "iso_a3": "AUS",
+          "value": 46,
+          "year": 2025
+        },
+        {
+          "iso_a3": "AZE",
+          "value": 20.8,
+          "year": 2025
+        },
+        {
+          "iso_a3": "BDI",
+          "value": 39.6396396396396,
+          "year": 2025
+        },
+        {
+          "iso_a3": "BEN",
+          "value": 26.605504587156,
+          "year": 2025
+        },
+        {
+          "iso_a3": "BFA",
+          "value": 18.3098591549296,
+          "year": 2025
+        },
+        {
+          "iso_a3": "BHR",
+          "value": 20,
+          "year": 2025
+        },
+        {
+          "iso_a3": "BHS",
+          "value": 18.4210526315789,
+          "year": 2025
+        }
+      ]
+    },
+    {
+      "scope": "country",
+      "domain": "인도적 보호",
+      "id": "SM.POP.RHCR.EA",
+      "label": "유엔난민기구 관할 난민 수용 인원",
+      "year": 2025,
+      "url": "https://data.worldbank.org/indicator/SM.POP.RHCR.EA",
+      "same_year_count": 176,
+      "non_europe_count": 135,
+      "distinct_non_europe_values": 120,
+      "non_europe_samples": [
+        {
+          "iso_a3": "ABW",
+          "value": 0,
+          "year": 2025
+        },
+        {
+          "iso_a3": "AFG",
+          "value": 20869,
+          "year": 2025
+        },
+        {
+          "iso_a3": "AGO",
+          "value": 25396,
+          "year": 2025
+        },
+        {
+          "iso_a3": "ARE",
+          "value": 1377,
+          "year": 2025
+        },
+        {
+          "iso_a3": "ARG",
+          "value": 4941,
+          "year": 2025
+        },
+        {
+          "iso_a3": "ARM",
+          "value": 123087,
+          "year": 2025
+        },
+        {
+          "iso_a3": "AUS",
+          "value": 33415,
+          "year": 2025
+        },
+        {
+          "iso_a3": "AZE",
+          "value": 6389,
+          "year": 2025
+        },
+        {
+          "iso_a3": "BDI",
+          "value": 110800,
+          "year": 2025
+        },
+        {
+          "iso_a3": "BEN",
+          "value": 16974,
+          "year": 2025
+        },
+        {
+          "iso_a3": "BFA",
+          "value": 40996,
+          "year": 2025
+        },
+        {
+          "iso_a3": "BGD",
+          "value": 1178038,
+          "year": 2025
+        }
+      ]
+    },
+    {
+      "scope": "country",
+      "domain": "인구 정주",
+      "id": "SP.URB.TOTL.IN.ZS",
+      "label": "도시 거주 인구 비율",
+      "year": 2025,
+      "url": "https://data.worldbank.org/indicator/SP.URB.TOTL.IN.ZS",
+      "same_year_count": 216,
+      "non_europe_count": 169,
+      "distinct_non_europe_values": 160,
+      "non_europe_samples": [
+        {
+          "iso_a3": "ABW",
+          "value": 61.7485249229588,
+          "year": 2025
+        },
+        {
+          "iso_a3": "AFG",
+          "value": 25.9401644699898,
+          "year": 2025
+        },
+        {
+          "iso_a3": "AGO",
+          "value": 71.4615915176085,
+          "year": 2025
+        },
+        {
+          "iso_a3": "ARE",
+          "value": 85.9617641324017,
+          "year": 2025
+        },
+        {
+          "iso_a3": "ARG",
+          "value": 92.3519221615173,
+          "year": 2025
+        },
+        {
+          "iso_a3": "ARM",
+          "value": 65.9287015589872,
+          "year": 2025
+        },
+        {
+          "iso_a3": "ASM",
+          "value": 80.5123508239818,
+          "year": 2025
+        },
+        {
+          "iso_a3": "ATG",
+          "value": 24.3334834700661,
+          "year": 2025
+        },
+        {
+          "iso_a3": "AUS",
+          "value": 87.7192672666333,
+          "year": 2025
+        },
+        {
+          "iso_a3": "AZE",
+          "value": 58.6371024281175,
+          "year": 2025
+        },
+        {
+          "iso_a3": "BDI",
+          "value": 25.6870184681663,
+          "year": 2025
+        },
+        {
+          "iso_a3": "BEN",
+          "value": 53.3620073968188,
+          "year": 2025
+        }
+      ]
+    },
+    {
+      "scope": "country",
+      "domain": "노동시장",
+      "id": "SL.UEM.TOTL.ZS",
+      "label": "실업률",
+      "year": 2025,
+      "url": "https://data.worldbank.org/indicator/SL.UEM.TOTL.ZS",
+      "same_year_count": 181,
+      "non_europe_count": 143,
+      "distinct_non_europe_values": 142,
+      "non_europe_samples": [
+        {
+          "iso_a3": "AFG",
+          "value": 13.351,
+          "year": 2025
+        },
+        {
+          "iso_a3": "AGO",
+          "value": 14.108,
+          "year": 2025
+        },
+        {
+          "iso_a3": "ARE",
+          "value": 2.174,
+          "year": 2025
+        },
+        {
+          "iso_a3": "ARG",
+          "value": 7.145,
+          "year": 2025
+        },
+        {
+          "iso_a3": "ARM",
+          "value": 12.871,
+          "year": 2025
+        },
+        {
+          "iso_a3": "AUS",
+          "value": 4.09,
+          "year": 2025
+        },
+        {
+          "iso_a3": "AZE",
+          "value": 5.457,
+          "year": 2025
+        },
+        {
+          "iso_a3": "BDI",
+          "value": 0.922,
+          "year": 2025
+        },
+        {
+          "iso_a3": "BEN",
+          "value": 1.589,
+          "year": 2025
+        },
+        {
+          "iso_a3": "BFA",
+          "value": 3.477,
+          "year": 2025
+        },
+        {
+          "iso_a3": "BGD",
+          "value": 3.778,
+          "year": 2025
+        },
+        {
+          "iso_a3": "BHR",
+          "value": 1.102,
+          "year": 2025
+        }
+      ]
+    },
+    {
+      "scope": "country",
+      "domain": "산업 구조",
+      "id": "NV.IND.MANF.ZS",
+      "label": "GDP 중 제조업 부가가치 비율",
+      "year": 2025,
+      "url": "https://data.worldbank.org/indicator/NV.IND.MANF.ZS",
+      "same_year_count": 132,
+      "non_europe_count": 95,
+      "distinct_non_europe_values": 95,
+      "non_europe_samples": [
+        {
+          "iso_a3": "AGO",
+          "value": 6.79262096961171,
+          "year": 2025
+        },
+        {
+          "iso_a3": "ARG",
+          "value": 13.5836570537516,
+          "year": 2025
+        },
+        {
+          "iso_a3": "ARM",
+          "value": 10.9919676933847,
+          "year": 2025
+        },
+        {
+          "iso_a3": "ATG",
+          "value": 2.43714290692572,
+          "year": 2025
+        },
+        {
+          "iso_a3": "AUS",
+          "value": 5.31714561568853,
+          "year": 2025
+        },
+        {
+          "iso_a3": "AZE",
+          "value": 5.97975118905604,
+          "year": 2025
+        },
+        {
+          "iso_a3": "BDI",
+          "value": 13.0990462265815,
+          "year": 2025
+        },
+        {
+          "iso_a3": "BEN",
+          "value": 10.1525612238474,
+          "year": 2025
+        },
+        {
+          "iso_a3": "BFA",
+          "value": 6.61760688368652,
+          "year": 2025
+        },
+        {
+          "iso_a3": "BGD",
+          "value": 22.441399081658,
+          "year": 2025
+        },
+        {
+          "iso_a3": "BHR",
+          "value": 19.8945041496894,
+          "year": 2025
+        },
+        {
+          "iso_a3": "BRA",
+          "value": 11.7722632755736,
+          "year": 2025
+        }
+      ]
+    },
+    {
+      "scope": "country",
+      "domain": "국제무역",
+      "id": "NE.TRD.GNFS.ZS",
+      "label": "GDP 대비 수출·수입 총액",
+      "year": 2025,
+      "url": "https://data.worldbank.org/indicator/NE.TRD.GNFS.ZS",
+      "same_year_count": 138,
+      "non_europe_count": 98,
+      "distinct_non_europe_values": 98,
+      "non_europe_samples": [
+        {
+          "iso_a3": "AGO",
+          "value": 34.6466403704517,
+          "year": 2025
+        },
+        {
+          "iso_a3": "ARG",
+          "value": 30.364633685192,
+          "year": 2025
+        },
+        {
+          "iso_a3": "ARM",
+          "value": 101.705936395702,
+          "year": 2025
+        },
+        {
+          "iso_a3": "AUS",
+          "value": 45.9014493880126,
+          "year": 2025
+        },
+        {
+          "iso_a3": "AZE",
+          "value": 79.8295815452306,
+          "year": 2025
+        },
+        {
+          "iso_a3": "BEN",
+          "value": 37.1169356248994,
+          "year": 2025
+        },
+        {
+          "iso_a3": "BFA",
+          "value": 65.0029506969427,
+          "year": 2025
+        },
+        {
+          "iso_a3": "BGD",
+          "value": 27.9505840425563,
+          "year": 2025
+        },
+        {
+          "iso_a3": "BRA",
+          "value": 35.2914822615074,
+          "year": 2025
+        },
+        {
+          "iso_a3": "BRN",
+          "value": 123.609124931602,
+          "year": 2025
+        },
+        {
+          "iso_a3": "BWA",
+          "value": 69.5446677858652,
+          "year": 2025
+        },
+        {
+          "iso_a3": "CAF",
+          "value": 52.9067459083503,
+          "year": 2025
+        }
+      ]
+    },
+    {
+      "scope": "country",
+      "domain": "해외투자",
+      "id": "BX.KLT.DINV.WD.GD.ZS",
+      "label": "GDP 대비 외국인직접투자 순유입액",
+      "year": 2025,
+      "url": "https://data.worldbank.org/indicator/BX.KLT.DINV.WD.GD.ZS",
+      "same_year_count": 184,
+      "non_europe_count": 143,
+      "distinct_non_europe_values": 143,
+      "non_europe_samples": [
+        {
+          "iso_a3": "AGO",
+          "value": 1.81406109811554,
+          "year": 2025
+        },
+        {
+          "iso_a3": "ARG",
+          "value": 0.638521752212331,
+          "year": 2025
+        },
+        {
+          "iso_a3": "ARM",
+          "value": 2.42116246926554,
+          "year": 2025
+        },
+        {
+          "iso_a3": "ATG",
+          "value": 12.05860582627,
+          "year": 2025
+        },
+        {
+          "iso_a3": "AUS",
+          "value": 2.08162673750194,
+          "year": 2025
+        },
+        {
+          "iso_a3": "AZE",
+          "value": 0.492755588950687,
+          "year": 2025
+        },
+        {
+          "iso_a3": "BDI",
+          "value": 1.04365754120843,
+          "year": 2025
+        },
+        {
+          "iso_a3": "BEN",
+          "value": 1.96064392078668,
+          "year": 2025
+        },
+        {
+          "iso_a3": "BFA",
+          "value": 1.12886934176847,
+          "year": 2025
+        },
+        {
+          "iso_a3": "BGD",
+          "value": 0.391072629131908,
+          "year": 2025
+        },
+        {
+          "iso_a3": "BHR",
+          "value": 1.67703062467795,
+          "year": 2025
+        },
+        {
+          "iso_a3": "BLZ",
+          "value": 0.0072149017030738,
+          "year": 2025
+        }
+      ]
+    },
+    {
+      "scope": "country",
+      "domain": "정부 재정",
+      "id": "GC.DOD.TOTL.GD.ZS",
+      "label": "GDP 대비 중앙정부 부채",
+      "year": 2024,
+      "url": "https://data.worldbank.org/indicator/GC.DOD.TOTL.GD.ZS",
+      "same_year_count": 34,
+      "non_europe_count": 25,
+      "distinct_non_europe_values": 25,
+      "non_europe_samples": [
+        {
+          "iso_a3": "ARM",
+          "value": 47.8813384886388,
+          "year": 2024
+        },
+        {
+          "iso_a3": "BFA",
+          "value": 64.1848911988902,
+          "year": 2024
+        },
+        {
+          "iso_a3": "BHS",
+          "value": 71.4578214596313,
+          "year": 2024
+        },
+        {
+          "iso_a3": "BRA",
+          "value": 81.8554431191023,
+          "year": 2024
+        },
+        {
+          "iso_a3": "CAN",
+          "value": 64.1314232901439,
+          "year": 2024
+        },
+        {
+          "iso_a3": "COL",
+          "value": 71.1965371181288,
+          "year": 2024
+        },
+        {
+          "iso_a3": "GEO",
+          "value": 40.0993201678867,
+          "year": 2024
+        },
+        {
+          "iso_a3": "KGZ",
+          "value": 38.7180366994573,
+          "year": 2024
+        },
+        {
+          "iso_a3": "KOR",
+          "value": 47.8141426119509,
+          "year": 2024
+        },
+        {
+          "iso_a3": "MEX",
+          "value": 50.270950655733,
+          "year": 2024
+        },
+        {
+          "iso_a3": "MNG",
+          "value": 43.3447191804482,
+          "year": 2024
+        },
+        {
+          "iso_a3": "MOZ",
+          "value": 71.7714670511801,
+          "year": 2024
+        }
+      ]
+    },
+    {
+      "scope": "country",
+      "domain": "저축",
+      "id": "NY.GNS.ICTR.ZS",
+      "label": "GDP 대비 국민 총저축",
+      "year": 2025,
+      "url": "https://data.worldbank.org/indicator/NY.GNS.ICTR.ZS",
+      "same_year_count": 101,
+      "non_europe_count": 62,
+      "distinct_non_europe_values": 62,
+      "non_europe_samples": [
+        {
+          "iso_a3": "ARG",
+          "value": 13.4258382363475,
+          "year": 2025
+        },
+        {
+          "iso_a3": "ARM",
+          "value": 17.4598811985961,
+          "year": 2025
+        },
+        {
+          "iso_a3": "AUS",
+          "value": 22.151788676055,
+          "year": 2025
+        },
+        {
+          "iso_a3": "AZE",
+          "value": 23.4639259547307,
+          "year": 2025
+        },
+        {
+          "iso_a3": "BDI",
+          "value": 43.0596281520809,
+          "year": 2025
+        },
+        {
+          "iso_a3": "BGD",
+          "value": 34.8133677055481,
+          "year": 2025
+        },
+        {
+          "iso_a3": "BRA",
+          "value": 14.4155934935691,
+          "year": 2025
+        },
+        {
+          "iso_a3": "BRN",
+          "value": 45.3344398925132,
+          "year": 2025
+        },
+        {
+          "iso_a3": "BWA",
+          "value": 28.2526040283132,
+          "year": 2025
+        },
+        {
+          "iso_a3": "CAN",
+          "value": 22.2218869937352,
+          "year": 2025
+        },
+        {
+          "iso_a3": "CHL",
+          "value": 22.8146737618207,
+          "year": 2025
+        },
+        {
+          "iso_a3": "COD",
+          "value": 28.691458203555,
+          "year": 2025
+        }
+      ]
+    },
+    {
+      "scope": "country",
+      "domain": "금융 접근성",
+      "id": "FX.OWN.TOTL.ZS",
+      "label": "성인의 금융계좌 보유율",
+      "year": 2024,
+      "url": "https://data.worldbank.org/indicator/FX.OWN.TOTL.ZS",
+      "same_year_count": 139,
+      "non_europe_count": 101,
+      "distinct_non_europe_values": 101,
+      "non_europe_samples": [
+        {
+          "iso_a3": "ARG",
+          "value": 81.7442446865007,
+          "year": 2024
+        },
+        {
+          "iso_a3": "ARM",
+          "value": 71.3734734683257,
+          "year": 2024
+        },
+        {
+          "iso_a3": "AUS",
+          "value": 98.0103778290099,
+          "year": 2024
+        },
+        {
+          "iso_a3": "AZE",
+          "value": 56.3046655573957,
+          "year": 2024
+        },
+        {
+          "iso_a3": "BEN",
+          "value": 51.8432060403598,
+          "year": 2024
+        },
+        {
+          "iso_a3": "BFA",
+          "value": 51.4274911911242,
+          "year": 2024
+        },
+        {
+          "iso_a3": "BGD",
+          "value": 43.2839733431322,
+          "year": 2024
+        },
+        {
+          "iso_a3": "BHR",
+          "value": 82.3220521049445,
+          "year": 2024
+        },
+        {
+          "iso_a3": "BLZ",
+          "value": 67.9682001512007,
+          "year": 2024
+        },
+        {
+          "iso_a3": "BOL",
+          "value": 56.849052664469,
+          "year": 2024
+        },
+        {
+          "iso_a3": "BRA",
+          "value": 86.3811782311541,
+          "year": 2024
+        },
+        {
+          "iso_a3": "BWA",
+          "value": 61.4384690565565,
+          "year": 2024
+        }
+      ]
+    },
+    {
+      "scope": "country",
+      "domain": "빈곤",
+      "id": "SI.POV.DDAY",
+      "label": "하루 3달러 미만 극빈 인구 비율·2021 PPP",
+      "year": 2024,
+      "url": "https://data.worldbank.org/indicator/SI.POV.DDAY",
+      "same_year_count": 26,
+      "non_europe_count": 25,
+      "distinct_non_europe_values": 22,
+      "non_europe_samples": [
+        {
+          "iso_a3": "ARG",
+          "value": 1,
+          "year": 2024
+        },
+        {
+          "iso_a3": "ARM",
+          "value": 0.8,
+          "year": 2024
+        },
+        {
+          "iso_a3": "BOL",
+          "value": 2.1,
+          "year": 2024
+        },
+        {
+          "iso_a3": "BRA",
+          "value": 3,
+          "year": 2024
+        },
+        {
+          "iso_a3": "CHL",
+          "value": 0.4,
+          "year": 2024
+        },
+        {
+          "iso_a3": "COL",
+          "value": 8.5,
+          "year": 2024
+        },
+        {
+          "iso_a3": "COM",
+          "value": 5.1,
+          "year": 2024
+        },
+        {
+          "iso_a3": "CRI",
+          "value": 1.3,
+          "year": 2024
+        },
+        {
+          "iso_a3": "DOM",
+          "value": 0.8,
+          "year": 2024
+        },
+        {
+          "iso_a3": "ECU",
+          "value": 7.3,
+          "year": 2024
+        },
+        {
+          "iso_a3": "GEO",
+          "value": 4.2,
+          "year": 2024
+        },
+        {
+          "iso_a3": "HND",
+          "value": 15.7,
+          "year": 2024
+        }
+      ]
+    },
+    {
+      "scope": "country",
+      "domain": "기초교육",
+      "id": "SE.ADT.LITR.ZS",
+      "label": "성인 문해율",
+      "year": 2024,
+      "url": "https://data.worldbank.org/indicator/SE.ADT.LITR.ZS",
+      "same_year_count": 29,
+      "non_europe_count": 29,
+      "distinct_non_europe_values": 29,
+      "non_europe_samples": [
+        {
+          "iso_a3": "ARE",
+          "value": 98.8099975585938,
+          "year": 2024
+        },
+        {
+          "iso_a3": "BHR",
+          "value": 97.8199996948242,
+          "year": 2024
+        },
+        {
+          "iso_a3": "BOL",
+          "value": 96.7300033569336,
+          "year": 2024
+        },
+        {
+          "iso_a3": "BRA",
+          "value": 94.7399978637695,
+          "year": 2024
+        },
+        {
+          "iso_a3": "COL",
+          "value": 95.3399963378906,
+          "year": 2024
+        },
+        {
+          "iso_a3": "CPV",
+          "value": 88.4700012207031,
+          "year": 2024
+        },
+        {
+          "iso_a3": "DOM",
+          "value": 94.0299987792969,
+          "year": 2024
+        },
+        {
+          "iso_a3": "ECU",
+          "value": 93.4899978637695,
+          "year": 2024
+        },
+        {
+          "iso_a3": "GEO",
+          "value": 99.6800003051758,
+          "year": 2024
+        },
+        {
+          "iso_a3": "GTM",
+          "value": 82.1100006103516,
+          "year": 2024
+        },
+        {
+          "iso_a3": "HND",
+          "value": 88.25,
+          "year": 2024
+        },
+        {
+          "iso_a3": "IND",
+          "value": 78.1625330351403,
+          "year": 2024
+        }
+      ]
+    },
+    {
+      "scope": "country",
+      "domain": "발명",
+      "id": "IP.PAT.RESD",
+      "label": "거주자 특허 출원 수",
+      "year": 2024,
+      "url": "https://data.worldbank.org/indicator/IP.PAT.RESD",
+      "same_year_count": 121,
+      "non_europe_count": 80,
+      "distinct_non_europe_values": 64,
+      "non_europe_samples": [
+        {
+          "iso_a3": "ARE",
+          "value": 278,
+          "year": 2024
+        },
+        {
+          "iso_a3": "ARG",
+          "value": 445,
+          "year": 2024
+        },
+        {
+          "iso_a3": "ARM",
+          "value": 13,
+          "year": 2024
+        },
+        {
+          "iso_a3": "AUS",
+          "value": 2542,
+          "year": 2024
+        },
+        {
+          "iso_a3": "AZE",
+          "value": 194,
+          "year": 2024
+        },
+        {
+          "iso_a3": "BGD",
+          "value": 87,
+          "year": 2024
+        },
+        {
+          "iso_a3": "BHR",
+          "value": 6,
+          "year": 2024
+        },
+        {
+          "iso_a3": "BRA",
+          "value": 5752,
+          "year": 2024
+        },
+        {
+          "iso_a3": "BRN",
+          "value": 1,
+          "year": 2024
+        },
+        {
+          "iso_a3": "BTN",
+          "value": 6,
+          "year": 2024
+        },
+        {
+          "iso_a3": "CAN",
+          "value": 4304,
+          "year": 2024
+        },
+        {
+          "iso_a3": "CHL",
+          "value": 390,
+          "year": 2024
+        }
+      ]
+    },
+    {
+      "scope": "country",
+      "domain": "창업",
+      "id": "IC.BUS.NDNS.ZS",
+      "label": "생산연령 인구 1천 명당 신설 유한책임회사 수",
+      "year": 2024,
+      "url": "https://data.worldbank.org/indicator/IC.BUS.NDNS.ZS",
+      "same_year_count": 134,
+      "non_europe_count": 98,
+      "distinct_non_europe_values": 98,
+      "non_europe_samples": [
+        {
+          "iso_a3": "AGO",
+          "value": 1.54761072720806,
+          "year": 2024
+        },
+        {
+          "iso_a3": "ARG",
+          "value": 0.524637359101967,
+          "year": 2024
+        },
+        {
+          "iso_a3": "ARM",
+          "value": 4.11990542061772,
+          "year": 2024
+        },
+        {
+          "iso_a3": "ATG",
+          "value": 4.16477358776314,
+          "year": 2024
+        },
+        {
+          "iso_a3": "AUS",
+          "value": 18.0607661617986,
+          "year": 2024
+        },
+        {
+          "iso_a3": "AZE",
+          "value": 2.00084171885183,
+          "year": 2024
+        },
+        {
+          "iso_a3": "BDI",
+          "value": 0.979776115154653,
+          "year": 2024
+        },
+        {
+          "iso_a3": "BEN",
+          "value": 0.690066011149777,
+          "year": 2024
+        },
+        {
+          "iso_a3": "BFA",
+          "value": 0.768016214728955,
+          "year": 2024
+        },
+        {
+          "iso_a3": "BGD",
+          "value": 0.0647727473005903,
+          "year": 2024
+        },
+        {
+          "iso_a3": "BHR",
+          "value": 6.16207559517277,
+          "year": 2024
+        },
+        {
+          "iso_a3": "BLZ",
+          "value": 13.0053143009381,
+          "year": 2024
+        }
+      ]
+    },
+    {
+      "scope": "country",
+      "domain": "식량 안보",
+      "id": "SN.ITK.DEFC.ZS",
+      "label": "영양부족 인구 비율",
+      "year": 2024,
+      "url": "https://data.worldbank.org/indicator/SN.ITK.DEFC.ZS",
+      "same_year_count": 165,
+      "non_europe_count": 127,
+      "distinct_non_europe_values": 86,
+      "non_europe_samples": [
+        {
+          "iso_a3": "AFG",
+          "value": 27.8,
+          "year": 2024
+        },
+        {
+          "iso_a3": "AGO",
+          "value": 17.4,
+          "year": 2024
+        },
+        {
+          "iso_a3": "ARE",
+          "value": 2.5,
+          "year": 2024
+        },
+        {
+          "iso_a3": "ARG",
+          "value": 2.8,
+          "year": 2024
+        },
+        {
+          "iso_a3": "ARM",
+          "value": 2.5,
+          "year": 2024
+        },
+        {
+          "iso_a3": "AUS",
+          "value": 2.5,
+          "year": 2024
+        },
+        {
+          "iso_a3": "AZE",
+          "value": 2.5,
+          "year": 2024
+        },
+        {
+          "iso_a3": "BEN",
+          "value": 11.1,
+          "year": 2024
+        },
+        {
+          "iso_a3": "BFA",
+          "value": 11.7,
+          "year": 2024
+        },
+        {
+          "iso_a3": "BGD",
+          "value": 8.2,
+          "year": 2024
+        },
+        {
+          "iso_a3": "BLZ",
+          "value": 4.4,
+          "year": 2024
+        },
+        {
+          "iso_a3": "BOL",
+          "value": 19.5,
+          "year": 2024
+        }
+      ]
+    },
+    {
+      "scope": "country",
+      "domain": "생활 인프라",
+      "id": "SH.H2O.SMDW.ZS",
+      "label": "안전하게 관리되는 식수 이용률",
+      "year": 2024,
+      "url": "https://data.worldbank.org/indicator/SH.H2O.SMDW.ZS",
+      "same_year_count": 148,
+      "non_europe_count": 103,
+      "distinct_non_europe_values": 99,
+      "non_europe_samples": [
+        {
+          "iso_a3": "AFG",
+          "value": 30.5547223111169,
+          "year": 2024
+        },
+        {
+          "iso_a3": "ARE",
+          "value": 98.6413172332089,
+          "year": 2024
+        },
+        {
+          "iso_a3": "ARM",
+          "value": 82.0728191880242,
+          "year": 2024
+        },
+        {
+          "iso_a3": "ASM",
+          "value": 90.5383360522023,
+          "year": 2024
+        },
+        {
+          "iso_a3": "AZE",
+          "value": 57.8118283196096,
+          "year": 2024
+        },
+        {
+          "iso_a3": "BEN",
+          "value": 17.6968322374867,
+          "year": 2024
+        },
+        {
+          "iso_a3": "BGD",
+          "value": 59.1254259857148,
+          "year": 2024
+        },
+        {
+          "iso_a3": "BHR",
+          "value": 98.9039755631804,
+          "year": 2024
+        },
+        {
+          "iso_a3": "BRA",
+          "value": 88.6239660721414,
+          "year": 2024
+        },
+        {
+          "iso_a3": "BTN",
+          "value": 65.5942159692749,
+          "year": 2024
+        },
+        {
+          "iso_a3": "BWA",
+          "value": 63.2910412393649,
+          "year": 2024
+        },
+        {
+          "iso_a3": "CAF",
+          "value": 6.21748768966731,
+          "year": 2024
+        }
+      ]
+    },
+    {
+      "scope": "country",
+      "domain": "에너지 전환",
+      "id": "EG.FEC.RNEW.ZS",
+      "label": "최종 에너지 소비 중 재생에너지 비율",
+      "year": 2022,
+      "url": "https://data.worldbank.org/indicator/EG.FEC.RNEW.ZS",
+      "same_year_count": 71,
+      "non_europe_count": 67,
+      "distinct_non_europe_values": 62,
+      "non_europe_samples": [
+        {
+          "iso_a3": "ABW",
+          "value": 8.8,
+          "year": 2022
+        },
+        {
+          "iso_a3": "AFG",
+          "value": 20,
+          "year": 2022
+        },
+        {
+          "iso_a3": "ASM",
+          "value": 0.4,
+          "year": 2022
+        },
+        {
+          "iso_a3": "ATG",
+          "value": 0.9,
+          "year": 2022
+        },
+        {
+          "iso_a3": "BDI",
+          "value": 83,
+          "year": 2022
+        },
+        {
+          "iso_a3": "BFA",
+          "value": 71.4,
+          "year": 2022
+        },
+        {
+          "iso_a3": "BHS",
+          "value": 1.1,
+          "year": 2022
+        },
+        {
+          "iso_a3": "BLZ",
+          "value": 30.8,
+          "year": 2022
+        },
+        {
+          "iso_a3": "BMU",
+          "value": 0.9,
+          "year": 2022
+        },
+        {
+          "iso_a3": "BRB",
+          "value": 5.5,
+          "year": 2022
+        },
+        {
+          "iso_a3": "BTN",
+          "value": 82.5,
+          "year": 2022
+        },
+        {
+          "iso_a3": "CAF",
+          "value": 90.9,
+          "year": 2022
+        }
+      ]
+    },
+    {
+      "scope": "country",
+      "domain": "에너지 안보",
+      "id": "EG.IMP.CONS.ZS",
+      "label": "에너지 사용량 대비 순수입 비율",
+      "year": 2024,
+      "url": "https://data.worldbank.org/indicator/EG.IMP.CONS.ZS",
+      "same_year_count": 139,
+      "non_europe_count": 101,
+      "distinct_non_europe_values": 101,
+      "non_europe_samples": [
+        {
+          "iso_a3": "AGO",
+          "value": -335.459585600048,
+          "year": 2024
+        },
+        {
+          "iso_a3": "ARE",
+          "value": -139.641317687413,
+          "year": 2024
+        },
+        {
+          "iso_a3": "ARG",
+          "value": -13.9151002311093,
+          "year": 2024
+        },
+        {
+          "iso_a3": "ARM",
+          "value": 76.2284355979207,
+          "year": 2024
+        },
+        {
+          "iso_a3": "AUS",
+          "value": -211.159446053918,
+          "year": 2024
+        },
+        {
+          "iso_a3": "AZE",
+          "value": -254.656709356943,
+          "year": 2024
+        },
+        {
+          "iso_a3": "BEN",
+          "value": 43.7966117300433,
+          "year": 2024
+        },
+        {
+          "iso_a3": "BGD",
+          "value": 48.4760145664199,
+          "year": 2024
+        },
+        {
+          "iso_a3": "BHR",
+          "value": -48.4511018619658,
+          "year": 2024
+        },
+        {
+          "iso_a3": "BOL",
+          "value": -25.5741566028588,
+          "year": 2024
+        },
+        {
+          "iso_a3": "BRA",
+          "value": -10.8440412585642,
+          "year": 2024
+        },
+        {
+          "iso_a3": "BRN",
+          "value": -203.832104131505,
+          "year": 2024
+        }
+      ]
+    },
+    {
+      "scope": "country",
+      "domain": "수자원",
+      "id": "ER.H2O.FWST.ZS",
+      "label": "가용 담수 대비 취수량·물 스트레스",
+      "year": 2022,
+      "url": "https://data.worldbank.org/indicator/ER.H2O.FWST.ZS",
+      "same_year_count": 176,
+      "non_europe_count": 138,
+      "distinct_non_europe_values": 138,
+      "non_europe_samples": [
+        {
+          "iso_a3": "AFG",
+          "value": 54.75701944,
+          "year": 2022
+        },
+        {
+          "iso_a3": "AGO",
+          "value": 1.871883289,
+          "year": 2022
+        },
+        {
+          "iso_a3": "ARE",
+          "value": 1509.933333,
+          "year": 2022
+        },
+        {
+          "iso_a3": "ARG",
+          "value": 10.45666408,
+          "year": 2022
+        },
+        {
+          "iso_a3": "ARM",
+          "value": 61.97296752,
+          "year": 2022
+        },
+        {
+          "iso_a3": "ATG",
+          "value": 8.461538462,
+          "year": 2022
+        },
+        {
+          "iso_a3": "AUS",
+          "value": 4.672295939,
+          "year": 2022
+        },
+        {
+          "iso_a3": "AZE",
+          "value": 57.52704791,
+          "year": 2022
+        },
+        {
+          "iso_a3": "BDI",
+          "value": 10.19286754,
+          "year": 2022
+        },
+        {
+          "iso_a3": "BEN",
+          "value": 0.975243811,
+          "year": 2022
+        },
+        {
+          "iso_a3": "BFA",
+          "value": 7.820267686,
+          "year": 2022
+        },
+        {
+          "iso_a3": "BGD",
+          "value": 5.723339482,
+          "year": 2022
+        }
+      ]
+    },
+    {
+      "scope": "country",
+      "domain": "생물다양성",
+      "id": "EN.MAM.THRD.NO",
+      "label": "멸종위기 포유류 종 수",
+      "year": 2022,
+      "url": "https://data.worldbank.org/indicator/EN.MAM.THRD.NO",
+      "same_year_count": 215,
+      "non_europe_count": 169,
+      "distinct_non_europe_values": 52,
+      "non_europe_samples": [
+        {
+          "iso_a3": "ABW",
+          "value": 2,
+          "year": 2022
+        },
+        {
+          "iso_a3": "AFG",
+          "value": 12,
+          "year": 2022
+        },
+        {
+          "iso_a3": "AGO",
+          "value": 24,
+          "year": 2022
+        },
+        {
+          "iso_a3": "ARE",
+          "value": 8,
+          "year": 2022
+        },
+        {
+          "iso_a3": "ARG",
+          "value": 39,
+          "year": 2022
+        },
+        {
+          "iso_a3": "ARM",
+          "value": 7,
+          "year": 2022
+        },
+        {
+          "iso_a3": "ASM",
+          "value": 1,
+          "year": 2022
+        },
+        {
+          "iso_a3": "ATG",
+          "value": 2,
+          "year": 2022
+        },
+        {
+          "iso_a3": "AUS",
+          "value": 69,
+          "year": 2022
+        },
+        {
+          "iso_a3": "AZE",
+          "value": 7,
+          "year": 2022
+        },
+        {
+          "iso_a3": "BDI",
+          "value": 16,
+          "year": 2022
+        },
+        {
+          "iso_a3": "BEN",
+          "value": 16,
+          "year": 2022
+        }
+      ]
+    },
+    {
+      "scope": "country",
+      "domain": "농업 생산성",
+      "id": "AG.YLD.CREL.KG",
+      "label": "경작지 1헥타르당 곡물 수확량",
+      "year": 2024,
+      "url": "https://data.worldbank.org/indicator/AG.YLD.CREL.KG",
+      "same_year_count": 176,
+      "non_europe_count": 138,
+      "distinct_non_europe_values": 138,
+      "non_europe_samples": [
+        {
+          "iso_a3": "AFG",
+          "value": 2358.6,
+          "year": 2024
+        },
+        {
+          "iso_a3": "AGO",
+          "value": 1106.6,
+          "year": 2024
+        },
+        {
+          "iso_a3": "ARE",
+          "value": 22474.3,
+          "year": 2024
+        },
+        {
+          "iso_a3": "ARG",
+          "value": 4854.2,
+          "year": 2024
+        },
+        {
+          "iso_a3": "ARM",
+          "value": 1961.1,
+          "year": 2024
+        },
+        {
+          "iso_a3": "ATG",
+          "value": 1963.3,
+          "year": 2024
+        },
+        {
+          "iso_a3": "AUS",
+          "value": 2689.7,
+          "year": 2024
+        },
+        {
+          "iso_a3": "AZE",
+          "value": 3427,
+          "year": 2024
+        },
+        {
+          "iso_a3": "BDI",
+          "value": 1163.4,
+          "year": 2024
+        },
+        {
+          "iso_a3": "BEN",
+          "value": 1356,
+          "year": 2024
+        },
+        {
+          "iso_a3": "BFA",
+          "value": 1197.9,
+          "year": 2024
+        },
+        {
+          "iso_a3": "BGD",
+          "value": 5408,
+          "year": 2024
+        }
+      ]
+    },
+    {
+      "scope": "country",
+      "domain": "국제물류",
+      "id": "LP.LPI.OVRL.XQ",
+      "label": "물류성과지수",
+      "year": 2022,
+      "url": "https://data.worldbank.org/indicator/LP.LPI.OVRL.XQ",
+      "same_year_count": 138,
+      "non_europe_count": 99,
+      "distinct_non_europe_values": 23,
+      "non_europe_samples": [
+        {
+          "iso_a3": "AFG",
+          "value": 1.9,
+          "year": 2022
+        },
+        {
+          "iso_a3": "AGO",
+          "value": 2.1,
+          "year": 2022
+        },
+        {
+          "iso_a3": "ARE",
+          "value": 4,
+          "year": 2022
+        },
+        {
+          "iso_a3": "ARG",
+          "value": 2.8,
+          "year": 2022
+        },
+        {
+          "iso_a3": "ARM",
+          "value": 2.5,
+          "year": 2022
+        },
+        {
+          "iso_a3": "ATG",
+          "value": 2.9,
+          "year": 2022
+        },
+        {
+          "iso_a3": "AUS",
+          "value": 3.7,
+          "year": 2022
+        },
+        {
+          "iso_a3": "BEN",
+          "value": 2.9,
+          "year": 2022
+        },
+        {
+          "iso_a3": "BFA",
+          "value": 2.3,
+          "year": 2022
+        },
+        {
+          "iso_a3": "BGD",
+          "value": 2.6,
+          "year": 2022
+        },
+        {
+          "iso_a3": "BHR",
+          "value": 3.5,
+          "year": 2022
+        },
+        {
+          "iso_a3": "BHS",
+          "value": 2.7,
+          "year": 2022
+        }
+      ]
+    }
+  ],
+  "city": [
+    {
+      "scope": "city",
+      "domain": "주거 구매 부담",
+      "label": "소득 대비 주택가격 배율",
+      "year": "2026",
+      "expression": "Price To Income Ratio",
+      "url": "https://www.numbeo.com/property-investment/rankings.jsp?title=2026",
+      "same_year_count": 395,
+      "non_europe_count": 177,
+      "distinct_non_europe_values": 122,
+      "non_europe_samples": [
+        {
+          "id": "Manila, Philippines",
+          "name": "Manila, Philippines",
+          "country": "Philippines",
+          "region": "Philippines",
+          "value": 35.9,
+          "non_europe": true
+        },
+        {
+          "id": "Shanghai, China",
+          "name": "Shanghai, China",
+          "country": "China",
+          "region": "China",
+          "value": 34.2,
+          "non_europe": true
+        },
+        {
+          "id": "Xiamen, China",
+          "name": "Xiamen, China",
+          "country": "China",
+          "region": "China",
+          "value": 33.9,
+          "non_europe": true
+        },
+        {
+          "id": "Cebu, Philippines",
+          "name": "Cebu, Philippines",
+          "country": "Philippines",
+          "region": "Philippines",
+          "value": 33.7,
+          "non_europe": true
+        },
+        {
+          "id": "Taipei, Taiwan",
+          "name": "Taipei, Taiwan",
+          "country": "Taiwan",
+          "region": "Taiwan",
+          "value": 33.6,
+          "non_europe": true
+        },
+        {
+          "id": "Mumbai, India",
+          "name": "Mumbai, India",
+          "country": "India",
+          "region": "India",
+          "value": 33.3,
+          "non_europe": true
+        },
+        {
+          "id": "Beijing, China",
+          "name": "Beijing, China",
+          "country": "China",
+          "region": "China",
+          "value": 32.9,
+          "non_europe": true
+        },
+        {
+          "id": "Ho Chi Minh City, Vietnam",
+          "name": "Ho Chi Minh City, Vietnam",
+          "country": "Vietnam",
+          "region": "Vietnam",
+          "value": 32.2,
+          "non_europe": true
+        },
+        {
+          "id": "Hanoi, Vietnam",
+          "name": "Hanoi, Vietnam",
+          "country": "Vietnam",
+          "region": "Vietnam",
+          "value": 31.1,
+          "non_europe": true
+        },
+        {
+          "id": "Bangkok, Thailand",
+          "name": "Bangkok, Thailand",
+          "country": "Thailand",
+          "region": "Thailand",
+          "value": 28.7,
+          "non_europe": true
+        },
+        {
+          "id": "Shenzhen, China",
+          "name": "Shenzhen, China",
+          "country": "China",
+          "region": "China",
+          "value": 28.5,
+          "non_europe": true
+        },
+        {
+          "id": "Seoul, South Korea",
+          "name": "Seoul, South Korea",
+          "country": "South Korea",
+          "region": "South Korea",
+          "value": 27.2,
+          "non_europe": true
+        }
+      ]
+    },
+    {
+      "scope": "city",
+      "domain": "생활 구매력",
+      "label": "현지 소득의 구매력",
+      "year": "2026",
+      "expression": "Local Purchasing Power Index",
+      "url": "https://www.numbeo.com/cost-of-living/rankings.jsp?title=2026",
+      "same_year_count": 479,
+      "non_europe_count": 215,
+      "distinct_non_europe_values": 195,
+      "non_europe_samples": [
+        {
+          "id": "New York, NY, United States",
+          "name": "New York, NY, United States",
+          "country": "United States",
+          "region": "United States",
+          "value": 100.0,
+          "non_europe": true
+        },
+        {
+          "id": "Honolulu, HI, United States",
+          "name": "Honolulu, HI, United States",
+          "country": "United States",
+          "region": "United States",
+          "value": 96.0,
+          "non_europe": true
+        },
+        {
+          "id": "San Francisco, CA, United States",
+          "name": "San Francisco, CA, United States",
+          "country": "United States",
+          "region": "United States",
+          "value": 151.0,
+          "non_europe": true
+        },
+        {
+          "id": "Tel Aviv-Yafo, Israel",
+          "name": "Tel Aviv-Yafo, Israel",
+          "country": "Israel",
+          "region": "Israel",
+          "value": 109.5,
+          "non_europe": true
+        },
+        {
+          "id": "Seattle, WA, United States",
+          "name": "Seattle, WA, United States",
+          "country": "United States",
+          "region": "United States",
+          "value": 165.0,
+          "non_europe": true
+        },
+        {
+          "id": "Singapore, Singapore",
+          "name": "Singapore, Singapore",
+          "country": "Singapore",
+          "region": "Singapore",
+          "value": 105.5,
+          "non_europe": true
+        },
+        {
+          "id": "Washington, DC, United States",
+          "name": "Washington, DC, United States",
+          "country": "United States",
+          "region": "United States",
+          "value": 152.1,
+          "non_europe": true
+        },
+        {
+          "id": "San Jose, CA, United States",
+          "name": "San Jose, CA, United States",
+          "country": "United States",
+          "region": "United States",
+          "value": 136.0,
+          "non_europe": true
+        },
+        {
+          "id": "Boston, MA, United States",
+          "name": "Boston, MA, United States",
+          "country": "United States",
+          "region": "United States",
+          "value": 143.9,
+          "non_europe": true
+        },
+        {
+          "id": "Charleston, SC, United States",
+          "name": "Charleston, SC, United States",
+          "country": "United States",
+          "region": "United States",
+          "value": 118.0,
+          "non_europe": true
+        },
+        {
+          "id": "Oakland, CA, United States",
+          "name": "Oakland, CA, United States",
+          "country": "United States",
+          "region": "United States",
+          "value": 138.1,
+          "non_europe": true
+        },
+        {
+          "id": "Ramat Gan, Israel",
+          "name": "Ramat Gan, Israel",
+          "country": "Israel",
+          "region": "Israel",
+          "value": 132.8,
+          "non_europe": true
+        }
+      ]
+    },
+    {
+      "scope": "city",
+      "domain": "주민 녹지 환경",
+      "label": "녹색도가 높은 구역에 사는 인구 비율",
+      "year": "2025",
+      "expression": "SD_POP_HGR_2025",
+      "url": "https://human-settlement.emergency.copernicus.eu/ucdb2024Overview.php",
+      "same_year_count": 11420,
+      "non_europe_count": 10256,
+      "distinct_non_europe_values": 9733,
+      "non_europe_samples": [
+        {
+          "id": "1",
+          "name": "Apia",
+          "value": 62.549106,
+          "country": "Samoa",
+          "region": "Oceania",
+          "non_europe": true
+        },
+        {
+          "id": "2",
+          "name": "Nuku'alofa",
+          "value": 36.20760334,
+          "country": "Tonga",
+          "region": "Oceania",
+          "non_europe": true
+        },
+        {
+          "id": "3",
+          "name": "Ewa Beach",
+          "value": 4.604064916,
+          "country": "United States",
+          "region": "Northern America",
+          "non_europe": true
+        },
+        {
+          "id": "4",
+          "name": "Papeete",
+          "value": 20.2236583,
+          "country": "French Polynesia",
+          "region": "Oceania",
+          "non_europe": true
+        },
+        {
+          "id": "5",
+          "name": "Rosarito",
+          "value": 0.0,
+          "country": "México",
+          "region": "Latin America and the Caribbean",
+          "non_europe": true
+        },
+        {
+          "id": "6",
+          "name": "Victoria",
+          "value": 12.26136224,
+          "country": "Canada",
+          "region": "Northern America",
+          "non_europe": true
+        },
+        {
+          "id": "7",
+          "name": "Malacatán",
+          "value": 13.89807441,
+          "country": "Guatemala",
+          "region": "Latin America and the Caribbean",
+          "non_europe": true
+        },
+        {
+          "id": "8",
+          "name": "Ahuachapan",
+          "value": 13.93828398,
+          "country": "El Salvador",
+          "region": "Latin America and the Caribbean",
+          "non_europe": true
+        },
+        {
+          "id": "9",
+          "name": "Santa Rosa",
+          "value": 3.95862313,
+          "country": "Honduras",
+          "region": "Latin America and the Caribbean",
+          "non_europe": true
+        },
+        {
+          "id": "10",
+          "name": "Chinandega",
+          "value": 10.69239223,
+          "country": "Nicaragua",
+          "region": "Latin America and the Caribbean",
+          "non_europe": true
+        },
+        {
+          "id": "11",
+          "name": "Belize City",
+          "value": 3.819896505,
+          "country": "Belize",
+          "region": "Latin America and the Caribbean",
+          "non_europe": true
+        },
+        {
+          "id": "12",
+          "name": "Liberia",
+          "value": 5.107562285,
+          "country": "Costa Rica",
+          "region": "Latin America and the Caribbean",
+          "non_europe": true
+        }
+      ]
+    },
+    {
+      "scope": "city",
+      "domain": "온열 환경",
+      "label": "강한 열 스트레스를 겪는 연평균 일수",
+      "year": "2020 참조",
+      "expression": "CL_UTC_T32_2020",
+      "url": "https://human-settlement.emergency.copernicus.eu/ucdb2024Overview.php",
+      "same_year_count": 11422,
+      "non_europe_count": 10257,
+      "distinct_non_europe_values": 360,
+      "non_europe_samples": [
+        {
+          "id": "1",
+          "name": "Apia",
+          "value": 147.0,
+          "country": "Samoa",
+          "region": "Oceania",
+          "non_europe": true
+        },
+        {
+          "id": "2",
+          "name": "Nuku'alofa",
+          "value": 31.0,
+          "country": "Tonga",
+          "region": "Oceania",
+          "non_europe": true
+        },
+        {
+          "id": "3",
+          "name": "Ewa Beach",
+          "value": 65.0,
+          "country": "United States",
+          "region": "Northern America",
+          "non_europe": true
+        },
+        {
+          "id": "4",
+          "name": "Papeete",
+          "value": 36.0,
+          "country": "French Polynesia",
+          "region": "Oceania",
+          "non_europe": true
+        },
+        {
+          "id": "5",
+          "name": "Rosarito",
+          "value": 19.0,
+          "country": "México",
+          "region": "Latin America and the Caribbean",
+          "non_europe": true
+        },
+        {
+          "id": "6",
+          "name": "Victoria",
+          "value": 3.0,
+          "country": "Canada",
+          "region": "Northern America",
+          "non_europe": true
+        },
+        {
+          "id": "7",
+          "name": "Malacatán",
+          "value": 0.0,
+          "country": "Guatemala",
+          "region": "Latin America and the Caribbean",
+          "non_europe": true
+        },
+        {
+          "id": "8",
+          "name": "Ahuachapan",
+          "value": 351.0,
+          "country": "El Salvador",
+          "region": "Latin America and the Caribbean",
+          "non_europe": true
+        },
+        {
+          "id": "9",
+          "name": "Santa Rosa",
+          "value": 139.0,
+          "country": "Honduras",
+          "region": "Latin America and the Caribbean",
+          "non_europe": true
+        },
+        {
+          "id": "10",
+          "name": "Chinandega",
+          "value": 355.0,
+          "country": "Nicaragua",
+          "region": "Latin America and the Caribbean",
+          "non_europe": true
+        },
+        {
+          "id": "11",
+          "name": "Belize City",
+          "value": 260.0,
+          "country": "Belize",
+          "region": "Latin America and the Caribbean",
+          "non_europe": true
+        },
+        {
+          "id": "12",
+          "name": "Liberia",
+          "value": 265.0,
+          "country": "Costa Rica",
+          "region": "Latin America and the Caribbean",
+          "non_europe": true
+        }
+      ]
+    },
+    {
+      "scope": "city",
+      "domain": "해안 변화",
+      "label": "해안 도시 주변 해수면 상승 속도",
+      "year": "1993~2023",
+      "expression": "WA_MAR_SHT_2023",
+      "url": "https://human-settlement.emergency.copernicus.eu/ucdb2024Overview.php",
+      "same_year_count": 1334,
+      "non_europe_count": 1112,
+      "distinct_non_europe_values": 909,
+      "non_europe_samples": [
+        {
+          "id": "1",
+          "name": "Apia",
+          "value": 4.339,
+          "country": "Samoa",
+          "region": "Oceania",
+          "non_europe": true
+        },
+        {
+          "id": "2",
+          "name": "Nuku'alofa",
+          "value": 4.991,
+          "country": "Tonga",
+          "region": "Oceania",
+          "non_europe": true
+        },
+        {
+          "id": "3",
+          "name": "Ewa Beach",
+          "value": 2.342,
+          "country": "United States",
+          "region": "Northern America",
+          "non_europe": true
+        },
+        {
+          "id": "4",
+          "name": "Papeete",
+          "value": 2.554,
+          "country": "French Polynesia",
+          "region": "Oceania",
+          "non_europe": true
+        },
+        {
+          "id": "5",
+          "name": "Rosarito",
+          "value": 2.323,
+          "country": "México",
+          "region": "Latin America and the Caribbean",
+          "non_europe": true
+        },
+        {
+          "id": "6",
+          "name": "Victoria",
+          "value": 2.626,
+          "country": "Canada",
+          "region": "Northern America",
+          "non_europe": true
+        },
+        {
+          "id": "11",
+          "name": "Belize City",
+          "value": 4.157,
+          "country": "Belize",
+          "region": "Latin America and the Caribbean",
+          "non_europe": true
+        },
+        {
+          "id": "14",
+          "name": "Talara",
+          "value": 1.718,
+          "country": "Peru",
+          "region": "Latin America and the Caribbean",
+          "non_europe": true
+        },
+        {
+          "id": "15",
+          "name": "Salinas [Santa Elena]",
+          "value": 2.207,
+          "country": "Ecuador",
+          "region": "Latin America and the Caribbean",
+          "non_europe": true
+        },
+        {
+          "id": "16",
+          "name": "San Andrés",
+          "value": 3.882,
+          "country": "Colombia",
+          "region": "Latin America and the Caribbean",
+          "non_europe": true
+        },
+        {
+          "id": "18",
+          "name": "Montego Bay",
+          "value": 4.181,
+          "country": "Jamaica",
+          "region": "Latin America and the Caribbean",
+          "non_europe": true
+        },
+        {
+          "id": "19",
+          "name": "Nassau",
+          "value": 4.838,
+          "country": "Bahamas",
+          "region": "Latin America and the Caribbean",
+          "non_europe": true
+        }
+      ]
+    },
+    {
+      "scope": "city",
+      "domain": "재해 노출",
+      "label": "100년 재현기간 하천 홍수 위험구역 거주 인구",
+      "year": "2025",
+      "expression": "EX_100_POP_2025",
+      "url": "https://human-settlement.emergency.copernicus.eu/ucdb2024Overview.php",
+      "same_year_count": 11422,
+      "non_europe_count": 10257,
+      "distinct_non_europe_values": 5555,
+      "non_europe_samples": [
+        {
+          "id": "1",
+          "name": "Apia",
+          "value": 0.0,
+          "country": "Samoa",
+          "region": "Oceania",
+          "non_europe": true
+        },
+        {
+          "id": "2",
+          "name": "Nuku'alofa",
+          "value": 0.0,
+          "country": "Tonga",
+          "region": "Oceania",
+          "non_europe": true
+        },
+        {
+          "id": "3",
+          "name": "Ewa Beach",
+          "value": 0.0,
+          "country": "United States",
+          "region": "Northern America",
+          "non_europe": true
+        },
+        {
+          "id": "4",
+          "name": "Papeete",
+          "value": 0.0,
+          "country": "French Polynesia",
+          "region": "Oceania",
+          "non_europe": true
+        },
+        {
+          "id": "5",
+          "name": "Rosarito",
+          "value": 0.0,
+          "country": "México",
+          "region": "Latin America and the Caribbean",
+          "non_europe": true
+        },
+        {
+          "id": "6",
+          "name": "Victoria",
+          "value": 0.0,
+          "country": "Canada",
+          "region": "Northern America",
+          "non_europe": true
+        },
+        {
+          "id": "7",
+          "name": "Malacatán",
+          "value": 0.0,
+          "country": "Guatemala",
+          "region": "Latin America and the Caribbean",
+          "non_europe": true
+        },
+        {
+          "id": "8",
+          "name": "Ahuachapan",
+          "value": 0.0,
+          "country": "El Salvador",
+          "region": "Latin America and the Caribbean",
+          "non_europe": true
+        },
+        {
+          "id": "9",
+          "name": "Santa Rosa",
+          "value": 0.0,
+          "country": "Honduras",
+          "region": "Latin America and the Caribbean",
+          "non_europe": true
+        },
+        {
+          "id": "10",
+          "name": "Chinandega",
+          "value": 0.0,
+          "country": "Nicaragua",
+          "region": "Latin America and the Caribbean",
+          "non_europe": true
+        },
+        {
+          "id": "11",
+          "name": "Belize City",
+          "value": 50295.9,
+          "country": "Belize",
+          "region": "Latin America and the Caribbean",
+          "non_europe": true
+        },
+        {
+          "id": "12",
+          "name": "Liberia",
+          "value": 0.0,
+          "country": "Costa Rica",
+          "region": "Latin America and the Caribbean",
+          "non_europe": true
+        }
+      ]
+    },
+    {
+      "scope": "city",
+      "domain": "도시계획",
+      "label": "인구 증가에 비해 도시 땅이 얼마나 늘어나는지",
+      "year": "2010~2020",
+      "expression": "SD_LUE_LPR_2010_2020",
+      "url": "https://human-settlement.emergency.copernicus.eu/ucdb2024Overview.php",
+      "same_year_count": 9473,
+      "non_europe_count": 8443,
+      "distinct_non_europe_values": 8443,
+      "non_europe_samples": [
+        {
+          "id": "1",
+          "name": "Apia",
+          "value": 0.575151033,
+          "country": "Samoa",
+          "region": "Oceania",
+          "non_europe": true
+        },
+        {
+          "id": "2",
+          "name": "Nuku'alofa",
+          "value": 0.741964392,
+          "country": "Tonga",
+          "region": "Oceania",
+          "non_europe": true
+        },
+        {
+          "id": "3",
+          "name": "Ewa Beach",
+          "value": 2.927107154,
+          "country": "United States",
+          "region": "Northern America",
+          "non_europe": true
+        },
+        {
+          "id": "4",
+          "name": "Papeete",
+          "value": 0.284194317,
+          "country": "French Polynesia",
+          "region": "Oceania",
+          "non_europe": true
+        },
+        {
+          "id": "5",
+          "name": "Rosarito",
+          "value": 0.853810943,
+          "country": "México",
+          "region": "Latin America and the Caribbean",
+          "non_europe": true
+        },
+        {
+          "id": "6",
+          "name": "Victoria",
+          "value": 0.206738577,
+          "country": "Canada",
+          "region": "Northern America",
+          "non_europe": true
+        },
+        {
+          "id": "7",
+          "name": "Malacatán",
+          "value": 0.54263077,
+          "country": "Guatemala",
+          "region": "Latin America and the Caribbean",
+          "non_europe": true
+        },
+        {
+          "id": "8",
+          "name": "Ahuachapan",
+          "value": -3.092184574,
+          "country": "El Salvador",
+          "region": "Latin America and the Caribbean",
+          "non_europe": true
+        },
+        {
+          "id": "11",
+          "name": "Belize City",
+          "value": 0.868072861,
+          "country": "Belize",
+          "region": "Latin America and the Caribbean",
+          "non_europe": true
+        },
+        {
+          "id": "12",
+          "name": "Liberia",
+          "value": 0.908992634,
+          "country": "Costa Rica",
+          "region": "Latin America and the Caribbean",
+          "non_europe": true
+        },
+        {
+          "id": "13",
+          "name": "David",
+          "value": 0.450672213,
+          "country": "Panama",
+          "region": "Latin America and the Caribbean",
+          "non_europe": true
+        },
+        {
+          "id": "15",
+          "name": "Salinas [Santa Elena]",
+          "value": 0.40337614,
+          "country": "Ecuador",
+          "region": "Latin America and the Caribbean",
+          "non_europe": true
+        }
+      ]
+    },
+    {
+      "scope": "city",
+      "domain": "기후 영향",
+      "label": "도시 주민 1인당 CO₂ 배출량",
+      "year": "2020",
+      "expression": "EM_CO2_PEC_2020",
+      "url": "https://human-settlement.emergency.copernicus.eu/ucdb2024Overview.php",
+      "same_year_count": 11422,
+      "non_europe_count": 10257,
+      "distinct_non_europe_values": 10257,
+      "non_europe_samples": [
+        {
+          "id": "1",
+          "name": "Apia",
+          "value": 1.546001722,
+          "country": "Samoa",
+          "region": "Oceania",
+          "non_europe": true
+        },
+        {
+          "id": "2",
+          "name": "Nuku'alofa",
+          "value": 0.434867453,
+          "country": "Tonga",
+          "region": "Oceania",
+          "non_europe": true
+        },
+        {
+          "id": "3",
+          "name": "Ewa Beach",
+          "value": 7.000430977,
+          "country": "United States",
+          "region": "Northern America",
+          "non_europe": true
+        },
+        {
+          "id": "4",
+          "name": "Papeete",
+          "value": 1.661916534,
+          "country": "French Polynesia",
+          "region": "Oceania",
+          "non_europe": true
+        },
+        {
+          "id": "5",
+          "name": "Rosarito",
+          "value": 32.87854001,
+          "country": "México",
+          "region": "Latin America and the Caribbean",
+          "non_europe": true
+        },
+        {
+          "id": "6",
+          "name": "Victoria",
+          "value": 3.454582346,
+          "country": "Canada",
+          "region": "Northern America",
+          "non_europe": true
+        },
+        {
+          "id": "7",
+          "name": "Malacatán",
+          "value": 0.141264349,
+          "country": "Guatemala",
+          "region": "Latin America and the Caribbean",
+          "non_europe": true
+        },
+        {
+          "id": "8",
+          "name": "Ahuachapan",
+          "value": 0.297721252,
+          "country": "El Salvador",
+          "region": "Latin America and the Caribbean",
+          "non_europe": true
+        },
+        {
+          "id": "9",
+          "name": "Santa Rosa",
+          "value": 0.159814185,
+          "country": "Honduras",
+          "region": "Latin America and the Caribbean",
+          "non_europe": true
+        },
+        {
+          "id": "10",
+          "name": "Chinandega",
+          "value": 0.174027259,
+          "country": "Nicaragua",
+          "region": "Latin America and the Caribbean",
+          "non_europe": true
+        },
+        {
+          "id": "11",
+          "name": "Belize City",
+          "value": 0.475121537,
+          "country": "Belize",
+          "region": "Latin America and the Caribbean",
+          "non_europe": true
+        },
+        {
+          "id": "12",
+          "name": "Liberia",
+          "value": 0.264331788,
+          "country": "Costa Rica",
+          "region": "Latin America and the Caribbean",
+          "non_europe": true
+        }
+      ]
+    },
+    {
+      "scope": "city",
+      "domain": "입지 잠재력",
+      "label": "도시의 태양광 발전 잠재량",
+      "year": "2020 참조",
+      "expression": "CL_REN_PVO_2020",
+      "url": "https://human-settlement.emergency.copernicus.eu/ucdb2024Overview.php",
+      "same_year_count": 11408,
+      "non_europe_count": 10255,
+      "distinct_non_europe_values": 2522,
+      "non_europe_samples": [
+        {
+          "id": "1",
+          "name": "Apia",
+          "value": 4.335,
+          "country": "Samoa",
+          "region": "Oceania",
+          "non_europe": true
+        },
+        {
+          "id": "2",
+          "name": "Nuku'alofa",
+          "value": 4.025,
+          "country": "Tonga",
+          "region": "Oceania",
+          "non_europe": true
+        },
+        {
+          "id": "3",
+          "name": "Ewa Beach",
+          "value": 4.79,
+          "country": "United States",
+          "region": "Northern America",
+          "non_europe": true
+        },
+        {
+          "id": "4",
+          "name": "Papeete",
+          "value": 4.492,
+          "country": "French Polynesia",
+          "region": "Oceania",
+          "non_europe": true
+        },
+        {
+          "id": "5",
+          "name": "Rosarito",
+          "value": 4.855,
+          "country": "México",
+          "region": "Latin America and the Caribbean",
+          "non_europe": true
+        },
+        {
+          "id": "6",
+          "name": "Victoria",
+          "value": 3.677,
+          "country": "Canada",
+          "region": "Northern America",
+          "non_europe": true
+        },
+        {
+          "id": "7",
+          "name": "Malacatán",
+          "value": 4.448,
+          "country": "Guatemala",
+          "region": "Latin America and the Caribbean",
+          "non_europe": true
+        },
+        {
+          "id": "8",
+          "name": "Ahuachapan",
+          "value": 4.633,
+          "country": "El Salvador",
+          "region": "Latin America and the Caribbean",
+          "non_europe": true
+        },
+        {
+          "id": "9",
+          "name": "Santa Rosa",
+          "value": 4.294,
+          "country": "Honduras",
+          "region": "Latin America and the Caribbean",
+          "non_europe": true
+        },
+        {
+          "id": "10",
+          "name": "Chinandega",
+          "value": 4.606,
+          "country": "Nicaragua",
+          "region": "Latin America and the Caribbean",
+          "non_europe": true
+        },
+        {
+          "id": "11",
+          "name": "Belize City",
+          "value": 4.415,
+          "country": "Belize",
+          "region": "Latin America and the Caribbean",
+          "non_europe": true
+        },
+        {
+          "id": "12",
+          "name": "Liberia",
+          "value": 4.567,
+          "country": "Costa Rica",
+          "region": "Latin America and the Caribbean",
+          "non_europe": true
+        }
+      ]
+    }
+  ]
+}

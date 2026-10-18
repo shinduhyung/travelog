@@ -1,6 +1,7 @@
 // lib/screens/religion_stats_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:jidoapp/models/country_model.dart';
 import 'package:flutter/foundation.dart';
 import 'package:jidoapp/providers/country_provider.dart';
@@ -125,6 +126,7 @@ class _ReligionStatsScreenState extends State<ReligionStatsScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final countryProvider = Provider.of<CountryProvider>(context);
     final religionProvider = Provider.of<ReligionProvider>(context);
 
@@ -203,8 +205,8 @@ class _ReligionStatsScreenState extends State<ReligionStatsScreen> {
                   padding: const EdgeInsets.symmetric(vertical: 8),
                 ),
                 icon: const Icon(Icons.public, color: Colors.white, size: 20),
-                label: const Text(
-                  'World Religions Map',
+                label:  Text(
+                  tr('World Religions Map'),
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w600,
@@ -226,8 +228,8 @@ class _ReligionStatsScreenState extends State<ReligionStatsScreen> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text(
-                  'Show Denominations',
+                 Text(
+                  tr('Show Denominations'),
                   style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
                 ),
                 Switch(
@@ -315,6 +317,7 @@ class _ReligionTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final total = countries.length;
     final visited = countries.where((c) => visitedNames.contains(c.name)).length;
     final percentage = total > 0 ? (visited / total) : 0.0;
@@ -355,7 +358,7 @@ class _ReligionTile extends StatelessWidget {
                       children: [
                         Expanded(
                           child: Text(
-                            title,
+                            tr(title),
                             style: theme.textTheme.titleMedium?.copyWith(
                               fontWeight: isExpanded ? FontWeight.w900 : FontWeight.bold,
                               fontSize: 16,
@@ -365,7 +368,7 @@ class _ReligionTile extends StatelessWidget {
                           ),
                         ),
                         Text(
-                          '${(percentage * 100).toStringAsFixed(0)}%',
+                          tr('${(percentage * 100).toStringAsFixed(0)}%'),
                           style: theme.textTheme.titleMedium?.copyWith(
                             fontWeight: FontWeight.w800,
                             fontSize: 16,
@@ -392,7 +395,7 @@ class _ReligionTile extends StatelessWidget {
                         ),
                         const SizedBox(width: 12),
                         Text(
-                          '$visited / $total Countries',
+                          tr('$visited / $total Countries'),
                           style: theme.textTheme.bodyMedium?.copyWith(
                             color: Colors.grey.shade600,
                             fontWeight: FontWeight.w500,
@@ -442,11 +445,11 @@ class _ReligionTile extends StatelessWidget {
                                   color: isVisited ? itemColor : Colors.grey,
                                 ),
                                 const SizedBox(width: 4),
-                                Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 14)), // 국기 추가
+                                Text(tr(flagEmoji(country.isoA2)), style: const TextStyle(fontSize: 14)), // 국기 추가
                                 const SizedBox(width: 4),
                                 Expanded(
                                   child: Text(
-                                    country.name,
+                                    tr(country.name),
                                     style: theme.textTheme.bodyMedium,
                                     overflow: TextOverflow.ellipsis,
                                   ),
@@ -546,11 +549,12 @@ class _ReligionPopulationRankingCardState extends State<_ReligionPopulationRanki
   }
 
   Widget _buildRankText(int rank, Color color) {
-    return Text('$rank', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.grey.shade600));
+    return Text(tr('$rank'), style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.grey.shade600));
   }
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final textTheme = Theme.of(context).textTheme;
     final countryProvider = Provider.of<CountryProvider>(context, listen: false);
     final useDefaultColor = countryProvider.useDefaultRankingBarColor;
@@ -574,7 +578,7 @@ class _ReligionPopulationRankingCardState extends State<_ReligionPopulationRanki
                   children: [
                     Icon(Icons.groups, color: rankingThemeColor),
                     const SizedBox(width: 8),
-                    Text("Religious Populations", style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
+                    Text(tr("Religious Populations"), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
                   ],
                 ),
                 const SizedBox(height: 8),
@@ -588,7 +592,7 @@ class _ReligionPopulationRankingCardState extends State<_ReligionPopulationRanki
                       child: Row(children: [
                         Icon(group.icon, color: group.themeColor, size: 20),
                         const SizedBox(width: 12),
-                        Text(group.title, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold, fontSize: 15)),
+                        Text(tr(group.title), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold, fontSize: 15)),
                       ]),
                     )).toList(),
                     onChanged: (newValue) { if (newValue != null) { setState(() { _selectedRanking = newValue; _prepareList(); }); } },
@@ -600,7 +604,7 @@ class _ReligionPopulationRankingCardState extends State<_ReligionPopulationRanki
           const Divider(height: 1),
           Expanded(
             child: _rankedList.isEmpty
-                ? const Center(child: Text('No data to display.'))
+                ?  Center(child: Text(tr('No data to display.')))
                 : ListView.builder(
               padding: const EdgeInsets.all(8.0),
               itemCount: _rankedList.length,
@@ -627,10 +631,10 @@ class _ReligionPopulationRankingCardState extends State<_ReligionPopulationRanki
                             children: [
                               _buildRankText(rank, rankingThemeColor),
                               const SizedBox(width: 12),
-                              Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 18)), // 국기 추가
+                              Text(tr(flagEmoji(country.isoA2)), style: const TextStyle(fontSize: 18)), // 국기 추가
                               const SizedBox(width: 8),
-                              Expanded(child: Text(country.name, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold, fontSize: 15))),
-                              Text(numberFormatter.format(value), style: textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
+                              Expanded(child: Text(tr(country.name), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold, fontSize: 15))),
+                              Text(tr(numberFormatter.format(value)), style: textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
                             ],
                           ),
                           const SizedBox(height: 6),
@@ -714,11 +718,12 @@ class _CatholicHierarchyRankingCardState extends State<_CatholicHierarchyRanking
   }
 
   Widget _buildRankText(int rank, Color color) {
-    return Text('$rank', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.grey.shade600));
+    return Text(tr('$rank'), style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.grey.shade600));
   }
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final textTheme = Theme.of(context).textTheme;
     final countryProvider = Provider.of<CountryProvider>(context, listen: false);
     final useDefaultColor = countryProvider.useDefaultRankingBarColor;
@@ -741,7 +746,7 @@ class _CatholicHierarchyRankingCardState extends State<_CatholicHierarchyRanking
                   children: [
                     Icon(Icons.volunteer_activism, color: rankingThemeColor),
                     const SizedBox(width: 8),
-                    Text("Catholic Hierarchy", style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
+                    Text(tr("Catholic Hierarchy"), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
                   ],
                 ),
                 const SizedBox(height: 8),
@@ -755,7 +760,7 @@ class _CatholicHierarchyRankingCardState extends State<_CatholicHierarchyRanking
                       child: Row(children: [
                         Icon(group.icon, color: group.themeColor, size: 20),
                         const SizedBox(width: 12),
-                        Text(group.title, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold, fontSize: 15)),
+                        Text(tr(group.title), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold, fontSize: 15)),
                       ]),
                     )).toList(),
                     onChanged: (newValue) { if (newValue != null) { setState(() { _selectedRanking = newValue; _prepareList(); }); } },
@@ -767,7 +772,7 @@ class _CatholicHierarchyRankingCardState extends State<_CatholicHierarchyRanking
           const Divider(height: 1),
           Expanded(
             child: _rankedList.isEmpty
-                ? const Center(child: Text('No data to display.'))
+                ?  Center(child: Text(tr('No data to display.')))
                 : ListView.builder(
               padding: const EdgeInsets.all(8.0),
               itemCount: _rankedList.length,
@@ -794,10 +799,10 @@ class _CatholicHierarchyRankingCardState extends State<_CatholicHierarchyRanking
                             children: [
                               _buildRankText(rank, rankingThemeColor),
                               const SizedBox(width: 12),
-                              Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 18)), // 국기 추가
+                              Text(tr(flagEmoji(country.isoA2)), style: const TextStyle(fontSize: 18)), // 국기 추가
                               const SizedBox(width: 8),
-                              Expanded(child: Text(country.name, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold, fontSize: 15))),
-                              Text('$value', style: textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
+                              Expanded(child: Text(tr(country.name), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold, fontSize: 15))),
+                              Text(tr('$value'), style: textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
                             ],
                           ),
                           const SizedBox(height: 6),

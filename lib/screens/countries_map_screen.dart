@@ -2,6 +2,7 @@
 
 import 'dart:ui'; // 글래스모피즘 효과
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -495,7 +496,7 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
           builder: (context, setStateDialog) {
             return AlertDialog(
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-              title: Text('Legend Color Settings', style: GoogleFonts.poppins(fontWeight: FontWeight.bold)),
+              title: Text(tr('Legend Color Settings'), style: GoogleFonts.poppins(fontWeight: FontWeight.bold)),
               content: SingleChildScrollView(
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
@@ -506,14 +507,14 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Expanded(child: Text(group.name, style: GoogleFonts.notoSansKr(), overflow: TextOverflow.ellipsis)),
+                          Expanded(child: Text(tr(group.name), style: GoogleFonts.notoSansKr(), overflow: TextOverflow.ellipsis)),
                           GestureDetector(
                             onTap: () {
                               showDialog(
                                 context: context,
                                 builder: (context) => AlertDialog(
                                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-                                  title: Text('Pick a color', style: GoogleFonts.poppins(fontWeight: FontWeight.bold)),
+                                  title: Text(tr('Pick a color'), style: GoogleFonts.poppins(fontWeight: FontWeight.bold)),
                                   content: SingleChildScrollView(
                                     child: ColorPicker(
                                       pickerColor: group.color,
@@ -530,7 +531,7 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
                                   actions: [
                                     ElevatedButton(
                                       style: ElevatedButton.styleFrom(shape: const StadiumBorder()),
-                                      child: const Text('Select'),
+                                      child:  Text(tr('Select')),
                                       onPressed: () => Navigator.of(context).pop(),
                                     ),
                                   ],
@@ -556,7 +557,7 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
               actions: [
                 TextButton(
                   onPressed: () => Navigator.of(context).pop(),
-                  child: Text('Cancel', style: GoogleFonts.poppins(color: Colors.grey)),
+                  child: Text(tr('Cancel'), style: GoogleFonts.poppins(color: Colors.grey)),
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(shape: const StadiumBorder()),
@@ -566,7 +567,7 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
                     });
                     Navigator.of(context).pop();
                   },
-                  child: Text('Done', style: GoogleFonts.poppins()),
+                  child: Text(tr('Done'), style: GoogleFonts.poppins()),
                 ),
               ],
             );
@@ -602,6 +603,7 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final seamlessBackgroundColor = const Color(0xfff5f5f5);
     final provider = Provider.of<CountryProvider>(context);
 
@@ -702,7 +704,7 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
                           padding: const EdgeInsets.only(left: 4, right: 12.0),
                           child: Row(
                             children: [
-                              Text('Show All', style: GoogleFonts.poppins(fontSize: 13, fontWeight: FontWeight.w500)),
+                              Text(tr('Show All'), style: GoogleFonts.poppins(fontSize: 13, fontWeight: FontWeight.w500)),
                               const SizedBox(width: 12),
                               SizedBox(
                                 height: 24,
@@ -729,23 +731,23 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
                         icon: Icons.swap_horiz_rounded,
                         selected: _showRegions,
                         onPressed: () => setState(() => _showRegions = !_showRegions),
-                        tooltip: _showRegions ? 'Show visited countries' : 'Show visited regions',
+                        tooltip: tr(_showRegions ? 'Show visited countries' : 'Show visited regions'),
                       ),
                       _buildIconButton(
                         icon: Icons.settings_rounded,
                         onPressed: _isHighlightMode ? _showHighlightColorSettingsDialog : _showColorSettingsDialog,
-                        tooltip: 'Settings',
+                        tooltip: tr('Settings'),
                       ),
                       if (!_isHighlightMode)
                         _buildIconButton(
                           icon: _showLegend ? Icons.visibility_off_rounded : Icons.visibility_rounded,
                           onPressed: () => setState(() => _showLegend = !_showLegend),
-                          tooltip: _showLegend ? 'Hide Legend' : 'Show Legend',
+                          tooltip: tr(_showLegend ? 'Hide Legend' : 'Show Legend'),
                         ),
                       _buildIconButton(
                         icon: _isFullScreen ? Icons.fullscreen_exit_rounded : Icons.fullscreen_rounded,
                         onPressed: _toggleFullScreen,
-                        tooltip: _isFullScreen ? 'Exit Fullscreen' : 'Fullscreen',
+                        tooltip: tr(_isFullScreen ? 'Exit Fullscreen' : 'Fullscreen'),
                       ),
                     ],
                   ),
@@ -800,7 +802,7 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
     return IconButton(
       icon: Icon(icon, size: 22, color: selected ? Colors.teal : Colors.grey.shade800),
       onPressed: onPressed,
-      tooltip: tooltip,
+      tooltip: tr(tooltip),
       visualDensity: VisualDensity.compact,
       splashRadius: 20,
     );
@@ -895,7 +897,7 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
                   decoration: BoxDecoration(color: group.color, shape: BoxShape.circle),
                 ),
                 const SizedBox(width: 8),
-                Text(group.name, style: GoogleFonts.poppins(fontSize: 12, fontWeight: FontWeight.w500)),
+                Text(tr(group.name), style: GoogleFonts.poppins(fontSize: 12, fontWeight: FontWeight.w500)),
               ],
             ),
           )).toList(),
@@ -1045,10 +1047,10 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
           const SizedBox(width: 8),
           RichText(
             text: TextSpan(
-              text: name,
+              text: tr(name),
               style: GoogleFonts.poppins(color: Colors.black87, fontSize: 12, fontWeight: FontWeight.w500),
               children: suffix != null ? [
-                TextSpan(text: suffix, style: GoogleFonts.poppins(color: Colors.grey.shade600, fontSize: 11))
+                TextSpan(text: tr(suffix), style: GoogleFonts.poppins(color: Colors.grey.shade600, fontSize: 11))
               ] : [],
             ),
           ),
@@ -1136,7 +1138,7 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
             context: context,
             builder: (context) => AlertDialog(
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-              title: Text('Pick a color', style: GoogleFonts.poppins(fontWeight: FontWeight.bold)),
+              title: Text(tr('Pick a color'), style: GoogleFonts.poppins(fontWeight: FontWeight.bold)),
               content: SingleChildScrollView(
                 child: ColorPicker(
                   pickerColor: currentColor,
@@ -1149,7 +1151,7 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
               actions: <Widget>[
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(shape: const StadiumBorder()),
-                  child: const Text('Select'),
+                  child:  Text(tr('Select')),
                   onPressed: () => Navigator.of(context).pop(),
                 ),
               ],
@@ -1177,7 +1179,7 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
           builder: (context, setStateDialog) {
             return AlertDialog(
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-              title: Text('Map Color Settings', style: GoogleFonts.poppins(fontWeight: FontWeight.bold)),
+              title: Text(tr('Map Color Settings'), style: GoogleFonts.poppins(fontWeight: FontWeight.bold)),
               content: SizedBox(
                 width: double.maxFinite,
                 child: SingleChildScrollView(
@@ -1187,13 +1189,13 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
                     children: [
                       // ----- 기본 설정 -----
                       if (widget.highlightGroups == null) ...[
-                        Text('Home, Lived & Wishlist', style: GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 14)),
+                        Text(tr('Home, Lived & Wishlist'), style: GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 14)),
                         const SizedBox(height: 8),
 
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Text('Show Home', style: GoogleFonts.poppins()),
+                            Text(tr('Show Home'), style: GoogleFonts.poppins()),
                             Switch(
                                 value: tempShowHome,
                                 onChanged: (v) => setStateDialog(() => tempShowHome = v),
@@ -1206,14 +1208,14 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
                             padding: const EdgeInsets.only(bottom: 8.0, left: 16),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [Text('Home Color', style: GoogleFonts.poppins(fontSize: 13)), buildColorPicker(tempHomeColor, (c) => setStateDialog(() => tempHomeColor = c))],
+                              children: [Text(tr('Home Color'), style: GoogleFonts.poppins(fontSize: 13)), buildColorPicker(tempHomeColor, (c) => setStateDialog(() => tempHomeColor = c))],
                             ),
                           ),
 
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Text('Show Lived', style: GoogleFonts.poppins()),
+                            Text(tr('Show Lived'), style: GoogleFonts.poppins()),
                             Switch(
                                 value: tempShowNonHomeLived,
                                 onChanged: (v) => setStateDialog(() => tempShowNonHomeLived = v),
@@ -1226,14 +1228,14 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
                             padding: const EdgeInsets.only(bottom: 8.0, left: 16),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [Text('Lived Color', style: GoogleFonts.poppins(fontSize: 13)), buildColorPicker(tempNonHomeLivedColor, (c) => setStateDialog(() => tempNonHomeLivedColor = c))],
+                              children: [Text(tr('Lived Color'), style: GoogleFonts.poppins(fontSize: 13)), buildColorPicker(tempNonHomeLivedColor, (c) => setStateDialog(() => tempNonHomeLivedColor = c))],
                             ),
                           ),
 
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Text('Show Wishlist', style: GoogleFonts.poppins()),
+                            Text(tr('Show Wishlist'), style: GoogleFonts.poppins()),
                             Switch(
                                 value: tempShowWishlist,
                                 onChanged: (v) => setStateDialog(() => tempShowWishlist = v),
@@ -1246,12 +1248,12 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
                             padding: const EdgeInsets.only(bottom: 8.0, left: 16),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [Text('Wishlist Color', style: GoogleFonts.poppins(fontSize: 13)), buildColorPicker(tempWishlistColor, (c) => setStateDialog(() => tempWishlistColor = c))],
+                              children: [Text(tr('Wishlist Color'), style: GoogleFonts.poppins(fontSize: 13)), buildColorPicker(tempWishlistColor, (c) => setStateDialog(() => tempWishlistColor = c))],
                             ),
                           ),
 
                         const Divider(height: 24),
-                        Text('Color Mode', style: GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 14)),
+                        Text(tr('Color Mode'), style: GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 14)),
 
                         ...CountriesColorMode.values.map((mode) {
                           String title = mode.toString().split('.').last;
@@ -1264,7 +1266,7 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
                           else if(mode == CountriesColorMode.wishlist) title = "Wishlist Only";
 
                           return RadioListTile<CountriesColorMode>(
-                            title: Text(title, style: GoogleFonts.poppins(fontSize: 13)),
+                            title: Text(tr(title), style: GoogleFonts.poppins(fontSize: 13)),
                             value: mode,
                             groupValue: tempColorMode,
                             onChanged: (v) => setStateDialog(() => tempColorMode = v!),
@@ -1281,7 +1283,7 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text('Visited Color', style: GoogleFonts.poppins()),
+                              Text(tr('Visited Color'), style: GoogleFonts.poppins()),
                               buildColorPicker(tempSameColor, (c) => setStateDialog(() => tempSameColor = c))
                             ],
                           ),
@@ -1289,7 +1291,7 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
                         // 2. By Visits 모드
                         if (tempColorMode == CountriesColorMode.byVisits) ...[
                           const SizedBox(height: 8),
-                          Text('Visit Count Colors', style: GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 13)),
+                          Text(tr('Visit Count Colors'), style: GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 13)),
                           const SizedBox(height: 8),
                           ...tempByVisitRanges.asMap().entries.map((entry) {
                             int index = entry.key;
@@ -1313,7 +1315,7 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
                                   ),
                                   const SizedBox(width: 8),
                                   Text(
-                                      index == tempByVisitRanges.length - 1 ? 'Visits +' : 'Visits',
+                                      tr(index == tempByVisitRanges.length - 1 ? 'Visits +' : 'Visits'),
                                       style: GoogleFonts.poppins(fontSize: 13)
                                   ),
                                   const Spacer(),
@@ -1331,7 +1333,7 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
                         // 3. By Duration 모드
                         if (tempColorMode == CountriesColorMode.byDuration) ...[
                           const SizedBox(height: 8),
-                          Text('Duration Colors (Days)', style: GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 13)),
+                          Text(tr('Duration Colors (Days)'), style: GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 13)),
                           const SizedBox(height: 8),
                           ...tempByDurationRanges.asMap().entries.map((entry) {
                             int index = entry.key;
@@ -1355,7 +1357,7 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
                                   ),
                                   const SizedBox(width: 8),
                                   Text(
-                                      index == tempByDurationRanges.length - 1 ? 'Days +' : 'Days',
+                                      tr(index == tempByDurationRanges.length - 1 ? 'Days +' : 'Days'),
                                       style: GoogleFonts.poppins(fontSize: 13)
                                   ),
                                   const Spacer(),
@@ -1371,7 +1373,7 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text('Unknown Duration', style: GoogleFonts.poppins(fontSize: 13)),
+                              Text(tr('Unknown Duration'), style: GoogleFonts.poppins(fontSize: 13)),
                               buildColorPicker(tempUnknownDurationColor, (c) => setStateDialog(() => tempUnknownDurationColor = c))
                             ],
                           )
@@ -1380,7 +1382,7 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
                         // 4. By Rating 모드
                         if (tempColorMode == CountriesColorMode.byRating) ...[
                           const SizedBox(height: 8),
-                          Text('Rating Colors', style: GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 13)),
+                          Text(tr('Rating Colors'), style: GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 13)),
                           const SizedBox(height: 8),
                           ...tempByRatingRanges.asMap().entries.map((entry) {
                             int index = entry.key;
@@ -1397,7 +1399,7 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Text(label, style: GoogleFonts.poppins(fontSize: 13)),
+                                  Text(tr(label), style: GoogleFonts.poppins(fontSize: 13)),
                                   buildColorPicker(category.color, (newColor) {
                                     setStateDialog(() {
                                       category.color = newColor;
@@ -1410,7 +1412,7 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text('No Rating', style: GoogleFonts.poppins(fontSize: 13)),
+                              Text(tr('No Rating'), style: GoogleFonts.poppins(fontSize: 13)),
                               buildColorPicker(tempUnknownRatingColor, (c) => setStateDialog(() => tempUnknownRatingColor = c))
                             ],
                           )
@@ -1419,7 +1421,7 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
                         // 5. By Continent 모드
                         if (tempColorMode == CountriesColorMode.byContinent)
                           ExpansionTile(
-                            title: Text('Continent Colors', style: GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 13)),
+                            title: Text(tr('Continent Colors'), style: GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 13)),
                             initiallyExpanded: false,
                             tilePadding: EdgeInsets.zero,
                             children: tempByContinentColors.entries.map((entry) {
@@ -1428,7 +1430,7 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Text(entry.key, style: GoogleFonts.poppins(fontSize: 13)),
+                                    Text(tr(entry.key), style: GoogleFonts.poppins(fontSize: 13)),
                                     buildColorPicker(entry.value, (newColor) {
                                       setStateDialog(() {
                                         tempByContinentColors[entry.key] = newColor;
@@ -1443,7 +1445,7 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
                         // 6. By Subregion 모드
                         if (tempColorMode == CountriesColorMode.bySubregion)
                           ExpansionTile(
-                            title: Text('Subregion Colors', style: GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 13)),
+                            title: Text(tr('Subregion Colors'), style: GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 13)),
                             initiallyExpanded: false,
                             tilePadding: EdgeInsets.zero,
                             children: tempBySubregionColors.entries.map((entry) {
@@ -1452,7 +1454,7 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Expanded(child: Text(entry.key, style: GoogleFonts.poppins(fontSize: 13))),
+                                    Expanded(child: Text(tr(entry.key), style: GoogleFonts.poppins(fontSize: 13))),
                                     buildColorPicker(entry.value, (newColor) {
                                       setStateDialog(() {
                                         tempBySubregionColors[entry.key] = newColor;
@@ -1470,13 +1472,13 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
               ),
               actions: [
                 TextButton(
-                  child: Text('Reset', style: GoogleFonts.poppins(color: Colors.redAccent)),
+                  child: Text(tr('Reset'), style: GoogleFonts.poppins(color: Colors.redAccent)),
                   onPressed: () {
                     Navigator.pop(context);
                   },
                 ),
                 TextButton(
-                  child: Text('Cancel', style: GoogleFonts.poppins(color: Colors.grey)),
+                  child: Text(tr('Cancel'), style: GoogleFonts.poppins(color: Colors.grey)),
                   onPressed: () {
                     for (var range in tempByVisitRanges) range.controller.dispose();
                     for (var range in tempByDurationRanges) range.controller.dispose();
@@ -1489,7 +1491,7 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
                       backgroundColor: Colors.teal,
                       foregroundColor: Colors.white
                   ),
-                  child: Text('Done', style: GoogleFonts.poppins(fontWeight: FontWeight.w600)),
+                  child: Text(tr('Done'), style: GoogleFonts.poppins(fontWeight: FontWeight.w600)),
                   onPressed: validateAndSave,
                 ),
               ],

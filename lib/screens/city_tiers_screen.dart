@@ -1,6 +1,7 @@
 // lib/screens/city_tiers_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'package:jidoapp/providers/city_provider.dart';
@@ -152,7 +153,7 @@ class _CityTiersScreenState extends State<CityTiersScreen> {
   }
 
   Widget _buildStarRating(double rating, {double size = 11}) {
-    if (rating <= 0) return Text('-', style: TextStyle(fontSize: size));
+    if (rating <= 0) return Text(tr('-'), style: TextStyle(fontSize: size));
     int fullStars = (rating / 2).floor();
     bool hasHalfStar = (rating / 2 - fullStars) >= 0.25;
     List<Widget> stars = [];
@@ -183,9 +184,9 @@ class _CityTiersScreenState extends State<CityTiersScreen> {
           Widget buildS(String m, double v, Function(double) onC) => Padding(
             padding: const EdgeInsets.symmetric(vertical: 0),
             child: Row(children: [
-              SizedBox(width: 85, child: Text("${_metricEmojis[m]} $m", style: const TextStyle(fontSize: 11, fontWeight: FontWeight.bold))),
+              SizedBox(width: 85, child: Text(tr("${_metricEmojis[m]} $m"), style: const TextStyle(fontSize: 11, fontWeight: FontWeight.bold))),
               Expanded(child: SliderTheme(data: SliderTheme.of(context).copyWith(trackHeight: 2, thumbShape: const RoundSliderThumbShape(enabledThumbRadius: 5)), child: Slider(value: v, min: 0, max: 10, divisions: 20, onChanged: (val) => setDS(() => onC(val))))),
-              SizedBox(width: 25, child: Text(v.toStringAsFixed(1), style: const TextStyle(fontSize: 10, fontWeight: FontWeight.bold))),
+              SizedBox(width: 25, child: Text(tr(v.toStringAsFixed(1)), style: const TextStyle(fontSize: 10, fontWeight: FontWeight.bold))),
             ]),
           );
 
@@ -224,7 +225,7 @@ class _CityTiersScreenState extends State<CityTiersScreen> {
             ),
             actionsPadding: const EdgeInsets.fromLTRB(0, 0, 15, 6),
             actions: [
-              TextButton(onPressed: () => Navigator.pop(context), child: const Text('Cancel', style: TextStyle(fontSize: 11, color: Colors.grey))),
+              TextButton(onPressed: () => Navigator.pop(context), child:  Text(tr('Cancel'), style: TextStyle(fontSize: 11, color: Colors.grey))),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(backgroundColor: Colors.blueAccent, foregroundColor: Colors.white, minimumSize: const Size(50, 28), padding: const EdgeInsets.symmetric(horizontal: 12)),
                 onPressed: () {
@@ -244,7 +245,7 @@ class _CityTiersScreenState extends State<CityTiersScreen> {
                   Navigator.pop(context);
                   setState(() {});
                 },
-                child: const Text('Save', style: TextStyle(fontSize: 11)),
+                child:  Text(tr('Save'), style: TextStyle(fontSize: 11)),
               ),
             ],
           );
@@ -259,9 +260,9 @@ class _CityTiersScreenState extends State<CityTiersScreen> {
       final list = provider.allCities.where((c) => !_currentState.cities.contains(c.name) && (q.isEmpty || c.name.toLowerCase().contains(q.toLowerCase()))).toList();
       return AlertDialog(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-        title: const Text('Add City', style: TextStyle(fontWeight: FontWeight.bold)),
+        title:  Text(tr('Add City'), style: TextStyle(fontWeight: FontWeight.bold)),
         content: SizedBox(width: 300, height: 350, child: Column(children: [
-          TextField(decoration: const InputDecoration(hintText: 'Search...', prefixIcon: Icon(Icons.search)), onChanged: (v) => setDS(() => q = v)),
+          TextField(decoration:  InputDecoration(hintText: tr('Search...'), prefixIcon: Icon(Icons.search)), onChanged: (v) => setDS(() => q = v)),
           Expanded(child: ListView.builder(itemCount: list.length, itemBuilder: (c, idx) => ListTile(dense: true, title: Text(list[idx].name), onTap: () {
             setState(() { _currentState.cities.add(list[idx].name); _currentState.filter1 = 'custom'; });
             Navigator.pop(ctx);
@@ -280,12 +281,12 @@ class _CityTiersScreenState extends State<CityTiersScreen> {
 
       return AlertDialog(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-        title: const Text('Select City', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+        title:  Text(tr('Select City'), style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
         content: SizedBox(width: 300, height: 400, child: Column(children: [
-          TextField(decoration: const InputDecoration(hintText: 'Search...', prefixIcon: Icon(Icons.search)), onChanged: (v) => setDS(() => q = v)),
+          TextField(decoration:  InputDecoration(hintText: tr('Search...'), prefixIcon: Icon(Icons.search)), onChanged: (v) => setDS(() => q = v)),
           Expanded(child: ListView(children: [
-            if (existing.isNotEmpty) ...[const Padding(padding: EdgeInsets.all(8), child: Text('Existing Data', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.blue))), ...existing.map((c) => ListTile(dense: true, title: Text(c.name), onTap: () { setState(() => _chartState.cities[replaceIndex] = c.name); Navigator.pop(ctx); }))],
-            if (others.isNotEmpty) ...[const Padding(padding: EdgeInsets.all(8), child: Text('Others', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.grey))), ...others.map((c) => ListTile(dense: true, title: Text(c.name), onTap: () { setState(() => _chartState.cities[replaceIndex] = c.name); Navigator.pop(ctx); _showEditSlidersDialog(c, provider); }))]
+            if (existing.isNotEmpty) ...[ Padding(padding: EdgeInsets.all(8), child: Text(tr('Existing Data'), style: TextStyle(fontWeight: FontWeight.bold, color: Colors.blue))), ...existing.map((c) => ListTile(dense: true, title: Text(c.name), onTap: () { setState(() => _chartState.cities[replaceIndex] = c.name); Navigator.pop(ctx); }))],
+            if (others.isNotEmpty) ...[ Padding(padding: EdgeInsets.all(8), child: Text(tr('Others'), style: TextStyle(fontWeight: FontWeight.bold, color: Colors.grey))), ...others.map((c) => ListTile(dense: true, title: Text(c.name), onTap: () { setState(() => _chartState.cities[replaceIndex] = c.name); Navigator.pop(ctx); _showEditSlidersDialog(c, provider); }))]
           ])),
         ])),
       );
@@ -302,7 +303,7 @@ class _CityTiersScreenState extends State<CityTiersScreen> {
           builder: (context, setDialogState) {
             return AlertDialog(
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-              title: const Text('Select Metrics', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+              title:  Text(tr('Select Metrics'), style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
               contentPadding: const EdgeInsets.fromLTRB(10, 5, 10, 0),
               content: SizedBox(
                 width: 220,
@@ -313,7 +314,7 @@ class _CityTiersScreenState extends State<CityTiersScreen> {
                       if (_viewMode == 'tiers') {
                         return RadioListTile<String>(
                           visualDensity: VisualDensity.compact,
-                          title: Text("${_metricEmojis[m]} $m", style: const TextStyle(fontSize: 13)),
+                          title: Text(tr("${_metricEmojis[m]} $m"), style: const TextStyle(fontSize: 13)),
                           value: m,
                           groupValue: state.selectedMetric,
                           onChanged: (val) {
@@ -329,7 +330,7 @@ class _CityTiersScreenState extends State<CityTiersScreen> {
                       } else {
                         return CheckboxListTile(
                           visualDensity: VisualDensity.compact,
-                          title: Text("${_metricEmojis[m]} $m", style: const TextStyle(fontSize: 13)),
+                          title: Text(tr("${_metricEmojis[m]} $m"), style: const TextStyle(fontSize: 13)),
                           value: state.selectedMetrics.contains(m),
                           onChanged: (val) {
                             setDialogState(() {
@@ -345,7 +346,7 @@ class _CityTiersScreenState extends State<CityTiersScreen> {
                 ),
               ),
               actions: _viewMode == 'tiers' ? null : [
-                TextButton(onPressed: () => Navigator.pop(context), child: const Text('Done', style: TextStyle(fontSize: 13))),
+                TextButton(onPressed: () => Navigator.pop(context), child:  Text(tr('Done'), style: TextStyle(fontSize: 13))),
               ],
             );
           },
@@ -358,7 +359,7 @@ class _CityTiersScreenState extends State<CityTiersScreen> {
     final colors = [Colors.red, Colors.orange, Colors.yellow, Colors.lime, Colors.green, Colors.teal, Colors.cyan, Colors.blue, Colors.indigo, Colors.purple, Colors.pink, Colors.grey];
     showDialog(context: context, builder: (ctx) => AlertDialog(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-      title: const Text('Pick Color', style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold)),
+      title:  Text(tr('Pick Color'), style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold)),
       content: SizedBox(width: 240, child: GridView.count(shrinkWrap: true, crossAxisCount: 6, mainAxisSpacing: 10, crossAxisSpacing: 10, children: colors.map((col) => GestureDetector(onTap: () { setState(() => _chartState.chartColors[cName] = col); Navigator.pop(ctx); }, child: CircleAvatar(backgroundColor: col, radius: 15))).toList())),
     ));
   }
@@ -367,7 +368,7 @@ class _CityTiersScreenState extends State<CityTiersScreen> {
 
   Widget _buildTiersView(CityProvider provider, CountryProvider countryProvider) {
     final state = _tiersState;
-    if (state.cities.isEmpty) return const Center(child: Text('No data found.'));
+    if (state.cities.isEmpty) return  Center(child: Text(tr('No data found.')));
     final Map<double, List<City>> grouped = {};
     for (var n in state.cities) {
       final city = provider.getCityDetail(n);
@@ -380,7 +381,7 @@ class _CityTiersScreenState extends State<CityTiersScreen> {
       final v = sortedKeys[idx];
       return Column(children: [
         Row(children: [
-          SizedBox(width: 80, child: state.selectedMetric == 'Rating' ? _buildStarRating(v) : Text("${_metricEmojis[state.selectedMetric]} ${v.toStringAsFixed(1)}", style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 11))),
+          SizedBox(width: 80, child: state.selectedMetric == 'Rating' ? _buildStarRating(v) : Text(tr("${_metricEmojis[state.selectedMetric]} ${v.toStringAsFixed(1)}"), style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 11))),
           Expanded(
             child: Wrap(
               spacing: 6.0, runSpacing: 6.0,
@@ -404,7 +405,7 @@ class _CityTiersScreenState extends State<CityTiersScreen> {
 
   Widget _buildTableView(CityProvider provider, CountryProvider countryProvider) {
     final state = _tableState;
-    if (state.cities.isEmpty) return const Center(child: Text('Table is empty.'));
+    if (state.cities.isEmpty) return  Center(child: Text(tr('Table is empty.')));
     final active = _metricNames.where((m) => state.selectedMetrics.contains(m)).toList();
 
     List<String> sortedNames = List.from(state.cities);
@@ -421,17 +422,17 @@ class _CityTiersScreenState extends State<CityTiersScreen> {
           horizontalMargin: 8, columnSpacing: 16, headingRowHeight: 40, dataRowMinHeight: 32, dataRowMaxHeight: 42,
           columns: [
             DataColumn(label: InkWell(onTap: () => setState(() { if (state.sortColumn == 'Rating') state.isAscending = !state.isAscending; else { state.sortColumn = 'Rating'; state.isAscending = false; } }), child: Row(children: [
-              Text(_metricEmojis[state.sortColumn]!, style: const TextStyle(fontSize: 16)),
+              Text(tr(_metricEmojis[state.sortColumn]!), style: const TextStyle(fontSize: 16)),
               Icon(state.isAscending ? Icons.arrow_upward : Icons.arrow_downward, size: 14, color: Colors.blueAccent),
             ]))),
-            ...active.map((m) => DataColumn(label: InkWell(onTap: () => setState(() { if (state.sortColumn == m) state.isAscending = !state.isAscending; else { state.sortColumn = m; state.isAscending = false; } }), child: Text(_metricEmojis[m]!, style: const TextStyle(fontSize: 18))))),
+            ...active.map((m) => DataColumn(label: InkWell(onTap: () => setState(() { if (state.sortColumn == m) state.isAscending = !state.isAscending; else { state.sortColumn = m; state.isAscending = false; } }), child: Text(tr(_metricEmojis[m]!), style: const TextStyle(fontSize: 18))))),
             const DataColumn(label: SizedBox(width: 30)),
           ],
           rows: sortedNames.map((n) {
             final city = provider.getCityDetail(n)!;
             return DataRow(cells: [
               DataCell(ConstrainedBox(constraints: const BoxConstraints(maxWidth: 160), child: Row(children: [_buildFlag(city.countryIsoA2, countryProvider), const SizedBox(width: 8), Text(city.name, style: const TextStyle(fontSize: 12), overflow: TextOverflow.ellipsis)]))),
-              ...active.map((m) => DataCell(m == 'Rating' ? _buildStarRating(_getMetricValue(provider.visitDetails[n], m)) : Text(_getMetricValue(provider.visitDetails[n], m).toStringAsFixed(1), style: const TextStyle(fontSize: 12)))),
+              ...active.map((m) => DataCell(m == 'Rating' ? _buildStarRating(_getMetricValue(provider.visitDetails[n], m)) : Text(tr(_getMetricValue(provider.visitDetails[n], m).toStringAsFixed(1)), style: const TextStyle(fontSize: 12)))),
               DataCell(PopupMenuButton<String>(
                 icon: const Icon(Icons.more_vert, size: 18, color: Colors.grey),
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
@@ -440,8 +441,8 @@ class _CityTiersScreenState extends State<CityTiersScreen> {
                   else if (v == 'remove') setState(() { state.cities.remove(n); state.filter1 = 'custom'; });
                 },
                 itemBuilder: (ctx) => [
-                  const PopupMenuItem(value: 'remove', child: Text('Remove from view', style: TextStyle(fontSize: 12))),
-                  const PopupMenuItem(value: 'edit', child: Text('Edit', style: TextStyle(fontSize: 12))),
+                   PopupMenuItem(value: 'remove', child: Text(tr('Remove from view'), style: TextStyle(fontSize: 12))),
+                   PopupMenuItem(value: 'edit', child: Text(tr('Edit'), style: TextStyle(fontSize: 12))),
                 ],
               )),
             ]);
@@ -453,9 +454,9 @@ class _CityTiersScreenState extends State<CityTiersScreen> {
 
   Widget _buildChartView(CityProvider provider, CountryProvider countryProvider) {
     final state = _chartState;
-    if (state.cities.isEmpty) return const Center(child: Text('Chart is empty.'));
+    if (state.cities.isEmpty) return  Center(child: Text(tr('Chart is empty.')));
     final active = _metricNames.where((m) => state.selectedMetrics.contains(m) && m != 'Rating').toList();
-    if (active.length < 3) return const Center(child: Text('Select 3+ metrics.'));
+    if (active.length < 3) return  Center(child: Text(tr('Select 3+ metrics.')));
 
     final chartList = state.cities.take(5).toList();
     final screenWidth = MediaQuery.of(context).size.width;
@@ -504,7 +505,7 @@ class _CityTiersScreenState extends State<CityTiersScreen> {
                     SizedBox(
                       width: 110,
                       child: Text(
-                        n,
+                        tr(n),
                         style: const TextStyle(fontSize: 11, fontWeight: FontWeight.bold),
                         overflow: TextOverflow.ellipsis,
                       ),
@@ -553,6 +554,7 @@ class _CityTiersScreenState extends State<CityTiersScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final cityProvider = Provider.of<CityProvider>(context);
     final countryProvider = Provider.of<CountryProvider>(context);
     _initTabStateIfNeeded(_tiersState, cityProvider);
@@ -569,9 +571,9 @@ class _CityTiersScreenState extends State<CityTiersScreen> {
           clipBehavior: Clip.hardEdge,
           decoration: BoxDecoration(color: Theme.of(context).scaffoldBackgroundColor),
           child: Padding(padding: const EdgeInsets.symmetric(horizontal: 10), child: Row(children: [
-            Container(decoration: BoxDecoration(color: Colors.grey.shade200, borderRadius: BorderRadius.circular(20)), padding: const EdgeInsets.all(3), child: Row(children: ['tiers', 'table', 'chart'].map((m) => GestureDetector(onTap: () => setState(() => _viewMode = m), child: AnimatedContainer(duration: const Duration(milliseconds: 200), padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 7), decoration: BoxDecoration(color: _viewMode == m ? Colors.white : Colors.transparent, borderRadius: BorderRadius.circular(18), boxShadow: _viewMode == m ? [BoxShadow(color: Colors.black12, blurRadius: 4)] : []), child: Text(m.toUpperCase(), style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: _viewMode == m ? Colors.blueAccent : Colors.blueGrey))))).toList())),
+            Container(decoration: BoxDecoration(color: Colors.grey.shade200, borderRadius: BorderRadius.circular(20)), padding: const EdgeInsets.all(3), child: Row(children: ['tiers', 'table', 'chart'].map((m) => GestureDetector(onTap: () => setState(() => _viewMode = m), child: AnimatedContainer(duration: const Duration(milliseconds: 200), padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 7), decoration: BoxDecoration(color: _viewMode == m ? Colors.white : Colors.transparent, borderRadius: BorderRadius.circular(18), boxShadow: _viewMode == m ? [BoxShadow(color: Colors.black12, blurRadius: 4)] : []), child: Text(tr(m.toUpperCase()), style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: _viewMode == m ? Colors.blueAccent : Colors.blueGrey))))).toList())),
             const Spacer(),
-            Container(height: 32, padding: const EdgeInsets.symmetric(horizontal: 12), decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(16), border: Border.all(color: Colors.grey.shade300)), child: DropdownButtonHideUnderline(child: DropdownButton<String>(borderRadius: BorderRadius.circular(16), value: state.filter1, style: const TextStyle(fontSize: 11, color: Colors.black, fontWeight: FontWeight.bold), items: const [DropdownMenuItem(value: 'all', child: Text('All')), DropdownMenuItem(value: 'mark_visited', child: Text('Visited')), DropdownMenuItem(value: 'unvisited', child: Text('Unvisited')), DropdownMenuItem(value: 'custom', child: Text('Custom'))], onChanged: (v) { if (v != null) setState(() { state.filter1 = v; _applyFilters(state, cityProvider); }); }))),
+            Container(height: 32, padding: const EdgeInsets.symmetric(horizontal: 12), decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(16), border: Border.all(color: Colors.grey.shade300)), child: DropdownButtonHideUnderline(child: DropdownButton<String>(borderRadius: BorderRadius.circular(16), value: state.filter1, style: const TextStyle(fontSize: 11, color: Colors.black, fontWeight: FontWeight.bold), items:  [DropdownMenuItem(value: 'all', child: Text(tr('All'))), DropdownMenuItem(value: 'mark_visited', child: Text(tr('Visited'))), DropdownMenuItem(value: 'unvisited', child: Text(tr('Unvisited'))), DropdownMenuItem(value: 'custom', child: Text(tr('Custom')))], onChanged: (v) { if (v != null) setState(() { state.filter1 = v; _applyFilters(state, cityProvider); }); }))),
             // 🆕 수정: Checklist 아이콘과 metrics 다이얼로그 호출
             IconButton(icon: const Icon(Icons.checklist, size: 18), onPressed: _showMetricsDialog),
             IconButton(icon: const Icon(Icons.add_circle_outline, size: 20, color: Colors.blue), onPressed: () => _showAddCityDialog(context, cityProvider)),

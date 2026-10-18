@@ -1,67 +1,642 @@
-[
-  {"name": "Diyarbakır", "country": "Turkey", "age": "-8000", "continent": "Asia"},
-  {"name": "Aleppo", "country": "Syria", "age": "-5000", "continent": "Asia"},
-  {"name": "Jbeil", "country": "Lebanon", "age": "-5000", "continent": "Asia"},
-  {"name": "Damascus", "country": "Syria", "age": "-3000", "continent": "Asia"},
-  {"name": "Jerusalem", "country": "Israel/Palestine", "age": "-3000", "continent": "Asia"},
-  {"name": "Jenin", "country": "Palestine", "age": "-2450", "continent": "Asia"},
-  {"name": "Hama", "country": "Syria", "age": "-2400", "continent": "Asia"},
-  {"name": "Erbil", "country": "Iraq", "age": "-2300", "continent": "Asia"},
-  {"name": "Ankara", "country": "Turkey", "age": "-2000", "continent": "Asia"},
-  {"name": "Jaffa", "country": "Israel", "age": "-2000", "continent": "Asia"},
-
-  {"name": "Plovdiv", "country": "Bulgaria", "age": "-6000", "continent": "Europe"},
-  {"name": "Argos", "country": "Greece", "age": "-5000", "continent": "Europe"},
-  {"name": "Thebes", "country": "Greece", "age": "-5000", "continent": "Europe"},
-  {"name": "Athens", "country": "Greece", "age": "-5000", "continent": "Europe"},
-  {"name": "Larisa", "country": "Greece", "age": "-5000", "continent": "Europe"},
-  {"name": "Nicosia", "country": "Cyprus", "age": "-2500", "continent": "Europe"},
-  {"name": "Shkodra", "country": "Albania", "age": "-2250", "continent": "Europe"},
-  {"name": "Mantua", "country": "Italy", "age": "-2000", "continent": "Europe"},
-  {"name": "Chania", "country": "Greece", "age": "-1700", "continent": "Europe"},
-  {"name": "Lisbon", "country": "Portugal", "age": "-1200", "continent": "Europe"},
-
-  {"name": "Girga (Thinis)", "country": "Egypt", "age": "-3273", "continent": "Africa"},
-  {"name": "Faiyum", "country": "Egypt", "age": "-2181", "continent": "Africa"},
-  {"name": "Luxor (Thebes)", "country": "Egypt", "age": "-2150", "continent": "Africa"},
-  {"name": "Aswan", "country": "Egypt", "age": "-650", "continent": "Africa"},
-  {"name": "Benghazi", "country": "Libya", "age": "-525", "continent": "Africa"},
-  {"name": "Aksum", "country": "Ethiopia", "age": "-400", "continent": "Africa"},
-  {"name": "Alexandria", "country": "Egypt", "age": "-332", "continent": "Africa"},
-  {"name": "Zeila", "country": "Somalia", "age": "100", "continent": "Africa"},
-  {"name": "Suakin", "country": "Sudan", "age": "1000", "continent": "Africa"},
-  {"name": "Antananarivo", "country": "Madagascar", "age": "1610", "continent": "Africa"},
-
-  {"name": "Cholula", "country": "Mexico", "age": "-1000", "continent": "North America"},
-  {"name": "Flores", "country": "Guatemala", "age": "-900", "continent": "North America"},
-  {"name": "Izamal", "country": "Mexico", "age": "-700", "continent": "North America"},
-  {"name": "Monte Albán", "country": "Mexico", "age": "-500", "continent": "North America"},
-  {"name": "Tututepec", "country": "Mexico", "age": "-400", "continent": "North America"},
-  {"name": "Toluca-Calixtlahuaca", "country": "Mexico", "age": "-400", "continent": "North America"},
-  {"name": "Papantla/El Tajín", "country": "Mexico", "age": "100", "continent": "North America"},
-  {"name": "Oraibi", "country": "US", "age": "1100", "continent": "North America"},
-  {"name": "Cuernavaca", "country": "Mexico", "age": "1200", "continent": "North America"},
-  {"name": "Tucson", "country": "US", "age": "1300", "continent": "North America"},
-
-  {"name": "Cusco", "country": "Peru", "age": "1100", "continent": "South America"},
-  {"name": "Cumaná", "country": "Venezuela", "age": "1515", "continent": "South America"},
-  {"name": "Santa Marta", "country": "Colombia", "age": "1525", "continent": "South America"},
-  {"name": "São Vicente", "country": "Brazil", "age": "1532", "continent": "South America"},
-  {"name": "Piura", "country": "Peru", "age": "1532", "continent": "South America"},
-  {"name": "Lima", "country": "Peru", "age": "1535", "continent": "South America"},
-  {"name": "Vila Velha", "country": "Brazil", "age": "1535", "continent": "South America"},
-  {"name": "Cali", "country": "Colombia", "age": "1536", "continent": "South America"},
-  {"name": "Asuncion", "country": "Paraguay", "age": "1537", "continent": "South America"},
-  {"name": "Bogotá", "country": "Colombia", "age": "1540", "continent": "South America"},
-
-  {"name": "Sydney", "country": "Australia", "age": "1788", "continent": "Oceania"},
-  {"name": "Parramatta", "country": "Australia", "age": "1788", "continent": "Oceania"},
-  {"name": "Norfolk Island (Kingston)", "country": "Australia (Territory)", "age": "1788", "continent": "Oceania"},
-  {"name": "Hobart", "country": "Australia", "age": "1804", "continent": "Oceania"},
-  {"name": "Newcastle", "country": "Australia", "age": "1804", "continent": "Oceania"},
-  {"name": "Launceston", "country": "Australia", "age": "1806", "continent": "Oceania"},
-  {"name": "Melbourne", "country": "Australia", "age": "1835", "continent": "Oceania"},
-  {"name": "Auckland", "country": "New Zealand", "age": "1840", "continent": "Oceania"},
-  {"name": "Wellington", "country": "New Zealand", "age": "1840", "continent": "Oceania"},
-  {"name": "Christchurch", "country": "New Zealand", "age": "1850", "continent": "Oceania"}
-]
+{
+  "schema_version": 1,
+  "dataset_id": "oldest",
+  "metadata": {
+    "source_url": null,
+    "reference_period": null,
+    "updated_at": null
+  },
+  "legacy_layout": "list",
+  "tables": [
+    {
+      "id": "main",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "name",
+        "country"
+      ],
+      "metrics": [
+        {
+          "id": "age",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        },
+        {
+          "id": "continent",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "name": "Diyarbakır",
+            "country": "Turkey"
+          },
+          "values": {
+            "age": "-8000",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Aleppo",
+            "country": "Syria"
+          },
+          "values": {
+            "age": "-5000",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Jbeil",
+            "country": "Lebanon"
+          },
+          "values": {
+            "age": "-5000",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Damascus",
+            "country": "Syria"
+          },
+          "values": {
+            "age": "-3000",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Jerusalem",
+            "country": "Israel/Palestine"
+          },
+          "values": {
+            "age": "-3000",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Jenin",
+            "country": "Palestine"
+          },
+          "values": {
+            "age": "-2450",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Hama",
+            "country": "Syria"
+          },
+          "values": {
+            "age": "-2400",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Erbil",
+            "country": "Iraq"
+          },
+          "values": {
+            "age": "-2300",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Ankara",
+            "country": "Turkey"
+          },
+          "values": {
+            "age": "-2000",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Jaffa",
+            "country": "Israel"
+          },
+          "values": {
+            "age": "-2000",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Plovdiv",
+            "country": "Bulgaria"
+          },
+          "values": {
+            "age": "-6000",
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Argos",
+            "country": "Greece"
+          },
+          "values": {
+            "age": "-5000",
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Thebes",
+            "country": "Greece"
+          },
+          "values": {
+            "age": "-5000",
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Athens",
+            "country": "Greece"
+          },
+          "values": {
+            "age": "-5000",
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Larisa",
+            "country": "Greece"
+          },
+          "values": {
+            "age": "-5000",
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Nicosia",
+            "country": "Cyprus"
+          },
+          "values": {
+            "age": "-2500",
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Shkodra",
+            "country": "Albania"
+          },
+          "values": {
+            "age": "-2250",
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Mantua",
+            "country": "Italy"
+          },
+          "values": {
+            "age": "-2000",
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Chania",
+            "country": "Greece"
+          },
+          "values": {
+            "age": "-1700",
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Lisbon",
+            "country": "Portugal"
+          },
+          "values": {
+            "age": "-1200",
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Girga (Thinis)",
+            "country": "Egypt"
+          },
+          "values": {
+            "age": "-3273",
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Faiyum",
+            "country": "Egypt"
+          },
+          "values": {
+            "age": "-2181",
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Luxor (Thebes)",
+            "country": "Egypt"
+          },
+          "values": {
+            "age": "-2150",
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Aswan",
+            "country": "Egypt"
+          },
+          "values": {
+            "age": "-650",
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Benghazi",
+            "country": "Libya"
+          },
+          "values": {
+            "age": "-525",
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Aksum",
+            "country": "Ethiopia"
+          },
+          "values": {
+            "age": "-400",
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Alexandria",
+            "country": "Egypt"
+          },
+          "values": {
+            "age": "-332",
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Zeila",
+            "country": "Somalia"
+          },
+          "values": {
+            "age": "100",
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Suakin",
+            "country": "Sudan"
+          },
+          "values": {
+            "age": "1000",
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Antananarivo",
+            "country": "Madagascar"
+          },
+          "values": {
+            "age": "1610",
+            "continent": "Africa"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Cholula",
+            "country": "Mexico"
+          },
+          "values": {
+            "age": "-1000",
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Flores",
+            "country": "Guatemala"
+          },
+          "values": {
+            "age": "-900",
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Izamal",
+            "country": "Mexico"
+          },
+          "values": {
+            "age": "-700",
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Monte Albán",
+            "country": "Mexico"
+          },
+          "values": {
+            "age": "-500",
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Tututepec",
+            "country": "Mexico"
+          },
+          "values": {
+            "age": "-400",
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Toluca-Calixtlahuaca",
+            "country": "Mexico"
+          },
+          "values": {
+            "age": "-400",
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Papantla/El Tajín",
+            "country": "Mexico"
+          },
+          "values": {
+            "age": "100",
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Oraibi",
+            "country": "US"
+          },
+          "values": {
+            "age": "1100",
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Cuernavaca",
+            "country": "Mexico"
+          },
+          "values": {
+            "age": "1200",
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Tucson",
+            "country": "US"
+          },
+          "values": {
+            "age": "1300",
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Cusco",
+            "country": "Peru"
+          },
+          "values": {
+            "age": "1100",
+            "continent": "South America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Cumaná",
+            "country": "Venezuela"
+          },
+          "values": {
+            "age": "1515",
+            "continent": "South America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Santa Marta",
+            "country": "Colombia"
+          },
+          "values": {
+            "age": "1525",
+            "continent": "South America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "São Vicente",
+            "country": "Brazil"
+          },
+          "values": {
+            "age": "1532",
+            "continent": "South America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Piura",
+            "country": "Peru"
+          },
+          "values": {
+            "age": "1532",
+            "continent": "South America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Lima",
+            "country": "Peru"
+          },
+          "values": {
+            "age": "1535",
+            "continent": "South America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Vila Velha",
+            "country": "Brazil"
+          },
+          "values": {
+            "age": "1535",
+            "continent": "South America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Cali",
+            "country": "Colombia"
+          },
+          "values": {
+            "age": "1536",
+            "continent": "South America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Asuncion",
+            "country": "Paraguay"
+          },
+          "values": {
+            "age": "1537",
+            "continent": "South America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Bogotá",
+            "country": "Colombia"
+          },
+          "values": {
+            "age": "1540",
+            "continent": "South America"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Sydney",
+            "country": "Australia"
+          },
+          "values": {
+            "age": "1788",
+            "continent": "Oceania"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Parramatta",
+            "country": "Australia"
+          },
+          "values": {
+            "age": "1788",
+            "continent": "Oceania"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Norfolk Island (Kingston)",
+            "country": "Australia (Territory)"
+          },
+          "values": {
+            "age": "1788",
+            "continent": "Oceania"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Hobart",
+            "country": "Australia"
+          },
+          "values": {
+            "age": "1804",
+            "continent": "Oceania"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Newcastle",
+            "country": "Australia"
+          },
+          "values": {
+            "age": "1804",
+            "continent": "Oceania"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Launceston",
+            "country": "Australia"
+          },
+          "values": {
+            "age": "1806",
+            "continent": "Oceania"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Melbourne",
+            "country": "Australia"
+          },
+          "values": {
+            "age": "1835",
+            "continent": "Oceania"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Auckland",
+            "country": "New Zealand"
+          },
+          "values": {
+            "age": "1840",
+            "continent": "Oceania"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Wellington",
+            "country": "New Zealand"
+          },
+          "values": {
+            "age": "1840",
+            "continent": "Oceania"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Christchurch",
+            "country": "New Zealand"
+          },
+          "values": {
+            "age": "1850",
+            "continent": "Oceania"
+          }
+        }
+      ]
+    }
+  ]
+}

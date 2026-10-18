@@ -2,6 +2,7 @@
 
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:intl/intl.dart';
 import 'package:jidoapp/models/country_model.dart';
 import 'package:jidoapp/models/landmarks_model.dart';
@@ -132,7 +133,7 @@ class _LandmarkStatsScreenState extends State<LandmarkStatsScreen> {
             builder: (context, setDialogState) {
               return AlertDialog(
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
-                title: const Text('Select Landmark Types', style: TextStyle(fontWeight: FontWeight.w800)),
+                title:  Text(tr('Select Landmark Types'), style: TextStyle(fontWeight: FontWeight.w800)),
                 content: SizedBox(
                   width: double.maxFinite,
                   child: SingleChildScrollView(
@@ -145,7 +146,7 @@ class _LandmarkStatsScreenState extends State<LandmarkStatsScreen> {
                             Padding(
                               padding: const EdgeInsets.symmetric(vertical: 8.0),
                               child: Text(
-                                  group.key,
+                                  tr(group.key),
                                   style: TextStyle(
                                     fontWeight: FontWeight.w800,
                                     color: Theme.of(context).primaryColor,
@@ -159,7 +160,7 @@ class _LandmarkStatsScreenState extends State<LandmarkStatsScreen> {
                               children: group.value.map((attr) {
                                 final isSelected = _selectedAttributes.contains(attr);
                                 return FilterChip(
-                                  label: Text(attr, style: const TextStyle(fontSize: 12)),
+                                  label: Text(tr(attr), style: const TextStyle(fontSize: 12)),
                                   selected: isSelected,
                                   onSelected: (val) {
                                     setState(() {
@@ -182,7 +183,7 @@ class _LandmarkStatsScreenState extends State<LandmarkStatsScreen> {
                 actions: [
                   TextButton(
                     onPressed: () => Navigator.pop(context),
-                    child: const Text('Close', style: TextStyle(fontWeight: FontWeight.w700)),
+                    child:  Text(tr('Close'), style: TextStyle(fontWeight: FontWeight.w700)),
                   ),
                 ],
               );
@@ -194,6 +195,7 @@ class _LandmarkStatsScreenState extends State<LandmarkStatsScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     // 로딩 중이거나 아직 설정을 불러오지 못했으면 로딩 표시
     if (!_isInit) {
       return const Scaffold(body: Center(child: CircularProgressIndicator()));
@@ -373,7 +375,7 @@ class _LandmarkStatsScreenState extends State<LandmarkStatsScreen> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      'DISCOVERY STATUS',
+                      tr('DISCOVERY STATUS'),
                       style: TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.w700,
@@ -388,7 +390,7 @@ class _LandmarkStatsScreenState extends State<LandmarkStatsScreen> {
                         borderRadius: BorderRadius.circular(8),
                       ),
                       child: Text(
-                        '${(percentage * 100).toStringAsFixed(1)}%',
+                        tr('${(percentage * 100).toStringAsFixed(1)}%'),
                         style: TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.w900,
@@ -404,7 +406,7 @@ class _LandmarkStatsScreenState extends State<LandmarkStatsScreen> {
                   textBaseline: TextBaseline.alphabetic,
                   children: [
                     Text(
-                      NumberFormat.decimalPattern('en_US').format(visited),
+                      tr(NumberFormat.decimalPattern('en_US').format(visited)),
                       style: const TextStyle(
                         fontSize: 52,
                         fontWeight: FontWeight.w900,
@@ -414,7 +416,7 @@ class _LandmarkStatsScreenState extends State<LandmarkStatsScreen> {
                     ),
                     const SizedBox(width: 8),
                     Text(
-                      '/ ${NumberFormat.decimalPattern('en_US').format(total)}',
+                      tr('/ ${NumberFormat.decimalPattern('en_US').format(total)}'),
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.w500,
@@ -469,7 +471,7 @@ Widget _buildRankBadge(int rank) {
     ),
     alignment: Alignment.center,
     child: Text(
-      rank.toString(),
+      tr(rank.toString()),
       style: TextStyle(
         fontSize: 14,
         fontWeight: FontWeight.w900,
@@ -537,6 +539,7 @@ class _LandmarkRankingCardState extends State<_LandmarkRankingCard> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     const primaryBlue = Color(0xFF3B82F6);
     final Map<String, Color> continentColors = {
       for (var data in LandmarkStatsScreen.continentsData)
@@ -567,11 +570,11 @@ class _LandmarkRankingCardState extends State<_LandmarkRankingCard> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Row(
+                     Row(
                       children: [
                         Icon(Icons.leaderboard_rounded, color: primaryBlue),
                         SizedBox(width: 12),
-                        Text('Country Rankings', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800, color: Color(0xFF1F2937))),
+                        Text(tr('Country Rankings'), style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800, color: Color(0xFF1F2937))),
                       ],
                     ),
                     IconButton(
@@ -586,19 +589,19 @@ class _LandmarkRankingCardState extends State<_LandmarkRankingCard> {
                   isExpanded: true,
                   borderRadius: BorderRadius.circular(16),
                   decoration: InputDecoration(
-                    labelText: 'Sort by',
+                    labelText: tr('Sort by'),
                     contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(16)),
                   ),
-                  items: _sortMetrics.map((v) => DropdownMenuItem(value: v, child: Text(v, style: const TextStyle(fontSize: 14)))).toList(),
+                  items: _sortMetrics.map((v) => DropdownMenuItem(value: v, child: Text(tr(v), style: const TextStyle(fontSize: 14)))).toList(),
                   onChanged: (v) { if (v != null) { setState(() { _sortMetric = v; _prepareList(); }); } },
                 ),
                 const SizedBox(height: 12),
                 Row(
                   children: [
-                    Expanded(child: SegmentedButton<int>(showSelectedIcon: false, segments: const [ButtonSegment(value: 0, label: Text('All')), ButtonSegment(value: 1, label: Text('Visited'))], selected: {_displaySegment}, onSelectionChanged: (s) { _displaySegment = s.first; _prepareList(); })),
+                    Expanded(child: SegmentedButton<int>(showSelectedIcon: false, segments:  [ButtonSegment(value: 0, label: Text(tr('All'))), ButtonSegment(value: 1, label: Text(tr('Visited')))], selected: {_displaySegment}, onSelectionChanged: (s) { _displaySegment = s.first; _prepareList(); })),
                     const SizedBox(width: 8),
-                    Expanded(child: SegmentedButton<int>(showSelectedIcon: false, segments: const [ButtonSegment(value: 0, label: Text('High')), ButtonSegment(value: 1, label: Text('Low'))], selected: {_sortOrderSegment}, onSelectionChanged: (s) { _sortOrderSegment = s.first; _prepareList(); })),
+                    Expanded(child: SegmentedButton<int>(showSelectedIcon: false, segments:  [ButtonSegment(value: 0, label: Text(tr('High'))), ButtonSegment(value: 1, label: Text(tr('Low')))], selected: {_sortOrderSegment}, onSelectionChanged: (s) { _sortOrderSegment = s.first; _prepareList(); })),
                   ],
                 ),
               ],
@@ -608,7 +611,7 @@ class _LandmarkRankingCardState extends State<_LandmarkRankingCard> {
           SizedBox(
             height: 400,
             child: _rankedList.isEmpty
-                ? const Center(child: Text('No data found.'))
+                ?  Center(child: Text(tr('No data found.')))
                 : ListView.builder(
               padding: const EdgeInsets.all(16),
               itemCount: _rankedList.length,
@@ -640,15 +643,15 @@ class _LandmarkRankingCardState extends State<_LandmarkRankingCard> {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Text(stat.country.name, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: Color(0xFF374151))),
+                                Text(tr(stat.country.name), style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: Color(0xFF374151))),
                                 Row(
                                   children: [
                                     Text(
-                                      _sortMetric == 'By Visit Percentage' ? '${stat.visitedPercentage.toStringAsFixed(1)}%' : '${stat.visitedLandmarks}',
+                                      tr(_sortMetric == 'By Visit Percentage' ? '${stat.visitedPercentage.toStringAsFixed(1)}%' : '${stat.visitedLandmarks}'),
                                       style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w900, color: Color(0xFF111827)),
                                     ),
                                     const SizedBox(width: 4),
-                                    Text('(${stat.visitedLandmarks}/${stat.totalLandmarks})', style: TextStyle(fontSize: 11, color: Colors.grey[400])),
+                                    Text(tr('(${stat.visitedLandmarks}/${stat.totalLandmarks})'), style: TextStyle(fontSize: 11, color: Colors.grey[400])),
                                   ],
                                 ),
                               ],
@@ -762,9 +765,9 @@ class _SiteRankingCardState extends State<_SiteRankingCard> {
     return Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(title, style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: themeColor)),
+          Text(tr(title), style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: themeColor)),
           const SizedBox(height: 4),
-          Text(content, style: TextStyle(color: Colors.grey[800], height: 1.4)),
+          Text(tr(content), style: TextStyle(color: Colors.grey[800], height: 1.4)),
           const SizedBox(height: 16)
         ]
     );
@@ -839,7 +842,7 @@ class _SiteRankingCardState extends State<_SiteRankingCard> {
                     borderRadius: BorderRadius.circular(4),
                   ),
                   child: Text(
-                    text,
+                    tr(text),
                     style: const TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
@@ -851,7 +854,7 @@ class _SiteRankingCardState extends State<_SiteRankingCard> {
                   Padding(
                     padding: const EdgeInsets.only(left: 10),
                     child: Text(
-                      openedText,
+                      tr(openedText),
                       style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.w500,
@@ -872,7 +875,7 @@ class _SiteRankingCardState extends State<_SiteRankingCard> {
             customHeaderWidget = Padding(
               padding: const EdgeInsets.only(top: 4, bottom: 2),
               child: Text(
-                subInfos.join(' • '),
+                tr(subInfos.join(' • ')),
                 style: TextStyle(
                     fontSize: 15,
                     fontWeight: FontWeight.w500,
@@ -887,7 +890,7 @@ class _SiteRankingCardState extends State<_SiteRankingCard> {
           customHeaderWidget = Padding(
             padding: const EdgeInsets.only(top: 4, bottom: 2),
             child: Text(
-              freshLandmark.month!,
+              tr(freshLandmark.month!),
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.w600,
@@ -911,7 +914,7 @@ class _SiteRankingCardState extends State<_SiteRankingCard> {
             customHeaderWidget = Padding(
               padding: const EdgeInsets.only(top: 4, bottom: 2),
               child: Text(
-                text,
+                tr(text),
                 style: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w500,
@@ -925,7 +928,7 @@ class _SiteRankingCardState extends State<_SiteRankingCard> {
           customHeaderWidget = Padding(
             padding: const EdgeInsets.only(top: 4, bottom: 2),
             child: Text(
-              freshLandmark.type!,
+              tr(freshLandmark.type!),
               style: TextStyle(
                 fontSize: 17,
                 fontWeight: FontWeight.w500,
@@ -1012,12 +1015,12 @@ class _SiteRankingCardState extends State<_SiteRankingCard> {
                               children: [
                                 TextButton(
                                   onPressed: () => Navigator.pop(sheetContext),
-                                  child: const Text('Cancel', style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600)),
+                                  child:  Text(tr('Cancel'), style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600)),
                                 ),
                                 ElevatedButton(
                                   onPressed: () => Navigator.pop(sheetContext),
                                   style: ElevatedButton.styleFrom(backgroundColor: headerTextColor),
-                                  child: Text('Done', style: TextStyle(fontWeight: FontWeight.w600, color: themeColor)),
+                                  child: Text(tr('Done'), style: TextStyle(fontWeight: FontWeight.w600, color: themeColor)),
                                 ),
                               ],
                             ),
@@ -1026,7 +1029,7 @@ class _SiteRankingCardState extends State<_SiteRankingCard> {
                               children: [
                                 Expanded(
                                   child: Text(
-                                    displayTitle,
+                                    tr(displayTitle),
                                     style: Theme.of(sheetContext).textTheme.titleLarge?.copyWith(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 26,
@@ -1042,7 +1045,7 @@ class _SiteRankingCardState extends State<_SiteRankingCard> {
                               Padding(
                                 padding: const EdgeInsets.only(top: 4.0),
                                 child: Text(
-                                  metricLabel,
+                                  tr(metricLabel),
                                   style: TextStyle(
                                     fontSize: 18,
                                     fontWeight: FontWeight.w600,
@@ -1060,7 +1063,7 @@ class _SiteRankingCardState extends State<_SiteRankingCard> {
                                 const SizedBox(width: 4),
                                 Expanded(
                                   child: Text(
-                                    locationDisplay,
+                                    tr(locationDisplay),
                                     style: Theme.of(sheetContext).textTheme.titleSmall?.copyWith(
                                       color: headerTextColor.withOpacity(0.8),
                                       fontWeight: FontWeight.normal,
@@ -1096,7 +1099,7 @@ class _SiteRankingCardState extends State<_SiteRankingCard> {
                               Padding(
                                 padding: const EdgeInsets.only(top: 12.0),
                                 child: Text(
-                                  "$visitedSubCount / $totalSubCount visited",
+                                  tr("$visitedSubCount / $totalSubCount visited"),
                                   style: Theme.of(sheetContext).textTheme.bodyMedium?.copyWith(
                                     color: headerTextColor.withOpacity(0.9),
                                     fontWeight: FontWeight.bold,
@@ -1117,23 +1120,23 @@ class _SiteRankingCardState extends State<_SiteRankingCard> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           if (_isItemCategory(freshLandmark, 'Painting') || _isItemCategory(freshLandmark, 'Artwork')) ...[
-                            if (freshLandmark.artist != null) Text(freshLandmark.artist!, style: Theme.of(sheetContext).textTheme.displaySmall?.copyWith(fontWeight: FontWeight.bold, fontSize: 32)),
-                            if (freshLandmark.created != null) Padding(padding: const EdgeInsets.only(top: 4), child: Text(freshLandmark.created!, style: Theme.of(sheetContext).textTheme.headlineSmall?.copyWith(color: Colors.black54, fontStyle: FontStyle.italic))),
-                            if (freshLandmark.museum != null) Padding(padding: const EdgeInsets.only(top: 8), child: Row(children: [Icon(Icons.museum_outlined, color: themeColor, size: 20), const SizedBox(width: 8), Text(freshLandmark.museum!, style: Theme.of(sheetContext).textTheme.titleMedium)])),
+                            if (freshLandmark.artist != null) Text(tr(freshLandmark.artist!), style: Theme.of(sheetContext).textTheme.displaySmall?.copyWith(fontWeight: FontWeight.bold, fontSize: 32)),
+                            if (freshLandmark.created != null) Padding(padding: const EdgeInsets.only(top: 4), child: Text(tr(freshLandmark.created!), style: Theme.of(sheetContext).textTheme.headlineSmall?.copyWith(color: Colors.black54, fontStyle: FontStyle.italic))),
+                            if (freshLandmark.museum != null) Padding(padding: const EdgeInsets.only(top: 8), child: Row(children: [Icon(Icons.museum_outlined, color: themeColor, size: 20), const SizedBox(width: 8), Text(tr(freshLandmark.museum!), style: Theme.of(sheetContext).textTheme.titleMedium)])),
                             const Padding(padding: EdgeInsets.symmetric(vertical: 16), child: Divider(thickness: 1)),
                           ],
 
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Row(mainAxisSize: MainAxisSize.min, children: [const Text('Wishlist:'), IconButton(visualDensity: VisualDensity.compact, icon: Icon(isWishlisted ? Icons.favorite : Icons.favorite_border, color: isWishlisted ? Colors.red : Colors.grey), onPressed: () => provider.toggleWishlistStatus(freshLandmark.name))]),
-                              Row(mainAxisSize: MainAxisSize.min, children: [const Text('My Rating:'), const SizedBox(width: 8), RatingBar.builder(initialRating: freshLandmark.rating ?? 0.0, minRating: 0, direction: Axis.horizontal, allowHalfRating: true, itemCount: 5, itemSize: 28.0, itemBuilder: (context, _) => const Icon(Icons.star, color: Colors.amber), onRatingUpdate: (rating) => provider.updateLandmarkRating(freshLandmark.name, rating))]),
+                              Row(mainAxisSize: MainAxisSize.min, children: [ Text(tr('Wishlist:')), IconButton(visualDensity: VisualDensity.compact, icon: Icon(isWishlisted ? Icons.favorite : Icons.favorite_border, color: isWishlisted ? Colors.red : Colors.grey), onPressed: () => provider.toggleWishlistStatus(freshLandmark.name))]),
+                              Row(mainAxisSize: MainAxisSize.min, children: [ Text(tr('My Rating:')), const SizedBox(width: 8), RatingBar.builder(initialRating: freshLandmark.rating ?? 0.0, minRating: 0, direction: Axis.horizontal, allowHalfRating: true, itemCount: 5, itemSize: 28.0, itemBuilder: (context, _) => const Icon(Icons.star, color: Colors.amber), onRatingUpdate: (rating) => provider.updateLandmarkRating(freshLandmark.name, rating))]),
                             ],
                           ),
                           const Divider(height: 20),
 
                           if (totalSubCount > 1) ...[
-                            Text("Components / Locations",
+                            Text(tr("Components / Locations"),
                                 style: Theme.of(sheetContext)
                                     .textTheme
                                     .titleMedium
@@ -1163,7 +1166,7 @@ class _SiteRankingCardState extends State<_SiteRankingCard> {
                             const Divider(height: 24),
                           ],
 
-                          Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [Text('History (${freshLandmark.visitDates.length} entries)', style: Theme.of(sheetContext).textTheme.titleSmall), OutlinedButton.icon(icon: const Icon(Icons.add), label: const Text('Add Visit'), onPressed: () => provider.addVisitDate(freshLandmark.name))]),
+                          Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [Text(tr('History (${freshLandmark.visitDates.length} entries)'), style: Theme.of(sheetContext).textTheme.titleSmall), OutlinedButton.icon(icon: const Icon(Icons.add), label:  Text(tr('Add Visit')), onPressed: () => provider.addVisitDate(freshLandmark.name))]),
                           const SizedBox(height: 8),
                           if (freshLandmark.visitDates.isNotEmpty) ...freshLandmark.visitDates.asMap().entries.map((entry) => _LandmarkVisitEditorCard(
                             key: ValueKey('${freshLandmark.name}_${entry.key}'),
@@ -1172,7 +1175,7 @@ class _SiteRankingCardState extends State<_SiteRankingCard> {
                             index: entry.key,
                             onDelete: () => provider.removeVisitDate(freshLandmark.name, entry.key),
                             availableLocations: freshLandmark.locations,
-                          )) else const Center(child: Text('No visits recorded.')),
+                          )) else  Center(child: Text(tr('No visits recorded.'))),
                           const Divider(height: 24),
 
                           if (_isItemCategory(freshLandmark, 'Food')) ...[
@@ -1231,6 +1234,7 @@ class _SiteRankingCardState extends State<_SiteRankingCard> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Container(
       decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(24), boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 15, offset: const Offset(0, 5))]),
       child: Column(
@@ -1241,11 +1245,11 @@ class _SiteRankingCardState extends State<_SiteRankingCard> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Row(
+                 Row(
                   children: [
                     Icon(Icons.star_rounded, color: Colors.amber),
                     SizedBox(width: 12),
-                    Text('Top Landmarks', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800, color: Color(0xFF1F2937))),
+                    Text(tr('Top Landmarks'), style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800, color: Color(0xFF1F2937))),
                   ],
                 ),
                 const SizedBox(height: 20),
@@ -1254,10 +1258,10 @@ class _SiteRankingCardState extends State<_SiteRankingCard> {
                   isExpanded: true,
                   borderRadius: BorderRadius.circular(16),
                   decoration: InputDecoration(
-                    labelText: 'Sort by',
+                    labelText: tr('Sort by'),
                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(16)),
                   ),
-                  items: _sortMetrics.map((v) => DropdownMenuItem(value: v, child: Text(v, style: const TextStyle(fontSize: 14)))).toList(),
+                  items: _sortMetrics.map((v) => DropdownMenuItem(value: v, child: Text(tr(v), style: const TextStyle(fontSize: 14)))).toList(),
                   onChanged: (v) { if (v != null) { setState(() { _sortMetric = v; _prepareList(); }); } },
                 ),
               ],
@@ -1267,7 +1271,7 @@ class _SiteRankingCardState extends State<_SiteRankingCard> {
           SizedBox(
             height: 300,
             child: _rankedList.isEmpty
-                ? const Center(child: Text('No data available.'))
+                ?  Center(child: Text(tr('No data available.')))
                 : ListView.builder(
               padding: const EdgeInsets.all(16),
               itemCount: _rankedList.length,
@@ -1281,9 +1285,9 @@ class _SiteRankingCardState extends State<_SiteRankingCard> {
                       ? Row(mainAxisSize: MainAxisSize.min, children: [
                     RatingBarIndicator(rating: landmark.rating ?? 0.0, itemBuilder: (context, index) => const Icon(Icons.star, color: Colors.amber), itemCount: 5, itemSize: 14.0),
                     const SizedBox(width: 4),
-                    Text((landmark.rating ?? 0).toStringAsFixed(1), style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w800)),
+                    Text(tr((landmark.rating ?? 0).toStringAsFixed(1)), style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w800)),
                   ])
-                      : Container(padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4), decoration: BoxDecoration(color: const Color(0xFF8B5CF6).withOpacity(0.1), borderRadius: BorderRadius.circular(8)), child: Text('${landmark.visitDates.length} visits', style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w800, color: Color(0xFF8B5CF6)))),
+                      : Container(padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4), decoration: BoxDecoration(color: const Color(0xFF8B5CF6).withOpacity(0.1), borderRadius: BorderRadius.circular(8)), child: Text(tr('${landmark.visitDates.length} visits'), style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w800, color: Color(0xFF8B5CF6)))),
                   onTap: () => _showLandmarkDetailsModal(context, landmark, Theme.of(context).primaryColor),
                 );
               },
@@ -1305,6 +1309,7 @@ class _AttributeStatsCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final visitedEntries = visitedAttributeCounts.entries.toList()..removeWhere((e) => e.value == 0)..sort((a, b) => b.value.compareTo(a.value));
     final int maxVisitedCount = visitedEntries.isNotEmpty ? visitedEntries.first.value : 1;
     final int totalVisitedAttributes = visitedEntries.fold(0, (sum, e) => sum + e.value);
@@ -1315,9 +1320,9 @@ class _AttributeStatsCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          const Padding(
+           Padding(
             padding: EdgeInsets.all(24),
-            child: Row(children: [Icon(Icons.pie_chart_rounded, color: Color(0xFF10B981)), SizedBox(width: 12), Text('Attribute Statistics', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800))]),
+            child: Row(children: [Icon(Icons.pie_chart_rounded, color: Color(0xFF10B981)), SizedBox(width: 12), Text(tr('Attribute Statistics'), style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800))]),
           ),
           const Divider(height: 1),
           Padding(
@@ -1325,21 +1330,21 @@ class _AttributeStatsCard extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text('Visit Count', style: TextStyle(fontSize: 14, fontWeight: FontWeight.w700, color: Color(0xFF6B7280), letterSpacing: 0.5)),
+                 Text(tr('Visit Count'), style: TextStyle(fontSize: 14, fontWeight: FontWeight.w700, color: Color(0xFF6B7280), letterSpacing: 0.5)),
                 const SizedBox(height: 20),
                 SizedBox(
                   height: 250,
-                  child: visitedEntries.isEmpty ? const Center(child: Text('No data.')) : ListView.builder(itemCount: visitedEntries.length, itemBuilder: (ctx, i) {
+                  child: visitedEntries.isEmpty ?  Center(child: Text(tr('No data.'))) : ListView.builder(itemCount: visitedEntries.length, itemBuilder: (ctx, i) {
                     final e = visitedEntries[i];
                     return _buildStatRow(label: e.key, value: e.value, maxValue: maxVisitedCount, info: '${(e.value / totalVisitedAttributes * 100).toStringAsFixed(1)}%', color: const Color(0xFF10B981));
                   }),
                 ),
                 const SizedBox(height: 32),
-                const Text('Visit Progress (%)', style: TextStyle(fontSize: 14, fontWeight: FontWeight.w700, color: Color(0xFF6B7280), letterSpacing: 0.5)),
+                 Text(tr('Visit Progress (%)'), style: TextStyle(fontSize: 14, fontWeight: FontWeight.w700, color: Color(0xFF6B7280), letterSpacing: 0.5)),
                 const SizedBox(height: 20),
                 SizedBox(
                   height: 250,
-                  child: progressEntries.isEmpty ? const Center(child: Text('No attributes found.')) : ListView.builder(itemCount: progressEntries.length, itemBuilder: (ctx, i) {
+                  child: progressEntries.isEmpty ?  Center(child: Text(tr('No attributes found.'))) : ListView.builder(itemCount: progressEntries.length, itemBuilder: (ctx, i) {
                     final s = progressEntries[i];
                     return _buildStatRow(label: s.name, value: s.visitedCount, maxValue: s.totalCount, info: '${s.percentage.toStringAsFixed(1)}%', color: primaryColor);
                   }),
@@ -1356,7 +1361,7 @@ class _AttributeStatsCard extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 10.0),
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [Text(label, style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color: Color(0xFF374151))), Text('$value ($info)', style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w800, color: Color(0xFF111827)))]),
+        Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [Text(tr(label), style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color: Color(0xFF374151))), Text(tr('$value ($info)'), style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w800, color: Color(0xFF111827)))]),
         const SizedBox(height: 8),
         LayoutBuilder(builder: (ctx, constraints) => Stack(children: [
           Container(height: 6, decoration: BoxDecoration(color: const Color(0xFFF3F4F6), borderRadius: BorderRadius.circular(3))),
@@ -1382,6 +1387,7 @@ class _LandmarkBrowserCardState extends State<_LandmarkBrowserCard> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final cp = context.watch<CountryProvider>();
     final lp = context.watch<LandmarksProvider>();
     final continents = LandmarkStatsScreen.continentsData.map((d) => d['fullName'] as String).toList();
@@ -1399,42 +1405,42 @@ class _LandmarkBrowserCardState extends State<_LandmarkBrowserCard> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Row(
+                 Row(
                   children: [
                     Icon(Icons.travel_explore_rounded, color: Color(0xFF6366F1)),
                     SizedBox(width: 12),
-                    Text('Landmark Explorer', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800, color: Color(0xFF1F2937))),
+                    Text(tr('Landmark Explorer'), style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800, color: Color(0xFF1F2937))),
                   ],
                 ),
                 const SizedBox(height: 20),
                 DropdownButtonFormField<String>(
                   value: _selectedContinent,
                   isExpanded: true,
-                  hint: const Text('Select Continent'),
+                  hint:  Text(tr('Select Continent')),
                   borderRadius: BorderRadius.circular(16),
                   decoration: InputDecoration(
                     contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(16)),
                   ),
-                  items: continents.map((c) => DropdownMenuItem(value: c, child: Text(c))).toList(),
+                  items: continents.map((c) => DropdownMenuItem(value: c, child: Text(tr(c)))).toList(),
                   onChanged: (v) { setState(() { _selectedContinent = v; _selectedCountryIsoA3 = null; }); },
                 ),
                 const SizedBox(height: 12),
                 DropdownButtonFormField<String>(
                   value: _selectedCountryIsoA3,
                   isExpanded: true,
-                  hint: const Text('Select Country'),
+                  hint:  Text(tr('Select Country')),
                   borderRadius: BorderRadius.circular(16),
                   decoration: InputDecoration(
                     contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(16)),
                   ),
-                  disabledHint: Text(_selectedContinent == null ? 'Select continent first' : 'No countries'),
-                  items: countries.map((c) => DropdownMenuItem(value: c.isoA3, child: Text(c.name))).toList(),
+                  disabledHint: Text(tr(_selectedContinent == null ? 'Select continent first' : 'No countries')),
+                  items: countries.map((c) => DropdownMenuItem(value: c.isoA3, child: Text(tr(c.name)))).toList(),
                   onChanged: countries.isEmpty ? null : (v) { setState(() { _selectedCountryIsoA3 = v; }); },
                 ),
                 const SizedBox(height: 12),
-                SizedBox(width: double.infinity, child: SegmentedButton<bool>(showSelectedIcon: false, segments: const [ButtonSegment(value: false, label: Text('Default')), ButtonSegment(value: true, label: Text('Alphabet'))], selected: {_sortAlphabetically}, onSelectionChanged: (s) { setState(() { _sortAlphabetically = s.first; }); })),
+                SizedBox(width: double.infinity, child: SegmentedButton<bool>(showSelectedIcon: false, segments:  [ButtonSegment(value: false, label: Text(tr('Default'))), ButtonSegment(value: true, label: Text(tr('Alphabet')))], selected: {_sortAlphabetically}, onSelectionChanged: (s) { setState(() { _sortAlphabetically = s.first; }); })),
               ],
             ),
           ),
@@ -1449,7 +1455,7 @@ class _LandmarkBrowserCardState extends State<_LandmarkBrowserCard> {
                   leading: InkWell(
                     onTap: () async {
                       if (isVisited) {
-                        final confirm = await showDialog<bool>(context: context, builder: (ctx) => AlertDialog(title: const Text('Confirm Removal'), content: Text('Remove all records for ${l.name}?'), actions: [TextButton(onPressed: () => Navigator.pop(ctx, false), child: const Text('Cancel')), TextButton(onPressed: () => Navigator.pop(ctx, true), child: const Text('Remove', style: TextStyle(color: Colors.red)))]));
+                        final confirm = await showDialog<bool>(context: context, builder: (ctx) => AlertDialog(title:  Text(tr('Confirm Removal')), content: Text(tr('Remove all records for ${l.name}?')), actions: [TextButton(onPressed: () => Navigator.pop(ctx, false), child:  Text(tr('Cancel'))), TextButton(onPressed: () => Navigator.pop(ctx, true), child:  Text(tr('Remove'), style: TextStyle(color: Colors.red)))]));
                         if (confirm == true) lp.toggleVisitedStatus(l.name);
                       } else { lp.toggleVisitedStatus(l.name); }
                     },
@@ -1572,6 +1578,7 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final themeColor = Theme.of(context).primaryColor;
     return Card(
       elevation: 1, margin: const EdgeInsets.symmetric(vertical: 4),
@@ -1579,18 +1586,18 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
       child: ExpansionTile(
         controller: _expansionTileController,
         initiallyExpanded: _isEditing,
-        title: Text(_displayTitle.isNotEmpty ? _displayTitle : 'Visit Record',
+        title: Text(tr(_displayTitle.isNotEmpty ? _displayTitle : 'Visit Record'),
             style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15)),
-        subtitle: Text('Date: $_year-$_month-$_day', style: TextStyle(color: Colors.grey[600], fontSize: 13)),
+        subtitle: Text(tr('Date: $_year-$_month-$_day'), style: TextStyle(color: Colors.grey[600], fontSize: 13)),
         trailing: IconButton(
           icon: const Icon(Icons.delete_outline, color: Colors.red, size: 22),
           onPressed: () => showDialog(context: context, builder: (ctx) => AlertDialog(
-              title: const Text('Delete Visit Record'),
-              content: const Text('Are you sure you want to delete this visit record?'),
+              title:  Text(tr('Delete Visit Record')),
+              content:  Text(tr('Are you sure you want to delete this visit record?')),
               actions: [
-                TextButton(onPressed: () => Navigator.pop(ctx), child: const Text('Cancel')),
+                TextButton(onPressed: () => Navigator.pop(ctx), child:  Text(tr('Cancel'))),
                 TextButton(onPressed: () { Navigator.pop(ctx); widget.onDelete(); },
-                    child: const Text('Delete', style: TextStyle(color: Colors.red))),
+                    child:  Text(tr('Delete'), style: TextStyle(color: Colors.red))),
               ])),
         ),
         children: [Container(
@@ -1600,28 +1607,28 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
           child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             if (_isEditing) ...[
               Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                Text('Visit Date: $_year-$_month-$_day',
+                Text(tr('Visit Date: $_year-$_month-$_day'),
                     style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14)),
-                TextButton.icon(icon: const Icon(Icons.edit_calendar, size: 18), label: const Text('Edit Date'),
+                TextButton.icon(icon: const Icon(Icons.edit_calendar, size: 18), label:  Text(tr('Edit Date')),
                     onPressed: () => _selectDate(context),
                     style: TextButton.styleFrom(visualDensity: VisualDensity.compact)),
               ]),
               const SizedBox(height: 12),
               TextField(controller: _titleController,
-                  decoration: InputDecoration(labelText: 'Title', isDense: true, filled: true, fillColor: Colors.white,
+                  decoration: InputDecoration(labelText: tr('Title'), isDense: true, filled: true, fillColor: Colors.white,
                       border: OutlineInputBorder(borderRadius: BorderRadius.circular(8), borderSide: BorderSide.none))),
               const SizedBox(height: 12),
               TextField(controller: _memoController, maxLines: 3, minLines: 1,
-                  decoration: InputDecoration(labelText: 'Memo', isDense: true, filled: true, fillColor: Colors.white,
+                  decoration: InputDecoration(labelText: tr('Memo'), isDense: true, filled: true, fillColor: Colors.white,
                       border: OutlineInputBorder(borderRadius: BorderRadius.circular(8), borderSide: BorderSide.none))),
             ] else if (_displayMemo.isNotEmpty)
               Padding(padding: const EdgeInsets.only(bottom: 12),
-                  child: Text(_displayMemo, style: TextStyle(fontSize: 14, color: Colors.grey[800], height: 1.4))),
+                  child: Text(tr(_displayMemo), style: TextStyle(fontSize: 14, color: Colors.grey[800], height: 1.4))),
 
             const SizedBox(height: 12),
 
             if (widget.availableLocations != null && widget.availableLocations!.length > 1) ...[
-              const Text("Locations included in this visit:",
+               Text(tr("Locations included in this visit:"),
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Colors.grey)),
               const SizedBox(height: 4),
               IgnorePointer(
@@ -1657,14 +1664,14 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
             Row(mainAxisAlignment: MainAxisAlignment.end, children: [
               if (_isEditing) ...[
                 TextButton(onPressed: _cancelEditing,
-                    child: Text('Cancel', style: TextStyle(color: Colors.grey[700], fontWeight: FontWeight.w600))),
+                    child: Text(tr('Cancel'), style: TextStyle(color: Colors.grey[700], fontWeight: FontWeight.w600))),
                 const SizedBox(width: 8),
                 ElevatedButton.icon(onPressed: _saveChanges,
-                    icon: const Icon(Icons.save, size: 18), label: const Text('Save'),
+                    icon: const Icon(Icons.save, size: 18), label:  Text(tr('Save')),
                     style: ElevatedButton.styleFrom(backgroundColor: themeColor, foregroundColor: Colors.white, elevation: 0)),
               ] else
                 OutlinedButton.icon(onPressed: () => setState(() => _isEditing = true),
-                    icon: const Icon(Icons.edit, size: 16), label: const Text('Edit Record'),
+                    icon: const Icon(Icons.edit, size: 16), label:  Text(tr('Edit Record')),
                     style: OutlinedButton.styleFrom(foregroundColor: themeColor,
                         side: BorderSide(color: themeColor.withOpacity(0.5)))),
             ]),

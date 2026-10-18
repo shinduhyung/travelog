@@ -1,6 +1,7 @@
 // lib/screens/home_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:jidoapp/providers/badge_provider.dart';
 import 'package:jidoapp/screens/cities_menu_screen.dart';
 import 'package:jidoapp/screens/countries_menu_screen.dart';
@@ -14,6 +15,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Consumer<BadgeProvider>(
       builder: (context, badgeProvider, child) {
         WidgetsBinding.instance.addPostFrameCallback((_) {
@@ -21,7 +23,7 @@ class HomeScreen extends StatelessWidget {
             for (var achievement in badgeProvider.newlyUnlockedAchievements) {
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(
-                  content: Text('🎉 ${achievement.name} Unlocked!'),
+                  content: Text(tr('🎉 ${achievement.name} Unlocked!')),
                   backgroundColor: Colors.green,
                   duration: const Duration(seconds: 3),
                 ),
@@ -34,7 +36,7 @@ class HomeScreen extends StatelessWidget {
       },
       child: Scaffold(
         appBar: AppBar(
-          title: const Text('jidoapp', style: TextStyle(fontWeight: FontWeight.bold)),
+          title:  Text(tr('jidoapp'), style: TextStyle(fontWeight: FontWeight.bold)),
           backgroundColor: Colors.white,
           elevation: 1,
         ),
@@ -86,7 +88,7 @@ class HomeScreen extends StatelessWidget {
   Widget _buildMenuButton(BuildContext context, String title, IconData icon, VoidCallback onPressed) {
     return ElevatedButton.icon(
       icon: Icon(icon, color: Colors.white),
-      label: Text(title, style: const TextStyle(fontSize: 18, color: Colors.white)),
+      label: Text(tr(title), style: const TextStyle(fontSize: 18, color: Colors.white)),
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
         backgroundColor: Colors.black.withOpacity(0.5),

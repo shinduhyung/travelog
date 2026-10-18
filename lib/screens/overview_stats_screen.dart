@@ -1,6 +1,7 @@
 // lib/screens/overview_stats_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter/foundation.dart';
 import 'package:jidoapp/models/economy_data_model.dart';
 import 'package:jidoapp/providers/economy_provider.dart';
@@ -229,6 +230,7 @@ class _OverviewTabScreenState extends State<OverviewTabScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final countryProvider = Provider.of<CountryProvider>(context);
     final economyProvider = Provider.of<EconomyProvider>(context);
 
@@ -319,9 +321,9 @@ class _OverviewTabScreenState extends State<OverviewTabScreen> {
                 .map((label) => DropdownMenuItem(
               value: label,
               child: Text(
-                label == 'Custom' && _customDateRange != null
+                tr(label == 'Custom' && _customDateRange != null
                     ? '${_customDateRange!.start.toLocal().toString().split(' ')[0]} - ${_customDateRange!.end.toLocal().toString().split(' ')[0]}'
-                    : label,
+                    : label),
                 style: const TextStyle(fontSize: 14),
                 overflow: TextOverflow.ellipsis,
               ),
@@ -349,7 +351,7 @@ class _OverviewTabScreenState extends State<OverviewTabScreen> {
             items: _continentOptions
                 .map((label) => DropdownMenuItem(
               value: label,
-              child: Text(label, style: const TextStyle(fontSize: 14)),
+              child: Text(tr(label), style: const TextStyle(fontSize: 14)),
             ))
                 .toList(),
             onChanged: (value) {
@@ -466,7 +468,7 @@ class _OverviewTabScreenState extends State<OverviewTabScreen> {
                         ),
                         const SizedBox(height: 8),
                         Text(
-                          '$allVisited/$allTotal',
+                          tr('$allVisited/$allTotal'),
                           style: TextStyle(
                             fontSize: 15,
                             fontWeight: FontWeight.bold,
@@ -576,7 +578,7 @@ class _OverviewTabScreenState extends State<OverviewTabScreen> {
                       ),
                       const SizedBox(height: 8),
                       Text(
-                        '$visited/$total',
+                        tr('$visited/$total'),
                         style: TextStyle(
                           fontSize: 15,
                           fontWeight: FontWeight.bold,
@@ -624,9 +626,9 @@ class _OverviewTabScreenState extends State<OverviewTabScreen> {
                 Icon(Icons.calendar_today, size: 16, color: Colors.grey.shade700),
                 const SizedBox(width: 8),
                 Text(
-                  _selectedDateRangeOption == 'Custom' && _customDateRange != null
+                  tr(_selectedDateRangeOption == 'Custom' && _customDateRange != null
                       ? '${_customDateRange!.start.toLocal().toString().split(' ')[0]} ~ ${_customDateRange!.end.toLocal().toString().split(' ')[0]}'
-                      : _selectedDateRangeOption,
+                      : _selectedDateRangeOption),
                   style: TextStyle(
                     fontSize: 13,
                     fontWeight: FontWeight.w600,
@@ -642,7 +644,7 @@ class _OverviewTabScreenState extends State<OverviewTabScreen> {
 
         const SizedBox(height: 20),
         Text(
-          _selectedContinentOption == 'All' ? 'World' : _selectedContinentOption,
+          tr(_selectedContinentOption == 'All' ? 'World' : _selectedContinentOption),
           style: TextStyle(
             fontSize: 24,
             fontWeight: FontWeight.w800,
@@ -687,7 +689,7 @@ class _OverviewTabScreenState extends State<OverviewTabScreen> {
                     tween: IntTween(begin: 0, end: visitedCountries),
                     builder: (context, value, child) {
                       return Text(
-                        '$value',
+                        tr('$value'),
                         style: TextStyle(
                           fontSize: 56,
                           fontWeight: FontWeight.w900,
@@ -701,7 +703,7 @@ class _OverviewTabScreenState extends State<OverviewTabScreen> {
                   ),
                   const SizedBox(height: 4),
                   Text(
-                    'of $totalCountries countries',
+                    tr('of $totalCountries countries'),
                     style: TextStyle(
                       fontSize: 14,
                       color: Colors.grey.shade600,
@@ -740,7 +742,7 @@ class _OverviewTabScreenState extends State<OverviewTabScreen> {
                           ],
                         ),
                         child: Text(
-                          '${(countryRatio * 100).toStringAsFixed(1)}%',
+                          tr('${(countryRatio * 100).toStringAsFixed(1)}%'),
                           style: const TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
@@ -807,14 +809,14 @@ class _OverviewTabScreenState extends State<OverviewTabScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          '$remainingCountries ${_selectedContinentOption == 'All' ? 'countries' : 'in $_selectedContinentOption'} waiting',
+                          tr('$remainingCountries ${_selectedContinentOption == 'All' ? 'countries' : 'in $_selectedContinentOption'} waiting'),
                           style: const TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 15,
                           ),
                         ),
                         Text(
-                          'Keep exploring!',
+                          tr('Keep exploring!'),
                           style: TextStyle(
                             fontSize: 12,
                             color: Colors.grey.shade600,
@@ -878,7 +880,7 @@ class _OverviewTabScreenState extends State<OverviewTabScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          subregion,
+                          tr(subregion),
                           style: const TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
@@ -891,7 +893,7 @@ class _OverviewTabScreenState extends State<OverviewTabScreen> {
                             borderRadius: BorderRadius.circular(12),
                           ),
                           child: Text(
-                            '${subCountries.where((c) => visitedNames.contains(c.name)).length} / ${subCountries.length}',
+                            tr('${subCountries.where((c) => visitedNames.contains(c.name)).length} / ${subCountries.length}'),
                             style: TextStyle(
                               color: themeColor,
                               fontWeight: FontWeight.bold,
@@ -911,11 +913,11 @@ class _OverviewTabScreenState extends State<OverviewTabScreen> {
                         final isVisited = visitedNames.contains(country.name);
                         return ListTile(
                           leading: Text(
-                            _getFlagEmoji(country.isoA2),
+                            tr(_getFlagEmoji(country.isoA2)),
                             style: const TextStyle(fontSize: 28),
                           ),
                           title: Text(
-                            country.name,
+                            tr(country.name),
                             style: const TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.w500,
@@ -934,7 +936,7 @@ class _OverviewTabScreenState extends State<OverviewTabScreen> {
                                     ),
                                   );
                                 },
-                                tooltip: 'View Country Details',
+                                tooltip: tr('View Country Details'),
                               ),
                               const SizedBox(width: 4),
                               isVisited
@@ -1001,7 +1003,7 @@ class _OverviewTabScreenState extends State<OverviewTabScreen> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      subregion,
+                      tr(subregion),
                       style: const TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 15,
@@ -1011,7 +1013,7 @@ class _OverviewTabScreenState extends State<OverviewTabScreen> {
                     Row(
                       children: [
                         Text(
-                          '$visited / $total',
+                          tr('$visited / $total'),
                           style: TextStyle(
                             color: Colors.grey.shade600,
                             fontSize: 13,
@@ -1053,7 +1055,7 @@ class _OverviewTabScreenState extends State<OverviewTabScreen> {
             Icon(icon, size: 16, color: Colors.grey.shade700),
             const SizedBox(width: 6),
             Text(
-              label,
+              tr(label),
               style: TextStyle(
                 fontSize: 13,
                 fontWeight: FontWeight.w600,
@@ -1075,10 +1077,10 @@ class _OverviewTabScreenState extends State<OverviewTabScreen> {
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text('Select Period', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+           Text(tr('Select Period'), style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
           const SizedBox(height: 16),
           ..._dateRangeOptions.map((option) => ListTile(
-            title: Text(option),
+            title: Text(tr(option)),
             trailing: _selectedDateRangeOption == option
                 ? Icon(Icons.check, color: Theme.of(context).primaryColor)
                 : null,
@@ -1096,10 +1098,10 @@ class _OverviewTabScreenState extends State<OverviewTabScreen> {
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text('Select Continent', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+           Text(tr('Select Continent'), style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
           const SizedBox(height: 16),
           ..._continentOptions.map((option) => ListTile(
-            title: Text(option),
+            title: Text(tr(option)),
             trailing: _selectedContinentOption == option
                 ? Icon(Icons.check, color: Theme.of(context).primaryColor)
                 : null,
@@ -1132,7 +1134,7 @@ class _OverviewTabScreenState extends State<OverviewTabScreen> {
                   children: [
                     Icon(Icons.insights, color: Theme.of(context).primaryColor),
                     const SizedBox(width: 8),
-                    Text('Data Explorer', style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
+                    Text(tr('Data Explorer'), style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
                   ],
                 ),
                 const SizedBox(height: 16),
@@ -1173,7 +1175,7 @@ class _OverviewTabScreenState extends State<OverviewTabScreen> {
               Container(
                 padding: const EdgeInsets.all(6),
                 decoration: BoxDecoration(color: Theme.of(context).primaryColor.withOpacity(0.1), borderRadius: BorderRadius.circular(6)),
-                child: Text('X', style: TextStyle(fontWeight: FontWeight.bold, color: Theme.of(context).primaryColor)),
+                child: Text(tr('X'), style: TextStyle(fontWeight: FontWeight.bold, color: Theme.of(context).primaryColor)),
               ),
               const SizedBox(width: 12),
               Expanded(
@@ -1183,16 +1185,16 @@ class _OverviewTabScreenState extends State<OverviewTabScreen> {
                     value: _xAxisMetric,
                     isExpanded: true,
                     style: const TextStyle(fontSize: 14, color: Colors.black87),
-                    items: const [
-                      DropdownMenuItem(value: 'visitCount', child: Text('Visit Count')),
-                      DropdownMenuItem(value: 'totalDays', child: Text('Total Days')),
-                      DropdownMenuItem(value: 'rating', child: Text('Rating')),
-                      DropdownMenuItem(value: 'firstVisitOrder', child: Text('First Visit Order')),
-                      DropdownMenuItem(value: 'visitMonth', child: Text('Visit Month')),
-                      DropdownMenuItem(value: 'population', child: Text('Population')),
-                      DropdownMenuItem(value: 'area', child: Text('Area')),
-                      DropdownMenuItem(value: 'gdp', child: Text('GDP')),
-                      DropdownMenuItem(value: 'gdpPerCapita', child: Text('GDP per Capita')),
+                    items:  [
+                      DropdownMenuItem(value: 'visitCount', child: Text(tr('Visit Count'))),
+                      DropdownMenuItem(value: 'totalDays', child: Text(tr('Total Days'))),
+                      DropdownMenuItem(value: 'rating', child: Text(tr('Rating'))),
+                      DropdownMenuItem(value: 'firstVisitOrder', child: Text(tr('First Visit Order'))),
+                      DropdownMenuItem(value: 'visitMonth', child: Text(tr('Visit Month'))),
+                      DropdownMenuItem(value: 'population', child: Text(tr('Population'))),
+                      DropdownMenuItem(value: 'area', child: Text(tr('Area'))),
+                      DropdownMenuItem(value: 'gdp', child: Text(tr('GDP'))),
+                      DropdownMenuItem(value: 'gdpPerCapita', child: Text(tr('GDP per Capita'))),
                     ],
                     onChanged: (value) {
                       if (value != null) setState(() => _xAxisMetric = value);
@@ -1203,7 +1205,7 @@ class _OverviewTabScreenState extends State<OverviewTabScreen> {
               Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  const Text('Log', style: TextStyle(fontSize: 12, color: Colors.grey)),
+                   Text(tr('Log'), style: TextStyle(fontSize: 12, color: Colors.grey)),
                   const SizedBox(width: 4),
                   SizedBox(
                     height: 24,
@@ -1227,7 +1229,7 @@ class _OverviewTabScreenState extends State<OverviewTabScreen> {
               Container(
                 padding: const EdgeInsets.all(6),
                 decoration: BoxDecoration(color: Colors.orange.withOpacity(0.1), borderRadius: BorderRadius.circular(6)),
-                child: const Text('Y', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.orange)),
+                child:  Text(tr('Y'), style: TextStyle(fontWeight: FontWeight.bold, color: Colors.orange)),
               ),
               const SizedBox(width: 12),
               Expanded(
@@ -1237,16 +1239,16 @@ class _OverviewTabScreenState extends State<OverviewTabScreen> {
                     value: _yAxisMetric,
                     isExpanded: true,
                     style: const TextStyle(fontSize: 14, color: Colors.black87),
-                    items: const [
-                      DropdownMenuItem(value: 'visitCount', child: Text('Visit Count')),
-                      DropdownMenuItem(value: 'totalDays', child: Text('Total Days')),
-                      DropdownMenuItem(value: 'rating', child: Text('Rating')),
-                      DropdownMenuItem(value: 'firstVisitOrder', child: Text('First Visit Order')),
-                      DropdownMenuItem(value: 'visitMonth', child: Text('Visit Month')),
-                      DropdownMenuItem(value: 'population', child: Text('Population')),
-                      DropdownMenuItem(value: 'area', child: Text('Area')),
-                      DropdownMenuItem(value: 'gdp', child: Text('GDP')),
-                      DropdownMenuItem(value: 'gdpPerCapita', child: Text('GDP per Capita')),
+                    items:  [
+                      DropdownMenuItem(value: 'visitCount', child: Text(tr('Visit Count'))),
+                      DropdownMenuItem(value: 'totalDays', child: Text(tr('Total Days'))),
+                      DropdownMenuItem(value: 'rating', child: Text(tr('Rating'))),
+                      DropdownMenuItem(value: 'firstVisitOrder', child: Text(tr('First Visit Order'))),
+                      DropdownMenuItem(value: 'visitMonth', child: Text(tr('Visit Month'))),
+                      DropdownMenuItem(value: 'population', child: Text(tr('Population'))),
+                      DropdownMenuItem(value: 'area', child: Text(tr('Area'))),
+                      DropdownMenuItem(value: 'gdp', child: Text(tr('GDP'))),
+                      DropdownMenuItem(value: 'gdpPerCapita', child: Text(tr('GDP per Capita'))),
                     ],
                     onChanged: (value) {
                       if (value != null) setState(() => _yAxisMetric = value);
@@ -1257,7 +1259,7 @@ class _OverviewTabScreenState extends State<OverviewTabScreen> {
               Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  const Text('Log', style: TextStyle(fontSize: 12, color: Colors.grey)),
+                   Text(tr('Log'), style: TextStyle(fontSize: 12, color: Colors.grey)),
                   const SizedBox(width: 4),
                   SizedBox(
                     height: 24,
@@ -1295,7 +1297,7 @@ class _OverviewTabScreenState extends State<OverviewTabScreen> {
 
   Widget _buildFilterChip(String label, bool value, Function(bool) onChanged) {
     return FilterChip(
-      label: Text(label, style: const TextStyle(fontSize: 12)),
+      label: Text(tr(label), style: const TextStyle(fontSize: 12)),
       selected: value,
       onSelected: onChanged,
       showCheckmark: false,
@@ -1313,7 +1315,7 @@ class _OverviewTabScreenState extends State<OverviewTabScreen> {
       return Container(
         height: 300,
         alignment: Alignment.center,
-        child: const Text('No countries to display.', style: TextStyle(color: Colors.grey)),
+        child:  Text(tr('No countries to display.'), style: TextStyle(color: Colors.grey)),
       );
     }
 
@@ -1386,7 +1388,7 @@ class _OverviewTabScreenState extends State<OverviewTabScreen> {
       return Container(
         height: 300,
         alignment: Alignment.center,
-        child: const Text('No data available for selected metrics', style: TextStyle(color: Colors.grey)),
+        child:  Text(tr('No data available for selected metrics'), style: TextStyle(color: Colors.grey)),
       );
     }
 
@@ -1412,7 +1414,7 @@ class _OverviewTabScreenState extends State<OverviewTabScreen> {
               maxY: finalMaxY,
               titlesData: FlTitlesData(
                 leftTitles: AxisTitles(
-                  axisNameWidget: Text(_getAxisLabel(_yAxisMetric), style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 11, color: Colors.grey)),
+                  axisNameWidget: Text(tr(_getAxisLabel(_yAxisMetric)), style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 11, color: Colors.grey)),
                   sideTitles: SideTitles(
                     showTitles: true,
                     reservedSize: 40,
@@ -1423,7 +1425,7 @@ class _OverviewTabScreenState extends State<OverviewTabScreen> {
                       double original = _yLogScale ? math.pow(10, value).toDouble() : value;
                       return SideTitleWidget(
                         axisSide: meta.axisSide,
-                        child: Text(_formatNumber(original), style: const TextStyle(fontSize: 10, color: Colors.black54)),
+                        child: Text(tr(_formatNumber(original)), style: const TextStyle(fontSize: 10, color: Colors.black54)),
                       );
                     },
                   ),
@@ -1431,7 +1433,7 @@ class _OverviewTabScreenState extends State<OverviewTabScreen> {
                 bottomTitles: AxisTitles(
                   axisNameWidget: Padding(
                     padding: const EdgeInsets.only(top: 12.0),
-                    child: Text(_getAxisLabel(_xAxisMetric), style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 11, color: Colors.grey)),
+                    child: Text(tr(_getAxisLabel(_xAxisMetric)), style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 11, color: Colors.grey)),
                   ),
                   sideTitles: SideTitles(
                     showTitles: true,
@@ -1443,7 +1445,7 @@ class _OverviewTabScreenState extends State<OverviewTabScreen> {
                       double original = _xLogScale ? math.pow(10, value).toDouble() : value;
                       return SideTitleWidget(
                         axisSide: meta.axisSide,
-                        child: Text(_formatNumber(original), style: const TextStyle(fontSize: 10, color: Colors.black54)),
+                        child: Text(tr(_formatNumber(original)), style: const TextStyle(fontSize: 10, color: Colors.black54)),
                       );
                     },
                   ),
@@ -1520,7 +1522,7 @@ class _OverviewTabScreenState extends State<OverviewTabScreen> {
             child: Row(
               children: [
                 Text(
-                  _getFlagEmoji(_selectedCountry!.isoA2),
+                  tr(_getFlagEmoji(_selectedCountry!.isoA2)),
                   style: const TextStyle(fontSize: 32),
                 ),
                 const SizedBox(width: 12),
@@ -1528,8 +1530,8 @@ class _OverviewTabScreenState extends State<OverviewTabScreen> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Text('Selected Country', style: TextStyle(fontSize: 10, color: Colors.grey, fontWeight: FontWeight.bold)),
-                      Text(_selectedCountry!.name, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+                       Text(tr('Selected Country'), style: TextStyle(fontSize: 10, color: Colors.grey, fontWeight: FontWeight.bold)),
+                      Text(tr(_selectedCountry!.name), style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
                     ],
                   ),
                 ),
@@ -1607,7 +1609,7 @@ class _OverviewTabScreenState extends State<OverviewTabScreen> {
               ),
             ),
             const SizedBox(width: 6),
-            Text(continent, style: const TextStyle(fontSize: 11, color: Colors.black87)),
+            Text(tr(continent), style: const TextStyle(fontSize: 11, color: Colors.black87)),
           ],
         );
       }).toList(),
@@ -1689,11 +1691,12 @@ class OverviewStatsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const List<Tab> tabs = <Tab>[
-      Tab(icon: Icon(Icons.insights), text: 'Overview'),
-      Tab(icon: Icon(Icons.groups), text: 'Population'),
-      Tab(icon: Icon(Icons.map_outlined), text: 'Area'),
-      Tab(icon: Icon(Icons.monetization_on_outlined), text: 'Economy'),
+    Localizations.maybeLocaleOf(context);
+    final List<Tab> tabs = <Tab>[
+      Tab(icon: Icon(Icons.insights), text: tr('Overview')),
+      Tab(icon: Icon(Icons.groups), text: tr('Population')),
+      Tab(icon: Icon(Icons.map_outlined), text: tr('Area')),
+      Tab(icon: Icon(Icons.monetization_on_outlined), text: tr('Economy')),
     ];
 
     const List<Widget> screens = <Widget>[
@@ -1711,7 +1714,7 @@ class OverviewStatsScreen extends StatelessWidget {
           bottom: false,
           child: Column(
             children: [
-              const Material(
+              Material(
                 elevation: 1,
                 child: TabBar(
                   tabs: tabs,
@@ -1850,7 +1853,7 @@ class _OverviewRankingCardState extends State<_OverviewRankingCard> {
 
   Widget _buildFilterChip(String label, bool value, Function(bool) onChanged) {
     return FilterChip(
-      label: Text(label, style: const TextStyle(fontSize: 11)),
+      label: Text(tr(label), style: const TextStyle(fontSize: 11)),
       selected: value,
       onSelected: (newValue) => onChanged(newValue),
       showCheckmark: false,
@@ -1863,7 +1866,7 @@ class _OverviewRankingCardState extends State<_OverviewRankingCard> {
 
   Widget _buildRankText(int rank, Color color) {
     return Text(
-      '$rank',
+      tr('$rank'),
       style: TextStyle(
         fontSize: 16,
         fontWeight: FontWeight.bold,
@@ -1874,6 +1877,7 @@ class _OverviewRankingCardState extends State<_OverviewRankingCard> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final textTheme = Theme.of(context).textTheme;
     final useDefaultColor = widget.provider.useDefaultRankingBarColor;
     final double maxValue =
@@ -1913,7 +1917,7 @@ class _OverviewRankingCardState extends State<_OverviewRankingCard> {
                         child: Row(children: [
                           Icon(group.icon, color: group.themeColor),
                           const SizedBox(width: 12),
-                          Text(group.title,
+                          Text(tr(group.title),
                               style: textTheme.titleMedium
                                   ?.copyWith(fontWeight: FontWeight.bold)),
                         ]),
@@ -1936,9 +1940,9 @@ class _OverviewRankingCardState extends State<_OverviewRankingCard> {
                     Expanded(
                       child: SegmentedButton<int>(
                         showSelectedIcon: false,
-                        segments: const [
-                          ButtonSegment<int>(value: 0, label: Text('High')),
-                          ButtonSegment<int>(value: 1, label: Text('Low')),
+                        segments:  [
+                          ButtonSegment<int>(value: 0, label: Text(tr('High'))),
+                          ButtonSegment<int>(value: 1, label: Text(tr('Low'))),
                         ],
                         selected: {_sortOrderSegment},
                         onSelectionChanged: (s) {
@@ -1972,7 +1976,7 @@ class _OverviewRankingCardState extends State<_OverviewRankingCard> {
                               .map((String value) => DropdownMenuItem<String>(
                             value: value,
                             child:
-                            Text(value, style: const TextStyle(fontSize: 14)),
+                            Text(tr(value), style: const TextStyle(fontSize: 14)),
                           ))
                               .toList(),
                           onChanged: (String? newValue) {
@@ -2009,7 +2013,7 @@ class _OverviewRankingCardState extends State<_OverviewRankingCard> {
           SizedBox(
             height: 350,
             child: _rankedList.isEmpty
-                ? const Center(child: Text('No countries to display.'))
+                ?  Center(child: Text(tr('No countries to display.')))
                 : ListView.builder(
               padding: const EdgeInsets.all(8.0),
               itemCount: _rankedList.length,
@@ -2046,23 +2050,23 @@ class _OverviewRankingCardState extends State<_OverviewRankingCard> {
                               _buildRankText(rank, rankingThemeColor),
                               const SizedBox(width: 8),
                               Text(
-                                widget.provider.allCountries
+                                tr(widget.provider.allCountries
                                     .where((c) => c.name == country.name)
                                     .map((c) {
                                   final base = 0x1F1E6 - 0x41;
                                   return String.fromCharCode(base + c.isoA2.codeUnitAt(0)) +
                                       String.fromCharCode(base + c.isoA2.codeUnitAt(1));
                                 })
-                                    .firstOrNull ?? '',
+                                    .firstOrNull ?? ''),
                                 style: const TextStyle(fontSize: 18),
                               ),
                               const SizedBox(width: 6),
                               Expanded(
-                                  child: Text(country.name,
+                                  child: Text(tr(country.name),
                                       style: textTheme.titleMedium?.copyWith(
                                           fontWeight: FontWeight.bold))),
                               Text(
-                                  '${value.toInt()}${_selectedRanking.unit}',
+                                  tr('${value.toInt()}${_selectedRanking.unit}'),
                                   style: textTheme.bodyLarge
                                       ?.copyWith(fontWeight: FontWeight.bold)),
                             ],
@@ -2124,6 +2128,7 @@ class _RatingTierCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final textTheme = Theme.of(context).textTheme;
 
     final Map<double, List<Country>> countriesByRating = {};
@@ -2179,7 +2184,7 @@ class _RatingTierCard extends StatelessWidget {
                         Icon(Icons.star_rounded, color: tierColor, size: 20),
                         const SizedBox(height: 4),
                         Text(
-                          tier.toStringAsFixed(1),
+                          tr(tier.toStringAsFixed(1)),
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 16,
@@ -2198,7 +2203,7 @@ class _RatingTierCard extends StatelessWidget {
                       runSpacing: 8.0,
                       children: countriesInTier.map((country) {
                         return Tooltip(
-                          message: country.name,
+                          message: tr(country.name),
                           child: InkWell(
                             borderRadius: BorderRadius.circular(8),
                             onTap: () => Navigator.push(
@@ -2213,7 +2218,7 @@ class _RatingTierCard extends StatelessWidget {
                                 border: Border.all(color: Colors.grey.shade200),
                               ),
                               child: Text(
-                                _getFlagEmoji(country.isoA2),
+                                tr(_getFlagEmoji(country.isoA2)),
                                 style: const TextStyle(fontSize: 24),
                               ),
                             ),
@@ -2247,7 +2252,7 @@ class _RatingTierCard extends StatelessWidget {
                         const Icon(Icons.star_rounded, color: Colors.amber),
                         const SizedBox(width: 8),
                         Text(
-                          'Rating Tiers',
+                          tr('Rating Tiers'),
                           style: textTheme.titleMedium
                               ?.copyWith(fontWeight: FontWeight.bold),
                         ),
@@ -2270,8 +2275,8 @@ class _RatingTierCard extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 16),
-                const Center(
-                    child: Text('No countries with ratings to display.', style: TextStyle(color: Colors.grey))),
+                 Center(
+                    child: Text(tr('No countries with ratings to display.'), style: TextStyle(color: Colors.grey))),
                 const SizedBox(height: 8),
               ],
             )),
@@ -2296,7 +2301,7 @@ class _RatingTierCard extends StatelessWidget {
                     const Icon(Icons.star_rounded, color: Colors.amber),
                     const SizedBox(width: 8),
                     Text(
-                      'Rating Tiers',
+                      tr('Rating Tiers'),
                       style: textTheme.titleMedium
                           ?.copyWith(fontWeight: FontWeight.bold),
                     ),

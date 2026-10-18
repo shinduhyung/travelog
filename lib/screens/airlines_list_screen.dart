@@ -1,6 +1,7 @@
 // lib/screens/airlines_list_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:jidoapp/models/airline_model.dart';
 import 'package:jidoapp/providers/airline_provider.dart';
 import 'package:jidoapp/screens/airline_detail_screen.dart';
@@ -190,8 +191,8 @@ class _AirlinesListScreenState extends State<AirlinesListScreen>
                             child: const Icon(Icons.filter_alt, color: Colors.white, size: 24),
                           ),
                           const SizedBox(width: 16),
-                          const Text(
-                            'Filters',
+                           Text(
+                            tr('Filters'),
                             style: TextStyle(
                               fontSize: 28,
                               fontWeight: FontWeight.bold,
@@ -202,7 +203,7 @@ class _AirlinesListScreenState extends State<AirlinesListScreen>
                       ),
                       const SizedBox(height: 28),
                       Text(
-                        'FILTER BY',
+                        tr('FILTER BY'),
                         style: TextStyle(
                           fontSize: 12,
                           fontWeight: FontWeight.bold,
@@ -248,7 +249,7 @@ class _AirlinesListScreenState extends State<AirlinesListScreen>
                                 ),
                               ),
                               child: Text(
-                                'Clear All',
+                                tr('Clear All'),
                                 style: TextStyle(
                                   color: Colors.grey[700],
                                   fontWeight: FontWeight.bold,
@@ -274,8 +275,8 @@ class _AirlinesListScreenState extends State<AirlinesListScreen>
                                   borderRadius: BorderRadius.circular(16),
                                 ),
                               ),
-                              child: const Text(
-                                'Apply Filters',
+                              child:  Text(
+                                tr('Apply Filters'),
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 16,
@@ -342,7 +343,7 @@ class _AirlinesListScreenState extends State<AirlinesListScreen>
             ),
             const SizedBox(width: 8),
             Text(
-              label,
+              tr(label),
               style: TextStyle(
                 color: selected ? Colors.white : Colors.grey[700],
                 fontWeight: FontWeight.bold,
@@ -365,6 +366,7 @@ class _AirlinesListScreenState extends State<AirlinesListScreen>
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final tabBar = TabBar(
       controller: _tabController,
       isScrollable: true,
@@ -382,12 +384,12 @@ class _AirlinesListScreenState extends State<AirlinesListScreen>
         fontWeight: FontWeight.w500,
         fontSize: 14,
       ),
-      tabs: const [
-        Tab(text: 'ALL'),
-        Tab(text: '★ STAR'),
-        Tab(text: '☁ SKYTEAM'),
-        Tab(text: '🌍 ONEWORLD'),
-        Tab(text: '✈ OTHER'),
+      tabs:  [
+        Tab(text: tr('ALL')),
+        Tab(text: tr('★ STAR')),
+        Tab(text: tr('☁ SKYTEAM')),
+        Tab(text: tr('🌍 ONEWORLD')),
+        Tab(text: tr('✈ OTHER')),
       ],
     );
 
@@ -405,8 +407,8 @@ class _AirlinesListScreenState extends State<AirlinesListScreen>
               automaticallyImplyLeading: false,
               flexibleSpace: FlexibleSpaceBar(
                 centerTitle: false,
-                title: const Text(
-                  'Airlines',
+                title:  Text(
+                  tr('Airlines'),
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.black87,
@@ -517,8 +519,8 @@ class _AirlinesListScreenState extends State<AirlinesListScreen>
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    const Text(
-                                      'View Statistics',
+                                     Text(
+                                      tr('View Statistics'),
                                       style: TextStyle(
                                         color: Colors.white,
                                         fontSize: 20,
@@ -527,7 +529,7 @@ class _AirlinesListScreenState extends State<AirlinesListScreen>
                                     ),
                                     const SizedBox(height: 4),
                                     Text(
-                                      'Explore your flight data',
+                                      tr('Explore your flight data'),
                                       style: TextStyle(
                                         color: Colors.white.withOpacity(0.9),
                                         fontSize: 13,
@@ -588,7 +590,7 @@ class _AirlinesListScreenState extends State<AirlinesListScreen>
                       child: TextField(
                         controller: _searchController,
                         decoration: InputDecoration(
-                          hintText: 'Search airlines',
+                          hintText: tr('Search airlines'),
                           hintStyle: TextStyle(
                             color: Colors.grey[400],
                             fontSize: 15,
@@ -638,14 +640,14 @@ class _AirlinesListScreenState extends State<AirlinesListScreen>
                                   color: Colors.grey[800],
                                   fontWeight: FontWeight.w600,
                                 ),
-                                items: const [
+                                items:  [
                                   DropdownMenuItem(
                                     value: SortOption.alphabetical,
                                     child: Row(
                                       children: [
                                         Icon(Icons.sort_by_alpha, size: 20),
                                         SizedBox(width: 10),
-                                        Text('A-Z'),
+                                        Text(tr('A-Z')),
                                       ],
                                     ),
                                   ),
@@ -655,7 +657,7 @@ class _AirlinesListScreenState extends State<AirlinesListScreen>
                                       children: [
                                         Icon(Icons.trending_up, size: 20),
                                         SizedBox(width: 10),
-                                        Text('Most Flown'),
+                                        Text(tr('Most Flown')),
                                       ],
                                     ),
                                   ),
@@ -665,7 +667,7 @@ class _AirlinesListScreenState extends State<AirlinesListScreen>
                                       children: [
                                         Icon(Icons.schedule, size: 20),
                                         SizedBox(width: 10),
-                                        Text('Recent'),
+                                        Text(tr('Recent')),
                                       ],
                                     ),
                                   ),
@@ -675,7 +677,7 @@ class _AirlinesListScreenState extends State<AirlinesListScreen>
                                       children: [
                                         Icon(Icons.star, size: 20),
                                         SizedBox(width: 10),
-                                        Text('Top Rated'),
+                                        Text(tr('Top Rated')),
                                       ],
                                     ),
                                   ),
@@ -685,7 +687,7 @@ class _AirlinesListScreenState extends State<AirlinesListScreen>
                                       children: [
                                         Icon(Icons.favorite, size: 20, color: Colors.pink),
                                         SizedBox(width: 10),
-                                        Text('Favorites'),
+                                        Text(tr('Favorites')),
                                       ],
                                     ),
                                   ),
@@ -731,7 +733,7 @@ class _AirlinesListScreenState extends State<AirlinesListScreen>
                                   : Colors.grey[600],
                               size: 24,
                             ),
-                            tooltip: 'Filters',
+                            tooltip: tr('Filters'),
                             onPressed: _showFilterBottomSheet,
                           ),
                         ),
@@ -762,7 +764,7 @@ class _AirlinesListScreenState extends State<AirlinesListScreen>
                     ),
                     const SizedBox(height: 16),
                     Text(
-                      'Loading airlines...',
+                      tr('Loading airlines...'),
                       style: TextStyle(
                         color: Colors.grey[600],
                         fontSize: 14,
@@ -847,7 +849,7 @@ class _AirlinesListScreenState extends State<AirlinesListScreen>
             ),
             const SizedBox(height: 24),
             Text(
-              'No airlines found',
+              tr('No airlines found'),
               style: TextStyle(
                 fontSize: 20,
                 color: Colors.grey[800],
@@ -856,7 +858,7 @@ class _AirlinesListScreenState extends State<AirlinesListScreen>
             ),
             const SizedBox(height: 8),
             Text(
-              'Try adjusting your filters',
+              tr('Try adjusting your filters'),
               style: TextStyle(
                 fontSize: 14,
                 color: Colors.grey[500],
@@ -988,7 +990,7 @@ class _AirlinesListScreenState extends State<AirlinesListScreen>
                         children: [
                           if (allianceName != null) ...[
                             Text(
-                              allianceName,
+                              tr(allianceName),
                               style: TextStyle(
                                 fontSize: 12,
                                 color: Colors.grey[500],
@@ -1011,7 +1013,7 @@ class _AirlinesListScreenState extends State<AirlinesListScreen>
                                 Icon(Icons.star, size: 14, color: Colors.amber[700]),
                                 const SizedBox(width: 2),
                                 Text(
-                                  airline.rating.toStringAsFixed(1),
+                                  tr(airline.rating.toStringAsFixed(1)),
                                   style: TextStyle(
                                     fontSize: 12,
                                     fontWeight: FontWeight.bold,
@@ -1022,7 +1024,7 @@ class _AirlinesListScreenState extends State<AirlinesListScreen>
                             )
                           else
                             Text(
-                              'No Rating',
+                              tr('No Rating'),
                               style: TextStyle(
                                 fontSize: 12,
                                 color: Colors.grey[400],
@@ -1066,7 +1068,7 @@ class _AirlinesListScreenState extends State<AirlinesListScreen>
                           border: Border.all(color: Colors.green[100]!),
                         ),
                         child: Text(
-                          '${totalFlights} flights',
+                          tr('${totalFlights} flights'),
                           style: TextStyle(
                             fontSize: 11,
                             fontWeight: FontWeight.bold,
@@ -1098,6 +1100,7 @@ class _SliverTabBarDelegate extends SliverPersistentHeaderDelegate {
   @override
   Widget build(
       BuildContext context, double shrinkOffset, bool overlapsContent) {
+    Localizations.maybeLocaleOf(context);
     return Container(
       decoration: BoxDecoration(
         color: Colors.grey[50],

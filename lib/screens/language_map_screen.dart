@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:jidoapp/models/country_model.dart';
 import 'package:jidoapp/models/language_data_model.dart';
@@ -72,6 +73,7 @@ class _LanguageMapScreenState extends State<LanguageMapScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final countryProvider = Provider.of<CountryProvider>(context);
     final languageProvider = Provider.of<LanguageProvider>(context);
     final isDarkMode = Theme.of(context).brightness == Brightness.dark;
@@ -126,7 +128,7 @@ class _LanguageMapScreenState extends State<LanguageMapScreen> {
     }
 
     return Scaffold(
-      appBar: AppBar(title: Text(widget.languageFilter ?? 'World Language Map')),
+      appBar: AppBar(title: Text(tr(widget.languageFilter ?? 'World Language Map'))),
       body: Stack(
         children: [
           FlutterMap(
@@ -184,7 +186,7 @@ class _LanguageMapScreenState extends State<LanguageMapScreen> {
                     Container(width: 12, height: 12, color: color),
                     const SizedBox(width: 8),
                     Text(
-                      lang,
+                      tr(lang),
                       style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.white, fontSize: 11, fontWeight: FontWeight.bold),
                     ),
                   ],

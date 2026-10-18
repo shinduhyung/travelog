@@ -1,236 +1,2870 @@
-[
-  { "iso_a3": "SML", "island_count": 0, "coastline_length": 850, "elevation_highest": 2415, "elevation_average": 900, "lake_count": 0 },
-  { "iso_a3": "AND", "island_count": 0, "coastline_length": 0, "elevation_highest": 2942, "elevation_average": 1996, "lake_count": 0 },
-  { "iso_a3": "KOS", "island_count": 0, "coastline_length": 0, "elevation_highest": 2656, "elevation_average": 800, "lake_count": 0 },
-  { "iso_a3": "ARE", "island_count": 200, "coastline_length": 1318, "elevation_highest": 1527, "elevation_average": 250, "lake_count": 0 },
-  { "iso_a3": "AFG", "island_count": 0, "coastline_length": 0, "elevation_highest": 7492, "elevation_average": 1885, "lake_count": 0 },
-  { "iso_a3": "ATG", "island_count": 54, "coastline_length": 153, "elevation_highest": 402, "elevation_average": 75, "lake_count": 0 },
-  { "iso_a3": "AIA", "island_count": 8, "coastline_length": 61, "elevation_highest": 65, "elevation_average": 35, "lake_count": 0 },
-  { "iso_a3": "ALB", "island_count": 10, "coastline_length": 362, "elevation_highest": 2764, "elevation_average": 708, "lake_count": 0 },
-  { "iso_a3": "ARM", "island_count": 0, "coastline_length": 0, "elevation_highest": 4090, "elevation_average": 1792, "lake_count": 0 },
-  { "iso_a3": "AGO", "island_count": 5, "coastline_length": 1600, "elevation_highest": 2620, "elevation_average": 1112, "lake_count": 0 },
-  { "iso_a3": "ARG", "island_count": 200, "coastline_length": 4989, "elevation_highest": 6960, "elevation_average": 595, "lake_count": 0 },
-  { "iso_a3": "ASM", "island_count": 7, "coastline_length": 116, "elevation_highest": 964, "elevation_average": 200, "lake_count": 0 },
-  { "iso_a3": "AUT", "island_count": 0, "coastline_length": 0, "elevation_highest": 3798, "elevation_average": 910, "lake_count": 0 },
-  { "iso_a3": "AUS", "island_count": 8222, "coastline_length": 25760, "elevation_highest": 2228, "elevation_average": 330, "lake_count": 0 },
-  { "iso_a3": "ABW", "island_count": 1, "coastline_length": 69, "elevation_highest": 188, "elevation_average": 30, "lake_count": 0 },
-  { "iso_a3": "AZE", "island_count": 10, "coastline_length": 713, "elevation_highest": 4485, "elevation_average": 384, "lake_count": 0 },
-  { "iso_a3": "BIH", "island_count": 5, "coastline_length": 20, "elevation_highest": 2386, "elevation_average": 500, "lake_count": 0 },
-  { "iso_a3": "BRB", "island_count": 1, "coastline_length": 97, "elevation_highest": 340, "elevation_average": 200, "lake_count": 0 },
-  { "iso_a3": "BGD", "island_count": 50, "coastline_length": 580, "elevation_highest": 1230, "elevation_average": 85, "lake_count": 0 },
-  { "iso_a3": "BEL", "island_count": 0, "coastline_length": 66, "elevation_highest": 694, "elevation_average": 181, "lake_count": 0 },
-  { "iso_a3": "BFA", "island_count": 0, "coastline_length": 0, "elevation_highest": 749, "elevation_average": 297, "lake_count": 0 },
-  { "iso_a3": "BGR", "island_count": 10, "coastline_length": 354, "elevation_highest": 2925, "elevation_average": 470, "lake_count": 0 },
-  { "iso_a3": "BHR", "island_count": 33, "coastline_length": 161, "elevation_highest": 134, "elevation_average": 30, "lake_count": 0 },
-  { "iso_a3": "BDI", "island_count": 0, "coastline_length": 0, "elevation_highest": 2684, "elevation_average": 1504, "lake_count": 0 },
-  { "iso_a3": "BEN", "island_count": 0, "coastline_length": 121, "elevation_highest": 658, "elevation_average": 273, "lake_count": 0 },
-  { "iso_a3": "BMU", "island_count": 138, "coastline_length": 103, "elevation_highest": 76, "elevation_average": 50, "lake_count": 0 },
-  { "iso_a3": "BRN", "island_count": 1, "coastline_length": 161, "elevation_highest": 1850, "elevation_average": 478, "lake_count": 0 },
-  { "iso_a3": "BOL", "island_count": 0, "coastline_length": 0, "elevation_highest": 6542, "elevation_average": 1192, "lake_count": 0 },
-  { "iso_a3": "BRA", "island_count": 300, "coastline_length": 7491, "elevation_highest": 2995, "elevation_average": 320, "lake_count": 20900 },
-  { "iso_a3": "BHS", "island_count": 700, "coastline_length": 3542, "elevation_highest": 63, "elevation_average": 10, "lake_count": 0 },
-  { "iso_a3": "BTN", "island_count": 0, "coastline_length": 0, "elevation_highest": 7570, "elevation_average": 3280, "lake_count": 0 },
-  { "iso_a3": "BWA", "island_count": 0, "coastline_length": 0, "elevation_highest": 1491, "elevation_average": 1013, "lake_count": 0 },
-  { "iso_a3": "BLR", "island_count": 0, "coastline_length": 0, "elevation_highest": 346, "elevation_average": 160, "lake_count": 0 },
-  { "iso_a3": "BLZ", "island_count": 450, "coastline_length": 386, "elevation_highest": 1124, "elevation_average": 200, "lake_count": 0 },
-  { "iso_a3": "CAN", "island_count": 52455, "coastline_length": 202080, "elevation_highest": 5959, "elevation_average": 487, "lake_count": 879800 },
-  { "iso_a3": "COD", "island_count": 10, "coastline_length": 37, "elevation_highest": 5109, "elevation_average": 726, "lake_count": 0 },
-  { "iso_a3": "CAF", "island_count": 0, "coastline_length": 0, "elevation_highest": 1420, "elevation_average": 635, "lake_count": 0 },
-  { "iso_a3": "COG", "island_count": 0, "coastline_length": 169, "elevation_highest": 1040, "elevation_average": 430, "lake_count": 0 },
-  { "iso_a3": "CHE", "island_count": 0, "coastline_length": 0, "elevation_highest": 4634, "elevation_average": 1350, "lake_count": 0 },
-  { "iso_a3": "CIV", "island_count": 5, "coastline_length": 515, "elevation_highest": 1852, "elevation_average": 250, "lake_count": 0 },
-  { "iso_a3": "COK", "island_count": 15, "coastline_length": 120, "elevation_highest": 652, "elevation_average": 100, "lake_count": 0 },
-  { "iso_a3": "CHL", "island_count": 43471, "coastline_length": 6435, "elevation_highest": 6893, "elevation_average": 1871, "lake_count": 0 },
-  { "iso_a3": "CMR", "island_count": 5, "coastline_length": 402, "elevation_highest": 4040, "elevation_average": 667, "lake_count": 0 },
-  { "iso_a3": "CHN", "island_count": 5000, "coastline_length": 14500, "elevation_highest": 8848, "elevation_average": 1840, "lake_count": 23800 },
-  { "iso_a3": "COL", "island_count": 10, "coastline_length": 3208, "elevation_highest": 5700, "elevation_average": 593, "lake_count": 0 },
-  { "iso_a3": "CRI", "island_count": 20, "coastline_length": 1290, "elevation_highest": 3810, "elevation_average": 746, "lake_count": 0 },
-  { "iso_a3": "CUB", "island_count": 1600, "coastline_length": 3735, "elevation_highest": 1974, "elevation_average": 108, "lake_count": 0 },
-  { "iso_a3": "CPV", "island_count": 10, "coastline_length": 965, "elevation_highest": 2829, "elevation_average": 300, "lake_count": 0 },
-  { "iso_a3": "CUW", "island_count": 1, "coastline_length": 364, "elevation_highest": 375, "elevation_average": 50, "lake_count": 0 },
-  { "iso_a3": "CYP", "island_count": 1, "coastline_length": 648, "elevation_highest": 1952, "elevation_average": 91, "lake_count": 0 },
-  { "iso_a3": "CZE", "island_count": 0, "coastline_length": 0, "elevation_highest": 1603, "elevation_average": 430, "lake_count": 0 },
-  { "iso_a3": "DEU", "island_count": 50, "coastline_length": 2389, "elevation_highest": 2962, "elevation_average": 263, "lake_count": 0 },
-  { "iso_a3": "DJI", "island_count": 5, "coastline_length": 314, "elevation_highest": 2028, "elevation_average": 430, "lake_count": 0 },
-  { "iso_a3": "DNK", "island_count": 443, "coastline_length": 7314, "elevation_highest": 171, "elevation_average": 34, "lake_count": 120000 },
-  { "iso_a3": "DMA", "island_count": 1, "coastline_length": 148, "elevation_highest": 1447, "elevation_average": 300, "lake_count": 0 },
-  { "iso_a3": "DOM", "island_count": 10, "coastline_length": 1288, "elevation_highest": 3098, "elevation_average": 424, "lake_count": 0 },
-  { "iso_a3": "DZA", "island_count": 5, "coastline_length": 998, "elevation_highest": 3003, "elevation_average": 800, "lake_count": 0 },
-  { "iso_a3": "ECU", "island_count": 100, "coastline_length": 2237, "elevation_highest": 6268, "elevation_average": 1117, "lake_count": 0 },
-  { "iso_a3": "EST", "island_count": 1500, "coastline_length": 3794, "elevation_highest": 318, "elevation_average": 61, "lake_count": 0 },
-  { "iso_a3": "EGY", "island_count": 20, "coastline_length": 2450, "elevation_highest": 2629, "elevation_average": 321, "lake_count": 0 },
-  { "iso_a3": "ESH", "island_count": 0, "coastline_length": 1046, "elevation_highest": 805, "elevation_average": 256, "lake_count": 0 },
-  { "iso_a3": "ERI", "island_count": 350, "coastline_length": 2234, "elevation_highest": 3018, "elevation_average": 853, "lake_count": 0 },
-  { "iso_a3": "ESP", "island_count": 100, "coastline_length": 4964, "elevation_highest": 3718, "elevation_average": 660, "lake_count": 0 },
-  { "iso_a3": "ETH", "island_count": 0, "coastline_length": 0, "elevation_highest": 4550, "elevation_average": 1330, "lake_count": 0 },
-  { "iso_a3": "FIN", "island_count": 179584, "coastline_length": 1250, "elevation_highest": 1324, "elevation_average": 164, "lake_count": 188000 },
-  { "iso_a3": "FJI", "island_count": 332, "coastline_length": 1129, "elevation_highest": 1324, "elevation_average": 300, "lake_count": 0 },
-  { "iso_a3": "FLK", "island_count": 778, "coastline_length": 1288, "elevation_highest": 705, "elevation_average": 200, "lake_count": 0 },
-  { "iso_a3": "FSM", "island_count": 607, "coastline_length": 6112, "elevation_highest": 791, "elevation_average": 100, "lake_count": 0 },
-  { "iso_a3": "FRO", "island_count": 18, "coastline_length": 1117, "elevation_highest": 882, "elevation_average": 200, "lake_count": 0 },
-  { "iso_a3": "FRA", "island_count": 200, "coastline_length": 3427, "elevation_highest": 4810, "elevation_average": 375, "lake_count": 0 },
-  { "iso_a3": "GAB", "island_count": 10, "coastline_length": 885, "elevation_highest": 1575, "elevation_average": 377, "lake_count": 0 },
-  { "iso_a3": "GBR", "island_count": 6289, "coastline_length": 12429, "elevation_highest": 1345, "elevation_average": 162, "lake_count": 42000 },
-  { "iso_a3": "GRD", "island_count": 3, "coastline_length": 121, "elevation_highest": 840, "elevation_average": 200, "lake_count": 0 },
-  { "iso_a3": "GEO", "island_count": 0, "coastline_length": 310, "elevation_highest": 5201, "elevation_average": 1432, "lake_count": 0 },
-  { "iso_a3": "GGY", "island_count": 10, "coastline_length": 50, "elevation_highest": 114, "elevation_average": 50, "lake_count": 0 },
-  { "iso_a3": "GHA", "island_count": 0, "coastline_length": 539, "elevation_highest": 885, "elevation_average": 190, "lake_count": 0 },
-  { "iso_a3": "GRL", "island_count": 1000, "coastline_length": 44087, "elevation_highest": 3694, "elevation_average": 1792, "lake_count": 0 },
-  { "iso_a3": "GMB", "island_count": 1, "coastline_length": 80, "elevation_highest": 53, "elevation_average": 34, "lake_count": 0 },
-  { "iso_a3": "GIN", "island_count": 10, "coastline_length": 320, "elevation_highest": 1752, "elevation_average": 472, "lake_count": 0 },
-  { "iso_a3": "GNQ", "island_count": 5, "coastline_length": 296, "elevation_highest": 3008, "elevation_average": 577, "lake_count": 0 },
-  { "iso_a3": "GRC", "island_count": 6000, "coastline_length": 13676, "elevation_highest": 2918, "elevation_average": 498, "lake_count": 0 },
-  { "iso_a3": "GTM", "island_count": 5, "coastline_length": 400, "elevation_highest": 4220, "elevation_average": 759, "lake_count": 0 },
-  { "iso_a3": "GUM", "island_count": 1, "coastline_length": 125, "elevation_highest": 406, "elevation_average": 100, "lake_count": 0 },
-  { "iso_a3": "GNB", "island_count": 88, "coastline_length": 350, "elevation_highest": 262, "elevation_average": 70, "lake_count": 0 },
-  { "iso_a3": "GUY", "island_count": 10, "coastline_length": 459, "elevation_highest": 2775, "elevation_average": 200, "lake_count": 0 },
-  { "iso_a3": "HKG", "island_count": 263, "coastline_length": 733, "elevation_highest": 957, "elevation_average": 150, "lake_count": 0 },
-  { "iso_a3": "HND", "island_count": 20, "coastline_length": 832, "elevation_highest": 2870, "elevation_average": 684, "lake_count": 0 },
-  { "iso_a3": "HRV", "island_count": 1185, "coastline_length": 5835, "elevation_highest": 1831, "elevation_average": 331, "lake_count": 0 },
-  { "iso_a3": "HTI", "island_count": 10, "coastline_length": 1771, "elevation_highest": 2680, "elevation_average": 470, "lake_count": 0 },
-  { "iso_a3": "HUN", "island_count": 0, "coastline_length": 0, "elevation_highest": 1014, "elevation_average": 143, "lake_count": 0 },
-  { "iso_a3": "IDN", "island_count": 17508, "coastline_length": 54716, "elevation_highest": 4884, "elevation_average": 367, "lake_count": 0 },
-  { "iso_a3": "IRL", "island_count": 80, "coastline_length": 1448, "elevation_highest": 1041, "elevation_average": 118, "lake_count": 0 },
-  { "iso_a3": "ISR", "island_count": 0, "coastline_length": 273, "elevation_highest": 1208, "elevation_average": 508, "lake_count": 0 },
-  { "iso_a3": "IMN", "island_count": 1, "coastline_length": 160, "elevation_highest": 620, "elevation_average": 150, "lake_count": 0 },
-  { "iso_a3": "IND", "island_count": 1200, "coastline_length": 7516, "elevation_highest": 8586, "elevation_average": 160, "lake_count": 0 },
-  { "iso_a3": "IRQ", "island_count": 0, "coastline_length": 58, "elevation_highest": 3611, "elevation_average": 312, "lake_count": 0 },
-  { "iso_a3": "IRN", "island_count": 20, "coastline_length": 2440, "elevation_highest": 5671, "elevation_average": 1305, "lake_count": 0 },
-  { "iso_a3": "ISL", "island_count": 30, "coastline_length": 4970, "elevation_highest": 2110, "elevation_average": 557, "lake_count": 0 },
-  { "iso_a3": "ITA", "island_count": 450, "coastline_length": 7600, "elevation_highest": 4810, "elevation_average": 538, "lake_count": 0 },
-  { "iso_a3": "JEY", "island_count": 8, "coastline_length": 70, "elevation_highest": 143, "elevation_average": 50, "lake_count": 0 },
-  { "iso_a3": "JAM", "island_count": 10, "coastline_length": 1022, "elevation_highest": 2256, "elevation_average": 340, "lake_count": 0 },
-  { "iso_a3": "JOR", "island_count": 0, "coastline_length": 26, "elevation_highest": 1854, "elevation_average": 812, "lake_count": 0 },
-  { "iso_a3": "JPN", "island_count": 6852, "coastline_length": 29751, "elevation_highest": 3776, "elevation_average": 438, "lake_count": 0 },
-  { "iso_a3": "KEN", "island_count": 0, "coastline_length": 536, "elevation_highest": 5199, "elevation_average": 762, "lake_count": 0 },
-  { "iso_a3": "KGZ", "island_count": 0, "coastline_length": 0, "elevation_highest": 7439, "elevation_average": 2988, "lake_count": 0 },
-  { "iso_a3": "KHM", "island_count": 60, "coastline_length": 443, "elevation_highest": 1813, "elevation_average": 126, "lake_count": 0 },
-  { "iso_a3": "KIR", "island_count": 33, "coastline_length": 1143, "elevation_highest": 81, "elevation_average": 2, "lake_count": 0 },
-  { "iso_a3": "COM", "island_count": 4, "coastline_length": 340, "elevation_highest": 2360, "elevation_average": 300, "lake_count": 0 },
-  { "iso_a3": "KNA", "island_count": 2, "coastline_length": 135, "elevation_highest": 1156, "elevation_average": 200, "lake_count": 0 },
-  { "iso_a3": "PRK", "island_count": 50, "coastline_length": 2495, "elevation_highest": 2744, "elevation_average": 600, "lake_count": 0 },
-  { "iso_a3": "KOR", "island_count": 3358, "coastline_length": 2413, "elevation_highest": 1950, "elevation_average": 282, "lake_count": 0 },
-  { "iso_a3": "KWT", "island_count": 9, "coastline_length": 499, "elevation_highest": 306, "elevation_average": 108, "lake_count": 0 },
-  { "iso_a3": "GIB", "island_count": 0, "coastline_length": 12, "elevation_highest": 426, "elevation_average": 100, "lake_count": 0 },
-  { "iso_a3": "CYM", "island_count": 3, "coastline_length": 160, "elevation_highest": 43, "elevation_average": 15, "lake_count": 0 },
-  { "iso_a3": "KAZ", "island_count": 0, "coastline_length": 1894, "elevation_highest": 7010, "elevation_average": 387, "lake_count": 0 },
-  { "iso_a3": "LAO", "island_count": 0, "coastline_length": 0, "elevation_highest": 2817, "elevation_average": 710, "lake_count": 0 },
-  { "iso_a3": "LBN", "island_count": 5, "coastline_length": 225, "elevation_highest": 3088, "elevation_average": 1250, "lake_count": 0 },
-  { "iso_a3": "LCA", "island_count": 1, "coastline_length": 158, "elevation_highest": 950, "elevation_average": 200, "lake_count": 0 },
-  { "iso_a3": "LIE", "island_count": 0, "coastline_length": 0, "elevation_highest": 2599, "elevation_average": 1800, "lake_count": 0 },
-  { "iso_a3": "LKA", "island_count": 1, "coastline_length": 1340, "elevation_highest": 2524, "elevation_average": 228, "lake_count": 0 },
-  { "iso_a3": "LBR", "island_count": 0, "coastline_length": 579, "elevation_highest": 1440, "elevation_average": 243, "lake_count": 0 },
-  { "iso_a3": "LSO", "island_count": 0, "coastline_length": 0, "elevation_highest": 3482, "elevation_average": 2161, "lake_count": 0 },
-  { "iso_a3": "LTU", "island_count": 0, "coastline_length": 90, "elevation_highest": 294, "elevation_average": 110, "lake_count": 0 },
-  { "iso_a3": "LUX", "island_count": 0, "coastline_length": 0, "elevation_highest": 559, "elevation_average": 325, "lake_count": 0 },
-  { "iso_a3": "LVA", "island_count": 0, "coastline_length": 498, "elevation_highest": 312, "elevation_average": 87, "lake_count": 0 },
-  { "iso_a3": "LBY", "island_count": 5, "coastline_length": 1770, "elevation_highest": 2267, "elevation_average": 423, "lake_count": 0 },
-  { "iso_a3": "MAR", "island_count": 10, "coastline_length": 1835, "elevation_highest": 4165, "elevation_average": 909, "lake_count": 0 },
-  { "iso_a3": "MCO", "island_count": 0, "coastline_length": 4, "elevation_highest": 140, "elevation_average": 50, "lake_count": 0 },
-  { "iso_a3": "MDA", "island_count": 0, "coastline_length": 0, "elevation_highest": 430, "elevation_average": 147, "lake_count": 0 },
-  { "iso_a3": "MNE", "island_count": 10, "coastline_length": 294, "elevation_highest": 2534, "elevation_average": 1086, "lake_count": 0 },
-  { "iso_a3": "MAF", "island_count": 1, "coastline_length": 70, "elevation_highest": 424, "elevation_average": 50, "lake_count": 0 },
-  { "iso_a3": "MDG", "island_count": 250, "coastline_length": 4828, "elevation_highest": 2876, "elevation_average": 615, "lake_count": 0 },
-  { "iso_a3": "MHL", "island_count": 34, "coastline_length": 370, "elevation_highest": 10, "elevation_average": 2, "lake_count": 0 },
-  { "iso_a3": "MKD", "island_count": 0, "coastline_length": 0, "elevation_highest": 2764, "elevation_average": 741, "lake_count": 0 },
-  { "iso_a3": "MLI", "island_count": 0, "coastline_length": 0, "elevation_highest": 1155, "elevation_average": 343, "lake_count": 0 },
-  { "iso_a3": "MMR", "island_count": 800, "coastline_length": 1930, "elevation_highest": 5881, "elevation_average": 702, "lake_count": 0 },
-  { "iso_a3": "MNG", "island_count": 0, "coastline_length": 0, "elevation_highest": 4374, "elevation_average": 1527, "lake_count": 0 },
-  { "iso_a3": "MAC", "island_count": 0, "coastline_length": 41, "elevation_highest": 172, "elevation_average": 50, "lake_count": 0 },
-  { "iso_a3": "MNP", "island_count": 15, "coastline_length": 148, "elevation_highest": 965, "elevation_average": 100, "lake_count": 0 },
-  { "iso_a3": "MUS", "island_count": 49, "coastline_length": 177, "elevation_highest": 828, "elevation_average": 200, "lake_count": 0 },
-  { "iso_a3": "MDV", "island_count": 1192, "coastline_length": 644, "elevation_highest": 5, "elevation_average": 2, "lake_count": 0 },
-  { "iso_a3": "MWI", "island_count": 0, "coastline_length": 0, "elevation_highest": 3002, "elevation_average": 779, "lake_count": 0 },
-  { "iso_a3": "MEX", "island_count": 1, "coastline_length": 9330, "elevation_highest": 5636, "elevation_average": 1111, "lake_count": 0 },
-  { "iso_a3": "MYS", "island_count": 400, "coastline_length": 4675, "elevation_highest": 4095, "elevation_average": 538, "lake_count": 0 },
-  { "iso_a3": "MOZ", "island_count": 50, "coastline_length": 2470, "elevation_highest": 2436, "elevation_average": 345, "lake_count": 0 },
-  { "iso_a3": "NAM", "island_count": 0, "coastline_length": 1572, "elevation_highest": 2606, "elevation_average": 1141, "lake_count": 0 },
-  { "iso_a3": "NCL", "island_count": 20, "coastline_length": 2254, "elevation_highest": 1628, "elevation_average": 400, "lake_count": 0 },
-  { "iso_a3": "NER", "island_count": 0, "coastline_length": 0, "elevation_highest": 2022, "elevation_average": 474, "lake_count": 0 },
-  { "iso_a3": "NFK", "island_count": 3, "coastline_length": 32, "elevation_highest": 319, "elevation_average": 100, "lake_count": 0 },
-  { "iso_a3": "NGA", "island_count": 10, "coastline_length": 853, "elevation_highest": 2419, "elevation_average": 380, "lake_count": 0 },
-  { "iso_a3": "NIC", "island_count": 10, "coastline_length": 910, "elevation_highest": 2107, "elevation_average": 298, "lake_count": 0 },
-  { "iso_a3": "NLD", "island_count": 1, "coastline_length": 451, "elevation_highest": 322, "elevation_average": 30, "lake_count": 0 },
-  { "iso_a3": "NOR", "island_count": 239057, "coastline_length": 83281, "elevation_highest": 2469, "elevation_average": 460, "lake_count": 20000 },
-  { "iso_a3": "NPL", "island_count": 0, "coastline_length": 0, "elevation_highest": 8848, "elevation_average": 3265, "lake_count": 0 },
-  { "iso_a3": "NRU", "island_count": 1, "coastline_length": 30, "elevation_highest": 65, "elevation_average": 20, "lake_count": 0 },
-  { "iso_a3": "NIU", "island_count": 1, "coastline_length": 64, "elevation_highest": 68, "elevation_average": 20, "lake_count": 0 },
-  { "iso_a3": "NZL", "island_count": 600, "coastline_length": 15134, "elevation_highest": 3724, "elevation_average": 388, "lake_count": 0 },
-  { "iso_a3": "OMN", "island_count": 20, "coastline_length": 2092, "elevation_highest": 3009, "elevation_average": 310, "lake_count": 0 },
-  { "iso_a3": "PAN", "island_count": 1000, "coastline_length": 2490, "elevation_highest": 3475, "elevation_average": 360, "lake_count": 0 },
-  { "iso_a3": "PER", "island_count": 1, "coastline_length": 2414, "elevation_highest": 6768, "elevation_average": 1555, "lake_count": 0 },
-  { "iso_a3": "PYF", "island_count": 118, "coastline_length": 2525, "elevation_highest": 2241, "elevation_average": 200, "lake_count": 0 },
-  { "iso_a3": "PNG", "island_count": 600, "coastline_length": 5152, "elevation_highest": 4509, "elevation_average": 667, "lake_count": 0 },
-  { "iso_a3": "PHL", "island_count": 7641, "coastline_length": 36289, "elevation_highest": 2954, "elevation_average": 443, "lake_count": 0 },
-  { "iso_a3": "PAK", "island_count": 10, "coastline_length": 1046, "elevation_highest": 8611, "elevation_average": 900, "lake_count": 0 },
-  { "iso_a3": "POL", "island_count": 0, "coastline_length": 440, "elevation_highest": 2499, "elevation_average": 173, "lake_count": 0 },
-  { "iso_a3": "SPM", "island_count": 3, "coastline_length": 120, "elevation_highest": 240, "elevation_average": 100, "lake_count": 0 },
-  { "iso_a3": "PCN", "island_count": 4, "coastline_length": 30, "elevation_highest": 347, "elevation_average": 100, "lake_count": 0 },
-  { "iso_a3": "PRI", "island_count": 100, "coastline_length": 501, "elevation_highest": 1338, "elevation_average": 261, "lake_count": 0 },
-  { "iso_a3": "PSE", "island_count": 0, "coastline_length": 40, "elevation_highest": 1020, "elevation_average": 375, "lake_count": 0 },
-  { "iso_a3": "PRT", "island_count": 20, "coastline_length": 1793, "elevation_highest": 2351, "elevation_average": 372, "lake_count": 0 },
-  { "iso_a3": "PLW", "island_count": 340, "coastline_length": 1519, "elevation_highest": 242, "elevation_average": 50, "lake_count": 0 },
-  { "iso_a3": "PRY", "island_count": 0, "coastline_length": 0, "elevation_highest": 842, "elevation_average": 178, "lake_count": 0 },
-  { "iso_a3": "QAT", "island_count": 1, "coastline_length": 563, "elevation_highest": 103, "elevation_average": 28, "lake_count": 0 },
-  { "iso_a3": "ROU", "island_count": 0, "coastline_length": 225, "elevation_highest": 2544, "elevation_average": 414, "lake_count": 0 },
-  { "iso_a3": "SRB", "island_count": 0, "coastline_length": 0, "elevation_highest": 2169, "elevation_average": 473, "lake_count": 0 },
-  { "iso_a3": "RUS", "island_count": 2500, "coastline_length": 37653, "elevation_highest": 5642, "elevation_average": 600, "lake_count": 201200 },
-  { "iso_a3": "RWA", "island_count": 0, "coastline_length": 0, "elevation_highest": 4507, "elevation_average": 1598, "lake_count": 0 },
-  { "iso_a3": "SAU", "island_count": 1285, "coastline_length": 2640, "elevation_highest": 3133, "elevation_average": 665, "lake_count": 0 },
-  { "iso_a3": "SLB", "island_count": 992, "coastline_length": 5313, "elevation_highest": 2335, "elevation_average": 400, "lake_count": 0 },
-  { "iso_a3": "SYC", "island_count": 115, "coastline_length": 491, "elevation_highest": 905, "elevation_average": 200, "lake_count": 0 },
-  { "iso_a3": "SDN", "island_count": 0, "coastline_length": 853, "elevation_highest": 3048, "elevation_average": 568, "lake_count": 0 },
-  { "iso_a3": "SWE", "island_count": 221800, "coastline_length": 3218, "elevation_highest": 2097, "elevation_average": 320, "lake_count": 22600 },
-  { "iso_a3": "SGP", "island_count": 63, "coastline_length": 193, "elevation_highest": 163, "elevation_average": 15, "lake_count": 0 },
-  { "iso_a3": "SVN", "island_count": 0, "coastline_length": 47, "elevation_highest": 2864, "elevation_average": 492, "lake_count": 0 },
-  { "iso_a3": "SVK", "island_count": 0, "coastline_length": 0, "elevation_highest": 2655, "elevation_average": 458, "lake_count": 0 },
-  { "iso_a3": "SLE", "island_count": 10, "coastline_length": 402, "elevation_highest": 1948, "elevation_average": 279, "lake_count": 0 },
-  { "iso_a3": "SMR", "island_count": 0, "coastline_length": 0, "elevation_highest": 739, "elevation_average": 400, "lake_count": 0 },
-  { "iso_a3": "SEN", "island_count": 0, "coastline_length": 531, "elevation_highest": 648, "elevation_average": 69, "lake_count": 0 },
-  { "iso_a3": "SOM", "island_count": 10, "coastline_length": 3025, "elevation_highest": 2416, "elevation_average": 410, "lake_count": 0 },
-  { "iso_a3": "SUR", "island_count": 0, "coastline_length": 386, "elevation_highest": 1230, "elevation_average": 246, "lake_count": 0 },
-  { "iso_a3": "SSD", "island_count": 0, "coastline_length": 0, "elevation_highest": 3187, "elevation_average": 450, "lake_count": 0 },
-  { "iso_a3": "STP", "island_count": 2, "coastline_length": 209, "elevation_highest": 2024, "elevation_average": 300, "lake_count": 0 },
-  { "iso_a3": "SLV", "island_count": 0, "coastline_length": 307, "elevation_highest": 2730, "elevation_average": 442, "lake_count": 0 },
-  { "iso_a3": "SXM", "island_count": 1, "coastline_length": 70, "elevation_highest": 407, "elevation_average": 50, "lake_count": 0 },
-  { "iso_a3": "SYR", "island_count": 0, "coastline_length": 193, "elevation_highest": 2814, "elevation_average": 514, "lake_count": 0 },
-  { "iso_a3": "SWZ", "island_count": 0, "coastline_length": 0, "elevation_highest": 1862, "elevation_average": 660, "lake_count": 0 },
-  { "iso_a3": "TCA", "island_count": 40, "coastline_length": 389, "elevation_highest": 49, "elevation_average": 20, "lake_count": 0 },
-  { "iso_a3": "TCD", "island_count": 0, "coastline_length": 0, "elevation_highest": 3445, "elevation_average": 543, "lake_count": 0 },
-  { "iso_a3": "TGO", "island_count": 0, "coastline_length": 56, "elevation_highest": 986, "elevation_average": 236, "lake_count": 0 },
-  { "iso_a3": "THA", "island_count": 143, "coastline_length": 3219, "elevation_highest": 2565, "elevation_average": 287, "lake_count": 0 },
-  { "iso_a3": "TJK", "island_count": 0, "coastline_length": 0, "elevation_highest": 7495, "elevation_average": 3186, "lake_count": 0 },
-  { "iso_a3": "TLS", "island_count": 4, "coastline_length": 706, "elevation_highest": 2963, "elevation_average": 500, "lake_count": 0 },
-  { "iso_a3": "TKM", "island_count": 0, "coastline_length": 1768, "elevation_highest": 3139, "elevation_average": 230, "lake_count": 0 },
-  { "iso_a3": "TUN", "island_count": 10, "coastline_length": 1148, "elevation_highest": 1544, "elevation_average": 246, "lake_count": 0 },
-  { "iso_a3": "TON", "island_count": 52, "coastline_length": 419, "elevation_highest": 1033, "elevation_average": 100, "lake_count": 0 },
-  { "iso_a3": "TUR", "island_count": 500, "coastline_length": 7200, "elevation_highest": 5137, "elevation_average": 1141, "lake_count": 0 },
-  { "iso_a3": "TTO", "island_count": 23, "coastline_length": 362, "elevation_highest": 940, "elevation_average": 83, "lake_count": 0 },
-  { "iso_a3": "TUV", "island_count": 9, "coastline_length": 24, "elevation_highest": 5, "elevation_average": 2, "lake_count": 0 },
-  { "iso_a3": "TWN", "island_count": 20, "coastline_length": 1566, "elevation_highest": 3952, "elevation_average": 1150, "lake_count": 0 },
-  { "iso_a3": "TZA", "island_count": 30, "coastline_length": 1424, "elevation_highest": 5895, "elevation_average": 1018, "lake_count": 0 },
-  { "iso_a3": "UKR", "island_count": 0, "coastline_length": 2782, "elevation_highest": 2061, "elevation_average": 175, "lake_count": 0 },
-  { "iso_a3": "UGA", "island_count": 0, "coastline_length": 0, "elevation_highest": 5110, "elevation_average": 1100, "lake_count": 0 },
-  { "iso_a3": "USA", "island_count": 18617, "coastline_length": 19924, "elevation_highest": 6190, "elevation_average": 760, "lake_count": 102500 },
-  { "iso_a3": "URY", "island_count": 0, "coastline_length": 660, "elevation_highest": 514, "elevation_average": 109, "lake_count": 0 },
-  { "iso_a3": "UZB", "island_count": 0, "coastline_length": 420, "elevation_highest": 4643, "elevation_average": 450, "lake_count": 0 },
-  { "iso_a3": "VAT", "island_count": 0, "coastline_length": 0, "elevation_highest": 75, "elevation_average": 50, "lake_count": 0 },
-  { "iso_a3": "VCT", "island_count": 32, "coastline_length": 84, "elevation_highest": 1234, "elevation_average": 200, "lake_count": 0 },
-  { "iso_a3": "VEN", "island_count": 70, "coastline_length": 2800, "elevation_highest": 4978, "elevation_average": 450, "lake_count": 0 },
-  { "iso_a3": "VGB", "island_count": 36, "coastline_length": 80, "elevation_highest": 521, "elevation_average": 100, "lake_count": 0 },
-  { "iso_a3": "VIR", "island_count": 50, "coastline_length": 188, "elevation_highest": 474, "elevation_average": 100, "lake_count": 0 },
-  { "iso_a3": "VNM", "island_count": 50, "coastline_length": 3444, "elevation_highest": 3147, "elevation_average": 398, "lake_count": 0 },
-  { "iso_a3": "VUT", "island_count": 83, "coastline_length": 2528, "elevation_highest": 1877, "elevation_average": 200, "lake_count": 0 },
-  { "iso_a3": "WLF", "island_count": 20, "coastline_length": 129, "elevation_highest": 524, "elevation_average": 100, "lake_count": 0 },
-  { "iso_a3": "WSM", "island_count": 10, "coastline_length": 403, "elevation_highest": 1857, "elevation_average": 200, "lake_count": 0 },
-  { "iso_a3": "KOS", "island_count": 0, "coastline_length": 0, "elevation_highest": 2656, "elevation_average": 800, "lake_count": 0 },
-  { "iso_a3": "YEM", "island_count": 200, "coastline_length": 1906, "elevation_highest": 3666, "elevation_average": 999, "lake_count": 0 },
-  { "iso_a3": "ZAF", "island_count": 10, "coastline_length": 2798, "elevation_highest": 3448, "elevation_average": 1034, "lake_count": 0 },
-  { "iso_a3": "ZMB", "island_count": 0, "coastline_length": 0, "elevation_highest": 2301, "elevation_average": 1138, "lake_count": 0 },
-  { "iso_a3": "ZWE", "island_count": 0, "coastline_length": 0, "elevation_highest": 2592, "elevation_average": 961, "lake_count": 0 },
-  { "iso_a3": "ALA", "island_count": 6500, "coastline_length": 600, "elevation_highest": 129, "elevation_average": 50, "lake_count": 0 },
-  { "iso_a3": "BLM", "island_count": 1, "coastline_length": 59, "elevation_highest": 424, "elevation_average": 50, "lake_count": 0 },
-  { "iso_a3": "MRT", "island_count": 0, "coastline_length": 754, "elevation_highest": 915, "elevation_average": 276, "lake_count": 0 },
-  { "iso_a3": "MSR", "island_count": 1, "coastline_length": 40, "elevation_highest": 1050, "elevation_average": 200, "lake_count": 0 },
-  { "iso_a3": "MLT", "island_count": 3, "coastline_length": 197, "elevation_highest": 253, "elevation_average": 100, "lake_count": 0 }
-]
+{
+  "schema_version": 1,
+  "dataset_id": "geography_data",
+  "metadata": {
+    "source_url": null,
+    "reference_period": null,
+    "updated_at": null
+  },
+  "legacy_layout": "list",
+  "tables": [
+    {
+      "id": "main",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "iso_a3"
+      ],
+      "metrics": [
+        {
+          "id": "island_count",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        },
+        {
+          "id": "coastline_length",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        },
+        {
+          "id": "elevation_highest",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        },
+        {
+          "id": "elevation_average",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        },
+        {
+          "id": "lake_count",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "iso_a3": "SML"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 850,
+            "elevation_highest": 2415,
+            "elevation_average": 900,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AND"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 0,
+            "elevation_highest": 2942,
+            "elevation_average": 1996,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KOS"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 0,
+            "elevation_highest": 2656,
+            "elevation_average": 800,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ARE"
+          },
+          "values": {
+            "island_count": 200,
+            "coastline_length": 1318,
+            "elevation_highest": 1527,
+            "elevation_average": 250,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AFG"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 0,
+            "elevation_highest": 7492,
+            "elevation_average": 1885,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ATG"
+          },
+          "values": {
+            "island_count": 54,
+            "coastline_length": 153,
+            "elevation_highest": 402,
+            "elevation_average": 75,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AIA"
+          },
+          "values": {
+            "island_count": 8,
+            "coastline_length": 61,
+            "elevation_highest": 65,
+            "elevation_average": 35,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ALB"
+          },
+          "values": {
+            "island_count": 10,
+            "coastline_length": 362,
+            "elevation_highest": 2764,
+            "elevation_average": 708,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ARM"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 0,
+            "elevation_highest": 4090,
+            "elevation_average": 1792,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AGO"
+          },
+          "values": {
+            "island_count": 5,
+            "coastline_length": 1600,
+            "elevation_highest": 2620,
+            "elevation_average": 1112,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ARG"
+          },
+          "values": {
+            "island_count": 200,
+            "coastline_length": 4989,
+            "elevation_highest": 6960,
+            "elevation_average": 595,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ASM"
+          },
+          "values": {
+            "island_count": 7,
+            "coastline_length": 116,
+            "elevation_highest": 964,
+            "elevation_average": 200,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AUT"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 0,
+            "elevation_highest": 3798,
+            "elevation_average": 910,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AUS"
+          },
+          "values": {
+            "island_count": 8222,
+            "coastline_length": 25760,
+            "elevation_highest": 2228,
+            "elevation_average": 330,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ABW"
+          },
+          "values": {
+            "island_count": 1,
+            "coastline_length": 69,
+            "elevation_highest": 188,
+            "elevation_average": 30,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AZE"
+          },
+          "values": {
+            "island_count": 10,
+            "coastline_length": 713,
+            "elevation_highest": 4485,
+            "elevation_average": 384,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BIH"
+          },
+          "values": {
+            "island_count": 5,
+            "coastline_length": 20,
+            "elevation_highest": 2386,
+            "elevation_average": 500,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BRB"
+          },
+          "values": {
+            "island_count": 1,
+            "coastline_length": 97,
+            "elevation_highest": 340,
+            "elevation_average": 200,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BGD"
+          },
+          "values": {
+            "island_count": 50,
+            "coastline_length": 580,
+            "elevation_highest": 1230,
+            "elevation_average": 85,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BEL"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 66,
+            "elevation_highest": 694,
+            "elevation_average": 181,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BFA"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 0,
+            "elevation_highest": 749,
+            "elevation_average": 297,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BGR"
+          },
+          "values": {
+            "island_count": 10,
+            "coastline_length": 354,
+            "elevation_highest": 2925,
+            "elevation_average": 470,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BHR"
+          },
+          "values": {
+            "island_count": 33,
+            "coastline_length": 161,
+            "elevation_highest": 134,
+            "elevation_average": 30,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BDI"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 0,
+            "elevation_highest": 2684,
+            "elevation_average": 1504,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BEN"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 121,
+            "elevation_highest": 658,
+            "elevation_average": 273,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BMU"
+          },
+          "values": {
+            "island_count": 138,
+            "coastline_length": 103,
+            "elevation_highest": 76,
+            "elevation_average": 50,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BRN"
+          },
+          "values": {
+            "island_count": 1,
+            "coastline_length": 161,
+            "elevation_highest": 1850,
+            "elevation_average": 478,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BOL"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 0,
+            "elevation_highest": 6542,
+            "elevation_average": 1192,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BRA"
+          },
+          "values": {
+            "island_count": 300,
+            "coastline_length": 7491,
+            "elevation_highest": 2995,
+            "elevation_average": 320,
+            "lake_count": 20900
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BHS"
+          },
+          "values": {
+            "island_count": 700,
+            "coastline_length": 3542,
+            "elevation_highest": 63,
+            "elevation_average": 10,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BTN"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 0,
+            "elevation_highest": 7570,
+            "elevation_average": 3280,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BWA"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 0,
+            "elevation_highest": 1491,
+            "elevation_average": 1013,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BLR"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 0,
+            "elevation_highest": 346,
+            "elevation_average": 160,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BLZ"
+          },
+          "values": {
+            "island_count": 450,
+            "coastline_length": 386,
+            "elevation_highest": 1124,
+            "elevation_average": 200,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CAN"
+          },
+          "values": {
+            "island_count": 52455,
+            "coastline_length": 202080,
+            "elevation_highest": 5959,
+            "elevation_average": 487,
+            "lake_count": 879800
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "COD"
+          },
+          "values": {
+            "island_count": 10,
+            "coastline_length": 37,
+            "elevation_highest": 5109,
+            "elevation_average": 726,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CAF"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 0,
+            "elevation_highest": 1420,
+            "elevation_average": 635,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "COG"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 169,
+            "elevation_highest": 1040,
+            "elevation_average": 430,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CHE"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 0,
+            "elevation_highest": 4634,
+            "elevation_average": 1350,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CIV"
+          },
+          "values": {
+            "island_count": 5,
+            "coastline_length": 515,
+            "elevation_highest": 1852,
+            "elevation_average": 250,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "COK"
+          },
+          "values": {
+            "island_count": 15,
+            "coastline_length": 120,
+            "elevation_highest": 652,
+            "elevation_average": 100,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CHL"
+          },
+          "values": {
+            "island_count": 43471,
+            "coastline_length": 6435,
+            "elevation_highest": 6893,
+            "elevation_average": 1871,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CMR"
+          },
+          "values": {
+            "island_count": 5,
+            "coastline_length": 402,
+            "elevation_highest": 4040,
+            "elevation_average": 667,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CHN"
+          },
+          "values": {
+            "island_count": 5000,
+            "coastline_length": 14500,
+            "elevation_highest": 8848,
+            "elevation_average": 1840,
+            "lake_count": 23800
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "COL"
+          },
+          "values": {
+            "island_count": 10,
+            "coastline_length": 3208,
+            "elevation_highest": 5700,
+            "elevation_average": 593,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CRI"
+          },
+          "values": {
+            "island_count": 20,
+            "coastline_length": 1290,
+            "elevation_highest": 3810,
+            "elevation_average": 746,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CUB"
+          },
+          "values": {
+            "island_count": 1600,
+            "coastline_length": 3735,
+            "elevation_highest": 1974,
+            "elevation_average": 108,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CPV"
+          },
+          "values": {
+            "island_count": 10,
+            "coastline_length": 965,
+            "elevation_highest": 2829,
+            "elevation_average": 300,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CUW"
+          },
+          "values": {
+            "island_count": 1,
+            "coastline_length": 364,
+            "elevation_highest": 375,
+            "elevation_average": 50,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CYP"
+          },
+          "values": {
+            "island_count": 1,
+            "coastline_length": 648,
+            "elevation_highest": 1952,
+            "elevation_average": 91,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CZE"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 0,
+            "elevation_highest": 1603,
+            "elevation_average": 430,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DEU"
+          },
+          "values": {
+            "island_count": 50,
+            "coastline_length": 2389,
+            "elevation_highest": 2962,
+            "elevation_average": 263,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DJI"
+          },
+          "values": {
+            "island_count": 5,
+            "coastline_length": 314,
+            "elevation_highest": 2028,
+            "elevation_average": 430,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DNK"
+          },
+          "values": {
+            "island_count": 443,
+            "coastline_length": 7314,
+            "elevation_highest": 171,
+            "elevation_average": 34,
+            "lake_count": 120000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DMA"
+          },
+          "values": {
+            "island_count": 1,
+            "coastline_length": 148,
+            "elevation_highest": 1447,
+            "elevation_average": 300,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DOM"
+          },
+          "values": {
+            "island_count": 10,
+            "coastline_length": 1288,
+            "elevation_highest": 3098,
+            "elevation_average": 424,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DZA"
+          },
+          "values": {
+            "island_count": 5,
+            "coastline_length": 998,
+            "elevation_highest": 3003,
+            "elevation_average": 800,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ECU"
+          },
+          "values": {
+            "island_count": 100,
+            "coastline_length": 2237,
+            "elevation_highest": 6268,
+            "elevation_average": 1117,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "EST"
+          },
+          "values": {
+            "island_count": 1500,
+            "coastline_length": 3794,
+            "elevation_highest": 318,
+            "elevation_average": 61,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "EGY"
+          },
+          "values": {
+            "island_count": 20,
+            "coastline_length": 2450,
+            "elevation_highest": 2629,
+            "elevation_average": 321,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ESH"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 1046,
+            "elevation_highest": 805,
+            "elevation_average": 256,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ERI"
+          },
+          "values": {
+            "island_count": 350,
+            "coastline_length": 2234,
+            "elevation_highest": 3018,
+            "elevation_average": 853,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ESP"
+          },
+          "values": {
+            "island_count": 100,
+            "coastline_length": 4964,
+            "elevation_highest": 3718,
+            "elevation_average": 660,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ETH"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 0,
+            "elevation_highest": 4550,
+            "elevation_average": 1330,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FIN"
+          },
+          "values": {
+            "island_count": 179584,
+            "coastline_length": 1250,
+            "elevation_highest": 1324,
+            "elevation_average": 164,
+            "lake_count": 188000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FJI"
+          },
+          "values": {
+            "island_count": 332,
+            "coastline_length": 1129,
+            "elevation_highest": 1324,
+            "elevation_average": 300,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FLK"
+          },
+          "values": {
+            "island_count": 778,
+            "coastline_length": 1288,
+            "elevation_highest": 705,
+            "elevation_average": 200,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FSM"
+          },
+          "values": {
+            "island_count": 607,
+            "coastline_length": 6112,
+            "elevation_highest": 791,
+            "elevation_average": 100,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FRO"
+          },
+          "values": {
+            "island_count": 18,
+            "coastline_length": 1117,
+            "elevation_highest": 882,
+            "elevation_average": 200,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FRA"
+          },
+          "values": {
+            "island_count": 200,
+            "coastline_length": 3427,
+            "elevation_highest": 4810,
+            "elevation_average": 375,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GAB"
+          },
+          "values": {
+            "island_count": 10,
+            "coastline_length": 885,
+            "elevation_highest": 1575,
+            "elevation_average": 377,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GBR"
+          },
+          "values": {
+            "island_count": 6289,
+            "coastline_length": 12429,
+            "elevation_highest": 1345,
+            "elevation_average": 162,
+            "lake_count": 42000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GRD"
+          },
+          "values": {
+            "island_count": 3,
+            "coastline_length": 121,
+            "elevation_highest": 840,
+            "elevation_average": 200,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GEO"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 310,
+            "elevation_highest": 5201,
+            "elevation_average": 1432,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GGY"
+          },
+          "values": {
+            "island_count": 10,
+            "coastline_length": 50,
+            "elevation_highest": 114,
+            "elevation_average": 50,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GHA"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 539,
+            "elevation_highest": 885,
+            "elevation_average": 190,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GRL"
+          },
+          "values": {
+            "island_count": 1000,
+            "coastline_length": 44087,
+            "elevation_highest": 3694,
+            "elevation_average": 1792,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GMB"
+          },
+          "values": {
+            "island_count": 1,
+            "coastline_length": 80,
+            "elevation_highest": 53,
+            "elevation_average": 34,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GIN"
+          },
+          "values": {
+            "island_count": 10,
+            "coastline_length": 320,
+            "elevation_highest": 1752,
+            "elevation_average": 472,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GNQ"
+          },
+          "values": {
+            "island_count": 5,
+            "coastline_length": 296,
+            "elevation_highest": 3008,
+            "elevation_average": 577,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GRC"
+          },
+          "values": {
+            "island_count": 6000,
+            "coastline_length": 13676,
+            "elevation_highest": 2918,
+            "elevation_average": 498,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GTM"
+          },
+          "values": {
+            "island_count": 5,
+            "coastline_length": 400,
+            "elevation_highest": 4220,
+            "elevation_average": 759,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GUM"
+          },
+          "values": {
+            "island_count": 1,
+            "coastline_length": 125,
+            "elevation_highest": 406,
+            "elevation_average": 100,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GNB"
+          },
+          "values": {
+            "island_count": 88,
+            "coastline_length": 350,
+            "elevation_highest": 262,
+            "elevation_average": 70,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GUY"
+          },
+          "values": {
+            "island_count": 10,
+            "coastline_length": 459,
+            "elevation_highest": 2775,
+            "elevation_average": 200,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HKG"
+          },
+          "values": {
+            "island_count": 263,
+            "coastline_length": 733,
+            "elevation_highest": 957,
+            "elevation_average": 150,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HND"
+          },
+          "values": {
+            "island_count": 20,
+            "coastline_length": 832,
+            "elevation_highest": 2870,
+            "elevation_average": 684,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HRV"
+          },
+          "values": {
+            "island_count": 1185,
+            "coastline_length": 5835,
+            "elevation_highest": 1831,
+            "elevation_average": 331,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HTI"
+          },
+          "values": {
+            "island_count": 10,
+            "coastline_length": 1771,
+            "elevation_highest": 2680,
+            "elevation_average": 470,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HUN"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 0,
+            "elevation_highest": 1014,
+            "elevation_average": 143,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IDN"
+          },
+          "values": {
+            "island_count": 17508,
+            "coastline_length": 54716,
+            "elevation_highest": 4884,
+            "elevation_average": 367,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IRL"
+          },
+          "values": {
+            "island_count": 80,
+            "coastline_length": 1448,
+            "elevation_highest": 1041,
+            "elevation_average": 118,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ISR"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 273,
+            "elevation_highest": 1208,
+            "elevation_average": 508,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IMN"
+          },
+          "values": {
+            "island_count": 1,
+            "coastline_length": 160,
+            "elevation_highest": 620,
+            "elevation_average": 150,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IND"
+          },
+          "values": {
+            "island_count": 1200,
+            "coastline_length": 7516,
+            "elevation_highest": 8586,
+            "elevation_average": 160,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IRQ"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 58,
+            "elevation_highest": 3611,
+            "elevation_average": 312,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IRN"
+          },
+          "values": {
+            "island_count": 20,
+            "coastline_length": 2440,
+            "elevation_highest": 5671,
+            "elevation_average": 1305,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ISL"
+          },
+          "values": {
+            "island_count": 30,
+            "coastline_length": 4970,
+            "elevation_highest": 2110,
+            "elevation_average": 557,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ITA"
+          },
+          "values": {
+            "island_count": 450,
+            "coastline_length": 7600,
+            "elevation_highest": 4810,
+            "elevation_average": 538,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "JEY"
+          },
+          "values": {
+            "island_count": 8,
+            "coastline_length": 70,
+            "elevation_highest": 143,
+            "elevation_average": 50,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "JAM"
+          },
+          "values": {
+            "island_count": 10,
+            "coastline_length": 1022,
+            "elevation_highest": 2256,
+            "elevation_average": 340,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "JOR"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 26,
+            "elevation_highest": 1854,
+            "elevation_average": 812,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "JPN"
+          },
+          "values": {
+            "island_count": 6852,
+            "coastline_length": 29751,
+            "elevation_highest": 3776,
+            "elevation_average": 438,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KEN"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 536,
+            "elevation_highest": 5199,
+            "elevation_average": 762,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KGZ"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 0,
+            "elevation_highest": 7439,
+            "elevation_average": 2988,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KHM"
+          },
+          "values": {
+            "island_count": 60,
+            "coastline_length": 443,
+            "elevation_highest": 1813,
+            "elevation_average": 126,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KIR"
+          },
+          "values": {
+            "island_count": 33,
+            "coastline_length": 1143,
+            "elevation_highest": 81,
+            "elevation_average": 2,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "COM"
+          },
+          "values": {
+            "island_count": 4,
+            "coastline_length": 340,
+            "elevation_highest": 2360,
+            "elevation_average": 300,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KNA"
+          },
+          "values": {
+            "island_count": 2,
+            "coastline_length": 135,
+            "elevation_highest": 1156,
+            "elevation_average": 200,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PRK"
+          },
+          "values": {
+            "island_count": 50,
+            "coastline_length": 2495,
+            "elevation_highest": 2744,
+            "elevation_average": 600,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KOR"
+          },
+          "values": {
+            "island_count": 3358,
+            "coastline_length": 2413,
+            "elevation_highest": 1950,
+            "elevation_average": 282,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KWT"
+          },
+          "values": {
+            "island_count": 9,
+            "coastline_length": 499,
+            "elevation_highest": 306,
+            "elevation_average": 108,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GIB"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 12,
+            "elevation_highest": 426,
+            "elevation_average": 100,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CYM"
+          },
+          "values": {
+            "island_count": 3,
+            "coastline_length": 160,
+            "elevation_highest": 43,
+            "elevation_average": 15,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KAZ"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 1894,
+            "elevation_highest": 7010,
+            "elevation_average": 387,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LAO"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 0,
+            "elevation_highest": 2817,
+            "elevation_average": 710,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LBN"
+          },
+          "values": {
+            "island_count": 5,
+            "coastline_length": 225,
+            "elevation_highest": 3088,
+            "elevation_average": 1250,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LCA"
+          },
+          "values": {
+            "island_count": 1,
+            "coastline_length": 158,
+            "elevation_highest": 950,
+            "elevation_average": 200,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LIE"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 0,
+            "elevation_highest": 2599,
+            "elevation_average": 1800,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LKA"
+          },
+          "values": {
+            "island_count": 1,
+            "coastline_length": 1340,
+            "elevation_highest": 2524,
+            "elevation_average": 228,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LBR"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 579,
+            "elevation_highest": 1440,
+            "elevation_average": 243,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LSO"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 0,
+            "elevation_highest": 3482,
+            "elevation_average": 2161,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LTU"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 90,
+            "elevation_highest": 294,
+            "elevation_average": 110,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LUX"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 0,
+            "elevation_highest": 559,
+            "elevation_average": 325,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LVA"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 498,
+            "elevation_highest": 312,
+            "elevation_average": 87,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LBY"
+          },
+          "values": {
+            "island_count": 5,
+            "coastline_length": 1770,
+            "elevation_highest": 2267,
+            "elevation_average": 423,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MAR"
+          },
+          "values": {
+            "island_count": 10,
+            "coastline_length": 1835,
+            "elevation_highest": 4165,
+            "elevation_average": 909,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MCO"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 4,
+            "elevation_highest": 140,
+            "elevation_average": 50,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MDA"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 0,
+            "elevation_highest": 430,
+            "elevation_average": 147,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MNE"
+          },
+          "values": {
+            "island_count": 10,
+            "coastline_length": 294,
+            "elevation_highest": 2534,
+            "elevation_average": 1086,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MAF"
+          },
+          "values": {
+            "island_count": 1,
+            "coastline_length": 70,
+            "elevation_highest": 424,
+            "elevation_average": 50,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MDG"
+          },
+          "values": {
+            "island_count": 250,
+            "coastline_length": 4828,
+            "elevation_highest": 2876,
+            "elevation_average": 615,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MHL"
+          },
+          "values": {
+            "island_count": 34,
+            "coastline_length": 370,
+            "elevation_highest": 10,
+            "elevation_average": 2,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MKD"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 0,
+            "elevation_highest": 2764,
+            "elevation_average": 741,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MLI"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 0,
+            "elevation_highest": 1155,
+            "elevation_average": 343,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MMR"
+          },
+          "values": {
+            "island_count": 800,
+            "coastline_length": 1930,
+            "elevation_highest": 5881,
+            "elevation_average": 702,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MNG"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 0,
+            "elevation_highest": 4374,
+            "elevation_average": 1527,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MAC"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 41,
+            "elevation_highest": 172,
+            "elevation_average": 50,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MNP"
+          },
+          "values": {
+            "island_count": 15,
+            "coastline_length": 148,
+            "elevation_highest": 965,
+            "elevation_average": 100,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MUS"
+          },
+          "values": {
+            "island_count": 49,
+            "coastline_length": 177,
+            "elevation_highest": 828,
+            "elevation_average": 200,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MDV"
+          },
+          "values": {
+            "island_count": 1192,
+            "coastline_length": 644,
+            "elevation_highest": 5,
+            "elevation_average": 2,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MWI"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 0,
+            "elevation_highest": 3002,
+            "elevation_average": 779,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MEX"
+          },
+          "values": {
+            "island_count": 1,
+            "coastline_length": 9330,
+            "elevation_highest": 5636,
+            "elevation_average": 1111,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MYS"
+          },
+          "values": {
+            "island_count": 400,
+            "coastline_length": 4675,
+            "elevation_highest": 4095,
+            "elevation_average": 538,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MOZ"
+          },
+          "values": {
+            "island_count": 50,
+            "coastline_length": 2470,
+            "elevation_highest": 2436,
+            "elevation_average": 345,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NAM"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 1572,
+            "elevation_highest": 2606,
+            "elevation_average": 1141,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NCL"
+          },
+          "values": {
+            "island_count": 20,
+            "coastline_length": 2254,
+            "elevation_highest": 1628,
+            "elevation_average": 400,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NER"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 0,
+            "elevation_highest": 2022,
+            "elevation_average": 474,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NFK"
+          },
+          "values": {
+            "island_count": 3,
+            "coastline_length": 32,
+            "elevation_highest": 319,
+            "elevation_average": 100,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NGA"
+          },
+          "values": {
+            "island_count": 10,
+            "coastline_length": 853,
+            "elevation_highest": 2419,
+            "elevation_average": 380,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NIC"
+          },
+          "values": {
+            "island_count": 10,
+            "coastline_length": 910,
+            "elevation_highest": 2107,
+            "elevation_average": 298,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NLD"
+          },
+          "values": {
+            "island_count": 1,
+            "coastline_length": 451,
+            "elevation_highest": 322,
+            "elevation_average": 30,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NOR"
+          },
+          "values": {
+            "island_count": 239057,
+            "coastline_length": 83281,
+            "elevation_highest": 2469,
+            "elevation_average": 460,
+            "lake_count": 20000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NPL"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 0,
+            "elevation_highest": 8848,
+            "elevation_average": 3265,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NRU"
+          },
+          "values": {
+            "island_count": 1,
+            "coastline_length": 30,
+            "elevation_highest": 65,
+            "elevation_average": 20,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NIU"
+          },
+          "values": {
+            "island_count": 1,
+            "coastline_length": 64,
+            "elevation_highest": 68,
+            "elevation_average": 20,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NZL"
+          },
+          "values": {
+            "island_count": 600,
+            "coastline_length": 15134,
+            "elevation_highest": 3724,
+            "elevation_average": 388,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "OMN"
+          },
+          "values": {
+            "island_count": 20,
+            "coastline_length": 2092,
+            "elevation_highest": 3009,
+            "elevation_average": 310,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PAN"
+          },
+          "values": {
+            "island_count": 1000,
+            "coastline_length": 2490,
+            "elevation_highest": 3475,
+            "elevation_average": 360,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PER"
+          },
+          "values": {
+            "island_count": 1,
+            "coastline_length": 2414,
+            "elevation_highest": 6768,
+            "elevation_average": 1555,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PYF"
+          },
+          "values": {
+            "island_count": 118,
+            "coastline_length": 2525,
+            "elevation_highest": 2241,
+            "elevation_average": 200,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PNG"
+          },
+          "values": {
+            "island_count": 600,
+            "coastline_length": 5152,
+            "elevation_highest": 4509,
+            "elevation_average": 667,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PHL"
+          },
+          "values": {
+            "island_count": 7641,
+            "coastline_length": 36289,
+            "elevation_highest": 2954,
+            "elevation_average": 443,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PAK"
+          },
+          "values": {
+            "island_count": 10,
+            "coastline_length": 1046,
+            "elevation_highest": 8611,
+            "elevation_average": 900,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "POL"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 440,
+            "elevation_highest": 2499,
+            "elevation_average": 173,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SPM"
+          },
+          "values": {
+            "island_count": 3,
+            "coastline_length": 120,
+            "elevation_highest": 240,
+            "elevation_average": 100,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PCN"
+          },
+          "values": {
+            "island_count": 4,
+            "coastline_length": 30,
+            "elevation_highest": 347,
+            "elevation_average": 100,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PRI"
+          },
+          "values": {
+            "island_count": 100,
+            "coastline_length": 501,
+            "elevation_highest": 1338,
+            "elevation_average": 261,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PSE"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 40,
+            "elevation_highest": 1020,
+            "elevation_average": 375,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PRT"
+          },
+          "values": {
+            "island_count": 20,
+            "coastline_length": 1793,
+            "elevation_highest": 2351,
+            "elevation_average": 372,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PLW"
+          },
+          "values": {
+            "island_count": 340,
+            "coastline_length": 1519,
+            "elevation_highest": 242,
+            "elevation_average": 50,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PRY"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 0,
+            "elevation_highest": 842,
+            "elevation_average": 178,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "QAT"
+          },
+          "values": {
+            "island_count": 1,
+            "coastline_length": 563,
+            "elevation_highest": 103,
+            "elevation_average": 28,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ROU"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 225,
+            "elevation_highest": 2544,
+            "elevation_average": 414,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SRB"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 0,
+            "elevation_highest": 2169,
+            "elevation_average": 473,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "RUS"
+          },
+          "values": {
+            "island_count": 2500,
+            "coastline_length": 37653,
+            "elevation_highest": 5642,
+            "elevation_average": 600,
+            "lake_count": 201200
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "RWA"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 0,
+            "elevation_highest": 4507,
+            "elevation_average": 1598,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SAU"
+          },
+          "values": {
+            "island_count": 1285,
+            "coastline_length": 2640,
+            "elevation_highest": 3133,
+            "elevation_average": 665,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SLB"
+          },
+          "values": {
+            "island_count": 992,
+            "coastline_length": 5313,
+            "elevation_highest": 2335,
+            "elevation_average": 400,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SYC"
+          },
+          "values": {
+            "island_count": 115,
+            "coastline_length": 491,
+            "elevation_highest": 905,
+            "elevation_average": 200,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SDN"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 853,
+            "elevation_highest": 3048,
+            "elevation_average": 568,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SWE"
+          },
+          "values": {
+            "island_count": 221800,
+            "coastline_length": 3218,
+            "elevation_highest": 2097,
+            "elevation_average": 320,
+            "lake_count": 22600
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SGP"
+          },
+          "values": {
+            "island_count": 63,
+            "coastline_length": 193,
+            "elevation_highest": 163,
+            "elevation_average": 15,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SVN"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 47,
+            "elevation_highest": 2864,
+            "elevation_average": 492,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SVK"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 0,
+            "elevation_highest": 2655,
+            "elevation_average": 458,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SLE"
+          },
+          "values": {
+            "island_count": 10,
+            "coastline_length": 402,
+            "elevation_highest": 1948,
+            "elevation_average": 279,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SMR"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 0,
+            "elevation_highest": 739,
+            "elevation_average": 400,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SEN"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 531,
+            "elevation_highest": 648,
+            "elevation_average": 69,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SOM"
+          },
+          "values": {
+            "island_count": 10,
+            "coastline_length": 3025,
+            "elevation_highest": 2416,
+            "elevation_average": 410,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SUR"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 386,
+            "elevation_highest": 1230,
+            "elevation_average": 246,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SSD"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 0,
+            "elevation_highest": 3187,
+            "elevation_average": 450,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "STP"
+          },
+          "values": {
+            "island_count": 2,
+            "coastline_length": 209,
+            "elevation_highest": 2024,
+            "elevation_average": 300,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SLV"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 307,
+            "elevation_highest": 2730,
+            "elevation_average": 442,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SXM"
+          },
+          "values": {
+            "island_count": 1,
+            "coastline_length": 70,
+            "elevation_highest": 407,
+            "elevation_average": 50,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SYR"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 193,
+            "elevation_highest": 2814,
+            "elevation_average": 514,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SWZ"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 0,
+            "elevation_highest": 1862,
+            "elevation_average": 660,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TCA"
+          },
+          "values": {
+            "island_count": 40,
+            "coastline_length": 389,
+            "elevation_highest": 49,
+            "elevation_average": 20,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TCD"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 0,
+            "elevation_highest": 3445,
+            "elevation_average": 543,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TGO"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 56,
+            "elevation_highest": 986,
+            "elevation_average": 236,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "THA"
+          },
+          "values": {
+            "island_count": 143,
+            "coastline_length": 3219,
+            "elevation_highest": 2565,
+            "elevation_average": 287,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TJK"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 0,
+            "elevation_highest": 7495,
+            "elevation_average": 3186,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TLS"
+          },
+          "values": {
+            "island_count": 4,
+            "coastline_length": 706,
+            "elevation_highest": 2963,
+            "elevation_average": 500,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TKM"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 1768,
+            "elevation_highest": 3139,
+            "elevation_average": 230,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TUN"
+          },
+          "values": {
+            "island_count": 10,
+            "coastline_length": 1148,
+            "elevation_highest": 1544,
+            "elevation_average": 246,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TON"
+          },
+          "values": {
+            "island_count": 52,
+            "coastline_length": 419,
+            "elevation_highest": 1033,
+            "elevation_average": 100,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TUR"
+          },
+          "values": {
+            "island_count": 500,
+            "coastline_length": 7200,
+            "elevation_highest": 5137,
+            "elevation_average": 1141,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TTO"
+          },
+          "values": {
+            "island_count": 23,
+            "coastline_length": 362,
+            "elevation_highest": 940,
+            "elevation_average": 83,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TUV"
+          },
+          "values": {
+            "island_count": 9,
+            "coastline_length": 24,
+            "elevation_highest": 5,
+            "elevation_average": 2,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TWN"
+          },
+          "values": {
+            "island_count": 20,
+            "coastline_length": 1566,
+            "elevation_highest": 3952,
+            "elevation_average": 1150,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TZA"
+          },
+          "values": {
+            "island_count": 30,
+            "coastline_length": 1424,
+            "elevation_highest": 5895,
+            "elevation_average": 1018,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "UKR"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 2782,
+            "elevation_highest": 2061,
+            "elevation_average": 175,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "UGA"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 0,
+            "elevation_highest": 5110,
+            "elevation_average": 1100,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "USA"
+          },
+          "values": {
+            "island_count": 18617,
+            "coastline_length": 19924,
+            "elevation_highest": 6190,
+            "elevation_average": 760,
+            "lake_count": 102500
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "URY"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 660,
+            "elevation_highest": 514,
+            "elevation_average": 109,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "UZB"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 420,
+            "elevation_highest": 4643,
+            "elevation_average": 450,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VAT"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 0,
+            "elevation_highest": 75,
+            "elevation_average": 50,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VCT"
+          },
+          "values": {
+            "island_count": 32,
+            "coastline_length": 84,
+            "elevation_highest": 1234,
+            "elevation_average": 200,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VEN"
+          },
+          "values": {
+            "island_count": 70,
+            "coastline_length": 2800,
+            "elevation_highest": 4978,
+            "elevation_average": 450,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VGB"
+          },
+          "values": {
+            "island_count": 36,
+            "coastline_length": 80,
+            "elevation_highest": 521,
+            "elevation_average": 100,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VIR"
+          },
+          "values": {
+            "island_count": 50,
+            "coastline_length": 188,
+            "elevation_highest": 474,
+            "elevation_average": 100,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VNM"
+          },
+          "values": {
+            "island_count": 50,
+            "coastline_length": 3444,
+            "elevation_highest": 3147,
+            "elevation_average": 398,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VUT"
+          },
+          "values": {
+            "island_count": 83,
+            "coastline_length": 2528,
+            "elevation_highest": 1877,
+            "elevation_average": 200,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "WLF"
+          },
+          "values": {
+            "island_count": 20,
+            "coastline_length": 129,
+            "elevation_highest": 524,
+            "elevation_average": 100,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "WSM"
+          },
+          "values": {
+            "island_count": 10,
+            "coastline_length": 403,
+            "elevation_highest": 1857,
+            "elevation_average": 200,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KOS"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 0,
+            "elevation_highest": 2656,
+            "elevation_average": 800,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "YEM"
+          },
+          "values": {
+            "island_count": 200,
+            "coastline_length": 1906,
+            "elevation_highest": 3666,
+            "elevation_average": 999,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ZAF"
+          },
+          "values": {
+            "island_count": 10,
+            "coastline_length": 2798,
+            "elevation_highest": 3448,
+            "elevation_average": 1034,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ZMB"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 0,
+            "elevation_highest": 2301,
+            "elevation_average": 1138,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ZWE"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 0,
+            "elevation_highest": 2592,
+            "elevation_average": 961,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ALA"
+          },
+          "values": {
+            "island_count": 6500,
+            "coastline_length": 600,
+            "elevation_highest": 129,
+            "elevation_average": 50,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BLM"
+          },
+          "values": {
+            "island_count": 1,
+            "coastline_length": 59,
+            "elevation_highest": 424,
+            "elevation_average": 50,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MRT"
+          },
+          "values": {
+            "island_count": 0,
+            "coastline_length": 754,
+            "elevation_highest": 915,
+            "elevation_average": 276,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MSR"
+          },
+          "values": {
+            "island_count": 1,
+            "coastline_length": 40,
+            "elevation_highest": 1050,
+            "elevation_average": 200,
+            "lake_count": 0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MLT"
+          },
+          "values": {
+            "island_count": 3,
+            "coastline_length": 197,
+            "elevation_highest": 253,
+            "elevation_average": 100,
+            "lake_count": 0
+          }
+        }
+      ]
+    }
+  ]
+}

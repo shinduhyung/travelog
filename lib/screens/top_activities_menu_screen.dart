@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:jidoapp/screens/top_paintings_screen.dart';
 import 'package:jidoapp/screens/disneyland_screen.dart';
 import 'package:jidoapp/screens/universal_studios_screen.dart';
@@ -56,6 +57,7 @@ class TopActivitiesMenuScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Scaffold(
       backgroundColor: const Color(0xFFF9FAFB),
       body: SafeArea(
@@ -81,10 +83,10 @@ class TopActivitiesMenuScreen extends StatelessWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Text('Top Activities',
+                       Text(tr('Top Activities'),
                           style: TextStyle(fontSize: 22, fontWeight: FontWeight.w900,
                               color: Color(0xFF111827), letterSpacing: -0.6, height: 1.1)),
-                      Text('Explore the best experiences',
+                      Text(tr('Explore the best experiences'),
                           style: TextStyle(fontSize: 12, color: Colors.grey[500], fontWeight: FontWeight.w500)),
                     ],
                   ),
@@ -131,11 +133,11 @@ class TopActivitiesMenuScreen extends StatelessWidget {
                         ),
                         const SizedBox(width: 14),
                         Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                          Text(title,
+                          Text(tr(title),
                               style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700,
                                   color: Color(0xFF111827), letterSpacing: -0.3)),
                           const SizedBox(height: 2),
-                          Text(sub,
+                          Text(tr(sub),
                               style: TextStyle(fontSize: 12, color: Colors.grey[500], fontWeight: FontWeight.w500)),
                         ])),
                         Icon(Icons.arrow_forward_ios_rounded, size: 14, color: Colors.grey[400]),

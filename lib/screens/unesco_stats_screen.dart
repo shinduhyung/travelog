@@ -1,6 +1,7 @@
 // lib/screens/unesco_stats_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:intl/intl.dart';
 import 'package:jidoapp/models/country_model.dart';
 import 'package:jidoapp/models/unesco_model.dart';
@@ -64,6 +65,7 @@ class _UnescoStatsScreenState extends State<UnescoStatsScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final unescoProvider = context.watch<UnescoProvider>();
     final countryProvider = context.watch<CountryProvider>();
 
@@ -242,7 +244,7 @@ class _UnescoStatsScreenState extends State<UnescoStatsScreen> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      'UNESCO DISCOVERY STATUS',
+                      tr('UNESCO DISCOVERY STATUS'),
                       style: TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.w700,
@@ -257,7 +259,7 @@ class _UnescoStatsScreenState extends State<UnescoStatsScreen> {
                         borderRadius: BorderRadius.circular(8),
                       ),
                       child: Text(
-                        '${(percentage * 100).toStringAsFixed(1)}%',
+                        tr('${(percentage * 100).toStringAsFixed(1)}%'),
                         style: TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.w900,
@@ -273,7 +275,7 @@ class _UnescoStatsScreenState extends State<UnescoStatsScreen> {
                   textBaseline: TextBaseline.alphabetic,
                   children: [
                     Text(
-                      NumberFormat.decimalPattern('en_US').format(visited),
+                      tr(NumberFormat.decimalPattern('en_US').format(visited)),
                       style: const TextStyle(
                         fontSize: 52,
                         fontWeight: FontWeight.w900,
@@ -283,7 +285,7 @@ class _UnescoStatsScreenState extends State<UnescoStatsScreen> {
                     ),
                     const SizedBox(width: 8),
                     Text(
-                      '/ ${NumberFormat.decimalPattern('en_US').format(total)}',
+                      tr('/ ${NumberFormat.decimalPattern('en_US').format(total)}'),
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.w500,
@@ -318,9 +320,9 @@ class _UnescoStatsScreenState extends State<UnescoStatsScreen> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Padding(
+         Padding(
           padding: EdgeInsets.only(left: 8.0, bottom: 12.0),
-          child: Text('EXPLORE BY CONTINENT', style: TextStyle(fontSize: 13, fontWeight: FontWeight.w800, color: Colors.blueGrey, letterSpacing: 1.2)),
+          child: Text(tr('EXPLORE BY CONTINENT'), style: TextStyle(fontSize: 13, fontWeight: FontWeight.w800, color: Colors.blueGrey, letterSpacing: 1.2)),
         ),
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
@@ -346,7 +348,7 @@ class _UnescoStatsScreenState extends State<UnescoStatsScreen> {
                         ]
                     ),
                     child: Row(children: [
-                      Text(data['name'] as String, style: TextStyle(fontWeight: FontWeight.w800, color: isSelected ? Colors.white : Colors.grey[800], fontSize: 14)),
+                      Text(tr(data['name'] as String), style: TextStyle(fontWeight: FontWeight.w800, color: isSelected ? Colors.white : Colors.grey[800], fontSize: 14)),
                       if (isSelected) ...[const SizedBox(width: 8), const Icon(Icons.check_circle, color: Colors.white, size: 16)]
                     ]),
                   ),
@@ -375,12 +377,12 @@ class _UnescoStatsScreenState extends State<UnescoStatsScreen> {
           Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(continentName.toUpperCase(), style: TextStyle(fontSize: 20, fontWeight: FontWeight.w900, color: color, letterSpacing: 1.0)),
-                Container(padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6), decoration: BoxDecoration(color: color.withOpacity(0.1), borderRadius: BorderRadius.circular(12)), child: Text('$visitedCount / ${continentSites.length}', style: TextStyle(fontWeight: FontWeight.bold, color: color)))
+                Text(tr(continentName.toUpperCase()), style: TextStyle(fontSize: 20, fontWeight: FontWeight.w900, color: color, letterSpacing: 1.0)),
+                Container(padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6), decoration: BoxDecoration(color: color.withOpacity(0.1), borderRadius: BorderRadius.circular(12)), child: Text(tr('$visitedCount / ${continentSites.length}'), style: TextStyle(fontWeight: FontWeight.bold, color: color)))
               ]
           ),
           const SizedBox(height: 20),
-          const Text('Recent Discoveries', style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: Colors.blueGrey)),
+           Text(tr('Recent Discoveries'), style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: Colors.blueGrey)),
           const SizedBox(height: 12),
           ...continentSites.where((s) => unescoProvider.visitedSites.contains(s.name)).take(3).map((s) => ListTile(
             contentPadding: EdgeInsets.zero,
@@ -389,7 +391,7 @@ class _UnescoStatsScreenState extends State<UnescoStatsScreen> {
             dense: true,
             onTap: () => _showUnescoSiteDetailsModal(context, s),
           )),
-          if (continentSites.where((s) => unescoProvider.visitedSites.contains(s.name)).isEmpty) const Padding(padding: EdgeInsets.symmetric(vertical: 8.0), child: Text('No sites visited yet in this continent.', style: TextStyle(fontSize: 13, color: Colors.grey))),
+          if (continentSites.where((s) => unescoProvider.visitedSites.contains(s.name)).isEmpty)  Padding(padding: EdgeInsets.symmetric(vertical: 8.0), child: Text(tr('No sites visited yet in this continent.'), style: TextStyle(fontSize: 13, color: Colors.grey))),
         ],
       ),
     );
@@ -467,12 +469,12 @@ class _UnescoStatsScreenState extends State<UnescoStatsScreen> {
                               children: [
                                 TextButton(
                                   onPressed: () => Navigator.pop(sheetContext),
-                                  child: const Text('Cancel', style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600)),
+                                  child:  Text(tr('Cancel'), style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600)),
                                 ),
                                 ElevatedButton(
                                   onPressed: () => Navigator.pop(sheetContext),
                                   style: ElevatedButton.styleFrom(backgroundColor: headerTextColor),
-                                  child: Text('Done', style: TextStyle(fontWeight: FontWeight.w600, color: themeColor)),
+                                  child: Text(tr('Done'), style: TextStyle(fontWeight: FontWeight.w600, color: themeColor)),
                                 ),
                               ],
                             ),
@@ -518,7 +520,7 @@ class _UnescoStatsScreenState extends State<UnescoStatsScreen> {
                               Padding(
                                 padding: const EdgeInsets.only(top: 12.0),
                                 child: Text(
-                                  "$visitedSubCount / $totalSubCount visited",
+                                  tr("$visitedSubCount / $totalSubCount visited"),
                                   style: Theme.of(sheetContext).textTheme.bodyMedium?.copyWith(
                                     color: headerTextColor.withOpacity(0.9),
                                     fontWeight: FontWeight.bold,
@@ -541,7 +543,7 @@ class _UnescoStatsScreenState extends State<UnescoStatsScreen> {
                           children: [
                             Row(
                               children: [
-                                const Text('Wishlist: '),
+                                 Text(tr('Wishlist: ')),
                                 IconButton(
                                   icon: Icon(isWishlisted ? Icons.favorite : Icons.favorite_border, color: isWishlisted ? Colors.red : Colors.grey),
                                   onPressed: () => provider.toggleWishlistStatus(freshSite.name),
@@ -550,7 +552,7 @@ class _UnescoStatsScreenState extends State<UnescoStatsScreen> {
                             ),
                             Row(
                               children: [
-                                const Text('My Rating: '),
+                                 Text(tr('My Rating: ')),
                                 RatingBar.builder(
                                   initialRating: freshSite.rating ?? 0.0,
                                   minRating: 0,
@@ -569,7 +571,7 @@ class _UnescoStatsScreenState extends State<UnescoStatsScreen> {
                         if (totalSubCount > 1) ...[
                           Align(
                             alignment: Alignment.centerLeft,
-                            child: Text("Components / Locations", style: Theme.of(sheetContext).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
+                            child: Text(tr("Components / Locations"), style: Theme.of(sheetContext).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
                           ),
                           const SizedBox(height: 4),
                           Container(
@@ -593,11 +595,11 @@ class _UnescoStatsScreenState extends State<UnescoStatsScreen> {
                           const Divider(height: 24),
                         ],
                         Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                          Text('History (${freshSite.visitDates.length} entries)',
+                          Text(tr('History (${freshSite.visitDates.length} entries)'),
                               style: Theme.of(sheetContext).textTheme.titleSmall),
                           OutlinedButton.icon(
                             icon: const Icon(Icons.add),
-                            label: const Text('Add Visit'),
+                            label:  Text(tr('Add Visit')),
                             onPressed: () => provider.addVisitDate(freshSite.name),
                           ),
                         ]),
@@ -611,7 +613,7 @@ class _UnescoStatsScreenState extends State<UnescoStatsScreen> {
                             onDelete: () => provider.removeVisitDate(freshSite.name, entry.key),
                             availableLocations: freshSite.locations,
                           ))
-                        else const Center(child: Text('No visits recorded.')),
+                        else  Center(child: Text(tr('No visits recorded.'))),
                         const SizedBox(height: 16),
                         LandmarkInfoCard(
                           overview: freshSite.overview,
@@ -657,7 +659,7 @@ Widget _buildRankBadge(int rank) {
     ),
     alignment: Alignment.center,
     child: Text(
-      rank.toString(),
+      tr(rank.toString()),
       style: TextStyle(
         fontSize: 14,
         fontWeight: FontWeight.w900,
@@ -721,6 +723,7 @@ class _UnescoRankingCardState extends State<_UnescoRankingCard> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     const primaryOrange = Colors.orange;
     final Map<String, Color> continentColors = {
       for (var data in UnescoStatsScreen.continentsData)
@@ -747,11 +750,11 @@ class _UnescoRankingCardState extends State<_UnescoRankingCard> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Row(
+                 Row(
                   children: [
                     Icon(Icons.leaderboard_rounded, color: primaryOrange),
                     SizedBox(width: 12),
-                    Text('Country Rankings', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800, color: Color(0xFF1F2937))),
+                    Text(tr('Country Rankings'), style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800, color: Color(0xFF1F2937))),
                   ],
                 ),
                 const SizedBox(height: 12),
@@ -760,11 +763,11 @@ class _UnescoRankingCardState extends State<_UnescoRankingCard> {
                   isExpanded: true,
                   borderRadius: BorderRadius.circular(16),
                   decoration: InputDecoration(
-                    labelText: 'Sort by',
+                    labelText: tr('Sort by'),
                     contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(16)),
                   ),
-                  items: _sortMetrics.map((v) => DropdownMenuItem(value: v, child: Text(v, style: const TextStyle(fontSize: 14)))).toList(),
+                  items: _sortMetrics.map((v) => DropdownMenuItem(value: v, child: Text(tr(v), style: const TextStyle(fontSize: 14)))).toList(),
                   onChanged: (v) { if (v != null) { setState(() { _sortMetric = v; _prepareList(); }); } },
                 ),
                 const SizedBox(height: 12),
@@ -772,7 +775,7 @@ class _UnescoRankingCardState extends State<_UnescoRankingCard> {
                   width: double.infinity,
                   child: SegmentedButton<int>(
                     showSelectedIcon: false,
-                    segments: const [ButtonSegment(value: 0, label: Text('All')), ButtonSegment(value: 1, label: Text('Visited'))],
+                    segments:  [ButtonSegment(value: 0, label: Text(tr('All'))), ButtonSegment(value: 1, label: Text(tr('Visited')))],
                     selected: {_displaySegment},
                     onSelectionChanged: (s) { _displaySegment = s.first; _prepareList(); },
                   ),
@@ -784,7 +787,7 @@ class _UnescoRankingCardState extends State<_UnescoRankingCard> {
           SizedBox(
             height: 400,
             child: _rankedList.isEmpty
-                ? const Center(child: Text('No data found.'))
+                ?  Center(child: Text(tr('No data found.')))
                 : ListView.builder(
               padding: const EdgeInsets.all(16),
               itemCount: _rankedList.length,
@@ -822,7 +825,7 @@ class _UnescoRankingCardState extends State<_UnescoRankingCard> {
                                     borderRadius: BorderRadius.circular(4),
                                   ) : null,
                                   child: Text(
-                                    stat.country.name,
+                                    tr(stat.country.name),
                                     style: TextStyle(
                                       fontSize: 15,
                                       fontWeight: isVisitedCountry ? FontWeight.w800 : FontWeight.w700,
@@ -833,11 +836,11 @@ class _UnescoRankingCardState extends State<_UnescoRankingCard> {
                                 Row(
                                   children: [
                                     Text(
-                                      _sortMetric == 'By Visit Percentage' ? '${stat.visitedPercentage.toStringAsFixed(1)}%' : '${stat.visitedSites}',
+                                      tr(_sortMetric == 'By Visit Percentage' ? '${stat.visitedPercentage.toStringAsFixed(1)}%' : '${stat.visitedSites}'),
                                       style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w900, color: Color(0xFF111827)),
                                     ),
                                     const SizedBox(width: 4),
-                                    Text('(${stat.visitedSites}/${stat.totalSites})', style: TextStyle(fontSize: 11, color: Colors.grey[400])),
+                                    Text(tr('(${stat.visitedSites}/${stat.totalSites})'), style: TextStyle(fontSize: 11, color: Colors.grey[400])),
                                   ],
                                 ),
                               ],
@@ -977,12 +980,12 @@ class _SiteRankingCardState extends State<_SiteRankingCard> {
                               children: [
                                 TextButton(
                                   onPressed: () => Navigator.pop(sheetContext),
-                                  child: const Text('Cancel', style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600)),
+                                  child:  Text(tr('Cancel'), style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600)),
                                 ),
                                 ElevatedButton(
                                   onPressed: () => Navigator.pop(sheetContext),
                                   style: ElevatedButton.styleFrom(backgroundColor: headerTextColor),
-                                  child: Text('Done', style: TextStyle(fontWeight: FontWeight.w600, color: themeColor)),
+                                  child: Text(tr('Done'), style: TextStyle(fontWeight: FontWeight.w600, color: themeColor)),
                                 ),
                               ],
                             ),
@@ -1028,7 +1031,7 @@ class _SiteRankingCardState extends State<_SiteRankingCard> {
                               Padding(
                                 padding: const EdgeInsets.only(top: 12.0),
                                 child: Text(
-                                  "$visitedSubCount / $totalSubCount visited",
+                                  tr("$visitedSubCount / $totalSubCount visited"),
                                   style: Theme.of(sheetContext).textTheme.bodyMedium?.copyWith(
                                     color: headerTextColor.withOpacity(0.9),
                                     fontWeight: FontWeight.bold,
@@ -1051,7 +1054,7 @@ class _SiteRankingCardState extends State<_SiteRankingCard> {
                           children: [
                             Row(
                               children: [
-                                const Text('Wishlist: '),
+                                 Text(tr('Wishlist: ')),
                                 IconButton(
                                   icon: Icon(isWishlisted ? Icons.favorite : Icons.favorite_border, color: isWishlisted ? Colors.red : Colors.grey),
                                   onPressed: () => provider.toggleWishlistStatus(freshSite.name),
@@ -1060,7 +1063,7 @@ class _SiteRankingCardState extends State<_SiteRankingCard> {
                             ),
                             Row(
                               children: [
-                                const Text('My Rating: '),
+                                 Text(tr('My Rating: ')),
                                 RatingBar.builder(
                                   initialRating: freshSite.rating ?? 0.0,
                                   minRating: 0,
@@ -1079,7 +1082,7 @@ class _SiteRankingCardState extends State<_SiteRankingCard> {
                         if (totalSubCount > 1) ...[
                           Align(
                             alignment: Alignment.centerLeft,
-                            child: Text("Components / Locations", style: Theme.of(sheetContext).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
+                            child: Text(tr("Components / Locations"), style: Theme.of(sheetContext).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
                           ),
                           const SizedBox(height: 4),
                           Container(
@@ -1103,11 +1106,11 @@ class _SiteRankingCardState extends State<_SiteRankingCard> {
                           const Divider(height: 24),
                         ],
                         Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                          Text('History (${freshSite.visitDates.length} entries)',
+                          Text(tr('History (${freshSite.visitDates.length} entries)'),
                               style: Theme.of(sheetContext).textTheme.titleSmall),
                           OutlinedButton.icon(
                             icon: const Icon(Icons.add),
-                            label: const Text('Add Visit'),
+                            label:  Text(tr('Add Visit')),
                             onPressed: () => provider.addVisitDate(freshSite.name),
                           ),
                         ]),
@@ -1121,7 +1124,7 @@ class _SiteRankingCardState extends State<_SiteRankingCard> {
                             onDelete: () => provider.removeVisitDate(freshSite.name, entry.key),
                             availableLocations: freshSite.locations,
                           ))
-                        else const Center(child: Text('No visits recorded.')),
+                        else  Center(child: Text(tr('No visits recorded.'))),
                         const SizedBox(height: 16),
                         LandmarkInfoCard(
                           overview: freshSite.overview,
@@ -1145,6 +1148,7 @@ class _SiteRankingCardState extends State<_SiteRankingCard> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Container(
       decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(24), boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 15, offset: const Offset(0, 5))]),
       child: Column(
@@ -1155,11 +1159,11 @@ class _SiteRankingCardState extends State<_SiteRankingCard> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Row(
+                 Row(
                   children: [
                     Icon(Icons.star_rounded, color: Colors.amber),
                     SizedBox(width: 12),
-                    Text('Top UNESCO Sites', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800, color: Color(0xFF1F2937))),
+                    Text(tr('Top UNESCO Sites'), style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800, color: Color(0xFF1F2937))),
                   ],
                 ),
                 const SizedBox(height: 20),
@@ -1168,10 +1172,10 @@ class _SiteRankingCardState extends State<_SiteRankingCard> {
                   isExpanded: true,
                   borderRadius: BorderRadius.circular(16),
                   decoration: InputDecoration(
-                    labelText: 'Sort by',
+                    labelText: tr('Sort by'),
                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(16)),
                   ),
-                  items: _sortMetrics.map((v) => DropdownMenuItem(value: v, child: Text(v, style: const TextStyle(fontSize: 14)))).toList(),
+                  items: _sortMetrics.map((v) => DropdownMenuItem(value: v, child: Text(tr(v), style: const TextStyle(fontSize: 14)))).toList(),
                   onChanged: (v) { if (v != null) { setState(() { _sortMetric = v; _prepareList(); }); } },
                 ),
               ],
@@ -1181,7 +1185,7 @@ class _SiteRankingCardState extends State<_SiteRankingCard> {
           SizedBox(
             height: 300,
             child: _rankedList.isEmpty
-                ? const Center(child: Text('No data available.'))
+                ?  Center(child: Text(tr('No data available.')))
                 : ListView.builder(
               padding: const EdgeInsets.all(16),
               itemCount: _rankedList.length,
@@ -1196,9 +1200,9 @@ class _SiteRankingCardState extends State<_SiteRankingCard> {
                       ? Row(mainAxisSize: MainAxisSize.min, children: [
                     RatingBarIndicator(rating: site.rating ?? 0.0, itemBuilder: (context, index) => const Icon(Icons.star, color: Colors.amber), itemCount: 5, itemSize: 14.0),
                     const SizedBox(width: 4),
-                    Text((site.rating ?? 0).toStringAsFixed(1), style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w800)),
+                    Text(tr((site.rating ?? 0).toStringAsFixed(1)), style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w800)),
                   ])
-                      : Container(padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4), decoration: BoxDecoration(color: Colors.orange.withOpacity(0.1), borderRadius: BorderRadius.circular(8)), child: Text('${site.visitDates.length} visits', style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w800, color: Colors.orange))),
+                      : Container(padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4), decoration: BoxDecoration(color: Colors.orange.withOpacity(0.1), borderRadius: BorderRadius.circular(8)), child: Text(tr('${site.visitDates.length} visits'), style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w800, color: Colors.orange))),
                 );
               },
             ),
@@ -1217,6 +1221,7 @@ class _TypeStatsCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final progressEntries = List<TypeStatData>.from(typeStats)..sort((a, b) => b.percentage.compareTo(a.percentage));
 
     return Container(
@@ -1226,7 +1231,7 @@ class _TypeStatsCard extends StatelessWidget {
         children: [
           Padding(
             padding: const EdgeInsets.all(24),
-            child: Row(children: [Icon(Icons.pie_chart_rounded, color: Colors.blueGrey[600]), const SizedBox(width: 12), const Text('Type Statistics', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800))]),
+            child: Row(children: [Icon(Icons.pie_chart_rounded, color: Colors.blueGrey[600]), const SizedBox(width: 12),  Text(tr('Type Statistics'), style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800))]),
           ),
           const Divider(height: 1),
           Padding(
@@ -1234,7 +1239,7 @@ class _TypeStatsCard extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text('Visit Progress (%)', style: TextStyle(fontSize: 14, fontWeight: FontWeight.w700, color: Color(0xFF6B7280), letterSpacing: 0.5)),
+                 Text(tr('Visit Progress (%)'), style: TextStyle(fontSize: 14, fontWeight: FontWeight.w700, color: Color(0xFF6B7280), letterSpacing: 0.5)),
                 const SizedBox(height: 20),
                 ...progressEntries.map((s) => _buildStatRow(
                   label: s.name,
@@ -1255,7 +1260,7 @@ class _TypeStatsCard extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 10.0),
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [Text(label, style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color: Color(0xFF374151))), Text('$value / $maxValue ($info)', style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w800, color: Color(0xFF111827)))]),
+        Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [Text(tr(label), style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color: Color(0xFF374151))), Text(tr('$value / $maxValue ($info)'), style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w800, color: Color(0xFF111827)))]),
         const SizedBox(height: 8),
         LayoutBuilder(builder: (ctx, constraints) => Stack(children: [
           Container(height: 6, decoration: BoxDecoration(color: const Color(0xFFF3F4F6), borderRadius: BorderRadius.circular(3))),
@@ -1373,24 +1378,25 @@ class _UnescoVisitEditorCardState extends State<_UnescoVisitEditorCard> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final themeColor = Theme.of(context).primaryColor;
     return Card(
       elevation: 1, margin: const EdgeInsets.symmetric(vertical: 4),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       child: ExpansionTile(
         controller: _expansionTileController, initiallyExpanded: _isEditing,
-        title: Text(_displayTitle.isNotEmpty ? _displayTitle : 'Visit Record',
+        title: Text(tr(_displayTitle.isNotEmpty ? _displayTitle : 'Visit Record'),
             style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15)),
-        subtitle: Text('Date: $_year-$_month-$_day', style: TextStyle(color: Colors.grey[600], fontSize: 13)),
+        subtitle: Text(tr('Date: $_year-$_month-$_day'), style: TextStyle(color: Colors.grey[600], fontSize: 13)),
         trailing: IconButton(
             icon: const Icon(Icons.delete_outline, color: Colors.red, size: 22),
             onPressed: () => showDialog(context: context, builder: (ctx) => AlertDialog(
-                title: const Text('Delete Visit Record'),
-                content: const Text('Are you sure you want to delete this visit record?'),
+                title:  Text(tr('Delete Visit Record')),
+                content:  Text(tr('Are you sure you want to delete this visit record?')),
                 actions: [
-                  TextButton(onPressed: () => Navigator.pop(ctx), child: const Text('Cancel')),
+                  TextButton(onPressed: () => Navigator.pop(ctx), child:  Text(tr('Cancel'))),
                   TextButton(onPressed: () { Navigator.pop(ctx); widget.onDelete(); },
-                      child: const Text('Delete', style: TextStyle(color: Colors.red))),
+                      child:  Text(tr('Delete'), style: TextStyle(color: Colors.red))),
                 ]))),
         children: [Container(
           padding: const EdgeInsets.all(16),
@@ -1399,25 +1405,25 @@ class _UnescoVisitEditorCardState extends State<_UnescoVisitEditorCard> {
           child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             if (_isEditing) ...[
               Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                Text('Visit Date: $_year-$_month-$_day', style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14)),
-                TextButton.icon(icon: const Icon(Icons.edit_calendar, size: 18), label: const Text('Edit Date'),
+                Text(tr('Visit Date: $_year-$_month-$_day'), style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14)),
+                TextButton.icon(icon: const Icon(Icons.edit_calendar, size: 18), label:  Text(tr('Edit Date')),
                     onPressed: () => _selectDate(context),
                     style: TextButton.styleFrom(visualDensity: VisualDensity.compact)),
               ]),
               const SizedBox(height: 12),
               TextField(controller: _titleController,
-                  decoration: InputDecoration(labelText: 'Title', isDense: true, filled: true, fillColor: Colors.white,
+                  decoration: InputDecoration(labelText: tr('Title'), isDense: true, filled: true, fillColor: Colors.white,
                       border: OutlineInputBorder(borderRadius: BorderRadius.circular(8), borderSide: BorderSide.none))),
               const SizedBox(height: 12),
               TextField(controller: _memoController, maxLines: 3, minLines: 1,
-                  decoration: InputDecoration(labelText: 'Memo', isDense: true, filled: true, fillColor: Colors.white,
+                  decoration: InputDecoration(labelText: tr('Memo'), isDense: true, filled: true, fillColor: Colors.white,
                       border: OutlineInputBorder(borderRadius: BorderRadius.circular(8), borderSide: BorderSide.none))),
             ] else if (_displayMemo.isNotEmpty)
               Padding(padding: const EdgeInsets.only(bottom: 12),
-                  child: Text(_displayMemo, style: TextStyle(fontSize: 14, color: Colors.grey[800], height: 1.4))),
+                  child: Text(tr(_displayMemo), style: TextStyle(fontSize: 14, color: Colors.grey[800], height: 1.4))),
             const SizedBox(height: 12),
             if (widget.availableLocations.isNotEmpty) ...[
-              const Text('Locations included in this visit:',
+               Text(tr('Locations included in this visit:'),
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Colors.grey)),
               const SizedBox(height: 4),
               IgnorePointer(ignoring: !_isEditing,
@@ -1449,14 +1455,14 @@ class _UnescoVisitEditorCardState extends State<_UnescoVisitEditorCard> {
             Row(mainAxisAlignment: MainAxisAlignment.end, children: [
               if (_isEditing) ...[
                 TextButton(onPressed: _cancelEditing,
-                    child: Text('Cancel', style: TextStyle(color: Colors.grey[700], fontWeight: FontWeight.w600))),
+                    child: Text(tr('Cancel'), style: TextStyle(color: Colors.grey[700], fontWeight: FontWeight.w600))),
                 const SizedBox(width: 8),
                 ElevatedButton.icon(onPressed: _saveChanges,
-                    icon: const Icon(Icons.save, size: 18), label: const Text('Save'),
+                    icon: const Icon(Icons.save, size: 18), label:  Text(tr('Save')),
                     style: ElevatedButton.styleFrom(backgroundColor: themeColor, foregroundColor: Colors.white, elevation: 0)),
               ] else
                 OutlinedButton.icon(onPressed: () => setState(() => _isEditing = true),
-                    icon: const Icon(Icons.edit, size: 16), label: const Text('Edit Record'),
+                    icon: const Icon(Icons.edit, size: 16), label:  Text(tr('Edit Record')),
                     style: OutlinedButton.styleFrom(foregroundColor: themeColor,
                         side: BorderSide(color: themeColor.withOpacity(0.5)))),
             ]),

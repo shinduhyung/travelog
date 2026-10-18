@@ -45,6 +45,7 @@ import 'dart:convert';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'dart:math';
@@ -805,6 +806,7 @@ class _SoftCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Container(
       padding: padding,
       decoration: BoxDecoration(
@@ -844,6 +846,7 @@ class _GradientButtonState extends State<_GradientButton> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final fg = widget.outlined ? widget.color : Colors.white;
     return GestureDetector(
       onTapDown: (_) => setState(() => _scale = 0.97),
@@ -881,7 +884,7 @@ class _GradientButtonState extends State<_GradientButton> {
                 Icon(widget.icon, color: fg, size: 20),
                 const SizedBox(width: 8),
               ],
-              Text(widget.label,
+              Text(tr(widget.label),
                   style: TextStyle(color: fg, fontSize: 15.5, fontWeight: FontWeight.w800, letterSpacing: 0.2)),
             ],
           ),
@@ -898,6 +901,7 @@ class _ScreenBackground extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Container(
       decoration: const BoxDecoration(
         gradient: LinearGradient(
@@ -922,13 +926,14 @@ class RevealModeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Scaffold(
       backgroundColor: _kSurface,
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        title: const Text('Reveal',
+        title:  Text(tr('Reveal'),
             style: TextStyle(fontSize: 20, fontWeight: FontWeight.w900, color: _kInk)),
         iconTheme: const IconThemeData(color: _kInk),
       ),
@@ -937,7 +942,7 @@ class RevealModeScreen extends StatelessWidget {
           child: ListView(
             padding: const EdgeInsets.fromLTRB(20, 100, 20, 32),
             children: [
-              const Text('CHOOSE A MODE',
+               Text(tr('CHOOSE A MODE'),
                   style: TextStyle(
                       fontSize: 12.5, fontWeight: FontWeight.w800, letterSpacing: 1.1, color: _kMuted)),
               const SizedBox(height: 16),
@@ -975,6 +980,7 @@ class _ModeCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return GestureDetector(
       onTap: onTap,
       child: _SoftCard(
@@ -1001,10 +1007,10 @@ class _ModeCard extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(mode.title,
+                  Text(tr(mode.title),
                       style: const TextStyle(fontSize: 16.5, fontWeight: FontWeight.w800, color: _kInk)),
                   const SizedBox(height: 4),
-                  Text(mode.heroSubtitle,
+                  Text(tr(mode.heroSubtitle),
                       style: const TextStyle(fontSize: 12.5, color: _kMuted, fontWeight: FontWeight.w500)),
                 ],
               ),
@@ -1057,13 +1063,14 @@ class _RevealLobbyScreenState extends State<_RevealLobbyScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Scaffold(
       backgroundColor: _kSurface,
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        title: Text('Reveal · ${widget.mode.title}',
+        title: Text(tr('Reveal · ${widget.mode.title}'),
             style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w800, color: _kInk)),
         iconTheme: const IconThemeData(color: _kInk),
       ),
@@ -1088,7 +1095,7 @@ class _RevealLobbyScreenState extends State<_RevealLobbyScreen> {
                       const SizedBox(width: 14),
                       Expanded(
                         child: Text(
-                          widget.mode.heroSubtitle,
+                          tr(widget.mode.heroSubtitle),
                           style: const TextStyle(fontSize: 12.5, fontWeight: FontWeight.w600, color: _kMuted),
                         ),
                       ),
@@ -1127,10 +1134,10 @@ class _RevealLobbyScreenState extends State<_RevealLobbyScreen> {
               children: [
                 Icon(Icons.emoji_events_outlined, size: 46, color: _kFaint),
                 const SizedBox(height: 12),
-                const Text('No runs yet',
+                 Text(tr('No runs yet'),
                     style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: _kInk)),
                 const SizedBox(height: 4),
-                const Text('Play a round to start your leaderboard',
+                 Text(tr('Play a round to start your leaderboard'),
                     style: TextStyle(fontSize: 12.5, color: _kMuted)),
               ],
             ),
@@ -1142,9 +1149,9 @@ class _RevealLobbyScreenState extends State<_RevealLobbyScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text('LEADERBOARD',
+                 Text(tr('LEADERBOARD'),
                     style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, letterSpacing: 1.0, color: _kMuted)),
-                Text('${records.length} run${records.length == 1 ? '' : 's'}',
+                Text(tr('${records.length} run${records.length == 1 ? '' : 's'}'),
                     style: const TextStyle(fontSize: 12, color: _kFaint, fontWeight: FontWeight.w600)),
               ],
             ),
@@ -1182,6 +1189,7 @@ class _RecordTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final medal = _medalColors[rank];
     return _SoftCard(
       radius: 16,
@@ -1199,18 +1207,18 @@ class _RecordTile extends StatelessWidget {
             ),
             child: medal != null
                 ? Icon(Icons.emoji_events_rounded, size: 16, color: medal)
-                : Text('$rank', style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 12, color: _kMuted)),
+                : Text(tr('$rank'), style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 12, color: _kMuted)),
           ),
           const SizedBox(width: 14),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('${record.score}',
+                Text(tr('${record.score}'),
                     style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 16, color: _kInk)),
                 const SizedBox(height: 2),
                 Text(
-                  '${record.roundsCompleted}/${record.maxRounds} rounds · best streak ${record.bestCombo} · ${_formatDate(record.playedAt)}',
+                  tr('${record.roundsCompleted}/${record.maxRounds} rounds · best streak ${record.bestCombo} · ${_formatDate(record.playedAt)}'),
                   style: const TextStyle(fontSize: 11.5, color: _kMuted),
                 ),
               ],
@@ -1357,13 +1365,14 @@ class _RevealGameScreenState extends State<_RevealGameScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Scaffold(
       backgroundColor: _kSurface,
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        title: Text(widget.mode.title,
+        title: Text(tr(widget.mode.title),
             style: TextStyle(fontSize: 17, fontWeight: FontWeight.w800, color: _kInk)),
         iconTheme: const IconThemeData(color: _kInk),
         actions: _phase == _RoundPhase.complete
@@ -1390,7 +1399,7 @@ class _RevealGameScreenState extends State<_RevealGameScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('ROUND ${_roundIndex + 1} / $_maxRounds',
+              Text(tr('ROUND ${_roundIndex + 1} / $_maxRounds'),
                   style: const TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, letterSpacing: 0.6, color: _kMuted)),
               if (_perfectStreak > 0)
                 Container(
@@ -1402,7 +1411,7 @@ class _RevealGameScreenState extends State<_RevealGameScreen> {
                   child: Row(mainAxisSize: MainAxisSize.min, children: [
                     const Icon(Icons.bolt_rounded, size: 15, color: _kAccent),
                     const SizedBox(width: 3),
-                    Text('$_perfectStreak',
+                    Text(tr('$_perfectStreak'),
                         style: const TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, color: _kAccent)),
                   ]),
                 ),
@@ -1448,12 +1457,12 @@ class _RevealGameScreenState extends State<_RevealGameScreen> {
                     const Icon(Icons.visibility_rounded, size: 18, color: _kAccent),
                     const SizedBox(width: 8),
                     Text(
-                      _hintLevel == 3 ? widget.mode.finalHintLabel : 'Reveal another clue',
+                      tr(_hintLevel == 3 ? widget.mode.finalHintLabel : 'Reveal another clue'),
                       style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w800, color: _kAccent),
                     ),
                     if (nextScore != null) ...[
                       const SizedBox(width: 6),
-                      Text('(worth $nextScore now)',
+                      Text(tr('(worth $nextScore now)'),
                           style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: _kMuted)),
                     ],
                   ],
@@ -1463,7 +1472,7 @@ class _RevealGameScreenState extends State<_RevealGameScreen> {
                 : Container(
               padding: const EdgeInsets.symmetric(vertical: 12),
               alignment: Alignment.center,
-              child: const Text('Final clue — guess below',
+              child:  Text(tr('Final clue — guess below'),
                   style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w600, color: _kMuted)),
             ),
         ],
@@ -1483,14 +1492,14 @@ class _RevealGameScreenState extends State<_RevealGameScreen> {
             height: 30,
             alignment: Alignment.center,
             decoration: BoxDecoration(color: _kAccent.withOpacity(0.12), shape: BoxShape.circle),
-            child: Text('$level',
+            child: Text(tr('$level'),
                 style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w800, color: _kAccent)),
           ),
           const SizedBox(width: 12),
           Expanded(
             child: isFlag
-                ? Text(_current.flagEmoji, style: const TextStyle(fontSize: 28))
-                : Text(_current.hints[level - 1],
+                ? Text(tr(_current.flagEmoji), style: const TextStyle(fontSize: 28))
+                : Text(tr(_current.hints[level - 1]),
                 style: const TextStyle(fontSize: 13.5, fontWeight: FontWeight.w600, color: _kInk, height: 1.35)),
           ),
         ],
@@ -1528,9 +1537,9 @@ class _RevealGameScreenState extends State<_RevealGameScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('${_current.flagEmoji} ${_current.name} +${_lastRoundScore ?? 0}',
+                  Text('${_current.flagEmoji} ${widget.mode == _kCountryMode ? AppLocale.instance.countryName(_current.name) : _current.name} +${_lastRoundScore ?? 0}',
                       style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w900, color: Colors.white)),
-                  Text(_hintLevel == 1 ? 'Perfect — solved on the first clue!' : 'Solved with $_hintLevel hints',
+                  Text(tr(_hintLevel == 1 ? 'Perfect — solved on the first clue!' : 'Solved with $_hintLevel hints'),
                       style: const TextStyle(fontSize: 12.5, fontWeight: FontWeight.w600, color: Colors.white70)),
                 ],
               ),
@@ -1581,7 +1590,7 @@ class _RevealGameScreenState extends State<_RevealGameScreen> {
               child: Icon(Icons.close_rounded, size: 14, color: Color(0xFFC62828)),
             ),
             Flexible(
-              child: Text(entry.name,
+              child: Text(widget.mode == _kCountryMode ? AppLocale.instance.countryName(entry.name) : entry.name,
                   textAlign: TextAlign.center,
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
@@ -1612,15 +1621,15 @@ class _RevealGameScreenState extends State<_RevealGameScreen> {
               child: const Icon(Icons.emoji_events_rounded, size: 40, color: Colors.white),
             ),
             const SizedBox(height: 18),
-            const Text('Run Complete!',
+             Text(tr('Run Complete!'),
                 style: TextStyle(fontSize: 22, fontWeight: FontWeight.w900, color: _kInk)),
             const SizedBox(height: 26),
             _SoftCard(
               padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 26),
               child: Column(children: [
-                Text('$_totalScore',
+                Text(tr('$_totalScore'),
                     style: const TextStyle(fontSize: 44, fontWeight: FontWeight.w900, color: _kAccent)),
-                const Text('TOTAL SCORE',
+                 Text(tr('TOTAL SCORE'),
                     style: TextStyle(fontSize: 11, fontWeight: FontWeight.w800, letterSpacing: 1.0, color: _kMuted)),
                 const SizedBox(height: 18),
                 Row(mainAxisAlignment: MainAxisAlignment.center, children: [
@@ -1656,6 +1665,7 @@ class _ScoreBadge extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Padding(
       padding: const EdgeInsets.only(right: 16, top: 4, bottom: 4),
       child: Container(
@@ -1669,9 +1679,9 @@ class _ScoreBadge extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.end,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('$total',
+            Text(tr('$total'),
                 style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w900, color: _kAccent)),
-            Text('best $best',
+            Text(tr('best $best'),
                 style: const TextStyle(fontSize: 9.5, fontWeight: FontWeight.w700, color: _kMuted)),
           ],
         ),
@@ -1688,13 +1698,14 @@ class _StatChip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
       decoration: BoxDecoration(color: _kSurface, borderRadius: BorderRadius.circular(14)),
       child: Column(children: [
-        Text(value, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w800, color: _kInk)),
+        Text(tr(value), style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w800, color: _kInk)),
         const SizedBox(height: 2),
-        Text(label.toUpperCase(),
+        Text(tr(label.toUpperCase()),
             style: const TextStyle(fontSize: 9.5, fontWeight: FontWeight.w800, letterSpacing: 0.4, color: _kMuted)),
       ]),
     );

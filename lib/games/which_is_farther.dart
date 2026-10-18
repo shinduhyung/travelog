@@ -32,6 +32,7 @@ import 'dart:math';
 
 import 'package:flutter/foundation.dart' show debugPrint;
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -346,6 +347,7 @@ class _SoftCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Container(
       padding: padding,
       decoration: BoxDecoration(
@@ -387,6 +389,7 @@ class _GradientButtonState extends State<_GradientButton> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final fg = widget.outlined ? widget.color : Colors.white;
     return GestureDetector(
       onTapDown: (_) => setState(() => _scale = 0.97),
@@ -424,7 +427,7 @@ class _GradientButtonState extends State<_GradientButton> {
                 Icon(widget.icon, color: fg, size: 20),
                 const SizedBox(width: 8),
               ],
-              Text(widget.label,
+              Text(tr(widget.label),
                   style: TextStyle(color: fg, fontSize: 15.5, fontWeight: FontWeight.w800, letterSpacing: 0.2)),
             ],
           ),
@@ -444,6 +447,7 @@ class _ScreenBackground extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Container(
       decoration: BoxDecoration(
         gradient: LinearGradient(
@@ -483,6 +487,7 @@ class WhichIsFartherDifficultyScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Scaffold(
       backgroundColor: _kSurface,
       extendBodyBehindAppBar: true,
@@ -511,7 +516,7 @@ class WhichIsFartherDifficultyScreen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(width: 10),
-                  const Text('CHOOSE A DIFFICULTY',
+                   Text(tr('CHOOSE A DIFFICULTY'),
                       style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, letterSpacing: 1.1, color: _kMuted)),
                 ],
               ),
@@ -598,14 +603,14 @@ class WhichIsFartherDifficultyScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text('DISTANCE PUZZLE',
+               Text(tr('DISTANCE PUZZLE'),
                   style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.w800, letterSpacing: 1.6, color: _kMuted)),
               const SizedBox(height: 4),
-              const Text('Which Is Farther?',
+               Text(tr('Which Is Farther?'),
                   style: TextStyle(
                       fontSize: 27, fontWeight: FontWeight.w900, color: _kInk, letterSpacing: -0.6, height: 1.05)),
               const SizedBox(height: 8),
-              Text('Pick the more distant city before the clock runs out. Gaps get tighter as you climb.',
+              Text(tr('Pick the more distant city before the clock runs out. Gaps get tighter as you climb.'),
                   style: TextStyle(
                       fontSize: 12.5, color: _kMuted.withOpacity(0.9), fontWeight: FontWeight.w600, height: 1.4)),
             ],
@@ -638,6 +643,7 @@ class _DifficultyCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final color = _accentFor(difficulty);
     final level = _diffLevel(difficulty);
     return GestureDetector(
@@ -669,7 +675,7 @@ class _DifficultyCard extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Text(_labelFor(difficulty),
+                      Text(tr(_labelFor(difficulty)),
                           style: const TextStyle(fontSize: 17.5, fontWeight: FontWeight.w900, color: _kInk, letterSpacing: -0.2)),
                       if (locked) ...[
                         const SizedBox(width: 6),
@@ -752,6 +758,7 @@ class _WhichIsFartherLobbyScreenState extends State<_WhichIsFartherLobbyScreen> 
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final accent = _accentFor(widget.difficulty);
     return Scaffold(
       backgroundColor: _kSurface,
@@ -810,10 +817,10 @@ class _WhichIsFartherLobbyScreenState extends State<_WhichIsFartherLobbyScreen> 
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text('DIFFICULTY',
+               Text(tr('DIFFICULTY'),
                   style: TextStyle(fontSize: 11, fontWeight: FontWeight.w800, letterSpacing: 1.4, color: _kMuted)),
               const SizedBox(height: 2),
-              Text('${_labelFor(widget.difficulty)} Mode',
+              Text(tr('${_labelFor(widget.difficulty)} Mode'),
                   style: const TextStyle(fontSize: 21, fontWeight: FontWeight.w900, color: _kInk, letterSpacing: -0.3)),
             ],
           ),
@@ -837,10 +844,10 @@ class _WhichIsFartherLobbyScreenState extends State<_WhichIsFartherLobbyScreen> 
               children: [
                 Icon(Icons.emoji_events_outlined, size: 46, color: _kFaint),
                 const SizedBox(height: 12),
-                const Text('No runs yet',
+                 Text(tr('No runs yet'),
                     style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: _kInk)),
                 const SizedBox(height: 4),
-                Text('Play a round to start your leaderboard',
+                Text(tr('Play a round to start your leaderboard'),
                     style: TextStyle(fontSize: 12.5, color: _kMuted)),
               ],
             ),
@@ -852,10 +859,10 @@ class _WhichIsFartherLobbyScreenState extends State<_WhichIsFartherLobbyScreen> 
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text('LEADERBOARD',
+                Text(tr('LEADERBOARD'),
                     style: TextStyle(
                         fontSize: 12.5, fontWeight: FontWeight.w800, letterSpacing: 1.0, color: _kMuted)),
-                Text('${records.length} run${records.length == 1 ? '' : 's'}',
+                Text(tr('${records.length} run${records.length == 1 ? '' : 's'}'),
                     style: TextStyle(fontSize: 12, color: _kFaint, fontWeight: FontWeight.w600)),
               ],
             ),
@@ -893,6 +900,7 @@ class _RecordTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final medal = _medalColors[rank];
     return _SoftCard(
       radius: 16,
@@ -910,18 +918,18 @@ class _RecordTile extends StatelessWidget {
             ),
             child: medal != null
                 ? Icon(Icons.emoji_events_rounded, size: 16, color: medal)
-                : Text('$rank', style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 12, color: _kMuted)),
+                : Text(tr('$rank'), style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 12, color: _kMuted)),
           ),
           const SizedBox(width: 14),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(record.score.toStringAsFixed(1),
+                Text(tr(record.score.toStringAsFixed(1)),
                     style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 16, color: _kInk)),
                 const SizedBox(height: 2),
                 Text(
-                  '${record.roundsCompleted}/${record.maxRounds} rounds · combo ${record.bestCombo} · ${_formatDate(record.playedAt)}',
+                  tr('${record.roundsCompleted}/${record.maxRounds} rounds · combo ${record.bestCombo} · ${_formatDate(record.playedAt)}'),
                   style: const TextStyle(fontSize: 11.5, color: _kMuted),
                 ),
               ],
@@ -1199,6 +1207,7 @@ class _WhichIsFartherGameScreenState extends State<_WhichIsFartherGameScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Scaffold(
       backgroundColor: _kSurface,
       extendBodyBehindAppBar: true,
@@ -1211,7 +1220,7 @@ class _WhichIsFartherGameScreenState extends State<_WhichIsFartherGameScreen> {
           children: [
             Container(width: 8, height: 8, decoration: BoxDecoration(color: _accent, shape: BoxShape.circle)),
             const SizedBox(width: 8),
-            Text('${_labelFor(widget.difficulty)} Mode',
+            Text(tr('${_labelFor(widget.difficulty)} Mode'),
                 style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w800, color: _kInk, letterSpacing: -0.2)),
           ],
         ),
@@ -1242,15 +1251,15 @@ class _WhichIsFartherGameScreenState extends State<_WhichIsFartherGameScreen> {
           children: [
             Icon(Icons.cloud_off_rounded, size: 48, color: _kFaint),
             const SizedBox(height: 16),
-            const Text("Couldn't load questions",
+             Text(tr("Couldn't load questions"),
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800, color: _kInk)),
             const SizedBox(height: 8),
             if (_loadError != null)
-              Text(_loadError!,
+              Text(tr(_loadError!),
                   textAlign: TextAlign.center,
                   style: const TextStyle(fontSize: 12.5, color: _kMuted)),
             const SizedBox(height: 8),
-            Text('Check the debug console for [WhichIsFarther] logs — details are printed there.',
+            Text(tr('Check the debug console for [WhichIsFarther] logs — details are printed there.'),
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 11.5, color: _kFaint)),
             const SizedBox(height: 24),
@@ -1273,7 +1282,7 @@ class _WhichIsFartherGameScreenState extends State<_WhichIsFartherGameScreen> {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Text('ROUND ${_roundIndex + 1} OF $_maxRounds',
+          Text(tr('ROUND ${_roundIndex + 1} OF $_maxRounds'),
               style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, letterSpacing: 1.0, color: _kMuted)),
           const SizedBox(height: 18),
           TweenAnimationBuilder<double>(
@@ -1296,13 +1305,13 @@ class _WhichIsFartherGameScreenState extends State<_WhichIsFartherGameScreen> {
                 boxShadow: [BoxShadow(color: _accent.withOpacity(0.35), blurRadius: 24, offset: const Offset(0, 10))],
               ),
               child: Text(
-                _prepCountdown > 0 ? '$_prepCountdown' : 'GO',
+                tr(_prepCountdown > 0 ? '$_prepCountdown' : 'GO'),
                 style: const TextStyle(fontSize: 38, fontWeight: FontWeight.w900, color: Colors.white),
               ),
             ),
           ),
           const SizedBox(height: 18),
-          Text('Get ready...', style: TextStyle(fontSize: 14, color: _kMuted, fontWeight: FontWeight.w600)),
+          Text(tr('Get ready...'), style: TextStyle(fontSize: 14, color: _kMuted, fontWeight: FontWeight.w600)),
         ],
       ),
     );
@@ -1321,7 +1330,7 @@ class _WhichIsFartherGameScreenState extends State<_WhichIsFartherGameScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('ROUND ${_roundIndex + 1} / $_maxRounds',
+              Text(tr('ROUND ${_roundIndex + 1} / $_maxRounds'),
                   style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, letterSpacing: 0.6, color: _kMuted)),
               if (_combo > 0)
                 Container(
@@ -1333,7 +1342,7 @@ class _WhichIsFartherGameScreenState extends State<_WhichIsFartherGameScreen> {
                   child: Row(mainAxisSize: MainAxisSize.min, children: [
                     const Icon(Icons.local_fire_department_rounded, size: 15, color: Color(0xFFFF5A5F)),
                     const SizedBox(width: 3),
-                    Text('$_combo',
+                    Text(tr('$_combo'),
                         style: const TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, color: Color(0xFFFF5A5F))),
                   ]),
                 ),
@@ -1355,7 +1364,7 @@ class _WhichIsFartherGameScreenState extends State<_WhichIsFartherGameScreen> {
                 const SizedBox(height: 6),
                 Align(
                   alignment: Alignment.centerRight,
-                  child: Text('${_remaining.toStringAsFixed(1)}s',
+                  child: Text(tr('${_remaining.toStringAsFixed(1)}s'),
                       style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w700, color: barColor)),
                 ),
               ],
@@ -1378,7 +1387,7 @@ class _WhichIsFartherGameScreenState extends State<_WhichIsFartherGameScreen> {
                     decoration: BoxDecoration(color: Colors.white, shape: BoxShape.circle, boxShadow: [
                       BoxShadow(color: Colors.black.withOpacity(0.06), blurRadius: 10, offset: const Offset(0, 3)),
                     ]),
-                    child: Text('VS',
+                    child: Text(tr('VS'),
                         style: TextStyle(fontSize: 11, fontWeight: FontWeight.w900, color: _kMuted)),
                   ),
                 ),
@@ -1395,19 +1404,19 @@ class _WhichIsFartherGameScreenState extends State<_WhichIsFartherGameScreen> {
   Widget _buildOriginHeader(_WhichIsFartherQuestion q) {
     return Column(
       children: [
-        Text('FROM', style: TextStyle(fontSize: 11, fontWeight: FontWeight.w800, letterSpacing: 1.2, color: _kMuted)),
+        Text(tr('FROM'), style: TextStyle(fontSize: 11, fontWeight: FontWeight.w800, letterSpacing: 1.2, color: _kMuted)),
         const SizedBox(height: 4),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(q.origin.emoji, style: const TextStyle(fontSize: 22)),
+            Text(tr(q.origin.emoji), style: const TextStyle(fontSize: 22)),
             const SizedBox(width: 8),
             Text(q.origin.name,
                 style: const TextStyle(fontSize: 21, fontWeight: FontWeight.w900, color: _kInk)),
           ],
         ),
         const SizedBox(height: 4),
-        Text('which is farther?', style: TextStyle(fontSize: 13, color: _kMuted, fontWeight: FontWeight.w600)),
+        Text(tr('which is farther?'), style: TextStyle(fontSize: 13, color: _kMuted, fontWeight: FontWeight.w600)),
       ],
     );
   }
@@ -1452,7 +1461,7 @@ class _WhichIsFartherGameScreenState extends State<_WhichIsFartherGameScreen> {
         ),
         child: Row(
           children: [
-            Text(place.emoji, style: const TextStyle(fontSize: 34)),
+            Text(tr(place.emoji), style: const TextStyle(fontSize: 34)),
             const SizedBox(width: 14),
             Expanded(
               child: Column(
@@ -1469,7 +1478,7 @@ class _WhichIsFartherGameScreenState extends State<_WhichIsFartherGameScreen> {
                         ? Padding(
                       key: const ValueKey('km'),
                       padding: const EdgeInsets.only(top: 3),
-                      child: Text('${_formatKm(km)} km',
+                      child: Text(tr('${_formatKm(km)} km'),
                           style: TextStyle(fontSize: 13.5, fontWeight: FontWeight.w700, color: sub)),
                     )
                         : const SizedBox.shrink(key: ValueKey('hidden')),
@@ -1516,9 +1525,9 @@ class _WhichIsFartherGameScreenState extends State<_WhichIsFartherGameScreen> {
             ),
             const SizedBox(width: 10),
             Text(
-              correct
+              tr(correct
                   ? 'Correct! +${_lastRoundScore!.toStringAsFixed(1)}'
-                  : (timedOut ? "Time's up" : 'Wrong'),
+                  : (timedOut ? "Time's up" : 'Wrong')),
               style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w900, color: Colors.white),
             ),
           ],
@@ -1548,15 +1557,15 @@ class _WhichIsFartherGameScreenState extends State<_WhichIsFartherGameScreen> {
                   size: 40, color: Colors.white),
             ),
             const SizedBox(height: 18),
-            Text(completed ? 'All Rounds Complete!' : 'Game Over',
+            Text(tr(completed ? 'All Rounds Complete!' : 'Game Over'),
                 style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w900, color: _kInk)),
             const SizedBox(height: 26),
             _SoftCard(
               padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 26),
               child: Column(children: [
-                Text(_totalScore.toStringAsFixed(1),
+                Text(tr(_totalScore.toStringAsFixed(1)),
                     style: TextStyle(fontSize: 44, fontWeight: FontWeight.w900, color: _accent)),
-                const Text('TOTAL SCORE',
+                 Text(tr('TOTAL SCORE'),
                     style: TextStyle(fontSize: 11, fontWeight: FontWeight.w800, letterSpacing: 1.0, color: _kMuted)),
                 const SizedBox(height: 18),
                 Row(mainAxisAlignment: MainAxisAlignment.center, children: [
@@ -1593,6 +1602,7 @@ class _ScoreBadge extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Padding(
       padding: const EdgeInsets.only(right: 16, top: 4, bottom: 4),
       child: Container(
@@ -1606,9 +1616,9 @@ class _ScoreBadge extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.end,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(total.toStringAsFixed(1),
+            Text(tr(total.toStringAsFixed(1)),
                 style: TextStyle(fontSize: 15, fontWeight: FontWeight.w900, color: accent)),
-            Text('best ${best.toStringAsFixed(1)}',
+            Text(tr('best ${best.toStringAsFixed(1)}'),
                 style: const TextStyle(fontSize: 9.5, fontWeight: FontWeight.w700, color: _kMuted)),
           ],
         ),
@@ -1625,13 +1635,14 @@ class _StatChip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
       decoration: BoxDecoration(color: _kSurface, borderRadius: BorderRadius.circular(14)),
       child: Column(children: [
-        Text(value, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w800, color: _kInk)),
+        Text(tr(value), style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w800, color: _kInk)),
         const SizedBox(height: 2),
-        Text(label.toUpperCase(),
+        Text(tr(label.toUpperCase()),
             style: const TextStyle(fontSize: 9.5, fontWeight: FontWeight.w800, letterSpacing: 0.4, color: _kMuted)),
       ]),
     );

@@ -1,243 +1,1962 @@
-[
-  {"iso_a3": "AFG", "homicide_rate": 4.022},
-  {"iso_a3": "ALB", "homicide_rate": 1.387},
-  {"iso_a3": "DZA", "homicide_rate": 1.161},
-  {"iso_a3": "AND", "homicide_rate": 2.574},
-  {"iso_a3": "AGO", "homicide_rate": 4.102},
-  {"iso_a3": "AIA", "homicide_rate": 28.328},
-  {"iso_a3": "ATG", "homicide_rate": 10.665},
-  {"iso_a3": "ARG", "homicide_rate": 4.309},
-  {"iso_a3": "ARM", "homicide_rate": 2.186},
-  {"iso_a3": "ABW", "homicide_rate": 1.931},
-  {"iso_a3": "AUS", "homicide_rate": 0.854},
-  {"iso_a3": "AUT", "homicide_rate": 0.876},
-  {"iso_a3": "AZE", "homicide_rate": 2.365},
-  {"iso_a3": "BHS", "homicide_rate": 31.221},
-  {"iso_a3": "BHR", "homicide_rate": 0.204},
-  {"iso_a3": "BGD", "homicide_rate": 2.340},
-  {"iso_a3": "BRB", "homicide_rate": 15.268},
-  {"iso_a3": "BLR", "homicide_rate": 2.326},
-  {"iso_a3": "BEL", "homicide_rate": 1.077},
-  {"iso_a3": "BLZ", "homicide_rate": 27.882},
-  {"iso_a3": "BMU", "homicide_rate": 6.183},
-  {"iso_a3": "BTN", "homicide_rate": 2.46},
-  {"iso_a3": "BOL", "homicide_rate": 4.369},
-  {"iso_a3": "BIH", "homicide_rate": 1.224},
-  {"iso_a3": "BWA", "homicide_rate": 10.547},
-  {"iso_a3": "BRA", "homicide_rate": 19.275},
-  {"iso_a3": "VGB", "homicide_rate": 8.223},
-  {"iso_a3": "BRN", "homicide_rate": 0.486},
-  {"iso_a3": "BGR", "homicide_rate": 1.088},
-  {"iso_a3": "BDI", "homicide_rate": 5.824},
-  {"iso_a3": "CPV", "homicide_rate": 6.179},
-  {"iso_a3": "KHM", "homicide_rate": 1.839},
-  {"iso_a3": "CMR", "homicide_rate": 4.537},
-  {"iso_a3": "CAN", "homicide_rate": 2.273},
-  {"iso_a3": "CYM", "homicide_rate": 4.457},
-  {"iso_a3": "CHL", "homicide_rate": 6.744},
-  {"iso_a3": "CHN", "homicide_rate": 0.502},
-  {"iso_a3": "COL", "homicide_rate": 25.269},
-  {"iso_a3": "COK", "homicide_rate": 3.49},
-  {"iso_a3": "CRI", "homicide_rate": 17.745},
-  {"iso_a3": "HRV", "homicide_rate": 0.769},
-  {"iso_a3": "CUB", "homicide_rate": 4.418},
-  {"iso_a3": "CUW", "homicide_rate": 17.092},
-  {"iso_a3": "CYP", "homicide_rate": 0.817},
-  {"iso_a3": "CZE", "homicide_rate": 0.768},
-  {"iso_a3": "DNK", "homicide_rate": 0.986},
-  {"iso_a3": "DMA", "homicide_rate": 26.121},
-  {"iso_a3": "DOM", "homicide_rate": 12.37},
-  {"iso_a3": "ECU", "homicide_rate": 45.723},
-  {"iso_a3": "EGY", "homicide_rate": 1.336},
-  {"iso_a3": "SLV", "homicide_rate": 7.828},
-  {"iso_a3": "ERI", "homicide_rate": 14.573},
-  {"iso_a3": "EST", "homicide_rate": 1.536},
-  {"iso_a3": "SWZ", "homicide_rate": 12.665},
-  {"iso_a3": "ETH", "homicide_rate": 8.632},
-  {"iso_a3": "FJI", "homicide_rate": 2.173},
-  {"iso_a3": "FIN", "homicide_rate": 0.982},
-  {"iso_a3": "FRA", "homicide_rate": 1.335},
-  {"iso_a3": "GUF", "homicide_rate": 13.3},
-  {"iso_a3": "PYF", "homicide_rate": 0.354},
-  {"iso_a3": "GEO", "homicide_rate": 2.042},
-  {"iso_a3": "DEU", "homicide_rate": 0.823},
-  {"iso_a3": "GHA", "homicide_rate": 1.813},
-  {"iso_a3": "GIB", "homicide_rate": 3.199},
-  {"iso_a3": "GRC", "homicide_rate": 0.84},
-  {"iso_a3": "GRL", "homicide_rate": 5.365},
-  {"iso_a3": "GRD", "homicide_rate": 6.378},
-  {"iso_a3": "GLP", "homicide_rate": 5.781},
-  {"iso_a3": "GUM", "homicide_rate": 4.151},
-  {"iso_a3": "GTM", "homicide_rate": 19.99},
-  {"iso_a3": "GNB", "homicide_rate": 1.117},
-  {"iso_a3": "GUY", "homicide_rate": 16.198},
-  {"iso_a3": "HTI", "homicide_rate": 41.152},
-  {"iso_a3": "HND", "homicide_rate": 31.442},
-  {"iso_a3": "HKG", "homicide_rate": 0.401},
-  {"iso_a3": "HUN", "homicide_rate": 0.774},
-  {"iso_a3": "ISL", "homicide_rate": 1.073},
-  {"iso_a3": "IND", "homicide_rate": 2.832},
-  {"iso_a3": "IDN", "homicide_rate": 0.307},
-  {"iso_a3": "IRN", "homicide_rate": 2.421},
-  {"iso_a3": "IRQ", "homicide_rate": 9.41},
-  {"iso_a3": "IRL", "homicide_rate": 0.654},
-  {"iso_a3": "ISR", "homicide_rate": 1.626},
-  {"iso_a3": "ITA", "homicide_rate": 0.545},
-  {"iso_a3": "JAM", "homicide_rate": 49.299},
-  {"iso_a3": "JPN", "homicide_rate": 0.233},
-  {"iso_a3": "JOR", "homicide_rate": 0.988},
-  {"iso_a3": "KAZ", "homicide_rate": 2.634},
-  {"iso_a3": "KEN", "homicide_rate": 4.892},
-  {"iso_a3": "KIR", "homicide_rate": 7.167},
-  {"iso_a3": "KOS", "homicide_rate": 1.986},
-  {"iso_a3": "KWT", "homicide_rate": 0.252},
-  {"iso_a3": "LVA", "homicide_rate": 2.497},
-  {"iso_a3": "LBN", "homicide_rate": 2.26},
-  {"iso_a3": "LSO", "homicide_rate": 37.694},
-  {"iso_a3": "LBR", "homicide_rate": 3.117},
-  {"iso_a3": "LIE", "homicide_rate": 5.123},
-  {"iso_a3": "BEN", "homicide_rate": 1.13},
-  {"iso_a3": "BFA", "homicide_rate": 1.25},
-  {"iso_a3": "CAF", "homicide_rate": 29.1},
-  {"iso_a3": "CIV", "homicide_rate": 45.7},
-  {"iso_a3": "COD", "homicide_rate": 35.2},
-  {"iso_a3": "COG", "homicide_rate": 0.00},
-  {"iso_a3": "COM", "homicide_rate": 9.3},
-  {"iso_a3": "DJI", "homicide_rate": 3.5},
-  {"iso_a3": "GAB", "homicide_rate": 17.1},
-  {"iso_a3": "GMB", "homicide_rate": 13.5},
-  {"iso_a3": "GNQ", "homicide_rate": 24.0},
-  {"iso_a3": "MDG", "homicide_rate": 11.7},
-  {"iso_a3": "MLI", "homicide_rate": 18.0},
-  {"iso_a3": "NRU", "homicide_rate": 9.9},
-  {"iso_a3": "SOM", "homicide_rate": 3.3},
-  {"iso_a3": "TCD", "homicide_rate": 19.0},
-  {"iso_a3": "TGO", "homicide_rate": 62.7},
-  {"iso_a3": "VIR", "homicide_rate": 49.6},
-  {"iso_a3": "SYR", "homicide_rate": 2.073},
-  {"iso_a3": "TJK", "homicide_rate": 0.912},
-  {"iso_a3": "TZA", "homicide_rate": 3.705},
-  {"iso_a3": "LTU", "homicide_rate": 2.628},
-  {"iso_a3": "LUX", "homicide_rate": 1.544},
-  {"iso_a3": "MAC", "homicide_rate": 0.568},
-  {"iso_a3": "MWI", "homicide_rate": 1.791},
-  {"iso_a3": "MYS", "homicide_rate": 0.724},
-  {"iso_a3": "MDV", "homicide_rate": 0.595},
-  {"iso_a3": "MLT", "homicide_rate": 0.563},
-  {"iso_a3": "MHL", "homicide_rate": 4.013},
-  {"iso_a3": "MTQ", "homicide_rate": 2.79},
-  {"iso_a3": "MRT", "homicide_rate": 1.023},
-  {"iso_a3": "MUS", "homicide_rate": 2.232},
-  {"iso_a3": "MYT", "homicide_rate": 5.816},
-  {"iso_a3": "MEX", "homicide_rate": 24.859},
-  {"iso_a3": "FSM", "homicide_rate": 0.898},
-  {"iso_a3": "MNG", "homicide_rate": 5.915},
-  {"iso_a3": "MNE", "homicide_rate": 0.789},
-  {"iso_a3": "MAR", "homicide_rate": 1.705},
-  {"iso_a3": "MOZ", "homicide_rate": 3.573},
-  {"iso_a3": "MMR", "homicide_rate": 3.872},
-  {"iso_a3": "NAM", "homicide_rate": 12.45},
-  {"iso_a3": "NPL", "homicide_rate": 2.102},
-  {"iso_a3": "NLD", "homicide_rate": 0.691},
-  {"iso_a3": "NCL", "homicide_rate": 3.113},
-  {"iso_a3": "NZL", "homicide_rate": 1.111},
-  {"iso_a3": "NIC", "homicide_rate": 11.006},
-  {"iso_a3": "NER", "homicide_rate": 4.389},
-  {"iso_a3": "NGA", "homicide_rate": 21.741},
-  {"iso_a3": "MKD", "homicide_rate": 1.529},
-  {"iso_a3": "GBN", "homicide_rate": 1.413},
-  {"iso_a3": "NOR", "homicide_rate": 0.725},
-  {"iso_a3": "OMN", "homicide_rate": 0.139},
-  {"iso_a3": "PAK", "homicide_rate": 4.335},
-  {"iso_a3": "PLW", "homicide_rate": 11.195},
-  {"iso_a3": "PSE", "homicide_rate": 1.41},
-  {"iso_a3": "PAN", "homicide_rate": 11.319},
-  {"iso_a3": "PNG", "homicide_rate": 9.402},
-  {"iso_a3": "PRY", "homicide_rate": 6.961},
-  {"iso_a3": "PER", "homicide_rate": 8.462},
-  {"iso_a3": "PHL", "homicide_rate": 4.316},
-  {"iso_a3": "POL", "homicide_rate": 0.802},
-  {"iso_a3": "PRT", "homicide_rate": 0.797},
-  {"iso_a3": "PRI", "homicide_rate": 14.312},
-  {"iso_a3": "QAT", "homicide_rate": 0.074},
-  {"iso_a3": "KOR", "homicide_rate": 0.531},
-  {"iso_a3": "MDA", "homicide_rate": 2.543},
-  {"iso_a3": "REU", "homicide_rate": 1.699},
-  {"iso_a3": "ROU", "homicide_rate": 1.109},
-  {"iso_a3": "RUS", "homicide_rate": 6.799},
-  {"iso_a3": "RWA", "homicide_rate": 3.59},
-  {"iso_a3": "KNA", "homicide_rate": 23.081},
-  {"iso_a3": "LCA", "homicide_rate": 36.696},
-  {"iso_a3": "MAF", "homicide_rate": 28.727},
-  {"iso_a3": "SPM", "homicide_rate": 16.518},
-  {"iso_a3": "VCT", "homicide_rate": 40.405},
-  {"iso_a3": "WSM", "homicide_rate": 6.199},
-  {"iso_a3": "STP", "homicide_rate": 3.225},
-  {"iso_a3": "SAU", "homicide_rate": 0.795},
-  {"iso_a3": "GBS", "homicide_rate": 0.967},
-  {"iso_a3": "SRB", "homicide_rate": 1.314},
-  {"iso_a3": "SYC", "homicide_rate": 9.335},
-  {"iso_a3": "SLE", "homicide_rate": 2.137},
-  {"iso_a3": "SGP", "homicide_rate": 0.069},
-  {"iso_a3": "SVK", "homicide_rate": 1.124},
-  {"iso_a3": "SVN", "homicide_rate": 0.566},
-  {"iso_a3": "SLB", "homicide_rate": 3.682},
-  {"iso_a3": "ZAF", "homicide_rate": 45.534},
-  {"iso_a3": "SSD", "homicide_rate": 14.054},
-  {"iso_a3": "ESP", "homicide_rate": 0.691},
-  {"iso_a3": "LKA", "homicide_rate": 3.427},
-  {"iso_a3": "SUR", "homicide_rate": 7.281},
-  {"iso_a3": "SWE", "homicide_rate": 1.147},
-  {"iso_a3": "CHE", "homicide_rate": 0.597},
-  {"iso_a3": "SYR", "homicide_rate": 2.073},
-  {"iso_a3": "TJK", "homicide_rate": 0.912},
-  {"iso_a3": "TZA", "homicide_rate": 3.705},
-  {"iso_a3": "THA", "homicide_rate": 4.813},
-  {"iso_a3": "TON", "homicide_rate": 0.953},
-  {"iso_a3": "TTO", "homicide_rate": 39.516},
-  {"iso_a3": "TUN", "homicide_rate": 4.621},
-  {"iso_a3": "TUR", "homicide_rate": 3.228},
-  {"iso_a3": "TKM", "homicide_rate": 1.093},
-  {"iso_a3": "UGA", "homicide_rate": 8.768},
-  {"iso_a3": "UKR", "homicide_rate": 3.843},
-  {"iso_a3": "ARE", "homicide_rate": 0.752},
-  {"iso_a3": "GBR", "homicide_rate": 1.148},
-  {"iso_a3": "USA", "homicide_rate": 5.763},
-  {"iso_a3": "URY", "homicide_rate": 11.19},
-  {"iso_a3": "UZB", "homicide_rate": 1.405},
-  {"iso_a3": "VUT", "homicide_rate": 0.321},
-  {"iso_a3": "VEN", "homicide_rate": 12.607},
-  {"iso_a3": "VNM", "homicide_rate": 1.537},
-  {"iso_a3": "YEM", "homicide_rate": 6.311},
-  {"iso_a3": "ZMB", "homicide_rate": 5.25},
-  {"iso_a3": "ZWE", "homicide_rate": 6.76},
-  {"iso_a3": "BEN", "homicide_rate": 1.1},
-  {"iso_a3": "BFA", "homicide_rate": 1.3},
-  {"iso_a3": "CAF", "homicide_rate": 19.8},
-  {"iso_a3": "CIV", "homicide_rate": 11.8},
-  {"iso_a3": "COD", "homicide_rate": 13.4},
-  {"iso_a3": "COG", "homicide_rate": 10.1},
-  {"iso_a3": "COM", "homicide_rate": 9.3},
-  {"iso_a3": "DJI", "homicide_rate": 3.5},
-  {"iso_a3": "GAB", "homicide_rate": 17.1},
-  {"iso_a3": "GIN", "homicide_rate": 8.5},
-  {"iso_a3": "GMB", "homicide_rate": 13.5},
-  {"iso_a3": "GNQ", "homicide_rate": 24.0},
-  {"iso_a3": "KGZ", "homicide_rate": 4.2},
-  {"iso_a3": "LAO", "homicide_rate": 6.9},
-  {"iso_a3": "LBY", "homicide_rate": 2.5},
-  {"iso_a3": "MDG", "homicide_rate": 11.7},
-  {"iso_a3": "MLI", "homicide_rate": 18.0},
-  {"iso_a3": "NRU", "homicide_rate": 9.9},
-  {"iso_a3": "SDN", "homicide_rate": 6.5},
-  {"iso_a3": "SEN", "homicide_rate": 7.3},
-  {"iso_a3": "SML", "homicide_rate": 5.6},
-  {"iso_a3": "SOM", "homicide_rate": 3.3},
-  {"iso_a3": "TCD", "homicide_rate": 19.0},
-  {"iso_a3": "TGO", "homicide_rate": 8.29},
-  {"iso_a3": "TLS", "homicide_rate": 4.06},
-  {"iso_a3": "TUV", "homicide_rate": 18.6},
-  {"iso_a3": "TWN", "homicide_rate": 0.8},
-  {"iso_a3": "VIR", "homicide_rate": 49.6},
-  {"iso_a3": "TCA", "homicide_rate": 76.6}
-]
+{
+  "schema_version": 1,
+  "dataset_id": "homicide_rate",
+  "metadata": {
+    "source_url": null,
+    "reference_period": null,
+    "updated_at": null
+  },
+  "legacy_layout": "list",
+  "tables": [
+    {
+      "id": "main",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "iso_a3"
+      ],
+      "metrics": [
+        {
+          "id": "homicide_rate",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "iso_a3": "AFG"
+          },
+          "values": {
+            "homicide_rate": 4.022
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ALB"
+          },
+          "values": {
+            "homicide_rate": 1.387
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DZA"
+          },
+          "values": {
+            "homicide_rate": 1.161
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AND"
+          },
+          "values": {
+            "homicide_rate": 2.574
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AGO"
+          },
+          "values": {
+            "homicide_rate": 4.102
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AIA"
+          },
+          "values": {
+            "homicide_rate": 28.328
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ATG"
+          },
+          "values": {
+            "homicide_rate": 10.665
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ARG"
+          },
+          "values": {
+            "homicide_rate": 4.309
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ARM"
+          },
+          "values": {
+            "homicide_rate": 2.186
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ABW"
+          },
+          "values": {
+            "homicide_rate": 1.931
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AUS"
+          },
+          "values": {
+            "homicide_rate": 0.854
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AUT"
+          },
+          "values": {
+            "homicide_rate": 0.876
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AZE"
+          },
+          "values": {
+            "homicide_rate": 2.365
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BHS"
+          },
+          "values": {
+            "homicide_rate": 31.221
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BHR"
+          },
+          "values": {
+            "homicide_rate": 0.204
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BGD"
+          },
+          "values": {
+            "homicide_rate": 2.34
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BRB"
+          },
+          "values": {
+            "homicide_rate": 15.268
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BLR"
+          },
+          "values": {
+            "homicide_rate": 2.326
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BEL"
+          },
+          "values": {
+            "homicide_rate": 1.077
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BLZ"
+          },
+          "values": {
+            "homicide_rate": 27.882
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BMU"
+          },
+          "values": {
+            "homicide_rate": 6.183
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BTN"
+          },
+          "values": {
+            "homicide_rate": 2.46
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BOL"
+          },
+          "values": {
+            "homicide_rate": 4.369
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BIH"
+          },
+          "values": {
+            "homicide_rate": 1.224
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BWA"
+          },
+          "values": {
+            "homicide_rate": 10.547
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BRA"
+          },
+          "values": {
+            "homicide_rate": 19.275
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VGB"
+          },
+          "values": {
+            "homicide_rate": 8.223
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BRN"
+          },
+          "values": {
+            "homicide_rate": 0.486
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BGR"
+          },
+          "values": {
+            "homicide_rate": 1.088
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BDI"
+          },
+          "values": {
+            "homicide_rate": 5.824
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CPV"
+          },
+          "values": {
+            "homicide_rate": 6.179
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KHM"
+          },
+          "values": {
+            "homicide_rate": 1.839
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CMR"
+          },
+          "values": {
+            "homicide_rate": 4.537
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CAN"
+          },
+          "values": {
+            "homicide_rate": 2.273
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CYM"
+          },
+          "values": {
+            "homicide_rate": 4.457
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CHL"
+          },
+          "values": {
+            "homicide_rate": 6.744
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CHN"
+          },
+          "values": {
+            "homicide_rate": 0.502
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "COL"
+          },
+          "values": {
+            "homicide_rate": 25.269
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "COK"
+          },
+          "values": {
+            "homicide_rate": 3.49
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CRI"
+          },
+          "values": {
+            "homicide_rate": 17.745
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HRV"
+          },
+          "values": {
+            "homicide_rate": 0.769
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CUB"
+          },
+          "values": {
+            "homicide_rate": 4.418
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CUW"
+          },
+          "values": {
+            "homicide_rate": 17.092
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CYP"
+          },
+          "values": {
+            "homicide_rate": 0.817
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CZE"
+          },
+          "values": {
+            "homicide_rate": 0.768
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DNK"
+          },
+          "values": {
+            "homicide_rate": 0.986
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DMA"
+          },
+          "values": {
+            "homicide_rate": 26.121
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DOM"
+          },
+          "values": {
+            "homicide_rate": 12.37
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ECU"
+          },
+          "values": {
+            "homicide_rate": 45.723
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "EGY"
+          },
+          "values": {
+            "homicide_rate": 1.336
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SLV"
+          },
+          "values": {
+            "homicide_rate": 7.828
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ERI"
+          },
+          "values": {
+            "homicide_rate": 14.573
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "EST"
+          },
+          "values": {
+            "homicide_rate": 1.536
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SWZ"
+          },
+          "values": {
+            "homicide_rate": 12.665
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ETH"
+          },
+          "values": {
+            "homicide_rate": 8.632
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FJI"
+          },
+          "values": {
+            "homicide_rate": 2.173
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FIN"
+          },
+          "values": {
+            "homicide_rate": 0.982
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FRA"
+          },
+          "values": {
+            "homicide_rate": 1.335
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GUF"
+          },
+          "values": {
+            "homicide_rate": 13.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PYF"
+          },
+          "values": {
+            "homicide_rate": 0.354
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GEO"
+          },
+          "values": {
+            "homicide_rate": 2.042
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DEU"
+          },
+          "values": {
+            "homicide_rate": 0.823
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GHA"
+          },
+          "values": {
+            "homicide_rate": 1.813
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GIB"
+          },
+          "values": {
+            "homicide_rate": 3.199
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GRC"
+          },
+          "values": {
+            "homicide_rate": 0.84
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GRL"
+          },
+          "values": {
+            "homicide_rate": 5.365
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GRD"
+          },
+          "values": {
+            "homicide_rate": 6.378
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GLP"
+          },
+          "values": {
+            "homicide_rate": 5.781
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GUM"
+          },
+          "values": {
+            "homicide_rate": 4.151
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GTM"
+          },
+          "values": {
+            "homicide_rate": 19.99
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GNB"
+          },
+          "values": {
+            "homicide_rate": 1.117
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GUY"
+          },
+          "values": {
+            "homicide_rate": 16.198
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HTI"
+          },
+          "values": {
+            "homicide_rate": 41.152
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HND"
+          },
+          "values": {
+            "homicide_rate": 31.442
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HKG"
+          },
+          "values": {
+            "homicide_rate": 0.401
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HUN"
+          },
+          "values": {
+            "homicide_rate": 0.774
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ISL"
+          },
+          "values": {
+            "homicide_rate": 1.073
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IND"
+          },
+          "values": {
+            "homicide_rate": 2.832
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IDN"
+          },
+          "values": {
+            "homicide_rate": 0.307
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IRN"
+          },
+          "values": {
+            "homicide_rate": 2.421
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IRQ"
+          },
+          "values": {
+            "homicide_rate": 9.41
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IRL"
+          },
+          "values": {
+            "homicide_rate": 0.654
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ISR"
+          },
+          "values": {
+            "homicide_rate": 1.626
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ITA"
+          },
+          "values": {
+            "homicide_rate": 0.545
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "JAM"
+          },
+          "values": {
+            "homicide_rate": 49.299
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "JPN"
+          },
+          "values": {
+            "homicide_rate": 0.233
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "JOR"
+          },
+          "values": {
+            "homicide_rate": 0.988
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KAZ"
+          },
+          "values": {
+            "homicide_rate": 2.634
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KEN"
+          },
+          "values": {
+            "homicide_rate": 4.892
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KIR"
+          },
+          "values": {
+            "homicide_rate": 7.167
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KOS"
+          },
+          "values": {
+            "homicide_rate": 1.986
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KWT"
+          },
+          "values": {
+            "homicide_rate": 0.252
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LVA"
+          },
+          "values": {
+            "homicide_rate": 2.497
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LBN"
+          },
+          "values": {
+            "homicide_rate": 2.26
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LSO"
+          },
+          "values": {
+            "homicide_rate": 37.694
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LBR"
+          },
+          "values": {
+            "homicide_rate": 3.117
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LIE"
+          },
+          "values": {
+            "homicide_rate": 5.123
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BEN"
+          },
+          "values": {
+            "homicide_rate": 1.13
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BFA"
+          },
+          "values": {
+            "homicide_rate": 1.25
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CAF"
+          },
+          "values": {
+            "homicide_rate": 29.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CIV"
+          },
+          "values": {
+            "homicide_rate": 45.7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "COD"
+          },
+          "values": {
+            "homicide_rate": 35.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "COG"
+          },
+          "values": {
+            "homicide_rate": 0.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "COM"
+          },
+          "values": {
+            "homicide_rate": 9.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DJI"
+          },
+          "values": {
+            "homicide_rate": 3.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GAB"
+          },
+          "values": {
+            "homicide_rate": 17.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GMB"
+          },
+          "values": {
+            "homicide_rate": 13.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GNQ"
+          },
+          "values": {
+            "homicide_rate": 24.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MDG"
+          },
+          "values": {
+            "homicide_rate": 11.7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MLI"
+          },
+          "values": {
+            "homicide_rate": 18.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NRU"
+          },
+          "values": {
+            "homicide_rate": 9.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SOM"
+          },
+          "values": {
+            "homicide_rate": 3.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TCD"
+          },
+          "values": {
+            "homicide_rate": 19.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TGO"
+          },
+          "values": {
+            "homicide_rate": 62.7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VIR"
+          },
+          "values": {
+            "homicide_rate": 49.6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SYR"
+          },
+          "values": {
+            "homicide_rate": 2.073
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TJK"
+          },
+          "values": {
+            "homicide_rate": 0.912
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TZA"
+          },
+          "values": {
+            "homicide_rate": 3.705
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LTU"
+          },
+          "values": {
+            "homicide_rate": 2.628
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LUX"
+          },
+          "values": {
+            "homicide_rate": 1.544
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MAC"
+          },
+          "values": {
+            "homicide_rate": 0.568
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MWI"
+          },
+          "values": {
+            "homicide_rate": 1.791
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MYS"
+          },
+          "values": {
+            "homicide_rate": 0.724
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MDV"
+          },
+          "values": {
+            "homicide_rate": 0.595
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MLT"
+          },
+          "values": {
+            "homicide_rate": 0.563
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MHL"
+          },
+          "values": {
+            "homicide_rate": 4.013
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MTQ"
+          },
+          "values": {
+            "homicide_rate": 2.79
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MRT"
+          },
+          "values": {
+            "homicide_rate": 1.023
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MUS"
+          },
+          "values": {
+            "homicide_rate": 2.232
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MYT"
+          },
+          "values": {
+            "homicide_rate": 5.816
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MEX"
+          },
+          "values": {
+            "homicide_rate": 24.859
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FSM"
+          },
+          "values": {
+            "homicide_rate": 0.898
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MNG"
+          },
+          "values": {
+            "homicide_rate": 5.915
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MNE"
+          },
+          "values": {
+            "homicide_rate": 0.789
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MAR"
+          },
+          "values": {
+            "homicide_rate": 1.705
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MOZ"
+          },
+          "values": {
+            "homicide_rate": 3.573
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MMR"
+          },
+          "values": {
+            "homicide_rate": 3.872
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NAM"
+          },
+          "values": {
+            "homicide_rate": 12.45
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NPL"
+          },
+          "values": {
+            "homicide_rate": 2.102
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NLD"
+          },
+          "values": {
+            "homicide_rate": 0.691
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NCL"
+          },
+          "values": {
+            "homicide_rate": 3.113
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NZL"
+          },
+          "values": {
+            "homicide_rate": 1.111
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NIC"
+          },
+          "values": {
+            "homicide_rate": 11.006
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NER"
+          },
+          "values": {
+            "homicide_rate": 4.389
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NGA"
+          },
+          "values": {
+            "homicide_rate": 21.741
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MKD"
+          },
+          "values": {
+            "homicide_rate": 1.529
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GBN"
+          },
+          "values": {
+            "homicide_rate": 1.413
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NOR"
+          },
+          "values": {
+            "homicide_rate": 0.725
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "OMN"
+          },
+          "values": {
+            "homicide_rate": 0.139
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PAK"
+          },
+          "values": {
+            "homicide_rate": 4.335
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PLW"
+          },
+          "values": {
+            "homicide_rate": 11.195
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PSE"
+          },
+          "values": {
+            "homicide_rate": 1.41
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PAN"
+          },
+          "values": {
+            "homicide_rate": 11.319
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PNG"
+          },
+          "values": {
+            "homicide_rate": 9.402
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PRY"
+          },
+          "values": {
+            "homicide_rate": 6.961
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PER"
+          },
+          "values": {
+            "homicide_rate": 8.462
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PHL"
+          },
+          "values": {
+            "homicide_rate": 4.316
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "POL"
+          },
+          "values": {
+            "homicide_rate": 0.802
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PRT"
+          },
+          "values": {
+            "homicide_rate": 0.797
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PRI"
+          },
+          "values": {
+            "homicide_rate": 14.312
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "QAT"
+          },
+          "values": {
+            "homicide_rate": 0.074
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KOR"
+          },
+          "values": {
+            "homicide_rate": 0.531
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MDA"
+          },
+          "values": {
+            "homicide_rate": 2.543
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "REU"
+          },
+          "values": {
+            "homicide_rate": 1.699
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ROU"
+          },
+          "values": {
+            "homicide_rate": 1.109
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "RUS"
+          },
+          "values": {
+            "homicide_rate": 6.799
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "RWA"
+          },
+          "values": {
+            "homicide_rate": 3.59
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KNA"
+          },
+          "values": {
+            "homicide_rate": 23.081
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LCA"
+          },
+          "values": {
+            "homicide_rate": 36.696
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MAF"
+          },
+          "values": {
+            "homicide_rate": 28.727
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SPM"
+          },
+          "values": {
+            "homicide_rate": 16.518
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VCT"
+          },
+          "values": {
+            "homicide_rate": 40.405
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "WSM"
+          },
+          "values": {
+            "homicide_rate": 6.199
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "STP"
+          },
+          "values": {
+            "homicide_rate": 3.225
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SAU"
+          },
+          "values": {
+            "homicide_rate": 0.795
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GBS"
+          },
+          "values": {
+            "homicide_rate": 0.967
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SRB"
+          },
+          "values": {
+            "homicide_rate": 1.314
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SYC"
+          },
+          "values": {
+            "homicide_rate": 9.335
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SLE"
+          },
+          "values": {
+            "homicide_rate": 2.137
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SGP"
+          },
+          "values": {
+            "homicide_rate": 0.069
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SVK"
+          },
+          "values": {
+            "homicide_rate": 1.124
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SVN"
+          },
+          "values": {
+            "homicide_rate": 0.566
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SLB"
+          },
+          "values": {
+            "homicide_rate": 3.682
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ZAF"
+          },
+          "values": {
+            "homicide_rate": 45.534
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SSD"
+          },
+          "values": {
+            "homicide_rate": 14.054
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ESP"
+          },
+          "values": {
+            "homicide_rate": 0.691
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LKA"
+          },
+          "values": {
+            "homicide_rate": 3.427
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SUR"
+          },
+          "values": {
+            "homicide_rate": 7.281
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SWE"
+          },
+          "values": {
+            "homicide_rate": 1.147
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CHE"
+          },
+          "values": {
+            "homicide_rate": 0.597
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SYR"
+          },
+          "values": {
+            "homicide_rate": 2.073
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TJK"
+          },
+          "values": {
+            "homicide_rate": 0.912
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TZA"
+          },
+          "values": {
+            "homicide_rate": 3.705
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "THA"
+          },
+          "values": {
+            "homicide_rate": 4.813
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TON"
+          },
+          "values": {
+            "homicide_rate": 0.953
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TTO"
+          },
+          "values": {
+            "homicide_rate": 39.516
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TUN"
+          },
+          "values": {
+            "homicide_rate": 4.621
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TUR"
+          },
+          "values": {
+            "homicide_rate": 3.228
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TKM"
+          },
+          "values": {
+            "homicide_rate": 1.093
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "UGA"
+          },
+          "values": {
+            "homicide_rate": 8.768
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "UKR"
+          },
+          "values": {
+            "homicide_rate": 3.843
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ARE"
+          },
+          "values": {
+            "homicide_rate": 0.752
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GBR"
+          },
+          "values": {
+            "homicide_rate": 1.148
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "USA"
+          },
+          "values": {
+            "homicide_rate": 5.763
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "URY"
+          },
+          "values": {
+            "homicide_rate": 11.19
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "UZB"
+          },
+          "values": {
+            "homicide_rate": 1.405
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VUT"
+          },
+          "values": {
+            "homicide_rate": 0.321
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VEN"
+          },
+          "values": {
+            "homicide_rate": 12.607
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VNM"
+          },
+          "values": {
+            "homicide_rate": 1.537
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "YEM"
+          },
+          "values": {
+            "homicide_rate": 6.311
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ZMB"
+          },
+          "values": {
+            "homicide_rate": 5.25
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ZWE"
+          },
+          "values": {
+            "homicide_rate": 6.76
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BEN"
+          },
+          "values": {
+            "homicide_rate": 1.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BFA"
+          },
+          "values": {
+            "homicide_rate": 1.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CAF"
+          },
+          "values": {
+            "homicide_rate": 19.8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CIV"
+          },
+          "values": {
+            "homicide_rate": 11.8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "COD"
+          },
+          "values": {
+            "homicide_rate": 13.4
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "COG"
+          },
+          "values": {
+            "homicide_rate": 10.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "COM"
+          },
+          "values": {
+            "homicide_rate": 9.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DJI"
+          },
+          "values": {
+            "homicide_rate": 3.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GAB"
+          },
+          "values": {
+            "homicide_rate": 17.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GIN"
+          },
+          "values": {
+            "homicide_rate": 8.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GMB"
+          },
+          "values": {
+            "homicide_rate": 13.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GNQ"
+          },
+          "values": {
+            "homicide_rate": 24.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KGZ"
+          },
+          "values": {
+            "homicide_rate": 4.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LAO"
+          },
+          "values": {
+            "homicide_rate": 6.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LBY"
+          },
+          "values": {
+            "homicide_rate": 2.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MDG"
+          },
+          "values": {
+            "homicide_rate": 11.7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MLI"
+          },
+          "values": {
+            "homicide_rate": 18.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NRU"
+          },
+          "values": {
+            "homicide_rate": 9.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SDN"
+          },
+          "values": {
+            "homicide_rate": 6.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SEN"
+          },
+          "values": {
+            "homicide_rate": 7.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SML"
+          },
+          "values": {
+            "homicide_rate": 5.6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SOM"
+          },
+          "values": {
+            "homicide_rate": 3.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TCD"
+          },
+          "values": {
+            "homicide_rate": 19.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TGO"
+          },
+          "values": {
+            "homicide_rate": 8.29
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TLS"
+          },
+          "values": {
+            "homicide_rate": 4.06
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TUV"
+          },
+          "values": {
+            "homicide_rate": 18.6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TWN"
+          },
+          "values": {
+            "homicide_rate": 0.8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VIR"
+          },
+          "values": {
+            "homicide_rate": 49.6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TCA"
+          },
+          "values": {
+            "homicide_rate": 76.6
+          }
+        }
+      ]
+    }
+  ]
+}

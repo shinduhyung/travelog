@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:jidoapp/models/country_model.dart';
 import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/screens/countries_map_screen.dart';
@@ -14,10 +15,11 @@ class ContinentsListScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final provider = Provider.of<CountryProvider>(context);
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Continents')),
+      appBar: AppBar(title:  Text(tr('Continents'))),
       body: provider.isLoading
           ? const Center(child: CircularProgressIndicator())
           : ListView.builder(
@@ -47,15 +49,15 @@ class ContinentsListScreen extends StatelessWidget {
             clipBehavior: Clip.antiAlias,
             child: ExpansionTile(
               leading: Icon(continentIcon, size: 30, color: Theme.of(context).primaryColor),
-              title: Text(continentName, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
-              subtitle: Text(stats, style: TextStyle(fontSize: 13, color: Theme.of(context).primaryColor, fontWeight: FontWeight.bold)),
+              title: Text(tr(continentName), style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
+              subtitle: Text(tr(stats), style: TextStyle(fontSize: 13, color: Theme.of(context).primaryColor, fontWeight: FontWeight.bold)),
               trailing: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   padding: const EdgeInsets.symmetric(horizontal: 12),
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
                 ),
                 onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => CountriesMapScreen(region: continentName))),
-                child: const Text('Map'),
+                child:  Text(tr('Map')),
               ),
               children: sortedSubregions.map<Widget>((subregion) {
                 final subregionCountries = countriesBySubregion[subregion]!;
@@ -67,7 +69,7 @@ class ContinentsListScreen extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.only(left: 16.0, top: 12.0, bottom: 4.0, right: 16.0),
                       child: Text(
-                        subregion,
+                        tr(subregion),
                         style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.black54),
                       ),
                     ),
@@ -77,7 +79,7 @@ class ContinentsListScreen extends StatelessWidget {
                       return ListTile(
                         dense: true,
                         contentPadding: const EdgeInsets.only(left: 24, right: 16),
-                        title: Text(country.name, style: const TextStyle(fontSize: 14)),
+                        title: Text(tr(country.name), style: const TextStyle(fontSize: 14)),
                         trailing: isVisited
                             ? Icon(Icons.check, color: Theme.of(context).primaryColor, size: 20)
                             : null,

@@ -1,6 +1,7 @@
 // lib/screens/top_landmarks_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:collection/collection.dart';
 import 'package:country_flags/country_flags.dart';
@@ -261,6 +262,7 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Consumer2<LandmarksProvider, CountryProvider>(
       builder: (context, landmarksProvider, countryProvider, child) {
         final topItems = landmarksProvider.allLandmarks
@@ -321,9 +323,9 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
                                   ),
                                 ),
                                 const SizedBox(width: 10),
-                                const Expanded(
+                                 Expanded(
                                   child: Text(
-                                    'Global Top Attractions',
+                                    tr('Global Top Attractions'),
                                     style: TextStyle(
                                       fontSize: 24,
                                       fontWeight: FontWeight.w900,
@@ -341,7 +343,7 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
                             Padding(
                               padding: const EdgeInsets.only(left: 16),
                               child: Text(
-                                'Discover the most iconic destinations',
+                                tr('Discover the most iconic destinations'),
                                 style: TextStyle(
                                   fontSize: 13,
                                   fontWeight: FontWeight.w500,
@@ -395,8 +397,8 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text('Visited', style: TextStyle(fontSize: 11, fontWeight: FontWeight.w600, color: Colors.grey.shade500)),
-                          Text('$visitedCount / $totalCount', style: TextStyle(fontSize: 11, fontWeight: FontWeight.w700, color: Colors.grey.shade700)),
+                          Text(tr('Visited'), style: TextStyle(fontSize: 11, fontWeight: FontWeight.w600, color: Colors.grey.shade500)),
+                          Text(tr('$visitedCount / $totalCount'), style: TextStyle(fontSize: 11, fontWeight: FontWeight.w700, color: Colors.grey.shade700)),
                         ],
                       ),
                       const SizedBox(height: 6),
@@ -535,7 +537,7 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
                                               Icon(Icons.emoji_events, size: 14, color: rankColor),
                                               const SizedBox(width: 4),
                                               Text(
-                                                '#${item.global_rank}',
+                                                tr('#${item.global_rank}'),
                                                 style: const TextStyle(
                                                   fontSize: 13,
                                                   fontWeight: FontWeight.w800,
@@ -624,7 +626,7 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
                                           ),
                                           const SizedBox(height: 4),
                                           Text(
-                                            _getDisplayCityName(item),
+                                            tr(_getDisplayCityName(item)),
                                             style: TextStyle(
                                               fontSize: 13,
                                               fontWeight: FontWeight.w500,
@@ -709,7 +711,7 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
               ),
               alignment: Alignment.center,
               child: Text(
-                '#${item.global_rank}',
+                tr('#${item.global_rank}'),
                 style: TextStyle(
                   fontSize: 13,
                   fontWeight: FontWeight.w900,
@@ -744,7 +746,7 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
                         borderRadius: BorderRadius.circular(4),
                       ),
                       child: Text(
-                        "Multinational",
+                        tr("Multinational"),
                         style: TextStyle(
                           fontSize: 11,
                           fontWeight: FontWeight.w600,
@@ -754,7 +756,7 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
                     )
                   else
                     Text(
-                      _getDisplayCityName(item),
+                      tr(_getDisplayCityName(item)),
                       style: TextStyle(
                         fontSize: 12,
                         fontWeight: FontWeight.w500,
@@ -898,7 +900,7 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
                                   TextButton.icon(
                                     onPressed: () => Navigator.pop(sheetContext),
                                     icon: const Icon(Icons.close, color: headerTextColor, size: 20),
-                                    label: const Text('Close', style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600)),
+                                    label:  Text(tr('Close'), style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600)),
                                     style: TextButton.styleFrom(
                                       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
                                     ),
@@ -916,7 +918,7 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
                                         const Icon(Icons.emoji_events, size: 16, color: Colors.amber),
                                         const SizedBox(width: 4),
                                         Text(
-                                          '#${freshLandmark.global_rank}',
+                                          tr('#${freshLandmark.global_rank}'),
                                           style: const TextStyle(
                                             fontSize: 13,
                                             fontWeight: FontWeight.w800,
@@ -971,7 +973,7 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
                                         if (displayCity.trim().isNotEmpty) ...[
                                           const SizedBox(height: 6),
                                           Text(
-                                            displayCity,
+                                            tr(displayCity),
                                             style: TextStyle(
                                               fontSize: 14,
                                               color: headerTextColor.withOpacity(0.9),
@@ -991,7 +993,7 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
                                     Icon(Icons.layers, size: 16, color: headerTextColor.withOpacity(0.9)),
                                     const SizedBox(width: 6),
                                     Text(
-                                      '$visitedSubCount / $totalSubCount locations visited',
+                                      tr('$visitedSubCount / $totalSubCount locations visited'),
                                       style: TextStyle(
                                         fontSize: 13,
                                         color: headerTextColor.withOpacity(0.85),
@@ -1030,7 +1032,7 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
                                     Icon(Icons.favorite_border, size: 20, color: Colors.grey[700]),
                                     const SizedBox(width: 8),
                                     Text(
-                                      'Wishlist',
+                                      tr('Wishlist'),
                                       style: TextStyle(
                                         fontSize: 15,
                                         fontWeight: FontWeight.w600,
@@ -1055,7 +1057,7 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
                                     Icon(Icons.star_border, size: 20, color: Colors.grey[700]),
                                     const SizedBox(width: 8),
                                     Text(
-                                      'My Rating',
+                                      tr('My Rating'),
                                       style: TextStyle(
                                         fontSize: 15,
                                         fontWeight: FontWeight.w600,
@@ -1095,7 +1097,7 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
                                 ),
                                 const SizedBox(width: 12),
                                 Text(
-                                  "Components / Locations",
+                                  tr("Components / Locations"),
                                   style: TextStyle(
                                     fontSize: 16,
                                     fontWeight: FontWeight.w700,
@@ -1143,7 +1145,7 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
                               ),
                               const SizedBox(width: 12),
                               Text(
-                                'Visit History',
+                                tr('Visit History'),
                                 style: TextStyle(
                                   fontSize: 16,
                                   fontWeight: FontWeight.w700,
@@ -1158,7 +1160,7 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
                                   borderRadius: BorderRadius.circular(12),
                                 ),
                                 child: Text(
-                                  '${freshLandmark.visitDates.length}',
+                                  tr('${freshLandmark.visitDates.length}'),
                                   style: TextStyle(
                                     fontSize: 12,
                                     fontWeight: FontWeight.w700,
@@ -1169,7 +1171,7 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
                               const Spacer(),
                               OutlinedButton.icon(
                                 icon: const Icon(Icons.add, size: 18),
-                                label: const Text('Add'),
+                                label:  Text(tr('Add')),
                                 onPressed: () => provider.addVisitDate(freshLandmark.name),
                                 style: OutlinedButton.styleFrom(
                                   padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
@@ -1198,7 +1200,7 @@ class _TopLandmarksScreenState extends State<TopLandmarksScreen> {
                                     Icon(Icons.event_busy, size: 48, color: Colors.grey[400]),
                                     const SizedBox(height: 8),
                                     Text(
-                                      'No visits recorded',
+                                      tr('No visits recorded'),
                                       style: TextStyle(
                                         color: Colors.grey[600],
                                         fontSize: 14,
@@ -1439,6 +1441,7 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final themeColor = Theme.of(context).primaryColor;
 
     return Card(
@@ -1449,29 +1452,29 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
         controller: _expansionTileController,
         initiallyExpanded: _isEditing,
         title: Text(
-          _displayTitle.isNotEmpty ? _displayTitle : 'Visit Record',
+          tr(_displayTitle.isNotEmpty ? _displayTitle : 'Visit Record'),
           style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15),
         ),
-        subtitle: Text('Date: $_year-$_month-$_day', style: TextStyle(color: Colors.grey[600], fontSize: 13)),
+        subtitle: Text(tr('Date: $_year-$_month-$_day'), style: TextStyle(color: Colors.grey[600], fontSize: 13)),
         trailing: IconButton(
           icon: const Icon(Icons.delete_outline, color: Colors.red, size: 22),
           onPressed: () {
             showDialog(
               context: context,
               builder: (context) => AlertDialog(
-                title: const Text('Delete Visit Record'),
-                content: const Text('Are you sure you want to delete this visit record?'),
+                title:  Text(tr('Delete Visit Record')),
+                content:  Text(tr('Are you sure you want to delete this visit record?')),
                 actions: [
                   TextButton(
                     onPressed: () => Navigator.pop(context),
-                    child: const Text('Cancel'),
+                    child:  Text(tr('Cancel')),
                   ),
                   TextButton(
                     onPressed: () {
                       Navigator.pop(context);
                       widget.onDelete();
                     },
-                    child: const Text('Delete', style: TextStyle(color: Colors.red)),
+                    child:  Text(tr('Delete'), style: TextStyle(color: Colors.red)),
                   ),
                 ],
               ),
@@ -1495,10 +1498,10 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text('Visit Date: $_year-$_month-$_day', style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14)),
+                      Text(tr('Visit Date: $_year-$_month-$_day'), style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14)),
                       TextButton.icon(
                         icon: const Icon(Icons.edit_calendar, size: 18),
-                        label: const Text('Edit Date'),
+                        label:  Text(tr('Edit Date')),
                         onPressed: () => _selectDate(context),
                         style: TextButton.styleFrom(visualDensity: VisualDensity.compact),
                       ),
@@ -1508,7 +1511,7 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
                   TextField(
                     controller: _titleController,
                     decoration: InputDecoration(
-                      labelText: 'Title',
+                      labelText: tr('Title'),
                       isDense: true,
                       filled: true,
                       fillColor: Colors.white,
@@ -1521,7 +1524,7 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
                     maxLines: 3,
                     minLines: 1,
                     decoration: InputDecoration(
-                      labelText: 'Memo',
+                      labelText: tr('Memo'),
                       isDense: true,
                       filled: true,
                       fillColor: Colors.white,
@@ -1533,7 +1536,7 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
                     Padding(
                       padding: const EdgeInsets.only(bottom: 12.0),
                       child: Text(
-                        _displayMemo,
+                        tr(_displayMemo),
                         style: TextStyle(fontSize: 14, color: Colors.grey[800], height: 1.4),
                       ),
                     ),
@@ -1542,7 +1545,7 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
                 const SizedBox(height: 12),
 
                 if (widget.availableLocations != null && widget.availableLocations!.length > 1) ...[
-                  Text("Locations included in this visit:",
+                  Text(tr("Locations included in this visit:"),
                       style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Colors.grey[700])),
                   const SizedBox(height: 8),
                   IgnorePointer(
@@ -1607,13 +1610,13 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
                     if (_isEditing) ...[
                       TextButton(
                         onPressed: _cancelEditing,
-                        child: Text('Cancel', style: TextStyle(color: Colors.grey[700], fontWeight: FontWeight.w600)),
+                        child: Text(tr('Cancel'), style: TextStyle(color: Colors.grey[700], fontWeight: FontWeight.w600)),
                       ),
                       const SizedBox(width: 8),
                       ElevatedButton.icon(
                         onPressed: _saveChanges,
                         icon: const Icon(Icons.save, size: 18),
-                        label: const Text('Save'),
+                        label:  Text(tr('Save')),
                         style: ElevatedButton.styleFrom(
                           backgroundColor: themeColor,
                           foregroundColor: Colors.white,
@@ -1628,7 +1631,7 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
                           });
                         },
                         icon: const Icon(Icons.edit, size: 16),
-                        label: const Text('Edit Record'),
+                        label:  Text(tr('Edit Record')),
                         style: OutlinedButton.styleFrom(
                           foregroundColor: themeColor,
                           side: BorderSide(color: themeColor.withOpacity(0.5)),

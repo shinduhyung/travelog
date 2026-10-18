@@ -2,6 +2,7 @@
 
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
@@ -44,6 +45,7 @@ class _InstagramRankingScreenState extends State<InstagramRankingScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final landmarksProvider = context.watch<LandmarksProvider>();
     final allLandmarks      = landmarksProvider.allLandmarks;
     final visitedSet        = landmarksProvider.visitedLandmarks;
@@ -86,16 +88,16 @@ class _InstagramRankingScreenState extends State<InstagramRankingScreen> {
                         child: const Icon(Icons.camera_alt_rounded, color: Colors.white, size: 12), // 수정: 아이콘 크기 줄임
                       ),
                       const SizedBox(width: 8), // 수정: 간격 늘림
-                      const Text('Most Instagrammed',
+                       Text(tr('Most Instagrammed'),
                           style: TextStyle(fontSize: 11, fontWeight: FontWeight.w700, // 수정: 폰트 크기 줄임, 굵기 늘림
                               color: _kThemePink, letterSpacing: 0.1)), // 수정: letterSpacing 줄임
                     ]),
                     const SizedBox(height: 8), // 수정: 간격 늘림
-                    const Text('Top 10 Landmarks',
+                     Text(tr('Top 10 Landmarks'),
                         style: TextStyle(fontSize: 26, fontWeight: FontWeight.w800, // 수정: 폰트 크기 줄임, 굵기 줄임
                             color: Color(0xFF111827), letterSpacing: -0.8, height: 1.0)), // 수정: letterSpacing, height 줄임
                     const SizedBox(height: 4),
-                    Text('Most tagged places on Instagram',
+                    Text(tr('Most tagged places on Instagram'),
                         style: TextStyle(fontSize: 12, color: Colors.grey[500], fontWeight: FontWeight.w500)),
                   ]),
                 ),
@@ -115,13 +117,13 @@ class _InstagramRankingScreenState extends State<InstagramRankingScreen> {
                       ShaderMask(
                         shaderCallback: (b) => const LinearGradient(
                             colors: [_kThemePink, _kThemePurple]).createShader(b),
-                        child: Text('$visited',
+                        child: Text(tr('$visited'),
                             style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w900, color: Colors.white, height: 1.0)),
                       ),
-                      Text('/ 10', style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600,
+                      Text(tr('/ 10'), style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600,
                           color: _kThemePink.withOpacity(0.7), height: 1.2)),
                       const SizedBox(height: 2),
-                      Text('visited', style: TextStyle(fontSize: 10, fontWeight: FontWeight.w500,
+                      Text(tr('visited'), style: TextStyle(fontSize: 10, fontWeight: FontWeight.w500,
                           color: _kThemePink.withOpacity(0.5))),
                     ]),
                   );
@@ -152,7 +154,7 @@ class _InstagramRankingScreenState extends State<InstagramRankingScreen> {
                         _showLandmarkDetailsModal(context, landmark, _kThemePink, imagePath);
                       } else {
                         ScaffoldMessenger.of(context).showSnackBar(
-                          SnackBar(content: Text('Landmark data not found for $name')),
+                          SnackBar(content: Text(tr('Landmark data not found for $name'))),
                         );
                       }
                     },
@@ -192,7 +194,7 @@ class _InstagramRankingScreenState extends State<InstagramRankingScreen> {
                                     child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
                                       Icon(Icons.camera_alt, size: 40, color: Colors.grey[400]),
                                       const SizedBox(height: 8),
-                                      Text('Image not available', style: TextStyle(color: Colors.grey[500])),
+                                      Text(tr('Image not available'), style: TextStyle(color: Colors.grey[500])),
                                     ]),
                                   ),
                                 ),
@@ -226,7 +228,7 @@ class _InstagramRankingScreenState extends State<InstagramRankingScreen> {
                                   borderRadius: BorderRadius.circular(20),
                                   boxShadow: [BoxShadow(color: _kThemePink.withOpacity(0.4), blurRadius: 6, offset: const Offset(0, 2))],
                                 ),
-                                child: Text('#$rank',
+                                child: Text(tr('#$rank'),
                                     style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w900, fontSize: 14, letterSpacing: 0.3)),
                               ),
                             ),
@@ -260,7 +262,7 @@ class _InstagramRankingScreenState extends State<InstagramRankingScreen> {
                               ),
                               const SizedBox(width: 10),
                               Expanded(
-                                child: Text(name,
+                                child: Text(tr(name),
                                     style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w800, color: Color(0xFF111827), letterSpacing: -0.3)),
                               ),
                               // 인스타 그라디언트 화살표
@@ -362,7 +364,7 @@ class _InstagramRankingScreenState extends State<InstagramRankingScreen> {
                         TextButton.icon(
                           onPressed: () => Navigator.pop(sheetContext),
                           icon: const Icon(Icons.close, color: Colors.white, size: 18),
-                          label: const Text('Close', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600)),
+                          label:  Text(tr('Close'), style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600)),
                         ),
                         if (isVisited)
                           Container(
@@ -409,13 +411,13 @@ class _InstagramRankingScreenState extends State<InstagramRankingScreen> {
                     // Wishlist + Rating
                     Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                       Row(mainAxisSize: MainAxisSize.min, children: [
-                        const Text('Wishlist:'),
+                         Text(tr('Wishlist:')),
                         IconButton(visualDensity: VisualDensity.compact,
                             icon: Icon(isWishlisted ? Icons.favorite : Icons.favorite_border, color: isWishlisted ? Colors.red : Colors.grey),
                             onPressed: () => provider.toggleWishlistStatus(freshLandmark.name)),
                       ]),
                       Row(mainAxisSize: MainAxisSize.min, children: [
-                        const Text('My Rating:'),
+                         Text(tr('My Rating:')),
                         const SizedBox(width: 8),
                         RatingBar.builder(initialRating: freshLandmark.rating ?? 0.0, minRating: 0,
                             direction: Axis.horizontal, allowHalfRating: true, itemCount: 5, itemSize: 28.0,
@@ -427,7 +429,7 @@ class _InstagramRankingScreenState extends State<InstagramRankingScreen> {
 
                     // Sub-locations
                     if (totalSubCount > 1) ...[
-                      Text('Components / Locations',
+                      Text(tr('Components / Locations'),
                           style: Theme.of(sheetContext).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
                       const SizedBox(height: 4),
                       Container(
@@ -447,11 +449,11 @@ class _InstagramRankingScreenState extends State<InstagramRankingScreen> {
 
                     // Visit history
                     Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                      Text('History (${freshLandmark.visitDates.length} entries)',
+                      Text(tr('History (${freshLandmark.visitDates.length} entries)'),
                           style: Theme.of(sheetContext).textTheme.titleSmall),
                       OutlinedButton.icon(
                         icon: const Icon(Icons.add),
-                        label: const Text('Add Visit'),
+                        label:  Text(tr('Add Visit')),
                         onPressed: () => provider.addVisitDate(freshLandmark.name),
                         style: OutlinedButton.styleFrom(foregroundColor: themeColor, side: const BorderSide(color: themeColor)),
                       ),
@@ -467,7 +469,7 @@ class _InstagramRankingScreenState extends State<InstagramRankingScreen> {
                         onDelete: () => provider.removeVisitDate(freshLandmark.name, entry.key),
                         availableLocations: freshLandmark.locations,
                       ))
-                    else const Center(child: Text('No visits recorded.')),
+                    else  Center(child: Text(tr('No visits recorded.'))),
                     const Divider(height: 24),
 
                     LandmarkInfoCard(
@@ -643,6 +645,7 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final themeColor = widget.themeColor;
 
     return Card(
@@ -653,22 +656,22 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
         controller: _expansionTileController,
         initiallyExpanded: _isEditing,
         title: Text(
-          _displayTitle.isNotEmpty ? _displayTitle : 'Visit Record',
+          tr(_displayTitle.isNotEmpty ? _displayTitle : 'Visit Record'),
           style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15),
         ),
-        subtitle: Text('Date: $_year-$_month-$_day',
+        subtitle: Text(tr('Date: $_year-$_month-$_day'),
             style: TextStyle(color: Colors.grey[600], fontSize: 13)),
         trailing: IconButton(
           icon: const Icon(Icons.delete_outline, color: Colors.red, size: 22),
           onPressed: () => showDialog(
             context: context,
             builder: (ctx) => AlertDialog(
-              title: const Text('Delete Visit Record'),
-              content: const Text('Are you sure you want to delete this visit record?'),
+              title:  Text(tr('Delete Visit Record')),
+              content:  Text(tr('Are you sure you want to delete this visit record?')),
               actions: [
-                TextButton(onPressed: () => Navigator.pop(ctx), child: const Text('Cancel')),
+                TextButton(onPressed: () => Navigator.pop(ctx), child:  Text(tr('Cancel'))),
                 TextButton(onPressed: () { Navigator.pop(ctx); widget.onDelete(); },
-                    child: const Text('Delete', style: TextStyle(color: Colors.red))),
+                    child:  Text(tr('Delete'), style: TextStyle(color: Colors.red))),
               ],
             ),
           ),
@@ -683,11 +686,11 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
             child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
               if (_isEditing) ...[
                 Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                  Text('Visit Date: $_year-$_month-$_day',
+                  Text(tr('Visit Date: $_year-$_month-$_day'),
                       style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14)),
                   TextButton.icon(
                     icon: const Icon(Icons.edit_calendar, size: 18),
-                    label: const Text('Edit Date'),
+                    label:  Text(tr('Edit Date')),
                     onPressed: () => _selectDate(context),
                     style: TextButton.styleFrom(visualDensity: VisualDensity.compact),
                   ),
@@ -695,20 +698,20 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
                 const SizedBox(height: 12),
                 TextField(
                   controller: _titleController,
-                  decoration: InputDecoration(labelText: 'Title', isDense: true, filled: true, fillColor: Colors.white,
+                  decoration: InputDecoration(labelText: tr('Title'), isDense: true, filled: true, fillColor: Colors.white,
                       border: OutlineInputBorder(borderRadius: BorderRadius.circular(8), borderSide: BorderSide.none)),
                 ),
                 const SizedBox(height: 12),
                 TextField(
                   controller: _memoController,
                   maxLines: 3, minLines: 1,
-                  decoration: InputDecoration(labelText: 'Memo', isDense: true, filled: true, fillColor: Colors.white,
+                  decoration: InputDecoration(labelText: tr('Memo'), isDense: true, filled: true, fillColor: Colors.white,
                       border: OutlineInputBorder(borderRadius: BorderRadius.circular(8), borderSide: BorderSide.none)),
                 ),
               ] else ...[
                 if (_displayMemo.isNotEmpty)
                   Padding(padding: const EdgeInsets.only(bottom: 12),
-                      child: Text(_displayMemo, style: TextStyle(fontSize: 14, color: Colors.grey[800], height: 1.4))),
+                      child: Text(tr(_displayMemo), style: TextStyle(fontSize: 14, color: Colors.grey[800], height: 1.4))),
               ],
               const SizedBox(height: 12),
               if (_currentPhotos.isNotEmpty || _isEditing)
@@ -729,14 +732,14 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
               Row(mainAxisAlignment: MainAxisAlignment.end, children: [
                 if (_isEditing) ...[
                   TextButton(onPressed: _cancelEditing,
-                      child: Text('Cancel', style: TextStyle(color: Colors.grey[700], fontWeight: FontWeight.w600))),
+                      child: Text(tr('Cancel'), style: TextStyle(color: Colors.grey[700], fontWeight: FontWeight.w600))),
                   const SizedBox(width: 8),
                   ElevatedButton.icon(onPressed: _saveChanges,
-                      icon: const Icon(Icons.save, size: 18), label: const Text('Save'),
+                      icon: const Icon(Icons.save, size: 18), label:  Text(tr('Save')),
                       style: ElevatedButton.styleFrom(backgroundColor: themeColor, foregroundColor: Colors.white, elevation: 0)),
                 ] else ...[
                   OutlinedButton.icon(onPressed: () => setState(() => _isEditing = true),
-                      icon: const Icon(Icons.edit, size: 16), label: const Text('Edit Record'),
+                      icon: const Icon(Icons.edit, size: 16), label:  Text(tr('Edit Record')),
                       style: OutlinedButton.styleFrom(foregroundColor: themeColor,
                           side: BorderSide(color: themeColor.withOpacity(0.5)))),
                 ],

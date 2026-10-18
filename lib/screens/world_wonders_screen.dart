@@ -2,6 +2,7 @@
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
@@ -115,6 +116,7 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final landmarksProvider = context.watch<LandmarksProvider>();
     final allLandmarks = landmarksProvider.allLandmarks;
     final visitedCount = _wondersList
@@ -193,9 +195,9 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
             crossAxisAlignment: CrossAxisAlignment.baseline,
             textBaseline: TextBaseline.alphabetic,
             children: [
-              const Expanded(
+               Expanded(
                 child: Text(
-                  'World\nWonders',
+                  tr('World\nWonders'),
                   style: TextStyle(
                     fontFamily: 'Georgia',
                     fontSize: 44,
@@ -207,8 +209,8 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
                   ),
                 ),
               ),
-              const Text(
-                '7',
+               Text(
+                tr('7'),
                 style: TextStyle(
                   fontFamily: 'Georgia',
                   fontSize: 44,
@@ -227,7 +229,7 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                "Humanity's greatest achievements",
+                tr("Humanity's greatest achievements"),
                 style: TextStyle(
                   fontSize: 11,
                   color: Colors.grey[500],
@@ -235,7 +237,7 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
                 ),
               ),
               Text(
-                '$visitedCount VISITED',
+                tr('$visitedCount VISITED'),
                 style: const TextStyle(
                   fontSize: 11,
                   fontWeight: FontWeight.w700,
@@ -366,7 +368,7 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
                             ),
                           ],
                         ),
-                        child: const Row(
+                        child:  Row(
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             Icon(
@@ -376,7 +378,7 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
                             ),
                             SizedBox(width: 4),
                             Text(
-                              'VISITED',
+                              tr('VISITED'),
                               style: TextStyle(
                                 fontSize: 10,
                                 fontWeight: FontWeight.w800,
@@ -406,7 +408,7 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            name,
+                            tr(name),
                             style: const TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.w800,
@@ -427,7 +429,7 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
                               ),
                               const SizedBox(width: 5),
                               Text(
-                                location,
+                                tr(location),
                                 style: TextStyle(
                                   fontSize: 12,
                                   color: Colors.grey[500],
@@ -544,7 +546,7 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
                               tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                             ),
                             child: Text(
-                              'Cancel',
+                              tr('Cancel'),
                               style: TextStyle(
                                 color: headerTextColor.withOpacity(0.7),
                                 fontWeight: FontWeight.w500,
@@ -569,7 +571,7 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
                               tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                             ),
                             child: Text(
-                              'Done',
+                              tr('Done'),
                               style: TextStyle(
                                 fontWeight: FontWeight.w700,
                                 color: themeColor,
@@ -613,7 +615,7 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
                           const SizedBox(width: 4),
                           Expanded(
                             child: Text(
-                              locationDisplay,
+                              tr(locationDisplay),
                               style: TextStyle(
                                 color: headerTextColor.withOpacity(0.7),
                                 fontSize: 13,
@@ -674,7 +676,7 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
                                   ),
                                   const SizedBox(width: 8),
                                   Text(
-                                    isWishlisted ? 'Wishlisted' : 'Wishlist',
+                                    tr(isWishlisted ? 'Wishlisted' : 'Wishlist'),
                                     style: TextStyle(
                                       fontSize: 13,
                                       fontWeight: FontWeight.w600,
@@ -709,8 +711,8 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            const Text(
-                              'Visit History',
+                             Text(
+                              tr('Visit History'),
                               style: TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.w800,
@@ -730,7 +732,7 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
                                   color: const Color(0xFF1A1A1A),
                                   borderRadius: BorderRadius.circular(20),
                                 ),
-                                child: const Row(
+                                child:  Row(
                                   mainAxisSize: MainAxisSize.min,
                                   children: [
                                     Icon(
@@ -740,7 +742,7 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
                                     ),
                                     SizedBox(width: 4),
                                     Text(
-                                      'Add Visit',
+                                      tr('Add Visit'),
                                       style: TextStyle(
                                         color: Colors.white,
                                         fontSize: 12,
@@ -775,7 +777,7 @@ class _WorldWondersScreenState extends State<WorldWondersScreen>
                             padding: const EdgeInsets.symmetric(vertical: 20),
                             alignment: Alignment.center,
                             child: Text(
-                              'No visits recorded yet',
+                              tr('No visits recorded yet'),
                               style: TextStyle(
                                 color: Colors.grey[400],
                                 fontSize: 13,
@@ -818,6 +820,7 @@ class _WonderIconBadge extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     if (!isVisited) {
       return Column(
         children: [
@@ -926,6 +929,7 @@ class _CardIconBadge extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     if (!isVisited) {
       return Container(
         width: 44,
@@ -994,6 +998,7 @@ class _AnimatedWonderCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final delay = index * 0.1;
     final animation = CurvedAnimation(
       parent: controller,

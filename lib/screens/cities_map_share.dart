@@ -2,6 +2,7 @@ import 'dart:io';
 import 'dart:math';
 import 'dart:typed_data';
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:latlong2/latlong.dart';
@@ -38,8 +39,8 @@ class CitiesMapShare {
 
       if (context.mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            content: Text('Generating map image...'),
+           SnackBar(
+            content: Text(tr('Generating map image...')),
             duration: Duration(seconds: 1),
           ),
         );
@@ -90,7 +91,7 @@ class CitiesMapShare {
       debugPrint("Share Error: $e");
       if (context.mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Failed to generate share image: $e')),
+          SnackBar(content: Text(tr('Failed to generate share image: $e'))),
         );
       }
     }
@@ -142,7 +143,7 @@ class CitiesMapShare {
                   ),
                   const SizedBox(width: 10),
                   Text(
-                    'Travelog',
+                    tr('Travelog'),
                     style: GoogleFonts.poppins(
                       fontSize: 28,
                       fontWeight: FontWeight.w900,
@@ -173,7 +174,7 @@ class CitiesMapShare {
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     Text(
-                      '$totalCities',
+                      tr('$totalCities'),
                       style: GoogleFonts.poppins(
                         fontSize: 24,
                         fontWeight: FontWeight.w900,
@@ -186,7 +187,7 @@ class CitiesMapShare {
                     Padding(
                       padding: const EdgeInsets.only(bottom: 2),
                       child: Text(
-                        'Cities',
+                        tr('Cities'),
                         style: GoogleFonts.poppins(
                           fontSize: 11,
                           fontWeight: FontWeight.w600,

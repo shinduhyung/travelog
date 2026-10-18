@@ -1,32 +1,342 @@
-[
-  {"city": "Beijing", "country": "China", "stations": 424, "continent": "Asia"},
-  {"city": "New York City", "country": "United States", "stations": 424, "continent": "North America"},
-  {"city": "Shanghai", "country": "China", "stations": 409, "continent": "Asia"},
-  {"city": "Seoul", "country": "South Korea", "stations": 337, "continent": "Asia"},
-  {"city": "Paris", "country": "France", "stations": 321, "continent": "Europe"},
-  {"city": "Shenzhen", "country": "China", "stations": 319, "continent": "Asia"},
-  {"city": "Wuhan", "country": "China", "stations": 312, "continent": "Asia"},
-  {"city": "Guangzhou", "country": "China", "stations": 306, "continent": "Asia"},
-  {"city": "Chengdu", "country": "China", "stations": 296, "continent": "Asia"},
-  {"city": "Suzhou", "country": "China", "stations": 285, "continent": "Asia"},
-  {"city": "London", "country": "United Kingdom", "stations": 272, "continent": "Europe"},
-  {"city": "Chongqing", "country": "China", "stations": 263, "continent": "Asia"},
-  {"city": "Hangzhou", "country": "China", "stations": 254, "continent": "Asia"},
-  {"city": "Madrid", "country": "Spain", "stations": 242, "continent": "Europe"},
-  {"city": "Moscow", "country": "Russia", "stations": 235, "continent": "Europe"},
-  {"city": "Zhengzhou", "country": "China", "stations": 233, "continent": "Asia"},
-  {"city": "Xi'an", "country": "China", "stations": 232, "continent": "Asia"},
-  {"city": "Delhi", "country": "India", "stations": 232, "continent": "Asia"},
-  {"city": "Nanjing", "country": "China", "stations": 212, "continent": "Asia"},
-  {"city": "Tianjin", "country": "China", "stations": 204, "continent": "Asia"},
-  {"city": "Hefei", "country": "China", "stations": 184, "continent": "Asia"},
-  {"city": "Changsha", "country": "China", "stations": 140, "continent": "Asia"},
-  {"city": "Berlin", "country": "Germany", "stations": 175, "continent": "Europe"},
-  {"city": "Qingdao", "country": "China", "stations": 172, "continent": "Asia"},
-  {"city": "Mexico City", "country": "Mexico", "stations": 163, "continent": "North America"},
-  {"city": "Istanbul", "country": "Turkey", "stations": 147, "continent": "Europe"},
-  {"city": "Tokyo", "country": "Japan", "stations": 142, "continent": "Asia"},
-  {"city": "Singapore", "country": "Singapore", "stations": 143, "continent": "Asia"},
-  {"city": "Kuala Lumpur", "country": "Malaysia", "stations": 138, "continent": "Asia"},
-  {"city": "Chicago", "country": "United States", "stations": 146, "continent": "North America"}
-]
+{
+  "schema_version": 1,
+  "dataset_id": "stations",
+  "metadata": {
+    "source_url": null,
+    "reference_period": null,
+    "updated_at": null
+  },
+  "legacy_layout": "list",
+  "tables": [
+    {
+      "id": "main",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "city",
+        "country"
+      ],
+      "metrics": [
+        {
+          "id": "stations",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        },
+        {
+          "id": "continent",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "city": "Beijing",
+            "country": "China"
+          },
+          "values": {
+            "stations": 424,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "New York City",
+            "country": "United States"
+          },
+          "values": {
+            "stations": 424,
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Shanghai",
+            "country": "China"
+          },
+          "values": {
+            "stations": 409,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Seoul",
+            "country": "South Korea"
+          },
+          "values": {
+            "stations": 337,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Paris",
+            "country": "France"
+          },
+          "values": {
+            "stations": 321,
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Shenzhen",
+            "country": "China"
+          },
+          "values": {
+            "stations": 319,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Wuhan",
+            "country": "China"
+          },
+          "values": {
+            "stations": 312,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Guangzhou",
+            "country": "China"
+          },
+          "values": {
+            "stations": 306,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Chengdu",
+            "country": "China"
+          },
+          "values": {
+            "stations": 296,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Suzhou",
+            "country": "China"
+          },
+          "values": {
+            "stations": 285,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "London",
+            "country": "United Kingdom"
+          },
+          "values": {
+            "stations": 272,
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Chongqing",
+            "country": "China"
+          },
+          "values": {
+            "stations": 263,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Hangzhou",
+            "country": "China"
+          },
+          "values": {
+            "stations": 254,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Madrid",
+            "country": "Spain"
+          },
+          "values": {
+            "stations": 242,
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Moscow",
+            "country": "Russia"
+          },
+          "values": {
+            "stations": 235,
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Zhengzhou",
+            "country": "China"
+          },
+          "values": {
+            "stations": 233,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Xi'an",
+            "country": "China"
+          },
+          "values": {
+            "stations": 232,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Delhi",
+            "country": "India"
+          },
+          "values": {
+            "stations": 232,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Nanjing",
+            "country": "China"
+          },
+          "values": {
+            "stations": 212,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Tianjin",
+            "country": "China"
+          },
+          "values": {
+            "stations": 204,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Hefei",
+            "country": "China"
+          },
+          "values": {
+            "stations": 184,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Changsha",
+            "country": "China"
+          },
+          "values": {
+            "stations": 140,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Berlin",
+            "country": "Germany"
+          },
+          "values": {
+            "stations": 175,
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Qingdao",
+            "country": "China"
+          },
+          "values": {
+            "stations": 172,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Mexico City",
+            "country": "Mexico"
+          },
+          "values": {
+            "stations": 163,
+            "continent": "North America"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Istanbul",
+            "country": "Turkey"
+          },
+          "values": {
+            "stations": 147,
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Tokyo",
+            "country": "Japan"
+          },
+          "values": {
+            "stations": 142,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Singapore",
+            "country": "Singapore"
+          },
+          "values": {
+            "stations": 143,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Kuala Lumpur",
+            "country": "Malaysia"
+          },
+          "values": {
+            "stations": 138,
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "city": "Chicago",
+            "country": "United States"
+          },
+          "values": {
+            "stations": 146,
+            "continent": "North America"
+          }
+        }
+      ]
+    }
+  ]
+}

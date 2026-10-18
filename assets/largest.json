@@ -1,224 +1,412 @@
-[
-  {
-    "name": "Sydney",
-    "country": "Australia",
-    "latitude": -33.8688,
-    "longitude": 151.2093
+{
+  "schema_version": 1,
+  "dataset_id": "largest",
+  "metadata": {
+    "source_url": null,
+    "reference_period": null,
+    "updated_at": null
   },
-  {
-    "name": "Antwerp",
-    "country": "Belgium",
-    "latitude": 51.22,
-    "longitude": 4.41
-  },
-  {
-    "name": "Belize City",
-    "country": "Belize",
-    "latitude": 17.5,
-    "longitude": -88.2
-  },
-  {
-    "name": "Cotonou",
-    "country": "Benin",
-    "latitude": 6.36,
-    "longitude": 2.43
-  },
-  {
-    "name": "Santa Cruz de la Sierra",
-    "country": "Bolivia",
-    "latitude": -17.78,
-    "longitude": -63.18
-  },
-  {
-    "name": "São Paulo",
-    "country": "Brazil",
-    "latitude": -23.55052,
-    "longitude": -46.633309
-  },
-  {
-    "name": "Bujumbura",
-    "country": "Burundi",
-    "latitude": -3.376,
-    "longitude": 29.36
-  },
-  {
-    "name": "Douala",
-    "country": "Cameroon",
-    "latitude": 4.05,
-    "longitude": 9.77
-  },
-  {
-    "name": "Toronto",
-    "country": "Canada",
-    "latitude": 43.6532,
-    "longitude": -79.3832
-  },
-  {
-    "name": "Shanghai",
-    "country": "China",
-    "latitude": 31.2304,
-    "longitude": 121.4737
-  },
-  {
-    "name": "Guayaquil",
-    "country": "Ecuador",
-    "latitude": -2.19,
-    "longitude": -79.89
-  },
-  {
-    "name": "Serekunda",
-    "country": "Gambia",
-    "latitude": 13.4475,
-    "longitude": -16.6789
-  },
-  {
-    "name": "Mumbai",
-    "country": "India",
-    "latitude": 19.076,
-    "longitude": 72.8777
-  },
-  {
-    "name": "Tel Aviv",
-    "country": "Israel",
-    "latitude": 32.0853,
-    "longitude": 34.7818
-  },
-  {
-    "name": "Abidjan",
-    "country": "Côte d'Ivoire",
-    "latitude": 5.33,
-    "longitude": -4.02
-  },
-  {
-    "name": "Almaty",
-    "country": "Kazakhstan",
-    "latitude": 43.24,
-    "longitude": 76.88
-  },
-  {
-    "name": "Schaan",
-    "country": "Liechtenstein",
-    "latitude": 47.166,
-    "longitude": 9.508
-  },
-  {
-    "name": "Weno",
-    "country": "Micronesia",
-    "latitude": 7.4253,
-    "longitude": 151.843
-  },
-  {
-    "name": "St. Paul's Bay",
-    "country": "Malta",
-    "latitude": 35.9458,
-    "longitude": 14.3989
-  },
-  {
-    "name": "Casablanca",
-    "country": "Morocco",
-    "latitude": 33.57,
-    "longitude": -7.59
-  },
-  {
-    "name": "Yangon",
-    "country": "Myanmar",
-    "latitude": 16.8409,
-    "longitude": 96.1735
-  },
-  {
-    "name": "Auckland",
-    "country": "New Zealand",
-    "latitude": -36.85,
-    "longitude": 174.76
-  },
-  {
-    "name": "Lagos",
-    "country": "Nigeria",
-    "latitude": 6.52,
-    "longitude": 3.38
-  },
-  {
-    "name": "Karachi",
-    "country": "Pakistan",
-    "latitude": 24.86,
-    "longitude": 67.0
-  },
-  {
-    "name": "Koror",
-    "country": "Palau",
-    "latitude": 7.34,
-    "longitude": 134.49
-  },
-  {
-    "name": "Gaza",
-    "country": "Palestine",
-    "latitude": 31.5,
-    "longitude": 34.47
-  },
-  {
-    "name": "Quezon City",
-    "country": "Philippines",
-    "latitude": 14.676,
-    "longitude": 121.0437
-  },
-  {
-    "name": "Serravalle",
-    "country": "San Marino",
-    "latitude": 43.9687,
-    "longitude": 12.4839
-  },
-  {
-    "name": "Johannesburg",
-    "country": "South Africa",
-    "latitude": -26.21,
-    "longitude": 28.03
-  },
-  {
-    "name": "Zurich",
-    "country": "Switzerland",
-    "latitude": 47.3769,
-    "longitude": 8.5417
-  },
-  {
-    "name": "New Taipei City",
-    "country": "Taiwan",
-    "latitude": 25.0139,
-    "longitude": 121.4479
-  },
-  {
-    "name": "Dar es Salaam",
-    "country": "Tanzania",
-    "latitude": -6.82,
-    "longitude": 39.29
-  },
-  {
-    "name": "Chaguanas",
-    "country": "Trinidad and Tobago",
-    "latitude": 10.53,
-    "longitude": -61.4
-  },
-  {
-    "name": "Istanbul",
-    "country": "Turkey",
-    "latitude": 41.01,
-    "longitude": 28.98
-  },
-  {
-    "name": "Dubai",
-    "country": "United Arab Emirates",
-    "latitude": 25.2,
-    "longitude": 55.27
-  },
-  {
-    "name": "New York City",
-    "country": "United States",
-    "latitude": 40.7128,
-    "longitude": -74.006
-  },
-  {
-    "name": "Ho Chi Minh City",
-    "country": "Vietnam",
-    "latitude": 10.82,
-    "longitude": 106.63
-  }
-]
+  "legacy_layout": "list",
+  "tables": [
+    {
+      "id": "main",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "name",
+        "country"
+      ],
+      "metrics": [
+        {
+          "id": "latitude",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        },
+        {
+          "id": "longitude",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "name": "Sydney",
+            "country": "Australia"
+          },
+          "values": {
+            "latitude": -33.8688,
+            "longitude": 151.2093
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Antwerp",
+            "country": "Belgium"
+          },
+          "values": {
+            "latitude": 51.22,
+            "longitude": 4.41
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Belize City",
+            "country": "Belize"
+          },
+          "values": {
+            "latitude": 17.5,
+            "longitude": -88.2
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Cotonou",
+            "country": "Benin"
+          },
+          "values": {
+            "latitude": 6.36,
+            "longitude": 2.43
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Santa Cruz de la Sierra",
+            "country": "Bolivia"
+          },
+          "values": {
+            "latitude": -17.78,
+            "longitude": -63.18
+          }
+        },
+        {
+          "dimensions": {
+            "name": "São Paulo",
+            "country": "Brazil"
+          },
+          "values": {
+            "latitude": -23.55052,
+            "longitude": -46.633309
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Bujumbura",
+            "country": "Burundi"
+          },
+          "values": {
+            "latitude": -3.376,
+            "longitude": 29.36
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Douala",
+            "country": "Cameroon"
+          },
+          "values": {
+            "latitude": 4.05,
+            "longitude": 9.77
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Toronto",
+            "country": "Canada"
+          },
+          "values": {
+            "latitude": 43.6532,
+            "longitude": -79.3832
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Shanghai",
+            "country": "China"
+          },
+          "values": {
+            "latitude": 31.2304,
+            "longitude": 121.4737
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Guayaquil",
+            "country": "Ecuador"
+          },
+          "values": {
+            "latitude": -2.19,
+            "longitude": -79.89
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Serekunda",
+            "country": "Gambia"
+          },
+          "values": {
+            "latitude": 13.4475,
+            "longitude": -16.6789
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Mumbai",
+            "country": "India"
+          },
+          "values": {
+            "latitude": 19.076,
+            "longitude": 72.8777
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Tel Aviv",
+            "country": "Israel"
+          },
+          "values": {
+            "latitude": 32.0853,
+            "longitude": 34.7818
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Abidjan",
+            "country": "Côte d'Ivoire"
+          },
+          "values": {
+            "latitude": 5.33,
+            "longitude": -4.02
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Almaty",
+            "country": "Kazakhstan"
+          },
+          "values": {
+            "latitude": 43.24,
+            "longitude": 76.88
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Schaan",
+            "country": "Liechtenstein"
+          },
+          "values": {
+            "latitude": 47.166,
+            "longitude": 9.508
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Weno",
+            "country": "Micronesia"
+          },
+          "values": {
+            "latitude": 7.4253,
+            "longitude": 151.843
+          }
+        },
+        {
+          "dimensions": {
+            "name": "St. Paul's Bay",
+            "country": "Malta"
+          },
+          "values": {
+            "latitude": 35.9458,
+            "longitude": 14.3989
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Casablanca",
+            "country": "Morocco"
+          },
+          "values": {
+            "latitude": 33.57,
+            "longitude": -7.59
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Yangon",
+            "country": "Myanmar"
+          },
+          "values": {
+            "latitude": 16.8409,
+            "longitude": 96.1735
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Auckland",
+            "country": "New Zealand"
+          },
+          "values": {
+            "latitude": -36.85,
+            "longitude": 174.76
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Lagos",
+            "country": "Nigeria"
+          },
+          "values": {
+            "latitude": 6.52,
+            "longitude": 3.38
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Karachi",
+            "country": "Pakistan"
+          },
+          "values": {
+            "latitude": 24.86,
+            "longitude": 67.0
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Koror",
+            "country": "Palau"
+          },
+          "values": {
+            "latitude": 7.34,
+            "longitude": 134.49
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Gaza",
+            "country": "Palestine"
+          },
+          "values": {
+            "latitude": 31.5,
+            "longitude": 34.47
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Quezon City",
+            "country": "Philippines"
+          },
+          "values": {
+            "latitude": 14.676,
+            "longitude": 121.0437
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Serravalle",
+            "country": "San Marino"
+          },
+          "values": {
+            "latitude": 43.9687,
+            "longitude": 12.4839
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Johannesburg",
+            "country": "South Africa"
+          },
+          "values": {
+            "latitude": -26.21,
+            "longitude": 28.03
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Zurich",
+            "country": "Switzerland"
+          },
+          "values": {
+            "latitude": 47.3769,
+            "longitude": 8.5417
+          }
+        },
+        {
+          "dimensions": {
+            "name": "New Taipei City",
+            "country": "Taiwan"
+          },
+          "values": {
+            "latitude": 25.0139,
+            "longitude": 121.4479
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Dar es Salaam",
+            "country": "Tanzania"
+          },
+          "values": {
+            "latitude": -6.82,
+            "longitude": 39.29
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Chaguanas",
+            "country": "Trinidad and Tobago"
+          },
+          "values": {
+            "latitude": 10.53,
+            "longitude": -61.4
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Istanbul",
+            "country": "Turkey"
+          },
+          "values": {
+            "latitude": 41.01,
+            "longitude": 28.98
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Dubai",
+            "country": "United Arab Emirates"
+          },
+          "values": {
+            "latitude": 25.2,
+            "longitude": 55.27
+          }
+        },
+        {
+          "dimensions": {
+            "name": "New York City",
+            "country": "United States"
+          },
+          "values": {
+            "latitude": 40.7128,
+            "longitude": -74.006
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Ho Chi Minh City",
+            "country": "Vietnam"
+          },
+          "values": {
+            "latitude": 10.82,
+            "longitude": 106.63
+          }
+        }
+      ]
+    }
+  ]
+}

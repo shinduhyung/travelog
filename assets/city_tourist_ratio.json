@@ -1,122 +1,251 @@
-[
-  {
-    "name": "Miami",
-    "country": "US",
-    "city_tourist_ratio": 16.41
+{
+  "schema_version": 1,
+  "dataset_id": "city_tourist_ratio",
+  "metadata": {
+    "source_url": null,
+    "reference_period": null,
+    "updated_at": null
   },
-  {
-    "name": "Las Vegas",
-    "country": "US",
-    "city_tourist_ratio": 9.93
-  },
-  {
-    "name": "Dubai",
-    "country": "AE",
-    "city_tourist_ratio": 5.88
-  },
-  {
-    "name": "Edinburgh",
-    "country": "GB",
-    "city_tourist_ratio": 4.45
-  },
-  {
-    "name": "Dublin",
-    "country": "IE",
-    "city_tourist_ratio": 4.27
-  },
-  {
-    "name": "Hong Kong",
-    "country": "HK",
-    "city_tourist_ratio": 3.98
-  },
-  {
-    "name": "San Francisco",
-    "country": "US",
-    "city_tourist_ratio": 3.92
-  },
-  {
-    "name": "Vienna",
-    "country": "AT",
-    "city_tourist_ratio": 3.29
-  },
-  {
-    "name": "Singapore",
-    "country": "SG",
-    "city_tourist_ratio": 3.16
-  },
-  {
-    "name": "Washington D.C.",
-    "country": "US",
-    "city_tourist_ratio": 2.86
-  },
-  {
-    "name": "Munich",
-    "country": "DE",
-    "city_tourist_ratio": 2.65
-  },
-  {
-    "name": "Boston",
-    "country": "US",
-    "city_tourist_ratio": 2.38
-  },
-  {
-    "name": "Bangkok",
-    "country": "TH",
-    "city_tourist_ratio": 2.29
-  },
-  {
-    "name": "London",
-    "country": "GB",
-    "city_tourist_ratio": 2.26
-  },
-  {
-    "name": "Porto",
-    "country": "PT",
-    "city_tourist_ratio": 1.83
-  },
-  {
-    "name": "Los Angeles",
-    "country": "US",
-    "city_tourist_ratio": 1.79
-  },
-  {
-    "name": "Abu Dhabi",
-    "country": "AE",
-    "city_tourist_ratio": 1.65
-  },
-  {
-    "name": "Berlin",
-    "country": "DE",
-    "city_tourist_ratio": 1.62
-  },
-  {
-    "name": "Kuala Lumpur",
-    "country": "MY",
-    "city_tourist_ratio": 1.62
-  },
-  {
-    "name": "New York City",
-    "country": "US",
-    "city_tourist_ratio": 1.57
-  },
-  {
-    "name": "Paris",
-    "country": "FR",
-    "city_tourist_ratio": 1.54
-  },
-  {
-    "name": "Birmingham",
-    "country": "GB",
-    "city_tourist_ratio": 1.32
-  },
-  {
-    "name": "Lisbon",
-    "country": "PT",
-    "city_tourist_ratio": 1.29
-  },
-  {
-    "name": "Barcelona",
-    "country": "ES",
-    "city_tourist_ratio": 1.21
-  }
-]
+  "legacy_layout": "list",
+  "tables": [
+    {
+      "id": "main",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "name",
+        "country"
+      ],
+      "metrics": [
+        {
+          "id": "city_tourist_ratio",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "name": "Miami",
+            "country": "US"
+          },
+          "values": {
+            "city_tourist_ratio": 16.41
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Las Vegas",
+            "country": "US"
+          },
+          "values": {
+            "city_tourist_ratio": 9.93
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Dubai",
+            "country": "AE"
+          },
+          "values": {
+            "city_tourist_ratio": 5.88
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Edinburgh",
+            "country": "GB"
+          },
+          "values": {
+            "city_tourist_ratio": 4.45
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Dublin",
+            "country": "IE"
+          },
+          "values": {
+            "city_tourist_ratio": 4.27
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Hong Kong",
+            "country": "HK"
+          },
+          "values": {
+            "city_tourist_ratio": 3.98
+          }
+        },
+        {
+          "dimensions": {
+            "name": "San Francisco",
+            "country": "US"
+          },
+          "values": {
+            "city_tourist_ratio": 3.92
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Vienna",
+            "country": "AT"
+          },
+          "values": {
+            "city_tourist_ratio": 3.29
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Singapore",
+            "country": "SG"
+          },
+          "values": {
+            "city_tourist_ratio": 3.16
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Washington D.C.",
+            "country": "US"
+          },
+          "values": {
+            "city_tourist_ratio": 2.86
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Munich",
+            "country": "DE"
+          },
+          "values": {
+            "city_tourist_ratio": 2.65
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Boston",
+            "country": "US"
+          },
+          "values": {
+            "city_tourist_ratio": 2.38
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Bangkok",
+            "country": "TH"
+          },
+          "values": {
+            "city_tourist_ratio": 2.29
+          }
+        },
+        {
+          "dimensions": {
+            "name": "London",
+            "country": "GB"
+          },
+          "values": {
+            "city_tourist_ratio": 2.26
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Porto",
+            "country": "PT"
+          },
+          "values": {
+            "city_tourist_ratio": 1.83
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Los Angeles",
+            "country": "US"
+          },
+          "values": {
+            "city_tourist_ratio": 1.79
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Abu Dhabi",
+            "country": "AE"
+          },
+          "values": {
+            "city_tourist_ratio": 1.65
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Berlin",
+            "country": "DE"
+          },
+          "values": {
+            "city_tourist_ratio": 1.62
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Kuala Lumpur",
+            "country": "MY"
+          },
+          "values": {
+            "city_tourist_ratio": 1.62
+          }
+        },
+        {
+          "dimensions": {
+            "name": "New York City",
+            "country": "US"
+          },
+          "values": {
+            "city_tourist_ratio": 1.57
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Paris",
+            "country": "FR"
+          },
+          "values": {
+            "city_tourist_ratio": 1.54
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Birmingham",
+            "country": "GB"
+          },
+          "values": {
+            "city_tourist_ratio": 1.32
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Lisbon",
+            "country": "PT"
+          },
+          "values": {
+            "city_tourist_ratio": 1.29
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Barcelona",
+            "country": "ES"
+          },
+          "values": {
+            "city_tourist_ratio": 1.21
+          }
+        }
+      ]
+    }
+  ]
+}

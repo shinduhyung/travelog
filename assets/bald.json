@@ -1,24 +1,194 @@
 {
-  "male_pattern_baldness": [
-{ "iso_a3": "ESP", "male_pattern_baldness_percent": 44.5 },
-{ "iso_a3": "ITA", "male_pattern_baldness_percent": 44.37 },
-{ "iso_a3": "FRA", "male_pattern_baldness_percent": 44.25 },
-{ "iso_a3": "USA", "male_pattern_baldness_percent": 42.68 },
-{ "iso_a3": "DEU", "male_pattern_baldness_percent": 41.51 },
-{ "iso_a3": "HRV", "male_pattern_baldness_percent": 41.32 },
-{ "iso_a3": "CAN", "male_pattern_baldness_percent": 40.94 },
-{ "iso_a3": "CZE", "male_pattern_baldness_percent": 40.9 },
-{ "iso_a3": "AUS", "male_pattern_baldness_percent": 40.8 },
-{ "iso_a3": "NOR", "male_pattern_baldness_percent": 40.75 },
-{ "iso_a3": "NZL", "male_pattern_baldness_percent": 40.19 },
-{ "iso_a3": "GBR", "male_pattern_baldness_percent": 40.09 },
-{ "iso_a3": "TUR", "male_pattern_baldness_percent": 40.03 },
-{ "iso_a3": "MEX", "male_pattern_baldness_percent": 39.75 },
-{ "iso_a3": "SAU", "male_pattern_baldness_percent": 39.75 },
-{ "iso_a3": "IRL", "male_pattern_baldness_percent": 38.65 },
-{ "iso_a3": "CHE", "male_pattern_baldness_percent": 38.53 },
-{ "iso_a3": "RUS", "male_pattern_baldness_percent": 38.28 },
-{ "iso_a3": "ARE", "male_pattern_baldness_percent": 38.1 },
-{ "iso_a3": "HUN", "male_pattern_baldness_percent": 37.86 }
-]
+  "schema_version": 1,
+  "dataset_id": "bald",
+  "metadata": {
+    "source_url": null,
+    "reference_period": null,
+    "updated_at": null
+  },
+  "legacy_layout": "sections",
+  "tables": [
+    {
+      "id": "male_pattern_baldness",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "iso_a3"
+      ],
+      "metrics": [
+        {
+          "id": "male_pattern_baldness_percent",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "iso_a3": "ESP"
+          },
+          "values": {
+            "male_pattern_baldness_percent": 44.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ITA"
+          },
+          "values": {
+            "male_pattern_baldness_percent": 44.37
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FRA"
+          },
+          "values": {
+            "male_pattern_baldness_percent": 44.25
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "USA"
+          },
+          "values": {
+            "male_pattern_baldness_percent": 42.68
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DEU"
+          },
+          "values": {
+            "male_pattern_baldness_percent": 41.51
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HRV"
+          },
+          "values": {
+            "male_pattern_baldness_percent": 41.32
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CAN"
+          },
+          "values": {
+            "male_pattern_baldness_percent": 40.94
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CZE"
+          },
+          "values": {
+            "male_pattern_baldness_percent": 40.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AUS"
+          },
+          "values": {
+            "male_pattern_baldness_percent": 40.8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NOR"
+          },
+          "values": {
+            "male_pattern_baldness_percent": 40.75
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NZL"
+          },
+          "values": {
+            "male_pattern_baldness_percent": 40.19
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GBR"
+          },
+          "values": {
+            "male_pattern_baldness_percent": 40.09
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TUR"
+          },
+          "values": {
+            "male_pattern_baldness_percent": 40.03
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MEX"
+          },
+          "values": {
+            "male_pattern_baldness_percent": 39.75
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SAU"
+          },
+          "values": {
+            "male_pattern_baldness_percent": 39.75
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IRL"
+          },
+          "values": {
+            "male_pattern_baldness_percent": 38.65
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CHE"
+          },
+          "values": {
+            "male_pattern_baldness_percent": 38.53
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "RUS"
+          },
+          "values": {
+            "male_pattern_baldness_percent": 38.28
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ARE"
+          },
+          "values": {
+            "male_pattern_baldness_percent": 38.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HUN"
+          },
+          "values": {
+            "male_pattern_baldness_percent": 37.86
+          }
+        }
+      ]
+    }
+  ]
 }

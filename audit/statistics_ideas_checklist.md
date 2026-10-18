@@ -1,0 +1,126 @@
+# 추가 통계 후보 검증
+
+항목마다 같은 연도의 국가·지역별 실제 수치 10개 이상 및 서로 다른 수치 10종 이상 확인. 지역 집계 제외. 표기 연도는 이 조건을 만족하는 2022~2025년 중 가장 최근 관측연도.
+
+- [ ] [인구 증가율](https://data.worldbank.org/indicator/SP.POP.GROW) — 2025년 · 216개국·지역
+- [ ] [도시 거주 인구 비율](https://data.worldbank.org/indicator/SP.URB.TOTL.IN.ZS) — 2025년 · 216개국·지역
+- [ ] [도시 인구 증가율](https://data.worldbank.org/indicator/SP.URB.GROW) — 2025년 · 216개국·지역
+- [ ] [14세 이하 인구 비율](https://data.worldbank.org/indicator/SP.POP.0014.TO.ZS) — 2025년 · 216개국·지역
+- [ ] [65세 이상 인구 비율](https://data.worldbank.org/indicator/SP.POP.65UP.TO.ZS) — 2025년 · 216개국·지역
+- [ ] [생산연령 인구 대비 부양인구 비율](https://data.worldbank.org/indicator/SP.POP.DPND) — 2025년 · 216개국·지역
+- [ ] [생산연령 인구 대비 고령인구 비율](https://data.worldbank.org/indicator/SP.POP.DPND.OL) — 2025년 · 216개국·지역
+- [ ] [연간 순이민자 수](https://data.worldbank.org/indicator/SM.POP.NETM) — 2025년 · 216개국·지역
+- [ ] [인구 1천 명당 출생아 수](https://data.worldbank.org/indicator/SP.DYN.CBRT.IN) — 2024년 · 216개국·지역
+- [ ] [인구 1천 명당 사망자 수](https://data.worldbank.org/indicator/SP.DYN.CDRT.IN) — 2024년 · 216개국·지역
+- [ ] [청소년 출산율](https://data.worldbank.org/indicator/SP.ADO.TFRT) — 2024년 · 216개국·지역
+- [ ] [유엔난민기구 관할 난민 수용 인원](https://data.worldbank.org/indicator/SM.POP.RHCR.EA) — 2025년 · 176개국·지역
+- [ ] [유엔난민기구 관할 자국 출신 난민 수](https://data.worldbank.org/indicator/SM.POP.RHCR.EO) — 2025년 · 198개국·지역
+- [ ] [실질 GDP 성장률](https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG) — 2025년 · 186개국·지역
+- [ ] [소비자물가 상승률](https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG) — 2025년 · 169개국·지역
+- [ ] [실업률](https://data.worldbank.org/indicator/SL.UEM.TOTL.ZS) — 2025년 · 181개국·지역
+- [ ] [청년 실업률](https://data.worldbank.org/indicator/SL.UEM.1524.ZS) — 2025년 · 181개국·지역
+- [ ] [경제활동참가율](https://data.worldbank.org/indicator/SL.TLF.CACT.ZS) — 2025년 · 181개국·지역
+- [ ] [여성 경제활동참가율](https://data.worldbank.org/indicator/SL.TLF.CACT.FE.ZS) — 2025년 · 181개국·지역
+- [ ] [농업 종사자 비율](https://data.worldbank.org/indicator/SL.AGR.EMPL.ZS) — 2025년 · 181개국·지역
+- [ ] [산업 부문 종사자 비율](https://data.worldbank.org/indicator/SL.IND.EMPL.ZS) — 2025년 · 181개국·지역
+- [ ] [서비스업 종사자 비율](https://data.worldbank.org/indicator/SL.SRV.EMPL.ZS) — 2025년 · 181개국·지역
+- [ ] [취약고용 비율](https://data.worldbank.org/indicator/SL.EMP.VULN.ZS) — 2025년 · 181개국·지역
+- [ ] [자영업자 비율](https://data.worldbank.org/indicator/SL.EMP.SELF.ZS) — 2025년 · 181개국·지역
+- [ ] [취업자 1인당 GDP](https://data.worldbank.org/indicator/SL.GDP.PCAP.EM.KD) — 2025년 · 168개국·지역
+- [ ] [GDP 대비 해외 개인송금 수취액](https://data.worldbank.org/indicator/BX.TRF.PWKR.DT.GD.ZS) — 2025년 · 131개국·지역
+- [ ] [GDP 대비 외국인직접투자 순유입액](https://data.worldbank.org/indicator/BX.KLT.DINV.WD.GD.ZS) — 2025년 · 184개국·지역
+- [ ] [GDP 대비 무역 규모](https://data.worldbank.org/indicator/NE.TRD.GNFS.ZS) — 2025년 · 138개국·지역
+- [ ] [GDP 대비 상품·서비스 수출액](https://data.worldbank.org/indicator/NE.EXP.GNFS.ZS) — 2025년 · 138개국·지역
+- [ ] [GDP 대비 상품·서비스 수입액](https://data.worldbank.org/indicator/NE.IMP.GNFS.ZS) — 2025년 · 138개국·지역
+- [ ] [GDP 대비 경상수지](https://data.worldbank.org/indicator/BN.CAB.XOKA.GD.ZS) — 2025년 · 136개국·지역
+- [ ] [국민총소득 대비 대외부채](https://data.worldbank.org/indicator/DT.DOD.DECT.GN.ZS) — 2024년 · 110개국·지역
+- [ ] [GDP 대비 중앙정부 부채](https://data.worldbank.org/indicator/GC.DOD.TOTL.GD.ZS) — 2024년 · 34개국·지역
+- [ ] [GDP 대비 조세 수입](https://data.worldbank.org/indicator/GC.TAX.TOTL.GD.ZS) — 2024년 · 93개국·지역
+- [ ] [GDP 대비 정부 지출](https://data.worldbank.org/indicator/GC.XPN.TOTL.GD.ZS) — 2023년 · 87개국·지역
+- [ ] [GDP 대비 공공 교육비](https://data.worldbank.org/indicator/SE.XPD.TOTL.GD.ZS) — 2024년 · 40개국·지역
+- [ ] [GDP 대비 경상의료비](https://data.worldbank.org/indicator/SH.XPD.CHEX.GD.ZS) — 2024년 · 22개국·지역
+- [ ] [GDP 대비 연구개발비](https://data.worldbank.org/indicator/GB.XPD.RSDV.GD.ZS) — 2024년 · 30개국·지역
+- [ ] [GDP 중 제조업 부가가치 비율](https://data.worldbank.org/indicator/NV.IND.MANF.ZS) — 2025년 · 132개국·지역
+- [ ] [GDP 중 농림어업 부가가치 비율](https://data.worldbank.org/indicator/NV.AGR.TOTL.ZS) — 2025년 · 158개국·지역
+- [ ] [GDP 중 서비스업 부가가치 비율](https://data.worldbank.org/indicator/NV.SRV.TOTL.ZS) — 2025년 · 158개국·지역
+- [ ] [GDP 대비 총저축](https://data.worldbank.org/indicator/NY.GNS.ICTR.ZS) — 2025년 · 101개국·지역
+- [ ] [제조업 수출 중 첨단기술 제품 비율](https://data.worldbank.org/indicator/TX.VAL.TECH.MF.ZS) — 2024년 · 125개국·지역
+- [ ] [수입액 기준 외환보유액 충당 개월 수](https://data.worldbank.org/indicator/FI.RES.TOTL.MO) — 2025년 · 113개국·지역
+- [ ] [15~64세 인구 1천 명당 신설 유한책임회사 수](https://data.worldbank.org/indicator/IC.BUS.NDNS.ZS) — 2024년 · 134개국·지역
+- [ ] [15세 이상 금융계좌 보유율](https://data.worldbank.org/indicator/FX.OWN.TOTL.ZS) — 2024년 · 139개국·지역
+- [ ] [15세 이상 모바일머니 계좌 보유율](https://data.worldbank.org/indicator/FX.OWN.TOTL.MA.ZS) — 2024년 · 139개국·지역
+- [ ] [성인 10만 명당 ATM 수](https://data.worldbank.org/indicator/FB.ATM.TOTL.P5) — 2024년 · 151개국·지역
+- [ ] [성인 10만 명당 은행 지점 수](https://data.worldbank.org/indicator/FB.CBK.BRCH.P5) — 2024년 · 153개국·지역
+- [ ] [GDP 대비 민간 부문 국내신용](https://data.worldbank.org/indicator/FS.AST.PRVT.GD.ZS) — 2025년 · 100개국·지역
+- [ ] [GDP 대비 은행의 민간 부문 국내신용](https://data.worldbank.org/indicator/FD.AST.PRVT.GD.ZS) — 2025년 · 110개국·지역
+- [ ] [하루 3달러 미만 극빈율·2021 PPP 기준](https://data.worldbank.org/indicator/SI.POV.DDAY) — 2024년 · 26개국·지역
+- [ ] [상위 10%의 소득 점유율](https://data.worldbank.org/indicator/SI.DST.10TH.10) — 2024년 · 26개국·지역
+- [ ] [하위 10%의 소득 점유율](https://data.worldbank.org/indicator/SI.DST.FRST.10) — 2024년 · 26개국·지역
+- [ ] [영아 사망률](https://data.worldbank.org/indicator/SP.DYN.IMRT.IN) — 2024년 · 196개국·지역
+- [ ] [5세 미만 아동 사망률](https://data.worldbank.org/indicator/SH.DYN.MORT) — 2024년 · 196개국·지역
+- [ ] [신생아 사망률](https://data.worldbank.org/indicator/SH.DYN.NMRT) — 2024년 · 196개국·지역
+- [ ] [모성 사망비](https://data.worldbank.org/indicator/SH.STA.MMRT) — 2023년 · 194개국·지역
+- [ ] [인구 1천 명당 의사 수](https://data.worldbank.org/indicator/SH.MED.PHYS.ZS) — 2023년 · 58개국·지역
+- [ ] [인구 1천 명당 간호·조산 인력 수](https://data.worldbank.org/indicator/SH.MED.NUMW.P3) — 2023년 · 75개국·지역
+- [ ] [경상의료비 중 가계 직접부담 비율](https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS) — 2024년 · 22개국·지역
+- [ ] [결핵 발생률](https://data.worldbank.org/indicator/SH.TBS.INCD) — 2024년 · 208개국·지역
+- [ ] [20~79세 당뇨병 유병률](https://data.worldbank.org/indicator/SH.STA.DIAB.ZS) — 2024년 · 209개국·지역
+- [ ] [영양부족 인구 비율](https://data.worldbank.org/indicator/SN.ITK.DEFC.ZS) — 2024년 · 165개국·지역
+- [ ] [5세 미만 아동 발육부진율](https://data.worldbank.org/indicator/SH.STA.STNT.ZS) — 2023년 · 25개국·지역
+- [ ] [5세 미만 아동 소모증 비율](https://data.worldbank.org/indicator/SH.STA.WAST.ZS) — 2023년 · 24개국·지역
+- [ ] [기본 식수 서비스 이용률](https://data.worldbank.org/indicator/SH.H2O.BASW.ZS) — 2024년 · 202개국·지역
+- [ ] [안전하게 관리되는 식수 이용률](https://data.worldbank.org/indicator/SH.H2O.SMDW.ZS) — 2024년 · 148개국·지역
+- [ ] [기본 위생시설 이용률](https://data.worldbank.org/indicator/SH.STA.BASS.ZS) — 2024년 · 193개국·지역
+- [ ] [안전하게 관리되는 위생시설 이용률](https://data.worldbank.org/indicator/SH.STA.SMSS.ZS) — 2024년 · 141개국·지역
+- [ ] [기본 손씻기 시설 이용률](https://data.worldbank.org/indicator/SH.STA.HYGN.ZS) — 2024년 · 91개국·지역
+- [ ] [홍역 예방접종률](https://data.worldbank.org/indicator/SH.IMM.MEAS) — 2024년 · 192개국·지역
+- [ ] [디프테리아·백일해·파상풍 예방접종률](https://data.worldbank.org/indicator/SH.IMM.IDPT) — 2024년 · 192개국·지역
+- [ ] [15~49세 기혼·동거 여성 피임 사용률](https://data.worldbank.org/indicator/SP.DYN.CONU.ZS) — 2022년 · 22개국·지역
+- [ ] [성인 문해율](https://data.worldbank.org/indicator/SE.ADT.LITR.ZS) — 2024년 · 29개국·지역
+- [ ] [청년 문해율](https://data.worldbank.org/indicator/SE.ADT.1524.LT.ZS) — 2024년 · 29개국·지역
+- [ ] [초등교육 이수율](https://data.worldbank.org/indicator/SE.PRM.CMPT.ZS) — 2025년 · 11개국·지역
+- [ ] [전기 중등교육 이수율](https://data.worldbank.org/indicator/SE.SEC.CMPT.LO.ZS) — 2025년 · 11개국·지역
+- [ ] [초등학령기 아동 미취학률](https://data.worldbank.org/indicator/SE.PRM.UNER.ZS) — 2025년 · 12개국·지역
+- [ ] [인구 100명당 이동전화 가입 회선 수](https://data.worldbank.org/indicator/IT.CEL.SETS.P2) — 2024년 · 151개국·지역
+- [ ] [인구 100명당 유선 초고속인터넷 가입 회선 수](https://data.worldbank.org/indicator/IT.NET.BBND.P2) — 2024년 · 151개국·지역
+- [ ] [인구 100만 명당 보안 인터넷 서버 수](https://data.worldbank.org/indicator/IT.NET.SECR.P6) — 2024년 · 215개국·지역
+- [ ] [인구 100만 명당 연구개발 연구자 수](https://data.worldbank.org/indicator/SP.POP.SCIE.RD.P6) — 2024년 · 28개국·지역
+- [ ] [과학·기술 학술논문 수](https://data.worldbank.org/indicator/IP.JRN.ARTC.SC) — 2023년 · 197개국·지역
+- [ ] [거주자 특허 출원 수](https://data.worldbank.org/indicator/IP.PAT.RESD) — 2024년 · 121개국·지역
+- [ ] [거주자 상표 출원 건수](https://data.worldbank.org/indicator/IP.TMK.RSCT) — 2024년 · 134개국·지역
+- [ ] [전력 접근률](https://data.worldbank.org/indicator/EG.ELC.ACCS.ZS) — 2024년 · 214개국·지역
+- [ ] [1인당 전력 소비량](https://data.worldbank.org/indicator/EG.USE.ELEC.KH.PC) — 2025년 · 40개국·지역
+- [ ] [최종 에너지 소비 중 재생에너지 비율](https://data.worldbank.org/indicator/EG.FEC.RNEW.ZS) — 2022년 · 71개국·지역
+- [ ] [청정 조리연료·기술 접근률](https://data.worldbank.org/indicator/EG.CFT.ACCS.ZS) — 2024년 · 192개국·지역
+- [ ] [구매력 기준 GDP 대비 에너지 집약도](https://data.worldbank.org/indicator/EG.EGY.PRIM.PP.KD) — 2022년 · 116개국·지역
+- [ ] [에너지 사용량 대비 순수입 비율](https://data.worldbank.org/indicator/EG.IMP.CONS.ZS) — 2024년 · 139개국·지역
+- [ ] [발전량 중 원자력 비율](https://data.worldbank.org/indicator/EG.ELC.NUCL.ZS) — 2025년 · 19개국·지역
+- [ ] [발전량 중 수력 비율](https://data.worldbank.org/indicator/EG.ELC.HYRO.ZS) — 2025년 · 39개국·지역
+- [ ] [발전량 중 석탄 비율](https://data.worldbank.org/indicator/EG.ELC.COAL.ZS) — 2025년 · 33개국·지역
+- [ ] [발전량 중 천연가스 비율](https://data.worldbank.org/indicator/EG.ELC.NGAS.ZS) — 2025년 · 38개국·지역
+- [ ] [송배전 전력 손실률](https://data.worldbank.org/indicator/EG.ELC.LOSS.ZS) — 2025년 · 40개국·지역
+- [ ] [토지이용·산림 제외 온실가스 총배출량](https://data.worldbank.org/indicator/EN.GHG.ALL.MT.CE.AR5) — 2024년 · 203개국·지역
+- [ ] [토지이용·산림 제외 1인당 온실가스 배출량](https://data.worldbank.org/indicator/EN.GHG.ALL.PC.CE.AR5) — 2024년 · 203개국·지역
+- [ ] [토지이용·산림 제외 1인당 이산화탄소 배출량](https://data.worldbank.org/indicator/EN.GHG.CO2.PC.CE.AR5) — 2024년 · 203개국·지역
+- [ ] [구매력 기준 GDP 대비 이산화탄소 배출량](https://data.worldbank.org/indicator/EN.GHG.CO2.RT.GDP.PP.KD) — 2024년 · 188개국·지역
+- [ ] [육지 면적 중 산림 비율](https://data.worldbank.org/indicator/AG.LND.FRST.ZS) — 2024년 · 209개국·지역
+- [ ] [육지 보호구역 비율](https://data.worldbank.org/indicator/ER.LND.PTLD.ZS) — 2025년 · 213개국·지역
+- [ ] [영해 중 해양 보호구역 비율](https://data.worldbank.org/indicator/ER.MRN.PTMR.ZS) — 2025년 · 174개국·지역
+- [ ] [멸종위기 조류 종 수](https://data.worldbank.org/indicator/EN.BIR.THRD.NO) — 2022년 · 215개국·지역
+- [ ] [멸종위기 포유류 종 수](https://data.worldbank.org/indicator/EN.MAM.THRD.NO) — 2022년 · 215개국·지역
+- [ ] [멸종위기 어류 종 수](https://data.worldbank.org/indicator/EN.FSH.THRD.NO) — 2022년 · 215개국·지역
+- [ ] [멸종위기 고등식물 종 수](https://data.worldbank.org/indicator/EN.HPT.THRD.NO) — 2022년 · 215개국·지역
+- [ ] [가용 담수 대비 취수량·물 스트레스](https://data.worldbank.org/indicator/ER.H2O.FWST.ZS) — 2022년 · 176개국·지역
+- [ ] [1인당 재생가능 내부 담수자원량](https://data.worldbank.org/indicator/ER.H2O.INTR.PC) — 2022년 · 181개국·지역
+- [ ] [농경지 중 관개 면적 비율](https://data.worldbank.org/indicator/AG.LND.IRIG.AG.ZS) — 2024년 · 67개국·지역
+- [ ] [육지 중 경작지 비율](https://data.worldbank.org/indicator/AG.LND.ARBL.ZS) — 2024년 · 205개국·지역
+- [ ] [경작지 1헥타르당 비료 사용량](https://data.worldbank.org/indicator/AG.CON.FERT.ZS) — 2024년 · 190개국·지역
+- [ ] [1헥타르당 곡물 수확량](https://data.worldbank.org/indicator/AG.YLD.CREL.KG) — 2024년 · 176개국·지역
+- [ ] [포획 어업 생산량](https://data.worldbank.org/indicator/ER.FSH.CAPT.MT) — 2024년 · 215개국·지역
+- [ ] [양식업 생산량](https://data.worldbank.org/indicator/ER.FSH.AQUA.MT) — 2024년 · 215개국·지역
+- [ ] [등록 항공사의 여객 수송 실적](https://data.worldbank.org/indicator/IS.AIR.PSGR) — 2023년 · 149개국·지역
+- [ ] [등록 항공사의 항공화물 수송 실적](https://data.worldbank.org/indicator/IS.AIR.GOOD.MT.K1) — 2023년 · 161개국·지역
+- [ ] [등록 항공사의 항공기 출발 횟수](https://data.worldbank.org/indicator/IS.AIR.DPRT) — 2023년 · 150개국·지역
+- [ ] [컨테이너 항만 물동량](https://data.worldbank.org/indicator/IS.SHP.GOOD.TU) — 2024년 · 103개국·지역
+- [ ] [물류성과지수](https://data.worldbank.org/indicator/LP.LPI.OVRL.XQ) — 2022년 · 138개국·지역
+- [ ] [하원·단원제 의회의 여성 의석 비율](https://data.worldbank.org/indicator/SG.GEN.PARL.ZS) — 2025년 · 184개국·지역

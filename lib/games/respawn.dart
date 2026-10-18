@@ -43,6 +43,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'package:jidoapp/services/game_ad_service.dart';
@@ -485,6 +486,7 @@ class _SoftCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Container(
       padding: padding,
       decoration: BoxDecoration(
@@ -524,6 +526,7 @@ class _GradientButtonState extends State<_GradientButton> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final fg = widget.outlined ? widget.color : Colors.white;
     return GestureDetector(
       onTapDown: (_) => setState(() => _scale = 0.97),
@@ -561,7 +564,7 @@ class _GradientButtonState extends State<_GradientButton> {
                 Icon(widget.icon, color: fg, size: 20),
                 const SizedBox(width: 8),
               ],
-              Text(widget.label,
+              Text(tr(widget.label),
                   style: TextStyle(color: fg, fontSize: 15.5, fontWeight: FontWeight.w800, letterSpacing: 0.2)),
             ],
           ),
@@ -578,6 +581,7 @@ class _ScreenBackground extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Container(
       decoration: const BoxDecoration(
         gradient: LinearGradient(
@@ -605,6 +609,7 @@ class _CountrySearchSheetState extends State<_CountrySearchSheet> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final q = _query.trim().toLowerCase();
     final options = _kCountries.where((c) => q.isEmpty || c.name.toLowerCase().contains(q)).toList()
       ..sort((a, b) => a.name.compareTo(b.name));
@@ -629,14 +634,14 @@ class _CountrySearchSheetState extends State<_CountrySearchSheet> {
                 decoration: BoxDecoration(color: _kFaint, borderRadius: BorderRadius.circular(4)),
               ),
               const SizedBox(height: 16),
-              const Text('Choose your country',
+               Text(tr('Choose your country'),
                   style: TextStyle(fontSize: 17, fontWeight: FontWeight.w800, color: _kInk)),
               const SizedBox(height: 12),
               TextField(
                 autofocus: true,
                 onChanged: (v) => setState(() => _query = v),
                 decoration: InputDecoration(
-                  hintText: 'Search…',
+                  hintText: tr('Search…'),
                   prefixIcon: const Icon(Icons.search_rounded, color: _kFaint),
                   filled: true,
                   fillColor: _kSurface,
@@ -657,7 +662,7 @@ class _CountrySearchSheetState extends State<_CountrySearchSheet> {
                     final c = options[i];
                     return ListTile(
                       contentPadding: EdgeInsets.zero,
-                      leading: Text(c.emoji, style: const TextStyle(fontSize: 24)),
+                      leading: Text(tr(c.emoji), style: const TextStyle(fontSize: 24)),
                       title: Text(c.name,
                           style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: _kInk)),
                       onTap: () => Navigator.pop(context, c.code),
@@ -734,6 +739,7 @@ class _RespawnModeScreenState extends State<RespawnModeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final home = _homeCode != null ? _kCountriesByCode[_homeCode] : null;
 
     return WillPopScope(
@@ -768,14 +774,14 @@ class _RespawnModeScreenState extends State<RespawnModeScreen> {
                           alignment: Alignment.center,
                           decoration: BoxDecoration(
                               color: _kAccent.withOpacity(0.15), borderRadius: BorderRadius.circular(14)),
-                          child: Text(home?.emoji ?? '🏠', style: const TextStyle(fontSize: 22)),
+                          child: Text(tr(home?.emoji ?? '🏠'), style: const TextStyle(fontSize: 22)),
                         ),
                         const SizedBox(width: 14),
                         Expanded(
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              const Text('MY COUNTRY',
+                               Text(tr('MY COUNTRY'),
                                   style: TextStyle(
                                       fontSize: 10.5, fontWeight: FontWeight.w800, letterSpacing: 0.8, color: _kMuted)),
                               const SizedBox(height: 2),
@@ -804,7 +810,7 @@ class _RespawnModeScreenState extends State<RespawnModeScreen> {
                       ),
                     ),
                     const SizedBox(width: 10),
-                    const Text('CHOOSE A MODE',
+                     Text(tr('CHOOSE A MODE'),
                         style: TextStyle(
                             fontSize: 12.5, fontWeight: FontWeight.w800, letterSpacing: 1.1, color: _kMuted)),
                   ],
@@ -858,14 +864,14 @@ class _RespawnModeScreenState extends State<RespawnModeScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text('RANDOM REBIRTH',
+               Text(tr('RANDOM REBIRTH'),
                   style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.w800, letterSpacing: 1.6, color: _kMuted)),
               const SizedBox(height: 4),
-              const Text('Respawn',
+               Text(tr('Respawn'),
                   style: TextStyle(
                       fontSize: 27, fontWeight: FontWeight.w900, color: _kInk, letterSpacing: -0.6, height: 1.05)),
               const SizedBox(height: 8),
-              Text('Get reborn somewhere random, weighted by real odds — then see how it stacks up against home.',
+              Text(tr('Get reborn somewhere random, weighted by real odds — then see how it stacks up against home.'),
                   style: TextStyle(
                       fontSize: 12.5, color: _kMuted.withOpacity(0.9), fontWeight: FontWeight.w600, height: 1.4)),
             ],
@@ -885,6 +891,7 @@ class _ModeCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final color = _modeColor(mode.id);
     return GestureDetector(
       onTap: onTap,
@@ -915,7 +922,7 @@ class _ModeCard extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Text(mode.title,
+                      Text(tr(mode.title),
                           style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w900, color: _kInk, letterSpacing: -0.2)),
                       if (locked) ...[
                         const SizedBox(width: 6),
@@ -924,7 +931,7 @@ class _ModeCard extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(height: 4),
-                  Text(locked ? 'Set your country first' : mode.subtitle,
+                  Text(tr(locked ? 'Set your country first' : mode.subtitle),
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                       style: const TextStyle(fontSize: 12.5, color: _kMuted, fontWeight: FontWeight.w600)),
@@ -1026,6 +1033,7 @@ class _RespawnGameScreenState extends State<_RespawnGameScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Scaffold(
       backgroundColor: _kSurface,
       extendBodyBehindAppBar: true,
@@ -1038,7 +1046,7 @@ class _RespawnGameScreenState extends State<_RespawnGameScreen> {
           children: [
             Container(width: 8, height: 8, decoration: const BoxDecoration(color: _kAccent, shape: BoxShape.circle)),
             const SizedBox(width: 8),
-            Text(widget.mode.title,
+            Text(tr(widget.mode.title),
                 style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w800, color: _kInk, letterSpacing: -0.2)),
           ],
         ),
@@ -1091,12 +1099,12 @@ class _RespawnGameScreenState extends State<_RespawnGameScreen> {
             _buildOutcomeBadge(_currentSuccess!),
             const SizedBox(height: 14),
           ],
-          Text(drawn.emoji, style: const TextStyle(fontSize: 64)),
+          Text(tr(drawn.emoji), style: const TextStyle(fontSize: 64)),
           const SizedBox(height: 10),
           Text(drawn.name,
               style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w900, color: _kInk)),
           const SizedBox(height: 4),
-          Text(widget.mode.resultLine(drawn),
+          Text(tr(widget.mode.resultLine(drawn)),
               style: const TextStyle(fontSize: 12.5, fontWeight: FontWeight.w600, color: _kMuted)),
           const SizedBox(height: 18),
           Row(
@@ -1128,7 +1136,7 @@ class _RespawnGameScreenState extends State<_RespawnGameScreen> {
             ),
           ],
           const SizedBox(height: 12),
-          Text('Respawn #$count in this mode',
+          Text(tr('Respawn #$count in this mode'),
               style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w600, color: _kFaint)),
         ],
       ),
@@ -1150,7 +1158,7 @@ class _RespawnGameScreenState extends State<_RespawnGameScreen> {
           Icon(success ? Icons.check_circle_rounded : Icons.cancel_rounded, size: 16, color: color),
           const SizedBox(width: 6),
           Text(
-            success ? 'SUCCESS' : 'FAIL',
+            tr(success ? 'SUCCESS' : 'FAIL'),
             style: TextStyle(fontSize: 12, fontWeight: FontWeight.w900, letterSpacing: 0.6, color: color),
           ),
         ],
@@ -1165,9 +1173,9 @@ class _RespawnGameScreenState extends State<_RespawnGameScreen> {
         children: [
           Row(
             children: [
-              Text(home.emoji, style: const TextStyle(fontSize: 16)),
+              Text(tr(home.emoji), style: const TextStyle(fontSize: 16)),
               const SizedBox(width: 6),
-              Text('VS YOUR COUNTRY (${home.name.toUpperCase()})',
+              Text(tr('VS YOUR COUNTRY (${home.name.toUpperCase()})'),
                   style: const TextStyle(
                       fontSize: 11, fontWeight: FontWeight.w800, letterSpacing: 0.5, color: _kMuted)),
             ],
@@ -1208,7 +1216,7 @@ class _RespawnGameScreenState extends State<_RespawnGameScreen> {
             _buildSuccessRateBanner(),
             const SizedBox(height: 14),
           ],
-          Text('YOUR AVERAGE RESPAWN (last ${stats.length})',
+          Text(tr('YOUR AVERAGE RESPAWN (last ${stats.length})'),
               style: const TextStyle(
                   fontSize: 11, fontWeight: FontWeight.w800, letterSpacing: 0.5, color: _kMuted)),
           const SizedBox(height: 12),
@@ -1249,9 +1257,9 @@ class _RespawnGameScreenState extends State<_RespawnGameScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('${rate.toStringAsFixed(0)}% SUCCESS RATE',
+                Text(tr('${rate.toStringAsFixed(0)}% SUCCESS RATE'),
                     style: TextStyle(fontSize: 19, fontWeight: FontWeight.w900, color: color)),
-                Text('$_successCount of $_attemptCount respawns this visit',
+                Text(tr('$_successCount of $_attemptCount respawns this visit'),
                     style: const TextStyle(fontSize: 11.5, fontWeight: FontWeight.w600, color: _kMuted)),
               ],
             ),
@@ -1269,11 +1277,11 @@ class _RespawnGameScreenState extends State<_RespawnGameScreen> {
         children: [
           Row(
             children: [
-              const Expanded(
-                child: Text('RECENT RESPAWNS',
+               Expanded(
+                child: Text(tr('RECENT RESPAWNS'),
                     style: TextStyle(fontSize: 11, fontWeight: FontWeight.w800, letterSpacing: 0.5, color: _kMuted)),
               ),
-              const Text('this visit only',
+               Text(tr('this visit only'),
                   style: TextStyle(fontSize: 10, fontWeight: FontWeight.w600, color: _kFaint)),
             ],
           ),
@@ -1302,7 +1310,7 @@ class _RespawnGameScreenState extends State<_RespawnGameScreen> {
                           size: 13, color: outcomeColor),
                       const SizedBox(width: 4),
                     ],
-                    Text(c.emoji, style: const TextStyle(fontSize: 13)),
+                    Text(tr(c.emoji), style: const TextStyle(fontSize: 13)),
                     const SizedBox(width: 5),
                     Text(c.name, style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: _kInk)),
                   ],
@@ -1325,11 +1333,12 @@ class _ComparisonRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     if (homeValue <= 0 || drawnValue <= 0) {
       return Row(
         children: [
-          Expanded(child: Text(label, style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w600, color: _kInk))),
-          const Text('—', style: TextStyle(fontSize: 12, color: _kFaint)),
+          Expanded(child: Text(tr(label), style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w600, color: _kInk))),
+           Text(tr('—'), style: TextStyle(fontSize: 12, color: _kFaint)),
         ],
       );
     }
@@ -1340,13 +1349,13 @@ class _ComparisonRow extends StatelessWidget {
 
     return Row(
       children: [
-        Expanded(child: Text(label, style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w600, color: _kInk))),
+        Expanded(child: Text(tr(label), style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w600, color: _kInk))),
         Row(
           children: [
             if (ratio >= 1.05)
               Icon(bigger ? Icons.arrow_upward_rounded : Icons.arrow_downward_rounded, size: 14, color: color),
             const SizedBox(width: 3),
-            Text(ratioText, style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w700, color: color)),
+            Text(tr(ratioText), style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w700, color: color)),
           ],
         ),
       ],
@@ -1362,17 +1371,18 @@ class _StatChip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
       decoration: BoxDecoration(color: _kSurface, borderRadius: BorderRadius.circular(14)),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(value,
+          Text(tr(value),
               style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w800, color: _kInk),
               overflow: TextOverflow.ellipsis),
           const SizedBox(height: 2),
-          Text(label.toUpperCase(),
+          Text(tr(label.toUpperCase()),
               style: const TextStyle(fontSize: 9, fontWeight: FontWeight.w800, letterSpacing: 0.3, color: _kMuted)),
         ],
       ),

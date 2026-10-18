@@ -1,6 +1,7 @@
 // lib/screens/historical_empire_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter_map/flutter_map.dart' as fm; // fm 별칭 사용
 import 'package:jidoapp/models/country_model.dart';
 import 'package:jidoapp/models/historical_empire_model.dart';
@@ -25,6 +26,7 @@ class _HistoricalEmpireScreenState extends State<HistoricalEmpireScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final countryProvider = Provider.of<CountryProvider>(context);
     if (countryProvider.isLoading) {
       return Scaffold(
@@ -44,7 +46,7 @@ class _HistoricalEmpireScreenState extends State<HistoricalEmpireScreen> {
         actions: [
           Row(
             children: [
-              const Text('Show Territory', style: TextStyle(fontSize: 12)),
+               Text(tr('Show Territory'), style: TextStyle(fontSize: 12)),
               Switch(
                 value: _showTerritory,
                 onChanged: (value) {
@@ -143,7 +145,7 @@ class _HistoricalEmpireScreenState extends State<HistoricalEmpireScreen> {
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
           child: Text(
-            'Countries in this Territory (${countriesInEmpire.length})',
+            tr('Countries in this Territory (${countriesInEmpire.length})'),
             style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
           ),
         ),
@@ -156,7 +158,7 @@ class _HistoricalEmpireScreenState extends State<HistoricalEmpireScreen> {
               final isVisited = visitedCountries.contains(country.name);
 
               return CheckboxListTile(
-                title: Text(country.name),
+                title: Text(tr(country.name)),
                 value: isVisited,
                 onChanged: (bool? value) {
                   if (value == true) {

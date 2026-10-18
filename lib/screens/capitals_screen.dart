@@ -3,6 +3,7 @@
 import 'dart:async';
 import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:jidoapp/models/city_model.dart';
@@ -143,6 +144,7 @@ class _CapitalsScreenState extends State<CapitalsScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final cityProvider = Provider.of<CityProvider>(context);
     final countryProvider = Provider.of<CountryProvider>(context);
 
@@ -325,7 +327,7 @@ class _CapitalsScreenState extends State<CapitalsScreen> {
           child: TextField(
             controller: _searchController,
             decoration: InputDecoration(
-              hintText: widget.isLargestMode ? 'Search Largest Cities' : 'Search Capitals',
+              hintText: tr(widget.isLargestMode ? 'Search Largest Cities' : 'Search Capitals'),
               prefixIcon: const Icon(Icons.search),
               filled: true,
               fillColor: Colors.grey.shade100,
@@ -359,7 +361,7 @@ class _CapitalsScreenState extends State<CapitalsScreen> {
               ),
               const SizedBox(width: 12),
               Text(
-                '$visitedCount / $total (${(percentage * 100).toStringAsFixed(0)}%)',
+                tr('$visitedCount / $total (${(percentage * 100).toStringAsFixed(0)}%)'),
                 style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13),
               ),
             ],
@@ -387,7 +389,7 @@ class _CapitalsScreenState extends State<CapitalsScreen> {
                   ),
                 ),
                 title: Text(city.name, style: const TextStyle(fontWeight: FontWeight.w600)),
-                subtitle: Text(city.country, style: TextStyle(color: Colors.grey.shade600, fontSize: 12)),
+                subtitle: Text(tr(city.country), style: TextStyle(color: Colors.grey.shade600, fontSize: 12)),
                 onTap: () {
                   setState(() {
                     _highlightedCityName = city.name;

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:jidoapp/models/trip_log_entry.dart';
 import 'package:jidoapp/providers/trip_log_provider.dart';
 import 'package:provider/provider.dart';
@@ -69,8 +70,8 @@ class _EditTripLogScreenState extends State<EditTripLogScreen> {
     if (_titleController.text.isEmpty ||
         _quillController.document.isEmpty()) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-            content: Text('Title and log content cannot be empty.')),
+         SnackBar(
+            content: Text(tr('Title and log content cannot be empty.'))),
       );
       return;
     }
@@ -111,7 +112,7 @@ class _EditTripLogScreenState extends State<EditTripLogScreen> {
 
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: Text(errorMessage),
+            content: Text(tr(errorMessage)),
             backgroundColor: Colors.red.shade700,
             duration: const Duration(seconds: 5),
             action: SnackBarAction(
@@ -135,6 +136,7 @@ class _EditTripLogScreenState extends State<EditTripLogScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Scaffold(
       backgroundColor: lightOrangeBackground,
       resizeToAvoidBottomInset: true,
@@ -143,7 +145,7 @@ class _EditTripLogScreenState extends State<EditTripLogScreen> {
         foregroundColor: Colors.white,
         elevation: 1,
         title: Text(
-          widget.entry == null ? 'New Trip Log' : 'Edit Trip Log',
+          tr(widget.entry == null ? 'New Trip Log' : 'Edit Trip Log'),
           style: const TextStyle(fontWeight: FontWeight.bold),
         ),
       ),
@@ -155,8 +157,8 @@ class _EditTripLogScreenState extends State<EditTripLogScreen> {
             TextField(
               controller: _titleController,
               decoration: InputDecoration(
-                labelText: 'Trip Title',
-                hintText: 'e.g., Unforgettable Moments in Italy',
+                labelText: tr('Trip Title'),
+                hintText: tr('e.g., Unforgettable Moments in Italy'),
                 border: const OutlineInputBorder(),
                 focusedBorder: OutlineInputBorder(
                   borderSide: BorderSide(color: orange, width: 2),
@@ -223,7 +225,7 @@ class _EditTripLogScreenState extends State<EditTripLogScreen> {
               ),
             )
                 : const Icon(Icons.check_rounded),
-            label: Text(_isLoading ? 'Analyzing...' : 'Save & Analyze'),
+            label: Text(tr(_isLoading ? 'Analyzing...' : 'Save & Analyze')),
             style: ElevatedButton.styleFrom(
               backgroundColor: orange,
               foregroundColor: Colors.white,

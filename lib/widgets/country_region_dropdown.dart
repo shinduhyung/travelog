@@ -1,5 +1,6 @@
 import 'package:jidoapp/widgets/country_region_access_gate.dart';
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:jidoapp/models/admin_region.dart';
 import 'package:jidoapp/services/admin_region_repository.dart';
 
@@ -43,6 +44,7 @@ class _CountryRegionDropdownState extends State<CountryRegionDropdown> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return FutureBuilder<List<AdminRegion>>(
       future: _regions,
       builder: (context, snapshot) {
@@ -56,10 +58,10 @@ class _CountryRegionDropdownState extends State<CountryRegionDropdown> {
             .where((region) => !region.isWholeArea)
             .toList();
         if (regions.isEmpty) {
-          return const Padding(
+          return  Padding(
             padding: EdgeInsets.all(16),
             child: Text(
-              'Subdivision boundaries are unavailable for this area.',
+              tr('Subdivision boundaries are unavailable for this area.'),
               style: TextStyle(fontSize: 12, color: Colors.black54),
             ),
           );
@@ -88,7 +90,7 @@ class _CountryRegionDropdownState extends State<CountryRegionDropdown> {
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 4),
             child: Text(
-              '$visited / ${regions.length} regions selected',
+              tr('$visited / ${regions.length} regions selected'),
               style: TextStyle(
                 color: widget.color,
                 fontWeight: FontWeight.w600,
@@ -98,8 +100,8 @@ class _CountryRegionDropdownState extends State<CountryRegionDropdown> {
           ),
           TextField(
             onChanged: (value) => setState(() => _query = value),
-            decoration: const InputDecoration(
-              hintText: 'Search regions',
+            decoration:  InputDecoration(
+              hintText: tr('Search regions'),
               prefixIcon: Icon(Icons.search),
               isDense: true,
               border: OutlineInputBorder(),
@@ -107,14 +109,14 @@ class _CountryRegionDropdownState extends State<CountryRegionDropdown> {
           ),
           const SizedBox(height: 8),
           if (widget.onChanged == null)
-            const Padding(
+             Padding(
               padding: EdgeInsets.all(8),
-              child: Text('Loading visit records...'),
+              child: Text(tr('Loading visit records...')),
             ),
           if (filtered.isEmpty)
-            const Padding(
+             Padding(
               padding: EdgeInsets.all(12),
-              child: Text('No matching regions.'),
+              child: Text(tr('No matching regions.')),
             )
           else
             ConstrainedBox(
@@ -141,7 +143,7 @@ class _CountryRegionDropdownState extends State<CountryRegionDropdown> {
                       title: Text(region.name),
                       subtitle: region.typeLabel.isEmpty
                           ? null
-                          : Text(region.typeLabel),
+                          : Text(tr(region.typeLabel)),
                     ),
                   );
                 },

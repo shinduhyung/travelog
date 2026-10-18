@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:jidoapp/services/country_region_access.dart';
 import 'package:jidoapp/services/subscription_service.dart';
 import 'package:jidoapp/widgets/subscription_sheet.dart';
@@ -10,16 +11,16 @@ Future<void> showCountryRegionsPremiumDialog(BuildContext context) async {
   final upgrade = await showDialog<bool>(
     context: context,
     builder: (context) => AlertDialog(
-      title: const Text('Unlock more regions'),
-      content: const Text(_premiumRegionsMessage),
+      title:  Text(tr('Unlock more regions')),
+      content:  Text(tr(_premiumRegionsMessage)),
       actions: [
         TextButton(
           onPressed: () => Navigator.pop(context, false),
-          child: const Text('Not now'),
+          child:  Text(tr('Not now')),
         ),
         FilledButton(
           onPressed: () => Navigator.pop(context, true),
-          child: const Text('Get Premium'),
+          child:  Text(tr('Get Premium')),
         ),
       ],
     ),
@@ -53,16 +54,16 @@ class CountryRegionAccessGate extends StatelessWidget {
           children: [
             const Icon(Icons.lock_outline_rounded, color: Color(0xFF26A69A)),
             const SizedBox(height: 8),
-            const Text(
-              'Premium regions',
+             Text(
+              tr('Premium regions'),
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 8),
-            const Text(_premiumRegionsMessage, textAlign: TextAlign.center),
+             Text(tr(_premiumRegionsMessage), textAlign: TextAlign.center),
             const SizedBox(height: 12),
             FilledButton(
               onPressed: () => showCountryRegionsPremiumDialog(context),
-              child: const Text('Get Premium'),
+              child:  Text(tr('Get Premium')),
             ),
           ],
         ),

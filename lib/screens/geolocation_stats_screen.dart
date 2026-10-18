@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:intl/intl.dart';
 import 'package:jidoapp/models/country_model.dart';
 import 'package:jidoapp/providers/country_provider.dart';
@@ -10,9 +11,10 @@ class GeolocationStatsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Geolocation Statistics'),
+        title:  Text(tr('Geolocation Statistics')),
         elevation: 1,
       ),
       body: Consumer<CountryProvider>(
@@ -69,6 +71,7 @@ class _EquatorStatsCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final equatorCountries = allCountries.where((c) => equatorCountryCodes.contains(c.isoA3)).toList();
     final total = equatorCountries.length;
     final visited = equatorCountries.where((c) => visitedCountryNames.contains(c.name)).length;
@@ -82,7 +85,7 @@ class _EquatorStatsCard extends StatelessWidget {
         title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text('Countries on the Equator', style: Theme.of(context).textTheme.titleLarge),
+            Text(tr('Countries on the Equator'), style: Theme.of(context).textTheme.titleLarge),
             const SizedBox(height: 8),
             Row(
               children: [
@@ -94,7 +97,7 @@ class _EquatorStatsCard extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(width: 16),
-                Text('$visited / $total (${(percentage * 100).toStringAsFixed(0)}%)'),
+                Text(tr('$visited / $total (${(percentage * 100).toStringAsFixed(0)}%)')),
               ],
             ),
           ],
@@ -116,13 +119,13 @@ class _EquatorStatsCard extends StatelessWidget {
             );
           },
           icon: const Icon(Icons.map_outlined),
-          label: const Text('See Map'),
+          label:  Text(tr('See Map')),
         ),
         children: sortedCountries.map((country) {
           final isVisited = visitedCountryNames.contains(country.name);
           return ListTile(
             dense: true,
-            title: Text(country.name),
+            title: Text(tr(country.name)),
             trailing: isVisited ? Icon(Icons.check, color: Theme.of(context).primaryColor) : null,
           );
         }).toList(),
@@ -169,6 +172,7 @@ class _LatitudeRankingCardState extends State<_LatitudeRankingCard> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Card(
       elevation: 2,
       clipBehavior: Clip.antiAlias,
@@ -176,25 +180,25 @@ class _LatitudeRankingCardState extends State<_LatitudeRankingCard> {
         children: [
           Padding(
             padding: const EdgeInsets.fromLTRB(16, 16, 16, 8),
-            child: Text('Latitude Ranking (Top 10)', style: Theme.of(context).textTheme.titleLarge),
+            child: Text(tr('Latitude Ranking (Top 10)'), style: Theme.of(context).textTheme.titleLarge),
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16.0),
             child: Column(
               children: [
                 SegmentedButton<int>(
-                  segments: const [
-                    ButtonSegment<int>(value: 0, label: Text('High')),
-                    ButtonSegment<int>(value: 1, label: Text('Low')),
+                  segments:  [
+                    ButtonSegment<int>(value: 0, label: Text(tr('High'))),
+                    ButtonSegment<int>(value: 1, label: Text(tr('Low'))),
                   ],
                   selected: {_highLowSegment},
                   onSelectionChanged: (s) => setState(() { _highLowSegment = s.first; _prepareList(); }),
                 ),
                 const SizedBox(height: 8),
                 SegmentedButton<int>(
-                  segments: const [
-                    ButtonSegment<int>(value: 0, label: Text('Average')),
-                    ButtonSegment<int>(value: 1, label: Text('Highest Pt.')),
+                  segments:  [
+                    ButtonSegment<int>(value: 0, label: Text(tr('Average'))),
+                    ButtonSegment<int>(value: 1, label: Text(tr('Highest Pt.'))),
                   ],
                   selected: {_avgMaxSegment},
                   onSelectionChanged: (s) => setState(() { _avgMaxSegment = s.first; _prepareList(); }),
@@ -214,10 +218,10 @@ class _LatitudeRankingCardState extends State<_LatitudeRankingCard> {
               return ListTile(
                 leading: SizedBox(
                   width: 40,
-                  child: Text('#${index + 1}', style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Colors.grey)),
+                  child: Text(tr('#${index + 1}'), style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Colors.grey)),
                 ),
-                title: Text(item.name),
-                subtitle: Text('Latitude: ${value.toStringAsFixed(2)}°'),
+                title: Text(tr(item.name)),
+                subtitle: Text(tr('Latitude: ${value.toStringAsFixed(2)}°')),
                 trailing: isVisited ? Icon(Icons.check, color: Theme.of(context).primaryColor) : null,
               );
             },
@@ -238,6 +242,7 @@ class _IslandRankingCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final listToRank = allCountries.where((c) => c.islandCount > 0).toList();
     listToRank.sort((a, b) => b.islandCount.compareTo(a.islandCount));
     final rankedList = listToRank.take(10).toList();
@@ -249,7 +254,7 @@ class _IslandRankingCard extends StatelessWidget {
         children: [
           Padding(
             padding: const EdgeInsets.fromLTRB(16, 16, 16, 8),
-            child: Text('Island Count (Top 10)', style: Theme.of(context).textTheme.titleLarge),
+            child: Text(tr('Island Count (Top 10)'), style: Theme.of(context).textTheme.titleLarge),
           ),
           const Divider(height: 1),
           ListView.separated(
@@ -262,10 +267,10 @@ class _IslandRankingCard extends StatelessWidget {
               return ListTile(
                 leading: SizedBox(
                   width: 40,
-                  child: Text('#${index + 1}', style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Colors.grey)),
+                  child: Text(tr('#${index + 1}'), style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Colors.grey)),
                 ),
-                title: Text(item.name),
-                subtitle: Text('Islands: ${formatter.format(item.islandCount)}'),
+                title: Text(tr(item.name)),
+                subtitle: Text(tr('Islands: ${formatter.format(item.islandCount)}')),
                 trailing: isVisited ? Icon(Icons.check, color: Theme.of(context).primaryColor) : null,
               );
             },
@@ -286,6 +291,7 @@ class _CoastlineRankingCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final listToRank = allCountries.where((c) => c.coastlineLength > 0).toList();
     listToRank.sort((a, b) => b.coastlineLength.compareTo(a.coastlineLength));
     final rankedList = listToRank.take(10).toList();
@@ -297,7 +303,7 @@ class _CoastlineRankingCard extends StatelessWidget {
         children: [
           Padding(
             padding: const EdgeInsets.fromLTRB(16, 16, 16, 8),
-            child: Text('Coastline Length (Top 10)', style: Theme.of(context).textTheme.titleLarge),
+            child: Text(tr('Coastline Length (Top 10)'), style: Theme.of(context).textTheme.titleLarge),
           ),
           const Divider(height: 1),
           ListView.separated(
@@ -310,10 +316,10 @@ class _CoastlineRankingCard extends StatelessWidget {
               return ListTile(
                 leading: SizedBox(
                   width: 40,
-                  child: Text('#${index + 1}', style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Colors.grey)),
+                  child: Text(tr('#${index + 1}'), style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Colors.grey)),
                 ),
-                title: Text(item.name),
-                subtitle: Text('Coastline: ${formatter.format(item.coastlineLength)} km'),
+                title: Text(tr(item.name)),
+                subtitle: Text(tr('Coastline: ${formatter.format(item.coastlineLength)} km')),
                 trailing: isVisited ? Icon(Icons.check, color: Theme.of(context).primaryColor) : null,
               );
             },
@@ -363,6 +369,7 @@ class _ElevationRankingCardState extends State<_ElevationRankingCard> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Card(
       elevation: 2,
       clipBehavior: Clip.antiAlias,
@@ -370,14 +377,14 @@ class _ElevationRankingCardState extends State<_ElevationRankingCard> {
         children: [
           Padding(
             padding: const EdgeInsets.fromLTRB(16, 16, 16, 8),
-            child: Text('Elevation (Top 10)', style: Theme.of(context).textTheme.titleLarge),
+            child: Text(tr('Elevation (Top 10)'), style: Theme.of(context).textTheme.titleLarge),
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16.0),
             child: SegmentedButton<int>(
-              segments: const [
-                ButtonSegment<int>(value: 0, label: Text('Highest')),
-                ButtonSegment<int>(value: 1, label: Text('Average')),
+              segments:  [
+                ButtonSegment<int>(value: 0, label: Text(tr('Highest'))),
+                ButtonSegment<int>(value: 1, label: Text(tr('Average'))),
               ],
               selected: {_selectedSegment},
               onSelectionChanged: (Set<int> newSelection) {
@@ -400,10 +407,10 @@ class _ElevationRankingCardState extends State<_ElevationRankingCard> {
               return ListTile(
                 leading: SizedBox(
                   width: 40,
-                  child: Text('#${index + 1}', style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Colors.grey)),
+                  child: Text(tr('#${index + 1}'), style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Colors.grey)),
                 ),
-                title: Text(item.name),
-                subtitle: Text('Elevation: ${formatter.format(value)} m'),
+                title: Text(tr(item.name)),
+                subtitle: Text(tr('Elevation: ${formatter.format(value)} m')),
                 trailing: isVisited ? Icon(Icons.check, color: Theme.of(context).primaryColor) : null,
               );
             },

@@ -1,6 +1,7 @@
 // lib/screens/purchase_stats_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:jidoapp/providers/airline_provider.dart';
 import 'package:jidoapp/models/airline_model.dart';
@@ -372,6 +373,7 @@ class _PurchaseStatsScreenState extends State<PurchaseStatsScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     // 배경색 통일: Colors.grey[50]
     return Scaffold(
       backgroundColor: Colors.grey[50],
@@ -453,7 +455,7 @@ class _PurchaseStatsScreenState extends State<PurchaseStatsScreen> {
                 return DropdownMenuItem<String>(
                   value: value,
                   child: Text(
-                    value,
+                    tr(value),
                     style: TextStyle(
                       fontWeight: FontWeight.w600,
                       color: _primaryColor,
@@ -486,7 +488,7 @@ class _PurchaseStatsScreenState extends State<PurchaseStatsScreen> {
                     Icon(Icons.calendar_today, size: 16, color: Colors.grey[600]),
                     const SizedBox(width: 8),
                     Text(
-                      '${DateFormat('yyyy-MM-dd').format(_customStartDate!)} ~ ${DateFormat('yyyy-MM-dd').format(_customEndDate!)}',
+                      tr('${DateFormat('yyyy-MM-dd').format(_customStartDate!)} ~ ${DateFormat('yyyy-MM-dd').format(_customEndDate!)}'),
                       style: TextStyle(
                         color: Colors.grey[700],
                         fontWeight: FontWeight.w500,
@@ -526,7 +528,7 @@ class _PurchaseStatsScreenState extends State<PurchaseStatsScreen> {
                   return DropdownMenuItem<String>(
                     value: value,
                     child: Text(
-                      value,
+                      tr(value),
                       style: TextStyle(
                         fontWeight: FontWeight.w600,
                         color: _primaryColor,
@@ -573,7 +575,7 @@ class _PurchaseStatsScreenState extends State<PurchaseStatsScreen> {
                     borderRadius: BorderRadius.circular(8),
                   ),
                   child: Text(
-                    '$_selectedYear',
+                    tr('$_selectedYear'),
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
@@ -640,12 +642,12 @@ class _PurchaseStatsScreenState extends State<PurchaseStatsScreen> {
       ),
       child: SwitchListTile(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-        title: const Text(
-          'Group by Itinerary',
+        title:  Text(
+          tr('Group by Itinerary'),
           style: TextStyle(fontWeight: FontWeight.w600),
         ),
         subtitle: Text(
-          'Through-ticket as one purchase',
+          tr('Through-ticket as one purchase'),
           style: Theme.of(context).textTheme.bodySmall?.copyWith(
             color: Colors.grey[600],
             fontSize: 12,
@@ -697,17 +699,17 @@ class _PurchaseStatsScreenState extends State<PurchaseStatsScreen> {
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        Text(label, style: TextStyle(fontSize: 12, color: Colors.grey.shade600, fontWeight: FontWeight.bold)),
+        Text(tr(label), style: TextStyle(fontSize: 12, color: Colors.grey.shade600, fontWeight: FontWeight.bold)),
         const SizedBox(height: 4),
         RichText(
           textAlign: TextAlign.center,
           text: TextSpan(
             style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: color, fontFamily: Theme.of(context).textTheme.bodyLarge?.fontFamily),
             children: [
-              TextSpan(text: value),
+              TextSpan(text: tr(value)),
               if (vatAmount != null && vatAmount > 0)
                 TextSpan(
-                  text: '\n(+ ${cashFormatter.format(vatAmount)})',
+                  text: tr('\n(+ ${cashFormatter.format(vatAmount)})'),
                   style: const TextStyle(color: Colors.orange, fontSize: 13),
                 ),
             ],
@@ -741,9 +743,9 @@ class _PurchaseStatsScreenState extends State<PurchaseStatsScreen> {
     Widget? centerWidget;
     if (_touchedIndex == null || _touchedIndex == -1 || _totalItemsInPeriod == 0) {
       centerWidget = Center(child: Column(mainAxisSize: MainAxisSize.min, children: [
-        Text('$_totalItemsInPeriod', style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold, color: _primaryColor)),
+        Text(tr('$_totalItemsInPeriod'), style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold, color: _primaryColor)),
         const SizedBox(height: 4),
-        Text(title, textAlign: TextAlign.center, style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: Colors.grey[600]))
+        Text(tr(title), textAlign: TextAlign.center, style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: Colors.grey[600]))
       ]));
     } else {
       final key = keys[_touchedIndex!];
@@ -751,10 +753,10 @@ class _PurchaseStatsScreenState extends State<PurchaseStatsScreen> {
       final count = _purchaseCounts[key] ?? 0;
       final percentage = (_totalItemsInPeriod > 0) ? (count / _totalItemsInPeriod) * 100 : 0.0;
       centerWidget = Center(child: Column(mainAxisSize: MainAxisSize.min, children: [
-        Text(info['abbr'], style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: info['color'])),
+        Text(tr(info['abbr']), style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: info['color'])),
         const SizedBox(height: 4),
-        Text('$count', style: const TextStyle(fontSize: 28, fontWeight: FontWeight.bold)),
-        Text('${percentage.toStringAsFixed(1)}%', style: TextStyle(fontSize: 14, color: Colors.grey[600]))
+        Text(tr('$count'), style: const TextStyle(fontSize: 28, fontWeight: FontWeight.bold)),
+        Text(tr('${percentage.toStringAsFixed(1)}%'), style: TextStyle(fontSize: 14, color: Colors.grey[600]))
       ]));
     }
 
@@ -777,7 +779,7 @@ class _PurchaseStatsScreenState extends State<PurchaseStatsScreen> {
             Padding(
               padding: const EdgeInsets.only(bottom: 24),
               child: Text(
-                'Purchase Type',
+                tr('Purchase Type'),
                 style: Theme.of(context).textTheme.titleLarge?.copyWith(
                   fontWeight: FontWeight.w900,
                   fontSize: 24,
@@ -793,7 +795,7 @@ class _PurchaseStatsScreenState extends State<PurchaseStatsScreen> {
             SizedBox(
               height: 220,
               child: (_totalItemsInPeriod == 0)
-                  ? Center(child: Column(mainAxisSize: MainAxisSize.min, children: [Icon(Icons.pie_chart_outline, size: 64, color: Colors.grey[300]), const SizedBox(height: 16), Text('No data for this period', style: TextStyle(color: Colors.grey[500], fontSize: 16))]))
+                  ? Center(child: Column(mainAxisSize: MainAxisSize.min, children: [Icon(Icons.pie_chart_outline, size: 64, color: Colors.grey[300]), const SizedBox(height: 16), Text(tr('No data for this period'), style: TextStyle(color: Colors.grey[500], fontSize: 16))]))
                   : Stack(
                 alignment: Alignment.center,
                 children: [
@@ -842,7 +844,7 @@ class _PurchaseStatsScreenState extends State<PurchaseStatsScreen> {
         children: [
           Container(width: 12, height: 12, decoration: BoxDecoration(color: color, borderRadius: BorderRadius.circular(3))),
           const SizedBox(width: 8),
-          Text(text, style: TextStyle(fontWeight: FontWeight.w600, fontSize: 11, color: Colors.grey[800])),
+          Text(tr(text), style: TextStyle(fontWeight: FontWeight.w600, fontSize: 11, color: Colors.grey[800])),
         ],
       ),
     );
@@ -864,9 +866,9 @@ class _PurchaseStatsScreenState extends State<PurchaseStatsScreen> {
       ),
       child: SegmentedButton<bool>(
         showSelectedIcon: false,
-        segments: const [
-          ButtonSegment<bool>(value: false, label: Text('Flight Logs'), icon: Icon(Icons.list_alt)),
-          ButtonSegment<bool>(value: true, label: Text('Ranking'), icon: Icon(Icons.emoji_events)),
+        segments:  [
+          ButtonSegment<bool>(value: false, label: Text(tr('Flight Logs')), icon: Icon(Icons.list_alt)),
+          ButtonSegment<bool>(value: true, label: Text(tr('Ranking')), icon: Icon(Icons.emoji_events)),
         ],
         selected: {_showRanking},
         onSelectionChanged: (Set<bool> newSelection) => setState(() => _showRanking = newSelection.first),
@@ -885,7 +887,7 @@ class _PurchaseStatsScreenState extends State<PurchaseStatsScreen> {
     final selectedColor = _purchaseTypeInfo[_selectedPurchaseType]!['color'] as Color;
 
     final inputDecoration = InputDecoration(
-      labelText: 'Purchase Type',
+      labelText: tr('Purchase Type'),
       labelStyle: TextStyle(color: Colors.grey[600], fontWeight: FontWeight.w500),
       prefixIcon: Icon(Icons.credit_card, color: selectedColor),
       border: OutlineInputBorder(borderRadius: BorderRadius.circular(16), borderSide: BorderSide(color: selectedColor.withOpacity(0.5), width: 1.5)),
@@ -917,7 +919,7 @@ class _PurchaseStatsScreenState extends State<PurchaseStatsScreen> {
             children: [
               Container(width: 8, height: 8, decoration: BoxDecoration(color: entry.value['color'], shape: BoxShape.circle)),
               const SizedBox(width: 12),
-              Text(entry.value['name'], style: TextStyle(color: entry.value['color'], fontWeight: FontWeight.w600)),
+              Text(tr(entry.value['name']), style: TextStyle(color: entry.value['color'], fontWeight: FontWeight.w600)),
             ],
           ),
         )).toList(),
@@ -955,9 +957,9 @@ class _PurchaseStatsScreenState extends State<PurchaseStatsScreen> {
             child: Icon(Icons.airplanemode_inactive, size: 48, color: Colors.grey[400]),
           ),
           const SizedBox(height: 16),
-          Text('No $type found', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600, color: Colors.grey[700])),
+          Text(tr('No $type found'), style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600, color: Colors.grey[700])),
           const SizedBox(height: 8),
-          Text('for this type in the selected period', style: TextStyle(fontSize: 14, color: Colors.grey[500])),
+          Text(tr('for this type in the selected period'), style: TextStyle(fontSize: 14, color: Colors.grey[500])),
         ],
       ),
     );
@@ -992,10 +994,10 @@ class _PurchaseStatsScreenState extends State<PurchaseStatsScreen> {
                 Expanded(
                   child: DropdownButtonFormField<String>(
                     value: _mileageRankingMode,
-                    decoration: const InputDecoration(labelText: 'Sort By', border: OutlineInputBorder()),
-                    items: const [
-                      DropdownMenuItem(value: 'Amount', child: Text('Amount')),
-                      DropdownMenuItem(value: 'Count', child: Text('Count')),
+                    decoration:  InputDecoration(labelText: tr('Sort By'), border: OutlineInputBorder()),
+                    items:  [
+                      DropdownMenuItem(value: 'Amount', child: Text(tr('Amount'))),
+                      DropdownMenuItem(value: 'Count', child: Text(tr('Count'))),
                     ],
                     onChanged: (value) {
                       if (value != null) {
@@ -1011,10 +1013,10 @@ class _PurchaseStatsScreenState extends State<PurchaseStatsScreen> {
                 Expanded(
                   child: DropdownButtonFormField<String>(
                     value: _mileageRankingAttribution,
-                    decoration: const InputDecoration(labelText: 'Group By', border: OutlineInputBorder()),
-                    items: const [
-                      DropdownMenuItem(value: 'Operating', child: Text('Operating Airline', style: TextStyle(fontSize: 13))),
-                      DropdownMenuItem(value: 'Purchasing', child: Text('Mileage Program', style: TextStyle(fontSize: 13))),
+                    decoration:  InputDecoration(labelText: tr('Group By'), border: OutlineInputBorder()),
+                    items:  [
+                      DropdownMenuItem(value: 'Operating', child: Text(tr('Operating Airline'), style: TextStyle(fontSize: 13))),
+                      DropdownMenuItem(value: 'Purchasing', child: Text(tr('Mileage Program'), style: TextStyle(fontSize: 13))),
                     ],
                     onChanged: (value) {
                       if (value != null) {
@@ -1045,8 +1047,8 @@ class _PurchaseStatsScreenState extends State<PurchaseStatsScreen> {
             Widget secondaryDisplay;
 
             if (_selectedPurchaseType == 'Cash') {
-              primaryDisplay = Text('\$${numberFormatter.format(totalAmount)}', style: TextStyle(fontWeight: FontWeight.bold, color: color, fontSize: 16));
-              secondaryDisplay = Text('$flightCount $unit', style: TextStyle(fontSize: 12, color: Colors.grey.shade600));
+              primaryDisplay = Text(tr('\$${numberFormatter.format(totalAmount)}'), style: TextStyle(fontWeight: FontWeight.bold, color: color, fontSize: 16));
+              secondaryDisplay = Text(tr('$flightCount $unit'), style: TextStyle(fontSize: 12, color: Colors.grey.shade600));
               currentItemValue = totalAmount;
             } else { // Mileage
               if (_mileageRankingMode == 'Amount') {
@@ -1055,22 +1057,22 @@ class _PurchaseStatsScreenState extends State<PurchaseStatsScreen> {
                   text: TextSpan(
                       style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16, fontFamily: Theme.of(context).textTheme.bodyLarge?.fontFamily),
                       children: [
-                        TextSpan(text: '${numberFormatter.format(totalAmount)} mi', style: TextStyle(color: color)),
-                        if (totalVat > 0) TextSpan(text: ' + \$${numberFormatter.format(totalVat)}', style: const TextStyle(color: Colors.orange)),
+                        TextSpan(text: tr('${numberFormatter.format(totalAmount)} mi'), style: TextStyle(color: color)),
+                        if (totalVat > 0) TextSpan(text: tr(' + \$${numberFormatter.format(totalVat)}'), style: const TextStyle(color: Colors.orange)),
                       ]
                   ),
                 );
-                secondaryDisplay = Text('$flightCount $unit', style: TextStyle(fontSize: 12, color: Colors.grey.shade600));
+                secondaryDisplay = Text(tr('$flightCount $unit'), style: TextStyle(fontSize: 12, color: Colors.grey.shade600));
                 currentItemValue = totalAmount;
               } else { // Count
-                primaryDisplay = Text('$flightCount $unit', style: TextStyle(fontWeight: FontWeight.bold, color: color, fontSize: 16));
+                primaryDisplay = Text(tr('$flightCount $unit'), style: TextStyle(fontWeight: FontWeight.bold, color: color, fontSize: 16));
                 secondaryDisplay = RichText(
                   textAlign: TextAlign.end,
                   text: TextSpan(
                       style: TextStyle(fontSize: 12, color: Colors.grey.shade600, fontFamily: Theme.of(context).textTheme.bodyLarge?.fontFamily),
                       children: [
-                        TextSpan(text: '${numberFormatter.format(totalAmount)} mi'),
-                        if (totalVat > 0) TextSpan(text: ' + \$${numberFormatter.format(totalVat)}', style: const TextStyle(color: Colors.orange)),
+                        TextSpan(text: tr('${numberFormatter.format(totalAmount)} mi')),
+                        if (totalVat > 0) TextSpan(text: tr(' + \$${numberFormatter.format(totalVat)}'), style: const TextStyle(color: Colors.orange)),
                       ]
                   ),
                 );
@@ -1107,13 +1109,13 @@ class _PurchaseStatsScreenState extends State<PurchaseStatsScreen> {
                           ),
                           child: Center(
                             child: Text(
-                              '#${index + 1}',
+                              tr('#${index + 1}'),
                               style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 14),
                             ),
                           ),
                         ),
                         const SizedBox(width: 12),
-                        Expanded(child: Text(name, style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 16), overflow: TextOverflow.ellipsis)),
+                        Expanded(child: Text(tr(name), style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 16), overflow: TextOverflow.ellipsis)),
                         const SizedBox(width: 8),
                         Column(crossAxisAlignment: CrossAxisAlignment.end, children: [primaryDisplay, secondaryDisplay]),
                       ],
@@ -1170,7 +1172,7 @@ class _PurchaseStatsScreenState extends State<PurchaseStatsScreen> {
                   child: Icon(Icons.trending_up, color: _primaryColor, size: 24),
                 ),
                 const SizedBox(width: 12),
-                Text("Yearly Trend (10 Years)", style: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold, fontSize: 20)),
+                Text(tr("Yearly Trend (10 Years)"), style: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold, fontSize: 20)),
               ],
             ),
             const SizedBox(height: 16),
@@ -1181,9 +1183,9 @@ class _PurchaseStatsScreenState extends State<PurchaseStatsScreen> {
                 SegmentedButton<String>(
                   // [수정] 체크 표시 제거
                   showSelectedIcon: false,
-                  segments: const [
-                    ButtonSegment(value: 'Cash', label: Text('Cash')),
-                    ButtonSegment(value: 'Mileage', label: Text('Mileage'))
+                  segments:  [
+                    ButtonSegment(value: 'Cash', label: Text(tr('Cash'))),
+                    ButtonSegment(value: 'Mileage', label: Text(tr('Mileage')))
                   ],
                   selected: {_lineChartType},
                   onSelectionChanged: (newSelection) {
@@ -1204,7 +1206,7 @@ class _PurchaseStatsScreenState extends State<PurchaseStatsScreen> {
                 Row(
                   children: [
                     Text(
-                      'Include VAT',
+                      tr('Include VAT'),
                       style: TextStyle(
                         // Mileage일 때 회색으로 표시
                         color: isCash ? Colors.black87 : Colors.grey,
@@ -1243,14 +1245,14 @@ class _PurchaseStatsScreenState extends State<PurchaseStatsScreen> {
                         getTitlesWidget: (value, meta) {
                           if (value == meta.max || value == meta.min) return Container();
                           final formattedValue = _lineChartType == 'Cash' ? '\$${NumberFormat.compact().format(value)}' : NumberFormat.compact().format(value);
-                          return SideTitleWidget( axisSide: meta.axisSide, child: Text(formattedValue, style: TextStyle(color: Colors.grey[600], fontSize: 12, fontWeight: FontWeight.w500)) );
+                          return SideTitleWidget( axisSide: meta.axisSide, child: Text(tr(formattedValue), style: TextStyle(color: Colors.grey[600], fontSize: 12, fontWeight: FontWeight.w500)) );
                         }
                     )),
                     topTitles: const AxisTitles(sideTitles: SideTitles(showTitles: false)),
                     rightTitles: const AxisTitles(sideTitles: SideTitles(showTitles: false)),
                     bottomTitles: AxisTitles(sideTitles: SideTitles(
                       showTitles: true, reservedSize: 30, interval: 1,
-                      getTitlesWidget: (value, meta) => SideTitleWidget(axisSide: meta.axisSide, child: Text(value.toInt().toString().substring(2), style: TextStyle(fontSize: 12, color: Colors.grey[600], fontWeight: FontWeight.w500))),
+                      getTitlesWidget: (value, meta) => SideTitleWidget(axisSide: meta.axisSide, child: Text(tr(value.toInt().toString().substring(2)), style: TextStyle(fontSize: 12, color: Colors.grey[600], fontWeight: FontWeight.w500))),
                     )),
                   ),
                   borderData: FlBorderData(show: true, border: Border(bottom: BorderSide(color: Colors.grey[300]!, width: 1), left: BorderSide(color: Colors.grey[300]!, width: 1))),
@@ -1276,7 +1278,7 @@ class _PurchaseStatsScreenState extends State<PurchaseStatsScreen> {
     if (displayDate != 'Unknown') {
       try {
         final dateTime = DateTime.parse(displayDate);
-        displayDate = DateFormat.yMMMd('en_US').format(dateTime);
+        displayDate = DateFormat.yMMMd(AppLocale.instance.locale.languageCode).format(dateTime);
       } catch (e) {/* Use original date string */}
     }
 
@@ -1324,18 +1326,18 @@ class _PurchaseStatsScreenState extends State<PurchaseStatsScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(log.airlineName ?? 'Unknown', style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 16)),
+                    Text(log.airlineName ?? tr('Unknown'), style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 16)),
                     const SizedBox(height: 4),
-                    Text(displayFlightNumber, style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: _primaryColor)),
+                    Text(tr(displayFlightNumber), style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: _primaryColor)),
                     const SizedBox(height: 4),
-                    Text('${log.departureIata ?? 'N/A'} → ${log.arrivalIata ?? 'N/A'}', style: TextStyle(fontSize: 14, color: Colors.grey.shade600)),
+                    Text(tr('${log.departureIata ?? 'N/A'} → ${log.arrivalIata ?? 'N/A'}'), style: TextStyle(fontSize: 14, color: Colors.grey.shade600)),
                   ],
                 ),
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
-                  Text(displayDate, style: TextStyle(fontSize: 12, color: Colors.grey.shade600, fontWeight: FontWeight.w500)),
+                  Text(tr(displayDate), style: TextStyle(fontSize: 12, color: Colors.grey.shade600, fontWeight: FontWeight.w500)),
                   if (log.rating > 0) ...[
                     const SizedBox(height: 8),
                     RatingBar.builder(

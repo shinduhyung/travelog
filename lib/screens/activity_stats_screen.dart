@@ -1,6 +1,7 @@
 // lib/screens/activity_stats_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:jidoapp/models/landmarks_model.dart';
 import 'package:jidoapp/providers/landmarks_provider.dart';
 import 'package:provider/provider.dart';
@@ -24,6 +25,7 @@ class ActivityStatsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Scaffold(
       backgroundColor: const Color(0xFFF8F9FA),
       body: SafeArea(
@@ -41,8 +43,8 @@ class ActivityStatsScreen extends StatelessWidget {
                     onPressed: () => Navigator.pop(context),
                   ),
                   const SizedBox(width: 4),
-                  const Text(
-                    'Activity Statistics',
+                   Text(
+                    tr('Activity Statistics'),
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 24,
@@ -64,7 +66,7 @@ class ActivityStatsScreen extends StatelessWidget {
                     // 현재는 임시로 텍스트만 표시합니다.
                     return Center(
                       child: Text(
-                        'Activities 통계 화면입니다. (데이터 로직 추가 필요)\n예: 방문한 Cuisines 통계, Zoo/Aquarium 방문률',
+                        tr('Activities 통계 화면입니다. (데이터 로직 추가 필요)\n예: 방문한 Cuisines 통계, Zoo/Aquarium 방문률'),
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontSize: 16,

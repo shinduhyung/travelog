@@ -1,6 +1,7 @@
 // lib/screens/specials_stats_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter/foundation.dart';
 import 'package:jidoapp/models/country_model.dart';
 import 'package:jidoapp/providers/country_provider.dart';
@@ -61,6 +62,7 @@ class SpecialsTabScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Consumer<CountryProvider>(
       builder: (context, countryProvider, child) {
         if (countryProvider.isLoading) {
@@ -135,9 +137,10 @@ class SpecialsStatsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const List<Tab> tabs = <Tab>[
-      Tab(icon: Icon(Icons.auto_awesome), text: 'Specials'),
-      Tab(icon: Icon(Icons.sports_soccer), text: 'Sports'),
+    Localizations.maybeLocaleOf(context);
+    final List<Tab> tabs = <Tab>[
+      Tab(icon: Icon(Icons.auto_awesome), text: tr('Specials')),
+      Tab(icon: Icon(Icons.sports_soccer), text: tr('Sports')),
     ];
 
     final List<Widget> screens = <Widget>[
@@ -153,7 +156,7 @@ class SpecialsStatsScreen extends StatelessWidget {
           bottom: false,
           child: Column(
             children: [
-              const Material(
+              Material(
                 elevation: 1,
                 child: TabBar(
                   tabs: tabs,
@@ -263,10 +266,10 @@ class _AlphabeticalChallengeCardState extends State<_AlphabeticalChallengeCard> 
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text('"$alphabet" Countries', style: theme.textTheme.titleLarge?.copyWith(color: Colors.white)),
+                Text(tr('"$alphabet" Countries'), style: theme.textTheme.titleLarge?.copyWith(color: Colors.white)),
                 TextButton.icon(
                   icon: const Icon(Icons.map_outlined, color: Colors.white),
-                  label: const Text('Map', style: TextStyle(color: Colors.white)),
+                  label:  Text(tr('Map'), style: TextStyle(color: Colors.white)),
                   style: TextButton.styleFrom(
                     padding: const EdgeInsets.symmetric(horizontal: 12),
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
@@ -301,8 +304,8 @@ class _AlphabeticalChallengeCardState extends State<_AlphabeticalChallengeCard> 
                       Navigator.of(context).pop();
                       navigateToCountryDetail(context, country);
                     },
-                    leading: Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 20)),
-                    title: Text(country.name),
+                    leading: Text(tr(flagEmoji(country.isoA2)), style: const TextStyle(fontSize: 20)),
+                    title: Text(tr(country.name)),
                   ),
                 );
               },
@@ -311,7 +314,7 @@ class _AlphabeticalChallengeCardState extends State<_AlphabeticalChallengeCard> 
           actions: [
             TextButton(
               onPressed: () => Navigator.of(context).pop(),
-              child: const Text('Close'),
+              child:  Text(tr('Close')),
             ),
           ],
         )
@@ -320,6 +323,7 @@ class _AlphabeticalChallengeCardState extends State<_AlphabeticalChallengeCard> 
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final textTheme = Theme.of(context).textTheme;
     final percentage = _totalAlphabets > 0 ? (_totalVisitedAlphabets / _totalAlphabets) : 0.0;
 
@@ -334,9 +338,9 @@ class _AlphabeticalChallengeCardState extends State<_AlphabeticalChallengeCard> 
               child: Row(children: [
                 Expanded(
                   child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                    Text('Countries A-Z Challenge', style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
+                    Text(tr('Countries A-Z Challenge'), style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
                     const SizedBox(height: 4),
-                    Text('Visited Alphabets: $_totalVisitedAlphabets / $_totalAlphabets', style: textTheme.bodyMedium?.copyWith(color: Colors.grey.shade600)),
+                    Text(tr('Visited Alphabets: $_totalVisitedAlphabets / $_totalAlphabets'), style: textTheme.bodyMedium?.copyWith(color: Colors.grey.shade600)),
                   ]),
                 ),
                 SizedBox(
@@ -378,7 +382,7 @@ class _AlphabeticalChallengeCardState extends State<_AlphabeticalChallengeCard> 
                     onTap: () => _showCountryListDialog(context, alphabet),
                     borderRadius: BorderRadius.circular(12),
                     child: Tooltip(
-                      message: total > 0 ? '$visited / $total countries visited' : 'No countries starting with $alphabet',
+                      message: tr(total > 0 ? '$visited / $total countries visited' : 'No countries starting with $alphabet'),
                       child: Container(
                         decoration: BoxDecoration(
                             color: isCompleted ? Theme.of(context).primaryColor.withOpacity(0.2) : isStarted ? Theme.of(context).primaryColor.withOpacity(0.08) : Colors.grey.shade200,
@@ -388,9 +392,9 @@ class _AlphabeticalChallengeCardState extends State<_AlphabeticalChallengeCard> 
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text(alphabet, style: textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.bold, color: total == 0 ? Colors.grey.shade400 : null)),
+                            Text(tr(alphabet), style: textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.bold, color: total == 0 ? Colors.grey.shade400 : null)),
                             if(total > 0)
-                              Text('$visited/$total', style: textTheme.bodySmall?.copyWith(color: Colors.grey.shade700)),
+                              Text(tr('$visited/$total'), style: textTheme.bodySmall?.copyWith(color: Colors.grey.shade700)),
                           ],
                         ),
                       ),
@@ -473,7 +477,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
 
   Widget _buildRankText(int rank, Color color) {
     return Text(
-      '$rank',
+      tr('$rank'),
       style: TextStyle(
         fontSize: 16,
         fontWeight: FontWeight.bold,
@@ -484,6 +488,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final textTheme = Theme.of(context).textTheme;
     final countryProvider = Provider.of<CountryProvider>(context, listen: false);
     final useDefaultColor = countryProvider.useDefaultRankingBarColor;
@@ -506,7 +511,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                   children: [
                     Icon(Icons.accessibility_new, color: rankingThemeColor),
                     const SizedBox(width: 8),
-                    Text('Physical Features', style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
+                    Text(tr('Physical Features'), style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
                   ],
                 ),
                 const SizedBox(height: 8),
@@ -520,7 +525,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                       value: group,
                       child: Row(children: [
                         Icon(group.icon, color: group.themeColor), const SizedBox(width: 12),
-                        Text(group.title, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
+                        Text(tr(group.title), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
                       ]),
                     )).toList(),
                     onChanged: (newValue) {
@@ -540,7 +545,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
           const Divider(height: 1),
           Expanded(
             child: _rankedList.isEmpty
-                ? const Center(child: Text('No data to display.'))
+                ?  Center(child: Text(tr('No data to display.')))
                 : ListView.builder(
               padding: const EdgeInsets.all(8.0),
               itemCount: _rankedList.length,
@@ -567,10 +572,10 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                             children: [
                               _buildRankText(rank, rankingThemeColor),
                               const SizedBox(width: 8),
-                              Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 18)),
+                              Text(tr(flagEmoji(country.isoA2)), style: const TextStyle(fontSize: 18)),
                               const SizedBox(width: 6),
-                              Expanded(child: Text(country.name, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
-                              Text('${value.toStringAsFixed(_selectedRanking.precision)}${_selectedRanking.unit}', style: textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
+                              Expanded(child: Text(tr(country.name), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
+                              Text(tr('${value.toStringAsFixed(_selectedRanking.precision)}${_selectedRanking.unit}'), style: textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
                             ],
                           ),
                           const SizedBox(height: 6),
@@ -670,7 +675,7 @@ class _CombinedInternetRankingCardState extends State<_CombinedInternetRankingCa
 
   Widget _buildRankText(int rank, Color color) {
     return Text(
-      '$rank',
+      tr('$rank'),
       style: TextStyle(
         fontSize: 16,
         fontWeight: FontWeight.bold,
@@ -681,6 +686,7 @@ class _CombinedInternetRankingCardState extends State<_CombinedInternetRankingCa
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final textTheme = Theme.of(context).textTheme;
     final countryProvider = Provider.of<CountryProvider>(context, listen: false);
     final useDefaultColor = countryProvider.useDefaultRankingBarColor;
@@ -706,7 +712,7 @@ class _CombinedInternetRankingCardState extends State<_CombinedInternetRankingCa
                   children: [
                     Icon(Icons.wifi_tethering, color: rankingThemeColor),
                     const SizedBox(width: 8),
-                    Text('Internet & Social Media', style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
+                    Text(tr('Internet & Social Media'), style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
                   ],
                 ),
                 const SizedBox(height: 8),
@@ -720,7 +726,7 @@ class _CombinedInternetRankingCardState extends State<_CombinedInternetRankingCa
                       child: Row(children: [
                         Icon(group.icon, color: group.themeColor),
                         const SizedBox(width: 12),
-                        Text(group.title, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
+                        Text(tr(group.title), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
                       ]),
                     )).toList(),
                     onChanged: (newValue) { if (newValue != null) { setState(() { _selectedRanking = newValue; _prepareList(); }); } },
@@ -737,7 +743,7 @@ class _CombinedInternetRankingCardState extends State<_CombinedInternetRankingCa
               child: Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Text(
-                  'No data to display. Check if the required data is available in technology.json and the ISO A3 mappings are correct.',
+                  tr('No data to display. Check if the required data is available in technology.json and the ISO A3 mappings are correct.'),
                   textAlign: TextAlign.center,
                   style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Colors.grey[600]),
                 ),
@@ -771,10 +777,10 @@ class _CombinedInternetRankingCardState extends State<_CombinedInternetRankingCa
                             children: [
                               _buildRankText(rank, rankingThemeColor),
                               const SizedBox(width: 8),
-                              Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 18)),
+                              Text(tr(flagEmoji(country.isoA2)), style: const TextStyle(fontSize: 18)),
                               const SizedBox(width: 6),
-                              Expanded(child: Text(country.name, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
-                              Text(formattedValue, style: textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
+                              Expanded(child: Text(tr(country.name), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
+                              Text(tr(formattedValue), style: textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
                             ],
                           ),
                           const SizedBox(height: 6),
@@ -849,6 +855,7 @@ class _CombinedFlagCardState extends State<_CombinedFlagCard> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final theme = Theme.of(context);
     final textTheme = theme.textTheme;
 
@@ -876,7 +883,7 @@ class _CombinedFlagCardState extends State<_CombinedFlagCard> {
                   value: group,
                   child: Row(children: [
                     Icon(group.icon, color: group.themeColor), const SizedBox(width: 12),
-                    Expanded(child: Text(group.title, style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold), overflow: TextOverflow.ellipsis, maxLines: 1)),
+                    Expanded(child: Text(tr(group.title), style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold), overflow: TextOverflow.ellipsis, maxLines: 1)),
                   ]),
                 )).toList(),
                 onChanged: (newValue) { if(newValue != null) setState(() { _selectedGroup = newValue; _isExpanded = false; }); },
@@ -891,10 +898,10 @@ class _CombinedFlagCardState extends State<_CombinedFlagCard> {
                 children: [
                   Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                     Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                      Text("Visited Countries", style: textTheme.bodyLarge),
+                      Text(tr("Visited Countries"), style: textTheme.bodyLarge),
                       Text.rich(TextSpan(
-                        text: '$visited', style: textTheme.headlineSmall?.copyWith(color: _selectedGroup.themeColor, fontWeight: FontWeight.bold),
-                        children: [TextSpan(text: ' / $total', style: theme.textTheme.titleMedium?.copyWith(color: Colors.grey.shade600))],
+                        text: tr('$visited'), style: textTheme.headlineSmall?.copyWith(color: _selectedGroup.themeColor, fontWeight: FontWeight.bold),
+                        children: [TextSpan(text: tr(' / $total'), style: theme.textTheme.titleMedium?.copyWith(color: Colors.grey.shade600))],
                       )),
                     ]),
                     ElevatedButton.icon(
@@ -907,7 +914,7 @@ class _CombinedFlagCardState extends State<_CombinedFlagCard> {
                         }
                         Navigator.push(context, MaterialPageRoute(builder: (context) => CountriesMapScreen(highlightGroups: groups)));
                       },
-                      icon: const Icon(Icons.map_outlined), label: const Text('Map'),
+                      icon: const Icon(Icons.map_outlined), label:  Text(tr('Map')),
                       style: ElevatedButton.styleFrom(backgroundColor: _selectedGroup.themeColor, foregroundColor: Colors.white, shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30))),
                     ),
                   ]),
@@ -939,9 +946,9 @@ class _CombinedFlagCardState extends State<_CombinedFlagCard> {
                       padding: const EdgeInsets.symmetric(horizontal: 8),
                       child: Row(
                         children: [
-                          Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 14)),
+                          Text(tr(flagEmoji(country.isoA2)), style: const TextStyle(fontSize: 14)),
                           const SizedBox(width: 6),
-                          Expanded(child: Text(country.name, style: theme.textTheme.bodyMedium, overflow: TextOverflow.ellipsis)),
+                          Expanded(child: Text(tr(country.name), style: theme.textTheme.bodyMedium, overflow: TextOverflow.ellipsis)),
                         ],
                       ),
                     ),
@@ -995,6 +1002,7 @@ class _CombinedNameCardState extends State<_CombinedNameCard> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final theme = Theme.of(context);
     final textTheme = theme.textTheme;
 
@@ -1022,7 +1030,7 @@ class _CombinedNameCardState extends State<_CombinedNameCard> {
                   value: group,
                   child: Row(children: [
                     Icon(group.icon, color: group.themeColor), const SizedBox(width: 12),
-                    Expanded(child: Text(group.title, style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold), overflow: TextOverflow.ellipsis, maxLines: 1)),
+                    Expanded(child: Text(tr(group.title), style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold), overflow: TextOverflow.ellipsis, maxLines: 1)),
                   ]),
                 )).toList(),
                 onChanged: (newValue) { if(newValue != null) setState(() { _selectedGroup = newValue; _isExpanded = false; }); },
@@ -1037,10 +1045,10 @@ class _CombinedNameCardState extends State<_CombinedNameCard> {
                 children: [
                   Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                     Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                      Text("Visited Countries", style: textTheme.bodyLarge),
+                      Text(tr("Visited Countries"), style: textTheme.bodyLarge),
                       Text.rich(TextSpan(
-                        text: '$visited', style: textTheme.headlineSmall?.copyWith(color: _selectedGroup.themeColor, fontWeight: FontWeight.bold),
-                        children: [TextSpan(text: ' / $total', style: theme.textTheme.titleMedium?.copyWith(color: Colors.grey.shade600))],
+                        text: tr('$visited'), style: textTheme.headlineSmall?.copyWith(color: _selectedGroup.themeColor, fontWeight: FontWeight.bold),
+                        children: [TextSpan(text: tr(' / $total'), style: theme.textTheme.titleMedium?.copyWith(color: Colors.grey.shade600))],
                       )),
                     ]),
                     ElevatedButton.icon(
@@ -1053,7 +1061,7 @@ class _CombinedNameCardState extends State<_CombinedNameCard> {
                         }
                         Navigator.push(context, MaterialPageRoute(builder: (context) => CountriesMapScreen(highlightGroups: groups)));
                       },
-                      icon: const Icon(Icons.map_outlined), label: const Text('Map'),
+                      icon: const Icon(Icons.map_outlined), label:  Text(tr('Map')),
                       style: ElevatedButton.styleFrom(backgroundColor: _selectedGroup.themeColor, foregroundColor: Colors.white, shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30))),
                     ),
                   ]),
@@ -1085,9 +1093,9 @@ class _CombinedNameCardState extends State<_CombinedNameCard> {
                       padding: const EdgeInsets.symmetric(horizontal: 8),
                       child: Row(
                         children: [
-                          Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 14)),
+                          Text(tr(flagEmoji(country.isoA2)), style: const TextStyle(fontSize: 14)),
                           const SizedBox(width: 6),
-                          Expanded(child: Text(country.name, style: theme.textTheme.bodyMedium, overflow: TextOverflow.ellipsis)),
+                          Expanded(child: Text(tr(country.name), style: theme.textTheme.bodyMedium, overflow: TextOverflow.ellipsis)),
                         ],
                       ),
                     ),
@@ -1142,6 +1150,7 @@ class _CombinedVisitsCardState extends State<_CombinedVisitsCard> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final theme = Theme.of(context);
     final textTheme = theme.textTheme;
 
@@ -1169,7 +1178,7 @@ class _CombinedVisitsCardState extends State<_CombinedVisitsCard> {
                   value: group,
                   child: Row(children: [
                     Icon(group.icon, color: group.themeColor), const SizedBox(width: 12),
-                    Expanded(child: Text(group.title, style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold), overflow: TextOverflow.ellipsis, maxLines: 1)),
+                    Expanded(child: Text(tr(group.title), style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold), overflow: TextOverflow.ellipsis, maxLines: 1)),
                   ]),
                 )).toList(),
                 onChanged: (newValue) { if(newValue != null) setState(() { _selectedGroup = newValue; _isExpanded = false; }); },
@@ -1184,10 +1193,10 @@ class _CombinedVisitsCardState extends State<_CombinedVisitsCard> {
                 children: [
                   Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                     Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                      Text("Visited Countries", style: textTheme.bodyLarge),
+                      Text(tr("Visited Countries"), style: textTheme.bodyLarge),
                       Text.rich(TextSpan(
-                        text: '$visited', style: textTheme.headlineSmall?.copyWith(color: _selectedGroup.themeColor, fontWeight: FontWeight.bold),
-                        children: [TextSpan(text: ' / $total', style: theme.textTheme.titleMedium?.copyWith(color: Colors.grey.shade600))],
+                        text: tr('$visited'), style: textTheme.headlineSmall?.copyWith(color: _selectedGroup.themeColor, fontWeight: FontWeight.bold),
+                        children: [TextSpan(text: tr(' / $total'), style: theme.textTheme.titleMedium?.copyWith(color: Colors.grey.shade600))],
                       )),
                     ]),
                     ElevatedButton.icon(
@@ -1200,7 +1209,7 @@ class _CombinedVisitsCardState extends State<_CombinedVisitsCard> {
                         }
                         Navigator.push(context, MaterialPageRoute(builder: (context) => CountriesMapScreen(highlightGroups: groups)));
                       },
-                      icon: const Icon(Icons.map_outlined), label: const Text('Map'),
+                      icon: const Icon(Icons.map_outlined), label:  Text(tr('Map')),
                       style: ElevatedButton.styleFrom(backgroundColor: _selectedGroup.themeColor, foregroundColor: Colors.white, shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30))),
                     ),
                   ]),
@@ -1232,9 +1241,9 @@ class _CombinedVisitsCardState extends State<_CombinedVisitsCard> {
                       padding: const EdgeInsets.symmetric(horizontal: 8),
                       child: Row(
                         children: [
-                          Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 14)),
+                          Text(tr(flagEmoji(country.isoA2)), style: const TextStyle(fontSize: 14)),
                           const SizedBox(width: 6),
-                          Expanded(child: Text(country.name, style: theme.textTheme.bodyMedium, overflow: TextOverflow.ellipsis)),
+                          Expanded(child: Text(tr(country.name), style: theme.textTheme.bodyMedium, overflow: TextOverflow.ellipsis)),
                         ],
                       ),
                     ),
@@ -1288,6 +1297,7 @@ class _CombinedSpaceCardState extends State<_CombinedSpaceCard> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final theme = Theme.of(context);
     final textTheme = theme.textTheme;
 
@@ -1315,7 +1325,7 @@ class _CombinedSpaceCardState extends State<_CombinedSpaceCard> {
                   value: group,
                   child: Row(children: [
                     Icon(group.icon, color: group.themeColor), const SizedBox(width: 12),
-                    Expanded(child: Text(group.title, style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold), overflow: TextOverflow.ellipsis, maxLines: 1)),
+                    Expanded(child: Text(tr(group.title), style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold), overflow: TextOverflow.ellipsis, maxLines: 1)),
                   ]),
                 )).toList(),
                 onChanged: (newValue) { if(newValue != null) setState(() { _selectedGroup = newValue; _isExpanded = false; }); },
@@ -1330,10 +1340,10 @@ class _CombinedSpaceCardState extends State<_CombinedSpaceCard> {
                 children: [
                   Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                     Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                      Text("Visited Countries", style: textTheme.bodyLarge),
+                      Text(tr("Visited Countries"), style: textTheme.bodyLarge),
                       Text.rich(TextSpan(
-                        text: '$visited', style: textTheme.headlineSmall?.copyWith(color: _selectedGroup.themeColor, fontWeight: FontWeight.bold),
-                        children: [TextSpan(text: ' / $total', style: theme.textTheme.titleMedium?.copyWith(color: Colors.grey.shade600))],
+                        text: tr('$visited'), style: textTheme.headlineSmall?.copyWith(color: _selectedGroup.themeColor, fontWeight: FontWeight.bold),
+                        children: [TextSpan(text: tr(' / $total'), style: theme.textTheme.titleMedium?.copyWith(color: Colors.grey.shade600))],
                       )),
                     ]),
                     ElevatedButton.icon(
@@ -1346,7 +1356,7 @@ class _CombinedSpaceCardState extends State<_CombinedSpaceCard> {
                         }
                         Navigator.push(context, MaterialPageRoute(builder: (context) => CountriesMapScreen(highlightGroups: groups)));
                       },
-                      icon: const Icon(Icons.map_outlined), label: const Text('Map'),
+                      icon: const Icon(Icons.map_outlined), label:  Text(tr('Map')),
                       style: ElevatedButton.styleFrom(backgroundColor: _selectedGroup.themeColor, foregroundColor: Colors.white, shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30))),
                     ),
                   ]),
@@ -1378,9 +1388,9 @@ class _CombinedSpaceCardState extends State<_CombinedSpaceCard> {
                       padding: const EdgeInsets.symmetric(horizontal: 8),
                       child: Row(
                         children: [
-                          Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 14)),
+                          Text(tr(flagEmoji(country.isoA2)), style: const TextStyle(fontSize: 14)),
                           const SizedBox(width: 6),
-                          Expanded(child: Text(country.name, style: theme.textTheme.bodyMedium, overflow: TextOverflow.ellipsis)),
+                          Expanded(child: Text(tr(country.name), style: theme.textTheme.bodyMedium, overflow: TextOverflow.ellipsis)),
                         ],
                       ),
                     ),

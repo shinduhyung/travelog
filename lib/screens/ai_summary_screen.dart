@@ -1,5 +1,6 @@
 // lib/screens/ai_summary_screen.dart
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter/services.dart'; // 👈 이 줄을 추가하세요.
 import 'package:jidoapp/screens/ai_itinerary_view.dart'; // 👈 이 줄 추가
 import 'package:jidoapp/models/trip_log_entry.dart';
@@ -425,8 +426,8 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
         });
 
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            content: Text('Changes saved to this trip log!'),
+           SnackBar(
+            content: Text(tr('Changes saved to this trip log!')),
             backgroundColor: Colors.green,
           ),
         );
@@ -439,7 +440,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
 
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: Text('Failed to save changes: $e'),
+            content: Text(tr('Failed to save changes: $e')),
             backgroundColor: Colors.red,
           ),
         );
@@ -1097,8 +1098,8 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
         await _saveModifications();
 
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            content: Text('New AI itinerary generated and saved!'),
+           SnackBar(
+            content: Text(tr('New AI itinerary generated and saved!')),
             backgroundColor: Colors.green,
           ),
         );
@@ -1355,7 +1356,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
 
     if (countriesToAdd.isEmpty && citiesToAdd.isEmpty && newLandmarks.isEmpty && newUnescoSites.isEmpty && validAirportLogs.isEmpty && filteredFlightsForDialog.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('No new items to add or update.')),
+         SnackBar(content: Text(tr('No new items to add or update.'))),
       );
       if (mounted) {
         setState(() { _isSending = false; });
@@ -1619,8 +1620,8 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
 
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            content: Text('Visited information has been updated!'),
+           SnackBar(
+            content: Text(tr('Visited information has been updated!')),
             backgroundColor: Colors.green,
           ),
         );
@@ -1637,16 +1638,17 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     // 1) 처음 국가/도시 매칭 중일 때 로딩 화면
     if (_isInitialResolving) {
-      return const Scaffold(
+      return  Scaffold(
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               CircularProgressIndicator(),
               SizedBox(height: 16),
-              Text("Resolving Country Data..."),
+              Text(tr("Resolving Country Data...")),
             ],
           ),
         ),
@@ -1664,15 +1666,15 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
               width: double.infinity,
               padding: const EdgeInsets.all(16.0),
               child: SegmentedButton<_AiViewMode>(
-                segments: const <ButtonSegment<_AiViewMode>>[
+                segments:  <ButtonSegment<_AiViewMode>>[
                   ButtonSegment<_AiViewMode>(
                     value: _AiViewMode.summary,
-                    label: Text('Summary'),
+                    label: Text(tr('Summary')),
                     icon: Icon(Icons.analytics_outlined),
                   ),
                   ButtonSegment<_AiViewMode>(
                     value: _AiViewMode.itinerary,
-                    label: Text('Itinerary'),
+                    label: Text(tr('Itinerary')),
                     icon: Icon(Icons.route_outlined),
                   ),
                 ],
@@ -1729,7 +1731,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                   padding: const EdgeInsets.only(bottom: 16.0),
                   child: ElevatedButton.icon(
                     icon: const Icon(Icons.map_outlined),
-                    label: const Text('View on Map'),
+                    label:  Text(tr('View on Map')),
                     onPressed: () {
                       Navigator.push(
                         context,
@@ -1814,8 +1816,8 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                         )
                             : const Icon(Icons.save_outlined),
                         label: _isSavingModifications
-                            ? const Text('Saving Modifications...')
-                            : const Text('Save Modifications'),
+                            ?  Text(tr('Saving Modifications...'))
+                            :  Text(tr('Save Modifications')),
                         onPressed: _isSavingModifications ? null : _saveModifications,
                         style: ElevatedButton.styleFrom(
                           padding: const EdgeInsets.symmetric(vertical: 12),
@@ -1847,8 +1849,8 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                   )
                       : const Icon(Icons.refresh),
                   label: _isMatching
-                      ? const Text('Matching...')
-                      : const Text('Re-run Database Matching'),
+                      ?  Text(tr('Matching...'))
+                      :  Text(tr('Re-run Database Matching')),
                   onPressed: _isMatching
                       ? null
                       : () {
@@ -1881,7 +1883,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                     width: 24,
                     child: CircularProgressIndicator(color: Colors.white),
                   )
-                      : const Text('Save Changes to My Data'),
+                      :  Text(tr('Save Changes to My Data')),
                   onPressed: _isSending ? null : _sendDataToProviders,
                   style: ElevatedButton.styleFrom(
                     padding: const EdgeInsets.symmetric(vertical: 12),
@@ -1910,17 +1912,17 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Text('Generated AI Itinerary', style: Theme.of(context).textTheme.titleLarge),
+            Text(tr('Generated AI Itinerary'), style: Theme.of(context).textTheme.titleLarge),
             const Divider(),
             if (_isGeneratingItinerary)
               const Center(child: CircularProgressIndicator())
             else if (_generatedItinerary.isNotEmpty)
               SelectableText(
-                _generatedItinerary,
+                tr(_generatedItinerary),
                 style: const TextStyle(fontFamily: 'monospace', height: 1.5, fontSize: 12),
               )
             else
-              const Text('Press the "Re-run AI" button to generate an itinerary based on the summary.'),
+               Text(tr('Press the "Re-run AI" button to generate an itinerary based on the summary.')),
           ],
         ),
       ),
@@ -1964,8 +1966,8 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                 children: [
                   Icon(Icons.location_city, color: pinkTheme, size: 24),
                   const SizedBox(width: 8),
-                  const Text(
-                    'Countries & Cities',
+                   Text(
+                    tr('Countries & Cities'),
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                   ),
                 ],
@@ -1979,10 +1981,10 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
           ),
           const SizedBox(height: 12),
           if (_processedSummary.cities.isEmpty && !_isMatching)
-            const Center(
+             Center(
               child: Padding(
                 padding: EdgeInsets.all(16.0),
-                child: Text('No cities to display for this trip.'),
+                child: Text(tr('No cities to display for this trip.')),
               ),
             ),
           if (_isMatching && citiesByCountry.isEmpty) // _processedSummary 대신 파라미터 사용
@@ -2077,7 +2079,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                   ),
                 // 국가명 텍스트
                 Text(
-                  matchedCountry?.name ?? citiesInCountry.countryName,
+                  tr(matchedCountry?.name ?? citiesInCountry.countryName),
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
@@ -2151,7 +2153,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                     const SizedBox(width: 6),
                     Expanded(
                       child: Text(
-                        displayCityName,
+                        tr(displayCityName),
                         style: const TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.bold,
@@ -2180,12 +2182,12 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                             Icon(Icons.flight_land, size: 12, color: Colors.grey[600]),
                             const SizedBox(width: 4),
                             Text(
-                              arrivalDateText,
+                              tr(arrivalDateText),
                               style: TextStyle(fontSize: 11, color: Colors.grey[700], fontWeight: FontWeight.w500),
                             ),
                             if (cityDetail.arrivalTime != null && cityDetail.arrivalTime != 'N/A')
                               Text(
-                                ' ${cityDetail.arrivalTime}',
+                                tr(' ${cityDetail.arrivalTime}'),
                                 style: TextStyle(fontSize: 11, color: Colors.grey[600]),
                               ),
                           ],
@@ -2199,12 +2201,12 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                             Icon(Icons.flight_takeoff, size: 12, color: Colors.grey[600]),
                             const SizedBox(width: 4),
                             Text(
-                              departureDateText,
+                              tr(departureDateText),
                               style: TextStyle(fontSize: 11, color: Colors.grey[700], fontWeight: FontWeight.w500),
                             ),
                             if (cityDetail.departureTime != null && cityDetail.departureTime != 'N/A')
                               Text(
-                                ' ${cityDetail.departureTime}',
+                                tr(' ${cityDetail.departureTime}'),
                                 style: TextStyle(fontSize: 11, color: Colors.grey[600]),
                               ),
                           ],
@@ -2220,7 +2222,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                         Icon(Icons.access_time, size: 12, color: Colors.grey[600]),
                         const SizedBox(width: 4),
                         Text(
-                          displayDuration,
+                          tr(displayDuration),
                           style: TextStyle(fontSize: 11, color: Colors.grey[700]),
                         ),
                       ],
@@ -2306,7 +2308,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
         return StatefulBuilder(
           builder: (context, setState) {
             return AlertDialog(
-              title: const Text('Add New City'),
+              title:  Text(tr('Add New City')),
               content: SizedBox(
                 width: double.maxFinite,
                 height: 500,
@@ -2317,8 +2319,8 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                       // 1. 도시 검색 (Hint 제거)
                       TextField(
                         controller: citySearchController,
-                        decoration: const InputDecoration(
-                          labelText: 'City Name',
+                        decoration:  InputDecoration(
+                          labelText: tr('City Name'),
                           prefixIcon: Icon(Icons.search),
                           border: OutlineInputBorder(),
                         ),
@@ -2349,7 +2351,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                               if (citySearchController.text.isNotEmpty)
                                 ListTile(
                                   leading: const Icon(Icons.add_circle_outline, color: Colors.blue),
-                                  title: Text('Add "${citySearchController.text}" as custom'),
+                                  title: Text(tr('Add "${citySearchController.text}" as custom')),
                                   onTap: () {
                                     setState(() {
                                       isCityListVisible = false;
@@ -2359,7 +2361,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                               const Divider(height: 1),
                               ...filteredCities.map((city) => ListTile(
                                 title: Text(city.name),
-                                subtitle: Text(city.country),
+                                subtitle: Text(tr(city.country)),
                                 onTap: () {
                                   citySearchController.text = city.name;
                                   final cityCode = city.countryIsoA2.toUpperCase();
@@ -2390,8 +2392,8 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                       // 2. 국가 검색 (Hint 제거)
                       TextField(
                         controller: countrySearchController,
-                        decoration: const InputDecoration(
-                          labelText: 'Country',
+                        decoration:  InputDecoration(
+                          labelText: tr('Country'),
                           prefixIcon: Icon(Icons.flag),
                           border: OutlineInputBorder(),
                         ),
@@ -2419,7 +2421,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                           child: ListView(
                             shrinkWrap: true,
                             children: filteredCountries.map((country) => ListTile(
-                              title: Text(country.name),
+                              title: Text(tr(country.name)),
                               onTap: () {
                                 countrySearchController.text = country.name;
                                 setState(() {
@@ -2442,7 +2444,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                                 child: TextField(
                                   controller: arrivalDateController,
                                   decoration: InputDecoration(
-                                    labelText: 'Arrival Date',
+                                    labelText: tr('Arrival Date'),
                                     suffixIcon: Icon(Icons.calendar_today),
                                   ),
                                 ),
@@ -2454,7 +2456,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                             child: TextField(
                               controller: arrivalTimeController,
                               decoration: InputDecoration(
-                                labelText: 'Time',
+                                labelText: tr('Time'),
                                 // hintText 제거됨
                                 suffixIcon: IconButton(
                                   icon: const Icon(Icons.access_time),
@@ -2476,7 +2478,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                             child: TextField(
                               controller: departureDateController,
                               decoration: InputDecoration(
-                                labelText: 'Departure Date',
+                                labelText: tr('Departure Date'),
                                 suffixIcon: IconButton(
                                   icon: const Icon(Icons.calendar_today_outlined),
                                   onPressed: () => _selectDate(dialogContext, departureDateController),
@@ -2490,7 +2492,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                             child: TextField(
                               controller: departureTimeController,
                               decoration: InputDecoration(
-                                labelText: 'Time',
+                                labelText: tr('Time'),
                                 // hintText 제거됨
                                 suffixIcon: IconButton(
                                   icon: const Icon(Icons.access_time_outlined),
@@ -2512,8 +2514,8 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                             child: TextField(
                               controller: durationDaysController,
                               keyboardType: TextInputType.number,
-                              decoration: const InputDecoration(
-                                labelText: 'Days',
+                              decoration:  InputDecoration(
+                                labelText: tr('Days'),
                                 suffixText: 'days',
                                 border: OutlineInputBorder(),
                               ),
@@ -2524,8 +2526,8 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                             child: TextField(
                               controller: durationHoursController,
                               keyboardType: TextInputType.number,
-                              decoration: const InputDecoration(
-                                labelText: 'Hours',
+                              decoration:  InputDecoration(
+                                labelText: tr('Hours'),
                                 suffixText: 'h',
                                 border: OutlineInputBorder(),
                               ),
@@ -2539,18 +2541,18 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
               ),
               actions: <Widget>[
                 TextButton(
-                  child: const Text('Cancel'),
+                  child:  Text(tr('Cancel')),
                   onPressed: () => Navigator.of(dialogContext).pop(),
                 ),
                 ElevatedButton(
-                  child: const Text('Add'),
+                  child:  Text(tr('Add')),
                   onPressed: () {
                     // (저장 로직은 기존과 동일)
                     final String cityName = citySearchController.text.trim();
                     final String countryName = countrySearchController.text.trim();
 
                     if (cityName.isEmpty) {
-                      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('City name is required.')));
+                      ScaffoldMessenger.of(context).showSnackBar( SnackBar(content: Text(tr('City name is required.'))));
                       return;
                     }
 
@@ -2562,7 +2564,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                       if (matchedCountry != null) {
                         countryIso = matchedCountry.isoA2;
                       } else {
-                        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Please select a valid country.')));
+                        ScaffoldMessenger.of(context).showSnackBar( SnackBar(content: Text(tr('Please select a valid country.'))));
                         return;
                       }
                     }
@@ -2628,7 +2630,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                     _refreshCityGroupsUI();
 
                     ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(content: Text('City added!'), backgroundColor: Colors.green),
+                       SnackBar(content: Text(tr('City added!')), backgroundColor: Colors.green),
                     );
                   },
                 ),
@@ -2783,7 +2785,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
         return StatefulBuilder(
           builder: (context, setState) {
             return AlertDialog(
-              title: const Text('Edit City Visit'),
+              title:  Text(tr('Edit City Visit')),
               content: SizedBox(
                 width: double.maxFinite,
                 height: 500,
@@ -2794,8 +2796,8 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                       // 1. 도시 검색 (Hint 제거)
                       TextField(
                         controller: citySearchController,
-                        decoration: const InputDecoration(
-                          labelText: 'City Name',
+                        decoration:  InputDecoration(
+                          labelText: tr('City Name'),
                           prefixIcon: Icon(Icons.search),
                           border: OutlineInputBorder(),
                         ),
@@ -2826,7 +2828,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                               if (citySearchController.text.isNotEmpty)
                                 ListTile(
                                   leading: const Icon(Icons.add_circle_outline, color: Colors.blue),
-                                  title: Text('Use "${citySearchController.text}" as custom'),
+                                  title: Text(tr('Use "${citySearchController.text}" as custom')),
                                   onTap: () {
                                     setState(() {
                                       isCityListVisible = false;
@@ -2836,7 +2838,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                               const Divider(height: 1),
                               ...filteredCities.map((city) => ListTile(
                                 title: Text(city.name),
-                                subtitle: Text(city.country),
+                                subtitle: Text(tr(city.country)),
                                 onTap: () {
                                   citySearchController.text = city.name;
                                   // (국가 자동완성 로직 생략 - 위와 동일)
@@ -2852,8 +2854,8 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                       // 2. 국가 검색 (Hint 제거)
                       TextField(
                         controller: countrySearchController,
-                        decoration: const InputDecoration(
-                          labelText: 'Country',
+                        decoration:  InputDecoration(
+                          labelText: tr('Country'),
                           prefixIcon: Icon(Icons.flag),
                           border: OutlineInputBorder(),
                         ),
@@ -2881,7 +2883,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                           child: ListView(
                             shrinkWrap: true,
                             children: filteredCountries.map((country) => ListTile(
-                              title: Text(country.name),
+                              title: Text(tr(country.name)),
                               subtitle: Text(country.isoA2),
                               onTap: () {
                                 countrySearchController.text = country.name;
@@ -2903,7 +2905,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                                 child: TextField(
                                   controller: arrivalDateController,
                                   decoration: InputDecoration(
-                                    labelText: 'Arrival Date',
+                                    labelText: tr('Arrival Date'),
                                     suffixIcon: Icon(Icons.calendar_today),
                                     border: const OutlineInputBorder(),
                                   ),
@@ -2916,7 +2918,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                             child: TextField(
                               controller: arrivalTimeController,
                               decoration: InputDecoration(
-                                labelText: 'Arrival Time',
+                                labelText: tr('Arrival Time'),
                                 suffixIcon: IconButton(
                                   icon: const Icon(Icons.access_time),
                                   onPressed: () => _selectTimeHelper(dialogContext, arrivalTimeController),
@@ -2941,7 +2943,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                                 child: TextField(
                                   controller: departureDateController,
                                   decoration: InputDecoration(
-                                    labelText: 'Departure Date',
+                                    labelText: tr('Departure Date'),
                                     suffixIcon: Icon(Icons.calendar_today),
                                     border: const OutlineInputBorder(),
                                   ),
@@ -2954,7 +2956,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                             child: TextField(
                               controller: departureTimeController,
                               decoration: InputDecoration(
-                                labelText: 'Departure Time',
+                                labelText: tr('Departure Time'),
                                 suffixIcon: IconButton(
                                   icon: const Icon(Icons.access_time),
                                   onPressed: () => _selectTimeHelper(dialogContext, departureTimeController),
@@ -2976,8 +2978,8 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                             child: TextField(
                               controller: durationDaysController,
                               keyboardType: TextInputType.number,
-                              decoration: const InputDecoration(
-                                labelText: 'Days',
+                              decoration:  InputDecoration(
+                                labelText: tr('Days'),
                                 suffixText: 'days',
                                 border: OutlineInputBorder(),
                               ),
@@ -2988,8 +2990,8 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                             child: TextField(
                               controller: durationHoursController,
                               keyboardType: TextInputType.number,
-                              decoration: const InputDecoration(
-                                labelText: 'Hours',
+                              decoration:  InputDecoration(
+                                labelText: tr('Hours'),
                                 suffixText: 'h',
                                 border: OutlineInputBorder(),
                               ),
@@ -3003,18 +3005,18 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
               ),
               actions: <Widget>[
                 TextButton(
-                  child: const Text('Cancel'),
+                  child:  Text(tr('Cancel')),
                   onPressed: () => Navigator.of(dialogContext).pop(),
                 ),
                 ElevatedButton(
-                  child: const Text('Save'),
+                  child:  Text(tr('Save')),
                   onPressed: () {
                     // (저장 로직은 위와 동일하게 duration 계산)
                     final String cityName = citySearchController.text.trim();
                     final String countryName = countrySearchController.text.trim();
 
                     if (cityName.isEmpty) {
-                      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('City name is required.')));
+                      ScaffoldMessenger.of(context).showSnackBar( SnackBar(content: Text(tr('City name is required.'))));
                       return;
                     }
 
@@ -3026,7 +3028,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                       if (matchedCountry != null) {
                         countryIso = matchedCountry.isoA2;
                       } else {
-                        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Please select a valid country.')));
+                        ScaffoldMessenger.of(context).showSnackBar( SnackBar(content: Text(tr('Please select a valid country.'))));
                         return;
                       }
                     }
@@ -3108,8 +3110,8 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                     _refreshCityGroupsUI();
 
                     ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(
-                        content: Text('City updated!'),
+                       SnackBar(
+                        content: Text(tr('City updated!')),
                         backgroundColor: Colors.green,
                       ),
                     );
@@ -3129,15 +3131,15 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
       context: context,
       builder: (BuildContext dialogContext) {
         return AlertDialog(
-          title: const Text('Delete City'),
-          content: Text('Are you sure you want to delete "$cityName"?'),
+          title:  Text(tr('Delete City')),
+          content: Text(tr('Are you sure you want to delete "$cityName"?', entities: [cityName])),
           actions: <Widget>[
             TextButton(
-              child: const Text('Cancel'),
+              child:  Text(tr('Cancel')),
               onPressed: () => Navigator.of(dialogContext).pop(false),
             ),
             ElevatedButton(
-              child: const Text('Delete'),
+              child:  Text(tr('Delete')),
               style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
               onPressed: () async {
                 final List<CitiesInCountry> updatedCitiesInCountry = [];
@@ -3169,7 +3171,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                 _refreshCityGroupsUI();
 
                 ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(content: Text('"$cityName" removed!'), backgroundColor: Colors.green),
+                  SnackBar(content: Text(tr('"$cityName" removed!', entities: [cityName])), backgroundColor: Colors.green),
                 );
               },
             ),
@@ -3206,8 +3208,8 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                 children: [
                   Icon(Icons.flight_takeoff, color: purpleTheme, size: 24),
                   const SizedBox(width: 8),
-                  const Text(
-                    'Flights',
+                   Text(
+                    tr('Flights'),
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                   ),
                 ],
@@ -3221,10 +3223,10 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
           ),
           const SizedBox(height: 12),
           if (flights.isEmpty)
-            const Center(
+             Center(
               child: Padding(
                 padding: EdgeInsets.all(16.0),
-                child: Text('No flights for this trip.'),
+                child: Text(tr('No flights for this trip.')),
               ),
             )
           else
@@ -3313,7 +3315,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                 Row(
                   children: [
                     Text(
-                      detail.origin,
+                      tr(detail.origin),
                       style: const TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.bold,
@@ -3324,7 +3326,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                     Icon(Icons.arrow_forward, size: 16, color: themeColor),
                     const SizedBox(width: 8),
                     Text(
-                      detail.destination,
+                      tr(detail.destination),
                       style: const TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.bold,
@@ -3346,7 +3348,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                           Icon(Icons.calendar_today, size: 12, color: Colors.grey[600]),
                           const SizedBox(width: 4),
                           Text(
-                            dateText,
+                            tr(dateText),
                             style: TextStyle(fontSize: 11, color: Colors.grey[700]),
                           ),
                         ],
@@ -3358,7 +3360,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                           Icon(Icons.flight_takeoff, size: 12, color: Colors.grey[600]),
                           const SizedBox(width: 4),
                           Text(
-                            detail.departureTime!,
+                            tr(detail.departureTime!),
                             style: TextStyle(fontSize: 11, color: Colors.grey[700]),
                           ),
                         ],
@@ -3370,7 +3372,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                           Icon(Icons.flight_land, size: 12, color: Colors.grey[600]),
                           const SizedBox(width: 4),
                           Text(
-                            detail.arrivalTime!,
+                            tr(detail.arrivalTime!),
                             style: TextStyle(fontSize: 11, color: Colors.grey[700]),
                           ),
                         ],
@@ -3382,7 +3384,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                           Icon(Icons.schedule, size: 12, color: Colors.grey[600]),
                           const SizedBox(width: 4),
                           Text(
-                            detail.duration!,
+                            tr(detail.duration!),
                             style: TextStyle(fontSize: 11, color: Colors.grey[700]),
                           ),
                         ],
@@ -3431,7 +3433,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
         return StatefulBuilder(
           builder: (context, setState) {
             return AlertDialog(
-              title: const Text('Add New Flight'),
+              title:  Text(tr('Add New Flight')),
               content: SingleChildScrollView(
                 child: ListBody(
                   children: <Widget>[
@@ -3440,8 +3442,8 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                       children: [
                         TextField(
                           controller: airlineNameController,
-                          decoration: const InputDecoration(
-                            labelText: 'Airline Name',
+                          decoration:  InputDecoration(
+                            labelText: tr('Airline Name'),
                             prefixIcon: Icon(Icons.search),
                             border: OutlineInputBorder(),
                           ),
@@ -3494,17 +3496,17 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                     const SizedBox(height: 10),
                     TextField(
                       controller: flightNumberController,
-                      decoration: const InputDecoration(
-                        labelText: 'Flight Number',
-                        hintText: 'e.g. KE123, UA456',
+                      decoration:  InputDecoration(
+                        labelText: tr('Flight Number'),
+                        hintText: tr('e.g. KE123, UA456'),
                       ),
                     ),
                     const SizedBox(height: 10),
                     TextField(
                       controller: originController,
-                      decoration: const InputDecoration(
-                        labelText: 'Origin ',
-                        hintText: 'e.g. ICN, LAX',
+                      decoration:  InputDecoration(
+                        labelText: tr('Origin '),
+                        hintText: tr('e.g. ICN, LAX'),
                       ),
                       textCapitalization: TextCapitalization.characters,
                       maxLength: 3,
@@ -3512,9 +3514,9 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                     const SizedBox(height: 10),
                     TextField(
                       controller: destinationController,
-                      decoration: const InputDecoration(
-                        labelText: 'Destination ',
-                        hintText: 'e.g. JFK, NRT',
+                      decoration:  InputDecoration(
+                        labelText: tr('Destination '),
+                        hintText: tr('e.g. JFK, NRT'),
                       ),
                       textCapitalization: TextCapitalization.characters,
                       maxLength: 3,
@@ -3523,8 +3525,8 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                     TextField(
                       controller: flightDateController,
                       decoration: InputDecoration(
-                        labelText: 'Flight Date',
-                        hintText: 'YYYY-MM-DD',
+                        labelText: tr('Flight Date'),
+                        hintText: tr('YYYY-MM-DD'),
                         suffixIcon: IconButton(
                           icon: const Icon(Icons.calendar_today),
                           onPressed: () => _selectFlightDate(dialogContext),
@@ -3539,8 +3541,8 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                           child: TextField(
                             controller: departureTimeController,
                             decoration: InputDecoration(
-                              labelText: 'Departure Time',
-                              hintText: 'e.g., 08:30, 14:00',
+                              labelText: tr('Departure Time'),
+                              hintText: tr('e.g., 08:30, 14:00'),
                               suffixIcon: IconButton(
                                 icon: const Icon(Icons.access_time),
                                 onPressed: () => _selectTime(dialogContext, departureTimeController),
@@ -3554,8 +3556,8 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                           child: TextField(
                             controller: arrivalTimeController,
                             decoration: InputDecoration(
-                              labelText: 'Arrival Time',
-                              hintText: 'e.g., 10:45, 16:30',
+                              labelText: tr('Arrival Time'),
+                              hintText: tr('e.g., 10:45, 16:30'),
                               suffixIcon: IconButton(
                                 icon: const Icon(Icons.access_time),
                                 onPressed: () => _selectTime(dialogContext, arrivalTimeController),
@@ -3573,9 +3575,9 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                           child: TextField(
                             controller: durationHoursController,
                             keyboardType: TextInputType.number,
-                            decoration: const InputDecoration(
-                              labelText: 'Duration ',
-                              hintText: 'e.g., 2',
+                            decoration:  InputDecoration(
+                              labelText: tr('Duration '),
+                              hintText: tr('e.g., 2'),
                             ),
                           ),
                         ),
@@ -3584,9 +3586,9 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                           child: TextField(
                             controller: durationMinutesController,
                             keyboardType: TextInputType.number,
-                            decoration: const InputDecoration(
-                              labelText: 'Duration ',
-                              hintText: 'e.g., 30',
+                            decoration:  InputDecoration(
+                              labelText: tr('Duration '),
+                              hintText: tr('e.g., 30'),
                             ),
                           ),
                         ),
@@ -3597,13 +3599,13 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
               ),
               actions: <Widget>[
                 TextButton(
-                  child: const Text('Cancel'),
+                  child:  Text(tr('Cancel')),
                   onPressed: () {
                     Navigator.of(dialogContext).pop();
                   },
                 ),
                 ElevatedButton(
-                  child: const Text('Add'),
+                  child:  Text(tr('Add')),
                   onPressed: () {
                     final String airlineName = airlineNameController.text.trim();
                     final String flightNumber = flightNumberController.text.trim();
@@ -3627,7 +3629,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
 
                     if (airlineName.isEmpty || flightNumber.isEmpty || origin.isEmpty || destination.isEmpty) {
                       ScaffoldMessenger.of(dialogContext).showSnackBar(
-                        const SnackBar(content: Text('All fields are required.'), backgroundColor: Colors.red),
+                         SnackBar(content: Text(tr('All fields are required.')), backgroundColor: Colors.red),
                       );
                       return;
                     }
@@ -3686,8 +3688,8 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                     _markAsChanged();
                     _performMatching();
                     ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(
-                        content: Text('Flight added!'),
+                       SnackBar(
+                        content: Text(tr('Flight added!')),
                         backgroundColor: Colors.green,
                       ),
                     );
@@ -3749,7 +3751,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
         return StatefulBuilder(
           builder: (context, setState) {
             return AlertDialog(
-              title: const Text('Edit Flight'),
+              title:  Text(tr('Edit Flight')),
               content: SingleChildScrollView(
                 child: ListBody(
                   children: <Widget>[
@@ -3758,8 +3760,8 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                       children: [
                         TextField(
                           controller: airlineNameController,
-                          decoration: const InputDecoration(
-                            labelText: 'Airline Name',
+                          decoration:  InputDecoration(
+                            labelText: tr('Airline Name'),
                             prefixIcon: Icon(Icons.search),
                             border: OutlineInputBorder(),
                           ),
@@ -3812,19 +3814,19 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                     const SizedBox(height: 10),
                     TextField(
                       controller: flightNumberController,
-                      decoration: const InputDecoration(labelText: 'Flight Number'),
+                      decoration:  InputDecoration(labelText: tr('Flight Number')),
                     ),
                     const SizedBox(height: 10),
                     TextField(
                       controller: originController,
-                      decoration: const InputDecoration(labelText: 'Origin '),
+                      decoration:  InputDecoration(labelText: tr('Origin ')),
                       textCapitalization: TextCapitalization.characters,
                       maxLength: 3,
                     ),
                     const SizedBox(height: 10),
                     TextField(
                       controller: destinationController,
-                      decoration: const InputDecoration(labelText: 'Destination '),
+                      decoration:  InputDecoration(labelText: tr('Destination ')),
                       textCapitalization: TextCapitalization.characters,
                       maxLength: 3,
                     ),
@@ -3832,8 +3834,8 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                     TextField(
                       controller: flightDateController,
                       decoration: InputDecoration(
-                        labelText: 'Flight Date',
-                        hintText: 'YYYY-MM-DD',
+                        labelText: tr('Flight Date'),
+                        hintText: tr('YYYY-MM-DD'),
                         suffixIcon: IconButton(
                           icon: const Icon(Icons.calendar_today),
                           onPressed: () => _selectFlightDate(dialogContext),
@@ -3848,8 +3850,8 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                           child: TextField(
                             controller: departureTimeController,
                             decoration: InputDecoration(
-                              labelText: 'Departure Time',
-                              hintText: 'e.g., 08:30, 14:00',
+                              labelText: tr('Departure Time'),
+                              hintText: tr('e.g., 08:30, 14:00'),
                               suffixIcon: IconButton(
                                 icon: const Icon(Icons.access_time),
                                 onPressed: () => _selectTime(dialogContext, departureTimeController),
@@ -3863,8 +3865,8 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                           child: TextField(
                             controller: arrivalTimeController,
                             decoration: InputDecoration(
-                              labelText: 'Arrival Time',
-                              hintText: 'e.g., 10:45, 16:30',
+                              labelText: tr('Arrival Time'),
+                              hintText: tr('e.g., 10:45, 16:30'),
                               suffixIcon: IconButton(
                                 icon: const Icon(Icons.access_time),
                                 onPressed: () => _selectTime(dialogContext, arrivalTimeController),
@@ -3882,9 +3884,9 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                           child: TextField(
                             controller: durationHoursController,
                             keyboardType: TextInputType.number,
-                            decoration: const InputDecoration(
-                              labelText: 'Duration ',
-                              hintText: 'e.g., 2',
+                            decoration:  InputDecoration(
+                              labelText: tr('Duration '),
+                              hintText: tr('e.g., 2'),
                             ),
                           ),
                         ),
@@ -3893,9 +3895,9 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                           child: TextField(
                             controller: durationMinutesController,
                             keyboardType: TextInputType.number,
-                            decoration: const InputDecoration(
-                              labelText: 'Duration ',
-                              hintText: 'e.g., 30',
+                            decoration:  InputDecoration(
+                              labelText: tr('Duration '),
+                              hintText: tr('e.g., 30'),
                             ),
                           ),
                         ),
@@ -3906,13 +3908,13 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
               ),
               actions: <Widget>[
                 TextButton(
-                  child: const Text('Cancel'),
+                  child:  Text(tr('Cancel')),
                   onPressed: () {
                     Navigator.of(dialogContext).pop();
                   },
                 ),
                 ElevatedButton(
-                  child: const Text('Save'),
+                  child:  Text(tr('Save')),
                   onPressed: () {
                     final String airlineName = airlineNameController.text.trim();
                     final String flightNumber = flightNumberController.text.trim();
@@ -3935,7 +3937,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
 
                     if (airlineName.isEmpty || flightNumber.isEmpty || origin.isEmpty || destination.isEmpty) {
                       ScaffoldMessenger.of(dialogContext).showSnackBar(
-                        const SnackBar(content: Text('All fields are required.'), backgroundColor: Colors.red),
+                         SnackBar(content: Text(tr('All fields are required.')), backgroundColor: Colors.red),
                       );
                       return;
                     }
@@ -3988,8 +3990,8 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                     _markAsChanged();
                     _performMatching();
                     ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(
-                        content: Text('Flight updated!'),
+                       SnackBar(
+                        content: Text(tr('Flight updated!')),
                         backgroundColor: Colors.green,
                       ),
                     );
@@ -4008,17 +4010,17 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
       context: context,
       builder: (BuildContext dialogContext) {
         return AlertDialog(
-          title: const Text('Delete Flight'),
-          content: Text('Are you sure you want to delete flight "$flightNumber" from $airlineName?'),
+          title:  Text(tr('Delete Flight')),
+          content: Text(tr('Are you sure you want to delete flight "$flightNumber" from $airlineName?')),
           actions: <Widget>[
             TextButton(
-              child: const Text('Cancel'),
+              child:  Text(tr('Cancel')),
               onPressed: () {
                 Navigator.of(dialogContext).pop(false);
               },
             ),
             ElevatedButton(
-              child: const Text('Delete'),
+              child:  Text(tr('Delete')),
               style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
               onPressed: () {
                 final List<AirlineLog> updatedFlights = [];
@@ -4048,7 +4050,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                 _markAsChanged();
                 _performMatching();
                 ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(content: Text('Flight "$flightNumber" removed! Click "Save & AI" to update itinerary.'), backgroundColor: Colors.green),
+                  SnackBar(content: Text(tr('Flight "$flightNumber" removed! Click "Save & AI" to update itinerary.')), backgroundColor: Colors.green),
                 );
               },
             ),
@@ -4089,8 +4091,8 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                 children: [
                   Icon(Icons.train, color: greenTheme, size: 24),
                   const SizedBox(width: 8),
-                  const Text(
-                    'Trains',
+                   Text(
+                    tr('Trains'),
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                   ),
                 ],
@@ -4104,10 +4106,10 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
           ),
           const SizedBox(height: 12),
           if (trains.isEmpty)
-            const Center(
+             Center(
               child: Padding(
                 padding: EdgeInsets.all(16.0),
-                child: Text('No trains for this trip.'),
+                child: Text(tr('No trains for this trip.')),
               ),
             )
           else
@@ -4152,7 +4154,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                         borderRadius: BorderRadius.circular(8),
                       ),
                       child: Text(
-                        train.trainNumber ?? 'N/A',
+                        tr(train.trainNumber ?? 'N/A'),
                         style: const TextStyle(
                           fontSize: 13,
                           fontWeight: FontWeight.bold,
@@ -4163,7 +4165,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                     const SizedBox(width: 8),
                     Expanded(
                       child: Text(
-                        train.trainCompany ?? 'Unknown Company',
+                        tr(train.trainCompany ?? 'Unknown Company'),
                         style: const TextStyle(
                           fontSize: 13,
                           fontWeight: FontWeight.w600,
@@ -4187,7 +4189,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                   children: [
                     Expanded(
                       child: Text(
-                        train.origin ?? 'Unknown',
+                        tr(train.origin ?? 'Unknown'),
                         style: const TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.bold,
@@ -4202,7 +4204,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                     ),
                     Expanded(
                       child: Text(
-                        train.destination ?? 'Unknown',
+                        tr(train.destination ?? 'Unknown'),
                         style: const TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.bold,
@@ -4225,7 +4227,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                         children: [
                           Icon(Icons.calendar_today, size: 12, color: Colors.grey[600]),
                           const SizedBox(width: 4),
-                          Text(dateText, style: TextStyle(fontSize: 11, color: Colors.grey[700])),
+                          Text(tr(dateText), style: TextStyle(fontSize: 11, color: Colors.grey[700])),
                         ],
                       ),
                     if (train.departureTime != null && train.departureTime!.isNotEmpty)
@@ -4234,7 +4236,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                         children: [
                           Icon(Icons.departure_board, size: 12, color: Colors.grey[600]),
                           const SizedBox(width: 4),
-                          Text(train.departureTime!, style: TextStyle(fontSize: 11, color: Colors.grey[700])),
+                          Text(tr(train.departureTime!), style: TextStyle(fontSize: 11, color: Colors.grey[700])),
                         ],
                       ),
                     if (train.arrivalTime != null && train.arrivalTime!.isNotEmpty)
@@ -4243,7 +4245,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                         children: [
                           Icon(Icons.access_time, size: 12, color: Colors.grey[600]),
                           const SizedBox(width: 4),
-                          Text(train.arrivalTime!, style: TextStyle(fontSize: 11, color: Colors.grey[700])),
+                          Text(tr(train.arrivalTime!), style: TextStyle(fontSize: 11, color: Colors.grey[700])),
                         ],
                       ),
                     if (train.duration != null && train.duration!.isNotEmpty && train.duration != 'N/A')
@@ -4252,7 +4254,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                         children: [
                           Icon(Icons.schedule, size: 12, color: Colors.grey[600]),
                           const SizedBox(width: 4),
-                          Text(train.duration!, style: TextStyle(fontSize: 11, color: Colors.grey[700])),
+                          Text(tr(train.duration!), style: TextStyle(fontSize: 11, color: Colors.grey[700])),
                         ],
                       ),
                   ],
@@ -4293,22 +4295,22 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
       barrierDismissible: false,
       builder: (BuildContext dialogContext) {
         return AlertDialog(
-          title: const Text('Add New Train Journey'),
+          title:  Text(tr('Add New Train Journey')),
           content: SingleChildScrollView(
             child: ListBody(
               children: <Widget>[
-                TextField(controller: companyController, decoration: const InputDecoration(labelText: 'Train Company')),
+                TextField(controller: companyController, decoration:  InputDecoration(labelText: tr('Train Company'))),
                 const SizedBox(height: 10),
-                TextField(controller: numberController, decoration: const InputDecoration(labelText: 'Train Number')),
+                TextField(controller: numberController, decoration:  InputDecoration(labelText: tr('Train Number'))),
                 const SizedBox(height: 10),
-                TextField(controller: originController, decoration: const InputDecoration(labelText: 'Origin')),
+                TextField(controller: originController, decoration:  InputDecoration(labelText: tr('Origin'))),
                 const SizedBox(height: 10),
-                TextField(controller: destinationController, decoration: const InputDecoration(labelText: 'Destination')),
+                TextField(controller: destinationController, decoration:  InputDecoration(labelText: tr('Destination'))),
                 const SizedBox(height: 10),
                 TextField(
                   controller: dateController,
                   decoration: InputDecoration(
-                    labelText: 'Date',
+                    labelText: tr('Date'),
                     suffixIcon: IconButton(
                       icon: const Icon(Icons.calendar_today),
                       onPressed: () => _selectDate(dialogContext),
@@ -4323,7 +4325,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                       child: TextField(
                         controller: departureTimeController,
                         decoration: InputDecoration(
-                          labelText: 'Departure Time',
+                          labelText: tr('Departure Time'),
                           suffixIcon: IconButton(
                             icon: const Icon(Icons.access_time),
                             onPressed: () => _selectTime(dialogContext, departureTimeController),
@@ -4337,7 +4339,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                       child: TextField(
                         controller: arrivalTimeController,
                         decoration: InputDecoration(
-                          labelText: 'Arrival Time',
+                          labelText: tr('Arrival Time'),
                           suffixIcon: IconButton(
                             icon: const Icon(Icons.access_time),
                             onPressed: () => _selectTime(dialogContext, arrivalTimeController),
@@ -4355,9 +4357,9 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                       child: TextField(
                         controller: durationHoursController,
                         keyboardType: TextInputType.number,
-                        decoration: const InputDecoration(
-                          labelText: 'Duration ',
-                          hintText: 'e.g., 2',
+                        decoration:  InputDecoration(
+                          labelText: tr('Duration '),
+                          hintText: tr('e.g., 2'),
                         ),
                       ),
                     ),
@@ -4366,9 +4368,9 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                       child: TextField(
                         controller: durationMinutesController,
                         keyboardType: TextInputType.number,
-                        decoration: const InputDecoration(
-                          labelText: 'Duration ',
-                          hintText: 'e.g., 30',
+                        decoration:  InputDecoration(
+                          labelText: tr('Duration '),
+                          hintText: tr('e.g., 30'),
                         ),
                       ),
                     ),
@@ -4379,13 +4381,13 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
           ),
           actions: <Widget>[
             TextButton(
-              child: const Text('Cancel'),
+              child:  Text(tr('Cancel')),
               onPressed: () {
                 Navigator.of(dialogContext).pop();
               },
             ),
             ElevatedButton(
-              child: const Text('Add'),
+              child:  Text(tr('Add')),
               onPressed: () {
                 final String? duration;
                 final int hours = int.tryParse(durationHoursController.text.trim()) ?? 0;
@@ -4416,7 +4418,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                 if (newTrain.trainCompany == null && newTrain.trainNumber == null &&
                     newTrain.origin == null && newTrain.destination == null) {
                   ScaffoldMessenger.of(dialogContext).showSnackBar(
-                    const SnackBar(content: Text('At least company/number or origin/destination must be provided.'), backgroundColor: Colors.red),
+                     SnackBar(content: Text(tr('At least company/number or origin/destination must be provided.')), backgroundColor: Colors.red),
                   );
                   return;
                 }
@@ -4440,8 +4442,8 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                 _markAsChanged();
                 _performMatching();
                 ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(
-                    content: Text('Train journey added! If you want to save your changes, click the "Save" button.'),
+                   SnackBar(
+                    content: Text(tr('Train journey added! If you want to save your changes, click the "Save" button.')),
                     backgroundColor: Colors.green,
                   ),
                 );
@@ -4495,22 +4497,22 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
       barrierDismissible: false,
       builder: (BuildContext dialogContext) {
         return AlertDialog(
-          title: const Text('Edit Train Journey'),
+          title:  Text(tr('Edit Train Journey')),
           content: SingleChildScrollView(
             child: ListBody(
               children: <Widget>[
-                TextField(controller: companyController, decoration: const InputDecoration(labelText: 'Train Company')),
+                TextField(controller: companyController, decoration:  InputDecoration(labelText: tr('Train Company'))),
                 const SizedBox(height: 10),
-                TextField(controller: numberController, decoration: const InputDecoration(labelText: 'Train Number')),
+                TextField(controller: numberController, decoration:  InputDecoration(labelText: tr('Train Number'))),
                 const SizedBox(height: 10),
-                TextField(controller: originController, decoration: const InputDecoration(labelText: 'Origin')),
+                TextField(controller: originController, decoration:  InputDecoration(labelText: tr('Origin'))),
                 const SizedBox(height: 10),
-                TextField(controller: destinationController, decoration: const InputDecoration(labelText: 'Destination')),
+                TextField(controller: destinationController, decoration:  InputDecoration(labelText: tr('Destination'))),
                 const SizedBox(height: 10),
                 TextField(
                   controller: dateController,
                   decoration: InputDecoration(
-                    labelText: 'Date',
+                    labelText: tr('Date'),
                     suffixIcon: IconButton(
                       icon: const Icon(Icons.calendar_today),
                       onPressed: () => _selectDate(dialogContext),
@@ -4525,7 +4527,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                       child: TextField(
                         controller: departureTimeController,
                         decoration: InputDecoration(
-                          labelText: 'Departure Time',
+                          labelText: tr('Departure Time'),
                           suffixIcon: IconButton(
                             icon: const Icon(Icons.access_time),
                             onPressed: () => _selectTime(dialogContext, departureTimeController),
@@ -4539,7 +4541,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                       child: TextField(
                         controller: arrivalTimeController,
                         decoration: InputDecoration(
-                          labelText: 'Arrival Time',
+                          labelText: tr('Arrival Time'),
                           suffixIcon: IconButton(
                             icon: const Icon(Icons.access_time),
                             onPressed: () => _selectTime(dialogContext, arrivalTimeController),
@@ -4557,9 +4559,9 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                       child: TextField(
                         controller: durationHoursController,
                         keyboardType: TextInputType.number,
-                        decoration: const InputDecoration(
-                          labelText: 'Duration ',
-                          hintText: 'e.g., 2',
+                        decoration:  InputDecoration(
+                          labelText: tr('Duration '),
+                          hintText: tr('e.g., 2'),
                         ),
                       ),
                     ),
@@ -4568,9 +4570,9 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                       child: TextField(
                         controller: durationMinutesController,
                         keyboardType: TextInputType.number,
-                        decoration: const InputDecoration(
-                          labelText: 'Duration ',
-                          hintText: 'e.g., 30',
+                        decoration:  InputDecoration(
+                          labelText: tr('Duration '),
+                          hintText: tr('e.g., 30'),
                         ),
                       ),
                     ),
@@ -4581,13 +4583,13 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
           ),
           actions: <Widget>[
             TextButton(
-              child: const Text('Cancel'),
+              child:  Text(tr('Cancel')),
               onPressed: () {
                 Navigator.of(dialogContext).pop();
               },
             ),
             ElevatedButton(
-              child: const Text('Save'),
+              child:  Text(tr('Save')),
               onPressed: () {
                 final String? duration;
                 final int hours = int.tryParse(durationHoursController.text.trim()) ?? 0;
@@ -4637,8 +4639,8 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                 _markAsChanged();
                 _performMatching();
                 ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(
-                    content: Text('Train journey updated! If you want to save your changes, click the "Save" button.'),
+                   SnackBar(
+                    content: Text(tr('Train journey updated! If you want to save your changes, click the "Save" button.')),
                     backgroundColor: Colors.green,
                   ),
                 );
@@ -4655,17 +4657,17 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
       context: context,
       builder: (BuildContext dialogContext) {
         return AlertDialog(
-          title: const Text('Delete Train Journey'),
-          content: Text('Are you sure you want to delete the train journey from ${train.origin ?? 'Unknown'} to ${train.destination ?? 'Unknown'} on ${train.date ?? 'Unknown'}?'),
+          title:  Text(tr('Delete Train Journey')),
+          content: Text(tr('Are you sure you want to delete the train journey from ${train.origin ?? 'Unknown'} to ${train.destination ?? 'Unknown'} on ${train.date ?? 'Unknown'}?')),
           actions: <Widget>[
             TextButton(
-              child: const Text('Cancel'),
+              child:  Text(tr('Cancel')),
               onPressed: () {
                 Navigator.of(dialogContext).pop(false);
               },
             ),
             ElevatedButton(
-              child: const Text('Delete'),
+              child:  Text(tr('Delete')),
               style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
               onPressed: () {
                 final updatedTrains = _processedSummary.trains.where((t) =>
@@ -4689,7 +4691,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                 _markAsChanged();
                 _performMatching();
                 ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(content: Text('Train journey removed! Click "Save & AI" to update itinerary.'), backgroundColor: Colors.green),
+                  SnackBar(content: Text(tr('Train journey removed! Click "Save & AI" to update itinerary.')), backgroundColor: Colors.green),
                 );
               },
             ),
@@ -4730,8 +4732,8 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                 children: [
                   Icon(Icons.directions_bus, color: orangeTheme, size: 24),
                   const SizedBox(width: 8),
-                  const Text(
-                    'Buses',
+                   Text(
+                    tr('Buses'),
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                   ),
                 ],
@@ -4745,10 +4747,10 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
           ),
           const SizedBox(height: 12),
           if (buses.isEmpty)
-            const Center(
+             Center(
               child: Padding(
                 padding: EdgeInsets.all(16.0),
-                child: Text('No buses for this trip.'),
+                child: Text(tr('No buses for this trip.')),
               ),
             )
           else
@@ -4797,7 +4799,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                           const Icon(Icons.directions_bus, size: 14, color: Colors.white),
                           const SizedBox(width: 4),
                           Text(
-                            'BUS',
+                            tr('BUS'),
                             style: const TextStyle(
                               fontSize: 11,
                               fontWeight: FontWeight.bold,
@@ -4810,7 +4812,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                     const SizedBox(width: 8),
                     Expanded(
                       child: Text(
-                        bus.busCompany ?? 'Unknown Company',
+                        tr(bus.busCompany ?? 'Unknown Company'),
                         style: const TextStyle(
                           fontSize: 13,
                           fontWeight: FontWeight.w600,
@@ -4834,7 +4836,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                   children: [
                     Expanded(
                       child: Text(
-                        bus.origin ?? 'Unknown',
+                        tr(bus.origin ?? 'Unknown'),
                         style: const TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.bold,
@@ -4849,7 +4851,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                     ),
                     Expanded(
                       child: Text(
-                        bus.destination ?? 'Unknown',
+                        tr(bus.destination ?? 'Unknown'),
                         style: const TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.bold,
@@ -4872,7 +4874,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                         children: [
                           Icon(Icons.calendar_today, size: 12, color: Colors.grey[600]),
                           const SizedBox(width: 4),
-                          Text(dateText, style: TextStyle(fontSize: 11, color: Colors.grey[700])),
+                          Text(tr(dateText), style: TextStyle(fontSize: 11, color: Colors.grey[700])),
                         ],
                       ),
                     if (bus.departureTime != null && bus.departureTime!.isNotEmpty)
@@ -4881,7 +4883,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                         children: [
                           Icon(Icons.departure_board, size: 12, color: Colors.grey[600]),
                           const SizedBox(width: 4),
-                          Text(bus.departureTime!, style: TextStyle(fontSize: 11, color: Colors.grey[700])),
+                          Text(tr(bus.departureTime!), style: TextStyle(fontSize: 11, color: Colors.grey[700])),
                         ],
                       ),
                     if (bus.arrivalTime != null && bus.arrivalTime!.isNotEmpty)
@@ -4890,7 +4892,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                         children: [
                           Icon(Icons.access_time, size: 12, color: Colors.grey[600]),
                           const SizedBox(width: 4),
-                          Text(bus.arrivalTime!, style: TextStyle(fontSize: 11, color: Colors.grey[700])),
+                          Text(tr(bus.arrivalTime!), style: TextStyle(fontSize: 11, color: Colors.grey[700])),
                         ],
                       ),
                     if (bus.duration != null && bus.duration!.isNotEmpty && bus.duration != 'N/A')
@@ -4899,7 +4901,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                         children: [
                           Icon(Icons.schedule, size: 12, color: Colors.grey[600]),
                           const SizedBox(width: 4),
-                          Text(bus.duration!, style: TextStyle(fontSize: 11, color: Colors.grey[700])),
+                          Text(tr(bus.duration!), style: TextStyle(fontSize: 11, color: Colors.grey[700])),
                         ],
                       ),
                   ],
@@ -4939,20 +4941,20 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
       barrierDismissible: false,
       builder: (BuildContext dialogContext) {
         return AlertDialog(
-          title: const Text('Add New Bus Journey'),
+          title:  Text(tr('Add New Bus Journey')),
           content: SingleChildScrollView(
             child: ListBody(
               children: <Widget>[
-                TextField(controller: companyController, decoration: const InputDecoration(labelText: 'Bus Company')),
+                TextField(controller: companyController, decoration:  InputDecoration(labelText: tr('Bus Company'))),
                 const SizedBox(height: 10),
-                TextField(controller: originController, decoration: const InputDecoration(labelText: 'Origin')),
+                TextField(controller: originController, decoration:  InputDecoration(labelText: tr('Origin'))),
                 const SizedBox(height: 10),
-                TextField(controller: destinationController, decoration: const InputDecoration(labelText: 'Destination')),
+                TextField(controller: destinationController, decoration:  InputDecoration(labelText: tr('Destination'))),
                 const SizedBox(height: 10),
                 TextField(
                   controller: dateController,
                   decoration: InputDecoration(
-                    labelText: 'Date',
+                    labelText: tr('Date'),
                     suffixIcon: IconButton(
                       icon: const Icon(Icons.calendar_today),
                       onPressed: () => _selectDate(dialogContext),
@@ -4967,7 +4969,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                       child: TextField(
                         controller: departureTimeController,
                         decoration: InputDecoration(
-                          labelText: 'Departure Time',
+                          labelText: tr('Departure Time'),
                           suffixIcon: IconButton(
                             icon: const Icon(Icons.access_time),
                             onPressed: () => _selectTime(dialogContext, departureTimeController),
@@ -4981,7 +4983,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                       child: TextField(
                         controller: arrivalTimeController,
                         decoration: InputDecoration(
-                          labelText: 'Arrival Time',
+                          labelText: tr('Arrival Time'),
                           suffixIcon: IconButton(
                             icon: const Icon(Icons.access_time),
                             onPressed: () => _selectTime(dialogContext, arrivalTimeController),
@@ -4999,9 +5001,9 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                       child: TextField(
                         controller: durationHoursController,
                         keyboardType: TextInputType.number,
-                        decoration: const InputDecoration(
-                          labelText: 'Duration ',
-                          hintText: 'e.g., 2',
+                        decoration:  InputDecoration(
+                          labelText: tr('Duration '),
+                          hintText: tr('e.g., 2'),
                         ),
                       ),
                     ),
@@ -5010,9 +5012,9 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                       child: TextField(
                         controller: durationMinutesController,
                         keyboardType: TextInputType.number,
-                        decoration: const InputDecoration(
-                          labelText: 'Duration ',
-                          hintText: 'e.g., 30',
+                        decoration:  InputDecoration(
+                          labelText: tr('Duration '),
+                          hintText: tr('e.g., 30'),
                         ),
                       ),
                     ),
@@ -5023,13 +5025,13 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
           ),
           actions: <Widget>[
             TextButton(
-              child: const Text('Cancel'),
+              child:  Text(tr('Cancel')),
               onPressed: () {
                 Navigator.of(dialogContext).pop();
               },
             ),
             ElevatedButton(
-              child: const Text('Add'),
+              child:  Text(tr('Add')),
               onPressed: () {
                 final String? duration;
                 final int hours = int.tryParse(durationHoursController.text.trim()) ?? 0;
@@ -5058,7 +5060,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
 
                 if (newBus.busCompany == null && newBus.origin == null && newBus.destination == null) {
                   ScaffoldMessenger.of(dialogContext).showSnackBar(
-                    const SnackBar(content: Text('At least company or origin/destination must be provided.'), backgroundColor: Colors.red),
+                     SnackBar(content: Text(tr('At least company or origin/destination must be provided.')), backgroundColor: Colors.red),
                   );
                   return;
                 }
@@ -5082,8 +5084,8 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                 _markAsChanged();
                 _performMatching();
                 ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(
-                    content: Text('Bus journey added! If you want to save your changes, click the "Save" button.'),
+                   SnackBar(
+                    content: Text(tr('Bus journey added! If you want to save your changes, click the "Save" button.')),
                     backgroundColor: Colors.green,
                   ),
                 );
@@ -5136,20 +5138,20 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
       barrierDismissible: false,
       builder: (BuildContext dialogContext) {
         return AlertDialog(
-          title: const Text('Edit Bus Journey'),
+          title:  Text(tr('Edit Bus Journey')),
           content: SingleChildScrollView(
             child: ListBody(
               children: <Widget>[
-                TextField(controller: companyController, decoration: const InputDecoration(labelText: 'Bus Company')),
+                TextField(controller: companyController, decoration:  InputDecoration(labelText: tr('Bus Company'))),
                 const SizedBox(height: 10),
-                TextField(controller: originController, decoration: const InputDecoration(labelText: 'Origin')),
+                TextField(controller: originController, decoration:  InputDecoration(labelText: tr('Origin'))),
                 const SizedBox(height: 10),
-                TextField(controller: destinationController, decoration: const InputDecoration(labelText: 'Destination')),
+                TextField(controller: destinationController, decoration:  InputDecoration(labelText: tr('Destination'))),
                 const SizedBox(height: 10),
                 TextField(
                   controller: dateController,
                   decoration: InputDecoration(
-                    labelText: 'Date',
+                    labelText: tr('Date'),
                     suffixIcon: IconButton(
                       icon: const Icon(Icons.calendar_today),
                       onPressed: () => _selectDate(dialogContext),
@@ -5164,7 +5166,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                       child: TextField(
                         controller: departureTimeController,
                         decoration: InputDecoration(
-                          labelText: 'Departure Time',
+                          labelText: tr('Departure Time'),
                           suffixIcon: IconButton(
                             icon: const Icon(Icons.access_time),
                             onPressed: () => _selectTime(dialogContext, departureTimeController),
@@ -5178,7 +5180,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                       child: TextField(
                         controller: arrivalTimeController,
                         decoration: InputDecoration(
-                          labelText: 'Arrival Time',
+                          labelText: tr('Arrival Time'),
                           suffixIcon: IconButton(
                             icon: const Icon(Icons.access_time),
                             onPressed: () => _selectTime(dialogContext, arrivalTimeController),
@@ -5196,9 +5198,9 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                       child: TextField(
                         controller: durationHoursController,
                         keyboardType: TextInputType.number,
-                        decoration: const InputDecoration(
-                          labelText: 'Duration ',
-                          hintText: 'e.g., 2',
+                        decoration:  InputDecoration(
+                          labelText: tr('Duration '),
+                          hintText: tr('e.g., 2'),
                         ),
                       ),
                     ),
@@ -5207,9 +5209,9 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                       child: TextField(
                         controller: durationMinutesController,
                         keyboardType: TextInputType.number,
-                        decoration: const InputDecoration(
-                          labelText: 'Duration ',
-                          hintText: 'e.g., 30',
+                        decoration:  InputDecoration(
+                          labelText: tr('Duration '),
+                          hintText: tr('e.g., 30'),
                         ),
                       ),
                     ),
@@ -5220,13 +5222,13 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
           ),
           actions: <Widget>[
             TextButton(
-              child: const Text('Cancel'),
+              child:  Text(tr('Cancel')),
               onPressed: () {
                 Navigator.of(dialogContext).pop();
               },
             ),
             ElevatedButton(
-              child: const Text('Save'),
+              child:  Text(tr('Save')),
               onPressed: () {
                 final String? duration;
                 final int hours = int.tryParse(durationHoursController.text.trim()) ?? 0;
@@ -5275,8 +5277,8 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                 _markAsChanged();
                 _performMatching();
                 ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(
-                    content: Text('Bus journey updated! If you want to save your changes, click the "Save" button.'),
+                   SnackBar(
+                    content: Text(tr('Bus journey updated! If you want to save your changes, click the "Save" button.')),
                     backgroundColor: Colors.green,
                   ),
                 );
@@ -5293,17 +5295,17 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
       context: context,
       builder: (BuildContext dialogContext) {
         return AlertDialog(
-          title: const Text('Delete Bus Journey'),
-          content: Text('Are you sure you want to delete the bus journey from ${bus.origin ?? 'Unknown'} to ${bus.destination ?? 'Unknown'} on ${bus.date ?? 'Unknown'}?'),
+          title:  Text(tr('Delete Bus Journey')),
+          content: Text(tr('Are you sure you want to delete the bus journey from ${bus.origin ?? 'Unknown'} to ${bus.destination ?? 'Unknown'} on ${bus.date ?? 'Unknown'}?')),
           actions: <Widget>[
             TextButton(
-              child: const Text('Cancel'),
+              child:  Text(tr('Cancel')),
               onPressed: () {
                 Navigator.of(dialogContext).pop(false);
               },
             ),
             ElevatedButton(
-              child: const Text('Delete'),
+              child:  Text(tr('Delete')),
               style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
               onPressed: () {
                 final updatedBuses = _processedSummary.buses.where((b) =>
@@ -5327,7 +5329,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                 _markAsChanged();
                 _performMatching();
                 ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(content: Text('Bus journey removed! Click "Save & AI" to update itinerary.'), backgroundColor: Colors.green),
+                  SnackBar(content: Text(tr('Bus journey removed! Click "Save & AI" to update itinerary.')), backgroundColor: Colors.green),
                 );
               },
             ),
@@ -5368,8 +5370,8 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                 children: [
                   Icon(Icons.directions_boat, color: tealTheme, size: 24),
                   const SizedBox(width: 8),
-                  const Text(
-                    'Ferries',
+                   Text(
+                    tr('Ferries'),
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                   ),
                 ],
@@ -5383,10 +5385,10 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
           ),
           const SizedBox(height: 12),
           if (ferries.isEmpty)
-            const Center(
+             Center(
               child: Padding(
                 padding: EdgeInsets.all(16.0),
-                child: Text('No ferries for this trip.'),
+                child: Text(tr('No ferries for this trip.')),
               ),
             )
           else
@@ -5435,7 +5437,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                           const Icon(Icons.directions_boat, size: 14, color: Colors.white),
                           const SizedBox(width: 4),
                           Text(
-                            'FERRY',
+                            tr('FERRY'),
                             style: const TextStyle(
                               fontSize: 11,
                               fontWeight: FontWeight.bold,
@@ -5448,7 +5450,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                     const SizedBox(width: 8),
                     Expanded(
                       child: Text(
-                        ferry.ferryName ?? 'Unknown Ferry',
+                        tr(ferry.ferryName ?? 'Unknown Ferry'),
                         style: const TextStyle(
                           fontSize: 13,
                           fontWeight: FontWeight.w600,
@@ -5472,7 +5474,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                   children: [
                     Expanded(
                       child: Text(
-                        ferry.origin ?? 'Unknown',
+                        tr(ferry.origin ?? 'Unknown'),
                         style: const TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.bold,
@@ -5487,7 +5489,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                     ),
                     Expanded(
                       child: Text(
-                        ferry.destination ?? 'Unknown',
+                        tr(ferry.destination ?? 'Unknown'),
                         style: const TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.bold,
@@ -5510,7 +5512,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                         children: [
                           Icon(Icons.calendar_today, size: 12, color: Colors.grey[600]),
                           const SizedBox(width: 4),
-                          Text(dateText, style: TextStyle(fontSize: 11, color: Colors.grey[700])),
+                          Text(tr(dateText), style: TextStyle(fontSize: 11, color: Colors.grey[700])),
                         ],
                       ),
                     if (ferry.departureTime != null && ferry.departureTime!.isNotEmpty)
@@ -5519,7 +5521,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                         children: [
                           Icon(Icons.departure_board, size: 12, color: Colors.grey[600]),
                           const SizedBox(width: 4),
-                          Text(ferry.departureTime!, style: TextStyle(fontSize: 11, color: Colors.grey[700])),
+                          Text(tr(ferry.departureTime!), style: TextStyle(fontSize: 11, color: Colors.grey[700])),
                         ],
                       ),
                     if (ferry.arrivalTime != null && ferry.arrivalTime!.isNotEmpty)
@@ -5528,7 +5530,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                         children: [
                           Icon(Icons.access_time, size: 12, color: Colors.grey[600]),
                           const SizedBox(width: 4),
-                          Text(ferry.arrivalTime!, style: TextStyle(fontSize: 11, color: Colors.grey[700])),
+                          Text(tr(ferry.arrivalTime!), style: TextStyle(fontSize: 11, color: Colors.grey[700])),
                         ],
                       ),
                     if (ferry.duration != null && ferry.duration!.isNotEmpty && ferry.duration != 'N/A')
@@ -5537,7 +5539,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                         children: [
                           Icon(Icons.schedule, size: 12, color: Colors.grey[600]),
                           const SizedBox(width: 4),
-                          Text(ferry.duration!, style: TextStyle(fontSize: 11, color: Colors.grey[700])),
+                          Text(tr(ferry.duration!), style: TextStyle(fontSize: 11, color: Colors.grey[700])),
                         ],
                       ),
                   ],
@@ -5577,20 +5579,20 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
       barrierDismissible: false,
       builder: (BuildContext dialogContext) {
         return AlertDialog(
-          title: const Text('Add New Ferry Journey'),
+          title:  Text(tr('Add New Ferry Journey')),
           content: SingleChildScrollView(
             child: ListBody(
               children: <Widget>[
-                TextField(controller: nameController, decoration: const InputDecoration(labelText: 'Ferry Name')),
+                TextField(controller: nameController, decoration:  InputDecoration(labelText: tr('Ferry Name'))),
                 const SizedBox(height: 10),
-                TextField(controller: originController, decoration: const InputDecoration(labelText: 'Origin')),
+                TextField(controller: originController, decoration:  InputDecoration(labelText: tr('Origin'))),
                 const SizedBox(height: 10),
-                TextField(controller: destinationController, decoration: const InputDecoration(labelText: 'Destination')),
+                TextField(controller: destinationController, decoration:  InputDecoration(labelText: tr('Destination'))),
                 const SizedBox(height: 10),
                 TextField(
                   controller: dateController,
                   decoration: InputDecoration(
-                    labelText: 'Date',
+                    labelText: tr('Date'),
                     suffixIcon: IconButton(
                       icon: const Icon(Icons.calendar_today),
                       onPressed: () => _selectDate(dialogContext),
@@ -5605,7 +5607,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                       child: TextField(
                         controller: departureTimeController,
                         decoration: InputDecoration(
-                          labelText: 'Departure Time',
+                          labelText: tr('Departure Time'),
                           suffixIcon: IconButton(
                             icon: const Icon(Icons.access_time),
                             onPressed: () => _selectTime(dialogContext, departureTimeController),
@@ -5619,7 +5621,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                       child: TextField(
                         controller: arrivalTimeController,
                         decoration: InputDecoration(
-                          labelText: 'Arrival Time',
+                          labelText: tr('Arrival Time'),
                           suffixIcon: IconButton(
                             icon: const Icon(Icons.access_time),
                             onPressed: () => _selectTime(dialogContext, arrivalTimeController),
@@ -5637,9 +5639,9 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                       child: TextField(
                         controller: durationHoursController,
                         keyboardType: TextInputType.number,
-                        decoration: const InputDecoration(
-                          labelText: 'Duration ',
-                          hintText: 'e.g., 2',
+                        decoration:  InputDecoration(
+                          labelText: tr('Duration '),
+                          hintText: tr('e.g., 2'),
                         ),
                       ),
                     ),
@@ -5648,9 +5650,9 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                       child: TextField(
                         controller: durationMinutesController,
                         keyboardType: TextInputType.number,
-                        decoration: const InputDecoration(
-                          labelText: 'Duration ',
-                          hintText: 'e.g., 30',
+                        decoration:  InputDecoration(
+                          labelText: tr('Duration '),
+                          hintText: tr('e.g., 30'),
                         ),
                       ),
                     ),
@@ -5661,13 +5663,13 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
           ),
           actions: <Widget>[
             TextButton(
-              child: const Text('Cancel'),
+              child:  Text(tr('Cancel')),
               onPressed: () {
                 Navigator.of(dialogContext).pop();
               },
             ),
             ElevatedButton(
-              child: const Text('Add'),
+              child:  Text(tr('Add')),
               onPressed: () {
                 final String? duration;
                 final int hours = int.tryParse(durationHoursController.text.trim()) ?? 0;
@@ -5696,7 +5698,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
 
                 if (newFerry.ferryName == null && newFerry.origin == null && newFerry.destination == null) {
                   ScaffoldMessenger.of(dialogContext).showSnackBar(
-                    const SnackBar(content: Text('At least ferry name or origin/destination must be provided.'), backgroundColor: Colors.red),
+                     SnackBar(content: Text(tr('At least ferry name or origin/destination must be provided.')), backgroundColor: Colors.red),
                   );
                   return;
                 }
@@ -5720,8 +5722,8 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                 _markAsChanged();
                 _performMatching();
                 ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(
-                    content: Text('Ferry journey added! If you want to save your changes, click the "Save" button.'),
+                   SnackBar(
+                    content: Text(tr('Ferry journey added! If you want to save your changes, click the "Save" button.')),
                     backgroundColor: Colors.green,
                   ),
                 );
@@ -5774,20 +5776,20 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
       barrierDismissible: false,
       builder: (BuildContext dialogContext) {
         return AlertDialog(
-          title: const Text('Edit Ferry Journey'),
+          title:  Text(tr('Edit Ferry Journey')),
           content: SingleChildScrollView(
             child: ListBody(
               children: <Widget>[
-                TextField(controller: nameController, decoration: const InputDecoration(labelText: 'Ferry Name')),
+                TextField(controller: nameController, decoration:  InputDecoration(labelText: tr('Ferry Name'))),
                 const SizedBox(height: 10),
-                TextField(controller: originController, decoration: const InputDecoration(labelText: 'Origin')),
+                TextField(controller: originController, decoration:  InputDecoration(labelText: tr('Origin'))),
                 const SizedBox(height: 10),
-                TextField(controller: destinationController, decoration: const InputDecoration(labelText: 'Destination')),
+                TextField(controller: destinationController, decoration:  InputDecoration(labelText: tr('Destination'))),
                 const SizedBox(height: 10),
                 TextField(
                   controller: dateController,
                   decoration: InputDecoration(
-                    labelText: 'Date',
+                    labelText: tr('Date'),
                     suffixIcon: IconButton(
                       icon: const Icon(Icons.calendar_today),
                       onPressed: () => _selectDate(dialogContext),
@@ -5802,7 +5804,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                       child: TextField(
                         controller: departureTimeController,
                         decoration: InputDecoration(
-                          labelText: 'Departure Time',
+                          labelText: tr('Departure Time'),
                           suffixIcon: IconButton(
                             icon: const Icon(Icons.access_time),
                             onPressed: () => _selectTime(dialogContext, departureTimeController),
@@ -5816,7 +5818,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                       child: TextField(
                         controller: arrivalTimeController,
                         decoration: InputDecoration(
-                          labelText: 'Arrival Time',
+                          labelText: tr('Arrival Time'),
                           suffixIcon: IconButton(
                             icon: const Icon(Icons.access_time),
                             onPressed: () => _selectTime(dialogContext, arrivalTimeController),
@@ -5834,9 +5836,9 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                       child: TextField(
                         controller: durationHoursController,
                         keyboardType: TextInputType.number,
-                        decoration: const InputDecoration(
-                          labelText: 'Duration ',
-                          hintText: 'e.g., 2',
+                        decoration:  InputDecoration(
+                          labelText: tr('Duration '),
+                          hintText: tr('e.g., 2'),
                         ),
                       ),
                     ),
@@ -5845,9 +5847,9 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                       child: TextField(
                         controller: durationMinutesController,
                         keyboardType: TextInputType.number,
-                        decoration: const InputDecoration(
-                          labelText: 'Duration ',
-                          hintText: 'e.g., 30',
+                        decoration:  InputDecoration(
+                          labelText: tr('Duration '),
+                          hintText: tr('e.g., 30'),
                         ),
                       ),
                     ),
@@ -5858,13 +5860,13 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
           ),
           actions: <Widget>[
             TextButton(
-              child: const Text('Cancel'),
+              child:  Text(tr('Cancel')),
               onPressed: () {
                 Navigator.of(dialogContext).pop();
               },
             ),
             ElevatedButton(
-              child: const Text('Save'),
+              child:  Text(tr('Save')),
               onPressed: () {
                 final String? duration;
                 final int hours = int.tryParse(durationHoursController.text.trim()) ?? 0;
@@ -5913,8 +5915,8 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                 _markAsChanged();
                 _performMatching();
                 ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(
-                    content: Text('Ferry journey updated! If you want to save your changes, click the "Save" button.'),
+                   SnackBar(
+                    content: Text(tr('Ferry journey updated! If you want to save your changes, click the "Save" button.')),
                     backgroundColor: Colors.green,
                   ),
                 );
@@ -5931,17 +5933,17 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
       context: context,
       builder: (BuildContext dialogContext) {
         return AlertDialog(
-          title: const Text('Delete Ferry Journey'),
-          content: Text('Are you sure you want to delete the ferry journey from ${ferry.origin ?? 'Unknown'} to ${ferry.destination ?? 'Unknown'} on ${ferry.date ?? 'Unknown'}?'),
+          title:  Text(tr('Delete Ferry Journey')),
+          content: Text(tr('Are you sure you want to delete the ferry journey from ${ferry.origin ?? 'Unknown'} to ${ferry.destination ?? 'Unknown'} on ${ferry.date ?? 'Unknown'}?')),
           actions: <Widget>[
             TextButton(
-              child: const Text('Cancel'),
+              child:  Text(tr('Cancel')),
               onPressed: () {
                 Navigator.of(dialogContext).pop(false);
               },
             ),
             ElevatedButton(
-              child: const Text('Delete'),
+              child:  Text(tr('Delete')),
               style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
               onPressed: () {
                 final updatedFerries = _processedSummary.ferries.where((f) =>
@@ -5965,7 +5967,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                 _markAsChanged();
                 _performMatching();
                 ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(content: Text('Ferry journey removed! Click "Save & AI" to update itinerary.'), backgroundColor: Colors.green),
+                  SnackBar(content: Text(tr('Ferry journey removed! Click "Save & AI" to update itinerary.')), backgroundColor: Colors.green),
                 );
               },
             ),
@@ -6006,8 +6008,8 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                 children: [
                   Icon(Icons.directions_car, color: redTheme, size: 24),
                   const SizedBox(width: 8),
-                  const Text(
-                    'Cars',
+                   Text(
+                    tr('Cars'),
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                   ),
                 ],
@@ -6021,10 +6023,10 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
           ),
           const SizedBox(height: 12),
           if (cars.isEmpty)
-            const Center(
+             Center(
               child: Padding(
                 padding: EdgeInsets.all(16.0),
-                child: Text('No cars for this trip.'),
+                child: Text(tr('No cars for this trip.')),
               ),
             )
           else
@@ -6073,7 +6075,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                           const Icon(Icons.directions_car, size: 14, color: Colors.white),
                           const SizedBox(width: 4),
                           Text(
-                            'CAR',
+                            tr('CAR'),
                             style: const TextStyle(
                               fontSize: 11,
                               fontWeight: FontWeight.bold,
@@ -6086,7 +6088,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                     const SizedBox(width: 8),
                     Expanded(
                       child: Text(
-                        car.carType ?? 'Unknown Type',
+                        tr(car.carType ?? 'Unknown Type'),
                         style: const TextStyle(
                           fontSize: 13,
                           fontWeight: FontWeight.w600,
@@ -6110,7 +6112,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                   children: [
                     Expanded(
                       child: Text(
-                        car.origin ?? 'Unknown',
+                        tr(car.origin ?? 'Unknown'),
                         style: const TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.bold,
@@ -6125,7 +6127,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                     ),
                     Expanded(
                       child: Text(
-                        car.destination ?? 'Unknown',
+                        tr(car.destination ?? 'Unknown'),
                         style: const TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.bold,
@@ -6148,7 +6150,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                         children: [
                           Icon(Icons.calendar_today, size: 12, color: Colors.grey[600]),
                           const SizedBox(width: 4),
-                          Text(dateText, style: TextStyle(fontSize: 11, color: Colors.grey[700])),
+                          Text(tr(dateText), style: TextStyle(fontSize: 11, color: Colors.grey[700])),
                         ],
                       ),
                     if (car.departureTime != null && car.departureTime!.isNotEmpty)
@@ -6157,7 +6159,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                         children: [
                           Icon(Icons.departure_board, size: 12, color: Colors.grey[600]),
                           const SizedBox(width: 4),
-                          Text(car.departureTime!, style: TextStyle(fontSize: 11, color: Colors.grey[700])),
+                          Text(tr(car.departureTime!), style: TextStyle(fontSize: 11, color: Colors.grey[700])),
                         ],
                       ),
                     if (car.arrivalTime != null && car.arrivalTime!.isNotEmpty)
@@ -6166,7 +6168,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                         children: [
                           Icon(Icons.access_time, size: 12, color: Colors.grey[600]),
                           const SizedBox(width: 4),
-                          Text(car.arrivalTime!, style: TextStyle(fontSize: 11, color: Colors.grey[700])),
+                          Text(tr(car.arrivalTime!), style: TextStyle(fontSize: 11, color: Colors.grey[700])),
                         ],
                       ),
                     if (car.duration != null && car.duration!.isNotEmpty && car.duration != 'N/A')
@@ -6175,7 +6177,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                         children: [
                           Icon(Icons.schedule, size: 12, color: Colors.grey[600]),
                           const SizedBox(width: 4),
-                          Text(car.duration!, style: TextStyle(fontSize: 11, color: Colors.grey[700])),
+                          Text(tr(car.duration!), style: TextStyle(fontSize: 11, color: Colors.grey[700])),
                         ],
                       ),
                   ],
@@ -6215,20 +6217,20 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
       barrierDismissible: false,
       builder: (BuildContext dialogContext) {
         return AlertDialog(
-          title: const Text('Add New Car Journey'),
+          title:  Text(tr('Add New Car Journey')),
           content: SingleChildScrollView(
             child: ListBody(
               children: <Widget>[
-                TextField(controller: carTypeController, decoration: const InputDecoration(labelText: 'Car Type ')),
+                TextField(controller: carTypeController, decoration:  InputDecoration(labelText: tr('Car Type '))),
                 const SizedBox(height: 10),
-                TextField(controller: originController, decoration: const InputDecoration(labelText: 'Origin')),
+                TextField(controller: originController, decoration:  InputDecoration(labelText: tr('Origin'))),
                 const SizedBox(height: 10),
-                TextField(controller: destinationController, decoration: const InputDecoration(labelText: 'Destination')),
+                TextField(controller: destinationController, decoration:  InputDecoration(labelText: tr('Destination'))),
                 const SizedBox(height: 10),
                 TextField(
                   controller: dateController,
                   decoration: InputDecoration(
-                    labelText: 'Date',
+                    labelText: tr('Date'),
                     suffixIcon: IconButton(
                       icon: const Icon(Icons.calendar_today),
                       onPressed: () => _selectDate(dialogContext),
@@ -6243,7 +6245,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                       child: TextField(
                         controller: departureTimeController,
                         decoration: InputDecoration(
-                          labelText: 'Departure Time',
+                          labelText: tr('Departure Time'),
                           suffixIcon: IconButton(
                             icon: const Icon(Icons.access_time),
                             onPressed: () => _selectTime(dialogContext, departureTimeController),
@@ -6257,7 +6259,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                       child: TextField(
                         controller: arrivalTimeController,
                         decoration: InputDecoration(
-                          labelText: 'Arrival Time',
+                          labelText: tr('Arrival Time'),
                           suffixIcon: IconButton(
                             icon: const Icon(Icons.access_time),
                             onPressed: () => _selectTime(dialogContext, arrivalTimeController),
@@ -6275,9 +6277,9 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                       child: TextField(
                         controller: durationHoursController,
                         keyboardType: TextInputType.number,
-                        decoration: const InputDecoration(
-                          labelText: 'Duration ',
-                          hintText: 'e.g., 2',
+                        decoration:  InputDecoration(
+                          labelText: tr('Duration '),
+                          hintText: tr('e.g., 2'),
                         ),
                       ),
                     ),
@@ -6286,9 +6288,9 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                       child: TextField(
                         controller: durationMinutesController,
                         keyboardType: TextInputType.number,
-                        decoration: const InputDecoration(
-                          labelText: 'Duration ',
-                          hintText: 'e.g., 30',
+                        decoration:  InputDecoration(
+                          labelText: tr('Duration '),
+                          hintText: tr('e.g., 30'),
                         ),
                       ),
                     ),
@@ -6299,13 +6301,13 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
           ),
           actions: <Widget>[
             TextButton(
-              child: const Text('Cancel'),
+              child:  Text(tr('Cancel')),
               onPressed: () {
                 Navigator.of(dialogContext).pop();
               },
             ),
             ElevatedButton(
-              child: const Text('Add'),
+              child:  Text(tr('Add')),
               onPressed: () {
                 final String? duration;
                 final int hours = int.tryParse(durationHoursController.text.trim()) ?? 0;
@@ -6334,7 +6336,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
 
                 if (newCar.origin == null && newCar.destination == null) {
                   ScaffoldMessenger.of(dialogContext).showSnackBar(
-                    const SnackBar(content: Text('Origin and Destination must be provided.'), backgroundColor: Colors.red),
+                     SnackBar(content: Text(tr('Origin and Destination must be provided.')), backgroundColor: Colors.red),
                   );
                   return;
                 }
@@ -6358,8 +6360,8 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                 _markAsChanged();
                 _performMatching();
                 ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(
-                    content: Text('Car journey added! If you want to save your changes, click the "Save" button.'),
+                   SnackBar(
+                    content: Text(tr('Car journey added! If you want to save your changes, click the "Save" button.')),
                     backgroundColor: Colors.green,
                   ),
                 );
@@ -6412,20 +6414,20 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
       barrierDismissible: false,
       builder: (BuildContext dialogContext) {
         return AlertDialog(
-          title: const Text('Edit Car Journey'),
+          title:  Text(tr('Edit Car Journey')),
           content: SingleChildScrollView(
             child: ListBody(
               children: <Widget>[
-                TextField(controller: carTypeController, decoration: const InputDecoration(labelText: 'Car Type ')),
+                TextField(controller: carTypeController, decoration:  InputDecoration(labelText: tr('Car Type '))),
                 const SizedBox(height: 10),
-                TextField(controller: originController, decoration: const InputDecoration(labelText: 'Origin')),
+                TextField(controller: originController, decoration:  InputDecoration(labelText: tr('Origin'))),
                 const SizedBox(height: 10),
-                TextField(controller: destinationController, decoration: const InputDecoration(labelText: 'Destination')),
+                TextField(controller: destinationController, decoration:  InputDecoration(labelText: tr('Destination'))),
                 const SizedBox(height: 10),
                 TextField(
                   controller: dateController,
                   decoration: InputDecoration(
-                    labelText: 'Date',
+                    labelText: tr('Date'),
                     suffixIcon: IconButton(
                       icon: const Icon(Icons.calendar_today),
                       onPressed: () => _selectDate(dialogContext),
@@ -6440,7 +6442,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                       child: TextField(
                         controller: departureTimeController,
                         decoration: InputDecoration(
-                          labelText: 'Departure Time',
+                          labelText: tr('Departure Time'),
                           suffixIcon: IconButton(
                             icon: const Icon(Icons.access_time),
                             onPressed: () => _selectTime(dialogContext, departureTimeController),
@@ -6454,7 +6456,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                       child: TextField(
                         controller: arrivalTimeController,
                         decoration: InputDecoration(
-                          labelText: 'Arrival Time',
+                          labelText: tr('Arrival Time'),
                           suffixIcon: IconButton(
                             icon: const Icon(Icons.access_time),
                             onPressed: () => _selectTime(dialogContext, arrivalTimeController),
@@ -6472,9 +6474,9 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                       child: TextField(
                         controller: durationHoursController,
                         keyboardType: TextInputType.number,
-                        decoration: const InputDecoration(
-                          labelText: 'Duration ',
-                          hintText: 'e.g., 2',
+                        decoration:  InputDecoration(
+                          labelText: tr('Duration '),
+                          hintText: tr('e.g., 2'),
                         ),
                       ),
                     ),
@@ -6483,9 +6485,9 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                       child: TextField(
                         controller: durationMinutesController,
                         keyboardType: TextInputType.number,
-                        decoration: const InputDecoration(
-                          labelText: 'Duration ',
-                          hintText: 'e.g., 30',
+                        decoration:  InputDecoration(
+                          labelText: tr('Duration '),
+                          hintText: tr('e.g., 30'),
                         ),
                       ),
                     ),
@@ -6496,13 +6498,13 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
           ),
           actions: <Widget>[
             TextButton(
-              child: const Text('Cancel'),
+              child:  Text(tr('Cancel')),
               onPressed: () {
                 Navigator.of(dialogContext).pop();
               },
             ),
             ElevatedButton(
-              child: const Text('Save'),
+              child:  Text(tr('Save')),
               onPressed: () {
                 final String? duration;
                 final int hours = int.tryParse(durationHoursController.text.trim()) ?? 0;
@@ -6551,8 +6553,8 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                 _markAsChanged();
                 _performMatching();
                 ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(
-                    content: Text('Car journey updated! If you want to save your changes, click the "Save" button.'),
+                   SnackBar(
+                    content: Text(tr('Car journey updated! If you want to save your changes, click the "Save" button.')),
                     backgroundColor: Colors.green,
                   ),
                 );
@@ -6569,17 +6571,17 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
       context: context,
       builder: (BuildContext dialogContext) {
         return AlertDialog(
-          title: const Text('Delete Car Journey'),
-          content: Text('Are you sure you want to delete the car journey from ${car.origin ?? 'Unknown'} to ${car.destination ?? 'Unknown'} on ${car.date ?? 'Unknown'}?'),
+          title:  Text(tr('Delete Car Journey')),
+          content: Text(tr('Are you sure you want to delete the car journey from ${car.origin ?? 'Unknown'} to ${car.destination ?? 'Unknown'} on ${car.date ?? 'Unknown'}?')),
           actions: <Widget>[
             TextButton(
-              child: const Text('Cancel'),
+              child:  Text(tr('Cancel')),
               onPressed: () {
                 Navigator.of(dialogContext).pop(false);
               },
             ),
             ElevatedButton(
-              child: const Text('Delete'),
+              child:  Text(tr('Delete')),
               style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
               onPressed: () {
                 final updatedCars = _processedSummary.cars.where((c) =>
@@ -6603,7 +6605,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                 _markAsChanged();
                 _performMatching();
                 ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(content: Text('Car journey removed! Click "Save & AI" to update itinerary.'), backgroundColor: Colors.green),
+                  SnackBar(content: Text(tr('Car journey removed! Click "Save & AI" to update itinerary.')), backgroundColor: Colors.green),
                 );
               },
             ),
@@ -6639,8 +6641,8 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                   children: [
                     Icon(Icons.explore, color: Colors.indigo, size: 24),
                     const SizedBox(width: 8),
-                    const Text(
-                      'Explore',
+                     Text(
+                      tr('Explore'),
                       style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                     ),
                   ],
@@ -6653,10 +6655,10 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
               ],
             ),
             const SizedBox(height: 12),
-            const Center(
+             Center(
               child: Padding(
                 padding: EdgeInsets.all(16.0),
-                child: Text('No landmarks for this trip.'),
+                child: Text(tr('No landmarks for this trip.')),
               ),
             ),
           ],
@@ -6723,8 +6725,8 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                 children: [
                   Icon(Icons.explore, color: Colors.indigo, size: 24),
                   const SizedBox(width: 8),
-                  const Text(
-                    'Explore',
+                   Text(
+                    tr('Explore'),
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                   ),
                 ],
@@ -6809,7 +6811,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
               Icon(icon, color: color, size: 18),
               const SizedBox(width: 8),
               Text(
-                title,
+                tr(title),
                 style: TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.bold,
@@ -6824,7 +6826,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Text(
-                  '${landmarks.length}',
+                  tr('${landmarks.length}'),
                   style: const TextStyle(
                     fontSize: 11,
                     color: Colors.white,
@@ -6890,7 +6892,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        cleanedLandmarkName,
+                        tr(cleanedLandmarkName),
                         style: const TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.bold,
@@ -6899,7 +6901,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                       ),
                       if (dateText.isNotEmpty)
                         Text(
-                          dateText,
+                          tr(dateText),
                           style: TextStyle(
                               fontSize: 12,
                               color: Colors.blueGrey[700],
@@ -6971,7 +6973,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
               _performMatching();
 
               ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(content: Text('"$name" added!'), backgroundColor: Colors.green),
+                SnackBar(content: Text(tr('"$name" added!')), backgroundColor: Colors.green),
               );
             }
 
@@ -6990,7 +6992,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
             }
 
             return AlertDialog(
-              title: const Text('Add New Landmark'),
+              title:  Text(tr('Add New Landmark')),
               content: SizedBox(
                 width: double.maxFinite,
                 height: 450,
@@ -6999,7 +7001,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                     TextField(
                       controller: dateController,
                       decoration: InputDecoration(
-                        labelText: 'Visit Date ',
+                        labelText: tr('Visit Date '),
                         prefixIcon: const Icon(Icons.calendar_today),
                         suffixIcon: IconButton(
                           icon: const Icon(Icons.clear),
@@ -7014,8 +7016,8 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
 
                     TextField(
                       controller: searchController,
-                      decoration: const InputDecoration(
-                        labelText: 'Search or type custom name',
+                      decoration:  InputDecoration(
+                        labelText: tr('Search or type custom name'),
                         prefixIcon: Icon(Icons.search),
                         border: OutlineInputBorder(),
                         // 🆕 [수정] hintText 제거
@@ -7041,10 +7043,10 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                             ListTile(
                               leading: const Icon(Icons.add_circle_outline, color: Colors.blue),
                               title: Text(
-                                'Add "${searchController.text}" as new',
+                                tr('Add "${searchController.text}" as new'),
                                 style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.blue),
                               ),
-                              subtitle: const Text('Custom landmark (not in database)'),
+                              subtitle:  Text(tr('Custom landmark (not in database)')),
                               onTap: () => _addLandmark(searchController.text),
                             ),
 
@@ -7052,7 +7054,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                             const Divider(),
 
                           if (filteredLandmarks.isEmpty && searchController.text.isNotEmpty)
-                            const Padding(padding: EdgeInsets.all(16), child: Text("No matching database landmarks.")),
+                             Padding(padding: EdgeInsets.all(16), child: Text(tr("No matching database landmarks."))),
 
                           ...filteredLandmarks.map((landmark) {
                             Color dotColor = Colors.indigo;
@@ -7062,7 +7064,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                             return ListTile(
                               leading: Container(width: 10, height: 10, decoration: BoxDecoration(color: dotColor, shape: BoxShape.circle)),
                               title: Text(landmark.name),
-                              subtitle: Text(landmark.city),
+                              subtitle: Text(tr(landmark.city)),
                               onTap: () => _addLandmark(landmark.name),
                             );
                           }).toList(),
@@ -7075,7 +7077,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
               actions: [
                 TextButton(
                   onPressed: () => Navigator.of(ctx).pop(),
-                  child: const Text('Cancel'),
+                  child:  Text(tr('Cancel')),
                 ),
               ],
             );
@@ -7112,22 +7114,22 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
               }
 
               return AlertDialog(
-                title: const Text('Edit Landmark'),
+                title:  Text(tr('Edit Landmark')),
                 content: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     TextField(
                       controller: landmarkNameController,
-                      decoration: const InputDecoration(
-                        labelText: 'Landmark Name',
-                        hintText: 'e.g. Eiffel Tower',
+                      decoration:  InputDecoration(
+                        labelText: tr('Landmark Name'),
+                        hintText: tr('e.g. Eiffel Tower'),
                       ),
                     ),
                     const SizedBox(height: 16),
                     TextField(
                       controller: dateController,
                       decoration: InputDecoration(
-                        labelText: 'Visit Date',
+                        labelText: tr('Visit Date'),
                         prefixIcon: const Icon(Icons.calendar_today),
                         suffixIcon: IconButton(
                           icon: const Icon(Icons.clear),
@@ -7141,18 +7143,18 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                 ),
                 actions: <Widget>[
                   TextButton(
-                    child: const Text('Cancel'),
+                    child:  Text(tr('Cancel')),
                     onPressed: () => Navigator.of(dialogContext).pop(),
                   ),
                   ElevatedButton(
-                    child: const Text('Save'),
+                    child:  Text(tr('Save')),
                     onPressed: () {
                       final String newLandmarkName = landmarkNameController.text.trim();
                       final String? newDate = dateController.text.isNotEmpty ? dateController.text : null;
 
                       if (newLandmarkName.isEmpty) {
                         ScaffoldMessenger.of(dialogContext).showSnackBar(
-                          const SnackBar(content: Text('Landmark name cannot be empty.'), backgroundColor: Colors.red),
+                           SnackBar(content: Text(tr('Landmark name cannot be empty.')), backgroundColor: Colors.red),
                         );
                         return;
                       }
@@ -7182,8 +7184,8 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                       _markAsChanged();
                       _performMatching();
                       ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(
-                          content: Text('Landmark updated!'),
+                         SnackBar(
+                          content: Text(tr('Landmark updated!')),
                           backgroundColor: Colors.green,
                         ),
                       );
@@ -7202,17 +7204,17 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
       context: context,
       builder: (BuildContext dialogContext) {
         return AlertDialog(
-          title: const Text('Delete Landmark'),
-          content: Text('Are you sure you want to delete "$landmarkName" from this trip summary?'),
+          title:  Text(tr('Delete Landmark')),
+          content: Text(tr('Are you sure you want to delete "$landmarkName" from this trip summary?')),
           actions: <Widget>[
             TextButton(
-              child: const Text('Cancel'),
+              child:  Text(tr('Cancel')),
               onPressed: () {
                 Navigator.of(dialogContext).pop(false);
               },
             ),
             ElevatedButton(
-              child: const Text('Delete'),
+              child:  Text(tr('Delete')),
               style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
               onPressed: () {
                 // 🔄 [수정됨] 객체에서 이름 비교하여 삭제
@@ -7238,7 +7240,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                 _markAsChanged();
                 _performMatching();
                 ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(content: Text('"$landmarkName" removed! Click "Save & AI" to update itinerary.'), backgroundColor: Colors.green),
+                  SnackBar(content: Text(tr('"$landmarkName" removed! Click "Save & AI" to update itinerary.')), backgroundColor: Colors.green),
                 );
               },
             ),
@@ -7276,8 +7278,8 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                 children: [
                   Icon(Icons.flight_takeoff, color: Theme.of(context).primaryColor, size: 24),
                   const SizedBox(width: 8),
-                  const Text(
-                    'Airports',
+                   Text(
+                    tr('Airports'),
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                   ),
                 ],
@@ -7408,7 +7410,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                         children: [
                           Expanded(
                             child: Text(
-                              airportFullName,
+                              tr(airportFullName),
                               style: TextStyle(
                                 fontSize: 13,
                                 color: isMatched ? Colors.black87 : Colors.grey[800],
@@ -7442,7 +7444,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                           Icon(Icons.calendar_today, size: 10, color: Colors.grey[600]),
                           const SizedBox(width: 4),
                           Text(
-                            dateTimeText,
+                            tr(dateTimeText),
                             style: TextStyle(
                               fontSize: 12,
                               color: isMatched ? Colors.grey[700] : Colors.grey[600],
@@ -7457,7 +7459,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                                   Icon(Icons.compare_arrows, size: 12, color: Colors.orange[800]),
                                   const SizedBox(width: 2),
                                   Text(
-                                    'Transit',
+                                    tr('Transit'),
                                     style: TextStyle(
                                       fontSize: 11,
                                       color: Colors.orange[800],
@@ -7523,17 +7525,17 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
         return StatefulBuilder(
           builder: (dialogContext, setDialogState) {
             return AlertDialog(
-              title: Text(airportLog == null ? 'Add Airport Details' : 'Edit Airport Details'),
+              title: Text(tr(airportLog == null ? 'Add Airport Details' : 'Edit Airport Details')),
               content: Column(
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    '$name ($iataCode)',
+                    tr('$name ($iataCode)'),
                     style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                   ),
                   Text(
-                    country,
+                    tr(country),
                     style: const TextStyle(color: Colors.grey, fontSize: 14),
                   ),
                   const SizedBox(height: 20),
@@ -7545,8 +7547,8 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                       child: TextField(
                         controller: dateController,
                         decoration: InputDecoration(
-                          labelText: 'Visit Date',
-                          hintText: 'YYYY-MM-DD',
+                          labelText: tr('Visit Date'),
+                          hintText: tr('YYYY-MM-DD'),
                           prefixIcon: const Icon(Icons.calendar_today),
                           suffixIcon: IconButton(
                             icon: const Icon(Icons.clear),
@@ -7562,7 +7564,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
 
                   // 🆕 Transit 스위치 (질문 제거)
                   SwitchListTile(
-                    title: const Text('Transit'),
+                    title:  Text(tr('Transit')),
                     subtitle: null, // 🆕 질문 제거됨
                     value: isTransit,
                     onChanged: (bool value) {
@@ -7578,16 +7580,16 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
               actions: [
                 TextButton(
                   onPressed: () => Navigator.of(ctx).pop(),
-                  child: const Text('Cancel'),
+                  child:  Text(tr('Cancel')),
                 ),
                 ElevatedButton(
-                  child: const Text('Save'),
+                  child:  Text(tr('Save')),
                   onPressed: () {
                     final String? finalDate = dateController.text.isNotEmpty ? dateController.text : null;
 
                     if (finalDate == null) {
                       ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(content: Text('Please select a visit date'), backgroundColor: Colors.red),
+                         SnackBar(content: Text(tr('Please select a visit date')), backgroundColor: Colors.red),
                       );
                       return;
                     }
@@ -7648,8 +7650,8 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
             void _addAirportWithDate(Airport airport) {
               if (dateController.text.isEmpty) {
                 ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(
-                    content: Text('Please select a visit date'),
+                   SnackBar(
+                    content: Text(tr('Please select a visit date')),
                     backgroundColor: Colors.red,
                   ),
                 );
@@ -7668,7 +7670,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
             }
 
             return AlertDialog(
-              title: const Text('Add Airport'),
+              title:  Text(tr('Add Airport')),
               content: SizedBox(
                 width: double.maxFinite,
                 height: 500,
@@ -7678,7 +7680,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                     TextField(
                       controller: dateController,
                       decoration: InputDecoration(
-                        labelText: 'Visit Date',
+                        labelText: tr('Visit Date'),
                         prefixIcon: const Icon(Icons.calendar_today),
                         suffixIcon: IconButton(
                           icon: const Icon(Icons.clear),
@@ -7693,7 +7695,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
 
                     // Transit 스위치
                     SwitchListTile(
-                      title: const Text('Transit'),
+                      title:  Text(tr('Transit')),
                       value: isTransit,
                       onChanged: (bool value) {
                         setDialogState(() {
@@ -7708,8 +7710,8 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                     // 공항 검색
                     TextField(
                       controller: searchController,
-                      decoration: const InputDecoration(
-                        labelText: 'Search airports',
+                      decoration:  InputDecoration(
+                        labelText: tr('Search airports'),
                         prefixIcon: Icon(Icons.search),
                         border: OutlineInputBorder(),
                       ),
@@ -7741,11 +7743,11 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                           return ListTile(
                             leading: _buildCountryFlagWidget(airport.country),
                             title: Text(
-                              formattedName,
+                              tr(formattedName),
                               style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
                             ),
                             subtitle: Text(
-                              '${airport.iataCode} • ${airport.country}',
+                              tr('${airport.iataCode} • ${airport.country}'),
                               style: TextStyle(color: Colors.grey[600], fontSize: 12),
                             ),
                             onTap: () => _addAirportWithDate(airport),
@@ -7759,7 +7761,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
               actions: [
                 TextButton(
                   onPressed: () => Navigator.of(ctx).pop(),
-                  child: const Text('Cancel'),
+                  child:  Text(tr('Cancel')),
                 ),
               ],
             );
@@ -7794,7 +7796,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
 
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text('"${airportLog.iataCode}" added with date ${airportLog.visitDate}!'),
+          content: Text(tr('"${airportLog.iataCode}" added with date ${airportLog.visitDate}!')),
           backgroundColor: Colors.green,
         ),
       );
@@ -7829,7 +7831,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
 
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: Text('"${newLog.iataCode}" updated!'),
+            content: Text(tr('"${newLog.iataCode}" updated!')),
             backgroundColor: Colors.green,
           ),
         );
@@ -7863,7 +7865,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
       _performMatching();
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text('${airportLog.name} removed!'),
+          content: Text(tr('${airportLog.name} removed!')),
           backgroundColor: Colors.green,
         ),
       );
@@ -7877,7 +7879,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(title, style: Theme.of(context).textTheme.titleMedium),
+          Text(tr(title), style: Theme.of(context).textTheme.titleMedium),
           const SizedBox(height: 8),
           Column(
             children: itemsWithDetails.map((itemMap) {
@@ -7911,7 +7913,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                     const SizedBox(width: 8),
                     Expanded(
                       child: Text(
-                        '${city.name} ($displayIso) ($formattedDuration)',
+                        tr('${city.name} ($displayIso) ($formattedDuration)'),
                         style: const TextStyle(fontSize: 14),
                       ),
                     ),
@@ -7944,7 +7946,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Text('Database Matching Results', style: Theme.of(context).textTheme.titleLarge),
+            Text(tr('Database Matching Results'), style: Theme.of(context).textTheme.titleLarge),
             const Divider(),
             if (_isMatching)
               const Center(child: CircularProgressIndicator())
@@ -7974,7 +7976,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(title, style: Theme.of(context).textTheme.titleMedium),
+          Text(tr(title), style: Theme.of(context).textTheme.titleMedium),
           const SizedBox(height: 8),
           Column(
             children: items.values.map((flightDetail) {
@@ -8004,7 +8006,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                     const SizedBox(width: 8),
                     Expanded(
                       child: Text(
-                        '${flightDetail.flightNumber} (${flightDetail.flightDate ?? 'Unknown'})',
+                        tr('${flightDetail.flightNumber} (${flightDetail.flightDate ?? 'Unknown'})'),
                         style: const TextStyle(fontSize: 14),
                       ),
                     ),
@@ -8024,7 +8026,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(title, style: Theme.of(context).textTheme.titleMedium),
+          Text(tr(title), style: Theme.of(context).textTheme.titleMedium),
           const SizedBox(height: 8),
           Column(
             children: items.map((item) {
@@ -8056,7 +8058,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                     const SizedBox(width: 8),
                     Expanded(
                       child: Text(
-                        displayLabel,
+                        tr(displayLabel),
                         style: const TextStyle(fontSize: 14),
                       ),
                     ),
@@ -8122,8 +8124,8 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                         child: const Icon(Icons.storage, color: Colors.white, size: 24),
                       ),
                       const SizedBox(width: 12),
-                      const Text(
-                        'Add to Database',
+                       Text(
+                        tr('Add to Database'),
                         style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
@@ -8137,7 +8139,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                           borderRadius: BorderRadius.circular(20),
                         ),
                         child: Text(
-                          '$totalCount selected',
+                          tr('$totalCount selected'),
                           style: const TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.bold,
@@ -8467,8 +8469,8 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                             padding: const EdgeInsets.symmetric(vertical: 16),
                             side: BorderSide(color: Colors.grey.shade400),
                           ),
-                          child: const Text(
-                            'Cancel',
+                          child:  Text(
+                            tr('Cancel'),
                             style: TextStyle(fontSize: 16),
                           ),
                         ),
@@ -8491,7 +8493,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                           },
                           icon: const Icon(Icons.save, size: 20),
                           label: Text(
-                            'Add $totalCount ${totalCount == 1 ? 'Item' : 'Items'}',
+                            tr('Add $totalCount ${totalCount == 1 ? 'Item' : 'Items'}'),
                             style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                           ),
                           style: ElevatedButton.styleFrom(
@@ -8539,7 +8541,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
             Icon(icon, color: color, size: 20),
             const SizedBox(width: 8),
             Text(
-              title,
+              tr(title),
               style: TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.bold,
@@ -8554,7 +8556,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
                 borderRadius: BorderRadius.circular(10),
               ),
               child: Text(
-                '$selectedCount/$count',
+                tr('$selectedCount/$count'),
                 style: const TextStyle(
                   fontSize: 12,
                   color: Colors.white,
@@ -8564,7 +8566,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
             ),
             const Spacer(),
             Text(
-              allSelected ? 'Deselect All' : 'Select All',
+              tr(allSelected ? 'Deselect All' : 'Select All'),
               style: TextStyle(
                 fontSize: 12,
                 color: color,
@@ -8625,7 +8627,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
           ],
         ),
         title: Text(
-          title,
+          tr(title),
           style: TextStyle(
             fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
             fontSize: 14,
@@ -8633,7 +8635,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
         ),
         subtitle: subtitle != null
             ? Text(
-          subtitle,
+          tr(subtitle),
           style: TextStyle(
             fontSize: 12,
             color: Colors.grey.shade600,
@@ -8642,7 +8644,7 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
             : null,
         trailing: trailing != null
             ? Text(
-          trailing,
+          tr(trailing),
           style: const TextStyle(
             fontSize: 12,
             fontWeight: FontWeight.w500,

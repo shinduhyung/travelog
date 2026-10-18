@@ -1,234 +1,1890 @@
-[
-  { "iso_a3": "IND", "cold": "3" },
-  { "iso_a3": "CHN", "cold": "2" },
-  { "iso_a3": "USA", "cold": "1" },
-  { "iso_a3": "IDN", "cold": "3" },
-  { "iso_a3": "PAK", "cold": "1" },
-  { "iso_a3": "NGA", "cold": "3" },
-  { "iso_a3": "BRA", "cold": "3" },
-  { "iso_a3": "BGD", "cold": "3" },
-  { "iso_a3": "RUS", "cold": "2" },
-  { "iso_a3": "MEX", "cold": "3" },
-  { "iso_a3": "JPN", "cold": "1" },
-  { "iso_a3": "PHL", "cold": "1" },
-  { "iso_a3": "COD", "cold": "3" },
-  { "iso_a3": "ETH", "cold": "3" },
-  { "iso_a3": "EGY", "cold": "3" },
-  { "iso_a3": "VNM", "cold": "4" },
-  { "iso_a3": "IRN", "cold": "3" },
-  { "iso_a3": "TUR", "cold": "1" },
-  { "iso_a3": "DEU", "cold": "4" },
-  { "iso_a3": "FRA", "cold": "1" },
-  { "iso_a3": "GBR", "cold": "1" },
-  { "iso_a3": "TZA", "cold": "3" },
-  { "iso_a3": "THA", "cold": "1" },
-  { "iso_a3": "ZAF", "cold": "1" },
-  { "iso_a3": "ITA", "cold": "1" },
-  { "iso_a3": "KEN", "cold": "3" },
-  { "iso_a3": "COL", "cold": "3" },
-  { "iso_a3": "SDN", "cold": "3" },
-  { "iso_a3": "MMR", "cold": "3" },
-  { "iso_a3": "KOR", "cold": "4" },
-  { "iso_a3": "ESP", "cold": "1" },
-  { "iso_a3": "DZA", "cold": "3" },
-  { "iso_a3": "ARG", "cold": "3" },
-  { "iso_a3": "IRQ", "cold": "3" },
-  { "iso_a3": "UGA", "cold": "3" },
-  { "iso_a3": "UKR", "cold": "2" },
-  { "iso_a3": "CAN", "cold": "1" },
-  { "iso_a3": "POL", "cold": "2" },
-  { "iso_a3": "MAR", "cold": "3" },
-  { "iso_a3": "UZB", "cold": "2" },
-  { "iso_a3": "SAU", "cold": "1" },
-  { "iso_a3": "PER", "cold": "3" },
-  { "iso_a3": "AFG", "cold": "2" },
-  { "iso_a3": "VEN", "cold": "3" },
-  { "iso_a3": "MYS", "cold": "3" },
-  { "iso_a3": "GHA", "cold": "3" },
-  { "iso_a3": "NPL", "cold": "3" },
-  { "iso_a3": "YEM", "cold": "4" },
-  { "iso_a3": "AGO", "cold": "3" },
-  { "iso_a3": "MOZ", "cold": "3" },
-  { "iso_a3": "AUS", "cold": "1" },
-  { "iso_a3": "SYR", "cold": "3" },
-  { "iso_a3": "CIV", "cold": "3" },
-  { "iso_a3": "MDG", "cold": "3" },
-  { "iso_a3": "CMR", "cold": "3" },
-  { "iso_a3": "NER", "cold": "3" },
-  { "iso_a3": "MLI", "cold": "3" },
-  { "iso_a3": "TWN", "cold": "1" },
-  { "iso_a3": "BFA", "cold": "3" },
-  { "iso_a3": "LKA", "cold": "3" },
-  { "iso_a3": "ECU", "cold": "3" },
-  { "iso_a3": "KAZ", "cold": "2" },
-  { "iso_a3": "CHL", "cold": "3" },
-  { "iso_a3": "ROU", "cold": "2" },
-  { "iso_a3": "NLD", "cold": "1" },
-  { "iso_a3": "MWI", "cold": "3" },
-  { "iso_a3": "GTM", "cold": "3" },
-  { "iso_a3": "SOM", "cold": "3" },
-  { "iso_a3": "TCD", "cold": "3" },
-  { "iso_a3": "SEN", "cold": "3" },
-  { "iso_a3": "KHM", "cold": "3" },
-  { "iso_a3": "ZWE", "cold": "3" },
-  { "iso_a3": "RWA", "cold": "3" },
-  { "iso_a3": "BEN", "cold": "3" },
-  { "iso_a3": "BOL", "cold": "3" },
-  { "iso_a3": "BEL", "cold": "1" },
-  { "iso_a3": "CUB", "cold": "2" },
-  { "iso_a3": "TUN", "cold": "3" },
-  { "iso_a3": "HTI", "cold": "3" },
-  { "iso_a3": "GRC", "cold": "1" },
-  { "iso_a3": "CZE", "cold": "2" },
-  { "iso_a3": "SWE", "cold": "3" },
-  { "iso_a3": "PRT", "cold": "1" },
-  { "iso_a3": "AZE", "cold": "2" },
-  { "iso_a3": "DOM", "cold": "3" },
-  { "iso_a3": "HND", "cold": "3" },
-  { "iso_a3": "BDI", "cold": "3" },
-  { "iso_a3": "ARE", "cold": "3" },
-  { "iso_a3": "AUT", "cold": "3" },
-  { "iso_a3": "CHE", "cold": "3" },
-  { "iso_a3": "BGR", "cold": "2" },
-  { "iso_a3": "KGZ", "cold": "2" },
-  { "iso_a3": "TJK", "cold": "2" },
-  { "iso_a3": "SLE", "cold": "3" },
-  { "iso_a3": "LAO", "cold": "2" },
-  { "iso_a3": "PNG", "cold": "3" },
-  { "iso_a3": "SLV", "cold": "3" },
-  { "iso_a3": "LBY", "cold": "3" },
-  { "iso_a3": "SGP", "cold": "3" },
-  { "iso_a3": "DNK", "cold": "1" },
-  { "iso_a3": "FIN", "cold": "3" },
-  { "iso_a3": "NOR", "cold": "1" },
-  { "iso_a3": "IRL", "cold": "3" },
-  { "iso_a3": "OMN", "cold": "3" },
-  { "iso_a3": "KWT", "cold": "3" },
-  { "iso_a3": "GEO", "cold": "2" },
-  { "iso_a3": "HRV", "cold": "3" },
-  { "iso_a3": "ERI", "cold": "3" },
-  { "iso_a3": "PAN", "cold": "3" },
-  { "iso_a3": "URY", "cold": "3" },
-  { "iso_a3": "MNG", "cold": "2" },
-  { "iso_a3": "QAT", "cold": "3" },
-  { "iso_a3": "NZL", "cold": "1" },
-  { "iso_a3": "SVK", "cold": "2" },
-  { "iso_a3": "LBN", "cold": "3" },
-  { "iso_a3": "PSE", "cold": "3" },
-  { "iso_a3": "PRI", "cold": "1" },
-  { "iso_a3": "LTU", "cold": "2" },
-  { "iso_a3": "ALB", "cold": "2" },
-  { "iso_a3": "JOR", "cold": "3" },
-  { "iso_a3": "EST", "cold": "2" },
-  { "iso_a3": "CYP", "cold": "3" },
-  { "iso_a3": "FJI", "cold": "3" },
-  { "iso_a3": "LUX", "cold": "1" },
-  { "iso_a3": "ISL", "cold": "1" },
-  { "iso_a3": "MLT", "cold": "3" },
-  { "iso_a3": "MDV", "cold": "3" },
-  { "iso_a3": "BLZ", "cold": "3" },
-  { "iso_a3": "BHR", "cold": "3" },
-  { "iso_a3": "GNQ", "cold": "3" },
-  { "iso_a3": "GAB", "cold": "3" },
-  { "iso_a3": "GMB", "cold": "3" },
-  { "iso_a3": "NAM", "cold": "3" },
-  { "iso_a3": "BWA", "cold": "3" },
-  { "iso_a3": "GIN", "cold": "3" },
-  { "iso_a3": "CAF", "cold": "3" },
-  { "iso_a3": "COG", "cold": "3" },
-  { "iso_a3": "DJI", "cold": "3" },
-  { "iso_a3": "COM", "cold": "3" },
-  { "iso_a3": "LSO", "cold": "3" },
-  { "iso_a3": "SWZ", "cold": "3" },
-  { "iso_a3": "CPV", "cold": "3" },
-  { "iso_a3": "SLB", "cold": "3" },
-  { "iso_a3": "VUT", "cold": "3" },
-  { "iso_a3": "WSM", "cold": "3" },
-  { "iso_a3": "TON", "cold": "3" },
-  { "iso_a3": "FSM", "cold": "3" },
-  { "iso_a3": "KIR", "cold": "3" },
-  { "iso_a3": "NRU", "cold": "3" },
-  { "iso_a3": "PLW", "cold": "3" },
-  { "iso_a3": "MHL", "cold": "3" },
-  { "iso_a3": "TUV", "cold": "3" },
-  { "iso_a3": "SMR", "cold": "3" },
-  { "iso_a3": "LIE", "cold": "3" },
-  { "iso_a3": "MCO", "cold": "3" },
-  { "iso_a3": "VAT", "cold": "3" },
-  { "iso_a3": "AND", "cold": "3" },
-  { "iso_a3": "IMN", "cold": "1" },
-  { "iso_a3": "JEY", "cold": "1" },
-  { "iso_a3": "GGY", "cold": "1" },
-  { "iso_a3": "FLK", "cold": "1" },
-  { "iso_a3": "GRL", "cold": "1" },
-  { "iso_a3": "ALA", "cold": "3" },
-  { "iso_a3": "PCN", "cold": "1" },
-  { "iso_a3": "WLF", "cold": "1" },
-  { "iso_a3": "NCL", "cold": "1" },
-  { "iso_a3": "PYF", "cold": "1" },
-  { "iso_a3": "SPM", "cold": "1" },
-  { "iso_a3": "BLM", "cold": "1" },
-  { "iso_a3": "MAF", "cold": "1" },
-  { "iso_a3": "CUW", "cold": "1" },
-  { "iso_a3": "SXM", "cold": "1" },
-  { "iso_a3": "ABW", "cold": "1" },
-  { "iso_a3": "BMU", "cold": "1" },
-  { "iso_a3": "VGB", "cold": "1" },
-  { "iso_a3": "CYM", "cold": "1" },
-  { "iso_a3": "TCA", "cold": "1" },
-  { "iso_a3": "VIR", "cold": "1" },
-  { "iso_a3": "MSR", "cold": "1" },
-  { "iso_a3": "ATG", "cold": "3" },
-  { "iso_a3": "GRD", "cold": "3" },
-  { "iso_a3": "LCA", "cold": "3" },
-  { "iso_a3": "VCT", "cold": "3" },
-  { "iso_a3": "BRB", "cold": "3" },
-  { "iso_a3": "DMA", "cold": "3" },
-  { "iso_a3": "KNA", "cold": "3" },
-  { "iso_a3": "AIA", "cold": "1" },
-  { "iso_a3": "NFK", "cold": "1" },
-  { "iso_a3": "COK", "cold": "3" },
-  { "iso_a3": "NIU", "cold": "3" },
-  { "iso_a3": "ASM", "cold": "1" },
-  { "iso_a3": "GUM", "cold": "1" },
-  { "iso_a3": "MNP", "cold": "1" },
-  { "iso_a3": "HKG", "cold": "1" },
-  { "iso_a3": "MAC", "cold": "1" },
-  { "iso_a3": "MUS", "cold": "3" },
-  { "iso_a3": "FRO", "cold": "1" },
-  { "iso_a3": "SYC", "cold": "3" },
-  { "iso_a3": "CRI", "cold": "3" },
-  { "iso_a3": "NIC", "cold": "3" },
-  { "iso_a3": "BHS", "cold": "3" },
-  { "iso_a3": "TTO", "cold": "3" },
-  { "iso_a3": "JAM", "cold": "3" },
-  { "iso_a3": "ISR", "cold": "1" },
-  { "iso_a3": "PRK", "cold": "4" },
-  { "iso_a3": "BTN", "cold": "3" },
-  { "iso_a3": "ARM", "cold": "2" },
-  { "iso_a3": "TLS", "cold": "3" },
-  { "iso_a3": "BRN", "cold": "3" },
-  { "iso_a3": "TKM", "cold": "2" },
-  { "iso_a3": "SUR", "cold": "3" },
-  { "iso_a3": "GUY", "cold": "3" },
-  { "iso_a3": "PRY", "cold": "3" },
-  { "iso_a3": "SSD", "cold": "3" },
-  { "iso_a3": "SML", "cold": "3" },
-  { "iso_a3": "ESH", "cold": "3" },
-  { "iso_a3": "ZMB", "cold": "3" },
-  { "iso_a3": "LBR", "cold": "3" },
-  { "iso_a3": "TGO", "cold": "3" },
-  { "iso_a3": "GNB", "cold": "3" },
-  { "iso_a3": "MRT", "cold": "3" },
-  { "iso_a3": "STP", "cold": "3" },
-  { "iso_a3": "BLR", "cold": "2" },
-  { "iso_a3": "LVA", "cold": "2" },
-  { "iso_a3": "MKD", "cold": "3" },
-  { "iso_a3": "KOS", "cold": "3" },
-  { "iso_a3": "HUN", "cold": "2" },
-  { "iso_a3": "SRB", "cold": "3" },
-  { "iso_a3": "SVN", "cold": "3" },
-  { "iso_a3": "MNE", "cold": "3" },
-  { "iso_a3": "BIH", "cold": "3" },
-  { "iso_a3": "MDA", "cold": "2" }
-]
+{
+  "schema_version": 1,
+  "dataset_id": "cold_war",
+  "metadata": {
+    "source_url": null,
+    "reference_period": null,
+    "updated_at": null
+  },
+  "legacy_layout": "list",
+  "tables": [
+    {
+      "id": "main",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "iso_a3"
+      ],
+      "metrics": [
+        {
+          "id": "cold",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "iso_a3": "IND"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CHN"
+          },
+          "values": {
+            "cold": "2"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "USA"
+          },
+          "values": {
+            "cold": "1"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IDN"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PAK"
+          },
+          "values": {
+            "cold": "1"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NGA"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BRA"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BGD"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "RUS"
+          },
+          "values": {
+            "cold": "2"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MEX"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "JPN"
+          },
+          "values": {
+            "cold": "1"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PHL"
+          },
+          "values": {
+            "cold": "1"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "COD"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ETH"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "EGY"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VNM"
+          },
+          "values": {
+            "cold": "4"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IRN"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TUR"
+          },
+          "values": {
+            "cold": "1"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DEU"
+          },
+          "values": {
+            "cold": "4"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FRA"
+          },
+          "values": {
+            "cold": "1"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GBR"
+          },
+          "values": {
+            "cold": "1"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TZA"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "THA"
+          },
+          "values": {
+            "cold": "1"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ZAF"
+          },
+          "values": {
+            "cold": "1"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ITA"
+          },
+          "values": {
+            "cold": "1"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KEN"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "COL"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SDN"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MMR"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KOR"
+          },
+          "values": {
+            "cold": "4"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ESP"
+          },
+          "values": {
+            "cold": "1"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DZA"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ARG"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IRQ"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "UGA"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "UKR"
+          },
+          "values": {
+            "cold": "2"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CAN"
+          },
+          "values": {
+            "cold": "1"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "POL"
+          },
+          "values": {
+            "cold": "2"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MAR"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "UZB"
+          },
+          "values": {
+            "cold": "2"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SAU"
+          },
+          "values": {
+            "cold": "1"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PER"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AFG"
+          },
+          "values": {
+            "cold": "2"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VEN"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MYS"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GHA"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NPL"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "YEM"
+          },
+          "values": {
+            "cold": "4"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AGO"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MOZ"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AUS"
+          },
+          "values": {
+            "cold": "1"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SYR"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CIV"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MDG"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CMR"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NER"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MLI"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TWN"
+          },
+          "values": {
+            "cold": "1"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BFA"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LKA"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ECU"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KAZ"
+          },
+          "values": {
+            "cold": "2"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CHL"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ROU"
+          },
+          "values": {
+            "cold": "2"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NLD"
+          },
+          "values": {
+            "cold": "1"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MWI"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GTM"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SOM"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TCD"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SEN"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KHM"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ZWE"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "RWA"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BEN"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BOL"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BEL"
+          },
+          "values": {
+            "cold": "1"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CUB"
+          },
+          "values": {
+            "cold": "2"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TUN"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HTI"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GRC"
+          },
+          "values": {
+            "cold": "1"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CZE"
+          },
+          "values": {
+            "cold": "2"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SWE"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PRT"
+          },
+          "values": {
+            "cold": "1"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AZE"
+          },
+          "values": {
+            "cold": "2"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DOM"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HND"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BDI"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ARE"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AUT"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CHE"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BGR"
+          },
+          "values": {
+            "cold": "2"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KGZ"
+          },
+          "values": {
+            "cold": "2"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TJK"
+          },
+          "values": {
+            "cold": "2"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SLE"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LAO"
+          },
+          "values": {
+            "cold": "2"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PNG"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SLV"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LBY"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SGP"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DNK"
+          },
+          "values": {
+            "cold": "1"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FIN"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NOR"
+          },
+          "values": {
+            "cold": "1"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IRL"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "OMN"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KWT"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GEO"
+          },
+          "values": {
+            "cold": "2"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HRV"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ERI"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PAN"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "URY"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MNG"
+          },
+          "values": {
+            "cold": "2"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "QAT"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NZL"
+          },
+          "values": {
+            "cold": "1"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SVK"
+          },
+          "values": {
+            "cold": "2"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LBN"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PSE"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PRI"
+          },
+          "values": {
+            "cold": "1"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LTU"
+          },
+          "values": {
+            "cold": "2"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ALB"
+          },
+          "values": {
+            "cold": "2"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "JOR"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "EST"
+          },
+          "values": {
+            "cold": "2"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CYP"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FJI"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LUX"
+          },
+          "values": {
+            "cold": "1"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ISL"
+          },
+          "values": {
+            "cold": "1"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MLT"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MDV"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BLZ"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BHR"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GNQ"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GAB"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GMB"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NAM"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BWA"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GIN"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CAF"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "COG"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DJI"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "COM"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LSO"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SWZ"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CPV"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SLB"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VUT"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "WSM"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TON"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FSM"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KIR"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NRU"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PLW"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MHL"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TUV"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SMR"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LIE"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MCO"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VAT"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AND"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IMN"
+          },
+          "values": {
+            "cold": "1"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "JEY"
+          },
+          "values": {
+            "cold": "1"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GGY"
+          },
+          "values": {
+            "cold": "1"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FLK"
+          },
+          "values": {
+            "cold": "1"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GRL"
+          },
+          "values": {
+            "cold": "1"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ALA"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PCN"
+          },
+          "values": {
+            "cold": "1"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "WLF"
+          },
+          "values": {
+            "cold": "1"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NCL"
+          },
+          "values": {
+            "cold": "1"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PYF"
+          },
+          "values": {
+            "cold": "1"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SPM"
+          },
+          "values": {
+            "cold": "1"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BLM"
+          },
+          "values": {
+            "cold": "1"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MAF"
+          },
+          "values": {
+            "cold": "1"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CUW"
+          },
+          "values": {
+            "cold": "1"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SXM"
+          },
+          "values": {
+            "cold": "1"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ABW"
+          },
+          "values": {
+            "cold": "1"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BMU"
+          },
+          "values": {
+            "cold": "1"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VGB"
+          },
+          "values": {
+            "cold": "1"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CYM"
+          },
+          "values": {
+            "cold": "1"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TCA"
+          },
+          "values": {
+            "cold": "1"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VIR"
+          },
+          "values": {
+            "cold": "1"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MSR"
+          },
+          "values": {
+            "cold": "1"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ATG"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GRD"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LCA"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VCT"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BRB"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DMA"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KNA"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AIA"
+          },
+          "values": {
+            "cold": "1"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NFK"
+          },
+          "values": {
+            "cold": "1"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "COK"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NIU"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ASM"
+          },
+          "values": {
+            "cold": "1"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GUM"
+          },
+          "values": {
+            "cold": "1"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MNP"
+          },
+          "values": {
+            "cold": "1"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HKG"
+          },
+          "values": {
+            "cold": "1"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MAC"
+          },
+          "values": {
+            "cold": "1"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MUS"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FRO"
+          },
+          "values": {
+            "cold": "1"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SYC"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CRI"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NIC"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BHS"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TTO"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "JAM"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ISR"
+          },
+          "values": {
+            "cold": "1"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PRK"
+          },
+          "values": {
+            "cold": "4"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BTN"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ARM"
+          },
+          "values": {
+            "cold": "2"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TLS"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BRN"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TKM"
+          },
+          "values": {
+            "cold": "2"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SUR"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GUY"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PRY"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SSD"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SML"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ESH"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ZMB"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LBR"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TGO"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GNB"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MRT"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "STP"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BLR"
+          },
+          "values": {
+            "cold": "2"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LVA"
+          },
+          "values": {
+            "cold": "2"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MKD"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KOS"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HUN"
+          },
+          "values": {
+            "cold": "2"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SRB"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SVN"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MNE"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BIH"
+          },
+          "values": {
+            "cold": "3"
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MDA"
+          },
+          "values": {
+            "cold": "2"
+          }
+        }
+      ]
+    }
+  ]
+}

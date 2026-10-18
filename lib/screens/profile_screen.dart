@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:jidoapp/services/ad_service.dart';
 import 'dart:typed_data';
 import 'package:provider/provider.dart';
@@ -64,6 +65,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final authProvider = Provider.of<AuthProvider>(context);
     final user = authProvider.user;
 
@@ -76,14 +78,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
           icon: const Icon(Icons.arrow_back_ios, color: Colors.black),
           onPressed: () => Navigator.pop(context),
         ),
-        title: const Text(
-          'My Profile',
+        title:  Text(
+          tr('My Profile'),
           style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
       ),
       body: user == null
-          ? const Center(child: Text("Not Logged In"))
+          ?  Center(child: Text(tr("Not Logged In")))
           : Consumer<CountryProvider>(
         builder: (context, countryProvider, _) {
           return Stack(
@@ -161,7 +163,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       ),
                       const SizedBox(height: 24),
                       Text(
-                        user.displayName ?? 'Traveler',
+                        tr(user.displayName ?? 'Traveler'),
                         style: const TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.bold,
@@ -170,7 +172,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       ),
                       const SizedBox(height: 8),
                       Text(
-                        user.email ?? '',
+                        tr(user.email ?? ''),
                         style: TextStyle(
                           fontSize: 16,
                           color: Colors.grey.shade600,
@@ -209,11 +211,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
                                       Text(
-                                        sub.isPremium
+                                        tr(sub.isPremium
                                             ? (kind == PremiumPlanKind.lifetime
                                             ? 'Lifetime Premium'
                                             : 'Premium Active')
-                                            : 'Unlock All Features & Ad-Free',
+                                            : 'Unlock All Features & Ad-Free'),
                                         style: const TextStyle(
                                           color: Colors.white,
                                           fontSize: 15,
@@ -221,11 +223,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                         ),
                                       ),
                                       Text(
-                                        sub.isPremium
+                                        tr(sub.isPremium
                                             ? 'You are subscribed. Thank you!'
                                             : (sub.productDetailsFor(sub.yearlyProductIdToOffer) != null
                                             ? 'Go ad-free for ${sub.productDetailsFor(sub.yearlyProductIdToOffer)!.price} / year'
-                                            : 'Go ad-free'),
+                                            : 'Go ad-free')),
                                         style: TextStyle(
                                           color: Colors.white.withOpacity(0.85),
                                           fontSize: 12,
@@ -318,7 +320,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     ),
                                     const SizedBox(width: 6),
                                     Text(
-                                      sub.isPremium ? 'YOUR PREMIUM BENEFITS' : 'ALL FEATURES & AD-FREE',
+                                      tr(sub.isPremium ? 'YOUR PREMIUM BENEFITS' : 'ALL FEATURES & AD-FREE'),
                                       style: TextStyle(
                                         fontSize: 10,
                                         fontWeight: FontWeight.w700,
@@ -431,16 +433,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                         child: Column(
                                           crossAxisAlignment: CrossAxisAlignment.start,
                                           children: [
-                                            const Text(
-                                              'Go Lifetime',
+                                             Text(
+                                              tr('Go Lifetime'),
                                               style: TextStyle(
                                                   fontSize: 16, fontWeight: FontWeight.w800, color: Colors.white),
                                             ),
                                             const SizedBox(height: 2),
                                             Text(
-                                              lifetime != null
+                                              tr(lifetime != null
                                                   ? 'Pay ${lifetime.price} once — never renew again'
-                                                  : 'Pay once — never renew again',
+                                                  : 'Pay once — never renew again'),
                                               style: TextStyle(fontSize: 12, color: Colors.white.withOpacity(0.9)),
                                             ),
                                           ],
@@ -483,8 +485,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               borderRadius: BorderRadius.circular(16),
                             ),
                           ),
-                          child: const Text(
-                            'Log Out',
+                          child:  Text(
+                            tr('Log Out'),
                             style: TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.bold,
@@ -520,6 +522,7 @@ class _ProfileBenefitRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final Color color = activeColor ?? const Color(0xFF3DDAD7);
     return Row(
       children: [
@@ -540,7 +543,7 @@ class _ProfileBenefitRow extends StatelessWidget {
         ),
         const SizedBox(width: 10),
         Text(
-          label,
+          tr(label),
           style: TextStyle(
             fontSize: 13,
             color: active ? const Color(0xFF2C3E50) : Colors.grey.shade400,

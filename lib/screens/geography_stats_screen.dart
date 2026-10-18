@@ -1,5 +1,6 @@
 // lib/screens/geography_stats_screen.dart
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:intl/intl.dart';
 import 'package:jidoapp/models/country_model.dart';
 import 'package:jidoapp/providers/country_provider.dart';
@@ -85,6 +86,7 @@ class GeographyTabScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     // Scaffold와 AppBar는 래퍼인 GeographyStatsScreen에서 처리합니다.
     return Consumer<CountryProvider>(
       builder: (context, provider, child) {
@@ -145,9 +147,10 @@ class GeographyStatsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const List<Tab> tabs = <Tab>[
-      Tab(icon: Icon(Icons.terrain), text: 'Geography'),
-      Tab(icon: Icon(Icons.thermostat), text: 'Climate'),
+    Localizations.maybeLocaleOf(context);
+    final List<Tab> tabs = <Tab>[
+      Tab(icon: Icon(Icons.terrain), text: tr('Geography')),
+      Tab(icon: Icon(Icons.thermostat), text: tr('Climate')),
     ];
 
     const List<Widget> screens = <Widget>[
@@ -163,7 +166,7 @@ class GeographyStatsScreen extends StatelessWidget {
           bottom: false,
           child: Column(
             children: [
-              const Material(
+              Material(
                 elevation: 1,
                 child: TabBar(
                   tabs: tabs,
@@ -241,6 +244,7 @@ class _CombinedGeoBlockCardState extends State<_CombinedGeoBlockCard> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final theme = Theme.of(context);
     final textTheme = theme.textTheme;
 
@@ -269,7 +273,7 @@ class _CombinedGeoBlockCardState extends State<_CombinedGeoBlockCard> {
                   value: group,
                   child: Row(children: [
                     Icon(group.icon, color: group.themeColor), const SizedBox(width: 12),
-                    Expanded(child: Text(group.title, style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold), overflow: TextOverflow.ellipsis)),
+                    Expanded(child: Text(tr(group.title), style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold), overflow: TextOverflow.ellipsis)),
                   ]),
                 )).toList(),
                 onChanged: (newValue) { if(newValue != null) setState(() { _selectedGroup = newValue; _isExpanded = false; }); },
@@ -284,10 +288,10 @@ class _CombinedGeoBlockCardState extends State<_CombinedGeoBlockCard> {
                 children: [
                   Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                     Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                      Text("Visited Countries", style: theme.textTheme.bodyLarge),
+                      Text(tr("Visited Countries"), style: theme.textTheme.bodyLarge),
                       Text.rich(TextSpan(
-                        text: '$visited', style: theme.textTheme.headlineSmall?.copyWith(color: _selectedGroup.themeColor, fontWeight: FontWeight.bold),
-                        children: [TextSpan(text: ' / $total', style: theme.textTheme.titleMedium?.copyWith(color: Colors.grey.shade600))],
+                        text: tr('$visited'), style: theme.textTheme.headlineSmall?.copyWith(color: _selectedGroup.themeColor, fontWeight: FontWeight.bold),
+                        children: [TextSpan(text: tr(' / $total'), style: theme.textTheme.titleMedium?.copyWith(color: Colors.grey.shade600))],
                       )),
                     ]),
                     ElevatedButton.icon(
@@ -295,7 +299,7 @@ class _CombinedGeoBlockCardState extends State<_CombinedGeoBlockCard> {
                         final groups = _selectedGroup.mapGroupsBuilder(widget.allCountries);
                         Navigator.push(context, MaterialPageRoute(builder: (context) => CountriesMapScreen(highlightGroups: groups)));
                       },
-                      icon: const Icon(Icons.map_outlined), label: const Text('Map'),
+                      icon: const Icon(Icons.map_outlined), label:  Text(tr('Map')),
                       style: ElevatedButton.styleFrom(backgroundColor: _selectedGroup.themeColor, foregroundColor: Colors.white, shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30))),
                     ),
                   ]),
@@ -328,12 +332,12 @@ class _CombinedGeoBlockCardState extends State<_CombinedGeoBlockCard> {
                       padding: const EdgeInsets.symmetric(horizontal: 12),
                       child: Row(
                         children: [
-                          Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 14)), // 국기 추가
+                          Text(tr(flagEmoji(country.isoA2)), style: const TextStyle(fontSize: 14)), // 국기 추가
                           const SizedBox(width: 6),
                           Expanded(
                             child: Align(
                                 alignment: Alignment.centerLeft,
-                                child: Text(country.name, style: theme.textTheme.bodyMedium, overflow: TextOverflow.ellipsis)
+                                child: Text(tr(country.name), style: theme.textTheme.bodyMedium, overflow: TextOverflow.ellipsis)
                             ),
                           ),
                         ],
@@ -484,6 +488,7 @@ class _CombinedSpecialGroupCardState extends State<_CombinedSpecialGroupCard> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final theme = Theme.of(context);
     final textTheme = theme.textTheme;
 
@@ -517,7 +522,7 @@ class _CombinedSpecialGroupCardState extends State<_CombinedSpecialGroupCard> {
                   value: group,
                   child: Row(children: [
                     Icon(group.icon, color: group.themeColor), const SizedBox(width: 12),
-                    Expanded(child: Text(group.title, style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold), overflow: TextOverflow.ellipsis)),
+                    Expanded(child: Text(tr(group.title), style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold), overflow: TextOverflow.ellipsis)),
                   ]),
                 )).toList(),
                 onChanged: (newValue) { if(newValue != null) setState(() { _selectedGroup = newValue; _isExpanded = false; }); },
@@ -532,10 +537,10 @@ class _CombinedSpecialGroupCardState extends State<_CombinedSpecialGroupCard> {
                 children: [
                   Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                     Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                      Text("Visited Countries", style: textTheme.bodyLarge),
+                      Text(tr("Visited Countries"), style: textTheme.bodyLarge),
                       Text.rich(TextSpan(
-                        text: '$visited', style: textTheme.headlineSmall?.copyWith(color: _selectedGroup.themeColor, fontWeight: FontWeight.bold),
-                        children: [TextSpan(text: ' / $total', style: theme.textTheme.titleMedium?.copyWith(color: Colors.grey.shade600))],
+                        text: tr('$visited'), style: textTheme.headlineSmall?.copyWith(color: _selectedGroup.themeColor, fontWeight: FontWeight.bold),
+                        children: [TextSpan(text: tr(' / $total'), style: theme.textTheme.titleMedium?.copyWith(color: Colors.grey.shade600))],
                       )),
                     ]),
                     ElevatedButton.icon(
@@ -543,7 +548,7 @@ class _CombinedSpecialGroupCardState extends State<_CombinedSpecialGroupCard> {
                         final groups = _selectedGroup.mapGroupsBuilder(widget.allCountries);
                         Navigator.push(context, MaterialPageRoute(builder: (context) => CountriesMapScreen(highlightGroups: groups)));
                       },
-                      icon: const Icon(Icons.map_outlined), label: const Text('Map'),
+                      icon: const Icon(Icons.map_outlined), label:  Text(tr('Map')),
                       style: ElevatedButton.styleFrom(backgroundColor: _selectedGroup.themeColor, foregroundColor: Colors.white, shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30))),
                     ),
                   ]),
@@ -578,7 +583,7 @@ class _CombinedSpecialGroupCardState extends State<_CombinedSpecialGroupCard> {
                       padding: const EdgeInsets.symmetric(horizontal: 12),
                       child: Row(
                         children: [
-                          Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 14)), // 국기 추가
+                          Text(tr(flagEmoji(country.isoA2)), style: const TextStyle(fontSize: 14)), // 국기 추가
                           const SizedBox(width: 6),
                           Expanded(
                             child: Align(
@@ -588,9 +593,9 @@ class _CombinedSpecialGroupCardState extends State<_CombinedSpecialGroupCard> {
                                   text: TextSpan(
                                     style: theme.textTheme.bodyMedium,
                                     children: [
-                                      if(isSubMember) const TextSpan(text: '(*) ', style: TextStyle(color: Colors.purple, fontWeight: FontWeight.bold)),
-                                      TextSpan(text: country.name),
-                                      if(memberData != null) TextSpan(text: ' ($memberData)', style: TextStyle(color: Colors.grey.shade600)),
+                                      if(isSubMember)  TextSpan(text: tr('(*) '), style: TextStyle(color: Colors.purple, fontWeight: FontWeight.bold)),
+                                      TextSpan(text: tr(country.name)),
+                                      if(memberData != null) TextSpan(text: tr(' ($memberData)'), style: TextStyle(color: Colors.grey.shade600)),
                                     ],
                                   ),
                                 )
@@ -691,7 +696,7 @@ class _CombinedGeoMetricCardState extends State<_CombinedGeoMetricCard> {
   // 모든 순위를 일반 텍스트로 표시하는 헬퍼 함수
   Widget _buildRankText(int rank, Color color) {
     return Text(
-      '$rank',
+      tr('$rank'),
       style: TextStyle(
         fontSize: 16,
         fontWeight: FontWeight.bold,
@@ -702,6 +707,7 @@ class _CombinedGeoMetricCardState extends State<_CombinedGeoMetricCard> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final theme = Theme.of(context);
     final textTheme = theme.textTheme;
     final isLatitude = _selectedMetricType == 'Latitude';
@@ -730,7 +736,7 @@ class _CombinedGeoMetricCardState extends State<_CombinedGeoMetricCard> {
                     child: Row(children: [
                       Icon(Icons.public, color: Colors.blue),
                       const SizedBox(width: 12),
-                      Text('Latitude', style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
+                      Text(tr('Latitude'), style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
                     ]),
                   ),
                   DropdownMenuItem(
@@ -738,7 +744,7 @@ class _CombinedGeoMetricCardState extends State<_CombinedGeoMetricCard> {
                     child: Row(children: [
                       Icon(Icons.terrain, color: Colors.brown),
                       const SizedBox(width: 12),
-                      Text('Elevation', style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
+                      Text(tr('Elevation'), style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
                     ]),
                   ),
                 ],
@@ -763,18 +769,18 @@ class _CombinedGeoMetricCardState extends State<_CombinedGeoMetricCard> {
                   child: DropdownButtonFormField<int>(
                     value: isLatitude ? _latitudeSortOrder : _elevationSortOrder,
                     decoration: InputDecoration(
-                        labelText: 'Order',
+                        labelText: tr('Order'),
                         border: OutlineInputBorder(borderRadius: BorderRadius.circular(16)), // 둥근 모서리
                         isDense: true
                     ),
-                    items: const [
+                    items:  [
                       DropdownMenuItem(
                         value: 0,
-                        child: Text('High'),
+                        child: Text(tr('High')),
                       ),
                       DropdownMenuItem(
                         value: 1,
-                        child: Text('Low'),
+                        child: Text(tr('Low')),
                       ),
                     ],
                     onChanged: (v) => setState(() {
@@ -789,27 +795,27 @@ class _CombinedGeoMetricCardState extends State<_CombinedGeoMetricCard> {
                       ? DropdownButtonFormField<int>(
                     value: _latitudeMetric,
                     decoration: InputDecoration(
-                        labelText: 'Metric',
+                        labelText: tr('Metric'),
                         border: OutlineInputBorder(borderRadius: BorderRadius.circular(16)), // 둥근 모서리
                         isDense: true
                     ),
-                    items: const [
-                      DropdownMenuItem(value: 0, child: Text('Average')),
-                      DropdownMenuItem(value: 1, child: Text('Farthest Pt.')),
-                      DropdownMenuItem(value: 2, child: Text('Capital')),
+                    items:  [
+                      DropdownMenuItem(value: 0, child: Text(tr('Average'))),
+                      DropdownMenuItem(value: 1, child: Text(tr('Farthest Pt.'))),
+                      DropdownMenuItem(value: 2, child: Text(tr('Capital'))),
                     ],
                     onChanged: (v) => setState(() { _latitudeMetric = v!; _prepareList(); }),
                   )
                       : DropdownButtonFormField<int>(
                     value: _elevationMetric,
                     decoration: InputDecoration(
-                        labelText: 'Metric',
+                        labelText: tr('Metric'),
                         border: OutlineInputBorder(borderRadius: BorderRadius.circular(16)), // 둥근 모서리
                         isDense: true
                     ),
-                    items: const [
-                      DropdownMenuItem(value: 1, child: Text('Average')),
-                      DropdownMenuItem(value: 0, child: Text('Highest')),
+                    items:  [
+                      DropdownMenuItem(value: 1, child: Text(tr('Average'))),
+                      DropdownMenuItem(value: 0, child: Text(tr('Highest'))),
                     ],
                     onChanged: (v) => setState(() { _elevationMetric = v!; _prepareList(); }),
                   ),
@@ -949,11 +955,11 @@ class _CombinedGeoMetricCardState extends State<_CombinedGeoMetricCard> {
                     children: [
                       _buildRankText(rank, themeColor),
                       const SizedBox(width: 12),
-                      Text(flagEmoji(item.isoA2), style: const TextStyle(fontSize: 18)), // 국기 추가
+                      Text(tr(flagEmoji(item.isoA2)), style: const TextStyle(fontSize: 18)), // 국기 추가
                       const SizedBox(width: 8),
-                      Expanded(child: Text(item.name, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold, fontSize: 17))),
+                      Expanded(child: Text(tr(item.name), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold, fontSize: 17))),
                       const SizedBox(width: 12),
-                      Text(displayValue, style: theme.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
+                      Text(tr(displayValue), style: theme.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
                     ],
                   ),
                   const SizedBox(height: 6),
@@ -1036,7 +1042,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
 
   Widget _buildRankText(int rank, Color color) {
     return Text(
-      '$rank',
+      tr('$rank'),
       style: TextStyle(
         fontSize: 16,
         fontWeight: FontWeight.bold,
@@ -1047,6 +1053,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final textTheme = Theme.of(context).textTheme;
     final countryProvider = Provider.of<CountryProvider>(context, listen: false);
     final useDefaultColor = countryProvider.useDefaultRankingBarColor;
@@ -1072,7 +1079,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                   children: [
                     Icon(Icons.search, color: rankingThemeColor),
                     const SizedBox(width: 8),
-                    Text('Geographic Features', style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
+                    Text(tr('Geographic Features'), style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
                   ],
                 ),
                 const SizedBox(height: 8),
@@ -1086,7 +1093,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                       child: Row(children: [
                         Icon(group.icon, color: group.themeColor),
                         const SizedBox(width: 12),
-                        Text(group.title, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
+                        Text(tr(group.title), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
                       ]),
                     )).toList(),
                     onChanged: (newValue) { if (newValue != null) { setState(() { _selectedRanking = newValue; _prepareList(); }); } },
@@ -1098,7 +1105,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
           const Divider(height: 1),
           Expanded(
             child: _rankedList.isEmpty
-                ? const Center(child: Text('No data to display.'))
+                ?  Center(child: Text(tr('No data to display.')))
                 : ListView.builder(
               padding: const EdgeInsets.all(8.0),
               itemCount: _rankedList.length,
@@ -1127,10 +1134,10 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                             children: [
                               _buildRankText(rank, rankingThemeColor),
                               const SizedBox(width: 12),
-                              Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 18)), // 국기 추가
+                              Text(tr(flagEmoji(country.isoA2)), style: const TextStyle(fontSize: 18)), // 국기 추가
                               const SizedBox(width: 8),
-                              Expanded(child: Text(country.name, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
-                              Text(formattedValue, style: textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
+                              Expanded(child: Text(tr(country.name), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
+                              Text(tr(formattedValue), style: textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
                             ],
                           ),
                           const SizedBox(height: 6),
@@ -1177,7 +1184,7 @@ Widget _buildHorizontalBar({
         children: [
           SizedBox(
             width: 60,
-            child: Text(label, style: const TextStyle(fontWeight: FontWeight.bold)),
+            child: Text(tr(label), style: const TextStyle(fontWeight: FontWeight.bold)),
           ),
           Expanded(
             child: Container(
@@ -1203,7 +1210,7 @@ Widget _buildHorizontalBar({
           SizedBox(
             width: 80,
             child: Text(
-              '${formatter.format(value)}$suffix',
+              tr('${formatter.format(value)}$suffix'),
               textAlign: TextAlign.right,
               style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12),
             ),

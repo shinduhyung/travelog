@@ -1,6 +1,7 @@
 // lib/screens/city_climate_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:jidoapp/models/city_model.dart';
 import 'package:jidoapp/providers/city_provider.dart';
@@ -136,16 +137,17 @@ class CityClimateTabScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Consumer<CityProvider>(
       builder: (context, provider, child) {
         if (provider.isLoading) {
           return Center(
             child: Column(
               mainAxisSize: MainAxisSize.min,
-              children: const [
+              children:  [
                 CircularProgressIndicator(strokeWidth: 2, color: _CT.ink),
                 SizedBox(height: 16),
-                Text('Loading climate data...', style: TextStyle(fontSize: 13, color: _CT.inkLight)),
+                Text(tr('Loading climate data...'), style: TextStyle(fontSize: 13, color: _CT.inkLight)),
               ],
             ),
           );
@@ -255,11 +257,12 @@ class _SectionHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Padding(
       padding: const EdgeInsets.fromLTRB(16, 24, 16, 12),
       child: Row(
         children: [
-          Text(label, style: const TextStyle(
+          Text(tr(label), style: const TextStyle(
             fontSize: 11, fontWeight: FontWeight.w700,
             letterSpacing: 2.0, color: _CT.inkLight,
           )),
@@ -333,6 +336,7 @@ class _ClimateRankingCardState extends State<_ClimateRankingCard> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final topValue = _list.isNotEmpty
         ? _list.map((c) => _selected.valueAccessor(c).abs()).reduce(math.max)
         : 1.0;
@@ -372,7 +376,7 @@ class _ClimateRankingCardState extends State<_ClimateRankingCard> {
                             Icon(r.icon, size: 15,
                                 color: active ? Colors.white : _CT.inkLight),
                             const SizedBox(width: 6),
-                            Text(r.title, style: TextStyle(
+                            Text(tr(r.title), style: TextStyle(
                               fontSize: 12,
                               fontWeight: active ? FontWeight.w700 : FontWeight.w400,
                               color: active ? Colors.white : _CT.inkLight,
@@ -411,7 +415,7 @@ class _ClimateRankingCardState extends State<_ClimateRankingCard> {
                         ),
                         const SizedBox(width: 4),
                         Text(
-                          _sortDir == 0 ? 'High' : 'Low',
+                          tr(_sortDir == 0 ? 'High' : 'Low'),
                           style: const TextStyle(
                             fontSize: 11, fontWeight: FontWeight.w600, color: _CT.inkMid,
                           ),
@@ -475,6 +479,7 @@ class _RankRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return GestureDetector(
       onTap: () => showExternalCityDetailsModal(context, city),
       child: Container(
@@ -493,7 +498,7 @@ class _RankRow extends StatelessWidget {
             SizedBox(
               width: 28,
               child: Text(
-                rank <= 3 ? (rank == 1 ? '🥇' : rank == 2 ? '🥈' : '🥉') : '$rank',
+                tr(rank <= 3 ? (rank == 1 ? '🥇' : rank == 2 ? '🥈' : '🥉') : '$rank'),
                 style: TextStyle(
                   fontSize: rank <= 3 ? 16 : 12,
                   fontWeight: FontWeight.w700,
@@ -521,7 +526,7 @@ class _RankRow extends StatelessWidget {
                         Icon(Icons.check_circle_rounded, size: 14, color: accentColor),
                       ],
                       const SizedBox(width: 6),
-                      Text(value, style: const TextStyle(
+                      Text(tr(value), style: const TextStyle(
                         fontSize: 13, fontWeight: FontWeight.w700, color: _CT.ink,
                       )),
                     ],
@@ -538,9 +543,9 @@ class _RankRow extends StatelessWidget {
                   const SizedBox(height: 3),
                   Row(
                     children: [
-                      Text(_cityFlagEmoji(city), style: const TextStyle(fontSize: 11)),
+                      Text(tr(_cityFlagEmoji(city)), style: const TextStyle(fontSize: 11)),
                       const SizedBox(width: 4),
-                      Text(city.country, style: const TextStyle(fontSize: 10, color: _CT.inkLight)),
+                      Text(tr(city.country), style: const TextStyle(fontSize: 10, color: _CT.inkLight)),
                     ],
                   ),
                 ],
@@ -568,6 +573,7 @@ class _ClimateSummaryBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final total = groups.length;
     final pct = total > 0 ? completed / total : 0.0;
 
@@ -581,15 +587,15 @@ class _ClimateSummaryBar extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  '$completed of $total collections',
+                  tr('$completed of $total collections'),
                   style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w800,
                       color: Colors.white, letterSpacing: -0.5),
                 ),
                 const SizedBox(height: 4),
                 Text(
-                  completed == 0 ? 'No collections fully completed yet'
+                  tr(completed == 0 ? 'No collections fully completed yet'
                       : completed == total ? 'All collections completed! 🎉'
-                      : '${total - completed} remaining to complete',
+                      : '${total - completed} remaining to complete'),
                   style: const TextStyle(fontSize: 12, color: Color(0xFF888888)),
                 ),
                 const SizedBox(height: 14),
@@ -612,6 +618,7 @@ class _SegBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final total = groups.fold<int>(0, (s, g) => s + g.cities.length);
     if (total == 0) return const SizedBox.shrink();
 
@@ -647,6 +654,7 @@ class _ArcPct extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return SizedBox(
       width: 68, height: 68,
       child: Stack(
@@ -656,10 +664,10 @@ class _ArcPct extends StatelessWidget {
           Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Text('${(value * 100).round()}', style: const TextStyle(
+              Text(tr('${(value * 100).round()}'), style: const TextStyle(
                 fontSize: 20, fontWeight: FontWeight.w800, color: Colors.white, height: 1,
               )),
-              const Text('%', style: TextStyle(fontSize: 10, color: Color(0xFF888888))),
+               Text(tr('%'), style: TextStyle(fontSize: 10, color: Color(0xFF888888))),
             ],
           ),
         ],
@@ -755,6 +763,7 @@ class _ClimateCollectionCardState extends State<_ClimateCollectionCard>
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final g = widget.data;
     final sorted = List<City>.from(g.cities)..sort((a, b) => a.name.compareTo(b.name));
     final total = sorted.length;
@@ -790,12 +799,12 @@ class _ClimateCollectionCardState extends State<_ClimateCollectionCard>
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(g.label, style: TextStyle(
+                        Text(tr(g.label), style: TextStyle(
                           fontSize: 10, fontWeight: FontWeight.w700,
                           letterSpacing: 1.5, color: g.color,
                         )),
                         const SizedBox(height: 2),
-                        Text(g.title, style: const TextStyle(
+                        Text(tr(g.title), style: const TextStyle(
                           fontSize: 15, fontWeight: FontWeight.w700,
                           color: _CT.ink, letterSpacing: -0.2,
                         )),
@@ -818,10 +827,10 @@ class _ClimateCollectionCardState extends State<_ClimateCollectionCard>
                       ),
                       child: Row(
                         mainAxisSize: MainAxisSize.min,
-                        children: const [
+                        children:  [
                           Icon(Icons.map_outlined, size: 14, color: _CT.inkMid),
                           SizedBox(width: 4),
-                          Text('Map', style: TextStyle(
+                          Text(tr('Map'), style: TextStyle(
                             fontSize: 12, fontWeight: FontWeight.w600, color: _CT.inkMid,
                           )),
                         ],
@@ -860,7 +869,7 @@ class _ClimateCollectionCardState extends State<_ClimateCollectionCard>
                     _Chip(label: 'Remaining', value: '${total - visited}', color: _CT.inkLight),
                     const Spacer(),
                     Text(
-                      '${(pct * 100).round()}%',
+                      tr('${(pct * 100).round()}%'),
                       style: TextStyle(
                         fontSize: 20, fontWeight: FontWeight.w800,
                         color: pct > 0 ? g.color : _CT.inkLight,
@@ -914,14 +923,15 @@ class _Chip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Row(
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.baseline,
       textBaseline: TextBaseline.alphabetic,
       children: [
-        Text(value, style: TextStyle(fontSize: 16, fontWeight: FontWeight.w800, color: color)),
+        Text(tr(value), style: TextStyle(fontSize: 16, fontWeight: FontWeight.w800, color: color)),
         const SizedBox(width: 3),
-        Text(label, style: const TextStyle(
+        Text(tr(label), style: const TextStyle(
           fontSize: 10, fontWeight: FontWeight.w500,
           color: _CT.inkLight, letterSpacing: 0.3,
         )),
@@ -938,6 +948,7 @@ class _CityChip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final flag = _cityFlagEmoji(city);
     return GestureDetector(
       onTap: () => showExternalCityDetailsModal(context, city),
@@ -952,7 +963,7 @@ class _CityChip extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             if (flag.isNotEmpty) ...[
-              Text(flag, style: const TextStyle(fontSize: 11)),
+              Text(tr(flag), style: const TextStyle(fontSize: 11)),
               const SizedBox(width: 5),
             ],
             Text(city.name, style: TextStyle(

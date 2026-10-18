@@ -1,6 +1,7 @@
 // lib/main_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:jidoapp/screens/cities_menu_screen.dart';
 import 'package:jidoapp/screens/countries_menu_screen.dart';
 import 'package:jidoapp/screens/explore_menu_screen.dart';
@@ -56,6 +57,7 @@ class _MainScreenState extends State<MainScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Scaffold(
       extendBody: true,
       body: SafeArea(
@@ -108,7 +110,7 @@ class _MainScreenState extends State<MainScreen> {
                           ),
                           const SizedBox(height: 4),
                           Text(
-                            _labels[index],
+                            tr(_labels[index]),
                             style: TextStyle(
                               fontSize: 11,
                               fontWeight: isSelected

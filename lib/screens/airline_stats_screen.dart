@@ -4,10 +4,11 @@ import 'dart:math' as math;
 import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 import 'package:fl_chart/fl_chart.dart';
+import 'package:jidoapp/services/statistics_repository.dart';
 import 'package:jidoapp/models/airline_model.dart';
 import 'package:jidoapp/models/country_model.dart';
 import 'package:jidoapp/providers/airline_provider.dart';
@@ -21,6 +22,7 @@ class AirlineStatsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Scaffold(
       body: SafeArea(
         child: Column(
@@ -40,7 +42,7 @@ class AirlineStatsScreen extends StatelessWidget {
                     child: Column(
                       children: [
                         FutureBuilder(
-                          future: rootBundle.loadString('assets/top_airlines.json'),
+                          future: StatisticsRepository.instance.loadLegacyString('assets/top_airlines.json'),
                           builder: (context, snapshot) {
                             if (snapshot.connectionState == ConnectionState.waiting) {
                               return const SizedBox(
@@ -49,9 +51,9 @@ class AirlineStatsScreen extends StatelessWidget {
                               );
                             }
                             if (snapshot.hasError) {
-                              return const SizedBox(
+                              return  SizedBox(
                                 height: 300,
-                                child: Center(child: Text('Failed to load top airline data.')),
+                                child: Center(child: Text(tr('Failed to load top airline data.'))),
                               );
                             }
                             final List<dynamic> rankingData = json.decode(snapshot.data!);
@@ -107,6 +109,7 @@ class _TopAirlinesRankingCardState extends State<_TopAirlinesRankingCard> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final textTheme = Theme.of(context).textTheme;
     final Color visitedColor = Colors.green.shade700;
     final countryProvider = context.read<CountryProvider>();
@@ -136,7 +139,7 @@ class _TopAirlinesRankingCardState extends State<_TopAirlinesRankingCard> {
                   children: [
                     Icon(Icons.emoji_events, color: widget.themeColor[800]),
                     const SizedBox(width: 8),
-                    Text('🏆 Top 100 Airlines', style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
+                    Text(tr('🏆 Top 100 Airlines'), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
                   ],
                 ),
                 SizedBox(
@@ -161,14 +164,14 @@ class _TopAirlinesRankingCardState extends State<_TopAirlinesRankingCard> {
                       padding: WidgetStateProperty.all(const EdgeInsets.symmetric(horizontal: 10)),
                       textStyle: WidgetStateProperty.all(const TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
                     ),
-                    segments: const [
+                    segments:  [
                       ButtonSegment<int>(
                         value: 0,
-                        label: Center(child: Text('All')),
+                        label: Center(child: Text(tr('All'))),
                       ),
                       ButtonSegment<int>(
                         value: 1,
-                        label: Center(child: Text('Flown')),
+                        label: Center(child: Text(tr('Flown'))),
                       ),
                     ],
                     selected: {_displaySegment},
@@ -186,7 +189,7 @@ class _TopAirlinesRankingCardState extends State<_TopAirlinesRankingCard> {
           SizedBox(
             height: 350,
             child: filteredRankingData.isEmpty
-                ? const Center(child: Text('No data to display.'))
+                ?  Center(child: Text(tr('No data to display.')))
                 : ListView.builder(
               padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
               itemCount: filteredRankingData.length,
@@ -228,7 +231,7 @@ class _TopAirlinesRankingCardState extends State<_TopAirlinesRankingCard> {
                         radius: 16,
                         backgroundColor: isVisited ? visitedColor : Colors.grey.shade400,
                         child: Text(
-                          rank.toString(),
+                          tr(rank.toString()),
                           style: textTheme.bodyMedium?.copyWith(
                               fontWeight: FontWeight.bold,
                               color: Colors.white,
@@ -250,7 +253,7 @@ class _TopAirlinesRankingCardState extends State<_TopAirlinesRankingCard> {
                           const SizedBox(width: 4),
                           Expanded(
                               child: Text(
-                                displayName,
+                                tr(displayName),
                                 style: textTheme.bodyMedium
                                     ?.copyWith(color: continentColor, fontWeight: FontWeight.bold),
                                 overflow: TextOverflow.ellipsis,
@@ -440,6 +443,7 @@ class _AirlineRankingCardState extends State<_AirlineRankingCard> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final textTheme = Theme.of(context).textTheme;
     final topFlights = _maxFlightsInPeriod;
 
@@ -456,7 +460,7 @@ class _AirlineRankingCardState extends State<_AirlineRankingCard> {
               children: [
                 Icon(Icons.flight_takeoff, color: widget.themeColor[800]),
                 const SizedBox(width: 8),
-                Text('Most Flown Airlines', style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
+                Text(tr('Most Flown Airlines'), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
               ],
             ),
           ),
@@ -486,7 +490,7 @@ class _AirlineRankingCardState extends State<_AirlineRankingCard> {
                           return DropdownMenuItem<String>(
                             value: value,
                             child: Text(
-                              value,
+                              tr(value),
                               style: TextStyle(color: widget.themeColor[800], fontWeight: FontWeight.bold),
                             ),
                           );
@@ -509,9 +513,9 @@ class _AirlineRankingCardState extends State<_AirlineRankingCard> {
                     Expanded(
                       child: SegmentedButton<int>(
                         showSelectedIcon: false,
-                        segments: const [
-                          ButtonSegment<int>(value: 0, label: Text('High')),
-                          ButtonSegment<int>(value: 1, label: Text('Low')),
+                        segments:  [
+                          ButtonSegment<int>(value: 0, label: Text(tr('High'))),
+                          ButtonSegment<int>(value: 1, label: Text(tr('Low'))),
                         ],
                         selected: {_sortOrderSegment},
                         onSelectionChanged: (Set<int> newSelection) {
@@ -559,7 +563,7 @@ class _AirlineRankingCardState extends State<_AirlineRankingCard> {
                           },
                         ),
                         Text(
-                          '$_selectedYear',
+                          tr('$_selectedYear'),
                           style: textTheme.titleMedium?.copyWith(
                             fontWeight: FontWeight.bold,
                             color: widget.themeColor[800],
@@ -581,7 +585,7 @@ class _AirlineRankingCardState extends State<_AirlineRankingCard> {
                   Padding(
                     padding: const EdgeInsets.only(top: 8.0),
                     child: Text(
-                      'Custom Range: ${DateFormat('yyyy-MM-dd').format(_customStartDate!)} ~ ${DateFormat('yyyy-MM-dd').format(_customEndDate!)}',
+                      tr('Custom Range: ${DateFormat('yyyy-MM-dd').format(_customStartDate!)} ~ ${DateFormat('yyyy-MM-dd').format(_customEndDate!)}'),
                       style: const TextStyle(fontSize: 14, color: Colors.grey, fontStyle: FontStyle.italic),
                     ),
                   ),
@@ -590,7 +594,7 @@ class _AirlineRankingCardState extends State<_AirlineRankingCard> {
           ),
           Expanded(
             child: _rankedAirlines.isEmpty
-                ? const Center(child: Text('No flight records available for this period.'))
+                ?  Center(child: Text(tr('No flight records available for this period.')))
                 : ListView.builder(
               padding: const EdgeInsets.all(8.0),
               itemCount: _rankedAirlines.length,
@@ -617,7 +621,7 @@ class _AirlineRankingCardState extends State<_AirlineRankingCard> {
                           children: [
                             SizedBox(
                                 width: 32,
-                                child: Text('#$rank',
+                                child: Text(tr('#$rank'),
                                     style: textTheme.titleSmall
                                         ?.copyWith(color: Colors.grey.shade700, fontWeight: FontWeight.bold))),
                             Expanded(
@@ -628,7 +632,7 @@ class _AirlineRankingCardState extends State<_AirlineRankingCard> {
                               ),
                             ),
                             const SizedBox(width: 12),
-                            Text('$useCount',
+                            Text(tr('$useCount'),
                                 style: textTheme.titleLarge
                                     ?.copyWith(fontWeight: FontWeight.bold, color: widget.themeColor[900])),
                           ],
@@ -665,7 +669,7 @@ class _AirlineRankingCardState extends State<_AirlineRankingCard> {
             padding: const EdgeInsets.symmetric(vertical: 12.0),
             child: Center(
               child: Text(
-                'Average Flights: $_averageFlights',
+                tr('Average Flights: $_averageFlights'),
                 style: TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.bold,
@@ -833,6 +837,7 @@ class _AirlineTypeStatsCardState extends State<_AirlineTypeStatsCard> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Container(
       decoration: BoxDecoration(
         color: Colors.white,
@@ -843,7 +848,7 @@ class _AirlineTypeStatsCardState extends State<_AirlineTypeStatsCard> {
       child: Column(
         children: [
           Text(
-            'Carrier Type Distribution',
+            tr('Carrier Type Distribution'),
             style: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w900, color: _primaryColor, fontSize: 22),
           ),
           const SizedBox(height: 16),
@@ -865,7 +870,7 @@ class _AirlineTypeStatsCardState extends State<_AirlineTypeStatsCard> {
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(16)),
         enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(16), borderSide: BorderSide(color: _primaryColor.withOpacity(0.5))),
       ),
-      items: _periods.map((p) => DropdownMenuItem(value: p, child: Text(p, style: TextStyle(color: _primaryColor, fontWeight: FontWeight.bold)))).toList(),
+      items: _periods.map((p) => DropdownMenuItem(value: p, child: Text(tr(p), style: TextStyle(color: _primaryColor, fontWeight: FontWeight.bold)))).toList(),
       onChanged: (val) {
         if (val == 'Custom') {
           _showCustomDateRangePicker();
@@ -923,8 +928,8 @@ class _AirlineTypeStatsCardState extends State<_AirlineTypeStatsCard> {
               Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Text('$_totalItemsInPeriod', style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold, color: _primaryColor)),
-                  Text('Flights', style: TextStyle(fontSize: 14, color: Colors.grey[600])),
+                  Text(tr('$_totalItemsInPeriod'), style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold, color: _primaryColor)),
+                  Text(tr('Flights'), style: TextStyle(fontSize: 14, color: Colors.grey[600])),
                 ],
               ),
             ],
@@ -945,7 +950,7 @@ class _AirlineTypeStatsCardState extends State<_AirlineTypeStatsCard> {
       children: [
         Container(width: 12, height: 12, decoration: BoxDecoration(color: color, borderRadius: BorderRadius.circular(3))),
         const SizedBox(width: 4),
-        Text(text, style: const TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
+        Text(tr(text), style: const TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
       ],
     );
   }
@@ -958,7 +963,7 @@ class _AirlineTypeStatsCardState extends State<_AirlineTypeStatsCard> {
           children: [
             Icon(Icons.trending_up, color: _primaryColor),
             const SizedBox(width: 8),
-            const Text("Yearly Trend (10 Years)", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+             Text(tr("Yearly Trend (10 Years)"), style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
           ],
         ),
         const SizedBox(height: 24),
@@ -967,8 +972,8 @@ class _AirlineTypeStatsCardState extends State<_AirlineTypeStatsCard> {
           child: LineChart(LineChartData(
             gridData: const FlGridData(show: true, drawVerticalLine: false),
             titlesData: FlTitlesData(
-              leftTitles: AxisTitles(sideTitles: SideTitles(showTitles: true, reservedSize: 30, getTitlesWidget: (v, m) => Text(v.toInt().toString(), style: const TextStyle(fontSize: 10)))),
-              bottomTitles: AxisTitles(sideTitles: SideTitles(showTitles: true, getTitlesWidget: (v, m) => Text(v.toInt().toString().substring(2), style: const TextStyle(fontSize: 10)))),
+              leftTitles: AxisTitles(sideTitles: SideTitles(showTitles: true, reservedSize: 30, getTitlesWidget: (v, m) => Text(tr(v.toInt().toString()), style: const TextStyle(fontSize: 10)))),
+              bottomTitles: AxisTitles(sideTitles: SideTitles(showTitles: true, getTitlesWidget: (v, m) => Text(tr(v.toInt().toString().substring(2)), style: const TextStyle(fontSize: 10)))),
               topTitles: const AxisTitles(sideTitles: SideTitles(showTitles: false)),
               rightTitles: const AxisTitles(sideTitles: SideTitles(showTitles: false)),
             ),

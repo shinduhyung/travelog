@@ -1,6 +1,7 @@
 // lib/screens/city_sports_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:jidoapp/providers/city_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:jidoapp/models/city_model.dart';
@@ -122,6 +123,7 @@ class CitySportsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Consumer<CityProvider>(
       builder: (context, provider, child) {
         if (provider.isLoading) {
@@ -131,8 +133,8 @@ class CitySportsScreen extends StatelessWidget {
               children: [
                 const CircularProgressIndicator(strokeWidth: 2, color: _ST.ink),
                 const SizedBox(height: 16),
-                const Text(
-                  'Loading sports...',
+                 Text(
+                  tr('Loading sports...'),
                   style: TextStyle(fontSize: 13, color: _ST.inkLight, letterSpacing: 0.3),
                 ),
               ],
@@ -300,12 +302,13 @@ class _SectionHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Padding(
       padding: const EdgeInsets.fromLTRB(16, 24, 16, 12),
       child: Row(
         children: [
           Text(
-            label,
+            tr(label),
             style: const TextStyle(
               fontSize: 11,
               fontWeight: FontWeight.w700,
@@ -338,6 +341,7 @@ class _SportsSummaryBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final total = cards.length;
     final pct = total > 0 ? completed / total : 0.0;
 
@@ -354,7 +358,7 @@ class _SportsSummaryBar extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  '$completed of $total collections',
+                  tr('$completed of $total collections'),
                   style: const TextStyle(
                     fontSize: 22,
                     fontWeight: FontWeight.w800,
@@ -364,11 +368,11 @@ class _SportsSummaryBar extends StatelessWidget {
                 ),
                 const SizedBox(height: 4),
                 Text(
-                  completed == 0
+                  tr(completed == 0
                       ? 'No collections fully completed yet'
                       : completed == total
                       ? 'All collections completed! 🎉'
-                      : '${total - completed} remaining to complete',
+                      : '${total - completed} remaining to complete'),
                   style: const TextStyle(
                     fontSize: 12,
                     color: Color(0xFF888888),
@@ -396,6 +400,7 @@ class _SegmentBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final total = cards.fold<int>(0, (s, c) => s + c.cityNames.length);
     if (total == 0) return const SizedBox.shrink();
 
@@ -437,6 +442,7 @@ class _ArcPercent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return SizedBox(
       width: 68,
       height: 68,
@@ -448,13 +454,13 @@ class _ArcPercent extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: [
               Text(
-                '${(value * 100).round()}',
+                tr('${(value * 100).round()}'),
                 style: const TextStyle(
                   fontSize: 20, fontWeight: FontWeight.w800,
                   color: Colors.white, height: 1,
                 ),
               ),
-              const Text('%', style: TextStyle(fontSize: 10, color: Color(0xFF888888))),
+               Text(tr('%'), style: TextStyle(fontSize: 10, color: Color(0xFF888888))),
             ],
           ),
         ],
@@ -538,6 +544,7 @@ class _SportsCardState extends State<_SportsCard> with SingleTickerProviderState
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final d = widget.data;
     final total = d.cityNames.length;
     final visited = d.cityNames.where((n) => widget.visitedNames.contains(n)).length;
@@ -580,7 +587,7 @@ class _SportsCardState extends State<_SportsCard> with SingleTickerProviderState
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          d.label,
+                          tr(d.label),
                           style: TextStyle(
                             fontSize: 10, fontWeight: FontWeight.w700,
                             letterSpacing: 1.5, color: d.color,
@@ -588,7 +595,7 @@ class _SportsCardState extends State<_SportsCard> with SingleTickerProviderState
                         ),
                         const SizedBox(height: 2),
                         Text(
-                          d.title,
+                          tr(d.title),
                           style: const TextStyle(
                             fontSize: 15, fontWeight: FontWeight.w700,
                             color: _ST.ink, letterSpacing: -0.2,
@@ -618,10 +625,10 @@ class _SportsCardState extends State<_SportsCard> with SingleTickerProviderState
                       ),
                       child: Row(
                         mainAxisSize: MainAxisSize.min,
-                        children: const [
+                        children:  [
                           Icon(Icons.map_outlined, size: 14, color: _ST.inkMid),
                           SizedBox(width: 4),
-                          Text('Map', style: TextStyle(
+                          Text(tr('Map'), style: TextStyle(
                             fontSize: 12, fontWeight: FontWeight.w600,
                             color: _ST.inkMid, letterSpacing: 0.2,
                           )),
@@ -662,7 +669,7 @@ class _SportsCardState extends State<_SportsCard> with SingleTickerProviderState
                     _Chip(label: 'Remaining', value: '$remaining', color: _ST.inkLight),
                     const Spacer(),
                     Text(
-                      '${(pct * 100).round()}%',
+                      tr('${(pct * 100).round()}%'),
                       style: TextStyle(
                         fontSize: 20, fontWeight: FontWeight.w800,
                         color: pct > 0 ? d.color : _ST.inkLight,
@@ -726,14 +733,15 @@ class _Chip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Row(
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.baseline,
       textBaseline: TextBaseline.alphabetic,
       children: [
-        Text(value, style: TextStyle(fontSize: 16, fontWeight: FontWeight.w800, color: color)),
+        Text(tr(value), style: TextStyle(fontSize: 16, fontWeight: FontWeight.w800, color: color)),
         const SizedBox(width: 3),
-        Text(label, style: const TextStyle(
+        Text(tr(label), style: const TextStyle(
           fontSize: 10, fontWeight: FontWeight.w500,
           color: _ST.inkLight, letterSpacing: 0.3,
         )),
@@ -757,6 +765,7 @@ class _CityChip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final flag = city != null ? _cityFlagEmoji(city!) : '';
     return GestureDetector(
       onTap: city != null
@@ -773,7 +782,7 @@ class _CityChip extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             if (flag.isNotEmpty) ...[
-              Text(flag, style: const TextStyle(fontSize: 11)),
+              Text(tr(flag), style: const TextStyle(fontSize: 11)),
               const SizedBox(width: 5),
             ],
             Text(

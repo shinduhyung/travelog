@@ -1,0 +1,430 @@
+{
+  "basis": "Dart _mergeAndProcessCities exact name, largest population candidate; later stats row wins",
+  "local": {
+    "missing_exact_names": [
+      "Chisinau"
+    ],
+    "country_mismatch": [
+      {
+        "stat": {
+          "name": "Stanley",
+          "country": "Falkland Islands",
+          "continent": "South America",
+          "country_iso": "FK",
+          "population": 2460,
+          "latitude": -51.6946,
+          "longitude": -57.8524,
+          "isCapital": "territory",
+          "annualVisitors": 1800,
+          "avgTemp": 5.6,
+          "avgPrecipitation": 634,
+          "altitude": 14,
+          "gdp_nominal": 320000000,
+          "gdp_ppp": 206000000
+        },
+        "base": {
+          "name": "Stanley",
+          "latitude": 54.86796,
+          "longitude": -1.69846,
+          "country_code": "GB",
+          "population": 21938,
+          "timezone": "Europe/London"
+        }
+      },
+      {
+        "stat": {
+          "name": "Kingston",
+          "country": "Norfolk Island",
+          "continent": "Oceania",
+          "country_iso": "NF",
+          "population": 912,
+          "latitude": -29.0545,
+          "longitude": 167.9665,
+          "isCapital": "territory",
+          "annualVisitors": 25000,
+          "avgTemp": 18.7,
+          "avgPrecipitation": 1312,
+          "altitude": 10,
+          "gdp_nominal": 64000000,
+          "gdp_ppp": null
+        },
+        "base": {
+          "name": "Kingston",
+          "latitude": 17.99702,
+          "longitude": -76.79358,
+          "country_code": "JM",
+          "population": 937700,
+          "timezone": "America/Jamaica"
+        }
+      },
+      {
+        "stat": {
+          "name": "Douglas",
+          "country": "Isle of Man",
+          "continent": "Europe",
+          "country_iso": "IM",
+          "population": 26677,
+          "latitude": 54.15,
+          "longitude": -4.4833,
+          "isCapital": "territory",
+          "annualVisitors": 300000,
+          "avgTemp": 9.2,
+          "avgPrecipitation": 859,
+          "altitude": 48,
+          "gdp_nominal": 7000000000,
+          "gdp_ppp": null
+        },
+        "base": {
+          "name": "Douglas",
+          "latitude": 51.87444,
+          "longitude": -8.435,
+          "country_code": "IE",
+          "population": 26883,
+          "timezone": "Europe/Dublin"
+        }
+      },
+      {
+        "stat": {
+          "name": "Queenstown",
+          "country": "New Zealand",
+          "continent": "Oceania",
+          "country_iso": "NZ",
+          "population": 49000,
+          "latitude": -45.0312,
+          "longitude": 168.6626,
+          "isCapital": false,
+          "annualVisitors": 1200000,
+          "avgTemp": 11.0,
+          "avgPrecipitation": 914,
+          "altitude": 310,
+          "gdp_nominal": null,
+          "gdp_ppp": null
+        },
+        "base": {
+          "name": "Queenstown",
+          "latitude": -31.89756,
+          "longitude": 26.87533,
+          "country_code": "ZA",
+          "population": 118599,
+          "timezone": "Africa/Johannesburg"
+        }
+      },
+      {
+        "stat": {
+          "name": "Windhoek",
+          "country": "Namibia",
+          "continent": "Africa",
+          "country_iso": "NA",
+          "population": 431000,
+          "latitude": -22.5594,
+          "longitude": 17.0832,
+          "isCapital": true,
+          "annualVisitors": 100,
+          "avgTemp": 19.5,
+          "avgPrecipitation": 361,
+          "altitude": 1655,
+          "gdp_nominal": 12900000000,
+          "gdp_ppp": 27000000000
+        },
+        "base": {
+          "name": "Windhoek",
+          "latitude": -22.55941,
+          "longitude": 17.08323,
+          "country_code": null,
+          "population": 386219,
+          "timezone": "Africa/Windhoek"
+        }
+      },
+      {
+        "stat": {
+          "name": "Victoria",
+          "country": "Seychelles",
+          "continent": "Africa",
+          "country_iso": "SC",
+          "population": 26450,
+          "latitude": -4.6191,
+          "longitude": 55.4513,
+          "isCapital": true,
+          "annualVisitors": 3610,
+          "avgTemp": 27.1,
+          "avgPrecipitation": 2329,
+          "altitude": 2,
+          "gdp_nominal": 1580000000,
+          "gdp_ppp": 3000000000
+        },
+        "base": {
+          "name": "Victoria",
+          "latitude": 22.2875,
+          "longitude": 114.14417,
+          "country_code": "HK",
+          "population": 956800,
+          "timezone": "Asia/Hong_Kong"
+        }
+      },
+      {
+        "stat": {
+          "name": "St. John's",
+          "country": "Antigua and Barbuda",
+          "continent": "North America",
+          "country_iso": "AG",
+          "population": 22219,
+          "latitude": 17.1274,
+          "longitude": -61.8445,
+          "isCapital": true,
+          "annualVisitors": 270000,
+          "avgTemp": 26.5,
+          "avgPrecipitation": 1050,
+          "altitude": 0,
+          "gdp_nominal": 1870000000,
+          "gdp_ppp": 2700000000
+        },
+        "base": {
+          "name": "St. John's",
+          "latitude": 47.56494,
+          "longitude": -52.70931,
+          "country_code": "CA",
+          "population": 110525,
+          "timezone": "America/St_Johns"
+        }
+      },
+      {
+        "stat": {
+          "name": "St. George's",
+          "country": "Grenada",
+          "continent": "North America",
+          "country_iso": "GD",
+          "population": 33734,
+          "latitude": 12.0561,
+          "longitude": -61.7511,
+          "isCapital": true,
+          "annualVisitors": 150000,
+          "avgTemp": 26.0,
+          "avgPrecipitation": 1520,
+          "altitude": 0,
+          "gdp_nominal": 1220000000,
+          "gdp_ppp": 1900000000
+        },
+        "base": {
+          "name": "St. George's",
+          "latitude": 32.3817,
+          "longitude": -64.678,
+          "country_code": "BM",
+          "population": 2000,
+          "timezone": "Atlantic/Bermuda"
+        }
+      },
+      {
+        "stat": {
+          "name": "Panama City",
+          "country": "Panama",
+          "continent": "North America",
+          "country_iso": "PA",
+          "population": 880691,
+          "latitude": 8.9824,
+          "longitude": -79.5199,
+          "isCapital": true,
+          "annualVisitors": 1800000,
+          "avgTemp": 27.0,
+          "avgPrecipitation": 1908,
+          "altitude": 2,
+          "gdp_nominal": 76520000000,
+          "gdp_ppp": 165000000000
+        },
+        "base": {
+          "name": "Panama City",
+          "latitude": 30.15946,
+          "longitude": -85.65983,
+          "country_code": "US",
+          "population": 38286,
+          "timezone": "America/Chicago"
+        }
+      },
+      {
+        "stat": {
+          "name": "Hamilton",
+          "country": "Bermuda",
+          "continent": "North America",
+          "country_iso": "BM",
+          "population": 854,
+          "latitude": 32.2949,
+          "longitude": -64.783,
+          "isCapital": "territory",
+          "annualVisitors": 530000,
+          "avgTemp": 22.8,
+          "avgPrecipitation": 1480,
+          "altitude": 18,
+          "gdp_nominal": 7500000000,
+          "gdp_ppp": 5100000000
+        },
+        "base": {
+          "name": "Hamilton",
+          "latitude": 43.25011,
+          "longitude": -79.84963,
+          "country_code": "CA",
+          "population": 519949,
+          "timezone": "America/Toronto"
+        }
+      },
+      {
+        "stat": {
+          "name": "George Town",
+          "country": "Cayman Islands",
+          "continent": "North America",
+          "country_iso": "KY",
+          "population": 40200,
+          "latitude": 19.2866,
+          "longitude": -81.3781,
+          "isCapital": "territory",
+          "annualVisitors": 385000,
+          "avgTemp": 27.6,
+          "avgPrecipitation": 1500,
+          "altitude": 0,
+          "gdp_nominal": 5880000000,
+          "gdp_ppp": 3600000000
+        },
+        "base": {
+          "name": "George Town",
+          "latitude": 5.41123,
+          "longitude": 100.33543,
+          "country_code": "MY",
+          "population": 158336,
+          "timezone": "Asia/Kuala_Lumpur"
+        }
+      },
+      {
+        "stat": {
+          "name": "Saint-Pierre",
+          "country": "Saint Pierre and Miquelon",
+          "continent": "North America",
+          "country_iso": "PM",
+          "population": 5340,
+          "latitude": 46.7773,
+          "longitude": -56.1777,
+          "isCapital": "territory",
+          "annualVisitors": 25000,
+          "avgTemp": 5.7,
+          "avgPrecipitation": 1326,
+          "altitude": 4,
+          "gdp_nominal": 215000000,
+          "gdp_ppp": null
+        },
+        "base": {
+          "name": "Saint-Pierre",
+          "latitude": -21.3393,
+          "longitude": 55.47811,
+          "country_code": "RE",
+          "population": 84077,
+          "timezone": "Indian/Reunion"
+        }
+      },
+      {
+        "stat": {
+          "name": "Hyderabad",
+          "country": "India",
+          "continent": "Asia",
+          "country_iso": "IN",
+          "population": 9482000,
+          "latitude": 17.385,
+          "longitude": 78.4867,
+          "isCapital": false,
+          "annualVisitors": 400000,
+          "avgTemp": 26.6,
+          "avgPrecipitation": 765,
+          "altitude": 542,
+          "gdp_nominal": 84130000000,
+          "gdp_ppp": 95000000000
+        },
+        "base": {
+          "name": "Hyderabad",
+          "latitude": 25.39689,
+          "longitude": 68.37718,
+          "country_code": "PK",
+          "population": 1921275,
+          "timezone": "Asia/Karachi"
+        }
+      }
+    ]
+  },
+  "remote": {
+    "records": 31479,
+    "duplicates": 0,
+    "wrong_country": [
+      {
+        "name": "Stanley",
+        "stats_iso": "FK",
+        "base_iso": "GB",
+        "base_population": 21938
+      },
+      {
+        "name": "Douglas",
+        "stats_iso": "IM",
+        "base_iso": "IE",
+        "base_population": 26883
+      },
+      {
+        "name": "Queenstown",
+        "stats_iso": "NZ",
+        "base_iso": "ZA",
+        "base_population": 118599
+      },
+      {
+        "name": "Windhoek",
+        "stats_iso": "NA",
+        "base_iso": null,
+        "base_population": 386219
+      },
+      {
+        "name": "Victoria",
+        "stats_iso": "SC",
+        "base_iso": "HK",
+        "base_population": 956800
+      },
+      {
+        "name": "St. John's",
+        "stats_iso": "AG",
+        "base_iso": "CA",
+        "base_population": 110525
+      },
+      {
+        "name": "St. George's",
+        "stats_iso": "GD",
+        "base_iso": "BM",
+        "base_population": 2000
+      },
+      {
+        "name": "Panama City",
+        "stats_iso": "PA",
+        "base_iso": "US",
+        "base_population": 38286
+      },
+      {
+        "name": "Hamilton",
+        "stats_iso": "BM",
+        "base_iso": "CA",
+        "base_population": 519949
+      },
+      {
+        "name": "George Town",
+        "stats_iso": "KY",
+        "base_iso": "MY",
+        "base_population": 158336
+      },
+      {
+        "name": "Saint-Pierre",
+        "stats_iso": "PM",
+        "base_iso": "RE",
+        "base_population": 84077
+      },
+      {
+        "name": "Hyderabad",
+        "stats_iso": "IN",
+        "base_iso": "PK",
+        "base_population": 1921275
+      }
+    ],
+    "missing_stats_names": [
+      "Chisinau",
+      "Washington D.C."
+    ]
+  }
+}

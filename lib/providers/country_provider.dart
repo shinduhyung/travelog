@@ -1,8 +1,8 @@
 // lib/providers/country_provider.dart
 
 import 'package:flutter/foundation.dart';
-import 'package:flutter/services.dart';
 import 'dart:convert';
+import 'package:jidoapp/services/statistics_repository.dart';
 import 'package:jidoapp/models/country_model.dart';
 import 'package:jidoapp/models/visit_details_model.dart';
 import 'package:latlong2/latlong.dart';
@@ -1065,7 +1065,7 @@ class CountryProvider with ChangeNotifier {
 
       final keys = assetKeys.keys.toList();
       final values = await Future.wait(
-        assetKeys.values.map((path) => rootBundle.loadString(path)),
+        assetKeys.values.map((path) => StatisticsRepository.instance.loadLegacyString(path)),
       );
       final Map<String, String> jsons = {
         for (int i = 0; i < keys.length; i++) keys[i]: values[i],

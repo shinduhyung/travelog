@@ -1,6 +1,7 @@
 // lib/screens/visa_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:jidoapp/models/user_visa_model.dart';
 import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/providers/visa_provider.dart';
@@ -34,6 +35,7 @@ class _VisaScreenState extends State<VisaScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Scaffold(
       backgroundColor: Colors.grey[50],
       body: SafeArea(
@@ -60,8 +62,8 @@ class _VisaScreenState extends State<VisaScreen> {
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 16.0),
                 child: Center(
-                  child: const Text(
-                    'My Visas',
+                  child:  Text(
+                    tr('My Visas'),
                     style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.w800,
@@ -79,7 +81,7 @@ class _VisaScreenState extends State<VisaScreen> {
                   Icon(Icons.folder_shared_outlined, color: Colors.grey[700]),
                   const SizedBox(width: 8),
                   Text(
-                    "Saved Visas",
+                    tr("Saved Visas"),
                     style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
@@ -122,7 +124,7 @@ class _VisaScreenState extends State<VisaScreen> {
                   ),
                   const SizedBox(width: 12),
                   Text(
-                    'Add New Visa',
+                    tr('Add New Visa'),
                     style: Theme.of(context).textTheme.titleLarge?.copyWith(
                       fontWeight: FontWeight.w800,
                       color: Colors.black87,
@@ -156,8 +158,8 @@ class _VisaScreenState extends State<VisaScreen> {
                     focusNode: focusNode,
                     decoration: _inputDecoration('Country', Icons.flag_rounded),
                     validator: (value) {
-                      if (value == null || value.isEmpty) return 'Please enter a country';
-                      if (!countryNames.contains(value)) return 'Please select a valid country';
+                      if (value == null || value.isEmpty) return tr('Please enter a country');
+                      if (!countryNames.contains(value)) return tr('Please select a valid country');
                       return null;
                     },
                   );
@@ -203,8 +205,8 @@ class _VisaScreenState extends State<VisaScreen> {
                     borderRadius: BorderRadius.circular(16),
                   ),
                 ),
-                child: const Text(
-                  'Save Visa Info',
+                child:  Text(
+                  tr('Save Visa Info'),
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                 ),
               ),
@@ -217,7 +219,7 @@ class _VisaScreenState extends State<VisaScreen> {
 
   InputDecoration _inputDecoration(String label, IconData icon) {
     return InputDecoration(
-      labelText: label,
+      labelText: tr(label),
       labelStyle: TextStyle(color: Colors.grey[600], fontSize: 14),
       floatingLabelStyle: const TextStyle(color: _darkMint, fontWeight: FontWeight.bold),
       border: OutlineInputBorder(
@@ -283,7 +285,7 @@ class _VisaScreenState extends State<VisaScreen> {
 
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: const Text('Visa added successfully!'),
+          content:  Text(tr('Visa added successfully!')),
           backgroundColor: _mintColor,
           behavior: SnackBarBehavior.floating,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
@@ -302,7 +304,7 @@ class _VisaScreenState extends State<VisaScreen> {
             Icon(Icons.folder_off_outlined, size: 60, color: Colors.grey[300]),
             const SizedBox(height: 16),
             Text(
-              'No visas saved yet.',
+              tr('No visas saved yet.'),
               style: TextStyle(color: Colors.grey[500], fontSize: 16),
             ),
           ],
@@ -354,7 +356,7 @@ class _VisaScreenState extends State<VisaScreen> {
                           const SizedBox(width: 12),
                           Expanded(
                             child: Text(
-                              visa.country,
+                              tr(visa.country),
                               style: const TextStyle(
                                   fontWeight: FontWeight.w800,
                                   fontSize: 18,
@@ -375,12 +377,12 @@ class _VisaScreenState extends State<VisaScreen> {
                             size: 26,
                           ),
                           onPressed: () => _showNoteViewDialog(context, index, visa),
-                          tooltip: 'View Notes',
+                          tooltip: tr('View Notes'),
                         ),
                         IconButton(
                           icon: Icon(Icons.delete_outline_rounded, color: Colors.grey[400], size: 24),
                           onPressed: () => _deleteVisa(context, index),
-                          tooltip: 'Delete',
+                          tooltip: tr('Delete'),
                         ),
                       ],
                     )
@@ -400,7 +402,7 @@ class _VisaScreenState extends State<VisaScreen> {
                         const Icon(Icons.class_outlined, size: 16, color: Colors.grey),
                         const SizedBox(width: 8),
                         Text(
-                          visa.visaType,
+                          tr(visa.visaType),
                           style: TextStyle(
                             fontSize: 15,
                             color: Colors.grey[800],
@@ -417,7 +419,7 @@ class _VisaScreenState extends State<VisaScreen> {
                     Icon(Icons.event_busy, size: 16, color: Colors.red[300]),
                     const SizedBox(width: 8),
                     Text(
-                      'Expires: ${visa.expiryDate}',
+                      tr('Expires: ${visa.expiryDate}'),
                       style: TextStyle(
                         color: Colors.red[400],
                         fontWeight: FontWeight.w600,
@@ -442,7 +444,7 @@ class _VisaScreenState extends State<VisaScreen> {
       builder: (context) => AlertDialog(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
         title: Text(
-          visa.country,
+          tr(visa.country),
           style: const TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.w800,
@@ -457,16 +459,16 @@ class _VisaScreenState extends State<VisaScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 if (!hasNote)
-                  const Padding(
+                   Padding(
                     padding: EdgeInsets.only(top: 10.0),
                     child: Text(
-                      'No notes added.',
+                      tr('No notes added.'),
                       style: TextStyle(color: Colors.grey, fontStyle: FontStyle.italic),
                     ),
                   )
                 else
                   Text(
-                    visa.note,
+                    tr(visa.note),
                     style: const TextStyle(
                       fontSize: 16,
                       height: 1.5,
@@ -480,7 +482,7 @@ class _VisaScreenState extends State<VisaScreen> {
         actions: [
           TextButton(
             onPressed: () => Navigator.of(context).pop(),
-            child: const Text('Close', style: TextStyle(color: Colors.grey)),
+            child:  Text(tr('Close'), style: TextStyle(color: Colors.grey)),
           ),
           ElevatedButton.icon(
             style: ElevatedButton.styleFrom(
@@ -489,7 +491,7 @@ class _VisaScreenState extends State<VisaScreen> {
               elevation: 0,
             ),
             icon: const Icon(Icons.edit, size: 16, color: Colors.white),
-            label: const Text('Edit', style: TextStyle(color: Colors.white)),
+            label:  Text(tr('Edit'), style: TextStyle(color: Colors.white)),
             onPressed: () {
               Navigator.of(context).pop();
               _showEditNoteDialog(context, index, visa);
@@ -508,7 +510,7 @@ class _VisaScreenState extends State<VisaScreen> {
       builder: (context) => AlertDialog(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
         title: Text(
-          visa.country,
+          tr(visa.country),
           style: const TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.w800,
@@ -519,8 +521,8 @@ class _VisaScreenState extends State<VisaScreen> {
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
-              'Edit Note',
+             Text(
+              tr('Edit Note'),
               style: TextStyle(fontSize: 12, color: _darkMint, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 8),
@@ -528,7 +530,7 @@ class _VisaScreenState extends State<VisaScreen> {
               controller: editController,
               maxLines: 6,
               decoration: InputDecoration(
-                hintText: 'Enter your notes here...',
+                hintText: tr('Enter your notes here...'),
                 filled: true,
                 fillColor: Colors.grey[50],
                 border: OutlineInputBorder(
@@ -550,7 +552,7 @@ class _VisaScreenState extends State<VisaScreen> {
         actions: [
           TextButton(
             onPressed: () => Navigator.of(context).pop(),
-            child: const Text('Cancel', style: TextStyle(color: Colors.grey)),
+            child:  Text(tr('Cancel'), style: TextStyle(color: Colors.grey)),
           ),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
@@ -568,7 +570,7 @@ class _VisaScreenState extends State<VisaScreen> {
 
               Navigator.of(context).pop();
             },
-            child: const Text('Save', style: TextStyle(color: Colors.white)),
+            child:  Text(tr('Save'), style: TextStyle(color: Colors.white)),
           ),
         ],
       ),
@@ -579,20 +581,20 @@ class _VisaScreenState extends State<VisaScreen> {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text('Remove Visa?'),
-        content: const Text('This action cannot be undone.'),
+        title:  Text(tr('Remove Visa?')),
+        content:  Text(tr('This action cannot be undone.')),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
         actions: [
           TextButton(
             onPressed: () => Navigator.of(context).pop(),
-            child: const Text('Cancel', style: TextStyle(color: Colors.grey)),
+            child:  Text(tr('Cancel'), style: TextStyle(color: Colors.grey)),
           ),
           TextButton(
             onPressed: () {
               Provider.of<VisaProvider>(context, listen: false).removeVisa(index);
               Navigator.of(context).pop();
             },
-            child: const Text('Delete', style: TextStyle(color: Colors.red)),
+            child:  Text(tr('Delete'), style: TextStyle(color: Colors.red)),
           ),
         ],
       ),

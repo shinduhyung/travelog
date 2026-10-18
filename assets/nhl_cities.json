@@ -1,37 +1,392 @@
-[
-  {"name": "Anaheim", "country": "United States", "latitude": 33.8366, "longitude": -117.9143},
-  {"name": "Boston", "country": "United States", "latitude": 42.3601, "longitude": -71.0589},
-  {"name": "Buffalo", "country": "United States", "latitude": 42.8864, "longitude": -78.8784},
-  {"name": "Calgary", "country": "Canada", "latitude": 51.0447, "longitude": -114.0719},
-  {"name": "Charlotte", "country": "United States", "latitude": 35.2271, "longitude": -80.8431},
-  {"name": "Raleigh", "country": "United States", "latitude": 35.7796, "longitude": -78.6382},
-  {"name": "Chicago", "country": "United States", "latitude": 41.8781, "longitude": -87.6298},
-  {"name": "Columbus", "country": "United States", "latitude": 39.9612, "longitude": -82.9988},
-  {"name": "Dallas", "country": "United States", "latitude": 32.7767, "longitude": -96.7970},
-  {"name": "Denver", "country": "United States", "latitude": 39.7392, "longitude": -104.9903},
-  {"name": "Detroit", "country": "United States", "latitude": 42.3314, "longitude": -83.0458},
-  {"name": "Edmonton", "country": "Canada", "latitude": 53.5461, "longitude": -113.4938},
-  {"name": "Las Vegas", "country": "United States", "latitude": 36.1699, "longitude": -115.1398},
-  {"name": "Los Angeles", "country": "United States", "latitude": 34.0522, "longitude": -118.2437},
-  {"name": "Miami", "country": "United States", "latitude": 25.7617, "longitude": -80.1918},
-  {"name": "Sunrise", "country": "United States", "latitude": 26.1342, "longitude": -80.1131},
-  {"name": "Minneapolis", "country": "United States", "latitude": 44.9778, "longitude": -93.2650},
-  {"name": "Saint Paul", "country": "United States", "latitude": 44.9537, "longitude": -93.0900},
-  {"name": "Montreal", "country": "Canada", "latitude": 45.5017, "longitude": -73.5673},
-  {"name": "Nashville", "country": "United States", "latitude": 36.1627, "longitude": -86.7816},
-  {"name": "Newark", "country": "United States", "latitude": 40.7357, "longitude": -74.1724},
-  {"name": "New York City", "country": "United States", "latitude": 40.7128, "longitude": -74.0060},
-  {"name": "Ottawa", "country": "Canada", "latitude": 45.4215, "longitude": -75.6972},
-  {"name": "Philadelphia", "country": "United States", "latitude": 39.9526, "longitude": -75.1652},
-  {"name": "Phoenix", "country": "United States", "latitude": 33.4484, "longitude": -112.0740},
-  {"name": "Tempe", "country": "United States", "latitude": 33.4255, "longitude": -111.9400},
-  {"name": "Pittsburgh", "country": "United States", "latitude": 40.4406, "longitude": -79.9959},
-  {"name": "San Jose", "country": "United States", "latitude": 37.3382, "longitude": -121.8863},
-  {"name": "Seattle", "country": "United States", "latitude": 47.6062, "longitude": -122.3321},
-  {"name": "St. Louis", "country": "United States", "latitude": 38.6270, "longitude": -90.1994},
-  {"name": "Tampa", "country": "United States", "latitude": 27.9506, "longitude": -82.4572},
-  {"name": "Toronto", "country": "Canada", "latitude": 43.6532, "longitude": -79.3832},
-  {"name": "Vancouver", "country": "Canada", "latitude": 49.2827, "longitude": -123.1207},
-  {"name": "Washington D.C.", "country": "United States", "latitude": 38.9072, "longitude": -77.0369},
-  {"name": "Winnipeg", "country": "Canada", "latitude": 49.8951, "longitude": -97.1384}
-]
+{
+  "schema_version": 1,
+  "dataset_id": "nhl_cities",
+  "metadata": {
+    "source_url": null,
+    "reference_period": null,
+    "updated_at": null
+  },
+  "legacy_layout": "list",
+  "tables": [
+    {
+      "id": "main",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "name",
+        "country"
+      ],
+      "metrics": [
+        {
+          "id": "latitude",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        },
+        {
+          "id": "longitude",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "name": "Anaheim",
+            "country": "United States"
+          },
+          "values": {
+            "latitude": 33.8366,
+            "longitude": -117.9143
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Boston",
+            "country": "United States"
+          },
+          "values": {
+            "latitude": 42.3601,
+            "longitude": -71.0589
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Buffalo",
+            "country": "United States"
+          },
+          "values": {
+            "latitude": 42.8864,
+            "longitude": -78.8784
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Calgary",
+            "country": "Canada"
+          },
+          "values": {
+            "latitude": 51.0447,
+            "longitude": -114.0719
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Charlotte",
+            "country": "United States"
+          },
+          "values": {
+            "latitude": 35.2271,
+            "longitude": -80.8431
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Raleigh",
+            "country": "United States"
+          },
+          "values": {
+            "latitude": 35.7796,
+            "longitude": -78.6382
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Chicago",
+            "country": "United States"
+          },
+          "values": {
+            "latitude": 41.8781,
+            "longitude": -87.6298
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Columbus",
+            "country": "United States"
+          },
+          "values": {
+            "latitude": 39.9612,
+            "longitude": -82.9988
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Dallas",
+            "country": "United States"
+          },
+          "values": {
+            "latitude": 32.7767,
+            "longitude": -96.797
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Denver",
+            "country": "United States"
+          },
+          "values": {
+            "latitude": 39.7392,
+            "longitude": -104.9903
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Detroit",
+            "country": "United States"
+          },
+          "values": {
+            "latitude": 42.3314,
+            "longitude": -83.0458
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Edmonton",
+            "country": "Canada"
+          },
+          "values": {
+            "latitude": 53.5461,
+            "longitude": -113.4938
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Las Vegas",
+            "country": "United States"
+          },
+          "values": {
+            "latitude": 36.1699,
+            "longitude": -115.1398
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Los Angeles",
+            "country": "United States"
+          },
+          "values": {
+            "latitude": 34.0522,
+            "longitude": -118.2437
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Miami",
+            "country": "United States"
+          },
+          "values": {
+            "latitude": 25.7617,
+            "longitude": -80.1918
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Sunrise",
+            "country": "United States"
+          },
+          "values": {
+            "latitude": 26.1342,
+            "longitude": -80.1131
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Minneapolis",
+            "country": "United States"
+          },
+          "values": {
+            "latitude": 44.9778,
+            "longitude": -93.265
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Saint Paul",
+            "country": "United States"
+          },
+          "values": {
+            "latitude": 44.9537,
+            "longitude": -93.09
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Montreal",
+            "country": "Canada"
+          },
+          "values": {
+            "latitude": 45.5017,
+            "longitude": -73.5673
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Nashville",
+            "country": "United States"
+          },
+          "values": {
+            "latitude": 36.1627,
+            "longitude": -86.7816
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Newark",
+            "country": "United States"
+          },
+          "values": {
+            "latitude": 40.7357,
+            "longitude": -74.1724
+          }
+        },
+        {
+          "dimensions": {
+            "name": "New York City",
+            "country": "United States"
+          },
+          "values": {
+            "latitude": 40.7128,
+            "longitude": -74.006
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Ottawa",
+            "country": "Canada"
+          },
+          "values": {
+            "latitude": 45.4215,
+            "longitude": -75.6972
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Philadelphia",
+            "country": "United States"
+          },
+          "values": {
+            "latitude": 39.9526,
+            "longitude": -75.1652
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Phoenix",
+            "country": "United States"
+          },
+          "values": {
+            "latitude": 33.4484,
+            "longitude": -112.074
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Tempe",
+            "country": "United States"
+          },
+          "values": {
+            "latitude": 33.4255,
+            "longitude": -111.94
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Pittsburgh",
+            "country": "United States"
+          },
+          "values": {
+            "latitude": 40.4406,
+            "longitude": -79.9959
+          }
+        },
+        {
+          "dimensions": {
+            "name": "San Jose",
+            "country": "United States"
+          },
+          "values": {
+            "latitude": 37.3382,
+            "longitude": -121.8863
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Seattle",
+            "country": "United States"
+          },
+          "values": {
+            "latitude": 47.6062,
+            "longitude": -122.3321
+          }
+        },
+        {
+          "dimensions": {
+            "name": "St. Louis",
+            "country": "United States"
+          },
+          "values": {
+            "latitude": 38.627,
+            "longitude": -90.1994
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Tampa",
+            "country": "United States"
+          },
+          "values": {
+            "latitude": 27.9506,
+            "longitude": -82.4572
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Toronto",
+            "country": "Canada"
+          },
+          "values": {
+            "latitude": 43.6532,
+            "longitude": -79.3832
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Vancouver",
+            "country": "Canada"
+          },
+          "values": {
+            "latitude": 49.2827,
+            "longitude": -123.1207
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Washington D.C.",
+            "country": "United States"
+          },
+          "values": {
+            "latitude": 38.9072,
+            "longitude": -77.0369
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Winnipeg",
+            "country": "Canada"
+          },
+          "values": {
+            "latitude": 49.8951,
+            "longitude": -97.1384
+          }
+        }
+      ]
+    }
+  ]
+}

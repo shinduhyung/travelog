@@ -1,6 +1,7 @@
 // lib/screens/trip_log_list_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:jidoapp/models/trip_log_entry.dart';
 import 'package:jidoapp/providers/trip_log_provider.dart';
 import 'package:jidoapp/screens/ai_summary_screen.dart';
@@ -84,6 +85,7 @@ class _TripLogListScreenState extends State<TripLogListScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final tripLogProvider = Provider.of<TripLogProvider>(context);
     final filteredEntries = _getFilteredEntries(tripLogProvider);
 
@@ -122,8 +124,8 @@ class _TripLogListScreenState extends State<TripLogListScreen> {
               child: TextField(
                 controller: _searchController,
                 autofocus: true,
-                decoration: const InputDecoration(
-                  hintText: 'Search logs...',
+                decoration:  InputDecoration(
+                  hintText: tr('Search logs...'),
                   border: InputBorder.none,
                 ),
                 style: const TextStyle(fontSize: 18),
@@ -144,8 +146,8 @@ class _TripLogListScreenState extends State<TripLogListScreen> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          const Text(
-            'My Trip Logs',
+           Text(
+            tr('My Trip Logs'),
             style: TextStyle(
               fontSize: 32,
               fontWeight: FontWeight.w900,
@@ -189,9 +191,7 @@ class _TripLogListScreenState extends State<TripLogListScreen> {
             ),
             const SizedBox(height: 16),
             Text(
-              _searchController.text.isEmpty
-                  ? 'No logs yet'
-                  : 'No results found',
+              _searchController.text.isEmpty ? 'No logs yet' : 'No results found',
               style: TextStyle(fontSize: 16, color: Colors.grey[400]),
             ),
           ],
@@ -227,15 +227,15 @@ class _TripLogListScreenState extends State<TripLogListScreen> {
     showDialog(
       context: context,
       builder: (ctx) => AlertDialog(
-        title: const Text('Delete Log'),
-        content: const Text('Are you sure you want to delete this trip log?'),
+        title:  Text(tr('Delete Log')),
+        content:  Text(tr('Are you sure you want to delete this trip log?')),
         actions: [
           TextButton(
-            child: const Text('Cancel'),
+            child:  Text(tr('Cancel')),
             onPressed: () => Navigator.of(ctx).pop(),
           ),
           TextButton(
-            child: const Text('Delete', style: TextStyle(color: Colors.red)),
+            child:  Text(tr('Delete'), style: TextStyle(color: Colors.red)),
             onPressed: () {
               Navigator.of(ctx).pop();
               provider.deleteEntry(entryId);
@@ -308,6 +308,7 @@ class _TripLogCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     String formattedDate = '';
     final formatter = DateFormat.yMMMd();
 
@@ -377,7 +378,7 @@ class _TripLogCard extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    formattedDate,
+                    tr(formattedDate),
                     style: TextStyle(color: Colors.grey.shade500, fontSize: 13, fontWeight: FontWeight.w600),
                   ),
                   Row(
@@ -407,7 +408,7 @@ class _TripLogCard extends StatelessWidget {
                   children: isoCodesA2.take(10).map((code) => Padding(
                     padding: const EdgeInsets.only(right: 8),
                     child: Text(
-                      _isoToEmoji(code),
+                      tr(_isoToEmoji(code)),
                       style: const TextStyle(fontSize: 22),
                     ),
                   )).toList(),
@@ -437,28 +438,28 @@ class _TripLogCard extends StatelessWidget {
             children: [
               Icon(Icons.edit_outlined, size: 22, color: Colors.grey.shade700),
               const SizedBox(width: 12),
-              const Text('Edit', style: TextStyle(fontSize: 16)),
+               Text(tr('Edit'), style: TextStyle(fontSize: 16)),
             ],
           ),
         ),
-        const PopupMenuItem(
+         PopupMenuItem(
           value: _CardAction.changeFlag,
           child: Row(
             children: [
               Icon(Icons.outlined_flag, size: 22, color: orange),
               SizedBox(width: 12),
-              Text('Change Flags', style: TextStyle(fontSize: 16)),
+              Text(tr('Change Flags'), style: TextStyle(fontSize: 16)),
             ],
           ),
         ),
         const PopupMenuDivider(),
-        const PopupMenuItem(
+         PopupMenuItem(
           value: _CardAction.delete,
           child: Row(
             children: [
               Icon(Icons.delete_outline, color: Colors.red, size: 22),
               SizedBox(width: 12),
-              Text('Delete', style: TextStyle(color: Colors.red, fontSize: 16)),
+              Text(tr('Delete'), style: TextStyle(color: Colors.red, fontSize: 16)),
             ],
           ),
         ),
@@ -519,13 +520,14 @@ class _CountrySelectionDialogState extends State<_CountrySelectionDialog> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final filteredCountries = widget.allCountries.where((country) {
       return country.name.toLowerCase().contains(_searchQuery);
     }).toList();
 
     return AlertDialog(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
-      title: const Text('Change Flags', style: TextStyle(fontWeight: FontWeight.bold)),
+      title:  Text(tr('Change Flags'), style: TextStyle(fontWeight: FontWeight.bold)),
       content: SizedBox(
         width: double.maxFinite,
         child: Column(
@@ -534,7 +536,7 @@ class _CountrySelectionDialogState extends State<_CountrySelectionDialog> {
             TextField(
               controller: _searchController,
               decoration: InputDecoration(
-                hintText: 'Search Country',
+                hintText: tr('Search Country'),
                 prefixIcon: const Icon(Icons.search, color: Colors.grey),
                 filled: true,
                 fillColor: Colors.grey.shade100,
@@ -568,9 +570,9 @@ class _CountrySelectionDialogState extends State<_CountrySelectionDialog> {
                     },
                     title: Row(
                       children: [
-                        Text(_isoToEmoji(country.isoA2), style: const TextStyle(fontSize: 24)),
+                        Text(tr(_isoToEmoji(country.isoA2)), style: const TextStyle(fontSize: 24)),
                         const SizedBox(width: 12),
-                        Expanded(child: Text(country.name, overflow: TextOverflow.ellipsis)),
+                        Expanded(child: Text(tr(country.name), overflow: TextOverflow.ellipsis)),
                       ],
                     ),
                     contentPadding: EdgeInsets.zero,
@@ -585,7 +587,7 @@ class _CountrySelectionDialogState extends State<_CountrySelectionDialog> {
       actions: [
         TextButton(
           onPressed: () => Navigator.of(context).pop(),
-          child: Text('Cancel', style: TextStyle(color: Colors.grey.shade600)),
+          child: Text(tr('Cancel'), style: TextStyle(color: Colors.grey.shade600)),
         ),
         ElevatedButton(
           style: ElevatedButton.styleFrom(
@@ -597,7 +599,7 @@ class _CountrySelectionDialogState extends State<_CountrySelectionDialog> {
             widget.onSelectionChanged(_selectedIsoCodes);
             Navigator.of(context).pop();
           },
-          child: const Text('Save'),
+          child:  Text(tr('Save')),
         ),
       ],
     );

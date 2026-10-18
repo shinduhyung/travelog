@@ -1,6 +1,7 @@
 // lib/screens/flight_log_list_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:jidoapp/models/airline_model.dart';
 import 'package:jidoapp/providers/airline_provider.dart';
@@ -44,6 +45,7 @@ class _FlightLogListScreenState extends State<FlightLogListScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Scaffold(
       backgroundColor: Colors.grey.shade100,
       body: SafeArea(
@@ -62,9 +64,9 @@ class _FlightLogListScreenState extends State<FlightLogListScreen> {
 
                   final allLogs = provider.allFlightLogs;
                   if (allLogs.isEmpty) {
-                    return const Center(
+                    return  Center(
                       child: Text(
-                        'No flight logs yet.\nTap the + button below to add one!',
+                        tr('No flight logs yet.\nTap the + button below to add one!'),
                         textAlign: TextAlign.center,
                         style: TextStyle(fontSize: 18, color: Colors.grey),
                       ),
@@ -208,7 +210,7 @@ class _FlightLogListScreenState extends State<FlightLogListScreen> {
               color: Colors.orange.shade700, size: 20),
           const SizedBox(width: 8),
           Text(
-            info.type.toUpperCase(),
+            tr(info.type.toUpperCase()),
             style: TextStyle(
               color: Colors.orange.shade800,
               fontWeight: FontWeight.bold,
@@ -217,7 +219,7 @@ class _FlightLogListScreenState extends State<FlightLogListScreen> {
           ),
           if (info.duration != null && info.duration!.trim().isNotEmpty)
             Text(
-              ' (${info.duration})',
+              tr(' (${info.duration})'),
               style: TextStyle(color: Colors.grey.shade700),
             ),
         ],
@@ -242,7 +244,7 @@ class _FlightLogListScreenState extends State<FlightLogListScreen> {
     if (displayDate != 'Unknown') {
       try {
         final date = DateTime.parse(displayDate);
-        displayDate = DateFormat.MMMd('en_US').format(date);
+        displayDate = DateFormat.MMMd(AppLocale.instance.locale.languageCode).format(date);
       } catch (e) {}
     }
 
@@ -420,7 +422,7 @@ class _FlightLogListScreenState extends State<FlightLogListScreen> {
                                   ),
                                 if (classIcon != null) const SizedBox(width: 4),
                                 Text(
-                                  classSuffix,
+                                  tr(classSuffix),
                                   style: TextStyle(
                                     fontSize:
                                     log.seatClass == 'First' ? 12 : 10,
@@ -454,7 +456,7 @@ class _FlightLogListScreenState extends State<FlightLogListScreen> {
                                 ),
                                 const SizedBox(width: 8),
                                 Text(
-                                  displayDate,
+                                  tr(displayDate),
                                   style: TextStyle(
                                     fontSize: 20,
                                     fontWeight: FontWeight.bold,
@@ -479,7 +481,7 @@ class _FlightLogListScreenState extends State<FlightLogListScreen> {
                                 ),
                               ),
                               child: Text(
-                                displayFlightNumber,
+                                tr(displayFlightNumber),
                                 style: TextStyle(
                                   fontSize: 18,
                                   fontWeight: FontWeight.bold,
@@ -504,7 +506,7 @@ class _FlightLogListScreenState extends State<FlightLogListScreen> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    'DEPARTURE',
+                                    tr('DEPARTURE'),
                                     style: TextStyle(
                                       fontSize: 10,
                                       fontWeight: FontWeight.bold,
@@ -514,7 +516,7 @@ class _FlightLogListScreenState extends State<FlightLogListScreen> {
                                   ),
                                   const SizedBox(height: 4),
                                   Text(
-                                    log.departureIata ?? 'N/A',
+                                    tr(log.departureIata ?? 'N/A'),
                                     style: TextStyle(
                                       fontSize: 32,
                                       fontWeight: FontWeight.bold,
@@ -530,7 +532,7 @@ class _FlightLogListScreenState extends State<FlightLogListScreen> {
                                       log.scheduledDepartureTime!.isNotEmpty) ...[
                                     const SizedBox(height: 4),
                                     Text(
-                                      log.scheduledDepartureTime!,
+                                      tr(log.scheduledDepartureTime!),
                                       style: TextStyle(
                                         fontSize: 14,
                                         fontWeight: FontWeight.bold,
@@ -552,7 +554,7 @@ class _FlightLogListScreenState extends State<FlightLogListScreen> {
                                       log.delay != 'Unknown' &&
                                       !log.isCanceled) ...[
                                     Text(
-                                      '+ ${log.delay}',
+                                      tr('+ ${log.delay}'),
                                       style: TextStyle(
                                         fontSize: 11,
                                         fontWeight: FontWeight.bold,
@@ -599,7 +601,7 @@ class _FlightLogListScreenState extends State<FlightLogListScreen> {
                                         ),
                                       ),
                                       child: Text(
-                                        log.duration!,
+                                        tr(log.duration!),
                                         style: TextStyle(
                                           fontSize: 10,
                                           fontWeight: FontWeight.bold,
@@ -617,7 +619,7 @@ class _FlightLogListScreenState extends State<FlightLogListScreen> {
                                 crossAxisAlignment: CrossAxisAlignment.end,
                                 children: [
                                   Text(
-                                    'ARRIVAL',
+                                    tr('ARRIVAL'),
                                     style: TextStyle(
                                       fontSize: 10,
                                       fontWeight: FontWeight.bold,
@@ -627,7 +629,7 @@ class _FlightLogListScreenState extends State<FlightLogListScreen> {
                                   ),
                                   const SizedBox(height: 4),
                                   Text(
-                                    log.arrivalIata ?? 'N/A',
+                                    tr(log.arrivalIata ?? 'N/A'),
                                     style: TextStyle(
                                       fontSize: 32,
                                       fontWeight: FontWeight.bold,
@@ -643,7 +645,7 @@ class _FlightLogListScreenState extends State<FlightLogListScreen> {
                                       log.scheduledArrivalTime!.isNotEmpty) ...[
                                     const SizedBox(height: 4),
                                     Text(
-                                      log.scheduledArrivalTime!,
+                                      tr(log.scheduledArrivalTime!),
                                       style: TextStyle(
                                         fontSize: 14,
                                         fontWeight: FontWeight.bold,
@@ -730,7 +732,7 @@ class _FlightLogListScreenState extends State<FlightLogListScreen> {
                                 ),
                                 const SizedBox(width: 6),
                                 Text(
-                                  'CANCELED',
+                                  tr('CANCELED'),
                                   style: TextStyle(
                                     color: Colors.red.shade700,
                                     fontWeight: FontWeight.bold,
@@ -764,7 +766,7 @@ class _FlightLogListScreenState extends State<FlightLogListScreen> {
         Icon(icon, size: 14, color: Colors.grey.shade600),
         const SizedBox(height: 3),
         Text(
-          label,
+          tr(label),
           style: TextStyle(
             fontSize: 9,
             color: Colors.grey.shade600,
@@ -775,7 +777,7 @@ class _FlightLogListScreenState extends State<FlightLogListScreen> {
         ),
         const SizedBox(height: 2),
         Text(
-          displayValue,
+          tr(displayValue),
           style: TextStyle(
             fontSize: 13,
             fontWeight: FontWeight.bold,

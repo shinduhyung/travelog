@@ -1,84 +1,690 @@
-[
-  { "iso_a3": "USA", "gold": 8133 },
-  { "iso_a3": "DEU", "gold": 3352 },
-  { "iso_a3": "ITA", "gold": 2452 },
-  { "iso_a3": "FRA", "gold": 2437 },
-  { "iso_a3": "RUS", "gold": 2333 },
-  { "iso_a3": "CHN", "gold": 2262 },
-  { "iso_a3": "CHE", "gold": 1040 },
-  { "iso_a3": "JPN", "gold": 846 },
-  { "iso_a3": "IND", "gold": 822 },
-  { "iso_a3": "NLD", "gold": 612 },
-  { "iso_a3": "TUR", "gold": 570 },
-  { "iso_a3": "TWN", "gold": 422 },
-  { "iso_a3": "PRT", "gold": 383 },
-  { "iso_a3": "POL", "gold": 359 },
-  { "iso_a3": "UZB", "gold": 358 },
-  { "iso_a3": "SAU", "gold": 323 },
-  { "iso_a3": "KAZ", "gold": 311 },
-  { "iso_a3": "GBR", "gold": 310 },
-  { "iso_a3": "ESP", "gold": 282 },
-  { "iso_a3": "AUT", "gold": 280 },
-  { "iso_a3": "SGP", "gold": 237 },
-  { "iso_a3": "THA", "gold": 235 },
-  { "iso_a3": "BEL", "gold": 227 },
-  { "iso_a3": "DZA", "gold": 174 },
-  { "iso_a3": "LBY", "gold": 147 },
-  { "iso_a3": "PHL", "gold": 146 },
-  { "iso_a3": "IRQ", "gold": 146 },
-  { "iso_a3": "BRA", "gold": 130 },
-  { "iso_a3": "EGY", "gold": 126 },
-  { "iso_a3": "SWE", "gold": 126 },
-  { "iso_a3": "ZAF", "gold": 125 },
-  { "iso_a3": "MEX", "gold": 120 },
-  { "iso_a3": "GRC", "gold": 114 },
-  { "iso_a3": "KOR", "gold": 104 },
-  { "iso_a3": "ROU", "gold": 104 },
-  { "iso_a3": "QAT", "gold": 103 },
-  { "iso_a3": "HUN", "gold": 94 },
-  { "iso_a3": "AUS", "gold": 80 },
-  { "iso_a3": "KWT", "gold": 79 },
-  { "iso_a3": "IDN", "gold": 79 },
-  { "iso_a3": "ARE", "gold": 75 },
-  { "iso_a3": "JOR", "gold": 67 },
-  { "iso_a3": "DNK", "gold": 67 },
-  { "iso_a3": "PAK", "gold": 65 },
-  { "iso_a3": "ARG", "gold": 62 },
-  { "iso_a3": "BLR", "gold": 54 },
-  { "iso_a3": "FIN", "gold": 49 },
-  { "iso_a3": "KHM", "gold": 42 },
-  { "iso_a3": "BGR", "gold": 41 },
-  { "iso_a3": "SRB", "gold": 41 },
-  { "iso_a3": "MYS", "gold": 39 },
-  { "iso_a3": "SVK", "gold": 32 },
-  { "iso_a3": "UKR", "gold": 27 },
-  { "iso_a3": "ECU", "gold": 26 },
-  { "iso_a3": "KGZ", "gold": 25 },
-  { "iso_a3": "MAR", "gold": 22 },
-  { "iso_a3": "BGD", "gold": 14 },
-  { "iso_a3": "CYP", "gold": 14 },
-  { "iso_a3": "MUS", "gold": 12 },
-  { "iso_a3": "IRL", "gold": 12 },
-  { "iso_a3": "PRY", "gold": 8 },
-  { "iso_a3": "NPL", "gold": 8 },
-  { "iso_a3": "GTM", "gold": 7 },
-  { "iso_a3": "MKD", "gold": 7 },
-  { "iso_a3": "TUN", "gold": 7 },
-  { "iso_a3": "OMN", "gold": 7 },
-  { "iso_a3": "LVA", "gold": 7 },
-  { "iso_a3": "LTU", "gold": 6 },
-  { "iso_a3": "MNG", "gold": 5 },
-  { "iso_a3": "COL", "gold": 5 },
-  { "iso_a3": "MOZ", "gold": 4 },
-  { "iso_a3": "ALB", "gold": 3 },
-  { "iso_a3": "SVN", "gold": 3 },
-  { "iso_a3": "LUX", "gold": 2 },
-  { "iso_a3": "HKG", "gold": 2 },
-  { "iso_a3": "ISL", "gold": 2 },
-  { "iso_a3": "TTO", "gold": 2 },
-  { "iso_a3": "HTI", "gold": 2 },
-  { "iso_a3": "BIH", "gold": 1 },
-  { "iso_a3": "SUR", "gold": 1 },
-  { "iso_a3": "HND", "gold": 1 },
-  { "iso_a3": "DOM", "gold": 1 }
-]
+{
+  "schema_version": 1,
+  "dataset_id": "gold",
+  "metadata": {
+    "source_url": null,
+    "reference_period": null,
+    "updated_at": null
+  },
+  "legacy_layout": "list",
+  "tables": [
+    {
+      "id": "main",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "iso_a3"
+      ],
+      "metrics": [
+        {
+          "id": "gold",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "iso_a3": "USA"
+          },
+          "values": {
+            "gold": 8133
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DEU"
+          },
+          "values": {
+            "gold": 3352
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ITA"
+          },
+          "values": {
+            "gold": 2452
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FRA"
+          },
+          "values": {
+            "gold": 2437
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "RUS"
+          },
+          "values": {
+            "gold": 2333
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CHN"
+          },
+          "values": {
+            "gold": 2262
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CHE"
+          },
+          "values": {
+            "gold": 1040
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "JPN"
+          },
+          "values": {
+            "gold": 846
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IND"
+          },
+          "values": {
+            "gold": 822
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NLD"
+          },
+          "values": {
+            "gold": 612
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TUR"
+          },
+          "values": {
+            "gold": 570
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TWN"
+          },
+          "values": {
+            "gold": 422
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PRT"
+          },
+          "values": {
+            "gold": 383
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "POL"
+          },
+          "values": {
+            "gold": 359
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "UZB"
+          },
+          "values": {
+            "gold": 358
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SAU"
+          },
+          "values": {
+            "gold": 323
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KAZ"
+          },
+          "values": {
+            "gold": 311
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GBR"
+          },
+          "values": {
+            "gold": 310
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ESP"
+          },
+          "values": {
+            "gold": 282
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AUT"
+          },
+          "values": {
+            "gold": 280
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SGP"
+          },
+          "values": {
+            "gold": 237
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "THA"
+          },
+          "values": {
+            "gold": 235
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BEL"
+          },
+          "values": {
+            "gold": 227
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DZA"
+          },
+          "values": {
+            "gold": 174
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LBY"
+          },
+          "values": {
+            "gold": 147
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PHL"
+          },
+          "values": {
+            "gold": 146
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IRQ"
+          },
+          "values": {
+            "gold": 146
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BRA"
+          },
+          "values": {
+            "gold": 130
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "EGY"
+          },
+          "values": {
+            "gold": 126
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SWE"
+          },
+          "values": {
+            "gold": 126
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ZAF"
+          },
+          "values": {
+            "gold": 125
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MEX"
+          },
+          "values": {
+            "gold": 120
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GRC"
+          },
+          "values": {
+            "gold": 114
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KOR"
+          },
+          "values": {
+            "gold": 104
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ROU"
+          },
+          "values": {
+            "gold": 104
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "QAT"
+          },
+          "values": {
+            "gold": 103
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HUN"
+          },
+          "values": {
+            "gold": 94
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AUS"
+          },
+          "values": {
+            "gold": 80
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KWT"
+          },
+          "values": {
+            "gold": 79
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IDN"
+          },
+          "values": {
+            "gold": 79
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ARE"
+          },
+          "values": {
+            "gold": 75
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "JOR"
+          },
+          "values": {
+            "gold": 67
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DNK"
+          },
+          "values": {
+            "gold": 67
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PAK"
+          },
+          "values": {
+            "gold": 65
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ARG"
+          },
+          "values": {
+            "gold": 62
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BLR"
+          },
+          "values": {
+            "gold": 54
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FIN"
+          },
+          "values": {
+            "gold": 49
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KHM"
+          },
+          "values": {
+            "gold": 42
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BGR"
+          },
+          "values": {
+            "gold": 41
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SRB"
+          },
+          "values": {
+            "gold": 41
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MYS"
+          },
+          "values": {
+            "gold": 39
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SVK"
+          },
+          "values": {
+            "gold": 32
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "UKR"
+          },
+          "values": {
+            "gold": 27
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ECU"
+          },
+          "values": {
+            "gold": 26
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KGZ"
+          },
+          "values": {
+            "gold": 25
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MAR"
+          },
+          "values": {
+            "gold": 22
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BGD"
+          },
+          "values": {
+            "gold": 14
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CYP"
+          },
+          "values": {
+            "gold": 14
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MUS"
+          },
+          "values": {
+            "gold": 12
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IRL"
+          },
+          "values": {
+            "gold": 12
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PRY"
+          },
+          "values": {
+            "gold": 8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NPL"
+          },
+          "values": {
+            "gold": 8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GTM"
+          },
+          "values": {
+            "gold": 7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MKD"
+          },
+          "values": {
+            "gold": 7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TUN"
+          },
+          "values": {
+            "gold": 7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "OMN"
+          },
+          "values": {
+            "gold": 7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LVA"
+          },
+          "values": {
+            "gold": 7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LTU"
+          },
+          "values": {
+            "gold": 6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MNG"
+          },
+          "values": {
+            "gold": 5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "COL"
+          },
+          "values": {
+            "gold": 5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MOZ"
+          },
+          "values": {
+            "gold": 4
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ALB"
+          },
+          "values": {
+            "gold": 3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SVN"
+          },
+          "values": {
+            "gold": 3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LUX"
+          },
+          "values": {
+            "gold": 2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HKG"
+          },
+          "values": {
+            "gold": 2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ISL"
+          },
+          "values": {
+            "gold": 2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TTO"
+          },
+          "values": {
+            "gold": 2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HTI"
+          },
+          "values": {
+            "gold": 2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BIH"
+          },
+          "values": {
+            "gold": 1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SUR"
+          },
+          "values": {
+            "gold": 1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HND"
+          },
+          "values": {
+            "gold": 1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DOM"
+          },
+          "values": {
+            "gold": 1
+          }
+        }
+      ]
+    }
+  ]
+}

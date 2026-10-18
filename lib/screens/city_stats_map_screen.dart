@@ -2,6 +2,7 @@
 
 import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:provider/provider.dart';
@@ -34,6 +35,7 @@ class _CityStatsMapScreenState extends State<CityStatsMapScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final cityProvider = Provider.of<CityProvider>(context);
     final countryProvider = Provider.of<CountryProvider>(context);
 
@@ -138,19 +140,19 @@ class _CityStatsMapScreenState extends State<CityStatsMapScreen> {
                         context: context,
                         builder: (context) => AlertDialog(
                           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-                          title: Text('Confirm Removal',
+                          title: Text(tr('Confirm Removal'),
                               style: GoogleFonts.poppins(fontWeight: FontWeight.bold, color: Colors.black87)),
                           content: Text(
-                              'Are you sure you want to remove all $recordCount visit records for ${city.name}?',
+                              tr('Are you sure you want to remove all $recordCount visit records for ${city.name}?'),
                               style: GoogleFonts.poppins(color: Colors.black54)),
                           actions: [
                             TextButton(
                               onPressed: () => Navigator.pop(context, false),
-                              child: Text('Cancel', style: GoogleFonts.poppins(color: Colors.grey)),
+                              child: Text(tr('Cancel'), style: GoogleFonts.poppins(color: Colors.grey)),
                             ),
                             TextButton(
                               onPressed: () => Navigator.pop(context, true),
-                              child: Text('Yes, Remove',
+                              child: Text(tr('Yes, Remove'),
                                   style: GoogleFonts.poppins(color: Colors.redAccent, fontWeight: FontWeight.bold)),
                             ),
                           ],

@@ -1,6 +1,7 @@
 // lib/screens/landmarks_menu_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:jidoapp/screens/landmarks_list_screen.dart';
 
 class LandmarksMenuScreen extends StatelessWidget {
@@ -8,6 +9,7 @@ class LandmarksMenuScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final categories = [
       {'title': 'Ancient & Medieval', 'imagePath': 'assets/explore_icons/ancient_ruins.png', 'attributes': ['Ancient Site']},
       {'title': 'Modern History', 'imagePath': 'assets/explore_icons/historical_sites.png', 'attributes': ['Modern History']},
@@ -44,8 +46,8 @@ class LandmarksMenuScreen extends StatelessWidget {
             // Header
             Padding(
               padding: const EdgeInsets.fromLTRB(20, 24, 20, 16),
-              child: const Text(
-                'Cultural Wonders',
+              child:  Text(
+                tr('Cultural Wonders'),
                 style: TextStyle(
                   fontSize: 32,
                   fontWeight: FontWeight.w800,
@@ -136,7 +138,7 @@ class LandmarksMenuScreen extends StatelessWidget {
                 right: 10,
                 bottom: 10,
                 child: Text(
-                  item['title'] as String,
+                  tr(item['title'] as String),
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
                   textAlign: TextAlign.center,

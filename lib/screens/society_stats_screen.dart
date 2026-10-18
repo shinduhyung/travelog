@@ -1,10 +1,11 @@
 // lib/screens/society_stats_screen.dart
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'dart:convert';
 import 'package:provider/provider.dart';
 import 'package:intl/intl.dart';
+import 'package:jidoapp/services/statistics_repository.dart';
 import 'package:jidoapp/models/country_model.dart';
 import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/screens/countries_map_screen.dart';
@@ -80,6 +81,7 @@ class SocietyTabScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     // 1. Development Rankings
     final List<RankingInfo> developmentRankings = [
       RankingInfo(title: 'Nobel Prizes', icon: Icons.emoji_events, themeColor: Colors.amber.shade700, valueAccessor: (c) => c.novel, precision: 0),
@@ -209,6 +211,7 @@ class SocietyStatsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Consumer<CountryProvider>(
       builder: (context, countryProvider, child) {
         if (countryProvider.isLoading) {
@@ -218,11 +221,11 @@ class SocietyStatsScreen extends StatelessWidget {
         final filteredCountries = countryProvider.filteredCountries;
         final visitedCountryNames = countryProvider.visitedCountries;
 
-        const List<Tab> tabs = <Tab>[
-          Tab(icon: Icon(Icons.groups), text: 'Society'),
-          Tab(icon: Icon(Icons.import_contacts), text: 'Religion'),
-          Tab(icon: Icon(Icons.language), text: 'Language'),
-          Tab(icon: Icon(Icons.history_edu), text: 'History'),
+        final List<Tab> tabs = <Tab>[
+          Tab(icon: Icon(Icons.groups), text: tr('Society')),
+          Tab(icon: Icon(Icons.import_contacts), text: tr('Religion')),
+          Tab(icon: Icon(Icons.language), text: tr('Language')),
+          Tab(icon: Icon(Icons.history_edu), text: tr('History')),
         ];
 
         final List<Widget> screens = <Widget>[
@@ -240,7 +243,7 @@ class SocietyStatsScreen extends StatelessWidget {
               bottom: false,
               child: Column(
                 children: [
-                  const Material(
+                  Material(
                     elevation: 1,
                     child: TabBar(
                       tabs: tabs,
@@ -300,7 +303,7 @@ class _FormsOfGovernmentSectionState extends State<_FormsOfGovernmentSection> {
 
   Future<void> _loadGovData() async {
     try {
-      final String response = await rootBundle.loadString('assets/gov.json');
+      final String response = await StatisticsRepository.instance.loadLegacyString('assets/gov.json');
       final List<dynamic> data = json.decode(response);
       setState(() {
         _govData = {
@@ -329,6 +332,7 @@ class _FormsOfGovernmentSectionState extends State<_FormsOfGovernmentSection> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     if (_isLoadingGovData) {
       return const Center(child: CircularProgressIndicator());
     }
@@ -402,8 +406,8 @@ class _FormsOfGovernmentSectionState extends State<_FormsOfGovernmentSection> {
                 padding: const EdgeInsets.symmetric(vertical: 8),
               ),
               icon: const Icon(Icons.account_balance, color: Colors.white, size: 20),
-              label: const Text(
-                'Government Type Map',
+              label:  Text(
+                tr('Government Type Map'),
                 style: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w600,
@@ -459,6 +463,7 @@ class _GovernmentTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final theme = Theme.of(context);
     final total = countries.length;
     final visited = countries.where((c) => visitedNames.contains(c.name)).length;
@@ -492,7 +497,7 @@ class _GovernmentTile extends StatelessWidget {
                     children: [
                       Expanded(
                         child: Text(
-                          title,
+                          tr(title),
                           style: theme.textTheme.titleMedium?.copyWith(
                             fontWeight: isExpanded ? FontWeight.w900 : FontWeight.bold,
                             fontSize: 16,
@@ -502,7 +507,7 @@ class _GovernmentTile extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        '${(percentage * 100).toStringAsFixed(0)}%',
+                        tr('${(percentage * 100).toStringAsFixed(0)}%'),
                         style: theme.textTheme.titleMedium?.copyWith(
                           fontWeight: FontWeight.w800,
                           fontSize: 16,
@@ -527,7 +532,7 @@ class _GovernmentTile extends StatelessWidget {
                       ),
                       const SizedBox(width: 12),
                       Text(
-                        '$visited / $total Countries',
+                        tr('$visited / $total Countries'),
                         style: theme.textTheme.bodyMedium?.copyWith(
                           color: Colors.grey.shade600,
                           fontWeight: FontWeight.w500,
@@ -576,11 +581,11 @@ class _GovernmentTile extends StatelessWidget {
                                 color: isVisited ? color : Colors.grey,
                               ),
                               const SizedBox(width: 6),
-                              Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 14)), // 국기 추가
+                              Text(tr(flagEmoji(country.isoA2)), style: const TextStyle(fontSize: 14)), // 국기 추가
                               const SizedBox(width: 4),
                               Expanded(
                                 child: Text(
-                                  country.name,
+                                  tr(country.name),
                                   style: theme.textTheme.bodyMedium,
                                   overflow: TextOverflow.ellipsis,
                                 ),
@@ -688,7 +693,7 @@ class _RankingCategoryCardState extends State<_RankingCategoryCard> {
 
   Widget _buildRankText(int rank, Color color) {
     return Text(
-      '$rank',
+      tr('$rank'),
       style: TextStyle(
         fontSize: 16,
         fontWeight: FontWeight.bold,
@@ -699,6 +704,7 @@ class _RankingCategoryCardState extends State<_RankingCategoryCard> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final textTheme = Theme.of(context).textTheme;
     final countryProvider = Provider.of<CountryProvider>(context, listen: false);
     final useDefaultColor = countryProvider.useDefaultRankingBarColor;
@@ -723,7 +729,7 @@ class _RankingCategoryCardState extends State<_RankingCategoryCard> {
                   children: [
                     Icon(widget.cardIcon, color: Colors.grey.shade800),
                     const SizedBox(width: 8),
-                    Text(widget.cardTitle, style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
+                    Text(tr(widget.cardTitle), style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
                   ],
                 ),
                 const SizedBox(height: 8),
@@ -737,7 +743,7 @@ class _RankingCategoryCardState extends State<_RankingCategoryCard> {
                       value: group,
                       child: Row(children: [
                         Icon(group.icon, color: group.themeColor), const SizedBox(width: 12),
-                        Text(group.title, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
+                        Text(tr(group.title), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
                       ]),
                     )).toList(),
                     onChanged: (newValue) {
@@ -766,7 +772,7 @@ class _RankingCategoryCardState extends State<_RankingCategoryCard> {
                             opacity: isRestricted ? 0.5 : 1.0,
                             child: SegmentedButton<int>(
                               showSelectedIcon: false,
-                              segments: const [ButtonSegment<int>(value: 0, label: Text('All')), ButtonSegment<int>(value: 1, label: Text('Visited'))],
+                              segments:  [ButtonSegment<int>(value: 0, label: Text(tr('All'))), ButtonSegment<int>(value: 1, label: Text(tr('Visited')))],
                               selected: {_displaySegment},
                               onSelectionChanged: (s) { _displaySegment = s.first; _onFilterChanged(); },
                               style: SegmentedButton.styleFrom(
@@ -790,7 +796,7 @@ class _RankingCategoryCardState extends State<_RankingCategoryCard> {
                             opacity: isRestricted ? 0.5 : 1.0,
                             child: SegmentedButton<int>(
                               showSelectedIcon: false,
-                              segments: const [ButtonSegment<int>(value: 0, label: Text('High')), ButtonSegment<int>(value: 1, label: Text('Low'))],
+                              segments:  [ButtonSegment<int>(value: 0, label: Text(tr('High'))), ButtonSegment<int>(value: 1, label: Text(tr('Low')))],
                               selected: {_sortOrderSegment},
                               onSelectionChanged: (s) { _sortOrderSegment = s.first; _onFilterChanged(); },
                               style: SegmentedButton.styleFrom(
@@ -817,7 +823,7 @@ class _RankingCategoryCardState extends State<_RankingCategoryCard> {
                       child: DropdownButton<String>(
                         borderRadius: BorderRadius.circular(16), // 둥근 모서리 적용
                         value: _selectedContinent,
-                        items: _continents.map((String value) => DropdownMenuItem<String>(value: value, child: Text(value, style: const TextStyle(fontSize: 14)))).toList(),
+                        items: _continents.map((String value) => DropdownMenuItem<String>(value: value, child: Text(tr(value), style: const TextStyle(fontSize: 14)))).toList(),
                         onChanged: (String? newValue) { _selectedContinent = newValue!; _onFilterChanged(); },
                         underline: const SizedBox(),
                       ),
@@ -830,7 +836,7 @@ class _RankingCategoryCardState extends State<_RankingCategoryCard> {
           const Divider(height: 1),
           Expanded(
             child: _rankedList.isEmpty
-                ? const Center(child: Text('No data to display.'))
+                ?  Center(child: Text(tr('No data to display.')))
                 : ListView.builder(
               padding: const EdgeInsets.all(8.0),
               itemCount: _rankedList.length,
@@ -857,10 +863,10 @@ class _RankingCategoryCardState extends State<_RankingCategoryCard> {
                             children: [
                               _buildRankText(rank, rankingThemeColor),
                               const SizedBox(width: 12),
-                              Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 18)), // 국기 추가
+                              Text(tr(flagEmoji(country.isoA2)), style: const TextStyle(fontSize: 18)), // 국기 추가
                               const SizedBox(width: 8),
-                              Expanded(child: Text(country.name, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
-                              Text('${value.toStringAsFixed(_selectedRanking.precision)}${_selectedRanking.unit}', style: textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
+                              Expanded(child: Text(tr(country.name), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold))),
+                              Text(tr('${value.toStringAsFixed(_selectedRanking.precision)}${_selectedRanking.unit}'), style: textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
                             ],
                           ),
                           const SizedBox(height: 6),
@@ -1104,6 +1110,7 @@ class _CombinedSpecialGroupCardState extends State<_CombinedSpecialGroupCard> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final theme = Theme.of(context);
     final textTheme = theme.textTheme;
 
@@ -1131,7 +1138,7 @@ class _CombinedSpecialGroupCardState extends State<_CombinedSpecialGroupCard> {
                   value: group,
                   child: Row(children: [
                     Icon(group.icon, color: group.themeColor), const SizedBox(width: 12),
-                    Expanded(child: Text(group.title, style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold), overflow: TextOverflow.ellipsis)),
+                    Expanded(child: Text(tr(group.title), style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold), overflow: TextOverflow.ellipsis)),
                   ]),
                 )).toList(),
                 onChanged: (newValue) { if(newValue != null) setState(() { _selectedGroup = newValue; _isExpanded = false; }); },
@@ -1146,10 +1153,10 @@ class _CombinedSpecialGroupCardState extends State<_CombinedSpecialGroupCard> {
                 children: [
                   Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                     Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                      Text("Visited Countries", style: textTheme.bodyLarge),
+                      Text(tr("Visited Countries"), style: textTheme.bodyLarge),
                       Text.rich(TextSpan(
-                        text: '$visited', style: theme.textTheme.headlineSmall?.copyWith(color: _selectedGroup.themeColor, fontWeight: FontWeight.bold),
-                        children: [TextSpan(text: ' / $total', style: theme.textTheme.titleMedium?.copyWith(color: Colors.grey.shade600))],
+                        text: tr('$visited'), style: theme.textTheme.headlineSmall?.copyWith(color: _selectedGroup.themeColor, fontWeight: FontWeight.bold),
+                        children: [TextSpan(text: tr(' / $total'), style: theme.textTheme.titleMedium?.copyWith(color: Colors.grey.shade600))],
                       )),
                     ]),
                     ElevatedButton.icon(
@@ -1157,7 +1164,7 @@ class _CombinedSpecialGroupCardState extends State<_CombinedSpecialGroupCard> {
                         final groups = _selectedGroup.mapGroupsBuilder(widget.countriesToDisplay);
                         Navigator.push(context, MaterialPageRoute(builder: (context) => CountriesMapScreen(highlightGroups: groups)));
                       },
-                      icon: const Icon(Icons.map_outlined), label: const Text('Map'),
+                      icon: const Icon(Icons.map_outlined), label:  Text(tr('Map')),
                       style: ElevatedButton.styleFrom(backgroundColor: _selectedGroup.themeColor, foregroundColor: Colors.white, shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30))),
                     ),
                   ]),
@@ -1189,12 +1196,12 @@ class _CombinedSpecialGroupCardState extends State<_CombinedSpecialGroupCard> {
                       padding: const EdgeInsets.symmetric(horizontal: 12),
                       child: Row(
                         children: [
-                          Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 16)), // 국기 추가
+                          Text(tr(flagEmoji(country.isoA2)), style: const TextStyle(fontSize: 16)), // 국기 추가
                           const SizedBox(width: 6),
                           Expanded(
                             child: Align(
                                 alignment: Alignment.centerLeft,
-                                child: Text(country.name, style: theme.textTheme.bodyMedium, overflow: TextOverflow.ellipsis)
+                                child: Text(tr(country.name), style: theme.textTheme.bodyMedium, overflow: TextOverflow.ellipsis)
                             ),
                           ),
                         ],
@@ -1299,7 +1306,7 @@ class _AgeRelatedRankingCardState extends State<_AgeRelatedRankingCard> {
 
   Widget _buildRankText(int rank, Color color) {
     return Text(
-      '$rank',
+      tr('$rank'),
       style: TextStyle(
         fontSize: 16,
         fontWeight: FontWeight.bold,
@@ -1310,6 +1317,7 @@ class _AgeRelatedRankingCardState extends State<_AgeRelatedRankingCard> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final textTheme = Theme.of(context).textTheme;
     final countryProvider = Provider.of<CountryProvider>(context, listen: false);
     final useDefaultColor = countryProvider.useDefaultRankingBarColor;
@@ -1337,7 +1345,7 @@ class _AgeRelatedRankingCardState extends State<_AgeRelatedRankingCard> {
                   children: [
                     Icon(Icons.cake, color: Colors.deepPurple), // Section Icon
                     const SizedBox(width: 8),
-                    Text("Age Demographics", style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold, color: Colors.black87)),
+                    Text(tr("Age Demographics"), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold, color: Colors.black87)),
                   ],
                 ),
                 const SizedBox(height: 8),
@@ -1351,7 +1359,7 @@ class _AgeRelatedRankingCardState extends State<_AgeRelatedRankingCard> {
                       child: Row(children: [
                         Icon(group.icon, color: group.themeColor, size: 20),
                         const SizedBox(width: 12),
-                        Text(group.title, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold, fontSize: 15)),
+                        Text(tr(group.title), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold, fontSize: 15)),
                       ]),
                     )).toList(),
                     onChanged: (newValue) { if (newValue != null) { setState(() { _selectedRanking = newValue; _prepareList(); }); } },
@@ -1363,7 +1371,7 @@ class _AgeRelatedRankingCardState extends State<_AgeRelatedRankingCard> {
                     Expanded(
                         child: SegmentedButton<int>(
                           showSelectedIcon: false,
-                          segments: const [ButtonSegment<int>(value: 0, label: Text('All')), ButtonSegment<int>(value: 1, label: Text('Visited'))],
+                          segments:  [ButtonSegment<int>(value: 0, label: Text(tr('All'))), ButtonSegment<int>(value: 1, label: Text(tr('Visited')))],
                           selected: {_displaySegment},
                           onSelectionChanged: (s) { _displaySegment = s.first; _onFilterChanged(); },
                           style: SegmentedButton.styleFrom(
@@ -1382,7 +1390,7 @@ class _AgeRelatedRankingCardState extends State<_AgeRelatedRankingCard> {
                     Expanded(
                         child: SegmentedButton<int>(
                           showSelectedIcon: false,
-                          segments: const [ButtonSegment<int>(value: 0, label: Text('High')), ButtonSegment<int>(value: 1, label: Text('Low'))],
+                          segments:  [ButtonSegment<int>(value: 0, label: Text(tr('High'))), ButtonSegment<int>(value: 1, label: Text(tr('Low')))],
                           selected: {_sortOrderSegment},
                           onSelectionChanged: (s) { _sortOrderSegment = s.first; _onFilterChanged(); },
                           style: SegmentedButton.styleFrom(
@@ -1406,7 +1414,7 @@ class _AgeRelatedRankingCardState extends State<_AgeRelatedRankingCard> {
           // List Section
           Expanded(
             child: _rankedList.isEmpty
-                ? const Center(child: Text('No data to display.'))
+                ?  Center(child: Text(tr('No data to display.')))
                 : ListView.builder(
               padding: const EdgeInsets.all(8.0),
               itemCount: _rankedList.length,
@@ -1434,10 +1442,10 @@ class _AgeRelatedRankingCardState extends State<_AgeRelatedRankingCard> {
                             children: [
                               _buildRankText(rank, rankingThemeColor),
                               const SizedBox(width: 12),
-                              Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 18)), // 국기 추가
+                              Text(tr(flagEmoji(country.isoA2)), style: const TextStyle(fontSize: 18)), // 국기 추가
                               const SizedBox(width: 8),
-                              Expanded(child: Text(country.name, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold, fontSize: 15))),
-                              Text('${value.toStringAsFixed(_selectedRanking.precision)}${_selectedRanking.unit}', style: textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
+                              Expanded(child: Text(tr(country.name), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold, fontSize: 15))),
+                              Text(tr('${value.toStringAsFixed(_selectedRanking.precision)}${_selectedRanking.unit}'), style: textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
                             ],
                           ),
                           const SizedBox(height: 6),

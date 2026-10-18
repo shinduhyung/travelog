@@ -3,8 +3,8 @@
 import 'dart:convert';
 import 'dart:math';
 import 'package:flutter/foundation.dart';
-import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
+import 'package:jidoapp/services/statistics_repository.dart';
 import 'package:jidoapp/models/city_model.dart';
 import 'package:jidoapp/models/city_visit_detail_model.dart';
 import 'package:jidoapp/models/visit_details_model.dart';
@@ -460,7 +460,7 @@ class CityProvider with ChangeNotifier {
       );
     }
     // 실패 시(오프라인, 타임아웃, statusCode 오류 등) 로컬 fallback
-    return await rootBundle.loadString('assets/$fileName');
+    return await StatisticsRepository.instance.loadLegacyString('assets/$fileName');
   }
 
   // cities15000.json은 매번 네트워크로 받으면 로딩이 느려지므로,
@@ -509,10 +509,9 @@ class CityProvider with ChangeNotifier {
     );
     try {
       // 1. 핵심 데이터 로드 (지도용 기본 도시 목록) — 최대한 병렬로
-      final continentFuture = rootBundle
-          .loadString('assets/continent.json')
+      final continentFuture = StatisticsRepository.instance.loadLegacyString('assets/continent.json')
           .then((s) => compute(_parseContinents, s));
-      final citiesJsonFuture = rootBundle.loadString('assets/cities.json');
+      final citiesJsonFuture = StatisticsRepository.instance.loadLegacyString('assets/cities.json');
       final cities15000Future = _loadCities15000WithCache();
 
       final Map<String, String> countryToContinentMap = await continentFuture;
@@ -568,7 +567,7 @@ class CityProvider with ChangeNotifier {
       await _loadThemeData(countryToContinentMap);
       await _loadSpecialStats();
 
-      final String touristRatioJsonStr = await rootBundle.loadString(
+      final String touristRatioJsonStr = await StatisticsRepository.instance.loadLegacyString(
         'assets/city_tourist_ratio.json',
       );
       _touristRatioData = await compute(
@@ -577,7 +576,7 @@ class CityProvider with ChangeNotifier {
       );
       _applyTouristRatioToAllLists();
 
-      final String financialIndexJsonStr = await rootBundle.loadString(
+      final String financialIndexJsonStr = await StatisticsRepository.instance.loadLegacyString(
         'assets/financial_index.json',
       );
       _financialIndexRawData =
@@ -606,7 +605,7 @@ class CityProvider with ChangeNotifier {
   // --- Special Stats (Instagram, Transportation, etc.) ---
   Future<void> _loadSpecialStats() async {
     try {
-      final String statsJsonStr = await rootBundle.loadString(
+      final String statsJsonStr = await StatisticsRepository.instance.loadLegacyString(
         'assets/city_stats.json',
       );
       final Map<String, dynamic> statsJson = json.decode(statsJsonStr);
@@ -748,7 +747,7 @@ class CityProvider with ChangeNotifier {
     _gawcCities = results[21];
 
     // largest는 같은 파일을 두 parser로 쓰므로 한 번만 로드 후 병렬 parse
-    final String largestJsonStr = await rootBundle.loadString(
+    final String largestJsonStr = await StatisticsRepository.instance.loadLegacyString(
       'assets/largest.json',
     );
     final largestResults = await Future.wait([
@@ -764,7 +763,7 @@ class CityProvider with ChangeNotifier {
     List<City> Function(String) parser,
   ) async {
     try {
-      final String jsonStr = await rootBundle.loadString(path);
+      final String jsonStr = await StatisticsRepository.instance.loadLegacyString(path);
       return await compute(parser, jsonStr);
     } catch (e) {
       print('[CityProvider] Error loading $path: $e');

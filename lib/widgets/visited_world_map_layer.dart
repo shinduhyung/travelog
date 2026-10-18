@@ -2,6 +2,7 @@ import 'package:jidoapp/services/country_region_access.dart';
 import 'package:jidoapp/services/subscription_service.dart';
 import 'package:jidoapp/widgets/country_region_access_gate.dart';
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:jidoapp/models/admin_region.dart';
 import 'package:jidoapp/models/country_model.dart';
@@ -64,6 +65,7 @@ class _VisitedWorldMapLayerState extends State<VisitedWorldMapLayer> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     if (!widget.showRegions) {
       return PolygonLayer(polygons: _countryPolygons());
     }
@@ -132,15 +134,15 @@ class _VisitedWorldMapLayerState extends State<VisitedWorldMapLayer> {
                       ),
                       onPressed: () => showCountryRegionsPremiumDialog(context),
                       icon: const Icon(Icons.lock_outline_rounded, size: 16),
-                      label: const Text('More regions with Premium'),
+                      label:  Text(tr('More regions with Premium')),
                     ),
                   ),
-                const Positioned(
+                 Positioned(
                   left: 8,
                   bottom: 4,
                   child: IgnorePointer(
                     child: Text(
-                      'Natural Earth • geoBoundaries • © OpenStreetMap contributors',
+                      tr('Natural Earth • geoBoundaries • © OpenStreetMap contributors'),
                       style: TextStyle(
                         fontSize: 9,
                         color: Colors.black54,

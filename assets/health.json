@@ -1,248 +1,1778 @@
 {
-  "hiv_prevalence_percent": [
-    {"iso_a3": "SWZ", "value": 25.9},
-    {"iso_a3": "LSO", "value": 19.3},
-    {"iso_a3": "BWA", "value": 18.6},
-    {"iso_a3": "ZAF", "value": 16.7},
-    {"iso_a3": "ZWE", "value": 11.6},
-    {"iso_a3": "MOZ", "value": 11.3},
-    {"iso_a3": "NAM", "value": 10.2},
-    {"iso_a3": "ZMB", "value": 10.1},
-    {"iso_a3": "MWI", "value": 7.2},
-    {"iso_a3": "GNQ", "value": 6.7}
-  ],
-  "alzheimers_case_rate_per_100k": [
-    {"iso_a3": "JPN", "value": 2710},
-    {"iso_a3": "DEU", "value": 2510},
-    {"iso_a3": "ITA", "value": 2420},
-    {"iso_a3": "GRC", "value": 2360},
-    {"iso_a3": "MCO", "value": 1940},
-    {"iso_a3": "PRI", "value": 1790},
-    {"iso_a3": "CAN", "value": 1760},
-    {"iso_a3": "FIN", "value": 1750},
-    {"iso_a3": "AUS", "value": 1680},
-    {"iso_a3": "BEL", "value": 1680},
-    {"iso_a3": "PRT", "value": 1650},
-    {"iso_a3": "NLD", "value": 1630},
-    {"iso_a3": "NZL", "value": 1580},
-    {"iso_a3": "NOR", "value": 1580},
-    {"iso_a3": "CHE", "value": 1570},
-    {"iso_a3": "SMR", "value": 1560},
-    {"iso_a3": "VIR", "value": 1530},
-    {"iso_a3": "AUT", "value": 1500}
-  ],
-  "cancer_rate_asr_2022": [
-    {"iso_a3": "AUS", "value": 462.5},
-    {"iso_a3": "NZL", "value": 427.3},
-    {"iso_a3": "DNK", "value": 374.7},
-    {"iso_a3": "USA", "value": 367.0},
-    {"iso_a3": "NOR", "value": 357.9},
-    {"iso_a3": "CAN", "value": 345.9},
-    {"iso_a3": "IRL", "value": 344.7},
-    {"iso_a3": "NLD", "value": 341.4},
-    {"iso_a3": "FRA", "value": 339.0},
-    {"iso_a3": "HUN", "value": 336.7},
-    {"iso_a3": "BEL", "value": 324.7},
-    {"iso_a3": "HRV", "value": 313.4}
-  ],
-  "opiate_usage_percent": [
-    {"iso_a3": "IRN", "value": 3.31},
-    {"iso_a3": "AFG", "value": 2.65},
-    {"iso_a3": "SYC", "value": 2.3},
-    {"iso_a3": "EGY", "value": 1.76},
-    {"iso_a3": "POL", "value": 1.7},
-    {"iso_a3": "AZE", "value": 1.5},
-    {"iso_a3": "IND", "value": 1.42},
-    {"iso_a3": "RUS", "value": 1.4},
-    {"iso_a3": "MDV", "value": 1.34},
-    {"iso_a3": "UKR", "value": 1.05}
-  ],
-  "covid_vaccination_rate_percent": [
-    {"iso_a3": "ARE", "value": 99.0},
-    {"iso_a3": "PRT", "value": 96.0},
-    {"iso_a3": "QAT", "value": 95.0},
-    {"iso_a3": "CUB", "value": 94.0},
-    {"iso_a3": "BRN", "value": 93.0},
-    {"iso_a3": "CHL", "value": 92.0},
-    {"iso_a3": "SGP", "value": 92.0},
-    {"iso_a3": "NPL", "value": 90.0},
-    {"iso_a3": "CHN", "value": 90.0},
-    {"iso_a3": "CAN", "value": 87.0}
-  ],
-  "specialist_doctor_pay_usd": [
-    {"iso_a3": "LUX", "value": 352300},
-    {"iso_a3": "USA", "value": 329000},
-    {"iso_a3": "NLD", "value": 253000},
-    {"iso_a3": "AUS", "value": 247000},
-    {"iso_a3": "DEU", "value": 222700},
-    {"iso_a3": "AUT", "value": 213200},
-    {"iso_a3": "BEL", "value": 188000},
-    {"iso_a3": "CAN", "value": 161000},
-    {"iso_a3": "IRL", "value": 143000},
-    {"iso_a3": "CHE", "value": 130000}
-  ],
-  "hospital_beds_per_1k": [
-    {"iso_a3": "JPN", "value": 12.6},
-    {"iso_a3": "KOR", "value": 12.4},
-    {"iso_a3": "DEU", "value": 7.8},
-    {"iso_a3": "AUT", "value": 7.3},
-    {"iso_a3": "HUN", "value": 6.8},
-    {"iso_a3": "CZE", "value": 6.6},
-    {"iso_a3": "POL", "value": 6.4},
-    {"iso_a3": "LTU", "value": 6.0},
-    {"iso_a3": "FRA", "value": 5.8},
-    {"iso_a3": "SVK", "value": 5.7}
-  ],
-  "tertiary_education_percent": [
-    {"iso_a3": "CAN", "value": 52.6},
-    {"iso_a3": "IRL", "value": 49.1},
-    {"iso_a3": "SGP", "value": 48.3},
-    {"iso_a3": "DNK", "value": 45.1},
-    {"iso_a3": "NOR", "value": 45.1},
-    {"iso_a3": "AUS", "value": 43.3},
-    {"iso_a3": "FRA", "value": 43.2},
-    {"iso_a3": "USA", "value": 43.1},
-    {"iso_a3": "SAU", "value": 42.6},
-    {"iso_a3": "KOR", "value": 41.8}
-  ],
-  "sex_ratio_total": [
-    {"iso_a3": "QAT", "value": 3.32},
-    {"iso_a3": "ARE", "value": 2.13},
-    {"iso_a3": "BHR", "value": 1.50},
-    {"iso_a3": "KWT", "value": 1.36},
-    {"iso_a3": "SAU", "value": 1.31},
-    {"iso_a3": "GNQ", "value": 1.16},
-    {"iso_a3": "OMN", "value": 1.16},
-    {"iso_a3": "MNP", "value": 1.12},
-    {"iso_a3": "BLM", "value": 1.12},
-    {"iso_a3": "JOR", "value": 1.10},
-    {"iso_a3": "SYC", "value": 1.08},
-    {"iso_a3": "BTN", "value": 1.07},
-    {"iso_a3": "FRO", "value": 1.07},
-    {"iso_a3": "GAB", "value": 1.07},
-    {"iso_a3": "GRL", "value": 1.07},
-    {"iso_a3": "EGY", "value": 1.06},
-    {"iso_a3": "GUM", "value": 1.06},
-    {"iso_a3": "IND", "value": 1.06},
-    {"iso_a3": "KOS", "value": 1.06},
-    {"iso_a3": "PLW", "value": 1.06},
-    {"iso_a3": "DJI", "value": 0.83},
-    {"iso_a3": "HKG", "value": 0.86},
-    {"iso_a3": "LTU", "value": 0.86},
-    {"iso_a3": "BHS", "value": 0.86},
-    {"iso_a3": "RUS", "value": 0.87},
-    {"iso_a3": "LVA", "value": 0.87},
-    {"iso_a3": "BLR", "value": 0.88},
-    {"iso_a3": "AIA", "value": 0.88},
-    {"iso_a3": "MDA", "value": 0.89},
-    {"iso_a3": "PRI", "value": 0.89},
-    {"iso_a3": "ATG", "value": 0.89},
-    {"iso_a3": "EST", "value": 0.89},
-    {"iso_a3": "VIR", "value": 0.90},
-    {"iso_a3": "MAC", "value": 0.90},
-    {"iso_a3": "PRT", "value": 0.90},
-    {"iso_a3": "VGB", "value": 0.90},
-    {"iso_a3": "SWZ", "value": 0.90},
-    {"iso_a3": "ABW", "value": 0.90},
-    {"iso_a3": "POL", "value": 0.91},
-    {"iso_a3": "GEO", "value": 0.92}
-  ],
-
-  "car_accidents": [
-
-    { "iso_a3": "USA", "car_accidents_per_million": 5938 },
-
-    { "iso_a3": "JPN", "car_accidents_per_million": 5478 },
-
-    { "iso_a3": "AUT", "car_accidents_per_million": 4024 },
-
-    { "iso_a3": "BEL", "car_accidents_per_million": 3983 },
-
-    { "iso_a3": "PRT", "car_accidents_per_million": 3618 },
-
-    { "iso_a3": "DEU", "car_accidents_per_million": 3612 },
-
-    { "iso_a3": "MNE", "car_accidents_per_million": 3092 },
-
-    { "iso_a3": "SVN", "car_accidents_per_million": 2884 },
-
-    { "iso_a3": "ITA", "car_accidents_per_million": 2883 },
-
-    { "iso_a3": "CAN", "car_accidents_per_million": 2814 },
-
-    { "iso_a3": "MLT", "car_accidents_per_million": 2656 },
-
-    { "iso_a3": "HRV", "car_accidents_per_million": 2383 },
-
-    { "iso_a3": "ESP", "car_accidents_per_million": 2208 },
-
-    { "iso_a3": "BIH", "car_accidents_per_million": 2165 },
-
-    { "iso_a3": "ISL", "car_accidents_per_million": 2136 },
-
-    { "iso_a3": "TUR", "car_accidents_per_million": 2118 },
-
-    { "iso_a3": "CHE", "car_accidents_per_million": 2071 },
-
-    { "iso_a3": "SRB", "car_accidents_per_million": 2051 }
-
-  ],
-
-  "alcohol_consumption_2019": [
-    { "iso_a3": "ROU", "alcohol_consumption_liters": 17.0 },
-    { "iso_a3": "GEO", "alcohol_consumption_liters": 14.3 },
-    { "iso_a3": "CZE", "alcohol_consumption_liters": 13.3 },
-    { "iso_a3": "LVA", "alcohol_consumption_liters": 13.1 },
-    { "iso_a3": "DEU", "alcohol_consumption_liters": 12.2 },
-    { "iso_a3": "UGA", "alcohol_consumption_liters": 12.2 },
-    { "iso_a3": "AUT", "alcohol_consumption_liters": 12.0 },
-    { "iso_a3": "SYC", "alcohol_consumption_liters": 12.0 },
-    { "iso_a3": "BGR", "alcohol_consumption_liters": 11.8 },
-    { "iso_a3": "LTU", "alcohol_consumption_liters": 11.8 }
-  ],
-  "total_smokers_2025": [
-    { "iso_a3": "NRU", "total_smokers_percent": 46.7 },
-    { "iso_a3": "MMR", "total_smokers_percent": 42.3 },
-    { "iso_a3": "SRB", "total_smokers_percent": 39.0 },
-    { "iso_a3": "BGR", "total_smokers_percent": 38.8 },
-    { "iso_a3": "IDN", "total_smokers_percent": 38.7 },
-    { "iso_a3": "PNG", "total_smokers_percent": 38.1 },
-    { "iso_a3": "HRV", "total_smokers_percent": 37.6 },
-    { "iso_a3": "TLS", "total_smokers_percent": 37.2 },
-    { "iso_a3": "KIR", "total_smokers_percent": 36.8 },
-    { "iso_a3": "AND", "total_smokers_percent": 36.4 },
-    { "iso_a3": "JOR", "total_smokers_percent": 36.3 },
-    { "iso_a3": "SLB", "total_smokers_percent": 36.1 },
-    { "iso_a3": "BIH", "total_smokers_percent": 35.2 },
-    { "iso_a3": "CYP", "total_smokers_percent": 35.0 },
-    { "iso_a3": "FRA", "total_smokers_percent": 34.6 }
-  ],
-
-  "firearm_ownership": [
-
-    { "iso_a3": "USA", "firearms_per_100": 120.5 },
-
-    { "iso_a3": "FLK", "firearms_per_100": 62.1 },
-
-    { "iso_a3": "YEM", "firearms_per_100": 52.8 },
-
-    { "iso_a3": "NCL", "firearms_per_100": 42.5 },
-
-    { "iso_a3": "SRB", "firearms_per_100": 39.1 },
-
-    { "iso_a3": "MNE", "firearms_per_100": 39.1 },
-
-    { "iso_a3": "URY", "firearms_per_100": 34.7 },
-
-    { "iso_a3": "CAN", "firearms_per_100": 34.7 },
-
-    { "iso_a3": "CYP", "firearms_per_100": 34.0 },
-
-    { "iso_a3": "FIN", "firearms_per_100": 32.4 },
-
-    { "iso_a3": "LBN", "firearms_per_100": 31.9 },
-
-    { "iso_a3": "ISL", "firearms_per_100": 31.7 }
-
+  "schema_version": 1,
+  "dataset_id": "health",
+  "metadata": {
+    "source_url": null,
+    "reference_period": null,
+    "updated_at": null
+  },
+  "legacy_layout": "sections",
+  "tables": [
+    {
+      "id": "hiv_prevalence_percent",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "iso_a3"
+      ],
+      "metrics": [
+        {
+          "id": "value",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "iso_a3": "SWZ"
+          },
+          "values": {
+            "value": 25.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LSO"
+          },
+          "values": {
+            "value": 19.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BWA"
+          },
+          "values": {
+            "value": 18.6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ZAF"
+          },
+          "values": {
+            "value": 16.7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ZWE"
+          },
+          "values": {
+            "value": 11.6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MOZ"
+          },
+          "values": {
+            "value": 11.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NAM"
+          },
+          "values": {
+            "value": 10.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ZMB"
+          },
+          "values": {
+            "value": 10.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MWI"
+          },
+          "values": {
+            "value": 7.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GNQ"
+          },
+          "values": {
+            "value": 6.7
+          }
+        }
+      ]
+    },
+    {
+      "id": "alzheimers_case_rate_per_100k",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "iso_a3"
+      ],
+      "metrics": [
+        {
+          "id": "value",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "iso_a3": "JPN"
+          },
+          "values": {
+            "value": 2710
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DEU"
+          },
+          "values": {
+            "value": 2510
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ITA"
+          },
+          "values": {
+            "value": 2420
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GRC"
+          },
+          "values": {
+            "value": 2360
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MCO"
+          },
+          "values": {
+            "value": 1940
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PRI"
+          },
+          "values": {
+            "value": 1790
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CAN"
+          },
+          "values": {
+            "value": 1760
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FIN"
+          },
+          "values": {
+            "value": 1750
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AUS"
+          },
+          "values": {
+            "value": 1680
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BEL"
+          },
+          "values": {
+            "value": 1680
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PRT"
+          },
+          "values": {
+            "value": 1650
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NLD"
+          },
+          "values": {
+            "value": 1630
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NZL"
+          },
+          "values": {
+            "value": 1580
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NOR"
+          },
+          "values": {
+            "value": 1580
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CHE"
+          },
+          "values": {
+            "value": 1570
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SMR"
+          },
+          "values": {
+            "value": 1560
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VIR"
+          },
+          "values": {
+            "value": 1530
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AUT"
+          },
+          "values": {
+            "value": 1500
+          }
+        }
+      ]
+    },
+    {
+      "id": "cancer_rate_asr_2022",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "iso_a3"
+      ],
+      "metrics": [
+        {
+          "id": "value",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "iso_a3": "AUS"
+          },
+          "values": {
+            "value": 462.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NZL"
+          },
+          "values": {
+            "value": 427.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DNK"
+          },
+          "values": {
+            "value": 374.7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "USA"
+          },
+          "values": {
+            "value": 367.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NOR"
+          },
+          "values": {
+            "value": 357.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CAN"
+          },
+          "values": {
+            "value": 345.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IRL"
+          },
+          "values": {
+            "value": 344.7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NLD"
+          },
+          "values": {
+            "value": 341.4
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FRA"
+          },
+          "values": {
+            "value": 339.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HUN"
+          },
+          "values": {
+            "value": 336.7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BEL"
+          },
+          "values": {
+            "value": 324.7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HRV"
+          },
+          "values": {
+            "value": 313.4
+          }
+        }
+      ]
+    },
+    {
+      "id": "opiate_usage_percent",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "iso_a3"
+      ],
+      "metrics": [
+        {
+          "id": "value",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "iso_a3": "IRN"
+          },
+          "values": {
+            "value": 3.31
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AFG"
+          },
+          "values": {
+            "value": 2.65
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SYC"
+          },
+          "values": {
+            "value": 2.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "EGY"
+          },
+          "values": {
+            "value": 1.76
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "POL"
+          },
+          "values": {
+            "value": 1.7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AZE"
+          },
+          "values": {
+            "value": 1.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IND"
+          },
+          "values": {
+            "value": 1.42
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "RUS"
+          },
+          "values": {
+            "value": 1.4
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MDV"
+          },
+          "values": {
+            "value": 1.34
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "UKR"
+          },
+          "values": {
+            "value": 1.05
+          }
+        }
+      ]
+    },
+    {
+      "id": "covid_vaccination_rate_percent",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "iso_a3"
+      ],
+      "metrics": [
+        {
+          "id": "value",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "iso_a3": "ARE"
+          },
+          "values": {
+            "value": 99.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PRT"
+          },
+          "values": {
+            "value": 96.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "QAT"
+          },
+          "values": {
+            "value": 95.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CUB"
+          },
+          "values": {
+            "value": 94.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BRN"
+          },
+          "values": {
+            "value": 93.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CHL"
+          },
+          "values": {
+            "value": 92.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SGP"
+          },
+          "values": {
+            "value": 92.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NPL"
+          },
+          "values": {
+            "value": 90.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CHN"
+          },
+          "values": {
+            "value": 90.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CAN"
+          },
+          "values": {
+            "value": 87.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "specialist_doctor_pay_usd",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "iso_a3"
+      ],
+      "metrics": [
+        {
+          "id": "value",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "iso_a3": "LUX"
+          },
+          "values": {
+            "value": 352300
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "USA"
+          },
+          "values": {
+            "value": 329000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NLD"
+          },
+          "values": {
+            "value": 253000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AUS"
+          },
+          "values": {
+            "value": 247000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DEU"
+          },
+          "values": {
+            "value": 222700
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AUT"
+          },
+          "values": {
+            "value": 213200
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BEL"
+          },
+          "values": {
+            "value": 188000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CAN"
+          },
+          "values": {
+            "value": 161000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IRL"
+          },
+          "values": {
+            "value": 143000
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CHE"
+          },
+          "values": {
+            "value": 130000
+          }
+        }
+      ]
+    },
+    {
+      "id": "hospital_beds_per_1k",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "iso_a3"
+      ],
+      "metrics": [
+        {
+          "id": "value",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "iso_a3": "JPN"
+          },
+          "values": {
+            "value": 12.6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KOR"
+          },
+          "values": {
+            "value": 12.4
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DEU"
+          },
+          "values": {
+            "value": 7.8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AUT"
+          },
+          "values": {
+            "value": 7.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HUN"
+          },
+          "values": {
+            "value": 6.8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CZE"
+          },
+          "values": {
+            "value": 6.6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "POL"
+          },
+          "values": {
+            "value": 6.4
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LTU"
+          },
+          "values": {
+            "value": 6.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FRA"
+          },
+          "values": {
+            "value": 5.8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SVK"
+          },
+          "values": {
+            "value": 5.7
+          }
+        }
+      ]
+    },
+    {
+      "id": "tertiary_education_percent",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "iso_a3"
+      ],
+      "metrics": [
+        {
+          "id": "value",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "iso_a3": "CAN"
+          },
+          "values": {
+            "value": 52.6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IRL"
+          },
+          "values": {
+            "value": 49.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SGP"
+          },
+          "values": {
+            "value": 48.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DNK"
+          },
+          "values": {
+            "value": 45.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NOR"
+          },
+          "values": {
+            "value": 45.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AUS"
+          },
+          "values": {
+            "value": 43.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FRA"
+          },
+          "values": {
+            "value": 43.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "USA"
+          },
+          "values": {
+            "value": 43.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SAU"
+          },
+          "values": {
+            "value": 42.6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KOR"
+          },
+          "values": {
+            "value": 41.8
+          }
+        }
+      ]
+    },
+    {
+      "id": "sex_ratio_total",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "iso_a3"
+      ],
+      "metrics": [
+        {
+          "id": "value",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "iso_a3": "QAT"
+          },
+          "values": {
+            "value": 3.32
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ARE"
+          },
+          "values": {
+            "value": 2.13
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BHR"
+          },
+          "values": {
+            "value": 1.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KWT"
+          },
+          "values": {
+            "value": 1.36
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SAU"
+          },
+          "values": {
+            "value": 1.31
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GNQ"
+          },
+          "values": {
+            "value": 1.16
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "OMN"
+          },
+          "values": {
+            "value": 1.16
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MNP"
+          },
+          "values": {
+            "value": 1.12
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BLM"
+          },
+          "values": {
+            "value": 1.12
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "JOR"
+          },
+          "values": {
+            "value": 1.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SYC"
+          },
+          "values": {
+            "value": 1.08
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BTN"
+          },
+          "values": {
+            "value": 1.07
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FRO"
+          },
+          "values": {
+            "value": 1.07
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GAB"
+          },
+          "values": {
+            "value": 1.07
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GRL"
+          },
+          "values": {
+            "value": 1.07
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "EGY"
+          },
+          "values": {
+            "value": 1.06
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GUM"
+          },
+          "values": {
+            "value": 1.06
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IND"
+          },
+          "values": {
+            "value": 1.06
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KOS"
+          },
+          "values": {
+            "value": 1.06
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PLW"
+          },
+          "values": {
+            "value": 1.06
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DJI"
+          },
+          "values": {
+            "value": 0.83
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HKG"
+          },
+          "values": {
+            "value": 0.86
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LTU"
+          },
+          "values": {
+            "value": 0.86
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BHS"
+          },
+          "values": {
+            "value": 0.86
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "RUS"
+          },
+          "values": {
+            "value": 0.87
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LVA"
+          },
+          "values": {
+            "value": 0.87
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BLR"
+          },
+          "values": {
+            "value": 0.88
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AIA"
+          },
+          "values": {
+            "value": 0.88
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MDA"
+          },
+          "values": {
+            "value": 0.89
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PRI"
+          },
+          "values": {
+            "value": 0.89
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ATG"
+          },
+          "values": {
+            "value": 0.89
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "EST"
+          },
+          "values": {
+            "value": 0.89
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VIR"
+          },
+          "values": {
+            "value": 0.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MAC"
+          },
+          "values": {
+            "value": 0.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PRT"
+          },
+          "values": {
+            "value": 0.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "VGB"
+          },
+          "values": {
+            "value": 0.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SWZ"
+          },
+          "values": {
+            "value": 0.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ABW"
+          },
+          "values": {
+            "value": 0.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "POL"
+          },
+          "values": {
+            "value": 0.91
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GEO"
+          },
+          "values": {
+            "value": 0.92
+          }
+        }
+      ]
+    },
+    {
+      "id": "car_accidents",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "iso_a3"
+      ],
+      "metrics": [
+        {
+          "id": "car_accidents_per_million",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "iso_a3": "USA"
+          },
+          "values": {
+            "car_accidents_per_million": 5938
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "JPN"
+          },
+          "values": {
+            "car_accidents_per_million": 5478
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AUT"
+          },
+          "values": {
+            "car_accidents_per_million": 4024
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BEL"
+          },
+          "values": {
+            "car_accidents_per_million": 3983
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PRT"
+          },
+          "values": {
+            "car_accidents_per_million": 3618
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DEU"
+          },
+          "values": {
+            "car_accidents_per_million": 3612
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MNE"
+          },
+          "values": {
+            "car_accidents_per_million": 3092
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SVN"
+          },
+          "values": {
+            "car_accidents_per_million": 2884
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ITA"
+          },
+          "values": {
+            "car_accidents_per_million": 2883
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CAN"
+          },
+          "values": {
+            "car_accidents_per_million": 2814
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MLT"
+          },
+          "values": {
+            "car_accidents_per_million": 2656
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HRV"
+          },
+          "values": {
+            "car_accidents_per_million": 2383
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ESP"
+          },
+          "values": {
+            "car_accidents_per_million": 2208
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BIH"
+          },
+          "values": {
+            "car_accidents_per_million": 2165
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ISL"
+          },
+          "values": {
+            "car_accidents_per_million": 2136
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TUR"
+          },
+          "values": {
+            "car_accidents_per_million": 2118
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CHE"
+          },
+          "values": {
+            "car_accidents_per_million": 2071
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SRB"
+          },
+          "values": {
+            "car_accidents_per_million": 2051
+          }
+        }
+      ]
+    },
+    {
+      "id": "alcohol_consumption_2019",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "iso_a3"
+      ],
+      "metrics": [
+        {
+          "id": "alcohol_consumption_liters",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "iso_a3": "ROU"
+          },
+          "values": {
+            "alcohol_consumption_liters": 17.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "GEO"
+          },
+          "values": {
+            "alcohol_consumption_liters": 14.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CZE"
+          },
+          "values": {
+            "alcohol_consumption_liters": 13.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LVA"
+          },
+          "values": {
+            "alcohol_consumption_liters": 13.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "DEU"
+          },
+          "values": {
+            "alcohol_consumption_liters": 12.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "UGA"
+          },
+          "values": {
+            "alcohol_consumption_liters": 12.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AUT"
+          },
+          "values": {
+            "alcohol_consumption_liters": 12.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SYC"
+          },
+          "values": {
+            "alcohol_consumption_liters": 12.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BGR"
+          },
+          "values": {
+            "alcohol_consumption_liters": 11.8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LTU"
+          },
+          "values": {
+            "alcohol_consumption_liters": 11.8
+          }
+        }
+      ]
+    },
+    {
+      "id": "total_smokers_2025",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "iso_a3"
+      ],
+      "metrics": [
+        {
+          "id": "total_smokers_percent",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "iso_a3": "NRU"
+          },
+          "values": {
+            "total_smokers_percent": 46.7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MMR"
+          },
+          "values": {
+            "total_smokers_percent": 42.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SRB"
+          },
+          "values": {
+            "total_smokers_percent": 39.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BGR"
+          },
+          "values": {
+            "total_smokers_percent": 38.8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "IDN"
+          },
+          "values": {
+            "total_smokers_percent": 38.7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "PNG"
+          },
+          "values": {
+            "total_smokers_percent": 38.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "HRV"
+          },
+          "values": {
+            "total_smokers_percent": 37.6
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "TLS"
+          },
+          "values": {
+            "total_smokers_percent": 37.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "KIR"
+          },
+          "values": {
+            "total_smokers_percent": 36.8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "AND"
+          },
+          "values": {
+            "total_smokers_percent": 36.4
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "JOR"
+          },
+          "values": {
+            "total_smokers_percent": 36.3
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SLB"
+          },
+          "values": {
+            "total_smokers_percent": 36.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "BIH"
+          },
+          "values": {
+            "total_smokers_percent": 35.2
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CYP"
+          },
+          "values": {
+            "total_smokers_percent": 35.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FRA"
+          },
+          "values": {
+            "total_smokers_percent": 34.6
+          }
+        }
+      ]
+    },
+    {
+      "id": "firearm_ownership",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "iso_a3"
+      ],
+      "metrics": [
+        {
+          "id": "firearms_per_100",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "iso_a3": "USA"
+          },
+          "values": {
+            "firearms_per_100": 120.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FLK"
+          },
+          "values": {
+            "firearms_per_100": 62.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "YEM"
+          },
+          "values": {
+            "firearms_per_100": 52.8
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "NCL"
+          },
+          "values": {
+            "firearms_per_100": 42.5
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "SRB"
+          },
+          "values": {
+            "firearms_per_100": 39.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "MNE"
+          },
+          "values": {
+            "firearms_per_100": 39.1
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "URY"
+          },
+          "values": {
+            "firearms_per_100": 34.7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CAN"
+          },
+          "values": {
+            "firearms_per_100": 34.7
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "CYP"
+          },
+          "values": {
+            "firearms_per_100": 34.0
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "FIN"
+          },
+          "values": {
+            "firearms_per_100": 32.4
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "LBN"
+          },
+          "values": {
+            "firearms_per_100": 31.9
+          }
+        },
+        {
+          "dimensions": {
+            "iso_a3": "ISL"
+          },
+          "values": {
+            "firearms_per_100": 31.7
+          }
+        }
+      ]
+    }
   ]
-  }
+}

@@ -2,6 +2,7 @@
 
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:jidoapp/models/visit_date_model.dart';
@@ -207,6 +208,7 @@ class _LandmarkVisitEditorCardState extends State<LandmarkVisitEditorCard> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final themeColor = Theme.of(context).primaryColor;
 
     return Card(
@@ -217,29 +219,29 @@ class _LandmarkVisitEditorCardState extends State<LandmarkVisitEditorCard> {
         controller: _expansionTileController,
         initiallyExpanded: _isEditing,
         title: Text(
-          _displayTitle.isNotEmpty ? _displayTitle : 'Visit Record',
+          tr(_displayTitle.isNotEmpty ? _displayTitle : 'Visit Record'),
           style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15),
         ),
-        subtitle: Text('Date: $_year-$_month-$_day', style: TextStyle(color: Colors.grey[600], fontSize: 13)),
+        subtitle: Text(tr('Date: $_year-$_month-$_day'), style: TextStyle(color: Colors.grey[600], fontSize: 13)),
         trailing: IconButton(
           icon: const Icon(Icons.delete_outline, color: Colors.red, size: 22),
           onPressed: () {
             showDialog(
               context: context,
               builder: (context) => AlertDialog(
-                title: const Text('Delete Visit Record'),
-                content: const Text('Are you sure you want to delete this visit record?'),
+                title:  Text(tr('Delete Visit Record')),
+                content:  Text(tr('Are you sure you want to delete this visit record?')),
                 actions: [
                   TextButton(
                     onPressed: () => Navigator.pop(context),
-                    child: const Text('Cancel'),
+                    child:  Text(tr('Cancel')),
                   ),
                   TextButton(
                     onPressed: () {
                       Navigator.pop(context);
                       widget.onDelete();
                     },
-                    child: const Text('Delete', style: TextStyle(color: Colors.red)),
+                    child:  Text(tr('Delete'), style: TextStyle(color: Colors.red)),
                   ),
                 ],
               ),
@@ -264,10 +266,10 @@ class _LandmarkVisitEditorCardState extends State<LandmarkVisitEditorCard> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text('Visit Date: $_year-$_month-$_day', style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14)),
+                      Text(tr('Visit Date: $_year-$_month-$_day'), style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14)),
                       TextButton.icon(
                         icon: const Icon(Icons.edit_calendar, size: 18),
-                        label: const Text('Edit Date'),
+                        label:  Text(tr('Edit Date')),
                         onPressed: () => _selectDate(context),
                         style: TextButton.styleFrom(visualDensity: VisualDensity.compact),
                       ),
@@ -278,7 +280,7 @@ class _LandmarkVisitEditorCardState extends State<LandmarkVisitEditorCard> {
                   TextField(
                     controller: _titleController,
                     decoration: InputDecoration(
-                      labelText: 'Title',
+                      labelText: tr('Title'),
                       isDense: true,
                       filled: true,
                       fillColor: Colors.white,
@@ -291,7 +293,7 @@ class _LandmarkVisitEditorCardState extends State<LandmarkVisitEditorCard> {
                     maxLines: 3,
                     minLines: 1,
                     decoration: InputDecoration(
-                      labelText: 'Memo',
+                      labelText: tr('Memo'),
                       isDense: true,
                       filled: true,
                       fillColor: Colors.white,
@@ -304,7 +306,7 @@ class _LandmarkVisitEditorCardState extends State<LandmarkVisitEditorCard> {
                     Padding(
                       padding: const EdgeInsets.only(bottom: 12.0),
                       child: Text(
-                        _displayMemo,
+                        tr(_displayMemo),
                         style: TextStyle(fontSize: 14, color: Colors.grey[800], height: 1.4),
                       ),
                     ),
@@ -314,7 +316,7 @@ class _LandmarkVisitEditorCardState extends State<LandmarkVisitEditorCard> {
 
                 // --- Sub-locations (장소 체크) ---
                 if (widget.availableLocations != null && widget.availableLocations!.length > 1) ...[
-                  Text("Locations included in this visit:",
+                  Text(tr("Locations included in this visit:"),
                       style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Colors.grey[700])),
                   const SizedBox(height: 8),
                   IgnorePointer(
@@ -381,13 +383,13 @@ class _LandmarkVisitEditorCardState extends State<LandmarkVisitEditorCard> {
                     if (_isEditing) ...[
                       TextButton(
                         onPressed: _cancelEditing,
-                        child: Text('Cancel', style: TextStyle(color: Colors.grey[700], fontWeight: FontWeight.w600)),
+                        child: Text(tr('Cancel'), style: TextStyle(color: Colors.grey[700], fontWeight: FontWeight.w600)),
                       ),
                       const SizedBox(width: 8),
                       ElevatedButton.icon(
                         onPressed: _saveChanges,
                         icon: const Icon(Icons.save, size: 18),
-                        label: const Text('Save'),
+                        label:  Text(tr('Save')),
                         style: ElevatedButton.styleFrom(
                           backgroundColor: themeColor,
                           foregroundColor: Colors.white,
@@ -402,7 +404,7 @@ class _LandmarkVisitEditorCardState extends State<LandmarkVisitEditorCard> {
                           });
                         },
                         icon: const Icon(Icons.edit, size: 16),
-                        label: const Text('Edit Record'),
+                        label:  Text(tr('Edit Record')),
                         style: OutlinedButton.styleFrom(
                           foregroundColor: themeColor,
                           side: BorderSide(color: themeColor.withOpacity(0.5)),

@@ -1,6 +1,7 @@
 // lib/screens/language_family_map_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:jidoapp/models/country_model.dart';
 import 'package:jidoapp/providers/country_provider.dart';
@@ -40,6 +41,7 @@ class _LanguageFamilyMapScreenState extends State<LanguageFamilyMapScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final countryProvider = context.watch<CountryProvider>();
     final langFamilyProvider = context.watch<LanguageFamilyProvider>();
     final backgroundColor = Theme.of(context).scaffoldBackgroundColor;
@@ -118,7 +120,7 @@ class _LanguageFamilyMapScreenState extends State<LanguageFamilyMapScreen> {
 
     return Scaffold(
       backgroundColor: backgroundColor,
-      appBar: AppBar(title: Text(_getAppBarTitle())),
+      appBar: AppBar(title: Text(tr(_getAppBarTitle()))),
       body: Stack(
         children: [
           FlutterMap(
@@ -145,10 +147,10 @@ class _LanguageFamilyMapScreenState extends State<LanguageFamilyMapScreen> {
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 8.0),
                 child: SegmentedButton<LanguageMapView>(
-                  segments: const [
-                    ButtonSegment(value: LanguageMapView.family, label: Text('Family')),
-                    ButtonSegment(value: LanguageMapView.subbranch, label: Text('Branch')),
-                    ButtonSegment(value: LanguageMapView.subsubbranch, label: Text('Subbranch')),
+                  segments:  [
+                    ButtonSegment(value: LanguageMapView.family, label: Text(tr('Family'))),
+                    ButtonSegment(value: LanguageMapView.subbranch, label: Text(tr('Branch'))),
+                    ButtonSegment(value: LanguageMapView.subsubbranch, label: Text(tr('Subbranch'))),
                   ],
                   selected: {_mapView},
                   onSelectionChanged: (newSelection) {
@@ -191,7 +193,7 @@ class _LanguageFamilyMapScreenState extends State<LanguageFamilyMapScreen> {
                               Padding(
                                 padding: const EdgeInsets.only(top: 4.0, bottom: 2.0),
                                 child: Text(
-                                  parentKey,
+                                  tr(parentKey),
                                   style: TextStyle(
                                     fontSize: 11,
                                     fontWeight: FontWeight.bold,
@@ -223,7 +225,7 @@ class _LanguageFamilyMapScreenState extends State<LanguageFamilyMapScreen> {
         children: [
           Container(width: 12, height: 12, color: color),
           const SizedBox(width: 8),
-          Text(name, style: const TextStyle(fontSize: 12)),
+          Text(tr(name), style: const TextStyle(fontSize: 12)),
         ],
       ),
     );

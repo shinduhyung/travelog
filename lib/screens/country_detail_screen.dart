@@ -2,6 +2,7 @@ import 'package:jidoapp/models/city_model.dart';
 import 'package:jidoapp/screens/cities_screen.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
 import 'package:collection/collection.dart';
@@ -69,18 +70,18 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
       context: context,
       builder: (context) => AlertDialog(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-        title: Text('Confirm Removal', style: GoogleFonts.poppins(fontWeight: FontWeight.bold, color: Colors.black87)),
+        title: Text(tr('Confirm Removal'), style: GoogleFonts.poppins(fontWeight: FontWeight.bold, color: Colors.black87)),
         content: Text(
-            'Are you sure you want to remove all $count visit records for $name?',
+            tr('Are you sure you want to remove all $count visit records for $name?'),
             style: GoogleFonts.poppins(color: Colors.black54)),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context, false),
-            child: Text('Cancel', style: GoogleFonts.poppins(color: Colors.grey)),
+            child: Text(tr('Cancel'), style: GoogleFonts.poppins(color: Colors.grey)),
           ),
           TextButton(
             onPressed: () => Navigator.pop(context, true),
-            child: Text('Yes, Remove', style: GoogleFonts.poppins(color: Colors.redAccent, fontWeight: FontWeight.bold)),
+            child: Text(tr('Yes, Remove'), style: GoogleFonts.poppins(color: Colors.redAccent, fontWeight: FontWeight.bold)),
           ),
         ],
       ),
@@ -346,7 +347,7 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
                                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                                     padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                                   ),
-                                  child: const Text('Cancel',
+                                  child:  Text(tr('Cancel'),
                                       style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600, fontSize: 13)),
                                 ),
                                 ElevatedButton(
@@ -358,7 +359,7 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
                                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                                     padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 8),
                                   ),
-                                  child: const Text('Done', style: TextStyle(fontWeight: FontWeight.w700, fontSize: 13)),
+                                  child:  Text(tr('Done'), style: TextStyle(fontWeight: FontWeight.w700, fontSize: 13)),
                                 ),
                               ],
                             ),
@@ -390,7 +391,7 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
                                       const SizedBox(width: 4),
                                       Flexible(
                                         child: Text(
-                                          locationDisplay,
+                                          tr(locationDisplay),
                                           overflow: TextOverflow.ellipsis,
                                           style: TextStyle(
                                             fontSize: 12.5,
@@ -415,7 +416,7 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
                                       children: [
                                         Icon(Icons.check_circle, size: 13, color: themeColor),
                                         const SizedBox(width: 4),
-                                        Text('Visited',
+                                        Text(tr('Visited'),
                                             style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: themeColor)),
                                       ],
                                     ),
@@ -440,13 +441,13 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Row(mainAxisSize: MainAxisSize.min, children: [const Text('Wishlist:'), IconButton(visualDensity: VisualDensity.compact, icon: Icon(isWishlisted ? Icons.favorite : Icons.favorite_border, color: isWishlisted ? Colors.red : Colors.grey), onPressed: () => provider.toggleWishlistStatus(freshLandmark.name))]),
-                              Row(mainAxisSize: MainAxisSize.min, children: [const Text('My Rating:'), const SizedBox(width: 8), RatingBar.builder(initialRating: freshLandmark.rating ?? 0.0, minRating: 0, direction: Axis.horizontal, allowHalfRating: true, itemCount: 5, itemSize: 28.0, itemBuilder: (context, _) => const Icon(Icons.star, color: Colors.amber), onRatingUpdate: (rating) => provider.updateLandmarkRating(freshLandmark.name, rating))]),
+                              Row(mainAxisSize: MainAxisSize.min, children: [ Text(tr('Wishlist:')), IconButton(visualDensity: VisualDensity.compact, icon: Icon(isWishlisted ? Icons.favorite : Icons.favorite_border, color: isWishlisted ? Colors.red : Colors.grey), onPressed: () => provider.toggleWishlistStatus(freshLandmark.name))]),
+                              Row(mainAxisSize: MainAxisSize.min, children: [ Text(tr('My Rating:')), const SizedBox(width: 8), RatingBar.builder(initialRating: freshLandmark.rating ?? 0.0, minRating: 0, direction: Axis.horizontal, allowHalfRating: true, itemCount: 5, itemSize: 28.0, itemBuilder: (context, _) => const Icon(Icons.star, color: Colors.amber), onRatingUpdate: (rating) => provider.updateLandmarkRating(freshLandmark.name, rating))]),
                             ],
                           ),
                           const Divider(height: 20),
                           if (totalSubCount > 1) ...[
-                            Text("Components / Locations", style: Theme.of(sheetContext).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
+                            Text(tr("Components / Locations"), style: Theme.of(sheetContext).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
                             const SizedBox(height: 4),
                             Container(
                               decoration: BoxDecoration(border: Border.all(color: Colors.grey.shade300), borderRadius: BorderRadius.circular(8)),
@@ -454,7 +455,7 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
                                 children: freshLandmark.locations!.map((loc) {
                                   final isLocVisited = provider.isSubLocationVisited(freshLandmark.name, loc.name);
                                   return CheckboxListTile(
-                                    title: Text(loc.name, style: const TextStyle(fontSize: 14)),
+                                    title: Text(tr(loc.name), style: const TextStyle(fontSize: 14)),
                                     value: isLocVisited,
                                     activeColor: themeColor,
                                     dense: true,
@@ -466,7 +467,7 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
                             ),
                             const Divider(height: 24),
                           ],
-                          Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [Text('History (${freshLandmark.visitDates.length} entries)', style: Theme.of(sheetContext).textTheme.titleSmall), OutlinedButton.icon(icon: const Icon(Icons.add), label: const Text('Add Visit'), onPressed: () => provider.addVisitDate(freshLandmark.name))]),
+                          Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [Text(tr('History (${freshLandmark.visitDates.length} entries)'), style: Theme.of(sheetContext).textTheme.titleSmall), OutlinedButton.icon(icon: const Icon(Icons.add), label:  Text(tr('Add Visit')), onPressed: () => provider.addVisitDate(freshLandmark.name))]),
                           const SizedBox(height: 8),
                           if (freshLandmark.visitDates.isNotEmpty) ...freshLandmark.visitDates.asMap().entries.map((entry) => _LandmarkVisitEditorCard(
                             key: ValueKey('${freshLandmark.name}_${entry.key}'),
@@ -475,7 +476,7 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
                             index: entry.key,
                             onDelete: () => provider.removeVisitDate(freshLandmark.name, entry.key),
                             availableLocations: freshLandmark.locations,
-                          )) else const Center(child: Text('No visits recorded.')),
+                          )) else  Center(child: Text(tr('No visits recorded.'))),
                           const Divider(height: 24),
                           LandmarkInfoCard(overview: freshLandmark.overview, historySignificance: freshLandmark.history_significance, highlights: freshLandmark.highlights, themeColor: themeColor),
                           const SizedBox(height: 40),
@@ -515,12 +516,12 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                      TextButton(onPressed: () => Navigator.pop(sheetContext), child: Text('Cancel', style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600))),
-                      ElevatedButton(onPressed: () => Navigator.pop(sheetContext), child: Text('Done', style: TextStyle(fontWeight: FontWeight.w600, color: themeColor)), style: ElevatedButton.styleFrom(backgroundColor: headerTextColor)),
+                      TextButton(onPressed: () => Navigator.pop(sheetContext), child: Text(tr('Cancel'), style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600))),
+                      ElevatedButton(onPressed: () => Navigator.pop(sheetContext), child: Text(tr('Done'), style: TextStyle(fontWeight: FontWeight.w600, color: themeColor)), style: ElevatedButton.styleFrom(backgroundColor: headerTextColor)),
                     ]),
                     const SizedBox(height: 12),
                     Row(children: [
-                      Expanded(child: Text(freshSite.name, style: Theme.of(sheetContext).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.bold, color: headerTextColor))),
+                      Expanded(child: Text(tr(freshSite.name), style: Theme.of(sheetContext).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.bold, color: headerTextColor))),
                       if (isVisited || visitedSubCount > 0) Padding(padding: const EdgeInsets.only(left: 8.0), child: Icon(Icons.check_circle, color: headerTextColor, size: 28)),
                     ]),
                   ],
@@ -534,25 +535,25 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                          Row(mainAxisSize: MainAxisSize.min, children: [const Text('Wishlist:'), IconButton(visualDensity: VisualDensity.compact, icon: Icon(isWishlisted ? Icons.favorite : Icons.favorite_border, color: isWishlisted ? Colors.red : Colors.grey), onPressed: () => provider.toggleWishlistStatus(freshSite.name))]),
-                          Row(mainAxisSize: MainAxisSize.min, children: [const Text('My Rating:'), const SizedBox(width: 8), RatingBar.builder(initialRating: freshSite.rating ?? 0.0, minRating: 0, direction: Axis.horizontal, allowHalfRating: true, itemCount: 5, itemSize: 28.0, itemBuilder: (context, _) => const Icon(Icons.star, color: Colors.amber), onRatingUpdate: (rating) => provider.updateLandmarkRating(freshSite.name, rating))]),
+                          Row(mainAxisSize: MainAxisSize.min, children: [ Text(tr('Wishlist:')), IconButton(visualDensity: VisualDensity.compact, icon: Icon(isWishlisted ? Icons.favorite : Icons.favorite_border, color: isWishlisted ? Colors.red : Colors.grey), onPressed: () => provider.toggleWishlistStatus(freshSite.name))]),
+                          Row(mainAxisSize: MainAxisSize.min, children: [ Text(tr('My Rating:')), const SizedBox(width: 8), RatingBar.builder(initialRating: freshSite.rating ?? 0.0, minRating: 0, direction: Axis.horizontal, allowHalfRating: true, itemCount: 5, itemSize: 28.0, itemBuilder: (context, _) => const Icon(Icons.star, color: Colors.amber), onRatingUpdate: (rating) => provider.updateLandmarkRating(freshSite.name, rating))]),
                         ]),
                         const Divider(height: 20),
                         if (freshSite.locations.length > 1) ...[
-                          Text("Components / Locations", style: Theme.of(sheetContext).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
+                          Text(tr("Components / Locations"), style: Theme.of(sheetContext).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
                           const SizedBox(height: 4),
                           Container(
                             decoration: BoxDecoration(border: Border.all(color: Colors.grey.shade300), borderRadius: BorderRadius.circular(8)),
                             child: Column(children: freshSite.locations.map((loc) {
                               final isLocVisited = provider.isSubLocationVisited(freshSite.name, loc.name);
-                              return CheckboxListTile(title: Text(loc.name, style: const TextStyle(fontSize: 14)), value: isLocVisited, activeColor: themeColor, dense: true, controlAffinity: ListTileControlAffinity.leading, onChanged: (val) => provider.toggleSubLocation(freshSite.name, loc.name));
+                              return CheckboxListTile(title: Text(tr(loc.name), style: const TextStyle(fontSize: 14)), value: isLocVisited, activeColor: themeColor, dense: true, controlAffinity: ListTileControlAffinity.leading, onChanged: (val) => provider.toggleSubLocation(freshSite.name, loc.name));
                             }).toList()),
                           ),
                           const Divider(height: 24),
                         ],
-                        Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [Text('History (${freshSite.visitDates.length} entries)', style: Theme.of(sheetContext).textTheme.titleSmall), OutlinedButton.icon(icon: const Icon(Icons.add), label: const Text('Add Visit'), onPressed: () => provider.addVisitDate(freshSite.name))]),
+                        Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [Text(tr('History (${freshSite.visitDates.length} entries)'), style: Theme.of(sheetContext).textTheme.titleSmall), OutlinedButton.icon(icon: const Icon(Icons.add), label:  Text(tr('Add Visit')), onPressed: () => provider.addVisitDate(freshSite.name))]),
                         const SizedBox(height: 8),
-                        if (freshSite.visitDates.isNotEmpty) ...freshSite.visitDates.asMap().entries.map((entry) => _UnescoVisitEditorCard(key: ValueKey('${freshSite.name}_${entry.key}'), siteName: freshSite.name, visitDate: entry.value, index: entry.key, onDelete: () => provider.removeVisitDate(freshSite.name, entry.key), availableLocations: freshSite.locations)) else const Center(child: Text('No visits recorded.')),
+                        if (freshSite.visitDates.isNotEmpty) ...freshSite.visitDates.asMap().entries.map((entry) => _UnescoVisitEditorCard(key: ValueKey('${freshSite.name}_${entry.key}'), siteName: freshSite.name, visitDate: entry.value, index: entry.key, onDelete: () => provider.removeVisitDate(freshSite.name, entry.key), availableLocations: freshSite.locations)) else  Center(child: Text(tr('No visits recorded.'))),
                         const Divider(height: 24),
                         LandmarkInfoCard(overview: freshSite.overview, historySignificance: freshSite.history_significance, highlights: freshSite.highlights, themeColor: themeColor),
                         const SizedBox(height: 40),
@@ -583,7 +584,7 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
         children: [
           Icon(icon, size: 22, color: themeColor),
           const SizedBox(width: 10),
-          Text(title, style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: themeColor)),
+          Text(tr(title), style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: themeColor)),
         ],
       ),
     );
@@ -595,9 +596,9 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Expanded(flex: 2, child: Text('${isSub ? '↳ ' : ''}$key', style: TextStyle(fontWeight: FontWeight.w600, fontSize: 13, color: Colors.grey.shade700))),
+          Expanded(flex: 2, child: Text(tr('${isSub ? '↳ ' : ''}$key'), style: TextStyle(fontWeight: FontWeight.w600, fontSize: 13, color: Colors.grey.shade700))),
           const SizedBox(width: 12),
-          Expanded(flex: 3, child: Text(value, style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: Colors.black87))),
+            Expanded(flex: 3, child: Text(key == 'Capital' ? value : tr(value), style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: Colors.black87))),
         ],
       ),
     );
@@ -611,7 +612,7 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
         children: [
           Container(margin: const EdgeInsets.only(top: 6), width: 6, height: 6, decoration: BoxDecoration(color: Colors.blue.shade400, shape: BoxShape.circle)),
           const SizedBox(width: 12),
-          Expanded(child: Text(text, style: const TextStyle(fontSize: 14, height: 1.5, color: Colors.black87))),
+          Expanded(child: Text(tr(text), style: const TextStyle(fontSize: 14, height: 1.5, color: Colors.black87))),
         ],
       ),
     );
@@ -661,7 +662,7 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      title,
+                      tr(title),
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
                       style: TextStyle(
@@ -676,7 +677,7 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
                 if (showSubtitle)
                   Padding(
                     padding: const EdgeInsets.only(top: 4, left: 0),
-                    child: Text(subtitle, style: TextStyle(fontSize: 13, color: Colors.grey.shade600)),
+                    child: Text(tr(subtitle), style: TextStyle(fontSize: 13, color: Colors.grey.shade600)),
                   ),
               ],
             ),
@@ -688,7 +689,7 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
             constraints: const BoxConstraints(minWidth: 40, minHeight: 40),
             iconSize: 24,
             onPressed: onDetailPressed,
-            tooltip: 'Details',
+            tooltip: tr('Details'),
           ),
           const SizedBox(width: 4),
           Switch(value: isVisited, onChanged: onToggle, activeColor: themeColor),
@@ -772,7 +773,7 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
                           color: Colors.black.withOpacity(0.75),
                           borderRadius: BorderRadius.circular(8),
                         ),
-                        child: Text('#$rank', style: const TextStyle(color: Colors.amber, fontWeight: FontWeight.bold, fontSize: 11)),
+                        child: Text(tr('#$rank'), style: const TextStyle(color: Colors.amber, fontWeight: FontWeight.bold, fontSize: 11)),
                       );
                     }),
                   ),
@@ -866,8 +867,8 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(title, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
-                      Text(subtitle, style: TextStyle(fontSize: 12, color: Colors.grey.shade600)),
+                      Text(tr(title), style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+                      Text(tr(subtitle), style: TextStyle(fontSize: 12, color: Colors.grey.shade600)),
                     ],
                   ),
                 ),
@@ -889,7 +890,7 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
       Function(String) onToggleVisited,
       Color themeColor,
       ) {
-    if (items.isEmpty) return const Padding(padding: EdgeInsets.all(16), child: Text("No items found."));
+    if (items.isEmpty) return  Padding(padding: EdgeInsets.all(16), child: Text(tr("No items found.")));
 
     final Map<String, List<Landmark>> cityBuckets = {};
     for (var item in items) {
@@ -937,7 +938,7 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
               width: double.infinity,
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
               color: Colors.grey.shade50,
-              child: Text(cityKey, style: TextStyle(fontWeight: FontWeight.bold, color: Colors.grey.shade700, fontSize: 13)),
+              child: Text(tr(cityKey), style: TextStyle(fontWeight: FontWeight.bold, color: Colors.grey.shade700, fontSize: 13)),
             ),
             ...cityItems.map((item) {
               final isVisited = visitedItems.contains(item.name);
@@ -977,7 +978,7 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
       Color themeColor,
       {required Map<String, List<String>> groupingRules, required String defaultGroup}
       ) {
-    if (items.isEmpty) return const Padding(padding: EdgeInsets.all(16), child: Text("No items found."));
+    if (items.isEmpty) return  Padding(padding: EdgeInsets.all(16), child: Text(tr("No items found.")));
 
     final Map<String, List<Landmark>> grouped = {};
 
@@ -1057,7 +1058,7 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
               width: double.infinity,
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
               color: Colors.grey.shade50,
-              child: Text(key, style: TextStyle(fontWeight: FontWeight.bold, color: Colors.grey.shade700, fontSize: 13)),
+              child: Text(tr(key), style: TextStyle(fontWeight: FontWeight.bold, color: Colors.grey.shade700, fontSize: 13)),
             ),
             ...sortedItems.map((item) {
               final isVisited = visitedItems.contains(item.name);
@@ -1122,6 +1123,7 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final countryInfoProvider = context.watch<CountryInfoProvider>();
     final landmarksProvider = context.watch<LandmarksProvider>();
     final unescoProvider = context.watch<UnescoProvider>();
@@ -1178,7 +1180,7 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
                       const Icon(Icons.emoji_events_rounded, color: Colors.amber, size: 24),
                       const SizedBox(width: 8),
                       Text(
-                        'Highlights in ${widget.country.name}',
+                        tr('Highlights in ${widget.country.name}'),
                         style: const TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.w800,
@@ -1204,10 +1206,10 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
               ],
 
               // Explore Title Changed
-              const Padding(
+               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 8, vertical: 8),
                 child: Text(
-                  'Explore',
+                  tr('Explore'),
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.w800, color: Color(0xFF111827)),
                 ),
               ),
@@ -1301,7 +1303,7 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12), side: BorderSide(color: themeColor.withOpacity(0.2))),
                   child: Column(
                     children: unescoSites.isEmpty
-                        ? [const Padding(padding: EdgeInsets.all(16), child: Text("No UNESCO sites found."))]
+                        ? [ Padding(padding: EdgeInsets.all(16), child: Text(tr("No UNESCO sites found.")))]
                         : ['Cultural', 'Natural', 'Mixed'].map((type) {
                       final rawSites = unescoSites.where((s) => s.type == type).toList();
                       if (rawSites.isEmpty) return const SizedBox.shrink();
@@ -1315,7 +1317,7 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
                             width: double.infinity,
                             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                             color: Colors.grey.shade50,
-                            child: Text(type, style: TextStyle(fontWeight: FontWeight.bold, color: Colors.grey.shade700, fontSize: 13)),
+                            child: Text(tr(type), style: TextStyle(fontWeight: FontWeight.bold, color: Colors.grey.shade700, fontSize: 13)),
                           ),
                           ...sortedSites.map((item) {
                             final isVisited = unescoProvider.visitedSites.contains(item.name);
@@ -1411,7 +1413,7 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
 
                           Flexible(
                             child: Text(
-                              widget.country.name,
+                              tr(widget.country.name),
                               style: TextStyle(
                                 fontSize: 28,
                                 fontWeight: FontWeight.bold,
@@ -1425,7 +1427,7 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
                       Row(
                         children: [
                           Text(
-                            '$visitedCount visits · $totalVisitDuration days',
+                            tr('$visitedCount visits · $totalVisitDuration days'),
                             style: TextStyle(
                               fontSize: 14,
                               color: Colors.grey.shade600,
@@ -1477,7 +1479,7 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
                                   ),
                                   const SizedBox(height: 3),
                                   Text(
-                                    'Home',
+                                    tr('Home'),
                                     style: TextStyle(
                                       fontSize: 10,
                                       color: isHomeCountry ? cardColor : Colors.grey.shade600,
@@ -1505,7 +1507,7 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
                                   ),
                                   const SizedBox(height: 3),
                                   Text(
-                                    'Lived',
+                                    tr('Lived'),
                                     style: TextStyle(
                                       fontSize: 10,
                                       color: hasLived ? cardColor : Colors.grey.shade600,
@@ -1533,7 +1535,7 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
                                   ),
                                   const SizedBox(height: 3),
                                   Text(
-                                    'Favorite',
+                                    tr('Favorite'),
                                     style: TextStyle(
                                       fontSize: 10,
                                       color: isWishlisted ? Colors.red : Colors.grey.shade600,
@@ -1565,9 +1567,9 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
                           ),
                           const SizedBox(height: 4),
                           Text(
-                            (visitDetails?.rating ?? 0) > 0
+                            tr((visitDetails?.rating ?? 0) > 0
                                 ? '${(visitDetails?.rating ?? 0).toStringAsFixed(1)}'
-                                : 'Rate',
+                                : 'Rate'),
                             style: TextStyle(
                               fontSize: 11,
                               color: Colors.amber.shade800,
@@ -1589,7 +1591,7 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
                       countryProvider.addDateRange(widget.country.name);
                     },
                     icon: const Icon(Icons.add_circle_outline, size: 20),
-                    label: const Text('Add Visit Record'),
+                    label:  Text(tr('Add Visit Record')),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: cardColor,
                       foregroundColor: textColor,
@@ -1641,9 +1643,9 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
               ),
             )
           else
-            const Padding(
+             Padding(
               padding: EdgeInsets.only(bottom: 16.0),
-              child: Center(child: Text('No visits recorded.')),
+              child: Center(child: Text(tr('No visits recorded.'))),
             ),
           const SizedBox(height: 8),
         ],
@@ -1694,7 +1696,7 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
           Icon(Icons.circle, size: 10, color: color),
           const SizedBox(width: 6),
           Text(
-            text,
+            tr(text),
             style: TextStyle(
               color: color,
               fontWeight: FontWeight.bold,
@@ -1759,7 +1761,7 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             regionsSection,
-            const Text('No additional info available.'),
+             Text(tr('No additional info available.')),
           ],
         ),
       );
@@ -1814,7 +1816,7 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
                     showExternalCityDetailsModal(context, cityObj);
                   } else {
                     ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(content: Text('This city is not currently in the map database.')),
+                       SnackBar(content: Text(tr('This city is not currently in the map database.'))),
                     );
                   }
                 },
@@ -1835,7 +1837,7 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
             if (info.history.isEmpty)
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 4.0),
-                child: Text("History data unavailable.", style: TextStyle(color: Colors.grey.shade600, fontStyle: FontStyle.italic)),
+                child: Text(tr("History data unavailable."), style: TextStyle(color: Colors.grey.shade600, fontStyle: FontStyle.italic)),
               )
             else
               ...info.history.map((item) => _buildListItem(item)),
@@ -1868,6 +1870,7 @@ class _StarRating extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return RatingBar.builder(
       initialRating: rating,
       minRating: 0.5,
@@ -1992,7 +1995,7 @@ class _CountryVisitDetailEditorTileState extends State<_CountryVisitDetailEditor
       final departureDate = DateTime(_departureYear!, _departureMonth!, _departureDay!);
       if (departureDate.isBefore(arrivalDate)) {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Departure date cannot be before arrival date.')),
+           SnackBar(content: Text(tr('Departure date cannot be before arrival date.'))),
         );
         return;
       }
@@ -2116,7 +2119,7 @@ class _CountryVisitDetailEditorTileState extends State<_CountryVisitDetailEditor
               ),
               const SizedBox(width: 8),
               Text(
-                label,
+                tr(label),
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 15,
@@ -2154,7 +2157,7 @@ class _CountryVisitDetailEditorTileState extends State<_CountryVisitDetailEditor
         value: value,
         isDense: true,
         decoration: InputDecoration(
-          labelText: hint,
+          labelText: tr(hint),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(8),
           ),
@@ -2174,7 +2177,7 @@ class _CountryVisitDetailEditorTileState extends State<_CountryVisitDetailEditor
             .map((item) => DropdownMenuItem<T>(
           value: item,
           child: Text(
-            item?.toString() ?? '-',
+            tr(item?.toString() ?? '-'),
             style: TextStyle(
               fontSize: (item == null) ? 9.0 : 13.5,
               color: (item == null) ? Colors.grey.shade600 : null,
@@ -2190,6 +2193,7 @@ class _CountryVisitDetailEditorTileState extends State<_CountryVisitDetailEditor
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Card(
       margin: const EdgeInsets.symmetric(vertical: 4.0),
       elevation: 0,
@@ -2203,7 +2207,7 @@ class _CountryVisitDetailEditorTileState extends State<_CountryVisitDetailEditor
           children: [
             Flexible(
               child: Text(
-                widget.title,
+                tr(widget.title),
                 overflow: TextOverflow.ellipsis,
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
@@ -2216,7 +2220,7 @@ class _CountryVisitDetailEditorTileState extends State<_CountryVisitDetailEditor
         ),
         subtitle: widget.subtitle != null
             ? Text(
-          widget.subtitle!,
+          tr(widget.subtitle!),
           style: TextStyle(fontSize: 13, color: Colors.grey.shade600),
         )
             : null,
@@ -2232,7 +2236,7 @@ class _CountryVisitDetailEditorTileState extends State<_CountryVisitDetailEditor
                   });
                   _expansionTileController.expand();
                 },
-                tooltip: 'Edit',
+                tooltip: tr('Edit'),
               ),
             IconButton(
               icon: const Icon(Icons.delete_outline, color: Colors.redAccent, size: 20),
@@ -2240,25 +2244,25 @@ class _CountryVisitDetailEditorTileState extends State<_CountryVisitDetailEditor
                 showDialog(
                   context: context,
                   builder: (context) => AlertDialog(
-                    title: const Text('Delete Visit Record'),
-                    content: const Text('Are you sure you want to delete this visit record?'),
+                    title:  Text(tr('Delete Visit Record')),
+                    content:  Text(tr('Are you sure you want to delete this visit record?')),
                     actions: [
                       TextButton(
                         onPressed: () => Navigator.pop(context),
-                        child: const Text('Cancel'),
+                        child:  Text(tr('Cancel')),
                       ),
                       TextButton(
                         onPressed: () {
                           Navigator.pop(context);
                           widget.onDelete();
                         },
-                        child: const Text('Delete', style: TextStyle(color: Colors.red)),
+                        child:  Text(tr('Delete'), style: TextStyle(color: Colors.red)),
                       ),
                     ],
                   ),
                 );
               },
-              tooltip: 'Delete',
+              tooltip: tr('Delete'),
             ),
           ],
         ),
@@ -2272,7 +2276,7 @@ class _CountryVisitDetailEditorTileState extends State<_CountryVisitDetailEditor
                   controller: _titleController,
                   readOnly: !_isEditMode,
                   decoration: InputDecoration(
-                    labelText: 'Title',
+                    labelText: tr('Title'),
                     prefixIcon: Icon(Icons.title, size: 20, color: Colors.blue.shade600),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(12),
@@ -2300,7 +2304,7 @@ class _CountryVisitDetailEditorTileState extends State<_CountryVisitDetailEditor
                   controller: _memoController,
                   readOnly: !_isEditMode,
                   decoration: InputDecoration(
-                    labelText: 'Memo',
+                    labelText: tr('Memo'),
                     prefixIcon: Icon(Icons.edit_note, size: 20, color: Colors.green.shade600),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(12),
@@ -2331,7 +2335,7 @@ class _CountryVisitDetailEditorTileState extends State<_CountryVisitDetailEditor
                     const SizedBox(width: 8),
                     Expanded(
                       child: Text(
-                        'Visited Cities',
+                        tr('Visited Cities'),
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 15,
@@ -2354,7 +2358,7 @@ class _CountryVisitDetailEditorTileState extends State<_CountryVisitDetailEditor
                               return StatefulBuilder(
                                 builder: (context, setDialogState) {
                                   return AlertDialog(
-                                    title: const Text('Add City'),
+                                    title:  Text(tr('Add City')),
                                     content: SizedBox(
                                       width: double.maxFinite,
                                       height: 300,
@@ -2363,11 +2367,11 @@ class _CountryVisitDetailEditorTileState extends State<_CountryVisitDetailEditor
                                         children: [
                                           TextField(
                                             controller: searchController,
-                                            decoration: const InputDecoration(
-                                              labelText: 'Search City',
+                                            decoration:  InputDecoration(
+                                              labelText: tr('Search City'),
                                               prefixIcon: Icon(Icons.search),
                                               border: OutlineInputBorder(),
-                                              hintText: 'Type city name...',
+                                              hintText: tr('Type city name...'),
                                             ),
                                             onChanged: (value) {
                                               setDialogState(() {
@@ -2411,8 +2415,8 @@ class _CountryVisitDetailEditorTileState extends State<_CountryVisitDetailEditor
                                                 if (searchController.text.trim().isNotEmpty)
                                                   ListTile(
                                                     leading: const Icon(Icons.add_circle_outline, color: Colors.blue),
-                                                    title: Text('Add "${searchController.text}" (Custom)'),
-                                                    subtitle: const Text('Add manually if not found'),
+                                                    title: Text(tr('Add "${searchController.text}" (Custom)')),
+                                                    subtitle:  Text(tr('Add manually if not found')),
                                                     onTap: () {
                                                       setState(() {
                                                         final current = _citiesController.text;
@@ -2432,7 +2436,7 @@ class _CountryVisitDetailEditorTileState extends State<_CountryVisitDetailEditor
                                                 ...filteredCities.map((city) => ListTile(
                                                   title: Text(city.name),
                                                   subtitle: city.population > 0
-                                                      ? Text('Population: ${NumberFormat.compact().format(city.population)}')
+                                                      ? Text(tr('Population: ${NumberFormat.compact().format(city.population)}'))
                                                       : null,
                                                   onTap: () {
                                                     setState(() {
@@ -2455,7 +2459,7 @@ class _CountryVisitDetailEditorTileState extends State<_CountryVisitDetailEditor
                                     actions: [
                                       TextButton(
                                         onPressed: () => Navigator.pop(dialogContext),
-                                        child: const Text('Cancel'),
+                                        child:  Text(tr('Cancel')),
                                       ),
                                     ],
                                   );
@@ -2474,7 +2478,7 @@ class _CountryVisitDetailEditorTileState extends State<_CountryVisitDetailEditor
                     ? Padding(
                   padding: const EdgeInsets.symmetric(vertical: 8),
                   child: Text(
-                    'No cities added',
+                    tr('No cities added'),
                     style: TextStyle(color: Colors.grey.shade600, fontSize: 13),
                   ),
                 )
@@ -2487,7 +2491,7 @@ class _CountryVisitDetailEditorTileState extends State<_CountryVisitDetailEditor
                       .map((city) {
                     return Chip(
                       label: Text(
-                        city.trim(),
+                        tr(city.trim()),
                         style: const TextStyle(
                           fontSize: 13,
                           color: Colors.white,
@@ -2516,7 +2520,7 @@ class _CountryVisitDetailEditorTileState extends State<_CountryVisitDetailEditor
                     const SizedBox(width: 8),
                     Expanded(
                       child: Text(
-                        'Photos',
+                        tr('Photos'),
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 15,
@@ -2536,7 +2540,7 @@ class _CountryVisitDetailEditorTileState extends State<_CountryVisitDetailEditor
                                 children: <Widget>[
                                   ListTile(
                                     leading: const Icon(Icons.photo_library),
-                                    title: const Text('Photo Library'),
+                                    title:  Text(tr('Photo Library')),
                                     onTap: () {
                                       Navigator.pop(modalContext);
                                       _pickImage(ImageSource.gallery);
@@ -2544,7 +2548,7 @@ class _CountryVisitDetailEditorTileState extends State<_CountryVisitDetailEditor
                                   ),
                                   ListTile(
                                     leading: const Icon(Icons.photo_camera),
-                                    title: const Text('Camera'),
+                                    title:  Text(tr('Camera')),
                                     onTap: () {
                                       Navigator.pop(modalContext);
                                       _pickImage(ImageSource.camera);
@@ -2570,7 +2574,7 @@ class _CountryVisitDetailEditorTileState extends State<_CountryVisitDetailEditor
                   ),
                   child: _currentPhotos.isEmpty
                       ? Text(
-                    'No photos added',
+                    tr('No photos added'),
                     style: TextStyle(color: Colors.grey.shade600, fontSize: 13),
                   )
                       : Wrap(
@@ -2616,7 +2620,7 @@ class _CountryVisitDetailEditorTileState extends State<_CountryVisitDetailEditor
                   controller: _durationController,
                   readOnly: !_isEditMode,
                   decoration: InputDecoration(
-                    labelText: 'Duration (days)',
+                    labelText: tr('Duration (days)'),
                     prefixIcon: Icon(Icons.schedule, size: 20, color: Colors.orange.shade600),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(12),
@@ -2669,7 +2673,7 @@ class _CountryVisitDetailEditorTileState extends State<_CountryVisitDetailEditor
                                 color: _isTransfer ? Colors.blue : Colors.grey.shade600,
                               ),
                               const SizedBox(width: 6),
-                              const Text('Transfer', style: TextStyle(fontWeight: FontWeight.w500)),
+                               Text(tr('Transfer'), style: TextStyle(fontWeight: FontWeight.w500)),
                               Checkbox(
                                 value: _isTransfer,
                                 onChanged: !_isEditMode ? null : (val) {
@@ -2708,7 +2712,7 @@ class _CountryVisitDetailEditorTileState extends State<_CountryVisitDetailEditor
                                 color: _isLayover ? Colors.orange : Colors.grey.shade600,
                               ),
                               const SizedBox(width: 6),
-                              const Text('Layover', style: TextStyle(fontWeight: FontWeight.w500)),
+                               Text(tr('Layover'), style: TextStyle(fontWeight: FontWeight.w500)),
                               Checkbox(
                                 value: _isLayover,
                                 onChanged: !_isEditMode ? null : (val) {
@@ -2732,19 +2736,19 @@ class _CountryVisitDetailEditorTileState extends State<_CountryVisitDetailEditor
                           showDialog(
                             context: context,
                             builder: (context) => AlertDialog(
-                              title: const Text('Delete Visit Record'),
-                              content: const Text('Are you sure you want to delete this visit record?'),
+                              title:  Text(tr('Delete Visit Record')),
+                              content:  Text(tr('Are you sure you want to delete this visit record?')),
                               actions: [
                                 TextButton(
                                   onPressed: () => Navigator.pop(context),
-                                  child: const Text('Cancel'),
+                                  child:  Text(tr('Cancel')),
                                 ),
                                 TextButton(
                                   onPressed: () {
                                     Navigator.pop(context);
                                     widget.onDelete();
                                   },
-                                  child: const Text('Delete', style: TextStyle(color: Colors.red)),
+                                  child:  Text(tr('Delete'), style: TextStyle(color: Colors.red)),
                                 ),
                               ],
                             ),
@@ -2758,7 +2762,7 @@ class _CountryVisitDetailEditorTileState extends State<_CountryVisitDetailEditor
                             borderRadius: BorderRadius.circular(12),
                           ),
                         ),
-                        child: const Text('Delete'),
+                        child:  Text(tr('Delete')),
                       ),
                     ),
                     const SizedBox(width: 10),
@@ -2779,7 +2783,7 @@ class _CountryVisitDetailEditorTileState extends State<_CountryVisitDetailEditor
                             borderRadius: BorderRadius.circular(12),
                           ),
                         ),
-                        child: const Text('Cancel'),
+                        child:  Text(tr('Cancel')),
                       ),
                     ),
                     const SizedBox(width: 10),
@@ -2797,7 +2801,7 @@ class _CountryVisitDetailEditorTileState extends State<_CountryVisitDetailEditor
                             borderRadius: BorderRadius.circular(12),
                           ),
                         ),
-                        child: const Text('Save'),
+                        child:  Text(tr('Save')),
                       ),
                     ),
                   ],
@@ -2895,23 +2899,24 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final tc = Theme.of(context).primaryColor;
     return Card(
       elevation: 1, margin: const EdgeInsets.symmetric(vertical: 4),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       child: ExpansionTile(
         controller: _expansionTileController, initiallyExpanded: _isEditing,
-        title: Text(_displayTitle.isNotEmpty ? _displayTitle : 'Visit Record',
+        title: Text(tr(_displayTitle.isNotEmpty ? _displayTitle : 'Visit Record'),
             style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15)),
-        subtitle: Text('Date: $_year-$_month-$_day', style: TextStyle(color: Colors.grey[600], fontSize: 13)),
+        subtitle: Text(tr('Date: $_year-$_month-$_day'), style: TextStyle(color: Colors.grey[600], fontSize: 13)),
         trailing: IconButton(icon: const Icon(Icons.delete_outline, color: Colors.red, size: 22),
             onPressed: () => showDialog(context: context, builder: (ctx) => AlertDialog(
-                title: const Text('Delete Visit Record'),
-                content: const Text('Are you sure you want to delete this visit record?'),
+                title:  Text(tr('Delete Visit Record')),
+                content:  Text(tr('Are you sure you want to delete this visit record?')),
                 actions: [
-                  TextButton(onPressed: () => Navigator.pop(ctx), child: const Text('Cancel')),
+                  TextButton(onPressed: () => Navigator.pop(ctx), child:  Text(tr('Cancel'))),
                   TextButton(onPressed: () { Navigator.pop(ctx); widget.onDelete(); },
-                      child: const Text('Delete', style: TextStyle(color: Colors.red))),
+                      child:  Text(tr('Delete'), style: TextStyle(color: Colors.red))),
                 ]))),
         children: [Container(
           padding: const EdgeInsets.all(16),
@@ -2920,21 +2925,21 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
           child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             if (_isEditing) ...[
               Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                Text('Visit Date: $_year-$_month-$_day', style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14)),
-                TextButton.icon(icon: const Icon(Icons.edit_calendar, size: 18), label: const Text('Edit Date'),
+                Text(tr('Visit Date: $_year-$_month-$_day'), style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14)),
+                TextButton.icon(icon: const Icon(Icons.edit_calendar, size: 18), label:  Text(tr('Edit Date')),
                     onPressed: () => _selectDate(context), style: TextButton.styleFrom(visualDensity: VisualDensity.compact)),
               ]),
               const SizedBox(height: 12),
               TextField(controller: _titleController,
-                  decoration: InputDecoration(labelText: 'Title', isDense: true, filled: true, fillColor: Colors.white,
+                  decoration: InputDecoration(labelText: tr('Title'), isDense: true, filled: true, fillColor: Colors.white,
                       border: OutlineInputBorder(borderRadius: BorderRadius.circular(8), borderSide: BorderSide.none))),
               const SizedBox(height: 12),
               TextField(controller: _memoController, maxLines: 3, minLines: 1,
-                  decoration: InputDecoration(labelText: 'Memo', isDense: true, filled: true, fillColor: Colors.white,
+                  decoration: InputDecoration(labelText: tr('Memo'), isDense: true, filled: true, fillColor: Colors.white,
                       border: OutlineInputBorder(borderRadius: BorderRadius.circular(8), borderSide: BorderSide.none))),
             ] else if (_displayMemo.isNotEmpty)
               Padding(padding: const EdgeInsets.only(bottom: 12),
-                  child: Text(_displayMemo, style: TextStyle(fontSize: 14, color: Colors.grey[800], height: 1.4))),
+                  child: Text(tr(_displayMemo), style: TextStyle(fontSize: 14, color: Colors.grey[800], height: 1.4))),
             const SizedBox(height: 12),
             if (_currentPhotos.isNotEmpty || _isEditing)
               Padding(padding: const EdgeInsets.only(top: 8),
@@ -2951,14 +2956,14 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
             Row(mainAxisAlignment: MainAxisAlignment.end, children: [
               if (_isEditing) ...[
                 TextButton(onPressed: _cancelEditing,
-                    child: Text('Cancel', style: TextStyle(color: Colors.grey[700], fontWeight: FontWeight.w600))),
+                    child: Text(tr('Cancel'), style: TextStyle(color: Colors.grey[700], fontWeight: FontWeight.w600))),
                 const SizedBox(width: 8),
                 ElevatedButton.icon(onPressed: _saveChanges,
-                    icon: const Icon(Icons.save, size: 18), label: const Text('Save'),
+                    icon: const Icon(Icons.save, size: 18), label:  Text(tr('Save')),
                     style: ElevatedButton.styleFrom(backgroundColor: tc, foregroundColor: Colors.white, elevation: 0)),
               ] else
                 OutlinedButton.icon(onPressed: () => setState(() => _isEditing = true),
-                    icon: const Icon(Icons.edit, size: 16), label: const Text('Edit Record'),
+                    icon: const Icon(Icons.edit, size: 16), label:  Text(tr('Edit Record')),
                     style: OutlinedButton.styleFrom(foregroundColor: tc, side: BorderSide(color: tc.withOpacity(0.5)))),
             ]),
           ]),
@@ -3065,23 +3070,24 @@ class _UnescoVisitEditorCardState extends State<_UnescoVisitEditorCard> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final tc = Theme.of(context).primaryColor;
     return Card(
       elevation: 1, margin: const EdgeInsets.symmetric(vertical: 4),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       child: ExpansionTile(
         controller: _expansionTileController, initiallyExpanded: _isEditing,
-        title: Text(_displayTitle.isNotEmpty ? _displayTitle : 'Visit Record',
+        title: Text(tr(_displayTitle.isNotEmpty ? _displayTitle : 'Visit Record'),
             style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15)),
-        subtitle: Text('Date: $_year-$_month-$_day', style: TextStyle(color: Colors.grey[600], fontSize: 13)),
+        subtitle: Text(tr('Date: $_year-$_month-$_day'), style: TextStyle(color: Colors.grey[600], fontSize: 13)),
         trailing: IconButton(icon: const Icon(Icons.delete_outline, color: Colors.red, size: 22),
             onPressed: () => showDialog(context: context, builder: (ctx) => AlertDialog(
-                title: const Text('Delete Visit Record'),
-                content: const Text('Are you sure you want to delete this visit record?'),
+                title:  Text(tr('Delete Visit Record')),
+                content:  Text(tr('Are you sure you want to delete this visit record?')),
                 actions: [
-                  TextButton(onPressed: () => Navigator.pop(ctx), child: const Text('Cancel')),
+                  TextButton(onPressed: () => Navigator.pop(ctx), child:  Text(tr('Cancel'))),
                   TextButton(onPressed: () { Navigator.pop(ctx); widget.onDelete(); },
-                      child: const Text('Delete', style: TextStyle(color: Colors.red))),
+                      child:  Text(tr('Delete'), style: TextStyle(color: Colors.red))),
                 ]))),
         children: [Container(
           padding: const EdgeInsets.all(16),
@@ -3090,24 +3096,24 @@ class _UnescoVisitEditorCardState extends State<_UnescoVisitEditorCard> {
           child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             if (_isEditing) ...[
               Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                Text('Visit Date: $_year-$_month-$_day', style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14)),
-                TextButton.icon(icon: const Icon(Icons.edit_calendar, size: 18), label: const Text('Edit Date'),
+                Text(tr('Visit Date: $_year-$_month-$_day'), style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14)),
+                TextButton.icon(icon: const Icon(Icons.edit_calendar, size: 18), label:  Text(tr('Edit Date')),
                     onPressed: () => _selectDate(context), style: TextButton.styleFrom(visualDensity: VisualDensity.compact)),
               ]),
               const SizedBox(height: 12),
               TextField(controller: _titleController,
-                  decoration: InputDecoration(labelText: 'Title', isDense: true, filled: true, fillColor: Colors.white,
+                  decoration: InputDecoration(labelText: tr('Title'), isDense: true, filled: true, fillColor: Colors.white,
                       border: OutlineInputBorder(borderRadius: BorderRadius.circular(8), borderSide: BorderSide.none))),
               const SizedBox(height: 12),
               TextField(controller: _memoController, maxLines: 3, minLines: 1,
-                  decoration: InputDecoration(labelText: 'Memo', isDense: true, filled: true, fillColor: Colors.white,
+                  decoration: InputDecoration(labelText: tr('Memo'), isDense: true, filled: true, fillColor: Colors.white,
                       border: OutlineInputBorder(borderRadius: BorderRadius.circular(8), borderSide: BorderSide.none))),
             ] else if (_displayMemo.isNotEmpty)
               Padding(padding: const EdgeInsets.only(bottom: 12),
-                  child: Text(_displayMemo, style: TextStyle(fontSize: 14, color: Colors.grey[800], height: 1.4))),
+                  child: Text(tr(_displayMemo), style: TextStyle(fontSize: 14, color: Colors.grey[800], height: 1.4))),
             const SizedBox(height: 12),
             if (widget.availableLocations != null && widget.availableLocations!.isNotEmpty) ...[
-              const Text('Locations:', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Colors.grey)),
+               Text(tr('Locations:'), style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Colors.grey)),
               const SizedBox(height: 4),
               IgnorePointer(ignoring: !_isEditing,
                   child: Wrap(spacing: 8.0, runSpacing: 4.0,
@@ -3138,14 +3144,14 @@ class _UnescoVisitEditorCardState extends State<_UnescoVisitEditorCard> {
             Row(mainAxisAlignment: MainAxisAlignment.end, children: [
               if (_isEditing) ...[
                 TextButton(onPressed: _cancelEditing,
-                    child: Text('Cancel', style: TextStyle(color: Colors.grey[700], fontWeight: FontWeight.w600))),
+                    child: Text(tr('Cancel'), style: TextStyle(color: Colors.grey[700], fontWeight: FontWeight.w600))),
                 const SizedBox(width: 8),
                 ElevatedButton.icon(onPressed: _saveChanges,
-                    icon: const Icon(Icons.save, size: 18), label: const Text('Save'),
+                    icon: const Icon(Icons.save, size: 18), label:  Text(tr('Save')),
                     style: ElevatedButton.styleFrom(backgroundColor: tc, foregroundColor: Colors.white, elevation: 0)),
               ] else
                 OutlinedButton.icon(onPressed: () => setState(() => _isEditing = true),
-                    icon: const Icon(Icons.edit, size: 16), label: const Text('Edit Record'),
+                    icon: const Icon(Icons.edit, size: 16), label:  Text(tr('Edit Record')),
                     style: OutlinedButton.styleFrom(foregroundColor: tc, side: BorderSide(color: tc.withOpacity(0.5)))),
             ]),
           ]),
@@ -3194,6 +3200,7 @@ class _FallbackNetworkImageState extends State<_FallbackNetworkImage> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     if (widget.urls.isEmpty) return widget.emptyBuilder(context);
 
     final allFailed = widget.urls.every(_failed.contains);

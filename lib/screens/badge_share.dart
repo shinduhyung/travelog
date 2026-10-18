@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'dart:io';
 import 'dart:typed_data';
 import 'package:path_provider/path_provider.dart';
@@ -53,7 +54,7 @@ class BadgeShare {
       debugPrint("Badge Share Error: $e");
       if (context.mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Failed to generate share image: $e')),
+          SnackBar(content: Text(tr('Failed to generate share image: $e'))),
         );
       }
     }
@@ -157,7 +158,7 @@ class BadgeShare {
                                 borderRadius: BorderRadius.circular(8),
                               ),
                               child: Text(
-                                '${achievement.points} points',
+                                tr('${achievement.points} points'),
                                 style: TextStyle(
                                   fontSize: 14,
                                   fontWeight: FontWeight.bold,
@@ -172,7 +173,7 @@ class BadgeShare {
                   ),
                   const SizedBox(height: 20),
                   Text(
-                    achievement.description,
+                    tr(achievement.description),
                     style: TextStyle(fontSize: 16, color: Colors.grey[700], height: 1.4),
                   ),
                   const SizedBox(height: 24),
@@ -183,11 +184,11 @@ class BadgeShare {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            'Progress',
+                            tr('Progress'),
                             style: TextStyle(fontSize: 15, color: Colors.grey[600], fontWeight: FontWeight.w500),
                           ),
                           Text(
-                            progressDetailText,
+                            tr(progressDetailText),
                             style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
                           ),
                         ],
@@ -204,7 +205,7 @@ class BadgeShare {
                       ),
                       const SizedBox(height: 8),
                       Text(
-                        '${(progress * 100).toStringAsFixed(0)}% Complete',
+                        tr('${(progress * 100).toStringAsFixed(0)}% Complete'),
                         style: TextStyle(fontSize: 14, color: Colors.grey[600]),
                       ),
                     ],
@@ -225,7 +226,7 @@ class BadgeShare {
                 ),
                 const SizedBox(width: 8),
                 Text(
-                  'Travelog App',
+                  tr('Travelog App'),
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w800,

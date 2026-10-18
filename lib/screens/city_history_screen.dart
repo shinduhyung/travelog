@@ -1,6 +1,7 @@
 // lib/screens/city_history_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:jidoapp/models/city_model.dart';
 import 'package:jidoapp/providers/city_provider.dart';
@@ -34,6 +35,7 @@ class CityHistoryTabScreen extends StatelessWidget{
   const CityHistoryTabScreen({super.key});
   @override
   Widget build(BuildContext context){
+    Localizations.maybeLocaleOf(context);
     return Consumer<CityProvider>(builder:(context,provider,child){
       if(provider.isLoading)return const Center(child:CircularProgressIndicator(strokeWidth:2,color:_C.ink));
       final allOldest=provider.oldestCities.where((c)=>c.altitude!=0).toList();
@@ -55,9 +57,9 @@ class CityHistoryTabScreen extends StatelessWidget{
           decoration:BoxDecoration(color:_C.ink,borderRadius:BorderRadius.circular(14)),
           child:Row(children:[
             Expanded(child:Column(crossAxisAlignment:CrossAxisAlignment.start,children:[
-              Text('$imperialCompleted of 1 collections',style:const TextStyle(fontSize:22,fontWeight:FontWeight.w800,color:Colors.white,letterSpacing:-0.5)),
+              Text(tr('$imperialCompleted of 1 collections'),style:const TextStyle(fontSize:22,fontWeight:FontWeight.w800,color:Colors.white,letterSpacing:-0.5)),
               const SizedBox(height:4),
-              Text(imperialCompleted==0?'No collections fully completed yet':'All collections completed! 🎉',style:const TextStyle(fontSize:12,color:Color(0xFF888888))),
+              Text(tr(imperialCompleted==0?'No collections fully completed yet':'All collections completed! 🎉'),style:const TextStyle(fontSize:12,color:Color(0xFF888888))),
               const SizedBox(height:14),
               ClipRRect(borderRadius:BorderRadius.circular(4),child:SizedBox(height:6,child:Stack(children:[Container(color:const Color(0xFF2E2E2E)),FractionallySizedBox(widthFactor:pct,child:Container(color:_HC.imperial))]))),
             ])),
@@ -78,7 +80,7 @@ class CityHistoryScreen extends StatelessWidget{
   @override Widget build(BuildContext context)=>const CityHistoryTabScreen();
 }
 
-class _SH extends StatelessWidget{final String label;const _SH({required this.label});@override Widget build(BuildContext context)=>Padding(padding:const EdgeInsets.fromLTRB(16,24,16,12),child:Row(children:[Text(label,style:const TextStyle(fontSize:11,fontWeight:FontWeight.w700,letterSpacing:2.0,color:_C.inkLight)),const SizedBox(width:12),Expanded(child:Container(height:1,color:_C.divider))]));}
+class _SH extends StatelessWidget{final String label;const _SH({required this.label});@override Widget build(BuildContext context)=>Padding(padding:const EdgeInsets.fromLTRB(16,24,16,12),child:Row(children:[Text(tr(label),style:const TextStyle(fontSize:11,fontWeight:FontWeight.w700,letterSpacing:2.0,color:_C.inkLight)),const SizedBox(width:12),Expanded(child:Container(height:1,color:_C.divider))]));}
 
 class _OldestCard extends StatefulWidget{
   final List<City> allData;final Set<String> visitedNames;final bool useDefaultColor;
@@ -96,6 +98,7 @@ class _OldestCardState extends State<_OldestCard>{
   }
   @override
   Widget build(BuildContext context){
+    Localizations.maybeLocaleOf(context);
     return Container(
       decoration:BoxDecoration(color:_C.surface,borderRadius:BorderRadius.circular(14),border:Border.all(color:_C.divider)),
       child:Column(children:[
@@ -103,9 +106,9 @@ class _OldestCardState extends State<_OldestCard>{
           child:Row(children:[
             Container(width:42,height:42,decoration:BoxDecoration(color:_HC.history.withOpacity(0.10),borderRadius:BorderRadius.circular(10)),child:const Icon(Icons.history_edu_outlined,size:20,color:_HC.history)),
             const SizedBox(width:12),
-            const Expanded(child:Text('Oldest Cities',style:TextStyle(fontSize:15,fontWeight:FontWeight.w700,color:_C.ink,letterSpacing:-0.2))),
+             Expanded(child:Text(tr('Oldest Cities'),style:TextStyle(fontSize:15,fontWeight:FontWeight.w700,color:_C.ink,letterSpacing:-0.2))),
             Container(height:36,padding:const EdgeInsets.symmetric(horizontal:10),decoration:BoxDecoration(color:_C.bg,borderRadius:BorderRadius.circular(8),border:Border.all(color:_C.divider)),
-                child:DropdownButtonHideUnderline(child:DropdownButton<String>(value:_cont,icon:const Icon(Icons.keyboard_arrow_down_rounded,size:16,color:_C.inkMid),style:const TextStyle(fontSize:12,color:_C.ink,fontWeight:FontWeight.w600),items:_conts.map((v)=>DropdownMenuItem(value:v,child:Text(v))).toList(),onChanged:(v){if(v!=null)setState((){_cont=v;_prep();}); }))),
+                child:DropdownButtonHideUnderline(child:DropdownButton<String>(value:_cont,icon:const Icon(Icons.keyboard_arrow_down_rounded,size:16,color:_C.inkMid),style:const TextStyle(fontSize:12,color:_C.ink,fontWeight:FontWeight.w600),items:_conts.map((v)=>DropdownMenuItem(value:v,child:Text(tr(v)))).toList(),onChanged:(v){if(v!=null)setState((){_cont=v;_prep();}); }))),
           ]),
         ),
         SizedBox(height:360,child:ListView.builder(
@@ -126,19 +129,19 @@ class _OldestCardState extends State<_OldestCard>{
                 padding:const EdgeInsets.symmetric(horizontal:10,vertical:10),
                 decoration:BoxDecoration(color:isV?_HC.history.withOpacity(0.05):Colors.transparent,borderRadius:BorderRadius.circular(8),border:Border(left:BorderSide(color:isV?_HC.history:Colors.transparent,width:2.5))),
                 child:Row(children:[
-                  SizedBox(width:28,child:Text(rank<=3?(rank==1?'🥇':rank==2?'🥈':'🥉'):'$rank',style:TextStyle(fontSize:rank<=3?16:12,fontWeight:FontWeight.w700,color:_C.inkLight),textAlign:TextAlign.center)),
+                  SizedBox(width:28,child:Text(tr(rank<=3?(rank==1?'🥇':rank==2?'🥈':'🥉'):'$rank'),style:TextStyle(fontSize:rank<=3?16:12,fontWeight:FontWeight.w700,color:_C.inkLight),textAlign:TextAlign.center)),
                   const SizedBox(width:10),
                   Expanded(child:Column(crossAxisAlignment:CrossAxisAlignment.start,children:[
                     Row(children:[
                       Expanded(child:Text(item.name,style:TextStyle(fontSize:13,fontWeight:isV?FontWeight.w700:FontWeight.w500,color:_C.ink),overflow:TextOverflow.ellipsis)),
                       if(isV)...[const SizedBox(width:4),const Icon(Icons.check_circle_rounded,size:14,color:_HC.history)],
                       const SizedBox(width:6),
-                      Text(ageStr,style:const TextStyle(fontSize:13,fontWeight:FontWeight.w700,color:_C.ink)),
+                      Text(tr(ageStr),style:const TextStyle(fontSize:13,fontWeight:FontWeight.w700,color:_C.ink)),
                     ]),
                     const SizedBox(height:5),
                     ClipRRect(borderRadius:BorderRadius.circular(3),child:LinearProgressIndicator(value:barFrac,minHeight:3,backgroundColor:_C.divider,valueColor:AlwaysStoppedAnimation<Color>(barColor))),
                     const SizedBox(height:3),
-                    Row(children:[Text(_cf(item),style:const TextStyle(fontSize:11)),const SizedBox(width:4),Text(item.country,style:const TextStyle(fontSize:10,color:_C.inkLight))]),
+                    Row(children:[Text(tr(_cf(item)),style:const TextStyle(fontSize:11)),const SizedBox(width:4),Text(tr(item.country),style:const TextStyle(fontSize:10,color:_C.inkLight))]),
                   ])),
                 ]),
               ),
@@ -162,6 +165,7 @@ class _ImperialCardState extends State<_ImperialCard> with SingleTickerProviderS
   void _toggle(){setState((){_exp=!_exp;_exp?_ctrl.forward():_ctrl.reverse();});}
   @override
   Widget build(BuildContext context){
+    Localizations.maybeLocaleOf(context);
     final total=widget.names.length;
     final vis=widget.names.where((n)=>widget.visitedNames.contains(n)).length;
     final pct=total>0?vis/total:0.0;
@@ -171,20 +175,20 @@ class _ImperialCardState extends State<_ImperialCard> with SingleTickerProviderS
         InkWell(onTap:_toggle,borderRadius:BorderRadius.circular(14),child:Padding(padding:const EdgeInsets.all(16),child:Row(children:[
           Container(width:42,height:42,decoration:BoxDecoration(color:_HC.imperial.withOpacity(0.10),borderRadius:BorderRadius.circular(10)),child:const Icon(Icons.account_balance_outlined,size:20,color:_HC.imperial)),
           const SizedBox(width:14),
-          const Expanded(child:Column(crossAxisAlignment:CrossAxisAlignment.start,children:[
-            Text('HISTORY',style:TextStyle(fontSize:10,fontWeight:FontWeight.w700,letterSpacing:1.5,color:_HC.imperial)),
+           Expanded(child:Column(crossAxisAlignment:CrossAxisAlignment.start,children:[
+            Text(tr('HISTORY'),style:TextStyle(fontSize:10,fontWeight:FontWeight.w700,letterSpacing:1.5,color:_HC.imperial)),
             SizedBox(height:2),
-            Text('Former Imperial Capitals',style:TextStyle(fontSize:15,fontWeight:FontWeight.w700,color:_C.ink,letterSpacing:-0.2)),
+            Text(tr('Former Imperial Capitals'),style:TextStyle(fontSize:15,fontWeight:FontWeight.w700,color:_C.ink,letterSpacing:-0.2)),
           ])),
           GestureDetector(onTap:()=>Navigator.push(context,MaterialPageRoute(builder:(_)=>CityStatsMapScreen(cities:widget.cities,title:'Imperial Capitals',markerColor:_HC.imperial))),
-              child:Container(padding:const EdgeInsets.symmetric(horizontal:10,vertical:6),decoration:BoxDecoration(color:_C.bg,borderRadius:BorderRadius.circular(8),border:Border.all(color:_C.divider)),child:Row(mainAxisSize:MainAxisSize.min,children:const[Icon(Icons.map_outlined,size:14,color:_C.inkMid),SizedBox(width:4),Text('Map',style:TextStyle(fontSize:12,fontWeight:FontWeight.w600,color:_C.inkMid))]))),
+              child:Container(padding:const EdgeInsets.symmetric(horizontal:10,vertical:6),decoration:BoxDecoration(color:_C.bg,borderRadius:BorderRadius.circular(8),border:Border.all(color:_C.divider)),child:Row(mainAxisSize:MainAxisSize.min,children:[Icon(Icons.map_outlined,size:14,color:_C.inkMid),SizedBox(width:4),Text(tr('Map'),style:TextStyle(fontSize:12,fontWeight:FontWeight.w600,color:_C.inkMid))]))),
           const SizedBox(width:4),
           RotationTransition(turns:_rA,child:const Icon(Icons.keyboard_arrow_down_rounded,size:22,color:_C.inkLight)),
         ]))),
         Padding(padding:const EdgeInsets.fromLTRB(16,0,16,14),child:Column(children:[
           ClipRRect(borderRadius:BorderRadius.circular(4),child:LinearProgressIndicator(value:pct,minHeight:5,backgroundColor:_C.divider,valueColor:const AlwaysStoppedAnimation<Color>(_HC.imperial))),
           const SizedBox(height:8),
-          Row(children:[_Ch(label:'Visited',value:'$vis',color:_HC.imperial),const SizedBox(width:8),_Ch(label:'Remaining',value:'${total-vis}',color:_C.inkLight),const Spacer(),Text('${(pct*100).round()}%',style:TextStyle(fontSize:20,fontWeight:FontWeight.w800,color:pct>0?_HC.imperial:_C.inkLight,letterSpacing:-0.5))]),
+          Row(children:[_Ch(label:'Visited',value:'$vis',color:_HC.imperial),const SizedBox(width:8),_Ch(label:'Remaining',value:'${total-vis}',color:_C.inkLight),const Spacer(),Text(tr('${(pct*100).round()}%'),style:TextStyle(fontSize:20,fontWeight:FontWeight.w800,color:pct>0?_HC.imperial:_C.inkLight,letterSpacing:-0.5))]),
         ])),
         AnimatedSize(duration:const Duration(milliseconds:280),curve:Curves.easeInOut,child:_exp
             ?FadeTransition(opacity:_fA,child:Container(width:double.infinity,padding:const EdgeInsets.fromLTRB(16,4,16,16),decoration:const BoxDecoration(border:Border(top:BorderSide(color:_C.divider))),
@@ -194,7 +198,7 @@ class _ImperialCardState extends State<_ImperialCard> with SingleTickerProviderS
             final flag=cityObj!=null?_cf(cityObj):'';
             return GestureDetector(onTap:cityObj!=null?()=>_showCityModal(context,cityObj):null,
                 child:Container(padding:const EdgeInsets.symmetric(horizontal:11,vertical:6),decoration:BoxDecoration(color:isV?_HC.imperial:_C.bg,borderRadius:BorderRadius.circular(20),border:Border.all(color:isV?_HC.imperial:_C.divider)),
-                    child:Row(mainAxisSize:MainAxisSize.min,children:[if(flag.isNotEmpty)...[Text(flag,style:const TextStyle(fontSize:11)),const SizedBox(width:5)],Text(name,style:TextStyle(fontSize:12,fontWeight:isV?FontWeight.w700:FontWeight.w500,color:isV?Colors.white:_C.inkMid))])));
+                    child:Row(mainAxisSize:MainAxisSize.min,children:[if(flag.isNotEmpty)...[Text(tr(flag),style:const TextStyle(fontSize:11)),const SizedBox(width:5)],Text(name,style:TextStyle(fontSize:12,fontWeight:isV?FontWeight.w700:FontWeight.w500,color:isV?Colors.white:_C.inkMid))])));
           }).toList()),
         ))
             :const SizedBox.shrink(),
@@ -204,6 +208,6 @@ class _ImperialCardState extends State<_ImperialCard> with SingleTickerProviderS
   }
 }
 
-class _AP extends StatelessWidget{final double value;const _AP({required this.value});@override Widget build(BuildContext context)=>SizedBox(width:68,height:68,child:Stack(alignment:Alignment.center,children:[CustomPaint(size:const Size(68,68),painter:_APainter(value:value)),Column(mainAxisSize:MainAxisSize.min,children:[Text('${(value*100).round()}',style:const TextStyle(fontSize:20,fontWeight:FontWeight.w800,color:Colors.white,height:1)),const Text('%',style:TextStyle(fontSize:10,color:Color(0xFF888888)))])]));}
+class _AP extends StatelessWidget{final double value;const _AP({required this.value});@override Widget build(BuildContext context)=>SizedBox(width:68,height:68,child:Stack(alignment:Alignment.center,children:[CustomPaint(size:const Size(68,68),painter:_APainter(value:value)),Column(mainAxisSize:MainAxisSize.min,children:[Text(tr('${(value*100).round()}'),style:const TextStyle(fontSize:20,fontWeight:FontWeight.w800,color:Colors.white,height:1)), Text(tr('%'),style:TextStyle(fontSize:10,color:Color(0xFF888888)))])]));}
 class _APainter extends CustomPainter{final double value;const _APainter({required this.value});@override void paint(Canvas canvas,Size size){final c=Offset(size.width/2,size.height/2);final r=size.width/2-4;canvas.drawCircle(c,r,Paint()..color=const Color(0xFF2E2E2E)..style=PaintingStyle.stroke..strokeWidth=4.0);if(value>0)canvas.drawArc(Rect.fromCircle(center:c,radius:r),-math.pi/2,2*math.pi*value,false,Paint()..color=Colors.white..style=PaintingStyle.stroke..strokeWidth=4.0..strokeCap=StrokeCap.round);}@override bool shouldRepaint(_APainter old)=>old.value!=value;}
-class _Ch extends StatelessWidget{final String label,value;final Color color;const _Ch({required this.label,required this.value,required this.color});@override Widget build(BuildContext context)=>Row(mainAxisSize:MainAxisSize.min,crossAxisAlignment:CrossAxisAlignment.baseline,textBaseline:TextBaseline.alphabetic,children:[Text(value,style:TextStyle(fontSize:16,fontWeight:FontWeight.w800,color:color)),const SizedBox(width:3),Text(label,style:const TextStyle(fontSize:10,fontWeight:FontWeight.w500,color:_C.inkLight,letterSpacing:0.3))]);}
+class _Ch extends StatelessWidget{final String label,value;final Color color;const _Ch({required this.label,required this.value,required this.color});@override Widget build(BuildContext context)=>Row(mainAxisSize:MainAxisSize.min,crossAxisAlignment:CrossAxisAlignment.baseline,textBaseline:TextBaseline.alphabetic,children:[Text(tr(value),style:TextStyle(fontSize:16,fontWeight:FontWeight.w800,color:color)),const SizedBox(width:3),Text(tr(label),style:const TextStyle(fontSize:10,fontWeight:FontWeight.w500,color:_C.inkLight,letterSpacing:0.3))]);}

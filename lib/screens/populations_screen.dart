@@ -1,5 +1,6 @@
 // lib/screens/populations_screen.dart
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:jidoapp/models/city_model.dart';
 import 'package:jidoapp/providers/city_provider.dart';
 import 'package:provider/provider.dart';
@@ -21,6 +22,7 @@ class PopulationsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Scaffold(
       body: Consumer<CityProvider>(
         builder: (context, provider, child) {
@@ -119,7 +121,7 @@ class PopulationsScreen extends StatelessWidget {
                     ),
                     const SizedBox(width: 12),
                     Text(
-                      'Population Distribution',
+                      tr('Population Distribution'),
                       style: Theme.of(context).textTheme.titleLarge?.copyWith(
                         fontWeight: FontWeight.bold,
                       ),
@@ -235,7 +237,7 @@ class PopulationsScreen extends StatelessWidget {
           ),
           const SizedBox(height: 12),
           Text(
-            title,
+            tr(title),
             style: Theme.of(context).textTheme.bodySmall?.copyWith(
               color: Colors.grey.shade700,
               fontWeight: FontWeight.w500,
@@ -244,7 +246,7 @@ class PopulationsScreen extends StatelessWidget {
           ),
           const SizedBox(height: 4),
           Text(
-            value,
+            tr(value),
             style: Theme.of(context).textTheme.headlineSmall?.copyWith(
               color: color.withOpacity(0.9),
               fontWeight: FontWeight.bold,
@@ -296,7 +298,7 @@ class PopulationsScreen extends StatelessWidget {
                 ),
               ),
               Text(
-                '$percentage%',
+                tr('$percentage%'),
                 style: Theme.of(context).textTheme.titleMedium?.copyWith(
                   fontWeight: FontWeight.bold,
                   color: color,
@@ -306,7 +308,7 @@ class PopulationsScreen extends StatelessWidget {
           ),
           const SizedBox(height: 8),
           Text(
-            label,
+            tr(label),
             style: Theme.of(context).textTheme.bodySmall?.copyWith(
               fontWeight: FontWeight.w600,
               color: Colors.grey.shade800,
@@ -314,7 +316,7 @@ class PopulationsScreen extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
           Text(
-            '($count)',
+            tr('($count)'),
             style: Theme.of(context).textTheme.bodySmall?.copyWith(
               color: Colors.grey.shade600,
               fontSize: 11,
@@ -329,11 +331,11 @@ class PopulationsScreen extends StatelessWidget {
   Widget _buildModern3DBarChart(List<int> counts, Color color, BuildContext context) {
     final maxCount = counts.isEmpty ? 1 : counts.reduce(max);
     if (maxCount == 0) {
-      return const SizedBox(
+      return  SizedBox(
         height: 80,
         child: Center(
           child: Text(
-            'No visited cities',
+            tr('No visited cities'),
             style: TextStyle(color: Colors.grey),
           ),
         ),
@@ -357,7 +359,7 @@ class PopulationsScreen extends StatelessWidget {
                 children: [
                   if (counts[index] > 0)
                     Text(
-                      '${counts[index]}',
+                      tr('${counts[index]}'),
                       style: TextStyle(
                         fontSize: 11,
                         fontWeight: FontWeight.bold,
@@ -390,7 +392,7 @@ class PopulationsScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 4),
                   Text(
-                    labels[index],
+                    tr(labels[index]),
                     style: TextStyle(
                       fontSize: 10,
                       fontWeight: FontWeight.w600,
@@ -463,6 +465,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final textTheme = Theme.of(context).textTheme;
     final compactFormatter = NumberFormat.compact();
     final topPopulation = _rankedList.isNotEmpty ? _rankedList.first.population : 1;
@@ -514,7 +517,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                               Icon(e[1] == 0 ? Icons.public_outlined : Icons.check_circle_outline,
                                   size: 15, color: active ? Colors.white : const Color(0xFFAAAAAA)),
                               const SizedBox(width: 6),
-                              Text(e[0] as String, style: TextStyle(
+                              Text(tr(e[0] as String), style: TextStyle(
                                 fontSize: 12, fontWeight: active ? FontWeight.w700 : FontWeight.w400,
                                 color: active ? Colors.white : const Color(0xFFAAAAAA),
                               )),
@@ -540,7 +543,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                         value: _selectedContinent,
                         icon: const Icon(Icons.keyboard_arrow_down_rounded, size: 16, color: Color(0xFF5C5C5C)),
                         style: const TextStyle(fontSize: 12, color: Color(0xFF141414), fontWeight: FontWeight.w600),
-                        items: _continents.map((v) => DropdownMenuItem(value: v, child: Text(v))).toList(),
+                        items: _continents.map((v) => DropdownMenuItem(value: v, child: Text(tr(v)))).toList(),
                         onChanged: (v) { if (v != null) { _selectedContinent = v; _onFilterChanged(); } },
                       ),
                     ),
@@ -554,7 +557,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
           // 🎨 랭킹 리스트
           Expanded(
             child: _rankedList.isEmpty
-                ? const Center(child: Text('No data to display.'))
+                ?  Center(child: Text(tr('No data to display.')))
                 : ListView.builder(
               padding: const EdgeInsets.all(8.0),
               itemCount: _rankedList.length > 100 ? 100 : _rankedList.length,
@@ -582,7 +585,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                     ),
                     child: Row(children: [
                       SizedBox(width: 28, child: Text(
-                        rank <= 3 ? (rank == 1 ? '🥇' : rank == 2 ? '🥈' : '🥉') : '$rank',
+                        tr(rank <= 3 ? (rank == 1 ? '🥇' : rank == 2 ? '🥈' : '🥉') : '$rank'),
                         style: TextStyle(fontSize: rank <= 3 ? 16 : 12, fontWeight: FontWeight.w700, color: const Color(0xFFAAAAAA)),
                         textAlign: TextAlign.center,
                       )),
@@ -595,7 +598,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                           ), overflow: TextOverflow.ellipsis)),
                           if (isVisited) ...[const SizedBox(width: 4), Icon(Icons.check_circle_rounded, size: 14, color: themeColor)],
                           const SizedBox(width: 6),
-                          Text(compactFormatter.format(city.population),
+                          Text(tr(compactFormatter.format(city.population)),
                               style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: Color(0xFF141414))),
                         ]),
                         const SizedBox(height: 5),
@@ -606,7 +609,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                           valueColor: AlwaysStoppedAnimation<Color>(barColor),
                         )),
                         const SizedBox(height: 3),
-                        Text(city.country, style: const TextStyle(fontSize: 10, color: Color(0xFFAAAAAA))),
+                        Text(tr(city.country), style: const TextStyle(fontSize: 10, color: Color(0xFFAAAAAA))),
                       ])),
                     ]),
                   ),

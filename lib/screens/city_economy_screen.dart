@@ -1,6 +1,7 @@
 // lib/screens/city_economy_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 import 'package:jidoapp/models/city_model.dart';
@@ -53,6 +54,7 @@ class CityEconomyScreen extends StatefulWidget {
 class _CityEconomyScreenState extends State<CityEconomyScreen> {
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Scaffold(
       body: Consumer<CityProvider>(
         builder: (context, cityProvider, child) {
@@ -184,6 +186,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final textTheme = Theme.of(context).textTheme;
     final compactFormatter = NumberFormat.compact(locale: 'en_US');
     final topValue = _rankedList.isNotEmpty
@@ -225,7 +228,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                           child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                             Icon(r.icon, size: 15, color: active ? Colors.white : const Color(0xFFAAAAAA)),
                             const SizedBox(width: 6),
-                            Text(r.title, style: TextStyle(
+                            Text(tr(r.title), style: TextStyle(
                               fontSize: 11, fontWeight: active ? FontWeight.w700 : FontWeight.w400,
                               color: active ? Colors.white : const Color(0xFFAAAAAA),
                             )),
@@ -253,7 +256,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                               borderRadius: BorderRadius.circular(7),
                               border: Border.all(color: active ? const Color(0xFF141414) : const Color(0xFFE8E8E4)),
                             ),
-                            child: Text(e[0] as String, textAlign: TextAlign.center, style: TextStyle(
+                            child: Text(tr(e[0] as String), textAlign: TextAlign.center, style: TextStyle(
                               fontSize: 11, fontWeight: active ? FontWeight.w700 : FontWeight.w400,
                               color: active ? Colors.white : const Color(0xFFAAAAAA),
                             )),
@@ -281,7 +284,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                               borderRadius: BorderRadius.circular(7),
                               border: Border.all(color: active ? const Color(0xFF141414) : const Color(0xFFE8E8E4)),
                             ),
-                            child: Text(e[0] as String, textAlign: TextAlign.center, style: TextStyle(
+                            child: Text(tr(e[0] as String), textAlign: TextAlign.center, style: TextStyle(
                               fontSize: 11, fontWeight: active ? FontWeight.w700 : FontWeight.w400,
                               color: active ? Colors.white : const Color(0xFFAAAAAA),
                             )),
@@ -307,7 +310,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                         value: _selectedContinent,
                         icon: const Icon(Icons.keyboard_arrow_down_rounded, size: 16, color: Color(0xFF5C5C5C)),
                         style: const TextStyle(fontSize: 12, color: Color(0xFF141414), fontWeight: FontWeight.w600),
-                        items: _continents.map((v) => DropdownMenuItem(value: v, child: Text(v))).toList(),
+                        items: _continents.map((v) => DropdownMenuItem(value: v, child: Text(tr(v)))).toList(),
                         onChanged: (v) { if (v != null) setState(() { _selectedContinent = v; _prepareList(); }); },
                       ),
                     ),
@@ -319,7 +322,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
           SizedBox(
             height: 600,
             child: _rankedList.isEmpty
-                ? const Center(child: Text('No data to display.'))
+                ?  Center(child: Text(tr('No data to display.')))
                 : ListView.builder(
               padding: const EdgeInsets.all(8.0),
               itemCount: _rankedList.length,
@@ -366,7 +369,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                     ),
                     child: Row(children: [
                       SizedBox(width: 28, child: Text(
-                        rank <= 3 ? (rank == 1 ? '🥇' : rank == 2 ? '🥈' : '🥉') : '$rank',
+                        tr(rank <= 3 ? (rank == 1 ? '🥇' : rank == 2 ? '🥈' : '🥉') : '$rank'),
                         style: TextStyle(fontSize: rank <= 3 ? 16 : 12, fontWeight: FontWeight.w700, color: const Color(0xFFAAAAAA)),
                         textAlign: TextAlign.center,
                       )),
@@ -379,7 +382,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                           ), overflow: TextOverflow.ellipsis)),
                           if (isVisited) ...[const SizedBox(width: 4), Icon(Icons.check_circle_rounded, size: 14, color: _selectedRanking.themeColor)],
                           const SizedBox(width: 6),
-                          Text('${_selectedRanking.unit}${compactFormatter.format(value)}',
+                          Text(tr('${_selectedRanking.unit}${compactFormatter.format(value)}'),
                               style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: Color(0xFF141414))),
                         ]),
                         const SizedBox(height: 5),
@@ -390,7 +393,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                           valueColor: AlwaysStoppedAnimation<Color>(barColor),
                         )),
                         const SizedBox(height: 3),
-                        Text(item is City ? (item as City).country : ((item as Map<String,dynamic>)['country'] ?? ''),
+                        Text(tr(item is City ? (item as City).country : ((item as Map<String,dynamic>)['country'] ?? '')),
                             style: const TextStyle(fontSize: 10, color: Color(0xFFAAAAAA))),
                       ])),
                     ]),

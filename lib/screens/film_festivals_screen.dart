@@ -1,6 +1,7 @@
 // lib/screens/film_festivals_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:collection/collection.dart';
 import 'package:country_flags/country_flags.dart';
@@ -26,6 +27,7 @@ class FilmFestivalsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final landmarksProvider = context.watch<LandmarksProvider>();
     final allLandmarks      = landmarksProvider.allLandmarks;
 
@@ -66,15 +68,15 @@ class FilmFestivalsScreen extends StatelessWidget {
                       const SizedBox(width: 14),
                       Expanded(
                         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                          Text('Film Festivals',
+                          Text(tr('Film Festivals'),
                               style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w600,
                                   color: Color(0xFF764BA2), letterSpacing: 0.6)),
                           const SizedBox(height: 3),
-                          const Text('Global Film Festivals',
+                           Text(tr('Global Film Festivals'),
                               style: TextStyle(fontSize: 22, fontWeight: FontWeight.w900,
                                   color: Color(0xFF111827), letterSpacing: -0.5, height: 1.1)),
                           const SizedBox(height: 4),
-                          Text('The "Big Five" film festivals', style: TextStyle(fontSize: 12, color: Colors.grey[500])),
+                          Text(tr('The "Big Five" film festivals'), style: TextStyle(fontSize: 12, color: Colors.grey[500])),
                         ]),
                       ),
                       const SizedBox(width: 12),
@@ -84,12 +86,12 @@ class FilmFestivalsScreen extends StatelessWidget {
                         final pct  = 5 > 0 ? seen / 5 : 0.0;
                         return Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.end, children: [
                           Row(mainAxisSize: MainAxisSize.min, children: [
-                            Text('$seen',
+                            Text(tr('$seen'),
                                 style: const TextStyle(fontSize: 26, fontWeight: FontWeight.w900,
                                     color: Color(0xFF764BA2), height: 1.0)),
                             Padding(
                               padding: const EdgeInsets.only(left: 3, top: 6),
-                              child: Text(' / 5',
+                              child: Text(tr(' / 5'),
                                   style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600,
                                       color: const Color(0xFF764BA2).withOpacity(0.45), height: 1.0)),
                             ),
@@ -133,7 +135,7 @@ class FilmFestivalsScreen extends StatelessWidget {
                       if (landmark != null) {
                         _showLandmarkDetailsModal(context, landmark, const Color(0xFF764BA2));
                       } else {
-                        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('$name details not found in database')));
+                        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(tr('$name details not found in database'))));
                       }
                     },
                     child: Container(
@@ -151,14 +153,14 @@ class FilmFestivalsScreen extends StatelessWidget {
                         ClipRRect(borderRadius: BorderRadius.circular(5),
                             child: SizedBox(width: 32, height: 24, child: CountryFlag.fromCountryCode(iso))),
                         const SizedBox(width: 16),
-                        Expanded(child: Text(name,
+                        Expanded(child: Text(tr(name),
                             style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Color(0xFF111827)),
                             overflow: TextOverflow.ellipsis)),
                         if (isVisited)
                           Container(
                               padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                               decoration: BoxDecoration(color: const Color(0xFF764BA2).withOpacity(0.12), borderRadius: BorderRadius.circular(12)),
-                              child: Text('Visited',
+                              child: Text(tr('Visited'),
                                   style: TextStyle(fontSize: 11, color: const Color(0xFF764BA2), fontWeight: FontWeight.w700)))
                         else
                           Container(width: 22, height: 22,
@@ -209,10 +211,10 @@ class FilmFestivalsScreen extends StatelessWidget {
                 child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                   Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                     TextButton(onPressed: () => Navigator.pop(sheetContext),
-                        child: Text('Cancel', style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600))),
+                        child: Text(tr('Cancel'), style: TextStyle(color: headerTextColor, fontWeight: FontWeight.w600))),
                     ElevatedButton(onPressed: () => Navigator.pop(sheetContext),
                         style: ElevatedButton.styleFrom(backgroundColor: headerTextColor),
-                        child: Text('Done', style: TextStyle(fontWeight: FontWeight.w600, color: themeColor))),
+                        child: Text(tr('Done'), style: TextStyle(fontWeight: FontWeight.w600, color: themeColor))),
                   ]),
                   const SizedBox(height: 12),
                   Row(children: [
@@ -224,7 +226,7 @@ class FilmFestivalsScreen extends StatelessWidget {
                   Row(children: [
                     Icon(Icons.location_on, size: 14, color: headerTextColor.withOpacity(0.8)),
                     const SizedBox(width: 4),
-                    Expanded(child: Text(locationDisplay,
+                    Expanded(child: Text(tr(locationDisplay),
                         style: Theme.of(sheetContext).textTheme.titleSmall?.copyWith(color: headerTextColor.withOpacity(0.8), fontWeight: FontWeight.normal))),
                   ]),
                 ])),
@@ -232,11 +234,11 @@ class FilmFestivalsScreen extends StatelessWidget {
               padding: const EdgeInsets.all(16.0),
               child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                 Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                  Row(mainAxisSize: MainAxisSize.min, children: [const Text('Wishlist:'),
+                  Row(mainAxisSize: MainAxisSize.min, children: [ Text(tr('Wishlist:')),
                     IconButton(visualDensity: VisualDensity.compact,
                         icon: Icon(isWishlisted ? Icons.favorite : Icons.favorite_border, color: isWishlisted ? Colors.red : Colors.grey),
                         onPressed: () => provider.toggleWishlistStatus(freshLandmark.name))]),
-                  Row(mainAxisSize: MainAxisSize.min, children: [const Text('My Rating:'), const SizedBox(width: 8),
+                  Row(mainAxisSize: MainAxisSize.min, children: [ Text(tr('My Rating:')), const SizedBox(width: 8),
                     RatingBar.builder(initialRating: freshLandmark.rating ?? 0.0, minRating: 0,
                         direction: Axis.horizontal, allowHalfRating: true, itemCount: 5, itemSize: 28.0,
                         itemBuilder: (context, _) => const Icon(Icons.star, color: Colors.amber),
@@ -244,8 +246,8 @@ class FilmFestivalsScreen extends StatelessWidget {
                 ]),
                 const Divider(height: 20),
                 Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                  Text('History (${freshLandmark.visitDates.length} entries)', style: Theme.of(sheetContext).textTheme.titleSmall),
-                  OutlinedButton.icon(icon: const Icon(Icons.add), label: const Text('Add Visit'),
+                  Text(tr('History (${freshLandmark.visitDates.length} entries)'), style: Theme.of(sheetContext).textTheme.titleSmall),
+                  OutlinedButton.icon(icon: const Icon(Icons.add), label:  Text(tr('Add Visit')),
                       onPressed: () => provider.addVisitDate(freshLandmark.name)),
                 ]),
                 const SizedBox(height: 8),
@@ -255,7 +257,7 @@ class FilmFestivalsScreen extends StatelessWidget {
                       landmarkName: freshLandmark.name, visitDate: entry.value, index: entry.key,
                       onDelete: () => provider.removeVisitDate(freshLandmark.name, entry.key),
                       availableLocations: freshLandmark.locations))
-                else const Center(child: Text('No visits recorded.')),
+                else  Center(child: Text(tr('No visits recorded.'))),
                 const Divider(height: 24),
                 LandmarkInfoCard(overview: freshLandmark.overview, historySignificance: freshLandmark.history_significance,
                     highlights: freshLandmark.highlights, themeColor: themeColor),
@@ -367,6 +369,7 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final themeColor = Theme.of(context).primaryColor;
     return Card(
       elevation: 1, margin: const EdgeInsets.symmetric(vertical: 4),
@@ -374,17 +377,17 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
       child: ExpansionTile(
         controller: _expansionTileController,
         initiallyExpanded: _isEditing,
-        title: Text(_displayTitle.isNotEmpty ? _displayTitle : 'Visit Record',
+        title: Text(tr(_displayTitle.isNotEmpty ? _displayTitle : 'Visit Record'),
             style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15)),
-        subtitle: Text('Date: $_year-$_month-$_day', style: TextStyle(color: Colors.grey[600], fontSize: 13)),
+        subtitle: Text(tr('Date: $_year-$_month-$_day'), style: TextStyle(color: Colors.grey[600], fontSize: 13)),
         trailing: IconButton(icon: const Icon(Icons.delete_outline, color: Colors.red, size: 22),
             onPressed: () => showDialog(context: context, builder: (ctx) => AlertDialog(
-              title: const Text('Delete Visit Record'),
-              content: const Text('Are you sure you want to delete this visit record?'),
+              title:  Text(tr('Delete Visit Record')),
+              content:  Text(tr('Are you sure you want to delete this visit record?')),
               actions: [
-                TextButton(onPressed: () => Navigator.pop(ctx), child: const Text('Cancel')),
+                TextButton(onPressed: () => Navigator.pop(ctx), child:  Text(tr('Cancel'))),
                 TextButton(onPressed: () { Navigator.pop(ctx); widget.onDelete(); },
-                    child: const Text('Delete', style: TextStyle(color: Colors.red))),
+                    child:  Text(tr('Delete'), style: TextStyle(color: Colors.red))),
               ],
             ))),
         children: [Container(
@@ -394,22 +397,22 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
           child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             if (_isEditing) ...[
               Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                Text('Visit Date: $_year-$_month-$_day', style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14)),
-                TextButton.icon(icon: const Icon(Icons.edit_calendar, size: 18), label: const Text('Edit Date'),
+                Text(tr('Visit Date: $_year-$_month-$_day'), style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14)),
+                TextButton.icon(icon: const Icon(Icons.edit_calendar, size: 18), label:  Text(tr('Edit Date')),
                     onPressed: () => _selectDate(context), style: TextButton.styleFrom(visualDensity: VisualDensity.compact)),
               ]),
               const SizedBox(height: 12),
               TextField(controller: _titleController,
-                  decoration: InputDecoration(labelText: 'Title', isDense: true, filled: true, fillColor: Colors.white,
+                  decoration: InputDecoration(labelText: tr('Title'), isDense: true, filled: true, fillColor: Colors.white,
                       border: OutlineInputBorder(borderRadius: BorderRadius.circular(8), borderSide: BorderSide.none))),
               const SizedBox(height: 12),
               TextField(controller: _memoController, maxLines: 3, minLines: 1,
-                  decoration: InputDecoration(labelText: 'Memo', isDense: true, filled: true, fillColor: Colors.white,
+                  decoration: InputDecoration(labelText: tr('Memo'), isDense: true, filled: true, fillColor: Colors.white,
                       border: OutlineInputBorder(borderRadius: BorderRadius.circular(8), borderSide: BorderSide.none))),
             ] else ...[
               if (_displayMemo.isNotEmpty)
                 Padding(padding: const EdgeInsets.only(bottom: 12),
-                    child: Text(_displayMemo, style: TextStyle(fontSize: 14, color: Colors.grey[800], height: 1.4))),
+                    child: Text(tr(_displayMemo), style: TextStyle(fontSize: 14, color: Colors.grey[800], height: 1.4))),
             ],
             const SizedBox(height: 12),
             if (_currentPhotos.isNotEmpty || _isEditing)
@@ -427,14 +430,14 @@ class _LandmarkVisitEditorCardState extends State<_LandmarkVisitEditorCard> {
             Row(mainAxisAlignment: MainAxisAlignment.end, children: [
               if (_isEditing) ...[
                 TextButton(onPressed: _cancelEditing,
-                    child: Text('Cancel', style: TextStyle(color: Colors.grey[700], fontWeight: FontWeight.w600))),
+                    child: Text(tr('Cancel'), style: TextStyle(color: Colors.grey[700], fontWeight: FontWeight.w600))),
                 const SizedBox(width: 8),
                 ElevatedButton.icon(onPressed: _saveChanges,
-                    icon: const Icon(Icons.save, size: 18), label: const Text('Save'),
+                    icon: const Icon(Icons.save, size: 18), label:  Text(tr('Save')),
                     style: ElevatedButton.styleFrom(backgroundColor: themeColor, foregroundColor: Colors.white, elevation: 0)),
               ] else ...[
                 OutlinedButton.icon(onPressed: () => setState(() => _isEditing = true),
-                    icon: const Icon(Icons.edit, size: 16), label: const Text('Edit Record'),
+                    icon: const Icon(Icons.edit, size: 16), label:  Text(tr('Edit Record')),
                     style: OutlinedButton.styleFrom(foregroundColor: themeColor, side: BorderSide(color: themeColor.withOpacity(0.5)))),
               ],
             ]),

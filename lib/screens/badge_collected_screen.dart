@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:jidoapp/models/badge_model.dart';
 import 'package:jidoapp/screens/badge_detail_screen.dart';
 import 'package:jidoapp/screens/badge_share.dart';
@@ -38,6 +39,7 @@ class _BadgeCollectedScreenState extends State<BadgeCollectedScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     // 뱃지 카테고리별 색상
     Color categoryColor;
     switch (widget.achievement.category) {
@@ -78,7 +80,7 @@ class _BadgeCollectedScreenState extends State<BadgeCollectedScreen> {
                 children: <Widget>[
                   // 상단 문구 (수정됨: 더 세련된 스타일 적용)
                   Text(
-                    "NEW BADGE UNLOCKED!",
+                    tr("NEW BADGE UNLOCKED!"),
                     style: TextStyle(
                       fontSize: 20, // 크기 키움
                       fontWeight: FontWeight.w900, // 두께를 더 굵게
@@ -121,7 +123,7 @@ class _BadgeCollectedScreenState extends State<BadgeCollectedScreen> {
                   ),
                   const SizedBox(height: 10),
                   Text(
-                    widget.achievement.description,
+                    tr(widget.achievement.description),
                     style: const TextStyle(fontSize: 14),
                     textAlign: TextAlign.center,
                   ),
@@ -144,8 +146,8 @@ class _BadgeCollectedScreenState extends State<BadgeCollectedScreen> {
                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
                         padding: const EdgeInsets.symmetric(vertical: 12),
                       ),
-                      child: const Text(
-                        "View Details",
+                      child:  Text(
+                        tr("View Details"),
                         style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                       ),
                     ),
@@ -168,8 +170,8 @@ class _BadgeCollectedScreenState extends State<BadgeCollectedScreen> {
                         child: CircularProgressIndicator(strokeWidth: 2, color: categoryColor),
                       )
                           : const Icon(Icons.share_rounded, size: 18),
-                      label: const Text(
-                        "Share My Badge",
+                      label:  Text(
+                        tr("Share My Badge"),
                         style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600),
                       ),
                     ),

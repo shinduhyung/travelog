@@ -1,6 +1,7 @@
 // lib/screens/top_picks_menu_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:jidoapp/providers/auth_provider.dart';
 import 'package:jidoapp/screens/login_prompt_screen.dart';
@@ -27,6 +28,7 @@ class TopPicksMenuScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Scaffold(
       backgroundColor: const Color(0xFFF8F9FA),
       body: SafeArea(
@@ -50,7 +52,7 @@ class TopPicksMenuScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Top Picks',
+                          tr('Top Picks'),
                           style: TextStyle(
                             fontSize: 32,
                             fontWeight: FontWeight.w800,
@@ -60,7 +62,7 @@ class TopPicksMenuScreen extends StatelessWidget {
                         ),
                         const SizedBox(height: 4),
                         Text(
-                          'Explore the world\'s finest landmarks',
+                          tr('Explore the world\'s finest landmarks'),
                           style: TextStyle(
                             fontSize: 15,
                             color: Colors.grey.shade600,
@@ -158,7 +160,7 @@ class TopPicksMenuScreen extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 24),
                     child: Text(
-                      'Cultural Wonders',
+                      tr('Cultural Wonders'),
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.w700,
@@ -331,7 +333,7 @@ class TopPicksMenuScreen extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 24),
                     child: Text(
-                      'Natural Wonders',
+                      tr('Natural Wonders'),
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.w700,
@@ -553,11 +555,11 @@ class TopPicksMenuScreen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(width: 14),
-                  const Column(
+                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Global Top Attractions',
+                        tr('Global Top Attractions'),
                         style: TextStyle(
                           fontSize: 19,
                           fontWeight: FontWeight.w800,
@@ -566,7 +568,7 @@ class TopPicksMenuScreen extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        'World\'s Most Iconic',
+                        tr('World\'s Most Iconic'),
                         style: TextStyle(
                           fontSize: 13,
                           color: Colors.white70,
@@ -584,7 +586,7 @@ class TopPicksMenuScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          '$visited / $total',
+                          tr('$visited / $total'),
                           style: const TextStyle(
                             fontSize: 28,
                             fontWeight: FontWeight.w800,
@@ -624,7 +626,7 @@ class TopPicksMenuScreen extends StatelessWidget {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         Text(
-                          '${(progress * 100).toStringAsFixed(0)}%',
+                          tr('${(progress * 100).toStringAsFixed(0)}%'),
                           style: const TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.w800,
@@ -710,7 +712,7 @@ class TopPicksMenuScreen extends StatelessWidget {
               ),
               const SizedBox(height: 10),
               Text(
-                title,
+                tr(title),
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 13,
@@ -805,7 +807,7 @@ class TopPicksMenuScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      title,
+                      tr(title),
                       style: TextStyle(
                         fontSize: 15,
                         fontWeight: FontWeight.w700,
@@ -814,7 +816,7 @@ class TopPicksMenuScreen extends StatelessWidget {
                     ),
                     const SizedBox(height: 2),
                     Text(
-                      '$visited of $total',
+                      tr('$visited of $total'),
                       style: TextStyle(
                         fontSize: 13,
                         color: Colors.grey.shade500,
@@ -829,7 +831,7 @@ class TopPicksMenuScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   Text(
-                    '${(progress * 100).toStringAsFixed(0)}%',
+                    tr('${(progress * 100).toStringAsFixed(0)}%'),
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w800,

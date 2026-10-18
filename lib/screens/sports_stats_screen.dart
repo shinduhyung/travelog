@@ -1,9 +1,10 @@
 // lib/screens/sports_stats_screen.dart
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart'; // rootBundle을 위해 추가
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'dart:convert'; // json.decode를 위해 추가
 import 'package:provider/provider.dart';
+import 'package:jidoapp/services/statistics_repository.dart';
 import 'package:jidoapp/models/country_model.dart';
 import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/screens/countries_map_screen.dart';
@@ -88,6 +89,7 @@ class SportsTabScreen extends StatefulWidget {
 class _SportsTabScreenState extends State<SportsTabScreen> {
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return SingleChildScrollView(
       padding: const EdgeInsets.all(16.0),
       child: Column(
@@ -123,6 +125,7 @@ class SportsStatsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Consumer<CountryProvider>(
       builder: (context, countryProvider, child) {
         if (countryProvider.isLoading) {
@@ -232,7 +235,7 @@ class _OlympicsRankingCardState extends State<_OlympicsRankingCard> {
 
   Widget _buildRankText(int rank, Color color) {
     return Text(
-      '$rank',
+      tr('$rank'),
       style: TextStyle(
         fontSize: 16,
         fontWeight: FontWeight.bold,
@@ -243,6 +246,7 @@ class _OlympicsRankingCardState extends State<_OlympicsRankingCard> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final textTheme = Theme.of(context).textTheme;
     final countryProvider = Provider.of<CountryProvider>(context, listen: false);
     final useDefaultColor = countryProvider.useDefaultRankingBarColor;
@@ -274,7 +278,7 @@ class _OlympicsRankingCardState extends State<_OlympicsRankingCard> {
                   children: [
                     Icon(Icons.emoji_events, color: olympicColor),
                     const SizedBox(width: 8),
-                    Text('Olympic Games', style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
+                    Text(tr('Olympic Games'), style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
                   ],
                 ),
                 const SizedBox(height: 8),
@@ -297,7 +301,7 @@ class _OlympicsRankingCardState extends State<_OlympicsRankingCard> {
                               child: Row(children: [
                                 Icon(Icons.wb_sunny, color: Colors.amber.shade700),
                                 const SizedBox(width: 8),
-                                Text('Summer Olympics', style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
+                                Text(tr('Summer Olympics'), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
                               ]),
                             ),
                             DropdownMenuItem<int>(
@@ -305,7 +309,7 @@ class _OlympicsRankingCardState extends State<_OlympicsRankingCard> {
                               child: Row(children: [
                                 Icon(Icons.ac_unit, color: Colors.lightBlue.shade700),
                                 const SizedBox(width: 8),
-                                Text('Winter Olympics', style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
+                                Text(tr('Winter Olympics'), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
                               ]),
                             ),
                           ],
@@ -329,7 +333,7 @@ class _OlympicsRankingCardState extends State<_OlympicsRankingCard> {
                           value: _selectedContinent,
                           isExpanded: true,
                           icon: Icon(Icons.arrow_drop_down, color: olympicColor),
-                          items: _continents.map((String value) => DropdownMenuItem<String>(value: value, child: Text(value, style: const TextStyle(fontSize: 14), overflow: TextOverflow.ellipsis,))).toList(),
+                          items: _continents.map((String value) => DropdownMenuItem<String>(value: value, child: Text(tr(value), style: const TextStyle(fontSize: 14), overflow: TextOverflow.ellipsis,))).toList(),
                           onChanged: (String? newValue) {
                             setState(() {
                               _selectedContinent = newValue!;
@@ -352,9 +356,9 @@ class _OlympicsRankingCardState extends State<_OlympicsRankingCard> {
                           value: _medalTypeSegment,
                           isExpanded: true,
                           icon: Icon(Icons.arrow_drop_down, color: olympicColor),
-                          items: const [
-                            DropdownMenuItem(value: 0, child: Text('Gold Medals')),
-                            DropdownMenuItem(value: 1, child: Text('Total Medals')),
+                          items:  [
+                            DropdownMenuItem(value: 0, child: Text(tr('Gold Medals'))),
+                            DropdownMenuItem(value: 1, child: Text(tr('Total Medals'))),
                           ],
                           onChanged: (val) {
                             if (val != null) {
@@ -375,9 +379,9 @@ class _OlympicsRankingCardState extends State<_OlympicsRankingCard> {
                           value: _displaySegment,
                           isExpanded: true,
                           icon: Icon(Icons.arrow_drop_down, color: olympicColor),
-                          items: const [
-                            DropdownMenuItem(value: 0, child: Text('All Countries')),
-                            DropdownMenuItem(value: 1, child: Text('Visited Only')),
+                          items:  [
+                            DropdownMenuItem(value: 0, child: Text(tr('All Countries'))),
+                            DropdownMenuItem(value: 1, child: Text(tr('Visited Only'))),
                           ],
                           onChanged: (val) {
                             if (val != null) {
@@ -398,7 +402,7 @@ class _OlympicsRankingCardState extends State<_OlympicsRankingCard> {
           const Divider(height: 1),
           Expanded(
             child: _rankedList.isEmpty
-                ? const Center(child: Text('No data to display.'))
+                ?  Center(child: Text(tr('No data to display.')))
                 : ListView.builder(
               padding: const EdgeInsets.all(8.0),
               itemCount: _rankedList.length,
@@ -428,11 +432,11 @@ class _OlympicsRankingCardState extends State<_OlympicsRankingCard> {
                             children: [
                               _buildRankText(rank, olympicColor),
                               const SizedBox(width: 8),
-                              Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 18)),
+                              Text(tr(flagEmoji(country.isoA2)), style: const TextStyle(fontSize: 18)),
                               const SizedBox(width: 6),
-                              Expanded(child: Text(country.name, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold, fontSize: 17))),
+                              Expanded(child: Text(tr(country.name), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold, fontSize: 17))),
                               const SizedBox(width: 8),
-                              Text(medalValue.toString(), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
+                              Text(tr(medalValue.toString()), style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
                             ],
                           ),
                           const SizedBox(height: 6),
@@ -548,6 +552,7 @@ class _CombinedSportsAchievementCardState extends State<_CombinedSportsAchieveme
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final theme = Theme.of(context);
     final textTheme = theme.textTheme;
 
@@ -591,7 +596,7 @@ class _CombinedSportsAchievementCardState extends State<_CombinedSportsAchieveme
                   child: Row(
                     children: [
                       Icon(group.icon, color: group.themeColor), const SizedBox(width: 12),
-                      Text(group.title, style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
+                      Text(tr(group.title), style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
                     ],
                   ),
                 )).toList(),
@@ -613,11 +618,11 @@ class _CombinedSportsAchievementCardState extends State<_CombinedSportsAchieveme
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text("Visited Entities", style: textTheme.bodyLarge),
+                            Text(tr("Visited Entities"), style: textTheme.bodyLarge),
                             Text.rich(TextSpan(
-                              text: '$visited',
+                              text: tr('$visited'),
                               style: textTheme.headlineSmall?.copyWith(color: _selectedGroup.themeColor, fontWeight: FontWeight.bold),
-                              children: [TextSpan(text: ' / $total', style: textTheme.titleMedium?.copyWith(color: Colors.grey.shade600))],
+                              children: [TextSpan(text: tr(' / $total'), style: textTheme.titleMedium?.copyWith(color: Colors.grey.shade600))],
                             )),
                           ],
                         ),
@@ -633,7 +638,7 @@ class _CombinedSportsAchievementCardState extends State<_CombinedSportsAchieveme
                             Navigator.push(context, MaterialPageRoute(builder: (context) => CountriesMapScreen(highlightGroups: groups)));
                           },
                           icon: const Icon(Icons.map_outlined),
-                          label: const Text('Map'),
+                          label:  Text(tr('Map')),
                           style: ElevatedButton.styleFrom(backgroundColor: _selectedGroup.themeColor, foregroundColor: Colors.white, shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30))),
                         ),
                       ],
@@ -689,8 +694,8 @@ class _CombinedSportsAchievementCardState extends State<_CombinedSportsAchieveme
                           children: [
                             Icon(isVisited ? Icons.check_circle : Icons.radio_button_unchecked, size: 20, color: isVisited ? _selectedGroup.themeColor : Colors.grey.shade400),
                             const SizedBox(width: 6),
-                            if (flag.isNotEmpty) ...[Text(flag, style: const TextStyle(fontSize: 14)), const SizedBox(width: 4)],
-                            Expanded(child: Text('${entry.displayName} $marker', style: textTheme.bodyMedium, overflow: TextOverflow.ellipsis)),
+                            if (flag.isNotEmpty) ...[Text(tr(flag), style: const TextStyle(fontSize: 14)), const SizedBox(width: 4)],
+                            Expanded(child: Text(tr('${entry.displayName} $marker'), style: textTheme.bodyMedium, overflow: TextOverflow.ellipsis)),
                           ],
                         ),
                       );
@@ -703,8 +708,8 @@ class _CombinedSportsAchievementCardState extends State<_CombinedSportsAchieveme
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text("(*) Winter Only Host", style: textTheme.bodySmall?.copyWith(color: Colors.grey.shade600)),
-                        Text("(**) Both Summer & Winter Host", style: textTheme.bodySmall?.copyWith(color: Colors.grey.shade600)),
+                        Text(tr("(*) Winter Only Host"), style: textTheme.bodySmall?.copyWith(color: Colors.grey.shade600)),
+                        Text(tr("(**) Both Summer & Winter Host"), style: textTheme.bodySmall?.copyWith(color: Colors.grey.shade600)),
                       ],
                     ),
                   ),
@@ -750,7 +755,7 @@ class _MostPopularSportSectionState extends State<_MostPopularSportSection> {
 
   Future<void> _loadSportsData() async {
     try {
-      final String response = await rootBundle.loadString('assets/sports.json');
+      final String response = await StatisticsRepository.instance.loadLegacyString('assets/sports.json');
       final List<dynamic> data = json.decode(response);
       setState(() {
         _sportsData = { for (var item in data) item['iso_a3'] as String: (item['sports'] as String == 'Soccer' ? 'Football (Soccer)' : item['sports'] as String) };
@@ -772,6 +777,7 @@ class _MostPopularSportSectionState extends State<_MostPopularSportSection> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     if (_isLoadingSportsData) {
       return const Center(child: CircularProgressIndicator());
     }
@@ -820,8 +826,8 @@ class _MostPopularSportSectionState extends State<_MostPopularSportSection> {
                 padding: const EdgeInsets.symmetric(vertical: 8),
               ),
               icon: const Icon(Icons.sports_soccer, color: Colors.white, size: 20),
-              label: const Text(
-                'Most Popular Sports Map',
+              label:  Text(
+                tr('Most Popular Sports Map'),
                 style: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w600,
@@ -909,6 +915,7 @@ class _SportTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final theme = Theme.of(context);
     final total = countries.length;
     final visited = countries.where((c) => visitedNames.contains(c.name)).length;
@@ -942,7 +949,7 @@ class _SportTile extends StatelessWidget {
                     children: [
                       Expanded(
                         child: Text(
-                          title,
+                          tr(title),
                           style: theme.textTheme.titleMedium?.copyWith(
                             fontWeight: isExpanded ? FontWeight.w900 : FontWeight.bold,
                             fontSize: 16,
@@ -952,7 +959,7 @@ class _SportTile extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        '${(percentage * 100).toStringAsFixed(0)}%',
+                        tr('${(percentage * 100).toStringAsFixed(0)}%'),
                         style: theme.textTheme.titleMedium?.copyWith(
                           fontWeight: FontWeight.w800,
                           fontSize: 16,
@@ -979,7 +986,7 @@ class _SportTile extends StatelessWidget {
                       ),
                       const SizedBox(width: 12),
                       Text(
-                        '$visited / $total Countries',
+                        tr('$visited / $total Countries'),
                         style: theme.textTheme.bodyMedium?.copyWith(
                           color: Colors.grey.shade600,
                           fontWeight: FontWeight.w500,
@@ -1029,11 +1036,11 @@ class _SportTile extends StatelessWidget {
                                 color: isVisited ? color : Colors.grey,
                               ),
                               const SizedBox(width: 4),
-                              Text(flagEmoji(country.isoA2), style: const TextStyle(fontSize: 14)),
+                              Text(tr(flagEmoji(country.isoA2)), style: const TextStyle(fontSize: 14)),
                               const SizedBox(width: 4),
                               Expanded(
                                 child: Text(
-                                  country.name,
+                                  tr(country.name),
                                   style: theme.textTheme.bodyMedium,
                                   overflow: TextOverflow.ellipsis,
                                 ),

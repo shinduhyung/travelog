@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:jidoapp/models/city_model.dart';
 import 'package:jidoapp/providers/city_provider.dart';
@@ -130,7 +131,7 @@ class _TopCitiesScreenState extends State<TopCitiesScreen> {
                   ),
                   const SizedBox(width: 10),
                   Text(
-                    "Major Cities",
+                    tr("Major Cities"),
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
@@ -157,14 +158,14 @@ class _TopCitiesScreenState extends State<TopCitiesScreen> {
                       fontWeight: FontWeight.w600,
                       color: Colors.grey.shade800,
                     ),
-                    items: const [
+                    items:  [
                       DropdownMenuItem(
                         value: false,
-                        child: Text("Capital Cities"),
+                        child: Text(tr("Capital Cities")),
                       ),
                       DropdownMenuItem(
                         value: true,
-                        child: Text("Largest Cities"),
+                        child: Text(tr("Largest Cities")),
                       ),
                     ],
                     onChanged: (val) {
@@ -188,7 +189,7 @@ class _TopCitiesScreenState extends State<TopCitiesScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "$percentage%",
+                    tr("$percentage%"),
                     style: TextStyle(
                       fontSize: 36,
                       fontWeight: FontWeight.w800,
@@ -198,7 +199,7 @@ class _TopCitiesScreenState extends State<TopCitiesScreen> {
                   ),
                   const SizedBox(height: 4),
                   Text(
-                    'Visited $visited of $total',
+                    tr('Visited $visited of $total'),
                     style: TextStyle(
                       fontSize: 14,
                       color: Colors.grey.shade500,
@@ -228,11 +229,11 @@ class _TopCitiesScreenState extends State<TopCitiesScreen> {
                       ),
                     ],
                   ),
-                  child: const Row(
+                  child:  Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       Text(
-                        "View Map",
+                        tr("View Map"),
                         style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
@@ -300,14 +301,14 @@ class _TopCitiesScreenState extends State<TopCitiesScreen> {
                   ),
                   const SizedBox(height: 6),
                   Text(
-                    '${(cPercent * 100).toStringAsFixed(0)}%',
+                    tr('${(cPercent * 100).toStringAsFixed(0)}%'),
                     style: const TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                   Text(
-                    '$cVisited / $cTotal',
+                    tr('$cVisited / $cTotal'),
                     style: TextStyle(fontSize: 10, color: Colors.grey.shade400),
                   ),
                   const SizedBox(height: 6),
@@ -340,6 +341,7 @@ class _TopCitiesScreenState extends State<TopCitiesScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     return Theme(
       data: ThemeData.from(
         colorScheme: ColorScheme.fromSwatch(
@@ -407,9 +409,9 @@ class _TopCitiesScreenState extends State<TopCitiesScreen> {
                                       ),
                                     ),
                                     const SizedBox(width: 10),
-                                    const Expanded(
+                                     Expanded(
                                       child: Text(
-                                        'Global Top Cities',
+                                        tr('Global Top Cities'),
                                         style: TextStyle(
                                           fontSize: 24,
                                           fontWeight: FontWeight.w900,
@@ -427,7 +429,7 @@ class _TopCitiesScreenState extends State<TopCitiesScreen> {
                                 Padding(
                                   padding: const EdgeInsets.only(left: 44),
                                   child: Text(
-                                    'GaWC Global City Rankings',
+                                    tr('GaWC Global City Rankings'),
                                     style: TextStyle(
                                       fontSize: 13,
                                       fontWeight: FontWeight.w500,
@@ -472,8 +474,8 @@ class _TopCitiesScreenState extends State<TopCitiesScreen> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text('Visited', style: TextStyle(fontSize: 11, fontWeight: FontWeight.w600, color: Colors.grey.shade500)),
-                              Text('$visitedGawcCount / $totalGawcCount', style: TextStyle(fontSize: 11, fontWeight: FontWeight.w700, color: Colors.grey.shade700)),
+                              Text(tr('Visited'), style: TextStyle(fontSize: 11, fontWeight: FontWeight.w600, color: Colors.grey.shade500)),
+                              Text(tr('$visitedGawcCount / $totalGawcCount'), style: TextStyle(fontSize: 11, fontWeight: FontWeight.w700, color: Colors.grey.shade700)),
                             ],
                           ),
                           const SizedBox(height: 6),
@@ -560,12 +562,12 @@ class _TopCitiesScreenState extends State<TopCitiesScreen> {
                                       ),
                                     ),
                                     const SizedBox(width: 14),
-                                    const Expanded(
+                                     Expanded(
                                       child: Column(
                                         crossAxisAlignment: CrossAxisAlignment.start,
                                         children: [
                                           Text(
-                                            'Iconic Cities',
+                                            tr('Iconic Cities'),
                                             style: TextStyle(
                                               fontSize: 16,
                                               fontWeight: FontWeight.w900,
@@ -576,7 +578,7 @@ class _TopCitiesScreenState extends State<TopCitiesScreen> {
                                           ),
                                           SizedBox(height: 3),
                                           Text(
-                                            '40 cities · 7 landmarks each',
+                                            tr('40 cities · 7 landmarks each'),
                                             style: TextStyle(
                                               fontSize: 12,
                                               color: Color(0xFF9CA3AF),
@@ -720,7 +722,7 @@ class _GaWCRankingListState extends State<_GaWCRankingList> {
       child: Row(
         children: [
           Text(
-            _getFlagEmoji(city.countryIsoA2),
+            tr(_getFlagEmoji(city.countryIsoA2)),
             style: const TextStyle(fontSize: 20),
           ),
           const SizedBox(width: 12),
@@ -739,7 +741,7 @@ class _GaWCRankingListState extends State<_GaWCRankingList> {
                 ),
                 if (city.countryIsoA2.isNotEmpty)
                   Text(
-                    city.country,
+                    tr(city.country),
                     style: TextStyle(
                       fontSize: 12,
                       color: Colors.grey[500],
@@ -774,6 +776,7 @@ class _GaWCRankingListState extends State<_GaWCRankingList> {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final countryProvider = Provider.of<CountryProvider>(context);
 
     final Map<String, List<City>> groupedByTier = {};
@@ -830,7 +833,7 @@ class _GaWCRankingListState extends State<_GaWCRankingList> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              tierName,
+                              tr(tierName),
                               style: TextStyle(
                                 fontSize: 18,
                                 fontWeight: FontWeight.w800,
@@ -840,7 +843,7 @@ class _GaWCRankingListState extends State<_GaWCRankingList> {
                             ),
                             const SizedBox(height: 4),
                             Text(
-                                '$total Cities',
+                                tr('$total Cities'),
                                 style: TextStyle(
                                   fontSize: 14,
                                   color: Colors.grey.shade500,
@@ -855,7 +858,7 @@ class _GaWCRankingListState extends State<_GaWCRankingList> {
                         crossAxisAlignment: CrossAxisAlignment.end,
                         children: [
                           Text(
-                              '${(percentage * 100).toStringAsFixed(0)}%',
+                              tr('${(percentage * 100).toStringAsFixed(0)}%'),
                               style: TextStyle(
                                 fontSize: 18,
                                 fontWeight: FontWeight.w800,
@@ -1014,7 +1017,7 @@ class _GaWCRankingListState extends State<_GaWCRankingList> {
                                 Row(
                                   children: [
                                     Text(
-                                      _getFlagEmoji(city.countryIsoA2),
+                                      tr(_getFlagEmoji(city.countryIsoA2)),
                                       style: const TextStyle(fontSize: 16),
                                     ),
                                     const SizedBox(width: 6),
@@ -1067,6 +1070,7 @@ class _IconicStatBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Localizations.maybeLocaleOf(context);
     final pct = (ratio * 100).toStringAsFixed(0);
 
     return Column(
@@ -1076,7 +1080,7 @@ class _IconicStatBar extends StatelessWidget {
           children: [
             Expanded(
               child: Text(
-                label,
+                tr(label),
                 style: TextStyle(
                   fontSize: 12,
                   fontWeight: FontWeight.w600,
@@ -1085,7 +1089,7 @@ class _IconicStatBar extends StatelessWidget {
               ),
             ),
             Text(
-              '$value',
+              tr('$value'),
               style: TextStyle(
                 fontSize: 14,
                 fontWeight: FontWeight.w900,
@@ -1093,7 +1097,7 @@ class _IconicStatBar extends StatelessWidget {
               ),
             ),
             Text(
-              '  $pct%',
+              tr('  $pct%'),
               style: TextStyle(
                 fontSize: 12,
                 fontWeight: FontWeight.w600,

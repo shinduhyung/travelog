@@ -1,12 +1,142 @@
-[
-  {"name": "Copenhagen", "country": "Denmark", "liveability": "98.0", "continent": "Europe"},
-  {"name": "Vienna", "country": "Austria", "liveability": "97.1", "continent": "Europe"},
-  {"name": "Zurich", "country": "Switzerland", "liveability": "97.1", "continent": "Europe"},
-  {"name": "Melbourne", "country": "Australia", "liveability": "97.0", "continent": "Oceania"},
-  {"name": "Geneva", "country": "Switzerland", "liveability": "96.8", "continent": "Europe"},
-  {"name": "Sydney", "country": "Australia", "liveability": "96.6", "continent": "Oceania"},
-  {"name": "Osaka", "country": "Japan", "liveability": "96.0", "continent": "Asia"},
-  {"name": "Auckland", "country": "New Zealand", "liveability": "96.0", "continent": "Oceania"},
-  {"name": "Adelaide", "country": "Australia", "liveability": "95.9", "continent": "Oceania"},
-  {"name": "Vancouver", "country": "Canada", "liveability": "95.8", "continent": "North America"}
-]
+{
+  "schema_version": 1,
+  "dataset_id": "liveability",
+  "metadata": {
+    "source_url": null,
+    "reference_period": null,
+    "updated_at": null
+  },
+  "legacy_layout": "list",
+  "tables": [
+    {
+      "id": "main",
+      "metadata": {
+        "source_url": null,
+        "reference_period": null,
+        "updated_at": null
+      },
+      "dimensions": [
+        "name",
+        "country"
+      ],
+      "metrics": [
+        {
+          "id": "liveability",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        },
+        {
+          "id": "continent",
+          "unit": null,
+          "source_url": null,
+          "reference_period": null,
+          "updated_at": null
+        }
+      ],
+      "records": [
+        {
+          "dimensions": {
+            "name": "Copenhagen",
+            "country": "Denmark"
+          },
+          "values": {
+            "liveability": "98.0",
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Vienna",
+            "country": "Austria"
+          },
+          "values": {
+            "liveability": "97.1",
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Zurich",
+            "country": "Switzerland"
+          },
+          "values": {
+            "liveability": "97.1",
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Melbourne",
+            "country": "Australia"
+          },
+          "values": {
+            "liveability": "97.0",
+            "continent": "Oceania"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Geneva",
+            "country": "Switzerland"
+          },
+          "values": {
+            "liveability": "96.8",
+            "continent": "Europe"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Sydney",
+            "country": "Australia"
+          },
+          "values": {
+            "liveability": "96.6",
+            "continent": "Oceania"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Osaka",
+            "country": "Japan"
+          },
+          "values": {
+            "liveability": "96.0",
+            "continent": "Asia"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Auckland",
+            "country": "New Zealand"
+          },
+          "values": {
+            "liveability": "96.0",
+            "continent": "Oceania"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Adelaide",
+            "country": "Australia"
+          },
+          "values": {
+            "liveability": "95.9",
+            "continent": "Oceania"
+          }
+        },
+        {
+          "dimensions": {
+            "name": "Vancouver",
+            "country": "Canada"
+          },
+          "values": {
+            "liveability": "95.8",
+            "continent": "North America"
+          }
+        }
+      ]
+    }
+  ]
+}
