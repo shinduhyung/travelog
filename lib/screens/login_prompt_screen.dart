@@ -1,6 +1,7 @@
 // lib/screens/login_prompt_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/services/screen_tracking.dart';
 import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:jidoapp/services/ad_service.dart';
 import 'package:provider/provider.dart';
@@ -36,7 +37,9 @@ class _LoginPromptScreenState extends State<LoginPromptScreen> {
     // 모달 환경 등에서 높이가 0으로 잡힐 때를 대비한 최소 여백(40) 확보
     final double safeTopPadding = statusBarHeight > 0 ? statusBarHeight : 40.0;
 
-    return Scaffold(
+    return AnalyticsScreen(
+      name: 'login_prompt',
+      child: Scaffold(
       backgroundColor: Colors.white,
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -194,6 +197,7 @@ class _LoginPromptScreenState extends State<LoginPromptScreen> {
             ),
           ),
         ],
+      ),
       ),
     );
   }

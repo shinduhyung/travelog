@@ -1,6 +1,7 @@
 // lib/screens/specials_stats_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/services/screen_tracking.dart';
 import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter/foundation.dart';
 import 'package:jidoapp/models/country_model.dart';
@@ -165,7 +166,8 @@ class SpecialsStatsScreen extends StatelessWidget {
                 ),
               ),
               Expanded(
-                child: TabBarView(
+                child: AnalyticsTabBarView(
+                  names: ['specials_stats', 'sports_stats'],
                   children: screens,
                 ),
               ),

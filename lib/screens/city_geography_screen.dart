@@ -1,6 +1,7 @@
 // lib/screens/city_geography_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/services/screen_tracking.dart';
 import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:jidoapp/models/city_model.dart';
 import 'package:jidoapp/providers/city_provider.dart';
@@ -148,7 +149,8 @@ class CityGeographyStatsScreen extends StatelessWidget {
         child: Scaffold(
           backgroundColor: _GT.bg,
           appBar: _GeoAppBar(),
-          body: const TabBarView(
+          body: const AnalyticsTabBarView(
+            names: ['city_geography', 'city_climate'],
             children: [
               CityGeographyTabScreen(),
               CityClimateTabScreen(),

@@ -1,4 +1,6 @@
 import 'dart:async';
+import 'package:jidoapp/services/screen_tracking.dart';
+import 'package:jidoapp/services/screen_registry.dart';
 import 'dart:ui';
 import 'dart:convert';
 import 'dart:io' show Platform;
@@ -406,6 +408,7 @@ void main() {
       }
 
       debugPrint('🟢 [DEBUG] 16) runApp 직전 — 여기까지 왔으면 초기화 단계는 전부 통과');
+      ScreenTracking.instance.start();
       runApp(const JidoRoot());
       debugPrint('🟢 [DEBUG] 17) runApp 호출 완료');
     },
@@ -1010,16 +1013,22 @@ class _WidgetUpdateWrapperState extends State<WidgetUpdateWrapper> {
     }
 
     if (_showWelcome) {
-      return WelcomeScreen(
-        onStartTutorial: () {
-          setState(() => _showWelcome = false);
-          setState(() => _showTutorial = true);
-        },
+      return AnalyticsScreen(
+        name: 'welcome',
+        child: WelcomeScreen(
+          onStartTutorial: () {
+            setState(() => _showWelcome = false);
+            setState(() => _showTutorial = true);
+          },
+        ),
       );
     }
 
     if (_showTutorial == true) {
-      return OnboardingTutorialScreen(onComplete: _completeTutorial);
+      return AnalyticsScreen(
+        name: 'onboarding_tutorial',
+        child: OnboardingTutorialScreen(onComplete: _completeTutorial),
+      );
     }
 
     final countryProvider = context.watch<CountryProvider>();
@@ -1118,7 +1127,11 @@ Widget _buildAppShell(Widget home, {GlobalKey<NavigatorState>? navKey}) {
         FlutterQuillLocalizations.delegate,
       ],
       navigatorKey: navKey,
-      navigatorObservers: [_appNavObserver, AdNavigatorObserver()],
+      navigatorObservers: [
+        _appNavObserver,
+        AdNavigatorObserver(),
+        ScreenTrackingObserver(resolve: screenNameForWidget),
+      ],
       title: 'Travelog',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
@@ -1283,7 +1296,10 @@ class _BadgeGlobalListenerState extends State<BadgeGlobalListener> {
         showDialog(
           context: overlayContext,
           barrierDismissible: false,
-          builder: (ctx) => RankCollectedScreen(rankName: rankName),
+          builder: (ctx) => AnalyticsScreen(
+            name: 'rank_collected',
+            child: RankCollectedScreen(rankName: rankName),
+          ),
         ).then((_) {
           debugPrint('🏆 [BADGE DEBUG] rank unlock dialog CLOSED: $rankName');
           if (mounted) {
@@ -1322,7 +1338,10 @@ class _BadgeGlobalListenerState extends State<BadgeGlobalListener> {
           barrierDismissible: false,
           builder: (ctx) {
             debugPrint('🏅 [BADGE DEBUG] BadgeCollectedScreen builder called');
-            return BadgeCollectedScreen(achievement: newBadge);
+            return AnalyticsScreen(
+              name: 'badge_collected',
+              child: BadgeCollectedScreen(achievement: newBadge),
+            );
           },
         ).then((_) async {
           debugPrint('🏅 [BADGE DEBUG] BadgeCollectedScreen CLOSED');

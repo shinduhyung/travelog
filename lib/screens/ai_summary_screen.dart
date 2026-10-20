@@ -1,5 +1,6 @@
 // lib/screens/ai_summary_screen.dart
 import 'package:flutter/material.dart';
+import 'package:jidoapp/services/screen_tracking.dart';
 import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter/services.dart'; // 👈 이 줄을 추가하세요.
 import 'package:jidoapp/screens/ai_itinerary_view.dart'; // 👈 이 줄 추가
@@ -1694,14 +1695,18 @@ class _AiSummaryScreenState extends State<AiSummaryScreen> {
 
           // ⭐ 핵심: 아래 Expanded 부분에서 _buildItineraryView() 대신 AiItineraryView 사용
           Expanded(
-            child: _currentView == _AiViewMode.summary
-                ? _buildSummaryView() // Summary 탭
-                : AiItineraryView(    // Itinerary 탭
-              title: widget.entry.title,
-              entryId: widget.entry.id,
-              sourceType: ItinerarySourceType.tripLog,
-              // 캘린더에서 온 게 아니므로 처음 페이지부터 시작
-              initialDate: null,
+            child: AnalyticsScreen(
+              name: _currentView == _AiViewMode.summary ? 'ai_summary' : 'ai_itinerary_view',
+              priority: 20,
+              child: _currentView == _AiViewMode.summary
+                  ? _buildSummaryView() // Summary 탭
+                  : AiItineraryView(    // Itinerary 탭
+                      title: widget.entry.title,
+                      entryId: widget.entry.id,
+                      sourceType: ItinerarySourceType.tripLog,
+                      // 캘린더에서 온 게 아니므로 처음 페이지부터 시작
+                      initialDate: null,
+                    ),
             ),
           ),
         ],

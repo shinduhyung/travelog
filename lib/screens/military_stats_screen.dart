@@ -1,6 +1,7 @@
 // lib/screens/military_stats_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/services/screen_tracking.dart';
 import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:intl/intl.dart';
@@ -248,7 +249,8 @@ class MilitaryStatsScreen extends StatelessWidget {
                 ),
               ),
               const Expanded(
-                child: TabBarView(
+                child: AnalyticsTabBarView(
+                  names: ['military_stats', 'geopolitics_stats'],
                   physics: NeverScrollableScrollPhysics(),
                   children: [
                     MilitaryTabScreen(),

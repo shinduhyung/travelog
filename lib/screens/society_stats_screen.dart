@@ -1,6 +1,7 @@
 // lib/screens/society_stats_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/services/screen_tracking.dart';
 import 'package:jidoapp/l10n/app_localizations.dart';
 import 'dart:convert';
 import 'package:provider/provider.dart';
@@ -252,7 +253,8 @@ class SocietyStatsScreen extends StatelessWidget {
                     ),
                   ),
                   Expanded(
-                    child: TabBarView(
+                    child: AnalyticsTabBarView(
+                      names: ['society_stats', 'religion_stats', 'language_stats', 'history_stats'],
                       children: screens,
                     ),
                   ),

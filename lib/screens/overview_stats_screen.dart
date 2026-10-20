@@ -1,6 +1,7 @@
 // lib/screens/overview_stats_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/services/screen_tracking.dart';
 import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter/foundation.dart';
 import 'package:jidoapp/models/economy_data_model.dart';
@@ -1723,7 +1724,8 @@ class OverviewStatsScreen extends StatelessWidget {
                 ),
               ),
               const Expanded(
-                child: TabBarView(
+                child: AnalyticsTabBarView(
+                  names: ['overview_stats', 'population_stats', 'area_stats', 'economy_stats'],
                   children: screens,
                 ),
               ),

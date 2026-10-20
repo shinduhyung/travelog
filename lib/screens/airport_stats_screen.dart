@@ -1,6 +1,7 @@
 // lib/screens/airport_stats_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/services/screen_tracking.dart';
 import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:jidoapp/services/statistics_repository.dart';
@@ -92,9 +93,13 @@ class _AirportStatsScreenState extends State<AirportStatsScreen> {
             ),
             // Main Contents
             Expanded(
-              child: _selectedIndex == 0
+              child: AnalyticsScreen(
+                name: _selectedIndex == 0 ? 'airport_stats' : 'flights_lounge_stats',
+                priority: 20,
+                child: _selectedIndex == 0
                   ? _AirportStatsBody(themeColor: themeColor)
                   : const LoungeStatsScreen(),
+              ),
             ),
           ],
         ),

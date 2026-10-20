@@ -1,6 +1,7 @@
 // lib/screens/tourism_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/services/screen_tracking.dart';
 import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
@@ -33,7 +34,7 @@ class TourismScreen extends StatelessWidget{
     Localizations.maybeLocaleOf(context);
     return Theme(data:Theme.of(context).copyWith(scaffoldBackgroundColor:_C.bg,cardColor:_C.surface),
         child:DefaultTabController(length:2,child:Scaffold(backgroundColor:_C.bg,appBar:_TourAppBar(),
-            body:const TabBarView(children:[_TourismTab(),CityTransportationScreen()]))));
+            body:const AnalyticsTabBarView(names: ['tourism', 'city_transportation'], children:[_TourismTab(),CityTransportationScreen()]))));
   }
 }
 

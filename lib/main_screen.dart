@@ -1,6 +1,7 @@
 // lib/main_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/services/screen_tracking.dart';
 import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:jidoapp/screens/cities_menu_screen.dart';
 import 'package:jidoapp/screens/countries_menu_screen.dart';
@@ -62,7 +63,10 @@ class _MainScreenState extends State<MainScreen> {
       extendBody: true,
       body: SafeArea(
         bottom: false,
-        child: IndexedStack(index: _selectedIndex, children: _pages),
+        child: AnalyticsScreen(
+          name: const ['my_trips_tab', 'countries_menu', 'cities_menu', 'explore_menu', 'flights_menu'][_selectedIndex],
+          child: IndexedStack(index: _selectedIndex, children: _pages),
+        ),
       ),
       bottomNavigationBar: Container(
         decoration: BoxDecoration(

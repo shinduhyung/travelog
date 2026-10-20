@@ -1,6 +1,7 @@
 // lib/screens/city_society_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/services/screen_tracking.dart';
 import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:jidoapp/models/city_model.dart';
@@ -29,7 +30,7 @@ class CitySocietyScreen extends StatelessWidget{
     Localizations.maybeLocaleOf(context);
     return Theme(data:Theme.of(context).copyWith(scaffoldBackgroundColor:_C.bg,cardColor:_C.surface),
         child:DefaultTabController(length:2,child:Scaffold(backgroundColor:_C.bg,appBar:_AppBar(),
-            body:const TabBarView(children:[CitySocietyTabScreen(),CityHistoryTabScreen()]))));
+            body:const AnalyticsTabBarView(names: ['city_society', 'city_history'], children:[CitySocietyTabScreen(),CityHistoryTabScreen()]))));
   }
 }
 

@@ -2,6 +2,7 @@
 
 import 'dart:ui'; // 글래스모피즘 효과
 import 'package:flutter/material.dart';
+import 'package:jidoapp/services/screen_tracking.dart';
 import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_map/flutter_map.dart';
@@ -783,10 +784,13 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
                     color: Colors.white,
                     borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
                   ),
-                  child: CountrySelectionScreen(
-                    allCountries: countriesForSelection,
-                    groupBy: widget.region == null ? GroupBy.continent : GroupBy.subregion,
-                    scrollController: scrollController,
+                  child: AnalyticsScreen(
+                    name: 'country_selection',
+                    child: CountrySelectionScreen(
+                      allCountries: countriesForSelection,
+                      groupBy: widget.region == null ? GroupBy.continent : GroupBy.subregion,
+                      scrollController: scrollController,
+                    ),
                   ),
                 );
               },

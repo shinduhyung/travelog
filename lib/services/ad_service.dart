@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:jidoapp/services/screen_tracking.dart';
 import 'dart:io';
 import 'dart:math';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -534,12 +535,16 @@ class AdService {
 
           _interstitialAd!
               .fullScreenContentCallback = FullScreenContentCallback(
+            onAdShowedFullScreenContent: (InterstitialAd ad) {
+              ScreenTracking.instance.adVisible(true);
+            },
             onAdImpression: (InterstitialAd ad) {
               // 실제 노출이 몇 번 일어나는지 별도 기록 —
               // onPaidEvent 발생 횟수와 비교해서 격차를 직접 확인하기 위함.
               _logAdImpressionToFirestore();
             },
             onAdDismissedFullScreenContent: (InterstitialAd ad) {
+              ScreenTracking.instance.adVisible(false);
               ad.dispose();
               _interstitialAd = null;
               loadInterstitialAd();
@@ -558,6 +563,7 @@ class AdService {
             },
             onAdFailedToShowFullScreenContent:
                 (InterstitialAd ad, AdError error) {
+                  ScreenTracking.instance.adVisible(false);
                   debugPrint(
                     '[AdService] failed to show: code=${error.code} '
                     'domain=${error.domain} msg=${error.message}',

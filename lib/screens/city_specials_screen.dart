@@ -1,6 +1,7 @@
 // lib/screens/city_specials_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/services/screen_tracking.dart';
 import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:jidoapp/models/city_model.dart';
 import 'package:jidoapp/providers/city_provider.dart';
@@ -186,7 +187,8 @@ class CitySpecialsScreen extends StatelessWidget {
         child: Scaffold(
           backgroundColor: _AppTheme.bg,
           appBar: _SpecialsAppBar(),
-          body: const TabBarView(
+          body: const AnalyticsTabBarView(
+            names: ['city_specials', 'city_sports'],
             children: [
               _SpecialsTabContent(),
               CitySportsScreen(),

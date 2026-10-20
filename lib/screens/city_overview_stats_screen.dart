@@ -1,6 +1,7 @@
 // lib/screens/city_overview_stats_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:jidoapp/services/screen_tracking.dart';
 import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:flutter/foundation.dart';
 import 'package:provider/provider.dart';
@@ -214,7 +215,7 @@ class CityOverviewStatsScreen extends StatelessWidget {
               ),
             ),
           ),
-          body: TabBarView(children: screens),
+          body: AnalyticsTabBarView(names: ['city_overview_stats', 'populations', 'city_economy'], children: screens),
         ),
       ),
     );

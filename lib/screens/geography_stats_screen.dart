@@ -1,5 +1,6 @@
 // lib/screens/geography_stats_screen.dart
 import 'package:flutter/material.dart';
+import 'package:jidoapp/services/screen_tracking.dart';
 import 'package:jidoapp/l10n/app_localizations.dart';
 import 'package:intl/intl.dart';
 import 'package:jidoapp/models/country_model.dart';
@@ -175,7 +176,8 @@ class GeographyStatsScreen extends StatelessWidget {
                 ),
               ),
               Expanded(
-                child: TabBarView(
+                child: AnalyticsTabBarView(
+                  names: ['geography_stats', 'climate_stats'],
                   children: screens,
                 ),
               ),
