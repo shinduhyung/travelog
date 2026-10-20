@@ -1,0 +1,14 @@
+rules_version = '2';
+
+// Every object in this bucket is published content (quizzes, l10n catalogs,
+// badge/landmark/passport images) read by the app over plain HTTPS without
+// auth. The app never writes to Storage from the client; uploads go through
+// the Admin SDK / gcloud (e.g. tool/l10n/publish.py), which bypass these rules.
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /{allPaths=**} {
+      allow read: if true;
+      allow write: if false;
+    }
+  }
+}
