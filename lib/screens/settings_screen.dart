@@ -258,6 +258,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     builder: (context, _) => ListTile(
                       leading: const Icon(Icons.language),
                       title: Text(tr('Language')),
+                      // Shown in English: the language being fetched isn't here yet.
+                      subtitle: AppLocale.instance.isDownloading
+                          ? const Text('Downloading language…')
+                          : null,
                       trailing: DropdownButton<String>(
                         value: AppLocale.instance.language ?? 'system',
                         onChanged: (value) => AppLocale.instance.setLanguage(
@@ -268,11 +272,12 @@ class _SettingsScreenState extends State<SettingsScreen> {
                             value: 'system',
                             child: Text(tr('System Default')),
                           ),
-                          DropdownMenuItem(value: 'ko', child: Text(tr('한국어'))),
-                          const DropdownMenuItem(
-                            value: 'en',
-                            child: Text('English'),
-                          ),
+                          // Native names, never translated.
+                          for (final language in AppLocale.instance.languages)
+                            DropdownMenuItem(
+                              value: language.code,
+                              child: Text(language.name),
+                            ),
                         ],
                       ),
                     ),

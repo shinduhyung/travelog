@@ -30,7 +30,7 @@ class AiService {
 
   String get _displayLanguageInstruction =>
       'Write headings and explanatory prose in '
-      '${AppLocale.instance.locale.languageCode == 'ko' ? 'Korean' : 'English'}. '
+      '${AppLocale.instance.current.englishName}. '
       'Use that language for country display names. Keep city, landmark, '
       'UNESCO site, airport, airline, hotel and other proper names in English.';
 
