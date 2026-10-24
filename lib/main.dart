@@ -70,6 +70,7 @@ import 'package:timezone/data/latest.dart' as tz;
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:app_tracking_transparency/app_tracking_transparency.dart';
 import 'package:facebook_app_events/facebook_app_events.dart';
+import 'package:jidoapp/social/social_hub.dart' show socialRouteName;
 
 const MaterialColor mintSwatch = MaterialColor(0xFF3DDAD7, <int, Color>{
   50: Color(0xFFE0F7F7),
@@ -103,14 +104,30 @@ final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 // 라우트가 push/pop/replace 될 때마다 알림을 보내서 버튼의 표시 여부(투명도)를
 // 갱신할 수 있게 해줍니다.
 class _AppNavObserver extends NavigatorObserver with ChangeNotifier {
+  // 맨 위 화면 (다이얼로그/바텀시트는 제외). 소셜 화면은 자체 뒤로가기가 있어서 버튼을 숨긴다.
+  Route? _topPage;
+  bool get onSocialPage => _topPage?.settings.name == socialRouteName;
+
   @override
-  void didPush(Route route, Route? previousRoute) => notifyListeners();
+  void didPush(Route route, Route? previousRoute) {
+    if (route is! PopupRoute) _topPage = route;
+    notifyListeners();
+  }
+
   @override
-  void didPop(Route route, Route? previousRoute) => notifyListeners();
+  void didPop(Route route, Route? previousRoute) {
+    if (route is! PopupRoute) _topPage = previousRoute;
+    notifyListeners();
+  }
+
   @override
   void didRemove(Route route, Route? previousRoute) => notifyListeners();
+
   @override
-  void didReplace({Route? newRoute, Route? oldRoute}) => notifyListeners();
+  void didReplace({Route? newRoute, Route? oldRoute}) {
+    if (newRoute is! PopupRoute) _topPage = newRoute;
+    notifyListeners();
+  }
 }
 
 final _appNavObserver = _AppNavObserver();
@@ -125,7 +142,7 @@ class _FloatingBackButton extends StatelessWidget {
     return AnimatedBuilder(
       animation: _appNavObserver,
       builder: (context, _) {
-        final canPop = navigatorKey.currentState?.canPop() ?? false;
+        final canPop = (navigatorKey.currentState?.canPop() ?? false) && !_appNavObserver.onSocialPage;
         return SafeArea(
           child: AnimatedOpacity(
             opacity: canPop ? 1.0 : 0.0,

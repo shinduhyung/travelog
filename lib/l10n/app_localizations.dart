@@ -49,6 +49,10 @@ class AppLocale extends ChangeNotifier with WidgetsBindingObserver {
   static final _latinLetters = RegExp('[A-Za-z]');
   static const preferenceKey = 'app_language';
   static const english = AppLanguage('en', 'English', 'English');
+
+  /// TEMP: 번역 출시 전까지 앱 전체를 영어로만 보여준다 (기기 언어/저장된 선택 무시).
+  /// 다시 켜려면 false로.
+  static const englishOnly = true;
   static List<Locale> get supportedLocales =>
       [for (final language in instance._languages) language.locale];
 
@@ -56,7 +60,7 @@ class AppLocale extends ChangeNotifier with WidgetsBindingObserver {
   List<AppLanguage> get languages => _languages;
   String? _language;
   String? get language => _language;
-  String get code => _language ?? _deviceLanguage;
+  String get code => englishOnly ? english.code : (_language ?? _deviceLanguage);
   bool get isEnglish => code == english.code;
   AppLanguage get current =>
       _languages.firstWhere((l) => l.code == code, orElse: () => english);
@@ -115,6 +119,7 @@ class AppLocale extends ChangeNotifier with WidgetsBindingObserver {
     _manifest = manifest;
     _languages = [
       english,
+      if (!englishOnly)
       for (final entry
           in (manifest['languages'] as List).cast<Map<String, dynamic>>())
         AppLanguage(

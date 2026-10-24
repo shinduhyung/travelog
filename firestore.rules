@@ -1,0 +1,137 @@
+rules_version = '2';
+
+// Travelog Firestore 보안 규칙
+//
+// 원칙
+//  - 원본 데이터(users/{uid} 및 하위 컬렉션, game_scores)는 본인만 읽고 쓴다.
+//  - 친구에게 보여줄 값은 profiles/{uid} 요약 문서로 따로 만들고, 친구만 읽는다.
+//    (Firestore 규칙은 문서 단위라서 한 문서 안의 일부 필드만 공개할 수 없음)
+//  - 전체 유저 통계는 admin 커스텀 클레임을 가진 계정(Travelog Admin 앱)만 읽는다.
+//    클레임 부여: functions/scripts/set_admin_claim.js
+//  - Cloud Functions(Admin SDK)는 규칙을 우회하므로 여기 적을 필요 없음.
+//
+// 배포: firebase deploy --only firestore:rules
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function isAdmin() {
+      return signedIn() && request.auth.token.admin == true;
+    }
+
+    function isSelf(uid) {
+      return signedIn() && request.auth.uid == uid;
+    }
+
+    // users/{uid}/friends/{friendUid} 문서가 있으면 friendUid는 uid의 친구.
+    // 이 목록은 uid 본인만 쓸 수 있으므로 "내 데이터를 누가 볼 수 있는지"는
+    // 항상 본인이 정한다. 친구 수락/삭제처럼 양쪽을 함께 바꾸는 작업은
+    // Cloud Functions에서 처리한다.
+    function isFriendOf(uid) {
+      return signedIn()
+        && exists(/databases/$(database)/documents/users/$(uid)/friends/$(request.auth.uid));
+    }
+
+    function onlyKeys(allowed) {
+      return request.resource.data.keys().hasOnly(allowed);
+    }
+
+    function changedOnly(allowed) {
+      return request.resource.data.diff(resource.data).affectedKeys().hasOnly(allowed);
+    }
+
+    // ── 관리자: 전체 읽기/쓰기 (collectionGroup 쿼리 포함) ─────────────────
+    match /{document=**} {
+      allow read, write: if isAdmin();
+    }
+
+    // ── 유저 원본 데이터: 본인만 ──────────────────────────────────────────
+    // trip_logs, badges, quiz_history, quiz_history_expert, friends 등 하위 컬렉션 포함
+    match /users/{uid} {
+      allow read, write: if isSelf(uid);
+
+      match /{sub=**} {
+        allow read, write: if isSelf(uid);
+      }
+    }
+
+    match /game_scores/{uid} {
+      allow read, write: if isSelf(uid);
+    }
+
+    // ── 소셜: 친구에게 공개하는 요약 ───────────────────────────────────────
+    match /profiles/{uid} {
+      allow read: if isSelf(uid) || isFriendOf(uid);
+      // plan(유료 등급)은 Cloud Functions(socialRefreshPlan)만 결제 기록을 보고 쓴다
+      allow create: if isSelf(uid) && !request.resource.data.keys().hasAny(['plan', 'planCheckedAt']);
+      allow update: if isSelf(uid)
+        && !request.resource.data.diff(resource.data).affectedKeys().hasAny(['plan', 'planCheckedAt']);
+      allow delete: if isSelf(uid);
+    }
+
+    // 친구 초대 코드(invites)는 Cloud Functions에서만 읽고 쓴다 → 클라이언트 규칙 없음.
+
+    // 1:1 대결: 참가자만 읽기. 생성/진행/결과 기록은 Cloud Functions에서만.
+    match /matches/{matchId} {
+      allow read: if signedIn() && request.auth.uid in resource.data.players;
+    }
+
+    // ── 결제 기록 ─────────────────────────────────────────────────────────
+    match /orders/{orderId} {
+      // 앱이 같은 주문을 중복 기록하지 않으려고 존재 여부를 먼저 조회함.
+      // 없는 문서이거나 본인 주문일 때만 읽기 허용 (타인 결제 내역 노출 방지).
+      allow get: if resource == null
+        || (signedIn() && resource.data.get('uid', null) == request.auth.uid);
+
+      allow create: if request.resource.data.get('uid', null) == null
+        || isSelf(request.resource.data.uid);
+
+      // iOS는 복원할 때마다 같은 transactionId에 merge로 다시 씀
+      allow update: if (resource.data.get('uid', null) == null
+          || isSelf(resource.data.get('uid', null)))
+        && (request.resource.data.get('uid', null) == null
+          || isSelf(request.resource.data.uid))
+        && changedOnly(['orderId', 'originalTransactionId', 'productId', 'isLifetime',
+          'purchaseTime', 'platform', 'status', 'priceAmountMicros',
+          'priceCurrencyCode', 'uid']);
+    }
+
+    // ── 푸시 토큰 (로그인 전에도 기록됨, 읽기는 Functions/관리자만) ─────────
+    match /fcm_tokens/{token} {
+      allow create: if onlyKeys(['token', 'updatedAt', 'platform', 'quizMode'])
+        && request.resource.data.get('token', token) == token;
+      allow update: if changedOnly(['token', 'updatedAt', 'platform', 'quizMode'])
+        && request.resource.data.get('token', token) == token;
+    }
+
+    // ── 광고 실험/분석 이벤트 (로그인 전에도 기록됨, 쓰기 전용) ──────────────
+    match /ad_experiment_assignments_v3/{docId} {
+      allow create: if onlyKeys(['adExperimentGroup', 'deviceId', 'localeCountryCode', 'assignedAt']);
+      allow update: if changedOnly(['deviceId', 'localeCountryCode']);
+    }
+
+    match /app_open_events/{docId} {
+      allow create: if true;
+    }
+
+    match /ad_request_events/{docId} {
+      allow create: if true;
+    }
+
+    match /ad_impression_events/{docId} {
+      allow create: if true;
+    }
+
+    match /ad_revenue_events/{docId} {
+      allow create: if true;
+    }
+
+    match /subscription_funnel_events/{docId} {
+      allow create: if true;
+    }
+  }
+}

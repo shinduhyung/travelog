@@ -22,12 +22,16 @@
       }
     }
   },
+  "firestore": {
+    "rules": "firestore.rules"
+  },
   "functions": [
     {
       "codebase": "default",
       "disallowLegacyRuntimeConfig": true,
       "ignore": [
         "node_modules",
+        "scripts",
         ".git",
         "firebase-debug.log",
         "firebase-debug.*.log",

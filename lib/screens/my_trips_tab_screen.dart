@@ -8,16 +8,12 @@ import 'package:jidoapp/screens/profile_screen.dart';
 import 'package:jidoapp/screens/login_prompt_screen.dart';
 import 'package:jidoapp/providers/badge_provider.dart';
 import 'package:jidoapp/screens/badges_screen.dart';
-import 'package:jidoapp/screens/calendar_screen.dart';
-import 'package:jidoapp/screens/passport_screen.dart';
-import 'package:jidoapp/screens/settings_screen.dart';
-import 'package:jidoapp/screens/visa_screen.dart';
-import 'package:jidoapp/screens/trip_log_list_screen.dart';
-import 'package:jidoapp/screens/recommendations_screen.dart';
-import 'package:jidoapp/screens/favorites_screen.dart';
 import 'package:jidoapp/screens/traveler_type_selector_screen.dart';
 import 'package:jidoapp/screens/daily_quiz_screen.dart';
 import 'package:jidoapp/screens/travelog_games_screen.dart';
+import 'package:jidoapp/widgets/my_hub_board.dart';
+import 'package:jidoapp/social/social_hub.dart';
+import 'package:jidoapp/social/social_menu.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:jidoapp/providers/country_provider.dart';
@@ -39,456 +35,6 @@ import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:screenshot/screenshot.dart';
 
-// ─────────────────────────────────────────────
-// 신규 기능 안내용 NEW 태그. (정적 — 애니메이션 없음)
-// ─────────────────────────────────────────────
-class _SparkleNewBadge extends StatelessWidget {
-  const _SparkleNewBadge();
-
-  @override
-  Widget build(BuildContext context) {
-    Localizations.maybeLocaleOf(context);
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-      decoration: BoxDecoration(
-        gradient: const LinearGradient(
-          colors: [Color(0xFFFF6B9D), Color(0xFFFFB300)],
-        ),
-        borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: Colors.white, width: 1.5),
-        boxShadow: [
-          BoxShadow(
-            color: const Color(0xFFFFB300).withOpacity(0.6),
-            blurRadius: 8,
-            spreadRadius: 0.5,
-          ),
-        ],
-      ),
-      child:  Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Icon(Icons.auto_awesome_rounded, size: 9, color: Colors.white),
-          SizedBox(width: 2),
-          Text(
-            tr('NEW'),
-            style: TextStyle(
-              fontSize: 9,
-              fontWeight: FontWeight.w900,
-              color: Colors.white,
-              letterSpacing: 0.3,
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-// ─────────────────────────────────────────────
-// Travelog Games 카드 배경에 쓰이는 "색이 흐르는" 애니메이션 그라데이션.
-// 폭이 2배인 그라데이션 띠를 계속 왼쪽으로 흘려보내는 방식이라, 색상
-// 리스트의 처음/끝이 이어져 있으면 끊김 없이 무한 루프된다.
-// ─────────────────────────────────────────────
-class _FlowingGradientBackground extends StatefulWidget {
-  final List<Color> colors;
-  final Duration duration;
-
-  const _FlowingGradientBackground({
-    required this.colors,
-    this.duration = const Duration(seconds: 5),
-  });
-
-  @override
-  State<_FlowingGradientBackground> createState() => _FlowingGradientBackgroundState();
-}
-
-class _FlowingGradientBackgroundState extends State<_FlowingGradientBackground>
-    with SingleTickerProviderStateMixin {
-  late final AnimationController _controller;
-
-  @override
-  void initState() {
-    super.initState();
-    _controller = AnimationController(vsync: this, duration: widget.duration)..repeat();
-  }
-
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    Localizations.maybeLocaleOf(context);
-    // 색상 리스트를 두 번 이어 붙여서 "끝 -> 처음"이 자연스럽게 이어지도록 함.
-    final loopColors = [...widget.colors, ...widget.colors];
-    return LayoutBuilder(
-      builder: (context, constraints) {
-        final width = constraints.maxWidth;
-        return ClipRect(
-          child: AnimatedBuilder(
-            animation: _controller,
-            builder: (context, _) {
-              final dx = -_controller.value * width;
-              return Stack(
-                children: [
-                  Positioned(
-                    left: dx,
-                    top: 0,
-                    bottom: 0,
-                    width: width * 2,
-                    child: DecoratedBox(
-                      decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                          begin: Alignment.centerLeft,
-                          end: Alignment.centerRight,
-                          colors: loopColors,
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              );
-            },
-          ),
-        );
-      },
-    );
-  }
-}
-// ─────────────────────────────────────────────
-// Travelog Games 진입 카드
-// ─────────────────────────────────────────────
-class _TravelogGamesCard extends StatelessWidget {
-  final VoidCallback onTap;
-
-  const _TravelogGamesCard({required this.onTap});
-
-  static const List<Color> _gameFlow = [
-    Color(0xFF087F6B),
-    Color(0xFF12A594),
-    Color(0xFF45B9A8),
-    Color(0xFF3FA9C6),
-    Color(0xFF6688C7),
-    Color(0xFF18A58B),
-    Color(0xFF087F6B),
-  ];
-
-  @override
-  Widget build(BuildContext context) {
-    Localizations.maybeLocaleOf(context);
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        height: 86,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20),
-          boxShadow: [
-            BoxShadow(
-              color: const Color(0xFF168F86).withOpacity(0.28),
-              blurRadius: 20,
-              offset: const Offset(0, 8),
-            ),
-          ],
-        ),
-        clipBehavior: Clip.antiAlias,
-        child: Stack(
-          fit: StackFit.expand,
-          children: [
-            // 기본 flowing gradient
-            _FlowingGradientBackground(
-              colors: _gameFlow,
-            ),
-
-            // ─────────────────────────────
-            // 왼쪽 상단 : 옅은 민트빛
-            // ─────────────────────────────
-            Positioned(
-              left: -45,
-              top: -65,
-              child: Container(
-                width: 170,
-                height: 170,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  gradient: RadialGradient(
-                    colors: [
-                      const Color(0xFFBFF3E6).withOpacity(0.35),
-                      const Color(0xFFBFF3E6).withOpacity(0.00),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-
-            // ─────────────────────────────
-            // 중앙 오른쪽 : 하늘색 glow
-            // ─────────────────────────────
-            Positioned(
-              right: 35,
-              top: -60,
-              child: Container(
-                width: 170,
-                height: 170,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  gradient: RadialGradient(
-                    colors: [
-                      const Color(0xFFC8E9FF).withOpacity(0.34),
-                      const Color(0xFFC8E9FF).withOpacity(0.00),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-
-            // ─────────────────────────────
-            // 오른쪽 아래 : 라벤더빛
-            // ─────────────────────────────
-            Positioned(
-              right: -55,
-              bottom: -90,
-              child: Container(
-                width: 190,
-                height: 190,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  gradient: RadialGradient(
-                    colors: [
-                      const Color(0xFFD8D5FF).withOpacity(0.30),
-                      const Color(0xFFD8D5FF).withOpacity(0.00),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-
-            // ─────────────────────────────
-            // 아주 옅은 크림색 포인트
-            // ─────────────────────────────
-            Positioned(
-              left: 115,
-              bottom: -60,
-              child: Container(
-                width: 130,
-                height: 130,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  gradient: RadialGradient(
-                    colors: [
-                      const Color(0xFFFFF0CC).withOpacity(0.18),
-                      const Color(0xFFFFF0CC).withOpacity(0.00),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-
-            // 전체적인 유리 하이라이트
-            Positioned.fill(
-              child: DecoratedBox(
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                    colors: [
-                      Colors.white.withOpacity(0.10),
-                      Colors.transparent,
-                      const Color(0xFF2C4D72).withOpacity(0.08),
-                    ],
-                    stops: const [
-                      0.0,
-                      0.52,
-                      1.0,
-                    ],
-                  ),
-                ),
-              ),
-            ),
-
-            // 오른쪽 배경 장식
-            Positioned(
-              right: 54,
-              top: -17,
-              child: Transform.rotate(
-                angle: -0.18,
-                child: Icon(
-                  Icons.public_rounded,
-                  size: 90,
-                  color: const Color(0xFFD8F5FF).withOpacity(0.075),
-                ),
-              ),
-            ),
-
-            Positioned(
-              right: 15,
-              bottom: -13,
-              child: Transform.rotate(
-                angle: 0.15,
-                child: Icon(
-                  Icons.explore_rounded,
-                  size: 50,
-                  color: const Color(0xFFE5DDFF).withOpacity(0.07),
-                ),
-              ),
-            ),
-
-            // ─────────────────────────────
-            // CONTENT
-            // ─────────────────────────────
-            Padding(
-              padding: const EdgeInsets.symmetric(
-                horizontal: 15,
-                vertical: 13,
-              ),
-              child: Row(
-                children: [
-                  // ─────────────────────────
-                  // 게임 아이콘
-                  // ─────────────────────────
-                  Stack(
-                    clipBehavior: Clip.none,
-                    children: [
-                      Container(
-                        width: 55,
-                        height: 55,
-                        decoration: BoxDecoration(
-                          gradient: const LinearGradient(
-                            begin: Alignment.topLeft,
-                            end: Alignment.bottomRight,
-                            colors: [
-                              Color(0xFFD9F5EC),
-                              Color(0xFFCFE7FF),
-                            ],
-                          ),
-                          borderRadius: BorderRadius.circular(17),
-                          border: Border.all(
-                            color: Colors.white.withOpacity(0.50),
-                            width: 1,
-                          ),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black.withOpacity(0.08),
-                              blurRadius: 9,
-                              offset: const Offset(0, 4),
-                            ),
-                          ],
-                        ),
-                        child: const Icon(
-                          Icons.sports_esports_rounded,
-                          color: Color(0xFF176C73),
-                          size: 29,
-                        ),
-                      ),
-
-                      const Positioned(
-                        top: -7,
-                        right: -7,
-                        child: _SparkleNewBadge(),
-                      ),
-                    ],
-                  ),
-
-                  const SizedBox(width: 16),
-
-                  // ─────────────────────────
-                  // 제목 영역
-                  // ─────────────────────────
-                  Expanded(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Container(
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 8,
-                            vertical: 3,
-                          ),
-                          decoration: BoxDecoration(
-                            color: const Color(0xFFDDF4F0)
-                                .withOpacity(0.20),
-                            borderRadius: BorderRadius.circular(7),
-                            border: Border.all(
-                              color: const Color(0xFFDDF4F0)
-                                  .withOpacity(0.24),
-                              width: 0.8,
-                            ),
-                          ),
-                          child:  Text(
-                            tr('PLAY & EXPLORE'),
-                            style: TextStyle(
-                              color: Color(0xFFE2FFF8),
-                              fontSize: 8.5,
-                              fontWeight: FontWeight.w800,
-                              letterSpacing: 0.9,
-                            ),
-                          ),
-                        ),
-
-                        const SizedBox(height: 6),
-
-                         Text(
-                          tr('Travelog Games'),
-                          maxLines: 1,
-                          overflow: TextOverflow.ellipsis,
-                          style: TextStyle(
-                            fontSize: 19,
-                            height: 1,
-                            fontWeight: FontWeight.w900,
-                            color: Color(0xFFF6FFFD),
-                            letterSpacing: -0.45,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-
-                  const SizedBox(width: 12),
-
-                  // ─────────────────────────
-                  // 오른쪽 버튼
-                  // ─────────────────────────
-                  Container(
-                    width: 37,
-                    height: 37,
-                    decoration: BoxDecoration(
-                      gradient: const LinearGradient(
-                        begin: Alignment.topLeft,
-                        end: Alignment.bottomRight,
-                        colors: [
-                          Color(0xFFE0F5F1),
-                          Color(0xFFDCE8FF),
-                        ],
-                      ),
-                      borderRadius: BorderRadius.circular(12),
-                      border: Border.all(
-                        color: Colors.white.withOpacity(0.55),
-                      ),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black.withOpacity(0.09),
-                          blurRadius: 8,
-                          offset: const Offset(0, 3),
-                        ),
-                      ],
-                    ),
-                    child: const Icon(
-                      Icons.arrow_forward_rounded,
-                      size: 18,
-                      color: Color(0xFF27747C),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
 class MyTripsTabScreen extends StatefulWidget {
   const MyTripsTabScreen({super.key});
 
@@ -512,6 +58,9 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
 
   bool _isSharing = false;
   final ScreenshotController _mapScreenshotController = ScreenshotController();
+
+  // 소셜: 메뉴에 보여줄 받은 대결 신청 수
+  int _duelInvites = 0;
 
   Future<void> _handleShare() async {
     if (_isSharing) return;
@@ -537,13 +86,8 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
 
   static const Color mint = Color(0xFF00CDB5);
   static const Color darkMint = Color(0xFF009688);
-  static const Color purple = Color(0xFF8B5CF6);
   static const Color blue = Color(0xFF6366F1);
-  static const Color red = Color(0xFFEF4444);
-  static const Color orange = Color(0xFFF97316);
   static const Color skyBlue = Color(0xFF0EA5E9);
-  static const Color pink = Color(0xFFEC4899);
-  static const Color recommendBlue = Color(0xFF2563EB);
 
   @override
   void initState() {
@@ -551,8 +95,76 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
     WidgetsBinding.instance.addPostFrameCallback((_) {
       _loadTravelerType();
       _loadQuizDefaultMode();
+      _loadSocialCounts();
     });
   }
+
+  void _loadSocialCounts() {
+    if (mounted) setState(() => _duelInvites = SocialHub.pendingInvites);
+  }
+
+  /// 소셜 화면은 로그인이 필요하다 (같은 계정으로 친구/대결 데이터를 쓴다)
+  Future<void> _openSocial(Future<void> Function(BuildContext) open) async {
+    if (Provider.of<custom_auth.AuthProvider>(context, listen: false).user == null) {
+      await showModalBottomSheet(
+        context: context,
+        isScrollControlled: true,
+        backgroundColor: Colors.transparent,
+        builder: (_) => const LoginPromptScreen(),
+      );
+      if (!mounted || Provider.of<custom_auth.AuthProvider>(context, listen: false).user == null) return;
+    }
+    if (!mounted) return;
+    await open(context);
+    _loadSocialCounts();
+  }
+
+  /// Daily Quiz와 같은 줄 형식의 게임 진입
+  Widget _buildGamesRow(BuildContext context) {
+    return GestureDetector(
+      onTap: () => Navigator.push(
+        context,
+        MaterialPageRoute(builder: (_) => const TravelogGamesScreen()),
+      ),
+      child: Container(
+        color: Colors.transparent,
+        child: Row(
+          children: [
+            Container(
+              width: 48,
+              height: 48,
+              decoration: BoxDecoration(
+                color: const Color(0xFF12A594).withOpacity(0.1),
+                borderRadius: BorderRadius.circular(14),
+              ),
+              child: const Icon(Icons.sports_esports_rounded, color: Color(0xFF12A594), size: 24),
+            ),
+            const SizedBox(width: 16),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    tr('Travelog Games'),
+                    style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: Colors.grey.shade500),
+                  ),
+                  const SizedBox(height: 2),
+                  Text(
+                    tr('Play & Explore'),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: Colors.black87),
+                  ),
+                ],
+              ),
+            ),
+            Icon(Icons.arrow_forward_ios, size: 14, color: Colors.grey.shade300),
+          ],
+        ),
+      ),
+    );
+  }
+
 
   Future<void> _loadQuizDefaultMode() async {
     try {
@@ -813,41 +425,7 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                 const SizedBox(height: 24),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 24),
-                  child: _buildMainFeatures(context),
-                ),
-                const SizedBox(height: 32),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 24),
-                  child: Row(
-                    children: [
-                      Container(
-                        width: 4,
-                        height: 20,
-                        decoration: BoxDecoration(
-                            color: darkMint,
-                            borderRadius: BorderRadius.circular(2)),
-                      ),
-                      const SizedBox(width: 8),
-                      Text(
-                        tr('My Documents'),
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.w700,
-                          color: Colors.grey.shade800,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                const SizedBox(height: 16),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 24),
-                  child: _buildDocumentsSection(context),
-                ),
-                const SizedBox(height: 16),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 24),
-                  child: _buildSettingsCard(context),
+                  child: const MyHubBoard(),
                 ),
                 const SizedBox(height: 120),
               ],
@@ -1208,6 +786,14 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                   const SizedBox(height: 20),
                   Divider(color: Colors.grey.shade100, height: 1),
                   const SizedBox(height: 16),
+                  SocialMenu(
+                    duelInvites: _duelInvites,
+                    onOpen: () => _openSocial(SocialHub.openFriends),
+                    onProfile: () => _openSocial(SocialHub.openProfile),
+                    onFriends: () => _openSocial(SocialHub.openFriends),
+                    onDuels: () => _openSocial(SocialHub.openDuels),
+                  ),
+                  const SizedBox(height: 18),
 
                   GestureDetector(
                     onTap: () async {
@@ -1360,12 +946,7 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
                   ),
 
                   const SizedBox(height: 16),
-                  _TravelogGamesCard(
-                    onTap: () => Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (_) => const TravelogGamesScreen()),
-                    ),
-                  ),
+                  _buildGamesRow(context),
 
                   const SizedBox(height: 16),
                   Divider(color: Colors.grey.shade100, height: 1),
@@ -1713,229 +1294,5 @@ class _MyTripsTabScreenState extends State<MyTripsTabScreen> {
         );
       },
     );
-  }
-
-  Widget _buildMainFeatures(BuildContext context) {
-    void gated(VoidCallback action) async {
-      final auth = Provider.of<custom_auth.AuthProvider>(context, listen: false);
-      if (auth.user == null) {
-        await showModalBottomSheet(
-          context: context,
-          isScrollControlled: true,
-          backgroundColor: Colors.transparent,
-          builder: (_) => const LoginPromptScreen(),
-        );
-        if (!context.mounted) return;
-        if (Provider.of<custom_auth.AuthProvider>(context, listen: false).user != null) {
-          action();
-        }
-        return;
-      }
-      action();
-    }
-
-    return Column(
-      children: [
-        Row(
-          children: [
-            Expanded(
-                child: _buildFeatureCard(
-                    context,
-                    'Trip Log',
-                    '',
-                    Icons.auto_stories_rounded,
-                    orange,
-                        () => gated(() => Navigator.push(context, MaterialPageRoute(builder: (_) => const TripLogListScreen()))))),
-            const SizedBox(width: 12),
-            Expanded(
-                child: _buildFeatureCard(
-                    context,
-                    'Discover',
-                    '',
-                    Icons.search_rounded,
-                    recommendBlue,
-                        () => gated(() => Navigator.push(context, MaterialPageRoute(builder: (_) => const RecommendationsScreen()))))),
-            const SizedBox(width: 12),
-            Expanded(
-                child: _buildFeatureCard(
-                    context,
-                    'Favorites',
-                    '',
-                    Icons.favorite_rounded,
-                    pink,
-                        () => gated(() => Navigator.push(context, MaterialPageRoute(builder: (_) => const FavoritesScreen()))))),
-          ],
-        ),
-        const SizedBox(height: 12),
-        _buildFeatureCard(
-            context,
-            'Calendar',
-            'Plan your next adventure',
-            Icons.calendar_month_rounded,
-            red,
-                () => gated(() => Navigator.push(context, MaterialPageRoute(builder: (_) => const CalendarScreen()))),
-            isWide: true),
-      ],
-    );
-  }
-
-  Widget _buildFeatureCard(BuildContext context, String title, String subtitle,
-      IconData icon, Color color, VoidCallback onTap,
-      {bool isWide = false}) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        padding:
-        EdgeInsets.symmetric(vertical: 20, horizontal: isWide ? 20 : 12),
-        decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(20),
-            boxShadow: [
-              BoxShadow(
-                  color: Colors.black.withOpacity(0.04),
-                  blurRadius: 10,
-                  offset: const Offset(0, 4))
-            ]),
-        child: isWide
-            ? Row(children: [
-          Container(
-              padding: const EdgeInsets.all(12),
-              decoration: BoxDecoration(
-                  color: color.withOpacity(0.1),
-                  borderRadius: BorderRadius.circular(14)),
-              child: Icon(icon, color: color, size: 24)),
-          const SizedBox(width: 16),
-          Expanded(
-              child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(tr(title),
-                        style: const TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w700,
-                            color: Colors.black87)),
-                    if (subtitle.isNotEmpty) ...[
-                      const SizedBox(height: 2),
-                      Text(tr(subtitle),
-                          style: TextStyle(
-                              fontSize: 13,
-                              color: Colors.grey.shade500,
-                              fontWeight: FontWeight.w500)),
-                    ]
-                  ])),
-          Icon(Icons.arrow_forward_ios,
-              size: 14, color: Colors.grey.shade300)
-        ])
-            : Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
-          Container(
-              padding: const EdgeInsets.all(14),
-              decoration: BoxDecoration(
-                color: color.withOpacity(0.1),
-                shape: BoxShape.circle,
-              ),
-              child: Icon(icon, color: color, size: 24)),
-          const SizedBox(height: 12),
-          Text(tr(title),
-              textAlign: TextAlign.center,
-              style: const TextStyle(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w700,
-                  color: Colors.black87)),
-        ]),
-      ),
-    );
-  }
-
-  Widget _buildDocumentsSection(BuildContext context) {
-    void gated(VoidCallback action) async {
-      final auth = Provider.of<custom_auth.AuthProvider>(context, listen: false);
-      if (auth.user == null) {
-        await showModalBottomSheet(
-          context: context,
-          isScrollControlled: true,
-          backgroundColor: Colors.transparent,
-          builder: (_) => const LoginPromptScreen(),
-        );
-        if (!context.mounted) return;
-        if (Provider.of<custom_auth.AuthProvider>(context, listen: false).user != null) {
-          action();
-        }
-        return;
-      }
-      action();
-    }
-
-    return Row(children: [
-      Expanded(
-          child: _buildDocCard(
-              context,
-              'Passport',
-              Icons.book_rounded,
-              purple,
-                  () => gated(() => Navigator.push(context, MaterialPageRoute(builder: (_) => const PassportScreen()))))),
-      const SizedBox(width: 12),
-      Expanded(
-          child: _buildDocCard(
-              context,
-              'Visa',
-              Icons.article_rounded,
-              mint,
-                  () => gated(() => Navigator.push(context, MaterialPageRoute(builder: (_) => const VisaScreen()))))),
-    ]);
-  }
-
-  Widget _buildDocCard(BuildContext context, String title, IconData icon,
-      Color color, VoidCallback onTap) {
-    return GestureDetector(
-        onTap: onTap,
-        child: Container(
-            padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 16),
-            decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(20),
-                boxShadow: [
-                  BoxShadow(
-                      color: Colors.black.withOpacity(0.04),
-                      blurRadius: 10,
-                      offset: const Offset(0, 4))
-                ]),
-            child: Column(children: [
-              Icon(icon, color: color, size: 32),
-              const SizedBox(height: 12),
-              Text(tr(title),
-                  style: const TextStyle(
-                      fontSize: 15,
-                      fontWeight: FontWeight.w600,
-                      color: Colors.black87))
-            ])));
-  }
-
-  Widget _buildSettingsCard(BuildContext context) {
-    return GestureDetector(
-        onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const SettingsScreen())),
-        child: Container(
-            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
-            decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(20),
-                boxShadow: [
-                  BoxShadow(
-                      color: Colors.black.withOpacity(0.04),
-                      blurRadius: 10,
-                      offset: const Offset(0, 4))
-                ]),
-            child: Row(children: [
-              Icon(Icons.settings_outlined,
-                  color: Colors.grey.shade700, size: 24),
-              const SizedBox(width: 16),
-               Expanded(
-                  child: Text(tr('Settings'),
-                      style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w600,
-                          color: Colors.black87))),
-              Icon(Icons.arrow_forward_ios,
-                  size: 14, color: Colors.grey.shade300)
-            ])));
   }
 }

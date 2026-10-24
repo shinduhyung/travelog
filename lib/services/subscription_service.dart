@@ -318,11 +318,29 @@ class SubscriptionService extends ChangeNotifier {
         final docRef = FirebaseFirestore.instance
             .collection('orders')
             .doc(orderId);
+        var orderLinked = false;
 
         try {
-          final existing = await docRef.get();
+          // 로그인 상태면 이미 기록된 주문에 내 uid를 붙인다 (로그인 전에 산 주문은 uid가 비어 있어서
+          // 서버가 누구 구독인지 모름 → 소셜 프로필 등급이 안 뜸). 규칙상 uid가 비었거나 내 것일 때만 된다.
+          // 문서가 없으면 not-found → 아래에서 새로 기록한다.
+          final uid = FirebaseAuth.instance.currentUser?.uid;
+          if (uid != null) {
+            try {
+              await docRef.update({'uid': uid});
+              debugPrint('[SubscriptionService] order $orderId linked to account (isRestore=$isRestore)');
+              orderLinked = true;
+            } on FirebaseException catch (e) {
+              if (e.code != 'not-found') {
+                debugPrint('[SubscriptionService] order $orderId not linked: ${e.code}');
+                orderLinked = true; // 다른 계정의 주문이면 건드리지 않는다
+              }
+            }
+          }
 
-          if (existing.exists) {
+          final existing = orderLinked ? null : await docRef.get();
+
+          if (orderLinked || existing!.exists) {
             debugPrint(
               '[SubscriptionService] order $orderId already recorded, skip (isRestore=$isRestore)',
             );
