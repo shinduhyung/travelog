@@ -1,0 +1,372 @@
+{
+ "schema_version": 1,
+ "dataset_id": "sports_ucl_titles",
+ "metadata": {
+  "source_url": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals",
+  "reference_period": "Through the 2026 final (Wikipedia revision 1379386025)",
+  "updated_at": "2026-10-24"
+ },
+ "legacy_layout": "sections",
+ "tables": [
+  {
+   "id": "country",
+   "metadata": {
+    "source_url": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals",
+    "reference_period": "Through the 2026 final (Wikipedia revision 1379386025)",
+    "updated_at": "2026-10-24"
+   },
+   "dimensions": [
+    "iso_a3"
+   ],
+   "metrics": [
+    {
+     "id": "titles",
+     "unit": "titles",
+     "source_url": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals",
+     "reference_period": "Through the 2026 final (Wikipedia revision 1379386025)",
+     "updated_at": "2026-10-24"
+    },
+    {
+     "id": "runners_up",
+     "unit": "finals",
+     "source_url": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals",
+     "reference_period": "Through the 2026 final (Wikipedia revision 1379386025)",
+     "updated_at": "2026-10-24"
+    }
+   ],
+   "records": [
+    {
+     "dimensions": {
+      "iso_a3": "ESP"
+     },
+     "values": {
+      "titles": 20,
+      "runners_up": 11
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "GBR"
+     },
+     "values": {
+      "titles": 16,
+      "runners_up": 13
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ITA"
+     },
+     "values": {
+      "titles": 12,
+      "runners_up": 18
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "DEU"
+     },
+     "values": {
+      "titles": 8,
+      "runners_up": 11
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "NLD"
+     },
+     "values": {
+      "titles": 6,
+      "runners_up": 2
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "PRT"
+     },
+     "values": {
+      "titles": 4,
+      "runners_up": 5
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "FRA"
+     },
+     "values": {
+      "titles": 3,
+      "runners_up": 6
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ROU"
+     },
+     "values": {
+      "titles": 1,
+      "runners_up": 1
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "SRB"
+     },
+     "values": {
+      "titles": 1,
+      "runners_up": 1
+     }
+    }
+   ]
+  },
+  {
+   "id": "city",
+   "metadata": {
+    "source_url": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals",
+    "reference_period": "Through the 2026 final (Wikipedia revision 1379386025)",
+    "updated_at": "2026-10-24"
+   },
+   "dimensions": [
+    "city",
+    "iso_a3"
+   ],
+   "metrics": [
+    {
+     "id": "titles",
+     "unit": "titles",
+     "source_url": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals",
+     "reference_period": "Through the 2026 final (Wikipedia revision 1379386025)",
+     "updated_at": "2026-10-24"
+    },
+    {
+     "id": "clubs",
+     "unit": null,
+     "source_url": "https://en.wikipedia.org/wiki/List_of_European_Cup_and_UEFA_Champions_League_finals",
+     "reference_period": "Through the 2026 final (Wikipedia revision 1379386025)",
+     "updated_at": "2026-10-24"
+    }
+   ],
+   "records": [
+    {
+     "dimensions": {
+      "city": "Madrid",
+      "iso_a3": "ESP"
+     },
+     "values": {
+      "titles": 15,
+      "clubs": "Real Madrid (15)"
+     }
+    },
+    {
+     "dimensions": {
+      "city": "Milan",
+      "iso_a3": "ITA"
+     },
+     "values": {
+      "titles": 10,
+      "clubs": "Milan (7), Inter Milan (3)"
+     }
+    },
+    {
+     "dimensions": {
+      "city": "Munich",
+      "iso_a3": "DEU"
+     },
+     "values": {
+      "titles": 6,
+      "clubs": "Bayern Munich (6)"
+     }
+    },
+    {
+     "dimensions": {
+      "city": "Liverpool",
+      "iso_a3": "GBR"
+     },
+     "values": {
+      "titles": 6,
+      "clubs": "Liverpool (6)"
+     }
+    },
+    {
+     "dimensions": {
+      "city": "Barcelona",
+      "iso_a3": "ESP"
+     },
+     "values": {
+      "titles": 5,
+      "clubs": "Barcelona (5)"
+     }
+    },
+    {
+     "dimensions": {
+      "city": "Amsterdam",
+      "iso_a3": "NLD"
+     },
+     "values": {
+      "titles": 4,
+      "clubs": "Ajax (4)"
+     }
+    },
+    {
+     "dimensions": {
+      "city": "Manchester",
+      "iso_a3": "GBR"
+     },
+     "values": {
+      "titles": 4,
+      "clubs": "Manchester United (3), Manchester City (1)"
+     }
+    },
+    {
+     "dimensions": {
+      "city": "Turin",
+      "iso_a3": "ITA"
+     },
+     "values": {
+      "titles": 2,
+      "clubs": "Juventus (2)"
+     }
+    },
+    {
+     "dimensions": {
+      "city": "Lisbon",
+      "iso_a3": "PRT"
+     },
+     "values": {
+      "titles": 2,
+      "clubs": "Benfica (2)"
+     }
+    },
+    {
+     "dimensions": {
+      "city": "London",
+      "iso_a3": "GBR"
+     },
+     "values": {
+      "titles": 2,
+      "clubs": "Chelsea (2)"
+     }
+    },
+    {
+     "dimensions": {
+      "city": "Paris",
+      "iso_a3": "FRA"
+     },
+     "values": {
+      "titles": 2,
+      "clubs": "Paris Saint-Germain (2)"
+     }
+    },
+    {
+     "dimensions": {
+      "city": "Nottingham",
+      "iso_a3": "GBR"
+     },
+     "values": {
+      "titles": 2,
+      "clubs": "Nottingham Forest (2)"
+     }
+    },
+    {
+     "dimensions": {
+      "city": "Porto",
+      "iso_a3": "PRT"
+     },
+     "values": {
+      "titles": 2,
+      "clubs": "Porto (2)"
+     }
+    },
+    {
+     "dimensions": {
+      "city": "Dortmund",
+      "iso_a3": "DEU"
+     },
+     "values": {
+      "titles": 1,
+      "clubs": "Borussia Dortmund (1)"
+     }
+    },
+    {
+     "dimensions": {
+      "city": "Glasgow",
+      "iso_a3": "GBR"
+     },
+     "values": {
+      "titles": 1,
+      "clubs": "Celtic (1)"
+     }
+    },
+    {
+     "dimensions": {
+      "city": "Hamburg",
+      "iso_a3": "DEU"
+     },
+     "values": {
+      "titles": 1,
+      "clubs": "Hamburger SV (1)"
+     }
+    },
+    {
+     "dimensions": {
+      "city": "Bucharest",
+      "iso_a3": "ROU"
+     },
+     "values": {
+      "titles": 1,
+      "clubs": "Steaua București (1)"
+     }
+    },
+    {
+     "dimensions": {
+      "city": "Marseille",
+      "iso_a3": "FRA"
+     },
+     "values": {
+      "titles": 1,
+      "clubs": "Marseille (1)"
+     }
+    },
+    {
+     "dimensions": {
+      "city": "Rotterdam",
+      "iso_a3": "NLD"
+     },
+     "values": {
+      "titles": 1,
+      "clubs": "Feyenoord (1)"
+     }
+    },
+    {
+     "dimensions": {
+      "city": "Birmingham",
+      "iso_a3": "GBR"
+     },
+     "values": {
+      "titles": 1,
+      "clubs": "Aston Villa (1)"
+     }
+    },
+    {
+     "dimensions": {
+      "city": "Eindhoven",
+      "iso_a3": "NLD"
+     },
+     "values": {
+      "titles": 1,
+      "clubs": "PSV Eindhoven (1)"
+     }
+    },
+    {
+     "dimensions": {
+      "city": "Belgrade",
+      "iso_a3": "SRB"
+     },
+     "values": {
+      "titles": 1,
+      "clubs": "Red Star Belgrade (1)"
+     }
+    }
+   ]
+  }
+ ]
+}

@@ -8,9 +8,13 @@ import 'package:jidoapp/widgets/firebase_badge_image.dart';
 class BadgeCollectedScreen extends StatefulWidget {
   final Achievement achievement;
 
+  /// 아직 확인하지 않은 뱃지 수(현재 뱃지 포함). 2개 이상이면 "모두 닫기"를 보여준다.
+  final int pendingCount;
+
   const BadgeCollectedScreen({
     Key? key,
     required this.achievement,
+    this.pendingCount = 1,
   }) : super(key: key);
 
   @override
@@ -176,6 +180,19 @@ class _BadgeCollectedScreenState extends State<BadgeCollectedScreen> {
                       ),
                     ),
                   ),
+                  if (widget.pendingCount > 1) ...[
+                    const SizedBox(height: 6),
+                    SizedBox(
+                      width: double.infinity,
+                      child: TextButton(
+                        onPressed: () => Navigator.of(context).pop('all'),
+                        child: Text(
+                          tr("Close All ({0})").replaceAll('{0}', '${widget.pendingCount}'),
+                          style: TextStyle(color: Colors.grey.shade700, fontWeight: FontWeight.w600),
+                        ),
+                      ),
+                    ),
+                  ],
                 ],
               ),
             ),

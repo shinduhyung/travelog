@@ -1,0 +1,167 @@
+{
+ "schema_version": 1,
+ "dataset_id": "sports_tennis_slam_men",
+ "metadata": {
+  "source_url": "https://en.wikipedia.org/wiki/List_of_Grand_Slam_men%27s_singles_champions",
+  "reference_period": "All-time through the 2026 US Open (Wikipedia revision 1375695111)",
+  "updated_at": "2026-10-24"
+ },
+ "legacy_layout": "list",
+ "tables": [
+  {
+   "id": "main",
+   "metadata": {
+    "source_url": "https://en.wikipedia.org/wiki/List_of_Grand_Slam_men%27s_singles_champions",
+    "reference_period": "All-time through the 2026 US Open (Wikipedia revision 1375695111)",
+    "updated_at": "2026-10-24"
+   },
+   "dimensions": [
+    "iso_a3"
+   ],
+   "metrics": [
+    {
+     "id": "titles",
+     "unit": "titles",
+     "source_url": "https://en.wikipedia.org/wiki/List_of_Grand_Slam_men%27s_singles_champions",
+     "reference_period": "All-time through the 2026 US Open (Wikipedia revision 1375695111)",
+     "updated_at": "2026-10-24"
+    },
+    {
+     "id": "players",
+     "unit": "players",
+     "source_url": "https://en.wikipedia.org/wiki/List_of_Grand_Slam_men%27s_singles_champions",
+     "reference_period": "All-time through the 2026 US Open (Wikipedia revision 1375695111)",
+     "updated_at": "2026-10-24"
+    }
+   ],
+   "records": [
+    {
+     "dimensions": {
+      "iso_a3": "USA"
+     },
+     "values": {
+      "titles": 147,
+      "players": 49
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "AUS"
+     },
+     "values": {
+      "titles": 100,
+      "players": 34
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "GBR"
+     },
+     "values": {
+      "titles": 48,
+      "players": 19
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ESP"
+     },
+     "values": {
+      "titles": 40,
+      "players": 9
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "SWE"
+     },
+     "values": {
+      "titles": 26,
+      "players": 5
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "SRB"
+     },
+     "values": {
+      "titles": 24,
+      "players": 1
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "CHE"
+     },
+     "values": {
+      "titles": 23,
+      "players": 2
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "FRA"
+     },
+     "values": {
+      "titles": 21,
+      "players": 6
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "CZE"
+     },
+     "values": {
+      "titles": 12,
+      "players": 3
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ITA"
+     },
+     "values": {
+      "titles": 8,
+      "players": 3
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ARG"
+     },
+     "values": {
+      "titles": 6,
+      "players": 3
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "RUS"
+     },
+     "values": {
+      "titles": 5,
+      "players": 3
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "BRA"
+     },
+     "values": {
+      "titles": 3,
+      "players": 1
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "AUT"
+     },
+     "values": {
+      "titles": 2,
+      "players": 2
+     }
+    }
+   ]
+  }
+ ]
+}

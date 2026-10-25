@@ -1146,6 +1146,11 @@ class _CombinedVisitsCardState extends State<_CombinedVisitsCard> {
         memberCodes: const ['ALB', 'AGO', 'ARM', 'AZE', 'BHS', 'BGD', 'BLZ', 'BOL', 'BWA', 'BGR', 'BDI', 'CPV', 'CAF', 'TCD', 'CHL', 'COL', 'COG', 'CRI', 'CUB', 'DNK', 'TLS', 'ECU', 'EGY', 'GNQ', 'ERI', 'EST', 'FJI', 'FIN', 'GAB', 'GMB', 'GEO', 'GHA', 'GRC', 'GUM', 'GIN', 'GNB', 'HTI', 'HND', 'ISL', 'IDN', 'IRL', 'ISR', 'JAM', 'JPN', 'JOR', 'KAZ', 'LVA', 'LBN', 'LSO', 'LIE', 'LTU', 'LUX', 'MDG', 'MWI', 'MLI', 'MUS', 'MAR', 'MOZ', 'NLD', 'NZL', 'NOR', 'PAK', 'PSE', 'PAN', 'PRY', 'ROU', 'RWA', 'LCA', 'SMR', 'STP', 'SEN', 'SYC', 'SGP', 'SLB', 'ZAF', 'LKA', 'SDN', 'SWZ', 'SWE', 'SYR', 'TZA', 'THA', 'TLS', 'TGO', 'TTO', 'TUN', 'TUR', 'UGA', 'UKR', 'ARE', 'USA', 'URY', 'VAT', 'YEM', 'ZMB', 'ZWE'],
         specialHighlightCodes: const ['VAT'], specialHighlightMapLegend: 'Holy See (Vatican City)', specialHighlightColor: Colors.yellow,
       ),
+      SpecialGroupInfo(
+        title: "IShowSpeed's Visits", icon: Icons.travel_explore, themeColor: Colors.red.shade400, mapLegend: 'Visited by IShowSpeed',
+        // 92 sovereign countries; non-sovereign stops (Puerto Rico, USVI, Guadeloupe, Saint-Martin, Sint Maarten, Hong Kong) are not counted.
+        memberCodes: const ['ALB', 'AUT', 'BEL', 'BIH', 'BGR', 'HRV', 'CZE', 'DNK', 'EST', 'FIN', 'FRA', 'DEU', 'GRC', 'HUN', 'IRL', 'ITA', 'LVA', 'LTU', 'MCO', 'NLD', 'NOR', 'POL', 'PRT', 'ROU', 'SRB', 'SVK', 'SVN', 'ESP', 'SWE', 'CHE', 'TUR', 'GBR', 'CHN', 'IND', 'IDN', 'JPN', 'KHM', 'MYS', 'MNG', 'PHL', 'QAT', 'SAU', 'SGP', 'KOR', 'THA', 'VNM', 'ARE', 'DZA', 'AGO', 'BEN', 'BWA', 'CIV', 'EGY', 'SWZ', 'ETH', 'GHA', 'KEN', 'LBR', 'MAR', 'MOZ', 'NAM', 'NGA', 'RWA', 'SEN', 'ZAF', 'ZMB', 'ZWE', 'USA', 'GTM', 'PAN', 'ATG', 'BHS', 'BRB', 'DMA', 'DOM', 'GRD', 'JAM', 'KNA', 'LCA', 'VCT', 'TTO', 'ARG', 'BOL', 'BRA', 'CHL', 'COL', 'ECU', 'PRY', 'PER', 'URY', 'AUS', 'NZL'],
+      ),
     ];
     _selectedGroup = _groups.first;
   }

@@ -1,0 +1,162 @@
+{
+ "schema_version": 1,
+ "dataset_id": "sports_mlb_international_players",
+ "metadata": {
+  "source_url": "https://www.mlb.com/press-release/press-release-opening-day-rosters-feature-249-internationally-born-players",
+  "reference_period": "2026 Opening Day rosters and inactive lists (MLB press release, 2026-03-26); players born outside the U.S.",
+  "updated_at": "2026-10-24"
+ },
+ "legacy_layout": "list",
+ "tables": [
+  {
+   "id": "main",
+   "metadata": {
+    "source_url": "https://www.mlb.com/press-release/press-release-opening-day-rosters-feature-249-internationally-born-players",
+    "reference_period": "2026 Opening Day rosters and inactive lists (MLB press release, 2026-03-26); players born outside the U.S.",
+    "updated_at": "2026-10-24"
+   },
+   "dimensions": [
+    "iso_a3"
+   ],
+   "metrics": [
+    {
+     "id": "players",
+     "unit": "players",
+     "source_url": "https://www.mlb.com/press-release/press-release-opening-day-rosters-feature-249-internationally-born-players",
+     "reference_period": "2026 Opening Day rosters and inactive lists (MLB press release, 2026-03-26); players born outside the U.S.",
+     "updated_at": "2026-10-24"
+    }
+   ],
+   "records": [
+    {
+     "dimensions": {
+      "iso_a3": "DOM"
+     },
+     "values": {
+      "players": 93
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "VEN"
+     },
+     "values": {
+      "players": 60
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "CUB"
+     },
+     "values": {
+      "players": 20
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "CAN"
+     },
+     "values": {
+      "players": 19
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "JPN"
+     },
+     "values": {
+      "players": 14
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "PRI"
+     },
+     "values": {
+      "players": 14
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "MEX"
+     },
+     "values": {
+      "players": 7
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "CUW"
+     },
+     "values": {
+      "players": 4
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "PAN"
+     },
+     "values": {
+      "players": 4
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "COL"
+     },
+     "values": {
+      "players": 3
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "KOR"
+     },
+     "values": {
+      "players": 3
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ABW"
+     },
+     "values": {
+      "players": 1
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "BHS"
+     },
+     "values": {
+      "players": 1
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "HND"
+     },
+     "values": {
+      "players": 1
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "NIC"
+     },
+     "values": {
+      "players": 1
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "TWN"
+     },
+     "values": {
+      "players": 1
+     }
+    }
+   ]
+  }
+ ]
+}

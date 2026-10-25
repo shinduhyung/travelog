@@ -1190,6 +1190,7 @@ class BadgeGlobalListener extends StatefulWidget {
 }
 
 class _BadgeGlobalListenerState extends State<BadgeGlobalListener> {
+  static const int _maxIndividualBadgePopups = 3;
   bool _isShowingDialog = false;
 
   static const int _currentBuildNumber = 75;
@@ -1321,6 +1322,40 @@ class _BadgeGlobalListenerState extends State<BadgeGlobalListener> {
           debugPrint('🏆 [BADGE DEBUG] rank unlock dialog CLOSED: $rankName');
           if (mounted) {
             _isShowingDialog = false;
+      // 한꺼번에 많은 뱃지가 해제되면(앱 업데이트로 신규 뱃지가 추가된 직후 등)
+      // 뱃지마다 팝업을 띄우지 않고 요약 팝업 하나로 대체한다.
+      if (badgeProvider.newlyUnlocked.length > _maxIndividualBadgePopups) {
+        final count = badgeProvider.newlyUnlocked.length;
+        _isShowingDialog = true;
+        final goToBadges = await showDialog<bool>(
+          context: overlayContext,
+          builder: (ctx) => AlertDialog(
+            title: Text(tr('New badges unlocked')),
+            content: Text(
+              tr('You unlocked {0} new badges.').replaceAll('{0}', '$count'),
+            ),
+            actions: [
+              TextButton(
+                onPressed: () => Navigator.pop(ctx, false),
+                child: Text(tr('Close')),
+              ),
+              FilledButton(
+                onPressed: () => Navigator.pop(ctx, true),
+                child: Text(tr('View Badges')),
+              ),
+            ],
+          ),
+        );
+        _isShowingDialog = false;
+        badgeProvider.clearNewlyUnlocked();
+        if (goToBadges == true && mounted) {
+          navigatorKey.currentState?.push(
+            MaterialPageRoute(builder: (_) => const BadgesScreen()),
+          );
+        }
+        return;
+      }
+
             badgeProvider.markRankAsSeen();
             debugPrint('🏆 [BADGE DEBUG] markRankAsSeen complete');
           }
@@ -1350,14 +1385,22 @@ class _BadgeGlobalListenerState extends State<BadgeGlobalListener> {
         }
         debugPrint('🚨🚨🚨 [BADGE DEBUG] OPENING BadgeCollectedScreen');
 
-        showDialog(
+        final pendingCount = badgeProvider.newlyUnlocked.length;
+        showDialog<String>(
           context: overlayContext,
           barrierDismissible: false,
           builder: (ctx) {
             debugPrint('🏅 [BADGE DEBUG] BadgeCollectedScreen builder called');
             return AnalyticsScreen(
               name: 'badge_collected',
-              child: BadgeCollectedScreen(achievement: newBadge),
+              child: BadgeCollectedScreen(
+                achievement: newBadge,
+                pendingCount: pendingCount,
+            if (result == 'all') {
+              badgeProvider.clearNewlyUnlocked();
+              return;
+            }
+              ),
             );
           },
         ).then((_) async {

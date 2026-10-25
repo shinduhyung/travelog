@@ -41,7 +41,7 @@ void main() {
           (sum, t) => sum + t.records.length,
         );
       }
-      expect(recordCount, 7982);
+      expect(recordCount, 7979);
     },
   );
 

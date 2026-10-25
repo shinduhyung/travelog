@@ -9,6 +9,7 @@ import 'package:jidoapp/models/country_model.dart';
 import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/screens/countries_map_screen.dart';
 import 'package:jidoapp/screens/country_detail_screen.dart';
+import 'package:jidoapp/screens/sports_extra_cards.dart';
 import 'package:collection/collection.dart'; // firstWhereOrNull을 위해 추가
 import 'dart:math' as math; // For math.max
 import 'package:flutter/foundation.dart'; // For listEquals, setEquals
@@ -107,6 +108,11 @@ class _SportsTabScreenState extends State<SportsTabScreen> {
               countriesToDisplay: widget.countriesToDisplay,
               visitedCountryNames: widget.visitedCountryNames,
             ),
+          ),
+
+          SportsExtraCards(
+            countries: widget.countriesToDisplay,
+            visitedCountryNames: widget.visitedCountryNames,
           ),
 
           const SizedBox(height: 24),

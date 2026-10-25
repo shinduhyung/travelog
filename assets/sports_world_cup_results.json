@@ -1,0 +1,761 @@
+{
+ "schema_version": 1,
+ "dataset_id": "sports_world_cup_results",
+ "metadata": {
+  "source_url": "https://en.wikipedia.org/wiki/National_team_appearances_in_the_FIFA_World_Cup",
+  "reference_period": "Through the 2026 FIFA World Cup (Wikipedia revision 1376530884)",
+  "updated_at": "2026-10-24"
+ },
+ "legacy_layout": "list",
+ "tables": [
+  {
+   "id": "main",
+   "metadata": {
+    "source_url": "https://en.wikipedia.org/wiki/National_team_appearances_in_the_FIFA_World_Cup",
+    "reference_period": "Through the 2026 FIFA World Cup (Wikipedia revision 1376530884)",
+    "updated_at": "2026-10-24"
+   },
+   "dimensions": [
+    "iso_a3"
+   ],
+   "metrics": [
+    {
+     "id": "best_result",
+     "unit": null,
+     "source_url": "https://en.wikipedia.org/wiki/National_team_appearances_in_the_FIFA_World_Cup",
+     "reference_period": "Through the 2026 FIFA World Cup (Wikipedia revision 1376530884)",
+     "updated_at": "2026-10-24"
+    },
+    {
+     "id": "appearances",
+     "unit": "tournaments",
+     "source_url": "https://en.wikipedia.org/wiki/National_team_appearances_in_the_FIFA_World_Cup",
+     "reference_period": "Through the 2026 FIFA World Cup (Wikipedia revision 1376530884)",
+     "updated_at": "2026-10-24"
+    }
+   ],
+   "records": [
+    {
+     "dimensions": {
+      "iso_a3": "GBR"
+     },
+     "values": {
+      "best_result": "Champions",
+      "appearances": 31
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "BRA"
+     },
+     "values": {
+      "best_result": "Champions",
+      "appearances": 23
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "DEU"
+     },
+     "values": {
+      "best_result": "Champions",
+      "appearances": 22
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ARG"
+     },
+     "values": {
+      "best_result": "Champions",
+      "appearances": 19
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ITA"
+     },
+     "values": {
+      "best_result": "Champions",
+      "appearances": 18
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ESP"
+     },
+     "values": {
+      "best_result": "Champions",
+      "appearances": 17
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "FRA"
+     },
+     "values": {
+      "best_result": "Champions",
+      "appearances": 17
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "URY"
+     },
+     "values": {
+      "best_result": "Champions",
+      "appearances": 15
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "SWE"
+     },
+     "values": {
+      "best_result": "Runners-up",
+      "appearances": 13
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "NLD"
+     },
+     "values": {
+      "best_result": "Runners-up",
+      "appearances": 12
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "CZE"
+     },
+     "values": {
+      "best_result": "Runners-up",
+      "appearances": 10
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "HUN"
+     },
+     "values": {
+      "best_result": "Runners-up",
+      "appearances": 9
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "SVK"
+     },
+     "values": {
+      "best_result": "Runners-up",
+      "appearances": 9
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "HRV"
+     },
+     "values": {
+      "best_result": "Runners-up",
+      "appearances": 7
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "BEL"
+     },
+     "values": {
+      "best_result": "Third place",
+      "appearances": 15
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "USA"
+     },
+     "values": {
+      "best_result": "Third place",
+      "appearances": 12
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "PRT"
+     },
+     "values": {
+      "best_result": "Third place",
+      "appearances": 9
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "POL"
+     },
+     "values": {
+      "best_result": "Third place",
+      "appearances": 9
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "CHL"
+     },
+     "values": {
+      "best_result": "Third place",
+      "appearances": 9
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "AUT"
+     },
+     "values": {
+      "best_result": "Third place",
+      "appearances": 8
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "TUR"
+     },
+     "values": {
+      "best_result": "Third place",
+      "appearances": 3
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "SRB"
+     },
+     "values": {
+      "best_result": "Fourth place",
+      "appearances": 13
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "KOR"
+     },
+     "values": {
+      "best_result": "Fourth place",
+      "appearances": 12
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "RUS"
+     },
+     "values": {
+      "best_result": "Fourth place",
+      "appearances": 11
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "BGR"
+     },
+     "values": {
+      "best_result": "Fourth place",
+      "appearances": 7
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "MAR"
+     },
+     "values": {
+      "best_result": "Fourth place",
+      "appearances": 7
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "MEX"
+     },
+     "values": {
+      "best_result": "Quarter-finals",
+      "appearances": 18
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "CHE"
+     },
+     "values": {
+      "best_result": "Quarter-finals",
+      "appearances": 13
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "PRY"
+     },
+     "values": {
+      "best_result": "Quarter-finals",
+      "appearances": 9
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "CMR"
+     },
+     "values": {
+      "best_result": "Quarter-finals",
+      "appearances": 8
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "COL"
+     },
+     "values": {
+      "best_result": "Quarter-finals",
+      "appearances": 7
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ROU"
+     },
+     "values": {
+      "best_result": "Quarter-finals",
+      "appearances": 7
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "CRI"
+     },
+     "values": {
+      "best_result": "Quarter-finals",
+      "appearances": 6
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "DNK"
+     },
+     "values": {
+      "best_result": "Quarter-finals",
+      "appearances": 6
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "GHA"
+     },
+     "values": {
+      "best_result": "Quarter-finals",
+      "appearances": 5
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "PER"
+     },
+     "values": {
+      "best_result": "Quarter-finals",
+      "appearances": 5
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "SEN"
+     },
+     "values": {
+      "best_result": "Quarter-finals",
+      "appearances": 4
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "NOR"
+     },
+     "values": {
+      "best_result": "Quarter-finals",
+      "appearances": 4
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "IRL"
+     },
+     "values": {
+      "best_result": "Quarter-finals",
+      "appearances": 3
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "PRK"
+     },
+     "values": {
+      "best_result": "Quarter-finals",
+      "appearances": 2
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "CUB"
+     },
+     "values": {
+      "best_result": "Quarter-finals",
+      "appearances": 1
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "UKR"
+     },
+     "values": {
+      "best_result": "Quarter-finals",
+      "appearances": 1
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "JPN"
+     },
+     "values": {
+      "best_result": "Round of 16",
+      "appearances": 8
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "AUS"
+     },
+     "values": {
+      "best_result": "Round of 16",
+      "appearances": 7
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "SAU"
+     },
+     "values": {
+      "best_result": "Round of 16",
+      "appearances": 7
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "NGA"
+     },
+     "values": {
+      "best_result": "Round of 16",
+      "appearances": 6
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ECU"
+     },
+     "values": {
+      "best_result": "Round of 16",
+      "appearances": 5
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "DZA"
+     },
+     "values": {
+      "best_result": "Round of 16",
+      "appearances": 5
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "EGY"
+     },
+     "values": {
+      "best_result": "Round of 16",
+      "appearances": 4
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "CAN"
+     },
+     "values": {
+      "best_result": "Round of 16",
+      "appearances": 3
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "GRC"
+     },
+     "values": {
+      "best_result": "Round of 16",
+      "appearances": 3
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "IDN"
+     },
+     "values": {
+      "best_result": "Round of 16",
+      "appearances": 1
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "CIV"
+     },
+     "values": {
+      "best_result": "Round of 32",
+      "appearances": 4
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ZAF"
+     },
+     "values": {
+      "best_result": "Round of 32",
+      "appearances": 4
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "COD"
+     },
+     "values": {
+      "best_result": "Round of 32",
+      "appearances": 2
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "BIH"
+     },
+     "values": {
+      "best_result": "Round of 32",
+      "appearances": 2
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "CPV"
+     },
+     "values": {
+      "best_result": "Round of 32",
+      "appearances": 1
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "IRN"
+     },
+     "values": {
+      "best_result": "Group stage",
+      "appearances": 7
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "TUN"
+     },
+     "values": {
+      "best_result": "Group stage",
+      "appearances": 7
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "HND"
+     },
+     "values": {
+      "best_result": "Group stage",
+      "appearances": 3
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "NZL"
+     },
+     "values": {
+      "best_result": "Group stage",
+      "appearances": 3
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "BOL"
+     },
+     "values": {
+      "best_result": "Group stage",
+      "appearances": 3
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "QAT"
+     },
+     "values": {
+      "best_result": "Group stage",
+      "appearances": 2
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "HTI"
+     },
+     "values": {
+      "best_result": "Group stage",
+      "appearances": 2
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "IRQ"
+     },
+     "values": {
+      "best_result": "Group stage",
+      "appearances": 2
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "PAN"
+     },
+     "values": {
+      "best_result": "Group stage",
+      "appearances": 2
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "SLV"
+     },
+     "values": {
+      "best_result": "Group stage",
+      "appearances": 2
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "SVN"
+     },
+     "values": {
+      "best_result": "Group stage",
+      "appearances": 2
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "CUW"
+     },
+     "values": {
+      "best_result": "Group stage",
+      "appearances": 1
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "JOR"
+     },
+     "values": {
+      "best_result": "Group stage",
+      "appearances": 1
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "UZB"
+     },
+     "values": {
+      "best_result": "Group stage",
+      "appearances": 1
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ISR"
+     },
+     "values": {
+      "best_result": "Group stage",
+      "appearances": 1
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "KWT"
+     },
+     "values": {
+      "best_result": "Group stage",
+      "appearances": 1
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ARE"
+     },
+     "values": {
+      "best_result": "Group stage",
+      "appearances": 1
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "JAM"
+     },
+     "values": {
+      "best_result": "Group stage",
+      "appearances": 1
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "CHN"
+     },
+     "values": {
+      "best_result": "Group stage",
+      "appearances": 1
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "AGO"
+     },
+     "values": {
+      "best_result": "Group stage",
+      "appearances": 1
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "TGO"
+     },
+     "values": {
+      "best_result": "Group stage",
+      "appearances": 1
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "TTO"
+     },
+     "values": {
+      "best_result": "Group stage",
+      "appearances": 1
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ISL"
+     },
+     "values": {
+      "best_result": "Group stage",
+      "appearances": 1
+     }
+    }
+   ]
+  }
+ ]
+}

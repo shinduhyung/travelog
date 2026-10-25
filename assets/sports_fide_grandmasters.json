@@ -1,0 +1,746 @@
+{
+ "schema_version": 1,
+ "dataset_id": "sports_fide_grandmasters",
+ "metadata": {
+  "source_url": "https://en.wikipedia.org/wiki/Geography_of_chess",
+  "reference_period": "FIDE federation grandmaster counts as compiled by Wikipedia (revision 1366407958; as-of date not stated, total 1792)",
+  "updated_at": "2026-10-24"
+ },
+ "legacy_layout": "list",
+ "tables": [
+  {
+   "id": "main",
+   "metadata": {
+    "source_url": "https://en.wikipedia.org/wiki/Geography_of_chess",
+    "reference_period": "FIDE federation grandmaster counts as compiled by Wikipedia (revision 1366407958; as-of date not stated, total 1792)",
+    "updated_at": "2026-10-24"
+   },
+   "dimensions": [
+    "iso_a3"
+   ],
+   "metrics": [
+    {
+     "id": "grandmasters",
+     "unit": "players",
+     "source_url": "https://en.wikipedia.org/wiki/Geography_of_chess",
+     "reference_period": "FIDE federation grandmaster counts as compiled by Wikipedia (revision 1366407958; as-of date not stated, total 1792)",
+     "updated_at": "2026-10-24"
+    }
+   ],
+   "records": [
+    {
+     "dimensions": {
+      "iso_a3": "RUS"
+     },
+     "values": {
+      "grandmasters": 185
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "USA"
+     },
+     "values": {
+      "grandmasters": 106
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "DEU"
+     },
+     "values": {
+      "grandmasters": 97
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "IND"
+     },
+     "values": {
+      "grandmasters": 92
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "UKR"
+     },
+     "values": {
+      "grandmasters": 88
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ESP"
+     },
+     "values": {
+      "grandmasters": 59
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "FRA"
+     },
+     "values": {
+      "grandmasters": 55
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "SRB"
+     },
+     "values": {
+      "grandmasters": 53
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "HUN"
+     },
+     "values": {
+      "grandmasters": 52
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "CHN"
+     },
+     "values": {
+      "grandmasters": 51
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "POL"
+     },
+     "values": {
+      "grandmasters": 50
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ISR"
+     },
+     "values": {
+      "grandmasters": 49
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "GBR"
+     },
+     "values": {
+      "grandmasters": 46
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "NLD"
+     },
+     "values": {
+      "grandmasters": 43
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ARM"
+     },
+     "values": {
+      "grandmasters": 40
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "BGR"
+     },
+     "values": {
+      "grandmasters": 35
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "CZE"
+     },
+     "values": {
+      "grandmasters": 33
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "GEO"
+     },
+     "values": {
+      "grandmasters": 31
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "AZE"
+     },
+     "values": {
+      "grandmasters": 30
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "HRV"
+     },
+     "values": {
+      "grandmasters": 30
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "CUB"
+     },
+     "values": {
+      "grandmasters": 26
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ROU"
+     },
+     "values": {
+      "grandmasters": 26
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "SWE"
+     },
+     "values": {
+      "grandmasters": 25
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ARG"
+     },
+     "values": {
+      "grandmasters": 23
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ITA"
+     },
+     "values": {
+      "grandmasters": 18
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "KAZ"
+     },
+     "values": {
+      "grandmasters": 18
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "NOR"
+     },
+     "values": {
+      "grandmasters": 18
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "GRC"
+     },
+     "values": {
+      "grandmasters": 17
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "UZB"
+     },
+     "values": {
+      "grandmasters": 17
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "DNK"
+     },
+     "values": {
+      "grandmasters": 16
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "BLR"
+     },
+     "values": {
+      "grandmasters": 15
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "BRA"
+     },
+     "values": {
+      "grandmasters": 15
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ISL"
+     },
+     "values": {
+      "grandmasters": 15
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "IRN"
+     },
+     "values": {
+      "grandmasters": 15
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "CAN"
+     },
+     "values": {
+      "grandmasters": 14
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "SVK"
+     },
+     "values": {
+      "grandmasters": 14
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "SVN"
+     },
+     "values": {
+      "grandmasters": 14
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "TUR"
+     },
+     "values": {
+      "grandmasters": 14
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "PHL"
+     },
+     "values": {
+      "grandmasters": 13
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "VNM"
+     },
+     "values": {
+      "grandmasters": 13
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "AUT"
+     },
+     "values": {
+      "grandmasters": 11
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "COL"
+     },
+     "values": {
+      "grandmasters": 11
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "LTU"
+     },
+     "values": {
+      "grandmasters": 11
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "MNE"
+     },
+     "values": {
+      "grandmasters": 11
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "CHE"
+     },
+     "values": {
+      "grandmasters": 11
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "AUS"
+     },
+     "values": {
+      "grandmasters": 10
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "LVA"
+     },
+     "values": {
+      "grandmasters": 10
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "MKD"
+     },
+     "values": {
+      "grandmasters": 10
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "PER"
+     },
+     "values": {
+      "grandmasters": 10
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "BEL"
+     },
+     "values": {
+      "grandmasters": 9
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "MNG"
+     },
+     "values": {
+      "grandmasters": 8
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "BIH"
+     },
+     "values": {
+      "grandmasters": 7
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "MDA"
+     },
+     "values": {
+      "grandmasters": 7
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "TKM"
+     },
+     "values": {
+      "grandmasters": 7
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "CHL"
+     },
+     "values": {
+      "grandmasters": 6
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "EGY"
+     },
+     "values": {
+      "grandmasters": 6
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "EST"
+     },
+     "values": {
+      "grandmasters": 6
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "BGD"
+     },
+     "values": {
+      "grandmasters": 5
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "MEX"
+     },
+     "values": {
+      "grandmasters": 5
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "PRY"
+     },
+     "values": {
+      "grandmasters": 5
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "SGP"
+     },
+     "values": {
+      "grandmasters": 5
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "FIN"
+     },
+     "values": {
+      "grandmasters": 4
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "IDN"
+     },
+     "values": {
+      "grandmasters": 4
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "PRT"
+     },
+     "values": {
+      "grandmasters": 4
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "DZA"
+     },
+     "values": {
+      "grandmasters": 3
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "AND"
+     },
+     "values": {
+      "grandmasters": 3
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "MCO"
+     },
+     "values": {
+      "grandmasters": 3
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "QAT"
+     },
+     "values": {
+      "grandmasters": 3
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "TUN"
+     },
+     "values": {
+      "grandmasters": 3
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "URY"
+     },
+     "values": {
+      "grandmasters": 3
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ARE"
+     },
+     "values": {
+      "grandmasters": 2
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ALB"
+     },
+     "values": {
+      "grandmasters": 1
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "BOL"
+     },
+     "values": {
+      "grandmasters": 1
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "TWN"
+     },
+     "values": {
+      "grandmasters": 1
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "CRI"
+     },
+     "values": {
+      "grandmasters": 1
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "DOM"
+     },
+     "values": {
+      "grandmasters": 1
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ECU"
+     },
+     "values": {
+      "grandmasters": 1
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "FRO"
+     },
+     "values": {
+      "grandmasters": 1
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "IRL"
+     },
+     "values": {
+      "grandmasters": 1
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "JOR"
+     },
+     "values": {
+      "grandmasters": 1
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "MYS"
+     },
+     "values": {
+      "grandmasters": 1
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "MAR"
+     },
+     "values": {
+      "grandmasters": 1
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "NZL"
+     },
+     "values": {
+      "grandmasters": 1
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "SEN"
+     },
+     "values": {
+      "grandmasters": 1
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ZAF"
+     },
+     "values": {
+      "grandmasters": 1
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "KOR"
+     },
+     "values": {
+      "grandmasters": 1
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "TJK"
+     },
+     "values": {
+      "grandmasters": 1
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "VEN"
+     },
+     "values": {
+      "grandmasters": 1
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ZMB"
+     },
+     "values": {
+      "grandmasters": 1
+     }
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,4162 @@
+{
+ "schema_version": 1,
+ "dataset_id": "sports_fifa_ranking",
+ "metadata": {
+  "source_url": "https://inside.fifa.com/fifa-rankings/world-ranking",
+  "reference_period": "men 2026-10-07 edition, women 2026-06-15 edition",
+  "updated_at": "2026-10-24"
+ },
+ "legacy_layout": "sections",
+ "tables": [
+  {
+   "id": "men",
+   "metadata": {
+    "source_url": "https://inside.fifa.com/fifa-rankings/world-ranking",
+    "reference_period": "FIFA ranking edition 20260720",
+    "updated_at": "2026-10-24"
+   },
+   "dimensions": [
+    "iso_a3",
+    "name"
+   ],
+   "metrics": [
+    {
+     "id": "rank",
+     "unit": "rank",
+     "source_url": "https://inside.fifa.com/fifa-rankings/world-ranking",
+     "reference_period": "FIFA ranking edition 20260720",
+     "updated_at": "2026-10-24"
+    },
+    {
+     "id": "points",
+     "unit": "points",
+     "source_url": "https://inside.fifa.com/fifa-rankings/world-ranking",
+     "reference_period": "FIFA ranking edition 20260720",
+     "updated_at": "2026-10-24"
+    }
+   ],
+   "records": [
+    {
+     "dimensions": {
+      "iso_a3": "ESP",
+      "name": "Spain"
+     },
+     "values": {
+      "rank": 1,
+      "points": 2011.57
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ARG",
+      "name": "Argentina"
+     },
+     "values": {
+      "rank": 2,
+      "points": 1972.8
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "FRA",
+      "name": "France"
+     },
+     "values": {
+      "rank": 3,
+      "points": 1958.86
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "GBR",
+      "name": "England"
+     },
+     "values": {
+      "rank": 4,
+      "points": 1925.59
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "PRT",
+      "name": "Portugal"
+     },
+     "values": {
+      "rank": 5,
+      "points": 1807.69
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "BRA",
+      "name": "Brazil"
+     },
+     "values": {
+      "rank": 6,
+      "points": 1806.51
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "MAR",
+      "name": "Morocco"
+     },
+     "values": {
+      "rank": 7,
+      "points": 1805.34
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "BEL",
+      "name": "Belgium"
+     },
+     "values": {
+      "rank": 8,
+      "points": 1779.17
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "NLD",
+      "name": "Netherlands"
+     },
+     "values": {
+      "rank": 9,
+      "points": 1778.61
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "MEX",
+      "name": "Mexico"
+     },
+     "values": {
+      "rank": 10,
+      "points": 1738.48
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "COL",
+      "name": "Colombia"
+     },
+     "values": {
+      "rank": 11,
+      "points": 1735.8
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "CHE",
+      "name": "Switzerland"
+     },
+     "values": {
+      "rank": 12,
+      "points": 1725.39
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "DEU",
+      "name": "Germany"
+     },
+     "values": {
+      "rank": 13,
+      "points": 1717.52
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "HRV",
+      "name": "Croatia"
+     },
+     "values": {
+      "rank": 14,
+      "points": 1714.74
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ITA",
+      "name": "Italy"
+     },
+     "values": {
+      "rank": 15,
+      "points": 1713.04
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "USA",
+      "name": "USA"
+     },
+     "values": {
+      "rank": 16,
+      "points": 1705.47
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "JPN",
+      "name": "Japan"
+     },
+     "values": {
+      "rank": 17,
+      "points": 1684.75
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "SEN",
+      "name": "Senegal"
+     },
+     "values": {
+      "rank": 18,
+      "points": 1648.84
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "NOR",
+      "name": "Norway"
+     },
+     "values": {
+      "rank": 19,
+      "points": 1637.89
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "URY",
+      "name": "Uruguay"
+     },
+     "values": {
+      "rank": 20,
+      "points": 1635.54
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "DNK",
+      "name": "Denmark"
+     },
+     "values": {
+      "rank": 21,
+      "points": 1619.62
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "AUT",
+      "name": "Austria"
+     },
+     "values": {
+      "rank": 22,
+      "points": 1600.66
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "IRN",
+      "name": "IR Iran"
+     },
+     "values": {
+      "rank": 23,
+      "points": 1597.31
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ECU",
+      "name": "Ecuador"
+     },
+     "values": {
+      "rank": 24,
+      "points": 1587.07
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "EGY",
+      "name": "Egypt"
+     },
+     "values": {
+      "rank": 25,
+      "points": 1585.86
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "AUS",
+      "name": "Australia"
+     },
+     "values": {
+      "rank": 26,
+      "points": 1580.52
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "CAN",
+      "name": "Canada"
+     },
+     "values": {
+      "rank": 27,
+      "points": 1575.31
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "DZA",
+      "name": "Algeria"
+     },
+     "values": {
+      "rank": 28,
+      "points": 1574.77
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "CIV",
+      "name": "Côte d'Ivoire"
+     },
+     "values": {
+      "rank": 29,
+      "points": 1569.32
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "NGA",
+      "name": "Nigeria"
+     },
+     "values": {
+      "rank": 30,
+      "points": 1567.97
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "TUR",
+      "name": "Türkiye"
+     },
+     "values": {
+      "rank": 31,
+      "points": 1563.54
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "KOR",
+      "name": "Korea Republic"
+     },
+     "values": {
+      "rank": 32,
+      "points": 1562.49
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "PRY",
+      "name": "Paraguay"
+     },
+     "values": {
+      "rank": 33,
+      "points": 1552.3
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "SWE",
+      "name": "Sweden"
+     },
+     "values": {
+      "rank": 34,
+      "points": 1543.8
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "RUS",
+      "name": "Russia"
+     },
+     "values": {
+      "rank": 35,
+      "points": 1537.45
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "UKR",
+      "name": "Ukraine"
+     },
+     "values": {
+      "rank": 36,
+      "points": 1535.27
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "POL",
+      "name": "Poland"
+     },
+     "values": {
+      "rank": 37,
+      "points": 1514.58
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "HUN",
+      "name": "Hungary"
+     },
+     "values": {
+      "rank": 38,
+      "points": 1511.24
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "GBR",
+      "name": "Wales"
+     },
+     "values": {
+      "rank": 39,
+      "points": 1510.37
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "COD",
+      "name": "Congo DR"
+     },
+     "values": {
+      "rank": 40,
+      "points": 1506.37
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "GRC",
+      "name": "Greece"
+     },
+     "values": {
+      "rank": 41,
+      "points": 1498.71
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "CMR",
+      "name": "Cameroon"
+     },
+     "values": {
+      "rank": 42,
+      "points": 1485.3
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "GBR",
+      "name": "Scotland"
+     },
+     "values": {
+      "rank": 43,
+      "points": 1483.57
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "SRB",
+      "name": "Serbia"
+     },
+     "values": {
+      "rank": 44,
+      "points": 1482.24
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "SVK",
+      "name": "Slovakia"
+     },
+     "values": {
+      "rank": 45,
+      "points": 1477.34
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "PAN",
+      "name": "Panama"
+     },
+     "values": {
+      "rank": 46,
+      "points": 1476.97
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "MLI",
+      "name": "Mali"
+     },
+     "values": {
+      "rank": 47,
+      "points": 1474.14
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ZAF",
+      "name": "South Africa"
+     },
+     "values": {
+      "rank": 48,
+      "points": 1468.88
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "VEN",
+      "name": "Venezuela"
+     },
+     "values": {
+      "rank": 49,
+      "points": 1465.87
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "CHL",
+      "name": "Chile"
+     },
+     "values": {
+      "rank": 50,
+      "points": 1458.97
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "CZE",
+      "name": "Czechia"
+     },
+     "values": {
+      "rank": 51,
+      "points": 1457.12
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "SVN",
+      "name": "Slovenia"
+     },
+     "values": {
+      "rank": 52,
+      "points": 1452.48
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "PER",
+      "name": "Peru"
+     },
+     "values": {
+      "rank": 53,
+      "points": 1450.95
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "CRI",
+      "name": "Costa Rica"
+     },
+     "values": {
+      "rank": 54,
+      "points": 1444.85
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "SAU",
+      "name": "Saudi Arabia"
+     },
+     "values": {
+      "rank": 55,
+      "points": 1443.17
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "IRL",
+      "name": "Republic of Ireland"
+     },
+     "values": {
+      "rank": 56,
+      "points": 1438.62
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "BIH",
+      "name": "Bosnia and Herzegovina"
+     },
+     "values": {
+      "rank": 57,
+      "points": 1429.32
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ROU",
+      "name": "Romania"
+     },
+     "values": {
+      "rank": 58,
+      "points": 1428.88
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "UZB",
+      "name": "Uzbekistan"
+     },
+     "values": {
+      "rank": 59,
+      "points": 1416.61
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "QAT",
+      "name": "Qatar"
+     },
+     "values": {
+      "rank": 60,
+      "points": 1416.47
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "TUN",
+      "name": "Tunisia"
+     },
+     "values": {
+      "rank": 61,
+      "points": 1415.38
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "BFA",
+      "name": "Burkina Faso"
+     },
+     "values": {
+      "rank": 62,
+      "points": 1407.8
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "IRQ",
+      "name": "Iraq"
+     },
+     "values": {
+      "rank": 63,
+      "points": 1400.91
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "GBR",
+      "name": "Northern Ireland"
+     },
+     "values": {
+      "rank": 64,
+      "points": 1383.86
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ARE",
+      "name": "United Arab Emirates"
+     },
+     "values": {
+      "rank": 65,
+      "points": 1376.95
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ALB",
+      "name": "Albania"
+     },
+     "values": {
+      "rank": 66,
+      "points": 1375.78
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "HND",
+      "name": "Honduras"
+     },
+     "values": {
+      "rank": 67,
+      "points": 1375.4
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "CPV",
+      "name": "Cabo Verde"
+     },
+     "values": {
+      "rank": 68,
+      "points": 1373.58
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "JAM",
+      "name": "Jamaica"
+     },
+     "values": {
+      "rank": 69,
+      "points": 1361.97
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "GHA",
+      "name": "Ghana"
+     },
+     "values": {
+      "rank": 70,
+      "points": 1361.27
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "MKD",
+      "name": "North Macedonia"
+     },
+     "values": {
+      "rank": 71,
+      "points": 1350.91
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "JOR",
+      "name": "Jordan"
+     },
+     "values": {
+      "rank": 72,
+      "points": 1350.88
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ISL",
+      "name": "Iceland"
+     },
+     "values": {
+      "rank": 73,
+      "points": 1349.42
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "GEO",
+      "name": "Georgia"
+     },
+     "values": {
+      "rank": 74,
+      "points": 1345.88
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "FIN",
+      "name": "Finland"
+     },
+     "values": {
+      "rank": 75,
+      "points": 1340.73
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "KOS",
+      "name": "Kosovo"
+     },
+     "values": {
+      "rank": 76,
+      "points": 1328.14
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ISR",
+      "name": "Israel"
+     },
+     "values": {
+      "rank": 77,
+      "points": 1325.52
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "BOL",
+      "name": "Bolivia"
+     },
+     "values": {
+      "rank": 78,
+      "points": 1322.19
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "MNE",
+      "name": "Montenegro"
+     },
+     "values": {
+      "rank": 79,
+      "points": 1315.49
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "CUW",
+      "name": "Curaçao"
+     },
+     "values": {
+      "rank": 80,
+      "points": 1304.98
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "OMN",
+      "name": "Oman"
+     },
+     "values": {
+      "rank": 81,
+      "points": 1302.77
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "GIN",
+      "name": "Guinea"
+     },
+     "values": {
+      "rank": 82,
+      "points": 1296.67
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "AGO",
+      "name": "Angola"
+     },
+     "values": {
+      "rank": 83,
+      "points": 1281.79
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "HTI",
+      "name": "Haiti"
+     },
+     "values": {
+      "rank": 84,
+      "points": 1280.91
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "GAB",
+      "name": "Gabon"
+     },
+     "values": {
+      "rank": 85,
+      "points": 1280.12
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "SYR",
+      "name": "Syria"
+     },
+     "values": {
+      "rank": 86,
+      "points": 1279.94
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "UGA",
+      "name": "Uganda"
+     },
+     "values": {
+      "rank": 87,
+      "points": 1278.26
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "NZL",
+      "name": "New Zealand"
+     },
+     "values": {
+      "rank": 88,
+      "points": 1277.02
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "BEN",
+      "name": "Benin"
+     },
+     "values": {
+      "rank": 89,
+      "points": 1266.01
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "BGR",
+      "name": "Bulgaria"
+     },
+     "values": {
+      "rank": 90,
+      "points": 1262.57
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ZMB",
+      "name": "Zambia"
+     },
+     "values": {
+      "rank": 91,
+      "points": 1260.61
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "PSE",
+      "name": "Palestine"
+     },
+     "values": {
+      "rank": 92,
+      "points": 1253.75
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "THA",
+      "name": "Thailand"
+     },
+     "values": {
+      "rank": 93,
+      "points": 1251.42
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "BLR",
+      "name": "Belarus"
+     },
+     "values": {
+      "rank": 94,
+      "points": 1249.6
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "GTM",
+      "name": "Guatemala"
+     },
+     "values": {
+      "rank": 95,
+      "points": 1245.1
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "CHN",
+      "name": "China PR"
+     },
+     "values": {
+      "rank": 96,
+      "points": 1241.9
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "BHR",
+      "name": "Bahrain"
+     },
+     "values": {
+      "rank": 97,
+      "points": 1240.3
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "MOZ",
+      "name": "Mozambique"
+     },
+     "values": {
+      "rank": 98,
+      "points": 1238.23
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "VNM",
+      "name": "Vietnam"
+     },
+     "values": {
+      "rank": 99,
+      "points": 1231.29
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "TJK",
+      "name": "Tajikistan"
+     },
+     "values": {
+      "rank": 100,
+      "points": 1218.88
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "LUX",
+      "name": "Luxembourg"
+     },
+     "values": {
+      "rank": 101,
+      "points": 1218.8
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "SLV",
+      "name": "El Salvador"
+     },
+     "values": {
+      "rank": 102,
+      "points": 1212.4
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "GNQ",
+      "name": "Equatorial Guinea"
+     },
+     "values": {
+      "rank": 103,
+      "points": 1200.39
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "KGZ",
+      "name": "Kyrgyz Republic"
+     },
+     "values": {
+      "rank": 104,
+      "points": 1199.73
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "TTO",
+      "name": "Trinidad and Tobago"
+     },
+     "values": {
+      "rank": 105,
+      "points": 1198.85
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "MDG",
+      "name": "Madagascar"
+     },
+     "values": {
+      "rank": 106,
+      "points": 1197.24
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "COM",
+      "name": "Comoros"
+     },
+     "values": {
+      "rank": 107,
+      "points": 1192.28
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ARM",
+      "name": "Armenia"
+     },
+     "values": {
+      "rank": 108,
+      "points": 1183.26
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "GMB",
+      "name": "The Gambia"
+     },
+     "values": {
+      "rank": 109,
+      "points": 1182.64
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "MRT",
+      "name": "Mauritania"
+     },
+     "values": {
+      "rank": 110,
+      "points": 1176.05
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "NER",
+      "name": "Niger"
+     },
+     "values": {
+      "rank": 111,
+      "points": 1172.93
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "LBN",
+      "name": "Lebanon"
+     },
+     "values": {
+      "rank": 112,
+      "points": 1170.3
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "LBY",
+      "name": "Libya"
+     },
+     "values": {
+      "rank": 113,
+      "points": 1168.89
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "KEN",
+      "name": "Kenya"
+     },
+     "values": {
+      "rank": 114,
+      "points": 1168.67
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "TZA",
+      "name": "Tanzania"
+     },
+     "values": {
+      "rank": 115,
+      "points": 1166.82
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "IDN",
+      "name": "Indonesia"
+     },
+     "values": {
+      "rank": 116,
+      "points": 1166.5
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "KAZ",
+      "name": "Kazakhstan"
+     },
+     "values": {
+      "rank": 117,
+      "points": 1166.26
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "SDN",
+      "name": "Sudan"
+     },
+     "values": {
+      "rank": 118,
+      "points": 1156.74
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "RWA",
+      "name": "Rwanda"
+     },
+     "values": {
+      "rank": 119,
+      "points": 1156.16
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "TGO",
+      "name": "Togo"
+     },
+     "values": {
+      "rank": 120,
+      "points": 1153.04
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "PRK",
+      "name": "DPR Korea"
+     },
+     "values": {
+      "rank": 121,
+      "points": 1151.05
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "EST",
+      "name": "Estonia"
+     },
+     "values": {
+      "rank": 122,
+      "points": 1147.12
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "NAM",
+      "name": "Namibia"
+     },
+     "values": {
+      "rank": 123,
+      "points": 1146.48
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "GNB",
+      "name": "Guinea-Bissau"
+     },
+     "values": {
+      "rank": 124,
+      "points": 1144.03
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "CYP",
+      "name": "Cyprus"
+     },
+     "values": {
+      "rank": 125,
+      "points": 1142.43
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "FRO",
+      "name": "Faroe Islands"
+     },
+     "values": {
+      "rank": 126,
+      "points": 1140.1
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "AZE",
+      "name": "Azerbaijan"
+     },
+     "values": {
+      "rank": 127,
+      "points": 1138.96
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "SUR",
+      "name": "Suriname"
+     },
+     "values": {
+      "rank": 128,
+      "points": 1138.46
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ZWE",
+      "name": "Zimbabwe"
+     },
+     "values": {
+      "rank": 129,
+      "points": 1128.05
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "SLE",
+      "name": "Sierra Leone"
+     },
+     "values": {
+      "rank": 130,
+      "points": 1123.2
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "MWI",
+      "name": "Malawi"
+     },
+     "values": {
+      "rank": 131,
+      "points": 1121.84
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "COG",
+      "name": "Congo"
+     },
+     "values": {
+      "rank": 132,
+      "points": 1102.46
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "MYS",
+      "name": "Malaysia"
+     },
+     "values": {
+      "rank": 133,
+      "points": 1102.09
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "KWT",
+      "name": "Kuwait"
+     },
+     "values": {
+      "rank": 134,
+      "points": 1098.64
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "DOM",
+      "name": "Dominican Republic"
+     },
+     "values": {
+      "rank": 135,
+      "points": 1096.58
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "PHL",
+      "name": "Philippines"
+     },
+     "values": {
+      "rank": 136,
+      "points": 1095.85
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "NIC",
+      "name": "Nicaragua"
+     },
+     "values": {
+      "rank": 137,
+      "points": 1090.8
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "IND",
+      "name": "India"
+     },
+     "values": {
+      "rank": 138,
+      "points": 1086.43
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "TKM",
+      "name": "Turkmenistan"
+     },
+     "values": {
+      "rank": 139,
+      "points": 1078.65
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "BDI",
+      "name": "Burundi"
+     },
+     "values": {
+      "rank": 140,
+      "points": 1076.75
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "BWA",
+      "name": "Botswana"
+     },
+     "values": {
+      "rank": 141,
+      "points": 1073.85
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "GUY",
+      "name": "Guyana"
+     },
+     "values": {
+      "rank": 142,
+      "points": 1071.38
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "LVA",
+      "name": "Latvia"
+     },
+     "values": {
+      "rank": 143,
+      "points": 1069.33
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "YEM",
+      "name": "Yemen"
+     },
+     "values": {
+      "rank": 144,
+      "points": 1067.53
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "CAF",
+      "name": "Central African Republic"
+     },
+     "values": {
+      "rank": 145,
+      "points": 1065.15
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "LBR",
+      "name": "Liberia"
+     },
+     "values": {
+      "rank": 146,
+      "points": 1064.58
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ETH",
+      "name": "Ethiopia"
+     },
+     "values": {
+      "rank": 147,
+      "points": 1064.46
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "LTU",
+      "name": "Lithuania"
+     },
+     "values": {
+      "rank": 148,
+      "points": 1059.28
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "SGP",
+      "name": "Singapore"
+     },
+     "values": {
+      "rank": 149,
+      "points": 1058.95
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "LSO",
+      "name": "Lesotho"
+     },
+     "values": {
+      "rank": 150,
+      "points": 1053.09
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "KNA",
+      "name": "St. Kitts and Nevis"
+     },
+     "values": {
+      "rank": 151,
+      "points": 1041.42
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "SLB",
+      "name": "Solomon Islands"
+     },
+     "values": {
+      "rank": 152,
+      "points": 1035.95
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "HKG",
+      "name": "Hong Kong"
+     },
+     "values": {
+      "rank": 153,
+      "points": 1035.23
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "FJI",
+      "name": "Fiji"
+     },
+     "values": {
+      "rank": 154,
+      "points": 1033.44
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "PRI",
+      "name": "Puerto Rico"
+     },
+     "values": {
+      "rank": 155,
+      "points": 1032.97
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "NCL",
+      "name": "New Caledonia"
+     },
+     "values": {
+      "rank": 156,
+      "points": 1026.01
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "PYF",
+      "name": "Tahiti"
+     },
+     "values": {
+      "rank": 157,
+      "points": 1016.32
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "MDA",
+      "name": "Moldova"
+     },
+     "values": {
+      "rank": 158,
+      "points": 1015.57
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "MMR",
+      "name": "Myanmar"
+     },
+     "values": {
+      "rank": 159,
+      "points": 1008.08
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "MLT",
+      "name": "Malta"
+     },
+     "values": {
+      "rank": 160,
+      "points": 1006.8
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "VUT",
+      "name": "Vanuatu"
+     },
+     "values": {
+      "rank": 161,
+      "points": 1005.9
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ATG",
+      "name": "Antigua and Barbuda"
+     },
+     "values": {
+      "rank": 162,
+      "points": 992.54
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "CUB",
+      "name": "Cuba"
+     },
+     "values": {
+      "rank": 163,
+      "points": 990.46
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "SWZ",
+      "name": "Eswatini"
+     },
+     "values": {
+      "rank": 164,
+      "points": 979.01
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "LCA",
+      "name": "St. Lucia"
+     },
+     "values": {
+      "rank": 165,
+      "points": 975.85
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "VCT",
+      "name": "St. Vincent / Grenadines"
+     },
+     "values": {
+      "rank": 166,
+      "points": 974.89
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "PNG",
+      "name": "Papua New Guinea"
+     },
+     "values": {
+      "rank": 167,
+      "points": 969.14
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "AFG",
+      "name": "Afghanistan"
+     },
+     "values": {
+      "rank": 168,
+      "points": 968.07
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "GRD",
+      "name": "Grenada"
+     },
+     "values": {
+      "rank": 169,
+      "points": 967.71
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "SSD",
+      "name": "South Sudan"
+     },
+     "values": {
+      "rank": 170,
+      "points": 959.91
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "BMU",
+      "name": "Bermuda"
+     },
+     "values": {
+      "rank": 171,
+      "points": 951.28
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "MSR",
+      "name": "Montserrat"
+     },
+     "values": {
+      "rank": 172,
+      "points": 939.13
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "MDV",
+      "name": "Maldives"
+     },
+     "values": {
+      "rank": 173,
+      "points": 935.93
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "BRB",
+      "name": "Barbados"
+     },
+     "values": {
+      "rank": 174,
+      "points": 934.52
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "AND",
+      "name": "Andorra"
+     },
+     "values": {
+      "rank": 175,
+      "points": 927.53
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "TWN",
+      "name": "Chinese Taipei"
+     },
+     "values": {
+      "rank": 176,
+      "points": 923.78
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "KHM",
+      "name": "Cambodia"
+     },
+     "values": {
+      "rank": 177,
+      "points": 920.83
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "NPL",
+      "name": "Nepal"
+     },
+     "values": {
+      "rank": 178,
+      "points": 914.54
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "MUS",
+      "name": "Mauritius"
+     },
+     "values": {
+      "rank": 179,
+      "points": 906.24
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "BLZ",
+      "name": "Belize"
+     },
+     "values": {
+      "rank": 180,
+      "points": 900.38
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "TCD",
+      "name": "Chad"
+     },
+     "values": {
+      "rank": 181,
+      "points": 896.85
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "BGD",
+      "name": "Bangladesh"
+     },
+     "values": {
+      "rank": 182,
+      "points": 893.46
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ERI",
+      "name": "Eritrea"
+     },
+     "values": {
+      "rank": 183,
+      "points": 890.97
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "LKA",
+      "name": "Sri Lanka"
+     },
+     "values": {
+      "rank": 184,
+      "points": 890.64
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ABW",
+      "name": "Aruba"
+     },
+     "values": {
+      "rank": 185,
+      "points": 889.53
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "DMA",
+      "name": "Dominica"
+     },
+     "values": {
+      "rank": 186,
+      "points": 884.58
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "COK",
+      "name": "Cook Islands"
+     },
+     "values": {
+      "rank": 187,
+      "points": 880.25
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "LAO",
+      "name": "Laos"
+     },
+     "values": {
+      "rank": 188,
+      "points": 880.17
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "WSM",
+      "name": "Samoa"
+     },
+     "values": {
+      "rank": 189,
+      "points": 876.41
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "MNG",
+      "name": "Mongolia"
+     },
+     "values": {
+      "rank": 190,
+      "points": 874.47
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ASM",
+      "name": "American Samoa"
+     },
+     "values": {
+      "rank": 191,
+      "points": 871.61
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "BTN",
+      "name": "Bhutan"
+     },
+     "values": {
+      "rank": 192,
+      "points": 870.81
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "MAC",
+      "name": "Macau, China"
+     },
+     "values": {
+      "rank": 193,
+      "points": 858.03
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "STP",
+      "name": "São Tomé and Príncipe"
+     },
+     "values": {
+      "rank": 194,
+      "points": 855.1
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "DJI",
+      "name": "Djibouti"
+     },
+     "values": {
+      "rank": 195,
+      "points": 853.58
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "BRN",
+      "name": "Brunei"
+     },
+     "values": {
+      "rank": 196,
+      "points": 849.56
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "PAK",
+      "name": "Pakistan"
+     },
+     "values": {
+      "rank": 197,
+      "points": 839.03
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "CYM",
+      "name": "Cayman Islands"
+     },
+     "values": {
+      "rank": 198,
+      "points": 836.15
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "TON",
+      "name": "Tonga"
+     },
+     "values": {
+      "rank": 199,
+      "points": 835.64
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "SOM",
+      "name": "Somalia"
+     },
+     "values": {
+      "rank": 200,
+      "points": 832.14
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "GIB",
+      "name": "Gibraltar"
+     },
+     "values": {
+      "rank": 201,
+      "points": 829.49
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "TLS",
+      "name": "Timor-Leste"
+     },
+     "values": {
+      "rank": 202,
+      "points": 823.16
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "GUM",
+      "name": "Guam"
+     },
+     "values": {
+      "rank": 203,
+      "points": 819.54
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "TCA",
+      "name": "Turks and Caicos Islands"
+     },
+     "values": {
+      "rank": 204,
+      "points": 806.26
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "SYC",
+      "name": "Seychelles"
+     },
+     "values": {
+      "rank": 205,
+      "points": 795.63
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "VIR",
+      "name": "US Virgin Islands"
+     },
+     "values": {
+      "rank": 206,
+      "points": 794.75
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "LIE",
+      "name": "Liechtenstein"
+     },
+     "values": {
+      "rank": 207,
+      "points": 790.18
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "BHS",
+      "name": "Bahamas"
+     },
+     "values": {
+      "rank": 208,
+      "points": 771.83
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "VGB",
+      "name": "British Virgin Islands"
+     },
+     "values": {
+      "rank": 209,
+      "points": 752.75
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "AIA",
+      "name": "Anguilla"
+     },
+     "values": {
+      "rank": 210,
+      "points": 736.67
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "SMR",
+      "name": "San Marino"
+     },
+     "values": {
+      "rank": 211,
+      "points": 715.93
+     }
+    }
+   ]
+  },
+  {
+   "id": "women",
+   "metadata": {
+    "source_url": "https://inside.fifa.com/fifa-rankings/world-ranking",
+    "reference_period": "FIFA ranking edition 20260615",
+    "updated_at": "2026-10-24"
+   },
+   "dimensions": [
+    "iso_a3",
+    "name"
+   ],
+   "metrics": [
+    {
+     "id": "rank",
+     "unit": "rank",
+     "source_url": "https://inside.fifa.com/fifa-rankings/world-ranking",
+     "reference_period": "FIFA ranking edition 20260615",
+     "updated_at": "2026-10-24"
+    },
+    {
+     "id": "points",
+     "unit": "points",
+     "source_url": "https://inside.fifa.com/fifa-rankings/world-ranking",
+     "reference_period": "FIFA ranking edition 20260615",
+     "updated_at": "2026-10-24"
+    }
+   ],
+   "records": [
+    {
+     "dimensions": {
+      "iso_a3": "ESP",
+      "name": "Spain"
+     },
+     "values": {
+      "rank": 1,
+      "points": 2121.5
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "USA",
+      "name": "USA"
+     },
+     "values": {
+      "rank": 2,
+      "points": 2042.38
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "DEU",
+      "name": "Germany"
+     },
+     "values": {
+      "rank": 3,
+      "points": 2034.62
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "GBR",
+      "name": "England"
+     },
+     "values": {
+      "rank": 4,
+      "points": 2025.47
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "JPN",
+      "name": "Japan"
+     },
+     "values": {
+      "rank": 5,
+      "points": 1994.43
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "FRA",
+      "name": "France"
+     },
+     "values": {
+      "rank": 6,
+      "points": 1983.77
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "BRA",
+      "name": "Brazil"
+     },
+     "values": {
+      "rank": 7,
+      "points": 1970.87
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "SWE",
+      "name": "Sweden"
+     },
+     "values": {
+      "rank": 8,
+      "points": 1938.13
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "CAN",
+      "name": "Canada"
+     },
+     "values": {
+      "rank": 9,
+      "points": 1926.96
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "DNK",
+      "name": "Denmark"
+     },
+     "values": {
+      "rank": 10,
+      "points": 1920.14
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "NLD",
+      "name": "Netherlands"
+     },
+     "values": {
+      "rank": 11,
+      "points": 1918.3
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "PRK",
+      "name": "Korea DPR"
+     },
+     "values": {
+      "rank": 12,
+      "points": 1916.52
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "NOR",
+      "name": "Norway"
+     },
+     "values": {
+      "rank": 13,
+      "points": 1883.31
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ITA",
+      "name": "Italy"
+     },
+     "values": {
+      "rank": 14,
+      "points": 1871.59
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "AUS",
+      "name": "Australia"
+     },
+     "values": {
+      "rank": 15,
+      "points": 1831.48
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ISL",
+      "name": "Iceland"
+     },
+     "values": {
+      "rank": 16,
+      "points": 1799.75
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "KOR",
+      "name": "Korea Republic"
+     },
+     "values": {
+      "rank": 17,
+      "points": 1791.12
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "CHN",
+      "name": "China PR"
+     },
+     "values": {
+      "rank": 18,
+      "points": 1786.8
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "COL",
+      "name": "Colombia"
+     },
+     "values": {
+      "rank": 19,
+      "points": 1780.16
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "BEL",
+      "name": "Belgium"
+     },
+     "values": {
+      "rank": 20,
+      "points": 1780.06
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "IRL",
+      "name": "Republic of Ireland"
+     },
+     "values": {
+      "rank": 21,
+      "points": 1771.66
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "FIN",
+      "name": "Finland"
+     },
+     "values": {
+      "rank": 22,
+      "points": 1768.25
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "GBR",
+      "name": "Scotland"
+     },
+     "values": {
+      "rank": 23,
+      "points": 1763.61
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "PRT",
+      "name": "Portugal"
+     },
+     "values": {
+      "rank": 24,
+      "points": 1762.36
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "AUT",
+      "name": "Austria"
+     },
+     "values": {
+      "rank": 25,
+      "points": 1747.03
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "CHE",
+      "name": "Switzerland"
+     },
+     "values": {
+      "rank": 26,
+      "points": 1736.56
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "RUS",
+      "name": "Russia"
+     },
+     "values": {
+      "rank": 27,
+      "points": 1723.24
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "MEX",
+      "name": "Mexico"
+     },
+     "values": {
+      "rank": 28,
+      "points": 1707.1
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "POL",
+      "name": "Poland"
+     },
+     "values": {
+      "rank": 29,
+      "points": 1700.12
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ARG",
+      "name": "Argentina"
+     },
+     "values": {
+      "rank": 30,
+      "points": 1689.16
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "GBR",
+      "name": "Wales"
+     },
+     "values": {
+      "rank": 31,
+      "points": 1675.49
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "UKR",
+      "name": "Ukraine"
+     },
+     "values": {
+      "rank": 32,
+      "points": 1658.16
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "NZL",
+      "name": "New Zealand"
+     },
+     "values": {
+      "rank": 33,
+      "points": 1645.41
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "CZE",
+      "name": "Czechia"
+     },
+     "values": {
+      "rank": 34,
+      "points": 1620.87
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "SRB",
+      "name": "Serbia"
+     },
+     "values": {
+      "rank": 35,
+      "points": 1610.64
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "SVN",
+      "name": "Slovenia"
+     },
+     "values": {
+      "rank": 36,
+      "points": 1589.24
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "VNM",
+      "name": "Vietnam"
+     },
+     "values": {
+      "rank": 37,
+      "points": 1585.06
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "TWN",
+      "name": "Chinese Taipei"
+     },
+     "values": {
+      "rank": 38,
+      "points": 1573.33
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "PHL",
+      "name": "Philippines"
+     },
+     "values": {
+      "rank": 39,
+      "points": 1562.91
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "JAM",
+      "name": "Jamaica"
+     },
+     "values": {
+      "rank": 40,
+      "points": 1558.19
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "CRI",
+      "name": "Costa Rica"
+     },
+     "values": {
+      "rank": 41,
+      "points": 1523.57
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "VEN",
+      "name": "Venezuela"
+     },
+     "values": {
+      "rank": 42,
+      "points": 1522.79
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "NGA",
+      "name": "Nigeria"
+     },
+     "values": {
+      "rank": 43,
+      "points": 1518.02
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "PRY",
+      "name": "Paraguay"
+     },
+     "values": {
+      "rank": 44,
+      "points": 1517.88
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "HUN",
+      "name": "Hungary"
+     },
+     "values": {
+      "rank": 45,
+      "points": 1499.96
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "BLR",
+      "name": "Belarus"
+     },
+     "values": {
+      "rank": 46,
+      "points": 1493.33
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "TUR",
+      "name": "Türkiye"
+     },
+     "values": {
+      "rank": 47,
+      "points": 1489.05
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "HTI",
+      "name": "Haiti"
+     },
+     "values": {
+      "rank": 48,
+      "points": 1488.98
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "CHL",
+      "name": "Chile"
+     },
+     "values": {
+      "rank": 49,
+      "points": 1487.99
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "THA",
+      "name": "Thailand"
+     },
+     "values": {
+      "rank": 50,
+      "points": 1483.12
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "UZB",
+      "name": "Uzbekistan"
+     },
+     "values": {
+      "rank": 51,
+      "points": 1475.02
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "GBR",
+      "name": "Northern Ireland"
+     },
+     "values": {
+      "rank": 52,
+      "points": 1470.42
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ROU",
+      "name": "Romania"
+     },
+     "values": {
+      "rank": 53,
+      "points": 1467.5
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "PAN",
+      "name": "Panama"
+     },
+     "values": {
+      "rank": 54,
+      "points": 1457.45
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "PNG",
+      "name": "Papua New Guinea"
+     },
+     "values": {
+      "rank": 55,
+      "points": 1455.55
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "MMR",
+      "name": "Myanmar"
+     },
+     "values": {
+      "rank": 56,
+      "points": 1452.52
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "SVK",
+      "name": "Slovakia"
+     },
+     "values": {
+      "rank": 57,
+      "points": 1443.47
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "GRC",
+      "name": "Greece"
+     },
+     "values": {
+      "rank": 58,
+      "points": 1431.82
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ZAF",
+      "name": "South Africa"
+     },
+     "values": {
+      "rank": 59,
+      "points": 1427.91
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ECU",
+      "name": "Ecuador"
+     },
+     "values": {
+      "rank": 60,
+      "points": 1418.82
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "URY",
+      "name": "Uruguay"
+     },
+     "values": {
+      "rank": 61,
+      "points": 1418.66
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "CMR",
+      "name": "Cameroon"
+     },
+     "values": {
+      "rank": 62,
+      "points": 1416.49
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "HRV",
+      "name": "Croatia"
+     },
+     "values": {
+      "rank": 63,
+      "points": 1398.57
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "MAR",
+      "name": "Morocco"
+     },
+     "values": {
+      "rank": 64,
+      "points": 1384.71
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "GHA",
+      "name": "Ghana"
+     },
+     "values": {
+      "rank": 65,
+      "points": 1383.11
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ISR",
+      "name": "Israel"
+     },
+     "values": {
+      "rank": 66,
+      "points": 1380.27
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "IRN",
+      "name": "IR Iran"
+     },
+     "values": {
+      "rank": 67,
+      "points": 1370.37
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ALB",
+      "name": "Albania"
+     },
+     "values": {
+      "rank": 68,
+      "points": 1369.56
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "IND",
+      "name": "India"
+     },
+     "values": {
+      "rank": 69,
+      "points": 1363.6
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ZMB",
+      "name": "Zambia"
+     },
+     "values": {
+      "rank": 70,
+      "points": 1363.47
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "BIH",
+      "name": "Bosnia and Herzegovina"
+     },
+     "values": {
+      "rank": 71,
+      "points": 1355.89
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "CIV",
+      "name": "Côte d'Ivoire"
+     },
+     "values": {
+      "rank": 72,
+      "points": 1349.27
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "DZA",
+      "name": "Algeria"
+     },
+     "values": {
+      "rank": 73,
+      "points": 1346.06
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "PER",
+      "name": "Peru"
+     },
+     "values": {
+      "rank": 74,
+      "points": 1331.32
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "AZE",
+      "name": "Azerbaijan"
+     },
+     "values": {
+      "rank": 75,
+      "points": 1317.93
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "SEN",
+      "name": "Senegal"
+     },
+     "values": {
+      "rank": 76,
+      "points": 1310.26
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "PRI",
+      "name": "Puerto Rico"
+     },
+     "values": {
+      "rank": 77,
+      "points": 1294.95
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "SLV",
+      "name": "El Salvador"
+     },
+     "values": {
+      "rank": 78,
+      "points": 1287.53
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "JOR",
+      "name": "Jordan"
+     },
+     "values": {
+      "rank": 79,
+      "points": 1283.62
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "HKG",
+      "name": "Hong Kong, China"
+     },
+     "values": {
+      "rank": 80,
+      "points": 1277.95
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "TTO",
+      "name": "Trinidad and Tobago"
+     },
+     "values": {
+      "rank": 81,
+      "points": 1269.08
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "GTM",
+      "name": "Guatemala"
+     },
+     "values": {
+      "rank": 82,
+      "points": 1267.25
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "KOS",
+      "name": "Kosovo"
+     },
+     "values": {
+      "rank": 83,
+      "points": 1265.42
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "MNE",
+      "name": "Montenegro"
+     },
+     "values": {
+      "rank": 84,
+      "points": 1262.33
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "FJI",
+      "name": "Fiji"
+     },
+     "values": {
+      "rank": 85,
+      "points": 1260.87
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "MLI",
+      "name": "Mali"
+     },
+     "values": {
+      "rank": 86,
+      "points": 1246.96
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "WSM",
+      "name": "Samoa"
+     },
+     "values": {
+      "rank": 87,
+      "points": 1246.84
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "SLB",
+      "name": "Solomon Islands"
+     },
+     "values": {
+      "rank": 88,
+      "points": 1241.67
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "NPL",
+      "name": "Nepal"
+     },
+     "values": {
+      "rank": 89,
+      "points": 1238.74
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "MLT",
+      "name": "Malta"
+     },
+     "values": {
+      "rank": 90,
+      "points": 1218.32
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "GUY",
+      "name": "Guyana"
+     },
+     "values": {
+      "rank": 91,
+      "points": 1217.37
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "DOM",
+      "name": "Dominican Republic"
+     },
+     "values": {
+      "rank": 92,
+      "points": 1211.22
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "GNQ",
+      "name": "Equatorial Guinea"
+     },
+     "values": {
+      "rank": 93,
+      "points": 1209.26
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "LTU",
+      "name": "Lithuania"
+     },
+     "values": {
+      "rank": 94,
+      "points": 1208.28
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "NIC",
+      "name": "Nicaragua"
+     },
+     "values": {
+      "rank": 95,
+      "points": 1205.13
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "CUB",
+      "name": "Cuba"
+     },
+     "values": {
+      "rank": 96,
+      "points": 1204.21
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "GUM",
+      "name": "Guam"
+     },
+     "values": {
+      "rank": 97,
+      "points": 1201.73
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "EST",
+      "name": "Estonia"
+     },
+     "values": {
+      "rank": 98,
+      "points": 1198.56
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "KAZ",
+      "name": "Kazakhstan"
+     },
+     "values": {
+      "rank": 99,
+      "points": 1197.2
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "VUT",
+      "name": "Vanuatu"
+     },
+     "values": {
+      "rank": 100,
+      "points": 1191.12
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "MYS",
+      "name": "Malaysia"
+     },
+     "values": {
+      "rank": 101,
+      "points": 1184.46
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "LVA",
+      "name": "Latvia"
+     },
+     "values": {
+      "rank": 102,
+      "points": 1179.98
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "FRO",
+      "name": "Faroe Islands"
+     },
+     "values": {
+      "rank": 103,
+      "points": 1179.27
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "MWI",
+      "name": "Malawi"
+     },
+     "values": {
+      "rank": 104,
+      "points": 1177.33
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "IDN",
+      "name": "Indonesia"
+     },
+     "values": {
+      "rank": 105,
+      "points": 1175.79
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "BGD",
+      "name": "Bangladesh"
+     },
+     "values": {
+      "rank": 106,
+      "points": 1175.35
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "TUN",
+      "name": "Tunisia"
+     },
+     "values": {
+      "rank": 107,
+      "points": 1174.95
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "NCL",
+      "name": "New Caledonia"
+     },
+     "values": {
+      "rank": 108,
+      "points": 1169.8
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "BFA",
+      "name": "Burkina Faso"
+     },
+     "values": {
+      "rank": 109,
+      "points": 1168.21
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "BGR",
+      "name": "Bulgaria"
+     },
+     "values": {
+      "rank": 110,
+      "points": 1166.44
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "TZA",
+      "name": "Tanzania"
+     },
+     "values": {
+      "rank": 111,
+      "points": 1164.03
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "COG",
+      "name": "Congo"
+     },
+     "values": {
+      "rank": 112,
+      "points": 1161.03
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "EGY",
+      "name": "Egypt"
+     },
+     "values": {
+      "rank": 113,
+      "points": 1159.69
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "COD",
+      "name": "Congo DR"
+     },
+     "values": {
+      "rank": 114,
+      "points": 1156.63
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "BOL",
+      "name": "Bolivia"
+     },
+     "values": {
+      "rank": 115,
+      "points": 1152.65
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "TON",
+      "name": "Tonga"
+     },
+     "values": {
+      "rank": 116,
+      "points": 1152.53
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "BHR",
+      "name": "Bahrain"
+     },
+     "values": {
+      "rank": 117,
+      "points": 1146.97
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "KHM",
+      "name": "Cambodia"
+     },
+     "values": {
+      "rank": 118,
+      "points": 1146.64
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "LUX",
+      "name": "Luxembourg"
+     },
+     "values": {
+      "rank": 119,
+      "points": 1143.95
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "LAO",
+      "name": "Laos"
+     },
+     "values": {
+      "rank": 120,
+      "points": 1142.54
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "CPV",
+      "name": "Cabo Verde"
+     },
+     "values": {
+      "rank": 121,
+      "points": 1134.71
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "MDA",
+      "name": "Moldova"
+     },
+     "values": {
+      "rank": 122,
+      "points": 1131.85
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ASM",
+      "name": "American Samoa"
+     },
+     "values": {
+      "rank": 123,
+      "points": 1130.42
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "PYF",
+      "name": "Tahiti"
+     },
+     "values": {
+      "rank": 124,
+      "points": 1127.92
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ARE",
+      "name": "United Arab Emirates"
+     },
+     "values": {
+      "rank": 125,
+      "points": 1126.67
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "HND",
+      "name": "Honduras"
+     },
+     "values": {
+      "rank": 126,
+      "points": 1115.28
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "PSE",
+      "name": "Palestine"
+     },
+     "values": {
+      "rank": 127,
+      "points": 1111.4
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "KEN",
+      "name": "Kenya"
+     },
+     "values": {
+      "rank": 128,
+      "points": 1106.41
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "GEO",
+      "name": "Georgia"
+     },
+     "values": {
+      "rank": 129,
+      "points": 1104.47
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "LBN",
+      "name": "Lebanon"
+     },
+     "values": {
+      "rank": 130,
+      "points": 1100.95
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "NAM",
+      "name": "Namibia"
+     },
+     "values": {
+      "rank": 131,
+      "points": 1099.86
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "COK",
+      "name": "Cook Islands"
+     },
+     "values": {
+      "rank": 132,
+      "points": 1099.76
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "TGO",
+      "name": "Togo"
+     },
+     "values": {
+      "rank": 133,
+      "points": 1092.99
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "BEN",
+      "name": "Benin"
+     },
+     "values": {
+      "rank": 134,
+      "points": 1089.9
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "GMB",
+      "name": "The Gambia"
+     },
+     "values": {
+      "rank": 135,
+      "points": 1082.47
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ZWE",
+      "name": "Zimbabwe"
+     },
+     "values": {
+      "rank": 136,
+      "points": 1078.3
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "CYP",
+      "name": "Cyprus"
+     },
+     "values": {
+      "rank": 137,
+      "points": 1076.22
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "MKD",
+      "name": "North Macedonia"
+     },
+     "values": {
+      "rank": 138,
+      "points": 1075.2
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "KGZ",
+      "name": "Kyrgyz Republic"
+     },
+     "values": {
+      "rank": 139,
+      "points": 1070.63
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ETH",
+      "name": "Ethiopia"
+     },
+     "values": {
+      "rank": 140,
+      "points": 1066.87
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "SUR",
+      "name": "Suriname"
+     },
+     "values": {
+      "rank": 141,
+      "points": 1065.77
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "TKM",
+      "name": "Turkmenistan"
+     },
+     "values": {
+      "rank": 142,
+      "points": 1063.88
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "UGA",
+      "name": "Uganda"
+     },
+     "values": {
+      "rank": 143,
+      "points": 1063.6
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "BMU",
+      "name": "Bermuda"
+     },
+     "values": {
+      "rank": 144,
+      "points": 1053.17
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "GIN",
+      "name": "Guinea"
+     },
+     "values": {
+      "rank": 145,
+      "points": 1048.64
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ARM",
+      "name": "Armenia"
+     },
+     "values": {
+      "rank": 146,
+      "points": 1043.34
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "SGP",
+      "name": "Singapore"
+     },
+     "values": {
+      "rank": 147,
+      "points": 1039.23
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "CAF",
+      "name": "Central African Republic"
+     },
+     "values": {
+      "rank": 148,
+      "points": 1038.44
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "MNG",
+      "name": "Mongolia"
+     },
+     "values": {
+      "rank": 149,
+      "points": 1035.67
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "GAB",
+      "name": "Gabon"
+     },
+     "values": {
+      "rank": 150,
+      "points": 1028.74
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "KNA",
+      "name": "St Kitts and Nevis"
+     },
+     "values": {
+      "rank": 151,
+      "points": 1026.93
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "SLE",
+      "name": "Sierra Leone"
+     },
+     "values": {
+      "rank": 152,
+      "points": 1021.39
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "AGO",
+      "name": "Angola"
+     },
+     "values": {
+      "rank": 153,
+      "points": 1011.42
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "PAK",
+      "name": "Pakistan"
+     },
+     "values": {
+      "rank": 154,
+      "points": 1008.65
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "BWA",
+      "name": "Botswana"
+     },
+     "values": {
+      "rank": 155,
+      "points": 1005.65
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "TCD",
+      "name": "Chad"
+     },
+     "values": {
+      "rank": 156,
+      "points": 985.55
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "SAU",
+      "name": "Saudi Arabia"
+     },
+     "values": {
+      "rank": 157,
+      "points": 980.32
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "TLS",
+      "name": "Timor-Leste"
+     },
+     "values": {
+      "rank": 158,
+      "points": 960.48
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "TJK",
+      "name": "Tajikistan"
+     },
+     "values": {
+      "rank": 159,
+      "points": 954.78
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "VCT",
+      "name": "St Vincent and the Grenadines"
+     },
+     "values": {
+      "rank": 160,
+      "points": 947.14
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "BTN",
+      "name": "Bhutan"
+     },
+     "values": {
+      "rank": 161,
+      "points": 933.09
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "SYR",
+      "name": "Syria"
+     },
+     "values": {
+      "rank": 162,
+      "points": 931.42
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "BRB",
+      "name": "Barbados"
+     },
+     "values": {
+      "rank": 163,
+      "points": 924.87
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "LCA",
+      "name": "St Lucia"
+     },
+     "values": {
+      "rank": 164,
+      "points": 923.18
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "LKA",
+      "name": "Sri Lanka"
+     },
+     "values": {
+      "rank": 165,
+      "points": 915.58
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "IRQ",
+      "name": "Iraq"
+     },
+     "values": {
+      "rank": 166,
+      "points": 910.49
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "MDV",
+      "name": "Maldives"
+     },
+     "values": {
+      "rank": 167,
+      "points": 906.97
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "BLZ",
+      "name": "Belize"
+     },
+     "values": {
+      "rank": 168,
+      "points": 903.05
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "RWA",
+      "name": "Rwanda"
+     },
+     "values": {
+      "rank": 169,
+      "points": 897.44
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "DMA",
+      "name": "Dominica"
+     },
+     "values": {
+      "rank": 170,
+      "points": 884.73
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "LBR",
+      "name": "Liberia"
+     },
+     "values": {
+      "rank": 171,
+      "points": 882.37
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "GRD",
+      "name": "Grenada"
+     },
+     "values": {
+      "rank": 172,
+      "points": 878.19
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "MOZ",
+      "name": "Mozambique"
+     },
+     "values": {
+      "rank": 173,
+      "points": 874.79
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "NER",
+      "name": "Niger"
+     },
+     "values": {
+      "rank": 174,
+      "points": 863.94
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "MAC",
+      "name": "Macau, China"
+     },
+     "values": {
+      "rank": 175,
+      "points": 846.53
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "GNB",
+      "name": "Guinea-Bissau"
+     },
+     "values": {
+      "rank": 176,
+      "points": 838.58
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "LSO",
+      "name": "Lesotho"
+     },
+     "values": {
+      "rank": 177,
+      "points": 836.43
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "SYC",
+      "name": "Seychelles"
+     },
+     "values": {
+      "rank": 178,
+      "points": 836.36
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "AND",
+      "name": "Andorra"
+     },
+     "values": {
+      "rank": 179,
+      "points": 824.53
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "BDI",
+      "name": "Burundi"
+     },
+     "values": {
+      "rank": 180,
+      "points": 822.1
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "CUW",
+      "name": "Curaçao"
+     },
+     "values": {
+      "rank": 181,
+      "points": 821.91
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ATG",
+      "name": "Antigua and Barbuda"
+     },
+     "values": {
+      "rank": 182,
+      "points": 807.2
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "ABW",
+      "name": "Aruba"
+     },
+     "values": {
+      "rank": 183,
+      "points": 801.27
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "SWZ",
+      "name": "Eswatini"
+     },
+     "values": {
+      "rank": 184,
+      "points": 797.06
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "VIR",
+      "name": "US Virgin Islands"
+     },
+     "values": {
+      "rank": 185,
+      "points": 790.28
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "CYM",
+      "name": "Cayman Islands"
+     },
+     "values": {
+      "rank": 186,
+      "points": 777.07
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "COM",
+      "name": "Comoros"
+     },
+     "values": {
+      "rank": 187,
+      "points": 749.38
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "LBY",
+      "name": "Libya"
+     },
+     "values": {
+      "rank": 188,
+      "points": 739.94
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "LIE",
+      "name": "Liechtenstein"
+     },
+     "values": {
+      "rank": 189,
+      "points": 730.32
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "GIB",
+      "name": "Gibraltar"
+     },
+     "values": {
+      "rank": 190,
+      "points": 729.18
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "MDG",
+      "name": "Madagascar"
+     },
+     "values": {
+      "rank": 191,
+      "points": 726.73
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "AIA",
+      "name": "Anguilla"
+     },
+     "values": {
+      "rank": 192,
+      "points": 681.6
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "BHS",
+      "name": "Bahamas"
+     },
+     "values": {
+      "rank": 193,
+      "points": 665.71
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "SDN",
+      "name": "Sudan"
+     },
+     "values": {
+      "rank": 194,
+      "points": 628.74
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "SSD",
+      "name": "South Sudan"
+     },
+     "values": {
+      "rank": 195,
+      "points": 628.66
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "TCA",
+      "name": "Turks and Caicos Islands"
+     },
+     "values": {
+      "rank": 196,
+      "points": 627.14
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "DJI",
+      "name": "Djibouti"
+     },
+     "values": {
+      "rank": 197,
+      "points": 556.64
+     }
+    },
+    {
+     "dimensions": {
+      "iso_a3": "MUS",
+      "name": "Mauritius"
+     },
+     "values": {
+      "rank": 198,
+      "points": 435.47
+     }
+    }
+   ]
+  }
+ ]
+}
