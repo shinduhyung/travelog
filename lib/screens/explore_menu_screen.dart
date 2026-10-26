@@ -20,6 +20,7 @@ import 'package:jidoapp/providers/auth_provider.dart';
 import 'package:jidoapp/screens/login_prompt_screen.dart';
 import 'package:jidoapp/utils/premium_access_manager.dart';
 import 'package:jidoapp/services/subscription_service.dart';
+import 'package:jidoapp/widgets/subscription_sheet.dart';
 
 class ExploreMenuScreen extends StatelessWidget {
   const ExploreMenuScreen({super.key});
@@ -124,7 +125,15 @@ class ExploreMenuScreen extends StatelessWidget {
                               ),
                             ));
                           }),
-                          onStatsTap: () => premiumGated(() => Navigator.push(context, MaterialPageRoute(builder: (_) => const UnescoStatsScreen()))),
+                          // UNESCO stats are fully premium: skip the screen and go
+                          // straight to the paywall for non-subscribers.
+                          onStatsTap: () {
+                            if (!SubscriptionService.instance.isPremium) {
+                              SubscriptionSheet.show(context, triggerContext: 'unesco_stats');
+                              return;
+                            }
+                            premiumGated(() => Navigator.push(context, MaterialPageRoute(builder: (_) => const UnescoStatsScreen())));
+                          },
                         );
                       },
                     ),
@@ -416,7 +425,6 @@ class ExploreMenuScreen extends StatelessWidget {
                 icon: Icons.analytics_outlined,
                 color: const Color(0xFF3B82F6),
                 onTap: () => premiumGated(() => Navigator.push(context, MaterialPageRoute(builder: (_) => const LandmarkStatsScreen()))),
-                showLock: !isPremium,
               ),
             ),
             const SizedBox(width: 10),

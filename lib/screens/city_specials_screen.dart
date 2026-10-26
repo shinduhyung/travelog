@@ -13,6 +13,7 @@ import 'dart:math' as math;
 import 'package:jidoapp/screens/city_sports_screen.dart';
 import 'package:jidoapp/screens/city_stats_map_screen.dart';
 import 'package:jidoapp/screens/cities_screen.dart';
+import 'package:jidoapp/widgets/stat_lock_guard.dart';
 
 // ====================================================================
 // 모달 헬퍼 (allCities에서 풀 데이터 City 조회 → 국가 테마색 보장)
@@ -763,7 +764,10 @@ class _RankingCardState extends State<_RankingCard> {
           // ── 랭킹 리스트
           SizedBox(
             height: 360,
-            child: ListView.builder(
+            child: StatLockGuard(
+              statKey: 'city.specials.${_selectedRanking.title}',
+              locked: _rankings.indexOf(_selectedRanking) >= 1,
+              child: ListView.builder(
               physics: const BouncingScrollPhysics(),
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
               itemCount: _rankedList.length,
@@ -790,6 +794,7 @@ class _RankingCardState extends State<_RankingCard> {
                   accentColor: themeColor,
                 );
               },
+            ),
             ),
           ),
         ],

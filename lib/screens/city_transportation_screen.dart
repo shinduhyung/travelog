@@ -10,6 +10,7 @@ import 'package:jidoapp/screens/city_stats_map_screen.dart';
 import 'package:collection/collection.dart';
 import 'dart:math' as math;
 import 'package:jidoapp/screens/cities_screen.dart';
+import 'package:jidoapp/widgets/stat_lock_guard.dart';
 
 // ====================================================================
 // 모달 헬퍼 (allCities에서 풀 데이터 City 조회 → 국가 테마색 보장)
@@ -113,7 +114,10 @@ class _RCardState extends State<_RCard>{
             }).toList(),
           ),
         ),
-        SizedBox(height:360,child:_list.isEmpty
+        SizedBox(height:360,child:StatLockGuard(
+              statKey: 'city.travel.transport.${_sel.title}',
+              locked: _ranks.indexOf(_sel) >= 1,
+              child: _list.isEmpty
             ? Center(child:Text(tr('No data'),style:TextStyle(color:_C.inkLight)))
             :ListView.builder(
           physics:const BouncingScrollPhysics(),
@@ -158,6 +162,7 @@ class _RCardState extends State<_RCard>{
             );
           },
         ),
+            ),
         ),
       ]),
     );

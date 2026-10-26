@@ -14,6 +14,7 @@ import 'package:collection/collection.dart';
 import 'dart:math' as math;
 import 'package:jidoapp/screens/sports_stats_screen.dart';
 import 'package:intl/intl.dart';
+import 'package:jidoapp/widgets/stat_lock_guard.dart';
 
 // Data Class: Ranking Info (for Country-based rankings)
 class CountryRankingInfo {
@@ -546,7 +547,10 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
           ),
           const Divider(height: 1),
           Expanded(
-            child: _rankedList.isEmpty
+            child: StatLockGuard(
+              statKey: 'country.specials.physical.${_selectedRanking.title}',
+              locked: _rankings.indexOf(_selectedRanking) >= 1,
+              child: _rankedList.isEmpty
                 ?  Center(child: Text(tr('No data to display.')))
                 : ListView.builder(
               padding: const EdgeInsets.all(8.0),
@@ -595,6 +599,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                   ),
                 );
               },
+            ),
             ),
           ),
         ],
@@ -740,7 +745,10 @@ class _CombinedInternetRankingCardState extends State<_CombinedInternetRankingCa
           ),
           const Divider(height: 1),
           Expanded(
-            child: _rankedList.isEmpty
+            child: StatLockGuard(
+              statKey: 'country.specials.internet.${_selectedRanking.title}',
+              locked: _rankings.indexOf(_selectedRanking) >= 1,
+              child: _rankedList.isEmpty
                 ? Center(
               child: Padding(
                 padding: const EdgeInsets.all(16.0),
@@ -800,6 +808,7 @@ class _CombinedInternetRankingCardState extends State<_CombinedInternetRankingCa
                   ),
                 );
               },
+            ),
             ),
           ),
         ],

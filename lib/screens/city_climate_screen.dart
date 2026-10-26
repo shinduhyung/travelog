@@ -8,6 +8,7 @@ import 'package:jidoapp/providers/city_provider.dart';
 import 'dart:math' as math;
 import 'package:jidoapp/screens/city_stats_map_screen.dart';
 import 'package:jidoapp/screens/cities_screen.dart';
+import 'package:jidoapp/widgets/stat_lock_guard.dart';
 
 // ====================================================================
 // 국기 이모지 헬퍼
@@ -431,7 +432,10 @@ class _ClimateRankingCardState extends State<_ClimateRankingCard> {
           // ── 리스트
           SizedBox(
             height: 360,
-            child: ListView.builder(
+            child: StatLockGuard(
+              statKey: 'city.climate.${_selected.title}',
+              locked: _rankings.indexOf(_selected) >= 1,
+              child: ListView.builder(
               physics: const BouncingScrollPhysics(),
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
               itemCount: _list.length,
@@ -454,6 +458,7 @@ class _ClimateRankingCardState extends State<_ClimateRankingCard> {
                   accentColor: _selected.themeColor,
                 );
               },
+            ),
             ),
           ),
         ],

@@ -14,6 +14,7 @@ import 'package:jidoapp/screens/specific_countries_stats_screen.dart';
 import 'package:flutter/foundation.dart';
 import 'dart:math' as math;
 import 'package:collection/collection.dart';
+import 'package:jidoapp/widgets/stat_lock_guard.dart';
 
 
 // Helper: ISO A2 → 국기 이모지
@@ -459,7 +460,10 @@ class _RankingCategoryCardState extends State<_RankingCategoryCard> {
           ),
           const Divider(height: 1),
           Expanded(
-            child: _rankedList.isEmpty
+            child: StatLockGuard(
+              statKey: 'country.military.${_selectedRanking.title}',
+              locked: widget.rankings.indexOf(_selectedRanking) >= 1,
+              child: _rankedList.isEmpty
                 ?  Center(child: Text(tr('No data to display.')))
                 : ListView.builder(
               padding: const EdgeInsets.all(8.0),
@@ -525,6 +529,7 @@ class _RankingCategoryCardState extends State<_RankingCategoryCard> {
                   ),
                 );
               },
+            ),
             ),
           ),
         ],
@@ -1346,7 +1351,10 @@ class _CasualtyRankingCardState extends State<_CasualtyRankingCard> {
           ),
           const Divider(height: 1),
           Expanded(
-            child: _rankedList.isEmpty
+            child: StatLockGuard(
+              statKey: 'country.military.casualty.${_selectedRanking.title}',
+              locked: _rankings.indexOf(_selectedRanking) >= 1,
+              child: _rankedList.isEmpty
                 ?  Center(child: Text(tr('No data to display.')))
                 : ListView.builder(
               padding: const EdgeInsets.all(8.0),
@@ -1396,6 +1404,7 @@ class _CasualtyRankingCardState extends State<_CasualtyRankingCard> {
                   ),
                 );
               },
+            ),
             ),
           ),
         ],

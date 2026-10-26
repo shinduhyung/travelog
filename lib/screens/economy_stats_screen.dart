@@ -13,6 +13,7 @@ import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/providers/economy_provider.dart';
 import 'package:jidoapp/screens/countries_map_screen.dart';
 import 'package:jidoapp/screens/country_detail_screen.dart'; // 상세 화면 임포트 추가
+import 'package:jidoapp/widgets/stat_lock_guard.dart';
 import 'package:sleek_circular_slider/sleek_circular_slider.dart';
 import 'package:collection/collection.dart';
 
@@ -1103,7 +1104,10 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
           ),
           const Divider(height: 1),
           Expanded(
-            child: _rankedList.isEmpty
+            child: StatLockGuard(
+              statKey: 'country.economy.${_selectedRanking.title}',
+              locked: _rankings.indexOf(_selectedRanking) >= 4,
+              child: _rankedList.isEmpty
                 ? Center(
               child: Padding(
                 padding: const EdgeInsets.all(16.0),
@@ -1171,6 +1175,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                   ),
                 );
               },
+            ),
             ),
           ),
         ],

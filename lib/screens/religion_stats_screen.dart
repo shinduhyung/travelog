@@ -14,6 +14,7 @@ import 'package:provider/provider.dart';
 import 'package:collection/collection.dart'; // 리스트 비교용
 import 'dart:math' as math; // max 계산용
 import 'package:intl/intl.dart'; // 숫자 포맷팅용
+import 'package:jidoapp/widgets/stat_lock_guard.dart';
 
 // Helper: ISO A2 → 국기 이모지
 String flagEmoji(String isoA2) {
@@ -603,7 +604,10 @@ class _ReligionPopulationRankingCardState extends State<_ReligionPopulationRanki
           ),
           const Divider(height: 1),
           Expanded(
-            child: _rankedList.isEmpty
+            child: StatLockGuard(
+              statKey: 'country.religion.population.${_selectedRanking.title}',
+              locked: _rankings.indexOf(_selectedRanking) >= 1,
+              child: _rankedList.isEmpty
                 ?  Center(child: Text(tr('No data to display.')))
                 : ListView.builder(
               padding: const EdgeInsets.all(8.0),
@@ -653,6 +657,7 @@ class _ReligionPopulationRankingCardState extends State<_ReligionPopulationRanki
                   ),
                 );
               },
+            ),
             ),
           ),
         ],
@@ -771,7 +776,10 @@ class _CatholicHierarchyRankingCardState extends State<_CatholicHierarchyRanking
           ),
           const Divider(height: 1),
           Expanded(
-            child: _rankedList.isEmpty
+            child: StatLockGuard(
+              statKey: 'country.religion.hierarchy.${_selectedRanking.title}',
+              locked: _rankings.indexOf(_selectedRanking) >= 1,
+              child: _rankedList.isEmpty
                 ?  Center(child: Text(tr('No data to display.')))
                 : ListView.builder(
               padding: const EdgeInsets.all(8.0),
@@ -821,6 +829,7 @@ class _CatholicHierarchyRankingCardState extends State<_CatholicHierarchyRanking
                   ),
                 );
               },
+            ),
             ),
           ),
         ],

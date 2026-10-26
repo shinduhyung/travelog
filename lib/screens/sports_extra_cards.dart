@@ -10,6 +10,7 @@ import 'package:jidoapp/models/statistics_dataset.dart';
 import 'package:jidoapp/screens/sports_stats_screen.dart'
     show flagEmoji, navigateToCountryDetail;
 import 'package:jidoapp/services/statistics_repository.dart';
+import 'package:jidoapp/widgets/stat_lock_guard.dart';
 
 class SportsRankRow {
   final String label;
@@ -155,7 +156,10 @@ class _SportsRankingCardState extends State<SportsRankingCard> {
           ),
           const Divider(height: 1),
           Expanded(
-            child: FutureBuilder<StatisticsDataset?>(
+            child: StatLockGuard(
+              statKey: 'country.sports.${widget.title}.$_tab',
+              locked: _tab >= 1,
+              child: FutureBuilder<StatisticsDataset?>(
               future: _data,
               builder: (context, snap) {
                 if (snap.connectionState != ConnectionState.done) {
@@ -211,6 +215,7 @@ class _SportsRankingCardState extends State<SportsRankingCard> {
                   },
                 );
               },
+            ),
             ),
           ),
         ],

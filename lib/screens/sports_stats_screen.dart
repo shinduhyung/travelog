@@ -14,6 +14,7 @@ import 'package:collection/collection.dart'; // firstWhereOrNull을 위해 추�
 import 'dart:math' as math; // For math.max
 import 'package:flutter/foundation.dart'; // For listEquals, setEquals
 import 'package:intl/intl.dart'; // for NumberFormat
+import 'package:jidoapp/widgets/stat_lock_guard.dart';
 
 
 // Helper: ISO A2 → 국기 이모지
@@ -407,7 +408,10 @@ class _OlympicsRankingCardState extends State<_OlympicsRankingCard> {
           ),
           const Divider(height: 1),
           Expanded(
-            child: _rankedList.isEmpty
+            child: StatLockGuard(
+              statKey: 'country.sports.olympics.season$_seasonSegment',
+              locked: _seasonSegment >= 1,
+              child: _rankedList.isEmpty
                 ?  Center(child: Text(tr('No data to display.')))
                 : ListView.builder(
               padding: const EdgeInsets.all(8.0),
@@ -459,6 +463,7 @@ class _OlympicsRankingCardState extends State<_OlympicsRankingCard> {
                   ),
                 );
               },
+            ),
             ),
           ),
         ],
@@ -522,7 +527,7 @@ class _CombinedSportsAchievementCardState extends State<_CombinedSportsAchieveme
       AchievementGroup(
         title: 'WBC Winners', icon: Icons.sports_baseball, themeColor: Colors.red.shade700, mapLegend: 'WBC Winner',
         entries: [
-          _AchievementDisplayEntry('Dominican Rep.', ['DMA']), _AchievementDisplayEntry('Japan', ['JPN']), _AchievementDisplayEntry('United States', ['USA']),
+          _AchievementDisplayEntry('Dominican Rep.', ['DOM']), _AchievementDisplayEntry('Japan', ['JPN']), _AchievementDisplayEntry('United States', ['USA']),
         ]..sort((a,b) => a.displayName.compareTo(b.displayName)),
       ),
       AchievementGroup(

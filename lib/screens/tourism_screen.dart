@@ -11,6 +11,7 @@ import 'package:jidoapp/screens/city_transportation_screen.dart';
 import 'package:jidoapp/screens/city_stats_map_screen.dart';
 import 'package:jidoapp/screens/cities_screen.dart';
 import 'dart:math' as math;
+import 'package:jidoapp/widgets/stat_lock_guard.dart';
 
 String _fe(String? code){if(code==null)return'';final c=code.trim().toUpperCase();if(c.length!=2)return'';final a=c.codeUnitAt(0),b=c.codeUnitAt(1);if(a<65||a>90||b<65||b>90)return'';return String.fromCharCode(0x1F1E6+(a-65))+String.fromCharCode(0x1F1E6+(b-65));}
 String _cf(City city){final iso=city.countryIsoA2.trim();return iso.length==2?_fe(iso):_fe(_im[city.country.trim()]);}
@@ -150,7 +151,10 @@ class _TourRankCardState extends State<_TourRankCard>{
             ],
           ]),
         ),
-        SizedBox(height:360,child:_list.isEmpty
+        SizedBox(height:360,child:StatLockGuard(
+              statKey: 'city.travel.tourism.${_sel.title}',
+              locked: _ranks.indexOf(_sel) >= 1,
+              child: _list.isEmpty
             ? Center(child:Text(tr('No data'),style:TextStyle(color:_C.inkLight)))
             :ListView.builder(physics:const BouncingScrollPhysics(),padding:const EdgeInsets.symmetric(horizontal:12,vertical:8),itemCount:_list.length,itemBuilder:(context,index){
           final item=_list[index];final isV=widget.provider.visitedCities.contains(item.name);final rank=index+1;
@@ -171,6 +175,7 @@ class _TourRankCardState extends State<_TourRankCard>{
                     ])),
                   ])));
         }),
+            ),
         ),
       ]),
     );

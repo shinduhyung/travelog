@@ -13,6 +13,7 @@ import 'package:flutter/foundation.dart';
 
 // Climate Stats Screen import
 import 'package:jidoapp/screens/climate_stats_screen.dart';
+import 'package:jidoapp/widgets/stat_lock_guard.dart';
 
 // Helper: ISO A2 → 국기 이모지
 String flagEmoji(String isoA2) {
@@ -832,7 +833,11 @@ class _CombinedGeoMetricCardState extends State<_CombinedGeoMetricCard> {
           const Divider(indent: 20, endIndent: 20, height: 24),
 
           // --- Ranking List (Expanded to fit) ---
-          Expanded(child: _buildRankingList(context, themeColor)),
+          Expanded(child: StatLockGuard(
+              statKey: 'country.geography.metric.${_selectedMetricType}',
+              locked: _selectedMetricType != 'Latitude',
+              child: _buildRankingList(context, themeColor),
+            )),
         ],
       ),
     );
@@ -1106,7 +1111,10 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
           ),
           const Divider(height: 1),
           Expanded(
-            child: _rankedList.isEmpty
+            child: StatLockGuard(
+              statKey: 'country.geography.feature.${_selectedRanking.title}',
+              locked: _rankings.indexOf(_selectedRanking) >= 1,
+              child: _rankedList.isEmpty
                 ?  Center(child: Text(tr('No data to display.')))
                 : ListView.builder(
               padding: const EdgeInsets.all(8.0),
@@ -1157,6 +1165,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                   ),
                 );
               },
+            ),
             ),
           ),
         ],

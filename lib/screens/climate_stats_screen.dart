@@ -12,6 +12,7 @@ import 'package:flutter/foundation.dart';
 import 'package:jidoapp/screens/countries_map_screen.dart';
 import 'package:jidoapp/screens/country_detail_screen.dart'; // 상세 화면 추가
 import 'package:jidoapp/screens/geography_stats_screen.dart';
+import 'package:jidoapp/widgets/stat_lock_guard.dart';
 
 // Helper: ISO A2 → 국기 이모지
 String flagEmoji(String isoA2) {
@@ -587,7 +588,10 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
           ),
           const Divider(height: 1),
           Expanded(
-            child: _rankedList.isEmpty
+            child: StatLockGuard(
+              statKey: 'country.climate.${_selectedRanking.title}',
+              locked: _rankings.indexOf(_selectedRanking) >= 1,
+              child: _rankedList.isEmpty
                 ?  Center(child: Text(tr('No data to display.')))
                 : ListView.builder(
               padding: const EdgeInsets.all(8.0),
@@ -643,6 +647,7 @@ class _CombinedRankingCardState extends State<_CombinedRankingCard> {
                   ),
                 );
               },
+            ),
             ),
           ),
         ],

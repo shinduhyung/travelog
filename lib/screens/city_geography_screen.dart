@@ -11,6 +11,7 @@ import 'package:intl/intl.dart';
 import 'package:jidoapp/screens/city_climate_screen.dart';
 import 'package:jidoapp/screens/city_stats_map_screen.dart';
 import 'package:jidoapp/screens/cities_screen.dart';
+import 'package:jidoapp/widgets/stat_lock_guard.dart';
 
 // ====================================================================
 // 국기 이모지 헬퍼
@@ -739,7 +740,10 @@ class _GeoRankingCardState extends State<_GeoRankingCard> {
           // ── 리스트
           SizedBox(
             height: 360,
-            child: ListView.builder(
+            child: StatLockGuard(
+              statKey: 'city.geography.${_selected.title}',
+              locked: _rankings.indexOf(_selected) >= 1,
+              child: ListView.builder(
               physics: const BouncingScrollPhysics(),
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
               itemCount: _list.length,
@@ -765,6 +769,7 @@ class _GeoRankingCardState extends State<_GeoRankingCard> {
                   barColor: barColor, accentColor: _selected.themeColor,
                 );
               },
+            ),
             ),
           ),
         ],

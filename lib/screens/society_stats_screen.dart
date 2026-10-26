@@ -11,6 +11,7 @@ import 'package:jidoapp/models/country_model.dart';
 import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/screens/countries_map_screen.dart';
 import 'package:jidoapp/screens/country_detail_screen.dart'; // 추가됨
+import 'package:jidoapp/widgets/stat_lock_guard.dart';
 import 'package:sleek_circular_slider/sleek_circular_slider.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter/foundation.dart';
@@ -837,7 +838,10 @@ class _RankingCategoryCardState extends State<_RankingCategoryCard> {
           ),
           const Divider(height: 1),
           Expanded(
-            child: _rankedList.isEmpty
+            child: StatLockGuard(
+              statKey: 'country.society.${widget.cardTitle}.${_selectedRanking.title}',
+              locked: widget.rankings.indexOf(_selectedRanking) >= 1,
+              child: _rankedList.isEmpty
                 ?  Center(child: Text(tr('No data to display.')))
                 : ListView.builder(
               padding: const EdgeInsets.all(8.0),
@@ -886,6 +890,7 @@ class _RankingCategoryCardState extends State<_RankingCategoryCard> {
                   ),
                 );
               },
+            ),
             ),
           ),
         ],
@@ -1415,7 +1420,10 @@ class _AgeRelatedRankingCardState extends State<_AgeRelatedRankingCard> {
           const Divider(height: 1),
           // List Section
           Expanded(
-            child: _rankedList.isEmpty
+            child: StatLockGuard(
+              statKey: 'country.society.age.${_selectedRanking.title}',
+              locked: _rankings.indexOf(_selectedRanking) >= 1,
+              child: _rankedList.isEmpty
                 ?  Center(child: Text(tr('No data to display.')))
                 : ListView.builder(
               padding: const EdgeInsets.all(8.0),
@@ -1465,6 +1473,7 @@ class _AgeRelatedRankingCardState extends State<_AgeRelatedRankingCard> {
                   ),
                 );
               },
+            ),
             ),
           ),
         ],
